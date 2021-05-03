@@ -1,0 +1,31 @@
+#犯罪抑止力-10％	安定度5％	エネルギー-5
+d_patrolling_society_deposit = {
+	category = deposit_cat_rare
+	
+	icon = d_city
+	
+	resources = {
+		category = planet_deposits
+        upkeep = {
+            energy = 5
+		}
+	}
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+#政策区域	エネルギー-5
+d_ngm_special_policies_deposit = {
+	category = deposit_cat_rare
+	
+	icon = d_city
+	
+	resources = {
+		category = planet_deposits
+        upkeep = {
+            energy = 5
+		}
+	}
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}

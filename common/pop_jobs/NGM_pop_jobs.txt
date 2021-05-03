@@ -1,0 +1,28 @@
+#式武官   統合力10 影響力1 → 勲章0.02
+bureau_of_ceremonies = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_bureau_of_ceremonies
+	clothes_texture_index = 3
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible = {
+		specialist_job_check_trigger = yes
+	}
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			ngm_order_of_merit = 0.2
+		}
+		upkeep = {
+			unity = 10
+			influence = 1
+		}
+	}
+	weight = {
+		weight = @specialist_job_weight
+	}
+}

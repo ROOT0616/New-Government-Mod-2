@@ -1,0 +1,17 @@
+#勲章
+ngm_order_of_merit = {
+	tradable = yes
+	max = 1000
+	ai_weight = {
+		weight = 10
+	}
+	ai_wants = {
+		base = 100
+	}
+	prerequisites = {
+		"tech_ceremony_theory"
+	}
+	visibility_prerequisite = {
+		always = yes
+	}
+}

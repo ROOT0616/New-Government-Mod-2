@@ -1,0 +1,254 @@
+###############################
+#######  国是用イベント ########
+###############################
+namespace = ngm_civic
+# 青年政治
+country_event = {
+	id = ngm_civic.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_youth_politics
+	}
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				NOT = {
+					has_leader_flag = flag_ngm_got_civic_young_bonus
+				}
+			}
+			add_trait = leader_trait_adaptable
+			set_leader_flag = flag_ngm_got_civic_young_bonus
+		}
+	}
+}
+
+country_event = {
+	id = ngm_civic.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_youth_politics
+	}
+	immediate = {
+		modify_species = {
+			species = THIS			# species to modify
+			base = auto			# new base species; default: auto (uses species)
+			add_trait = trait_ngm_youth_politics			# optional, can specify multiple
+		}
+	}
+}
+
+# 老年政治
+country_event = {
+	id = ngm_civic.4
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_elder_politics
+	}
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				NOT = {
+					has_leader_flag = flag_ngm_got_civic_old_bonus
+				}
+			}
+			set_skill = 4
+			add_experience = 300
+			set_leader_flag = flag_ngm_got_civic_old_bonus
+		}
+	}
+}
+
+country_event = {
+	id = ngm_civic.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_elder_politics
+	}
+	immediate = {
+		# limit = {
+		# 	is_species = THIS
+		# }
+		modify_species = {
+			species = THIS			# species to modify
+			base = auto			# new base species; default: auto (uses species)
+			add_trait = trait_ngm_elder_politics			# optional, can specify multiple
+		}
+	}
+}
+
+#19z.高度な栄典制度	権威主義のみ	影響力+1	リーダースキル+1	リーダースキル上限+1	リーダー経験値+25%	リーダー雇用費用+50%	リーダー維持費+20%
+country_event = {
+	id = ngm_civic.7
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_advanced_glory_system
+	}
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				NOT = {
+					has_leader_flag = flag_civic_ngm_advanced_glory_system
+				}
+			}
+			set_leader_flag = flag_civic_ngm_advanced_glory_system
+			set_skill = 2
+		}
+	}
+}
+
+###############################
+######  policy用イベント #######
+###############################
+namespace = ngm_policy
+country_event = {
+	id = ngm_policy.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			is_country_type = default
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = primitive
+			is_country_type = awakened_marauders
+		}
+		is_homicidal = no		# They have their own variants of this
+	}
+	immediate = {
+		set_policy = {
+			policy = ngm_policies_population_stance
+			option = NAME_population_stance_non_non
+			cooldown = no
+		}
+		set_policy = {
+			policy = ngm_policies_civil_service_appointments_system
+			option = NAME_hybrid
+			cooldown = no
+		}
+		set_policy = {
+			policy = ngm_policies_taxation_system
+			option = NAME_general_tax_system
+			cooldown = no
+		}
+		set_policy = {
+			policy = ngm_policies_cultural_policy
+			option = NAME_private_initiative
+			cooldown = no
+		}
+		set_policy = {
+			policy = ngm_policies_agricultural_policy
+			option = NAME_no_agricultural_incentives
+			cooldown = no
+		}
+		set_policy = {
+			policy = ngm_policies_language_policy
+			option = NAME_common_language_policy
+			cooldown = no
+		}
+	}
+}
+
+###############################
+#######  内政用イベント ########
+###############################
+# namespace = ngm_domestic_affairs
+# # トマト祭り
+# country_event = {
+# 	## イベントの基本情報
+# 	id = ngm_domestic_affairs.1
+# 	title = ngm_domestic_affairs.1.name
+# 	desc = ngm_domestic_affairs.1.desc
+# 	picture =GFX_evt_announcement
+# 	hide_window = no
+# 	## イベントの発生条件
+# 	is_triggered_only = no
+# 	fire_only_once = no
+# 	mean_time_to_happen = { years = 5 }
+# 	trigger = { 
+# 		is_regular_empire = yes
+# 	}
+# 		## イベントの効果
+# 	immediate = {
+#  }
+# }
+# # トマト祭り
+# country_event = {
+# 	## イベントの基本情報
+# 	id = ngm_domestic_affairs.2
+# 	title = ngm_domestic_affairs.2.name
+# 	desc = ngm_domestic_affairs.2.desc
+# 	picture = GFX_evt_announcement
+# 	hide_window = no
+# 	## イベントの発生条件
+# 	is_triggered_only = yes
+# 	fire_only_once = no
+# 	trigger = { 
+# 		is_regular_empire = yes
+# 	}
+# 		## イベントの効果
+# 	option = {
+# 		allow = { owner = { resource_stockpile_compare = { resource = food value >= 5000 } } }
+# 		name = ngm_domestic_affairs.2a.name
+# 		owner = { add_resource = { food = -5000 } }
+# 	}
+# 	option = {
+# 		name = ngm_domestic_affairs.2b.name
+# 	}
+# }
+# # 廃棄部が多い
+# country_event = {
+# 	## イベントの基本情報
+# 	id = ngm_domestic_affairs.3
+# 	title = ngm_domestic_affairs.3.name
+# 	desc = ngm_domestic_affairs.3.desc
+# 	picture = GFX_evt_announcement
+# 	hide_window = no
+# 	## イベントの発生条件
+# 	is_triggered_only = no
+# 	fire_only_once = no
+# 	trigger = { 
+# 		is_regular_empire = yes
+# 		owner = { resource_stockpile_compare = { resource = ngm_garbage value >= 10000 } }
+# 	}
+# 		## イベントの効果
+# 	option = {
+# 		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 5000 } } }
+# 		name = ngm_domestic_affairs.3a.name
+# 		owner = { add_resource = { ngm_garbage = -5000 } }
+# 		owner = { add_resource = { energy =-6000 } }
+# 	}
+# 	option = {
+# 		name = ngm_domestic_affairs.3b.name
+# 	}
+# }
+# # 廃棄部が多すぎる
+# country_event = {
+# 	## イベントの基本情報
+# 	id = ngm_domestic_affairs.3
+# 	title = ngm_domestic_affairs.3.name
+# 	desc = ngm_domestic_affairs.3.desc
+# 	picture = GFX_evt_announcement
+# 	hide_window = no
+# 	## イベントの発生条件
+# 	is_triggered_only = no
+# 	fire_only_once = no
+# 	trigger = { 
+# 		is_regular_empire = yes
+# 		owner = { resource_stockpile_compare = { resource = ngm_garbage value >= 100000 } }
+# 	}
+# 		## イベントの効果
+# 	option = {
+# 		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 100000 } } }
+# 		name = ngm_domestic_affairs.3a.name
+# 		owner = { add_resource = { ngm_garbage = -95000 } }
+# 		owner = { add_resource = { energy = -100000 } }
+# 	}
+# 	option = {
+# 		name = ngm_domestic_affairs.3b.name
+# 	}
+# }

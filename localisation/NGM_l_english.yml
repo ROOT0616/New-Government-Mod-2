@@ -1,0 +1,350 @@
+﻿l_english:
+
+##############################
+#####    ディシジョン    ######
+##############################
+
+ decision_ngm_do:0 "NGM：非表示"
+ decision_ngm_do_desc:0 ""
+ decision_ngm_undo:0 "NGM:表示"
+ decision_ngm_undo_desc:0 ""
+
+ decision_ngm_territorial_monarchy:0 "領邦君主制"
+ decision_ngm_territorial_monarchy_desc:0 "このセクター首都は権限の強い地方君主に委ねられ、地方自治の根幹とすべきである。"
+ ngm_territorial_monarchy:0 "領邦君主制"
+ ngm_territorial_monarchy_desc:0 "このセクター首都は現地の君主が支配しており、領民からより良い「利益」を得ようとしている。"
+ decision_ngm_end_territorial_monarchy:0 "領邦君主制を取りやめる"
+ decision_ngm_end_territorial_monarchy_desc:0 "不適切な地方自治を排し、元来あるべき中央集権体制へと回帰する。"
+
+ decision_ngm_symbolic_monarchy:0 "象徴君主制"
+ decision_ngm_symbolic_monarchy_desc:0 "このセクター首都は権限のない地方君主と現地政府に委ねられ、地方自治の根幹とすべきである。"
+ ngm_symbolic_monarchy:0 "象徴君主制"
+ ngm_symbolic_monarchy_desc:0 "このセクター首都は形式的な君主と現地の民主的ないし寡頭的な政府により統治されており、現地の君主は民衆の幸福と安定した統合を目指している。"
+ decision_ngm_end_symbolic_monarchy:0 "象徴君主制を取りやめる"
+ decision_ngm_end_symbolic_monarchy_desc:0 "不適切な地方自治を排し、元来あるべき中央集権体制へと回帰する。"
+
+ decision_ngm_local_dictatorship:0 "地方独裁制"
+ decision_ngm_local_dictatorship_desc:0 "このセクター首都は権限の強い独裁官に委ねられ、地方自治の根幹とすべきである。"
+ ngm_local_dictatorship:0 "地方独裁制"
+ ngm_local_dictatorship_desc:0 "このセクター首都は市民より非選出の統治者が中央政府以外の束縛なしに統治を行っている。時に苛烈で、時に効率的な統治を市民は「ほどほどに」納得している。"
+ decision_ngm_end_local_dictatorship:0 "地方独裁制を取りやめる"
+ decision_ngm_end_local_dictatorship_desc:0 "不適切な地方自治を排し、元来あるべき中央集権体制へと回帰する。"
+
+ decision_ngm_golden_rule_system:0 "金権支配制"
+ decision_ngm_golden_rule_system_desc:0 "このセクター首都は金融資本家や大企業に委ねられ、地方自治の根幹とすべきである。"
+ ngm_golden_rule_system:0 "金権支配制"
+ ngm_golden_rule_system_desc:0 "このセクター首都は納税の義務をより果たす資本家や大企業により効率的な運用がなされている。\n §R（この案内を読むには1クレジット必要です）§!"
+ decision_ngm_end_golden_rule_system:0 "金権支配制を取りやめる"
+ decision_ngm_end_golden_rule_system_desc:0 "不適切な地方自治を排し、元来あるべき中央集権体制へと回帰する。"
+
+ decision_ngm_ai_supplementary_governance:0 "AI補助統治"
+ decision_ngm_ai_supplementary_governance_desc:0 "このセクター首都は高度なAIとそれを支える技術スタッフに委ねられ、地方自治の根幹とすべきである。"
+ ngm_ai_supplementary_governance:0 "AI補助統治"
+ ngm_ai_supplementary_governance_desc:0 "このセクター首都は、複数のAIによる問題の解決とそれを支える研究者や技術者による効果的かつ合理的な統治が行われている。市民、あなたは幸福ですか？"
+ decision_ngm_end_ai_supplementary_governance:0 "AI補助統治を取りやめる"
+ decision_ngm_end_ai_supplementary_governance_desc:0 "不適切な地方自治を排し、元来あるべき中央集権体制へと回帰する。"
+
+ decision_ngm_chieftaincy_system:0 "首長優位制"
+ decision_ngm_chieftaincy_system_desc:0 "このセクター首都は弱い議会と強力な権限を持つ首長を委ねられ、地方自治の根幹とすべきである。"
+ ngm_chieftaincy_system:0 "首長優位制"
+ ngm_chieftaincy_system_desc:0 "このセクター首都は選挙で選ばれた、弱い権限の議会と選挙ないし非選挙で選ばれた強い権限を有する首長により統治されている。民衆の意見を政治に投影し、効率的かつドラスティックな改革が行われることが多い。"
+ decision_ngm_end_chieftaincy_system:0 "首長優位制を取りやめる"
+ decision_ngm_end_chieftaincy_system_desc:0 "不適切な地方自治を排し、元来あるべき中央集権体制へと回帰する。"
+
+ decision_ngm_parliamentary_dominance:0 "議会優位制"
+ decision_ngm_parliamentary_dominance_desc:0 "このセクター首都は強力な議会と弱い権限の首長に委ねられ、地方自治の根幹とすべきである。"
+ ngm_parliamentary_dominance:0 "議会優位制"
+ ngm_parliamentary_dominance_desc:0 "このセクター首都は選挙で選ばれた強い権限を有する議会と、選挙ないし非選挙で選ばれた弱い権限を有する首長により統治されている。首長は行政機関の長としての権限しか持たず、民衆の意見を背景にした議会に譲歩することもしばしばである。"
+ decision_ngm_end_parliamentary_dominance:0 "議会優位制を取りやめる"
+ decision_ngm_end_parliamentary_dominance_desc:0 "不適切な地方自治を排し、元来あるべき中央集権体制へと回帰する。"
+
+ decision_ngm_religious_domination:0 "宗教支配制"
+ decision_ngm_religious_domination_desc:0 "このセクター首都は現地教会に委ねられ、地方自治の根幹とすべきである。"
+ ngm_religious_domination:0 "宗教支配制"
+ ngm_religious_domination_desc:0 "このセクター首都は現地教会の長により統治されており、宗教家が政治を取り仕切っている。民衆に思想、信仰の自由は少なく、一つの思想により幸福な生活を送っている。"
+ decision_ngm_end_religious_domination:0 "宗教支配制を取りやめる"
+ decision_ngm_end_religious_domination_desc:0 "不適切な地方自治を排し、元来あるべき中央集権体制へと回帰する。"
+
+ patrolling_society:0 "ドローン警備隊"
+ patrolling_society_desc:0 "この惑星は、街中をドローンにより警備される。"
+ decision_planet_patrolling:0 "ドローン警備隊"
+ decision_planet_patrolling_desc:0 "この惑星を、ドローンで警備しよう。"
+ d_patrolling_society_deposit:0 "ドローン警備地区"
+ d_patrolling_society_deposit_desc:0 "この惑星は、ドローンにより警備されています。"
+ 
+ decision_end_patrolling:0 "ドローン警備隊をやめる"
+ decision_end_patrolling_desc:0 "街中をドローンが飛び回るなんて恐ろしいことだ￥nやめさせろ！"
+ decision_end_planet_patrolling_society_effects_short:0 "ドローンによる街の警備を終わらせる。"
+ 
+ fanatic_patrolling_society:0 "衛星による監視"
+ fanatic_patrolling_society_desc:0 "この惑星は、街中を衛星による監視されています"
+ decision_planet_fanatic_patrolling:0 "衛星による監視"
+ decision_planet_fanatic_patrolling_desc:0 "すべての人を衛星で監視しろ！"
+ 
+ decision_end_fanatic_patrolling:0 "衛星による監視をやめる"
+ decision_end_fanatic_patrolling_desc:0 "市民が怖がっている\n今すぐに衛星による監視をやめろ！"
+ fanatic_patrolling_society:0 "衛星による監視をやめる"
+ decision_end_planet_fanatic_patrolling_society_effects_short:0 "衛星による街の警備を終わらせる。"
+ 
+ hyper_fanatic_patrolling_society:0 "完全なる人民の監視"
+ hyper_fanatic_patrolling_society_desc:0 "この惑星は、街中を衛星、ドローンによる監視されています"
+ decision_planet_hyper_fanatic_patrolling:0 "完全なる人民の監視"
+ decision_planet_hyper_fanatic_patrolling_desc:0 "すべての人を衛星、ドローンで監視しろ！"
+ 
+ decision_end_hyper_fanatic_patrolling:0 "完全なる人民の監視をやめる"
+ decision_end_hyper_fanatic_patrolling_desc:0 "市民が怖がっている。 \n 今すぐに衛星、ドローンによる監視をやめろ！"
+ hyper_fanatic_patrolling_society:0 "衛星による監視をやめる"
+ decision_end_planet_hyper_fanatic_patrolling_society_effects_short:0 "衛星、ドローンによる街の警備を終わらせる。"
+ 
+ free_speech:0 "自由言論を推奨する"
+ free_speech_desc:0 "自由な討論を行うことを推奨する"
+ decision_planet_free_speech:0 "自由言論"
+ decision_planet_free_speech_desc:0 "自由な討論を行うことを推奨する"
+ 
+ decision_end_free_speech:0 "自由言論の推奨をやめる"
+ decision_end_free_speech_desc:0 "自由な言論の推奨なんて政府にとって不利益だ\nやめさせろ！"
+ decision_end_planet_free_speech_effects_short:0 "自由言論の推奨をやめる"
+ 
+ fanatic_free_speech:0 "大自由討論会を定期時に行う"
+ fanatic_free_speech_desc:0 "自由な討論を行うことができる会を定期的に行う"
+ decision_planet_fanatic_free_speech:0 "大自由討論会を定期時に行う"
+ decision_planet_fanatic_free_speech_desc:0 "自由な討論を行うことができる会を定期的に行う"
+ 
+ decision_end_fanatic_free_speech:0 "自由言論の推奨をやめる"
+ decision_end_fanatic_free_speech_desc:0 "自由な言論の推奨なんて政府にとって不利益だ\nやめさせろ！"
+ decision_end_planet_fanatic_free_speech_effects_short:0 "自由言論の推奨をやめる"
+ 
+ forced_labor:0 "強制労働を行う"
+ forced_labor_desc:0 "強制労働を行う"
+ decision_planet_forced_labor:0 "強制労働を行う"
+ decision_planet_forced_labor_desc:0 "強制労働を行う"
+ 
+ decision_end_forced_labor:0 "強制労働をやめる"
+ decision_end_forced_labor_desc:0 "強制労働なんて政府にとって不利益だ\nやめさせろ！"
+ decision_end_planet_forced_labor_effects_short:0 "強制労働をやめる"
+ 
+ requisition_policy:0 "惑星規模の徴用政策を行う"
+ requisition_policy_desc:0 "惑星規模の徴用政策を行う"
+ decision_planet_requisition_policy:0 "惑星規模の徴用政策を行う"
+ decision_planet_requisition_policy_desc:0 "惑星規模の徴用政策を行う"
+ 
+ decision_end_requisition_policy:0 "惑星規模の徴用政策をやめる"
+ decision_end_requisition_policy_desc:0 "惑星規模の徴用政策なんて政府にとって不利益だ \n やめさせろ！"
+ decision_end_planet_requisition_policy_effects_short:0 "惑星規模の徴用政策をやめる"
+
+#######################
+#####    国是    ######
+#######################
+
+ civic_sham_constitutionalism:0 "外見的立憲制度"
+ civic_sham_constitutionalism_desc:0 "この国では成文の法により行政権が制約されているが、制約は意味を成しておらず名目上の意味合いでしかない。しかし、愚かな市民は民主制度を手に入れたと錯覚しており、専門家は労働者を虐げつつせせら笑っている。"
+ 
+ civic_substantive_constitutionalism:0 "実質的立憲制度"
+ civic_substantive_constitutionalism_desc:0 "この国では不文、成文の法により君主の権限が制限されており、民主的プロセスにより国民の意見が政策に反映される国家である。外部から見ると非効率かつ不合理に見えるこの制度も、国家の安定という側面には極めて大きな効果を有している。"
+ 
+ civic_noblesse_oblige:0 "ノブレス＝オブリージュ"
+ civic_noblesse_oblige_desc:0 "身分の高い者はそれに応じて果たさねばならぬ社会的責任と義務があるという、欧米社会における基本的な道徳観。"
+ 
+ civic_non_retention_of_force:0 "戦力の不保持"
+ civic_non_retention_of_force_desc:0 "この国は侵略の原因となる宇宙軍を保有せず、国権の発動たる戦争を威嚇目的であったとしても認めない。わずかに海賊対処用の「宇宙警察」と「機動隊」を認める程度で、あらゆる軍事力等の行使と保有は認められていない。"
+ 
+ civic_symbolic_monarchy:0 "象徴君主制"
+ civic_symbolic_monarchy_desc:0 "「象徴君主制」とは「君主の存在を認めながら、その君主は国政に関する機能をもたず、単に精神的・心理的に国民の統合・国家の永続性を象徴する機能のみをもつとされる君主制」である。"
+ 
+ civic_cramming_for_education:0 "詰め込み教育"
+ civic_cramming_for_education_desc:0 "詰め込み教育とは、もっぱら暗記による知識量の増大に比重を置く、あるいは知識の増大を目指す教育方法のこと。"
+ 
+ civic_lax_building_codes:0 "緩やかな建築基準法"
+ civic_lax_building_codes_desc:0 "この国の建築基準法は極めて緩やかな規制であるため、多くの国民が窮屈で不快な部屋に押し込められることとなる。しかし、その分多くの建物や施設を用意することが可能となっている。"
+ 
+ civic_truth_and_reconciliation_commission:0 "真実と和解委員会"
+ civic_truth_and_reconciliation_commission_desc:0 "この国ではかつての独裁制や戦争、虐殺行為への反省から国民や民族、共同体の融和のために過去、現在、そして未来のために過誤を発見、公表することが公に行われている。そのために常設された委員会は国家の統合に少なからぬ影響を与えている。"
+ 
+ civic_national_sacrifice:0 "国家祭祀"
+ civic_national_sacrifice_desc:0 "この国では信仰の自由はさておき、国家主催の祭祀や式典が重視されており国内中で執り行われている。式典分野の官僚は国内の重要な地位を占めており、国民も祭りと同じ式典を心待ちにしている。"
+ 
+ civic_neoliberalism:0 "新自由主義"
+ civic_neoliberalism_desc:0 "社会的市場経済に対して個人の自由や市場原理を再評価し、政府による個人や市場への介入は最低限とすべきと提唱する。"
+ 
+ civic_ngm_manifest_destiny:0 "マニュフェスト・ディスティニー"
+ civic_ngm_manifest_destiny_desc:0 "明白なる使命の名の下で拡張を続けることがこの国の目標であり、国民の総意でもある。開明と文明の光が最も重要なのである"
+
+ civic_ngm_separation_of_powers:0 "三権分立"
+ civic_ngm_separation_of_powers_desc:0 "行政や立法、司法はそれぞれ暴走の蓋然性を大きくはらんでいる。それぞれを一人や一つの機関に集中させることなく分散させ、相互監視させることで国家の安定と国民の安定を目指すことができる。"
+
+ civic_ngm_kakistocracy:0 "カキストクラシー"
+ civic_ngm_kakistocracy_desc:0 "カキストクラシーとは、悪意を持った為政者もしくは市民によって運営されている政府であり、能力のある多くの者は私腹を肥やすためにその能力を行使し、大多数の人間はその日を生きることで精いっぱいである。しかし、欲により運営されるこの政府は時に大きな方向性を持って動くこともできる。"
+
+ civic_ngm_enlightenment:0 "啓蒙主義"
+ civic_ngm_enlightenment_desc:0 "この政府は自分たちよりも弱い存在を守り、自分たちと同格の存在へと昇華させることを目指す友好的なものである。"
+
+ civic_ngm_youth_politics:0 "青年政治"
+ civic_ngm_youth_politics_desc:0 "この政府の高官は若者に支配されており、新進気鋭の政府高官により多くの決定がなされている。しかし、それは労連で熟達した経験者の引退を早める傾向にあり、突発的な決定を生み出してしまう傾向にある。"
+ Youth_Politics:0 "初期リーダーの年齢が20-30歳になる"
+
+ civic_ngm_elder_politics:0 "長老政治"
+ civic_ngm_elder_politics_desc:0 "この政府の高官は高齢の者に支配されており、熟達した政府高官により多くの決定がなされている。しかし、それは新参者の政府参加を妨げやすく、新たな思想を受け入れる素地を減らしてしまう傾向にある。"
+ Elder_Politics:0 "初期リーダーの年齢が65-100歳になる"
+
+ civic_ngm_advanced_glory_system:0 "高度な栄典制度"
+ civic_ngm_advanced_glory_system_desc:0 "この国の栄典は重層的なものであり、他国にとっては理解が難しいものとなっている。しかし、我々にとって栄典は至上のものであり、これを得ることは名誉であり、しばしば命よりも重要視される。"
+
+ civic_ngm_culturism:0 "教養主義"
+ civic_ngm_culturism_desc:0 "この政府は教育と知識を重視しており、知識を有した者による統治が行われており、蒙昧主義や低学歴の者の出世はほぼ不可能である。その結果研究者等は優遇されるが商業は軽視されている。"
+
+ civic_ngm_imaginary_socialism:0 "空想的社会主義"
+ civic_ngm_imaginary_socialism_desc:0 "社会と民衆の共同による楽園を理想としたこの社会主義国家は理想的で達成不可能な目的に向かう旅路にある。多くの達成困難な課題が残されているが、総じて政府は民衆のために行動している。"
+
+ civic_tooltip_fsass:0 "§Y寡頭制§!か§Y独裁制§!か§Y君主制§!である"
+ 
+ civic_tooltip_not_authoritarian:0 "§Y権威主義§!系統でない"
+
+#######################
+#####    政策    ######
+#######################
+
+ policy_ngm_policies_population_stance:0 "人口政策"
+ policy_ngm_policies_population_stance_desc:0 "人口の増減を調整することで柔軟な国家運営を目指す。"
+ NAME_population_stance_non_non:0 "人口政策なし"
+ population_stance_non_non_name:0 "人口政策なし"
+ NAME_population_stance_non_non_desc:0 ""
+ NAME_one_child:0 "一人っ子政策"
+ population_stance_one_child_name:0 "一人っ子政策"
+ NAME_one_child_desc:0 "急激な人口増加を緩和するため、一組の夫婦につき子供を一人に制限し、二人目からは罰金を科すもの。"
+ 
+ policy_ngm_policies_civil_service_appointments_system:0 "公務員任用制度"
+ policy_ngm_policies_civil_service_appointments_system_desc:0 "官吏の選任方法は国家の手足の動きを決定づける極めて重要なものである"
+ NAME_spoils_system:0 "猟官制"
+ civil_service_appointments_system_spoils_system_name:0 "猟官制"
+ NAME_spoils_system_desc:0 "政権に従順な者を採用することで政府の動きは柔軟性を帯びるが、経験と知識の反映される蓋然性は下がる。"
+ NAME_hybrid:0 "混合制"
+ civil_service_appointments_system_hybrid_name:0 "混合制"
+ NAME_hybrid_desc:0 "政府に勤めるものは政治的な必要性に応じてポストが決定する。"
+ NAME_qualified_appointment_system:0 "資格任用制"
+ civil_service_appointments_system_qualified_appointment_system_name:0 "資格任用制"
+ NAME_qualified_appointment_system_desc:0 "政府の職はその者の能力や資格により与えられており、政府の仕事を効率よく確実に遂行するが、硬直性を産んでしまう。"
+
+ policy_ngm_policies_taxation_system:0 "納税制度"
+ policy_ngm_policies_taxation_system_desc:0 "税は嫌われるが必要である。"
+ NAME_progressive_tax_system:0 "累進課税制度"
+ taxation_system_progressive_tax_system_name:0 "累進課税制度"
+ NAME_progressive_tax_system_desc:0 "高所得者の税を増やすことで、弱者の福祉にその予算を使うことができる。"
+ NAME_general_tax_system:0 "一般税制度"
+ taxation_system_general_tax_system_name:0 "一般税制度"
+ NAME_general_tax_system_desc:0 "税であっても平等主義が必要である。"
+ NAME_counterproductive_taxation_system:0 "逆進課税制度"
+ taxation_system_counterproductive_taxation_system_name:0 "逆進課税制度"
+ NAME_counterproductive_taxation_system_desc:0 "高所得者の税を引き下げることで国家に対する功労者を厚く遇することができる。"
+
+ policy_ngm_policies_cultural_policy:0 "文化政策"
+ policy_ngm_policies_cultural_policy_desc:0 "国家における文化の在り方を決定する。"
+ NAME_state_intervention:0 "国家干渉"
+ cultural_policy_state_intervention_name:0 "国家干渉"
+ NAME_state_intervention_desc:0 "国家により芸術や文化事業の内容や方針が決定され、芸術家は公務員の一種として扱われる。"
+ NAME_private_initiative:0 "民間主導"
+ cultural_policy_private_initiative_name:0 "民間主導"
+ NAME_private_initiative_desc:0 "民間により芸術は比較的自由に運営される。"
+ NAME_state_sponsorship:0 "国家後援"
+ cultural_policy_state_sponsorship_name:0 "国家後援"
+ NAME_state_sponsorship_desc:0 "内容は関係なく多くの芸術や文化が国家による支援の下で発展を見せている。"
+ NAME_the_art_of_disorder:0 "無秩序の芸術"
+ cultural_policy_the_art_of_disorder_name:0 "無秩序の芸術"
+ NAME_the_art_of_disorder_desc:0 "あらゆる芸術は既存の社会や法に縛られることがない。"
+
+ policy_ngm_policies_agricultural_policy:0 "農業政策"
+ policy_ngm_policies_agricultural_policy_desc:0 "農業は民衆の生存に大きな影響を与える。"
+ NAME_large_scale_farmer_preference:0 "大規模農家優遇"
+ agricultural_policy_large_scale_farmer_preference_name:0 "大規模農家優遇"
+ NAME_large_scale_farmer_preference_desc:0 "大規模農家を優遇することにより水や農薬を大量使用し、農業生産量を引き上げることができる。しかし、低所得者の住居や生活環境が惑星上で制約されることとなる。"
+ NAME_no_agricultural_incentives:0 "農業優遇なし"
+ agricultural_policy_no_agricultural_incentives_name:0 "農業優遇なし"
+ NAME_no_agricultural_incentives_desc:0 "農業は市場政策に関与されるべきである。"
+ NAME_preferential_treatment_for_farmers:0 "自作農家優遇"
+ agricultural_policy_preferential_treatment_for_farmers_name:0 "自作農家優遇"
+ NAME_preferential_treatment_for_farmers_desc:0 "自作農を創設し、農業試験場や農家支援策をうちだすことで作付面積当たりの農業生産量を引き上げることができる。しかし、土地の融通が利きにくくなることから惑星上の鉱物生産に制約がかかることとなる。"
+
+ policy_ngm_policies_language_policy:0 "言語政策"
+ policy_ngm_policies_language_policy_desc:0 "言語とは国家をつなぐロープの一種である。翻訳機だけではなく、文化事業や教育、家庭内においても影響を与えるべきである。"
+ NAME_uniform_language_policy:0 "統一言語政策"
+ language_policy_uniform_language_policy_name:0 "統一言語政策"
+ NAME_uniform_language_policy_desc:0 "異国語や民族語、方言を廃止し、統一した言語により国家を運営することとなる。効率性は最終的に向上するが、反発も多い。"
+ NAME_common_language_policy:0 "共通語政策"
+ language_policy_common_language_policy_name:0 "共通語政策"
+ NAME_common_language_policy_desc:0 "一定程度広域で使用される共通語を中心とした政策を使うことにより国家の運営は安定的なものとなる。"
+ NAME_mother_tongue_training:0 "母語教育"
+ language_policy_mother_tongue_training_name:0 "母語教育"
+ NAME_mother_tongue_training_desc:0 "各母語を中心とした教育を行うことで各民族や文化を重視するが、教育コストは高くなる。"
+
+#######################
+#####    布告    ######
+#######################
+
+ edict_awarding_medalsto_faction_leaders_campaign:0 "派閥指導者への勲章授与"
+ edict_awarding_medalsto_faction_leaders_campaign_desc:0 "派閥の指導者に栄誉を与えることで自尊心をくすぐることで政府に好意的な態度を取らせる。"
+
+ edict_awarding_medals_to_military_personnel_campaign:0 "軍人への勲章授与"
+ edict_awarding_medals_to_military_personnel_campaign_desc:0 "軍人に栄誉を与えることで自尊心をくすぐり、職務により精励させる。"
+
+ edict_awarding_medals_to_the_ruling_class_campaign:0 "統治層への勲章授与"
+ edict_awarding_medals_to_the_ruling_class_campaign_desc:0 "各惑星の名士や有力者に栄誉を与えることにより、各惑星の安定度を高めることができる。"
+
+ edict_awarding_of_medals_to_cultural_figures_campaign:0 "文化人への勲章授与"
+ edict_awarding_of_medals_to_cultural_figures_campaign_desc:0 "文化人に栄誉を与えることで科学研究や文化を振興することができる。"
+
+#######################
+#####    技術    ######
+#######################
+
+ tech_ceremony_theory:0 "式典理論1"
+ tech_ceremony_theory_desc:0 "式典担当の官僚の効率的運用や、より安価で手軽に権威を象徴する式典を行うための研究"
+
+ tech_ceremony_theory_second:0 "式典理論2"
+ tech_ceremony_theory_second_desc:0 "式典担当の官僚の効率的運用や、より安価で手軽に権威を象徴する式典を行うための研究"
+
+ tech_ad_high_degree_of_local_autonomy:0 "高度な地方自治"
+ tech_ad_high_degree_of_local_autonomy_desc:0 "高度な地方自治の説明"
+
+#######################
+#####    資源    ######
+#######################
+
+ ngm_order_of_merit:0 "勲章"
+ ngm_order_of_merit_desc:0 "国家あるいはその元首などが個人に対し、その功績や業績を表彰するために与える栄典のうち、章飾の授与を伴うもの。"
+
+#######################
+#####    建物    ######
+#######################
+
+ building_bureau_of_ceremonies:0 "儀典局"
+ building_bureau_of_ceremonies_desc:0 "式典や栄典を管理し、国家や権力者の権威を守り、敷衍させる役所"
+
+#######################
+#####    仕事    ######
+#######################
+
+ bureau_of_ceremonies:0 "式部官"
+ bureau_of_ceremonies_desc:0 "式典や栄典を管理作成し、その授与に大きな権威を与える"
+ job_bureau_of_ceremonies:0 "式部官"
+ job_bureau_of_ceremonies_desc:0 "式典や栄典を管理作成し、その授与に大きな権威を与える"
+ job_bureau_of_ceremonies_plural:0 "式部官"
+ mod_job_bureau_of_ceremonies_add:0 "式部官の職業枠"
+
+#######################
+#####    特性    ######
+#######################
+
+ trait_ngm_youth_politics:0 "青年政治"
+ trait_ngm_youth_politics_desc:0 "§Lこの政府の高官は若者に支配されており、新進気鋭の政府高官により多くの決定がなされている。しかし、それは労連で熟達した経験者の引退を早める傾向にあり、突発的な決定を生み出してしまう傾向にある。§!"
+ trait_ngm_elder_politics:0 "長老政治"
+ trait_ngm_elder_politics_desc:0 "§Lこの政府の高官は高齢の者に支配されており、熟達した政府高官により多くの決定がなされている。しかし、それは新参者の政府参加を妨げやすく、新たな思想を受け入れる素地を減らしてしまう傾向にある。§!"
+
+##########################
+#####    そのほか    ######
+##########################
+
+ mod_planet_buildings_energy_upkeep_mult:0 "建物の$energy$維持費"
+ mod_planet_jobs_consumer_goods_upkeep_mult:0 "£job£ 職業の$consumer_goods$維持費"
+ mod_planet_pops_energy_upkeep_mult:0 "Popの$energy$維持費"
+
+# :0 ""
+# _desc:0 ""

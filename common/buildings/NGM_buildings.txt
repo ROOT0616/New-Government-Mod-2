@@ -1,0 +1,22 @@
+#儀典局	  式部官x2 エネルギ200  鉱石400
+#式武官   統合力10 影響力1 → 勲章0.02
+building_bureau_of_ceremonies = {
+  base_buildtime = 360
+  base_cap_amount = 1
+  prerequisites = {
+		"tech_ceremony_theory"
+	}
+  resources = {
+    category = planet_buildings
+      cost = {
+        energy = 200
+        minerals = 400
+      }
+      upkeep = {
+        energy = 2
+      }
+  }
+	planet_modifier = {
+		job_bureau_of_ceremonies_add = 2
+	}
+}

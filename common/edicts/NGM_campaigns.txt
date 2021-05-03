@@ -1,0 +1,880 @@
+@campaignDuration = 3600
+#派閥指導者への勲章授与（派閥満足度+）
+awarding_medalsto_faction_leaders_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			ngm_order_of_merit = 1
+		}
+	}
+	modifier = {
+		pop_factions_produces_mult = 0.15
+	}
+	potential = {
+		has_technology = tech_ceremony_theory
+	}
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 400
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 600
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 700
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 800
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				has_civic = civic_ngm_advanced_glory_system
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 600
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 700
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 800
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				has_civic = civic_ngm_advanced_glory_system
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 800
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 900
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 1000
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 500
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 600
+			}
+		}
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 2
+			has_civic = civic_national_sacrifice
+		}
+		modifier = {
+			factor = 2
+			has_civic = civic_ngm_advanced_glory_system
+		}
+		modifier = {
+			factor = 2
+			has_technology = tech_ceremony_theory
+		}
+		modifier = {
+			factor = 2
+			has_technology = tech_ceremony_theory_second
+		}
+	}
+}
+
+#軍人への勲章授与（陸軍士気+10%、艦隊射撃レート+10%）
+awarding_medals_to_military_personnel_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			ngm_order_of_merit = 1
+		}
+	}
+	modifier = {
+		army_attack_morale_mult = 0.1
+		army_defense_morale_mult = 0.1
+		ship_fire_rate_mult = 0.1
+	}
+	potential = {
+		has_technology = tech_ceremony_theory
+	}
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 400
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 600
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 700
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 800
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				has_civic = civic_ngm_advanced_glory_system
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 600
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 700
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 800
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				has_civic = civic_ngm_advanced_glory_system
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 800
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 900
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 1000
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 500
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 600
+			}
+		}
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 2
+			has_civic = civic_national_sacrifice
+		}
+		modifier = {
+			factor = 2
+			has_civic = civic_ngm_advanced_glory_system
+		}
+		modifier = {
+			factor = 2
+			has_technology = tech_ceremony_theory
+		}
+		modifier = {
+			factor = 2
+			has_technology = tech_ceremony_theory_second
+		}
+	}
+}
+
+#統治層への勲章授与（惑星安定度+10）
+awarding_medals_to_the_ruling_class_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			ngm_order_of_merit = 1
+		}
+	}
+	modifier = {
+		planet_stability_add = 10
+	}
+	potential = {
+		has_technology = tech_ceremony_theory
+	}
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 400
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 600
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 700
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 800
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				has_civic = civic_ngm_advanced_glory_system
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 600
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 700
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 800
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				has_civic = civic_ngm_advanced_glory_system
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 800
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 900
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 1000
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 500
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 600
+			}
+		}
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 2
+			has_civic = civic_national_sacrifice
+		}
+		modifier = {
+			factor = 2
+			has_civic = civic_ngm_advanced_glory_system
+		}
+		modifier = {
+			factor = 2
+			has_technology = tech_ceremony_theory
+		}
+		modifier = {
+			factor = 2
+			has_technology = tech_ceremony_theory_second
+		}
+	}
+}
+
+#文化人への勲章授与（研究+10%）
+awarding_of_medals_to_cultural_figures_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			ngm_order_of_merit = 1
+		}
+	}
+	modifier = {
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_engineering_research_produces_mult = 0.1
+	}
+	potential = {
+		has_technology = tech_ceremony_theory
+	}
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 400
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 600
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 700
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 800
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				has_civic = civic_ngm_advanced_glory_system
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 600
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 700
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 800
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				has_civic = civic_ngm_advanced_glory_system
+				NOT = {
+					has_technology = tech_ceremony_theory
+				}
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 800
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 900
+			}
+		}
+		else_if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+				has_civic = civic_ngm_advanced_glory_system
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 1000
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				NOT = {
+					has_technology = tech_ceremony_theory_second
+				}
+			}
+			add_resource = {
+				unity = 500
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_civic = civic_national_sacrifice
+				}
+				NOT = {
+					has_civic = civic_ngm_advanced_glory_system
+				}
+				has_technology = tech_ceremony_theory
+				has_technology = tech_ceremony_theory_second
+			}
+			add_resource = {
+				unity = 600
+			}
+		}
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 2
+			has_civic = civic_national_sacrifice
+		}
+		modifier = {
+			factor = 2
+			has_civic = civic_ngm_advanced_glory_system
+		}
+		modifier = {
+			factor = 2
+			has_technology = tech_ceremony_theory
+		}
+		modifier = {
+			factor = 2
+			has_technology = tech_ceremony_theory_second
+		}
+	}
+}

@@ -1,0 +1,25 @@
+#17.青年政治 オール	リーダー寿命-20年	初期リーダー年-5年	研究速度+10%
+trait_ngm_youth_politics = {
+	cost = 0
+	custom_tooltip = Youth_Politics
+	potential_crossbreeding_chance = 0.1
+	opposites = { "trait_ngm_elder_politics" }
+	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE PRESAPIENT LITHOID }
+	initial = no
+	randomized = no
+	leader_age_min = 15
+	leader_age_max = 25
+}
+
+#18.長老政治 オール	リーダー寿命+20年	初期リーダー年+10年	統合力+10%
+trait_ngm_elder_politics = {
+	cost = 0
+	custom_tooltip = Elder_Politics
+	potential_crossbreeding_chance = 0.1
+	opposites = { "trait_ngm_youth_politics" }
+	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE PRESAPIENT LITHOID }
+	initial = no
+	randomized = no
+    leader_age_min = 60
+    leader_age_max = 100
+}

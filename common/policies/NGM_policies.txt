@@ -1,0 +1,754 @@
+#人口政策	Population Policy
+# 人口政策なし
+# 一人っ子政策
+ngm_policies_population_stance = {
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = primitive
+			is_country_type = awakened_marauders
+		}
+		is_homicidal = no		# They have their own variants of this
+	}
+	option = {
+		name = "NAME_population_stance_non_non"		# 人口政策なし
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			population_stance_non_non
+		}
+		ai_weight = {
+			weight = 10
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 0.5
+				has_civic = civic_ngm_kakistocracy
+			}
+			modifier = {
+				factor = 2
+				has_civic = civic_beacon_of_liberty
+			}
+			modifier = {
+				factor = 10
+				has_civic = civic_neoliberalism
+			}
+		}
+	}
+	option = {
+		name = "NAME_one_child"		# 一人っ子政策
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			population_stance_one_child
+		}
+		modifier = {
+			pop_growth_speed = -0.2
+			planet_jobs_alloys_produces_mult = 0.1
+			planet_jobs_physics_research_produces_mult = 0.1
+			planet_jobs_society_research_produces_mult = 0.1
+			planet_jobs_engineering_research_produces_mult = 0.1
+		}
+		ai_weight = {
+			weight = 10
+			# modifier = {
+			# 	factor = 1.5
+			# 	free_housing < 0 
+			# }
+			# modifier = {
+			# 	factor = 2
+			# 	free_housing < -10 
+			# }
+			# modifier = {
+			# 	factor = 6
+			# 	free_housing < -20 
+			# }
+			# modifier = {
+			# 	factor = 0.5
+			# 	free_housing >=10
+			# }
+			# modifier = {
+			# 	factor = 0
+			# 	free_housing >=20
+			# }
+			# Militarist
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_militarist
+			}
+			# Citizen Service
+			modifier = {
+				factor = 1.5
+				has_civic = civic_citizen_service
+			}
+			# 詰め込み教育
+			modifier = {
+				factor = 2.0
+				has_civic = civic_cramming_for_education
+			}
+		}
+	}
+}
+
+# ・公務員任用制度	The civil service appointment system.
+# 猟官制			リーダー雇用費用-50% 市場手数料-7%
+# 混合制			影響力+0.5
+# 資格任用制	布告許容量+1	管理許容量+20
+ngm_policies_civil_service_appointments_system = {
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = primitive
+			is_country_type = awakened_marauders
+		}
+		is_homicidal = no		# They have their own variants of this
+	}
+	option = {
+		name = "NAME_spoils_system"		# 猟官制
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			civil_service_appointments_system_spoils_system
+		}
+		modifier = {
+			leaders_cost_mult = -0.5
+			country_trade_fee = -0.07
+		}
+		ai_weight = {
+			weight = 10
+			# Militarist
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 2.0
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 1.5
+				has_civic = civic_ngm_kakistocracy
+			}
+			modifier = {
+				factor = 1.5
+				has_civic = civic_shadow_council
+			}
+			modifier = {
+				factor = 1.5
+				has_civic = civic_feudal_realm
+			}
+			modifier = {
+				factor = 10
+				has_civic = civic_imperial_cult
+			}
+		}
+	}
+	option = {
+		name = "NAME_hybrid"		# 混合制
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			civil_service_appointments_system_hybrid
+		}
+		modifier = {
+			country_base_influence_produces_add = 0.5
+		}
+		ai_weight = {
+			weight = 10
+			# Materialist
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_materialist
+			}
+			modifier = {
+				factor = 1.25
+				has_civic = civic_parliamentary_system
+			}
+		}
+	}
+	option = {
+		name = "NAME_qualified_appointment_system"		# 資格任用制
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			civil_service_appointments_system_qualified_appointment_system
+		}
+		modifier = {
+			country_edict_cap_add = 1
+			country_admin_cap_add = 20
+		}
+		ai_weight = {
+			weight = 10
+			# Egalitarian
+			modifier = {
+				factor = 5.0
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_egalitarian
+			}
+			modifier = {
+				factor = 2.0
+				has_civic = civic_meritocracy
+			}
+			modifier = {
+				factor = 1.25
+				has_civic = civic_technocracy
+			}
+		}
+	}
+}
+
+# ・納税制度 taxation_system
+# 累進課税制度	Progressive Tax System	統治者幸福度-10%、エネルギー生産量+10%
+# 一般税制度	General tax system
+# 逆進課税制度	Counterproductive taxation system	労働者幸福度-10%、エネルギー生産量+10%
+ngm_policies_taxation_system = {
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = primitive
+			is_country_type = awakened_marauders
+		}
+		is_homicidal = no		# They have their own variants of this
+	}
+	option = {
+		name = "NAME_progressive_tax_system"		# 累進課税制度
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			taxation_system_progressive_tax_system
+		}
+		modifier = {
+			planet_jobs_energy_produces_mult = 0.1
+			pop_cat_ruler_happiness = -0.1
+		}
+		ai_weight = {
+			weight = 10
+			# Egalitarian
+			modifier = {
+				factor = 5.0
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_egalitarian
+			}
+			modifier = {
+				factor = 2.0
+				has_civic = civic_shared_burden
+			}
+		}
+	}
+	option = {
+		name = "NAME_general_tax_system"		# 一般税制度
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			taxation_system_general_tax_system
+		}
+		ai_weight = {
+			weight = 10
+			# Materialist
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_materialist
+			}
+		}
+	}
+	option = {
+		name = "NAME_counterproductive_taxation_system"		# 逆進課税制度
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			taxation_system_counterproductive_taxation_system
+		}
+		modifier = {
+			planet_jobs_energy_produces_mult = 0.1
+			pop_cat_worker_happiness = -0.1
+		}
+		ai_weight = {
+			weight = 10
+			modifier = {
+				factor = 1.5
+				has_civic = civic_ngm_kakistocracy
+			}
+			modifier = {
+				factor = 1.25
+				has_civic = civic_aristocratic_elite
+			}
+			modifier = {
+				factor = 1.25
+				has_civic = civic_corvee_system
+			}
+		}
+	}
+}
+
+# ・文化政策	cultural policy
+# 国家干渉	state_intervention	統治志向魅力+10%、統合力+5%、専門家幸福度-5%
+# 民間主導	private initiative
+# 国家後援	state sponsorship	エネルギー算出-5%、統合力+10%
+# 無秩序の芸術	The Art of Disorder	統治志向魅力-10%、統合力+20%、消費財消費量+10%
+ngm_policies_cultural_policy = {
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = primitive
+			is_country_type = awakened_marauders
+		}
+		is_homicidal = no		# They have their own variants of this
+	}
+	option = {
+		name = "NAME_state_intervention"		# 国家干渉
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			cultural_policy_state_intervention
+		}
+		modifier = {
+			pop_government_ethic_attraction = 0.1
+			pop_cat_specialist_happiness = -0.05
+			planet_jobs_unity_produces_mult = 0.05
+		}
+		ai_weight = {
+			weight = 10
+			# Authoritarian
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_authoritarian
+			}
+			# Militarist
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_militarist
+			}
+			modifier = {
+				factor = 10
+				has_civic = civic_imperial_cult
+			}
+			modifier = {
+				factor = 1.25
+				has_civic = civic_aristocratic_elite
+			}
+		}
+	}
+	option = {
+		name = "NAME_private_initiative"		# 民間主導
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			cultural_policy_private_initiative
+		}
+		ai_weight = {
+			weight = 10
+			# Egalitarian
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_egalitarian
+			}
+		}
+	}
+	option = {
+		name = "NAME_state_sponsorship"		# 国家後援
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			cultural_policy_state_sponsorship
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.1
+			planet_jobs_energy_produces_mult = -0.05
+		}
+		ai_weight = {
+			weight = 10
+			# Authoritarian
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_authoritarian
+			}
+			# Materialist
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_materialist
+			}
+		}
+	}
+	option = {
+		name = "NAME_the_art_of_disorder"		# 無秩序の芸術
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			cultural_policy_the_art_of_disorder
+		}
+		modifier = {
+			pop_government_ethic_attraction = -0.1
+			planet_jobs_unity_produces_mult = 0.2
+			planet_jobs_consumer_goods_upkeep_mult = 0.1
+		}
+		ai_weight = {
+			weight = 10
+			modifier = {
+				factor = 10
+				has_civic = civic_neoliberalism
+			}
+		}
+	}
+}
+
+# ・農業政策	agricultural policy
+# 大規模農家優遇	Large-scale Farmer Preference	食料生産量+20%、労働者幸福度-10%
+# 農業優遇なし		No agricultural incentives
+# 自作農家優遇	preferential treatment for farmers	食料生産量+20%、鉱物生産量-5%
+ngm_policies_agricultural_policy = {
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = primitive
+			is_country_type = awakened_marauders
+		}
+		is_homicidal = no		# They have their own variants of this
+	}
+	option = {
+		name = "NAME_large_scale_farmer_preference"		# 大規模農家優遇
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			agricultural_policy_large_scale_farmer_preference
+		}
+		modifier = {
+			pop_cat_worker_happiness = -0.1
+			planet_jobs_food_produces_mult = 0.2
+		}
+		ai_weight = {
+			weight = 10
+			modifier = {
+				factor = 1.25
+				has_civic = civic_agrarian_idyll
+			}
+		}
+	}
+	option = {
+		name = "NAME_no_agricultural_incentives"		# 農業優遇なし
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			agricultural_policy_no_agricultural_incentives
+		}
+		ai_weight = {
+			weight = 10
+			# Egalitarian
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 1.2
+				has_ethic = ethic_egalitarian
+			}
+			modifier = {
+				factor = 10
+				has_civic = civic_neoliberalism
+			}
+		}
+	}
+	option = {
+		name = "NAME_preferential_treatment_for_farmers"		# 自作農家優遇
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			agricultural_policy_preferential_treatment_for_farmers
+		}
+		modifier = {
+			planet_jobs_food_produces_mult = 0.2
+			planet_jobs_minerals_produces_mult = -0.05
+		}
+		ai_weight = {
+			weight = 10
+		}
+	}
+}
+
+# ・言語政策	language policy
+# 統一言語政策	uniform language policy	交易価値+10%、研究速度+5%、幸福度-10%
+# 共通語政策	common language policy	
+# 母語教育	mother tongue training	統合力+15%、エネルギー消費-5%、研究力-5%
+ngm_policies_language_policy = {
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+			is_country_type = primitive
+			is_country_type = awakened_marauders
+		}
+		is_homicidal = no		# They have their own variants of this
+	}
+	option = {
+		name = "NAME_uniform_language_policy"		# 統一言語政策
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			language_policy_uniform_language_policy
+		}
+		modifier = {
+			trade_value_mult = 0.1
+			pop_happiness = -0.1
+			all_technology_research_speed = 0.05
+		}
+		ai_weight = {
+			weight = 10
+			# Materialist
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_materialist
+			}
+			# Authoritarian
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_authoritarian
+			}
+			modifier = {
+				factor = 10
+				has_civic = civic_imperial_cult
+			}
+		}
+	}
+	option = {
+		name = "NAME_common_language_policy"		# 共通語政策
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			language_policy_common_language_policy
+		}
+		ai_weight = {
+			weight = 10
+			modifier = {
+				factor = 10
+				has_civic = civic_neoliberalism
+			}
+		}
+	}
+	option = {
+		name = "NAME_mother_tongue_training"		# 母語教育
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = primitive
+				is_country_type = awakened_marauders
+			}
+			is_homicidal = no			# They have their own variants of this
+		}
+		policy_flags = {
+			language_policy_mother_tongue_training
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.15
+			all_technology_research_speed = -0.05
+			planet_jobs_energy_produces_mult = -0.05
+		}
+		ai_weight = {
+			weight = 10
+			# Egalitarian
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_egalitarian
+			}
+		}
+	}
+}

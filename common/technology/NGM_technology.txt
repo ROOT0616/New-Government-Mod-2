@@ -1,0 +1,138 @@
+#	式典理論	ceremony_theory	 Tire1
+tech_ceremony_theory = {
+	cost = @tier1cost2
+	area = society
+	tier = 1
+	category = { statecraft }
+	weight = @tier1weight2
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+#	式典理論Ⅱ	ceremony_theory_second	 Tire3
+tech_ceremony_theory_second = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	prerequisites = { "tech_ceremony_theory" }
+	category = { statecraft }
+	weight = @tier3weight1
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+# 高度な地方自治 high_degree_of_local_autonomy (社会学研究)
+tech_ad_high_degree_of_local_autonomy = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = { statecraft }
+	weight = @tier3weight1
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
