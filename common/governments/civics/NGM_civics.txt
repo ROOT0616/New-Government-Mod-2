@@ -464,3 +464,1162 @@ civic_ngm_imaginary_socialism = {
 		trade_value_mult = -0.05
 	}
 }
+
+# 〇ノーマル
+# 円滑な交通 smooth_traffic		亜光移動速度+10%、交易価値+5%
+civic_ngm_smooth_traffic = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 船舶保護プロトコル ship_protection_protocol	回避+20%、緊急FTL時損害-30%、艦船連射レート-10%
+civic_ngm_ship_protection_protocol = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 宙間警備本部 space_security_headquarters		海賊抑止力+5、交易保護値+5、交易価値+5%
+civic_ngm_space_security_headquarters = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 乱脈的出生率 random_birth_rate		Pop成長率+10%、幸福度-5%、住居使用量+5%
+civic_ngm_random_birth_rate = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 貿易国家 trading_nations		交易価値+10%、市場手数料-5%、犯罪度+5
+civic_ngm_trading_nations = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 仮想的社会 virtual_society		幸福度+10%、居住性+5%、Pop成長速度-10%
+civic_ngm_virtual_society = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 健康的習慣 healthy_habits		リーダー寿命+10年、幸福度+5%
+civic_ngm_healthy_habits = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 文化高権 cultural_hegemony		統合力+10%、リーダー取得経験値+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 〇政治制度規定
+# 銀河連邦 federation_of_the_galaxies 	(民主制、受容主義) 派閥影響力収入+10%、リーダー経験値取得+20%、リーダースキル上限+1、行政官の一人を社会的英雄に置換え。	
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+	
+# 環境民主制 environmental_democracy	(民主制、保全主義) 居住性+5%、Pop成長速度+10%、行政官の一人を大自然監督官に置換え。
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 宗教共和制 religious_republicanism 	(民主制、精神主義) 統合力+10%、安定度+5、行政官の一人を大祭司に置換え。
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 人民民主制 peoples_democracy	(民主制、社会主義) Pop幸福度+5%、労働者生産量+5%、行政官の一人を書記に置換え。
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# サイバー民主制 cyberdemocracy	(民主制、物質主義) 研究力+5%、管理許容量+10%、行政官の一人を科学総裁に置換え。
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 貴族共和制 aristocratic_republicanism	(寡頭制、栄望主義) 影響力+0.5、安定度+5、行政官の一人を紋章官に置換え。
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 書記長制 chief_secretary_system	(寡頭制、社会主義) 安定度+10、消費財生産量+5%、合金生産量+5%、行政官の一人を書記に置換え。
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 戦争卿 war_lord		(独裁制、軍国主義) 宿敵の最大数+3、地上軍編成速度-50%、艦隊建造コスト-5%、行政官の一人を高級参謀に置換え。
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 共産独裁制 communist_dictatorship	(独裁制、社会主義) 防衛軍耐久度+20%、労働者生産量+5%、行政官の一人を書記に置換え。
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 衆愚扇動制 demagoguery	(独裁制、実利主義) 安定度+10、行政官の一人を宣撫官に置換え。
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 騎士団 order_of_chivalry		(君主制、軍国主義) 艦船連射レート+5%、地上軍士気+20%、行政官の一人を高級参謀に置換え。
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 名誉帝制 honorary_imperialism	(君主制、栄望主義) 安定度+10、統合力+10%、リーダースキル上限+2、行政官の一人を紋章官に置換え。
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 〇権威
+# 指導者原理 guiding_principle		(狂権威)	影響力+0.5、統治志向魅力+15%、労働者幸福度+5%、専門家幸福度-5%、安定度-5
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 党支配 party_rule			(権威、社会主義)統治志向魅力+10%、布告コスト-10%、労働者生産+5%、安定度-5
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 服従の中の自由 freedom_in_obedience		(権威、受容)	安定度+5、移民流入+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# カースト制度 caste_system		(権威、精神)	市民権がカースト制固定、統治者幸福度+10%、労働者と奴隷Popの生産量+5%、奴隷の割合25%、階級の降下時間+300%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 部族制 tribalism			(権威、排他)	住居使用量-20%、統治志向への魅力+10%、統合力-5%、研究力-10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 宮廷政治 court_politics		(権威、栄望)	影響力+0.5、統治者幸福度+5%、統合力+10%、リーダー雇用コスト+30%、研究力-5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 社会ダーヴィニズム social_darvinism	(狂権威)	影響力+0.5、統合力+10%、研究力+5%、Pop成長速度-10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 徒弟制度 apprenticeship  		(権威、物質)	専門家出力+5%、リーダースキル上限+2、リーダー選択肢-2、労働者幸福度-5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 〇平等主義
+# 直接民主制 direct_democracy 		(民主制、平等主義)			影響力+0.5、布告コスト+20%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 自由主義教育 liberal_education		(平等主義、実利や排他、軍国ではない)	統合力+10%、専門家生産力+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# デモ文化 demonstration_culture		(平等、実利ではない)			影響力+0.5、派閥幸福度+5%、統治志向魅力-5%、安定度-5
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 公開討論会 open_forum 		(平等、実利ではない)			統合力+10%統治志向魅力-5%、派閥幸福度+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 消費社会 consumer_society 		(平等、資本主義)			幸福度+5%、安定度+5、消費財消費+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 社会福祉 social_welfare 		(平等、実利や狂信的資本主義ではない)	労働者幸福度+5%、労働者生産力+5%、犯罪度-5%、消費財消費量+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 宇宙規模の解放 cosmic_scale_liberation 		(平等、軍国)				艦船連射レート+5%、建艦速度+5%、宇宙軍許容量+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 究極の思想的自由 ultimate_freedom_of_thought	(狂信的平等)				管理許容量+30%、安定度-10、統治志向魅力-30%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 個人武装権 right_to_bear_arms 		(平等、軍国)				地上軍ダメージ+30%、地上軍コスト-20%、犯罪発生率+10、犯罪発生率+20%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 〇受容主義
+# 共通価値観 shared_values  	(受容)		統合力+10%、移民流入+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 共に征く go_along_with	(受容)		(防衛戦争時)艦船連射レート+10%、(防衛戦争時)建艦速度+5%、危機に対するダメージ+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# グローバル主義 globalism	(受容、資本主義)交易価値+10%、市場手数料-5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 多文化主義 multiculturalism	(受容、平等)	統合力+10%、Pop成長速度+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 庇護主義 paternalism	(狂信的受容)	属国の友好度+100、属国の受け入れ値+10、艦船連射レート+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 来るものは拒まず accept_everyone (受容)		移民流入+10%、難民政策を無制限許容で固定
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 飛び立つ民衆 people_flying_away	(狂信的受容)	流出圧力+10%、Pop成長速度+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 〇排他主義		
+# 排他的コミュニティ exclusive_community 	(排他)		統合力+5%、安定度+10、交易価値-5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 呵責なき正義 remorseless_justice		(排他、平等)	艦隊連射レート+5%、無制限爆撃以外選択不可、犯罪度-10%、安定度-5、他国友好度-30
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 他者蔑視		(排他)		影響力+0.5、防衛ステーション防衛力+10%、暗号力+5、交易魅力値-100
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 紳士的嫌悪		(排他、栄望)	使節+1、統合力+5%、交易価値+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 痕跡の抹消		(狂排他)	統合力+10%、無制限爆撃以外選択不可、他者痕跡の抹消の開戦事由を取得（総力戦）、異種族を浄化しなくてはならない。		
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 選民思想		(排他、精神)	統合力+10%、安定度+5、精神主義魅力+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 異種族解剖		(排他、物質)	研究力+10%、異種族は強制で奴隷化、他国友好度-100
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 〇軍国主義
+# 帝国主義		(軍国、受容ではない)	請求権作成コスト-20%、前哨地建造コスト-20%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 大艦巨砲主義		(軍国)			船体値+10%、艦船連射レート+10%、宇宙軍許容量+30、回避-10%、亜光速移動速度-10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 軍産複合体 		(軍国、資本主義or実利)	交易保護値+5、20Popあたり兵士+1、兵士が交易価値を1生み出す。
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 戦争経済 		(狂信軍国)		戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+10%、建艦速度+10%。非戦争時の鉱物、合金、交易価値、消費財生産量-20%、建艦速度+20%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 軍事政権		(軍国)			20popにつき兵士+1、兵士により統合力+1、安定度+5、軍国主義への魅力+10%、軍国以外の派閥幸福度-5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 闘争のための闘争 	(狂信軍国)		戦争疲弊-20%、戦時中の合金生産量+10%、軍艦建造コスト-5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 〇平和主義
+# イージスの護り		(平和)		ステーション許容量+5、ステーション防衛+10%、船体値+20%、暗号力+5、艦船連射レート-10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 繁栄主義者		(平和、実利)	労働者生産量+5%、交易価値+10%、平和の期間が1年続くごとに労働者生産量+0.2%、交易価値+0.5%（最大50年分）
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 武装平和主義		(平和、開発)	宇宙軍許容量+10、国内での連射レート+15%、船体値+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 積極的平和主義者	(平和、介入)	使節+1、外交発言力+10%、宇宙軍許容量+20、他国友好度-10
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 平和の使者		(狂平和)	安定度+5、亜光速移動速度+10%、危機に対する攻撃力+20%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 誠実な交渉人		(平和、平等)	使節+1、他国友好度+20
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 〇精神主義
+# 機械信仰		(精神、開発)	精神主義派閥がロボットに怒らなくなる。工学研究+10%、ロボット建造速度+10%、ロボット維持費+5%、ロボットを非合法化できない。ロボットの人権を市民権に固定。
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 伝道者団		(精神、介入)	使節+1、隣国の精神主義魅力+20%、他国友好度-50
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 信仰の擁護者		(精神、軍国)	宇宙軍許容量+20、艦船連射レート+5%、交易価値-5%、影響力+0.2、非精神主義国家友好度-30
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 亀卜（きぼく）		(狂精神)	統合力+20%、幸福度+5%、研究力-10%、精神主義魅力+20%、そのほかの志向魅力-5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 文化の大量消費		(精神、実利)	統合力-10%、安定度+5、幸福度+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+
+# 〇物質
+# AIによる補助政治 	(物質)					統治志向魅力+10%、幸福度+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 機械は友達 		(物質、ゲーム開始後削除不可)		ロボット製造速度+10%、ロボット維持費+10%、ロボットの権利を市民権以外に変更不可
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 未来への渇望		(物質、内向きの成熟を取得していない)	調査速度+20%、アノマリー発見率+10%、アノマリー調査速度+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 実験的物質の発見	(物質、開発)				首都惑星の各戦略資源特性を1つずつ付与
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 産業資本主義		(物質、資本主義、開発主義)		鉱物、合金、消費財+10%、エネルギー通貨+15%、労働者Pop幸福度-10%、専門家Pop幸福度-5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 実験的実践		(狂信的な物質)				研究力+10%、幸福度-10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# AI主導政治		(狂信的な物質：ゲーム開始後削除不可)	統治志向魅力+10%、研究力+10%、安定度-10、幸福度+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+
+# 〇社会主義
+# 社会的平等		(社会、平等)	安定度+10、Pop降下時間-50%、労働者政治力+50%、市場手数料+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 分配主義		(社会、精神)	労働者生産量+10%、労働者政治力+100%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 人民軍			(社会、軍国)	防衛軍士気+20%、防衛軍ダメージ+10%、地上軍維持費-50%、地上軍編成速度+30%、攻撃軍士気-20%、攻撃軍ダメージ-10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 経済的原始主義		(狂社会)	職業によるエネルギーと交易価値-20%、鉱物と農作物+20%、幸福度+20%、消費財消費-50%、市場手数料+30%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 土地の共有		(社会)		住居使用量-10%、農作物と鉱物生産量+10%、居住性-5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 共産主義		(社会、権威)	Pop成長速度+10%、工学研究速度+5%、Pop降下速度-100%、消費財消費量+10%、都市区域維持コスト+20%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+
+# 〇資本主義
+# 開発独裁		(独裁、資本、開発)	建造速度+10%、建造コスト-10%、安定度+5、専門家幸福度-10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 重商主義		(資本)			行政官が交易価値+3を産む、交易価値+10%、市場手数料+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 金融資本主義		(資本)			都市区域が豪商1を産む。交易価値+15%、労働者幸福度-5%、消費財生産量-5%、合金生産量-5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 情報資本主義		(資本、物質)		交易価値+10%、研究力+5%、解読力+5、暗号力-5
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 農業資本主義		(資本、保全)		交易価値+10%、農作物生産+10%、居住性+5%、鉱物生産-5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 究極の規制緩和		(狂資本)		専門家出力+10%、流入圧力+10%、犯罪度+20、犯罪度+15%、労働者幸福度-10%、安定度+10
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+
+# 〇介入主義
+# 攻撃的情報機関		(介入、軍国)	解読力+5、回避+5%、連射レート+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 情報操作		(介入、物質)	解読力+5、暗号力+5、友好度+20
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 高度な暗号技術		(介入)		暗号力+5、研究力+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 外に向けられた眼	(介入、排他)	解読力+5、社会学研究+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 笑顔の仲介者		(介入、平和)	使節+1、取引受諾値+50、交易価値+5%、友好度+20、統治志向魅力-10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 国際的黒幕		(狂介入)	使節+1、暗号力+5、解読力+5、外交発言力+10%、友好度-30
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+
+# 〇中立主義
+# 栄光ある孤立		(中立)		安定度+5、宇宙軍許容量+20
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 防衛的情報機関		(中立、平和)	暗号力+10、研究力+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 内政不干渉		(中立、排他)	安定度+10、統治者幸福度+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 内なる満足感		(狂中立)	幸福度+5%、統合力+20%、研究力-10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 武装中立		(中立、軍国)	ステーション許容量+3、ステーション耐久度+10%、ステーション連射レート+10%、
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 利益代表国		(中立、平和)	使節+1、交易価値+10%、市場手数料-5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+
+# 〇保全主義
+# 環境維持工学		(保全、物質)	居住性+10%、社会学+10%、鉱物生産-5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 害虫駆除		(保全、軍国)	開発主義国家に対して、環境保全の開戦事由を獲得（勝利すると開発主義の志向を保全主義に転向させ、相手を属国化させる。さらに、終戦時に戦争相手へ社会学研究力を自国の3か月分あげる）。
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 自然適応		(狂保全)	社会学+10%、農作物生産+10%、遺伝子改造コスト-25%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 惑星庭園		(保全)		統合力+10%、農業生産量+5%、消費財生産+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 絶滅防止法		(狂保全)	社会学研究+20%、統合力+10%、消費財消費+10%、
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 自然信仰		(保全、精神)	司祭が算出する社会学+1、司祭が居住性+1%を算出、統合力+10%、精神志向魅力+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+
+# 〇開発主義
+# グランド・モニュメント	(開発)							建築物Slot+1、建造物速度+10%、建築物コスト+10%、巨大構造物建造速度-10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 破壊掘削		(狂開発、途中削除不可)					居住性-10%、鉱物生産+30%、粉末生産量+20%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 不可逆的な工業化	(開発)							居住性-5%、合金生産量+10%、消費財生産+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# インフラ建築		(開発)							区域建造速度+10%、区域建造コスト-10%、区域維持コスト+20%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 全国総合開発計画	(開発)							植民速度+25%、植民中維持コスト+10%、建築物スロット+1、巨大構造物建造コスト-10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 惑星規模灌漑		(開発、破壊掘削、不可逆的な工業化を取得していない。)	居住性+10%、農作物生産量+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 惑星改造工学		(開発、物質)						テラフォーミング研究コスト-10%、テラフォーミングコスト-10%、テラフォーミング速度+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+
+# 〇栄望主義
+# 高度な栄典制度		(栄望)		以下略
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 複雑な外交儀礼		(栄望、削除不可)使節+1、影響力+1、消費材消費量+5%、友好度-10
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 栄典交換		(栄望、受容)	統合力+10%、友好度+20、志向転向度+5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 英雄志願部隊		(栄望、軍国)	攻撃軍士気+20%、攻撃軍ダメージ+10%、攻撃軍製造コスト+20%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 独善的な英雄		(栄望、排他)	統合力+20%、艦船連射レート+5%、使節-1
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 称号と敬称の尊重法	(狂栄望)	25Popあたり1の貴族、影響力+1、栄望主義魅力+10%、移民流入-10%、幸福度-5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+
+# 〇実利主義
+# 個人利益至上法		(実利、資本)	エネルギー生産+10%、交易価値+10%、犯罪度+10、犯罪度+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 人権への抵当権		(実利、権威)	安定度+10、奴隷生産量+5%、奴隷購入コスト-10%、幸福度-10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 刑罰の金銭代替		(狂実利)	惑星の犯罪度*1の交易価値を惑星に付与、交易価値+10%、犯罪度+10、犯罪度+10%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 適切な利益誘導		(実利)		安定度+5、エネルギー生産+10%、交易価値+20%、市場手数料-5%、労働者幸福度-5%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 実益の確保		(実利)		外交発言力+10%、艦船連射レート+5%、請求権作成コスト-10%、友好度-10
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 高度生産消費社会	(実利、資本)	労働者生産量+10%、専門家生産量+5%、消費財消費量+20%
+civic_ngm_ = {
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
