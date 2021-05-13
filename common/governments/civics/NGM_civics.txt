@@ -54,14 +54,21 @@ civic_substantive_constitutionalism = {
 	}
 }
 
-#3.ノブレス＝オブリージュ	権威主義	50popあたりの貴族Job+1、幸福度+5％、統合力+10％
+#3.ノブレス＝オブリージュ	栄望主義。社会主義、資本主義ではない	50popあたりの貴族Job+1、幸福度+5％、統合力+10％
 civic_noblesse_oblige = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_authoritarian
-				value = ethic_authoritarian
-				value = ethic_fanatic_authoritarian
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+			NOR = {
+				text = civic_tooltip_not_socialism_or_capitalism
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
 			}
 		}
 	}
@@ -75,11 +82,12 @@ civic_noblesse_oblige = {
 	}
 }
 
-#4.戦力の不保持	狂信的な平和主義	艦隊許容量-80％、消費財、食料生産量+20％、交易保護値+5、使節+1,ステーションダメージ+50％ 経済力からの発言力50％
+#4.戦力の不保持	狂平和、狂中立	艦隊許容量-80％、消費財、食料生産量+20％、交易保護値+5、使節+1,ステーションダメージ+50％ 経済力からの発言力50％
 civic_non_retention_of_force = {
 	possible = {
 		ethics = {
 			value = ethic_fanatic_pacifist
+			value = ethic_fanatic_neutralism
 		}
 	}
 	random_weight = {
@@ -92,8 +100,8 @@ civic_non_retention_of_force = {
 		planet_jobs_consumer_goods_produces_mult = 0.2
 		DIPLO_WEIGHT_ECONOMY_MULT = 0.25
 		country_naval_cap_mult = -0.8
-		shipclass_starbase_damage_mult = 2.0
-		shipclass_military_station_damage_mult = 1.0
+		shipclass_starbase_damage_mult = 2
+		shipclass_military_station_damage_mult = 1
 	}
 }
 
@@ -116,7 +124,6 @@ civic_symbolic_monarchy = {
 		planet_jobs_unity_produces_mult = 0.1
 	}
 }
-
 
 #7.詰め込み教育			物質主義				各研究力+10％、幸福度-10％
 civic_cramming_for_education = {
@@ -163,14 +170,23 @@ civic_lax_building_codes = {
 	}
 }
 
-#10.真実と和解委員会		受容主義				幸福度+10％、統合力+10％、使節+1
+#10.真実と和解委員会		受容主義、中立主義。権威主義、実利主義、狂信的資本主義ではない				幸福度+10％、統合力+10％、使節+1
 civic_truth_and_reconciliation_commission = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_xenophile
+				text = civic_tooltip_xenophile_and_neutralism
 				value = ethic_xenophile
 				value = ethic_fanatic_xenophile
+				value = ethic_neutralism
+				value = ethic_fanatic_neutralism
+			}
+			NOR = {
+				text = civic_tooltip_authoritarian_nor_utilitarianism
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
 			}
 		}
 	}
@@ -205,15 +221,11 @@ civic_national_sacrifice = {
 	}
 }
 
-#12.新自由主義			権威主義でない				交易価値+10％ 合金、消費財生産量+10％、労働者幸福度-20％
+#12.新自由主義			狂資本主義				交易価値+10％ 合金、消費財生産量+10％、労働者幸福度-20％
 civic_neoliberalism = {
 	possible = {
 		ethics = {
-			NOR = {
-				text = civic_tooltip_not_authoritarian
-				value = ethic_authoritarian
-				value = ethic_fanatic_authoritarian
-			}
+			value = ethic_fanatic_capitalism
 		}
 	}
 	random_weight = {
@@ -246,12 +258,19 @@ civic_ngm_manifest_destiny = {
 	}
 }
 
-#14.三権分立 独裁制以外	犯罪度-10%	影響力+1	選挙影響力コスト+100%
+#14.三権分立 寡頭制、独裁制ではない、実利主義ではない）	犯罪度-10%	影響力+1	選挙影響力コスト+100%
 civic_ngm_separation_of_powers = {
 	possible = {
+		ethics = {
+			NOR = {
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+			}
+		}
 		authority = {
-			NOT = {
+			NOR = {
 				value = auth_oligarchic
+				value = auth_dictatorial
 			}
 		}
 	}
@@ -265,12 +284,19 @@ civic_ngm_separation_of_powers = {
 	}
 }
 
-#15.カキストクラシー オール	犯罪度+50%	安定度-10	幸福度-20%	選挙影響力コスト-50%	エネルギー生産量+20%	交易価値+20%	影響力+1
+#15.カキストクラシー 実利主義。社会主義ではない	犯罪度+50%	安定度-10	幸福度-20%	選挙影響力コスト-50%	エネルギー生産量+20%	交易価値+20%	影響力+1
 civic_ngm_kakistocracy = {
 	possible = {
 		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
+			OR = {
+				text = civic_tooltip_utilitarianism
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+			}
+			NOR = {
+				text = civic_tooltip_not_socialism
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
 			}
 		}
 	}
@@ -288,14 +314,21 @@ civic_ngm_kakistocracy = {
 	}
 }
 
-#16.啓蒙主義 受容主義	原地文明啓蒙速度+10%	従属国統合速度+50%	関係改善速度+10%
+#16.啓蒙主義 介入主義、受容主義。実利主義ではない	原地文明啓蒙速度+10%	従属国統合速度+50%	関係改善速度+10%
 civic_ngm_enlightenment = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_xenophile
+				text = civic_tooltip_xenophile_and_interventionism
 				value = ethic_xenophile
 				value = ethic_fanatic_xenophile
+				value = ethic_interventionism
+				value = ethic_fanatic_interventionism
+			}
+			NOR = {
+				text = civic_tooltip_not_utilitarianism
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
 			}
 		}
 	}
@@ -356,14 +389,14 @@ civic_ngm_elder_politics = {
 	}
 }
 
-#19.高度な栄典制度	権威主義のみ	影響力+1	リーダースキル+1	リーダースキル上限+1	リーダー経験値+25%	リーダー雇用費用+50%	リーダー維持費+20%
+#19.高度な栄典制度	栄望主義のみ	影響力+1	リーダースキル+1	リーダースキル上限+1	リーダー経験値+25%	リーダー雇用費用+50%	リーダー維持費+20%
 civic_ngm_advanced_glory_system = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_authoritarian
-				value = ethic_authoritarian
-				value = ethic_fanatic_authoritarian
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
 			}
 		}
 	}
@@ -377,9 +410,6 @@ civic_ngm_advanced_glory_system = {
 		leaders_cost_mult = 0.5
 		leaders_upkeep_mult = 0.2
 	}
-	# every_owned_leader = {
-	# 	add_experience = 200
-	# }
 }
 
 #20.教養主義	物質主義	研究速度+10%	統合力+10%	エネルギー生産-5%	交易価値-5%
@@ -404,14 +434,14 @@ civic_ngm_culturism = {
 	}
 }
 
-#21.空想的社会主義 精神主義以外	快適度+10%	住宅+10%	幸福度+5%	消費財維持費+20%	交易価値-5%
+#21.空想的社会主義 社会主義	快適度+10%	住宅+10%	幸福度+5%	消費財維持費+20%	交易価値-5%
 civic_ngm_imaginary_socialism = {
 	possible = {
 		ethics = {
 			NOR = {
-				text = civic_tooltip_not_spiritualist
-				value = ethic_spiritualist
-				value = ethic_fanatic_spiritualist
+				text = civic_tooltip_not_socialism
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
 			}
 		}
 	}
@@ -427,6 +457,7 @@ civic_ngm_imaginary_socialism = {
 	}
 }
 
+
 # 〇ノーマル
 # 円滑な交通 smooth_traffic		亜光移動速度+10%、交易価値+5%
 civic_ngm_smooth_traffic = {
@@ -438,6 +469,7 @@ civic_ngm_smooth_traffic = {
 		trade_value_mult = 0.05
 	}
 }
+
 # 船舶保護プロトコル ship_protection_protocol	回避+20%、緊急FTL時損害-30%、艦船連射レート-10%
 civic_ngm_ship_protection_protocol = {
 	random_weight = {
@@ -449,6 +481,7 @@ civic_ngm_ship_protection_protocol = {
 		ship_fire_rate_mult = -0.1
 	}
 }
+
 # 宙間警備本部 space_security_headquarters		海賊抑止力+5、交易保護値+5、交易価値+5%
 civic_ngm_space_security_headquarters = {
 	random_weight = {
@@ -461,6 +494,7 @@ civic_ngm_space_security_headquarters = {
 		COUNTRY_COUNTER_ESPIONAGE_MULT = 0.2
 	}
 }
+
 # 乱脈的出生率 random_birth_rate		Pop成長率+10%、幸福度-5%、住居使用量+5%
 civic_ngm_random_birth_rate = {
 	random_weight = {
@@ -472,6 +506,7 @@ civic_ngm_random_birth_rate = {
 		pop_housing_usage_mult = 0.05
 	}
 }
+
 # 貿易国家 trading_nations		交易価値+10%、市場手数料-5%、犯罪度+5
 civic_ngm_trading_nations = {
 	random_weight = {
@@ -483,6 +518,7 @@ civic_ngm_trading_nations = {
 		planet_crime_add = 5
 	}
 }
+
 # 仮想的社会 virtual_society		幸福度+10%、居住性+5%、Pop成長速度-10%
 civic_ngm_virtual_society = {
 	random_weight = {
@@ -494,6 +530,7 @@ civic_ngm_virtual_society = {
 		pop_growth_speed = -0.1
 	}
 }
+
 # 健康的習慣 healthy_habits		リーダー寿命+10年、幸福度+5%
 civic_ngm_healthy_habits = {
 	random_weight = {
@@ -504,6 +541,7 @@ civic_ngm_healthy_habits = {
 		pop_happiness = 0.05
 	}
 }
+
 # 文化高権 cultural_hegemony		統合力+10%、リーダー取得経験値+10%
 civic_ngm_cultural_hegemony = {
 	random_weight = {
@@ -769,16 +807,13 @@ civic_ngm_honorary_imperialism = {
 	}
 }
 
+
 # 〇権威
 # 指導者原理 guiding_principle		(狂権威)	影響力+0.5、統治志向魅力+15%、労働者幸福度+5%、専門家幸福度-5%、安定度-5
 civic_ngm_guiding_principle = {
 	possible = {
 		ethics = {
-			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
-			}
+			value = ethic_fanatic_authoritarian
 		}
 	}
 	random_weight = {
@@ -793,9 +828,11 @@ civic_ngm_party_rule = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_authoritarian_or_socialism
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
 			}
 		}
 	}
@@ -811,9 +848,11 @@ civic_ngm_freedom_in_obedience = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_authoritarian_or_xenophile
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
 			}
 		}
 	}
@@ -829,9 +868,11 @@ civic_ngm_caste_system = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_authoritarian_or_spiritualist
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
 			}
 		}
 	}
@@ -847,9 +888,11 @@ civic_ngm_tribalism = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_authoritarian_or_xenophobe
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
 			}
 		}
 	}
@@ -865,7 +908,9 @@ civic_ngm_court_politics = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
+				text = civic_tooltip_authoritarian_or_honorism
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
 				value = ethic_honorism
 				value = ethic_fanatic_honorism
 			}
@@ -882,11 +927,7 @@ civic_ngm_court_politics = {
 civic_ngm_social_darvinism = {
 	possible = {
 		ethics = {
-			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
-			}
+			value = ethic_fanatic_authoritarian
 		}
 	}
 	random_weight = {
@@ -901,9 +942,11 @@ civic_ngm_apprenticeship = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_authoritarian_or_materialist
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
 			}
 		}
 	}
@@ -916,15 +959,18 @@ civic_ngm_apprenticeship = {
 
 
 # 〇平等主義
-# 直接民主制 direct_democracy 		(民主制、平等主義)			影響力+0.5、布告コスト+20%
+# 直接民主制 direct_democracy 			 (この社会は、市民から直接意見や判断を行うことで政治に市民の意見を最大限反映させようとしている)						(民主制、平等主義)			影響力+0.5、布告コスト+20%
 civic_ngm_direct_democracy = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
 			}
+		}
+		authority = {
+			value = auth_democratic
 		}
 	}
 	random_weight = {
@@ -934,14 +980,22 @@ civic_ngm_direct_democracy = {
 	}
 }
 
-# 自由主義教育 liberal_education		(平等主義、実利や排他、軍国ではない)	統合力+10%、専門家生産力+5%
+# 自由主義教育 liberal_education		 (この社会は教育に力をいれており、自由と博愛に基づくラディカルな内容は世界でも類を見ない。)						(平等主義)（実利や排他、軍国ではない）	統合力+10%、専門家生産力+5%
 civic_ngm_liberal_education = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+			NOR = {
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
 			}
 		}
 	}
@@ -952,12 +1006,18 @@ civic_ngm_liberal_education = {
 	}
 }
 
-# デモ文化 demonstration_culture		(平等、実利ではない)			影響力+0.5、派閥幸福度+5%、統治志向魅力-5%、安定度-5
+# デモ文化 demonstration_culture		 (この社会ではデモの権利が広範に認められており、様々な思想を有する団体や活動家は自分の意見を社会に訴えやすい。)				(平等)(実利、栄望ではない)		影響力+0.5、派閥幸福度+5%、統治志向魅力-5%、安定度-5
 civic_ngm_demonstration_culture = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
+				text = civic_tooltip_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+			NOR = {
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
 				value = ethic_honorism
 				value = ethic_fanatic_honorism
 			}
@@ -970,14 +1030,18 @@ civic_ngm_demonstration_culture = {
 	}
 }
 
-# 公開討論会 open_forum 		(平等、実利ではない)			統合力+10%統治志向魅力-5%、派閥幸福度+5%
+# 公開討論会 open_forum 			 (この社会では、選挙や重大問題が発生すると専門家や政治家等を集めて公開討論会を行う。熟議を重んじるこの社会は様々な問題に対応できる。)	(平等)(実利ではない)			統合力+10%統治志向魅力-5%、派閥幸福度+5%
 civic_ngm_open_forum = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+			NOR = {
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
 			}
 		}
 	}
@@ -988,14 +1052,19 @@ civic_ngm_open_forum = {
 	}
 }
 
-# 消費社会 consumer_society 		(平等、資本主義)			幸福度+5%、安定度+5、消費財消費+10%
+# 消費社会 consumer_society 			 (この社会は大量の消耗品を浪費することで安定的な社会を維持している。)									(平等、資本主義)(狂信的社会主義ではない)			幸福度+5%、安定度+5、消費財消費+10%
 civic_ngm_consumer_society = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+			}
+			NOT = {
+				value = ethic_fanatic_socialism
 			}
 		}
 	}
@@ -1006,14 +1075,19 @@ civic_ngm_consumer_society = {
 	}
 }
 
-# 社会福祉 social_welfare 		(平等、実利や狂信的資本主義ではない)	労働者幸福度+5%、労働者生産力+5%、犯罪度-5%、消費財消費量+10%
+# 社会福祉 social_welfare 			 (この社会は弱者救済に力を入れており、貧困層は手厚い保障を受けることができる体制が整っている。)						(平等)(実利、狂信的資本主義ではない)	労働者幸福度+5%、労働者生産力+5%、犯罪度-5%、消費財消費量+10%
 civic_ngm_social_welfare = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+			NOR = {
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+				value = ethic_fanatic_capitalism
 			}
 		}
 	}
@@ -1024,14 +1098,21 @@ civic_ngm_social_welfare = {
 	}
 }
 
-# 宇宙規模の解放 cosmic_scale_liberation 		(平等、軍国)				艦船連射レート+5%、建艦速度+5%、宇宙軍許容量+10%
+# 宇宙規模の解放 cosmic_scale_liberation 	 (自由というものは自国だけで達成されるものではなく、銀河規模で達成されるべきものである。)						(平等、軍国)(中立ではない)		艦船連射レート+5%、建艦速度+5%、宇宙軍許容量+10%
 civic_ngm_cosmic_scale_liberation = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_egalitarian_and_militarist
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+			NOR = {
+				text = civic_tooltip_not_neutralism
+				value = ethic_neutralism
+				value = ethic_fanatic_neutralism
 			}
 		}
 	}
@@ -1042,15 +1123,11 @@ civic_ngm_cosmic_scale_liberation = {
 	}
 }
 
-# 究極の思想的自由 ultimate_freedom_of_thought	(狂信的平等)				管理許容量+30%、安定度-10、統治志向魅力-30%
+# 究極の思想的自由 ultimate_freedom_of_thought	 (この社会では他者に対する侵害の蓋然性がある思想を除いてあらゆる思想が許容されている。)							(狂信的平等)(ゲーム開始後の追加削除不可)				管理許容量+30%、安定度-10、統治志向魅力-30%
 civic_ngm_ultimate_freedom_of_thought = {
 	possible = {
 		ethics = {
-			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
-			}
+			value = ethic_fanatic_egalitarian
 		}
 	}
 	random_weight = {
@@ -1060,14 +1137,16 @@ civic_ngm_ultimate_freedom_of_thought = {
 	}
 }
 
-# 個人武装権 right_to_bear_arms 		(平等、軍国)				地上軍ダメージ+30%、地上軍コスト-20%、犯罪発生率+10、犯罪発生率+20%
+# 個人武装権 right_to_bear_arms 		 (この社会は個人の自由を守るという崇高な目標のために武装を行う自由を認めている。)							(平等、軍国)				地上軍ダメージ+30%、地上軍コスト-20%、犯罪発生率+10、犯罪発生率+20%
 civic_ngm_right_to_bear_arms = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_egalitarian_and_militarist
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
 			}
 		}
 	}
@@ -1077,6 +1156,7 @@ civic_ngm_right_to_bear_arms = {
 	modifier = {
 	}
 }
+
 
 # 〇受容主義
 # 共通価値観 shared_values  	(受容)		統合力+10%、移民流入+5%
@@ -1084,9 +1164,9 @@ civic_ngm_shared_values = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
 			}
 		}
 	}
@@ -1102,9 +1182,9 @@ civic_ngm_go_along_with = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
 			}
 		}
 	}
@@ -1120,9 +1200,11 @@ civic_ngm_globalism = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_xenophile_and_capitalism
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
 			}
 		}
 	}
@@ -1138,9 +1220,11 @@ civic_ngm_multiculturalism = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_xenophile_and_egalitarian
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
 			}
 		}
 	}
@@ -1155,11 +1239,7 @@ civic_ngm_multiculturalism = {
 civic_ngm_paternalism = {
 	possible = {
 		ethics = {
-			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
-			}
+			value = ethic_fanatic_xenophile
 		}
 	}
 	random_weight = {
@@ -1174,9 +1254,9 @@ civic_ngm_accept_everyone = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
 			}
 		}
 	}
@@ -1191,11 +1271,7 @@ civic_ngm_accept_everyone = {
 civic_ngm_people_flying_away = {
 	possible = {
 		ethics = {
-			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
-			}
+			value = ethic_fanatic_xenophile
 		}
 	}
 	random_weight = {
@@ -1207,14 +1283,16 @@ civic_ngm_people_flying_away = {
 
 
 # 〇排他主義		
-# 排他的コミュニティ exclusive_community 	(排他)		統合力+5%、安定度+10、交易価値-5%
+# 排他的コミュニティ exclusive_community 	(この国の社会は他者に対して非常に排他的で自分たちで独自の世界を築き上げている。)		(排他、権威)	統合力+5%、安定度+10、交易価値-5%
 civic_ngm_exclusive_community = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_xenophobe_and_authoritarian
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
 			}
 		}
 	}
@@ -1225,14 +1303,21 @@ civic_ngm_exclusive_community = {
 	}
 }
 
-# 呵責なき正義 remorseless_justice		(排他、平等)	艦隊連射レート+5%、無制限爆撃以外選択不可、犯罪度-10%、安定度-5、他国友好度-30
+# 呵責なき正義 remorseless_justice		(この国は自国が正義で、他者が悪であると考えており、悪に対しては無制限の苛烈さで対処する。)	(排他、軍国)（実利ではない）	艦隊連射レート+5%、無制限爆撃以外選択不可、犯罪度-10%、安定度-5、他国友好度-30
 civic_ngm_remorseless_justice = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+			NOR = {
+				text = civic_tooltip_not_utilitarianism
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
 			}
 		}
 	}
@@ -1243,14 +1328,19 @@ civic_ngm_remorseless_justice = {
 	}
 }
 
-# 他者蔑視		(排他)		影響力+0.5、防衛ステーション防衛力+10%、暗号力+5、交易魅力値-100
-civic_ngm_ = {
+# 他者蔑視	disdain_for_others		(この国は他国や他者を公然と罵倒し、自尊心を満足させる。)					(排他)（実利ではない）		影響力+0.5、防衛ステーション防衛力+10%、暗号力+5、交易魅力値-100
+civic_ngm_disdain_for_others = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+			NOR = {
+				text = civic_tooltip_not_utilitarianism
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
 			}
 		}
 	}
@@ -1261,14 +1351,21 @@ civic_ngm_ = {
 	}
 }
 
-# 紳士的嫌悪		(排他、栄望)	使節+1、統合力+5%、交易価値+5%
-civic_ngm_ = {
+# 紳士的嫌悪	gentlemanly_disgust		(この国の排他的態度は紳士的で、公然とした罵倒や侮辱はほとんどないが、厳然と他者を拒否する。)	(排他、栄望)（実利ではない）	使節+1、統合力+5%、交易価値+5%
+civic_ngm_gentlemanly_disgust = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
+				text = civic_tooltip_xenophobe_and_honorism
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
 				value = ethic_honorism
 				value = ethic_fanatic_honorism
+			}
+			NOR = {
+				text = civic_tooltip_not_utilitarianism
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
 			}
 		}
 	}
@@ -1279,14 +1376,30 @@ civic_ngm_ = {
 	}
 }
 
-# 痕跡の抹消		(狂排他)	統合力+10%、無制限爆撃以外選択不可、他者痕跡の抹消の開戦事由を取得（総力戦）、異種族を浄化しなくてはならない。		
-civic_ngm_ = {
+# 痕跡の抹消	erasure				(他国はいたが、何処にあったかは知らないね。)							(狂排他)	統合力+10%、無制限爆撃以外選択不可、他者痕跡の抹消の開戦事由を取得（総力戦）、異種族を浄化しなくてはならない。		
+civic_ngm_erasure = {
+	possible = {
+		ethics = {
+			value = ethic_fanatic_xenophobe
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+	}
+}
+
+# 選民思想	elitism				(この社会は神に選ばれており、神の救済を受けることができる自分達以外は下賤であると考えている。)	(排他、精神)	統合力+10%、安定度+5、精神主義魅力+10%
+civic_ngm_elitism = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_xenophobe_and_spiritualist
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
 			}
 		}
 	}
@@ -1297,32 +1410,18 @@ civic_ngm_ = {
 	}
 }
 
-# 選民思想		(排他、精神)	統合力+10%、安定度+5、精神主義魅力+10%
-civic_ngm_ = {
+# 異種族解剖	dissection			(この国家は自らの生物学的知見のために多種族を解剖することや実験を厭わず、顰蹙をかっている。)	(排他、物質or実利)	研究力+10%、異種族は強制で奴隷化、他国友好度-100
+civic_ngm_dissection = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
-			}
-		}
-	}
-	random_weight = {
-		base = 5
-	}
-	modifier = {
-	}
-}
-
-# 異種族解剖		(排他、物質)	研究力+10%、異種族は強制で奴隷化、他国友好度-100
-civic_ngm_ = {
-	possible = {
-		ethics = {
-			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
+				text = civic_tooltip_xenophobe_or_materialist_or_utilitarianism
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
 			}
 		}
 	}
@@ -1335,15 +1434,10 @@ civic_ngm_ = {
 
 
 # 〇軍国主義
-# 帝国主義		(軍国、受容ではない)	請求権作成コスト-20%、前哨地建造コスト-20%
-civic_ngm_ = {
+# 帝国主義	imperialism			(この社会は自らが最も優れた政府だと考えており、国力とその威容を示し、利権を確保するために全力を注いでいる。)	(軍国、受容、中立ではない)	請求権作成コスト-20%、前哨地建造コスト-20%
+civic_ngm_imperialism = {
 	possible = {
 		ethics = {
-			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
-			}
 		}
 	}
 	random_weight = {
@@ -1353,15 +1447,10 @@ civic_ngm_ = {
 	}
 }
 
-# 大艦巨砲主義		(軍国)			船体値+10%、艦船連射レート+10%、宇宙軍許容量+30、回避-10%、亜光速移動速度-10%
-civic_ngm_ = {
+# 大艦巨砲主義	big_ship_policy			(この社会は巨艦が至高であり、巨砲は全てを薙ぎ払うと考えている。）						(軍国)			船体値+10%、艦船連射レート+10%、宇宙軍許容量+30、回避-10%、亜光速移動速度-10%
+civic_ngm_big_ship_policy = {
 	possible = {
 		ethics = {
-			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
-			}
 		}
 	}
 	random_weight = {
@@ -1371,15 +1460,10 @@ civic_ngm_ = {
 	}
 }
 
-# 軍産複合体 		(軍国、資本主義or実利)	交易保護値+5、20Popあたり兵士+1、兵士が交易価値を1生み出す。
-civic_ngm_ = {
+# 軍産複合体 	military_industrial_complex	(この社会は巨大な軍産複合体が大きな力を有しており、軍事政策にも大きな影響を与えている。)			(軍国、資本主義or実利)	交易保護値+5、20Popあたり兵士+1、兵士が交易価値を1生み出す。
+civic_ngm_military_industrial_complex = {
 	possible = {
 		ethics = {
-			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
-			}
 		}
 	}
 	random_weight = {
@@ -1389,15 +1473,10 @@ civic_ngm_ = {
 	}
 }
 
-# 戦争経済 		(狂信軍国)		戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+10%、建艦速度+10%。非戦争時の鉱物、合金、交易価値、消費財生産量-20%、建艦速度+20%
-civic_ngm_ = {
+# 戦争経済 	war_prosperity	 		(この社会の経済は極めて脆弱であるが、戦争が始まると総動員の名の下にあらゆる経済が活性化する。)			(狂信軍国)（中立ではない）		戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+10%、建艦速度+10%。非戦争時の鉱物、合金、交易価値、消費財生産量-20%、建艦速度+20%
+civic_ngm_war_prosperity = {
 	possible = {
 		ethics = {
-			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
-			}
 		}
 	}
 	random_weight = {
@@ -1407,15 +1486,10 @@ civic_ngm_ = {
 	}
 }
 
-# 軍事政権		(軍国)			20popにつき兵士+1、兵士により統合力+1、安定度+5、軍国主義への魅力+10%、軍国以外の派閥幸福度-5%
-civic_ngm_ = {
+# 軍事政権	military_regime			(この社会は職業軍人が政治的中立性を名目に国家運営に強い影響を与えている。)					(軍国)			20popにつき兵士+1、兵士により統合力+1、安定度+5、軍国主義への魅力+10%、軍国以外の派閥幸福度-5%
+civic_ngm_military_regime = {
 	possible = {
 		ethics = {
-			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
-			}
 		}
 	}
 	random_weight = {
@@ -1425,15 +1499,10 @@ civic_ngm_ = {
 	}
 }
 
-# 闘争のための闘争 	(狂信軍国)		戦争疲弊-20%、戦時中の合金生産量+10%、軍艦建造コスト-5%
-civic_ngm_ = {
+# 闘争のための闘争 The_Struggle_for_Struggle	(平和とは戦争と戦争との休憩期間にすぎない。)									(狂信軍国)(ゲーム開始後の追加削除不可)		戦争疲弊-20%、戦時中の合金生産量+10%、軍艦建造コスト-5%
+civic_ngm_The_Struggle_for_Struggle = {
 	possible = {
 		ethics = {
-			OR = {
-				text = civic_tooltip_honorism
-				value = ethic_honorism
-				value = ethic_fanatic_honorism
-			}
 		}
 	}
 	random_weight = {
@@ -1445,8 +1514,12 @@ civic_ngm_ = {
 
 
 # 〇平和主義
-# イージスの護り		(平和)		ステーション許容量+5、ステーション防衛+10%、船体値+20%、暗号力+5、艦船連射レート-10%
-civic_ngm_ = {
+# イージスの護り	aegis_shield(この国は鉄壁の守りを重視しており、この国の要塞を突破することは容易ではない。)(平和)（介入ではない）		ステーション許容量+5、ステーション防衛+10%、船体値+20%、暗号力+5、艦船連射レート-10%
+civic_ngm_aegis_shield = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1454,8 +1527,12 @@ civic_ngm_ = {
 	}
 }
 
-# 繁栄主義者		(平和、実利)	労働者生産量+5%、交易価値+10%、平和の期間が1年続くごとに労働者生産量+0.2%、交易価値+0.5%（最大50年分）
-civic_ngm_ = {
+# 繁栄主義者		prosperity_advocate(この国は戦争ではなく、平和と交易にこそ社会の豊かさと幸福をもたらすと考えている。)(平和、実利)	労働者生産量+5%、交易価値+10%、平和の期間が1年続くごとに労働者生産量+0.2%、交易価値+0.5%（最大50年分）
+civic_ngm_prosperity_advocate = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1463,8 +1540,12 @@ civic_ngm_ = {
 	}
 }
 
-# 武装平和主義		(平和、開発)	宇宙軍許容量+10、国内での連射レート+15%、船体値+10%
-civic_ngm_ = {
+# 武装平和主義		armed_pacifism(この国は平和を保つためには防衛力としての軍が必要であると考えている。)(平和、開発)	宇宙軍許容量+10、国内での連射レート+15%、船体値+10%
+civic_ngm_armed_pacifism = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1472,8 +1553,12 @@ civic_ngm_ = {
 	}
 }
 
-# 積極的平和主義者	(平和、介入)	使節+1、外交発言力+10%、宇宙軍許容量+20、他国友好度-10
-civic_ngm_ = {
+# 積極的平和主義者	active_pacifist(この国は、平和を維持するためには銀河規模で平和を仲介するため他国に関与していくべきだと考えている。)(平和、介入)	使節+1、外交発言力+10%、宇宙軍許容量+20、他国友好度-10
+civic_ngm_active_pacifist = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1481,8 +1566,12 @@ civic_ngm_ = {
 	}
 }
 
-# 平和の使者		(狂平和)	安定度+5、亜光速移動速度+10%、危機に対する攻撃力+20%
-civic_ngm_ = {
+# 平和の使者		messenger_of_peace(この国は、自国の平和だけではなく、他国の平和にも強い関心があり、他国に平和をもたらすため外交力を駆使する。)(狂平和)	安定度+5、亜光速移動速度+10%、危機に対する攻撃力+20%
+civic_ngm_messenger_of_peace = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1490,8 +1579,12 @@ civic_ngm_ = {
 	}
 }
 
-# 誠実な交渉人		(平和、平等)	使節+1、他国友好度+20
-civic_ngm_ = {
+# 誠実な交渉人		good_faith_negotiator(この国は他国から誠実であると考えられており、貿易や外交において信頼を置かれている。)(平和、平等)	使節+1、他国友好度+20
+civic_ngm_good_faith_negotiator = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1501,8 +1594,12 @@ civic_ngm_ = {
 
 
 # 〇精神主義
-# 機械信仰		(精神、開発)	精神主義派閥がロボットに怒らなくなる。工学研究+10%、ロボット建造速度+10%、ロボット維持費+5%、ロボットを非合法化できない。ロボットの人権を市民権に固定。
-civic_ngm_ = {
+# 機械信仰		mechanical_faith(この国の信仰は創作物に向けられており、その究極であるロボットは神と我々を繋ぐ存在であると考えられている。)(精神、開発)(ゲーム開始後の追加削除不可)	精神主義派閥がロボットに怒らなくなる。工学研究+10%、ロボット建造速度+10%、ロボット維持費+5%、ロボットを非合法化できない。ロボットの人権を市民権に固定。
+civic_ngm_mechanical_faith = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1510,8 +1607,12 @@ civic_ngm_ = {
 	}
 }
 
-# 伝道者団		(精神、介入)	使節+1、隣国の精神主義魅力+20%、他国友好度-50
-civic_ngm_ = {
+# 伝道者団		missionary_group(この国の聖職者は熱心であり、他国に対しても自らの信仰を広めることに注力している。)(精神、介入)	使節+1、隣国の精神主義魅力+20%、他国友好度-50
+civic_ngm_missionary_group = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1519,8 +1620,12 @@ civic_ngm_ = {
 	}
 }
 
-# 信仰の擁護者		(精神、軍国)	宇宙軍許容量+20、艦船連射レート+5%、交易価値-5%、影響力+0.2、非精神主義国家友好度-30
-civic_ngm_ = {
+# 信仰の擁護者		defender_of_the_faith(この国の指導者は国家として神を守ることを誓約しており、そのためにはあらゆる犠牲を惜しまない。)(精神、軍国)	宇宙軍許容量+20、艦船連射レート+5%、交易価値-5%、影響力+0.2、非精神主義国家友好度-30
+civic_ngm_defender_of_the_faith = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1528,8 +1633,12 @@ civic_ngm_ = {
 	}
 }
 
-# 亀卜（きぼく）		(狂精神)	統合力+20%、幸福度+5%、研究力-10%、精神主義魅力+20%、そのほかの志向魅力-5%
-civic_ngm_ = {
+# 亀卜（きぼく）	divination(この国では占いにより政治が行われており、奇跡的に現在まで生き残ってきた原始的な体制である。)(狂精神)	統合力+20%、幸福度+5%、研究力-10%、精神主義魅力+20%、そのほかの志向魅力-5%
+civic_ngm_divination = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1537,20 +1646,27 @@ civic_ngm_ = {
 	}
 }
 
-# 文化の大量消費		(精神、実利)	統合力-10%、安定度+5、幸福度+5%
-civic_ngm_ = {
+# 文化の大量消費	cultural_consumption(この国は大量の文化創作物が消費され、人々の精神的ゆとりに良い影響を与えている。)(精神、実利)	統合力-10%、安定度+5、幸福度+5%
+civic_ngm_cultural_consumption = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
 	modifier = {
 	}
 }
-
 
 
 # 〇物質
-# AIによる補助政治 	(物質)					統治志向魅力+10%、幸福度+5%
-civic_ngm_ = {
+# AIによる補助政治 	ai_assistance(この社会は政治的な決定を一部AIに委託しており、官僚は重要事項に集中できる。)(物質)					統治志向魅力+10%、幸福度+5%
+civic_ngm_ai_assistance = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1558,8 +1674,12 @@ civic_ngm_ = {
 	}
 }
 
-# 機械は友達 		(物質、ゲーム開始後削除不可)		ロボット製造速度+10%、ロボット維持費+10%、ロボットの権利を市民権以外に変更不可
-civic_ngm_ = {
+# 機械は友達 		machines_are_our_friends(この社会はロボットに人権が与えられており、街の至る所でロボットと市民が楽しく暮らしている。)(物質、ゲーム開始後削除不可)		ロボット製造速度+10%、ロボット維持費+10%、ロボットの権利を市民権以外に変更不可
+civic_ngm_machines_are_our_friends = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1567,8 +1687,12 @@ civic_ngm_ = {
 	}
 }
 
-# 未来への渇望		(物質、内向きの成熟を取得していない)	調査速度+20%、アノマリー発見率+10%、アノマリー調査速度+10%
-civic_ngm_ = {
+# 未来への渇望		longing_for_the_future(この社会は自らの手で未知を解明し、未来への糸口とすることを目指している。)(物質、内向きの成熟を取得していない)	調査速度+20%、アノマリー発見率+10%、アノマリー調査速度+10%
+civic_ngm_longing_for_the_future = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1576,8 +1700,12 @@ civic_ngm_ = {
 	}
 }
 
-# 実験的物質の発見	(物質、開発)				首都惑星の各戦略資源特性を1つずつ付与
-civic_ngm_ = {
+# 実験的物質の発見	experimental_substance(この社会は自らの手で未知を解明し、未来への糸口とすることを目指している。)(物質、開発)				首都惑星の各戦略資源特性を1つずつ付与
+civic_ngm_experimental_substance = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1585,8 +1713,12 @@ civic_ngm_ = {
 	}
 }
 
-# 産業資本主義		(物質、資本主義、開発主義)		鉱物、合金、消費財+10%、エネルギー通貨+15%、労働者Pop幸福度-10%、専門家Pop幸福度-5%
-civic_ngm_ = {
+# 産業資本主義		industrial_capitalism(開発と研究は社会を活性化させ、より豊かな社会を目指すべきだ！  そのために一部の犠牲は仕方がないことだろう？  経済担当大臣談)(物質、資本主義、開発主義)		鉱物、合金、消費財+10%、エネルギー通貨+15%、労働者Pop幸福度-10%、専門家Pop幸福度-5%
+civic_ngm_industrial_capitalism = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1594,8 +1726,12 @@ civic_ngm_ = {
 	}
 }
 
-# 実験的実践		(狂信的な物質)				研究力+10%、幸福度-10%
-civic_ngm_ = {
+# 実験的実践		experimental_practice(あらゆる実験を日常的に行い、未熟な技術や理論を日常に取り入れた結果、毎日が「パラダイス」である。)(狂信的な物質)				研究力+10%、幸福度-10%
+civic_ngm_experimental_practice = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1603,8 +1739,12 @@ civic_ngm_ = {
 	}
 }
 
-# AI主導政治		(狂信的な物質：ゲーム開始後削除不可)	統治志向魅力+10%、研究力+10%、安定度-10、幸福度+5%
-civic_ngm_ = {
+# AI主導政治		paranoia(市民、貴方は幸福ですか？ マザーコンピュータ談)(狂信的な物質：ゲーム開始後削除不可)	統治志向魅力+10%、研究力+10%、安定度-10、幸福度+5%
+civic_ngm_paranoia = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1614,8 +1754,12 @@ civic_ngm_ = {
 
 
 # 〇社会主義
-# 社会的平等		(社会、平等)	安定度+10、Pop降下時間-50%、労働者政治力+50%、市場手数料+10%
-civic_ngm_ = {
+# 社会的平等		equality_in_society(この国では出自や能力だけではなく、成果による利益も社会の利益として考えられ、経済的な平等が図られている。)(社会、平等)	安定度+10、Pop降下時間-50%、労働者政治力+50%、市場手数料+10%
+civic_ngm_equality_in_society = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1623,8 +1767,12 @@ civic_ngm_ = {
 	}
 }
 
-# 分配主義		(社会、精神)	労働者生産量+10%、労働者政治力+100%
-civic_ngm_ = {
+# 分配主義		sectionalism(この社会は富や地位を含めたあらゆる物が分配され、平等的な制度が実現している。)(社会、精神)	労働者生産量+10%、労働者政治力+100%
+civic_ngm_sectionalism = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1632,8 +1780,12 @@ civic_ngm_ = {
 	}
 }
 
-# 人民軍			(社会、軍国)	防衛軍士気+20%、防衛軍ダメージ+10%、地上軍維持費-50%、地上軍編成速度+30%、攻撃軍士気-20%、攻撃軍ダメージ-10%
-civic_ngm_ = {
+# 人民軍		peoples_army(この国の陸軍は市民からの徴募で成り立っており、質は高くないが凄まじい数の陸軍を展開することが可能である。)(社会、軍国)	防衛軍士気+20%、防衛軍ダメージ+10%、地上軍維持費-50%、地上軍編成速度+30%、攻撃軍士気-20%、攻撃軍ダメージ-10%
+civic_ngm_peoples_army = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1641,8 +1793,12 @@ civic_ngm_ = {
 	}
 }
 
-# 経済的原始主義		(狂社会)	職業によるエネルギーと交易価値-20%、鉱物と農作物+20%、幸福度+20%、消費財消費-50%、市場手数料+30%
-civic_ngm_ = {
+# 経済的原始主義	economic_primitivism(この国の経済はほとんど発展していないか、退化しており極めて原始的で素朴な経済状況である。)(狂社会)(ゲーム開始後の追加削除不可)	職業によるエネルギーと交易価値-20%、鉱物と農作物+20%、幸福度+20%、消費財消費-50%、市場手数料+30%
+civic_ngm_economic_primitivism = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1650,8 +1806,12 @@ civic_ngm_ = {
 	}
 }
 
-# 土地の共有		(社会)		住居使用量-10%、農作物と鉱物生産量+10%、居住性-5%
-civic_ngm_ = {
+# 土地の共有		land_sharing(この国では土地は共同体に帰属しており、土地の私有は認められていない。豊かで重要な土地はすべからく国家が管理している。)(社会)		住居使用量-10%、農作物と鉱物生産量+10%、居住性-5%
+civic_ngm_land_sharing = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1659,8 +1819,12 @@ civic_ngm_ = {
 	}
 }
 
-# 共産主義		(社会、権威)	Pop成長速度+10%、工学研究速度+5%、Pop降下速度-100%、消費財消費量+10%、都市区域維持コスト+20%
-civic_ngm_ = {
+# 共産主義		communism(この国では財産のすべてが共有され、平等な社会が形成されている。)(社会、権威)	Pop成長速度+10%、工学研究速度+5%、Pop降下速度-100%、消費財消費量+10%、都市区域維持コスト+20%
+civic_ngm_communism = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1670,8 +1834,12 @@ civic_ngm_ = {
 
 
 # 〇資本主義
-# 開発独裁		(独裁、資本、開発)	建造速度+10%、建造コスト-10%、安定度+5、専門家幸福度-10%
-civic_ngm_ = {
+# 開発独裁		development_dictatorship(この国では経済発展の為には「政治的安定」が必要であるとして、国民の政治参加を著しく制限し、強権的政策が正当化されている。)(独裁、資本、開発)	建造速度+10%、建造コスト-10%、安定度+5、専門家幸福度-10%
+civic_ngm_development_dictatorship = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1679,8 +1847,12 @@ civic_ngm_ = {
 	}
 }
 
-# 重商主義		(資本)			行政官が交易価値+3を産む、交易価値+10%、市場手数料+5%
-civic_ngm_ = {
+# 重商主義		commercialism(この国では貿易により通貨を蓄えることを重視しており、貿易利潤を求めている。)(資本)			行政官が交易価値+3を産む、交易価値+10%、市場手数料+5%
+civic_ngm_commercialism = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1688,8 +1860,12 @@ civic_ngm_ = {
 	}
 }
 
-# 金融資本主義		(資本)			都市区域が豪商1を産む。交易価値+15%、労働者幸福度-5%、消費財生産量-5%、合金生産量-5%
-civic_ngm_ = {
+# 金融資本主義		financing(この国では金融産業が中心として発展しており、資本家はそれらに投資を続けている。)(資本)			都市区域が豪商1を産む。交易価値+15%、労働者幸福度-5%、消費財生産量-5%、合金生産量-5%
+civic_ngm_financing = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1697,8 +1873,12 @@ civic_ngm_ = {
 	}
 }
 
-# 情報資本主義		(資本、物質)		交易価値+10%、研究力+5%、解読力+5、暗号力-5
-civic_ngm_ = {
+# 情報資本主義		information(この国では情報産業が中心として発展しており、資本家はそれらに投資を続けている。)(資本、物質)		交易価値+10%、研究力+5%、解読力+5、暗号力-5
+civic_ngm_information = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1706,8 +1886,12 @@ civic_ngm_ = {
 	}
 }
 
-# 農業資本主義		(資本、保全)		交易価値+10%、農作物生産+10%、居住性+5%、鉱物生産-5%
-civic_ngm_ = {
+# 農業資本主義		agriculture(この国では農業産業が中心として発展しており、資本家はそれらに投資を続けている。)(資本、保全)		交易価値+10%、農作物生産+10%、居住性+5%、鉱物生産-5%
+civic_ngm_agriculture = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1715,8 +1899,12 @@ civic_ngm_ = {
 	}
 }
 
-# 究極の規制緩和		(狂資本)		専門家出力+10%、流入圧力+10%、犯罪度+20、犯罪度+15%、労働者幸福度-10%、安定度+10
-civic_ngm_ = {
+# 究極の規制緩和	deregulation(この国に経済的規制はほとんど存在せず、自由に各々が活動している。)		(狂資本)(ゲーム開始後の追加削除不可)		専門家出力+10%、流入圧力+10%、犯罪度+20、犯罪度+15%、労働者幸福度-10%、安定度+10
+civic_ngm_deregulation = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1726,8 +1914,12 @@ civic_ngm_ = {
 
 
 # 〇介入主義
-# 攻撃的情報機関		(介入、軍国)	解読力+5、回避+5%、連射レート+5%
-civic_ngm_ = {
+# 攻撃的情報機関	CIA(この国の情報機関は非常に攻撃的で常に他国への介入を画策している。)(介入、軍国)	解読力+5、回避+5%、連射レート+5%
+civic_ngm_CIA = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1735,8 +1927,12 @@ civic_ngm_ = {
 	}
 }
 
-# 情報操作		(介入、物質)	解読力+5、暗号力+5、友好度+20
-civic_ngm_ = {
+# 情報操作		information_operation(この国では自国の印象を良くし、自国の情報を隠蔽するためにシステム的な情報操作が欠かせない。)(介入、物質)	解読力+5、暗号力+5、友好度+20
+civic_ngm_information_operation = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1744,8 +1940,12 @@ civic_ngm_ = {
 	}
 }
 
-# 高度な暗号技術		(介入)		暗号力+5、研究力+5%
-civic_ngm_ = {
+# 高度な暗号技術	cryptography(この国の暗号技術は独特で、他国には理解ができない暗号規則が用いられている。)(介入)		暗号力+5、研究力+5%
+civic_ngm_cryptography = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1753,8 +1953,12 @@ civic_ngm_ = {
 	}
 }
 
-# 外に向けられた眼	(介入、排他)	解読力+5、社会学研究+10%
-civic_ngm_ = {
+# 外に向けられた眼	parabola(この国は自国にあらゆる脅威が向かないよう、また向いてもよいように他国について研究し続けている。)(介入、排他)	解読力+5、社会学研究+10%
+civic_ngm_parabola = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1762,8 +1966,12 @@ civic_ngm_ = {
 	}
 }
 
-# 笑顔の仲介者		(介入、平和)	使節+1、取引受諾値+50、交易価値+5%、友好度+20、統治志向魅力-10%
-civic_ngm_ = {
+# 笑顔の仲介者		smile(この国は銀河の平和をもたらすため、どのような状況でも笑顔で他国と向き合っている。)(介入、平和)	使節+1、取引受諾値+50、交易価値+5%、友好度+20、統治志向魅力-10%
+civic_ngm_smile = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1771,8 +1979,12 @@ civic_ngm_ = {
 	}
 }
 
-# 国際的黒幕		(狂介入)	使節+1、暗号力+5、解読力+5、外交発言力+10%、友好度-30
-civic_ngm_ = {
+# 国際的黒幕		mastermind(さあ、我が掌で踊れ。すべては我らの思いのままに......)(狂介入)(ゲーム開始後の追加削除不可)	使節+1、暗号力+5、解読力+5、外交発言力+10%、友好度-30
+civic_ngm_mastermind = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1782,8 +1994,12 @@ civic_ngm_ = {
 
 
 # 〇中立主義
-# 栄光ある孤立		(中立)		安定度+5、宇宙軍許容量+20
-civic_ngm_ = {
+# 栄光ある孤立		glorious_isolation(我が国が孤立しているのではなく、我が国から世界が孤立しているのである。)(中立)(ゲーム開始後の追加削除不可)		安定度+5、宇宙軍許容量+20
+civic_ngm_glorious_isolation = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1791,8 +2007,12 @@ civic_ngm_ = {
 	}
 }
 
-# 防衛的情報機関		(中立、平和)	暗号力+10、研究力+5%
-civic_ngm_ = {
+# 防衛的情報機関	FBI(この国の情報機関は防諜が主任務であり、多大な予算が組まれている。)(中立、平和)	暗号力+10、研究力+5%
+civic_ngm_FBI = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1800,8 +2020,12 @@ civic_ngm_ = {
 	}
 }
 
-# 内政不干渉		(中立、排他)	安定度+10、統治者幸福度+10%
-civic_ngm_ = {
+# 内政不干渉		internal_affairs(この国は自国に対する内政干渉を許さない代わりとして他国への内政干渉をも嫌う。)(中立、排他)	安定度+10、統治者幸福度+10%
+civic_ngm_internal_affairs = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1809,8 +2033,12 @@ civic_ngm_ = {
 	}
 }
 
-# 内なる満足感		(狂中立)	幸福度+5%、統合力+20%、研究力-10%
-civic_ngm_ = {
+# 内なる満足感		inner_satisfaction(おうちのなかはあんぜんだね)(狂中立)	幸福度+5%、統合力+20%、研究力-10%
+civic_ngm_inner_satisfaction = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1818,8 +2046,12 @@ civic_ngm_ = {
 	}
 }
 
-# 武装中立		(中立、軍国)	ステーション許容量+3、ステーション耐久度+10%、ステーション連射レート+10%、
-civic_ngm_ = {
+# 武装中立		armed_neutrality(真の中立とは、それに伴う武力を必要とするのである。)(中立、軍国)	ステーション許容量+3、ステーション耐久度+10%、ステーション連射レート+10%、
+civic_ngm_armed_neutrality = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1827,8 +2059,12 @@ civic_ngm_ = {
 	}
 }
 
-# 利益代表国		(中立、平和)	使節+1、交易価値+10%、市場手数料-5%
-civic_ngm_ = {
+# 利益代表国		interest_representation(この国は自らの中立性ゆえに他国の代わりに利益代表を務めることがある。それに伴う貿易利益は無視できない。)(中立、平和)	使節+1、交易価値+10%、市場手数料-5%
+civic_ngm_interest_representation = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1838,8 +2074,12 @@ civic_ngm_ = {
 
 
 # 〇保全主義
-# 環境維持工学		(保全、物質)	居住性+10%、社会学+10%、鉱物生産-5%
-civic_ngm_ = {
+# 環境維持工学		environmental_maintenance(この国では乱れた環境を維持するため、あらゆる技術が投入されている。)(保全、物質)	居住性+10%、社会学+10%、鉱物生産-5%
+civic_ngm_environmental_maintenance = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1847,8 +2087,12 @@ civic_ngm_ = {
 	}
 }
 
-# 害虫駆除		(保全、軍国)	開発主義国家に対して、環境保全の開戦事由を獲得（勝利すると開発主義の志向を保全主義に転向させ、相手を属国化させる。さらに、終戦時に戦争相手へ社会学研究力を自国の3か月分あげる）。
-civic_ngm_ = {
+# 害虫駆除		pest_control(きれいな惑星に群がる害虫は駆除されなければならない......益虫である我々以外は)(保全、軍国)	開発主義国家に対して、環境保全の開戦事由を獲得（勝利すると開発主義の志向を保全主義に転向させ、相手を属国化させる。さらに、終戦時に戦争相手へ社会学研究力を自国の3か月分あげる）。
+civic_ngm_pest_control = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1856,8 +2100,12 @@ civic_ngm_ = {
 	}
 }
 
-# 自然適応		(狂保全)	社会学+10%、農作物生産+10%、遺伝子改造コスト-25%
-civic_ngm_ = {
+# 自然適応		natural_adaptation(この国では市民は生物学的な意味で惑星と適応することが求められる。)(狂保全)	社会学+10%、農作物生産+10%、遺伝子改造コスト-25%
+civic_ngm_natural_adaptation = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1865,8 +2113,12 @@ civic_ngm_ = {
 	}
 }
 
-# 惑星庭園		(保全)		統合力+10%、農業生産量+5%、消費財生産+5%
-civic_ngm_ = {
+# 惑星庭園		planetary_garden(この国の惑星は庭園のように整備され、美しい光景が広がっている。)(保全)		統合力+10%、農業生産量+5%、消費財生産+5%
+civic_ngm_planetary_garden = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1874,8 +2126,12 @@ civic_ngm_ = {
 	}
 }
 
-# 絶滅防止法		(狂保全)	社会学研究+20%、統合力+10%、消費財消費+10%、
-civic_ngm_ = {
+# 絶滅防止法		breakdown_prevention_method(この国において、絶滅ということは存在せず、すべての種は保存される。)(狂保全)(ゲーム開始後の追加削除不可)	社会学研究+20%、統合力+10%、消費財消費+10%、
+civic_ngm_breakdown_prevention_method = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1883,8 +2139,12 @@ civic_ngm_ = {
 	}
 }
 
-# 自然信仰		(保全、精神)	司祭が算出する社会学+1、司祭が居住性+1%を算出、統合力+10%、精神志向魅力+10%
-civic_ngm_ = {
+# 自然信仰		nature_faith(自然は神が作りし存在であり、自然には神が宿る。)(保全、精神)	司祭が算出する社会学+1、司祭が居住性+1%を算出、統合力+10%、精神志向魅力+10%
+civic_ngm_nature_faith = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1894,8 +2154,12 @@ civic_ngm_ = {
 
 
 # 〇開発主義
-# グランド・モニュメント	(開発)							建築物Slot+1、建造物速度+10%、建築物コスト+10%、巨大構造物建造速度-10%
-civic_ngm_ = {
+# グランド・モニュメント grand_monument(建築とは自らを表現する至高の物品である。)(開発)							建築物Slot+1、建造物速度+10%、建築物コスト+10%、巨大構造物建造速度-10%
+civic_ngm_grand_monument = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1903,8 +2167,12 @@ civic_ngm_ = {
 	}
 }
 
-# 破壊掘削		(狂開発、途中削除不可)					居住性-10%、鉱物生産+30%、粉末生産量+20%
-civic_ngm_ = {
+# 破壊掘削		destructive_digging(惑星を破壊すれば鉱物ってとれるんじゃないかな？)(狂開発)(ゲーム開始後の追加削除不可)					居住性-10%、鉱物生産+30%、粉末生産量+20%
+civic_ngm_destructive_digging = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1912,8 +2180,12 @@ civic_ngm_ = {
 	}
 }
 
-# 不可逆的な工業化	(開発)							居住性-5%、合金生産量+10%、消費財生産+10%
-civic_ngm_ = {
+# 不可逆的な工業化	irreversible_industrialization(工業化を進めすぎた結果として惑星環境は不可逆的なまでに破壊された（と思い込んでいる）。)(開発)(ゲーム開始後の追加削除不可)							居住性-5%、合金生産量+10%、消費財生産+10%
+civic_ngm_irreversible_industrialization = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1921,8 +2193,12 @@ civic_ngm_ = {
 	}
 }
 
-# インフラ建築		(開発)							区域建造速度+10%、区域建造コスト-10%、区域維持コスト+20%
-civic_ngm_ = {
+# インフラ建築		infrastructure_construction(インフラを構築することによってこの国の根幹は形作られているのである。)(開発)							区域建造速度+10%、区域建造コスト-10%、区域維持コスト+20%
+civic_ngm_infrastructure_construction = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1930,8 +2206,12 @@ civic_ngm_ = {
 	}
 }
 
-# 全国総合開発計画	(開発)							植民速度+25%、植民中維持コスト+10%、建築物スロット+1、巨大構造物建造コスト-10%
-civic_ngm_ = {
+# 全国総合開発計画	nationwide_development(我が国の開発は総合的に行われるべきであり、地方格差は発生させるべきではない。)(開発)							植民速度+25%、植民中維持コスト+10%、建築物スロット+1、巨大構造物建造コスト-10%
+civic_ngm_nationwide_development = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1939,8 +2219,12 @@ civic_ngm_ = {
 	}
 }
 
-# 惑星規模灌漑		(開発、破壊掘削、不可逆的な工業化を取得していない。)	居住性+10%、農作物生産量+10%
-civic_ngm_ = {
+# 惑星規模灌漑		planetary_scale_irrigation(惑星規模で構築された灌漑システムにより、工業的に農業と自然が作られている。)(開発、破壊掘削、不可逆的な工業化を取得していない。)	居住性+10%、農作物生産量+10%
+civic_ngm_planetary_scale_irrigation = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1948,8 +2232,12 @@ civic_ngm_ = {
 	}
 }
 
-# 惑星改造工学		(開発、物質)						テラフォーミング研究コスト-10%、テラフォーミングコスト-10%、テラフォーミング速度+10%
-civic_ngm_ = {
+# 惑星改造工学		modification_engineering(気に入らないなら作り直せばいいじゃない。)(開発、物質)						テラフォーミング研究コスト-10%、テラフォーミングコスト-10%、テラフォーミング速度+10%
+civic_ngm_modification_engineering = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1959,8 +2247,12 @@ civic_ngm_ = {
 
 
 # 〇栄望主義
-# 高度な栄典制度		(栄望)		以下略
-civic_ngm_ = {
+# 複雑な外交儀礼	diplomatic_etiquette(この国の外交官は粘り強く優秀であるが、外交システムにアクセスした場合何十人もの儀礼的な会話を交わし、本題に入るまでに日が変わることすらある。)(栄望、削除不可)使節+1、影響力+1、消費材消費量+5%、友好度-10
+civic_ngm_diplomatic_etiquette = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1968,8 +2260,12 @@ civic_ngm_ = {
 	}
 }
 
-# 複雑な外交儀礼		(栄望、削除不可)使節+1、影響力+1、消費材消費量+5%、友好度-10
-civic_ngm_ = {
+# 栄典交換		exchange_of_honor(この国の高官は自国の栄典のみならず他国の栄典をも欲しがり、他国の高官もそうであろうと考えている。そのため外交業務の何割かが栄典の交換に充てられる。)(栄望、受容)	統合力+10%、友好度+20、志向転向度+5%
+civic_ngm_exchange_of_honor = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1977,8 +2273,12 @@ civic_ngm_ = {
 	}
 }
 
-# 栄典交換		(栄望、受容)	統合力+10%、友好度+20、志向転向度+5%
-civic_ngm_ = {
+# 英雄志願部隊		heroic_volunteer_force(この戦場を生き延びた者こそが英雄である。英雄こそ我らの望むものである。  「帝国先遣降下軍スローガン」)(栄望、軍国)	攻撃軍士気+20%、攻撃軍ダメージ+10%、攻撃軍製造コスト+20%
+civic_ngm_heroic_volunteer_force = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1986,8 +2286,12 @@ civic_ngm_ = {
 	}
 }
 
-# 英雄志願部隊		(栄望、軍国)	攻撃軍士気+20%、攻撃軍ダメージ+10%、攻撃軍製造コスト+20%
-civic_ngm_ = {
+# 独善的な英雄		the_self_righteous_hero(我は英雄ぞ。英雄にはそれにふさわしき待遇を与えるべきである。)(栄望、排他)	統合力+20%、艦船連射レート+5%、使節-1
+civic_ngm_the_self_righteous_hero = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -1995,17 +2299,12 @@ civic_ngm_ = {
 	}
 }
 
-# 独善的な英雄		(栄望、排他)	統合力+20%、艦船連射レート+5%、使節-1
-civic_ngm_ = {
-	random_weight = {
-		base = 5
+# 称号と敬称の尊重法	respect_act(あらゆる称号、肩書を有する者はふさわしき敬称を付けられる。また、称号、肩書、敬称を省略する。もしくは誤ることは重罪である。)(狂栄望)	25Popあたり1の貴族、影響力+1、栄望主義魅力+10%、移民流入-10%、幸福度-5%
+civic_ngm_respect_act = {
+	possible = {
+		ethics = {
+		}
 	}
-	modifier = {
-	}
-}
-
-# 称号と敬称の尊重法	(狂栄望)	25Popあたり1の貴族、影響力+1、栄望主義魅力+10%、移民流入-10%、幸福度-5%
-civic_ngm_ = {
 	random_weight = {
 		base = 5
 	}
@@ -2015,8 +2314,12 @@ civic_ngm_ = {
 
 
 # 〇実利主義
-# 個人利益至上法		(実利、資本)	エネルギー生産+10%、交易価値+10%、犯罪度+10、犯罪度+10%
-civic_ngm_ = {
+# 個人利益至上法	personal_interest(他者を気にしていては自らの利益を最大化することはできない。)(実利、資本)	エネルギー生産+10%、交易価値+10%、犯罪度+10、犯罪度+10%
+civic_ngm_personal_interest = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -2024,8 +2327,12 @@ civic_ngm_ = {
 	}
 }
 
-# 人権への抵当権		(実利、権威)	安定度+10、奴隷生産量+5%、奴隷購入コスト-10%、幸福度-10%
-civic_ngm_ = {
+# 人権への抵当権	hypothecation_of_human_rights(借金の抵当として自分や家族の人権を抵当に充てることが認められている。)(実利、権威)	安定度+10、奴隷生産量+5%、奴隷購入コスト-10%、幸福度-10%
+civic_ngm_hypothecation_of_human_rights = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -2033,8 +2340,12 @@ civic_ngm_ = {
 	}
 }
 
-# 刑罰の金銭代替		(狂実利)	惑星の犯罪度*1の交易価値を惑星に付与、交易価値+10%、犯罪度+10、犯罪度+10%
-civic_ngm_ = {
+# 刑罰の金銭代替	money_penalty(刑罰を金銭で代替することによって国家的な利益を最大化させ、)(狂実利)	惑星の犯罪度*1の交易価値を惑星に付与、交易価値+10%、犯罪度+10、犯罪度+10%
+civic_ngm_money_penalty = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -2042,8 +2353,12 @@ civic_ngm_ = {
 	}
 }
 
-# 適切な利益誘導		(実利)		安定度+5、エネルギー生産+10%、交易価値+20%、市場手数料-5%、労働者幸福度-5%
-civic_ngm_ = {
+# 適切な利益誘導	profit_motive(愚民を誘導するのは容易であり、)(実利)		安定度+5、エネルギー生産+10%、交易価値+20%、市場手数料-5%、労働者幸福度-5%
+civic_ngm_profit_motive = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -2051,8 +2366,12 @@ civic_ngm_ = {
 	}
 }
 
-# 実益の確保		(実利)		外交発言力+10%、艦船連射レート+5%、請求権作成コスト-10%、友好度-10
-civic_ngm_ = {
+# 実益の確保		securing_real_benefits(利益を確保するために最大限の努力を。)(実利)		外交発言力+10%、艦船連射レート+5%、請求権作成コスト-10%、友好度-10
+civic_ngm_securing_real_benefits = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -2060,8 +2379,12 @@ civic_ngm_ = {
 	}
 }
 
-# 高度生産消費社会	(実利、資本)	労働者生産量+10%、専門家生産量+5%、消費財消費量+20%
-civic_ngm_ = {
+# 高度生産消費社会	producer_consumer_society(たくさん作り、たくさん使い、たくさん捨てる。)(実利、資本)	労働者生産量+10%、専門家生産量+5%、消費財消費量+20%
+civic_ngm_producer_consumer_society = {
+	possible = {
+		ethics = {
+		}
+	}
 	random_weight = {
 		base = 5
 	}
