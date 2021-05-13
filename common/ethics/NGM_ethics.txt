@@ -288,9 +288,6 @@ ethic_fanatic_capitalism = {
 	regular_variant = ethic_capitalism
 
 	country_modifier = {
-		pop_cat_ruler_happiness = 0.1
-		trade_value_mult = 0.1
-		pop_cat_worker_happiness = -0.1
 	}
 
 	tags = {
@@ -310,7 +307,6 @@ ethic_capitalism = {
 	fanatic_variant = ethic_fanatic_capitalism
 
 	country_modifier = {
-		pop_cat_worker_happiness = 0.05
 	}
 
 	tags = {
@@ -549,18 +545,16 @@ ethic_capitalism = {
 }
 
 # 〇介入主義：使節+1、解読力+2			狂：関係-30、使節+2、解読力+5	
-ethic_fanatic_socialism = {
+ethic_fanatic_interventionism = {
 	cost = 2
 	category = "col"
 	category_value = 0
 
 	use_for_pops = no
 
-	regular_variant = ethic_socialism
+	regular_variant = ethic_interventionism
 
 	country_modifier = {
-		pop_cat_worker_happiness = 0.1
-		pop_cat_ruler_happiness = -0.05
 	}
 
 	tags = {
@@ -573,15 +567,14 @@ ethic_fanatic_socialism = {
 	}
 }
 
-ethic_socialism = {
+ethic_interventionism = {
 	cost = 1
 	category = "col"
 	category_value = 1
 
-	fanatic_variant = ethic_fanatic_socialism
+	fanatic_variant = ethic_fanatic_interventionism
 
 	country_modifier = {
-		pop_cat_worker_happiness = 0.05
 	}
 
 	tags = {
@@ -595,11 +588,11 @@ ethic_socialism = {
 	}
 
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_SOCIALISM_POS
+		desc = POP_ATTRACTION_INTERVENTIONISM_POS
 		trigger = {
 			OR = {
-				has_ethic = ethic_socialism
-				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_interventionism
+				has_ethic = ethic_fanatic_interventionism
 			}
 		}
 	}
@@ -608,8 +601,8 @@ ethic_socialism = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
 			NOR = {
-				has_ethic = ethic_socialism
-				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_interventionism
+				has_ethic = ethic_fanatic_interventionism
 			}
 			has_faction = totalitarian
 		}
@@ -691,8 +684,8 @@ ethic_socialism = {
 			factor = 0
 			NOR = {
 				is_country_type = default
-				has_ethic = ethic_socialism
-				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_interventionism
+				has_ethic = ethic_fanatic_interventionism
 				AND = {
 					is_country_type = primitive
 					capital_scope = {
@@ -702,8 +695,8 @@ ethic_socialism = {
 						}
 						observation_outpost_owner = {
 							OR = {
-								has_ethic = ethic_fanatic_socialism
-								has_ethic = ethic_socialism
+								has_ethic = ethic_fanatic_interventionism
+								has_ethic = ethic_interventionism
 							}
 						}
 					}
@@ -719,7 +712,7 @@ ethic_socialism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_socialism }
+				observation_outpost_owner = { has_ethic = ethic_fanatic_interventionism }
 			}
 		}
 		modifier = {
@@ -730,14 +723,14 @@ ethic_socialism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_socialism }
+				observation_outpost_owner = { has_ethic = ethic_interventionism }
 			}
 		}
 		modifier = {
 			factor = 2
 			NOR = {
-				has_ethic = ethic_socialism
-				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_interventionism
+				has_ethic = ethic_fanatic_interventionism
 			}
 			has_faction = totalitarian
 		}
@@ -755,11 +748,11 @@ ethic_socialism = {
 		}
 		modifier = {
 			factor = 2
-			has_ethic = ethic_socialism
+			has_ethic = ethic_interventionism
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_socialism
+			has_ethic = ethic_fanatic_interventionism
 		}
 		modifier = {
 			factor = 1.25
@@ -822,19 +815,16 @@ ethic_socialism = {
 
 # 〇中立主義：関係+20、暗号力+5	狂：連邦結束度月-5、関係+50、暗号力+10（対外）
 
-ethic_fanatic_capitalism = {
+ethic_fanatic_neutralism = {
 	cost = 2
 	category = "col"
 	category_value = 4
 
 	use_for_pops = no
 
-	regular_variant = ethic_capitalism
+	regular_variant = ethic_neutralism
 
 	country_modifier = {
-		pop_cat_ruler_happiness = 0.1
-		trade_value_mult = 0.1
-		pop_cat_worker_happiness = -0.1
 	}
 
 	tags = {
@@ -846,15 +836,14 @@ ethic_fanatic_capitalism = {
 	}
 }
 
-ethic_capitalism = {
+ethic_neutralism = {
 	cost = 1
 	category = "col"
 	category_value = 3
 
-	fanatic_variant = ethic_fanatic_capitalism
+	fanatic_variant = ethic_fanatic_neutralism
 
 	country_modifier = {
-		pop_cat_worker_happiness = 0.05
 	}
 
 	tags = {
@@ -867,11 +856,11 @@ ethic_capitalism = {
 	}
 
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_CAPITALISM_POS
+		desc = POP_ATTRACTION_NEUTRALISM_POS
 		trigger = {
 			OR = {
-				has_ethic = ethic_capitalism
-				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_neutralism
+				has_ethic = ethic_fanatic_neutralism
 			}
 		}
 	}
@@ -880,8 +869,8 @@ ethic_capitalism = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
 			NOR = {
-				has_ethic = ethic_capitalism
-				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_neutralism
+				has_ethic = ethic_fanatic_neutralism
 			}
 			has_faction = totalitarian
 		}
@@ -963,8 +952,8 @@ ethic_capitalism = {
 			factor = 0
 			NOR = {
 				is_country_type = default
-				has_ethic = ethic_capitalism
-				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_neutralism
+				has_ethic = ethic_fanatic_neutralism
 				AND = {
 					is_country_type = primitive
 					capital_scope = {
@@ -974,8 +963,8 @@ ethic_capitalism = {
 						}
 						observation_outpost_owner = {
 							OR = {
-								has_ethic = ethic_fanatic_capitalism
-								has_ethic = ethic_capitalism
+								has_ethic = ethic_fanatic_neutralism
+								has_ethic = ethic_neutralism
 							}
 						}
 					}
@@ -991,7 +980,7 @@ ethic_capitalism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_capitalism }
+				observation_outpost_owner = { has_ethic = ethic_fanatic_neutralism }
 			}
 		}
 		modifier = {
@@ -1002,14 +991,14 @@ ethic_capitalism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_capitalism }
+				observation_outpost_owner = { has_ethic = ethic_neutralism }
 			}
 		}
 		modifier = {
 			factor = 2
 			NOR = {
-				has_ethic = ethic_capitalism
-				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_neutralism
+				has_ethic = ethic_fanatic_neutralism
 			}
 			has_faction = totalitarian
 		}
@@ -1027,11 +1016,11 @@ ethic_capitalism = {
 		}
 		modifier = {
 			factor = 2
-			has_ethic = ethic_capitalism
+			has_ethic = ethic_neutralism
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_capitalism
+			has_ethic = ethic_fanatic_neutralism
 		}
 		modifier = {
 			factor = 1.25
@@ -1093,18 +1082,16 @@ ethic_capitalism = {
 }
 
 # 〇保全主義：居住性＋5%、農業生産量+10%  	狂：居住性+10%、農業生産量+20%、鉱物生産量-10%	
-ethic_fanatic_socialism = {
+ethic_fanatic_conservationism = {
 	cost = 2
 	category = "col"
 	category_value = 0
 
 	use_for_pops = no
 
-	regular_variant = ethic_socialism
+	regular_variant = ethic_conservationism
 
 	country_modifier = {
-		pop_cat_worker_happiness = 0.1
-		pop_cat_ruler_happiness = -0.05
 	}
 
 	tags = {
@@ -1117,15 +1104,14 @@ ethic_fanatic_socialism = {
 	}
 }
 
-ethic_socialism = {
+ethic_conservationism = {
 	cost = 1
 	category = "col"
 	category_value = 1
 
-	fanatic_variant = ethic_fanatic_socialism
+	fanatic_variant = ethic_fanatic_conservationism
 
 	country_modifier = {
-		pop_cat_worker_happiness = 0.05
 	}
 
 	tags = {
@@ -1139,11 +1125,11 @@ ethic_socialism = {
 	}
 
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_SOCIALISM_POS
+		desc = POP_ATTRACTION_CONSERVATIONISM_POS
 		trigger = {
 			OR = {
-				has_ethic = ethic_socialism
-				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_conservationism
+				has_ethic = ethic_fanatic_conservationism
 			}
 		}
 	}
@@ -1152,8 +1138,8 @@ ethic_socialism = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
 			NOR = {
-				has_ethic = ethic_socialism
-				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_conservationism
+				has_ethic = ethic_fanatic_conservationism
 			}
 			has_faction = totalitarian
 		}
@@ -1235,8 +1221,8 @@ ethic_socialism = {
 			factor = 0
 			NOR = {
 				is_country_type = default
-				has_ethic = ethic_socialism
-				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_conservationism
+				has_ethic = ethic_fanatic_conservationism
 				AND = {
 					is_country_type = primitive
 					capital_scope = {
@@ -1246,8 +1232,8 @@ ethic_socialism = {
 						}
 						observation_outpost_owner = {
 							OR = {
-								has_ethic = ethic_fanatic_socialism
-								has_ethic = ethic_socialism
+								has_ethic = ethic_fanatic_conservationism
+								has_ethic = ethic_conservationism
 							}
 						}
 					}
@@ -1263,7 +1249,7 @@ ethic_socialism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_socialism }
+				observation_outpost_owner = { has_ethic = ethic_fanatic_conservationism }
 			}
 		}
 		modifier = {
@@ -1274,14 +1260,14 @@ ethic_socialism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_socialism }
+				observation_outpost_owner = { has_ethic = ethic_conservationism }
 			}
 		}
 		modifier = {
 			factor = 2
 			NOR = {
-				has_ethic = ethic_socialism
-				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_conservationism
+				has_ethic = ethic_fanatic_conservationism
 			}
 			has_faction = totalitarian
 		}
@@ -1299,11 +1285,11 @@ ethic_socialism = {
 		}
 		modifier = {
 			factor = 2
-			has_ethic = ethic_socialism
+			has_ethic = ethic_conservationism
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_socialism
+			has_ethic = ethic_fanatic_conservationism
 		}
 		modifier = {
 			factor = 1.25
@@ -1365,19 +1351,16 @@ ethic_socialism = {
 }
 
 # 〇開発主義：鉱物生産+5%、建築スロット＋2    狂：鉱物生産+10%、建築スロット+2、区域建造速度+10%、居住性-5%
-ethic_fanatic_capitalism = {
+ethic_fanatic_developmentalism = {
 	cost = 2
 	category = "col"
 	category_value = 4
 
 	use_for_pops = no
 
-	regular_variant = ethic_capitalism
+	regular_variant = ethic_developmentalism
 
 	country_modifier = {
-		pop_cat_ruler_happiness = 0.1
-		trade_value_mult = 0.1
-		pop_cat_worker_happiness = -0.1
 	}
 
 	tags = {
@@ -1389,15 +1372,14 @@ ethic_fanatic_capitalism = {
 	}
 }
 
-ethic_capitalism = {
+ethic_developmentalism = {
 	cost = 1
 	category = "col"
 	category_value = 3
 
-	fanatic_variant = ethic_fanatic_capitalism
+	fanatic_variant = ethic_fanatic_developmentalism
 
 	country_modifier = {
-		pop_cat_worker_happiness = 0.05
 	}
 
 	tags = {
@@ -1410,11 +1392,11 @@ ethic_capitalism = {
 	}
 
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_CAPITALISM_POS
+		desc = POP_ATTRACTION_DEVELOPMENTALISM_POS
 		trigger = {
 			OR = {
-				has_ethic = ethic_capitalism
-				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_developmentalism
+				has_ethic = ethic_fanatic_developmentalism
 			}
 		}
 	}
@@ -1423,8 +1405,8 @@ ethic_capitalism = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
 			NOR = {
-				has_ethic = ethic_capitalism
-				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_developmentalism
+				has_ethic = ethic_fanatic_developmentalism
 			}
 			has_faction = totalitarian
 		}
@@ -1506,8 +1488,8 @@ ethic_capitalism = {
 			factor = 0
 			NOR = {
 				is_country_type = default
-				has_ethic = ethic_capitalism
-				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_developmentalism
+				has_ethic = ethic_fanatic_developmentalism
 				AND = {
 					is_country_type = primitive
 					capital_scope = {
@@ -1517,8 +1499,8 @@ ethic_capitalism = {
 						}
 						observation_outpost_owner = {
 							OR = {
-								has_ethic = ethic_fanatic_capitalism
-								has_ethic = ethic_capitalism
+								has_ethic = ethic_fanatic_developmentalism
+								has_ethic = ethic_developmentalism
 							}
 						}
 					}
@@ -1534,7 +1516,7 @@ ethic_capitalism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_capitalism }
+				observation_outpost_owner = { has_ethic = ethic_fanatic_developmentalism }
 			}
 		}
 		modifier = {
@@ -1545,14 +1527,14 @@ ethic_capitalism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_capitalism }
+				observation_outpost_owner = { has_ethic = ethic_developmentalism }
 			}
 		}
 		modifier = {
 			factor = 2
 			NOR = {
-				has_ethic = ethic_capitalism
-				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_developmentalism
+				has_ethic = ethic_fanatic_developmentalism
 			}
 			has_faction = totalitarian
 		}
@@ -1570,11 +1552,11 @@ ethic_capitalism = {
 		}
 		modifier = {
 			factor = 2
-			has_ethic = ethic_capitalism
+			has_ethic = ethic_developmentalism
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_capitalism
+			has_ethic = ethic_fanatic_developmentalism
 		}
 		modifier = {
 			factor = 1.25
@@ -1637,18 +1619,16 @@ ethic_capitalism = {
 
 # 〇栄望主義：Pop30あたり貴族職業枠＋1、統治者の幸福度＋10%、開戦自由「名誉にかけて」勝利時影響力＋100  狂：Pop20あたり貴族職業枠＋1、統治者の幸福度＋20%、戦争疲弊-20%、
 # 開戦自由「名誉にかけて」勝利時影響力＋100、
-ethic_fanatic_socialism = {
+ethic_fanatic_honorism = {
 	cost = 2
 	category = "col"
 	category_value = 0
 
 	use_for_pops = no
 
-	regular_variant = ethic_socialism
+	regular_variant = ethic_honorism
 
 	country_modifier = {
-		pop_cat_worker_happiness = 0.1
-		pop_cat_ruler_happiness = -0.05
 	}
 
 	tags = {
@@ -1661,15 +1641,14 @@ ethic_fanatic_socialism = {
 	}
 }
 
-ethic_socialism = {
+ethic_honorism = {
 	cost = 1
 	category = "col"
 	category_value = 1
 
-	fanatic_variant = ethic_fanatic_socialism
+	fanatic_variant = ethic_fanatic_honorism
 
 	country_modifier = {
-		pop_cat_worker_happiness = 0.05
 	}
 
 	tags = {
@@ -1683,11 +1662,11 @@ ethic_socialism = {
 	}
 
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_SOCIALISM_POS
+		desc = POP_ATTRACTION_HONORISM_POS
 		trigger = {
 			OR = {
-				has_ethic = ethic_socialism
-				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_honorism
+				has_ethic = ethic_fanatic_honorism
 			}
 		}
 	}
@@ -1696,8 +1675,8 @@ ethic_socialism = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
 			NOR = {
-				has_ethic = ethic_socialism
-				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_honorism
+				has_ethic = ethic_fanatic_honorism
 			}
 			has_faction = totalitarian
 		}
@@ -1779,8 +1758,8 @@ ethic_socialism = {
 			factor = 0
 			NOR = {
 				is_country_type = default
-				has_ethic = ethic_socialism
-				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_honorism
+				has_ethic = ethic_fanatic_honorism
 				AND = {
 					is_country_type = primitive
 					capital_scope = {
@@ -1790,8 +1769,8 @@ ethic_socialism = {
 						}
 						observation_outpost_owner = {
 							OR = {
-								has_ethic = ethic_fanatic_socialism
-								has_ethic = ethic_socialism
+								has_ethic = ethic_fanatic_honorism
+								has_ethic = ethic_honorism
 							}
 						}
 					}
@@ -1807,7 +1786,7 @@ ethic_socialism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_socialism }
+				observation_outpost_owner = { has_ethic = ethic_fanatic_honorism }
 			}
 		}
 		modifier = {
@@ -1818,14 +1797,14 @@ ethic_socialism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_socialism }
+				observation_outpost_owner = { has_ethic = ethic_honorism }
 			}
 		}
 		modifier = {
 			factor = 2
 			NOR = {
-				has_ethic = ethic_socialism
-				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_honorism
+				has_ethic = ethic_fanatic_honorism
 			}
 			has_faction = totalitarian
 		}
@@ -1843,11 +1822,11 @@ ethic_socialism = {
 		}
 		modifier = {
 			factor = 2
-			has_ethic = ethic_socialism
+			has_ethic = ethic_honorism
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_socialism
+			has_ethic = ethic_fanatic_honorism
 		}
 		modifier = {
 			factor = 1.25
@@ -1910,19 +1889,16 @@ ethic_socialism = {
 
 # 	〇実利主義  奴隷の使用許可、30Popあたりインフルエンサー職業枠+1、奴隷の購入コスト-10%    狂：奴隷の使用許可、20Popあたりインフルエンサー職業枠+1、奴隷購入コスト-20%、
 # 戦時中の艦隊製造速度+10%（思想）
-ethic_fanatic_capitalism = {
+ethic_fanatic_utilitarianism = {
 	cost = 2
 	category = "col"
 	category_value = 4
 
 	use_for_pops = no
 
-	regular_variant = ethic_capitalism
+	regular_variant = ethic_utilitarianism
 
 	country_modifier = {
-		pop_cat_ruler_happiness = 0.1
-		trade_value_mult = 0.1
-		pop_cat_worker_happiness = -0.1
 	}
 
 	tags = {
@@ -1934,15 +1910,14 @@ ethic_fanatic_capitalism = {
 	}
 }
 
-ethic_capitalism = {
+ethic_utilitarianism = {
 	cost = 1
 	category = "col"
 	category_value = 3
 
-	fanatic_variant = ethic_fanatic_capitalism
+	fanatic_variant = ethic_fanatic_utilitarianism
 
 	country_modifier = {
-		pop_cat_worker_happiness = 0.05
 	}
 
 	tags = {
@@ -1955,11 +1930,11 @@ ethic_capitalism = {
 	}
 
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_CAPITALISM_POS
+		desc = POP_ATTRACTION_UTILITARIANISM_POS
 		trigger = {
 			OR = {
-				has_ethic = ethic_capitalism
-				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
 			}
 		}
 	}
@@ -1968,8 +1943,8 @@ ethic_capitalism = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
 			NOR = {
-				has_ethic = ethic_capitalism
-				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
 			}
 			has_faction = totalitarian
 		}
@@ -2051,8 +2026,8 @@ ethic_capitalism = {
 			factor = 0
 			NOR = {
 				is_country_type = default
-				has_ethic = ethic_capitalism
-				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
 				AND = {
 					is_country_type = primitive
 					capital_scope = {
@@ -2062,8 +2037,8 @@ ethic_capitalism = {
 						}
 						observation_outpost_owner = {
 							OR = {
-								has_ethic = ethic_fanatic_capitalism
-								has_ethic = ethic_capitalism
+								has_ethic = ethic_fanatic_utilitarianism
+								has_ethic = ethic_utilitarianism
 							}
 						}
 					}
@@ -2079,7 +2054,7 @@ ethic_capitalism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_capitalism }
+				observation_outpost_owner = { has_ethic = ethic_fanatic_utilitarianism }
 			}
 		}
 		modifier = {
@@ -2090,14 +2065,14 @@ ethic_capitalism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_capitalism }
+				observation_outpost_owner = { has_ethic = ethic_utilitarianism }
 			}
 		}
 		modifier = {
 			factor = 2
 			NOR = {
-				has_ethic = ethic_capitalism
-				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
 			}
 			has_faction = totalitarian
 		}
@@ -2115,11 +2090,11 @@ ethic_capitalism = {
 		}
 		modifier = {
 			factor = 2
-			has_ethic = ethic_capitalism
+			has_ethic = ethic_utilitarianism
 		}
 		modifier = {
 			factor = 3
-			has_ethic = ethic_fanatic_capitalism
+			has_ethic = ethic_fanatic_utilitarianism
 		}
 		modifier = {
 			factor = 1.25

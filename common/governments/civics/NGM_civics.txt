@@ -117,26 +117,6 @@ civic_symbolic_monarchy = {
 	}
 }
 
-# #6.一人っ子政策	権威主義	Pop成長率-20％、各研究力+10％、合金生産+10％
-# civic_one_child_policy = {
-# 	possible = {
-# 		ethics = {
-# 			OR = { 
-# 				text = civic_tooltip_authoritarian
-# 				value =  ethic_authoritarian
-# 				value =  ethic_fanatic_authoritarian
-# 			}
-# 		}
-# 	}
-# 	random_weight = { base = 5 }
-# 	modifier = {
-# 	pop_growth_speed = -0.2
-# 	planet_jobs_alloys_produces_mult = 0.1
-# 	planet_jobs_physics_research_produces_mult = 0.1
-# 	planet_jobs_society_research_produces_mult = 0.1
-# 	planet_jobs_engineering_research_produces_mult = 0.1
-# 	}
-# }
 
 #7.詰め込み教育			物質主義				各研究力+10％、幸福度-10％
 civic_cramming_for_education = {
@@ -183,24 +163,6 @@ civic_lax_building_codes = {
 	}
 }
 
-# 9.宣教師			精神主義				隣国の志向を精神主義へ？
-# civic_ = {
-# 	potential = {
-# 		ethics = { NOT = {  value = ethic_egalitarian } }
-# 	}
-# 	possible = {
-# 		ethics = {
-# 			OR = { 
-# 				text = civic_tooltip_materialist
-# 				value =  ethic_materialist
-# 				value =  ethic_fanatic_materialist
-# 			}
-# 		}
-# 	}
-# 	random_weight = { base = 5 }
-# 	modifier = {
-# 	}
-# }
 #10.真実と和解委員会		受容主義				幸福度+10％、統合力+10％、使節+1
 civic_truth_and_reconciliation_commission = {
 	possible = {
@@ -472,84 +434,124 @@ civic_ngm_smooth_traffic = {
 		base = 5
 	}
 	modifier = {
+		ship_speed_mult = 0.1
+		trade_value_mult = 0.05
 	}
 }
-
 # 船舶保護プロトコル ship_protection_protocol	回避+20%、緊急FTL時損害-30%、艦船連射レート-10%
 civic_ngm_ship_protection_protocol = {
 	random_weight = {
 		base = 5
 	}
 	modifier = {
+		ship_evasion_mult = 0.2
+		ship_emergency_ftl_mult = -0.3
+		ship_fire_rate_mult = -0.1
 	}
 }
-
 # 宙間警備本部 space_security_headquarters		海賊抑止力+5、交易保護値+5、交易価値+5%
 civic_ngm_space_security_headquarters = {
 	random_weight = {
 		base = 5
 	}
 	modifier = {
+		ship_piracy_suppression_add = 5
+		local_trade_protection_add = 5
+		trade_value_mult = 0.05
+		COUNTRY_COUNTER_ESPIONAGE_MULT = 0.2
 	}
 }
-
 # 乱脈的出生率 random_birth_rate		Pop成長率+10%、幸福度-5%、住居使用量+5%
 civic_ngm_random_birth_rate = {
 	random_weight = {
 		base = 5
 	}
 	modifier = {
+		pop_growth_speed = 0.1
+		pop_happiness = -0.05
+		pop_housing_usage_mult = 0.05
 	}
 }
-
 # 貿易国家 trading_nations		交易価値+10%、市場手数料-5%、犯罪度+5
 civic_ngm_trading_nations = {
 	random_weight = {
 		base = 5
 	}
 	modifier = {
+		trade_value_mult = 0.1
+		country_trade_fee = -0.05
+		planet_crime_add = 5
 	}
 }
-
 # 仮想的社会 virtual_society		幸福度+10%、居住性+5%、Pop成長速度-10%
 civic_ngm_virtual_society = {
 	random_weight = {
 		base = 5
 	}
 	modifier = {
+		pop_happiness = 0.1
+		pop_habitability = 0.05
+		pop_growth_speed = -0.1
 	}
 }
-
 # 健康的習慣 healthy_habits		リーダー寿命+10年、幸福度+5%
 civic_ngm_healthy_habits = {
 	random_weight = {
 		base = 5
 	}
 	modifier = {
+		leader_age = 10
+		pop_happiness = 0.05
 	}
 }
-
 # 文化高権 cultural_hegemony		統合力+10%、リーダー取得経験値+10%
-civic_ngm_ = {
+civic_ngm_cultural_hegemony = {
 	random_weight = {
 		base = 5
 	}
 	modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+		species_leader_exp_gain = 0.1
 	}
 }
+
 
 # 〇政治制度規定
 # 銀河連邦 federation_of_the_galaxies 	(民主制、受容主義) 派閥影響力収入+10%、リーダー経験値取得+20%、リーダースキル上限+1、行政官の一人を社会的英雄に置換え。	
-civic_ngm_ = {
+civic_ngm_federation_of_the_galaxies = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+		authority = {
+			value = auth_democratic
+		}
+	}
 	random_weight = {
 		base = 5
 	}
 	modifier = {
 	}
 }
-	
+
 # 環境民主制 environmental_democracy	(民主制、保全主義) 居住性+5%、Pop成長速度+10%、行政官の一人を大自然監督官に置換え。
-civic_ngm_ = {
+civic_ngm_environmental_democracy = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_conservationism
+				value = ethic_conservationism
+				value = ethic_fanatic_conservationism
+			}
+		}
+		authority = {
+			value = auth_democratic
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -558,7 +560,19 @@ civic_ngm_ = {
 }
 
 # 宗教共和制 religious_republicanism 	(民主制、精神主義) 統合力+10%、安定度+5、行政官の一人を大祭司に置換え。
-civic_ngm_ = {
+civic_ngm_religious_republicanism = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+		authority = {
+			value = auth_democratic
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -567,7 +581,19 @@ civic_ngm_ = {
 }
 
 # 人民民主制 peoples_democracy	(民主制、社会主義) Pop幸福度+5%、労働者生産量+5%、行政官の一人を書記に置換え。
-civic_ngm_ = {
+civic_ngm_peoples_democracy = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_socialism
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
+			}
+		}
+		authority = {
+			value = auth_democratic
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -576,7 +602,19 @@ civic_ngm_ = {
 }
 
 # サイバー民主制 cyberdemocracy	(民主制、物質主義) 研究力+5%、管理許容量+10%、行政官の一人を科学総裁に置換え。
-civic_ngm_ = {
+civic_ngm_cyberdemocracy = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+		authority = {
+			value = auth_democratic
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -585,7 +623,19 @@ civic_ngm_ = {
 }
 
 # 貴族共和制 aristocratic_republicanism	(寡頭制、栄望主義) 影響力+0.5、安定度+5、行政官の一人を紋章官に置換え。
-civic_ngm_ = {
+civic_ngm_aristocratic_republicanism = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+		authority = {
+			value = auth_oligarchic
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -594,7 +644,19 @@ civic_ngm_ = {
 }
 
 # 書記長制 chief_secretary_system	(寡頭制、社会主義) 安定度+10、消費財生産量+5%、合金生産量+5%、行政官の一人を書記に置換え。
-civic_ngm_ = {
+civic_ngm_chief_secretary_system = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_socialism
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
+			}
+		}
+		authority = {
+			value = auth_oligarchic
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -603,7 +665,19 @@ civic_ngm_ = {
 }
 
 # 戦争卿 war_lord		(独裁制、軍国主義) 宿敵の最大数+3、地上軍編成速度-50%、艦隊建造コスト-5%、行政官の一人を高級参謀に置換え。
-civic_ngm_ = {
+civic_ngm_war_lord = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+		authority = {
+			value = auth_dictatorial
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -612,7 +686,19 @@ civic_ngm_ = {
 }
 
 # 共産独裁制 communist_dictatorship	(独裁制、社会主義) 防衛軍耐久度+20%、労働者生産量+5%、行政官の一人を書記に置換え。
-civic_ngm_ = {
+civic_ngm_communist_dictatorship = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_socialism
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
+			}
+		}
+		authority = {
+			value = auth_dictatorial
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -621,7 +707,19 @@ civic_ngm_ = {
 }
 
 # 衆愚扇動制 demagoguery	(独裁制、実利主義) 安定度+10、行政官の一人を宣撫官に置換え。
-civic_ngm_ = {
+civic_ngm_demagoguery = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_utilitarianism
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+			}
+		}
+		authority = {
+			value = auth_dictatorial
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -630,7 +728,19 @@ civic_ngm_ = {
 }
 
 # 騎士団 order_of_chivalry		(君主制、軍国主義) 艦船連射レート+5%、地上軍士気+20%、行政官の一人を高級参謀に置換え。
-civic_ngm_ = {
+civic_ngm_order_of_chivalry = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+		authority = {
+			value = auth_imperial
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -639,7 +749,19 @@ civic_ngm_ = {
 }
 
 # 名誉帝制 honorary_imperialism	(君主制、栄望主義) 安定度+10、統合力+10%、リーダースキル上限+2、行政官の一人を紋章官に置換え。
-civic_ngm_ = {
+civic_ngm_honorary_imperialism = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+		authority = {
+			value = auth_imperial
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -649,7 +771,16 @@ civic_ngm_ = {
 
 # 〇権威
 # 指導者原理 guiding_principle		(狂権威)	影響力+0.5、統治志向魅力+15%、労働者幸福度+5%、専門家幸福度-5%、安定度-5
-civic_ngm_ = {
+civic_ngm_guiding_principle = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -658,7 +789,16 @@ civic_ngm_ = {
 }
 
 # 党支配 party_rule			(権威、社会主義)統治志向魅力+10%、布告コスト-10%、労働者生産+5%、安定度-5
-civic_ngm_ = {
+civic_ngm_party_rule = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -667,7 +807,16 @@ civic_ngm_ = {
 }
 
 # 服従の中の自由 freedom_in_obedience		(権威、受容)	安定度+5、移民流入+10%
-civic_ngm_ = {
+civic_ngm_freedom_in_obedience = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -676,7 +825,16 @@ civic_ngm_ = {
 }
 
 # カースト制度 caste_system		(権威、精神)	市民権がカースト制固定、統治者幸福度+10%、労働者と奴隷Popの生産量+5%、奴隷の割合25%、階級の降下時間+300%
-civic_ngm_ = {
+civic_ngm_caste_system = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -685,7 +843,16 @@ civic_ngm_ = {
 }
 
 # 部族制 tribalism			(権威、排他)	住居使用量-20%、統治志向への魅力+10%、統合力-5%、研究力-10%
-civic_ngm_ = {
+civic_ngm_tribalism = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -694,7 +861,16 @@ civic_ngm_ = {
 }
 
 # 宮廷政治 court_politics		(権威、栄望)	影響力+0.5、統治者幸福度+5%、統合力+10%、リーダー雇用コスト+30%、研究力-5%
-civic_ngm_ = {
+civic_ngm_court_politics = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -703,7 +879,16 @@ civic_ngm_ = {
 }
 
 # 社会ダーヴィニズム social_darvinism	(狂権威)	影響力+0.5、統合力+10%、研究力+5%、Pop成長速度-10%
-civic_ngm_ = {
+civic_ngm_social_darvinism = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -712,7 +897,16 @@ civic_ngm_ = {
 }
 
 # 徒弟制度 apprenticeship  		(権威、物質)	専門家出力+5%、リーダースキル上限+2、リーダー選択肢-2、労働者幸福度-5%
-civic_ngm_ = {
+civic_ngm_apprenticeship = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -720,9 +914,19 @@ civic_ngm_ = {
 	}
 }
 
+
 # 〇平等主義
 # 直接民主制 direct_democracy 		(民主制、平等主義)			影響力+0.5、布告コスト+20%
-civic_ngm_ = {
+civic_ngm_direct_democracy = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -731,7 +935,16 @@ civic_ngm_ = {
 }
 
 # 自由主義教育 liberal_education		(平等主義、実利や排他、軍国ではない)	統合力+10%、専門家生産力+5%
-civic_ngm_ = {
+civic_ngm_liberal_education = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -740,7 +953,16 @@ civic_ngm_ = {
 }
 
 # デモ文化 demonstration_culture		(平等、実利ではない)			影響力+0.5、派閥幸福度+5%、統治志向魅力-5%、安定度-5
-civic_ngm_ = {
+civic_ngm_demonstration_culture = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -749,7 +971,16 @@ civic_ngm_ = {
 }
 
 # 公開討論会 open_forum 		(平等、実利ではない)			統合力+10%統治志向魅力-5%、派閥幸福度+5%
-civic_ngm_ = {
+civic_ngm_open_forum = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -758,7 +989,16 @@ civic_ngm_ = {
 }
 
 # 消費社会 consumer_society 		(平等、資本主義)			幸福度+5%、安定度+5、消費財消費+10%
-civic_ngm_ = {
+civic_ngm_consumer_society = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -767,7 +1007,16 @@ civic_ngm_ = {
 }
 
 # 社会福祉 social_welfare 		(平等、実利や狂信的資本主義ではない)	労働者幸福度+5%、労働者生産力+5%、犯罪度-5%、消費財消費量+10%
-civic_ngm_ = {
+civic_ngm_social_welfare = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -776,7 +1025,16 @@ civic_ngm_ = {
 }
 
 # 宇宙規模の解放 cosmic_scale_liberation 		(平等、軍国)				艦船連射レート+5%、建艦速度+5%、宇宙軍許容量+10%
-civic_ngm_ = {
+civic_ngm_cosmic_scale_liberation = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -785,7 +1043,16 @@ civic_ngm_ = {
 }
 
 # 究極の思想的自由 ultimate_freedom_of_thought	(狂信的平等)				管理許容量+30%、安定度-10、統治志向魅力-30%
-civic_ngm_ = {
+civic_ngm_ultimate_freedom_of_thought = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -794,7 +1061,16 @@ civic_ngm_ = {
 }
 
 # 個人武装権 right_to_bear_arms 		(平等、軍国)				地上軍ダメージ+30%、地上軍コスト-20%、犯罪発生率+10、犯罪発生率+20%
-civic_ngm_ = {
+civic_ngm_right_to_bear_arms = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -804,7 +1080,16 @@ civic_ngm_ = {
 
 # 〇受容主義
 # 共通価値観 shared_values  	(受容)		統合力+10%、移民流入+5%
-civic_ngm_ = {
+civic_ngm_shared_values = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -813,7 +1098,16 @@ civic_ngm_ = {
 }
 
 # 共に征く go_along_with	(受容)		(防衛戦争時)艦船連射レート+10%、(防衛戦争時)建艦速度+5%、危機に対するダメージ+10%
-civic_ngm_ = {
+civic_ngm_go_along_with = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -822,7 +1116,16 @@ civic_ngm_ = {
 }
 
 # グローバル主義 globalism	(受容、資本主義)交易価値+10%、市場手数料-5%
-civic_ngm_ = {
+civic_ngm_globalism = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -831,7 +1134,16 @@ civic_ngm_ = {
 }
 
 # 多文化主義 multiculturalism	(受容、平等)	統合力+10%、Pop成長速度+5%
-civic_ngm_ = {
+civic_ngm_multiculturalism = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -840,7 +1152,16 @@ civic_ngm_ = {
 }
 
 # 庇護主義 paternalism	(狂信的受容)	属国の友好度+100、属国の受け入れ値+10、艦船連射レート+5%
-civic_ngm_ = {
+civic_ngm_paternalism = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -849,7 +1170,16 @@ civic_ngm_ = {
 }
 
 # 来るものは拒まず accept_everyone (受容)		移民流入+10%、難民政策を無制限許容で固定
-civic_ngm_ = {
+civic_ngm_accept_everyone = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -858,7 +1188,16 @@ civic_ngm_ = {
 }
 
 # 飛び立つ民衆 people_flying_away	(狂信的受容)	流出圧力+10%、Pop成長速度+5%
-civic_ngm_ = {
+civic_ngm_people_flying_away = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -866,9 +1205,19 @@ civic_ngm_ = {
 	}
 }
 
+
 # 〇排他主義		
 # 排他的コミュニティ exclusive_community 	(排他)		統合力+5%、安定度+10、交易価値-5%
-civic_ngm_ = {
+civic_ngm_exclusive_community = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -877,7 +1226,16 @@ civic_ngm_ = {
 }
 
 # 呵責なき正義 remorseless_justice		(排他、平等)	艦隊連射レート+5%、無制限爆撃以外選択不可、犯罪度-10%、安定度-5、他国友好度-30
-civic_ngm_ = {
+civic_ngm_remorseless_justice = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -887,6 +1245,15 @@ civic_ngm_ = {
 
 # 他者蔑視		(排他)		影響力+0.5、防衛ステーション防衛力+10%、暗号力+5、交易魅力値-100
 civic_ngm_ = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -896,6 +1263,15 @@ civic_ngm_ = {
 
 # 紳士的嫌悪		(排他、栄望)	使節+1、統合力+5%、交易価値+5%
 civic_ngm_ = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -905,6 +1281,15 @@ civic_ngm_ = {
 
 # 痕跡の抹消		(狂排他)	統合力+10%、無制限爆撃以外選択不可、他者痕跡の抹消の開戦事由を取得（総力戦）、異種族を浄化しなくてはならない。		
 civic_ngm_ = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -914,6 +1299,15 @@ civic_ngm_ = {
 
 # 選民思想		(排他、精神)	統合力+10%、安定度+5、精神主義魅力+10%
 civic_ngm_ = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -923,6 +1317,15 @@ civic_ngm_ = {
 
 # 異種族解剖		(排他、物質)	研究力+10%、異種族は強制で奴隷化、他国友好度-100
 civic_ngm_ = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -930,9 +1333,19 @@ civic_ngm_ = {
 	}
 }
 
+
 # 〇軍国主義
 # 帝国主義		(軍国、受容ではない)	請求権作成コスト-20%、前哨地建造コスト-20%
 civic_ngm_ = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -942,6 +1355,15 @@ civic_ngm_ = {
 
 # 大艦巨砲主義		(軍国)			船体値+10%、艦船連射レート+10%、宇宙軍許容量+30、回避-10%、亜光速移動速度-10%
 civic_ngm_ = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -951,6 +1373,15 @@ civic_ngm_ = {
 
 # 軍産複合体 		(軍国、資本主義or実利)	交易保護値+5、20Popあたり兵士+1、兵士が交易価値を1生み出す。
 civic_ngm_ = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -960,14 +1391,15 @@ civic_ngm_ = {
 
 # 戦争経済 		(狂信軍国)		戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+10%、建艦速度+10%。非戦争時の鉱物、合金、交易価値、消費財生産量-20%、建艦速度+20%
 civic_ngm_ = {
-	random_weight = {
-		base = 5
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
 	}
-	modifier = {
-	}
-}
-
-civic_ngm_ = {
 	random_weight = {
 		base = 5
 	}
@@ -977,6 +1409,15 @@ civic_ngm_ = {
 
 # 軍事政権		(軍国)			20popにつき兵士+1、兵士により統合力+1、安定度+5、軍国主義への魅力+10%、軍国以外の派閥幸福度-5%
 civic_ngm_ = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -986,12 +1427,22 @@ civic_ngm_ = {
 
 # 闘争のための闘争 	(狂信軍国)		戦争疲弊-20%、戦時中の合金生産量+10%、軍艦建造コスト-5%
 civic_ngm_ = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
 	modifier = {
 	}
 }
+
 
 # 〇平和主義
 # イージスの護り		(平和)		ステーション許容量+5、ステーション防衛+10%、船体値+20%、暗号力+5、艦船連射レート-10%
@@ -1013,14 +1464,6 @@ civic_ngm_ = {
 }
 
 # 武装平和主義		(平和、開発)	宇宙軍許容量+10、国内での連射レート+15%、船体値+10%
-civic_ngm_ = {
-	random_weight = {
-		base = 5
-	}
-	modifier = {
-	}
-}
-
 civic_ngm_ = {
 	random_weight = {
 		base = 5
@@ -1055,6 +1498,7 @@ civic_ngm_ = {
 	modifier = {
 	}
 }
+
 
 # 〇精神主義
 # 機械信仰		(精神、開発)	精神主義派閥がロボットに怒らなくなる。工学研究+10%、ロボット建造速度+10%、ロボット維持費+5%、ロボットを非合法化できない。ロボットの人権を市民権に固定。
@@ -1101,6 +1545,7 @@ civic_ngm_ = {
 	modifier = {
 	}
 }
+
 
 
 # 〇物質

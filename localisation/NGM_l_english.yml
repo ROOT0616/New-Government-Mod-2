@@ -133,6 +133,66 @@
  decision_end_planet_requisition_policy_effects_short:0 "惑星規模の徴用政策をやめる"
 
 #######################
+#####    志向    ######
+#######################
+
+ ethic_fanatic_socialism:0 "狂信的な社会主義"
+ ethic_fanatic_socialism_desc:0 "§L §!\n"
+ ethic_socialism:0 "社会主義"
+ ethic_socialism_desc:0 "§L §!\n"
+ POP_ATTRACTION_SOCIALISM_POS:0 "§G+ £empire£ 帝国の志向が社会主義である§!"
+ POP_ATTRACTION_SOCIALISM_NEG:0 "§R- £empire£ 帝国の志向が社会主義である§!"
+
+ ethic_fanatic_capitalism:0 "狂信的な資本主義"
+ ethic_fanatic_capitalism_desc:0 "§L §!\n"
+ ethic_capitalism:0 "資本主義"
+ ethic_capitalism_desc:0 "§L §!\n"
+ POP_ATTRACTION_CAPITALISM_POS:0 "§G+ £empire£ 帝国の志向が資本主義である§!"
+ POP_ATTRACTION_CAPITALISM_NEG:0 "§R- £empire£ 帝国の志向が資本主義である§!"
+
+ ethic_fanatic_interventionism:0 "狂信的な介入主義"
+ ethic_fanatic_interventionism_desc:0 "§L §!\n"
+ ethic_interventionism:0 "介入主義"
+ ethic_interventionism_desc:0 "§L §!\n"
+ POP_ATTRACTION_INTERVENTIONISM_POS:0 "§G+ £empire£ 帝国の志向が介入主義である§!"
+ POP_ATTRACTION_INTERVENTIONISM_NEG:0 "§R- £empire£ 帝国の志向が介入主義である§!"
+
+ ethic_fanatic_neutralism:0 "狂信的な中立主義"
+ ethic_fanatic_neutralism_desc:0 "§L §!\n"
+ ethic_neutralism:0 "中立主義"
+ ethic_neutralism_desc:0 "§L §!\n"
+ POP_ATTRACTION_NEUTRALISM_POS:0 "§G+ £empire£ 帝国の志向が中立主義である§!"
+ POP_ATTRACTION_NEUTRALISM_NEG:0 "§R- £empire£ 帝国の志向が中立主義である§!"
+
+ ethic_fanatic_conservationism:0 "狂信的な保全主義"
+ ethic_fanatic_conservationism_desc:0 "§L §!\n"
+ ethic_conservationism:0 "保全主義"
+ ethic_conservationism_desc:0 "§L §!\n"
+ POP_ATTRACTION_CONSERVATIONISM_POS:0 "§G+ £empire£ 帝国の志向が保全主義である§!"
+ POP_ATTRACTION_CONSERVATIONISM_NEG:0 "§R- £empire£ 帝国の志向が保全主義である§!"
+
+ ethic_fanatic_developmentalism:0 "狂信的な開発主義"
+ ethic_fanatic_developmentalism_desc:0 "§L §!\n"
+ ethic_developmentalism:0 "開発主義"
+ ethic_developmentalism_desc:0 "§L §!\n"
+ POP_ATTRACTION_DEVELOPMENTALISM_POS:0 "§G+ £empire£ 帝国の志向が開発主義である§!"
+ POP_ATTRACTION_DEVELOPMENTALISM_NEG:0 "§R- £empire£ 帝国の志向が開発主義である§!"
+
+ ethic_fanatic_honorism:0 "狂信的な栄望主義"
+ ethic_fanatic_honorism_desc:0 "§L §!\n"
+ ethic_honorism:0 "栄望主義"
+ ethic_honorism_desc:0 "§L §!\n"
+ POP_ATTRACTION_HONORISM_POS:0 "§G+ £empire£ 帝国の志向が栄望主義である§!"
+ POP_ATTRACTION_HONORISM_NEG:0 "§R- £empire£ 帝国の志向が栄望主義である§!"
+
+ ethic_fanatic_utilitarianism:0 "狂信的な実利主義"
+ ethic_fanatic_utilitarianism_desc:0 "§L §!\n"
+ ethic_utilitarianism:0 "実利主義"
+ ethic_utilitarianism_desc:0 "§L §!\n"
+ POP_ATTRACTION_UTILITARIANISM_POS:0 "§G+ £empire£ 帝国の志向が実利主義である§!"
+ POP_ATTRACTION_UTILITARIANISM_NEG:0 "§R- £empire£ 帝国の志向が実利主義である§!"
+
+#######################
 #####    国是    ######
 #######################
 
@@ -196,8 +256,39 @@
  civic_ngm_imaginary_socialism_desc:0 "社会と民衆の共同による楽園を理想としたこの社会主義国家は理想的で達成不可能な目的に向かう旅路にある。多くの達成困難な課題が残されているが、総じて政府は民衆のために行動している。"
 
  civic_tooltip_fsass:0 "§Y寡頭制§!か§Y独裁制§!か§Y君主制§!である"
- 
- civic_tooltip_not_authoritarian:0 "§Y権威主義§!系統でない"
+
+ civic_ngm_smooth_traffic:0 "円滑な交通"
+ civic_ngm_smooth_traffic_desc:0 ""
+
+ civic_ngm_ship_protection_protocol:0 "船舶保護プロトコル"
+ civic_ngm_ship_protection_protocol_desc:0 ""
+
+ civic_ngm_space_security_headquarters:0 "宙間警備本部"
+ civic_ngm_space_security_headquarters_desc:0 ""
+
+ civic_ngm_random_birth_rate:0 "乱脈的出生率"
+ civic_ngm_random_birth_rate_desc:0 ""
+
+ civic_ngm_trading_nations:0 "貿易国家"
+ civic_ngm_trading_nations_desc:0 ""
+
+ civic_ngm_virtual_society:0 "仮想的社会"
+ civic_ngm_virtual_society_desc:0 ""
+
+ civic_ngm_healthy_habits:0 "健康的習慣"
+ civic_ngm_healthy_habits_desc:0 ""
+
+ civic_ngm_cultural_hegemony:0 "文化高権"
+ civic_ngm_cultural_hegemony_desc:0 ""
+
+ civic_tooltip_socialism:0 "§Y社会主義§!系統である"
+ civic_tooltip_capitalism:0 "§Y資本主義§!系統である"
+ civic_tooltip_interventionism:0 "§Y介入主義§!系統である"
+ civic_tooltip_neutralism:0 "§Y中立主義§!系統である"
+ civic_tooltip_conservationism:0 "§Y保全主義§!系統である"
+ civic_tooltip_developmentalism:0 "§Y開発主義§!系統である"
+ civic_tooltip_honorism:0 "§Y栄望主義§!系統である"
+ civic_tooltip_utilitarianism:0 "§Y実利主義§!系統である"
 
 #######################
 #####    政策    ######
@@ -562,7 +653,6 @@
 
  trait_ngm_spendthrift:0 "浪費家"
  trait_ngm_spendthrift_desc:0 "この種族は浪費癖があり、交易をうまく行うことができない。"
-
 
 ##########################
 #####    そのほか    ######
