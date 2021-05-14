@@ -878,3 +878,194 @@ awarding_of_medals_to_cultural_figures_campaign = {
 		}
 	}
 }
+
+# 布告「5か年計画」  布告できるのはいずれか1つ。布告コスト  影響力：20、エネルギー500  影響力布告期間は5年。クールタイムは10年
+# five_year_plan1 .建築5か年計画  ：建造物コスト-5%、建造物建築速度+10%、区域建造速度+5%	  Pop消費財使用量+5%
+ngm_five_year_plan1_campaign = {
+	length = 1825
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			influence = 20
+			energy = 500
+		}
+	}
+	modifier = {
+		planet_buildings_cost_mult = -0.05
+		planet_building_build_speed_mult = 0.1
+		# planet_district_build_speed_mult = 0.05
+		planet_pops_consumer_goods_upkeep_mult = 0.05
+	}
+	effect = {
+		set_timed_country_flag = {
+			flag = ngm_five_year_plan_campaign
+			days = 3650
+		}
+	}
+	potential = {
+		NOT = {
+			has_country_flag = ngm_five_year_plan_campaign
+		}
+		OR = {
+			text = civic_tooltip_socialism
+			has_ethic = ethic_socialism
+			has_ethic = ethic_fanatic_socialism
+		}
+	}
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# five_year_plan2 .重工業5か年計画：合金生産量+10%、造船速度5%		居住性-5%、農業生産量-10%
+ngm_five_year_plan2_campaign = {
+	length = 1825
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			influence = 20
+			energy = 500
+		}
+	}
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.1
+		starbase_shipyard_build_speed_mult = 0.05
+		pop_habitability = -0.05
+		planet_jobs_food_produces_mult = -0.1
+	}
+	effect = {
+		set_timed_country_flag = {
+			flag = ngm_five_year_plan_campaign
+			days = 3650
+		}
+	}
+	potential = {
+		NOT = {
+			has_country_flag = ngm_five_year_plan_campaign
+		}
+		OR = {
+			text = civic_tooltip_socialism
+			has_ethic = ethic_socialism
+			has_ethic = ethic_fanatic_socialism
+		}
+	}
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# five_year_plan3 .農業5か年計画  ：農業生産量+20%、Pop成長速度+5%	研究力-5%
+ngm_five_year_plan3_campaign = {
+	length = 1825
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			influence = 20
+			energy = 500
+		}
+	}
+	modifier = {
+		planet_jobs_food_produces_mult = 0.2
+		pop_growth_speed = 0.05
+		planet_jobs_physics_research_produces_mult = -0.05
+		planet_jobs_society_research_produces_mult = -0.05
+		planet_jobs_engineering_research_produces_mult = -0.05
+	}
+	effect = {
+		set_timed_country_flag = {
+			flag = ngm_five_year_plan_campaign
+			days = 3650
+		}
+	}
+	potential = {
+		NOT = {
+			has_country_flag = ngm_five_year_plan_campaign
+		}
+		OR = {
+			text = civic_tooltip_socialism
+			has_ethic = ethic_socialism
+			has_ethic = ethic_fanatic_socialism
+		}
+	}
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# five_year_plan4 .研究5か年計画  ：工学+10%、巨大構造物建造速度+5%	物理学-5%、社会学-5%
+ngm_five_year_plan4_campaign = {
+	length = 1825
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			influence = 20
+			energy = 500
+		}
+	}
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.1
+		megastructure_build_speed_mult = 0.05
+		planet_jobs_physics_research_produces_mult = -0.05
+		planet_jobs_society_research_produces_mult = -0.05
+	}
+	effect = {
+		set_timed_country_flag = {
+			flag = ngm_five_year_plan_campaign
+			days = 3650
+		}
+	}
+	potential = {
+		NOT = {
+			has_country_flag = ngm_five_year_plan_campaign
+		}
+		OR = {
+			text = civic_tooltip_socialism
+			has_ethic = ethic_socialism
+			has_ethic = ethic_fanatic_socialism
+		}
+	}
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# five_year_plan5 .思想5か年計画  ：社会主義魅力+20%、統合力+10%		安定度-5
+ngm_five_year_plan5_campaign = {
+	length = 1825
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			influence = 20
+			energy = 500
+		}
+	}
+	modifier = {
+		pop_ethic_socialism_attraction_mult = 0.2
+		planet_jobs_unity_produces_mult = 0.1
+		planet_stability_add = -5
+	}
+	effect = {
+		set_timed_country_flag = {
+			flag = ngm_five_year_plan_campaign
+			days = 3650
+		}
+	}
+	potential = {
+		NOT = {
+			has_country_flag = ngm_five_year_plan_campaign
+		}
+		OR = {
+			text = civic_tooltip_socialism
+			has_ethic = ethic_socialism
+			has_ethic = ethic_fanatic_socialism
+		}
+	}
+	ai_weight = {
+		weight = 1
+	}
+}
