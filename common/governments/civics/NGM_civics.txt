@@ -495,8 +495,9 @@ civic_ngm_space_security_headquarters = {
 	}
 }
 
-# 乱脈的出生率 random_birth_rate		Pop成長率+10%、幸福度-5%、住居使用量+5%
+# 乱脈的出生率 random_birth_rate		(この国では出生率がコントロールできていない。)(ゲーム開始後の追加削除不可)Pop成長率+10%、幸福度-5%、住居使用量+5%
 civic_ngm_random_birth_rate = {
+	pickable_at_start = no
 	random_weight = {
 		base = 5
 	}
@@ -531,8 +532,9 @@ civic_ngm_virtual_society = {
 	}
 }
 
-# 健康的習慣 healthy_habits		リーダー寿命+10年、幸福度+5%
+# 健康的習慣 healthy_habits			(この国の国民は運動と食事、適度な日向ぼっこにより健康的な生活を送っている。)(ゲーム開始後の追加削除不可)リーダー寿命+10年、幸福度+5%
 civic_ngm_healthy_habits = {
+	pickable_at_start = no
 	random_weight = {
 		base = 5
 	}
@@ -1125,6 +1127,7 @@ civic_ngm_cosmic_scale_liberation = {
 
 # 究極の思想的自由 ultimate_freedom_of_thought	 (この社会では他者に対する侵害の蓋然性がある思想を除いてあらゆる思想が許容されている。)							(狂信的平等)(ゲーム開始後の追加削除不可)				管理許容量+30%、安定度-10、統治志向魅力-30%
 civic_ngm_ultimate_freedom_of_thought = {
+	pickable_at_start = no
 	possible = {
 		ethics = {
 			value = ethic_fanatic_egalitarian
@@ -1438,6 +1441,18 @@ civic_ngm_dissection = {
 civic_ngm_imperialism = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+			NOR = {
+				text = civic_tooltip_xenophile_nor_neutralism
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+				value = ethic_neutralism
+				value = ethic_fanatic_neutralism
+			}
 		}
 	}
 	random_weight = {
@@ -1451,6 +1466,11 @@ civic_ngm_imperialism = {
 civic_ngm_big_ship_policy = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
 		}
 	}
 	random_weight = {
@@ -1464,6 +1484,15 @@ civic_ngm_big_ship_policy = {
 civic_ngm_military_industrial_complex = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_militarist_and_capitalism_utilitarianism
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+			}
 		}
 	}
 	random_weight = {
@@ -1477,6 +1506,12 @@ civic_ngm_military_industrial_complex = {
 civic_ngm_war_prosperity = {
 	possible = {
 		ethics = {
+			value = ethic_fanatic_militarist
+			NOR = {
+				text = civic_tooltip_not_neutralism
+				value = ethic_neutralism
+				value = ethic_fanatic_neutralism
+			}
 		}
 	}
 	random_weight = {
@@ -1490,6 +1525,11 @@ civic_ngm_war_prosperity = {
 civic_ngm_military_regime = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
 		}
 	}
 	random_weight = {
@@ -1501,8 +1541,10 @@ civic_ngm_military_regime = {
 
 # 闘争のための闘争 The_Struggle_for_Struggle	(平和とは戦争と戦争との休憩期間にすぎない。)									(狂信軍国)(ゲーム開始後の追加削除不可)		戦争疲弊-20%、戦時中の合金生産量+10%、軍艦建造コスト-5%
 civic_ngm_The_Struggle_for_Struggle = {
+	pickable_at_start = no
 	possible = {
 		ethics = {
+			value = ethic_fanatic_militarist
 		}
 	}
 	random_weight = {
@@ -1518,6 +1560,16 @@ civic_ngm_The_Struggle_for_Struggle = {
 civic_ngm_aegis_shield = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_pacifist
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+			NOR = {
+				text = civic_tooltip_not_interventionism
+				value = ethic_interventionism
+				value = ethic_fanatic_interventionism
+			}
 		}
 	}
 	random_weight = {
@@ -1531,6 +1583,13 @@ civic_ngm_aegis_shield = {
 civic_ngm_prosperity_advocate = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_pacifist_and_utilitarianism
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+			}
 		}
 	}
 	random_weight = {
@@ -1544,6 +1603,13 @@ civic_ngm_prosperity_advocate = {
 civic_ngm_armed_pacifism = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_pacifist_and_developmentalism
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+				value = ethic_developmentalism
+				value = ethic_fanatic_developmentalism
+			}
 		}
 	}
 	random_weight = {
@@ -1557,6 +1623,13 @@ civic_ngm_armed_pacifism = {
 civic_ngm_active_pacifist = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_pacifist_and_interventionism
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+				value = ethic_interventionism
+				value = ethic_fanatic_interventionism
+			}
 		}
 	}
 	random_weight = {
@@ -1570,6 +1643,7 @@ civic_ngm_active_pacifist = {
 civic_ngm_messenger_of_peace = {
 	possible = {
 		ethics = {
+			value = ethic_fanatic_pacifist
 		}
 	}
 	random_weight = {
@@ -1583,6 +1657,13 @@ civic_ngm_messenger_of_peace = {
 civic_ngm_good_faith_negotiator = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_pacifist_and_egalitarian
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
 		}
 	}
 	random_weight = {
@@ -1596,8 +1677,16 @@ civic_ngm_good_faith_negotiator = {
 # 〇精神主義
 # 機械信仰		mechanical_faith(この国の信仰は創作物に向けられており、その究極であるロボットは神と我々を繋ぐ存在であると考えられている。)(精神、開発)(ゲーム開始後の追加削除不可)	精神主義派閥がロボットに怒らなくなる。工学研究+10%、ロボット建造速度+10%、ロボット維持費+5%、ロボットを非合法化できない。ロボットの人権を市民権に固定。
 civic_ngm_mechanical_faith = {
+	pickable_at_start = no
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist_and_developmentalism
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+				value = ethic_developmentalism
+				value = ethic_fanatic_developmentalism
+			}
 		}
 	}
 	random_weight = {
@@ -1611,6 +1700,13 @@ civic_ngm_mechanical_faith = {
 civic_ngm_missionary_group = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist_and_interventionism
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+				value = ethic_interventionism
+				value = ethic_fanatic_interventionism
+			}
 		}
 	}
 	random_weight = {
@@ -1624,6 +1720,13 @@ civic_ngm_missionary_group = {
 civic_ngm_defender_of_the_faith = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist_and_militarist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
 		}
 	}
 	random_weight = {
@@ -1637,6 +1740,7 @@ civic_ngm_defender_of_the_faith = {
 civic_ngm_divination = {
 	possible = {
 		ethics = {
+			value = ethic_fanatic_spiritualist
 		}
 	}
 	random_weight = {
@@ -1650,6 +1754,13 @@ civic_ngm_divination = {
 civic_ngm_cultural_consumption = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist_and_utilitarianism
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+			}
 		}
 	}
 	random_weight = {
@@ -1665,6 +1776,11 @@ civic_ngm_cultural_consumption = {
 civic_ngm_ai_assistance = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
 		}
 	}
 	random_weight = {
@@ -1676,8 +1792,14 @@ civic_ngm_ai_assistance = {
 
 # 機械は友達 		machines_are_our_friends(この社会はロボットに人権が与えられており、街の至る所でロボットと市民が楽しく暮らしている。)(物質、ゲーム開始後削除不可)		ロボット製造速度+10%、ロボット維持費+10%、ロボットの権利を市民権以外に変更不可
 civic_ngm_machines_are_our_friends = {
+	pickable_at_start = no
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
 		}
 	}
 	random_weight = {
@@ -1691,6 +1813,16 @@ civic_ngm_machines_are_our_friends = {
 civic_ngm_longing_for_the_future = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_inwards_perfection
+			}
 		}
 	}
 	random_weight = {
@@ -1704,6 +1836,13 @@ civic_ngm_longing_for_the_future = {
 civic_ngm_experimental_substance = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+				value = ethic_developmentalism
+				value = ethic_fanatic_developmentalism
+			}
 		}
 	}
 	random_weight = {
@@ -1717,6 +1856,15 @@ civic_ngm_experimental_substance = {
 civic_ngm_industrial_capitalism = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_materialist_and_capitalism_and_developmentalism
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+				value = ethic_developmentalism
+				value = ethic_fanatic_developmentalism
+			}
 		}
 	}
 	random_weight = {
@@ -1730,6 +1878,7 @@ civic_ngm_industrial_capitalism = {
 civic_ngm_experimental_practice = {
 	possible = {
 		ethics = {
+			value = ethic_fanatic_materialist
 		}
 	}
 	random_weight = {
@@ -1741,8 +1890,10 @@ civic_ngm_experimental_practice = {
 
 # AI主導政治		paranoia(市民、貴方は幸福ですか？ マザーコンピュータ談)(狂信的な物質：ゲーム開始後削除不可)	統治志向魅力+10%、研究力+10%、安定度-10、幸福度+5%
 civic_ngm_paranoia = {
+	pickable_at_start = no
 	possible = {
 		ethics = {
+			value = ethic_fanatic_materialist
 		}
 	}
 	random_weight = {
@@ -1758,6 +1909,13 @@ civic_ngm_paranoia = {
 civic_ngm_equality_in_society = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_socialism_and_egalitarian
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
 		}
 	}
 	random_weight = {
@@ -1771,6 +1929,13 @@ civic_ngm_equality_in_society = {
 civic_ngm_sectionalism = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_socialism_and_spiritualist
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
 		}
 	}
 	random_weight = {
@@ -1784,6 +1949,13 @@ civic_ngm_sectionalism = {
 civic_ngm_peoples_army = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_socialism_and_militarist
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
 		}
 	}
 	random_weight = {
@@ -1795,8 +1967,10 @@ civic_ngm_peoples_army = {
 
 # 経済的原始主義	economic_primitivism(この国の経済はほとんど発展していないか、退化しており極めて原始的で素朴な経済状況である。)(狂社会)(ゲーム開始後の追加削除不可)	職業によるエネルギーと交易価値-20%、鉱物と農作物+20%、幸福度+20%、消費財消費-50%、市場手数料+30%
 civic_ngm_economic_primitivism = {
+	pickable_at_start = no
 	possible = {
 		ethics = {
+			value = ethic_fanatic_socialism
 		}
 	}
 	random_weight = {
@@ -1810,6 +1984,11 @@ civic_ngm_economic_primitivism = {
 civic_ngm_land_sharing = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_socialism
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
+			}
 		}
 	}
 	random_weight = {
@@ -1823,6 +2002,13 @@ civic_ngm_land_sharing = {
 civic_ngm_communism = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_socialism_and_authoritarian
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
 		}
 	}
 	random_weight = {
@@ -1837,7 +2023,17 @@ civic_ngm_communism = {
 # 開発独裁		development_dictatorship(この国では経済発展の為には「政治的安定」が必要であるとして、国民の政治参加を著しく制限し、強権的政策が正当化されている。)(独裁、資本、開発)	建造速度+10%、建造コスト-10%、安定度+5、専門家幸福度-10%
 civic_ngm_development_dictatorship = {
 	possible = {
+		authority = {
+			value = auth_dictatorial
+		}
 		ethics = {
+			OR = {
+				text = civic_tooltip_capitalism_and_developmentalism
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+				value = ethic_developmentalism
+				value = ethic_fanatic_developmentalism
+			}
 		}
 	}
 	random_weight = {
@@ -1851,6 +2047,11 @@ civic_ngm_development_dictatorship = {
 civic_ngm_commercialism = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_capitalism
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+			}
 		}
 	}
 	random_weight = {
@@ -1864,6 +2065,11 @@ civic_ngm_commercialism = {
 civic_ngm_financing = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_capitalism
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+			}
 		}
 	}
 	random_weight = {
@@ -1877,6 +2083,13 @@ civic_ngm_financing = {
 civic_ngm_information = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_capitalism_and_materialist
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
 		}
 	}
 	random_weight = {
@@ -1890,6 +2103,13 @@ civic_ngm_information = {
 civic_ngm_agriculture = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_capitalism_and_conservationism
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+				value = ethic_conservationism
+				value = ethic_fanatic_conservationism
+			}
 		}
 	}
 	random_weight = {
@@ -1901,8 +2121,10 @@ civic_ngm_agriculture = {
 
 # 究極の規制緩和	deregulation(この国に経済的規制はほとんど存在せず、自由に各々が活動している。)		(狂資本)(ゲーム開始後の追加削除不可)		専門家出力+10%、流入圧力+10%、犯罪度+20、犯罪度+15%、労働者幸福度-10%、安定度+10
 civic_ngm_deregulation = {
+	pickable_at_start = no
 	possible = {
 		ethics = {
+			value = ethic_fanatic_capitalism
 		}
 	}
 	random_weight = {
@@ -1918,6 +2140,13 @@ civic_ngm_deregulation = {
 civic_ngm_CIA = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_interventionism_and_militarist
+				value = ethic_interventionism
+				value = ethic_fanatic_interventionism
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
 		}
 	}
 	random_weight = {
@@ -1931,6 +2160,13 @@ civic_ngm_CIA = {
 civic_ngm_information_operation = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_interventionism_and_materialist
+				value = ethic_interventionism
+				value = ethic_fanatic_interventionism
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
 		}
 	}
 	random_weight = {
@@ -1944,6 +2180,11 @@ civic_ngm_information_operation = {
 civic_ngm_cryptography = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_interventionism
+				value = ethic_interventionism
+				value = ethic_fanatic_interventionism
+			}
 		}
 	}
 	random_weight = {
@@ -1957,6 +2198,13 @@ civic_ngm_cryptography = {
 civic_ngm_parabola = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_interventionism_and_xenophobe
+				value = ethic_interventionism
+				value = ethic_fanatic_interventionism
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
 		}
 	}
 	random_weight = {
@@ -1970,6 +2218,13 @@ civic_ngm_parabola = {
 civic_ngm_smile = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_interventionism_and_pacifist
+				value = ethic_interventionism
+				value = ethic_fanatic_interventionism
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
 		}
 	}
 	random_weight = {
@@ -1981,8 +2236,10 @@ civic_ngm_smile = {
 
 # 国際的黒幕		mastermind(さあ、我が掌で踊れ。すべては我らの思いのままに......)(狂介入)(ゲーム開始後の追加削除不可)	使節+1、暗号力+5、解読力+5、外交発言力+10%、友好度-30
 civic_ngm_mastermind = {
+	pickable_at_start = no
 	possible = {
 		ethics = {
+			value = ethic_fanatic_interventionism
 		}
 	}
 	random_weight = {
@@ -1996,8 +2253,14 @@ civic_ngm_mastermind = {
 # 〇中立主義
 # 栄光ある孤立		glorious_isolation(我が国が孤立しているのではなく、我が国から世界が孤立しているのである。)(中立)(ゲーム開始後の追加削除不可)		安定度+5、宇宙軍許容量+20
 civic_ngm_glorious_isolation = {
+	pickable_at_start = no
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_neutralism
+				value = ethic_neutralism
+				value = ethic_fanatic_neutralism
+			}
 		}
 	}
 	random_weight = {
@@ -2011,6 +2274,13 @@ civic_ngm_glorious_isolation = {
 civic_ngm_FBI = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_neutralism_and_pacifist
+				value = ethic_neutralism
+				value = ethic_fanatic_neutralism
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
 		}
 	}
 	random_weight = {
@@ -2024,6 +2294,13 @@ civic_ngm_FBI = {
 civic_ngm_internal_affairs = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_neutralism_and_xenophobe
+				value = ethic_neutralism
+				value = ethic_fanatic_neutralism
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
 		}
 	}
 	random_weight = {
@@ -2037,6 +2314,7 @@ civic_ngm_internal_affairs = {
 civic_ngm_inner_satisfaction = {
 	possible = {
 		ethics = {
+			value = ethic_fanatic_neutralism
 		}
 	}
 	random_weight = {
@@ -2050,6 +2328,13 @@ civic_ngm_inner_satisfaction = {
 civic_ngm_armed_neutrality = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_neutralism_and_militarist
+				value = ethic_neutralism
+				value = ethic_fanatic_neutralism
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
 		}
 	}
 	random_weight = {
@@ -2063,6 +2348,13 @@ civic_ngm_armed_neutrality = {
 civic_ngm_interest_representation = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_neutralism_and_pacifist
+				value = ethic_neutralism
+				value = ethic_fanatic_neutralism
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
 		}
 	}
 	random_weight = {
@@ -2078,6 +2370,13 @@ civic_ngm_interest_representation = {
 civic_ngm_environmental_maintenance = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_conservationism_and_materialist
+				value = ethic_conservationism
+				value = ethic_fanatic_conservationism
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
 		}
 	}
 	random_weight = {
@@ -2091,6 +2390,13 @@ civic_ngm_environmental_maintenance = {
 civic_ngm_pest_control = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_conservationism_and_militarist
+				value = ethic_conservationism
+				value = ethic_fanatic_conservationism
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
 		}
 	}
 	random_weight = {
@@ -2104,6 +2410,7 @@ civic_ngm_pest_control = {
 civic_ngm_natural_adaptation = {
 	possible = {
 		ethics = {
+			value = ethic_fanatic_conservationism
 		}
 	}
 	random_weight = {
@@ -2117,6 +2424,11 @@ civic_ngm_natural_adaptation = {
 civic_ngm_planetary_garden = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_conservationism
+				value = ethic_conservationism
+				value = ethic_fanatic_conservationism
+			}
 		}
 	}
 	random_weight = {
@@ -2128,8 +2440,10 @@ civic_ngm_planetary_garden = {
 
 # 絶滅防止法		breakdown_prevention_method(この国において、絶滅ということは存在せず、すべての種は保存される。)(狂保全)(ゲーム開始後の追加削除不可)	社会学研究+20%、統合力+10%、消費財消費+10%、
 civic_ngm_breakdown_prevention_method = {
+	pickable_at_start = no
 	possible = {
 		ethics = {
+			value = ethic_fanatic_conservationism
 		}
 	}
 	random_weight = {
@@ -2143,6 +2457,13 @@ civic_ngm_breakdown_prevention_method = {
 civic_ngm_nature_faith = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_conservationism_and_spiritualist
+				value = ethic_conservationism
+				value = ethic_fanatic_conservationism
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
 		}
 	}
 	random_weight = {
@@ -2158,6 +2479,11 @@ civic_ngm_nature_faith = {
 civic_ngm_grand_monument = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_developmentalism
+				value = ethic_developmentalism
+				value = ethic_fanatic_developmentalism
+			}
 		}
 	}
 	random_weight = {
@@ -2169,8 +2495,10 @@ civic_ngm_grand_monument = {
 
 # 破壊掘削		destructive_digging(惑星を破壊すれば鉱物ってとれるんじゃないかな？)(狂開発)(ゲーム開始後の追加削除不可)					居住性-10%、鉱物生産+30%、粉末生産量+20%
 civic_ngm_destructive_digging = {
+	pickable_at_start = no
 	possible = {
 		ethics = {
+			value = ethic_fanatic_developmentalism
 		}
 	}
 	random_weight = {
@@ -2182,8 +2510,14 @@ civic_ngm_destructive_digging = {
 
 # 不可逆的な工業化	irreversible_industrialization(工業化を進めすぎた結果として惑星環境は不可逆的なまでに破壊された（と思い込んでいる）。)(開発)(ゲーム開始後の追加削除不可)							居住性-5%、合金生産量+10%、消費財生産+10%
 civic_ngm_irreversible_industrialization = {
+	pickable_at_start = no
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_developmentalism
+				value = ethic_developmentalism
+				value = ethic_fanatic_developmentalism
+			}
 		}
 	}
 	random_weight = {
@@ -2197,6 +2531,11 @@ civic_ngm_irreversible_industrialization = {
 civic_ngm_infrastructure_construction = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_developmentalism
+				value = ethic_developmentalism
+				value = ethic_fanatic_developmentalism
+			}
 		}
 	}
 	random_weight = {
@@ -2210,6 +2549,11 @@ civic_ngm_infrastructure_construction = {
 civic_ngm_nationwide_development = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_developmentalism
+				value = ethic_developmentalism
+				value = ethic_fanatic_developmentalism
+			}
 		}
 	}
 	random_weight = {
@@ -2223,6 +2567,17 @@ civic_ngm_nationwide_development = {
 civic_ngm_planetary_scale_irrigation = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_developmentalism
+				value = ethic_developmentalism
+				value = ethic_fanatic_developmentalism
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_ngm_destructive_digging
+				value = civic_ngm_irreversible_industrialization
+			}
 		}
 	}
 	random_weight = {
@@ -2236,6 +2591,13 @@ civic_ngm_planetary_scale_irrigation = {
 civic_ngm_modification_engineering = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_developmentalism_and_materialist
+				value = ethic_developmentalism
+				value = ethic_fanatic_developmentalism
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
 		}
 	}
 	random_weight = {
@@ -2249,8 +2611,14 @@ civic_ngm_modification_engineering = {
 # 〇栄望主義
 # 複雑な外交儀礼	diplomatic_etiquette(この国の外交官は粘り強く優秀であるが、外交システムにアクセスした場合何十人もの儀礼的な会話を交わし、本題に入るまでに日が変わることすらある。)(栄望、削除不可)使節+1、影響力+1、消費材消費量+5%、友好度-10
 civic_ngm_diplomatic_etiquette = {
+	pickable_at_start = no
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
 		}
 	}
 	random_weight = {
@@ -2264,6 +2632,13 @@ civic_ngm_diplomatic_etiquette = {
 civic_ngm_exchange_of_honor = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_honorism_and_xenophile
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
 		}
 	}
 	random_weight = {
@@ -2277,6 +2652,13 @@ civic_ngm_exchange_of_honor = {
 civic_ngm_heroic_volunteer_force = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_honorism_and_militarist
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
 		}
 	}
 	random_weight = {
@@ -2290,6 +2672,13 @@ civic_ngm_heroic_volunteer_force = {
 civic_ngm_the_self_righteous_hero = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_honorism_and_xenophobe
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
 		}
 	}
 	random_weight = {
@@ -2303,6 +2692,7 @@ civic_ngm_the_self_righteous_hero = {
 civic_ngm_respect_act = {
 	possible = {
 		ethics = {
+			value = ethic_fanatic_honorism
 		}
 	}
 	random_weight = {
@@ -2318,6 +2708,13 @@ civic_ngm_respect_act = {
 civic_ngm_personal_interest = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_utilitarianism_and_capitalism
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+			}
 		}
 	}
 	random_weight = {
@@ -2331,6 +2728,13 @@ civic_ngm_personal_interest = {
 civic_ngm_hypothecation_of_human_rights = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_utilitarianism_and_authoritarian
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
 		}
 	}
 	random_weight = {
@@ -2344,6 +2748,7 @@ civic_ngm_hypothecation_of_human_rights = {
 civic_ngm_money_penalty = {
 	possible = {
 		ethics = {
+			value = ethic_fanatic_utilitarianism
 		}
 	}
 	random_weight = {
@@ -2357,6 +2762,11 @@ civic_ngm_money_penalty = {
 civic_ngm_profit_motive = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_utilitarianism
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+			}
 		}
 	}
 	random_weight = {
@@ -2370,6 +2780,11 @@ civic_ngm_profit_motive = {
 civic_ngm_securing_real_benefits = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_utilitarianism
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+			}
 		}
 	}
 	random_weight = {
@@ -2383,6 +2798,13 @@ civic_ngm_securing_real_benefits = {
 civic_ngm_producer_consumer_society = {
 	possible = {
 		ethics = {
+			OR = {
+				text = civic_tooltip_utilitarianism_and_capitalism
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+			}
 		}
 	}
 	random_weight = {
