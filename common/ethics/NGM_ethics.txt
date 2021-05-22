@@ -5,16 +5,32 @@
 # 〇栄望主義：Pop30あたり貴族職業枠＋1、統治者の幸福度＋10%、開戦自由「名誉にかけて」勝利時影響力＋100  狂：Pop20あたり貴族職業枠＋1、統治者の幸福度＋20%、戦争疲弊-20%、開戦自由「名誉にかけて」勝利時影響力＋100、	〇実利主義  奴隷の使用許可、30Popあたりインフルエンサー職業枠+1、奴隷の購入コスト-10%    狂：奴隷の使用許可、20Popあたりインフルエンサー職業枠+1、奴隷購入コスト-20%、戦時中の艦隊製造速度+10%（思想）
 # ※インフルエンサージョブ  統治者  影響力+0.1、社会研究+5、統治志向魅力+5%（現代社会で様々なコンテンツを利用して他者の思考や行動に影響を与える有力者）
 
+ethic_categories = {
+	ngm_soc_or_cap = {}
+
+	ngm_int_or_neu = {}
+	
+	ngm_con_or_dev = {}
+
+	ngm_hon_or_uti = {}
+
+}
+
 # 〇社会主義：労働者幸福度+5%、布告「5か年計画」を宣言可能。  狂：労働者幸福度+10%、統治者幸福度-5%、布告「5か年計画」を宣言可能。	
 ethic_fanatic_socialism = {
 	cost = 2
-	category = "col"
+	category = "ngm_soc_or_cap"
 	category_value = 0
+
+	playable = {
+		NOT = {
+			has_authority = auth_corporate
+		}
+	}
 
 	use_for_pops = no
 
 	regular_variant = ethic_socialism
-
 	country_modifier = {
 		pop_cat_worker_happiness = 0.1
 		pop_cat_ruler_happiness = -0.05
@@ -32,8 +48,14 @@ ethic_fanatic_socialism = {
 
 ethic_socialism = {
 	cost = 1
-	category = "col"
+	category = "ngm_soc_or_cap"
 	category_value = 1
+
+	playable = {
+		NOT = {
+			has_authority = auth_corporate
+		}
+	}
 
 	fanatic_variant = ethic_fanatic_socialism
 
@@ -280,7 +302,7 @@ ethic_socialism = {
 # 〇資本主義：統治者幸福度+5%、交易価値+10%	狂：統治者幸福度+10%、交易価値+10%、労働者幸福度-10%
 ethic_fanatic_capitalism = {
 	cost = 2
-	category = "col"
+	category = "ngm_soc_or_cap"
 	category_value = 4
 
 	use_for_pops = no
@@ -288,6 +310,9 @@ ethic_fanatic_capitalism = {
 	regular_variant = ethic_capitalism
 
 	country_modifier = {
+		pop_cat_ruler_happiness = 0.1
+		trade_value_mult = 0.1
+		pop_cat_worker_happiness = -0.1
 	}
 
 	tags = {
@@ -301,12 +326,14 @@ ethic_fanatic_capitalism = {
 
 ethic_capitalism = {
 	cost = 1
-	category = "col"
+	category = "ngm_soc_or_cap"
 	category_value = 3
 
 	fanatic_variant = ethic_fanatic_capitalism
 
 	country_modifier = {
+		pop_cat_ruler_happiness = 0.05
+		trade_value_mult = 0.1
 	}
 
 	tags = {
@@ -547,7 +574,7 @@ ethic_capitalism = {
 # 〇介入主義：使節+1、解読力+2			狂：関係-30、使節+2、解読力+5	
 ethic_fanatic_interventionism = {
 	cost = 2
-	category = "col"
+	category = "ngm_int_or_neu"
 	category_value = 0
 
 	use_for_pops = no
@@ -555,6 +582,9 @@ ethic_fanatic_interventionism = {
 	regular_variant = ethic_interventionism
 
 	country_modifier = {
+		envoys_add = 2
+		intel_decryption_add = 5
+		country_trust_cap_add = -30
 	}
 
 	tags = {
@@ -569,12 +599,14 @@ ethic_fanatic_interventionism = {
 
 ethic_interventionism = {
 	cost = 1
-	category = "col"
+	category = "ngm_int_or_neu"
 	category_value = 1
 
 	fanatic_variant = ethic_fanatic_interventionism
 
 	country_modifier = {
+		envoys_add = 1
+		intel_decryption_add = 2
 	}
 
 	tags = {
@@ -813,11 +845,11 @@ ethic_interventionism = {
 	}
 }
 
-# 〇中立主義：関係+20、暗号力+5	狂：連邦結束度月-5、関係+50、暗号力+10（対外）
+# 〇中立主義：関係+20、暗号力+5	狂：(連邦結束度月-5)、関係+50、暗号力+10（対外）
 
 ethic_fanatic_neutralism = {
 	cost = 2
-	category = "col"
+	category = "ngm_int_or_neu"
 	category_value = 4
 
 	use_for_pops = no
@@ -825,7 +857,10 @@ ethic_fanatic_neutralism = {
 	regular_variant = ethic_neutralism
 
 	country_modifier = {
+		country_trust_cap_add = 50
+		intel_encryption_add = 10
 	}
+	
 
 	tags = {
 		ETHIC_ALLOWS_STRATIFIED_SOCIETY
@@ -838,12 +873,13 @@ ethic_fanatic_neutralism = {
 
 ethic_neutralism = {
 	cost = 1
-	category = "col"
+	category = "ngm_int_or_neu"
 	category_value = 3
 
 	fanatic_variant = ethic_fanatic_neutralism
 
 	country_modifier = {
+		intel_encryption_add = 5
 	}
 
 	tags = {
@@ -1084,7 +1120,7 @@ ethic_neutralism = {
 # 〇保全主義：居住性＋5%、農業生産量+10%  	狂：居住性+10%、農業生産量+20%、鉱物生産量-10%	
 ethic_fanatic_conservationism = {
 	cost = 2
-	category = "col"
+	category = "ngm_con_or_dev"
 	category_value = 0
 
 	use_for_pops = no
@@ -1092,6 +1128,9 @@ ethic_fanatic_conservationism = {
 	regular_variant = ethic_conservationism
 
 	country_modifier = {
+		pop_habitability = 0.1
+		planet_jobs_food_produces_mult = 0.2
+		planet_jobs_minerals_produces_mult = -0.1
 	}
 
 	tags = {
@@ -1106,12 +1145,14 @@ ethic_fanatic_conservationism = {
 
 ethic_conservationism = {
 	cost = 1
-	category = "col"
+	category = "ngm_con_or_dev"
 	category_value = 1
 
 	fanatic_variant = ethic_fanatic_conservationism
 
 	country_modifier = {
+		pop_habitability = 0.05
+		planet_jobs_food_produces_mult = 0.1
 	}
 
 	tags = {
@@ -1353,7 +1394,7 @@ ethic_conservationism = {
 # 〇開発主義：鉱物生産+5%、建築スロット＋2    狂：鉱物生産+10%、建築スロット+2、区域建造速度+10%、居住性-5%
 ethic_fanatic_developmentalism = {
 	cost = 2
-	category = "col"
+	category = "ngm_con_or_dev"
 	category_value = 4
 
 	use_for_pops = no
@@ -1361,6 +1402,10 @@ ethic_fanatic_developmentalism = {
 	regular_variant = ethic_developmentalism
 
 	country_modifier = {
+		planet_jobs_minerals_produces_mult = 0.1
+		planet_max_buildings_add = 2
+		planet_building_build_speed_mult = 0.1
+		pop_habitability = -0.05
 	}
 
 	tags = {
@@ -1374,12 +1419,14 @@ ethic_fanatic_developmentalism = {
 
 ethic_developmentalism = {
 	cost = 1
-	category = "col"
+	category = "ngm_con_or_dev"
 	category_value = 3
 
 	fanatic_variant = ethic_fanatic_developmentalism
 
 	country_modifier = {
+		planet_jobs_minerals_produces_mult = 0.05
+		planet_max_buildings_add = 2
 	}
 
 	tags = {
@@ -1617,11 +1664,11 @@ ethic_developmentalism = {
 	}
 }
 
-# 〇栄望主義：Pop30あたり貴族職業枠＋1、統治者の幸福度＋10%、開戦自由「名誉にかけて」勝利時影響力＋100  狂：Pop20あたり貴族職業枠＋1、統治者の幸福度＋20%、戦争疲弊-20%、
+# 〇栄望主義：Pop25あたり貴族職業枠＋1、統治者の幸福度＋10%、開戦自由「名誉にかけて」勝利時影響力＋100  狂：Pop20あたり貴族職業枠＋1、統治者の幸福度＋20%、戦争疲弊-20%、
 # 開戦自由「名誉にかけて」勝利時影響力＋100、
 ethic_fanatic_honorism = {
 	cost = 2
-	category = "col"
+	category = "ngm_hon_or_uti"
 	category_value = 0
 
 	use_for_pops = no
@@ -1629,6 +1676,8 @@ ethic_fanatic_honorism = {
 	regular_variant = ethic_honorism
 
 	country_modifier = {
+		pop_cat_ruler_happiness = 0.2
+		job_noble_per_pop = 0.05
 	}
 
 	tags = {
@@ -1643,12 +1692,14 @@ ethic_fanatic_honorism = {
 
 ethic_honorism = {
 	cost = 1
-	category = "col"
+	category = "ngm_hon_or_uti"
 	category_value = 1
 
 	fanatic_variant = ethic_fanatic_honorism
 
 	country_modifier = {
+		pop_cat_ruler_happiness = 0.1
+		job_noble_per_pop = 0.04
 	}
 
 	tags = {
@@ -1887,11 +1938,11 @@ ethic_honorism = {
 	}
 }
 
-# 	〇実利主義  奴隷の使用許可、30Popあたりインフルエンサー職業枠+1、奴隷の購入コスト-10%    狂：奴隷の使用許可、20Popあたりインフルエンサー職業枠+1、奴隷購入コスト-20%、
+# 	〇実利主義  奴隷の使用許可、25Popあたりインフルエンサー職業枠+1、奴隷の購入コスト-10%    狂：奴隷の使用許可、20Popあたりインフルエンサー職業枠+1、奴隷購入コスト-20%、
 # 戦時中の艦隊製造速度+10%（思想）
 ethic_fanatic_utilitarianism = {
 	cost = 2
-	category = "col"
+	category = "ngm_hon_or_uti"
 	category_value = 4
 
 	use_for_pops = no
@@ -1899,6 +1950,9 @@ ethic_fanatic_utilitarianism = {
 	regular_variant = ethic_utilitarianism
 
 	country_modifier = {
+		job_ngm_influencer_per_pop = 0.05
+		slave_market_cost_mult = -0.2
+		starbase_defensive_war_ship_build_speed_mult = 0.1
 	}
 
 	tags = {
@@ -1912,12 +1966,14 @@ ethic_fanatic_utilitarianism = {
 
 ethic_utilitarianism = {
 	cost = 1
-	category = "col"
+	category = "ngm_hon_or_uti"
 	category_value = 3
 
 	fanatic_variant = ethic_fanatic_utilitarianism
 
 	country_modifier = {
+		job_ngm_influencer_per_pop = 0.04
+		slave_market_cost_mult = -0.1
 	}
 
 	tags = {
