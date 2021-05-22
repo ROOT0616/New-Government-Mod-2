@@ -22,12 +22,6 @@ ethic_fanatic_socialism = {
 	category = "ngm_soc_or_cap"
 	category_value = 0
 
-	playable = {
-		NOT = {
-			has_authority = auth_corporate
-		}
-	}
-
 	use_for_pops = no
 
 	regular_variant = ethic_socialism
@@ -37,8 +31,7 @@ ethic_fanatic_socialism = {
 	}
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
-		ETHIC_ONLY_AUTOCRACY
+		ETHIC_ALLOWS_UTOPIA
 	}
 
 	random_weight = {
@@ -51,12 +44,6 @@ ethic_socialism = {
 	category = "ngm_soc_or_cap"
 	category_value = 1
 
-	playable = {
-		NOT = {
-			has_authority = auth_corporate
-		}
-	}
-
 	fanatic_variant = ethic_fanatic_socialism
 
 	country_modifier = {
@@ -64,9 +51,7 @@ ethic_socialism = {
 	}
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
-		ETHIC_ONLY_AUTOCRACY
-		ETHIC_NEVER_DEMOCRACY
+		ETHIC_ALLOWS_UTOPIA
 	}
 
 	random_weight = {
@@ -305,6 +290,12 @@ ethic_fanatic_capitalism = {
 	category = "ngm_soc_or_cap"
 	category_value = 4
 
+	playable = {
+		NOT = {
+			has_authority = auth_imperial
+		}
+	}
+
 	use_for_pops = no
 
 	regular_variant = ethic_capitalism
@@ -316,7 +307,7 @@ ethic_fanatic_capitalism = {
 	}
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
+		ETHIC_ALLOWS_SLAVERY
 	}
 
 	random_weight = {
@@ -337,7 +328,6 @@ ethic_capitalism = {
 	}
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 		ETHIC_ALLOWS_SLAVERY
 	}
 
@@ -588,8 +578,6 @@ ethic_fanatic_interventionism = {
 	}
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
-		ETHIC_ONLY_AUTOCRACY
 	}
 
 	random_weight = {
@@ -610,9 +598,6 @@ ethic_interventionism = {
 	}
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
-		ETHIC_ONLY_AUTOCRACY
-		ETHIC_NEVER_DEMOCRACY
 	}
 
 	random_weight = {
@@ -863,7 +848,6 @@ ethic_fanatic_neutralism = {
 	
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 	}
 
 	random_weight = {
@@ -883,8 +867,6 @@ ethic_neutralism = {
 	}
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
-		ETHIC_ALLOWS_SLAVERY
 	}
 
 	random_weight = {
@@ -1128,14 +1110,12 @@ ethic_fanatic_conservationism = {
 	regular_variant = ethic_conservationism
 
 	country_modifier = {
-		pop_habitability = 0.1
+		pop_environment_tolerance = 0.1
 		planet_jobs_food_produces_mult = 0.2
 		planet_jobs_minerals_produces_mult = -0.1
 	}
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
-		ETHIC_ONLY_AUTOCRACY
 	}
 
 	random_weight = {
@@ -1151,14 +1131,11 @@ ethic_conservationism = {
 	fanatic_variant = ethic_fanatic_conservationism
 
 	country_modifier = {
-		pop_habitability = 0.05
+		pop_environment_tolerance = 0.05
 		planet_jobs_food_produces_mult = 0.1
 	}
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
-		ETHIC_ONLY_AUTOCRACY
-		ETHIC_NEVER_DEMOCRACY
 	}
 
 	random_weight = {
@@ -1405,11 +1382,10 @@ ethic_fanatic_developmentalism = {
 		planet_jobs_minerals_produces_mult = 0.1
 		planet_max_buildings_add = 2
 		planet_building_build_speed_mult = 0.1
-		pop_habitability = -0.05
+		pop_environment_tolerance = -0.05
 	}
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 	}
 
 	random_weight = {
@@ -1430,8 +1406,6 @@ ethic_developmentalism = {
 	}
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
-		ETHIC_ALLOWS_SLAVERY
 	}
 
 	random_weight = {
@@ -1671,6 +1645,12 @@ ethic_fanatic_honorism = {
 	category = "ngm_hon_or_uti"
 	category_value = 0
 
+	playable = {
+		NOT = {
+			has_authority = auth_democratic
+		}
+	}
+
 	use_for_pops = no
 
 	regular_variant = ethic_honorism
@@ -1681,8 +1661,6 @@ ethic_fanatic_honorism = {
 	}
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
-		ETHIC_ONLY_AUTOCRACY
 	}
 
 	random_weight = {
@@ -1703,8 +1681,6 @@ ethic_honorism = {
 	}
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
-		ETHIC_ONLY_AUTOCRACY
 		ETHIC_NEVER_DEMOCRACY
 	}
 
@@ -1945,6 +1921,11 @@ ethic_fanatic_utilitarianism = {
 	category = "ngm_hon_or_uti"
 	category_value = 4
 
+	playable = {
+		NOT = {
+			has_authority = auth_imperial
+		}
+	}
 	use_for_pops = no
 
 	regular_variant = ethic_utilitarianism
@@ -1956,7 +1937,6 @@ ethic_fanatic_utilitarianism = {
 	}
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 	}
 
 	random_weight = {
@@ -1969,6 +1949,12 @@ ethic_utilitarianism = {
 	category = "ngm_hon_or_uti"
 	category_value = 3
 
+	playable = {
+		NOT = {
+			has_authority = auth_imperial
+		}
+	}
+
 	fanatic_variant = ethic_fanatic_utilitarianism
 
 	country_modifier = {
@@ -1977,8 +1963,6 @@ ethic_utilitarianism = {
 	}
 
 	tags = {
-		ETHIC_ALLOWS_STRATIFIED_SOCIETY
-		ETHIC_ALLOWS_SLAVERY
 	}
 
 	random_weight = {

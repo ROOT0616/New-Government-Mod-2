@@ -122,32 +122,32 @@ country_event = {
 	immediate = {
 		set_policy = {
 			policy = ngm_policies_population_stance
-			option = NAME_population_stance_non_non
+			option = NAME_NGM_population_stance_non_non
 			cooldown = no
 		}
 		set_policy = {
 			policy = ngm_policies_civil_service_appointments_system
-			option = NAME_hybrid
+			option = NAME_NGM_hybrid
 			cooldown = no
 		}
 		set_policy = {
 			policy = ngm_policies_taxation_system
-			option = NAME_general_tax_system
+			option = NAME_NGM_general_tax_system
 			cooldown = no
 		}
 		set_policy = {
 			policy = ngm_policies_cultural_policy
-			option = NAME_private_initiative
+			option = NAME_NGM_private_initiative
 			cooldown = no
 		}
 		set_policy = {
 			policy = ngm_policies_agricultural_policy
-			option = NAME_no_agricultural_incentives
+			option = NAME_NGM_no_agricultural_incentives
 			cooldown = no
 		}
 		set_policy = {
 			policy = ngm_policies_language_policy
-			option = NAME_common_language_policy
+			option = NAME_NGM_common_language_policy
 			cooldown = no
 		}
 	}

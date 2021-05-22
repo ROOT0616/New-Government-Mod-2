@@ -188,7 +188,7 @@ ngm_superintendent_of_wilderness = {
 		ruler_job_check_trigger = yes
 	}
 	planet_modifier = {
-		pop_habitability = 0.05
+		pop_environment_tolerance = 0.05
 		pop_ethic_conservationism_attraction_mult = 0.1
 	}
 	resources = {

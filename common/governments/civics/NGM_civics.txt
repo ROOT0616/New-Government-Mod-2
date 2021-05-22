@@ -445,8 +445,8 @@ civic_ngm_culturism = {
 civic_ngm_imaginary_socialism = {
 	possible = {
 		ethics = {
-			NOR = {
-				text = civic_tooltip_not_socialism
+			OR = {
+				text = civic_tooltip_socialism
 				value = ethic_socialism
 				value = ethic_fanatic_socialism
 			}
@@ -606,7 +606,7 @@ civic_ngm_steady_hand = {
 	}
 }
 
-# 6.毒舌な処世術師	:(この国の政府は基本的に口が悪く相手に良い印象を与えないが、実益に基づいた処世術に長けており、裏でコツコツと努力をしている。)友好度-20、交易価値-10%、生産量+5%、外交発言力+10%、
+# 6.毒舌な処世術師	:(この国の政府は基本的に口が悪く相手に良い印象を与えないが、実益に基づいた処世術に長けており、裏でコツコツと努力をしている。)信用値-20、交易価値-10%、生産量+5%、外交発言力+10%、
 civic_ngm_the_toxic_survivalist = {
 	possible = {
 		civics = {
@@ -626,13 +626,14 @@ civic_ngm_the_toxic_survivalist = {
 		base = 5
 	}
 	modifier = {
+		country_trust_cap_add = -20
 		trade_value_mult = -0.1
 		planet_jobs_produces_mult = 0.05
 		diplo_weight_mult = 0.1
 	}
 }
 
-# 7.マイペースな苦労人	:(この国の政府は忍耐力があり、他国の対応に常に苦労しつつ独自のペースで安全保障計画を執り行っている。しかし、そういった態度から各国から信頼され、国民からも強い信頼を寄せられている。)建艦速度+10%、艦隊許容量-5%、友好度+30、消費財消費量-20%、ステーション耐久度+20%
+# 7.マイペースな苦労人	:(この国の政府は忍耐力があり、他国の対応に常に苦労しつつ独自のペースで安全保障計画を執り行っている。しかし、そういった態度から各国から信頼され、国民からも強い信頼を寄せられている。)建艦速度+10%、艦隊許容量-5%、信用値+30、消費財消費量-20%、ステーション耐久度+20%
 civic_ngm_hard_worker_with_a_slow_pace = {
 	possible = {
 		civics = {
@@ -654,6 +655,7 @@ civic_ngm_hard_worker_with_a_slow_pace = {
 	modifier = {
 		starbase_shipyard_build_speed_mult = 0.1
 		country_naval_cap_mult = -0.05
+		country_trust_cap_add = 30
 		planet_pops_consumer_goods_upkeep_mult = -0.2
 		shipsize_starbase_outpost_hull_mult = 0.2 
 		shipsize_starbase_starport_hull_mult = 0.2 
@@ -663,7 +665,7 @@ civic_ngm_hard_worker_with_a_slow_pace = {
 	}
 }
 
-# 8.冷酷な現実主義者	:(この国の政府は恐ろしく現実主義であり、数時間前の味方を裏切ることも躊躇なく、内政も苛烈で効率的ある。しかし、その態度は国民からも他国からも積極的に支持されない。)友好度-30、幸福度-10%、外交発言力+20%、艦船連射レート+10%、統治者生産量+10%
+# 8.冷酷な現実主義者	:(この国の政府は恐ろしく現実主義であり、数時間前の味方を裏切ることも躊躇なく、内政も苛烈で効率的ある。しかし、その態度は国民からも他国からも積極的に支持されない。)信用値-30、幸福度-10%、外交発言力+20%、艦船連射レート+10%、統治者生産量+10%
 civic_ngm_ruthless_realist = {
 	possible = {
 		civics = {
@@ -683,7 +685,7 @@ civic_ngm_ruthless_realist = {
 		base = 5
 	}
 	modifier = {
-		country_trust_growth = 0.3
+		country_trust_cap_add = -30
 		envoy_improve_relations_mult = -0.3
 		pop_happiness = -0.1
 		diplo_weight_mult = 0.2
@@ -732,7 +734,6 @@ civic_ngm_space_security_headquarters = {
 
 # 乱脈的出生率 random_birth_rate		(この国では出生率がコントロールできていない。)(ゲーム開始後の追加削除不可)Pop成長率+10%、幸福度-5%、住居使用量+5%
 civic_ngm_random_birth_rate = {
-	pickable_at_start = no
 	random_weight = {
 		base = 5
 	}
@@ -762,14 +763,13 @@ civic_ngm_virtual_society = {
 	}
 	modifier = {
 		pop_happiness = 0.1
-		pop_habitability = 0.05
+		pop_environment_tolerance = 0.05
 		pop_growth_speed = -0.1
 	}
 }
 
 # 健康的習慣 healthy_habits			(この国の国民は運動と食事、適度な日向ぼっこにより健康的な生活を送っている。)(ゲーム開始後の追加削除不可)リーダー寿命+10年、幸福度+5%
 civic_ngm_healthy_habits = {
-	pickable_at_start = no
 	random_weight = {
 		base = 5
 	}
@@ -834,7 +834,7 @@ civic_ngm_environmental_democracy = {
 		base = 5
 	}
 	modifier = {
-		pop_habitability = 0.05
+		pop_environment_tolerance = 0.05
 		pop_growth_speed = 0.1
 	}
 }
@@ -1450,7 +1450,6 @@ civic_ngm_cosmic_scale_liberation = {
 
 # 究極の思想的自由 ultimate_freedom_of_thought	 (この社会では他者に対する侵害の蓋然性がある思想を除いてあらゆる思想が許容されている。)							(狂信的平等)(ゲーム開始後の追加削除不可)				管理許容量+30%、安定度-10、統治志向魅力-30%
 civic_ngm_ultimate_freedom_of_thought = {
-	pickable_at_start = no
 	possible = {
 		ethics = {
 			value = ethic_fanatic_egalitarian
@@ -1654,8 +1653,7 @@ civic_ngm_exclusive_community = {
 	}
 }
 
-# まだ
-# 呵責なき正義 remorseless_justice		(この国は自国が正義で、他者が悪であると考えており、悪に対しては無制限の苛烈さで対処する。)	(排他、軍国)（実利ではない）	艦隊連射レート+5%、無制限爆撃以外選択不可、犯罪度-10%、安定度-5、他国友好度-30
+# 呵責なき正義 remorseless_justice		(この国は自国が正義で、他者が悪であると考えており、悪に対しては無制限の苛烈さで対処する。)	(排他、軍国)（実利ではない）	艦隊連射レート+5%、無制限爆撃以外選択不可、犯罪度-10%、安定度-5、信用値-30
 civic_ngm_remorseless_justice = {
 	possible = {
 		ethics = {
@@ -1680,6 +1678,7 @@ civic_ngm_remorseless_justice = {
 		ship_fire_rate_mult = 0.05
 		planet_crime_mult = -0.1
 		planet_stability_add = -5
+		country_trust_cap_add = -30
 	}
 }
 
@@ -1776,7 +1775,7 @@ civic_ngm_elitism = {
 }
 
 # まだ
-# 異種族解剖	dissection			(この国家は自らの生物学的知見のために多種族を解剖することや実験を厭わず、顰蹙をかっている。)	(排他、物質or実利)	研究力+10%、異種族は強制で奴隷化、国他友好度-100
+# 異種族解剖	dissection			(この国家は自らの生物学的知見のために多種族を解剖することや実験を厭わず、顰蹙をかっている。)	(排他、物質or実利)	研究力+10%、異種族は強制で奴隷化、信用値-100
 civic_ngm_dissection = {
 	possible = {
 		ethics = {
@@ -1798,6 +1797,7 @@ civic_ngm_dissection = {
 		country_physics_research_produces_mult = 0.1
 		country_society_research_produces_mult = 0.1
 		country_engineering_research_produces_mult = 0.1
+		country_trust_cap_add = -10
 	}
 }
 
@@ -1925,7 +1925,6 @@ civic_ngm_military_regime = {
 # まだ
 # 闘争のための闘争 The_Struggle_for_Struggle	(平和とは戦争と戦争との休憩期間にすぎない。)									(狂信軍国)(ゲーム開始後の追加削除不可)		戦争疲弊-20%、戦時中の合金生産量+10%、軍艦建造コスト-5%
 civic_ngm_The_Struggle_for_Struggle = {
-	pickable_at_start = no
 	possible = {
 		ethics = {
 			value = ethic_fanatic_militarist
@@ -2020,7 +2019,7 @@ civic_ngm_armed_pacifism = {
 }
 
 
-# 積極的平和主義者	active_pacifist(この国は、平和を維持するためには銀河規模で平和を仲介するため他国に関与していくべきだと考えている。)(平和、介入)	使節+1、外交発言力+10%、宇宙軍許容量+20、他国友好度-10
+# 積極的平和主義者	active_pacifist(この国は、平和を維持するためには銀河規模で平和を仲介するため他国に関与していくべきだと考えている。)(平和、介入)	使節+1、外交発言力+10%、宇宙軍許容量+20、他国信用値-10
 civic_ngm_active_pacifist = {
 	possible = {
 		ethics = {
@@ -2040,6 +2039,7 @@ civic_ngm_active_pacifist = {
 		envoys_add = 1
 		diplo_weight_mult = 0.1
 		country_naval_cap_add = 20
+		country_trust_cap_add = -10
 	}
 }
 
@@ -2061,7 +2061,7 @@ civic_ngm_messenger_of_peace = {
 }
 
 # まだ
-# 誠実な交渉人		good_faith_negotiator(この国は他国から誠実であると考えられており、貿易や外交において信頼を置かれている。)(平和、平等)	使節+1、他国友好度+20
+# 誠実な交渉人		good_faith_negotiator(この国は他国から誠実であると考えられており、貿易や外交において信頼を置かれている。)(平和、平等)	使節+1、他国信用値+20
 civic_ngm_good_faith_negotiator = {
 	possible = {
 		ethics = {
@@ -2079,6 +2079,7 @@ civic_ngm_good_faith_negotiator = {
 	}
 	modifier = {
 		envoys_add = 1
+		country_trust_cap_add = 20
 	}
 }
 
@@ -2087,7 +2088,6 @@ civic_ngm_good_faith_negotiator = {
 # まだ
 # 機械信仰		mechanical_faith(この国の信仰は創作物に向けられており、その究極であるロボットは神と我々を繋ぐ存在であると考えられている。)(精神、開発)(ゲーム開始後の追加削除不可)	精神主義派閥がロボットに怒らなくなる。工学研究+10%、ロボット建造速度+10%、ロボット維持費+5%、ロボットを非合法化できない。ロボットの人権を市民権に固定。
 civic_ngm_mechanical_faith = {
-	pickable_at_start = no
 	possible = {
 		ethics = {
 			OR = {
@@ -2110,7 +2110,7 @@ civic_ngm_mechanical_faith = {
 }
 
 # まだ
-# 伝道者団		missionary_group(この国の聖職者は熱心であり、他国に対しても自らの信仰を広めることに注力している。)(精神、介入)	使節+1、隣国の精神主義魅力+20%、他国友好度-50
+# 伝道者団		missionary_group(この国の聖職者は熱心であり、他国に対しても自らの信仰を広めることに注力している。)(精神、介入)	使節+1、隣国の精神主義魅力+20%、信用値-50
 civic_ngm_missionary_group = {
 	possible = {
 		ethics = {
@@ -2128,10 +2128,11 @@ civic_ngm_missionary_group = {
 	}
 	modifier = {
 		envoys_add = 1
+		country_trust_cap_add = -50
 	}
 }
 
-# 信仰の擁護者		defender_of_the_faith(この国の指導者は国家として神を守ることを誓約しており、そのためにはあらゆる犠牲を惜しまない。)(精神、軍国)	宇宙軍許容量+20、艦船連射レート+5%、交易価値-5%、影響力+0.2、非精神主義国家友好度-30
+# 信仰の擁護者		defender_of_the_faith(この国の指導者は国家として神を守ることを誓約しており、そのためにはあらゆる犠牲を惜しまない。)(精神、軍国)	宇宙軍許容量+20、艦船連射レート+5%、交易価値-5%、影響力+0.2、非精神主義国家信用値-30
 civic_ngm_defender_of_the_faith = {
 	possible = {
 		ethics = {
@@ -2153,6 +2154,7 @@ civic_ngm_defender_of_the_faith = {
 		trade_value_mult = -0.05
 		country_base_influence_produces_add = 0.2
 		spiritualist_attraction = 30
+		country_trust_cap_add = -30
 	}
 }
 
@@ -2223,7 +2225,6 @@ civic_ngm_ai_assistance = {
 
 # 機械は友達 		machines_are_our_friends(この社会はロボットに人権が与えられており、街の至る所でロボットと市民が楽しく暮らしている。)(物質、ゲーム開始後削除不可)		ロボット製造速度+10%、ロボット維持費+10%、ロボットの権利を市民権以外に変更不可
 civic_ngm_machines_are_our_friends = {
-	pickable_at_start = no
 	possible = {
 		ethics = {
 			OR = {
@@ -2337,7 +2338,6 @@ civic_ngm_experimental_practice = {
 
 # AI主導政治		paranoia(市民、貴方は幸福ですか？ マザーコンピュータ談)(狂信的な物質：ゲーム開始後削除不可)	統治志向魅力+10%、研究力+10%、安定度-10、幸福度+5%
 civic_ngm_paranoia = {
-	pickable_at_start = no
 	possible = {
 		ethics = {
 			value = ethic_fanatic_materialist
@@ -2469,7 +2469,7 @@ civic_ngm_land_sharing = {
 		pop_housing_usage_mult = -0.1
 		country_minerals_produces_mult = 	0.1
 		country_food_produces_mult = 0.1
-		pop_habitability = -0.05
+		pop_environment_tolerance = -0.05
 	}
 }
 
@@ -2617,14 +2617,13 @@ civic_ngm_agriculture = {
 	modifier = {
 		trade_value_mult = 0.1
 		country_food_produces_mult = 0.1
-		pop_habitability = 0.05
+		pop_environment_tolerance = 0.05
 		country_minerals_produces_mult = -0.05
 	}
 }
 
 # 究極の規制緩和	deregulation(この国に経済的規制はほとんど存在せず、自由に各々が活動している。)		(狂資本)(ゲーム開始後の追加削除不可)		専門家出力+10%、流入圧力+10%、犯罪度+20、犯罪度+15%、労働者幸福度-10%、安定度+10
 civic_ngm_deregulation = {
-	pickable_at_start = no
 	possible = {
 		ethics = {
 			value = ethic_fanatic_capitalism
@@ -2668,7 +2667,7 @@ civic_ngm_CIA = {
 }
 
 # まだ
-# 情報操作		information_operation(この国では自国の印象を良くし、自国の情報を隠蔽するためにシステム的な情報操作が欠かせない。)(介入、物質)	解読力+5、暗号力+5、友好度+20
+# 情報操作		information_operation(この国では自国の印象を良くし、自国の情報を隠蔽するためにシステム的な情報操作が欠かせない。)(介入、物質)	解読力+5、暗号力+5、信用値+20
 civic_ngm_information_operation = {
 	possible = {
 		ethics = {
@@ -2687,7 +2686,7 @@ civic_ngm_information_operation = {
 	modifier = {
 		intel_decryption_add = 5
 		intel_encryption_add = 5
-
+		country_trust_cap_add = 20
 	}
 }
 
@@ -2735,8 +2734,7 @@ civic_ngm_parabola = {
 	}
 }
 
-# まだ
-# 笑顔の仲介者		smile(この国は銀河の平和をもたらすため、どのような状況でも笑顔で他国と向き合っている。)(介入、平和)	使節+1、取引受諾値+50、交易価値+5%、友好度+20、統治志向魅力-10%
+# 笑顔の仲介者		smile(この国は銀河の平和をもたらすため、どのような状況でも笑顔で他国と向き合っている。)(介入、平和)	使節+1、取引受諾値+50、交易価値+5%、信用値+20、統治志向魅力-10%
 civic_ngm_smile = {
 	possible = {
 		ethics = {
@@ -2754,15 +2752,15 @@ civic_ngm_smile = {
 	}
 	modifier = {
 		envoys_add = 1
+		country_trade_attractiveness = 50
 		trade_value_mult = 0.05
+		country_trust_cap_add = 20
 		pop_government_ethic_attraction = -0.1
 	}
 }
 
-# まだ
-# 国際的黒幕		mastermind(さあ、我が掌で踊れ。すべては我らの思いのままに......)(狂介入)(ゲーム開始後の追加削除不可)	使節+1、暗号力+5、解読力+5、外交発言力+10%、友好度-30
+# 国際的黒幕		mastermind(さあ、我が掌で踊れ。すべては我らの思いのままに......)(狂介入)(ゲーム開始後の追加削除不可)	使節+1、暗号力+5、解読力+5、外交発言力+10%、信用値-30
 civic_ngm_mastermind = {
-	pickable_at_start = no
 	possible = {
 		ethics = {
 			value = ethic_fanatic_interventionism
@@ -2776,6 +2774,7 @@ civic_ngm_mastermind = {
 		intel_encryption_add = 5
 		intel_decryption_add = 5
 		diplo_weight_mult = 0.1
+		country_trust_cap_add = -30
 	}
 }
 
@@ -2937,7 +2936,7 @@ civic_ngm_environmental_maintenance = {
 		base = 5
 	}
 	modifier = {
-		pop_habitability = 0.1
+		pop_environment_tolerance = 0.1
 		country_society_research_produces_mult = 0.1
 		country_minerals_produces_mult = -0.05
 	}
@@ -3079,7 +3078,7 @@ civic_ngm_destructive_digging = {
 	modifier = {
 		country_minerals_produces_mult = 0.3
 		country_volatile_motes_produces_mult = 02
-		pop_habitability = -0.1
+		pop_environment_tolerance = -0.1
 	}
 }
 
@@ -3101,7 +3100,7 @@ civic_ngm_irreversible_industrialization = {
 	modifier = {
 		country_consumer_goods_produces_mult = 0.1
 		country_alloys_produces_mult = 0.1
-		pop_habitability = -0.05
+		pop_environment_tolerance = -0.05
 	}
 }
 
@@ -3172,7 +3171,7 @@ civic_ngm_planetary_scale_irrigation = {
 		base = 5
 	}
 	modifier = {
-		pop_habitability = 0.1
+		pop_environment_tolerance = 0.1
 		country_food_produces_mult = 0.1
 	}
 }
@@ -3202,10 +3201,8 @@ civic_ngm_modification_engineering = {
 
 
 # 〇栄望主義
-# まだ
-# 複雑な外交儀礼	diplomatic_etiquette(この国の外交官は粘り強く優秀であるが、外交システムにアクセスした場合何十人もの儀礼的な会話を交わし、本題に入るまでに日が変わることすらある。)(栄望、削除不可)使節+1、影響力+1、消費材消費量+5%、友好度-10
+# 複雑な外交儀礼	diplomatic_etiquette(この国の外交官は粘り強く優秀であるが、外交システムにアクセスした場合何十人もの儀礼的な会話を交わし、本題に入るまでに日が変わることすらある。)(栄望、削除不可)使節+1、影響力+1、消費材消費量+5%、信用値-10
 civic_ngm_diplomatic_etiquette = {
-	pickable_at_start = no
 	possible = {
 		ethics = {
 			OR = {
@@ -3222,6 +3219,7 @@ civic_ngm_diplomatic_etiquette = {
 		envoys_add = 1
 		country_base_influence_produces_add = 1
 		planet_pops_consumer_goods_upkeep_mult = 0.05
+		country_trust_cap_add = -10
 	}
 }
 
@@ -3375,7 +3373,7 @@ civic_ngm_money_penalty = {
 		base = 5
 	}
 	modifier = {
-		trade_value_mult = 10
+		trade_value_mult = 0.1
 		planet_crime_add = 10
 		planet_crime_mult = 0.1
 	}
