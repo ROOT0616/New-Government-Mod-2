@@ -1969,7 +1969,7 @@ civic_ngm_aegis_shield = {
 	}
 }
 
-# 繁栄主義者		prosperity_advocate(この国は戦争ではなく、平和と交易にこそ社会の豊かさと幸福をもたらすと考えている。)(平和、実利)	労働者生産量+5%、交易価値+10%、平和の期間が1年続くごとに労働者生産量+0.2%、交易価値+0.5%（最大50年分）
+# 繁栄主義者		prosperity_advocate(この国は戦争ではなく、平和と交易にこそ社会の豊かさと幸福をもたらすと考えている。)(平和、実利)	労働者生産量+5%、交易価値+10%、平和の期間が5年続くごとに労働者生産量+1%、交易価値+2.5%（最大50年分）
 civic_ngm_prosperity_advocate = {
 	possible = {
 		ethics = {
@@ -1985,6 +1985,7 @@ civic_ngm_prosperity_advocate = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_prosperity_advocate_effects
 	modifier = {
 		planet_jobs_worker_produces_mult = 0.05
 		trade_value_mult = 0.1
