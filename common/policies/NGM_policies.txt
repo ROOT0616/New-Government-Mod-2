@@ -159,6 +159,22 @@ ngm_policies_civil_law = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_egalitarian
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_authoritarian
+			}
 		}
 	}
 	option = {
@@ -188,6 +204,22 @@ ngm_policies_civil_law = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_xenophile
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_xenophobe
+			}
 		}
 	}
 	option = {
@@ -239,6 +271,22 @@ ngm_policies_civil_law = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_authoritarian
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_egalitarian
+			}
 		}
 	}
 	option = {
@@ -269,6 +317,38 @@ ngm_policies_civil_law = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_interventionism
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_interventionism
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_neutralism
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_neutralism
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_authoritarian
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_egalitarian
+			}
 		}
 	}
 }
@@ -317,6 +397,22 @@ ngm_policies_criminal_law = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_utilitarianism
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_honorism
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_honorism
+			}
 		}
 	}
 	option = {
@@ -339,6 +435,22 @@ ngm_policies_criminal_law = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_utilitarianism
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_honorism
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_fanatic_honorism
+			}
 		}
 	}
 	option = {
@@ -381,6 +493,22 @@ ngm_policies_criminal_law = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_authoritarian
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_egalitarian
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_fanatic_egalitarian
+			}
 		}
 	}
 	option = {
@@ -411,6 +539,22 @@ ngm_policies_criminal_law = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_authoritarian
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_egalitarian
+			}
 		}
 	}
 }
@@ -568,6 +712,14 @@ ngm_policies_parliamentarism = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_authority = auth_imperial
+			}
+			modifier = {
+				factor = 1.25
+				has_authority = auth_dictatorial
+			}
 		}
 	}
 	option = {
@@ -596,6 +748,18 @@ ngm_policies_parliamentarism = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_authority = auth_dictatorial
+			}
+			modifier = {
+				factor = 1.25
+				has_authority = auth_imperial
+			}
+			modifier = {
+				factor = 1.5
+				has_civic = civic_ngm_kakistocracy
+			}
 		}
 	}
 }
@@ -808,6 +972,14 @@ ngm_policies_electoral_system = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_authority = auth_dictatorial
+			}
+			modifier = {
+				factor = 1.5
+				has_civic = civic_ngm_kakistocracy
+			}
 		}
 	}
 }
@@ -1371,6 +1543,22 @@ ngm_policies_income_tax = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 2
+				has_ethic = ethic_fanatic_socialism
+			}
+			modifier = {
+				factor = 1.75
+				has_ethic = ethic_socialism
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_egalitarian
+			}
 		}
 	}
 	option = {
@@ -1393,6 +1581,22 @@ ngm_policies_income_tax = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_socialism
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_socialism
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 1.125
+				has_ethic = ethic_egalitarian
+			}
 		}
 	}
 	option = {
@@ -1415,6 +1619,22 @@ ngm_policies_income_tax = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_fanatic_socialism
+			}
+			modifier = {
+				factor = 1.125
+				has_ethic = ethic_socialism
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 1.125
+				has_ethic = ethic_egalitarian
+			}
 		}
 	}
 	option = {
@@ -1509,6 +1729,14 @@ ngm_policies_income_tax = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_capitalism
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_capitalism
+			}
 		}
 	}
 }
@@ -1908,6 +2136,38 @@ ngm_policies_national_ceremony = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_honorism
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_honorism
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_spiritualist
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_utilitarianism
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_materialist
+			}
 		}
 	}
 	option = {
@@ -1947,7 +2207,6 @@ ngm_policies_national_ceremony = {
 			national_ceremony
 		}
 		modifier = {
-
 		}
 		AI_weight = {
 			weight = 10
@@ -2006,6 +2265,38 @@ ngm_policies_national_ceremony = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_utilitarianism
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_materialist
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_honorism
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_honorism
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_spiritualist
+			}
 		}
 	}
 }
@@ -2319,6 +2610,38 @@ ngm_policies_research_ethics = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_materialist
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_utilitarianism
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_spiritualist
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_honorism
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_honorism
+			}
 		}
 	}
 	option = {
@@ -2394,6 +2717,22 @@ ngm_policies_research_ethics = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_spiritualist
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_utilitarianism
+			}
 		}
 	}
 	option = {
@@ -2425,6 +2764,38 @@ ngm_policies_research_ethics = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_xenophile
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_conservationism
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_conservationism
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_neutralism
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_neutralism
+			}
 		}
 	}
 	option = {
@@ -2455,6 +2826,22 @@ ngm_policies_research_ethics = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_xenophile
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_xenophobe
+			}
 		}
 	}
 }
@@ -2535,7 +2922,6 @@ ngm_policies_SNS_regulation = {
 			SNS_regulation_ext_restriction
 		}
 		modifier = {
-
 		}
 		AI_weight = {
 			weight = 10
@@ -2636,6 +3022,14 @@ ngm_policies_weapon_export_law = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_pacifist
+			}
 		}
 	}
 	option = {
@@ -2734,6 +3128,46 @@ ngm_policies_weapon_export_law = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_militarist
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_interventionism
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_interventionism
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_capitalism
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_capitalism
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_pacifist
+			}
+			modifier = {
+				factor = 0.5
+				has_ethic = ethic_fanatic_neutralism
+			}
+			modifier = {
+				factor = 0.75
+				has_ethic = ethic_neutralism
+			}
 		}
 	}
 }
@@ -3034,11 +3468,26 @@ ngm_policies_martial_law = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_militarist
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_militarist
+			}
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_xenophobe
+			}
 		}
 	}
 }
 
-# まだ
 # 〇治安法 （警官と治安に関する法律）sheriffs_law
 # 自力救済の拡大        self_s    :幸福度+5%、安定度+5、エネルギー生産+10%、犯罪度+10%        (警官は最後の処理のみ。あとはご自分で)(実利のみ) 
 # 治安職員の非武装    no_wep    :幸福度+5%、安定度+5                        (警官は平和と安定のために非武装で対応する。強盗にも融和的に立ち向かう。あ、撃たれた。)(権威以外) 
@@ -3343,6 +3792,14 @@ ngm_policies_broadcast_law = {
 		}
 		AI_weight = {
 			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			modifier = {
+				factor = 1.25
+				has_ethic = ethic_authoritarian
+			}
 		}
 	}
 }

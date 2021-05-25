@@ -904,13 +904,14 @@ ngm_five_year_plan1_campaign = {
 		}
 	}
 	potential = {
-		NOT = {
-			has_country_flag = ngm_five_year_plan_campaign
-		}
 		OR = {
-			text = civic_tooltip_socialism
 			has_ethic = ethic_socialism
 			has_ethic = ethic_fanatic_socialism
+		}
+	}
+	allow = {
+		NOT = {
+			has_country_flag = ngm_five_year_plan_campaign
 		}
 	}
 	ai_weight = {
@@ -942,13 +943,14 @@ ngm_five_year_plan2_campaign = {
 		}
 	}
 	potential = {
-		NOT = {
-			has_country_flag = ngm_five_year_plan_campaign
-		}
 		OR = {
-			text = civic_tooltip_socialism
 			has_ethic = ethic_socialism
 			has_ethic = ethic_fanatic_socialism
+		}
+	}
+	allow = {
+		NOT = {
+			has_country_flag = ngm_five_year_plan_campaign
 		}
 	}
 	ai_weight = {
@@ -981,13 +983,14 @@ ngm_five_year_plan3_campaign = {
 		}
 	}
 	potential = {
-		NOT = {
-			has_country_flag = ngm_five_year_plan_campaign
-		}
 		OR = {
-			text = civic_tooltip_socialism
 			has_ethic = ethic_socialism
 			has_ethic = ethic_fanatic_socialism
+		}
+	}
+	allow = {
+		NOT = {
+			has_country_flag = ngm_five_year_plan_campaign
 		}
 	}
 	ai_weight = {
@@ -1019,13 +1022,14 @@ ngm_five_year_plan4_campaign = {
 		}
 	}
 	potential = {
-		NOT = {
-			has_country_flag = ngm_five_year_plan_campaign
-		}
 		OR = {
-			text = civic_tooltip_socialism
 			has_ethic = ethic_socialism
 			has_ethic = ethic_fanatic_socialism
+		}
+	}
+	allow = {
+		NOT = {
+			has_country_flag = ngm_five_year_plan_campaign
 		}
 	}
 	ai_weight = {
@@ -1056,13 +1060,14 @@ ngm_five_year_plan5_campaign = {
 		}
 	}
 	potential = {
-		NOT = {
-			has_country_flag = ngm_five_year_plan_campaign
-		}
 		OR = {
-			text = civic_tooltip_socialism
 			has_ethic = ethic_socialism
 			has_ethic = ethic_fanatic_socialism
+		}
+	}
+	allow = {
+		NOT = {
+			has_country_flag = ngm_five_year_plan_campaign
 		}
 	}
 	ai_weight = {

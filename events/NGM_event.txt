@@ -117,138 +117,155 @@ country_event = {
 			is_country_type = primitive
 			is_country_type = awakened_marauders
 		}
-		is_homicidal = no		# They have their own variants of this
 	}
 	immediate = {
+		#人口政策	Population Policy
 		set_policy = {
 			policy = ngm_policies_population_stance
 			option = NAME_NGM_population_stance_non_non
 			cooldown = no
 		}
+		# 一般国家新政策 (特筆ない限り☆がデフォルト)
+		set_policy = {
+			policy = ngm_policies_civil_law
+			option = NAME_NGM_maintaining_order
+			cooldown = no
+		}
+		# 〇刑法
+		set_policy = {
+			policy = ngm_policies_criminal_law
+			option = NAME_NGM_maintaining_order_cri
+			cooldown = no
+		}
+		# 議会制度	独裁制と君主制以外デフォルト
+		if = {
+			limit = {
+				NOR = {
+					has_authority = auth_imperial
+					has_authority = auth_dictatorial
+				}
+			}
+			set_policy = {
+				policy = ngm_policies_parliamentarism
+				option = NAME_NGM_unicameral_system
+				cooldown = no
+			}
+		}
+		# 議会制度	独裁制と君主制デフォルト
+		if = {
+			limit = {
+				OR = {
+					has_authority = auth_imperial
+					has_authority = auth_dictatorial
+				}
+			}
+			set_policy = {
+				policy = ngm_policies_parliamentarism
+				option = NAME_NGM_unicameral_system
+				cooldown = no
+			}
+		}
+		# 選挙制度
+		set_policy = {
+			policy = ngm_policies_electoral_system
+			option = NAME_NGM_maze
+			cooldown = no
+		}
+		# 選挙法 
+		set_policy = {
+			policy = ngm_policies_election_law
+			option = NAME_NGM_maze_e
+			cooldown = no
+		}
+		# 公務員任用制度
 		set_policy = {
 			policy = ngm_policies_civil_service_appointments_system
 			option = NAME_NGM_hybrid
 			cooldown = no
 		}
+		# 納税制度
 		set_policy = {
 			policy = ngm_policies_taxation_system
 			option = NAME_NGM_general_tax_system
 			cooldown = no
 		}
+		# 所得税
+		set_policy = {
+			policy = ngm_policies_income_tax
+			option = NAME_NGM_a_income
+			cooldown = no
+		}
+		# 法人税
+		set_policy = {
+			policy = ngm_policies_corporation_tax
+			option = NAME_NGM_a_corp_tax
+			cooldown = no
+		}
+		# 文化政策
 		set_policy = {
 			policy = ngm_policies_cultural_policy
 			option = NAME_NGM_private_initiative
 			cooldown = no
 		}
+		# 国家祭典
+		set_policy = {
+			policy = ngm_policies_national_ceremony
+			option = NAME_NGM_ceremony
+			cooldown = no
+		}
+		# 農業政策
 		set_policy = {
 			policy = ngm_policies_agricultural_policy
 			option = NAME_NGM_no_agricultural_incentives
 			cooldown = no
 		}
+		# 言語政策
 		set_policy = {
 			policy = ngm_policies_language_policy
 			option = NAME_NGM_common_language_policy
 			cooldown = no
 		}
+		# 研究倫理
+		set_policy = {
+			policy = ngm_policies_research_ethics
+			option = NAME_NGM_ethical
+			cooldown = no
+		}
+		# 過激思想規制
+		set_policy = {
+			policy = ngm_policies_SNS_regulation
+			option = NAME_NGM_ext_restriction
+			cooldown = no
+		}
+		# 武器輸出法
+		set_policy = {
+			policy = ngm_policies_weapon_export_law
+			option = NAME_NGM_ave_exp
+			cooldown = no
+		}
+		# 情報法
+		set_policy = {
+			policy = ngm_policies_information_law
+			option = NAME_NGM_nat_save
+			cooldown = no
+		}
+		# 軍法
+		set_policy = {
+			policy = ngm_policies_martial_law
+			option = NAME_NGM_court_martial
+			cooldown = no
+		}
+		# 治安法
+		set_policy = {
+			policy = ngm_policies_sheriffs_law
+			option = NAME_NGM_pub_erd
+			cooldown = no
+		}
+		# 放送法
+		set_policy = {
+			policy = ngm_policies_broadcast_law
+			option = NAME_NGM_non_limit
+			cooldown = no
+		}
 	}
 }
-
-###############################
-#######  内政用イベント ########
-###############################
-# namespace = ngm_domestic_affairs
-# # トマト祭り
-# country_event = {
-# 	## イベントの基本情報
-# 	id = ngm_domestic_affairs.1
-# 	title = ngm_domestic_affairs.1.name
-# 	desc = ngm_domestic_affairs.1.desc
-# 	picture =GFX_evt_announcement
-# 	hide_window = no
-# 	## イベントの発生条件
-# 	is_triggered_only = no
-# 	fire_only_once = no
-# 	mean_time_to_happen = { years = 5 }
-# 	trigger = { 
-# 		is_regular_empire = yes
-# 	}
-# 		## イベントの効果
-# 	immediate = {
-#  }
-# }
-# # トマト祭り
-# country_event = {
-# 	## イベントの基本情報
-# 	id = ngm_domestic_affairs.2
-# 	title = ngm_domestic_affairs.2.name
-# 	desc = ngm_domestic_affairs.2.desc
-# 	picture = GFX_evt_announcement
-# 	hide_window = no
-# 	## イベントの発生条件
-# 	is_triggered_only = yes
-# 	fire_only_once = no
-# 	trigger = { 
-# 		is_regular_empire = yes
-# 	}
-# 		## イベントの効果
-# 	option = {
-# 		allow = { owner = { resource_stockpile_compare = { resource = food value >= 5000 } } }
-# 		name = ngm_domestic_affairs.2a.name
-# 		owner = { add_resource = { food = -5000 } }
-# 	}
-# 	option = {
-# 		name = ngm_domestic_affairs.2b.name
-# 	}
-# }
-# # 廃棄部が多い
-# country_event = {
-# 	## イベントの基本情報
-# 	id = ngm_domestic_affairs.3
-# 	title = ngm_domestic_affairs.3.name
-# 	desc = ngm_domestic_affairs.3.desc
-# 	picture = GFX_evt_announcement
-# 	hide_window = no
-# 	## イベントの発生条件
-# 	is_triggered_only = no
-# 	fire_only_once = no
-# 	trigger = { 
-# 		is_regular_empire = yes
-# 		owner = { resource_stockpile_compare = { resource = ngm_garbage value >= 10000 } }
-# 	}
-# 		## イベントの効果
-# 	option = {
-# 		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 5000 } } }
-# 		name = ngm_domestic_affairs.3a.name
-# 		owner = { add_resource = { ngm_garbage = -5000 } }
-# 		owner = { add_resource = { energy =-6000 } }
-# 	}
-# 	option = {
-# 		name = ngm_domestic_affairs.3b.name
-# 	}
-# }
-# # 廃棄部が多すぎる
-# country_event = {
-# 	## イベントの基本情報
-# 	id = ngm_domestic_affairs.3
-# 	title = ngm_domestic_affairs.3.name
-# 	desc = ngm_domestic_affairs.3.desc
-# 	picture = GFX_evt_announcement
-# 	hide_window = no
-# 	## イベントの発生条件
-# 	is_triggered_only = no
-# 	fire_only_once = no
-# 	trigger = { 
-# 		is_regular_empire = yes
-# 		owner = { resource_stockpile_compare = { resource = ngm_garbage value >= 100000 } }
-# 	}
-# 		## イベントの効果
-# 	option = {
-# 		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 100000 } } }
-# 		name = ngm_domestic_affairs.3a.name
-# 		owner = { add_resource = { ngm_garbage = -95000 } }
-# 		owner = { add_resource = { energy = -100000 } }
-# 	}
-# 	option = {
-# 		name = ngm_domestic_affairs.3b.name
-# 	}
-# }
