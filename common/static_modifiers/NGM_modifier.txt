@@ -150,8 +150,63 @@ forced_labor = {
 }
 
 # 繁栄主義者		平和の期間が5年続くごとに労働者生産量+1%、交易価値+2.5%（最大50年分）
-civic_ngm_prosperity_advocate_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_archaeology.dds"
+civic_ngm_prosperity_1_advocate_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
 	planet_jobs_worker_produces_mult = 0.01
+	trade_value_mult = 0.025
+}
+civic_ngm_prosperity_2_advocate_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	planet_jobs_worker_produces_mult = 0.02
+	trade_value_mult = 0.05
+}
+civic_ngm_prosperity_3_advocate_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	planet_jobs_worker_produces_mult = 0.03
+	trade_value_mult = 0.075
+}
+civic_ngm_prosperity_4_advocate_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	planet_jobs_worker_produces_mult = 0.04
+	trade_value_mult = 0.1
+}
+civic_ngm_prosperity_5_advocate_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	planet_jobs_worker_produces_mult = 0.05
+	trade_value_mult = 0.125
+}
+civic_ngm_prosperity_6_advocate_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	planet_jobs_worker_produces_mult = 0.06
+	trade_value_mult = 0.15
+}
+civic_ngm_prosperity_7_advocate_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	planet_jobs_worker_produces_mult = 0.07
+	trade_value_mult = 0.175
+}
+civic_ngm_prosperity_8_advocate_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	planet_jobs_worker_produces_mult = 0.08
+	trade_value_mult = 0.2
+}
+civic_ngm_prosperity_9_advocate_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	planet_jobs_worker_produces_mult = 0.09
+	trade_value_mult = 0.225
+}
+civic_ngm_prosperity_10_advocate_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	planet_jobs_worker_produces_mult = 0.1
+	trade_value_mult = 0.25
 }

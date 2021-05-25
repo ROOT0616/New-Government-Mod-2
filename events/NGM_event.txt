@@ -110,95 +110,226 @@ country_event = {
 		has_civic = civic_ngm_prosperity_advocate
 	}
 	immediate = {
-		every_owned_planet = {
-			limit = {
-				NOT = {
-					has_planet_modifier = civic_ngm_prosperity_advocate_modifier
-				}
-			}
-			add_modifier = {
-				modifier = civic_ngm_prosperity_advocate_modifier
-			}
+		set_country_flag = civic_ngm_prosperity_advocate_flag1
+		country_event = {
+			id = ngm_civic.9
+			days = 1825
 		}
+	}
+}
+
+country_event = {
+	id = ngm_civic.9
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_prosperity_advocate
+		OR = {
+			has_country_flag = civic_ngm_prosperity_advocate_flag1
+			has_country_flag = civic_ngm_prosperity_advocate_flag2
+			has_country_flag = civic_ngm_prosperity_advocate_flag3
+			has_country_flag = civic_ngm_prosperity_advocate_flag4
+			has_country_flag = civic_ngm_prosperity_advocate_flag5
+			has_country_flag = civic_ngm_prosperity_advocate_flag6
+			has_country_flag = civic_ngm_prosperity_advocate_flag7
+			has_country_flag = civic_ngm_prosperity_advocate_flag8
+			has_country_flag = civic_ngm_prosperity_advocate_flag9
+			has_country_flag = civic_ngm_prosperity_advocate_flag10
+			has_country_flag = civic_ngm_prosperity_advocate_flag11
+		}
+	}
+	immediate = {
 		if = {
 			limit = {
-				NOT = {
-					has_country_flag = civic_ngm_prosperity_advocate_flag1
-				}
+				has_country_flag = civic_ngm_prosperity_advocate_flag1
 			}
-			set_country_flag = civic_ngm_prosperity_advocate_flag1
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_country_flag = civic_ngm_prosperity_advocate_flag2
-				}
-			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag1
 			set_country_flag = civic_ngm_prosperity_advocate_flag2
+			every_owned_planet = {
+				add_modifier = {
+					modifier = civic_ngm_prosperity_1_advocate_modifier
+				}
+			}
+			country_event = {
+				id = ngm_civic.9
+				days = 1825
+			}
 		}
 		else_if = {
 			limit = {
-				NOT = {
-					has_country_flag = civic_ngm_prosperity_advocate_flag3
-				}
+				has_country_flag = civic_ngm_prosperity_advocate_flag2
 			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag2
 			set_country_flag = civic_ngm_prosperity_advocate_flag3
+			every_owned_planet = {
+				add_modifier = {
+					modifier = civic_ngm_prosperity_2_advocate_modifier
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_1_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_1_advocate_modifier
+			}
+			country_event = {
+				id = ngm_civic.9
+				days = 1825
+			}
 		}
 		else_if = {
 			limit = {
-				NOT = {
-					has_country_flag = civic_ngm_prosperity_advocate_flag4
+				has_country_flag = civic_ngm_prosperity_advocate_flag3
+			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag3
+			set_country_flag = civic_ngm_prosperity_advocate_flag4
+			every_owned_planet = {
+				add_modifier = {
+					modifier = civic_ngm_prosperity_3_advocate_modifier
 				}
 			}
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_2_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_2_advocate_modifier
+			}
+			country_event = {
+				id = ngm_civic.9
+				days = 1825
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = civic_ngm_prosperity_advocate_flag4
+			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag4
 			set_country_flag = civic_ngm_prosperity_advocate_flag5
+			every_owned_planet = {
+				add_modifier = {
+					modifier = civic_ngm_prosperity_4_advocate_modifier
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_3_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_3_advocate_modifier
+			}
+			country_event = {
+				id = ngm_civic.9
+				days = 1825
+			}
 		}
 		else_if = {
 			limit = {
-				NOT = {
-					has_country_flag = civic_ngm_prosperity_advocate_flag5
-				}
+				has_country_flag = civic_ngm_prosperity_advocate_flag5
 			}
-			set_country_flag = civic_ngm_prosperity_advocate_flag5
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_country_flag = civic_ngm_prosperity_advocate_flag6
-				}
-			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag5
 			set_country_flag = civic_ngm_prosperity_advocate_flag6
+			every_owned_planet = {
+				add_modifier = {
+					modifier = civic_ngm_prosperity_5_advocate_modifier
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_4_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_4_advocate_modifier
+			}
+			country_event = {
+				id = ngm_civic.9
+				days = 1825
+			}
 		}
 		else_if = {
 			limit = {
-				NOT = {
-					has_country_flag = civic_ngm_prosperity_advocate_flag7
-				}
+				has_country_flag = civic_ngm_prosperity_advocate_flag6
 			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag6
 			set_country_flag = civic_ngm_prosperity_advocate_flag7
+			every_owned_planet = {
+				add_modifier = {
+					modifier = civic_ngm_prosperity_6_advocate_modifier
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_5_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_5_advocate_modifier
+			}
+			country_event = {
+				id = ngm_civic.9
+				days = 1825
+			}
 		}
 		else_if = {
 			limit = {
-				NOT = {
-					has_country_flag = civic_ngm_prosperity_advocate_flag8
-				}
+				has_country_flag = civic_ngm_prosperity_advocate_flag7
 			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag7
 			set_country_flag = civic_ngm_prosperity_advocate_flag8
+			every_owned_planet = {
+				add_modifier = {
+					modifier = civic_ngm_prosperity_7_advocate_modifier
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_6_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_6_advocate_modifier
+			}
+			country_event = {
+				id = ngm_civic.9
+				days = 1825
+			}
 		}
 		else_if = {
 			limit = {
-				NOT = {
-					has_country_flag = civic_ngm_prosperity_advocate_flag9
-				}
+				has_country_flag = civic_ngm_prosperity_advocate_flag8
 			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag8
 			set_country_flag = civic_ngm_prosperity_advocate_flag9
+			every_owned_planet = {
+				add_modifier = {
+					modifier = civic_ngm_prosperity_8_advocate_modifier
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_7_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_7_advocate_modifier
+			}
+			country_event = {
+				id = ngm_civic.9
+				days = 1825
+			}
 		}
 		else_if = {
 			limit = {
-				NOT = {
-					has_country_flag = civic_ngm_prosperity_advocate_flag10
+				has_country_flag = civic_ngm_prosperity_advocate_flag9
+			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag9
+			set_country_flag = civic_ngm_prosperity_advocate_flag10
+			every_owned_planet = {
+				add_modifier = {
+					modifier = civic_ngm_prosperity_9_advocate_modifier
 				}
 			}
-			set_country_flag = civic_ngm_prosperity_advocate_flag10
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_8_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_8_advocate_modifier
+			}
+			country_event = {
+				id = ngm_civic.9
+				days = 1825
+			}
 		}
 		else_if = {
 			limit = {
@@ -207,16 +338,23 @@ country_event = {
 				}
 			}
 			set_country_flag = civic_ngm_prosperity_advocate_flag11
-		}
-		country_event = {
-			id = ngm_civic.8
-			days = 3650
+			every_owned_planet = {
+				add_modifier = {
+					modifier = civic_ngm_prosperity_10_advocate_modifier
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_9_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_9_advocate_modifier
+			}
 		}
 	}
 }
 
 country_event = {
-	id = ngm_civic.9
+	id = ngm_civic.10
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -238,6 +376,12 @@ country_event = {
 				}
 			}
 			remove_country_flag = civic_ngm_prosperity_advocate_flag2
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_1_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_1_advocate_modifier
+			}
 		}
 		if = {
 			limit = {
@@ -246,6 +390,12 @@ country_event = {
 				}
 			}
 			remove_country_flag = civic_ngm_prosperity_advocate_flag3
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_2_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_2_advocate_modifier
+			}
 		}
 		if = {
 			limit = {
@@ -253,7 +403,13 @@ country_event = {
 					has_country_flag = civic_ngm_prosperity_advocate_flag4
 				}
 			}
-			remove_country_flag = civic_ngm_prosperity_advocate_flag5
+			remove_country_flag = civic_ngm_prosperity_advocate_flag4
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_3_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_3_advocate_modifier
+			}
 		}
 		if = {
 			limit = {
@@ -262,6 +418,12 @@ country_event = {
 				}
 			}
 			remove_country_flag = civic_ngm_prosperity_advocate_flag5
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_4_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_4_advocate_modifier
+			}
 		}
 		if = {
 			limit = {
@@ -270,6 +432,12 @@ country_event = {
 				}
 			}
 			remove_country_flag = civic_ngm_prosperity_advocate_flag6
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_5_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_5_advocate_modifier
+			}
 		}
 		if = {
 			limit = {
@@ -278,6 +446,12 @@ country_event = {
 				}
 			}
 			remove_country_flag = civic_ngm_prosperity_advocate_flag7
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_6_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_6_advocate_modifier
+			}
 		}
 		if = {
 			limit = {
@@ -286,6 +460,12 @@ country_event = {
 				}
 			}
 			remove_country_flag = civic_ngm_prosperity_advocate_flag8
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_7_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_7_advocate_modifier
+			}
 		}
 		if = {
 			limit = {
@@ -294,6 +474,12 @@ country_event = {
 				}
 			}
 			remove_country_flag = civic_ngm_prosperity_advocate_flag9
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_8_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_8_advocate_modifier
+			}
 		}
 		if = {
 			limit = {
@@ -302,6 +488,12 @@ country_event = {
 				}
 			}
 			remove_country_flag = civic_ngm_prosperity_advocate_flag10
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_9_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_9_advocate_modifier
+			}
 		}
 		if = {
 			limit = {
@@ -310,6 +502,12 @@ country_event = {
 				}
 			}
 			remove_country_flag = civic_ngm_prosperity_advocate_flag11
+			every_owned_planet = {
+				limit = {
+					has_modifier = civic_ngm_prosperity_10_advocate_modifier
+				}
+				remove_modifier = civic_ngm_prosperity_10_advocate_modifier
+			}
 		}
 	}
 }
