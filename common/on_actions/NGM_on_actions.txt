@@ -11,6 +11,8 @@ on_game_start_country = {
 		ngm_civic.5
 		#高度な栄典制度
 		ngm_civic.7
+		#繁栄主義者
+		ngm_civic.8
 	}
 }
 
@@ -26,5 +28,25 @@ on_leader_spawned = {
 		ngm_civic.5
 		#高度な栄典制度
 		ngm_civic.7
+	}
+}
+
+# 戦争が始まり、戦争に参加しているすべての国で実行される。
+# Root = Country
+# From = War
+on_war_beginning = {
+	events = {
+		#繁栄主義者
+		ngm_civic.9
+	}
+}
+
+# 戦争の終結
+# Root = Loser
+# From = Main Winner
+on_war_ended = {
+	events = {
+		#繁栄主義者
+		ngm_civic.8
 	}
 }

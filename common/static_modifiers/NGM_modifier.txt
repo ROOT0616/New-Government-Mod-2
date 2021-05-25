@@ -10,6 +10,7 @@
 # 8.宗教支配制(統合力+)
 # 9.中央支配体制(エネルギー消費なし)
 # 10.高度な地方自治(初期の社会学研究)
+
 # 1.絶対君主制 territorial_monarchy(鉱業、農業)
 ngm_territorial_monarchy = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
@@ -146,4 +147,11 @@ forced_labor = {
 	planet_jobs_physics_research_produces_mult = -0.3
 	planet_jobs_society_research_produces_mult = -0.3
 	planet_jobs_engineering_research_produces_mult = -0.3
+}
+
+# 繁栄主義者		平和の期間が5年続くごとに労働者生産量+1%、交易価値+2.5%（最大50年分）
+civic_ngm_prosperity_advocate_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_archaeology.dds"
+	icon_frame = 1
+	planet_jobs_worker_produces_mult = 0.01
 }

@@ -155,7 +155,6 @@ living_standard_psi_assimilation = {
 	}
 }
 
-
 living_standard_organic_trophy = {
 	token = living_standard_organic_trophy
 	name = living_standard_organic_trophy
@@ -321,7 +320,6 @@ living_standard_shared_burden = {
 	}
 }
 
-
 living_standard_utopian = {
 	token = living_standard_utopian
 	name = living_standard_utopian
@@ -350,6 +348,26 @@ living_standard_utopian = {
 
 	allow = {
 		hidden_trigger = { exists = from }
+		# 栄望主義
+		custom_tooltip = {
+			fail_text = empire_not_honorism
+			from = {
+				OR = {
+					has_ethic = ethic_honorism
+					has_ethic = ethic_fanatic_honorism
+				}
+			}
+		}
+		# 社会主義
+		custom_tooltip = {
+			fail_text = empire_not_socialism
+			from = {
+				OR = {
+					has_ethic = ethic_socialism
+					has_ethic = ethic_fanatic_socialism
+				}
+			}
+		}
 		custom_tooltip = {
 			fail_text = empire_not_egalitarian
 			from = {
@@ -472,6 +490,46 @@ living_standard_academic_privilege = {
 
 	allow = {
 		hidden_trigger = { exists = from }
+		# 栄望主義
+		custom_tooltip = {
+			fail_text = empire_not_honorism
+			from = {
+				OR = {
+					has_ethic = ethic_honorism
+					has_ethic = ethic_fanatic_honorism
+				}
+			}
+		}
+		# 社会主義
+		custom_tooltip = {
+			fail_text = empire_not_socialism
+			from = {
+				OR = {
+					has_ethic = ethic_socialism
+					has_ethic = ethic_fanatic_socialism
+				}
+			}
+		}
+		# 資本主義
+		custom_tooltip = {
+			fail_text = empire_not_capitalism
+			from = {
+				OR = {
+					has_ethic = ethic_capitalism
+					has_ethic = ethic_fanatic_capitalism
+				}
+			}
+		}
+		# 実利主義
+		custom_tooltip = {
+			fail_text = empire_not_utilitarianism
+			from = {
+				OR = {
+					has_ethic = ethic_utilitarianism
+					has_ethic = ethic_fanatic_utilitarianism
+				}
+			}
+		}
 		custom_tooltip = {
 			fail_text = empire_not_materialist
 			from = {
@@ -832,6 +890,36 @@ living_standard_stratified = {
 
 	allow = {
 		hidden_trigger = { exists = from }
+		# 栄望主義
+		custom_tooltip = {
+			fail_text = empire_not_honorism
+			from = {
+				OR = {
+					has_ethic = ethic_honorism
+					has_ethic = ethic_fanatic_honorism
+				}
+			}
+		}
+		# 資本主義
+		custom_tooltip = {
+			fail_text = empire_not_capitalism
+			from = {
+				OR = {
+					has_ethic = ethic_capitalism
+					has_ethic = ethic_fanatic_capitalism
+				}
+			}
+		}
+		# 実利主義
+		custom_tooltip = {
+			fail_text = empire_not_utilitarianism
+			from = {
+				OR = {
+					has_ethic = ethic_utilitarianism
+					has_ethic = ethic_fanatic_utilitarianism
+				}
+			}
+		}
 		custom_tooltip = {
 			fail_text = empire_not_authoritarian
 			from = { is_authoritarian = yes }

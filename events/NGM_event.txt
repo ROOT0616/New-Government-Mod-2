@@ -80,7 +80,7 @@ country_event = {
 	}
 }
 
-#19z.高度な栄典制度	権威主義のみ	影響力+1	リーダースキル+1	リーダースキル上限+1	リーダー経験値+25%	リーダー雇用費用+50%	リーダー維持費+20%
+#19.高度な栄典制度	権威主義のみ	影響力+1	リーダースキル+1	リーダースキル上限+1	リーダー経験値+25%	リーダー雇用費用+50%	リーダー維持費+20%
 country_event = {
 	id = ngm_civic.7
 	hide_window = yes
@@ -97,6 +97,219 @@ country_event = {
 			}
 			set_leader_flag = flag_civic_ngm_advanced_glory_system
 			set_skill = 2
+		}
+	}
+}
+
+# 繁栄主義者		労働者生産量+5%、交易価値+10%、平和の期間が1年続くごとに労働者生産量+0.2%、交易価値+0.5%（最大50年分）
+country_event = {
+	id = ngm_civic.8
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_prosperity_advocate
+	}
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				NOT = {
+					has_planet_modifier = civic_ngm_prosperity_advocate_modifier
+				}
+			}
+			add_modifier = {
+				modifier = civic_ngm_prosperity_advocate_modifier
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag1
+				}
+			}
+			set_country_flag = civic_ngm_prosperity_advocate_flag1
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag2
+				}
+			}
+			set_country_flag = civic_ngm_prosperity_advocate_flag2
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag3
+				}
+			}
+			set_country_flag = civic_ngm_prosperity_advocate_flag3
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag4
+				}
+			}
+			set_country_flag = civic_ngm_prosperity_advocate_flag5
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag5
+				}
+			}
+			set_country_flag = civic_ngm_prosperity_advocate_flag5
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag6
+				}
+			}
+			set_country_flag = civic_ngm_prosperity_advocate_flag6
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag7
+				}
+			}
+			set_country_flag = civic_ngm_prosperity_advocate_flag7
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag8
+				}
+			}
+			set_country_flag = civic_ngm_prosperity_advocate_flag8
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag9
+				}
+			}
+			set_country_flag = civic_ngm_prosperity_advocate_flag9
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag10
+				}
+			}
+			set_country_flag = civic_ngm_prosperity_advocate_flag10
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag11
+				}
+			}
+			set_country_flag = civic_ngm_prosperity_advocate_flag11
+		}
+		country_event = {
+			id = ngm_civic.8
+			days = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ngm_civic.9
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_prosperity_advocate
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag1
+				}
+			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag1
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag2
+				}
+			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag2
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag3
+				}
+			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag3
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag4
+				}
+			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag5
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag5
+				}
+			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag5
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag6
+				}
+			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag6
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag7
+				}
+			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag7
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag8
+				}
+			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag8
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag9
+				}
+			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag9
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag10
+				}
+			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag10
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_prosperity_advocate_flag11
+				}
+			}
+			remove_country_flag = civic_ngm_prosperity_advocate_flag11
 		}
 	}
 }

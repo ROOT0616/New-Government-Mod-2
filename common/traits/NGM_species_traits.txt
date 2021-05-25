@@ -579,6 +579,9 @@ trait_ngm_sluggish = {
 		"trait_ngm_sixth_sense"
 		"trait_ngm_degeneration"
 	}
+	species_potential_add = {
+		is_species_class = HUM
+	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		ship_evasion_mult = -0.1
