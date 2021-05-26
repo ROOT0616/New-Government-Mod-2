@@ -656,10 +656,10 @@ civic_ngm_hard_worker_with_a_slow_pace = {
 		country_naval_cap_mult = -0.05
 		country_trust_cap_add = 30
 		planet_pops_consumer_goods_upkeep_mult = -0.2
-		shipsize_starbase_outpost_hull_mult = 0.2 
-		shipsize_starbase_starport_hull_mult = 0.2 
-		shipsize_starbase_starhold_hull_mult = 0.2 
-		shipsize_starbase_starfortress_hull_mult = 0.2 
+		shipsize_starbase_outpost_hull_mult = 0.2
+		shipsize_starbase_starport_hull_mult = 0.2
+		shipsize_starbase_starhold_hull_mult = 0.2
+		shipsize_starbase_starfortress_hull_mult = 0.2
 		shipsize_starbase_citadel_hull_mult = 0.2
 	}
 }
@@ -692,7 +692,6 @@ civic_ngm_ruthless_realist = {
 		planet_jobs_ruler_produces_mult = 0.1
 	}
 }
-
 
 # 〇ノーマル
 # 円滑な交通 smooth_traffic		亜光移動速度+10%、交易価値+5%
@@ -788,7 +787,6 @@ civic_ngm_cultural_hegemony = {
 		species_leader_exp_gain = 0.1
 	}
 }
-
 
 # 〇政治制度規定
 # 銀河連邦 federation_of_the_galaxies 	(民主制、受容主義) 派閥影響力収入+10%、リーダー経験値取得+20%、リーダースキル上限+1、行政官の一人を社会的英雄に置換え。	
@@ -1071,7 +1069,6 @@ civic_ngm_honorary_imperialism = {
 	}
 }
 
-
 # 〇権威
 # 指導者原理 guiding_principle		(狂権威)	影響力+0.5、統治志向魅力+15%、労働者幸福度+5%、専門家幸福度-5%、安定度-5
 civic_ngm_guiding_principle = {
@@ -1259,7 +1256,6 @@ civic_ngm_apprenticeship = {
 		pop_cat_worker_happiness = -0.05
 	}
 }
-
 
 # 〇平等主義
 # 直接民主制 direct_democracy 			 (この社会は、市民から直接意見や判断を行うことで政治に市民の意見を最大限反映させようとしている)						(民主制、平等主義)			影響力+0.5、布告コスト+20%
@@ -1488,7 +1484,6 @@ civic_ngm_right_to_bear_arms = {
 	}
 }
 
-
 # 〇受容主義
 # 共通価値観 shared_values  	(受容)		統合力+10%、移民流入+5%
 civic_ngm_shared_values = {
@@ -1626,7 +1621,6 @@ civic_ngm_people_flying_away = {
 		pop_growth_speed = 0.05
 	}
 }
-
 
 # 〇排他主義		
 # 排他的コミュニティ exclusive_community 	(この国の社会は他者に対して非常に排他的で自分たちで独自の世界を築き上げている。)		(排他、権威)	統合力+5%、安定度+10、交易価値-5%
@@ -1800,7 +1794,6 @@ civic_ngm_dissection = {
 	}
 }
 
-
 # 〇軍国主義
 # 帝国主義	imperialism			(この社会は自らが最も優れた政府だと考えており、国力とその威容を示し、利権を確保するために全力を注いでいる。)	(軍国、受容、中立ではない)	請求権作成コスト-20%、前哨地建造コスト-20%
 civic_ngm_imperialism = {
@@ -1935,7 +1928,6 @@ civic_ngm_The_Struggle_for_Struggle = {
 	}
 }
 
-
 # 〇平和主義
 # イージスの護り	aegis_shield(この国は鉄壁の守りを重視しており、この国の要塞を突破することは容易ではない。)(平和)（介入ではない）		ステーション許容量+5、ステーション防衛+10%、船体値+20%、暗号力+5、艦船連射レート-10%
 civic_ngm_aegis_shield = {
@@ -1959,10 +1951,10 @@ civic_ngm_aegis_shield = {
 	modifier = {
 		country_starbase_capacity_add = 5
 		shipclass_starbase_damage_mult = 0.1
-		shipsize_starbase_outpost_hull_mult = 0.2 
-		shipsize_starbase_starport_hull_mult = 0.2 
-		shipsize_starbase_starhold_hull_mult = 0.2 
-		shipsize_starbase_starfortress_hull_mult = 0.2 
+		shipsize_starbase_outpost_hull_mult = 0.2
+		shipsize_starbase_starport_hull_mult = 0.2
+		shipsize_starbase_starhold_hull_mult = 0.2
+		shipsize_starbase_starfortress_hull_mult = 0.2
 		shipsize_starbase_citadel_hull_mult = 0.2
 		intel_encryption_add = 5
 		ship_fire_rate_mult = -0.1
@@ -2014,7 +2006,6 @@ civic_ngm_armed_pacifism = {
 		ship_hull_mult = 0.1
 	}
 }
-
 
 # 積極的平和主義者	active_pacifist(この国は、平和を維持するためには銀河規模で平和を仲介するため他国に関与していくべきだと考えている。)(平和、介入)	使節+1、外交発言力+10%、宇宙軍許容量+20、他国信用値-10
 civic_ngm_active_pacifist = {
@@ -2078,7 +2069,6 @@ civic_ngm_good_faith_negotiator = {
 		country_trust_cap_add = 20
 	}
 }
-
 
 # 〇精神主義
 # まだ
@@ -2196,7 +2186,6 @@ civic_ngm_cultural_consumption = {
 		pop_happiness = 0.05
 	}
 }
-
 
 # 〇物質
 # AIによる補助政治 	ai_assistance(この社会は政治的な決定を一部AIに委託しており、官僚は重要事項に集中できる。)(物質)					統治志向魅力+10%、幸福度+5%
@@ -2352,7 +2341,6 @@ civic_ngm_paranoia = {
 	}
 }
 
-
 # 〇社会主義
 # 社会的平等		equality_in_society(この国では出自や能力だけではなく、成果による利益も社会の利益として考えられ、経済的な平等が図られている。)(社会、平等)	安定度+10、Pop降下時間-50%、労働者政治力+50%、市場手数料+10%
 civic_ngm_equality_in_society = {
@@ -2463,7 +2451,7 @@ civic_ngm_land_sharing = {
 	}
 	modifier = {
 		pop_housing_usage_mult = -0.1
-		country_minerals_produces_mult = 	0.1
+		country_minerals_produces_mult = 0.1
 		country_food_produces_mult = 0.1
 		pop_environment_tolerance = -0.05
 	}
@@ -2493,7 +2481,6 @@ civic_ngm_communism = {
 		planet_districts_upkeep_mult = 0.2
 	}
 }
-
 
 # 〇資本主義
 # 開発独裁		development_dictatorship(この国では経済発展の為には「政治的安定」が必要であるとして、国民の政治参加を著しく制限し、強権的政策が正当化されている。)(独裁、資本、開発)	建造速度+10%、建造コスト-10%、安定度+5、専門家幸福度-10%
@@ -2583,7 +2570,6 @@ civic_ngm_information = {
 	}
 	modifier = {
 		trade_value_mult = 0.1
-		
 		country_physics_research_produces_mult = 0.1
 		country_society_research_produces_mult = 0.1
 		country_engineering_research_produces_mult = 0.1
@@ -2616,6 +2602,7 @@ civic_ngm_agriculture = {
 	}
 }
 
+# まだ
 # 究極の規制緩和	deregulation(この国に経済的規制はほとんど存在せず、自由に各々が活動している。)		(狂資本)(ゲーム開始後の追加削除不可)		専門家出力+10%、流入圧力+10%、犯罪度+20、犯罪度+15%、労働者幸福度-10%、安定度+10
 civic_ngm_deregulation = {
 	possible = {
@@ -2634,7 +2621,6 @@ civic_ngm_deregulation = {
 		pop_cat_worker_happiness = -0.1
 	}
 }
-
 
 # 〇介入主義
 # 攻撃的情報機関	CIA(この国の情報機関は非常に攻撃的で常に他国への介入を画策している。)(介入、軍国)	解読力+5、回避+5%、連射レート+5%
@@ -2876,10 +2862,10 @@ civic_ngm_armed_neutrality = {
 	}
 	modifier = {
 		country_starbase_capacity_add = 3
-		shipsize_starbase_outpost_hull_mult = 0.1 
-		shipsize_starbase_starport_hull_mult = 0.1 
-		shipsize_starbase_starhold_hull_mult = 0.1 
-		shipsize_starbase_starfortress_hull_mult = 0.1 
+		shipsize_starbase_outpost_hull_mult = 0.1
+		shipsize_starbase_starport_hull_mult = 0.1
+		shipsize_starbase_starhold_hull_mult = 0.1
+		shipsize_starbase_starfortress_hull_mult = 0.1
 		shipsize_starbase_citadel_hull_mult = 0.1
 		weapon_role_point_defense_weapon_fire_rate_mult = 0.1
 		weapon_type_point_defense_weapon_fire_rate_mult = 0.1
@@ -2909,7 +2895,6 @@ civic_ngm_interest_representation = {
 		country_trade_fee = -0.05
 	}
 }
-
 
 # 〇保全主義
 # 環境維持工学		environmental_maintenance(この国では乱れた環境を維持するため、あらゆる技術が投入されている。)(保全、物質)	居住性+10%、社会学+10%、鉱物生産-5%
@@ -3032,7 +3017,6 @@ civic_ngm_nature_faith = {
 	}
 }
 
-
 # 〇開発主義
 # グランド・モニュメント grand_monument(建築とは自らを表現する至高の物品である。)(開発)							建築物Slot+1、建造物速度+10%、建築物コスト+10%、巨大構造物建造速度-10%
 civic_ngm_grand_monument = {
@@ -3069,7 +3053,7 @@ civic_ngm_destructive_digging = {
 	}
 	modifier = {
 		country_minerals_produces_mult = 0.3
-		country_volatile_motes_produces_mult = 02
+		country_volatile_motes_produces_mult = 2
 		pop_environment_tolerance = -0.1
 	}
 }
@@ -3191,7 +3175,6 @@ civic_ngm_modification_engineering = {
 	}
 }
 
-
 # 〇栄望主義
 # 複雑な外交儀礼	diplomatic_etiquette(この国の外交官は粘り強く優秀であるが、外交システムにアクセスした場合何十人もの儀礼的な会話を交わし、本題に入るまでに日が変わることすらある。)(栄望、削除不可)使節+1、影響力+1、消費材消費量+5%、信用値-10
 civic_ngm_diplomatic_etiquette = {
@@ -3303,7 +3286,6 @@ civic_ngm_respect_act = {
 	}
 }
 
-
 # 〇実利主義
 # 個人利益至上法	personal_interest(他者を気にしていては自らの利益を最大化することはできない。)(実利、資本)	エネルギー生産+10%、交易価値+10%、犯罪度+10、犯罪度+10%
 civic_ngm_personal_interest = {
@@ -3353,7 +3335,6 @@ civic_ngm_hypothecation_of_human_rights = {
 	}
 }
 
-# まだ
 # 刑罰の金銭代替	money_penalty(刑罰を金銭で代替することによって国家的な利益を最大化させ、)(狂実利)	惑星の犯罪度*1の交易価値を惑星に付与、交易価値+10%、犯罪度+10、犯罪度+10%
 civic_ngm_money_penalty = {
 	possible = {
@@ -3364,6 +3345,7 @@ civic_ngm_money_penalty = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_money_penalty_effects
 	modifier = {
 		trade_value_mult = 0.1
 		planet_crime_add = 10

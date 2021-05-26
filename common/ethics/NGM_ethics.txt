@@ -17,6 +17,7 @@ ethic_categories = {
 }
 
 # 〇社会主義：労働者幸福度+5%、布告「5か年計画」を宣言可能。  狂：労働者幸福度+10%、統治者幸福度-5%、布告「5か年計画」を宣言可能。	
+# ユートピアの豊かさ、学術特権を使用可能
 ethic_fanatic_socialism = {
 	cost = 2
 	category = "ngm_soc_or_cap"
@@ -32,6 +33,8 @@ ethic_fanatic_socialism = {
 
 	tags = {
 		ETHIC_ALLOWS_UTOPIA
+		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
+		ETHIC_DISALLOWS_SLAVERY
 	}
 
 	random_weight = {
@@ -52,6 +55,8 @@ ethic_socialism = {
 
 	tags = {
 		ETHIC_ALLOWS_UTOPIA
+		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
+		ETHIC_DISALLOWS_SLAVERY
 	}
 
 	random_weight = {
@@ -285,6 +290,7 @@ ethic_socialism = {
 }
 
 # 〇資本主義：統治者幸福度+5%、交易価値+10%	狂：統治者幸福度+10%、交易価値+10%、労働者幸福度-10%
+# 階級制経済、学術特権を使用可能、社会福祉は選択できない
 ethic_fanatic_capitalism = {
 	cost = 2
 	category = "ngm_soc_or_cap"
@@ -307,7 +313,8 @@ ethic_fanatic_capitalism = {
 	}
 
 	tags = {
-		ETHIC_ALLOWS_SLAVERY
+		ETHIC_ALLOWS_STRATIFIED_SOCIETY
+		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
 	}
 
 	random_weight = {
@@ -328,7 +335,8 @@ ethic_capitalism = {
 	}
 
 	tags = {
-		ETHIC_ALLOWS_SLAVERY
+		ETHIC_ALLOWS_STRATIFIED_SOCIETY
+		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
 	}
 
 	random_weight = {
@@ -831,7 +839,6 @@ ethic_interventionism = {
 }
 
 # 〇中立主義：関係+20、暗号力+5	狂：(連邦結束度月-5)、関係+50、暗号力+10（対外）
-
 ethic_fanatic_neutralism = {
 	cost = 2
 	category = "ngm_int_or_neu"
@@ -1640,6 +1647,7 @@ ethic_developmentalism = {
 
 # 〇栄望主義：Pop25あたり貴族職業枠＋1、統治者の幸福度＋10%、開戦自由「名誉にかけて」勝利時影響力＋100  狂：Pop20あたり貴族職業枠＋1、統治者の幸福度＋20%、戦争疲弊-20%、
 # 開戦自由「名誉にかけて」勝利時影響力＋100、
+# ユートピアの豊かさ、階級制経済、学術特権を使用可能
 ethic_fanatic_honorism = {
 	cost = 2
 	category = "ngm_hon_or_uti"
@@ -1661,6 +1669,9 @@ ethic_fanatic_honorism = {
 	}
 
 	tags = {
+		ETHIC_ALLOWS_UTOPIA
+		ETHIC_ALLOWS_STRATIFIED_SOCIETY
+		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
 	}
 
 	random_weight = {
@@ -1681,7 +1692,9 @@ ethic_honorism = {
 	}
 
 	tags = {
-		ETHIC_NEVER_DEMOCRACY
+		ETHIC_ALLOWS_UTOPIA
+		ETHIC_ALLOWS_STRATIFIED_SOCIETY
+		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
 	}
 
 	random_weight = {
@@ -1916,6 +1929,7 @@ ethic_honorism = {
 
 # 	〇実利主義  奴隷の使用許可、25Popあたりインフルエンサー職業枠+1、奴隷の購入コスト-10%    狂：奴隷の使用許可、20Popあたりインフルエンサー職業枠+1、奴隷購入コスト-20%、
 # 戦時中の艦隊製造速度+10%（思想）
+# 階級制経済、学術特権を使用可能、社会福祉は選択できない
 ethic_fanatic_utilitarianism = {
 	cost = 2
 	category = "ngm_hon_or_uti"
@@ -1937,6 +1951,8 @@ ethic_fanatic_utilitarianism = {
 	}
 
 	tags = {
+		ETHIC_ALLOWS_STRATIFIED_SOCIETY
+		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
 	}
 
 	random_weight = {
@@ -1963,6 +1979,8 @@ ethic_utilitarianism = {
 	}
 
 	tags = {
+		ETHIC_ALLOWS_STRATIFIED_SOCIETY
+		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
 	}
 
 	random_weight = {

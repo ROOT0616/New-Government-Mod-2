@@ -111,6 +111,16 @@ country_event = {
 	}
 	immediate = {
 		set_country_flag = civic_ngm_prosperity_advocate_flag1
+		if = {
+			limit = {
+				has_country_flag = civic_ngm_prosperity_advocate_war_begin_flag
+			}
+			remove_country_flag = civic_ngm_prosperity_advocate_war_begin_flag
+			set_timed_country_flag = {
+				flag = civic_ngm_prosperity_advocate_war_finish_flag
+				days = 1820
+			}
+		}
 		country_event = {
 			id = ngm_civic.9
 			days = 1825
@@ -123,19 +133,24 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_civic = civic_ngm_prosperity_advocate
-		OR = {
-			has_country_flag = civic_ngm_prosperity_advocate_flag1
-			has_country_flag = civic_ngm_prosperity_advocate_flag2
-			has_country_flag = civic_ngm_prosperity_advocate_flag3
-			has_country_flag = civic_ngm_prosperity_advocate_flag4
-			has_country_flag = civic_ngm_prosperity_advocate_flag5
-			has_country_flag = civic_ngm_prosperity_advocate_flag6
-			has_country_flag = civic_ngm_prosperity_advocate_flag7
-			has_country_flag = civic_ngm_prosperity_advocate_flag8
-			has_country_flag = civic_ngm_prosperity_advocate_flag9
-			has_country_flag = civic_ngm_prosperity_advocate_flag10
-			has_country_flag = civic_ngm_prosperity_advocate_flag11
+		AND = {
+			has_civic = civic_ngm_prosperity_advocate
+			NOT = {
+				has_country_flag = civic_ngm_prosperity_advocate_war_finish_flag
+			}
+			OR = {
+				has_country_flag = civic_ngm_prosperity_advocate_flag1
+				has_country_flag = civic_ngm_prosperity_advocate_flag2
+				has_country_flag = civic_ngm_prosperity_advocate_flag3
+				has_country_flag = civic_ngm_prosperity_advocate_flag4
+				has_country_flag = civic_ngm_prosperity_advocate_flag5
+				has_country_flag = civic_ngm_prosperity_advocate_flag6
+				has_country_flag = civic_ngm_prosperity_advocate_flag7
+				has_country_flag = civic_ngm_prosperity_advocate_flag8
+				has_country_flag = civic_ngm_prosperity_advocate_flag9
+				has_country_flag = civic_ngm_prosperity_advocate_flag10
+				has_country_flag = civic_ngm_prosperity_advocate_flag11
+			}
 		}
 	}
 	immediate = {
@@ -508,6 +523,1117 @@ country_event = {
 				}
 				remove_modifier = civic_ngm_prosperity_10_advocate_modifier
 			}
+		}
+		set_country_flag = civic_ngm_prosperity_advocate_war_begin_flag
+	}
+}
+
+# ゲーム開始後の追加削除不可の国是
+country_event = {
+	id = ngm_civic.11
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_civic = civic_ngm_random_birth_rate
+			has_civic = civic_ngm_healthy_habits
+			has_civic = civic_ngm_ultimate_freedom_of_thought
+			has_civic = civic_ngm_The_Struggle_for_Struggle
+			has_civic = civic_ngm_mechanical_faith
+			has_civic = civic_ngm_economic_primitivism
+			has_civic = civic_ngm_deregulation
+			has_civic = civic_ngm_mastermind
+			has_civic = civic_ngm_glorious_isolation
+			has_civic = civic_ngm_breakdown_prevention_method
+			has_civic = civic_ngm_destructive_digging
+			has_civic = civic_ngm_irreversible_industrialization
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_civic = civic_ngm_random_birth_rate
+			}
+			set_country_flag = civic_ngm_random_birth_rate_flag
+		}
+		if = {
+			limit = {
+				has_civic = civic_ngm_healthy_habits
+			}
+			set_country_flag = civic_ngm_healthy_habits_flag
+		}
+		if = {
+			limit = {
+				has_civic = civic_ngm_ultimate_freedom_of_thought
+			}
+			set_country_flag = civic_ngm_ultimate_freedom_of_thought_flag
+		}
+		if = {
+			limit = {
+				has_civic = civic_ngm_The_Struggle_for_Struggle
+			}
+			set_country_flag = civic_ngm_The_Struggle_for_Struggle_flag
+		}
+		if = {
+			limit = {
+				has_civic = civic_ngm_mechanical_faith
+			}
+			set_country_flag = civic_ngm_mechanical_faith_flag
+		}
+		if = {
+			limit = {
+				has_civic = civic_ngm_economic_primitivism
+			}
+			set_country_flag = civic_ngm_economic_primitivism_flag
+		}
+		if = {
+			limit = {
+				has_civic = civic_ngm_deregulation
+			}
+			set_country_flag = civic_ngm_deregulation_flag
+		}
+		if = {
+			limit = {
+				has_civic = civic_ngm_mastermind
+			}
+			set_country_flag = civic_ngm_mastermind_flag
+		}
+		if = {
+			limit = {
+				has_civic = civic_ngm_glorious_isolation
+			}
+			set_country_flag = civic_ngm_glorious_isolation_flag
+		}
+		if = {
+			limit = {
+				has_civic = civic_ngm_breakdown_prevention_method
+			}
+			set_country_flag = civic_ngm_breakdown_prevention_method_flag
+		}
+		if = {
+			limit = {
+				has_civic = civic_ngm_destructive_digging
+			}
+			set_country_flag = civic_ngm_destructive_digging_flag
+		}
+		if = {
+			limit = {
+				has_civic = civic_ngm_irreversible_industrialization
+			}
+			set_country_flag = civic_ngm_irreversible_industrialization_flag
+		}
+	}
+}
+
+country_event = {
+	id = ngm_civic.12
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_country_flag = civic_ngm_random_birth_rate_flag
+			has_country_flag = civic_ngm_healthy_habits_flag
+			has_country_flag = civic_ngm_ultimate_freedom_of_thought_flag
+			has_country_flag = civic_ngm_The_Struggle_for_Struggle_flag
+			has_country_flag = civic_ngm_mechanical_faith_flag
+			has_country_flag = civic_ngm_economic_primitivism_flag
+			has_country_flag = civic_ngm_deregulation_flag
+			has_country_flag = civic_ngm_mastermind_flag
+			has_country_flag = civic_ngm_glorious_isolation_flag
+			has_country_flag = civic_ngm_breakdown_prevention_method_flag
+			has_country_flag = civic_ngm_destructive_digging_flag
+			has_country_flag = civic_ngm_irreversible_industrialization_flag
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_ngm_random_birth_rate
+				}
+				has_country_flag = civic_ngm_random_birth_rate_flag
+			}
+			force_add_civic = civic_ngm_random_birth_rate
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_ngm_healthy_habits
+				}
+				has_country_flag = civic_ngm_healthy_habits_flag
+			}
+			force_add_civic = civic_ngm_healthy_habits
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_ngm_ultimate_freedom_of_thought
+				}
+				has_country_flag = civic_ngm_ultimate_freedom_of_thought_flag
+			}
+			force_add_civic = civic_ngm_ultimate_freedom_of_thought
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_ngm_The_Struggle_for_Struggle
+				}
+				has_country_flag = civic_ngm_The_Struggle_for_Struggle_flag
+			}
+			force_add_civic = civic_ngm_The_Struggle_for_Struggle
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_ngm_mechanical_faith
+				}
+				has_country_flag = civic_ngm_mechanical_faith_flag
+			}
+			force_add_civic = civic_ngm_mechanical_faith
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_ngm_economic_primitivism
+				}
+				has_country_flag = civic_ngm_economic_primitivism_flag
+			}
+			force_add_civic = civic_ngm_economic_primitivism
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_ngm_deregulation
+				}
+				has_country_flag = civic_ngm_deregulation_flag
+			}
+			force_add_civic = civic_ngm_deregulation
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_ngm_mastermind
+				}
+				has_country_flag = civic_ngm_mastermind_flag
+			}
+			force_add_civic = civic_ngm_mastermind
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_ngm_glorious_isolation
+				}
+				has_country_flag = civic_ngm_glorious_isolation_flag
+			}
+			force_add_civic = civic_ngm_glorious_isolation
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_ngm_breakdown_prevention_method
+				}
+				has_country_flag = civic_ngm_breakdown_prevention_method_flag
+			}
+			force_add_civic = civic_ngm_breakdown_prevention_method
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_ngm_destructive_digging
+				}
+				has_country_flag = civic_ngm_destructive_digging_flag
+			}
+			force_add_civic = civic_ngm_destructive_digging
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_ngm_irreversible_industrialization
+				}
+				has_country_flag = civic_ngm_irreversible_industrialization_flag
+			}
+			force_add_civic = civic_ngm_irreversible_industrialization
+			add_resource = {
+				influence = 250
+			}
+		}
+		country_event = {
+			id = ngm_civic.13
+			days = 30
+		}
+	}
+}
+
+# 刑罰の金銭代替		惑星の犯罪度*1の交易価値を惑星に付与
+country_event = {
+	id = ngm_civic.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_money_penalty
+	}
+	immediate = {
+		every_owned_planet = {
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_1_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_1_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_2_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_2_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_3_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_3_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_4_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_4_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_5_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_5_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_6_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_6_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_7_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_7_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_8_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_8_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_9_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_9_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_10_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_10_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_11_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_11_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_12_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_12_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_13_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_13_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_14_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_14_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_15_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_15_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_16_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_16_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_17_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_17_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_18_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_18_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_19_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_19_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_20_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_20_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_21_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_21_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_22_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_22_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_23_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_23_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_24_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_24_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_25_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_25_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_26_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_26_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_27_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_27_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_28_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_28_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_29_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_29_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_30_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_30_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_31_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_31_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_32_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_32_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_33_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_33_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_34_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_34_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_35_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_35_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_36_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_36_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_37_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_37_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_38_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_38_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_39_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_39_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_30_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_30_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_31_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_31_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_32_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_32_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_33_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_33_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_34_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_34_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_35_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_35_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_36_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_36_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_37_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_37_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_38_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_38_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_39_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_39_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_40_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_40_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_41_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_41_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_42_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_42_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_43_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_43_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_44_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_44_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_45_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_45_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_46_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_46_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_47_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_47_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_48_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_48_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_49_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_49_modifier
+			}
+			if = {
+				limit = { 
+					has_modifier = civic_ngm_money_penalty_50_modifier
+				}
+				remove_modifier = civic_ngm_money_penalty_50_modifier
+			}
+		}
+		country_event = {
+			id = ngm_civic.14
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = ngm_civic.14
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_planet = {
+			if = {
+				limit = { 
+					planet_crime > 0
+					planet_crime <= 1
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_1_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 1
+					planet_crime <= 2
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_2_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 2
+					planet_crime <= 3
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_3_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 3
+					planet_crime <= 4
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_4_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 4
+					planet_crime <= 5
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_5_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 5
+					planet_crime <= 6
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_6_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 6
+					planet_crime <= 7
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_7_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 7
+					planet_crime <= 8
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_8_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 8
+					planet_crime <= 9
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_9_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 9
+					planet_crime <= 10
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_10_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 10
+					planet_crime <= 11
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_11_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 11
+					planet_crime <= 12
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_12_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 12
+					planet_crime <= 13
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_13_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 13
+					planet_crime <= 14
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_14_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 14
+					planet_crime <= 15
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_15_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 15
+					planet_crime <= 16
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_16_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 16
+					planet_crime <= 17
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_17_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 17
+					planet_crime <= 18
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_18_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 18
+					planet_crime <= 19
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_19_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 19
+					planet_crime <= 20
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_20_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 20
+					planet_crime <= 21
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_21_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 21
+					planet_crime <= 22
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_22_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 22
+					planet_crime <= 23
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_23_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 23
+					planet_crime <= 24
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_24_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 24
+					planet_crime <= 25
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_25_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 25
+					planet_crime <= 26
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_26_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 26
+					planet_crime <= 27
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_27_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 27
+					planet_crime <= 28
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_28_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 28
+					planet_crime <= 29
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_29_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 29
+					planet_crime <= 30
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_30_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 30
+					planet_crime <= 31
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_31_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 31
+					planet_crime <= 32
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_32_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 32
+					planet_crime <= 33
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_33_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 33
+					planet_crime <= 34
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_34_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 34
+					planet_crime <= 35
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_35_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 35
+					planet_crime <= 36
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_36_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 36
+					planet_crime <= 37
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_37_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 37
+					planet_crime <= 38
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_38_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 38
+					planet_crime <= 39
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_39_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 39
+					planet_crime <= 40
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_40_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 40
+					planet_crime <= 41
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_41_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 41
+					planet_crime <= 42
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_42_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 42
+					planet_crime <= 43
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_43_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 43
+					planet_crime <= 44
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_44_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 44
+					planet_crime <= 45
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_45_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 45
+					planet_crime <= 46
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_46_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 46
+					planet_crime <= 47
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_47_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 47
+					planet_crime <= 48
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_48_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 48
+					planet_crime <= 49
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_49_modifier
+				}
+			}
+			if = {
+				limit = { 
+					planet_crime > 49
+				}
+				add_modifier = {
+					modifier = civic_ngm_money_penalty_50_modifier
+				}
+			}
+		}
+		country_event = {
+			id = ngm_civic.13
+			days = 30
 		}
 	}
 }

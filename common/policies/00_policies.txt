@@ -2148,6 +2148,10 @@ slavery = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
 			}
+			OR = {
+				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_socialism
+			}
 		}
 		policy_flags = {
 			slavery_not_allowed
@@ -2174,6 +2178,10 @@ slavery = {
 				has_ethic = ethic_fanatic_authoritarian
 				has_ethic = ethic_xenophobe
 				has_ethic = ethic_fanatic_xenophobe
+			}
+			NOR = {
+				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_socialism
 			}
 		}
 		policy_flags = {
