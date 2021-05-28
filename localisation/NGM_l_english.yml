@@ -1193,9 +1193,9 @@
  trait_ngm_elder_politics:0 "長老政治"
  trait_ngm_elder_politics_desc:0 "§Lこの政府の高官は高齢の者に支配されており、熟達した政府高官により多くの決定がなされている。しかし、それは新参者の政府参加を妨げやすく、新たな思想を受け入れる素地を減らしてしまう傾向にある。§!"
 
- civic_tooltip_ngm_not_removed:0 "§Lゲーム開始後の追加削除不可§!\n§L(ゲーム開始後に追加、削除すると元に戻されます。)§!"
+ civic_tooltip_ngm_not_removed:0 "§Rゲーム開始後の追加削除不可§!\n§Y(ゲーム開始後に追加、削除すると元に戻されます。)§!"
 
- civic_tooltip_ngm_prosperity_advocate_effects:0 "平和の期間が5年続くごとに労働者生産量§G+1%§!§L（最大50年分）§!\n平和の期間が5年続くごとに交易価値§G+2.5%§!§L（最大50年分）§!"
+ civic_tooltip_ngm_prosperity_advocate_effects:0 "平和の期間が5年続くごとに労働者生産量§G+1%§!§Y（最大50年分）§!\n平和の期間が5年続くごとに交易価値§G+2.5%§!§Y（最大50年分）§!"
  civic_ngm_prosperity_1_advocate_modifier:0 "平和の期間が5年"
  civic_ngm_prosperity_1_advocate_modifier_desc:0 "この国は平和で、平和は富をもたらす。"
  civic_ngm_prosperity_2_advocate_modifier:0 "平和の期間が10年"
@@ -1321,7 +1321,7 @@
 
  civic_tooltip_ngm_experimental_substance_effects:0 "首都惑星に各戦略資源特性を1つずつ付与"
 
- civic_tooltip_ngm_war_prosperity_effects:0 "戦時中の鉱物,合金,消費財生産量§G+10%§!\n戦時中の交易価値生産量§G+10%§!\n戦時中の建艦速度§G+10§!\n非戦時中の鉱物,合金,消費財生産量§G-R10%§!\n非戦時中の交易価値生産量§-R10%§!\n非戦時中の建艦速度§G+20§!"
+ civic_tooltip_ngm_war_prosperity_effects:0 "戦時中の鉱物,合金,消費財生産量§G+10%§!\n戦時中の交易価値生産量§G+10%§!\n戦時中の建艦速度§G+10%§!\n非戦時中の鉱物,合金,消費財生産量§R-10%§!\n非戦時中の交易価値生産量§R-10%§!\n非戦時中の建艦速度§R-20%§!"
  civic_ngm_war_prosperity_not_war_modifier:0 "非戦時経済"
  civic_ngm_war_prosperity_not_war_modifier_desc:0 "怠惰な平和により、資源や産業の有機的な結合は失われている。"
  civic_ngm_war_prosperity_not_war_country_modifier:0 "非戦時経済"
@@ -1332,6 +1332,8 @@
  civic_ngm_war_prosperity_is_war_country_modifier_desc:0 "国家に張りをもたらす戦いにより経済は有機的な活況を見せている。"
 
  civic_tooltip_ngm_dissection_effects:0 "異種族は強制で奴隷化"
+
+ civic_tooltip_ngm_pest_control_effects:0 "開発主義国家に対して、§G環境保全§!の開戦事由を獲得\n（勝利すると開発主義の志向を保全主義に転向させ、相手を属国化させる。さらに、終戦時に戦争相手へ社会学研究力をあげる）。"
 
  mod_weapon_role_point_defense_weapon_fire_rate_mult:0 "対空砲連射レート"
  mod_country_sr_living_metal_produces_mult:0 "月間 $sr_living_metal$"
@@ -1697,9 +1699,9 @@
  war_goal_wg_ngm_with_honor:0 "名誉の獲得"
  war_goal_wg_ngm_with_honor_desc:0 "他国を下し、我が国の優位を銀河中に知らしめる。"
 
- casus_belli_cb_ngm_pest_control:0 "害虫駆除"
+ casus_belli_cb_ngm_pest_control:0 "環境保全"
  casus_belli_cb_ngm_pest_control_desc:0 "美しい自然に巣くう国家は撃滅され、改心されるべきである。"
- war_goal_wg_ngm_pest_control:0 "害虫駆除"
+ war_goal_wg_ngm_pest_control:0 "環境保全"
  war_goal_wg_ngm_pest_control_desc:0 "開発主義国家を保全主義へと改心させ、生物学的知見を相手に与える。"
  fail_text_wg_ngm_pest_control:0 "相手国は必要な§Y$ethic_developmentalism$§!の志向を採用していない。"
 
