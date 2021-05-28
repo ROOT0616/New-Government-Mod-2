@@ -430,7 +430,7 @@
  civic_ngm_elitism_desc:0 "この社会は神に選ばれており、神の救済を受けることができる自分達以外は下賤であると考えている。"
 
  civic_ngm_dissection:0 "異種族解剖"
- civic_ngm_dissection_desc:0 "§Rまだ§!\n この国家は自らの生物学的知見のために多種族を解剖することや実験を厭わず、顰蹙をかっている。"
+ civic_ngm_dissection_desc:0 "この国家は自らの生物学的知見のために多種族を解剖することや実験を厭わず、顰蹙をかっている。"
 
  civic_ngm_imperialism:0 "帝国主義"
  civic_ngm_imperialism_desc:0 "この社会は自らが最も優れた政府だと考えており、国力とその威容を示し、利権を確保するために全力を注いでいる。"
@@ -442,13 +442,13 @@
  civic_ngm_military_industrial_complex_desc:0 "この社会は巨大な軍産複合体が大きな力を有しており、軍事政策にも大きな影響を与えている。"
 
  civic_ngm_war_prosperity:0 "戦争経済"
- civic_ngm_war_prosperity_desc:0 "§Rまだ§!\nこの社会の経済は極めて脆弱であるが、戦争が始まると総動員の名の下にあらゆる経済が活性化する。"
+ civic_ngm_war_prosperity_desc:0 "この社会の経済は極めて脆弱であるが、戦争が始まると総動員の名の下にあらゆる経済が活性化する。"
 
  civic_ngm_military_regime:0 "軍事政権"
  civic_ngm_military_regime_desc:0 "この社会は職業軍人が政治的中立性を名目に国家運営に強い影響を与えている。"
 
- civic_ngm_The_Struggle_for_Struggle:0 "§Rまだ§!\n闘争のための闘争"
- civic_ngm_The_Struggle_for_Struggle_desc:0 "平和とは戦争と戦争との休憩期間にすぎない。"
+ civic_ngm_The_Struggle_for_Struggle:0 "闘争のための闘争"
+ civic_ngm_The_Struggle_for_Struggle_desc:0 "§Rまだ§!\n平和とは戦争と戦争との休憩期間にすぎない。"
 
  civic_ngm_aegis_shield:0 "イージスの護り"
  civic_ngm_aegis_shield_desc:0 "この国は鉄壁の守りを重視しており、この国の要塞を突破することは容易ではない。"
@@ -493,7 +493,7 @@
  civic_ngm_longing_for_the_future_desc:0 "この社会は自らの手で未知を解明し、未来への糸口とすることを目指している。"
 
  civic_ngm_experimental_substance:0 "実験的物質の発見"
- civic_ngm_experimental_substance_desc:0 "§Rまだ§!\nこの国ではかつてエネルギー問題を解決するために様々な実験を行った。結果、惑星内にさまざまな戦略物資が生成された。"
+ civic_ngm_experimental_substance_desc:0 "この国ではかつてエネルギー問題を解決するために様々な実験を行った。結果、惑星内にさまざまな戦略物資が生成された。"
 
  civic_ngm_industrial_capitalism:0 "産業資本主義"
  civic_ngm_industrial_capitalism_desc:0 "開発と研究は社会を活性化させ、より豊かな社会を目指すべきだ！"
@@ -873,7 +873,7 @@
  income_tax_l_corp_tax_name:0 "低い"
  NAME_NGM_l_corp_tax:0 "低い"
  NAME_NGM_l_corp_tax_desc:0 ""
- income_tax_vl_corp_tax:0 "極めて低い"
+ income_tax_vl_corp_tax_name:0 "極めて低い"
  NAME_NGM_vl_corp_tax:0 "極めて低い"
  NAME_NGM_vl_corp_tax_desc:0 "企業の自由性を確保し、競争力を高めるべきだ。"
  income_tax_max_corp_tax_name:0 "法人税の廃止"
@@ -963,7 +963,7 @@
  export_law_hig_exp_name:0 "防衛品協力法"
  NAME_NGM_hig_exp:0 "防衛品協力法"
  NAME_NGM_hig_exp_desc:0 "武器輸出は我が国の主要な産業で、できる限り保護すべきだ。"
- export_law_vh_exp:0 "軍需品輸出推進法"
+ export_law_vh_exp_name:0 "軍需品輸出推進法"
  NAME_NGM_vh_exp:0 "軍需品輸出推進法"
  NAME_NGM_vh_exp_desc:0 "死の商人？  何とでも呼びたまえ。お買い上げありがとうございます！"
 
@@ -1072,6 +1072,9 @@
 
  ngm_five_year_plan_campaign:0 "5か年計画"
 
+ ngm_honorism_wartime_fleet:0 "名誉のために"
+ ngm_honorism_wartime_fleet_desc:0 ""
+
 #######################
 #####    技術    ######
 #######################
@@ -1103,6 +1106,7 @@
 #####    仕事    ######
 #######################
 
+ planet_bureau_of_ceremonies:0 "式部官"
  bureau_of_ceremonies:0 "式部官"
  bureau_of_ceremonies_desc:0 "式典や栄典を管理作成し、その授与に大きな権威を与える"
  job_bureau_of_ceremonies:0 "式部官"
@@ -1110,54 +1114,75 @@
  job_bureau_of_ceremonies_plural:0 "式部官"
  mod_job_bureau_of_ceremonies_add:0 "式部官の職業枠"
 
+ planet_ngm_secretary:0 "書記"
  ngm_secretary:0 "書記"
  ngm_secretary_desc:0 "政党の幹部で、あらゆる官僚や軍人に指導を行う政治的エリート"
  job_ngm_secretary:0 "書記"
  job_ngm_secretary_plural:0 "書記"
  job_ngm_secretary_desc:0 "政党の幹部で、あらゆる官僚や軍人に指導を行う政治的エリート"
  mod_job_ngm_secretary_add:0 "書記の職業枠"
+ mod_job_ngm_influencer_per_pop:0 "$VALUE$ POP につき$job_ngm_secretary$の職業枠§G+1§!"
+ mod_job_ngm_influencer_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_secretary_add£ §G+1§!"
 
+ planet_ngm_pacifist:0 "宣撫官"
  ngm_pacifist:0 "宣撫官"
  ngm_pacifist_desc:0 "民衆を鼓舞し、扇動する言葉の魔術師"
  job_ngm_pacifist:0 "宣撫官"
  job_ngm_pacifist_plural:0 "宣撫官"
  job_ngm_pacifist_desc:0 "民衆を鼓舞し、扇動する言葉の魔術師"
  mod_job_ngm_pacifist_add:0 "宣撫官の職業枠"
+ mod_job_ngm_influencer_per_pop:0 "$VALUE$ POP につき$job_ngm_pacifist$の職業枠§G+1§!"
+ mod_job_ngm_influencer_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_pacifist_add£ §G+1§!"
 
+ planet_ngm_crest_bearer:0 "紋章官"
  ngm_crest_bearer:0 "紋章官"
  ngm_crest_bearer_desc:0 "貴族の称号や紋章を管理し、運用する宮廷官僚"
  job_ngm_crest_bearer:0 "紋章官"
  job_ngm_crest_bearer_plural:0 "紋章官"
  job_ngm_crest_bearer_desc:0 "貴族の称号や紋章を管理し、運用する宮廷官僚"
  mod_job_ngm_crest_bearer_add:0 "紋章官の職業枠"
+ mod_job_ngm_influencer_per_pop:0 "$VALUE$ POP につき$job_ngm_crest_bearer$の職業枠§G+1§!"
+ mod_job_ngm_influencer_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_crest_bearer_add£ §G+1§!"
 
+ planet_ngm_senior_advisor:0 "高級参謀"
  ngm_senior_advisor:0 "高級参謀"
  ngm_senior_advisor_desc:0 "国家指導者や将官を特別に補佐する高位の参謀"
  job_ngm_senior_advisor:0 "高級参謀"
  job_ngm_senior_advisor_plural:0 "高級参謀"
  job_ngm_senior_advisor_desc:0 "国家指導者や将官を特別に補佐する高位の参謀"
  mod_job_ngm_senior_advisor_add:0 "高級参謀の職業枠"
+ mod_job_ngm_influencer_per_pop:0 "$VALUE$ POP につき$job_ngm_senior_advisor$の職業枠§G+1§!"
+ mod_job_ngm_influencer_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_senior_advisor_add£ §G+1§!"
 
+ planet_ngm_heroes_of_society:0 "社会的英雄"
  ngm_heroes_of_society:0 "社会的英雄"
  ngm_heroes_of_society_desc:0 "下層市民から成り上がり、国家のために尽くした偉人"
  job_ngm_heroes_of_society:0 "社会的英雄"
  job_ngm_heroes_of_society_plural:0 "社会的英雄"
  job_ngm_heroes_of_society_desc:0 "下層市民から成り上がり、国家のために尽くした偉人"
  mod_job_ngm_heroes_of_society_add:0 "社会的英雄の職業枠"
+ mod_job_ngm_influencer_per_pop:0 "$VALUE$ POP につき$job_ngm_heroes_of_society$の職業枠§G+1§!"
+ mod_job_ngm_influencer_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_heroes_of_society_add£ §G+1§!"
 
+ planet_ngm_superintendent_of_wilderness:0 "大自然監督官"
  ngm_superintendent_of_wilderness:0 "大自然監督官"
  ngm_superintendent_of_wilderness_desc:0 "国家の自然を管理し、保全を行う高級官僚"
  job_ngm_superintendent_of_wilderness:0 "大自然監督官"
  job_ngm_superintendent_of_wilderness_plural:0 "大自然監督官"
  job_ngm_superintendent_of_wilderness_desc:0 "国家の自然を管理し、保全を行う高級官僚"
  mod_job_ngm_superintendent_of_wilderness_add:0 "大自然監督官の職業枠"
+ mod_job_ngm_influencer_per_pop:0 "$VALUE$ POP につき$job_ngm_superintendent_of_wilderness$の職業枠§G+1§!"
+ mod_job_ngm_influencer_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_superintendent_of_wilderness_add£ §G+1§!"
 
+ planet_ngm_influencer:0 "インフルエンサー"
  ngm_influencer:0 "インフルエンサー"
  ngm_influencer_desc:0 "現代社会で様々なコンテンツを利用して他者の思考や行動に影響を与える有力者"
  job_ngm_influencer:0 "インフルエンサー"
  job_ngm_influencer_plural:0 "インフルエンサー"
  job_ngm_influencer_desc:0 "現代社会で様々なコンテンツを利用して他者の思考や行動に影響を与える有力者"
  mod_job_ngm_influencer_add:0 "インフルエンサーの職業枠"
+ mod_job_ngm_influencer_per_pop:0 "$VALUE$ POP につき$job_ngm_influencer$の職業枠§G+1§!"
+ mod_job_ngm_influencer_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_influencer_add£ §G+1§!"
 
 #######################
 #####    特性    ######
@@ -1168,25 +1193,27 @@
  trait_ngm_elder_politics:0 "長老政治"
  trait_ngm_elder_politics_desc:0 "§Lこの政府の高官は高齢の者に支配されており、熟達した政府高官により多くの決定がなされている。しかし、それは新参者の政府参加を妨げやすく、新たな思想を受け入れる素地を減らしてしまう傾向にある。§!"
 
+ civic_tooltip_ngm_not_removed:0 "§Lゲーム開始後の追加削除不可§!\n§L(ゲーム開始後に追加、削除すると元に戻されます。)§!"
+
  civic_tooltip_ngm_prosperity_advocate_effects:0 "平和の期間が5年続くごとに労働者生産量§G+1%§!§L（最大50年分）§!\n平和の期間が5年続くごとに交易価値§G+2.5%§!§L（最大50年分）§!"
  civic_ngm_prosperity_1_advocate_modifier:0 "平和の期間が5年"
  civic_ngm_prosperity_1_advocate_modifier_desc:0 "この国は平和で、平和は富をもたらす。"
  civic_ngm_prosperity_2_advocate_modifier:0 "平和の期間が10年"
  civic_ngm_prosperity_2_advocate_modifier_desc:0 "この国は平和で、平和による利益は拡大する。"
  civic_ngm_prosperity_3_advocate_modifier:0 "平和の期間が15年"
- civic_ngm_prosperity_3_advocate_modifier_desc:0 "この国は平和で、平和による利益は拡大する。"
+ civic_ngm_prosperity_3_advocate_modifier_desc:0 "この国は平和で、豊かな平和はこれからも続いていく。"
  civic_ngm_prosperity_4_advocate_modifier:0 "平和の期間が20年"
- civic_ngm_prosperity_4_advocate_modifier_desc:0 "この国は平和で、平和による利益は拡大する。"
+ civic_ngm_prosperity_4_advocate_modifier_desc:0 "この国は平和で、平和に対する努力と利益を得るための努力に一致する。"
  civic_ngm_prosperity_5_advocate_modifier:0 "平和の期間が25年"
- civic_ngm_prosperity_5_advocate_modifier_desc:0 "この国は平和で、平和による利益は拡大する。"
+ civic_ngm_prosperity_5_advocate_modifier_desc:0 "この国は平和で、その平穏は万金に等しい。"
  civic_ngm_prosperity_6_advocate_modifier:0 "平和の期間が30年"
- civic_ngm_prosperity_6_advocate_modifier_desc:0 "この国は平和で、平和による利益は拡大する。"
+ civic_ngm_prosperity_6_advocate_modifier_desc:0 "この国は平和で、刃よりも必要なものを見つけることができたのである。"
  civic_ngm_prosperity_7_advocate_modifier:0 "平和の期間が35年"
- civic_ngm_prosperity_7_advocate_modifier_desc:0 "この国は平和で、平和による利益は拡大する。"
+ civic_ngm_prosperity_7_advocate_modifier_desc:0 "この国は平和で、その平和は富により裏付けられる。"
  civic_ngm_prosperity_8_advocate_modifier:0 "平和の期間が40年"
- civic_ngm_prosperity_8_advocate_modifier_desc:0 "この国は平和で、平和による利益は拡大する。"
+ civic_ngm_prosperity_8_advocate_modifier_desc:0 "この国は平和で、戦争に費やされる時間は富を得るために費やされる。"
  civic_ngm_prosperity_9_advocate_modifier:0 "平和の期間が45年"
- civic_ngm_prosperity_9_advocate_modifier_desc:0 "この国は平和で、平和による利益は拡大する。"
+ civic_ngm_prosperity_9_advocate_modifier_desc:0 "この国は平和で、金色の平和は金色の富をもたらす。"
  civic_ngm_prosperity_10_advocate_modifier:0 "平和の期間が50年"
  civic_ngm_prosperity_10_advocate_modifier_desc:0 "この国は平和で、永遠の平和は永遠の繁栄をもたらす。"
 
@@ -1291,6 +1318,39 @@
  civic_ngm_money_penalty_49_modifier_desc:0 ""
  civic_ngm_money_penalty_50_modifier:0 "刑罰の金銭代替"
  civic_ngm_money_penalty_50_modifier_desc:0 ""
+
+ civic_tooltip_ngm_experimental_substance_effects:0 "首都惑星に各戦略資源特性を1つずつ付与"
+
+ civic_tooltip_ngm_war_prosperity_effects:0 "戦時中の鉱物,合金,消費財生産量§G+10%§!\n戦時中の交易価値生産量§G+10%§!\n戦時中の建艦速度§G+10§!\n非戦時中の鉱物,合金,消費財生産量§G-R10%§!\n非戦時中の交易価値生産量§-R10%§!\n非戦時中の建艦速度§G+20§!"
+ civic_ngm_war_prosperity_not_war_modifier:0 "非戦時経済"
+ civic_ngm_war_prosperity_not_war_modifier_desc:0 "怠惰な平和により、資源や産業の有機的な結合は失われている。"
+ civic_ngm_war_prosperity_not_war_country_modifier:0 "非戦時経済"
+ civic_ngm_war_prosperity_not_war_country_modifier_desc:0 "怠惰な平和により、資源や産業の有機的な結合は失われている。"
+ civic_ngm_war_prosperity_is_war_modifier:0 "戦時経済"
+ civic_ngm_war_prosperity_is_war_modifier_desc:0 "国家に張りをもたらす戦いにより経済は有機的な活況を見せている。"
+ civic_ngm_war_prosperity_is_war_country_modifier:0 "戦時経済"
+ civic_ngm_war_prosperity_is_war_country_modifier_desc:0 "国家に張りをもたらす戦いにより経済は有機的な活況を見せている。"
+
+ civic_tooltip_ngm_dissection_effects:0 "異種族は強制で奴隷化"
+
+ mod_weapon_role_point_defense_weapon_fire_rate_mult:0 "対空砲連射レート"
+ mod_country_sr_living_metal_produces_mult:0 "月間 $sr_living_metal$"
+ mod_country_sr_zro_produces_mult:0 "月間 $sr_zro$"
+ mod_country_sr_dark_matter_produces_mult:0 "月間 $sr_living_metal$"
+ mod_country_nanites_produces_mult:0 "月間 $nanites$"
+ mod_shipsize_starbase_outpost_hull_mult:0 "前哨地建造船体値"
+ mod_shipsize_starbase_starport_hull_mult:0 "星系港建造船体値"
+ mod_shipsize_starbase_starhold_hull_mult:0 "星系軍港建造船体値"
+ mod_shipsize_starbase_starfortress_hull_mult:0 "星系要塞建造船体値"
+ mod_shipsize_starbase_citadel_hull_mult:0 "シタデル建造船体値"
+ mod_pop_ethic_socialism_attraction_mult:0 "社会主義志向への魅力"
+ mod_pop_ethic_capitalism_attraction_mult:0 "資本主義志向への魅力"
+ mod_pop_ethic_honorism_attraction_mult:0 "栄望主義志向への魅力"
+ mod_pop_ethic_utilitarianism_attraction_mult:0 "実利主義志向への魅力"
+
+ mod_planet_buildings_energy_upkeep_mult:0 "建物の$energy$維持費"
+ mod_planet_jobs_consumer_goods_upkeep_mult:0 "£job£ 職業の$consumer_goods$維持費"
+ mod_planet_pops_energy_upkeep_mult:0 "Popの$energy$維持費"
 
  trait_ngm_knight:0 "騎士道精神"
  trait_ngm_knight_desc:0 "この種族は弱きものを助け、社会正義を全うすべきだという強い信念を有した高潔性を有している。"
@@ -1585,6 +1645,7 @@
 
  civic_tooltip_materialist_or_capitalism_or_developmentalism:0 "§Y物質主義§!系統か§Y資本主義§!系統か§Y開発主義§!系統である"
  civic_tooltip_materialist_or_spiritualist:0 "§Y物質主義§!系統か§Y精神主義§!系統である"
+ civic_tooltip_materialist_or_utilitarianism:0 "§Y物質主義§!系統か§Y実利主義§!系統である"
 
  civic_tooltip_socialism_or_egalitarian:0 "§Y社会主義§!系統か§Y平等主義§!系統である"
  civic_tooltip_socialism_or_spiritualist:0 "§Y社会主義§!系統か§Y精神主義§!系統である"
@@ -1631,9 +1692,16 @@
  empire_is_utilitarianism:0 "$TRIGGER_FAIL$我々の帝国は§Y$ethic_utilitarianism$§!の志向を採用している。 "
  empire_is_capitalism:0 "$TRIGGER_FAIL$我々の帝国は§Y$ethic_capitalism$§!の志向を採用している。 "
 
- mod_planet_buildings_energy_upkeep_mult:0 "建物の$energy$維持費"
- mod_planet_jobs_consumer_goods_upkeep_mult:0 "£job£ 職業の$consumer_goods$維持費"
- mod_planet_pops_energy_upkeep_mult:0 "Popの$energy$維持費"
+ casus_belli_cb_ngm_with_honor:0 "名誉にかけて"
+ casus_belli_cb_ngm_with_honor_desc:0 "我が国の名誉を汚す存在は許されるべきではない。流される血液により汚名をそそぐべきだ。"
+ war_goal_wg_ngm_with_honor:0 "名誉の獲得"
+ war_goal_wg_ngm_with_honor_desc:0 "他国を下し、我が国の優位を銀河中に知らしめる。"
+
+ casus_belli_cb_ngm_pest_control:0 "害虫駆除"
+ casus_belli_cb_ngm_pest_control_desc:0 "美しい自然に巣くう国家は撃滅され、改心されるべきである。"
+ war_goal_wg_ngm_pest_control:0 "害虫駆除"
+ war_goal_wg_ngm_pest_control_desc:0 "開発主義国家を保全主義へと改心させ、生物学的知見を相手に与える。"
+ fail_text_wg_ngm_pest_control:0 "相手国は必要な§Y$ethic_developmentalism$§!の志向を採用していない。"
 
 # :0 ""
 # _desc:0 ""

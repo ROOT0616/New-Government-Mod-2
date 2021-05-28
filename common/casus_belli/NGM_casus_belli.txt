@@ -1,0 +1,96 @@
+#my_casus_belli = {
+#	potential = { ... }		# tCBをある種の国で無効にするためのリガー、これ＝アタッカー（CB所有者); default: { always = yes }
+#	is_valid = { ... }		# CBが自動的に作成または破壊されるべきかどうかをチェックするために毎日評価されるトリガーで、スクリプトによって付与されたCBには影響しない。;
+#								# this = attacker (CB owner), from = defender (target country); default: { always = yes }
+#	destroy_if = { ... }	# スクリプトで付与されたCBを有効期限前に破棄するために、毎日評価されるトリガー;
+#								# this = attacker (CB owner), from = defender (target country); default: { always = no }
+#	show_notification = no/yes	# optional (default = yes), flag to control whether this CB will generate a notification (to avoid duplicate
+# 								# notification when a claim CB is generated)
+#}
+
+
+# cb_claim = {
+# 	show_in_diplomacy = yes
+# 	show_notification = no
+# 	potential = {
+# 		is_country_type = default
+# 		NOT = { is_in_federation_with = from }
+# 	}
+# 	is_valid = {
+# 		OR = {
+# 			has_claim = FROM
+# 			from = {
+# 				any_subject = {
+# 					root = { has_claim = prev }
+# 				}
+# 			}
+# 		}
+# 		has_total_war_cb = no
+# 		NOT = { is_overlord_to = FROM }
+# 		OR = {
+# 			is_subject = no
+# 			overlord = { NOT = { is_same_value = from } }
+# 		}
+# 	}
+# }
+
+# 〇栄望主義：開戦自由「名誉にかけて」勝利時影響力＋100
+cb_ngm_with_honor = {
+	show_in_diplomacy = yes
+	show_notification = no
+	potential = {
+		exists = from
+		OR = {
+			has_ethic = ethic_honorism
+			has_ethic = ethic_fanatic_honorism
+		}
+	}
+	is_valid = {
+		has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+# 害虫駆除		(保全、軍国)	開発主義国家に対して、環境保全の開戦事由を獲得
+# （勝利すると開発主義の志向を保全主義に転向させ、相手を属国化させる。
+# さらに、終戦時に戦争相手へ社会学研究力を自国の3か月分あげる）。
+cb_ngm_pest_control = {
+	show_in_diplomacy = yes
+	show_notification = no
+	potential = {
+		is_country_type = default
+		exists = from
+		OR = {
+			has_ethic = ethic_conservationism
+			has_ethic = ethic_fanatic_conservationism
+		}
+		OR = {
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
+		}
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			is_in_federation_with = from
+		}
+	}
+	is_valid = {
+		from = { is_country_type = default }
+		from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+		from = {
+			OR = {
+				has_ethic = ethic_developmentalism
+				has_ethic = ethic_fanatic_developmentalism
+			}
+		}
+		has_total_war_cb = no
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}

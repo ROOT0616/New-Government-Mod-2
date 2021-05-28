@@ -462,3 +462,28 @@ civic_ngm_money_penalty_50_modifier = {
 	icon_frame = 1
 	trade_value_add = 50
 }
+
+# 戦争経済	戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+10%、建艦速度+10%。
+# 非戦争時の鉱物、合金、交易価値、消費財生産量-20%、建艦速度+20%
+civic_ngm_war_prosperity_not_war_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon_frame = 1
+	planet_jobs_minerals_produces_mult = -0.2
+	planet_jobs_alloys_produces_mult = -0.2
+	planet_jobs_consumer_goods_produces_mult = -0.2
+	trade_value_mult = -0.2
+}
+civic_ngm_war_prosperity_not_war_country_modifier = {
+	starbase_shipyard_build_speed_mult = -0.2
+}
+civic_ngm_war_prosperity_is_war_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	planet_jobs_minerals_produces_mult = 0.1
+	planet_jobs_alloys_produces_mult = 0.1
+	planet_jobs_consumer_goods_produces_mult = 0.1
+	trade_value_mult = 0.1
+}
+civic_ngm_war_prosperity_is_war_country_modifier = {
+	starbase_shipyard_build_speed_mult = 0.1
+}

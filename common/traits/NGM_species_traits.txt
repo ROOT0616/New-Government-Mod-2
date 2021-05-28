@@ -735,7 +735,7 @@ trait_ngm_huge = {
 	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_pops_food_upkeep_mult = 0.1
+		planet_pops_organics_food_upkeep_mult = 0.1
 		pop_housing_usage_mult = 0.15
 		army_damage_mult = 0.2
 		army_health = 0.2
@@ -760,7 +760,7 @@ trait_ngm_big = {
 	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_pops_food_upkeep_mult = 0.05
+		planet_pops_organics_food_upkeep_mult = 0.05
 		pop_housing_usage_mult = 0.1
 		army_damage_mult = 0.1
 		army_health = 0.1
@@ -785,7 +785,7 @@ trait_ngm_small = {
 	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_pops_food_upkeep_mult = -0.05
+		planet_pops_organics_food_upkeep_mult = -0.05
 		pop_housing_usage_mult = -0.1
 		army_damage_mult = -0.1
 		army_health = -0.1
@@ -810,7 +810,7 @@ trait_ngm_minimum = {
 	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_pops_food_upkeep_mult = -0.1
+		planet_pops_organics_food_upkeep_mult = -0.1
 		pop_housing_usage_mult = -0.15
 		army_damage_mult = -0.2
 		army_health = -0.2
@@ -988,7 +988,7 @@ trait_ngm_unappetizing = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		planet_livestock_food_produces_add = -2
-		planet_pops_food_upkeep_mult = -0.1
+		planet_pops_organics_food_upkeep_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -1007,7 +1007,7 @@ trait_ngm_speckled_w_white = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		planet_livestock_food_produces_add = 1
-		planet_pops_food_upkeep_mult = 0.1
+		planet_pops_organics_food_upkeep_mult = 0.1
 		leader_age = -5
 	}
 	slave_cost = {

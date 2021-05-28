@@ -16,7 +16,13 @@ on_game_start_country = {
 		# ゲーム開始後の追加削除不可の国是
 		ngm_civic.11
 		# 刑罰の金銭代替
-		ngm_civic.13
+		ngm_civic.14
+		# 実験的物質の発見
+		ngm_civic.16
+		# 戦争経済
+		ngm_civic.17
+		# 異種族解剖
+		ngm_civic.20
 	}
 }
 
@@ -42,6 +48,8 @@ on_war_beginning = {
 	events = {
 		# 繁栄主義者
 		ngm_civic.10
+		# 戦争経済
+		ngm_civic.18
 	}
 }
 
@@ -52,5 +60,7 @@ on_war_ended = {
 	events = {
 		# 繁栄主義者
 		ngm_civic.8
+		# 戦争経済
+		ngm_civic.19
 	}
 }

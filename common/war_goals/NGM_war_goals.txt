@@ -1,0 +1,345 @@
+#wg_example = {
+#	# 必要なのは、アクターがターゲットに対してCasus Belliを持っていること。
+#	casus_belli = cb_example
+#
+#	# アタッカーのウォーゴールとして使用され、設定された場合、ディフェンダーは、ウォーゴールがこれによって決定されます。
+#	# セットされていない場合、ディフェンダーは自分のウォーゴールを選ぶことになります。
+#	set_defender_wargoal = wg_example
+#
+#   # 戦争目標が銀河帝国のメンバーに対して使用された場合、この評価が「yes」であれば、他のすべてのメンバーが戦争に参加します。
+#   # Default no
+#   # FROM = The targeted country
+#   # THIS = The acting country
+#   galactic_community_joins_defender = { always = yes }
+#
+#	# ディフェンダーは、時間内にウォーゴールが選ばれなかった場合、このウォーゴールを得る。複数のウォーゴールがディフェンダーのデフォルトに設定されている場合、ファイルに記述されている最初のウォーゴールが選択されます。
+#	defender_default = yes # Default no
+#
+# 	# システムや惑星を征服した際に発生する脅威に影響を与えます。
+#	threat_multiplier = 1.0 # Default 1.0
+#
+#	# 国に必要なCBがない場合は、このウォーゴールを隠す
+#	hide_if_no_cb = no	# Default no
+#
+#	# 平和の主張を放棄するのか？
+#	cede_claims = yes/occupied_only/no
+#
+#	# これは、この戦争目標に対してAIが降伏する可能性に影響します。一般的に、より厳しい戦争目標では降伏する可能性が低くなります（負の数＝降伏する可能性が低い）。
+#	surrender_acceptance = 0 # Default 0
+#
+#	# これは、戦争でのこちら側の消耗の速さに影響します（2.0＝2倍の速さ）。
+#	war_exhaustion = 1.0 # Default 1.0
+#
+#	# 説明文にクレームを記載するかどうかを決定します。
+#	show_claims_in_description = yes # Default no
+#
+#	# FROM = The targeted country
+#	# THIS = The acting country
+#	potential = {
+#		always = yes
+#	}
+#	possible = {
+#		always = yes
+#	}
+#	# 戦争が終わって現状維持になったときに実行
+#	on_status_quo = {
+#
+#	}
+#	# Run when target surrenders after claims are ceded
+#	on_accept = {
+#
+#	}
+#
+#}
+# 〇栄望主義：開戦自由「名誉にかけて」勝利時影響力＋100
+wg_ngm_with_honor = {
+	casus_belli = cb_ngm_with_honor
+	hide_if_no_cb = no
+	galactic_empire_joins_defender = {
+		from = {
+			is_galactic_emperor = yes
+		}
+		imperial_authority >= 100
+	}
+	# どのような平和の申し出を許可するかを設定します。これを省略すると平和が成立しないことになりますが、これは通常バグであるため、必要な項目となっています。
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+	threat_multiplier = 0.75
+	cede_claims = no
+	potential = {
+		OR = {
+			has_ethic = ethic_honorism
+			has_ethic = ethic_fanatic_honorism
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	# Run when target surrenders after claims are ceded
+	on_accept = {
+		add_resource = {
+			influence = 100
+		}
+	}
+	ai_weight = {
+		weight = 2
+	}
+}
+
+# 害虫駆除		(保全、軍国)	開発主義国家に対して、環境保全の開戦事由を獲得
+# （勝利すると開発主義の志向を保全主義に転向させ、相手を属国化させる。
+# さらに、終戦時に戦争相手へ社会学研究力を自国の3か月分あげる）。
+wg_ngm_pest_control = {
+	casus_belli = cb_ngm_pest_control
+	hide_if_no_cb = no
+	release_occupied_systems_on_status_quo = yes
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+	surrender_acceptance = -100
+	war_exhaustion = 0.75
+	potential = {
+		is_country_type = default
+		exists = from
+		OR = {
+			has_ethic = ethic_conservationism
+			has_ethic = ethic_fanatic_conservationism
+		}
+		OR = {
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
+		}
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			is_in_federation_with = from
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = fail_text_wg_ngm_pest_control
+			from = {
+				OR = {
+					has_ethic = ethic_developmentalism
+					has_ethic = ethic_fanatic_developmentalismelopmentalism
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_status_quo = {
+		if = {
+			limit = {
+				exists = last_created_country
+				last_created_country = {
+					has_country_flag = released_empire
+				}
+			}
+			last_created_country = {
+				add_modifier = {
+					modifier = recently_liberated
+					days = 7300
+				}
+			}
+			root = {
+				add_opinion_modifier = {
+					modifier = opinion_we_liberated
+					who = last_created_country
+				}
+			}
+			last_created_country = {
+				add_opinion_modifier = {
+					modifier = opinion_liberated_us
+					who = root
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_in_federation_with = root
+						AND = {
+							is_subject = yes
+							exists = overlord
+							overlord = {
+								is_same_value = root
+							}
+						}
+					}
+				}
+				add_opinion_modifier = {
+					modifier = opinion_we_liberated
+					who = last_created_country
+				}
+				last_created_country = {
+					add_opinion_modifier = {
+						modifier = opinion_liberated_us
+						who = prev
+					}
+				}
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.1
+				}
+			}
+		}
+	}
+	on_accept = {
+		custom_tooltip = wg_force_ideology_accept
+		custom_tooltip = wg_force_ideology_accept_2
+		if = {
+			limit = {
+				from = {
+					has_federation = yes
+				}
+			}
+			custom_tooltip = wg_force_ideology_accept_3
+		}
+		from = {
+			add_resource = {
+				society_research = 1000
+			}
+		}
+		if = {
+			limit = { from = { has_been_declared_crisis = no } }
+			from = {
+				set_subject_of = {
+					who = root
+					subject_type = vassal
+				}
+			}
+		}
+		hidden_effect = {
+			from = {
+				copy_ethos_and_authority = root
+				if = {
+					limit = {
+						has_civic = civic_galactic_sovereign
+					}
+					force_remove_civic = civic_galactic_sovereign
+				}
+				if = {
+					limit = {
+						has_civic = civic_galactic_sovereign_megacorp
+					}
+					force_remove_civic = civic_galactic_sovereign_megacorp
+				}
+			}
+			from = {
+				add_modifier = {
+					modifier = recently_liberated
+					days = 7300
+				}
+			}
+			add_opinion_modifier = {
+				modifier = opinion_we_liberated
+				who = from
+			}
+			from = {
+				add_opinion_modifier = {
+					modifier = opinion_liberated_us
+					who = root
+				}
+			}
+			end_rivalry = from
+			from = {
+				end_rivalry = root
+			}
+			every_system_within_border = {
+				limit = {
+					from = {
+						has_claim = prev
+					}
+				}
+				remove_claims = {
+					who = from
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_in_federation_with = root
+						AND = {
+							is_subject = yes
+							exists = overlord
+							overlord = {
+								is_same_value = root
+							}
+						}
+					}
+				}
+				end_rivalry = from
+				from = {
+					end_rivalry = prev
+				}
+				add_opinion_modifier = {
+					modifier = opinion_we_liberated
+					who = from
+				}
+				from = {
+					add_opinion_modifier = {
+						modifier = opinion_liberated_us
+						who = prev
+					}
+				}
+				every_system_within_border = {
+					limit = {
+						from = {
+							has_claim = prev
+						}
+					}
+					remove_claims = {
+						who = from
+					}
+				}
+			}
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.1
+				}
+			}
+			from = {
+				leave_alliance = {
+					override_requirements = yes
+				}
+			}
+		}
+	}
+	ai_weight = {
+		weight = 5
+	}
+}

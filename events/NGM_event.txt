@@ -582,6 +582,12 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_civic = civic_ngm_experimental_substance
+			}
+			set_country_flag = civic_ngm_experimental_substance_flag
+		}
+		if = {
+			limit = {
 				has_civic = civic_ngm_economic_primitivism
 			}
 			set_country_flag = civic_ngm_economic_primitivism_flag
@@ -631,6 +637,18 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		OR = {
+			has_civic = civic_ngm_random_birth_rate
+			has_civic = civic_ngm_healthy_habits
+			has_civic = civic_ngm_ultimate_freedom_of_thought
+			has_civic = civic_ngm_The_Struggle_for_Struggle
+			has_civic = civic_ngm_mechanical_faith
+			has_civic = civic_ngm_economic_primitivism
+			has_civic = civic_ngm_deregulation
+			has_civic = civic_ngm_mastermind
+			has_civic = civic_ngm_glorious_isolation
+			has_civic = civic_ngm_breakdown_prevention_method
+			has_civic = civic_ngm_destructive_digging
+			has_civic = civic_ngm_irreversible_industrialization
 			has_country_flag = civic_ngm_random_birth_rate_flag
 			has_country_flag = civic_ngm_healthy_habits_flag
 			has_country_flag = civic_ngm_ultimate_freedom_of_thought_flag
@@ -660,12 +678,36 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_civic = civic_ngm_random_birth_rate
+				NOT = {
+					has_country_flag = civic_ngm_random_birth_rate_flag
+				}
+			}
+			force_remove_civic = civic_ngm_random_birth_rate
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
 				NOT = {
 					has_civic = civic_ngm_healthy_habits
 				}
 				has_country_flag = civic_ngm_healthy_habits_flag
 			}
 			force_add_civic = civic_ngm_healthy_habits
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_healthy_habits_flag
+				}
+				has_civic = civic_ngm_healthy_habits
+			}
+			force_remove_civic = civic_ngm_healthy_habits
 			add_resource = {
 				influence = 250
 			}
@@ -685,11 +727,35 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
+					has_country_flag = civic_ngm_ultimate_freedom_of_thought_flag
+				}
+				has_civic = civic_ngm_ultimate_freedom_of_thought
+			}
+			force_remove_civic = civic_ngm_ultimate_freedom_of_thought
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
 					has_civic = civic_ngm_The_Struggle_for_Struggle
 				}
 				has_country_flag = civic_ngm_The_Struggle_for_Struggle_flag
 			}
 			force_add_civic = civic_ngm_The_Struggle_for_Struggle
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_The_Struggle_for_Struggle_flag
+				}
+				has_civic = civic_ngm_The_Struggle_for_Struggle
+			}
+			force_remove_civic = civic_ngm_The_Struggle_for_Struggle
 			add_resource = {
 				influence = 250
 			}
@@ -709,9 +775,57 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
+					has_country_flag = civic_ngm_mechanical_faith_flag
+				}
+				has_civic = civic_ngm_mechanical_faith
+			}
+			force_remove_civic = civic_ngm_mechanical_faith
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_civic = civic_ngm_experimental_substance
+				}
+				has_country_flag = civic_ngm_experimental_substance_flag
+			}
+			force_add_civic = civic_ngm_experimental_substance
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_experimental_substance_flag
+				}
+				has_civic = civic_ngm_experimental_substance
+			}
+			force_remove_civic = civic_ngm_experimental_substance
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
 					has_civic = civic_ngm_economic_primitivism
 				}
 				has_country_flag = civic_ngm_economic_primitivism_flag
+			}
+			force_add_civic = civic_ngm_economic_primitivism
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_economic_primitivism_flag
+				}
+				has_civic = civic_ngm_economic_primitivism
 			}
 			force_add_civic = civic_ngm_economic_primitivism
 			add_resource = {
@@ -733,11 +847,35 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
+					has_country_flag = civic_ngm_deregulation_flag
+				}
+				has_civic = civic_ngm_deregulation
+			}
+			force_remove_civic = civic_ngm_deregulation
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
 					has_civic = civic_ngm_mastermind
 				}
 				has_country_flag = civic_ngm_mastermind_flag
 			}
 			force_add_civic = civic_ngm_mastermind
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_mastermind_flag
+				}
+				has_civic = civic_ngm_mastermind
+			}
+			force_remove_civic = civic_ngm_mastermind
 			add_resource = {
 				influence = 250
 			}
@@ -757,11 +895,35 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
+					has_country_flag = civic_ngm_glorious_isolation_flag
+				}
+				has_civic = civic_ngm_glorious_isolation
+			}
+			force_remove_civic = civic_ngm_glorious_isolation
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
 					has_civic = civic_ngm_breakdown_prevention_method
 				}
 				has_country_flag = civic_ngm_breakdown_prevention_method_flag
 			}
 			force_add_civic = civic_ngm_breakdown_prevention_method
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_breakdown_prevention_method_flag
+				}
+				has_civic = civic_ngm_breakdown_prevention_method
+			}
+			force_remove_civic = civic_ngm_breakdown_prevention_method
 			add_resource = {
 				influence = 250
 			}
@@ -781,6 +943,18 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
+					has_country_flag = civic_ngm_destructive_digging_flag
+				}
+				has_civic = civic_ngm_destructive_digging
+			}
+			force_remove_civic = civic_ngm_destructive_digging
+			add_resource = {
+				influence = 250
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
 					has_civic = civic_ngm_irreversible_industrialization
 				}
 				has_country_flag = civic_ngm_irreversible_industrialization_flag
@@ -790,16 +964,28 @@ country_event = {
 				influence = 250
 			}
 		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = civic_ngm_irreversible_industrialization_flag
+				}
+				has_civic = civic_ngm_irreversible_industrialization
+			}
+			force_remove_civic = civic_ngm_irreversible_industrialization
+			add_resource = {
+				influence = 250
+			}
+		}
 		country_event = {
-			id = ngm_civic.13
-			days = 30
+			id = ngm_civic.12
+			days = 31
 		}
 	}
 }
 
 # 刑罰の金銭代替		惑星の犯罪度*1の交易価値を惑星に付与
 country_event = {
-	id = ngm_civic.13
+	id = ngm_civic.14
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -808,381 +994,381 @@ country_event = {
 	immediate = {
 		every_owned_planet = {
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_1_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_1_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_2_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_2_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_3_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_3_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_4_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_4_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_5_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_5_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_6_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_6_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_7_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_7_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_8_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_8_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_9_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_9_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_10_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_10_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_11_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_11_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_12_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_12_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_13_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_13_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_14_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_14_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_15_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_15_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_16_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_16_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_17_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_17_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_18_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_18_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_19_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_19_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_20_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_20_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_21_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_21_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_22_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_22_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_23_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_23_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_24_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_24_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_25_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_25_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_26_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_26_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_27_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_27_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_28_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_28_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_29_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_29_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_30_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_30_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_31_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_31_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_32_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_32_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_33_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_33_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_34_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_34_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_35_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_35_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_36_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_36_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_37_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_37_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_38_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_38_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_39_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_39_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_30_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_30_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_31_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_31_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_32_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_32_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_33_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_33_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_34_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_34_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_35_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_35_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_36_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_36_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_37_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_37_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_38_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_38_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_39_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_39_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_40_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_40_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_41_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_41_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_42_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_42_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_43_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_43_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_44_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_44_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_45_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_45_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_46_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_46_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_47_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_47_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_48_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_48_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_49_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_49_modifier
 			}
 			if = {
-				limit = { 
+				limit = {
 					has_modifier = civic_ngm_money_penalty_50_modifier
 				}
 				remove_modifier = civic_ngm_money_penalty_50_modifier
 			}
 		}
 		country_event = {
-			id = ngm_civic.14
+			id = ngm_civic.15
 			days = 1
 		}
 	}
 }
 
 country_event = {
-	id = ngm_civic.14
+	id = ngm_civic.15
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
 		every_owned_planet = {
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 0
 					planet_crime <= 1
 				}
@@ -1191,7 +1377,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 1
 					planet_crime <= 2
 				}
@@ -1200,7 +1386,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 2
 					planet_crime <= 3
 				}
@@ -1209,7 +1395,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 3
 					planet_crime <= 4
 				}
@@ -1218,7 +1404,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 4
 					planet_crime <= 5
 				}
@@ -1227,7 +1413,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 5
 					planet_crime <= 6
 				}
@@ -1236,7 +1422,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 6
 					planet_crime <= 7
 				}
@@ -1245,7 +1431,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 7
 					planet_crime <= 8
 				}
@@ -1254,7 +1440,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 8
 					planet_crime <= 9
 				}
@@ -1263,7 +1449,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 9
 					planet_crime <= 10
 				}
@@ -1272,7 +1458,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 10
 					planet_crime <= 11
 				}
@@ -1281,7 +1467,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 11
 					planet_crime <= 12
 				}
@@ -1290,7 +1476,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 12
 					planet_crime <= 13
 				}
@@ -1299,7 +1485,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 13
 					planet_crime <= 14
 				}
@@ -1308,7 +1494,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 14
 					planet_crime <= 15
 				}
@@ -1317,7 +1503,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 15
 					planet_crime <= 16
 				}
@@ -1326,7 +1512,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 16
 					planet_crime <= 17
 				}
@@ -1335,7 +1521,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 17
 					planet_crime <= 18
 				}
@@ -1344,7 +1530,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 18
 					planet_crime <= 19
 				}
@@ -1353,7 +1539,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 19
 					planet_crime <= 20
 				}
@@ -1362,7 +1548,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 20
 					planet_crime <= 21
 				}
@@ -1371,7 +1557,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 21
 					planet_crime <= 22
 				}
@@ -1380,7 +1566,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 22
 					planet_crime <= 23
 				}
@@ -1389,7 +1575,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 23
 					planet_crime <= 24
 				}
@@ -1398,7 +1584,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 24
 					planet_crime <= 25
 				}
@@ -1407,7 +1593,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 25
 					planet_crime <= 26
 				}
@@ -1416,7 +1602,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 26
 					planet_crime <= 27
 				}
@@ -1425,7 +1611,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 27
 					planet_crime <= 28
 				}
@@ -1434,7 +1620,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 28
 					planet_crime <= 29
 				}
@@ -1443,7 +1629,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 29
 					planet_crime <= 30
 				}
@@ -1452,7 +1638,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 30
 					planet_crime <= 31
 				}
@@ -1461,7 +1647,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 31
 					planet_crime <= 32
 				}
@@ -1470,7 +1656,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 32
 					planet_crime <= 33
 				}
@@ -1479,7 +1665,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 33
 					planet_crime <= 34
 				}
@@ -1488,7 +1674,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 34
 					planet_crime <= 35
 				}
@@ -1497,7 +1683,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 35
 					planet_crime <= 36
 				}
@@ -1506,7 +1692,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 36
 					planet_crime <= 37
 				}
@@ -1515,7 +1701,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 37
 					planet_crime <= 38
 				}
@@ -1524,7 +1710,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 38
 					planet_crime <= 39
 				}
@@ -1533,7 +1719,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 39
 					planet_crime <= 40
 				}
@@ -1542,7 +1728,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 40
 					planet_crime <= 41
 				}
@@ -1551,7 +1737,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 41
 					planet_crime <= 42
 				}
@@ -1560,7 +1746,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 42
 					planet_crime <= 43
 				}
@@ -1569,7 +1755,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 43
 					planet_crime <= 44
 				}
@@ -1578,7 +1764,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 44
 					planet_crime <= 45
 				}
@@ -1587,7 +1773,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 45
 					planet_crime <= 46
 				}
@@ -1596,7 +1782,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 46
 					planet_crime <= 47
 				}
@@ -1605,7 +1791,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 47
 					planet_crime <= 48
 				}
@@ -1614,7 +1800,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 48
 					planet_crime <= 49
 				}
@@ -1623,7 +1809,7 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					planet_crime > 49
 				}
 				add_modifier = {
@@ -1632,9 +1818,177 @@ country_event = {
 			}
 		}
 		country_event = {
-			id = ngm_civic.13
+			id = ngm_civic.14
 			days = 30
 		}
+	}
+}
+
+# 実験的物質の発見	首都惑星の各戦略資源特性を1つずつ付与
+country_event = {
+	id = ngm_civic.16
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_experimental_substance
+	}
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				is_capital = yes
+			}
+			add_deposit = d_rare_crystals_1
+			add_deposit = d_exotic_gases_1
+			add_deposit = d_volatile_motes_1
+		}
+	}
+}
+
+# 戦争経済	戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+10%、建艦速度+10%。非戦争時の鉱物、合金、交易価値、消費財生産量-20%、建艦速度+20%
+country_event = {
+	id = ngm_civic.17
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		AND = {
+			has_civic = civic_ngm_war_prosperity
+			is_at_war = no
+		}
+	}
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				NOT = {
+					has_modifier = civic_ngm_war_prosperity_not_war_modifier
+				}
+			}
+			add_modifier = {
+				modifier = civic_ngm_war_prosperity_not_war_modifier
+			}
+		}
+		add_modifier = {
+			modifier = civic_ngm_war_prosperity_not_war_country_modifier
+		}
+		if = {
+			remove_modifier = civic_ngm_war_prosperity_is_war_country_modifier
+			limit = {
+				has_modifier = civic_ngm_war_prosperity_is_war_country_modifier
+			}
+		}
+		country_event = {
+			id = ngm_civic.17
+			days = 31
+		}
+	}
+}
+
+country_event = {
+	id = ngm_civic.18
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_war_prosperity
+	}
+	immediate = {
+		every_owned_planet = {
+			add_modifier = {
+				modifier = civic_ngm_war_prosperity_is_war_modifier
+			}
+			if = {
+				limit = {
+					has_modifier = civic_ngm_war_prosperity_not_war_modifier
+				}
+				remove_modifier = civic_ngm_war_prosperity_not_war_modifier
+			}
+		}
+		add_modifier = {
+			modifier = civic_ngm_war_prosperity_is_war_country_modifier
+		}
+		if = {
+			limit = {
+				has_modifier = civic_ngm_war_prosperity_not_war_country_modifier
+			}
+			remove_modifier = civic_ngm_war_prosperity_not_war_country_modifier
+		}
+	}
+}
+
+country_event = {
+	id = ngm_civic.19
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_war_prosperity
+	}
+	immediate = {
+		every_owned_planet = {
+			add_modifier = {
+				modifier = civic_ngm_war_prosperity_not_war_modifier
+			}
+			if = {
+				limit = {
+					has_modifier = civic_ngm_war_prosperity_is_war_modifier
+				}
+				remove_modifier = civic_ngm_war_prosperity_is_war_modifier
+			}
+		}
+	}
+}
+
+# 異種族解剖	(排他、物質or実利)	研究力+10%、異種族は強制で奴隷化、信用値-100
+country_event = {
+	id = ngm_civic.20
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_dissection
+	}
+	immediate = {
+		owner_main_species = {
+			set_species_flag = civic_ngm_dissection_owner_species_flag
+		}
+		country_event = {
+			id = ngm_civic.21
+			days = 31
+		}
+	}
+}
+
+country_event = {
+	id = ngm_civic.21
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_dissection
+	}
+	immediate = {
+		every_owned_species = {
+			limit = {
+				NOT = {
+					has_species_flag = civic_ngm_dissection_owner_species_flag
+				}
+			}
+			set_citizenship_type = {
+				type = citizenship_slavery
+			}
+		}
+		country_event = {
+			id = ngm_civic.21
+			days = 31
+		}
+	}
+}
+
+# 伝道者団		(精神、介入)	使節+1、隣国の精神主義魅力+20%、信用値-50
+country_event = {
+	id = ngm_civic.22
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_missionary_group
+	}
+	immediate = {
+		
 	}
 }
 

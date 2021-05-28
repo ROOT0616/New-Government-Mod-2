@@ -730,11 +730,13 @@ civic_ngm_space_security_headquarters = {
 	}
 }
 
+# まだ
 # 乱脈的出生率 random_birth_rate		(この国では出生率がコントロールできていない。)(ゲーム開始後の追加削除不可)Pop成長率+10%、幸福度-5%、住居使用量+5%
 civic_ngm_random_birth_rate = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_not_removed
 	modifier = {
 		pop_growth_speed = 0.1
 		pop_happiness = -0.05
@@ -766,11 +768,13 @@ civic_ngm_virtual_society = {
 	}
 }
 
+# まだ
 # 健康的習慣 healthy_habits			(この国の国民は運動と食事、適度な日向ぼっこにより健康的な生活を送っている。)(ゲーム開始後の追加削除不可)リーダー寿命+10年、幸福度+5%
 civic_ngm_healthy_habits = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_not_removed
 	modifier = {
 		leader_age = 10
 		pop_happiness = 0.05
@@ -1094,9 +1098,12 @@ civic_ngm_party_rule = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_authoritarian_or_socialism
+				text = civic_tooltip_authoritarian
 				value = ethic_authoritarian
 				value = ethic_fanatic_authoritarian
+			}
+			OR = {
+				text = civic_tooltip_socialism
 				value = ethic_socialism
 				value = ethic_fanatic_socialism
 			}
@@ -1118,9 +1125,12 @@ civic_ngm_freedom_in_obedience = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_authoritarian_or_xenophile
+				text = civic_tooltip_authoritarian
 				value = ethic_authoritarian
 				value = ethic_fanatic_authoritarian
+			}
+			OR = {
+				text = civic_tooltip_xenophile
 				value = ethic_xenophile
 				value = ethic_fanatic_xenophile
 			}
@@ -1140,9 +1150,12 @@ civic_ngm_caste_system = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_authoritarian_or_spiritualist
+				text = civic_tooltip_authoritarian
 				value = ethic_authoritarian
 				value = ethic_fanatic_authoritarian
+			}
+			OR = {
+				text = civic_tooltip_spiritualist
 				value = ethic_spiritualist
 				value = ethic_fanatic_spiritualist
 			}
@@ -1165,9 +1178,12 @@ civic_ngm_tribalism = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_authoritarian_or_xenophobe
+				text = civic_tooltip_authoritarian
 				value = ethic_authoritarian
 				value = ethic_fanatic_authoritarian
+			}
+			OR = {
+				text = civic_tooltip_xenophobe
 				value = ethic_xenophobe
 				value = ethic_fanatic_xenophobe
 			}
@@ -1191,9 +1207,12 @@ civic_ngm_court_politics = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_authoritarian_or_honorism
+				text = civic_tooltip_authoritarian
 				value = ethic_authoritarian
 				value = ethic_fanatic_authoritarian
+			}
+			OR = {
+				text = civic_tooltip_honorism
 				value = ethic_honorism
 				value = ethic_fanatic_honorism
 			}
@@ -1238,9 +1257,12 @@ civic_ngm_apprenticeship = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_authoritarian_or_materialist
+				text = civic_tooltip_authoritarian
 				value = ethic_authoritarian
 				value = ethic_fanatic_authoritarian
+			}
+			OR = {
+				text = civic_tooltip_materialist
 				value = ethic_materialist
 				value = ethic_fanatic_materialist
 			}
@@ -1370,6 +1392,9 @@ civic_ngm_consumer_society = {
 				text = civic_tooltip_egalitarian
 				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
+			}
+			OR = {
+				text = civic_tooltip_capitalism
 				value = ethic_capitalism
 				value = ethic_fanatic_capitalism
 			}
@@ -1420,9 +1445,12 @@ civic_ngm_cosmic_scale_liberation = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_egalitarian_or_militarist
+				text = civic_tooltip_egalitarian
 				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
+			}
+			OR = {
+				text = civic_tooltip_militarist
 				value = ethic_militarist
 				value = ethic_fanatic_militarist
 			}
@@ -1443,6 +1471,7 @@ civic_ngm_cosmic_scale_liberation = {
 	}
 }
 
+# まだ
 # 究極の思想的自由 ultimate_freedom_of_thought	 (この社会では他者に対する侵害の蓋然性がある思想を除いてあらゆる思想が許容されている。)							(狂信的平等)(ゲーム開始後の追加削除不可)				管理許容量+30%、安定度-10、統治志向魅力-30%
 civic_ngm_ultimate_freedom_of_thought = {
 	possible = {
@@ -1453,6 +1482,7 @@ civic_ngm_ultimate_freedom_of_thought = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_not_removed
 	modifier = {
 		country_admin_cap_mult = 0.3
 		planet_stability_add = -10
@@ -1465,9 +1495,12 @@ civic_ngm_right_to_bear_arms = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_egalitarian_or_militarist
+				text = civic_tooltip_egalitarian
 				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
+			}
+			OR = {
+				text = civic_tooltip_militarist
 				value = ethic_militarist
 				value = ethic_fanatic_militarist
 			}
@@ -1531,9 +1564,12 @@ civic_ngm_globalism = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_xenophile_or_capitalism
+				text = civic_tooltip_xenophile
 				value = ethic_xenophile
 				value = ethic_fanatic_xenophile
+			}
+			OR = {
+				text = civic_tooltip_capitalism
 				value = ethic_capitalism
 				value = ethic_fanatic_capitalism
 			}
@@ -1553,9 +1589,12 @@ civic_ngm_multiculturalism = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_xenophile_or_egalitarian
+				text = civic_tooltip_xenophile
 				value = ethic_xenophile
 				value = ethic_fanatic_xenophile
+			}
+			OR = {
+				text = civic_tooltip_egalitarian
 				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
 			}
@@ -1628,9 +1667,12 @@ civic_ngm_exclusive_community = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_xenophobe_or_authoritarian
+				text = civic_tooltip_xenophobe
 				value = ethic_xenophobe
 				value = ethic_fanatic_xenophobe
+			}
+			OR = {
+				text = civic_tooltip_authoritarian
 				value = ethic_authoritarian
 				value = ethic_fanatic_authoritarian
 			}
@@ -1654,6 +1696,9 @@ civic_ngm_remorseless_justice = {
 				text = civic_tooltip_xenophobe
 				value = ethic_xenophobe
 				value = ethic_fanatic_xenophobe
+			}
+			OR = {
+				text = civic_tooltip_militarist
 				value = ethic_militarist
 				value = ethic_fanatic_militarist
 			}
@@ -1706,9 +1751,12 @@ civic_ngm_gentlemanly_disgust = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_xenophobe_or_honorism
+				text = civic_tooltip_xenophobe
 				value = ethic_xenophobe
 				value = ethic_fanatic_xenophobe
+			}
+			OR = {
+				text = civic_tooltip_honorism
 				value = ethic_honorism
 				value = ethic_fanatic_honorism
 			}
@@ -1749,9 +1797,12 @@ civic_ngm_elitism = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_xenophobe_or_spiritualist
+				text = civic_tooltip_xenophobe
 				value = ethic_xenophobe
 				value = ethic_fanatic_xenophobe
+			}
+			OR = {
+				text = civic_tooltip_spiritualist
 				value = ethic_spiritualist
 				value = ethic_fanatic_spiritualist
 			}
@@ -1773,9 +1824,12 @@ civic_ngm_dissection = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_xenophobe_or_materialist_or_utilitarianism
+				text = civic_tooltip_xenophobe
 				value = ethic_xenophobe
 				value = ethic_fanatic_xenophobe
+			}
+			OR = {
+				text = civic_tooltip_materialist_or_utilitarianism
 				value = ethic_materialist
 				value = ethic_fanatic_materialist
 				value = ethic_utilitarianism
@@ -1786,6 +1840,7 @@ civic_ngm_dissection = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_dissection_effects
 	modifier = {
 		country_physics_research_produces_mult = 0.1
 		country_society_research_produces_mult = 0.1
@@ -1850,9 +1905,12 @@ civic_ngm_military_industrial_complex = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_militarist_or_capitalism_or_utilitarianism
+				text = civic_tooltip_militarist
 				value = ethic_militarist
 				value = ethic_fanatic_militarist
+			}
+			OR = {
+				text = civic_tooltip_capitalism_or_utilitarianism
 				value = ethic_capitalism
 				value = ethic_fanatic_capitalism
 				value = ethic_utilitarianism
@@ -1885,6 +1943,7 @@ civic_ngm_war_prosperity = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_war_prosperity_effects
 	modifier = {
 		country_war_exhaustion_mult = -0.2
 	}
@@ -1923,6 +1982,7 @@ civic_ngm_The_Struggle_for_Struggle = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_not_removed
 	modifier = {
 		country_war_exhaustion_mult = -0.2
 	}
@@ -1966,9 +2026,12 @@ civic_ngm_prosperity_advocate = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_pacifist_or_utilitarianism
+				text = civic_tooltip_pacifist
 				value = ethic_pacifist
 				value = ethic_fanatic_pacifist
+			}
+			OR = {
+				text = civic_tooltip_utilitarianism
 				value = ethic_utilitarianism
 				value = ethic_fanatic_utilitarianism
 			}
@@ -1989,9 +2052,12 @@ civic_ngm_armed_pacifism = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_pacifist_or_developmentalism
+				text = civic_tooltip_pacifist
 				value = ethic_pacifist
 				value = ethic_fanatic_pacifist
+			}
+			OR = {
+				text = civic_tooltip_developmentalism
 				value = ethic_developmentalism
 				value = ethic_fanatic_developmentalism
 			}
@@ -2012,9 +2078,12 @@ civic_ngm_active_pacifist = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_pacifist_or_interventionism
+				text = civic_tooltip_pacifist
 				value = ethic_pacifist
 				value = ethic_fanatic_pacifist
+			}
+			OR = {
+				text = civic_tooltip_interventionism
 				value = ethic_interventionism
 				value = ethic_fanatic_interventionism
 			}
@@ -2053,9 +2122,12 @@ civic_ngm_good_faith_negotiator = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_pacifist_or_egalitarian
+				text = civic_tooltip_pacifist
 				value = ethic_pacifist
 				value = ethic_fanatic_pacifist
+			}
+			OR = {
+				text = civic_tooltip_egalitarian
 				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
 			}
@@ -2077,9 +2149,12 @@ civic_ngm_mechanical_faith = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_spiritualist_or_developmentalism
+				text = civic_tooltip_spiritualist
 				value = ethic_spiritualist
 				value = ethic_fanatic_spiritualist
+			}
+			OR = {
+				text = civic_tooltip_developmentalism
 				value = ethic_developmentalism
 				value = ethic_fanatic_developmentalism
 			}
@@ -2088,6 +2163,7 @@ civic_ngm_mechanical_faith = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_not_removed
 	modifier = {
 		country_engineering_research_produces_mult = 0.1
 		planet_pop_assembly_mult = 0.1
@@ -2101,9 +2177,12 @@ civic_ngm_missionary_group = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_spiritualist_or_interventionism
+				text = civic_tooltip_spiritualist
 				value = ethic_spiritualist
 				value = ethic_fanatic_spiritualist
+			}
+			OR = {
+				text = civic_tooltip_interventionism
 				value = ethic_interventionism
 				value = ethic_fanatic_interventionism
 			}
@@ -2123,9 +2202,12 @@ civic_ngm_defender_of_the_faith = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_spiritualist_or_militarist
+				text = civic_tooltip_spiritualist
 				value = ethic_spiritualist
 				value = ethic_fanatic_spiritualist
+			}
+			OR = {
+				text = civic_tooltip_militarist
 				value = ethic_militarist
 				value = ethic_fanatic_militarist
 			}
@@ -2169,9 +2251,12 @@ civic_ngm_cultural_consumption = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_spiritualist_or_utilitarianism
+				text = civic_tooltip_spiritualist
 				value = ethic_spiritualist
 				value = ethic_fanatic_spiritualist
+			}
+			OR = {
+				text = civic_tooltip_utilitarianism
 				value = ethic_utilitarianism
 				value = ethic_fanatic_utilitarianism
 			}
@@ -2255,7 +2340,7 @@ civic_ngm_longing_for_the_future = {
 }
 
 # まだ
-# 実験的物質の発見	experimental_substance(この国ではかつてエネルギー問題を解決するために様々な実験を行った。結果、惑星内にさまざまな戦略物資が生成された。)(物質、開発)				首都惑星の各戦略資源特性を1つずつ付与
+# 実験的物質の発見	experimental_substance(この国ではかつてエネルギー問題を解決するために様々な実験を行った。結果、惑星内にさまざまな戦略物資が生成された。)(物質、開発)(ゲーム開始後の追加削除不可)				首都惑星の各戦略資源特性を1つずつ付与
 civic_ngm_experimental_substance = {
 	possible = {
 		ethics = {
@@ -2263,6 +2348,9 @@ civic_ngm_experimental_substance = {
 				text = civic_tooltip_materialist
 				value = ethic_materialist
 				value = ethic_fanatic_materialist
+			}
+			OR = {
+				text = civic_tooltip_developmentalism
 				value = ethic_developmentalism
 				value = ethic_fanatic_developmentalism
 			}
@@ -2271,6 +2359,8 @@ civic_ngm_experimental_substance = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_not_removed
+	description = civic_tooltip_ngm_experimental_substance_effects
 	modifier = {
 	}
 }
@@ -2280,11 +2370,17 @@ civic_ngm_industrial_capitalism = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_materialist_or_capitalism_or_developmentalism
+				text = civic_tooltip_materialist
 				value = ethic_materialist
 				value = ethic_fanatic_materialist
+			}
+			OR = {
+				text = civic_tooltip_capitalism
 				value = ethic_capitalism
 				value = ethic_fanatic_capitalism
+			}
+			OR = {
+				text = civic_tooltip_developmentalism
 				value = ethic_developmentalism
 				value = ethic_fanatic_developmentalism
 			}
@@ -2347,9 +2443,12 @@ civic_ngm_equality_in_society = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_socialism_or_egalitarian
+				text = civic_tooltip_socialism
 				value = ethic_socialism
 				value = ethic_fanatic_socialism
+			}
+			OR = {
+				text = civic_tooltip_egalitarian
 				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
 			}
@@ -2371,9 +2470,12 @@ civic_ngm_sectionalism = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_socialism_or_spiritualist
+				text = civic_tooltip_socialism
 				value = ethic_socialism
 				value = ethic_fanatic_socialism
+			}
+			OR = {
+				text = civic_tooltip_spiritualist
 				value = ethic_spiritualist
 				value = ethic_fanatic_spiritualist
 			}
@@ -2393,9 +2495,12 @@ civic_ngm_peoples_army = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_socialism_or_militarist
+				text = civic_tooltip_socialism
 				value = ethic_socialism
 				value = ethic_fanatic_socialism
+			}
+			OR = {
+				text = civic_tooltip_militarist
 				value = ethic_militarist
 				value = ethic_fanatic_militarist
 			}
@@ -2424,6 +2529,7 @@ civic_ngm_economic_primitivism = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_not_removed
 	modifier = {
 		planet_jobs_energy_produces_mult = -0.2
 		trade_value_mult = -0.2
@@ -2462,9 +2568,12 @@ civic_ngm_communism = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_socialism_or_authoritarian
+				text = civic_tooltip_socialism
 				value = ethic_socialism
 				value = ethic_fanatic_socialism
+			}
+			OR = {
+				text = civic_tooltip_authoritarian
 				value = ethic_authoritarian
 				value = ethic_fanatic_authoritarian
 			}
@@ -2491,9 +2600,12 @@ civic_ngm_development_dictatorship = {
 		}
 		ethics = {
 			OR = {
-				text = civic_tooltip_capitalism_or_developmentalism
+				text = civic_tooltip_capitalism
 				value = ethic_capitalism
 				value = ethic_fanatic_capitalism
+			}
+			OR = {
+				text = civic_tooltip_developmentalism
 				value = ethic_developmentalism
 				value = ethic_fanatic_developmentalism
 			}
@@ -2557,9 +2669,12 @@ civic_ngm_information = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_capitalism_or_materialist
+				text = civic_tooltip_capitalism
 				value = ethic_capitalism
 				value = ethic_fanatic_capitalism
+			}
+			OR = {
+				text = civic_tooltip_materialist
 				value = ethic_materialist
 				value = ethic_fanatic_materialist
 			}
@@ -2583,9 +2698,12 @@ civic_ngm_agriculture = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_capitalism_or_conservationism
+				text = civic_tooltip_capitalism
 				value = ethic_capitalism
 				value = ethic_fanatic_capitalism
+			}
+			OR = {
+				text = civic_tooltip_conservationism
 				value = ethic_conservationism
 				value = ethic_fanatic_conservationism
 			}
@@ -2613,6 +2731,7 @@ civic_ngm_deregulation = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_not_removed
 	modifier = {
 		planet_stability_add = 10
 		planet_jobs_specialist_produces_mult = 0.1
@@ -2628,9 +2747,12 @@ civic_ngm_CIA = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_interventionism_or_militarist
+				text = civic_tooltip_interventionism
 				value = ethic_interventionism
 				value = ethic_fanatic_interventionism
+			}
+			OR = {
+				text = civic_tooltip_militarist
 				value = ethic_militarist
 				value = ethic_fanatic_militarist
 			}
@@ -2651,9 +2773,12 @@ civic_ngm_information_operation = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_interventionism_or_materialist
+				text = civic_tooltip_interventionism
 				value = ethic_interventionism
 				value = ethic_fanatic_interventionism
+			}
+			OR = {
+				text = civic_tooltip_materialist
 				value = ethic_materialist
 				value = ethic_fanatic_materialist
 			}
@@ -2696,9 +2821,12 @@ civic_ngm_parabola = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_interventionism_or_xenophobe
+				text = civic_tooltip_interventionism
 				value = ethic_interventionism
 				value = ethic_fanatic_interventionism
+			}
+			OR = {
+				text = civic_tooltip_xenophobe
 				value = ethic_xenophobe
 				value = ethic_fanatic_xenophobe
 			}
@@ -2718,9 +2846,12 @@ civic_ngm_smile = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_interventionism_or_pacifist
+				text = civic_tooltip_interventionism
 				value = ethic_interventionism
 				value = ethic_fanatic_interventionism
+			}
+			OR = {
+				text = civic_tooltip_pacifist
 				value = ethic_pacifist
 				value = ethic_fanatic_pacifist
 			}
@@ -2738,6 +2869,7 @@ civic_ngm_smile = {
 	}
 }
 
+# まだ
 # 国際的黒幕		mastermind(さあ、我が掌で踊れ。すべては我らの思いのままに......)(狂介入)(ゲーム開始後の追加削除不可)	使節+1、暗号力+5、解読力+5、外交発言力+10%、信用値-30
 civic_ngm_mastermind = {
 	possible = {
@@ -2748,6 +2880,7 @@ civic_ngm_mastermind = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_not_removed
 	modifier = {
 		envoys_add = 1
 		intel_encryption_add = 5
@@ -2773,6 +2906,7 @@ civic_ngm_glorious_isolation = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_not_removed
 	modifier = {
 		planet_stability_add = 5
 		country_naval_cap_add = 20
@@ -2784,9 +2918,12 @@ civic_ngm_FBI = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_neutralism_or_pacifist
+				text = civic_tooltip_neutralism
 				value = ethic_neutralism
 				value = ethic_fanatic_neutralism
+			}
+			OR = {
+				text = civic_tooltip_pacifist
 				value = ethic_pacifist
 				value = ethic_fanatic_pacifist
 			}
@@ -2808,9 +2945,12 @@ civic_ngm_internal_affairs = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_neutralism_or_xenophobe
+				text = civic_tooltip_neutralism
 				value = ethic_neutralism
 				value = ethic_fanatic_neutralism
+			}
+			OR = {
+				text = civic_tooltip_xenophobe
 				value = ethic_xenophobe
 				value = ethic_fanatic_xenophobe
 			}
@@ -2849,9 +2989,12 @@ civic_ngm_armed_neutrality = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_neutralism_or_militarist
+				text = civic_tooltip_neutralism
 				value = ethic_neutralism
 				value = ethic_fanatic_neutralism
+			}
+			OR = {
+				text = civic_tooltip_militarist
 				value = ethic_militarist
 				value = ethic_fanatic_militarist
 			}
@@ -2878,9 +3021,12 @@ civic_ngm_interest_representation = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_neutralism_or_pacifist
+				text = civic_tooltip_neutralism
 				value = ethic_neutralism
 				value = ethic_fanatic_neutralism
+			}
+			OR = {
+				text = civic_tooltip_pacifist
 				value = ethic_pacifist
 				value = ethic_fanatic_pacifist
 			}
@@ -2902,9 +3048,12 @@ civic_ngm_environmental_maintenance = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_conservationism_or_materialist
+				text = civic_tooltip_conservationism
 				value = ethic_conservationism
 				value = ethic_fanatic_conservationism
+			}
+			OR = {
+				text = civic_tooltip_materialist
 				value = ethic_materialist
 				value = ethic_fanatic_materialist
 			}
@@ -2920,15 +3069,17 @@ civic_ngm_environmental_maintenance = {
 	}
 }
 
-# まだ
 # 害虫駆除		pest_control(きれいな惑星に群がる害虫は駆除されなければならない......益虫である我々以外は)(保全、軍国)	開発主義国家に対して、環境保全の開戦事由を獲得（勝利すると開発主義の志向を保全主義に転向させ、相手を属国化させる。さらに、終戦時に戦争相手へ社会学研究力を自国の3か月分あげる）。
 civic_ngm_pest_control = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_conservationism_or_militarist
+				text = civic_tooltip_conservationism
 				value = ethic_conservationism
 				value = ethic_fanatic_conservationism
+			}
+			OR = {
+				text = civic_tooltip_militarist
 				value = ethic_militarist
 				value = ethic_fanatic_militarist
 			}
@@ -2988,6 +3139,7 @@ civic_ngm_breakdown_prevention_method = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_not_removed
 	modifier = {
 		country_society_research_produces_mult = 0.2
 		country_unity_produces_mult = 0.1
@@ -3000,9 +3152,12 @@ civic_ngm_nature_faith = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_conservationism_or_spiritualist
+				text = civic_tooltip_conservationism
 				value = ethic_conservationism
 				value = ethic_fanatic_conservationism
+			}
+			OR = {
+				text = civic_tooltip_spiritualist
 				value = ethic_spiritualist
 				value = ethic_fanatic_spiritualist
 			}
@@ -3051,6 +3206,7 @@ civic_ngm_destructive_digging = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_not_removed
 	modifier = {
 		country_minerals_produces_mult = 0.3
 		country_volatile_motes_produces_mult = 2
@@ -3073,6 +3229,7 @@ civic_ngm_irreversible_industrialization = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_not_removed
 	modifier = {
 		country_consumer_goods_produces_mult = 0.1
 		country_alloys_produces_mult = 0.1
@@ -3105,7 +3262,7 @@ civic_ngm_infrastructure_construction = {
 	}
 }
 
-# 全国総合開発計画	nationwide_development(我が国の開発は総合的に行われるべきであり、地方格差は発生させるべきではない。)(開発)							植民速度+25%、植民中維持コスト+10%、建築物スロット+1、巨大構造物建造コスト-10%
+# 全国総合開発計画	nationwide_development(我が国の開発は総合的に行われるべきであり、地方格差は発生させるべきではない。)(開発)							植民速度+25%、植民中維持コスト+10%、建築物スロット+1、巨大構造物建造スピード-30%
 civic_ngm_nationwide_development = {
 	possible = {
 		ethics = {
@@ -3122,7 +3279,7 @@ civic_ngm_nationwide_development = {
 	modifier = {
 		planet_colony_development_speed_mult = 0.25
 		planet_max_buildings_add = 1
-		megastructures_cost_mult = -0.1
+		megastructure_build_speed_mult = -0.2
 	}
 }
 
@@ -3157,9 +3314,12 @@ civic_ngm_modification_engineering = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_developmentalism_or_materialist
+				text = civic_tooltip_developmentalism
 				value = ethic_developmentalism
 				value = ethic_fanatic_developmentalism
+			}
+			OR = {
+				text = civic_tooltip_materialist
 				value = ethic_materialist
 				value = ethic_fanatic_materialist
 			}
@@ -3169,7 +3329,7 @@ civic_ngm_modification_engineering = {
 		base = 5
 	}
 	modifier = {
-		terraforming_candidate_category_research_speed_mult = 0.1
+		category_new_worlds_research_speed_mult = 0.1
 		terraforming_cost_mult = -0.1
 		terraform_speed_mult = 0.1
 	}
@@ -3203,9 +3363,12 @@ civic_ngm_exchange_of_honor = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism_or_xenophile
+				text = civic_tooltip_honorism
 				value = ethic_honorism
 				value = ethic_fanatic_honorism
+			}
+			OR = {
+				text = civic_tooltip_xenophile
 				value = ethic_xenophile
 				value = ethic_fanatic_xenophile
 			}
@@ -3226,9 +3389,12 @@ civic_ngm_heroic_volunteer_force = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism_or_militarist
+				text = civic_tooltip_honorism
 				value = ethic_honorism
 				value = ethic_fanatic_honorism
+			}
+			OR = {
+				text = civic_tooltip_militarist
 				value = ethic_militarist
 				value = ethic_fanatic_militarist
 			}
@@ -3249,9 +3415,12 @@ civic_ngm_the_self_righteous_hero = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_honorism_or_xenophobe
+				text = civic_tooltip_honorism
 				value = ethic_honorism
 				value = ethic_fanatic_honorism
+			}
+			OR = {
+				text = civic_tooltip_xenophobe
 				value = ethic_xenophobe
 				value = ethic_fanatic_xenophobe
 			}
@@ -3292,9 +3461,12 @@ civic_ngm_personal_interest = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_utilitarianism_or_capitalism
+				text = civic_tooltip_utilitarianism
 				value = ethic_utilitarianism
 				value = ethic_fanatic_utilitarianism
+			}
+			OR = {
+				text = civic_tooltip_capitalism
 				value = ethic_capitalism
 				value = ethic_fanatic_capitalism
 			}
@@ -3316,9 +3488,12 @@ civic_ngm_hypothecation_of_human_rights = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_utilitarianism_or_authoritarian
+				text = civic_tooltip_utilitarianism
 				value = ethic_utilitarianism
 				value = ethic_fanatic_utilitarianism
+			}
+			OR = {
+				text = civic_tooltip_authoritarian
 				value = ethic_authoritarian
 				value = ethic_fanatic_authoritarian
 			}
@@ -3403,9 +3578,12 @@ civic_ngm_producer_consumer_society = {
 	possible = {
 		ethics = {
 			OR = {
-				text = civic_tooltip_utilitarianism_or_capitalism
+				text = civic_tooltip_utilitarianism
 				value = ethic_utilitarianism
 				value = ethic_fanatic_utilitarianism
+			}
+			OR = {
+				text = civic_tooltip_capitalism
 				value = ethic_capitalism
 				value = ethic_fanatic_capitalism
 			}

@@ -270,6 +270,7 @@ priest = {
 		# 自然信仰
 		produces = {
 			trigger = {
+				exists = owner
 				has_civic = civic_ngm_nature_faith
 			}
 			society_research = 1
