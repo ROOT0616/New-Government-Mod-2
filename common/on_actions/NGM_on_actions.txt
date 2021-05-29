@@ -41,6 +41,14 @@ on_leader_spawned = {
 	}
 }
 
+# this = country
+on_yearly_pulse_country = {
+	events = {
+		# ゲーム開始後の追加削除不可の国是
+		ngm_civic.12
+	}
+}
+
 # 戦争が始まり、戦争に参加しているすべての国で実行される。
 # Root = Country
 # From = War

@@ -547,6 +547,7 @@ country_event = {
 			has_civic = civic_ngm_breakdown_prevention_method
 			has_civic = civic_ngm_destructive_digging
 			has_civic = civic_ngm_irreversible_industrialization
+			has_civic = civic_ngm_experimental_substance
 		}
 	}
 	immediate = {
@@ -649,6 +650,7 @@ country_event = {
 			has_civic = civic_ngm_breakdown_prevention_method
 			has_civic = civic_ngm_destructive_digging
 			has_civic = civic_ngm_irreversible_industrialization
+			has_civic = civic_ngm_experimental_substance
 			has_country_flag = civic_ngm_random_birth_rate_flag
 			has_country_flag = civic_ngm_healthy_habits_flag
 			has_country_flag = civic_ngm_ultimate_freedom_of_thought_flag
@@ -661,6 +663,7 @@ country_event = {
 			has_country_flag = civic_ngm_breakdown_prevention_method_flag
 			has_country_flag = civic_ngm_destructive_digging_flag
 			has_country_flag = civic_ngm_irreversible_industrialization_flag
+			has_country_flag = civic_ngm_experimental_substance_flag
 		}
 	}
 	immediate = {
@@ -975,10 +978,6 @@ country_event = {
 			add_resource = {
 				influence = 250
 			}
-		}
-		country_event = {
-			id = ngm_civic.12
-			days = 31
 		}
 	}
 }
