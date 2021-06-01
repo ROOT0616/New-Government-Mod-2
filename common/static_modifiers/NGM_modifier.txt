@@ -487,3 +487,83 @@ civic_ngm_war_prosperity_is_war_modifier = {
 civic_ngm_war_prosperity_is_war_country_modifier = {
 	starbase_shipyard_build_speed_mult = 0.1
 }
+
+# 〇社会主義
+suppressed_socialism = {
+	pop_ethic_socialism_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+promoted_socialism = {
+	pop_ethic_socialism_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+# 〇資本主義
+suppressed_capitalism = {
+	pop_ethic_capitalism_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+promoted_capitalism = {
+	pop_ethic_capitalism_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+# 〇介入主義
+suppressed_interventionism = {
+	pop_ethic_interventionism_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+promoted_interventionism = {
+	pop_ethic_interventionism_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+# 〇中立主義
+suppressed_neutralism = {
+	pop_ethic_neutralism_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+promoted_neutralism = {
+	pop_ethic_neutralism_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+# 〇保全主義
+suppressed_conservationism = {
+	pop_ethic_conservationism_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+promoted_conservationism = {
+	pop_ethic_conservationism_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+# 〇開発主義
+suppressed_developmentalism = {
+	pop_ethic_developmentalism_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+promoted_developmentalism = {
+	pop_ethic_developmentalism_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+# 〇栄望主義
+suppressed_honorism = {
+	pop_ethic_honorism_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+promoted_honorism = {
+	pop_ethic_honorism_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}
+
+# 〇実利主義
+suppressed_utilitarianism = {
+	pop_ethic_utilitarianism_attraction_mult = -0.75
+	country_base_influence_produces_add = -1
+}
+promoted_utilitarianism = {
+	pop_ethic_utilitarianism_attraction_mult = 1
+	country_base_influence_produces_add = -2
+}

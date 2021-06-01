@@ -1,0 +1,129 @@
+#Perks Example
+#<perk_name>={
+#	Modifier for federation scope
+#	federation_modifier = {}
+#	メンバー全員のモディファイ(リーダー含む)
+#	members_modifier = {}
+#	Modifier for exclusevely leader
+#	leader_modifier = {}
+#	フェデレーションスコープでの起動効果について
+#	on_activate = {}
+#	On deactivate effect in federation scope
+#}
+
+
+### Passive, starting bonuses
+# 包括的経済連協定
+# 防疫関税条約	Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment	(エネルギー算出-5%、交易価値+10%、全加盟国が相互に通商協定、移民協定を締結する。)
+CEPA_CTOCIDTP = {
+	members_modifier = {
+		description = federation_CEPA_CTOCIDTP_effect
+		country_energy_produces_mult = -0.05
+		trade_value_mult = 0.1
+	}
+}
+# 度量衡の標準化	Standardization of Weights and Measures	(交易価値+5%)
+CEPA_SWM ={
+	members_modifier = {
+		description = federation_CEPA_SWM_effect
+		trade_value_mult = 0.05
+	}
+}
+
+# 多国間報道機関の設立	Establishment of a multinational news organization	(統治志向魅力-5%、幸福度+5%)
+CEPA_EMNO = {
+	members_modifier = {
+		description = federation_CEPA_EMNO_effect
+		pop_government_ethic_attraction = -0.05
+		pop_happiness = 0.05
+	}
+}
+
+# 犯罪者取扱条約	Convention on the Treatment of Criminals	(犯罪度-10%、交易価値+5%)
+CEPA_CTC = {
+	members_modifier = {
+		description = federation_CEPA_CTC_effect
+		planet_crime_mult = -0.1
+		trade_value_mult = 0.05
+	}
+}
+
+# 知的財産保護条約	IPT	(統合力+5%、研究力+5%)
+CEPA_IPT = {
+	members_modifier = {
+		description = federation_CEPA_IPT_effect
+		country_unity_produces_mult = 0.05
+		country_physics_research_produces_mult = 0.05
+		country_society_research_produces_mult = 0.05
+		country_engineering_research_produces_mult = 0.05
+	}
+}
+
+# 域内交易路保安局の成立	Establishment of Regional Trade Route Security Bureau	(交易路保護値+5)
+CEPA_ERTRSB = {
+	members_modifier = {
+		description = federation_CEPA_ERTRSB_effect
+		local_trade_protection_add = 5
+	}
+}
+
+# 域内職業安定局の設立	Establishment of regional employment security bureaus	(Pop移住速度+10%、Pop成長速度+5%)
+CEPA_ERESB = {
+	members_modifier = {
+		description = federation_CEPA_ERESB_effect
+		planet_immigration_pull_mult = 0.1
+		pop_growth_speed = 0.05
+	}
+}
+
+# 共通市場事務所の設立	Establishment of Common Market Office	(市場手数料-10%、交易価値+10%)
+CEPA_ECMO = {
+	members_modifier = {
+		description = federation_CEPA_ECMO_effect
+		country_trade_fee = -0.1
+		trade_value_mult = 0.1
+	}
+}
+
+# 銀河建設公社の設立	Establishment of the Galactic Construction Corporation	（建設コスト-10%、区域建造コスト-10%）
+CEPA_EGCC = {
+	members_modifier = {
+		description = federation_CEPA_ECMO_effect
+		planet_buildings_cost_mult = -0.1
+		planet_districts_cost_mult = -0.1
+	}
+}
+
+
+# 同君連合
+# 権威への平伏		（権威主義志向の魅力+20%）
+# 君主への敬服		（安定度+5）
+# 栄光への道		（地上軍ダメージ+10%）※パトロネージ（統合力+10%）
+# 特権階級のプライド		（初期リーダー経験値+200、経験値獲得+10%）
+# 高貴なる使節団		（使節+1）※属国の賦役（建築コスト-10%、建築スロット+1）
+# 統合を通じた力		（議長国以外の加盟国のみ、職業からの資源産出+5%）
+# 称号の創設		（統治者幸福度+20%）※第一発言者の地位（他の連邦加盟国の外交発言力の30%を奪い取る）
+# 宮中の拡大		（影響力+1）
+# 主要省庁の兼務		（布告許容量+1）※王の中の王（影響力+1）
+
+# 常設首脳会議
+# 首脳会議（志向の多様さからの団結度ペナルティ-75%、外交発言力+10%）
+# 観光協定（居住性+5%）
+# 犯罪者引き渡し条約（犯罪度-10%、交易保護値+3）
+# 銀河連邦常駐委員会の設置（外交発言力+10%、使節+1）
+# 多国間報道機関の設立(統治志向魅力-5%、幸福度+5%)
+# 将校の交流（連邦艦隊許容量への貢献+25%）
+# 強力な弁論術（外交発言力+10%）
+# 共に強く在れ（危機とグレイ・テンペストに対するダメージ+25%）
+# 強力なリーダーシップ（危機の発生中、外交発言力+20%）
+
+# 統一教団
+# 統一教典（精神主義魅力+30%、志向転向度+50%、研究力-5%）
+# 内面への拡充（住居使用量-10%、快適度使用量-10%）
+# 銀河異端裁判所（犯罪度-15%）※連邦の使節（使節+1）
+# 枢機卿団（統合力+10%）
+# 武僧督戦隊（地上軍士気+10%）※銀河教会組織（権威主義魅力+30%）
+# 銀河宗教大学の設立（リーダーレベル上限+1）
+# 巡礼団の強制（Pop移住速度+30%）※聖戦（非精神主義国家に対して精神主義を強要する宣戦布告事由を得る）
+# 共に強く在れ（危機とグレイ・テンペストに対するダメージ+25%）
+# 壮麗な儀式（各惑星大祭司職業枠+1、司祭職業枠+3）※地位の神聖さ(影響力+1/月)

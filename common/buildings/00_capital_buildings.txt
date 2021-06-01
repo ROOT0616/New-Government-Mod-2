@@ -159,6 +159,7 @@ building_capital = {
 					has_civic = civic_merchant_guilds
 					has_civic = civic_technocracy
 					has_civic = civic_ngm_federation_of_the_galaxies
+					has_civic = civic_ngm_environmental_democracy
 					has_civic = civic_ngm_religious_republicanism
 					has_civic = civic_ngm_peoples_democracy
 					has_civic = civic_ngm_cyberdemocracy
@@ -233,6 +234,19 @@ building_capital = {
 		}
 		modifier = {
 			job_ngm_heroes_of_society_add = 1
+			job_administrator_add = 1
+		}
+	}
+	# 環境民主制 (民主制、保全主義)行政官の一人を大自然監督官に置換え。
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_civic = civic_ngm_environmental_democracy
+			}
+		}
+		modifier = {
+			job_ngm_superintendent_of_wilderness_add = 1
 			job_administrator_add = 1
 		}
 	}
@@ -435,6 +449,16 @@ building_capital = {
 			}
 		}
 		text = job_ngm_heroes_of_society_effect_desc
+	}
+	# 環境民主制 (民主制、保全主義)行政官の一人を大自然監督官に置換え。
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_civic = civic_ngm_environmental_democracy
+			}
+		}
+		text = job_ngm_superintendent_of_wilderness_effect_desc
 	}
 	# 宗教共和制 (民主制、精神主義)行政官の一人を大祭司に置換え。
 	triggered_desc = {
@@ -733,6 +757,19 @@ building_major_capital = {
 			job_administrator_add = 2
 		}
 	}
+	# 環境民主制 (民主制、保全主義)行政官の一人を大自然監督官に置換え。
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_civic = civic_ngm_environmental_democracy
+			}
+		}
+		modifier = {
+			job_ngm_superintendent_of_wilderness_add = 1
+			job_administrator_add = 2
+		}
+	}
 	# 宗教共和制 (民主制、精神主義)行政官の一人を大祭司に置換え。
 	triggered_planet_modifier = {
 		potential = {
@@ -944,6 +981,16 @@ building_major_capital = {
 			}
 		}
 		text = job_ngm_heroes_of_society_effect_desc
+	}
+	# 環境民主制 (民主制、保全主義)行政官の一人を大自然監督官に置換え。
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_civic = civic_ngm_environmental_democracy
+			}
+		}
+		text = job_ngm_superintendent_of_wilderness_effect_desc
 	}
 	# 宗教共和制 (民主制、精神主義)行政官の一人を大祭司に置換え。
 	triggered_desc = {
@@ -1248,6 +1295,19 @@ building_system_capital = {
 			job_administrator_add = 2
 		}
 	}
+	# 環境民主制 (民主制、保全主義)行政官の一人を大自然監督官に置換え。
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_civic = civic_ngm_environmental_democracy
+			}
+		}
+		modifier = {
+			job_ngm_superintendent_of_wilderness_add = 2
+			job_administrator_add = 2
+		}
+	}
 	# 宗教共和制 (民主制、精神主義)行政官の一人を大祭司に置換え。
 	triggered_planet_modifier = {
 		potential = {
@@ -1471,6 +1531,16 @@ building_system_capital = {
 			}
 		}
 		text = job_ngm_heroes_of_society_effect_desc
+	}
+	# 環境民主制 (民主制、保全主義)行政官の一人を大自然監督官に置換え。
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_civic = civic_ngm_environmental_democracy
+			}
+		}
+		text = job_ngm_superintendent_of_wilderness_effect_desc
 	}
 	# 宗教共和制 (民主制、精神主義)行政官の一人を大祭司に置換え。
 	triggered_desc = {
@@ -2608,6 +2678,19 @@ building_hab_major_capital = {
 			job_administrator_add = 1
 		}
 	}
+	# 環境民主制 (民主制、保全主義)行政官の一人を大自然監督官に置換え。
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_civic = civic_ngm_environmental_democracy
+			}
+		}
+		modifier = {
+			job_ngm_superintendent_of_wilderness_add = 1
+			job_administrator_add = 1
+		}
+	}
 	# 宗教共和制 (民主制、精神主義)行政官の一人を大祭司に置換え。
 	triggered_planet_modifier = {
 		potential = {
@@ -3448,6 +3531,19 @@ building_imperial_capital = {
 			job_administrator_add = 3
 		}
 	}
+	# 環境民主制 (民主制、保全主義)行政官の一人を大自然監督官に置換え。
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_civic = civic_ngm_environmental_democracy
+			}
+		}
+		modifier = {
+			job_ngm_superintendent_of_wilderness_add = 3
+			job_administrator_add = 3
+		}
+	}
 	# 宗教共和制 (民主制、精神主義)行政官の一人を大祭司に置換え。
 	triggered_planet_modifier = {
 		potential = {
@@ -3671,6 +3767,16 @@ building_imperial_capital = {
 			}
 		}
 		text = job_ngm_heroes_of_society_effect_desc
+	}
+	# 環境民主制 (民主制、保全主義)行政官の一人を大自然監督官に置換え。
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_civic = civic_ngm_environmental_democracy
+			}
+		}
+		text = job_ngm_superintendent_of_wilderness_effect_desc
 	}
 	# 宗教共和制 (民主制、精神主義)行政官の一人を大祭司に置換え。
 	triggered_desc = {

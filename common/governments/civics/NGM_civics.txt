@@ -818,7 +818,7 @@ civic_ngm_federation_of_the_galaxies = {
 	}
 }
 
-# 環境民主制 environmental_democracy	(民主制、保全主義) 居住性+5%、Pop成長速度+10%、	
+# 環境民主制 environmental_democracy	(民主制、保全主義) 居住性+5%、Pop成長速度+10%、	行政官の一人を大自然監督官に置換え。
 civic_ngm_environmental_democracy = {
 	possible = {
 		ethics = {
@@ -835,6 +835,7 @@ civic_ngm_environmental_democracy = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_tooltip_ngm_superintendent_of_wilderness_effects
 	modifier = {
 		pop_environment_tolerance = 0.05
 		pop_growth_speed = 0.1
@@ -2175,7 +2176,7 @@ civic_ngm_mechanical_faith = {
 	random_weight = {
 		base = 5
 	}
-	description = civic_tooltip_ngm_not_removed
+	description = civic_tooltip_mechanical_faith_effects
 	modifier = {
 		country_engineering_research_produces_mult = 0.1
 		planet_pop_assembly_mult = 0.1

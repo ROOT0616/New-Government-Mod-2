@@ -1,0 +1,203 @@
+# NGM_mammonism
+pop_faction_name_parts_list = {
+	key = "NGM_mammonism_names_1"
+	parts = {
+		"社会民主" = 1
+		"共産" = 1
+		"人民" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "NGM_mammonism_names_2"
+	parts = {
+		"戦線" = 1
+		"運動" = 1
+		"党" = 1
+		"派" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "NGM_mammonism"
+		}
+	}
+	format = "[This.Owner.GetSpeciesName]<NGM_mammonism_names_1><NGM_mammonism_names_2>"
+}
+
+# NGM_collectivism
+pop_faction_name_parts_list = {
+	key = "NGM_collectivism_names_1"
+	parts = {
+		"自由" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "NGM_collectivism_names_2"
+	parts = {
+		"戦線" = 1
+		"運動" = 1
+		"党" = 1
+		"派" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "NGM_collectivism"
+		}
+	}
+	format = "[This.Owner.GetSpeciesName]<NGM_collectivism_names_1><NGM_collectivism_names_2>"
+}
+
+# NGM_environmentalism
+pop_faction_name_parts_list = {
+	key = "NGM_environmentalism_names_1"
+	parts = {
+		"緑の" = 1
+		"反工業" = 1
+		"グリーン" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "NGM_environmentalism_names_2"
+	parts = {
+		"戦線" = 1
+		"運動" = 1
+		"党" = 1
+		"派" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "NGM_environmentalism"
+		}
+	}
+	format = "[This.Owner.GetSpeciesName]<NGM_environmentalism_names_1><NGM_environmentalism_names_2>"
+}
+
+# NGM_industrialism
+pop_faction_name_parts_list = {
+	key = "NGM_industrialism_names_1"
+	parts = {
+		"帝国重工業" = 1
+		"経済開発" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "NGM_industrialism_names_2"
+	parts = {
+		"戦線" = 1
+		"連合" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "NGM_industrialism"
+		}
+	}
+	format = "[This.Owner.GetSpeciesName]<NGM_industrialism_names_1><NGM_industrialism_names_2>"
+}
+
+# NGM_hawks
+pop_faction_name_parts_list = {
+	key = "NGM_hawks_names_1"
+	parts = {
+		"保守党右派" = 1
+		"議会内最右翼党" = 1
+		"国民党" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "NGM_hawks"
+		}
+	}
+	format = "[This.Owner.GetSpeciesName]<NGM_hawks_names_1>"
+}
+
+# NGM_doves
+pop_faction_name_parts_list = {
+	key = "NGM_doves_names_1"
+	parts = {
+		"保守党穏健派" = 1
+		"国家党" = 1
+		"協同党" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "NGM_doves"
+		}
+	}
+	format = "[This.Owner.GetSpeciesName]<NGM_doves_names_1>"
+}
+
+# NGM_reputation
+pop_faction_name_parts_list = {
+	key = "NGM_reputation_names_1"
+	parts = {
+		"名士会" = 1
+		"学士院" = 1
+		"上流社会" = 1
+		"将校退役軍人会" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "NGM_reputation"
+		}
+	}
+	format = "[This.Owner.GetSpeciesName]<NGM_reputation_names_1>"
+}
+
+# NGM_supremacy
+pop_faction_name_parts_list = {
+	key = "NGM_supremacy_names_1"
+	parts = {
+		"ダークウェブ" = 1
+		"自由主義同盟" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "NGM_supremacy"
+		}
+	}
+	format = "[This.Owner.GetSpeciesName]<NGM_supremacy_names_1>"
+}
+
