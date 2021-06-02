@@ -4,7 +4,7 @@
 @xp_to_level_5 = 9600
 
 # 包括的経済連携協定 Comprehensive Economic Partnership Agreement
-CEPA_federation = {
+NGM_CEPA_federation = {
 	icon = "GFX_default_federation"
 	potential = {
 		always = yes
@@ -22,34 +22,34 @@ CEPA_federation = {
 			# Starting rank
 			experience = @xp_to_level_2			# Experience until next rank
 			perks = {
-				CEPA_CTOCIDTP
+				NGM_CEPA_CTOCIDTP
 			}
 		}
 		level_2 = {
 			experience = @xp_to_level_3
 			perks = {
-				CEPA_SWM
-				CEPA_EMNO
+				NGM_CEPA_SWM
+				NGM_CEPA_EMNO
 			}
 		}
 		level_3 = {
 			experience = @xp_to_level_4
 			perks = {
-				CEPA_CTC
-				CEPA_IPT
+				NGM_CEPA_CTC
+				NGM_CEPA_IPT
 			}
 		}
 		level_4 = {
 			experience = @xp_to_level_5
 			perks = {
-				CEPA_ERTRSB
-				CEPA_ERESB
+				NGM_CEPA_ERTRSB
+				NGM_CEPA_ERESB
 			}
 		}
 		level_5 = {
 			perks = {
-				CEPA_ECMO
-				CEPA_EGCC
+				NGM_CEPA_ECMO
+				NGM_CEPA_EGCC
 			}
 		}
 	}
@@ -275,7 +275,8 @@ CEPA_federation = {
 # 同君連合 Personal union
 # 要件  提案は君主制のみ
 # 選好  属国+4000、それ以外は-1000
-personal_union_federation = {
+NGM_personal_union_federation = {
+	icon = "GFX_default_federation"
 	#potential
 	potential = {
 	}
@@ -288,40 +289,62 @@ personal_union_federation = {
 			# Starting rank
 			experience = @xp_to_level_2			# Experience until next rank
 			perks = {
+				NGM_PU_BA
 			}
 		}
 		level_2 = {
 			experience = @xp_to_level_3
 			perks = {
+				NGM_PU_RM
+				NGM_PU_TRG
 			}
 		}
 		level_3 = {
 			experience = @xp_to_level_4
 			perks = {
+				NGM_PU_TPP
+				NGM_PU_NM
 			}
 		}
 		level_4 = {
 			experience = @xp_to_level_5
 			perks = {
+				NGM_PU_PTI
+				NGM_PU_CT
 			}
 		}
 		level_5 = {
 			perks = {
+				NGM_PU_EP
+				NGM_PU_CPKM
 			}
 		}
 	}
-	#on_create, run everytime the federation type has been set
 	on_create = {
+		remove_federation_flag = enable_federation_cooldowns
+		set_federation_law = centralization_minimal
+		set_federation_law = succession_type_rotation
+		set_federation_law = succession_term_years_20
+		set_federation_law = fleet_contribution_none
+		set_federation_law = federation_build_fleets_everyone
+		set_federation_law = vote_weight_equal
+		set_federation_law = declare_war_unanimous_vote
+		set_federation_law = invite_members_unanimous_vote
+		set_federation_law = kick_members_majority_vote
+		set_federation_law = free_migration_no
+		set_federation_law = treaties_separate_yes
+		set_federation_flag = enable_federation_cooldowns
+	}
+	ai_weight = {
+		base = 0
 	}
 }
 
 # 常設首脳会議 Permanent Summit
 # 要件 受容主義のみ提案可能
 # 選好 受容主義以外-100
-permanent_summit_federation = {
-	#on_create, run everytime the federation type has been set
-	on_create = {
-	}
+NGM_permanent_summit_federation = {
+	icon = "GFX_default_federation"
 	#potential
 	potential = {
 		always = yes
@@ -335,37 +358,62 @@ permanent_summit_federation = {
 			# Starting rank
 			experience = @xp_to_level_2			# Experience until next rank
 			perks = {
+				NGM_PS_SM
 			}
 		}
 		level_2 = {
 			experience = @xp_to_level_3
 			perks = {
+				NGM_PS_TA
+				NGM_PS_ET
 			}
 		}
 		level_3 = {
 			experience = @xp_to_level_4
 			perks = {
+				NGM_PS_EGFRC
+				NGM_PS_EMNO
 			}
 		}
 		level_4 = {
 			experience = @xp_to_level_5
 			perks = {
+				NGM_PS_EO
+				NGM_PS_PA
 			}
 		}
 		level_5 = {
 			perks = {
+				NGM_PS_SST
+				NGM_PS_SL
 			}
 		}
+	}
+	on_create = {
+		remove_federation_flag = enable_federation_cooldowns
+		set_federation_law = centralization_minimal
+		set_federation_law = succession_type_rotation
+		set_federation_law = succession_term_years_20
+		set_federation_law = fleet_contribution_none
+		set_federation_law = federation_build_fleets_everyone
+		set_federation_law = vote_weight_equal
+		set_federation_law = declare_war_unanimous_vote
+		set_federation_law = invite_members_unanimous_vote
+		set_federation_law = kick_members_majority_vote
+		set_federation_law = free_migration_no
+		set_federation_law = treaties_separate_yes
+		set_federation_flag = enable_federation_cooldowns
+	}
+	ai_weight = {
+		base = 0
 	}
 }
 
 # 統一教団 Unification Church
 # 要件  精神主義のみ提案可能
 # 選好  精神主義以外-2000
-unification_church_federation = {
-	#on_create, run everytime the federation type has been set
-	on_create = {
-	}
+NGM_unification_church_federation = {
+	icon = "GFX_default_federation"
 	#potential
 	potential = {
 	}
@@ -378,26 +426,53 @@ unification_church_federation = {
 			# Starting rank
 			experience = @xp_to_level_2			# Experience until next rank
 			perks = {
+				NGM_UC_encyclopedia
 			}
 		}
 		level_2 = {
 			experience = @xp_to_level_3
 			perks = {
+				NGM_UC_EI
+				NGM_UC_GCH
 			}
 		}
 		level_3 = {
 			experience = @xp_to_level_4
 			perks = {
+				NGM_UC_CC
+				NGM_UC_VS
 			}
 		}
 		level_4 = {
 			experience = @xp_to_level_5
 			perks = {
+				NGM_UC_EGUR
+				NGM_UC_CP
 			}
 		}
 		level_5 = {
 			perks = {
+				NGM_PS_SST賊
+				NGM_UC_GC
 			}
 		}
+	}
+	on_create = {
+		remove_federation_flag = enable_federation_cooldowns
+		set_federation_law = centralization_minimal
+		set_federation_law = succession_type_rotation
+		set_federation_law = succession_term_years_20
+		set_federation_law = fleet_contribution_none
+		set_federation_law = federation_build_fleets_everyone
+		set_federation_law = vote_weight_equal
+		set_federation_law = declare_war_unanimous_vote
+		set_federation_law = invite_members_unanimous_vote
+		set_federation_law = kick_members_majority_vote
+		set_federation_law = free_migration_no
+		set_federation_law = treaties_separate_yes
+		set_federation_flag = enable_federation_cooldowns
+	}
+	ai_weight = {
+		base = 0
 	}
 }

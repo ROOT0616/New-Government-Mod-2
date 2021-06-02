@@ -15,43 +15,43 @@
 ### Passive, starting bonuses
 # 包括的経済連協定
 # 防疫関税条約	Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment	(エネルギー算出-5%、交易価値+10%、全加盟国が相互に通商協定、移民協定を締結する。)
-CEPA_CTOCIDTP = {
+NGM_CEPA_CTOCIDTP = {
 	members_modifier = {
-		description = federation_CEPA_CTOCIDTP_effect
+		description = federation_NGM_CEPA_CTOCIDTP_effect
 		country_energy_produces_mult = -0.05
 		trade_value_mult = 0.1
 	}
 }
 # 度量衡の標準化	Standardization of Weights and Measures	(交易価値+5%)
-CEPA_SWM ={
+NGM_CEPA_SWM ={
 	members_modifier = {
-		description = federation_CEPA_SWM_effect
+		description = federation_NGM_CEPA_SWM_effect
 		trade_value_mult = 0.05
 	}
 }
 
 # 多国間報道機関の設立	Establishment of a multinational news organization	(統治志向魅力-5%、幸福度+5%)
-CEPA_EMNO = {
+NGM_CEPA_EMNO = {
 	members_modifier = {
-		description = federation_CEPA_EMNO_effect
+		description = federation_NGM_CEPA_EMNO_effect
 		pop_government_ethic_attraction = -0.05
 		pop_happiness = 0.05
 	}
 }
 
 # 犯罪者取扱条約	Convention on the Treatment of Criminals	(犯罪度-10%、交易価値+5%)
-CEPA_CTC = {
+NGM_CEPA_CTC = {
 	members_modifier = {
-		description = federation_CEPA_CTC_effect
+		description = federation_NGM_CEPA_CTC_effect
 		planet_crime_mult = -0.1
 		trade_value_mult = 0.05
 	}
 }
 
 # 知的財産保護条約	IPT	(統合力+5%、研究力+5%)
-CEPA_IPT = {
+NGM_CEPA_IPT = {
 	members_modifier = {
-		description = federation_CEPA_IPT_effect
+		description = federation_NGM_CEPA_IPT_effect
 		country_unity_produces_mult = 0.05
 		country_physics_research_produces_mult = 0.05
 		country_society_research_produces_mult = 0.05
@@ -60,35 +60,35 @@ CEPA_IPT = {
 }
 
 # 域内交易路保安局の成立	Establishment of Regional Trade Route Security Bureau	(交易路保護値+5)
-CEPA_ERTRSB = {
+NGM_CEPA_ERTRSB = {
 	members_modifier = {
-		description = federation_CEPA_ERTRSB_effect
+		description = federation_NGM_CEPA_ERTRSB_effect
 		local_trade_protection_add = 5
 	}
 }
 
 # 域内職業安定局の設立	Establishment of regional employment security bureaus	(Pop移住速度+10%、Pop成長速度+5%)
-CEPA_ERESB = {
+NGM_CEPA_ERESB = {
 	members_modifier = {
-		description = federation_CEPA_ERESB_effect
+		description = federation_NGM_CEPA_ERESB_effect
 		planet_immigration_pull_mult = 0.1
 		pop_growth_speed = 0.05
 	}
 }
 
 # 共通市場事務所の設立	Establishment of Common Market Office	(市場手数料-10%、交易価値+10%)
-CEPA_ECMO = {
+NGM_CEPA_ECMO = {
 	members_modifier = {
-		description = federation_CEPA_ECMO_effect
+		description = federation_NGM_CEPA_ECMO_effect
 		country_trade_fee = -0.1
 		trade_value_mult = 0.1
 	}
 }
 
 # 銀河建設公社の設立	Establishment of the Galactic Construction Corporation	（建設コスト-10%、区域建造コスト-10%）
-CEPA_EGCC = {
+NGM_CEPA_EGCC = {
 	members_modifier = {
-		description = federation_CEPA_ECMO_effect
+		description = federation_NGM_CEPA_EGCC_effect
 		planet_buildings_cost_mult = -0.1
 		planet_districts_cost_mult = -0.1
 	}
@@ -96,34 +96,221 @@ CEPA_EGCC = {
 
 
 # 同君連合
-# 権威への平伏		（権威主義志向の魅力+20%）
-# 君主への敬服		（安定度+5）
-# 栄光への道		（地上軍ダメージ+10%）※パトロネージ（統合力+10%）
-# 特権階級のプライド		（初期リーダー経験値+200、経験値獲得+10%）
-# 高貴なる使節団		（使節+1）※属国の賦役（建築コスト-10%、建築スロット+1）
-# 統合を通じた力		（議長国以外の加盟国のみ、職業からの資源産出+5%）
-# 称号の創設		（統治者幸福度+20%）※第一発言者の地位（他の連邦加盟国の外交発言力の30%を奪い取る）
-# 宮中の拡大		（影響力+1）
-# 主要省庁の兼務		（布告許容量+1）※王の中の王（影響力+1）
+# 権威への平伏	Bowing to Authority	（権威主義志向の魅力+20%）
+NGM_PU_BA ={
+	members_modifier = {
+		description = federation_NGM_PU_BA_effect
+		pop_ethic_authoritarian_attraction_mult = 0.2
+	}
+}
+
+# 君主への敬服	Respect for the monarch	（安定度+5）
+NGM_PU_RM ={
+	members_modifier = {
+		description = federation_NGM_PU_RM_effect
+		planet_stability_add = 5
+	}
+}
+
+# 栄光への道	The Road to Glory	（地上軍ダメージ+10%）※パトロネージ（統合力+10%）
+NGM_PU_TRG = {
+	members_modifier = {
+		description = federation_NGM_PU_TRG_effect
+		army_damage_mult = 0.1
+	}
+}
+
+# 特権階級のプライド	The Pride of the Privileged	（初期リーダー経験値+200、経験値獲得+10%）
+NGM_PU_TPP = {
+	members_modifier = {
+		description = federation_NGM_PU_TPP_effect
+		species_leader_exp_gain = 0.1
+	}
+}
+
+# 高貴なる使節団	Noble Missions	（使節+1）※属国の賦役（建築コスト-10%、建築スロット+1）
+NGM_PU_NM = {
+	members_modifier = {
+		description = federation_NGM_PU_NM_effect
+		envoys_add = 1
+	}
+}
+
+# 統合を通じた力	Power through integration	（議長国以外の加盟国のみ、職業からの資源産出+5%）
+NGM_PU_PTI = {
+	members_modifier = {
+		description = federation_NGM_PU_PTI_effect
+		planet_jobs_produces_mult = 0.05
+	}
+}
+# 称号の創設	Creation of a title	（統治者幸福度+20%）※第一発言者の地位（他の連邦加盟国の外交発言力の30%を奪い取る）
+NGM_PU_CT = {
+	members_modifier = {
+		description = federation_NGM_PU_CT_effect
+		pop_cat_ruler_happiness = 0.2
+	}
+}
+
+# 宮中の拡大	Expansion of the Palace	（影響力+1）
+NGM_PU_EP = {
+	members_modifier = {
+		description = federation_NGM_PU_EP_effect
+		country_base_influence_produces_add = 1
+	}
+}
+# 主要省庁の兼務	Concurrent positions in key ministries	（布告許容量+1）※王の中の王（影響力+1）
+NGM_PU_CPKM = {
+	members_modifier = {
+		description = federation_NGM_PU_CPKM_effect
+		country_edict_cap_add = 1
+	}
+}
 
 # 常設首脳会議
-# 首脳会議（志向の多様さからの団結度ペナルティ-75%、外交発言力+10%）
-# 観光協定（居住性+5%）
-# 犯罪者引き渡し条約（犯罪度-10%、交易保護値+3）
-# 銀河連邦常駐委員会の設置（外交発言力+10%、使節+1）
-# 多国間報道機関の設立(統治志向魅力-5%、幸福度+5%)
-# 将校の交流（連邦艦隊許容量への貢献+25%）
-# 強力な弁論術（外交発言力+10%）
-# 共に強く在れ（危機とグレイ・テンペストに対するダメージ+25%）
-# 強力なリーダーシップ（危機の発生中、外交発言力+20%）
+# 首脳会議	summit meeting	（志向の多様さからの団結度ペナルティ-75%、外交発言力+10%）
+NGM_PS_SM = {
+	members_modifier = {
+		description = federation_NGM_PS_SM_effect
+		diplo_weight_mult = 0.1
+	}
+}
+
+# 観光協定	Tourism Agreement	（居住性+5%）
+NGM_PS_TA = {
+	members_modifier = {
+		description = federation_NGM_PS_TA_effect
+		pop_environment_tolerance = 0
+	}
+}
+
+# 犯罪者引き渡し条約	Extradition Treaty	（犯罪度-10%、交易保護値+3）
+NGM_PS_ET = {
+	members_modifier = {
+		description = federation_NGM_PS_ET_effect
+		planet_crime_mult = -0.1
+		local_trade_protection_add = 3
+	}
+}
+
+# 銀河連邦常駐委員会の設置	Establishment of the Galactic Federation Resident Commission	（外交発言力+10%、使節+1）
+NGM_PS_EGFRC = {
+	members_modifier = {
+		description = federation_NGM_PS_EGFRC_effect
+		diplo_weight_mult = 0.1
+		envoys_add = 1
+	}
+}
+
+# 多国間報道機関の設立	Establishment of a multinational news organization	(統治志向魅力-5%、幸福度+5%)
+NGM_PS_EMNO = {
+	members_modifier = {
+		description = federation_NGM_PS_EMNO_effect
+		pop_government_ethic_attraction = -0.05
+		pop_happiness = 0.05
+	}
+}
+
+# 将校の交流	Exchange of officers	（連邦艦隊許容量への貢献+25%）
+NGM_PS_EO = {
+	members_modifier = {
+		description = federation_NGM_PS_EO_effect
+		federation_naval_cap_contribution_mult = 0.25
+	}
+}
+
+# 強力な弁論術	Powerful Argumentation	（外交発言力+10%）
+NGM_PS_PA = {
+	members_modifier = {
+		description = federation_NGM_PS_PA_effect
+		diplo_weight_mult = 0.1
+	}
+}
+
+# 共に強く在れ	Stay strong together	（危機とグレイ・テンペストに対するダメージ+25%）
+NGM_PS_SST = {
+	members_modifier = {
+		description = federation_NGM_PS_SST_effect
+		damage_vs_player_crisis_mult = 0.25
+		damage_vs_country_type_tiyanki_garrison_mult = 0.25
+		damage_vs_country_type_gray_goo_mult = 0.25
+	}
+}
+
+# 強力なリーダーシップ	Strong leadership	（危機の発生中、外交発言力+20%）
+NGM_PS_SL = {
+	members_modifier = {
+		description = federation_NGM_PS_SL_effect
+		diplo_weight_mult = 0.2
+	}
+}
 
 # 統一教団
-# 統一教典（精神主義魅力+30%、志向転向度+50%、研究力-5%）
-# 内面への拡充（住居使用量-10%、快適度使用量-10%）
-# 銀河異端裁判所（犯罪度-15%）※連邦の使節（使節+1）
-# 枢機卿団（統合力+10%）
-# 武僧督戦隊（地上軍士気+10%）※銀河教会組織（権威主義魅力+30%）
-# 銀河宗教大学の設立（リーダーレベル上限+1）
-# 巡礼団の強制（Pop移住速度+30%）※聖戦（非精神主義国家に対して精神主義を強要する宣戦布告事由を得る）
-# 共に強く在れ（危機とグレイ・テンペストに対するダメージ+25%）
-# 壮麗な儀式（各惑星大祭司職業枠+1、司祭職業枠+3）※地位の神聖さ(影響力+1/月)
+# 統一教典	encyclopedia	（精神主義魅力+30%、志向転向度+50%、研究力-5%）
+NGM_UC_encyclopedia = {
+	members_modifier = {
+		description = federation_NGM_UC_encyclopedia_effect
+		pop_ethic_spiritualist_attraction_mult = 0.3
+		pop_ethics_shift_speed_mult = 0.5
+		country_physics_research_produces_mult = -0.05
+		country_society_research_produces_mult = -0.05
+		country_engineering_research_produces_mult = -0.05
+	}
+}
+
+# 内面への拡充	Expansion to the inside	（住居使用量-10%、快適度使用量-10%）
+NGM_UC_EI = {
+	members_modifier = {
+		description = federation_NGM_UC_EI_effect
+		pop_housing_usage_mult = -0.1
+		pop_amenities_usage_mult = -0.1
+	}
+}
+
+# 銀河異端裁判所	Galactic Court of Heresy	（犯罪度-15%）※連邦の使節（使節+1）
+NGM_UC_GCH = {
+	members_modifier = {
+		description = federation_NGM_UC_GCH_effect
+		planet_crime_mult = -0.15
+	}
+}
+
+# 枢機卿団	College of Cardinals	（統合力+10%）
+NGM_UC_CC = {
+	members_modifier = {
+		description = federation_NGM_UC_CC_effect
+		country_unity_produces_mult = 0.1
+	}
+}
+
+# 武僧督戦隊	Viceroy Squadron	（地上軍士気+10%）※銀河教会組織（権威主義魅力+30%）
+NGM_UC_VS = {
+	members_modifier = {
+		description = federation_NGM_UC_VS_effect
+		army_damage_mult = 0.1
+	}
+}
+
+# 銀河宗教大学の設立	Establishment of the Galactic University of Religion	（リーダーレベル上限+1）
+NGM_UC_EGUR = {
+	members_modifier = {
+		description = federation_NGM_UC_EGUR_effect
+		leader_skill_levels = 1
+	}
+}
+
+# 巡礼団の強制	Compulsion of the pilgrims	（Pop移住速度+30%）※聖戦（非精神主義国家に対して精神主義を強要する宣戦布告事由を得る）
+NGM_UC_CP = {
+	members_modifier = {
+		description = federation_NGM_UC_CP_effect
+		planet_immigration_pull_mult = 0.3
+	}
+}
+
+# 壮麗な儀式	A grand ceremony	（各惑星大祭司職業枠+1、司祭職業枠+3）※地位の神聖さ(影響力+1/月)
+NGM_UC_GC = {
+	members_modifier = {
+		description = federation_NGM_UC_GC_effect
+		job_high_priest_add = 1
+		job_priest_add = 3
+	}
+}
