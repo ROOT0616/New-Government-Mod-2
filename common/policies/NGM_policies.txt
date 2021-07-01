@@ -795,7 +795,7 @@ ngm_policies_electoral_system = {
 		}
 		valid = {
 			NOR = {
-				has_authority = auth_democratic
+				has_authority = auth_dictatorial
 				has_authority = auth_corporate
 			}
 		}
@@ -824,7 +824,7 @@ ngm_policies_electoral_system = {
 		}
 		valid = {
 			NOR = {
-				has_authority = auth_democratic
+				has_authority = auth_dictatorial
 				has_authority = auth_corporate
 			}
 		}
@@ -852,8 +852,8 @@ ngm_policies_electoral_system = {
 			}
 		}
 		valid = {
-			NOT = {
-				has_authority = auth_democratic
+			NOT = {	
+				has_authority = auth_dictatorial
 			}
 		}
 		policy_flags = {
@@ -1503,7 +1503,7 @@ ngm_policies_taxation_system = {
 # 高い        h_income    :エネルギー生産+10%、幸福度-5%             (高所得者はその利潤の一部を国民に還元させるべきである。)
 # ☆平均        a_income    :なし                         (税とは国家の基本である。)
 # 低い        l_income    :エネルギー生産-10%、幸福度+5%             (より努力した者がより豊かな生活を送ることができる。)
-# 極めて低い    vh_income    :エネルギー生産-20%、幸福度+10%         (努力と能力があるものは豊かになるべきである。)
+# 極めて低い    vl_income    :エネルギー生産-20%、幸福度+10%         (努力と能力があるものは豊かになるべきである。)
 # 所得税の廃止    max_income    :エネルギー生産-30%、統治者生産量+10%、幸福度+15%(所得税は個人の利潤を最大化させるためには不要の存在である。)(資本主義のみ)
 ngm_policies_income_tax = {
 	potential = {
@@ -1680,7 +1680,7 @@ ngm_policies_income_tax = {
 		}
 	}
 	option = {
-		name = "NAME_NGM_vh_income"		# 極めて低い
+		name = "NAME_NGM_vl_income"		# 極めて低い
 		potential = {
 			OR = {
 				is_country_type = default
@@ -1691,7 +1691,7 @@ ngm_policies_income_tax = {
 			}
 		}
 		policy_flags = {
-			income_tax_vh_income
+			income_tax_vl_income
 		}
 		modifier = {
 			country_energy_produces_mult = -0.2

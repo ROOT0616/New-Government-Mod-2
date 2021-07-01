@@ -28,7 +28,7 @@ NGM_CEPA_federation = {
 		level_2 = {
 			experience = @xp_to_level_3
 			perks = {
-				NGM_CEPA_SWM
+				trade_value_2
 				NGM_CEPA_EMNO
 			}
 		}
@@ -279,9 +279,11 @@ NGM_personal_union_federation = {
 	icon = "GFX_default_federation"
 	#potential
 	potential = {
+		always = yes
 	}
 	#allowed
 	allow = {
+		has_authority = auth_imperial
 	}
 	#levels
 	levels = {
@@ -304,12 +306,13 @@ NGM_personal_union_federation = {
 			perks = {
 				NGM_PU_TPP
 				NGM_PU_NM
+				MGN_PU_vassalage
 			}
 		}
 		level_4 = {
 			experience = @xp_to_level_5
 			perks = {
-				NGM_PU_PTI
+				job_output_1
 				NGM_PU_CT
 			}
 		}
@@ -351,6 +354,10 @@ NGM_permanent_summit_federation = {
 	}
 	#allowed
 	allow = {
+		OR = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophilee
+		}
 	}
 	#levels
 	levels = {
@@ -378,13 +385,13 @@ NGM_permanent_summit_federation = {
 		level_4 = {
 			experience = @xp_to_level_5
 			perks = {
-				NGM_PS_EO
+				federation_fleet_size_1
 				NGM_PS_PA
 			}
 		}
 		level_5 = {
 			perks = {
-				NGM_PS_SST
+				damage_crisis_1
 				NGM_PS_SL
 			}
 		}
@@ -416,9 +423,14 @@ NGM_unification_church_federation = {
 	icon = "GFX_default_federation"
 	#potential
 	potential = {
+		always = yes
 	}
 	#allowed
 	allow = {
+		OR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+		}
 	}
 	#levels
 	levels = {
@@ -434,6 +446,7 @@ NGM_unification_church_federation = {
 			perks = {
 				NGM_UC_EI
 				NGM_UC_GCH
+				extra_envoy_1
 			}
 		}
 		level_3 = {
@@ -452,8 +465,9 @@ NGM_unification_church_federation = {
 		}
 		level_5 = {
 			perks = {
-				NGM_PS_SST賊
+				damage_crisis_1
 				NGM_UC_GC
+				extra_influence_1
 			}
 		}
 	}

@@ -22,13 +22,6 @@ NGM_CEPA_CTOCIDTP = {
 		trade_value_mult = 0.1
 	}
 }
-# 度量衡の標準化	Standardization of Weights and Measures	(交易価値+5%)
-NGM_CEPA_SWM ={
-	members_modifier = {
-		description = federation_NGM_CEPA_SWM_effect
-		trade_value_mult = 0.05
-	}
-}
 
 # 多国間報道機関の設立	Establishment of a multinational news organization	(統治志向魅力-5%、幸福度+5%)
 NGM_CEPA_EMNO = {
@@ -112,14 +105,20 @@ NGM_PU_RM ={
 	}
 }
 
-# 栄光への道	The Road to Glory	（地上軍ダメージ+10%）※パトロネージ（統合力+10%）
+# 栄光への道	The Road to Glory	（地上軍ダメージ+10%）
 NGM_PU_TRG = {
 	members_modifier = {
 		description = federation_NGM_PU_TRG_effect
 		army_damage_mult = 0.1
 	}
 }
-
+# パトロネージ	patronage	（統合力+10%）
+NGM_PU_patronage = {
+	members_modifier = {
+		description = federation_NGM_PU_patronage_effect
+		country_unity_produces_mult = 0.1
+	}
+}
 # 特権階級のプライド	The Pride of the Privileged	（初期リーダー経験値+200、経験値獲得+10%）
 NGM_PU_TPP = {
 	members_modifier = {
@@ -128,7 +127,7 @@ NGM_PU_TPP = {
 	}
 }
 
-# 高貴なる使節団	Noble Missions	（使節+1）※属国の賦役（建築コスト-10%、建築スロット+1）
+# 高貴なる使節団	Noble Missions	（使節+1）
 NGM_PU_NM = {
 	members_modifier = {
 		description = federation_NGM_PU_NM_effect
@@ -136,13 +135,15 @@ NGM_PU_NM = {
 	}
 }
 
-# 統合を通じた力	Power through integration	（議長国以外の加盟国のみ、職業からの資源産出+5%）
-NGM_PU_PTI = {
+# 属国の賦役	vassalage	（建築コスト-10%、建築スロット+1）
+MGN_PU_vassalage = {
 	members_modifier = {
-		description = federation_NGM_PU_PTI_effect
-		planet_jobs_produces_mult = 0.05
+		description = federation_NGM_PU_vassalage_effect
+		planet_buildings_cost_mult = -0.1
+		planet_max_buildings_add = 1
 	}
 }
+
 # 称号の創設	Creation of a title	（統治者幸福度+20%）※第一発言者の地位（他の連邦加盟国の外交発言力の30%を奪い取る）
 NGM_PU_CT = {
 	members_modifier = {
@@ -158,11 +159,19 @@ NGM_PU_EP = {
 		country_base_influence_produces_add = 1
 	}
 }
-# 主要省庁の兼務	Concurrent positions in key ministries	（布告許容量+1）※王の中の王（影響力+1）
+# 主要省庁の兼務	Concurrent positions in key ministries	（布告許容量+1）
 NGM_PU_CPKM = {
 	members_modifier = {
 		description = federation_NGM_PU_CPKM_effect
 		country_edict_cap_add = 1
+	}
+}
+
+# 王の中の王	king among kings	（影響力+1）
+NGM_PU_king_among_kings = {
+	members_modifier = {
+		description = federation_NGM_PU_king_among_kings_effect
+		country_base_influence_produces_add = 1
 	}
 }
 
@@ -210,14 +219,6 @@ NGM_PS_EMNO = {
 	}
 }
 
-# 将校の交流	Exchange of officers	（連邦艦隊許容量への貢献+25%）
-NGM_PS_EO = {
-	members_modifier = {
-		description = federation_NGM_PS_EO_effect
-		federation_naval_cap_contribution_mult = 0.25
-	}
-}
-
 # 強力な弁論術	Powerful Argumentation	（外交発言力+10%）
 NGM_PS_PA = {
 	members_modifier = {
@@ -226,15 +227,6 @@ NGM_PS_PA = {
 	}
 }
 
-# 共に強く在れ	Stay strong together	（危機とグレイ・テンペストに対するダメージ+25%）
-NGM_PS_SST = {
-	members_modifier = {
-		description = federation_NGM_PS_SST_effect
-		damage_vs_player_crisis_mult = 0.25
-		damage_vs_country_type_tiyanki_garrison_mult = 0.25
-		damage_vs_country_type_gray_goo_mult = 0.25
-	}
-}
 
 # 強力なリーダーシップ	Strong leadership	（危機の発生中、外交発言力+20%）
 NGM_PS_SL = {
@@ -266,7 +258,7 @@ NGM_UC_EI = {
 	}
 }
 
-# 銀河異端裁判所	Galactic Court of Heresy	（犯罪度-15%）※連邦の使節（使節+1）
+# 銀河異端裁判所	Galactic Court of Heresy	（犯罪度-15%）
 NGM_UC_GCH = {
 	members_modifier = {
 		description = federation_NGM_UC_GCH_effect
@@ -282,11 +274,19 @@ NGM_UC_CC = {
 	}
 }
 
-# 武僧督戦隊	Viceroy Squadron	（地上軍士気+10%）※銀河教会組織（権威主義魅力+30%）
+# 武僧督戦隊	Viceroy Squadron	（地上軍士気+10%）
 NGM_UC_VS = {
 	members_modifier = {
 		description = federation_NGM_UC_VS_effect
 		army_damage_mult = 0.1
+	}
+}
+
+# 銀河教会組織	Galactic Church Organization	（権威主義魅力+30%）
+NGM_UC_GCO = {
+	members_modifier = {
+		description = federation_NGM_UC_GCO_effect
+		pop_ethic_authoritarian_attraction_mult = 0.3
 	}
 }
 
