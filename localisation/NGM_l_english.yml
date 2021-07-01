@@ -1848,7 +1848,7 @@
  NGM_UC_VS_desc:0 "聖戦を戦うにあたり、神に背を向けることは許されない。"
  federation_NGM_UC_VS_effect:0 ""
 
- NGM_UC_GCO;0 "銀河教会組織"
+ NGM_UC_GCO:0 "銀河教会組織"
  NGM_UC_GCO_desc:0 "銀河規模の教団組織を維持するためには高度な官僚制と資金体制が必要である。"
  federation_NGM_UC_GCO_effect:0 ""
 
@@ -1863,6 +1863,21 @@
  NGM_UC_GC:0 "壮麗な儀式"
  NGM_UC_GC_desc:0 "見る者すべてが魅了される素晴らしい儀式でこの宗教の偉大さを知らしめる。"
  federation_NGM_UC_GC_effect:0 ""
+
+##########################
+#####    戦争目標    ######
+##########################
+
+ casus_belli_cb_ngm_with_honor:0 "名誉にかけて"
+ casus_belli_cb_ngm_with_honor_desc:0 "我が国の名誉を汚す存在は許されるべきではない。流される血液により汚名をそそぐべきだ。"
+ war_goal_wg_ngm_with_honor:0 "名誉の獲得"
+ war_goal_wg_ngm_with_honor_desc:0 "他国を下し、我が国の優位を銀河中に知らしめる。"
+
+ casus_belli_cb_ngm_pest_control:0 "環境保全"
+ casus_belli_cb_ngm_pest_control_desc:0 "美しい自然に巣くう国家は撃滅され、改心されるべきである。"
+ war_goal_wg_ngm_pest_control:0 "環境保全"
+ war_goal_wg_ngm_pest_control_desc:0 "開発主義国家を保全主義へと改心させ、生物学的知見を相手に与える。"
+ fail_text_wg_ngm_pest_control:0 "相手国は必要な§Y$ethic_developmentalism$§!の志向を採用していない。"
 
 ##########################
 #####    そのほか    ######
@@ -1978,17 +1993,6 @@
  empire_not_utilitarianism:0 "$TRIGGER_FAIL$帝国は必要な§Y$ethic_utilitarianism$§!の志向を採用していない。 "
  empire_is_utilitarianism:0 "$TRIGGER_FAIL$我々の帝国は§Y$ethic_utilitarianism$§!の志向を採用している。 "
  empire_is_capitalism:0 "$TRIGGER_FAIL$我々の帝国は§Y$ethic_capitalism$§!の志向を採用している。 "
-
- casus_belli_cb_ngm_with_honor:0 "名誉にかけて"
- casus_belli_cb_ngm_with_honor_desc:0 "我が国の名誉を汚す存在は許されるべきではない。流される血液により汚名をそそぐべきだ。"
- war_goal_wg_ngm_with_honor:0 "名誉の獲得"
- war_goal_wg_ngm_with_honor_desc:0 "他国を下し、我が国の優位を銀河中に知らしめる。"
-
- casus_belli_cb_ngm_pest_control:0 "環境保全"
- casus_belli_cb_ngm_pest_control_desc:0 "美しい自然に巣くう国家は撃滅され、改心されるべきである。"
- war_goal_wg_ngm_pest_control:0 "環境保全"
- war_goal_wg_ngm_pest_control_desc:0 "開発主義国家を保全主義へと改心させ、生物学的知見を相手に与える。"
- fail_text_wg_ngm_pest_control:0 "相手国は必要な§Y$ethic_developmentalism$§!の志向を採用していない。"
 
 # :0 ""
 # _desc:0 ""
