@@ -3611,3 +3611,341 @@ civic_ngm_producer_consumer_society = {
 		planet_pops_consumer_goods_upkeep_mult = 0.2
 	}
 }
+
+# 国是
+# 1.企業帝国	corporate_empire	(企業、栄望主義or権威主義である)			:交易価値+20%、外交発言力+10%、25Popあたり事務員+1		:銀河百貨店		(全銀河の嗜好品が集まる集合商業施設)						(惑星につき一つ:企業国家の交易価値+10、事務員+3)				:この企業はあらゆる産業に拡大しており、取り扱わない内容はないほど拡大しており、その頂点に一部のエリートが君臨している。
+civic_ngm_corporate_empire = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_authoritarian_or_honorism
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+		authority = {
+			value = auth_corporate
+		}
+	}
+	modifier = {
+		trade_value_mult = 0.2
+		diplo_weight_mult = 0.1
+		job_clerk_per_pop = 0.04
+	}
+	random_weight = {
+		base = 5
+	}
+}
+
+# 2.ハイテク企業	high_tech_company	(企業、狂信物質である)					:研究力+10%、支社1つあたり研究速度+1%				:企業大学校		(経済や経営を学ぶ者の専門大学)							(惑星につき一つ:企業国家の研究算出各々+10、研究者+1)				:この企業は高度な技術を運用した工業製品を取り扱っており、極めて高度な製品はあらゆる産業の礎となっている。
+civic_ngm_high_tech_company = {
+	possible = {
+		ethics = {
+			value = ethic_fanatic_materialist
+		}
+		authority = {
+			value = auth_corporate
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		country_physics_research_produces_mult = 0.1
+		country_society_research_produces_mult = 0.1
+		country_engineering_research_produces_mult = 0.1
+	}
+}
+
+# 3.重厚長大産業	smokestack_industry	(企業、開発主義である)					:合金生産量+10%、消費財生産量+10%、造船速度+5%			:星間工場群		(惑星規模に広がるコンビナート群)						(惑星につき一つ:企業国家の合金+5、企業国家の消費財+5、職人+1、冶金技師+1)	:この企業は重化学工業を中心とした大規模な工業製品を取り扱っており、その工場が惑星表面を覆うほどの工業化が進んでいる。
+civic_ngm_smokestack_industry = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_developmentalism
+				value = ethic_developmentalism
+				value = ethic_fanatic_developmentalism
+			}
+		}
+		authority = {
+			value = auth_corporate
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		country_alloys_produces_mult = 0.1
+		country_consumer_goods_produces_mult = 0.1
+		starbase_shipyard_build_speed_mult = 0.05
+	}
+}
+
+# 4.世襲役員	hereditary_officers	(企業、栄望主義である)					:使節+1、統合力+10%、安定度+5					:銀河サロン		(上流階級の者が集う社交界)							(惑星につき一つ:企業国家の統合力+5、企業国家の外交発言力+10、豪商+1、役員+1)	:この企業は創業家を中心に会社に多大な貢献を行った社員一家を特別役員として扱っており、企業内の団結や対外交渉などに活躍している、一種の君主制国家の様相を呈している。
+civic_ngm_hereditary_officers = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+		authority = {
+			value = auth_corporate
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		envoys_add = 1
+		country_unity_produces_mult = 0.1
+		planet_stability_add = 5
+	}
+}
+
+# 5.財閥	zaibatsu		(企業、権威主義である)					:管理許容量+20%、交易価値+10%					:M&Aセンター		(他社を評価、買収することを目的とした企業)					(惑星につき一つ:惑星の交易価値+30%、豪商+1、事務員+2)				:この企業は一部の持株会社が多くの企業を支配する形をとっており、ごく少数の役員やエリートによる決定が絶対視されている。
+civic_ngm_zaibatsu = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_authoritarian
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
+		}
+		authority = {
+			value = auth_corporate
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		country_admin_cap_mult = 0.2
+		trade_value_mult = 0.1
+	}
+}
+
+# 6.金融企業	financial_enterprises	(企業、資本主義、実利主義である。開発主義ではない)	:エネルギー+10%、交易価値+20%					:銀河銀行		(銀河規模に広がる投資、貯蓄、資産運用を行う銀行)				(惑星につき一つ:企業国家のエネルギー+10、惑星の交易価値+5%、事務員+3)		:この企業はコンサルティングや債権、電子通貨、金融商品等を取り扱うことに長けており、それらの産業が中心となって企業が運営されている。
+civic_ngm_financial_enterprises = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_capitalism
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+			}
+			OR = {
+				text = civic_tooltip_utilitarianism
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+			}
+			NOR = {
+				text = civic_tooltip_not_developmentalism
+				value = ethic_developmentalism
+				value = ethic_fanatic_developmentalism
+			}
+		}
+		authority = {
+			value = auth_corporate
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		country_energy_produces_mult = 0.1
+		trade_value_mult = 0.2
+	}
+}
+
+# 7.情報企業	information_company	(企業、物質主義である)					:解読力+5、暗号力+5、交易価値+20%				:星間広告代理店		(情報を加工し、大衆に敷衍しやすい言葉で洗脳を行う企業)				(惑星につき一つ:企業国家の快適度+10、惑星の快適度+5、事務員+3)			:この企業はSNSや広告、システムエンジニアリングなどの目に見えないものを取り扱うことが多く、総じてそれらに対する造詣が深い。
+civic_ngm_information_company = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+		authority = {
+			value = auth_corporate
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		intel_decryption_add = 5
+		intel_encryption_add = 5
+		trade_value_mult = 0.2
+	}
+}
+
+# 8.社会企業	social_enterprise	(企業、資本主義ではない)				:幸福度+10%、安定度+10（奴隷使用不可。社会福祉固定）		:企業病院		(できるだけ安価に高品質な医療や福祉を行うことを目的とした社有の医療機関)	(惑星につき一つ:企業国家の社会学+10、惑星のPop成長速度+5%、医療従事者+1)	:この企業は利益だけではなく社員や顧客の幸福や利益を追求することを目指している。
+civic_ngm_social_enterprise = {
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_capitalism
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+			}
+		}
+		authority = {
+			value = auth_corporate
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		pop_happiness = 0.1
+		planet_stability_add = 10
+	}
+}
+
+# 9.ゼネコン	general_contractor	(企業、開発主義である)					:建築コスト-10%、建築速度-10%、メガエンジニアリングコスト-10%	:惑星規模建築センター	(惑星で何らかの建築が行われる際に重機や物資、人員を提供する企業)		(惑星につき一つ:企業国家の鉱物+20、惑星の区域建造コスト-10%、事務員+2)		:この企業はインフラ建築や材料調達に関しての専門企業で、大規模な建築が行われる際にはこの企業の関与がないことはほとんどない。
+civic_ngm_general_contractor = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_developmentalism
+				value = ethic_developmentalism
+				value = ethic_fanatic_developmentalism
+			}
+		}
+		authority = {
+			value = auth_corporate
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		planet_buildings_cost_mult = -0.1
+		planet_building_build_speed_mult = -0.1
+		megastructure_build_cost_mult = -0.1
+	}
+}
+
+# 10.農業企業	agricultural_company	(企業、環境主義である)					:食料生産量+30%、居住性+10%					:企業農園		(社有の大規模な農園で、惑星特有の農作物取り扱っている。)			(惑星につき一つ:企業国家の食料+20、農民+3)					:この企業は農業を中心としており、自然と共生しつつ農業生産を行うことで環境系企業として存続している。
+civic_ngm_agricultural_company = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_conservationism
+				value = ethic_conservationism
+				value = ethic_fanatic_conservationism
+			}
+		}
+		authority = {
+			value = auth_corporate
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		country_food_produces_mult = 0.3
+		pop_environment_tolerance = 0.1
+	}
+}
+
+# 11.運送企業	shipping_company	(企業)							:交易価値+20%、移民速度+10%、強制移住コス-20%			:社有宇宙港		(物資や旅客を効率的かつ高速に取り扱うための会社専用の宇宙港)			(惑星につき一つ:惑星の交易価値+10、支社の価値+30%、事務員+2)		:この企業は物資等の輸送や運輸、旅客運送により利益を得ており、輸送分野における実績は並ぶものがない。
+civic_ngm_shipping_company = {
+	possible = {
+		authority = {
+			value = auth_corporate
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		trade_value_mult = 0.2
+		planet_immigration_pull_mult = 0.1
+		country_resettlement_cost_mult = -0.2
+	}
+}
+
+# 12.運用会社	operating_company	(企業、資本主義、実利主義である)			:交易価値+10%、エネルギー+10%、統治者幸福度+5%			:惑星信託銀行		(惑星単位で資産や有価証券を運用して利益を追求する企業)				(惑星につき一つ:惑星の交易価値+30%、支社の価値+30%、豪商+1、事務員+3)	:この企業は出資者やクライアントの資産を最大化することを目指しており、倫理観を無視した投資運用を行い、利益を追求する。
+civic_ngm_operating_company = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_capitalism_or_utilitarianism
+				value = ethic_capitalism
+				value = ethic_fanatic_capitalism
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+			}
+		}
+		authority = {
+			value = auth_corporate
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		trade_value_mult = 0.1
+		country_energy_produces_mult = 0.1
+		pop_cat_ruler_happiness = 0.05
+	}
+}
+
+# 13.産業スパイ	industrial_espionage	(企業、実利主義である)					:交易価値+10%、解読力+10、研究力+5%				:企業諜報機関		(自社以外のあらゆる情報を収集し、他者に売却する企業)				(惑星につき一つ:企業帝国の解読力+5、惑星の犯罪度+5、事務員+2)		:この企業は国家や企業の情報を奪い、それを利用してあらゆる利益を獲得している。
+civic_ngm_industrial_espionage = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_utilitarianism
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+			}
+		}
+		authority = {
+			value = auth_corporate
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		trade_value_mult = 0.1
+		intel_decryption_add = 10
+		country_physics_research_produces_mult = 0.1
+		country_society_research_produces_mult = 0.1
+		country_engineering_research_produces_mult = 0.1
+	}
+}
+
+# 14.格付会社	rating_company	(企業、栄望主義である)					:交易価値+10%、外交発言力+10%、統合力+10%			:惑星格付会社		(あらゆるものを格付けし、判断基準を創出する企業)				(惑星につき一つ:企業帝国の統合力+10、惑星の統合力+5%、事務員+2)		:この企業は人物や企業、国家、栄典を各付けし、他者の判断基準を作ることを生業としている。
+civic_ngm_rating_company = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_honorism
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+		authority = {
+			value = auth_corporate
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		trade_value_mult = 0.1
+		diplo_weight_mult = 0.1
+		country_unity_produces_mult = 0.1
+	}
+}

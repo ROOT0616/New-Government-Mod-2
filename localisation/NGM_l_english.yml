@@ -193,6 +193,14 @@
  POP_ATTRACTION_UTILITARIANISM_NEG:0 "§R- £empire£ 帝国の志向が実利主義である§!"
 
 #######################
+#####    起源    ######
+#######################
+
+ origin_ngm_buffer_state:0 "律儀な古代の緩衝国家"
+ origin_ngm_buffer_state_desc:0 "この国が位置する星系はその豊かな立地ゆえに古代においても戦略重要地として奪い合いの戦争が繰り広げられていました。\n古代の国家はこの星系に極々小さな独立緩衝国を築き上げ、統治させることで戦争の危機を脱しました。そうして出来上がった国家は貿易的利益と強力な国際発言力の代償に小さな国土と限られた原料生産を強いられている。\n古代の国家群が滅びた後でも、この国はその伝統を数少ない継承要素として維持しているのである。"
+ origin_tooltip_ngm_buffer_state_effects:0 "1:§G平和主義§!のみ取得可能。\n2:非常に豊かなチョークポイントに位置する星系に生成される。\n3:開始時に遺物§G『古代の盟約』§!を取得する。\n4:拡張に関して極めて大きな制約を課せられる。\n5:市場手数料§G-10%§!、Pop成長率§G+80%§!、\n6:特殊な種族特性を取得する。\n\n初期建築物「永久の宮殿」\n種族特性「古代からの商人」\n"
+
+#######################
 #####    国是    ######
 #######################
 
@@ -647,6 +655,49 @@
 
  civic_ngm_producer_consumer_society:0 "高度生産消費社会"
  civic_ngm_producer_consumer_society_desc:0 "たくさん作り、たくさん使い、たくさん捨てる。"
+
+ civic_ngm_corporate_empire:0 "企業帝国"
+ civic_ngm_corporate_empire_desc:0 "この企業はあらゆる産業に拡大しており、取り扱わない内容はないほど拡大しており、その頂点に一部のエリートが君臨している。"
+
+ civic_ngm_high_tech_company:0 "ハイテク企業"
+ civic_ngm_high_tech_company_desc:0 "この企業は高度な技術を運用した工業製品を取り扱っており、極めて高度な製品はあらゆる産業の礎となっている。"
+
+ civic_ngm_smokestack_industry:0 "重厚長大産業"
+ civic_ngm_smokestack_industry_desc:0 "この企業は重化学工業を中心とした大規模な工業製品を取り扱っており、その工場が惑星表面を覆うほどの工業化が進んでいる。"
+
+ civic_ngm_hereditary_officers:0 "世襲役員"
+ civic_ngm_hereditary_officers_desc:0 "この企業は創業家を中心に会社に多大な貢献を行った社員一家を特別役員として扱っており、企業内の団結や対外交渉などに活躍している、一種の君主制国家の様相を呈している。"
+
+ civic_ngm_zaibatsu:0 "財閥"
+ civic_ngm_zaibatsu_desc:0 "この企業は一部の持株会社が多くの企業を支配する形をとっており、ごく少数の役員やエリートによる決定が絶対視されている。"
+
+ civic_ngm_financial_enterprises:0 "金融企業"
+ civic_ngm_financial_enterprises_desc:0 "この企業はコンサルティングや債権、電子通貨、金融商品等を取り扱うことに長けており、それらの産業が中心となって企業が運営されている。"
+
+ civic_ngm_information_company:0 "情報企業"
+ civic_ngm_information_company_desc:0 "この企業はSNSや広告、システムエンジニアリングなどの目に見えないものを取り扱うことが多く、総じてそれらに対する造詣が深い。"
+
+ civic_ngm_social_enterprise:0 "社会企業"
+ civic_ngm_social_enterprise_desc:0 "この企業は利益だけではなく社員や顧客の幸福や利益を追求することを目指している。"
+
+ civic_ngm_general_contractor:0 "ゼネコン"
+ civic_ngm_general_contractor_desc:0 "この企業はインフラ建築や材料調達に関しての専門企業で、大規模な建築が行われる際にはこの企業の関与がないことはほとんどない。"
+
+ civic_ngm_agricultural_company:0 "農業企業"
+ civic_ngm_agricultural_company_desc:0 "この企業は農業を中心としており、自然と共生しつつ農業生産を行うことで環境系企業として存続している。"
+
+ civic_ngm_shipping_company:0 "運送企業"
+ civic_ngm_shipping_company_desc:0 "この企業は物資等の輸送や運輸、旅客運送により利益を得ており、輸送分野における実績は並ぶものがない。"
+
+ civic_ngm_operating_company:0 "運用会社"
+ civic_ngm_operating_company_desc:0 "この企業は出資者やクライアントの資産を最大化することを目指しており、倫理観を無視した投資運用を行い、利益を追求する。"
+
+ civic_ngm_industrial_espionage:0 "産業スパイ"
+ civic_ngm_industrial_espionage_desc:0 "この企業は国家や企業の情報を奪い、それを利用してあらゆる利益を獲得している。"
+
+ civic_ngm_rating_company:0 "格付会社"
+ civic_ngm_rating_company_desc:0 "この企業は人物や企業、国家、栄典を各付けし、他者の判断基準を作ることを生業としている。"
+
 
 #######################
 #####    政策    ######
@@ -1105,6 +1156,9 @@
  building_bureau_of_ceremonies:0 "儀典局"
  building_bureau_of_ceremonies_desc:0 "式典や栄典を管理し、国家や権力者の権威を守り、敷衍させる役所"
 
+ building_ngm_perpetual_palace:0 "永久の宮殿"
+ building_ngm_perpetual_palace_desc:0 "古代から続くこの地を治める者のための宮殿で、列強の君主や元首が集い交渉を行うことも多かったためか、壮麗な建築でいまだに陰りを見せていない。現在も支配者の宮殿や国際会議場としてだけではなく、政府機関や上流階級の住居として使用されている。"
+
 #######################
 #####    仕事    ######
 #######################
@@ -1336,6 +1390,9 @@
  civic_ngm_money_penalty_50_modifier:0 "刑罰の金銭代替"
  civic_ngm_money_penalty_50_modifier_desc:0 ""
 
+ ngm_determination_to_rebuild:0 "国家再興の決意"
+ ngm_determination_to_rebuild_desc:0 "一度衰退してしまったが、太古から続く我が国は世界でも有数の能力を有しており、それらの能力は国家の再建に費やされるべきである。"
+
  civic_tooltip_ngm_experimental_substance_effects:0 "§Rゲーム開始後の追加削除不可§!\n§Y(ゲーム開始後に追加、削除すると元に戻されます。)\n\n§!首都惑星に各戦略資源特性を1つずつ付与"
 
  civic_tooltip_ngm_war_prosperity_effects:0 "戦時中の鉱物,合金,消費財生産量§G+10%§!\n戦時中の交易価値生産量§G+10%§!\n戦時中の建艦速度§G+10%§!\n非戦時中の鉱物,合金,消費財生産量§R-10%§!\n非戦時中の交易価値生産量§R-10%§!\n非戦時中の建艦速度§R-20%§!"
@@ -1407,6 +1464,8 @@
  suppressed_utilitarianism_desc:0 "§H実利主義§!志向は政府によって抑圧されている"
  promoted_utilitarianism:0 "実利主義を推奨"
  promoted_utilitarianism_desc:0 "§H実利主義§!志向は政府によって推奨されている"
+
+ ngm_ancient_pact:0 "遺物「古代の盟約」"
 
  trait_ngm_knight:0 "騎士道精神"
  trait_ngm_knight_desc:0 "この種族は弱きものを助け、社会正義を全うすべきだという強い信念を有した高潔性を有している。"
@@ -1632,6 +1691,9 @@
 
  trait_ngm_spendthrift:0 "浪費家"
  trait_ngm_spendthrift_desc:0 "この種族は浪費癖があり、交易をうまく行うことができない。"
+
+ trait_ngm_merchant_from_ancient:0 "古代からの商人"
+ trait_ngm_merchant_from_ancient_desc:0 "はるか太古から頭脳労働者として活躍してきたため、創造やデスクワークに適性がある種族。人口過少の防止として太古に繁殖力の増強が図られている。"
 
 #######################
 #####    派閥    ######
@@ -1863,6 +1925,13 @@
  NGM_UC_GC:0 "壮麗な儀式"
  NGM_UC_GC_desc:0 "見る者すべてが魅了される素晴らしい儀式でこの宗教の偉大さを知らしめる。"
  federation_NGM_UC_GC_effect:0 ""
+
+#######################
+#####    遺物    ######
+#######################
+
+ r_ngm_ancient_pact:0 "古代の盟約"
+ r_ngm_ancient_pact_desc:0 "古代の列強間の協定で、緊急時に強力な自衛力を求められたうえで、平時には他国の脅威にならない経済国家であることを求められる条文。所有国は永久にこれを守らなくてはならない。"
 
 ##########################
 #####    戦争目標    ######
