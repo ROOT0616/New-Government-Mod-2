@@ -928,9 +928,9 @@ trait_ngm_elder_non_verbal = {
 	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_energy_produces_mult = -0.1
-		planet_jobs_minerals_produces_mult = -0.1
-		planet_jobs_food_produces_mult = -0.1
+		planet_jobs_physics_research_produces_mult = -0.1
+		planet_jobs_society_research_produces_mult = -0.1
+		planet_jobs_engineering_research_produces_mult = -0.1
 		planet_jobs_unity_produces_mult = -0.05
 		pop_growth_speed = 0.03
 	}
@@ -949,9 +949,9 @@ trait_ngm_elder_non_character = {
 	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_energy_produces_mult = -0.1
-		planet_jobs_minerals_produces_mult = -0.1
-		planet_jobs_food_produces_mult = -0.1
+		planet_jobs_physics_research_produces_mult = -0.1
+		planet_jobs_society_research_produces_mult = -0.1
+		planet_jobs_engineering_research_produces_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -1159,9 +1159,9 @@ trait_ngm_clumsy = {
 	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_energy_produces_mult = -0.05
-		planet_jobs_minerals_produces_mult = -0.05
-		planet_jobs_food_produces_mult = -0.05
+		planet_jobs_physics_research_produces_mult = -0.05
+		planet_jobs_society_research_produces_mult = -0.05
+		planet_jobs_engineering_research_produces_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -1460,9 +1460,9 @@ trait_ngm_stupidity = {
 	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_energy_produces_mult = -0.1
-		planet_jobs_minerals_produces_mult = -0.1
-		planet_jobs_food_produces_mult = -0.1
+		planet_jobs_physics_research_produces_mult = -0.1
+		planet_jobs_society_research_produces_mult = -0.1
+		planet_jobs_engineering_research_produces_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -1488,6 +1488,26 @@ trait_ngm_spendthrift = {
 	}
 }
 
+# 起源用
+# 種族特性「古代からの商人」（はるか太古から頭脳労働者として活躍してきたため、創造やデスクワークに適性がある種族。人口過少の防止として太古に繁殖力の増強が図られている。）
+# 交易価値+30%、住居使用量-30%、Pop成長率+20%。鉱山労働者の生産量-50%、消費財消費量+10%。途中削除、追加不可。強制取得。
+trait_ngm_merchant_from_ancient = {
+	cost = 0
+	initial = no
+	modification = no
+	potential_crossbreeding_chance = 1.0
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		trade_value_mult = 0.3
+		pop_housing_usage_mult = -0.3
+		pop_growth_speed = 0.2
+		planet_jobs_minerals_produces_mult = -0.5
+		planet_pops_consumer_goods_upkeep_mult = 0.1
+	}
+	slave_cost = {
+		energy = 500
+	}
+}
 
 # 以下、対応するポートレートのみ選択可能。
 

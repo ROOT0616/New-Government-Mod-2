@@ -1,0 +1,26 @@
+origin_ngm_buffer_state = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_ngm_buffer_state .dds"
+	picture = GFX_origin_ngm_buffer_state
+	starting_colony = pc_relic
+	habitability_preference = pc_relic
+	preferred_planet_class_neighbor = no
+	potential = {
+		always = yes
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
+	traits = {
+		trait = trait_ngm_merchant_from_ancient
+	}
+	description = "origin_tooltip_ngm_buffer_state_effects"
+	random_weight = {
+		base = 5
+	}
+}

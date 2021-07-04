@@ -20,3 +20,35 @@ building_bureau_of_ceremonies = {
 		job_bureau_of_ceremonies_add = 2
 	}
 }
+# 初期建築物「永久の宮殿」 Perpetual Palace （古代から続くこの地を治める者のための宮殿で、列強の君主や元首が集い交渉を行うことも多かったためか、壮麗な建築でいまだに陰りを見せていない。）
+# 維持費：エネルギー10、消費財5。住居+5、快適度+5、貴族Job+1、行政官+1、紋章官+1、高級参謀+1、事務員+10、建築物Slot+10、
+building_ngm_perpetual_palace = {
+	base_buildtime = @b2_time
+	can_build = no
+	can_demolish = yes
+	position_priority = 0
+	icon = building_palace
+  country_modifier = {
+    pop_growth_speed = 0.8
+		country_trade_fee = -0.1
+  }
+	planet_modifier = {
+    planet_housing_add = 5
+    planet_amenities_add = 5
+    job_noble_add = 1
+    job_administrator_add = 1
+    job_ngm_crest_bearer_add = 1
+    job_ngm_senior_advisor_add = 1
+    job_clerk_add = 10
+    planet_max_buildings_add = 10
+    planet_max_districts_add = 10
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 5
+		}
+	}
+
+}
