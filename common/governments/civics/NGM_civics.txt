@@ -730,7 +730,6 @@ civic_ngm_space_security_headquarters = {
 	}
 }
 
-# まだ
 # 乱脈的出生率 random_birth_rate		(この国では出生率がコントロールできていない。)(ゲーム開始後の追加削除不可)Pop成長率+10%、幸福度-5%、住居使用量+5%
 civic_ngm_random_birth_rate = {
 	random_weight = {
@@ -768,7 +767,6 @@ civic_ngm_virtual_society = {
 	}
 }
 
-# まだ
 # 健康的習慣 healthy_habits			(この国の国民は運動と食事、適度な日向ぼっこにより健康的な生活を送っている。)(ゲーム開始後の追加削除不可)リーダー寿命+10年、幸福度+5%
 civic_ngm_healthy_habits = {
 	random_weight = {
@@ -1483,7 +1481,6 @@ civic_ngm_cosmic_scale_liberation = {
 	}
 }
 
-# まだ
 # 究極の思想的自由 ultimate_freedom_of_thought	 (この社会では他者に対する侵害の蓋然性がある思想を除いてあらゆる思想が許容されている。)							(狂信的平等)(ゲーム開始後の追加削除不可)				管理許容量+30%、安定度-10、統治志向魅力-30%
 civic_ngm_ultimate_freedom_of_thought = {
 	possible = {
@@ -1831,7 +1828,6 @@ civic_ngm_elitism = {
 	}
 }
 
-# まだ
 # 異種族解剖	dissection			(この国家は自らの生物学的知見のために多種族を解剖することや実験を厭わず、顰蹙をかっている。)	(排他、物質or実利)	研究力+10%、異種族は強制で奴隷化、信用値-100
 civic_ngm_dissection = {
 	possible = {
@@ -1940,7 +1936,6 @@ civic_ngm_military_industrial_complex = {
 	}
 }
 
-# まだ
 # 戦争経済 	war_prosperity	 		(この社会の経済は極めて脆弱であるが、戦争が始まると総動員の名の下にあらゆる経済が活性化する。)			(狂信軍国)（中立ではない）		戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+10%、建艦速度+10%。非戦争時の鉱物、合金、交易価値、消費財生産量-20%、建艦速度+20%
 civic_ngm_war_prosperity = {
 	possible = {
@@ -1984,7 +1979,6 @@ civic_ngm_military_regime = {
 	}
 }
 
-# まだ
 # 闘争のための闘争 The_Struggle_for_Struggle	(平和とは戦争と戦争との休憩期間にすぎない。)									(狂信軍国)(ゲーム開始後の追加削除不可)		戦争疲弊-20%、戦時中の合金生産量+10%、軍艦建造コスト-5%
 civic_ngm_The_Struggle_for_Struggle = {
 	possible = {
@@ -2156,7 +2150,6 @@ civic_ngm_good_faith_negotiator = {
 }
 
 # 〇精神主義
-# まだ
 # 機械信仰		mechanical_faith(この国の信仰は創作物に向けられており、その究極であるロボットは神と我々を繋ぐ存在であると考えられている。)(精神、開発)(ゲーム開始後の追加削除不可)	精神主義派閥がロボットに怒らなくなる。工学研究+10%、ロボット建造速度+10%、ロボット維持費+5%、ロボットを非合法化できない。ロボットの人権を市民権に固定。
 civic_ngm_mechanical_faith = {
 	possible = {
@@ -2352,7 +2345,6 @@ civic_ngm_longing_for_the_future = {
 	}
 }
 
-# まだ
 # 実験的物質の発見	experimental_substance(この国ではかつてエネルギー問題を解決するために様々な実験を行った。結果、惑星内にさまざまな戦略物資が生成された。)(物質、開発)(ゲーム開始後の追加削除不可)				首都惑星の各戦略資源特性を1つずつ付与
 civic_ngm_experimental_substance = {
 	possible = {
@@ -2530,7 +2522,6 @@ civic_ngm_peoples_army = {
 	}
 }
 
-# まだ
 # 経済的原始主義	economic_primitivism(この国の経済はほとんど発展していないか、退化しており極めて原始的で素朴な経済状況である。)(狂社会)(ゲーム開始後の追加削除不可)	職業によるエネルギーと交易価値-20%、鉱物と農作物+20%、幸福度+20%、消費財消費-50%、市場手数料+30%
 civic_ngm_economic_primitivism = {
 	possible = {
@@ -2732,7 +2723,6 @@ civic_ngm_agriculture = {
 	}
 }
 
-# まだ
 # 究極の規制緩和	deregulation(この国に経済的規制はほとんど存在せず、自由に各々が活動している。)		(狂資本)(ゲーム開始後の追加削除不可)		専門家出力+10%、流入圧力+10%、犯罪度+20、犯罪度+15%、労働者幸福度-10%、安定度+10
 civic_ngm_deregulation = {
 	possible = {
@@ -2881,7 +2871,6 @@ civic_ngm_smile = {
 	}
 }
 
-# まだ
 # 国際的黒幕		mastermind(さあ、我が掌で踊れ。すべては我らの思いのままに......)(狂介入)(ゲーム開始後の追加削除不可)	使節+1、暗号力+5、解読力+5、外交発言力+10%、信用値-30
 civic_ngm_mastermind = {
 	possible = {
@@ -2902,7 +2891,6 @@ civic_ngm_mastermind = {
 	}
 }
 
-# まだ
 # 〇中立主義
 # 栄光ある孤立		glorious_isolation(我が国が孤立しているのではなく、我が国から世界が孤立しているのである。)(中立)(ゲーム開始後の追加削除不可)		安定度+5、宇宙軍許容量+20
 civic_ngm_glorious_isolation = {
@@ -3141,7 +3129,6 @@ civic_ngm_planetary_garden = {
 	}
 }
 
-# まだ
 # 絶滅防止法		breakdown_prevention_method(この国において、絶滅ということは存在せず、すべての種は保存される。)(狂保全)(ゲーム開始後の追加削除不可)	社会学研究+20%、統合力+10%、消費財消費+10%、
 civic_ngm_breakdown_prevention_method = {
 	possible = {
@@ -3208,7 +3195,6 @@ civic_ngm_grand_monument = {
 	}
 }
 
-# まだ
 # 破壊掘削		destructive_digging(惑星を破壊すれば鉱物ってとれるんじゃないかな？)(狂開発)(ゲーム開始後の追加削除不可)					居住性-10%、鉱物生産+30%、粉末生産量+20%
 civic_ngm_destructive_digging = {
 	possible = {
@@ -3227,7 +3213,6 @@ civic_ngm_destructive_digging = {
 	}
 }
 
-# まだ
 # 不可逆的な工業化	irreversible_industrialization(工業化を進めすぎた結果として惑星環境は不可逆的なまでに破壊された（と思い込んでいる）。)(開発)(ゲーム開始後の追加削除不可)							居住性-5%、合金生産量+10%、消費財生産+10%
 civic_ngm_irreversible_industrialization = {
 	possible = {
