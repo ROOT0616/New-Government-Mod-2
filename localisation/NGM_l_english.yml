@@ -198,7 +198,7 @@
 
  origin_ngm_buffer_state:0 "律儀な古代の緩衝国家"
  origin_ngm_buffer_state_desc:0 "この国が位置する星系はその豊かな立地ゆえに古代においても戦略重要地として奪い合いの戦争が繰り広げられていました。\n古代の国家はこの星系に極々小さな独立緩衝国を築き上げ、統治させることで戦争の危機を脱しました。そうして出来上がった国家は貿易的利益と強力な国際発言力の代償に小さな国土と限られた原料生産を強いられている。\n古代の国家群が滅びた後でも、この国はその伝統を数少ない継承要素として維持しているのである。"
- origin_tooltip_ngm_buffer_state_effects:0 "1:§G平和主義§!のみ取得可能。\n2:非常に豊かなチョークポイントに位置する星系に生成される。\n3:開始時に遺物§G『古代の盟約』§!を取得する。\n4:拡張に関して極めて大きな制約を課せられる。\n5:市場手数料§G-10%§!、Pop成長率§G+100%§!、\n6:特殊な種族特性を取得する。\n\n初期建築物「永久の宮殿」\n種族特性「古代からの商人」\n"
+ origin_tooltip_ngm_buffer_state_effects:0 "-非常に豊かなチョークポイントに位置する星系に生成される。\n-開始時に遺物§Y『古代の盟約』§!を取得する。\n-拡張に関して極めて大きな制約を課せられる。\n-市場手数料§G-10%§!、Pop成長率§G+100%§!、\n-特殊な種族特性を取得する。\n\n初期建築物§Y「永久の宮殿」§!\n種族特性§Y「古代からの商人」§!\n"
 
 #######################
 #####    国是    ######
@@ -1830,35 +1830,35 @@
 
  NGM_CEPA_CTOCIDTP:0 "防疫関税条約"
  NGM_CEPA_CTOCIDTP_desc:0 "国家間の交易には関税と防疫が問題として存在しており、そういった問題は共同的に解決されるべきである。"
- federation_NGM_CEPA_CTOCIDTP_effect:0 "エネルギー算出-5%、交易価値+10%、無償の移民協定"
+ federation_NGM_CEPA_CTOCIDTP_effect:0 "エネルギー算出§G-5%§!、交易価値§G+10%§!、§Y無償の移民協定§!"
 
  NGM_CEPA_EMNO:0 "多国間報道機関の設立"
  NGM_CEPA_EMNO_desc:0 "国際的な中立的報道機関を設立することにより市民に対して安定的な情報を提供する。"
- federation_NGM_CEPA_EMNO_effect:0 "統治志向魅力-5%、幸福度+5%"
+ federation_NGM_CEPA_EMNO_effect:0 "統治志向魅力§R-5%§!、幸福度§G+5%§!"
 
  NGM_CEPA_CTC:0 "犯罪者取扱条約"
  NGM_CEPA_CTC_desc:0 "銀河の安定的な秩序のために、他国においても犯罪を犯した者が入国した際には共同で対処する。"
- federation_NGM_CEPA_CTC_effect:0 "犯罪度-10%、交易価値+5%"
+ federation_NGM_CEPA_CTC_effect:0 "犯罪度§G-10%、交易価値§G+5%§!"
 
  NGM_CEPA_IPT:0 "知的財産保護条約"
  NGM_CEPA_IPT_desc:0 "目に見えない財産である知的財産の保護は多国間で保護することにより初めてその意義が生まれるといっても過言ではない。"
- federation_NGM_CEPA_IPT_effect:0 "統合力+5%、研究力+5%"
+ federation_NGM_CEPA_IPT_effect:0 "統合力§G+5%§!、研究力§G+5%§!"
 
  NGM_CEPA_ERTRSB:0 "域内交易路保安局の成立"
  NGM_CEPA_ERTRSB_desc:0 "多国間交易を行うことで交易路に不安が生じる。それに対処するために保安機関を設立するべきである。"
- federation_NGM_CEPA_ERTRSB_effect:0 "交易路保護値+5"
+ federation_NGM_CEPA_ERTRSB_effect:0 "交易路保護値§G+5§!"
 
  NGM_CEPA_ERESB:0 "域内職業安定局の設立"
  NGM_CEPA_ERESB_desc:0 "域内では労働力と職場のバランスが保たれており、過剰供給が発生しないように調整が行われている。"
- federation_NGM_CEPA_ERESB_effect:0 "移住によるPOPの流入+10%、Pop成長速度+5%"
+ federation_NGM_CEPA_ERESB_effect:0 "移住によるPOPの流入§G+10%§!、Pop成長速度§G+5%§!"
 
  NGM_CEPA_ECMO:0 "共通市場事務所の設立"
  NGM_CEPA_ECMO_desc:0 "銀河市場に対して共通の代表事務所を設立することにより、事務手続きや交渉をより円滑化させることができる。"
- federation_NGM_CEPA_ECMO_effect:0 "市場手数料-10%、交易価値+10%"
+ federation_NGM_CEPA_ECMO_effect:0 "市場手数料§G-10%§!、交易価値§G+10%§!"
 
  NGM_CEPA_EGCC:0 "銀河建設公社の設立"
  NGM_CEPA_EGCC_desc:0 "銀河規模のインフラ整備と資材の調達は多国間で設立された建設公社が担うことでコストを下げることができる。"
- federation_NGM_CEPA_EGCC_effect:0 "建設コスト-10%、区域建造コスト-10%"
+ federation_NGM_CEPA_EGCC_effect:0 "建設コスト§G-10%§!、区域建造コスト§G-10%§!"
 
  NGM_PU_BA:0 "権威への平伏"
  NGM_PU_BA_desc:0 "主君は絶対であり、裏切りは許されない。"
