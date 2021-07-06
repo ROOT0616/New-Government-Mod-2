@@ -2070,10 +2070,17 @@ country_event = {
 			sector = {
 				assign_leader = event_target:ngm_buffer_gov
 			}
-			while = {
-				count = 15
-				create_pop = {
-					species = owner_main_species
+			if = {
+				limit = {
+					owner = {
+						is_ai = yes
+					}
+				}
+				while = {
+					count = 15
+					create_pop = {
+						species = owner_main_species
+					}
 				}
 			}
 			add_deposit = d_fungal_forest

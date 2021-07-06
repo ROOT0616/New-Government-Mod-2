@@ -198,7 +198,7 @@
 
  origin_ngm_buffer_state:0 "律儀な古代の緩衝国家"
  origin_ngm_buffer_state_desc:0 "この国が位置する星系はその豊かな立地ゆえに古代においても戦略重要地として奪い合いの戦争が繰り広げられていました。\n古代の国家はこの星系に極々小さな独立緩衝国を築き上げ、統治させることで戦争の危機を脱しました。そうして出来上がった国家は貿易的利益と強力な国際発言力の代償に小さな国土と限られた原料生産を強いられている。\n古代の国家群が滅びた後でも、この国はその伝統を数少ない継承要素として維持しているのである。"
- origin_tooltip_ngm_buffer_state_effects:0 "1:§G平和主義§!のみ取得可能。\n2:非常に豊かなチョークポイントに位置する星系に生成される。\n3:開始時に遺物§G『古代の盟約』§!を取得する。\n4:拡張に関して極めて大きな制約を課せられる。\n5:市場手数料§G-10%§!、Pop成長率§G+80%§!、\n6:特殊な種族特性を取得する。\n\n初期建築物「永久の宮殿」\n種族特性「古代からの商人」\n"
+ origin_tooltip_ngm_buffer_state_effects:0 "1:§G平和主義§!のみ取得可能。\n2:非常に豊かなチョークポイントに位置する星系に生成される。\n3:開始時に遺物§G『古代の盟約』§!を取得する。\n4:拡張に関して極めて大きな制約を課せられる。\n5:市場手数料§G-10%§!、Pop成長率§G+100%§!、\n6:特殊な種族特性を取得する。\n\n初期建築物「永久の宮殿」\n種族特性「古代からの商人」\n"
 
 #######################
 #####    国是    ######
@@ -698,7 +698,6 @@
  civic_ngm_rating_company:0 "格付会社"
  civic_ngm_rating_company_desc:0 "この企業は人物や企業、国家、栄典を各付けし、他者の判断基準を作ることを生業としている。"
 
-
 #######################
 #####    政策    ######
 #######################
@@ -1159,6 +1158,48 @@
  building_ngm_perpetual_palace:0 "永久の宮殿"
  building_ngm_perpetual_palace_desc:0 "古代から続くこの地を治める者のための宮殿で、列強の君主や元首が集い交渉を行うことも多かったためか、壮麗な建築でいまだに陰りを見せていない。現在も支配者の宮殿や国際会議場としてだけではなく、政府機関や上流階級の住居として使用されている。"
 
+ building_ngm_ginga_department_store:0 "銀河百貨店"
+ building_ngm_ginga_department_store_desc:0 "全銀河の嗜好品が集まる集合商業施設"
+
+ building_ngm_business_school:0 "企業大学校"
+ building_ngm_business_school_desc:0 "経済や経営を学ぶ者の専門大学"
+
+ building_ngm_star_workshop:0 "星間工場群"
+ building_ngm_star_workshop_desc:0 "惑星規模に広がるコンビナート群"
+
+ building_ngm_galaxy_salon:0 "銀河サロン"
+ building_ngm_galaxy_salon_desc:0 "上流階級の者が集う社交界"
+
+ building_ngm_m_a_center:0 "M&Aセンター"
+ building_ngm_m_a_center_desc:0 "他社を評価、買収することを目的とした企業"
+
+ building_ngm_galactic_bank:0 "銀河銀行"
+ building_ngm_galactic_bank_desc:0 "銀河規模に広がる投資、貯蓄、資産運用を行う銀行"
+
+ building_ngm_IAA:0 "星間広告代理店"
+ building_ngm_IAA_desc:0 "情報を加工し、大衆に敷衍しやすい言葉で洗脳を行う企業"
+
+ building_ngm_corporate_hospital:0 "企業病院"
+ building_ngm_corporate_hospital_desc:0 "できるだけ安価に高品質な医療や福祉を行うことを目的とした社有の医療機関"
+
+ building_ngm_planetary_scale_building_center:0 "惑星規模建築センター"
+ building_ngm_planetary_scale_building_center_desc:0 "惑星で何らかの建築が行われる際に重機や物資、人員を提供する企業"
+
+ building_ngm_corporate_plantation:0 "企業農園"
+ building_ngm_corporate_plantation_desc:0 "社有の大規模な農園で、惑星特有の農作物取り扱っている。"
+
+ building_ngm_society_cosmic_port:0 "社有宇宙港"
+ building_ngm_society_cosmic_port_desc:0 "物資や旅客を効率的かつ高速に取り扱うための会社専用の宇宙港"
+
+ building_ngm_planet_trust_bank:0 "惑星信託銀行"
+ building_ngm_planet_trust_bank_desc:0 "惑星単位で資産や有価証券を運用して利益を追求する企業"
+
+ building_ngm_corporate_espionage:0 "企業諜報機関"
+ building_ngm_corporate_espionage_desc:0 "自社以外のあらゆる情報を収集し、他者に売却する企業"
+
+ building_ngm_planet_rating_agency:0 "惑星格付会社"
+ building_ngm_planet_rating_agency_desc:0 "あらゆるものを格付けし、判断基準を創出する企業"
+
 #######################
 #####    仕事    ######
 #######################
@@ -1418,6 +1459,7 @@
  mod_country_sr_zro_produces_mult:0 "月間 $sr_zro$"
  mod_country_sr_dark_matter_produces_mult:0 "月間 $sr_living_metal$"
  mod_country_nanites_produces_mult:0 "月間 $nanites$"
+ mod_starbase_outpost_alloys_cost_mult:0 "星系基地建設の合金コスト"
  mod_shipsize_starbase_outpost_hull_mult:0 "前哨地建造船体値"
  mod_shipsize_starbase_starport_hull_mult:0 "星系港建造船体値"
  mod_shipsize_starbase_starhold_hull_mult:0 "星系軍港建造船体値"
@@ -1788,143 +1830,146 @@
 
  NGM_CEPA_CTOCIDTP:0 "防疫関税条約"
  NGM_CEPA_CTOCIDTP_desc:0 "国家間の交易には関税と防疫が問題として存在しており、そういった問題は共同的に解決されるべきである。"
- federation_NGM_CEPA_CTOCIDTP_effect:0 ""
+ federation_NGM_CEPA_CTOCIDTP_effect:0 "エネルギー算出-5%、交易価値+10%、無償の移民協定"
 
  NGM_CEPA_EMNO:0 "多国間報道機関の設立"
  NGM_CEPA_EMNO_desc:0 "国際的な中立的報道機関を設立することにより市民に対して安定的な情報を提供する。"
- federation_NGM_CEPA_EMNO_effect:0 ""
+ federation_NGM_CEPA_EMNO_effect:0 "統治志向魅力-5%、幸福度+5%"
 
  NGM_CEPA_CTC:0 "犯罪者取扱条約"
  NGM_CEPA_CTC_desc:0 "銀河の安定的な秩序のために、他国においても犯罪を犯した者が入国した際には共同で対処する。"
- federation_NGM_CEPA_CTC_effect:0 ""
+ federation_NGM_CEPA_CTC_effect:0 "犯罪度-10%、交易価値+5%"
 
  NGM_CEPA_IPT:0 "知的財産保護条約"
  NGM_CEPA_IPT_desc:0 "目に見えない財産である知的財産の保護は多国間で保護することにより初めてその意義が生まれるといっても過言ではない。"
- federation_NGM_CEPA_IPT_effect:0 ""
+ federation_NGM_CEPA_IPT_effect:0 "統合力+5%、研究力+5%"
 
  NGM_CEPA_ERTRSB:0 "域内交易路保安局の成立"
  NGM_CEPA_ERTRSB_desc:0 "多国間交易を行うことで交易路に不安が生じる。それに対処するために保安機関を設立するべきである。"
- federation_NGM_CEPA_ERTRSB_effect:0 ""
+ federation_NGM_CEPA_ERTRSB_effect:0 "交易路保護値+5"
 
  NGM_CEPA_ERESB:0 "域内職業安定局の設立"
  NGM_CEPA_ERESB_desc:0 "域内では労働力と職場のバランスが保たれており、過剰供給が発生しないように調整が行われている。"
- federation_NGM_CEPA_ERESB_effect:0 ""
+ federation_NGM_CEPA_ERESB_effect:0 "移住によるPOPの流入+10%、Pop成長速度+5%"
 
  NGM_CEPA_ECMO:0 "共通市場事務所の設立"
  NGM_CEPA_ECMO_desc:0 "銀河市場に対して共通の代表事務所を設立することにより、事務手続きや交渉をより円滑化させることができる。"
- federation_NGM_CEPA_ECMO_effect:0 ""
+ federation_NGM_CEPA_ECMO_effect:0 "市場手数料-10%、交易価値+10%"
 
  NGM_CEPA_EGCC:0 "銀河建設公社の設立"
  NGM_CEPA_EGCC_desc:0 "銀河規模のインフラ整備と資材の調達は多国間で設立された建設公社が担うことでコストを下げることができる。"
- federation_NGM_CEPA_EGCC_effect:0 ""
+ federation_NGM_CEPA_EGCC_effect:0 "建設コスト-10%、区域建造コスト-10%"
 
  NGM_PU_BA:0 "権威への平伏"
  NGM_PU_BA_desc:0 "主君は絶対であり、裏切りは許されない。"
- federation_NGM_PU_BA_effect:0 ""
+ federation_NGM_PU_BA_effect:0 "権威主義志向の魅力+20%"
 
  NGM_PU_RM:0 "君主への敬服"
  NGM_PU_RM_desc:0 "主君は偉大であり、従属は喜びである。"
- federation_NGM_PU_RM_effect:0 ""
+ federation_NGM_PU_RM_effect:0 "安定度+5"
 
  NGM_PU_TRG:0 "栄光への道"
  NGM_PU_TRG_desc:0 "我々の前には永遠の繁栄に向かう道が存在し、その道を歩み続けるのだ"
- federation_NGM_PU_TRG_effect:0 ""
+ federation_NGM_PU_TRG_effect:0 "地上軍ダメージ+10%"
 
  NGM_PU_patronage:0 "パトロネージ"
  NGM_PU_patronage_desc:0 "力のあるものはその力を適切に扱い、文化的発展を後援するべきである。"
- federation_NGM_PU_patronage_effect:0 ""
+ federation_NGM_PU_patronage_effect:0 "統合力+10%"
 
  NGM_PU_TPP:0 "特権階級のプライド"
  NGM_PU_TPP_desc:0 "特権階級たるもの、他者に対しては高潔で有能であり続けなければならない。"
- federation_NGM_PU_TPP_effect:0 ""
+ federation_NGM_PU_TPP_effect:0 "初期リーダー経験値+200、経験値獲得+10%"
 
  NGM_PU_NM:0 "高貴なる使節団"
  NGM_PU_NM_desc:0 "勲章や栄典にまみれた煌びやかな使節団は、見るものを圧倒する。"
- federation_NGM_PU_NM_effect:0 ""
+ federation_NGM_PU_NM_effect:0 "使節+1"
 
  MGN_PU_vassalage:0 "属国の賦役"
  MGN_PU_vassalage_desc:0 "宗主国を豊かにするために臣下は全力を尽くして奉仕しなければならない。"
- federation_NGM_PU_vassalage_effect:0 ""
+ federation_NGM_PU_vassalage_effect:0 "建築コスト-10%、建築スロット+1"
 
  NGM_PU_CT:0 "称号の創設"
  NGM_PU_CT_desc:0 "貴族称号を創設することで、支配階級を懐柔することができる。"
- federation_NGM_PU_CT_effect:0 ""
+ federation_NGM_PU_CT_effect:0 "統治者幸福度+20%"
 
  NGM_PU_EP:0 "宮中の拡大"
  NGM_PU_EP_desc:0 "君主を支える宮中は拡大され、魑魅魍魎がはびこる政権中枢部が構築される。"
- federation_NGM_PU_EP_effect:0 ""
+ federation_NGM_PU_EP_effect:0 "影響力+1"
 
  NGM_PU_CPKM:0 "主要省庁の兼務"
  NGM_PU_CPKM_desc:0 "各国の主要な省庁は統合され、効率的に運用されるべきである。"
- federation_NGM_PU_CPKM_effect:0 ""
+ federation_NGM_PU_CPKM_effect:0 "布告許容量+1"
  
  NGM_PU_king_among_kings:0 "王の中の王"
  NGM_PU_king_among_kings_desc:0 "この連合の君主は偉大であり、その威容は、まさに王の中の王と名乗るにふさわしい。"
- federation_NGM_PU_king_among_kings_effect:0 ""
+ federation_NGM_PU_king_among_kings_effect:0 "影響力+1"
 
  NGM_PS_SM:0 "首脳会議"
  NGM_PS_SM_desc:0 "各国の首脳が直接会談することにより、効率的な意思決定が行われる。"
- federation_NGM_PS_SM_effect:0 ""
+ federation_NGM_PS_SM_effect:0 "志向の多様さからの団結度ペナルティ-75%、外交発言力+10%"
 
  NGM_PS_TA:0 "観光協定"
  NGM_PS_TA_desc:0 "各国の観光客がお互いに訪れることにより経済的利益が生み出される。"
- federation_NGM_PS_TA_effect:0 ""
+ federation_NGM_PS_TA_effect:0 "居住性+5%"
 
  NGM_PS_ET:0 "犯罪者引き渡し条約"
  NGM_PS_ET_desc:0 "各国の犯罪者は、域内のどこに逃げようとすぐさま逮捕される。"
- federation_NGM_PS_ET_effect:0 ""
+ federation_NGM_PS_ET_effect:0 "犯罪度-10%、交易保護値+3"
 
  NGM_PS_EGFRC:0 "銀河連邦常駐委員会の設置"
  NGM_PS_EGFRC_desc:0 "銀河連邦における円滑な交渉を行うために常駐で討議と親善を広める委員を各国が組織する必要がある。"
- federation_NGM_PS_EGFRC_effect:0 ""
+ federation_NGM_PS_EGFRC_effect:0 "外交発言力+10%、使節+1"
 
  NGM_PS_EMNO:0 "多国間報道機関の設立"
  NGM_PS_EMNO_desc:0 ""
- federation_NGM_PS_EMNO_effect:0 ""
+ federation_NGM_PS_EMNO_effect:0 "統治志向魅力-5%、幸福度+5%"
 
  NGM_PS_PA:0 "強力な弁論術"
  NGM_PS_PA_desc:0 "勇猛で説得力のある弁舌は首脳会談を率いる際には非常に有用である。"
- federation_NGM_PS_PA_effect:0 ""
+ federation_NGM_PS_PA_effect:0 "外交発言力+10%"
 
  NGM_PS_SL:0 "強力なリーダーシップ"
  NGM_PS_SL_desc:0 "強力なリーダーが首脳会談を率いることで、円滑に物事の決定がなされる。"
- federation_NGM_PS_SL_effect:0 ""
+ federation_NGM_PS_SL_effect:0 "危機の発生中、外交発言力+20%"
 
  NGM_UC_encyclopedia:0 "統一教典"
  NGM_UC_encyclopedia_desc:0 "各国に分かれた些末な教義の違いを修正するために統一の教典を作成すつ。"
- federation_NGM_UC_encyclopedia_effect:0 ""
+ federation_NGM_UC_encyclopedia_effect:0 "精神主義魅力+30%、志向転向度+50%、研究力-5%"
 
  NGM_UC_EI:0 "内面への拡充"
  NGM_UC_EI_desc:0 "自己を見つめ、より深きを知ることでより高みへと昇る。"
- federation_NGM_UC_EI_effect:0 ""
+ federation_NGM_UC_EI_effect:0 "住居使用量-10%、快適度使用量-10%"
 
  NGM_UC_GCH:0 "銀河異端裁判所"
  NGM_UC_GCH_desc:0 "異端死すべし慈悲は無し。"
- federation_NGM_UC_GCH_effect:0 ""
+ federation_NGM_UC_GCH_effect:0 "犯罪度-15%"
 
  NGM_UC_CC:0 "枢機卿団"
  NGM_UC_CC_desc:0 "教義に熟知し、徳の高い聖職者は枢機卿として教団を率いていく。"
- federation_NGM_UC_CC_effect:0 ""
+ federation_NGM_UC_CC_effect:0 "統合力+10%"
 
  NGM_UC_VS:0 "武僧督戦隊"
  NGM_UC_VS_desc:0 "聖戦を戦うにあたり、神に背を向けることは許されない。"
- federation_NGM_UC_VS_effect:0 ""
+ federation_NGM_UC_VS_effect:0 "地上軍士気+10%"
 
  NGM_UC_GCO:0 "銀河教会組織"
  NGM_UC_GCO_desc:0 "銀河規模の教団組織を維持するためには高度な官僚制と資金体制が必要である。"
- federation_NGM_UC_GCO_effect:0 ""
+ federation_NGM_UC_GCO_effect:0 "権威主義魅力+30%"
 
  NGM_UC_EGUR:0 "銀河宗教大学の設立"
  NGM_UC_EGUR_desc:0 "銀河規模で教義を深めるために集中して教義を伝える大学を設立する。"
- federation_NGM_UC_EGUR_effect:0 ""
+ federation_NGM_UC_EGUR_effect:0 "リーダーレベル上限+1"
 
  NGM_UC_CP:0 "巡礼団の強制"
  NGM_UC_CP_desc:0 "民衆は各国の聖地を巡礼しなければならず、そのことで少しの富を教団は得ることができる。"
- federation_NGM_UC_CP_effect:0 ""
+ federation_NGM_UC_CP_effect:0 "Pop移住速度+30%"
 
  NGM_UC_GC:0 "壮麗な儀式"
  NGM_UC_GC_desc:0 "見る者すべてが魅了される素晴らしい儀式でこの宗教の偉大さを知らしめる。"
- federation_NGM_UC_GC_effect:0 ""
+ federation_NGM_UC_GC_effect:0 "各惑星大祭司職業枠+1、司祭職業枠+3"
+
+ ngm_migration_yes:0 "$free_migration_yes$"
+ ngm_migration_yes_desc:0 "$free_migration_yes_desc$"
 
 #######################
 #####    遺物    ######

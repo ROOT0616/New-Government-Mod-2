@@ -64,9 +64,10 @@ NGM_CEPA_federation = {
 		set_federation_law = declare_war_unanimous_vote
 		set_federation_law = invite_members_unanimous_vote
 		set_federation_law = kick_members_majority_vote
-		set_federation_law = free_migration_no
+		set_federation_law = ngm_migration_yes
 		set_federation_law = treaties_separate_yes
 		set_federation_flag = enable_federation_cooldowns
+		set_federation_flag = federation_CEPA_flag
 	}
 	ai_weight = {
 		base = 0

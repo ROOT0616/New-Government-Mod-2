@@ -2378,6 +2378,7 @@ guiTypes = {
 			spriteType = "GFX_ethics_egalitarian"
 			position = { x = 125 y = 104 }
 			clicksound = interface
+			# orientation = center_up
 		}
 		
 
@@ -2515,7 +2516,7 @@ guiTypes = {
 		}
 		
 		buttonType = {
-		name = "ethic_fanatic_militarist"
+			name = "ethic_fanatic_militarist"
 			spriteType = "GFX_ethics_fanatic_militarist"
 			position = { x = 199.6 y = 104.4 }
 			clicksound = interface

@@ -3858,7 +3858,7 @@ civic_ngm_agricultural_company = {
 }
 
 # 11.運送企業	shipping_company	(企業)							:交易価値+20%、移民速度+10%、強制移住コス-20%			:社有宇宙港		(物資や旅客を効率的かつ高速に取り扱うための会社専用の宇宙港)			(惑星につき一つ:惑星の交易価値+10、支社の価値+30%、事務員+2)		:この企業は物資等の輸送や運輸、旅客運送により利益を得ており、輸送分野における実績は並ぶものがない。
-civic_ngm_shipping_company = {
+civic_ngm_agricultural_company = {
 	possible = {
 		authority = {
 			value = auth_corporate

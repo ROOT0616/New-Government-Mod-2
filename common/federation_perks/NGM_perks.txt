@@ -14,7 +14,7 @@
 
 ### Passive, starting bonuses
 # 包括的経済連協定
-# 防疫関税条約	Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment	(エネルギー算出-5%、交易価値+10%、全加盟国が相互に通商協定、移民協定を締結する。)
+# 防疫関税条約	Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment	(エネルギー算出-5%、交易価値+10%、)
 NGM_CEPA_CTOCIDTP = {
 	members_modifier = {
 		description = federation_NGM_CEPA_CTOCIDTP_effect
@@ -60,12 +60,12 @@ NGM_CEPA_ERTRSB = {
 	}
 }
 
-# 域内職業安定局の設立	Establishment of regional employment security bureaus	(Pop移住速度+10%、Pop成長速度+5%)
-NGM_CEPA_ERESB = {
+# 域内職業安定局の設立	Establishment of regional employment security bureaus	(移住によるPOPの流入3+10%、Pop成長速度+5%)
+N3GM_CEPA_ERESB = {
 	members_modifier = {
 		description = federation_NGM_CEPA_ERESB_effect
 		planet_immigration_pull_mult = 0.1
-		pop_growth_speed = 0.05
+		pop_growth_speed = 0.05	
 	}
 }
 

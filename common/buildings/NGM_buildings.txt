@@ -1,54 +1,644 @@
 #儀典局	  式部官x2 エネルギ200  鉱石400
 #式武官   統合力10 影響力1 → 勲章0.02
 building_bureau_of_ceremonies = {
-  base_buildtime = 360
-  base_cap_amount = 1
-  prerequisites = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	prerequisites = {
 		"tech_ceremony_theory"
 	}
-  resources = {
-    category = planet_buildings
-      cost = {
-        energy = 200
-        minerals = 400
-      }
-      upkeep = {
-        energy = 2
-      }
-  }
+	resources = {
+		category = planet_buildings
+		cost = {
+			energy = 200
+			minerals = 400
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
 	planet_modifier = {
 		job_bureau_of_ceremonies_add = 2
 	}
 }
+
 # 初期建築物「永久の宮殿」 Perpetual Palace （古代から続くこの地を治める者のための宮殿で、列強の君主や元首が集い交渉を行うことも多かったためか、壮麗な建築でいまだに陰りを見せていない。）
-# 維持費：エネルギー10、消費財5。住居+5、快適度+5、貴族Job+1、行政官+1、紋章官+1、高級参謀+1、事務員+10、建築物Slot+10、
+# 維持費：エネルギー10、消費財5。住居+5、快適度+5、貴族Job+1、行政官+1、紋章官+1、高級参謀+1、事務員+10、建築物Slot+16、
 building_ngm_perpetual_palace = {
 	base_buildtime = @b2_time
 	can_build = no
 	can_demolish = yes
 	position_priority = 0
 	icon = building_palace
-  country_modifier = {
-    pop_growth_speed = 0.8
+	country_modifier = {
+		pop_growth_speed = 1
 		country_trade_fee = -0.1
-  }
-	planet_modifier = {
-    planet_housing_add = 5
-    planet_amenities_add = 5
-    job_noble_add = 1
-    job_administrator_add = 1
-    job_ngm_crest_bearer_add = 1
-    job_ngm_senior_advisor_add = 1
-    job_clerk_add = 10
-    planet_max_buildings_add = 10
-    planet_max_districts_add = 10
 	}
-
+	planet_modifier = {
+		planet_housing_add = 5
+		planet_amenities_add = 5
+		job_noble_add = 1
+		job_administrator_add = 1
+		job_ngm_crest_bearer_add = 1
+		job_ngm_senior_advisor_add = 1
+		job_clerk_add = 10
+		planet_max_buildings_add = 16
+		planet_max_districts_add = 10
+	}
 	resources = {
 		category = planet_buildings
 		upkeep = {
 			energy = 5
 		}
 	}
+}
 
+# 銀河百貨店	ginga_department_store	(全銀河の嗜好品が集まる集合商業施設)						(惑星につき一つ:支社の価値+20%、惑星快適度+5、事務員+3)
+building_ngm_ginga_department_store = {
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	base_cap_amount = 1
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+      has_civic = civic_ngm_corporate_empire
+      is_criminal_syndicate = no
+			NOT = {
+				is_ai = yes
+			}
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+	planet_modifier = {
+		branch_office_value_mult = 0.2
+		job_clerk_add = 3
+		planet_amenities_add = 5
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			minerals = 10
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# 企業大学校  business_school		(経済や経営を学ぶ者の専門大学)							(惑星につき一つ:企業国家の研究算出各々+10、研究者+1)				:この企業は高度な技術を運用した工業製品を取り扱っており、極めて高度な製品はあらゆる産業の礎となっている。
+building_ngm_business_school = {
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	base_cap_amount = 1
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+      has_civic = civic_ngm_high_tech_company
+			is_criminal_syndicate = no
+			NOT = {
+				is_ai = yes
+			}
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+	planet_modifier = {
+		job_researcher_add = 1
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		produces = {
+			physics_research = 10
+			society_research = 10
+			engineering_research = 10
+		}
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# 星間工場群	star_workshop	(惑星規模に広がるコンビナート群)						(惑星につき一つ:企業国家の合金+5、企業国家の消費財+5、職人+1、冶金技師+1)	:この企業は重化学工業を中心とした大規模な工業製品を取り扱っており、その工場が惑星表面を覆うほどの工業化が進んでいる。
+building_ngm_star_workshop = {
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	base_cap_amount = 1
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+      has_civic = civic_ngm_smokestack_industry
+			is_criminal_syndicate = no
+			NOT = {
+				is_ai = yes
+			}
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+	planet_modifier = {
+		job_artisan_add = 1
+		job_foundry_add = 1
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		produces = {
+			alloys = 5
+			consumer_goods = 5
+		}
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# 銀河サロン  galaxy_salon		(上流階級の者が集う社交界)							(惑星につき一つ:企業国家の統合力+5、企業国家の外交発言力+10、豪商+1、役員+1)	:この企業は創業家を中心に会社に多大な貢献を行った社員一家を特別役員として扱っており、企業内の団結や対外交渉などに活躍している、一種の君主制国家の様相を呈している。
+building_ngm_galaxy_salon = {
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	base_cap_amount = 1
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+      has_civic = civic_ngm_hereditary_officers
+			is_criminal_syndicate = no
+			NOT = {
+				is_ai = yes
+			}
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+	country_modifier = {
+		diplo_weight_mult = 0.1
+	}
+	planet_modifier = {
+		job_merchant_add = 1
+		job_executive_add = 1
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		produces = {
+			unity = 5
+		}
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# M&Aセンター m_a_center		(他社を評価、買収することを目的とした企業)					(惑星につき一つ:企業国家の外交発言力+10%、惑星の交易価値+30%、豪商+1、事務員+2)	:この企業は一部の持株会社が多くの企業を支配する形をとっており、ごく少数の役員やエリートによる決定が絶対視されている。
+building_ngm_m_a_center = {
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	base_cap_amount = 1
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+      has_civic = civic_ngm_zaibatsu
+      is_criminal_syndicate = no
+			NOT = {
+				is_ai = yes
+			}
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+	country_modifier = {
+		diplo_weight_mult = 0.1
+	}
+	planet_modifier = {
+		trade_value_mult = 0.3
+		job_merchant_add = 1
+		job_clerk_add = 2
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# 銀河銀行  galactic_bank		(銀河規模に広がる投資、貯蓄、資産運用を行う銀行)				(惑星につき一つ:企業国家のエネルギー+10、惑星の交易価値+5%、事務員+3)		:この企業はコンサルティングや債権、電子通貨、金融商品等を取り扱うことに長けており、それらの産業が中心となって企業が運営されている。
+building_ngm_galactic_bank = {
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	base_cap_amount = 1
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+      has_civic = civic_ngm_financial_enterprises
+			is_criminal_syndicate = no
+			NOT = {
+				is_ai = yes
+			}
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+	planet_modifier = {
+		trade_value_mult = 0.05
+		job_clerk_add = 3
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		produces = {
+			energy = 10
+		}
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# 星間広告代理店	interstellar_advertising_agency	(情報を加工し、大衆に敷衍しやすい言葉で洗脳を行う企業)				(惑星につき一つ:企業国家の快適度+10、惑星の快適度+5、事務員+3)			:この企業はSNSや広告、システムエンジニアリングなどの目に見えないものを取り扱うことが多く、総じてそれらに対する造詣が深い。
+building_ngm_IAA = {
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	base_cap_amount = 1
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+      has_civic = civic_ngm_information_company
+			is_criminal_syndicate = no
+			NOT = {
+				is_ai = yes
+			}
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+	country_modifier = {
+		planet_amenities_mult = 0.1
+	}
+	planet_modifier = {
+		planet_amenities_add = 5
+		job_clerk_add = 3
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# 企業病院	corporate_hospital	(できるだけ安価に高品質な医療や福祉を行うことを目的とした社有の医療機関)	(惑星につき一つ:企業国家の社会学+10、惑星のPop成長速度+5%、医療従事者+1)	:この企業は利益だけではなく社員や顧客の幸福や利益を追求することを目指している。
+building_ngm_corporate_hospital = {
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	base_cap_amount = 1
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+      has_civic = civic_ngm_social_enterprise
+			is_criminal_syndicate = no
+			NOT = {
+				is_ai = yes
+			}
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+	planet_modifier = {
+		pop_growth_speed = 0.05
+		job_healthcare_add = 1
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		produces = {
+			society_research = 10
+		}
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# 惑星規模建築センター planetary_scale_building_center	(惑星で何らかの建築が行われる際に重機や物資、人員を提供する企業)		(惑星につき一つ:企業国家の鉱物+20、惑星の区域建造コスト-10%、事務員+2)		:この企業はインフラ建築や材料調達に関しての専門企業で、大規模な建築が行われる際にはこの企業の関与がないことはほとんどない。
+building_ngm_planetary_scale_building_center = {
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	base_cap_amount = 1
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+      has_civic = civic_ngm_general_contractor
+			is_criminal_syndicate = no
+			NOT = {
+				is_ai = yes
+			}
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+	planet_modifier = {
+		planet_districts_cost_mult = -0.1
+		job_clerk_add = 2
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		produces = {
+			minerals = 20
+		}
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# 企業農園	corporate_plantation	(社有の大規模な農園で、惑星特有の農作物取り扱っている。)			(惑星につき一つ:企業国家の食料+20、農民+3)					:この企業は農業を中心としており、自然と共生しつつ農業生産を行うことで環境系企業として存続している。
+building_ngm_corporate_plantation = {
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	base_cap_amount = 1
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+      has_civic = civic_ngm_agricultural_company
+			is_criminal_syndicate = no
+			NOT = {
+				is_ai = yes
+			}
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+	planet_modifier = {
+		job_farmer_add = 3
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		produces = {
+			food = 20
+		}
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# 社有宇宙港  society_cosmic_port		(物資や旅客を効率的かつ高速に取り扱うための会社専用の宇宙港)			(惑星につき一つ:惑星の交易価値+10、支社の価値+30%、事務員+2)			:この企業は物資等の輸送や運輸、旅客運送により利益を得ており、輸送分野における実績は並ぶものがない。
+building_ngm_society_cosmic_port = {
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	base_cap_amount = 1
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+      has_civic = civic_ngm_shipping_company
+			is_criminal_syndicate = no
+			NOT = {
+				is_ai = yes
+			}
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+	planet_modifier = {
+		trade_value_mult = 0.1
+		branch_office_value_mult = 0.3
+		job_clerk_add = 2
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# 惑星信託銀行	planet_trust_bank	(惑星単位で資産や有価証券を運用して利益を追求する企業)				(惑星につき一つ:惑星の交易価値+30%、支社の価値+30%、豪商+1、事務員+3)		:この企業は出資者やクライアントの資産を最大化することを目指しており、倫理観を無視した投資運用を行い、利益を追求する。
+building_ngm_planet_trust_bank = {
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	base_cap_amount = 1
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+      has_civic = civic_ngm_operating_company
+			is_criminal_syndicate = no
+			NOT = {
+				is_ai = yes
+			}
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+	planet_modifier = {
+		trade_value_mult = 0.3
+		branch_office_value_mult = 0.3
+		job_merchant_add = 1
+		job_clerk_add = 3
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# 企業諜報機関	corporate_espionage	(自社以外のあらゆる情報を収集し、他者に売却する企業)				(惑星につき一つ:企業帝国の解読力+5、惑星の犯罪度+5、事務員+2)			:この企業は国家や企業の情報を奪い、それを利用してあらゆる利益を獲得している。
+building_ngm_corporate_espionage = {
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	base_cap_amount = 1
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+      has_civic = civic_ngm_industrial_espionage
+			is_criminal_syndicate = no
+			NOT = {
+				is_ai = yes
+			}
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+	country_modifier = {
+		intel_decryption_add = 5
+	}
+	planet_modifier = {
+		planet_crime_add = 5
+		job_clerk_add = 2
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# 惑星格付会社	planet_rating_agency	(あらゆるものを格付けし、判断基準を創出する企業)				(惑星につき一つ:企業帝国の統合力+10、惑星の統合力+5%、事務員+2)
+building_ngm_planet_rating_agency = {
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	base_cap_amount = 1
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+      has_civic = civic_ngm_rating_company
+			is_criminal_syndicate = no
+			NOT = {
+				is_ai = yes
+			}
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+		job_clerk_add = 2
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		produces = {
+			unity = 10
+		}
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	ai_weight = {
+		factor = 1
+	}
 }
