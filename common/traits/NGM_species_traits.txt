@@ -83,7 +83,7 @@ trait_ngm_rascal = {
 	}
 }
 
-# trait_ngm_totemowarui	巨悪      	：-2p	統合力-10%、犯罪度-10%	(この種族は自己利益を最大化することに余念がなく、その方法を気にしない。)
+# trait_ngm_totemowarui	巨悪      	：-2p	統合力-10%、犯罪度10%	(この種族は自己利益を最大化することに余念がなく、その方法を気にしない。)
 trait_ngm_totemowarui = {
 	cost = -2
 	potential_crossbreeding_chance = 1.0
@@ -95,7 +95,7 @@ trait_ngm_totemowarui = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		planet_jobs_unity_produces_mult = -0.1
-		planet_crime_mult = -0.1
+		planet_crime_mult = 0.1
 	}
 	slave_cost = {
 		energy = 50

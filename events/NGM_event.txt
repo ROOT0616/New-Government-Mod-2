@@ -2290,6 +2290,261 @@ country_event = {
 	}
 }
 
+# 過去への逃走 escape_to_the_past
+country_event = {
+	id = ngm_origin.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+	immediate = {
+		home_planet = {
+			add_modifier = {
+				modifier = ngm_space_time_continuum
+			}
+		}
+		country_event = {
+			id = ngm_origin.4
+			days = 3600
+		}
+	}
+}
+
+country_event = {
+	id = ngm_origin.4
+	title = ngm_origin.4.name
+	desc = ngm_origin.4.desc
+	picture = GFX_evt_ship_in_orbit
+	show_sound = event_activating_unknown_technology
+	location = root
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+	## イベントの効果
+	option = {
+		name = ngm_origin.4.a
+		if = {
+			limit = {
+				owner = {
+					NOR = {
+						has_technology = tech_fusion_power
+						has_technology = tech_lasers_2
+						has_technology = tech_ship_armor_2
+						has_technology = tech_thrusters_2
+						has_technology = tech_mass_drivers_2
+					}
+				}
+			}
+			set_country_flag = ngm_pursuer_1_flag
+		}
+		else_if = {
+			limit = {
+				owner = {
+					NOR = {
+						has_technology = tech_cold_fusion_power
+						has_technology = tech_lasers_3
+						has_technology = tech_ship_armor_3
+						has_technology = tech_thrusters_3
+						has_technology = tech_mass_drivers_3
+					}
+				}
+			}
+			remove_country_flag = ngm_pursuer_1_flag
+			set_country_flag = ngm_pursuer_2_flag
+		}
+		else_if = {
+			limit = {
+				owner = {
+					NOR = {
+						has_technology = tech_antimatter_power
+						has_technology = tech_lasers_3
+						has_technology = tech_ship_armor_3
+						has_technology = tech_thrusters_3
+						has_technology = tech_mass_drivers_3
+					}
+				}
+			}
+			remove_country_flag = ngm_pursuer_2_flag
+			set_country_flag = ngm_pursuer_3_flag
+		}
+		else_if = {
+			limit = {
+				owner = {
+					NOR = {
+						has_technology = tech_zero_point_power
+						has_technology = tech_lasers_4
+						has_technology = tech_ship_armor_4
+						has_technology = tech_thrusters_4
+						has_technology = tech_mass_drivers_4
+					}
+				}
+			}
+			remove_country_flag = ngm_pursuer_3_flag
+			set_country_flag = ngm_pursuer_4_flag
+		}
+		else_if = {
+			limit = {
+				owner = {
+					NOR = {
+						has_technology = tech_dark_matter_power_core
+						has_technology = tech_lasers_5
+						has_technology = tech_ship_armor_5
+						has_technology = tech_dark_matter_propulsion
+						has_technology = tech_mass_drivers_5
+					}
+				}
+			}
+			remove_country_flag = ngm_pursuer_4_flag
+			set_country_flag = ngm_pursuer_5_flag
+		}
+		else = {
+			set_country_flag = ngm_pursuer_6_flag
+		}
+		country_event = {
+			id = ngm_origin.5
+		}
+	}
+}
+
+country_event = {
+	id = ngm_origin.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_1_flag
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									if = {
+										limit = {
+											owner = {
+												NOT = {
+													has_technology = tech_destroyers
+												}
+											}
+										}
+										create_ship = {
+											design = "NAME_Pursuer3_1"
+											name = "Pursuer"
+										}
+									}
+									else_if = {
+										limit = {
+											owner = {
+												NOT = {
+													has_technology = tech_cruisers
+												}
+											}
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_1"
+											name = "Pursuer"
+										}
+									}
+									else_if = {
+										limit = {
+											owner = {
+												NOT = {
+													has_technology = tech_battleships
+												}
+											}
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_1"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.4
+			days = 3600			#10年後
+		}
+	}
+}
+
+###############################
+#######  連邦用イベント ########
+###############################
+namespace = ngm_federation
+country_event = {
+	id = ngm_federation.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_federation_perk = NGM_PU_TPP
+	}
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				NOT = {
+					has_leader_flag = flag_NGM_PU_TPP_bonus
+				}
+			}
+			set_leader_flag = flag_NGM_PU_TPP_bonus
+			set_skill = 2
+		}
+	}
+}
+
 ###############################
 ######  policy用イベント #######
 ###############################

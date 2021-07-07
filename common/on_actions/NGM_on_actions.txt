@@ -24,7 +24,8 @@ on_game_start_country = {
 		# 異種族解剖
 		ngm_civic.20
 		# Origin
-		ngm_origin.1 # プレーヤを動かすメインイベント
+		ngm_origin.1 # プレーヤを動かすメインイベント # 律儀な古代の緩衝国家
+		ngm_origin.3 # プレーヤを動かすメインイベント # 過去への逃走
 	}
 }
 
@@ -40,6 +41,8 @@ on_leader_spawned = {
 		ngm_civic.5
 		# 高度な栄典制度
 		ngm_civic.7
+		# 特権階級のプライド
+		ngm_federation.1
 	}
 }
 

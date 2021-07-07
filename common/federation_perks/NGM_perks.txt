@@ -10,8 +10,6 @@
 #	on_activate = {}
 #	On deactivate effect in federation scope
 #}
-
-
 ### Passive, starting bonuses
 # 包括的経済連協定
 # 防疫関税条約	Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment	(エネルギー算出-5%、交易価値+10%、)
@@ -65,7 +63,7 @@ N3GM_CEPA_ERESB = {
 	members_modifier = {
 		description = federation_NGM_CEPA_ERESB_effect
 		planet_immigration_pull_mult = 0.1
-		pop_growth_speed = 0.05	
+		pop_growth_speed = 0.05
 	}
 }
 
@@ -87,10 +85,17 @@ NGM_CEPA_EGCC = {
 	}
 }
 
-
-# 同君連合
+# 2.同君連合
+# 要件  提案は君主制のみ
+# 選好  属国+4000、それ以外は-1000
+# 効果
+# レベル1 権威への平伏（権威主義志向の魅力+20%）
+# レベル2 君主への敬服（安定度+5）、栄光への道（地上軍ダメージ+10%）※パトロネージ（統合力+10%）
+# レベル3 特権階級のプライド（初期リーダー経験値+200、経験値獲得+10%）、高貴なる使節団（使節+1）※属国の賦役（建築コスト-10%、建築スロット+1）
+# レベル4 統合を通じた力（議長国以外の加盟国のみ、職業からの資源産出+5%）、称号の創設（統治者幸福度+20%）※第一発言者の地位（他の連邦加盟国の外交発言力の30%を奪い取る）
+# レベル5 宮中の拡大（影響力+1）、主要省庁の兼務（布告許容量+1）※王の中の王（影響力+1）
 # 権威への平伏	Bowing to Authority	（権威主義志向の魅力+20%）
-NGM_PU_BA ={
+NGM_PU_BA = {
 	members_modifier = {
 		description = federation_NGM_PU_BA_effect
 		pop_ethic_authoritarian_attraction_mult = 0.2
@@ -98,7 +103,7 @@ NGM_PU_BA ={
 }
 
 # 君主への敬服	Respect for the monarch	（安定度+5）
-NGM_PU_RM ={
+NGM_PU_RM = {
 	members_modifier = {
 		description = federation_NGM_PU_RM_effect
 		planet_stability_add = 5
@@ -112,13 +117,15 @@ NGM_PU_TRG = {
 		army_damage_mult = 0.1
 	}
 }
-# パトロネージ	patronage	（統合力+10%）
+
+# ※パトロネージ	patronage	（統合力+10%）
 NGM_PU_patronage = {
-	members_modifier = {
+	leader_modifier = {
 		description = federation_NGM_PU_patronage_effect
 		country_unity_produces_mult = 0.1
 	}
 }
+
 # 特権階級のプライド	The Pride of the Privileged	（初期リーダー経験値+200、経験値獲得+10%）
 NGM_PU_TPP = {
 	members_modifier = {
@@ -144,7 +151,7 @@ MGN_PU_vassalage = {
 	}
 }
 
-# 称号の創設	Creation of a title	（統治者幸福度+20%）※第一発言者の地位（他の連邦加盟国の外交発言力の30%を奪い取る）
+# 称号の創設	Creation of a title	（統治者幸福度+20%）
 NGM_PU_CT = {
 	members_modifier = {
 		description = federation_NGM_PU_CT_effect
@@ -152,13 +159,23 @@ NGM_PU_CT = {
 	}
 }
 
+# ※第一発言者の地位 First speaker status（他の連邦加盟国の外交発言力の30%を奪い取る）
+NGM_PU_FSS = {
+	leader_modifier = {
+		diplo_weight_mult = 0.6
+	}
+	members_modifier = {
+		diplo_weight_mult = -0.3
+	}
+}
 # 宮中の拡大	Expansion of the Palace	（影響力+1）
 NGM_PU_EP = {
 	members_modifier = {
 		description = federation_NGM_PU_EP_effect
-		country_base_influence_produces_add = 1
+		federation_influence_produces_add = 1
 	}
 }
+
 # 主要省庁の兼務	Concurrent positions in key ministries	（布告許容量+1）
 NGM_PU_CPKM = {
 	members_modifier = {
@@ -167,15 +184,21 @@ NGM_PU_CPKM = {
 	}
 }
 
-# 王の中の王	king among kings	（影響力+1）
+# ※王の中の王	king among kings	（影響力+1）
 NGM_PU_king_among_kings = {
-	members_modifier = {
-		description = federation_NGM_PU_king_among_kings_effect
-		country_base_influence_produces_add = 1
+	leader_modifier = {
+		federation_influence_produces_add = 1
 	}
 }
 
-# 常設首脳会議
+# 3.常設首脳会議
+# 要件 受容主義のみ提案可能
+# 選好 受容主義以外-100
+# レベル1 首脳会議（志向の多様さからの団結度ペナルティ-75%、外交発言力+10%）
+# レベル2 観光協定（居住性+5%）、犯罪者引き渡し条約（犯罪度-10%、交易保護値+3）
+# レベル3 銀河連邦常駐委員会の設置（外交発言力+10%、使節+1）、多国間報道機関の設立(統治志向魅力-5%、幸福度+5%)
+# レベル4 将校の交流（連邦艦隊許容量への貢献+25%）、強力な弁論術（外交発言力+10%）
+# レベル5 共に強く在れ（危機とグレイ・テンペストに対するダメージ+25%）、強力なリーダーシップ（危機の発生中、外交発言力+20%）
 # 首脳会議	summit meeting	（志向の多様さからの団結度ペナルティ-75%、外交発言力+10%）
 NGM_PS_SM = {
 	members_modifier = {
@@ -227,7 +250,6 @@ NGM_PS_PA = {
 	}
 }
 
-
 # 強力なリーダーシップ	Strong leadership	（危機の発生中、外交発言力+20%）
 NGM_PS_SL = {
 	members_modifier = {
@@ -236,7 +258,14 @@ NGM_PS_SL = {
 	}
 }
 
-# 統一教団
+# 4.統一教団
+# 要件  精神主義のみ提案可能
+# 選好  精神主義以外-2000
+# レベル1 統一教典（精神主義魅力+30%、志向転向度+50%、研究力-5%）
+# レベル2 内面への拡充（住居使用量-10%、快適度使用量-10%）、銀河異端裁判所（犯罪度-15%）※連邦の使節（使節+1）
+# レベル3 枢機卿団（統合力+10%）、武僧督戦隊（地上軍士気+10%）※銀河教会組織（権威主義魅力+30%）
+# レベル4 銀河宗教大学の設立（リーダーレベル上限+1）、巡礼団の強制（Pop移住速度+30%）※聖戦（非精神主義国家に対して精神主義を強要する宣戦布告事由を得る）
+# レベル5 共に強く在れ（危機とグレイ・テンペストに対するダメージ+25%）、壮麗な儀式（各惑星大祭司職業枠+1、司祭職業枠+3）※地位の神聖さ(影響力+1/月)
 # 統一教典	encyclopedia	（精神主義魅力+30%、志向転向度+50%、研究力-5%）
 NGM_UC_encyclopedia = {
 	members_modifier = {
@@ -282,9 +311,9 @@ NGM_UC_VS = {
 	}
 }
 
-# 銀河教会組織	Galactic Church Organization	（権威主義魅力+30%）
+# ※銀河教会組織	Galactic Church Organization	（権威主義魅力+30%）
 NGM_UC_GCO = {
-	members_modifier = {
+	leader_modifier = {
 		description = federation_NGM_UC_GCO_effect
 		pop_ethic_authoritarian_attraction_mult = 0.3
 	}
@@ -298,7 +327,7 @@ NGM_UC_EGUR = {
 	}
 }
 
-# 巡礼団の強制	Compulsion of the pilgrims	（Pop移住速度+30%）※聖戦（非精神主義国家に対して精神主義を強要する宣戦布告事由を得る）
+# 巡礼団の強制	Compulsion of the pilgrims	（Pop移住速度+30%）
 NGM_UC_CP = {
 	members_modifier = {
 		description = federation_NGM_UC_CP_effect
@@ -306,6 +335,26 @@ NGM_UC_CP = {
 	}
 }
 
+# ※聖戦（非精神主義国家に対して精神主義を強要する宣戦布告事由を得る）
+NGM_holy_wars = {
+	federation_modifier = {
+		description = NGM_holy_wars_effect
+	}
+	
+	member_triggered_modifier = {
+		key = NGM_holy_wars
+		potential = {
+			any_war = { 
+				root = { is_war_leader = yes }
+				using_war_goal = { 
+					type = NGM_wg_cb_deus_vult 
+					owner = root
+				}
+			}
+		}
+		federation_influence_produces_add = -10
+	}
+}
 # 壮麗な儀式	A grand ceremony	（各惑星大祭司職業枠+1、司祭職業枠+3）※地位の神聖さ(影響力+1/月)
 NGM_UC_GC = {
 	members_modifier = {

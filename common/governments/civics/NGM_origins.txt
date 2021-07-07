@@ -1,6 +1,24 @@
+# 起源「律儀な古代の緩衝国家」
+# この国が位置する星系はその豊かな立地ゆえに古代においても戦略重要地として奪い合いの戦争が繰り広げられていました。
+# 古代の国家はこの星系に極々小さな独立緩衝国を築き上げ、統治させることで戦争の危機を脱しました。そうして出来上がった国家は貿易的利益と強力な国際発言力の代償に小さな国土と限られた原料生産を強いられている。
+# 古代の国家群が滅びた後でも、この国はその伝統を数少ない継承要素として維持しているのである。
+# 
+# ①平和主義のみ取得可能。
+# ②非常に豊かなチョークポイントに位置する星系に生成される。
+# ③開始時に遺物『古代の盟約』を取得する。
+# ④拡張に関して極めて大きな制約を課せられる。
+# ⑤市場手数料-10%、Pop成長率+40%、
+# ⑥特殊な種族特性を取得する。
+# 
+# 遺物「古代の盟約」（古代の列強間の協定で、緊急時に強力な自衛力を求められたうえで、平時には他国の脅威にならない経済国家であることを求められる条文。所有国は永久にこれを守らなくてはならない。）
+# パッシブ効果	：請求権作成コスト+9999%、開拓前哨地建造コスト+9999%、外交発言力+100%。統合力+30%、交易価値+50%、
+# アクティブ効果	：船体値+100%、宇宙軍許容量+500%、造船速度+500%(10年間。起動コスト影響力200)
+# 
+# 種族特性「古代からの商人」（はるか太古から頭脳労働者として活躍してきたため、創造やデスクワークに適性がある種族。人口過少の防止として太古に繁殖力の増強が図られている。）
+# 交易価値+20%、統合力+10%、研究力+5%、住居使用量-10%、Pop成長率+20%。鉱山労働者の生産量-30%、消費財消費量+10%。途中削除、追加不可。強制取得。
 origin_ngm_buffer_state = {
 	is_origin = yes
-	icon = "gfx/interface/icons/origins/origins_ngm_buffer_state.dds"
+	icon = "gfx/interface/icons/governments/origins/origins_ngm_buffer_state.dds"
 	picture = GFX_origin_ngm_buffer_state
 	starting_colony = pc_relic
 	habitability_preference = pc_relic
@@ -20,6 +38,36 @@ origin_ngm_buffer_state = {
 		trait = trait_ngm_merchant_from_ancient
 	}
 	description = "origin_tooltip_ngm_buffer_state_effects"
+	random_weight = {
+		base = 5
+	}
+}
+
+# 過去への逃走 escape_to_the_past
+# 
+# この国の種族は苛烈な運命をたどる時代から逃げ去り、未来を変えるために再度過去へと戻った。
+# しかし、その運命から抗う手法は追跡者を生み、定期的な襲撃を受けることとなる。
+# 
+# 研究力+10%、艦隊連射レート+5%
+# 120か月に1度未来からの艦隊が襲撃する。打ち勝つことによって技術のデブリを取得することが可能となる。
+# 
+# 首都惑星に特殊な特性「時空超越機」（時間を超えることができる機械で、惑星と一体化している。原理は失われているため再現は不可能であるが、時折亡命者がこの時代に流れ込んでいる。）
+# 物理学研究+20%、Pop成長速度+10%
+origin_ngm_escape_to_the_past = {
+	is_origin = yes
+	icon = "gfx/interface/icons/governments/origins/origins_ngm_escape_to_the_past.dds"
+	picture = GFX_origin_ngm_escape_to_the_past
+	potential = {
+		always = yes
+	}
+	possible = {
+	}
+	modifier = {
+		country_physics_research_produces_mult = 0.1
+		country_society_research_produces_mult = 0.1
+		country_engineering_research_produces_mult = 0.1
+	}
+	description = "origin_tooltip_ngm_escape_to_the_past"
 	random_weight = {
 		base = 5
 	}

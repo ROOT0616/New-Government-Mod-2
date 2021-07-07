@@ -585,3 +585,12 @@ ngm_determination_to_rebuild = {
 	pop_assembly_speed = 2
 	planet_immigration_pull_mult = 1
 }
+
+# 首都惑星に特殊な特性「時空超越機」 space_time_continuum （時間を超えることができる機械で、惑星と一体化している。原理は失われているため再現は不可能であるが、時折亡命者がこの時代に流れ込んでいる。）
+# 物理学研究+20%、Pop成長速度+10%
+ngm_space_time_continuum = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	pop_growth_speed = 0.1
+	country_engineering_research_produces_mult = 0.2
+}

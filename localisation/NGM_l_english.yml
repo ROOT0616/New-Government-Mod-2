@@ -200,6 +200,14 @@
  origin_ngm_buffer_state_desc:0 "この国が位置する星系はその豊かな立地ゆえに古代においても戦略重要地として奪い合いの戦争が繰り広げられていました。\n古代の国家はこの星系に極々小さな独立緩衝国を築き上げ、統治させることで戦争の危機を脱しました。そうして出来上がった国家は貿易的利益と強力な国際発言力の代償に小さな国土と限られた原料生産を強いられている。\n古代の国家群が滅びた後でも、この国はその伝統を数少ない継承要素として維持しているのである。"
  origin_tooltip_ngm_buffer_state_effects:0 "-非常に豊かなチョークポイントに位置する星系に生成される。\n-開始時に遺物§Y『古代の盟約』§!を取得する。\n-拡張に関して極めて大きな制約を課せられる。\n-市場手数料§G-10%§!、Pop成長率§G+100%§!、\n-特殊な種族特性を取得する。\n\n初期建築物§Y「永久の宮殿」§!\n種族特性§Y「古代からの商人」§!\n"
 
+ origin_ngm_escape_to_the_past:0 "過去への逃走"
+ origin_ngm_escape_to_the_past_desc:0 " この国の種族は苛烈な運命をたどる時代から逃げ去り、未来を変えるために再度過去へと戻った。\n しかし、その運命から抗う手法は追跡者を生み、定期的な襲撃を受けることとなる。"
+ origin_tooltip_ngm_escape_to_the_past:0 "120か月に1度未来からの艦隊が襲撃する。打ち勝つことによって技術のデブリを取得することが可能となる。\n\n首都惑星に特殊な特性「時空超越機」\n物理学研究+20%、Pop成長速度+10%"
+
+ ngm_origin.4.name:0 ""
+ ngm_origin.4.desc:0 ""
+ ngm_origin.4.a:0 ""
+
 #######################
 #####    国是    ######
 #######################
@@ -1434,6 +1442,9 @@
  ngm_determination_to_rebuild:0 "国家再興の決意"
  ngm_determination_to_rebuild_desc:0 "一度衰退してしまったが、太古から続く我が国は世界でも有数の能力を有しており、それらの能力は国家の再建に費やされるべきである。"
 
+ ngm_space_time_continuum:0 "時空超越機"
+ ngm_space_time_continuum_desc:0 "時間を超えることができる機械で、惑星と一体化している。原理は失われているため再現は不可能であるが、時折亡命者がこの時代に流れ込んでいる。"
+
  civic_tooltip_ngm_experimental_substance_effects:0 "§Rゲーム開始後の追加削除不可§!\n§Y(ゲーム開始後に追加、削除すると元に戻されます。)\n\n§!首都惑星に各戦略資源特性を1つずつ付与"
 
  civic_tooltip_ngm_war_prosperity_effects:0 "戦時中の鉱物,合金,消費財生産量§G+10%§!\n戦時中の交易価値生産量§G+10%§!\n戦時中の建艦速度§G+10%§!\n非戦時中の鉱物,合金,消費財生産量§R-10%§!\n非戦時中の交易価値生産量§R-10%§!\n非戦時中の建艦速度§R-20%§!"
@@ -1892,6 +1903,9 @@
  NGM_PU_CT_desc:0 "貴族称号を創設することで、支配階級を懐柔することができる。"
  federation_NGM_PU_CT_effect:0 "統治者幸福度+20%"
 
+ NGM_PU_FSS:0 "第一発言者の地位"
+ NGM_PU_FSS_desc:0 ""
+
  NGM_PU_EP:0 "宮中の拡大"
  NGM_PU_EP_desc:0 "君主を支える宮中は拡大され、魑魅魍魎がはびこる政権中枢部が構築される。"
  federation_NGM_PU_EP_effect:0 "影響力+1"
@@ -1920,8 +1934,8 @@
  NGM_PS_EGFRC_desc:0 "銀河連邦における円滑な交渉を行うために常駐で討議と親善を広める委員を各国が組織する必要がある。"
  federation_NGM_PS_EGFRC_effect:0 "外交発言力+10%、使節+1"
 
- NGM_PS_EMNO:0 "多国間報道機関の設立"
- NGM_PS_EMNO_desc:0 ""
+ NGM_PS_EMNO:0 "$NGM_CEPA_EMNO$"
+ NGM_PS_EMNO_desc:0 "$NGM_CEPA_EMNO_desc$"
  federation_NGM_PS_EMNO_effect:0 "統治志向魅力-5%、幸福度+5%"
 
  NGM_PS_PA:0 "強力な弁論術"
