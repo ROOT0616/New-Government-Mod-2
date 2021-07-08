@@ -2,7 +2,14 @@
 @xp_to_level_3 = 2400
 @xp_to_level_4 = 4800
 @xp_to_level_5 = 9600
-# 包括的経済連携協定 Comprehensive Economic Partnership Agreement
+# 1.包括的経済連携協定
+# 要件	なし
+# 選好	銀河連邦と同じ
+# レベル1 防疫関税条約(エネルギー算出-5%、交易価値+10%、全加盟国が相互に通商協定、移民協定を締結する。)
+# レベル2 度量衡の標準化(交易価値+5%)、多国間報道機関の設立(統治志向魅力-5%、幸福度+5%)
+# レベル3 犯罪者取扱条約(犯罪度-10%、交易価値+5%)、知的財産保護条約(統合力+5%、研究力+5%)
+# レベル4 域内交易路保安局の成立(交易路保護値+5)、域内職業安定局の設立(Pop移住速度+10%、Pop成長速度+5%)
+# レベル5 共通市場事務所の設立(市場手数料-10%、交易価値+10%)、銀河建設公社の設立（建設コスト-10%、区域建造コスト-10%）
 NGM_CEPA_federation = {
 	icon = "GFX_NGM_CEPA_federation"
 	potential = {
@@ -922,7 +929,7 @@ NGM_permanent_summit_federation = {
 			experience = @xp_to_level_4
 			perks = {
 				NGM_PS_EGFRC
-				NGM_PS_EMNO
+				NGM_CEPA_EMNO
 			}
 		}
 		level_4 = {
@@ -1191,7 +1198,7 @@ NGM_permanent_summit_federation = {
 # レベル4 銀河宗教大学の設立（リーダーレベル上限+1）、巡礼団の強制（Pop移住速度+30%）※聖戦（非精神主義国家に対して精神主義を強要する宣戦布告事由を得る）
 # レベル5 共に強く在れ（危機とグレイ・テンペストに対するダメージ+25%）、壮麗な儀式（各惑星大祭司職業枠+1、司祭職業枠+3）※地位の神聖さ(影響力+1/月)
 NGM_unification_church_federation = {
-	icon = "GFX_default_federation"
+	icon = "GFX_NGM_unification_church_federation"
 	#potential
 	potential = {
 		always = yes

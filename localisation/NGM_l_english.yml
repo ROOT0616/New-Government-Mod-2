@@ -1934,10 +1934,6 @@
  NGM_PS_EGFRC_desc:0 "銀河連邦における円滑な交渉を行うために常駐で討議と親善を広める委員を各国が組織する必要がある。"
  federation_NGM_PS_EGFRC_effect:0 "外交発言力+10%、使節+1"
 
- NGM_PS_EMNO:0 "$NGM_CEPA_EMNO$"
- NGM_PS_EMNO_desc:0 "$NGM_CEPA_EMNO_desc$"
- federation_NGM_PS_EMNO_effect:0 "統治志向魅力-5%、幸福度+5%"
-
  NGM_PS_PA:0 "強力な弁論術"
  NGM_PS_PA_desc:0 "勇猛で説得力のある弁舌は首脳会談を率いる際には非常に有用である。"
  federation_NGM_PS_PA_effect:0 "外交発言力+10%"
@@ -2007,10 +2003,10 @@
  war_goal_wg_ngm_pest_control_desc:0 "開発主義国家を保全主義へと改心させ、生物学的知見を相手に与える。"
  fail_text_wg_ngm_pest_control:0 "相手国は必要な§Y$ethic_developmentalism$§!の志向を採用していない。"
 
- NGM_cb_deus_vult:0 "聖戦"
- NGM_cb_deus_vult_desc:0 ""
- NGM_wg_cb_deus_vult:0 "聖戦"
- NGM_wg_cb_deus_vult_desc:0 ""
+ cb_ngm_holy_wars:0 "聖戦"
+ cb_ngm_holy_wars_desc:0 ""
+ wg_ngm_holy_wars:0 "聖戦"
+ wg_ngm_holy_wars_desc:0 ""
 
 ##########################
 #####    そのほか    ######

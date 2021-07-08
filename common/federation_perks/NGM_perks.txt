@@ -4,12 +4,13 @@
 #	federation_modifier = {}
 #	メンバー全員のモディファイ(リーダー含む)
 #	members_modifier = {}
-#	Modifier for exclusevely leader
+#	排他的なリーダーの修飾語
 #	leader_modifier = {}
 #	フェデレーションスコープでの起動効果について
 #	on_activate = {}
 #	On deactivate effect in federation scope
 #}
+
 ### Passive, starting bonuses
 # 包括的経済連協定
 # 防疫関税条約	Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment	(エネルギー算出-5%、交易価値+10%、)
@@ -233,15 +234,6 @@ NGM_PS_EGFRC = {
 	}
 }
 
-# 多国間報道機関の設立	Establishment of a multinational news organization	(統治志向魅力-5%、幸福度+5%)
-NGM_PS_EMNO = {
-	members_modifier = {
-		description = federation_NGM_PS_EMNO_effect
-		pop_government_ethic_attraction = -0.05
-		pop_happiness = 0.05
-	}
-}
-
 # 強力な弁論術	Powerful Argumentation	（外交発言力+10%）
 NGM_PS_PA = {
 	members_modifier = {
@@ -347,7 +339,7 @@ NGM_holy_wars = {
 			any_war = { 
 				root = { is_war_leader = yes }
 				using_war_goal = { 
-					type = NGM_wg_cb_deus_vult 
+					type = wg_ngm_holy_wars 
 					owner = root
 				}
 			}

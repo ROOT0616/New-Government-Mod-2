@@ -324,8 +324,8 @@ wg_ngm_pest_control = {
 }
 
 # ※聖戦（非精神主義国家に対して精神主義を強要する宣戦布告事由を得る）
-NGM_wg_cb_deus_vult = {
-	casus_belli = NGM_cb_deus_vult
+wg_ngm_holy_wars = {
+	casus_belli = cb_ngm_holy_wars
 
 	hide_if_no_cb = yes
 	
