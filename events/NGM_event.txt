@@ -3812,6 +3812,9 @@ country_event = {
 			limit = {
 				owner = {
 					has_country_flag = ngm_pursuer_5_flag
+					NOT = {
+						has_country_flag = ngm_pursuer_6_flag
+					}
 				}
 			}
 			hidden_effect = {
