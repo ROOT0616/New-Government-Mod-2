@@ -2333,7 +2333,6 @@ country_event = {
 						has_technology = tech_lasers_2
 						has_technology = tech_ship_armor_2
 						has_technology = tech_thrusters_2
-						has_technology = tech_mass_drivers_2
 					}
 				}
 			}
@@ -2347,7 +2346,6 @@ country_event = {
 						has_technology = tech_lasers_3
 						has_technology = tech_ship_armor_3
 						has_technology = tech_thrusters_3
-						has_technology = tech_mass_drivers_3
 					}
 				}
 			}
@@ -2362,7 +2360,6 @@ country_event = {
 						has_technology = tech_lasers_3
 						has_technology = tech_ship_armor_3
 						has_technology = tech_thrusters_3
-						has_technology = tech_mass_drivers_3
 					}
 				}
 			}
@@ -2377,7 +2374,6 @@ country_event = {
 						has_technology = tech_lasers_4
 						has_technology = tech_ship_armor_4
 						has_technology = tech_thrusters_4
-						has_technology = tech_mass_drivers_4
 					}
 				}
 			}
@@ -2392,7 +2388,6 @@ country_event = {
 						has_technology = tech_lasers_5
 						has_technology = tech_ship_armor_5
 						has_technology = tech_dark_matter_propulsion
-						has_technology = tech_mass_drivers_5
 					}
 				}
 			}
@@ -2403,8 +2398,53 @@ country_event = {
 			remove_country_flag = ngm_pursuer_5_flag
 			set_country_flag = ngm_pursuer_6_flag
 		}
-		country_event = {
-			id = ngm_origin.5
+		if = {
+			limit = {
+				has_country_flag = ngm_pursuer_1_flag
+			}
+			country_event = {
+				id = ngm_origin.5
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ngm_pursuer_2_flag
+			}
+			country_event = {
+				id = ngm_origin.6
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ngm_pursuer_3_flag
+			}
+			country_event = {
+				id = ngm_origin.7
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ngm_pursuer_4_flag
+			}
+			country_event = {
+				id = ngm_origin.8
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ngm_pursuer_5_flag
+			}
+			country_event = {
+				id = ngm_origin.9
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ngm_pursuer_6_flag
+			}
+			country_event = {
+				id = ngm_origin.10
+			}
 		}
 	}
 }
@@ -2414,7 +2454,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_origin = origin_ngm_escape_to_the_past
+		has_country_flag = ngm_pursuer_1_flag
 	}
 	immediate = {
 		if = {
@@ -2469,7 +2509,7 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 5
+										count = 10
 										create_ship = {
 											design = "NAME_Pursuer3_1"
 											name = "Pursuer"
@@ -2538,7 +2578,7 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 5
+										count = 15
 										create_ship = {
 											design = "NAME_Pursuer3_1"
 											name = "Pursuer"
@@ -2611,7 +2651,7 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 5
+										count = 25
 										create_ship = {
 											design = "NAME_Pursuer3_1"
 											name = "Pursuer"
@@ -2685,7 +2725,7 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 10
+										count = 30
 										create_ship = {
 											design = "NAME_Pursuer3_1"
 											name = "Pursuer"
@@ -2762,9 +2802,9 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 5
+										count = 10
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_2"
 											name = "Pursuer"
 										}
 									}
@@ -2831,13 +2871,13 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 5
+										count = 15
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_2"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer2_1"
+											design = "NAME_Pursuer2_2"
 											name = "Pursuer"
 										}
 									}
@@ -2904,17 +2944,17 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 5
+										count = 25
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_2"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer2_1"
+											design = "NAME_Pursuer2_2"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer1_1"
+											design = "NAME_Pursuer1_2"
 											name = "Pursuer"
 										}
 									}
@@ -2978,17 +3018,17 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 10
+										count = 30
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_2"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer2_1"
+											design = "NAME_Pursuer2_2"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer1_1"
+											design = "NAME_Pursuer1_2"
 											name = "Pursuer"
 										}
 									}
@@ -3055,9 +3095,9 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 5
+										count = 25
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_3"
 											name = "Pursuer"
 										}
 									}
@@ -3124,13 +3164,13 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 5
+										count = 25
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_3"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer2_1"
+											design = "NAME_Pursuer2_3"
 											name = "Pursuer"
 										}
 									}
@@ -3197,17 +3237,17 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 5
+										count = 25
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_3"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer2_1"
+											design = "NAME_Pursuer2_3"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer1_1"
+											design = "NAME_Pursuer1_3"
 											name = "Pursuer"
 										}
 									}
@@ -3271,17 +3311,17 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 10
+										count = 30
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_3"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer2_1"
+											design = "NAME_Pursuer2_3"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer1_1"
+											design = "NAME_Pursuer1_3"
 											name = "Pursuer"
 										}
 									}
@@ -3348,9 +3388,9 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 5
+										count = 25
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_4"
 											name = "Pursuer"
 										}
 									}
@@ -3417,13 +3457,13 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 5
+										count = 25
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_4"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer2_1"
+											design = "NAME_Pursuer2_4"
 											name = "Pursuer"
 										}
 									}
@@ -3490,17 +3530,17 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 5
+										count = 25
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_4"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer2_1"
+											design = "NAME_Pursuer2_4"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer1_1"
+											design = "NAME_Pursuer1_4"
 											name = "Pursuer"
 										}
 									}
@@ -3564,17 +3604,17 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 10
+										count = 30
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_4"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer2_1"
+											design = "NAME_Pursuer2_4"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer1_1"
+											design = "NAME_Pursuer1_4"
 											name = "Pursuer"
 										}
 									}
@@ -3641,9 +3681,9 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 5
+										count = 25
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_5"
 											name = "Pursuer"
 										}
 									}
@@ -3710,13 +3750,13 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 5
+										count = 25
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_5"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer2_1"
+											design = "NAME_Pursuer2_5"
 											name = "Pursuer"
 										}
 									}
@@ -3783,17 +3823,17 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 5
+										count = 25
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_5"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer2_1"
+											design = "NAME_Pursuer2_5"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer1_1"
+											design = "NAME_Pursuer1_5"
 											name = "Pursuer"
 										}
 									}
@@ -3860,17 +3900,17 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
-										count = 10
+										count = 30
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_5"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer2_1"
+											design = "NAME_Pursuer2_5"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer1_1"
+											design = "NAME_Pursuer1_5"
 											name = "Pursuer"
 										}
 									}
@@ -3934,17 +3974,2297 @@ country_event = {
 								effect = {
 									set_owner = event_target:pursuer_enemy
 									while = {
+										count = 45
+										create_ship = {
+											design = "NAME_Pursuer3_6"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_6"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_6"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.4
+			days = 3600			#10年後
+		}
+	}
+}
+
+country_event = {
+	id = ngm_origin.6
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = ngm_pursuer_2_flag
+	}
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_2_flag
+					NOT = {
+						has_technology = tech_destroyers
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 10
+										create_ship = {
+											design = "NAME_Pursuer3_2"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_2_flag
+					NOT = {
+						has_technology = tech_destroyers
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
 										count = 15
 										create_ship = {
-											design = "NAME_Pursuer3_1"
+											design = "NAME_Pursuer3_2"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer2_1"
+											design = "NAME_Pursuer2_2"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_2_flag
+					NOT = {
+						has_technology = tech_battleships
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_2"
 											name = "Pursuer"
 										}
 										create_ship = {
-											design = "NAME_Pursuer1_1"
+											design = "NAME_Pursuer2_2"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_2"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_2_flag
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 30
+										create_ship = {
+											design = "NAME_Pursuer3_2"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_2"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_2"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_3_flag
+					NOT = {
+						has_technology = tech_destroyers
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_3"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_3_flag
+					NOT = {
+						has_technology = tech_destroyers
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_3"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_3"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_3_flag
+					NOT = {
+						has_technology = tech_battleships
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_3"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_3"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_3"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_3_flag
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 30
+										create_ship = {
+											design = "NAME_Pursuer3_3"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_3"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_3"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_4_flag
+					NOT = {
+						has_technology = tech_destroyers
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_4"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_4_flag
+					NOT = {
+						has_technology = tech_destroyers
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_4"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_4"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_4_flag
+					NOT = {
+						has_technology = tech_battleships
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_4"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_4"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_4"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_4_flag
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 30
+										create_ship = {
+											design = "NAME_Pursuer3_4"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_4"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_4"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_5_flag
+					NOT = {
+						has_technology = tech_destroyers
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_5"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_5_flag
+					NOT = {
+						has_technology = tech_destroyers
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_5"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_5"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_5_flag
+					NOT = {
+						has_technology = tech_battleships
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_5"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_5"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_5"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_5_flag
+					NOT = {
+						has_country_flag = ngm_pursuer_6_flag
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 30
+										create_ship = {
+											design = "NAME_Pursuer3_5"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_5"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_5"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_6_flag
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 45
+										create_ship = {
+											design = "NAME_Pursuer3_6"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_6"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_6"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.4
+			days = 3600			#10年後
+		}
+	}
+}
+
+country_event = {
+	id = ngm_origin.7
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = ngm_pursuer_3_flag
+	}
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_3_flag
+					NOT = {
+						has_technology = tech_destroyers
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_3"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_3_flag
+					NOT = {
+						has_technology = tech_destroyers
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_3"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_3"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_3_flag
+					NOT = {
+						has_technology = tech_battleships
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_3"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_3"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_3"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_3_flag
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 30
+										create_ship = {
+											design = "NAME_Pursuer3_3"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_3"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_3"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.4
+			days = 3600			#10年後
+		}
+	}
+}
+
+country_event = {
+	id = ngm_origin.8
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = ngm_pursuer_4_flag
+	}
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_4_flag
+					NOT = {
+						has_technology = tech_destroyers
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_4"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_4_flag
+					NOT = {
+						has_technology = tech_destroyers
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_4"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_4"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_4_flag
+					NOT = {
+						has_technology = tech_battleships
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_4"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_4"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_4"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_4_flag
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 30
+										create_ship = {
+											design = "NAME_Pursuer3_4"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_4"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_4"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.4
+			days = 3600			#10年後
+		}
+	}
+}
+
+country_event = {
+	id = ngm_origin.9
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = ngm_pursuer_5_flag
+	}
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_5_flag
+					NOT = {
+						has_technology = tech_destroyers
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_5"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_5_flag
+					NOT = {
+						has_technology = tech_destroyers
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_5"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_5"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_5_flag
+					NOT = {
+						has_technology = tech_battleships
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 25
+										create_ship = {
+											design = "NAME_Pursuer3_5"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_5"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_5"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_5_flag
+					NOT = {
+						has_country_flag = ngm_pursuer_6_flag
+					}
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 30
+										create_ship = {
+											design = "NAME_Pursuer3_5"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_5"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_5"
+											name = "Pursuer"
+										}
+									}
+									set_location = {
+										target = event_target:local_star
+										distance = 80
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.4
+			days = 3600			#10年後
+		}
+	}
+}
+
+country_event = {
+	id = ngm_origin.10
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = ngm_pursuer_6_flag
+	}
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = ngm_pursuer_6_flag
+				}
+			}
+			hidden_effect = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							is_star = yes
+						}
+						save_event_target_as = local_star
+					}
+					create_country = {
+						name = "NAME_Pursuer"
+						type = faction
+						auto_delete = no
+						flag = {
+							icon = {
+								category = "special"
+								file = "extradimensional_02.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "circle.dds"
+							}
+							colors = {
+								"black"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							establish_communications_no_message = root.owner
+							establish_contact = {
+								who = root.owner
+								location = root
+							}
+							save_global_event_target_as = pursuer_enemy
+							create_fleet = {
+								name = "Pursuer"
+								settings = {
+									spawn_debris = yes
+								}
+								effect = {
+									set_owner = event_target:pursuer_enemy
+									while = {
+										count = 45
+										create_ship = {
+											design = "NAME_Pursuer3_6"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer2_6"
+											name = "Pursuer"
+										}
+										create_ship = {
+											design = "NAME_Pursuer1_6"
 											name = "Pursuer"
 										}
 									}

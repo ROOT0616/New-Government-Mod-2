@@ -147,8 +147,8 @@ trait_ngm_assimilation = {
 	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		pc_habitat_habitability = 0.1
-		immigrants_protection = -0.1
+		pop_environment_tolerance = 0.1
+		pop_growth_from_immigration = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -164,7 +164,7 @@ trait_ngm_unadaptation = {
 	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		pc_habitat_habitability = -0.1
+		pop_environment_tolerance = -0.1
 		pop_growth_from_immigration = 0.1
 	}
 	slave_cost = {
@@ -836,7 +836,7 @@ trait_ngm_hunting = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		planet_jobs_food_produces_mult = -0.2
-		pc_habitat_habitability = -0.05
+		pop_environment_tolerance = -0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -855,7 +855,7 @@ trait_ngm_collecting = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		planet_jobs_food_produces_mult = -0.2
-		pc_habitat_habitability = -0.05
+		pop_environment_tolerance = -0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -874,7 +874,7 @@ trait_ngm_h_g = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		planet_jobs_food_produces_mult = -0.1
-		pc_habitat_habitability = -0.03
+		pop_environment_tolerance = -0.03
 	}
 	slave_cost = {
 		energy = 50
@@ -893,7 +893,7 @@ trait_ngm_agriculture = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		planet_jobs_food_produces_mult = 0.1
-		pc_habitat_habitability = 0.03
+		pop_environment_tolerance = 0.03
 	}
 	slave_cost = {
 		energy = 50
