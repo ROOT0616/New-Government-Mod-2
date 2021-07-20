@@ -594,3 +594,55 @@ ngm_space_time_continuum = {
 	pop_growth_speed = 0.1
 	country_engineering_research_produces_mult = 0.2
 }
+
+# 統合参謀本部に任せる。(消費財1000消費。1年間亜空間移動速度+10%)
+ngm_government1a = {
+	ship_speed_mult = 0.1
+}
+
+# 前線指揮官の見解を聞こう。(エネルギー1000消費。1年間艦隊連射レート+5%)
+ngm_government1b = {
+	ship_fire_rate_mult = 0.05
+}
+
+# 陸軍のやり方に一理あるようだ。(合金500消費。3年間陸軍耐久+20%)
+ngm_government1c = {
+	army_health = 0.2
+}
+
+# ふむ。私の意見ではな......(軍国のみの選択)(エネルギー、合金500消費。2年間艦隊船体値+5%)
+ngm_government1d = {
+	ship_hull_mult = 0.05
+}
+
+# よろしい。直ちに軍事パレードだ。(影響力100消費。安定度)
+ngm_government2a = {
+	pop_happiness = 0.1
+}
+# 軍事パレードではなく、追悼集会をしよう(平和のみ。影響力50消費。厭戦-10)
+ngm_government2c = {
+	planet_stability_add = 10
+}
+# 盛大にやろうじゃないか(軍国or栄望or権威のみ。影響力100、エネルギー500消費。厭戦値-10%、1年間の厭戦増加-10%)
+ngm_government2d = {
+	country_war_exhaustion_mult = -0.1
+}
+# 英雄を讃え、勲章を配ろう。(実利以外。勲章を-10 厭戦値-10%、1年間の厭戦増加-10%)(編集済)
+ngm_government2e = {
+	country_war_exhaustion_mult = -0.1
+}
+
+
+# すぐに鎮圧しろ！(3年間惑星安定度-10。厭戦+10)
+ngm_government3a = {
+	country_war_exhaustion_mult = -0.1
+	planet_stability_add = -10
+}
+# 群衆に呼びかけ、軍の支持集会を開け。(軍国のみ。影響力-50。厭戦-10)
+ngm_government3d = {
+	country_war_exhaustion_mult = -0.1
+}
+# とある施設なら中で叫んでくれて構わない。(権威かつ社会主義。影響力-80。当該惑星に3年間強制労働者3枠のJobを獲得)
+ngm_government3e = {
+	job_ad_forcrd_larbor_add = 3
+}

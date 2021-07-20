@@ -452,7 +452,7 @@
  civic_ngm_imperialism_desc:0 "この社会は自らが最も優れた政府だと考えており、国力とその威容を示し、利権を確保するために全力を注いでいる。"
 
  civic_ngm_big_ship_policy:0 "大艦巨砲主義"
- civic_ngm_big_ship_policy_desc:0 "この社会は巨艦が至高であり、巨砲は全てを薙ぎ払うと考えている。）"
+ civic_ngm_big_ship_policy_desc:0 "この社会は巨艦が至高であり、巨砲は全てを薙ぎ払うと考えている。"
 
  civic_ngm_military_industrial_complex:0 "軍産複合体"
  civic_ngm_military_industrial_complex_desc:0 "この社会は巨大な軍産複合体が大きな力を有しており、軍事政策にも大きな影響を与えている。"
@@ -1457,6 +1457,20 @@
  civic_ngm_war_prosperity_is_war_country_modifier:0 "戦時経済"
  civic_ngm_war_prosperity_is_war_country_modifier_desc:0 "国家に張りをもたらす戦いにより経済は有機的な活況を見せている。"
 
+ ngm_government1a:0 "統合参謀本部に任せる。"
+ ngm_government1b:0 "前線指揮官の見解を聞こう。"
+ ngm_government1c:0 "陸軍のやり方に一理あるようだ。"
+ ngm_government1d:0 "ふむ。私の意見ではな......"
+
+ ngm_government2a:0 "よろしい。直ちに軍事パレードだ。"
+ ngm_government2c:0 "軍事パレードではなく、追悼集会をしよう。"
+ ngm_government2d:0 "盛大にやろうじゃないか。"
+ ngm_government2e:0 "英雄を讃え、勲章を配ろう。"
+
+ ngm_government3a:0 "すぐに鎮圧しろ！"
+ ngm_government3d:0 "群衆に呼びかけ、軍の支持集会を開け。"
+ ngm_government3e:0 "とある施設なら中で叫んでくれて構わない。"
+
  civic_tooltip_ngm_dissection_effects:0 "異種族は強制で奴隷化"
 
  civic_tooltip_ngm_pest_control_effects:0 "開発主義国家に対して、§G環境保全§!の開戦事由を獲得\n（勝利すると開発主義の志向を保全主義に転向させ、相手を属国化させる。さらに、終戦時に戦争相手へ社会学研究力をあげる）。"
@@ -2007,6 +2021,34 @@
  cb_ngm_holy_wars_desc:0 ""
  wg_ngm_holy_wars:0 "聖戦"
  wg_ngm_holy_wars_desc:0 ""
+
+##########################
+#####    イベント    ######
+##########################
+
+ ngm_government.1.name:0 "作戦会議"
+ ngm_government.1.desc:0 "我が国の戦争に対して、各所から所見が届いている。統合参謀本部からは必要な補給物資を将兵に与えることで士気を高めることができると指摘している。しかし、前線指揮官達は補給物資を別の用途で使用することで戦力を向上させることができると主張している。\nこれらとは別に陸軍将校からは臨時の補強計画が提案されている。\n本日の会議は限られた資源をどのように投入するかという内容である。"
+ ngm_government.1.a:0 "統合参謀本部に任せる。"
+ ngm_government.1.b:0 "前線指揮官の見解を聞こう。"
+ ngm_government.1.c:0 "陸軍のやり方に一理あるようだ。"
+ ngm_government.1.d:0 "ふむ。私の意見ではな......"
+ ngm_government.1.e:0 "会議は躍る。"
+
+ ngm_government.2.name:0 "軍事パレード"
+ ngm_government.2.desc:0 "長引く戦争の影響で国民の中には厭戦感情を訴えるものも存在する。その者たちの不安を解消し、我が国の威力を誇示するために戦時の軍事パレードを行うよう国防省から提案があった。"
+ ngm_government.2.a:0 "よろしい。直ちに軍事パレードだ。"
+ ngm_government.2.b:0 "そのような余裕はない。"
+ ngm_government.2.c:0 "軍事パレードではなく、追悼集会をしよう。"
+ ngm_government.2.d:0 "盛大にやろうじゃないか。"
+ ngm_government.2.e:0 "英雄を讃え、勲章を配ろう。"
+
+ ngm_government.3.name:0 "厭戦活動"
+ ngm_government.3.desc:0 "長きにわたる戦争のためか遂に(惑星名)の市民の一部が反戦デモを開始した。これは我が国の方針に反しており、徐々に規模が拡張している。"
+ ngm_government.3.a:0 "すぐに鎮圧しろ！"
+ ngm_government.3.b:0 "代表者と交渉しろ。"
+ ngm_government.3.c:0 "いつも通り行えば良い。"
+ ngm_government.3.d:0 "群衆に呼びかけ、軍の支持集会を開け。"
+ ngm_government.3.e:0 "とある施設なら中で叫んでくれて構わない。"
 
 ##########################
 #####    そのほか    ######

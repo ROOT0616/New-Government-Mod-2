@@ -112,13 +112,15 @@ traditionalist = {
 		fulfilled_effect = 0.001
 		potential = {
 			exists = owner
+			owner = {
+				NOT = {
+					has_valid_civic = "civic_ngm_mechanical_faith"
+				}
+			}
 		}
 		trigger = {
 			owner = {
 				has_policy_flag = robots_outlawed
-				NOT = {
-					has_civic = "civic_ngm_mechanical_faith"
-				}
 			}
 		}
 	}

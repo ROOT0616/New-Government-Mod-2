@@ -66,12 +66,6 @@ building_ngm_ginga_department_store = {
 				is_ai = yes
 			}
 		}
-		is_artificial = no
-		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
-		}
 	}
 	planet_modifier = {
 		branch_office_value_mult = 0.2
@@ -108,12 +102,6 @@ building_ngm_business_school = {
 			NOT = {
 				is_ai = yes
 			}
-		}
-		is_artificial = no
-		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
 		}
 	}
 	planet_modifier = {
@@ -152,12 +140,6 @@ building_ngm_star_workshop = {
 				is_ai = yes
 			}
 		}
-		is_artificial = no
-		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
-		}
 	}
 	planet_modifier = {
 		job_artisan_add = 1
@@ -194,12 +176,6 @@ building_ngm_galaxy_salon = {
 			NOT = {
 				is_ai = yes
 			}
-		}
-		is_artificial = no
-		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
 		}
 	}
 	country_modifier = {
@@ -240,12 +216,6 @@ building_ngm_m_a_center = {
 				is_ai = yes
 			}
 		}
-		is_artificial = no
-		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
-		}
 	}
 	country_modifier = {
 		diplo_weight_mult = 0.1
@@ -283,12 +253,6 @@ building_ngm_galactic_bank = {
 				is_ai = yes
 			}
 		}
-		is_artificial = no
-		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
-		}
 	}
 	planet_modifier = {
 		trade_value_mult = 0.05
@@ -324,12 +288,6 @@ building_ngm_IAA = {
 			NOT = {
 				is_ai = yes
 			}
-		}
-		is_artificial = no
-		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
 		}
 	}
 	country_modifier = {
@@ -367,12 +325,6 @@ building_ngm_corporate_hospital = {
 				is_ai = yes
 			}
 		}
-		is_artificial = no
-		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
-		}
 	}
 	planet_modifier = {
 		pop_growth_speed = 0.05
@@ -408,12 +360,6 @@ building_ngm_planetary_scale_building_center = {
 			NOT = {
 				is_ai = yes
 			}
-		}
-		is_artificial = no
-		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
 		}
 	}
 	planet_modifier = {
@@ -451,12 +397,6 @@ building_ngm_corporate_plantation = {
 				is_ai = yes
 			}
 		}
-		is_artificial = no
-		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
-		}
 	}
 	planet_modifier = {
 		job_farmer_add = 3
@@ -492,12 +432,6 @@ building_ngm_society_cosmic_port = {
 				is_ai = yes
 			}
 		}
-		is_artificial = no
-		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
-		}
 	}
 	planet_modifier = {
 		trade_value_mult = 0.1
@@ -531,12 +465,6 @@ building_ngm_planet_trust_bank = {
 			NOT = {
 				is_ai = yes
 			}
-		}
-		is_artificial = no
-		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
 		}
 	}
 	planet_modifier = {
@@ -573,12 +501,6 @@ building_ngm_corporate_espionage = {
 				is_ai = yes
 			}
 		}
-		is_artificial = no
-		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
-		}
 	}
 	country_modifier = {
 		intel_decryption_add = 5
@@ -614,12 +536,6 @@ building_ngm_planet_rating_agency = {
 			NOT = {
 				is_ai = yes
 			}
-		}
-		is_artificial = no
-		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
 		}
 	}
 	planet_modifier = {

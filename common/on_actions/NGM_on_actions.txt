@@ -63,6 +63,8 @@ on_war_beginning = {
 		ngm_civic.10
 		# 戦争経済
 		ngm_civic.18
+		# 戦時中イベント
+		ngm_government.1
 	}
 }
 
@@ -75,5 +77,7 @@ on_war_ended = {
 		ngm_civic.8
 		# 戦争経済
 		ngm_civic.19
+		# 戦時中イベント
+		ngm_government.4
 	}
 }

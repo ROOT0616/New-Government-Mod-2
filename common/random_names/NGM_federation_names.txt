@@ -1,0 +1,47 @@
+# 1.包括的経済連携協定
+federation_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_federation_type = NGM_CEPA_federation
+		}
+	}
+	format = "包括的経済連携協定"
+}
+
+# 2.同君連合
+federation_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_federation_type = NGM_personal_union_federation
+		}
+	}
+	format = "同君連合"
+}
+
+# 3.常設首脳会議
+federation_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_federation_type = NGM_permanent_summit_federation
+		}
+	}
+	format = "常設首脳会議"
+}
+
+# 4.統一教団
+federation_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_federation_type = NGM_unification_church_federation
+		}
+	}
+	format = "統一教団"
+}

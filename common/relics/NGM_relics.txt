@@ -25,9 +25,21 @@ r_ngm_ancient_pact = {
 		}
 		starbase_outpost_alloys_cost_mult = 9999.99
 		country_claim_influence_cost_mult = 90
-		diplo_weight_mult = 1
 		country_unity_produces_mult = 0.3
 		trade_value_mult = 1
+	}
+	triggered_country_modifier = {
+		potential = {
+			is_ai = no
+		}
+		diplo_weight_mult = 0.5
+	}
+	triggered_country_modifier = {
+		potential = {
+			is_ai = yes
+		}
+		
+		diplo_weight_mult = 1
 	}
 	score = 1000
 	# アクティブ効果	：船体値+100%、宇宙軍許容量+500%、造船速度+500%(10年間。起動コスト影響力200)
