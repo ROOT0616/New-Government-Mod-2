@@ -24,6 +24,31 @@ trait_ngm_elder_politics = {
     leader_age_max = 100
 }
 
+
+# 政府後見
+# 総督:リーダー経験値取得+20%。職からの統合力+10%、職からの管理許容量+10%
+# 研究者: リーダー経験値取得+20%。調査速度+10%、研究速度+5%
+# 提督: リーダー経験値取得+20%。艦隊維持費-10%、亜空間移動速度+10%
+# 将軍: リーダー経験値取得+20%。地上軍維持費-10%、地上軍士気+20%
+trait_ngm_government_guardianship = {
+	cost = 0
+	potential_crossbreeding_chance = 0.1
+	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE PRESAPIENT LITHOID }
+	initial = no
+	randomized = no
+	modifier = {
+		species_leader_exp_gain = 0.2
+		planet_jobs_unity_produces_mult = 0.1
+		country_admin_cap_mult = 0.1
+		science_ship_survey_speed = 0.1
+		all_technology_research_speed = 0.05
+		ships_upkeep_mult = -0.1
+		ship_speed_mult = 0.1
+		armies_upkeep_mult = -0.1
+		army_morale = 0.2
+	}
+}
+
 # 特性
 
 # trait_ngm_knight	騎士道精神	：2p	統合力+10%、犯罪度-10%	(この種族は弱きものを助け、社会正義を全うすべきだという強い信念を有した高潔性を有している。)

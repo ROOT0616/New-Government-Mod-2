@@ -81,3 +81,23 @@ on_war_ended = {
 		ngm_government.4
 	}
 }
+
+# this = country
+on_mid_game_pulse_country = {
+	random_events = {
+		# 10 = 0
+		10 = ngm_government.6
+		10 = ngm_government.7
+		10 = 0
+	}
+}
+
+# this = country
+on_late_game_pulse_country = {
+	random_events = {
+		# 10 = 0
+		10 = ngm_government.6
+		10 = ngm_government.7
+		10 = 0
+	}
+}

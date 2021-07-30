@@ -51,6 +51,7 @@
 #	}
 #
 #}
+
 # 〇栄望主義：開戦自由「名誉にかけて」勝利時影響力＋100
 wg_ngm_with_honor = {
 	casus_belli = cb_ngm_with_honor
@@ -92,10 +93,27 @@ wg_ngm_with_honor = {
 			}
 		}
 	}
+	# 戦争が終わって現状維持になったときに実行
+	on_status_quo = {
+		add_modifier = {
+			modifier = ngm_with_honor_2_modifier
+			years = 1
+		}
+	}
 	# Run when target surrenders after claims are ceded
 	on_accept = {
 		add_resource = {
 			influence = 100
+		}
+		add_modifier = {
+			modifier = ngm_with_honor_1_modifier
+			years = 2
+		}
+		from = {
+			add_modifier = {
+				modifier = ngm_with_honor_2_modifier
+				years = 1
+			}
 		}
 	}
 	ai_weight = {

@@ -202,11 +202,7 @@
 
  origin_ngm_escape_to_the_past:0 "過去への逃走"
  origin_ngm_escape_to_the_past_desc:0 " この国の種族は苛烈な運命をたどる時代から逃げ去り、未来を変えるために再度過去へと戻った。\n しかし、その運命から抗う手法は追跡者を生み、定期的な襲撃を受けることとなる。"
- origin_tooltip_ngm_escape_to_the_past:0 "120か月に1度未来からの艦隊が襲撃する。打ち勝つことによって技術のデブリを取得することが可能となる。\n\n首都惑星に特殊な特性「時空超越機」\n物理学研究+20%、Pop成長速度+10%"
-
- ngm_origin.4.name:0 ""
- ngm_origin.4.desc:0 ""
- ngm_origin.4.a:0 ""
+ origin_tooltip_ngm_escape_to_the_past:0 "120か月に1度未来からの艦隊が襲撃する。打ち勝つことによって技術のデブリを取得することが可能となる。\n\n首都惑星に特殊な特性「時空超越機」\n物理学研究§G+20%§!、Pop成長速度§G+10%§!"
 
 #######################
 #####    国是    ######
@@ -1313,6 +1309,9 @@
  trait_ngm_elder_politics:0 "長老政治"
  trait_ngm_elder_politics_desc:0 "§Lこの政府の高官は高齢の者に支配されており、熟達した政府高官により多くの決定がなされている。しかし、それは新参者の政府参加を妨げやすく、新たな思想を受け入れる素地を減らしてしまう傾向にある。§!"
 
+ trait_ngm_government_guardianship:0 "政府後見"
+ trait_ngm_government_guardianship_desc:0 "このリーダーは政府により強力な支援が与えられている"
+
  civic_tooltip_ngm_not_removed:0 "§Rゲーム開始後の追加削除不可§!\n§Y(ゲーム開始後に追加、削除すると元に戻されます。)§!"
 
  civic_tooltip_ngm_prosperity_advocate_effects:0 "平和の期間が5年続くごとに労働者生産量§G+1%§!§Y（最大50年分）§!\n平和の期間が5年続くごとに交易価値§G+2.5%§!§Y（最大50年分）§!"
@@ -1471,9 +1470,12 @@
  ngm_government3d:0 "群衆に呼びかけ、軍の支持集会を開け。"
  ngm_government3e:0 "とある施設なら中で叫んでくれて構わない。"
 
+ ngm_with_honor_1_modifier:0 "死は無であるが、敗北と不名誉に生きることは、まさに日常の死なのだ。"
+ ngm_with_honor_2_modifier:0 "屈辱を与えられた。"
+
  civic_tooltip_ngm_dissection_effects:0 "異種族は強制で奴隷化"
 
- civic_tooltip_ngm_pest_control_effects:0 "開発主義国家に対して、§G環境保全§!の開戦事由を獲得\n（勝利すると開発主義の志向を保全主義に転向させ、相手を属国化させる。さらに、終戦時に戦争相手へ社会学研究力をあげる）。"
+ civic_tooltip_ngm_pest_control_effects:0 "開発主義国家に対して、§G$casus_belli_cb_ngm_pest_control$§!の開戦事由を得る。 \n（勝利すると開発主義の志向を保全主義に転向させ、相手を属国化させる。さらに、終戦時に戦争相手へ社会学研究力をあげる）。"
 
  civic_tooltip_ngm_remorseless_justice_effects:0 "終末軌道爆撃以外選択不可"
 
@@ -1507,30 +1509,30 @@
  promoted_socialism_desc:0 "§H社会主義§!志向は政府によって推奨されている"
  suppressed_socialism:0 "社会主義を抑圧"
  suppressed_socialism_desc:0 "§H社会主義§!志向は政府によって抑圧されている"
- suppressed_interventionism:0 "介入主義を抑圧"
- suppressed_interventionism_desc:0 "§H介入主義§!志向は政府によって抑圧されている"
  promoted_interventionism:0 "介入主義を推奨"
  promoted_interventionism_desc:0 "§H介入主義§!志向は政府によって推奨されている"
- suppressed_neutralism:0 "中立主義を抑圧"
- suppressed_neutralism_desc:0 "§H中立主義§!志向は政府によって抑圧されている"
+ suppressed_interventionism:0 "介入主義を抑圧"
+ suppressed_interventionism_desc:0 "§H介入主義§!志向は政府によって抑圧されている"
  promoted_neutralism:0 "中立主義を推奨"
  promoted_neutralism_desc:0 "§H中立主義§!志向は政府によって推奨されている"
- suppressed_conservationism:0 "保全主義を抑圧"
- suppressed_conservationism_desc:0 "§H保全主義§!志向は政府によって抑圧されている"
+ suppressed_neutralism:0 "中立主義を抑圧"
+ suppressed_neutralism_desc:0 "§H中立主義§!志向は政府によって抑圧されている"
  promoted_conservationism:0 "保全主義を推奨"
  promoted_conservationism_desc:0 "§H保全主義§!志向は政府によって推奨されている"
- suppressed_developmentalism:0 "開発主義を抑圧"
- suppressed_developmentalism_desc:0 "§H開発主義§!志向は政府によって抑圧されている"
+ suppressed_conservationism:0 "保全主義を抑圧"
+ suppressed_conservationism_desc:0 "§H保全主義§!志向は政府によって抑圧されている"
  promoted_developmentalism:0 "開発主義を推奨"
  promoted_developmentalism_desc:0 "§H開発主義§!志向は政府によって推奨されている"
- suppressed_honorism:0 "栄望主義を抑圧"
- suppressed_honorism_desc:0 "§H栄望主義§!志向は政府によって抑圧されている"
+ suppressed_developmentalism:0 "開発主義を抑圧"
+ suppressed_developmentalism_desc:0 "§H開発主義§!志向は政府によって抑圧されている"
  promoted_honorism:0 "栄望主義を推奨"
  promoted_honorism_desc:0 "§H栄望主義§!志向は政府によって推奨されている"
- suppressed_utilitarianism:0 "実利主義を抑圧"
- suppressed_utilitarianism_desc:0 "§H実利主義§!志向は政府によって抑圧されている"
+ suppressed_honorism:0 "栄望主義を抑圧"
+ suppressed_honorism_desc:0 "§H栄望主義§!志向は政府によって抑圧されている"
  promoted_utilitarianism:0 "実利主義を推奨"
  promoted_utilitarianism_desc:0 "§H実利主義§!志向は政府によって推奨されている"
+ suppressed_utilitarianism:0 "実利主義を抑圧"
+ suppressed_utilitarianism_desc:0 "§H実利主義§!志向は政府によって抑圧されている"
 
  ngm_ancient_pact:0 "遺物「古代の盟約」"
 
@@ -1855,11 +1857,11 @@
 
  NGM_CEPA_CTOCIDTP:0 "防疫関税条約"
  NGM_CEPA_CTOCIDTP_desc:0 "国家間の交易には関税と防疫が問題として存在しており、そういった問題は共同的に解決されるべきである。"
- federation_NGM_CEPA_CTOCIDTP_effect:0 "エネルギー算出§G-5%§!、交易価値§G+10%§!、§Y無償の移民協定§!"
+ federation_NGM_CEPA_CTOCIDTP_effect:0 "エネルギー算出§G-5%§!、$TRADE_VALUE$§G+10%§!、§Y無償の移民協定§!"
 
  NGM_CEPA_EMNO:0 "多国間報道機関の設立"
  NGM_CEPA_EMNO_desc:0 "国際的な中立的報道機関を設立することにより市民に対して安定的な情報を提供する。"
- federation_NGM_CEPA_EMNO_effect:0 "統治志向魅力§R-5%§!、幸福度§G+5%§!"
+ federation_NGM_CEPA_EMNO_effect:0 "$MOD_POP_GOVERNMENT_ETHIC_ATTRACTION$§R-5%§!、幸福度§G+5%§!"
 
  NGM_CEPA_CTC:0 "犯罪者取扱条約"
  NGM_CEPA_CTC_desc:0 "銀河の安定的な秩序のために、他国においても犯罪を犯した者が入国した際には共同で対処する。"
@@ -2026,6 +2028,9 @@
 #####    イベント    ######
 ##########################
 
+ ngm_origin.11.name:0 "追跡者"
+ ngm_origin.11.desc:0 "やつらが未来から追いかけて来た\nなんとかするんだ"
+
  ngm_government.1.name:0 "作戦会議"
  ngm_government.1.desc:0 "我が国の戦争に対して、各所から所見が届いている。統合参謀本部からは必要な補給物資を将兵に与えることで士気を高めることができると指摘している。しかし、前線指揮官達は補給物資を別の用途で使用することで戦力を向上させることができると主張している。\nこれらとは別に陸軍将校からは臨時の補強計画が提案されている。\n本日の会議は限られた資源をどのように投入するかという内容である。"
  ngm_government.1.a:0 "統合参謀本部に任せる。"
@@ -2043,12 +2048,27 @@
  ngm_government.2.e:0 "英雄を讃え、勲章を配ろう。"
 
  ngm_government.3.name:0 "厭戦活動"
- ngm_government.3.desc:0 "長きにわたる戦争のためか遂に(惑星名)の市民の一部が反戦デモを開始した。これは我が国の方針に反しており、徐々に規模が拡張している。"
+ ngm_government.3.desc:0 "長きにわたる戦争のためか遂に [Root.GetName] の市民の一部が反戦デモを開始した。これは我が国の方針に反しており、徐々に規模が拡張している。"
  ngm_government.3.a:0 "すぐに鎮圧しろ！"
  ngm_government.3.b:0 "代表者と交渉しろ。"
  ngm_government.3.c:0 "いつも通り行えば良い。"
  ngm_government.3.d:0 "群衆に呼びかけ、軍の支持集会を開け。"
  ngm_government.3.e:0 "とある施設なら中で叫んでくれて構わない。"
+
+#  ngm_government.5.name:0 "政治論争"
+#  ngm_government.5.desc:0 ""
+#  ngm_government.5.a:0 ""
+#  ngm_government.5.b:0 ""
+
+ ngm_government.6.name:0 "学術論争"
+ ngm_government.6.desc:0 ""
+ ngm_government.6.a:0 "誰かを支持しよう！"
+ ngm_government.6.b:0 "政府は臨機応変に対応する。"
+
+ ngm_government.7.name:0 "厭戦活動"
+ ngm_government.7.desc:0 ""
+ ngm_government.7.a:0 "誰かを支持しよう！"
+ ngm_government.7.b:0 "政府は臨機応変に対応する。"
 
 ##########################
 #####    そのほか    ######
