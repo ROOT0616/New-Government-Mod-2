@@ -1,0 +1,111 @@
+@resolution_cost_t1 = 100
+@resolution_cost_t2 = 150
+@resolution_cost_t3 = 200
+@resolution_cost_t4 = 250
+@resolution_cost_t5 = 300
+@resolution_cost_denounce = 25
+@resolution_flag_timer = 360
+
+#example_resolution = {
+#	icon = "name of the icon key"
+#	resources = {} # コストとカテゴリー
+#	target = yes/no # この解像度で対象となる国が必要な場合
+#	harmful = yes/no # ターゲットを選択する際に、AIがこの有害性を考慮すべきかどうか。
+#	modifier = {} # 合格した場合、すべてのコミュニティメンバーに適用される修正プログラム
+#	triggered_modifier = {} # 適用されるトリガーモディファイア、スコープは国
+#	effect = {} # 合格した場合に適用される効果は、対象国がない限り提案者が対象となる - その場合、対象国が対象となり、提案者は対象から外れる。
+#	fail_effects = {} # 失敗した場合に適用される効果は、対象国がない限り、提案者が対象となります - その場合、対象国が対象となり、提案者は対象から外れます。
+#	potential = {} # 潜在的なトリガー、スコープは国
+#	allow = {} # トリガーを許可し、スコープは国
+#	active = {} # このトリガーが失敗した場合、制定された決議はキャンセルされます。
+#	ai_weight = {} # ai weight modifiers, scope is country. from scope is target country for targeted resolutions
+#	valid_target = {} # 有効なターゲットはトリガー、スコープは国
+#}
+# NOTE: レゾリューションカテゴリーにレゾリューションを追加することを忘れないでください。
+
+resolution_ngm_galactic_scale_1 = {
+	icon = "name of the icon key"
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+	level = 1
+	modifier = {
+		resolution_ngm_galactic_scale_1 = 1
+	}
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_ecology days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = galactic_community_resolution_failed_ecology
+				days = @resolution_flag_timer
+			}
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"
+			NOT = {
+				is_active_resolution = "resolution_ngm_galactic_scale_1"
+			}
+		}
+	}
+	ai_weight = {
+		weight = 1
+	}
+}
+
+resolution_ngm_galactic_scale_2 = {
+	icon = "name of the icon key"
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_ecology days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = galactic_community_resolution_failed_ecology
+				days = @resolution_flag_timer
+			}
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+	potential = {
+		is_active_resolution = "resolution_ngm_galactic_scale_1"
+	}
+	ai_weight = {
+		weight = 1
+	}
+}

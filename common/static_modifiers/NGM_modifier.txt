@@ -665,3 +665,11 @@ ngm_with_honor_2_modifier = {
 	pop_growth_speed = -0.1
 	diplo_weight_mult = -0.1
 }
+
+# 名前は、銀河規模の拡大という名称で、
+# Pop成長率+1000%、Pop製造速度+1000%。Pop消費財+50%
+resolution_ngm_galactic_scale_1 = {
+	pop_growth_speed = 10
+	pop_assembly_speed = 10
+	planet_pops_consumer_goods_upkeep_mult = 0.5
+}

@@ -1,0 +1,24 @@
+# Example Resolution Cateogry
+# NOTE: Resolution types specified here need to exist in the type database!
+
+# example_category = {
+# 	group = none 			# determines how the categories are grouped in the UI
+# 	icon = "key"			# sets icon in the dropdown menu
+# 	resolution_types = {
+# 		"resolution_type_1"
+# 		"resolution_type_2"
+# 		"resolution_type_3"
+# 	}
+# }
+
+
+# 名前は、銀河規模の拡大という名称で、
+# Pop成長率+1000%、Pop製造速度+1000%。Pop消費財+50%
+resolution_category_ngm_galactic_scale = {
+	group = environment_technology 			# UIでのカテゴリーのグループ化を決定します。
+	icon = "key"			# ドロップダウンメニューのアイコンを設定する
+	resolution_types = {
+		"resolution_ngm_galactic_scale_1"
+		"resolution_ngm_galactic_scale_2"
+	}
+}
