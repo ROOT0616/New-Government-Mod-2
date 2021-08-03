@@ -138,6 +138,13 @@ researcher = {
 			}
 			unity = 1
 		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_ngm_cyberdemocracy }
+			}
+			unity = 1
+		}
 		upkeep = {
 			consumer_goods = 2
 		}
