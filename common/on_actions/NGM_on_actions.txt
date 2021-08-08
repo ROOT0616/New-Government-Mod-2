@@ -24,8 +24,8 @@ on_game_start_country = {
 		# 異種族解剖
 		ngm_civic.20
 		# Origin
-		ngm_origin.1 # プレーヤを動かすメインイベント # 律儀な古代の緩衝国家
-		ngm_origin.3 # プレーヤを動かすメインイベント # 過去への逃走
+		ngm_origin.1 # 律儀な古代の緩衝国家
+		ngm_origin.3 # 過去への逃走
 	}
 }
 
@@ -86,8 +86,8 @@ on_war_ended = {
 on_mid_game_pulse_country = {
 	random_events = {
 		# 10 = 0
-		10 = ngm_government.6
-		10 = ngm_government.7
+		45 = ngm_government.6
+		45 = ngm_government.7
 		10 = 0
 	}
 }
@@ -96,8 +96,19 @@ on_mid_game_pulse_country = {
 on_late_game_pulse_country = {
 	random_events = {
 		# 10 = 0
-		10 = ngm_government.6
-		10 = ngm_government.7
+		45 = ngm_government.6
+		45 = ngm_government.7
 		10 = 0
+	}
+}
+
+# This = owner of fleet 1 (combatant)
+# From = owner of fleet 2 (destroyed)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_perp = {
+	events = {
+		# 過去への逃走
+		ngm_origin.101
 	}
 }

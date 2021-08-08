@@ -1,6 +1,5 @@
 @activation_cost = 150
 @triumph_duration = 3600
-
 # 遺物「古代の盟約」Ancient Pact（古代の列強間の協定で、緊急時に強力な自衛力を求められたうえで、平時には他国の脅威にならない経済国家であることを求められる条文。所有国は永久にこれを守らなくてはならない。）
 # パッシブ効果	：請求権作成コスト+9999%、開拓前哨地建造コスト+9999%、外交発言力+100%。統合力+30%、交易価値+100%、
 # アクティブ効果	：船体値+100%、宇宙軍許容量+500%、造船速度+500%(10年間。起動コスト影響力200)
@@ -18,13 +17,13 @@ r_ngm_ancient_pact = {
 	ai_weight = {
 		weight = 100
 	}
-# パッシブ効果	：請求権作成コスト+9999%、開拓前哨地建造コスト+9999%、外交発言力+100%。統合力+30%、交易価値+100%、
+	# パッシブ効果	：請求権作成コスト+9999%、開拓前哨地建造コスト+9999%、外交発言力+100%。統合力+30%、交易価値+100%、
 	triggered_country_modifier = {
 		potential = {
 			always = yes
 		}
 		starbase_outpost_alloys_cost_mult = 9999.99
-		country_claim_influence_cost_mult = 90
+		country_claim_influence_cost_mult = 50
 		country_unity_produces_mult = 0.3
 		trade_value_mult = 1
 	}
@@ -38,7 +37,6 @@ r_ngm_ancient_pact = {
 		potential = {
 			is_ai = yes
 		}
-		
 		diplo_weight_mult = 1
 	}
 	score = 1000

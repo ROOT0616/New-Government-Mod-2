@@ -4191,6 +4191,162 @@ country_event = {
 	}
 }
 
+# on fleet destroyed perp
+country_event = {
+	id = ngm_origin.101
+	title = ngm_origin.101.name
+	desc = ngm_origin.101.desc
+	picture = GFX_evt_crisis_defeated
+	show_sound = event_celebration
+	location = root
+	is_triggered_only = yes
+	trigger = {
+		exists = event_target:pursuer_enemy
+		from = {
+			is_same_value = event_target:pursuer_enemy
+		}
+	}
+	immediate = {
+		event_target:pursuer_enemy = {
+			destroy_country = yes
+		}
+	}
+	option = {
+		name = ngm_origin.101.a
+		locked_random_list = {
+			20 = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier5researchmax
+				}
+			}
+			20 = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier5researchmax
+				}
+			}
+			20 = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier5researchmax
+				}
+			}
+			10 = {
+				add_random_research_option = {
+					add_progress = 0.3
+					area = engineering
+					ignore_prereqs = yes
+					fail_effects = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier5researchmax
+						}
+					}
+				}
+			}
+			10 = {
+				add_random_research_option = {
+					add_progress = 0.3
+					area = physics
+					ignore_prereqs = yes
+					fail_effects = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier5researchmax
+						}
+					}
+				}
+			}
+			10 = {
+				add_random_research_option = {
+					add_progress = 0.3
+					area = society
+					ignore_prereqs = yes
+					fail_effects = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier5researchmax
+						}
+					}
+				}
+			}
+			2 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = nano_forge_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			2 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = skydome_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			2 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = dimensional_fabricator_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			2 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = affluence_center_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			1 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = nourishment_center_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			1 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = class_4_singularity_build_count
+							value = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 ###############################
 #######  連邦用イベント ########
 ###############################
@@ -4848,8 +5004,6 @@ country_event = {
 # 		}
 # 	}
 # }
-
-
 # 2.学術論争
 # (リーダー名)を支持する(当該リーダーに「政府後見」の特性を付与。各研究力100を獲得)
 # 政府は臨機応変に対応する。(研究力各500獲得。)
@@ -4912,13 +5066,11 @@ country_event = {
 
 # 国内大会イベント
 # (ランダムで発生。開催するために影響力50を消費。大会中にいくつかのイベントが発生し、イベント中は帝国補正として幸福度+5%、移民流入+10%を獲得。イベント期間は半年。大会によって終わり次第バフを得る。ゲシュタルトは不可。)
-
 # 1.論文大会(2年間研究速度+10%)
 # 2.弁論大会(2年間外交発言力+10%)
 # 4.レース大会(2年間幸福度+10%)
 # 5.運動大会(2年間幸福度+10%。リーダー寿命+5年)
 # 6.芸術大会(2年間統合力+10%)
-
 # イベント
 # 開会式
 # スポンサーの好況
@@ -4927,42 +5079,32 @@ country_event = {
 # 大使の熱狂
 # 閉会式
 # 不正発生！
-
 # 別枠
 # 1.シナプス接続テスト(ゲシュタルトのみ。影響力100消費。固有イベントがランダムで発生。終了後、3年間研究速度と統合力+10%)
-
 # 測定開始
 # 問題なし
 # エラー発生
 # 測定終了
-
 # 2.運動機能テスト(ゲシュタルトのみ。影響力100消費。固有イベントがランダムで発生。終了後、3年間地上軍耐久力+20%、リーダー寿命+10年。)
-
 # 測定開始
 # 問題なし
 # エラー発生
 # 測定終了
-
 # 3.観艦式(栄望もしくは軍国のみ発生。エネルギー1000を消費。消費後に1年以内に首都惑星で軍艦1隻以上を当てるプロジェクトを遂行すれば達成。影響力100と2年間軍国主義、栄望主義魅力+20%、2年間外交発言力+10％)
-
 # 行進開始
 # 成功裏の終了
 # 将校への叱責
 # 私は帰ってきた！
-
-
 # 世界大会イベント(ゲシュタルト、実利以外がの銀河コミュニティ参加国のみが主催。ゲシュタルト以外の銀河コミュニティ加盟国が参加可能)
 # 主催は銀河コミュニティ設立後に発生するランダムなイベントで、エネルギー1kを支払えば可能。主催国決定後に各国に参加するか否かのイベントが発生する。
 # 参加国が4ヵ国以上で開始。
 # 予選イベント(国数制限なし)→準決勝イベント(最大4ヵ国に発生)→決勝イベント(最大3ヵ国に発生)とすすむ。
 # 参加者、3位、2位、1位にそれぞれ報酬がもらえる。
-
 # 1.論文大会
 # 研究力と種族補正+乱数で競う。
 # 参加者は影響力+20。3位影響力+50、5年間研究速度+5%。2位影響力+80、5年間研究速度+10%。1位影響力+100、5年間研究速度+10%、10年間外交発言力+10%
 # 2.レース大会
 # 3.芸術大会
-
 # 開会式
 # 予選結果
 # 準決勝結果
@@ -4973,10 +5115,8 @@ country_event = {
 # スポンサーの大盛況
 # 歴史的一戦
 # 不正発生！
-
 # 別枠
 # 1.観艦式(栄望もしくは軍国のみ主催可能。エネルギー1000、影響50を消費。銀河コミュニティ加盟国に呼びかけ、3ヵ国以上の参加で開催。消費後に1年以内に首都惑星で軍艦1隻以上を当てるプロジェクトを遂行すれば達成。主催国は影響力200と5年間軍国主義、栄望主義魅力+20%、5年間外交発言力+20％)参加国は影響100と2年間外交発言力+10%を獲得。
-
 # 行進開始
 # 市民の関心
 # 盛大な式次第
