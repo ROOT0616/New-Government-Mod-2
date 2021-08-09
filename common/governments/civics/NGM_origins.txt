@@ -66,13 +66,10 @@ origin_ngm_escape_to_the_past = {
 		always = yes
 	}
 	modifier = {
-		ship_hull_mult = 0.1
-		ship_fire_rate_mult = 0.1
-		all_technology_research_speed = 0.2
-		country_alloys_produces_mult = 0.1
-		country_physics_research_produces_mult = 0.2
-		country_society_research_produces_mult = 0.2
-		country_engineering_research_produces_mult = 0.2
+		ship_fire_rate_mult = 0.05
+		country_physics_research_produces_mult = 0.1
+		country_society_research_produces_mult = 0.1
+		country_engineering_research_produces_mult = 0.1
 	}
 	description = "origin_tooltip_ngm_escape_to_the_past"
 	random_weight = {
