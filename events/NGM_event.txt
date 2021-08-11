@@ -1823,22 +1823,35 @@ country_event = {
 	}
 }
 
-# # 実験的物質の発見	首都惑星の各戦略資源特性を1つずつ付与
-# country_event = {
-# 	id = ngm_civic.16
-# 	# hide_window = yes
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		owner = {
-# 			has_civic = civic_ngm_experimental_substance
-# 		}
-# 	}
-# 	immediate = {
-# 		every_owned_planet = {
-# 			add_deposit = d_ngm_experimental_substance
-# 		}
-# 	}
-# }
+# 実験的物質の発見	首都惑星の各戦略資源特性を1つずつ付与
+country_event = {
+	id = ngm_civic.16
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = {
+			has_civic = civic_ngm_experimental_substance
+		}
+	}
+	immediate = {
+		every_owned_planet = {
+			planet_event = {
+				id = ngm_civic.165
+				days = 1
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = ngm_civic.165
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		add_deposit = d_ngm_experimental_substance
+	}
+}
+
 # 戦争経済	戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+10%、建艦速度+10%。非戦争時の鉱物、合金、交易価値、消費財生産量-20%、建艦速度+20%
 country_event = {
 	id = ngm_civic.17
@@ -4341,6 +4354,140 @@ country_event = {
 			}
 		}
 	}
+	option = {
+		name = ngm_origin.101.b
+		locked_random_list = {
+			20 = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier5researchmax
+				}
+			}
+			20 = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier5researchmax
+				}
+			}
+			20 = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier5researchmax
+				}
+			}
+			10 = {
+				add_random_research_option = {
+					add_progress = 0.3
+					area = engineering
+					ignore_prereqs = yes
+					fail_effects = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier5researchmax
+						}
+					}
+				}
+			}
+			10 = {
+				add_random_research_option = {
+					add_progress = 0.3
+					area = physics
+					ignore_prereqs = yes
+					fail_effects = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier5researchmax
+						}
+					}
+				}
+			}
+			10 = {
+				add_random_research_option = {
+					add_progress = 0.3
+					area = society
+					ignore_prereqs = yes
+					fail_effects = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier5researchmax
+						}
+					}
+				}
+			}
+			2 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = nano_forge_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			2 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = skydome_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			2 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = dimensional_fabricator_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			2 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = affluence_center_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			1 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = nourishment_center_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			1 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = class_4_singularity_build_count
+							value = 1
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 ###############################
@@ -5016,7 +5163,7 @@ country_event = {
 			limit = {
 				leader_class = scientist
 			}
-			add_trait = leader_trait_ngm_governor_government_guardianship
+			add_trait = leader_trait_ngm_scientist_government_guardianship
 		}
 		add_resource = {
 			physics_research = 100
