@@ -1823,26 +1823,22 @@ country_event = {
 	}
 }
 
-# 実験的物質の発見	首都惑星の各戦略資源特性を1つずつ付与
-country_event = {
-	id = ngm_civic.16
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		has_civic = civic_ngm_experimental_substance
-	}
-	immediate = {
-		every_owned_planet = {
-			limit = {
-				is_capital = yes
-			}
-			add_deposit = d_rare_crystals_1
-			add_deposit = d_exotic_gases_1
-			add_deposit = d_volatile_motes_1
-		}
-	}
-}
-
+# # 実験的物質の発見	首都惑星の各戦略資源特性を1つずつ付与
+# country_event = {
+# 	id = ngm_civic.16
+# 	# hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		owner = {
+# 			has_civic = civic_ngm_experimental_substance
+# 		}
+# 	}
+# 	immediate = {
+# 		every_owned_planet = {
+# 			add_deposit = d_ngm_experimental_substance
+# 		}
+# 	}
+# }
 # 戦争経済	戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+10%、建艦速度+10%。非戦争時の鉱物、合金、交易価値、消費財生産量-20%、建艦速度+20%
 country_event = {
 	id = ngm_civic.17
@@ -5017,7 +5013,10 @@ country_event = {
 	option = {
 		name = ngm_government.6.a
 		random_owned_leader = {
-			add_trait = trait_ngm_government_guardianship
+			limit = {
+				leader_class = scientist
+			}
+			add_trait = leader_trait_ngm_governor_government_guardianship
 		}
 		add_resource = {
 			physics_research = 100
@@ -5059,7 +5058,19 @@ country_event = {
 	option = {
 		name = ngm_government.7.b
 		random_owned_leader = {
-			add_trait = trait_ngm_government_guardianship
+			limit = {
+				leader_class = admiral
+			}
+			add_trait = leader_trait_ngm_admiral_government_guardianship
+		}
+	}
+	option = {
+		name = ngm_government.7.c
+		random_owned_leader = {
+			limit = {
+				leader_class = general
+			}
+			add_trait = leader_trait_ngm_general_government_guardianship
 		}
 	}
 }

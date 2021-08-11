@@ -1309,8 +1309,14 @@
  trait_ngm_elder_politics:0 "長老政治"
  trait_ngm_elder_politics_desc:0 "§Lこの政府の高官は高齢の者に支配されており、熟達した政府高官により多くの決定がなされている。しかし、それは新参者の政府参加を妨げやすく、新たな思想を受け入れる素地を減らしてしまう傾向にある。§!"
 
- trait_ngm_government_guardianship:0 "政府後見"
- trait_ngm_government_guardianship_desc:0 "このリーダーは政府により強力な支援が与えられている"
+ leader_trait_ngm_governor_government_guardianship:0 "政府後見"
+ leader_trait_ngm_governor_government_guardianship_desc:0 "このリーダーは政府により強力な支援が与えられている"
+ leader_trait_ngm_scientist_government_guardianship:0 "$leader_trait_ngm_governor_government_guardianship$"
+ leader_trait_ngm_scientist_government_guardianship_desc:0 "$leader_trait_ngm_governor_government_guardianship_desc$"
+ leader_trait_ngm_admiral_government_guardianship:0 "$leader_trait_ngm_governor_government_guardianship$"
+ leader_trait_ngm_admiral_government_guardianship_desc:0 "$leader_trait_ngm_governor_government_guardianship_desc$"
+ leader_trait_ngm_general_government_guardianship:0 "$leader_trait_ngm_governor_government_guardianship$"
+ leader_trait_ngm_general_government_guardianship_desc:0 "$leader_trait_ngm_governor_government_guardianship_desc$"
 
  civic_tooltip_ngm_not_removed:0 "§Rゲーム開始後の追加削除不可§!\n§Y(ゲーム開始後に追加、削除すると元に戻されます。)§!"
 
@@ -2072,7 +2078,8 @@
  ngm_government.7.name:0 "厭戦活動"
  ngm_government.7.desc:0 ""
  ngm_government.7.a:0 "誰かを支持しよう！"
- ngm_government.7.b:0 "政府は臨機応変に対応する。"
+ ngm_government.7.b:0 "政府は提督を支持する。"
+ ngm_government.7.c:0 "政府は将軍を支持する。"
 
 ##########################
 #####    そのほか    ######

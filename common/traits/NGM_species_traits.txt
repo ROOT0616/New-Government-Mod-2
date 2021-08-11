@@ -32,21 +32,58 @@ trait_ngm_elder_politics = {
 # 研究者: リーダー経験値取得+20%。調査速度+10%、研究速度+5%
 # 提督: リーダー経験値取得+20%。艦隊維持費-10%、亜空間移動速度+10%
 # 将軍: リーダー経験値取得+20%。地上軍維持費-10%、地上軍士気+20%
-trait_ngm_government_guardianship = {
+leader_trait_ngm_governor_government_guardianship = {
 	cost = 0
-	potential_crossbreeding_chance = 0.1
-	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE PRESAPIENT LITHOID }
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = { governor }
+	leader_class = { governor }
 	initial = no
 	randomized = no
-	modification = no
 	modifier = {
 		species_leader_exp_gain = 0.2
 		planet_jobs_unity_produces_mult = 0.1
 		country_admin_cap_mult = 0.1
+	}
+}
+leader_trait_ngm_scientist_government_guardianship = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+	modifier = {
+		species_leader_exp_gain = 0.2
 		science_ship_survey_speed = 0.1
 		all_technology_research_speed = 0.05
+	}
+}
+leader_trait_ngm_admiral_government_guardianship = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+	modifier = {
+		species_leader_exp_gain = 0.2
 		ships_upkeep_mult = -0.1
 		ship_speed_mult = 0.1
+	}
+}
+leader_trait_ngm_general_government_guardianship = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+	randomized = no
+	modifier = {
+		species_leader_exp_gain = 0.2
 		armies_upkeep_mult = -0.1
 		army_morale = 0.2
 	}
@@ -183,9 +220,9 @@ trait_ngm_assimilation = {
 	}
 }
 
-# trait_ngm_unadaptation	適応不足  	：2p	居住性-10%、Popの移住+10%	(この種族は、身体的な同化機能が低く、自分の身体に合った環境への移動をより好む傾向がある。)
+# trait_ngm_unadaptation	適応不足  	：-2p	居住性-10%、Popの移住+10%	(この種族は、身体的な同化機能が低く、自分の身体に合った環境への移動をより好む傾向がある。)
 trait_ngm_unadaptation = {
-	cost = 2
+	cost = -2
 	potential_crossbreeding_chance = 1.0
 	opposites = {
 		"trait_ngm_assimilation"
