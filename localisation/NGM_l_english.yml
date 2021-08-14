@@ -1450,6 +1450,27 @@
  ngm_space_time_continuum:0 "時空超越機"
  ngm_space_time_continuum_desc:0 "時間を超えることができる機械で、惑星と一体化している。原理は失われているため再現は不可能であるが、時折亡命者がこの時代に流れ込んでいる。"
 
+ first_covid_a_planet_modifier:0 "1-a"
+ first_covid_a_planet_modifier_desc:0 ""
+ second_covid_a_planet_modifier:0 "2-a"
+ second_covid_a_planet_modifier_desc:0 ""
+ third_covid_a_planet_modifier:0 "3-a"
+ third_covid_a_planet_modifier_desc:0 ""
+
+ first_covid_b_planet_modifier:0 "1-b"
+ first_covid_b_planet_modifier_desc:0 ""
+ second_covid_b_planet_modifier:0 "2-b"
+ second_covid_b_planet_modifier_desc:0 ""
+ third_covid_b_planet_modifier:0 "3-b"
+ third_covid_b_planet_modifier_desc:0 ""
+
+ first_covid_c_planet_modifier:0 "1-c"
+ first_covid_c_planet_modifier_desc:0 ""
+ second_covid_c_planet_modifier:0 "2-c"
+ second_covid_c_planet_modifier_desc:0 ""
+ third_covid_c_planet_modifier:0 "3-c"
+ third_covid_c_planet_modifier_desc:0 ""
+
  civic_tooltip_ngm_experimental_substance_effects:0 "§Rゲーム開始後の追加削除不可§!\n§Y(ゲーム開始後に追加、削除すると元に戻されます。)\n\n§!首都惑星に各戦略資源特性を1つずつ付与"
 
  civic_tooltip_ngm_war_prosperity_effects:0 "戦時中の鉱物,合金,消費財生産量§G+10%§!\n戦時中の交易価値生産量§G+10%§!\n戦時中の建艦速度§G+10%§!\n非戦時中の鉱物,合金,消費財生産量§R-10%§!\n非戦時中の交易価値生産量§R-10%§!\n非戦時中の建艦速度§R-20%§!"
@@ -1561,7 +1582,7 @@
  trait_ngm_unhealing_desc:0 "この種族の遺伝子は特殊で、自己複製能力が低く、多少の怪我や病気が命取りとなる。"
 
  trait_ngm_assimilation:0 "身体的同化"
- trait_ngm_assimilation_desc:0 "この種族は、身体的な同化機能が高く、どのような環境であれ、ある程度の順応性を有する。ただし、順応には時間がかかるため、新たな環境への移動を躊躇することが多い。"
+ trait_ngm_assimilation_desc:0 "この種族は身体的な適応能力が高く、順応性がある。しかし、その順応の際に痛みを伴うことから一度順応した土地から離れたくないという者も数少なくいる。"
 
  trait_ngm_unadaptation:0 "適応不足"
  trait_ngm_unadaptation_desc:0 "この種族は、身体的な同化機能が低く、自分の身体に合った環境への移動をより好む傾向がある。"
@@ -2089,10 +2110,10 @@
  ngm_government.3.d:0 "群衆に呼びかけ、軍の支持集会を開け。"
  ngm_government.3.e:0 "とある施設なら中で叫んでくれて構わない。"
 
-#  ngm_government.5.name:0 "政治論争"
-#  ngm_government.5.desc:0 ""
-#  ngm_government.5.a:0 ""
-#  ngm_government.5.b:0 ""
+ ngm_government.5.name:0 "政治論争"
+ ngm_government.5.desc:0 ""
+ ngm_government.5.a:0 ""
+ ngm_government.5.b:0 ""
 
  ngm_government.6.name:0 "学術論争"
  ngm_government.6.desc:0 ""
@@ -2104,6 +2125,20 @@
  ngm_government.7.a:0 "誰かを支持しよう！"
  ngm_government.7.b:0 "政府は提督を支持する。"
  ngm_government.7.c:0 "政府は将軍を支持する。"
+
+ ngm_crisis.2.name:0 "不穏な気配"
+ ngm_crisis.2.desc:0 "一部で体調不良を訴えるものが増えているらしい"
+ ngm_crisis.2.a:0 "REPLACE_ME"
+ ngm_crisis.2.b:0 "REPLACE_ME"
+ ngm_crisis.2.c:0 "REPLACE_ME"
+ ngm_crisis.2.d:0 "REPLACE_ME"
+
+ ngm_crisis.3.name:0 "何かがおかしい"
+ ngm_crisis.3.desc:0 "最近死者が増加しているようだ"
+ ngm_crisis.3.a:0 "REPLACE_ME"
+ ngm_crisis.3.b:0 "REPLACE_ME"
+ ngm_crisis.3.c:0 "REPLACE_ME"
+ ngm_crisis.3.d:0 "REPLACE_ME"
 
 ##########################
 #####    そのほか    ######

@@ -82,6 +82,20 @@ on_war_ended = {
 	}
 }
 
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		ngm_crisis.3
+	}
+}
+
+# No scope, like on_game_start
+on_mid_game_pulse = {
+	events = {
+		ngm_crisis.1
+	}
+}
+
 # this = country
 on_mid_game_pulse_country = {
 	random_events = {
