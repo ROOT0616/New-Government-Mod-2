@@ -4198,6 +4198,8 @@ country_event = {
 	trigger = {
 		has_origin = origin_ngm_escape_to_the_past
 	}
+	immediate = {
+	}
 }
 
 # on fleet destroyed perp
@@ -4219,11 +4221,16 @@ country_event = {
 		event_target:pursuer_enemy = {
 			destroy_country = yes
 		}
+		hidden_effect = {
+			add_resource = {
+				alloys = 600000
+			}
+		}
 	}
 	option = {
 		name = ngm_origin.101.a
 		locked_random_list = {
-			20 = {
+			15 = {
 				add_monthly_resource_mult = {
 					resource = engineering_research
 					value = @tier3researchreward
@@ -4231,7 +4238,7 @@ country_event = {
 					max = @tier5researchmax
 				}
 			}
-			20 = {
+			15 = {
 				add_monthly_resource_mult = {
 					resource = physics_research
 					value = @tier3researchreward
@@ -4239,7 +4246,7 @@ country_event = {
 					max = @tier5researchmax
 				}
 			}
-			20 = {
+			15 = {
 				add_monthly_resource_mult = {
 					resource = society_research
 					value = @tier3researchreward
@@ -4292,7 +4299,7 @@ country_event = {
 					}
 				}
 			}
-			2 = {
+			5 = {
 				hidden_effect = {
 					owner = {
 						change_variable = {
@@ -4302,7 +4309,7 @@ country_event = {
 					}
 				}
 			}
-			2 = {
+			5 = {
 				hidden_effect = {
 					owner = {
 						change_variable = {
@@ -4312,7 +4319,7 @@ country_event = {
 					}
 				}
 			}
-			2 = {
+			5 = {
 				hidden_effect = {
 					owner = {
 						change_variable = {
@@ -4322,7 +4329,7 @@ country_event = {
 					}
 				}
 			}
-			2 = {
+			5 = {
 				hidden_effect = {
 					owner = {
 						change_variable = {
@@ -4332,7 +4339,7 @@ country_event = {
 					}
 				}
 			}
-			1 = {
+			3 = {
 				hidden_effect = {
 					owner = {
 						change_variable = {
@@ -4342,7 +4349,7 @@ country_event = {
 					}
 				}
 			}
-			1 = {
+			2 = {
 				hidden_effect = {
 					owner = {
 						change_variable = {
@@ -4357,7 +4364,7 @@ country_event = {
 	option = {
 		name = ngm_origin.101.b
 		locked_random_list = {
-			20 = {
+			15 = {
 				add_monthly_resource_mult = {
 					resource = engineering_research
 					value = @tier3researchreward
@@ -4365,7 +4372,7 @@ country_event = {
 					max = @tier5researchmax
 				}
 			}
-			20 = {
+			15 = {
 				add_monthly_resource_mult = {
 					resource = physics_research
 					value = @tier3researchreward
@@ -4373,7 +4380,7 @@ country_event = {
 					max = @tier5researchmax
 				}
 			}
-			20 = {
+			15 = {
 				add_monthly_resource_mult = {
 					resource = society_research
 					value = @tier3researchreward
@@ -4426,7 +4433,7 @@ country_event = {
 					}
 				}
 			}
-			2 = {
+			5 = {
 				hidden_effect = {
 					owner = {
 						change_variable = {
@@ -4436,7 +4443,7 @@ country_event = {
 					}
 				}
 			}
-			2 = {
+			5 = {
 				hidden_effect = {
 					owner = {
 						change_variable = {
@@ -4446,7 +4453,7 @@ country_event = {
 					}
 				}
 			}
-			2 = {
+			5 = {
 				hidden_effect = {
 					owner = {
 						change_variable = {
@@ -4456,7 +4463,7 @@ country_event = {
 					}
 				}
 			}
-			2 = {
+			5 = {
 				hidden_effect = {
 					owner = {
 						change_variable = {
@@ -4466,7 +4473,7 @@ country_event = {
 					}
 				}
 			}
-			1 = {
+			3 = {
 				hidden_effect = {
 					owner = {
 						change_variable = {
@@ -4476,7 +4483,7 @@ country_event = {
 					}
 				}
 			}
-			1 = {
+			2 = {
 				hidden_effect = {
 					owner = {
 						change_variable = {
@@ -5003,12 +5010,14 @@ country_event = {
 	show_sound = event_activating_unknown_technology
 	is_triggered_only = yes
 	trigger = {
-		is_war_participant = {
-			who = root
-			side = attackers
+		owner = {
+			is_war_participant = {
+				who = THIS
+				side = attackers
+			}
+			attacker_war_exhaustion >= 0.5
 		}
 		has_country_flag = ngm_government_war_flag
-		attacker_war_exhaustion >= 0.5
 		is_at_war = yes
 	}
 	# すぐに鎮圧しろ！(3年間惑星安定度-10。厭戦+10)
@@ -5289,17 +5298,20 @@ observer_event = {
 	id = ngm_crisis.1
 	hide_window = yes
 	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_global_flag = ngm_first_covid_global_flag
+		}
+	}
 	immediate = {
 		random_galaxy_planet = {
 			limit = {
-				num_pops >= 150
+				owner = {
+					is_ai = no
+				}
+				num_pops >= 100
 			}
 			set_planet_flag = ngm_covid_planet_flag
-			from = {
-				planet_event = {
-					id = ngm_crisis.2
-				}
-			}
 		}
 		set_global_flag = ngm_first_covid_global_flag
 	}
@@ -5311,13 +5323,15 @@ planet_event = {
 	desc = ngm_government.2.desc
 	picture = GFX_evt_announcement
 	show_sound = event_activating_unknown_technology
+	fire_only_once = yes
 	is_triggered_only = yes
+	trigger = {
+		has_planet_flag = ngm_covid_planet_flag
+	}
 	immediate = {
-		owner = {
-			planet_event = {
-				id = ngm_crisis.3
-				days = 180
-			}
+		planet_event = {
+			id = ngm_crisis.3
+			days = 180
 		}
 	}
 	option = {
@@ -5655,7 +5669,6 @@ planet_event = {
 				}
 				distance = {
 					source = prev
-					angle = random
 					min_distance >= 1
 					max_distance <= 15
 				}

@@ -109,8 +109,8 @@ ngm_buffer_state_starting_init = {
 			init_effect = {
 				add_modifier = {
 					modifier = ultra_rich
-					add_deposit = d_zro_deposit_2
 				}
+				add_deposit = d_zro_deposit_2
 			}
 			change_orbit = @base_moon_distance
 			moon = {
