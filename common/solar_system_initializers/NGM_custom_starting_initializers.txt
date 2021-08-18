@@ -185,10 +185,8 @@ ngm_buffer_state_starting_init = {
 			}
 			init_effect = {
 				save_event_target_as = ngm_buffer_state
-				every_system_planet = {
-					set_planet_flag = cant_build_here
-					set_planet_flag = cant_target_this_planet
-				}
+				set_planet_flag = cant_build_here
+				set_planet_flag = cant_target_this_planet
 			}
 			init_effect = {
 				generate_empire_home_planet = yes

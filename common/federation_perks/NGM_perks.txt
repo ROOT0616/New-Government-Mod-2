@@ -60,7 +60,7 @@ NGM_CEPA_ERTRSB = {
 }
 
 # 域内職業安定局の設立	Establishment of regional employment security bureaus	(移住によるPOPの流入3+10%、Pop成長速度+5%)
-N3GM_CEPA_ERESB = {
+NGM_CEPA_ERESB = {
 	members_modifier = {
 		description = federation_NGM_CEPA_ERESB_effect
 		planet_immigration_pull_mult = 0.1

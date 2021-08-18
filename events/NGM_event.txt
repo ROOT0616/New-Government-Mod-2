@@ -4198,7 +4198,8 @@ country_event = {
 	trigger = {
 		has_origin = origin_ngm_escape_to_the_past
 	}
-	immediate = {
+	option = {
+		name = x
 	}
 }
 
@@ -5010,12 +5011,9 @@ country_event = {
 	show_sound = event_activating_unknown_technology
 	is_triggered_only = yes
 	trigger = {
-		owner = {
-			is_war_participant = {
-				who = THIS
-				side = attackers
-			}
-			attacker_war_exhaustion >= 0.5
+		is_war_participant = {
+			who = THIS
+			side = attackers
 		}
 		has_country_flag = ngm_government_war_flag
 		is_at_war = yes
@@ -5294,16 +5292,19 @@ country_event = {
 ######  クライシス用イベント #######
 ##################################
 namespace = ngm_crisis
-observer_event = {
-	id = ngm_crisis.1
+## 	クライシスイベントの始まり
+event = {
+	## イベントの基本情報
+	id = ngm_crisis.0
 	hide_window = yes
+	## イベントの発生条件
 	is_triggered_only = yes
-	trigger = {
-		NOT = {
-			has_global_flag = ngm_first_covid_global_flag
-		}
-	}
+	fire_only_once = yes
+	## イベントの効果
 	immediate = {
+		observer_event = {
+			id = ngm_crisis.1
+		}
 		random_galaxy_planet = {
 			limit = {
 				owner = {
@@ -5311,27 +5312,41 @@ observer_event = {
 				}
 				num_pops >= 100
 			}
-			set_planet_flag = ngm_covid_planet_flag
+			planet_event = {
+				id = ngm_crisis.2
+			}
 		}
-		set_global_flag = ngm_first_covid_global_flag
 	}
 }
 
+## 	クライシスイベントの始まり
+observer_event = {
+	id = ngm_crisis.1
+	title = "ngm_crisis.1.name"
+	desc = "ngm_crisis.1.desc"
+	show_sound = event_default
+	picture = "GFX_evt_city_ruins"
+	is_triggered_only = yes
+	option = {
+		name = "OK"
+	}
+}
+
+## 	惑星にウイルスを沸かす
 planet_event = {
 	id = ngm_crisis.2
-	title = ngm_government.2.name
-	desc = ngm_government.2.desc
+	title = ngm_crisis.2.name
+	desc = ngm_crisis.2.desc
 	picture = GFX_evt_announcement
 	show_sound = event_activating_unknown_technology
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		has_planet_flag = ngm_covid_planet_flag
-	}
 	immediate = {
+		set_global_flag = ngm_first_covid_global_flag
+		set_planet_flag = ngm_covid_planet_flag
 		planet_event = {
 			id = ngm_crisis.3
-			days = 180
+			days = 1
 		}
 	}
 	option = {
@@ -5344,7 +5359,9 @@ planet_event = {
 				}
 			}
 		}
-		set_global_flag = ngm_militarist_covid_global_flag
+		hidden_effect = {
+			set_global_flag = ngm_militarist_covid_global_flag
+		}
 	}
 	option = {
 		name = ngm_crisis.2.b
@@ -5356,7 +5373,9 @@ planet_event = {
 				}
 			}
 		}
-		set_global_flag = ngm_conservationism_covid_global_flag
+		hidden_effect = {
+			set_global_flag = ngm_conservationism_covid_global_flag
+		}
 	}
 	option = {
 		name = ngm_crisis.2.c
@@ -5368,7 +5387,9 @@ planet_event = {
 				}
 			}
 		}
-		set_global_flag = ngm_materialist_covid_global_flag
+		hidden_effect = {
+			set_global_flag = ngm_materialist_covid_global_flag
+		}
 	}
 	option = {
 		name = ngm_crisis.2.d
@@ -5384,274 +5405,78 @@ planet_event = {
 				}
 			}
 		}
-		random_list = {
-			20 = {
-				set_global_flag = ngm_militarist_covid_global_flag
+		hidden_effect = {
+			random_list = {
+				20 = {
+					set_global_flag = ngm_militarist_covid_global_flag
+				}
+				20 = {
+					set_global_flag = ngm_conservationism_covid_global_flag
+				}
+				20 = {
+					set_global_flag = ngm_materialist_covid_global_flag
+				}
 			}
-			20 = {
-				set_global_flag = ngm_conservationism_covid_global_flag
-			}
-			20 = {
-				set_global_flag = ngm_materialist_covid_global_flag
-			}
+		}
+		country_event = {
+			id = ngm_crisis.3
+			days = 1
 		}
 	}
 }
 
 planet_event = {
 	id = ngm_crisis.3
-	title = ngm_government.3.name
-	desc = ngm_government.3.desc
+	title = ngm_crisis.3.name
+	desc = ngm_crisis.3.desc
 	picture = GFX_evt_announcement
 	show_sound = event_activating_unknown_technology
 	is_triggered_only = yes
 	trigger = {
-		mid_game_years_passed >= 0
+		has_global_flag = ngm_first_covid_global_flag
+		has_planet_flag = ngm_covid_planet_flag
+		# mid_game_years_passed >= 0
 	}
 	immediate = {
-		every_galaxy_planet = {
+		if = {
 			limit = {
-				has_planet_flag = ngm_covid_planet_flag
+				has_global_flag = ngm_militarist_covid_global_flag
 			}
-			if = {
-				limit = {
-					NOR = {
-						has_modifier = first_covid_a_planet_modifier
-						has_modifier = second_covid_a_planet_modifier
-						has_modifier = third_covid_a_planet_modifier
-						has_modifier = first_covid_b_planet_modifier
-						has_modifier = second_covid_b_planet_modifier
-						has_modifier = third_covid_b_planet_modifier
-						has_modifier = first_covid_c_planet_modifier
-						has_modifier = second_covid_c_planet_modifier
-						has_modifier = third_covid_c_planet_modifier
-					}
-				}
-				random_list = {
-					0 = {
-						modifier = {
-							weight = 60
-							has_global_flag = ngm_militarist_covid_global_flag
-						}
-						add_modifier = {
-							modifier = first_covid_a_planet_modifier
-						}
-					}
-					0 = {
-						modifier = {
-							weight = 30
-							has_global_flag = ngm_militarist_covid_global_flag
-						}
-						add_modifier = {
-							modifier = second_covid_a_planet_modifier
-						}
-					}
-					0 = {
-						modifier = {
-							weight = 10
-							has_global_flag = ngm_militarist_covid_global_flag
-						}
-						add_modifier = {
-							modifier = third_covid_a_planet_modifier
-						}
-						planet_event = {
-							id = ngm_crisis.4
-							days = 360
-						}
-					}
-					0 = {
-						modifier = {
-							weight = 60
-							has_global_flag = ngm_conservationism_covid_global_flag
-						}
-						add_modifier = {
-							modifier = first_covid_b_planet_modifier
-						}
-					}
-					0 = {
-						modifier = {
-							weight = 30
-							has_global_flag = ngm_conservationism_covid_global_flag
-						}
-						add_modifier = {
-							modifier = second_covid_b_planet_modifier
-						}
-					}
-					0 = {
-						modifier = {
-							weight = 10
-							has_global_flag = ngm_conservationism_covid_global_flag
-						}
-						add_modifier = {
-							modifier = third_covid_b_planet_modifier
-						}
-						planet_event = {
-							id = ngm_crisis.4
-							days = 360
-						}
-					}
-					0 = {
-						modifier = {
-							weight = 60
-							has_global_flag = ngm_materialist_covid_global_flag
-						}
-						add_modifier = {
-							modifier = first_covid_c_planet_modifier
-						}
-					}
-					0 = {
-						modifier = {
-							weight = 30
-							has_global_flag = ngm_materialist_covid_global_flag
-						}
-						add_modifier = {
-							modifier = second_covid_c_planet_modifier
-						}
-					}
-					0 = {
-						modifier = {
-							weight = 10
-							has_global_flag = ngm_materialist_covid_global_flag
-						}
-						add_modifier = {
-							modifier = third_covid_c_planet_modifier
-						}
-						planet_event = {
-							id = ngm_crisis.4
-							days = 360
-						}
-					}
-				}
+			add_modifier = {
+				modifier = first_covid_a_planet_modifier
 			}
-			else_if = {
-				limit = {
-					NOR = {
-						has_modifier = second_covid_a_planet_modifier
-						has_modifier = third_covid_a_planet_modifier
-						has_modifier = second_covid_b_planet_modifier
-						has_modifier = third_covid_b_planet_modifier
-						has_modifier = second_covid_c_planet_modifier
-						has_modifier = third_covid_c_planet_modifier
-					}
-				}
-				random_list = {
-					0 = {
-						modifier = {
-							weight = 30
-							has_global_flag = ngm_militarist_covid_global_flag
-						}
-						add_modifier = {
-							modifier = second_covid_a_planet_modifier
-						}
-					}
-					0 = {
-						modifier = {
-							weight = 10
-							has_global_flag = ngm_militarist_covid_global_flag
-						}
-						add_modifier = {
-							modifier = third_covid_a_planet_modifier
-						}
-						planet_event = {
-							id = ngm_crisis.4
-							days = 360
-						}
-					}
-					0 = {
-						modifier = {
-							weight = 30
-							has_global_flag = ngm_conservationism_covid_global_flag
-						}
-						add_modifier = {
-							modifier = second_covid_b_planet_modifier
-						}
-					}
-					0 = {
-						modifier = {
-							weight = 10
-							has_global_flag = ngm_conservationism_covid_global_flag
-						}
-						add_modifier = {
-							modifier = third_covid_b_planet_modifier
-						}
-						planet_event = {
-							id = ngm_crisis.4
-							days = 360
-						}
-					}
-					0 = {
-						modifier = {
-							weight = 30
-							has_global_flag = ngm_materialist_covid_global_flag
-						}
-						add_modifier = {
-							modifier = second_covid_c_planet_modifier
-						}
-					}
-					0 = {
-						modifier = {
-							weight = 10
-							has_global_flag = ngm_materialist_covid_global_flag
-						}
-						add_modifier = {
-							modifier = third_covid_c_planet_modifier
-						}
-						planet_event = {
-							id = ngm_crisis.4
-							days = 360
-						}
-					}
-				}
+		}
+		if = {
+			limit = {
+				has_global_flag = ngm_conservationism_covid_global_flag
 			}
-			else_if = {
+			add_modifier = {
+				modifier = first_covid_b_planet_modifier
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = ngm_materialist_covid_global_flag
+			}
+			add_modifier = {
+				modifier = first_covid_c_planet_modifier
+			}
+		}
+		planet_event = {
+			id = ngm_crisis.4
+			days = 2
+		}
+	}
+	option = {
+		name = "OK"
+		while = {
+			count = 10
+			random_owned_pop = {
 				limit = {
-					NOR = {
-						has_modifier = third_covid_a_planet_modifier
-						has_modifier = third_covid_b_planet_modifier
-						has_modifier = third_covid_c_planet_modifier
-					}
+					is_robotic = no
 				}
-				random_list = {
-					0 = {
-						modifier = {
-							weight = 10
-							has_global_flag = ngm_militarist_covid_global_flag
-						}
-						add_modifier = {
-							modifier = third_covid_a_planet_modifier
-						}
-						planet_event = {
-							id = ngm_crisis.4
-							days = 360
-						}
-					}
-					0 = {
-						modifier = {
-							weight = 10
-							has_global_flag = ngm_conservationism_covid_global_flag
-						}
-						add_modifier = {
-							modifier = third_covid_b_planet_modifier
-						}
-						planet_event = {
-							id = ngm_crisis.4
-							days = 360
-						}
-					}
-					0 = {
-						modifier = {
-							weight = 10
-							has_global_flag = ngm_materialist_covid_global_flag
-						}
-						add_modifier = {
-							modifier = third_covid_c_planet_modifier
-						}
-						planet_event = {
-							id = ngm_crisis.4
-							days = 360
-						}
-					}
-				}
+				unemploy_pop = yes
+				kill_pop = yes
 			}
 		}
 	}
@@ -5659,21 +5484,51 @@ planet_event = {
 
 planet_event = {
 	id = ngm_crisis.4
-	hide_window = yes
+	title = "ngm_crisis.4.name"
+	desc = "ngm_crisis.4.desc"
+	picture = GFX_evt_announcement
+	show_sound = event_activating_unknown_technology
+	# hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		random_galaxy_planet = {
-			limit = {
-				NOT = {
-					has_planet_flag = ngm_covid_planet_flag
+		solar_system = {
+			random_neighbor_system = {
+				limit = {
+					any_system_planet = {
+						NOT = { has_planet_flag = ngm_covid_planet_flag }
+						num_pops > 0
+					}
 				}
-				distance = {
-					source = prev
-					min_distance >= 1
-					max_distance <= 15
+				random_system_planet = {
+					limit = {
+						NOT = { has_planet_flag = ngm_covid_planet_flag }
+						num_pops > 0
+					}
+					planet_event = {
+						id = ngm_crisis.3
+						days = 2
+					}
 				}
 			}
-			set_planet_flag = ngm_covid_planet_flag
+		}
+		solar_system = {
+			random_system_planet = {
+				limit = {
+					NOT = {
+						has_planet_flag = ngm_covid_planet_flag
+					}
+					num_pops > 10
+					distance = {
+						source = prev
+						min_distance >= 1
+						max_distance <= 120
+					}
+				}
+				planet_event = {
+					id = ngm_crisis.3
+					days = 1
+				}
+			}
 		}
 	}
 }

@@ -841,7 +841,6 @@ orbital_bombardment = {
 		OR = {
 			is_country_type = default
 			is_country_type = vol
-			is_country_type = heavenly_realm
 		}
 	}
 	option = {
@@ -899,10 +898,6 @@ orbital_bombardment = {
 					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
 					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
 				}
-			}
-			modifier = {
-				factor = 1000
-				is_country_type = heavenly_realm
 			}
 		}
 	}
