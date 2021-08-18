@@ -5462,7 +5462,7 @@ planet_event = {
 				modifier = first_covid_c_planet_modifier
 			}
 		}
-		planet_event = {
+		event = {
 			id = ngm_crisis.4
 			days = 2
 		}
@@ -5482,7 +5482,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+event = {
 	id = ngm_crisis.4
 	title = "ngm_crisis.4.name"
 	desc = "ngm_crisis.4.desc"
@@ -5491,42 +5491,53 @@ planet_event = {
 	# hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		solar_system = {
-			random_neighbor_system = {
-				limit = {
-					any_system_planet = {
-						NOT = { has_planet_flag = ngm_covid_planet_flag }
-						num_pops > 0
-					}
-				}
-				random_system_planet = {
-					limit = {
-						NOT = { has_planet_flag = ngm_covid_planet_flag }
-						num_pops > 0
-					}
-					planet_event = {
-						id = ngm_crisis.3
-						days = 2
-					}
+		every_system = {
+			limit = {
+				any_system_planet = {
+					has_planet_flag = ngm_covid_planet_flag
 				}
 			}
-		}
-		solar_system = {
 			random_system_planet = {
 				limit = {
 					NOT = {
 						has_planet_flag = ngm_covid_planet_flag
 					}
-					num_pops > 10
-					distance = {
-						source = prev
-						min_distance >= 1
-						max_distance <= 120
-					}
+					num_pops > 0
 				}
 				planet_event = {
 					id = ngm_crisis.3
-					days = 1
+				}
+			}
+		}
+		every_system = {
+			limit = {
+				any_system_planet = {
+					has_planet_flag = ngm_covid_planet_flag
+				}
+			}
+			random_system = {
+				limit = {
+					distance = {
+						source = PREV
+						max_distance = 30
+					}
+					any_system_planet = {
+						NOT = {
+							has_planet_flag = ngm_covid_planet_flag
+						}
+						num_pops > 0
+					}
+				}
+				random_system_planet = {
+					limit = {
+						NOT = {
+							has_planet_flag = ngm_covid_planet_flag
+						}
+						num_pops > 0
+					}
+					planet_event = {
+						id = ngm_crisis.3
+					}
 				}
 			}
 		}
