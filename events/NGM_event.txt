@@ -5308,7 +5308,7 @@ event = {
 		random_galaxy_planet = {
 			limit = {
 				owner = {
-					is_ai = no
+					is_country_type = default
 				}
 				num_pops >= 100
 			}
@@ -5418,10 +5418,6 @@ planet_event = {
 				}
 			}
 		}
-		country_event = {
-			id = ngm_crisis.3
-			days = 1
-		}
 	}
 }
 
@@ -5462,10 +5458,6 @@ planet_event = {
 				modifier = first_covid_c_planet_modifier
 			}
 		}
-		event = {
-			id = ngm_crisis.4
-			days = 2
-		}
 	}
 	option = {
 		name = "OK"
@@ -5473,7 +5465,9 @@ planet_event = {
 			count = 10
 			random_owned_pop = {
 				limit = {
-					is_robotic = no
+					species = {
+						is_robotic = no
+					}
 				}
 				unemploy_pop = yes
 				kill_pop = yes
@@ -5502,7 +5496,7 @@ event = {
 					NOT = {
 						has_planet_flag = ngm_covid_planet_flag
 					}
-					num_pops > 0
+					has_building = yes
 				}
 				planet_event = {
 					id = ngm_crisis.3
@@ -5519,13 +5513,15 @@ event = {
 				limit = {
 					distance = {
 						source = PREV
-						max_distance = 30
+						use_bypasses = no
+						min_jumps = 1
+						max_jumps = 6
 					}
 					any_system_planet = {
 						NOT = {
 							has_planet_flag = ngm_covid_planet_flag
 						}
-						num_pops > 0
+						has_building = yes
 					}
 				}
 				random_system_planet = {
@@ -5533,7 +5529,7 @@ event = {
 						NOT = {
 							has_planet_flag = ngm_covid_planet_flag
 						}
-						num_pops > 0
+						has_building = yes
 					}
 					planet_event = {
 						id = ngm_crisis.3
@@ -5541,5 +5537,8 @@ event = {
 				}
 			}
 		}
+	}
+	option = {
+		name = "OK"
 	}
 }

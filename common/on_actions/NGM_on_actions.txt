@@ -90,6 +90,24 @@ on_yearly_pulse = {
 }
 
 # No scope, like on_game_start
+on_bi_yearly_pulse = {
+	events = {
+		ngm_crisis.4
+	}
+}
+
+# No scope, like on_game_start
+on_five_year_pulse = {
+	events = {
+	}
+}
+
+# No scope, like on_game_start
+on_decade_pulse = {
+	events = {
+	}
+}
+# No scope, like on_game_start
 on_mid_game_pulse = {
 	events = {
 		ngm_crisis.1
