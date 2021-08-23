@@ -2234,10 +2234,9 @@
  civic_tooltip_utilitarianism_or_militarist:0 "§Y実利主義§!系統か§Y軍国主義§!系統である"
  civic_tooltip_utilitarianism_or_militarist_or_xenophobe:0 "§Y実利主義§!系統か§Y軍国主義§!系統か§Y排他主義§!系統である"
 
- empire_not_socialism:0 "$TRIGGER_FAIL$帝国は必要な§Y$ethic_socialism$§!の志向を採用していない。 "
- empire_not_capitalism:0 "$TRIGGER_FAIL$帝国は必要な§Y$ethic_capitalism$§!の志向を採用していない。 "
- empire_not_honorism:0 "$TRIGGER_FAIL$帝国は必要な§Y$ethic_honorism$§!の志向を採用していない。 "
- empire_not_utilitarianism:0 "$TRIGGER_FAIL$帝国は必要な§Y$ethic_utilitarianism$§!の志向を採用していない。 "
+ empire_nor_honorism_socialism_egalitarian:0 "$TRIGGER_FAIL$帝国は必要な§Y$ethic_egalitarian$§!、§Y$ethic_honorism$§!もしくは§Y$ethic_socialism$§!の志向を採用していない。 "
+ empire_nor_honorism_socialism_capitalism_utilitarianism_materialist:0 "$TRIGGER_FAIL$帝国は必要な§Y$ethic_materialist$§!、§Y$ethic_honorism$§!、§Y$ethic_utilitarianism$§!、§Y$ethic_capitalism$§!もしくは§Y$ethic_socialism$§!の志向を採用していない。 "
+ empire_nor_honorism_capitalism_utilitarianism:0 "$TRIGGER_FAIL$帝国は必要な§Y$ethic_honorism$§!、§Y$ethic_capitalism$§!もしくは§Y$ethic_utilitarianism$§!の志向を採用していない。 "
  empire_is_utilitarianism:0 "$TRIGGER_FAIL$我々の帝国は§Y$ethic_utilitarianism$§!の志向を採用している。 "
  empire_is_capitalism:0 "$TRIGGER_FAIL$我々の帝国は§Y$ethic_capitalism$§!の志向を採用している。 "
 
