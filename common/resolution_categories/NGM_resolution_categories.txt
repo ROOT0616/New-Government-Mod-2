@@ -22,3 +22,12 @@ resolution_category_ngm_galactic_scale = {
 		"resolution_ngm_galactic_scale_2"
 	}
 }
+# 名前は、銀河規模の拡大という名称で、
+# Pop成長率+1000%、Pop製造速度+1000%。Pop消費財+50%
+resolution_category_ngm_olympic_form = {
+	group = galactic_focus 			# UIでのカテゴリーのグループ化を決定します。
+	icon = "key"			# ドロップダウンメニューのアイコンを設定する
+	resolution_types = {
+		"resolution_ngm_olympic_form"
+	}
+}

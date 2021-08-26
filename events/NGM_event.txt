@@ -5230,132 +5230,703 @@ country_event = {
 }
 
 # イベント表
-
-# 1.地元の好況(大会開催以来開催地の景気は向上している。観光客を中心とした消費の上昇と土地価格等の向上は惑星規模の経済を大きく発展させている。地元企業や住民はこの好景気により多大な利益を得ている。)
-# エネルギー2k
-# 1年間当該惑星交易価値+10%
 country_event = {
 	id = ngm_government.100
 	title = ngm_government.100.name
 	desc = {
 		text = ngm_government.100.desc
-		trigger = { is_xenophobe = no }
+		trigger = {
+			is_xenophobe = no
+		}
 	}
 	desc = {
 		text = ngm_government.100.desc.phobe
-		trigger = { is_xenophobe = yes }
+		trigger = {
+			is_xenophobe = yes
+		}
 	}
 	picture = GFX_evt_financial_instruments
 	show_sound = event_galactic_market
-
 	is_triggered_only = yes
-
 	immediate = {
-		set_global_flag = ongoing_market_nomination
-		set_country_flag = market_nomination_eligible
+		set_global_flag = ongoing_ngm_olympic_nomination
+		set_country_flag = ngm_olympic_nomination_eligible
 		event_target:global_event_country = {
-			country_event = { id = action.98 days = 1800 }
+			country_event = {
+				id = ngm_government.102
+				days = 1800
+			}
 		}
 		begin_event_chain = {
-			event_chain = market_founding_chain
+			event_chain = ngm_olympic_chain
 			target = this
 		}
 		every_playable_country = {
 			limit = {
-				NOT = { is_same_value = root }
+				NOT = {
+					is_same_value = root
+				}
 				is_galactic_community_member = yes
 			}
 			begin_event_chain = {
-				event_chain = market_founding_chain
+				event_chain = ngm_olympic_chain
 				target = this
 			}
-			country_event = { id = action.97 }
+			country_event = {
+				id = ngm_government.101
+			}
+		}
+		country_event = {
+			id = ngm_government.100
+			days = 1800
 		}
 	}
-
 	after = {
 		custom_tooltip = enable_decision_market_nomination
 		# Notification
 		tooltip = {
 			begin_event_chain = {
-				event_chain = market_founding_chain
+				event_chain = ngm_olympic_chain
 				target = this
 			}
 		}
 	}
-
 	option = {
 		name = ngm_government.100.a
-		trigger = { has_authority = auth_corporate }
+		trigger = {
+			has_authority = auth_corporate
+		}
 	}
-
 	option = {
 		name = ngm_government.100.b
-		trigger = { NOT = { has_authority = auth_corporate } }
+		trigger = {
+			NOT = {
+				has_authority = auth_corporate
+			}
+		}
 	}
 }
+
+# Market Nomination started notification event
+country_event = {
+	id = ngm_government.101
+	title = ngm_government.101.name
+	desc = {
+		text = ngm_government.101.desc
+		trigger = {
+			NOR = {
+				is_xenophobe = yes
+				has_authority = auth_corporate
+			}
+		}
+	}
+	desc = {
+		text = ngm_government.101.desc.phobe
+		trigger = {
+			is_xenophobe = yes
+		}
+	}
+	desc = {
+		text = ngm_government.101.desc.corp
+		trigger = {
+			has_authority = auth_corporate
+		}
+	}
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = ngm_olympic_nomination_eligible
+	}
+	after = {
+		tooltip = {
+			begin_event_chain = {
+				event_chain = ngm_olympic_chain
+				target = this
+			}
+		}
+	}
+	option = {
+		name = ngm_government.100.a
+		trigger = {
+			has_authority = auth_corporate
+		}
+		custom_tooltip = enable_decision_market_nomination
+	}
+	option = {
+		name = ngm_government.100.b
+		trigger = {
+			NOT = {
+				has_authority = auth_corporate
+			}
+		}
+		custom_tooltip = enable_decision_market_nomination
+	}
+}
+
+# Market Founder luck-of-the-draw
+country_event = {
+	id = ngm_government.102
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_playable_country = {
+			limit = {
+				has_event_chain = ngm_olympic_chain
+			}
+			end_event_chain = ngm_olympic_chain
+		}
+		remove_global_flag = ongoing_ngm_olympic_nomination
+		# nominees start equal, modifiers improve chances
+		random_country = {
+			limit = {
+				is_country_type = default
+				has_country_flag = ngm_olympic_nomination_eligible
+			}
+			weights = {
+				# can use add or mult
+				base = 1
+				modifier = {
+					add = 75
+					check_variable = {
+						which = expel_pop_var
+						value = 5
+					}
+				}
+				modifier = {
+					add = 50
+					check_variable = {
+						which = ngm_olympic_rating
+						value = 4
+					}
+				}
+				modifier = {
+					add = 30
+					check_variable = {
+						which = ngm_olympic_rating
+						value = 3
+					}
+				}
+				modifier = {
+					add = 20
+					check_variable = {
+						which = ngm_olympic_rating
+						value = 2
+					}
+				}
+				modifier = {
+					add = 10
+					check_variable = {
+						which = ngm_olympic_rating
+						value = 1
+					}
+				}
+				modifier = {
+					mult = 0.5
+					NOT = {
+						any_owned_planet = {
+							OR = {
+								has_modifier = ngm_olympic_nominee_level_1
+								has_modifier = ngm_olympic_nominee_level_2
+								has_modifier = ngm_olympic_nominee_level_3
+								has_modifier = ngm_olympic_nominee_level_4
+								has_modifier = ngm_olympic_nominee_level_5
+							}
+						}
+					}
+				}
+			}
+			save_global_event_target_as = market_founder
+			random_owned_planet = {
+				weights = {
+					base = 1
+					modifier = {
+						mult = 9999
+						OR = {
+							has_modifier = ngm_olympic_nominee_level_1
+							has_modifier = ngm_olympic_nominee_level_2
+							has_modifier = ngm_olympic_nominee_level_3
+							has_modifier = ngm_olympic_nominee_level_4
+							has_modifier = ngm_olympic_nominee_level_5
+						}
+					}
+				}
+				save_global_event_target_as = market_founder_planet
+			}
+			country_event = {
+				id = ngm_government.103
+			}
+		}
+		every_playable_country = {
+			limit = {
+				has_country_flag = ngm_olympic_nomination_eligible
+			}
+			every_owned_planet = {
+				limit = {
+					OR = {
+						has_modifier = ngm_olympic_nominee_level_1
+						has_modifier = ngm_olympic_nominee_level_2
+						has_modifier = ngm_olympic_nominee_level_3
+						has_modifier = ngm_olympic_nominee_level_4
+						has_modifier = ngm_olympic_nominee_level_5
+					}
+				}
+				# remove boosted flags
+				if = {
+					limit = {
+						has_planet_flag = boosted_once
+					}
+					remove_planet_flag = boosted_once
+				}
+				if = {
+					limit = {
+						has_planet_flag = boosted_twice
+					}
+					remove_planet_flag = boosted_twice
+				}
+				# remove modifiers
+				if = {
+					limit = {
+						has_modifier = ngm_olympic_nominee_level_1
+					}
+					remove_modifier = ngm_olympic_nominee_level_1
+				}
+				else_if = {
+					limit = {
+						has_modifier = ngm_olympic_nominee_level_2
+					}
+					remove_modifier = ngm_olympic_nominee_level_2
+				}
+				else_if = {
+					limit = {
+						has_modifier = ngm_olympic_nominee_level_3
+					}
+					remove_modifier = ngm_olympic_nominee_level_3
+				}
+				else_if = {
+					limit = {
+						has_modifier = ngm_olympic_nominee_level_4
+					}
+					remove_modifier = ngm_olympic_nominee_level_4
+				}
+				else_if = {
+					limit = {
+						has_modifier = ngm_olympic_nominee_level_5
+					}
+					remove_modifier = ngm_olympic_nominee_level_5
+				}
+			}
+			set_variable = {
+				which = ngm_olympic_rating
+				value = 0
+			}
+		}
+	}
+}
+
+# Founder selected port
+country_event = {
+	id = ngm_government.103
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = ngm_olympic_founded
+		# code listens for this flag to create market
+		country_event = {
+			id = ngm_government.104
+			days = 5
+		}
+	}
+}
+
+country_event = {
+	id = ngm_government.104
+	title = ngm_government.103.name
+	desc = {
+		text = ngm_government.103.desc
+		trigger = {
+			is_xenophobe = no
+		}
+	}
+	desc = {
+		text = ngm_government.103.desc.phobe
+		trigger = {
+			is_xenophobe = yes
+		}
+	}
+	picture = GFX_evt_financial_instruments
+	location = event_target:galactic_market_station
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = has_market_access
+		enable_galactic_market = yes
+		enable_on_market = energy
+		enable_on_market = minerals
+		enable_on_market = food
+		enable_on_market = consumer_goods
+		enable_on_market = alloys
+		add_modifier = {
+			modifier = galactic_market_founder
+			days = -1
+		}
+		set_market_leader = yes		# Update who owns the market station
+		set_timed_global_flag = {
+			flag = resolution_galactic_market_relocated_recently
+			days = 18000
+		}
+		event_target:market_founder_planet.solar_system.star = {
+			create_ambient_object = {
+				type = galactic_market_station
+				location = this
+			}
+			last_created_ambient_object = {
+				save_global_event_target_as = galactic_market_station
+				set_ambient_object_flag = galactic_market_station_flag
+				set_location = {
+					target = event_target:market_founder_planet.solar_system.star
+					angle = random
+					distance = 40
+				}
+			}
+		}
+		every_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+				NOT = {
+					is_same_value = root
+				}
+			}
+			country_event = {
+				id = ngm_government.105
+			}
+		}
+	}
+	option = {
+		name = OK
+		custom_tooltip = established_galactic_market_station
+		tooltip = {
+			end_event_chain = ngm_olympic_chain
+			add_modifier = {
+				modifier = galactic_market_founder
+				days = -1
+			}
+		}
+	}
+}
+
+# Founder selected notification
+country_event = {
+	id = ngm_government.105
+	title = ngm_government.105.name
+	desc = {
+		text = ngm_government.105.desc
+		trigger = {
+			NOT = {
+				is_xenophobe = yes
+			}
+		}
+	}
+	desc = {
+		text = ngm_government.105.desc.phobe
+		trigger = {
+			is_xenophobe = yes
+		}
+	}
+	picture = GFX_evt_financial_instruments
+	location = event_target:galactic_market_station
+	immediate = {
+		set_country_flag = has_market_access
+		enable_galactic_market = yes
+		event_target:galactic_market_station.solar_system = {
+			every_system_planet = {
+				set_surveyed = {
+					surveyed = yes
+					surveyor = root
+				}
+			}
+		}
+	}
+	is_triggered_only = yes
+	option = {
+		name = OK
+		tooltip = {
+			end_event_chain = ngm_olympic_chain
+		}
+	}
+}
+
+# Market station lost, is conquered or moved
+country_event = {
+	id = ngm_government.106
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = event_target:galactic_market_station
+		from = {
+			any_system_ambient_object = {
+				is_same_value = event_target:galactic_market_station
+			}
+		}
+	}
+	immediate = {
+		if = {
+			# no new owner or homicidal empire
+			limit = {
+				OR = {
+					NOT = {
+						exists = fromfrom
+					}
+					AND = {
+						exists = fromfrom
+						fromfrom = {
+							OR = {
+								is_homicidal = yes
+								is_galactic_community_member = yes
+							}
+						}
+					}
+				}
+			}
+			# transfer to contact
+			event_target:galactic_market_station = {
+				destroy_ambient_object = this
+			}
+			clear_global_event_target = galactic_market_station
+			clear_global_event_target = market_founder_planet
+			remove_modifier = galactic_market_founder
+			random_playable_country = {
+				limit = {
+					is_homicidal = no
+					is_galactic_community_member = yes
+				}
+				weights = {
+					base = 1
+					modifier = {
+						mult = 999
+						has_communications = root
+						has_country_flag = ngm_olympic_nomination_eligible
+					}
+					modifier = {
+						mult = 20
+						capital_scope = {
+							is_planet_class = pc_city
+						}
+					}
+					modifier = {
+						mult = 9
+						has_authority = auth_corporate
+					}
+					modifier = {
+						mult = 2
+						trade_income >= 120
+					}
+					modifier = {
+						mult = 0.5
+						trade_income <= 50
+					}
+					modifier = {
+						mult = 0.75
+						has_ethic = ethic_gestalt_consciousness
+					}
+				}
+				capital_scope = {
+					create_ambient_object = {
+						type = "galactic_market_station"
+						location = this
+					}
+					save_global_event_target_as = market_founder_planet
+					last_created_ambient_object = {
+						save_global_event_target_as = galactic_market_station
+						set_ambient_object_flag = galactic_market_station_flag
+						set_location = {
+							target = event_target:market_founder_planet.solar_system.star
+							angle = random
+							distance = 40
+						}
+					}
+				}
+				add_modifier = {
+					modifier = galactic_market_founder
+					days = -1
+				}
+				set_market_leader = yes
+				country_event = {
+					id = ngm_government.107
+				}
+			}
+			create_message = {
+				type = MESSAGE_TYPE_LOST_MARKET_STATION
+				localization = MESSAGE_LOST_MARKET_STATION
+				days = 30
+				target = root.from				# the Go To
+				variable = {
+					type = name
+					localization = SYSTEM
+					scope = root.from
+				}
+			}
+		}
+		else_if = {
+			# lost to valid empire without market access (somehow)
+			limit = {
+				exists = fromfrom
+				fromfrom = {
+					is_country_type = default
+					NOT = {
+						has_country_flag = has_market_access
+					}
+				}
+			}
+			fromfrom = {
+				set_country_flag = has_market_access
+				enable_galactic_market = yes
+				add_modifier = {
+					modifier = galactic_market_founder
+					days = -1
+				}
+				set_market_leader = yes
+			}
+			remove_modifier = galactic_market_founder
+			create_message = {
+				type = MESSAGE_TYPE_LOST_MARKET_STATION
+				localization = MESSAGE_LOST_MARKET_STATION
+				days = 30
+				target = root.from				# the Go To
+				variable = {
+					type = name
+					localization = SYSTEM
+					scope = root.from
+				}
+			}
+		}
+		else = {
+			remove_modifier = galactic_market_founder
+			fromfrom = {
+				add_modifier = {
+					modifier = galactic_market_founder
+					days = -1
+				}
+				set_market_leader = yes
+			}
+			create_message = {
+				type = MESSAGE_TYPE_LOST_MARKET_STATION
+				localization = MESSAGE_LOST_MARKET_STATION
+				days = 30
+				target = root.from				# the Go To
+				variable = {
+					type = name
+					localization = SYSTEM
+					scope = root.from
+				}
+			}
+		}
+	}
+}
+
+# Market station moved to my system
+country_event = {
+	id = ngm_government.107
+	title = ngm_government.107.name
+	desc = ngm_government.107.desc
+	picture = GFX_evt_financial_instruments
+	location = event_target:galactic_market_station
+	is_triggered_only = yes
+	option = {
+		name = OK
+		custom_tooltip = established_galactic_market_station
+		tooltip = {
+			add_modifier = {
+				modifier = galactic_market_founder
+				days = -1
+			}
+		}
+	}
+}
+
+# Catch non-standard comms ending up outside the Market, on yearly pulse
+event = {
+	id = ngm_government.108
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = ngm_olympic_founded
+		any_playable_country = {
+			is_homicidal = no
+			NOT = {
+				has_country_flag = has_market_access
+			}
+		}
+	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				is_homicidal = no
+				is_galactic_community_member = yes
+				NOT = {
+					has_country_flag = has_market_access
+				}
+				any_playable_country = {
+					has_communications = prev
+					has_country_flag = has_market_access
+				}
+			}
+			country_event = {
+				id = action.115
+				random = 40
+			}
+		}
+	}
+}
+
+# 1.地元の好況(大会開催以来開催地の景気は向上している。観光客を中心とした消費の上昇と土地価格等の向上は惑星規模の経済を大きく発展させている。地元企業や住民はこの好景気により多大な利益を得ている。)
+# エネルギー2k
+# 1年間当該惑星交易価値+10%
 # 2.テロ行為の事前発覚(惑星の治安当局は大会において大規模なテロ行為を行おうとした犯罪組織を未然に摘発することに成功したした。その組織は大会会場において原始的な中性子爆弾を炸裂させようとしたが、その材料入手の経路から組織摘発につながった。)
 # 影響力+50
 # 2年間当該惑星安定度+10
-
 # 3.外交官の関心(この大会は世界的な注目を集めており、各国の外交官においても例外ではない。外交官の多くも選手の督励や観戦のために会場に集まっており、主催国の印象向上や外交的アピールの場としても利用されている。)
 # 影響力+50
 # 1年間外交発言力+10%
-
 # 4.大会への熱狂(市民達は現在世界規模の大規模大会への関心を強めており、その開催と大会の内容に熱狂を続けている。至る所で大会の話題に花が咲き、市民は大会を心から楽しんでいる。)
 # 2年間当該惑星幸福度+10%
-
 # 5.国家規模の好景気(大会開催以来〇〇の景気は向上している。観光客を中心とした消費の上昇と土地価格等の向上は国家規模の経済を大きく発展させている。企業や市民はこの好景気により多大な利益を得ている。)
 # エネルギー5k
 # 1年間帝国交易価値+10%
-
 # 6.テロ組織の粉砕(〇〇の治安当局は大会において大規模なテロ行為を行おうとした犯罪組織を未然に摘発することに成功したした。その組織は大会会場において多数の中性子爆弾を炸裂させようとしたが、その材料入手の経路から組織摘発につながった。)
 # 影響力+100
 # 2年間帝国安定度+10
-
 # 7.大会記念品のヒット(大会が開催されるにあたり、大会マスコットやさまざまな記念品が飛ぶように売れている。これらの経済効果は一時的であろうが、絶大な利益を産んでいる)
 # 1年間当該惑星交易価値+10%
-
 # 8.移民の流入(大会に合わせて観光客が惑星に詰めかけている。その中には〇〇への移住希望者が含まれており、入境当局は移民を許可した。そのことから観光客の中にも移住希望者が出ており、惑星人口は上昇傾向にある。)
 # 当該惑星に全銀河のPopのうちランダムに2Pop発生
 # 1年間当該惑星Pop成長速度+10%
-
 # 9.国威発揚(大会は〇〇の経済的、文化的威信を示しており、国威発揚の側面を見せている。住民は大会誘致に成功した政府を支持し、各国の外交官や観光客に自国の宣伝を行うことに成功した。)
 # 影響力+100
 # 5年間帝国安定度+10
-
 # 10.歴史的記録(この大会の実施と経過は全銀河史に残る偉業であると〇〇の文化人は主張している。この声を受けて現地当局は大会の歴史を記すプロジェクトを開始し、永遠に大会を記録しようと努力している。)
 # 5年間当該惑星統合力+10%
-
 # 11.世界的配信(この銀河的大会は全銀河で報道されており、その合間に行われる企業の宣伝活動やパブリックビューイングにおける経済活動は全銀河的な好景気を生んでいる。)
 # 1年間参加国交易価値+5%
-
 # 12.観光地評価(〇〇における大会は銀河中でも評価されており、観光地としての名声が高まっている。そのため、多くの観光客が〇〇に集まっており、経済的な利益を生んでいる。)
 # 2年間当該惑星交易価値+5%
 # 2年間当該惑星移民流入+20%
-
 # 13.効率的運営(大会の運営は滞りなく行われており、その経験と知識は国家運営においても転用され、効率的な行政に繋げることが可能である)
 # 影響力+50
 # 5年間帝国管理許容量+10%
-
 # 14.犯罪流入(大会が開催されるにあたり、開催地には多くの人的流入が発生した。無論多くは観光客や大会関係者ではあるが、その中には犯罪者もまぎれており、開催地での治安悪化が報告されている。)
 # 2年間当該惑星犯罪度+10
-
 # 15.大会事故発生(大会が開催され、協議が進んでいる中で会場の照明が落下する事故が発生した。幸いにも死傷者は出なかったが、会場の設備等の再点検が行われ、開催地の住民は不安視している。)
 # 1年間惑星幸福度-5%
-
 # 16.運営の腐敗(大会の運営に対して「偶然」行われた金融調査の結果、大会役員の数名が大規模な汚職をしていたことが発覚した。国家の最高クラスの政治家がかかわっているとも考えられたが証拠は見つからなかった。しかし、今回の大会の誘致や会場建設等に大きな汚職事件が見つかったことは国家的威信を失うこととなった。)
 # エネルギー-1k
 # 影響力-50
-
 # 17.テロ発生(大会に多くの観光客が集まる中、突然発生した爆発は多くの命を奪った。反政府勢力を自称するテロ組織は会場近辺で中性子爆弾を破裂させ、数十万人の命を一瞬で奪い去った。幸いなことに選手や外交官、政府高官に犠牲者は出ておらず、会場自体も無事であった。大会運営は苦渋の決断として大会を継続させることを決めたが、遺族は不満を示しており、現地から逃げる者もいる。)
 # 惑星上のPopをランダムに1Pop殺害
 # 2年間帝国Pop幸福度-10%
 # 1年間当該惑星Pop成長速度-10%
-
 # 18.予想外の不況(大会の誘致は経済に大きな影響を与えるとされてきた。しかし、膨大な資金を投下したにもかかわらず経済的効果は殆ど現れなかった。あらゆる投資が効果をなしておらず、以外にも不況が訪れている。)
 # 2年間当該惑星交易価値-10%
-
 ##################################
 ######  クライシス用イベント #######
 ##################################

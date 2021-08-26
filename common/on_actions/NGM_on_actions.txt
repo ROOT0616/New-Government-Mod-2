@@ -54,6 +54,13 @@ on_yearly_pulse_country = {
 	}
 }
 
+# this = country
+on_five_year_pulse_country = {
+	events = {
+		action.220
+	}
+}
+
 # 戦争が始まり、戦争に参加しているすべての国で実行される。
 # Root = Country
 # From = War
@@ -86,6 +93,7 @@ on_war_ended = {
 on_yearly_pulse = {
 	events = {
 		ngm_crisis.3
+		# ngm_government.108
 	}
 }
 
@@ -142,5 +150,14 @@ on_fleet_destroyed_perp = {
 	events = {
 		# 過去への逃走
 		ngm_origin.101
+	}
+}
+
+# From = system
+# FromFrom = country (new owner)
+# This = country (previous owner)
+on_system_lost = {
+	events = {
+		# ngm_government.106
 	}
 }
