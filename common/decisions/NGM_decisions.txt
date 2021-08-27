@@ -1289,7 +1289,7 @@ decision_end_forced_labor = {
 }
 
 # マーケット候補者の推薦
-decision_market_nomination = {
+decision_ngm_olympic_nomination = {
 	owned_planets_only = yes
 	# instant
 	resources = {
@@ -1303,7 +1303,6 @@ decision_market_nomination = {
 		OR = {
 			has_global_flag = ongoing_ngm_olympic_nomination
 		}
-		#from = { has_communications = event_target:50percentcomms } # should include self
 		from = {
 			has_country_flag = ngm_olympic_nomination_eligible
 		}
@@ -1311,7 +1310,7 @@ decision_market_nomination = {
 	allow = {
 		num_pops > 20
 		custom_tooltip = {
-			fail_text = already_market_nominated
+			fail_text = already_ngm_olympic_nominated
 			from = {
 				NOT = {
 					any_owned_planet = {
@@ -1328,7 +1327,7 @@ decision_market_nomination = {
 		}
 	}
 	effect = {
-		custom_tooltip = decision_market_nomination_effects
+		custom_tooltip = decision_ngm_olympic_nomination_effects
 		hidden_effect = {
 			from = {
 				set_variable = {
@@ -1357,13 +1356,19 @@ decision_market_nomination = {
 					modifier = {
 						factor = 0.33
 						from = {
-							trade_income >= 100
+							has_monthly_income = {
+								resource = unity
+								value >= 600
+							}
 						}
 					}
 					modifier = {
 						factor = 2
 						from = {
-							trade_income <= 50
+							has_monthly_income = {
+								resource = unity
+								value <= 300
+							}
 						}
 					}
 					modifier = {
@@ -1399,13 +1404,20 @@ decision_market_nomination = {
 					modifier = {
 						factor = 2
 						from = {
-							trade_income >= 120
+							has_monthly_income = {
+								resource = unity
+								value >= 600
+							}
 						}
 					}
 					modifier = {
 						factor = 0.5
 						from = {
-							trade_income <= 50
+
+							has_monthly_income = {
+								resource = unity
+								value <= 300
+							}
 						}
 					}
 					modifier = {
@@ -1462,7 +1474,7 @@ decision_market_nomination = {
 	}
 }
 
-decision_boost_market_nomination = {
+decision_boost_ngm_olympic_nomination = {
 	owned_planets_only = yes
 	resources = {
 		category = decisions
@@ -1495,7 +1507,7 @@ decision_boost_market_nomination = {
 		}
 	}
 	effect = {
-		custom_tooltip = decision_boost_market_nomination_effects
+		custom_tooltip = decision_boost_ngm_olympic_nomination_effects
 		hidden_effect = {
 			# boost counter
 			if = {
@@ -1591,7 +1603,7 @@ decision_boost_market_nomination = {
 }
 
 # マーケット候補者の推薦
-decision_revoke_market_nomination = {
+decision_revoke_ngm_olympic_nomination = {
 	owned_planets_only = yes
 	# instant
 	resources = {
@@ -1668,7 +1680,7 @@ decision_revoke_market_nomination = {
 				}
 			}
 		}
-		custom_tooltip = decision_revoke_market_nomination_effect
+		custom_tooltip = decision_revoke_ngm_olympic_nomination_effect
 	}
 	ai_weight = {
 		weight = 0
