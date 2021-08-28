@@ -3175,7 +3175,7 @@ civic_ngm_nature_faith = {
 }
 
 # 〇開発主義
-# グランド・モニュメント grand_monument(建築とは自らを表現する至高の物品である。)(開発)							建築物Slot+1、建造物速度+10%、建築物コスト+10%、巨大構造物建造速度-10%
+# グランド・モニュメント grand_monument(建築とは自らを表現する至高の物品である。)(開発)							建築物Slot+1、建造物速度+10%、建築物コスト+10%、巨大構造物建造速度10%
 civic_ngm_grand_monument = {
 	possible = {
 		ethics = {
@@ -3193,7 +3193,7 @@ civic_ngm_grand_monument = {
 		planet_max_buildings_add = 1
 		planet_building_build_speed_mult = 0.1
 		planet_buildings_cost_mult = 0.1
-		megastructure_build_speed_mult = -0.1
+		megastructure_build_speed_mult = 0.1
 	}
 }
 
@@ -3816,9 +3816,9 @@ civic_ngm_general_contractor = {
 	}
 	modifier = {
 		planet_buildings_cost_mult = -0.1
-		planet_building_build_speed_mult = -0.1
+		planet_building_build_speed_mult = 0.1
 		# megastructure_build_cost_mult = -0.1
-		megastructure_build_speed_mult = -0.1
+		megastructure_build_speed_mult = 0.1
 	}
 }
 
