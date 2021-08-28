@@ -5210,6 +5210,7 @@ country_event = {
 }
 
 # イベント表
+# オリンピック開催地抽選開始
 country_event = {
 	id = ngm_government.100
 	title = ngm_government.100.name
@@ -5230,12 +5231,15 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		set_global_flag = ongoing_ngm_olympic_nomination
-		set_country_flag = ngm_olympic_nomination_eligible
 		event_target:global_event_country = {
 			country_event = {
 				id = ngm_government.102
 				days = 1800
 			}
+		}
+		country_event = {
+			id = ngm_government.106
+			days = 3600
 		}
 		begin_event_chain = {
 			event_chain = ngm_olympic_chain
@@ -5283,7 +5287,7 @@ country_event = {
 	}
 }
 
-# Market Nomination started notification event
+# オリンピックノミネートが通知イベントを開始
 country_event = {
 	id = ngm_government.101
 	title = ngm_government.101.name
@@ -5340,7 +5344,7 @@ country_event = {
 	}
 }
 
-# Market Founder luck-of-the-draw
+# オリンピックの創設者 抽選会
 country_event = {
 	id = ngm_government.102
 	hide_window = yes
@@ -5427,7 +5431,7 @@ country_event = {
 						}
 					}
 				}
-				save_global_event_target_as = ngm_olympic__founder_planet
+				save_global_event_target_as = ngm_olympic_founder_planet
 			}
 			country_event = {
 				id = ngm_government.103
@@ -5450,15 +5454,15 @@ country_event = {
 				# remove boosted flags
 				if = {
 					limit = {
-						has_planet_flag = boosted_once
+						has_planet_flag = ngm_olympic_boosted_once
 					}
-					remove_planet_flag = boosted_once
+					remove_planet_flag = ngm_olympic_boosted_once
 				}
 				if = {
 					limit = {
-						has_planet_flag = boosted_twice
+						has_planet_flag = ngm_olympic_boosted_twice
 					}
-					remove_planet_flag = boosted_twice
+					remove_planet_flag = ngm_olympic_boosted_twice
 				}
 				# remove modifiers
 				if = {
@@ -5500,14 +5504,14 @@ country_event = {
 	}
 }
 
-# Founder selected port
+# オリンピックの創設者を選択されたモード
 country_event = {
 	id = ngm_government.103
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		set_global_flag = galactic_market_founded
-		# code listens for this flag to create market
+		# set_global_flag = galactic_market_founded
+		# コードはこのフラグを待って、オリンピックを作ります。
 		country_event = {
 			id = ngm_government.104
 			days = 5
@@ -5531,7 +5535,7 @@ country_event = {
 		}
 	}
 	picture = GFX_evt_financial_instruments
-	location = event_target:ngm_olympic__founder_planet
+	location = event_target:ngm_olympic_founder_planet
 	show_sound = event_galactic_market
 	is_triggered_only = yes
 	immediate = {
@@ -5564,7 +5568,7 @@ country_event = {
 	}
 }
 
-# ファウンダー選択通知
+# オリンピックの創設者選択通知
 country_event = {
 	id = ngm_government.105
 	title = ngm_government.105.name
@@ -5583,9 +5587,9 @@ country_event = {
 		}
 	}
 	picture = GFX_evt_financial_instruments
-	location = event_target:ngm_olympic__founder_planet
+	location = event_target:ngm_olympic_founder_planet
 	immediate = {
-		event_target:ngm_olympic__founder_planet.solar_system = {
+		event_target:ngm_olympic_founder_planet.solar_system = {
 			every_system_planet = {
 				set_surveyed = {
 					surveyed = yes
@@ -5599,6 +5603,85 @@ country_event = {
 		name = OK
 		tooltip = {
 			end_event_chain = ngm_olympic_chain
+		}
+	}
+}
+
+# オリンピック次期開催地決定イベント開始
+country_event = {
+	id = ngm_government.106
+	title = ngm_government.106.name
+	desc = {
+		text = ngm_government.106.desc
+		trigger = {
+			is_xenophobe = no
+		}
+	}
+	desc = {
+		text = ngm_government.106.desc.phobe
+		trigger = {
+			is_xenophobe = yes
+		}
+	}
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = ongoing_ngm_olympic_nomination
+		clear_global_event_target = ngm_olympic_founder_planet
+		# set_country_flag = ngm_olympic_nomination_eligible
+		event_target:global_event_country = {
+			country_event = {
+				id = ngm_government.102
+				days = 360
+			}
+		}
+		country_event = {
+			id = ngm_government.106
+			days = 1800
+		}
+		begin_event_chain = {
+			event_chain = ngm_olympic_chain
+			target = this
+		}
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			begin_event_chain = {
+				event_chain = ngm_olympic_chain
+				target = this
+			}
+			country_event = {
+				id = ngm_government.101
+			}
+		}
+	}
+	after = {
+		custom_tooltip = enable_decision_market_nomination
+		# Notification
+		tooltip = {
+			begin_event_chain = {
+				event_chain = ngm_olympic_chain
+				target = this
+			}
+		}
+	}
+	option = {
+		name = ngm_government.100.a
+		trigger = {
+			has_authority = auth_corporate
+		}
+	}
+	option = {
+		name = ngm_government.100.b
+		trigger = {
+			NOT = {
+				has_authority = auth_corporate
+			}
 		}
 	}
 }

@@ -1502,7 +1502,7 @@ decision_boost_ngm_olympic_nomination = {
 		custom_tooltip = {
 			fail_text = max_boosted
 			NOT = {
-				has_planet_flag = boosted_twice
+				has_planet_flag = ngm_olympic_boosted_twice
 			}
 		}
 	}
@@ -1512,12 +1512,12 @@ decision_boost_ngm_olympic_nomination = {
 			# boost counter
 			if = {
 				limit = {
-					has_planet_flag = boosted_once
+					has_planet_flag = ngm_olympic_boosted_once
 				}
-				set_planet_flag = boosted_twice
+				set_planet_flag = ngm_olympic_boosted_twice
 			}
 			else = {
-				set_planet_flag = boosted_once
+				set_planet_flag = ngm_olympic_boosted_once
 			}
 			# boost rating
 			if = {
