@@ -5171,11 +5171,6 @@ country_event = {
 # 3.軍事論争(提督や将軍同士での論争。どちらかを優遇するとバフが得られる。)
 # (リーダー名)を支持する(当該リーダーに「政府後見」の特性を付与。)
 # 政府は臨機応変に対応する。(影響力+100。)
-# 政府後見
-# 総督:リーダー経験値取得+20%。職からの統合力+10%、職からの管理許容量+10%
-# 研究者: リーダー経験値取得+20%。調査速度+10%、研究速度+5%
-# 提督: リーダー経験値取得+20%。艦隊維持費-10%、亜空間移動速度+10%
-# 将軍: リーダー経験値取得+20%。地上軍維持費-10%、地上軍士気+20%
 country_event = {
 	id = ngm_government.7
 	title = ngm_government.7.name
@@ -5209,7 +5204,6 @@ country_event = {
 	}
 }
 
-# イベント表
 # オリンピック開催地抽選開始
 country_event = {
 	id = ngm_government.100
@@ -5231,15 +5225,16 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		set_global_flag = ongoing_ngm_olympic_nomination
+		set_country_flag = ngm_olympic_nomination_eligible
 		event_target:global_event_country = {
 			country_event = {
 				id = ngm_government.102
-				days = 1800
+				days = 360
 			}
 		}
 		country_event = {
 			id = ngm_government.106
-			days = 3600
+			days = 1800
 		}
 		begin_event_chain = {
 			event_chain = ngm_olympic_chain
@@ -5262,7 +5257,7 @@ country_event = {
 		}
 	}
 	after = {
-		custom_tooltip = enable_decision_market_nomination
+		custom_tooltip = enable_decision_ngm_olympic
 		# Notification
 		tooltip = {
 			begin_event_chain = {
@@ -5416,7 +5411,7 @@ country_event = {
 					}
 				}
 			}
-			save_global_event_target_as = market_founder
+			save_global_event_target_as = ngm_olympic_founder
 			random_owned_planet = {
 				weights = {
 					base = 1
@@ -5510,7 +5505,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		# set_global_flag = galactic_market_founded
+		set_global_flag = on_ngm_olympic
 		# コードはこのフラグを待って、オリンピックを作ります。
 		country_event = {
 			id = ngm_government.104
@@ -5539,10 +5534,6 @@ country_event = {
 	show_sound = event_galactic_market
 	is_triggered_only = yes
 	immediate = {
-		# set_timed_global_flag = {
-		# 	flag = resolution_galactic_market_relocated_recently
-		# 	days = 18000
-		# }
 		every_playable_country = {
 			limit = {
 				is_galactic_community_member = yes
@@ -5554,16 +5545,29 @@ country_event = {
 				id = ngm_government.105
 			}
 		}
+		every_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.107
+				days = 180
+			}
+		}
+		country_event = {
+			id = ngm_government.109
+			days = 480
+		}
 	}
 	option = {
 		name = OK
-		custom_tooltip = established_galactic_market_station
+		# custom_tooltip = established_ngm_olympic_station
 		tooltip = {
 			end_event_chain = ngm_olympic_chain
-			add_modifier = {
-				modifier = galactic_market_founder
-				days = -1
-			}
+			# add_modifier = {
+			# 	modifier = ngm_olympic_founder
+			# 	days = -1
+			# }
 		}
 	}
 }
@@ -5627,9 +5631,10 @@ country_event = {
 	show_sound = event_galactic_market
 	is_triggered_only = yes
 	immediate = {
+		remove_global_flag = on_ngm_olympic
 		set_global_flag = ongoing_ngm_olympic_nomination
+		set_country_flag = ngm_olympic_nomination_eligible
 		clear_global_event_target = ngm_olympic_founder_planet
-		# set_country_flag = ngm_olympic_nomination_eligible
 		event_target:global_event_country = {
 			country_event = {
 				id = ngm_government.102
@@ -5686,54 +5691,1332 @@ country_event = {
 	}
 }
 
+# ↓半年後
+# 開催規模決定(選択期間半年)
+# 近くに開催される大会において、我が国の演出と選手団の規模について議論が上がっている。壮麗なものとすればもちろん国威を示すことができるが、選手団にその費用は用意できないという相談があった。我が国としてはどのように支援するべきであろうか。(主催国、参加国双方発生。時間切れの選択肢として最低限が選択される。)
+# (大規模、質実充実、最低限の3種類。それぞれエネルギー3k、1k、0の消費で、大規模であれば、開会式で影響力を獲得する。)
+country_event = {
+	id = ngm_government.107
+	title = ngm_government.107.name
+	text = ngm_government.107.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	immediate = {
+		country_event = {
+			id = ngm_government.108
+			days = 240
+		}
+	}
+	option = {
+		name = ngm_government.107.a
+		allow = {
+			owner = {
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 3000
+				}
+			}
+		}
+		add_resource = {
+			energy = -3000
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = ngm_olympic_l_country_flag
+				days = 300
+			}
+		}
+	}
+	option = {
+		name = ngm_government.107.b
+		allow = {
+			owner = {
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 1000
+				}
+			}
+		}
+		add_resource = {
+			energy = -1000
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = ngm_olympic_m_country_flag
+				days = 300
+			}
+		}
+	}
+	option = {
+		name = ngm_government.107.c
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = ngm_olympic_s_country_flag
+				days = 300
+			}
+		}
+	}
+}
+
+# ↓8か月後
+# 開会式
+# ●●において△△の大会が開催された。開会にあたり式典が行われ、最新鋭の技術を利用したホログラムや機械的なアピールが行われ、市民たちは熱狂の渦に置かれた。各国の選手たちの入場もつつがなく行われ、居住性に合わせたドームの中で行進が行われた。
+# 入場の後には□□の国家元首である××により開会の宣言が起こなわれ、今から大会が開催される。「すばらしい」
+# (開催規模決定の準備に応じて影響力を200、50、10を獲得)
+country_event = {
+	id = ngm_government.108
+	title = ngm_government.108.name
+	text = ngm_government.108.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.108.a
+		if = {
+			limit = {
+				has_country_flag = ngm_olympic_l_country_flag
+			}
+			add_resource = {
+				influence = 200
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ngm_olympic_m_country_flag
+			}
+			add_resource = {
+				influence = 50
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ngm_olympic_s_country_flag
+			}
+			add_resource = {
+				influence = 10
+			}
+		}
+	}
+}
+
+# ↓2か月後
+# イベント
+#   イベント表準拠
+country_event = {
+	id = ngm_government.109
+	is_triggered_only = yes
+	hide_window = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	immediate = {
+		# イベント
+		random_list = {
+			1 = {
+				country_event = {
+					id = ngm_government.110
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.111
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.112
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.113
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.114
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.115
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.116
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.117
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.118
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.119
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.120
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.121
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.122
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.123
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.124
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.125
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.126
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.127
+				}
+			}
+		}
+		# 競技イベント
+		random_list = {
+			1 = {
+				country_event = {
+					id = ngm_government.200
+					days = 30
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.201
+					days = 30
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.202
+					days = 30
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.203
+					days = 30
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.204
+					days = 30
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.205
+					days = 30
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.206
+					days = 30
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.207
+					days = 30
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.208
+					days = 30
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.209
+					days = 30
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.210
+					days = 30
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.211
+					days = 30
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.212
+					days = 30
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.213
+					days = 30
+				}
+			}
+		}
+		# イベント
+		random_list = {
+			1 = {
+				country_event = {
+					id = ngm_government.110
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.111
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.112
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.113
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.114
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.115
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.116
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.117
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.118
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.119
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.120
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.121
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.122
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.123
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.124
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.125
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.126
+					days = 90
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.127
+					days = 90
+				}
+			}
+		}
+		country_event = {
+			id = ngm_government.300
+			days = 120
+		}
+	}
+}
+
+# イベント表
 # 1.地元の好況(大会開催以来開催地の景気は向上している。観光客を中心とした消費の上昇と土地価格等の向上は惑星規模の経済を大きく発展させている。地元企業や住民はこの好景気により多大な利益を得ている。)
 # エネルギー2k
 # 1年間当該惑星交易価値+10%
+country_event = {
+	id = ngm_government.110
+	title = ngm_government.110.name
+	text = ngm_government.110.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.110.a
+		add_resource = {
+			energy = 2000
+		}
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 2.テロ行為の事前発覚(惑星の治安当局は大会において大規模なテロ行為を行おうとした犯罪組織を未然に摘発することに成功したした。その組織は大会会場において原始的な中性子爆弾を炸裂させようとしたが、その材料入手の経路から組織摘発につながった。)
 # 影響力+50
 # 2年間当該惑星安定度+10
+country_event = {
+	id = ngm_government.111
+	title = ngm_government.111.name
+	text = ngm_government.111.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.111.a
+		add_resource = {
+			influence = 50
+		}
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_2_modifier
+				years = 2
+			}
+		}
+	}
+}
+
 # 3.外交官の関心(この大会は世界的な注目を集めており、各国の外交官においても例外ではない。外交官の多くも選手の督励や観戦のために会場に集まっており、主催国の印象向上や外交的アピールの場としても利用されている。)
 # 影響力+50
 # 1年間外交発言力+10%
+country_event = {
+	id = ngm_government.112
+	title = ngm_government.112.name
+	text = ngm_government.112.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.112.a
+		add_resource = {
+			influence = 50
+		}
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 4.大会への熱狂(市民達は現在世界規模の大規模大会への関心を強めており、その開催と大会の内容に熱狂を続けている。至る所で大会の話題に花が咲き、市民は大会を心から楽しんでいる。)
 # 2年間当該惑星幸福度+10%
+country_event = {
+	id = ngm_government.113
+	title = ngm_government.113.name
+	text = ngm_government.113.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.113.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 5.国家規模の好景気(大会開催以来〇〇の景気は向上している。観光客を中心とした消費の上昇と土地価格等の向上は国家規模の経済を大きく発展させている。企業や市民はこの好景気により多大な利益を得ている。)
 # エネルギー5k
 # 1年間帝国交易価値+10%
+country_event = {
+	id = ngm_government.114
+	title = ngm_government.114.name
+	text = ngm_government.114.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.114.a
+		add_resource = {
+			energy = 5000
+		}
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 6.テロ組織の粉砕(〇〇の治安当局は大会において大規模なテロ行為を行おうとした犯罪組織を未然に摘発することに成功したした。その組織は大会会場において多数の中性子爆弾を炸裂させようとしたが、その材料入手の経路から組織摘発につながった。)
 # 影響力+100
 # 2年間帝国安定度+10
+country_event = {
+	id = ngm_government.115
+	title = ngm_government.115.name
+	text = ngm_government.115.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.115.a
+		add_resource = {
+			influence = 100
+		}
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 7.大会記念品のヒット(大会が開催されるにあたり、大会マスコットやさまざまな記念品が飛ぶように売れている。これらの経済効果は一時的であろうが、絶大な利益を産んでいる)
 # 1年間当該惑星交易価値+10%
+country_event = {
+	id = ngm_government.116
+	title = ngm_government.116.name
+	text = ngm_government.116.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.116.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 8.移民の流入(大会に合わせて観光客が惑星に詰めかけている。その中には〇〇への移住希望者が含まれており、入境当局は移民を許可した。そのことから観光客の中にも移住希望者が出ており、惑星人口は上昇傾向にある。)
 # 当該惑星に全銀河のPopのうちランダムに2Pop発生
 # 1年間当該惑星Pop成長速度+10%
+country_event = {
+	id = ngm_government.117
+	title = ngm_government.117.name
+	text = ngm_government.117.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.117.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 9.国威発揚(大会は〇〇の経済的、文化的威信を示しており、国威発揚の側面を見せている。住民は大会誘致に成功した政府を支持し、各国の外交官や観光客に自国の宣伝を行うことに成功した。)
 # 影響力+100
 # 5年間帝国安定度+10
+country_event = {
+	id = ngm_government.118
+	title = ngm_government.118.name
+	text = ngm_government.118.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.118.a
+		add_resource = {
+			influence = 100
+		}
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 10.歴史的記録(この大会の実施と経過は全銀河史に残る偉業であると〇〇の文化人は主張している。この声を受けて現地当局は大会の歴史を記すプロジェクトを開始し、永遠に大会を記録しようと努力している。)
 # 5年間当該惑星統合力+10%
+country_event = {
+	id = ngm_government.119
+	title = ngm_government.119.name
+	text = ngm_government.119.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.119.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 11.世界的配信(この銀河的大会は全銀河で報道されており、その合間に行われる企業の宣伝活動やパブリックビューイングにおける経済活動は全銀河的な好景気を生んでいる。)
 # 1年間参加国交易価値+5%
+country_event = {
+	id = ngm_government.120
+	title = ngm_government.120.name
+	text = ngm_government.120.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.120.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 12.観光地評価(〇〇における大会は銀河中でも評価されており、観光地としての名声が高まっている。そのため、多くの観光客が〇〇に集まっており、経済的な利益を生んでいる。)
 # 2年間当該惑星交易価値+5%
 # 2年間当該惑星移民流入+20%
+country_event = {
+	id = ngm_government.121
+	title = ngm_government.121.name
+	text = ngm_government.121.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.121.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 13.効率的運営(大会の運営は滞りなく行われており、その経験と知識は国家運営においても転用され、効率的な行政に繋げることが可能である)
 # 影響力+50
 # 5年間帝国管理許容量+10%
+country_event = {
+	id = ngm_government.122
+	title = ngm_government.122.name
+	text = ngm_government.122.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.110.a
+		add_resource = {
+			influence = 50
+		}
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 14.犯罪流入(大会が開催されるにあたり、開催地には多くの人的流入が発生した。無論多くは観光客や大会関係者ではあるが、その中には犯罪者もまぎれており、開催地での治安悪化が報告されている。)
 # 2年間当該惑星犯罪度+10
+country_event = {
+	id = ngm_government.123
+	title = ngm_government.123.name
+	text = ngm_government.123.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.123.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 15.大会事故発生(大会が開催され、協議が進んでいる中で会場の照明が落下する事故が発生した。幸いにも死傷者は出なかったが、会場の設備等の再点検が行われ、開催地の住民は不安視している。)
 # 1年間惑星幸福度-5%
+country_event = {
+	id = ngm_government.124
+	title = ngm_government.124.name
+	text = ngm_government.124.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.124.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 16.運営の腐敗(大会の運営に対して「偶然」行われた金融調査の結果、大会役員の数名が大規模な汚職をしていたことが発覚した。国家の最高クラスの政治家がかかわっているとも考えられたが証拠は見つからなかった。しかし、今回の大会の誘致や会場建設等に大きな汚職事件が見つかったことは国家的威信を失うこととなった。)
 # エネルギー-1k
 # 影響力-50
+country_event = {
+	id = ngm_government.125
+	title = ngm_government.125.name
+	text = ngm_government.125.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.125.a
+		add_resource = {
+			energy = -1000
+			influence = -50
+		}
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 17.テロ発生(大会に多くの観光客が集まる中、突然発生した爆発は多くの命を奪った。反政府勢力を自称するテロ組織は会場近辺で中性子爆弾を破裂させ、数十万人の命を一瞬で奪い去った。幸いなことに選手や外交官、政府高官に犠牲者は出ておらず、会場自体も無事であった。大会運営は苦渋の決断として大会を継続させることを決めたが、遺族は不満を示しており、現地から逃げる者もいる。)
 # 惑星上のPopをランダムに1Pop殺害
 # 2年間帝国Pop幸福度-10%
 # 1年間当該惑星Pop成長速度-10%
+country_event = {
+	id = ngm_government.126
+	title = ngm_government.126.name
+	text = ngm_government.126.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.126.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
 # 18.予想外の不況(大会の誘致は経済に大きな影響を与えるとされてきた。しかし、膨大な資金を投下したにもかかわらず経済的効果は殆ど現れなかった。あらゆる投資が効果をなしておらず、以外にも不況が訪れている。)
 # 2年間当該惑星交易価値-10%
+country_event = {
+	id = ngm_government.127
+	title = ngm_government.127.name
+	text = ngm_government.127.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.127.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+# 競技イベント
+# 1.息をのむ競技(しんと静まった会場の中で繰り広げられる競技は全銀河に放送されている。意図的に静かにしているわけではなく、皆無意識に息をのんでいるのだ。それほどまでに皆を引き込む試合はまだ続いている。)
+# 1年間全参加国幸福度+10%
+country_event = {
+	id = ngm_government.200
+	title = ngm_government.200.name
+	text = ngm_government.200.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.200.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+# 2.感動的選手(△△の選手団の団長は大会の有力選手である。何度も繰り返し傷病や成績不良による挫折を味わいながら這い上がった経歴を持つ団長は母国では英雄詩されており、彼の活躍は多くの人に感動を与えている。)
+# 1年間参加国のうちランダムで1か国幸福度+20%
+country_event = {
+	id = ngm_government.201
+	title = ngm_government.201.name
+	text = ngm_government.201.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.201.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+# 3.熾烈な競技(大会の有力国である●●と〇〇による競技は絶対に譲れない熱気がある。人々も熾烈なこの競技の結果を予測できておらず、予想外の追い抜きが繰り返されるたびに歓声をあげている。)
+# 1年間参加国のうちランダムで2か国幸福度+20%
+country_event = {
+	id = ngm_government.202
+	title = ngm_government.202.name
+	text = ngm_government.202.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.202.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+# 4.歴史的一戦(歴史的一戦)
+# 1年間参加国のうちランダムで2か国幸福度+20%
+# 1年間全参加国統合力+20%
+country_event = {
+	id = ngm_government.203
+	title = ngm_government.203.name
+	text = ngm_government.203.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.203.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+# 5.全銀河記録の樹立(競技のとある試合において記録された成績は銀河で記録されたもののなかで、最も高い成績となった。全銀河記録の樹立に選手だけではなく人々も熱狂している。)
+# 1年間参加国のうちランダムで1か国統合力+20%、影響力+100
+country_event = {
+	id = ngm_government.204
+	title = ngm_government.204.name
+	text = ngm_government.204.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.204.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+# 6.観客の熱狂(大会の観客は選手たちの白熱する競技に熱狂しており、歓声は惑星中に広がっている。特に主催国である●●での熱狂ぶりは甚だしく、市民は競技に夢中である。)
+# 1年間主催国の幸福度+10%
+country_event = {
+	id = ngm_government.205
+	title = ngm_government.205.name
+	text = ngm_government.205.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.205.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+# 7.革新的チーム(△△の選手団は大会の有力候補である。天才的選手の直感に任せた勝利は派手さもあって人々からも人気であり、勝利に向かって進んでいる。)
+# 参加国のうちランダムで1カ国優勝確率+20%
+country_event = {
+	id = ngm_government.206
+	title = ngm_government.206.name
+	text = ngm_government.206.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.206.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+# 8.堅実なチーム(△△の選手団は大会の有力候補である。堅実に努力を重ねた優秀な選手が行う堅実な勝利は人々からも大いに認められており、優勝へと邁進している。)
+# 参加国のうちランダムで1カ国優勝確率+20%
+country_event = {
+	id = ngm_government.207
+	title = ngm_government.207.name
+	text = ngm_government.207.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.207.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+# 9.競技外での表彰(△△の選手団は日ごろの行いが素晴らしく、会場付近では自発的にごみ拾いを、選手団の中でも謙虚で礼儀正しい。その選手団の行為に対して現地当局は感謝状を発行し、選手団も恭しく受け取った。)
+# 参加国のうちランダムで1カ国に影響力+30
+country_event = {
+	id = ngm_government.208
+	title = ngm_government.208.name
+	text = ngm_government.208.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.208.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+# 10.スリル感のある競技(△△選手団は当初有力候補ではなかった。しかし、試合が開始すると頭角を現した。各試合の最終局面で一気に勝利へと追い込むさまはスリル感もあって全銀河を虜にしている。)
+# 参加国のうちランダムで1カ国優勝確率+20%
+country_event = {
+	id = ngm_government.209
+	title = ngm_government.209.name
+	text = ngm_government.209.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.209.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+# 11.ドーピングの発覚(厳正な審判団はあることに気が付いた。△△の選手団の様子がおかしいのである。審判団の追求と調査により△△選手団が違法薬物による瞬時の能力向上を行っていたことが発覚した。△△選手団の一部は失格となった。)
+# 1年間参加国のうちランダムで1か国幸福度-10%
+# 1年間主催国社会学研究+10%
+country_event = {
+	id = ngm_government.210
+	title = ngm_government.210.name
+	text = ngm_government.210.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.210.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+# 12.競技における不正(厳正な審判団はあることに気が付いた。△△の選手団の様子がおかしいのである。審判団の追求と調査により不正なデータを結果に反映させるようクラッキングが行われていたのだ。△△選手団の一部は失格となった。)
+# 1年間参加国のうちランダムで1か国幸福度-10%
+# 主催国影響力+50
+country_event = {
+	id = ngm_government.211
+	title = ngm_government.211.name
+	text = ngm_government.211.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.211.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+# 13.有力選手の故障(△△の選手団のうち最も有力視されている選手が発熱し、最高のパフォーマンスができない状態にある。そのため△△の選手団の成績は確実に落ちており、優勝の確立は下がっている。)
+# 参加国のうちランダムで1カ国優勝確率+20%
+country_event = {
+	id = ngm_government.212
+	title = ngm_government.212.name
+	text = ngm_government.212.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.212.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+# 14.選手によるヘイトクライム(△△の選手団の数名が開催惑星の市民に対して信じられないほどの差別的発言を行っていたことが発覚された。融和と平和の祭典で差別的発言を行ったことは許されない行為であり、△△の政府は弁明に追われている。)
+# 参加国のうちランダムで1カ国影響力-50、1年間統合力-10%
+country_event = {
+	id = ngm_government.213
+	title = ngm_government.213.name
+	text = ngm_government.213.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.213.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_1_modifier
+				years = 1
+			}
+		}
+	}
+}
+
+# 閉会式
+country_event = {
+	id = ngm_government.300
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		every_playable_country = {
+			country_event = {
+				id = ngm_government.310
+				days = 5
+			}
+		}
+		random_country = {
+			limit = {
+				is_country_type = default
+				has_country_flag = ngm_olympic_nomination_eligible
+			}
+			country_event = {
+				id = ngm_government.301
+				days = 1
+			}
+		}
+		random_country = {
+			limit = {
+				is_country_type = default
+				has_country_flag = ngm_olympic_nomination_eligible
+			}
+			country_event = {
+				id = ngm_government.302
+				days = 2
+			}
+		}
+		random_country = {
+			limit = {
+				is_country_type = default
+				has_country_flag = ngm_olympic_nomination_eligible
+			}
+			country_event = {
+				id = ngm_government.303
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ngm_government.301
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		save_global_event_target_as = ngm_olympic_1win_event_target
+	}
+}
+
+country_event = {
+	id = ngm_government.302
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		save_global_event_target_as = ngm_olympic_2win_event_target
+	}
+}
+
+country_event = {
+	id = ngm_government.303
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		save_global_event_target_as = ngm_olympic_3win_event_target
+	}
+}
+
+country_event = {
+	id = ngm_government.310
+	title = ngm_government.300.name
+	text = ngm_government.300.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.300.a
+	}
+}
+
+
 ##################################
 ######  クライシス用イベント #######
 ##################################

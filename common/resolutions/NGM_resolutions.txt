@@ -167,6 +167,14 @@ resolution_ngm_olympic_form = {
 			count >= 3
 		}
 	}
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"
+			NOT = {
+				is_active_resolution = "resolution_ngm_olympic_form"
+			}
+		}
+	}
 	ai_weight = {
 		weight = @resolution_weight_popular
 		modifier = {
