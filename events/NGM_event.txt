@@ -6140,7 +6140,7 @@ country_event = {
 		}
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_1_event_modifier
 				years = 1
 			}
 		}
@@ -6168,7 +6168,7 @@ country_event = {
 		}
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_2_modifier
+				modifier = ngm_olympic_2_event_modifier
 				years = 2
 			}
 		}
@@ -6196,7 +6196,7 @@ country_event = {
 		}
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_3_event_modifier
 				years = 1
 			}
 		}
@@ -6220,7 +6220,7 @@ country_event = {
 		name = ngm_government.113.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_4_event_modifier
 				years = 1
 			}
 		}
@@ -6248,7 +6248,7 @@ country_event = {
 		}
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_5_event_modifier
 				years = 1
 			}
 		}
@@ -6276,7 +6276,7 @@ country_event = {
 		}
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_6_event_modifier
 				years = 1
 			}
 		}
@@ -6300,7 +6300,7 @@ country_event = {
 		name = ngm_government.116.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_7_event_modifier
 				years = 1
 			}
 		}
@@ -6325,7 +6325,7 @@ country_event = {
 		name = ngm_government.117.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_8_event_modifier
 				years = 1
 			}
 		}
@@ -6353,7 +6353,7 @@ country_event = {
 		}
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_9_event_modifier
 				years = 1
 			}
 		}
@@ -6377,7 +6377,7 @@ country_event = {
 		name = ngm_government.119.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_10_event_modifier
 				years = 1
 			}
 		}
@@ -6401,7 +6401,7 @@ country_event = {
 		name = ngm_government.120.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_11_event_modifier
 				years = 1
 			}
 		}
@@ -6426,7 +6426,7 @@ country_event = {
 		name = ngm_government.121.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_12_event_modifier
 				years = 1
 			}
 		}
@@ -6454,7 +6454,7 @@ country_event = {
 		}
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_13_event_modifier
 				years = 1
 			}
 		}
@@ -6478,7 +6478,7 @@ country_event = {
 		name = ngm_government.123.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_14_event_modifier
 				years = 1
 			}
 		}
@@ -6502,7 +6502,7 @@ country_event = {
 		name = ngm_government.124.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_15_event_modifier
 				years = 1
 			}
 		}
@@ -6530,10 +6530,6 @@ country_event = {
 			influence = -50
 		}
 		event_target:ngm_olympic_founder_planet = {
-			add_modifier = {
-				modifier = ngm_olympic_1_modifier
-				years = 1
-			}
 		}
 	}
 }
@@ -6557,7 +6553,11 @@ country_event = {
 		name = ngm_government.126.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_16_event_modifier
+				years = 2
+			}
+			add_modifier = {
+				modifier = ngm_olympic_17_event_modifier
 				years = 1
 			}
 		}
@@ -6581,7 +6581,7 @@ country_event = {
 		name = ngm_government.127.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_18_event_modifier
 				years = 1
 			}
 		}
@@ -6606,7 +6606,7 @@ country_event = {
 		name = ngm_government.200.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_1_game_modifier
 				years = 1
 			}
 		}
@@ -6630,7 +6630,7 @@ country_event = {
 		name = ngm_government.201.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_2_game_modifier
 				years = 1
 			}
 		}
@@ -6654,7 +6654,7 @@ country_event = {
 		name = ngm_government.202.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_3_game_modifier
 				years = 1
 			}
 		}
@@ -6679,7 +6679,7 @@ country_event = {
 		name = ngm_government.203.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_4_game_modifier
 				years = 1
 			}
 		}
@@ -6703,7 +6703,7 @@ country_event = {
 		name = ngm_government.204.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_5_game_modifier
 				years = 1
 			}
 		}
@@ -6727,7 +6727,7 @@ country_event = {
 		name = ngm_government.205.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_6_game_modifier
 				years = 1
 			}
 		}
@@ -6751,7 +6751,7 @@ country_event = {
 		name = ngm_government.206.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_7_game_modifier
 				years = 1
 			}
 		}
@@ -6775,7 +6775,7 @@ country_event = {
 		name = ngm_government.207.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_8_game_modifier
 				years = 1
 			}
 		}
@@ -6799,7 +6799,7 @@ country_event = {
 		name = ngm_government.208.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_9_game_modifier
 				years = 1
 			}
 		}
@@ -6823,7 +6823,7 @@ country_event = {
 		name = ngm_government.209.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_10_game_modifier
 				years = 1
 			}
 		}
@@ -6848,7 +6848,7 @@ country_event = {
 		name = ngm_government.210.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_11_game_modifier
 				years = 1
 			}
 		}
@@ -6873,7 +6873,7 @@ country_event = {
 		name = ngm_government.211.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_12_game_modifier
 				years = 1
 			}
 		}
@@ -6897,7 +6897,7 @@ country_event = {
 		name = ngm_government.212.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_13_game_modifier
 				years = 1
 			}
 		}
@@ -6921,7 +6921,7 @@ country_event = {
 		name = ngm_government.213.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_1_modifier
+				modifier = ngm_olympic_14_game_modifier
 				years = 1
 			}
 		}
