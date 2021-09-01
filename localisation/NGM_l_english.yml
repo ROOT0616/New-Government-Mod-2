@@ -132,6 +132,22 @@
  decision_end_requisition_policy_desc:0 "惑星規模の徴用政策なんて政府にとって不利益だ \n やめさせろ！"
  decision_end_planet_requisition_policy_effects_short:0 "惑星規模の徴用政策をやめる"
 
+ decision_ngm_olympic_nomination:0 "国際大会の開催地に推薦"
+ decision_ngm_olympic_nomination_desc:0 "銀国際大会の開催地となることは、 単なる栄誉のみならず利益ももたらす。 国際大会は気まぐれだが、 我々が充分なインセンティブを提供すれば、 ビッグプレーヤーたちをこの惑星に惹きつけられるかもしれない。 "
+ decision_ngm_olympic_nomination_effects:0 "地元の状況に応じて、 §Y大会誘致競争の格付け§!補正がこの惑星に適用される。 格付けが高いほど、 この惑星が§H国際大会§!の主催場所となる確率が上がる。"
+ decision_ngm_olympic_nomination_effects_short:0 "この惑星を国際的文化事業である§H国際大会§!の開催候補地として提案する。 "
+
+ already_ngm_olympic_nominated:0 "§R我々は既に惑星を指定している！ §!"
+
+ decision_boost_ngm_olympic_nomination:0 "推薦運動を強化"
+ decision_boost_ngm_olympic_nomination_desc:0 "管理費を削減、 経済特区、 賄賂。 "
+ decision_boost_ngm_olympic_nomination_effects:0 "§Y2§!回まで利用可能だ。 "
+ decision_boost_ngm_olympic_nomination_effects_short:0 "追加対策を講じ惑星の§Y大会誘致競争の格付け§!を強化する。 "
+
+ decision_revoke_ngm_olympic_nomination:0 "推薦を取り下げる"
+ decision_revoke_ngm_olympic_nomination_effect:0 "§H既に投資したものは払い戻されない。 §!"
+ decision_revoke_ngm_olympic_nomination_desc:0 "時には注目の的になりたくないことだってある。 "
+
 #######################
 #####    志向    ######
 #######################
@@ -1450,6 +1466,18 @@
  ngm_space_time_continuum:0 "時空超越機"
  ngm_space_time_continuum_desc:0 "時間を超えることができる機械で、惑星と一体化している。原理は失われているため再現は不可能であるが、時折亡命者がこの時代に流れ込んでいる。"
 
+ ngm_olympic_nominee_desc_intro:0 "この惑星は、 将来の国際大会の基盤として候補になっている。 "
+ ngm_olympic_nominee_level_1:0 "国際大会候補地の競争力格付け：§R脆弱§!"
+ ngm_olympic_nominee_level_1_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§R脆弱§!。 "
+ ngm_olympic_nominee_level_2:0 "国際大会候補地の競争力格付け：§Y平凡§!"
+ ngm_olympic_nominee_level_2_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§Y平凡§!。 "
+ ngm_olympic_nominee_level_3:0 "国際大会候補地の競争力格付け：§G強力§!"
+ ngm_olympic_nominee_level_3_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§G強力§!。 "
+ ngm_olympic_nominee_level_4:0 "強化された国際大会候補地の競争力格付け：§G特例§!"
+ ngm_olympic_nominee_level_4_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§G特例§!。 "
+ ngm_olympic_nominee_level_5:0 "強化された国際大会候補地の競争力格付け：§G完璧§!"
+ ngm_olympic_nominee_level_5_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§G完璧§!。 "
+
  first_covid_a_planet_modifier:0 "1-a"
  first_covid_a_planet_modifier_desc:0 ""
  second_covid_a_planet_modifier:0 "2-a"
@@ -2112,29 +2140,29 @@
  ngm_government.7.b:0 "政府は提督を支持する。"
  ngm_government.7.c:0 "政府は将軍を支持する。"
 
- ngm_government.100.name:0 "§H銀河大会の誕生§!"
- ngm_government.100.desc:0 ""
- ngm_government.100.desc.phobe:0 ""
- ngm_government.100.a:0 "経済を回そう！"
- ngm_government.100.b:0 "分かった。"
+ ngm_government.100.name:0 "§H国際大会の開催§!"
+ ngm_government.100.desc:0 "宇宙の中で我々は孤独ではないということが判明したそのときより、 国家間外交に縛られない形で、 事国際的文化事業を行うべきだという声は見られた。 新しい国境が発見され、 古い国境が引かれ直されたとき、 銀河の指導者たちは今こそ§Y国際的文化活動に投資§!し、 皆が利益を享受すべきであるとの合意に至った。 \n\n今後数年のうちに、 各国政府機関や大会主催機関は国際的大会を開催することとなるだろう。 そのような国際大会が[Root.GetAdj]の勢力圏内で開催されたならば、 我々の利益に繋がることはまちがいない。 そのために、 我々は§Y惑星のひとつを推薦§!するべきだ。 "
+ ngm_government.100.desc.corp:0 "銀河の住人や政府職員、 文化人たちはついに、 各国のソフト外交や国際的文化交流としての国際大会の意義を受け入れたようだ。 \n\n我々は潜在的利益を最大化すべく、 この国際大会の開催地として§Y自惑星のひとつを推薦§!できる。 "
+ ngm_government.100.desc.homicidal:0 "我々の力を日の当たる場所で披露することができる。 "
+ ngm_government.100.a:0 "誘致合戦だ！ "
+ ngm_government.100.b:0 "分かった。 "
 
  ngm_government.101.name:0 "$ngm_government.100.name$"
  ngm_government.101.desc:0 "$ngm_government.100.desc$"
- ngm_government.101.desc.phobe:0 "$ngm_government.100.desc.phobe$"
  ngm_government.101.desc.corp:0 "$ngm_government.100.desc.corp$"
- enable_decision_ngm_olympic:0 "§Hディシジョンをアンロック：§!銀河大会の中心地に推薦する"
+ enable_decision_ngm_olympic:0 "§Hディシジョンをアンロック：§!国際大会の中心地に推薦する"
 
- ngm_government.103.name:0 "§H銀河大会§!：[ngm_olympic_founder_planet.GetStarName]に設立"
+ ngm_government.103.name:0 "§H国際大会§!：[ngm_olympic_founder_planet.GetStarName]に設立"
  ngm_government.103.desc:0 "[ngm_olympic_founder_planet.GetName]における我々の招致運動が実を結び、 市場の有力者たちはその活動の大部分を[ngm_olympic_founder_planet.GetStarName]星系で行うことに決めた！"
  ngm_government.103.desc.phobe:0 "$ngm_government.103.desc$"
 
- ngm_government.105.name:0 "§H銀河大会§!：設立"
+ ngm_government.105.name:0 "§H国際大会§!：設立"
  ngm_government.105.desc:0 "銀河商業の中心が[From.GetName]領内の§Y[ngm_olympic_founder_planet.GetName]§!に現れた。 [From.GetAdj]管理当局は、 中立的な第三者を通じて資源を売買するこの市場を公式に合法とした。 "
  ngm_government.105.desc.phobe:0 "§Y[From.GetName]§!のいかがわしい異星人が異星品目の交易のため市場を開設した。 もちろん嫌悪感を催すことだが、 我々にはこの取引に関わる選択肢もある。 "
 
- ngm_government.106.name:0 "§H次期銀河大会の誕生§!"
+ ngm_government.106.name:0 "§H次期国際大会の誕生§!"
  ngm_government.106.desc:0 "$ngm_government.100.desc$"
- ngm_government.106.desc.phobe:0 "$ngm_government.100.desc.phobe$"
+ ngm_government.106.desc.phobe:0 "$ngm_government.100.desc.corp$"
 
  ngm_government.107.name:0 "開催規模決定"
  ngm_government.107.desc:0 "近くに開催される大会において、我が国の演出と選手団の規模について議論が上がっている。壮麗なものとすればもちろん国威を示すことができるが、選手団にその費用は用意できないという相談があった。我が国としてはどのように支援するべきであろうか。"
@@ -2280,17 +2308,17 @@
 
  ngm_crisis.2.name:0 "不穏な気配"
  ngm_crisis.2.desc:0 "[Root.GetName]で体調不良を訴えるものが増えているらしい"
- ngm_crisis.2.a:0 "REPLACE_MEa"
- ngm_crisis.2.b:0 "REPLACE_MEb"
- ngm_crisis.2.c:0 "REPLACE_MEc"
- ngm_crisis.2.d:0 "REPLACE_MEd"
+ ngm_crisis.2.a:0 "a"
+ ngm_crisis.2.b:0 "b"
+ ngm_crisis.2.c:0 "c"
+ ngm_crisis.2.d:0 "d"
 
  ngm_crisis.3.name:0 "何かがおかしい"
  ngm_crisis.3.desc:0 "最近、[Root.GetName]で死者が増加しているようだ"
- ngm_crisis.3.a:0 "REPLACE_MEa"
- ngm_crisis.3.b:0 "REPLACE_MEb"
- ngm_crisis.3.c:0 "REPLACE_MEc"
- ngm_crisis.3.d:0 "REPLACE_MEd"
+ ngm_crisis.3.a:0 "a"
+ ngm_crisis.3.b:0 "b"
+ ngm_crisis.3.c:0 "c"
+ ngm_crisis.3.d:0 "d"
 
 ##########################
 #####    そのほか    ######
