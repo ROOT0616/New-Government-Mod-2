@@ -2625,6 +2625,7 @@ country_event = {
 										design = "NAME_Pursuer3_1"
 										name = "Pursuer"
 									}
+								}
 								while = {
 									count = 4
 									create_ship = {
@@ -2720,12 +2721,14 @@ country_event = {
 									design = "NAME_Pursuer3_1"
 										name = "Pursuer"
 									}
+								}
 								while = {
 									count =	8
 									create_ship = {
 									design = "NAME_Pursuer2_1"
 										name = "Pursuer"
 									}
+								}
 								while = {
 									count = 1
 									create_ship = {
@@ -2830,12 +2833,14 @@ country_event = {
 											design = "NAME_Pursuer3_2"
 											name = "Pursuer"
 										}
+									}
 									while = {
 										count = 12
 										create_ship = {
 											design = "NAME_Pursuer2_2"
 											name = "Pursuer"
 										}
+									}
 									while = {
 										count = 3
 										create_ship = {
