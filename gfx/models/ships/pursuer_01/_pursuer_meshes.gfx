@@ -1,0 +1,18 @@
+objectTypes = {
+	pdxmesh = {
+		name = "pursuer_01_warship_small_mesh"
+		file = "gfx/models/ships/pursuer_01/pursuer_01_small_ship.mesh"
+		scale = 1
+		meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+	}
+	pdxmesh = {
+		name = "pursuer_01_warship_medium_mesh"
+		file = "gfx/models/ships/pursuer_01/pursuer_01_midle_ship.mesh"
+		scale = 1
+		meshsettings = {
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+	}
+}
