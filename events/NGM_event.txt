@@ -2486,7 +2486,6 @@ country_event = {
 				}
 			}
 		}
-
 		hidden_effect = {
 			solar_system = {
 				random_system_planet = {
@@ -2498,7 +2497,7 @@ country_event = {
 				create_country = {
 					name = "NAME_Pursuer"
 					type = faction
-					auto_delete = no						
+					auto_delete = no
 					flag = {
 						icon = {
 							category = "special"
@@ -2532,7 +2531,7 @@ country_event = {
 								while = {
 									count = 16
 									create_ship = {
-										design = "NAME_Pursuer3_1"
+										design = "NAME_PURSUER3_1"
 										name = "Pursuer"
 									}
 								}
@@ -2576,7 +2575,6 @@ country_event = {
 				}
 			}
 		}
-
 		hidden_effect = {
 			solar_system = {
 				random_system_planet = {
@@ -2622,14 +2620,14 @@ country_event = {
 								while = {
 									count = 28
 									create_ship = {
-										design = "NAME_Pursuer3_1"
+										design = "NAME_PURSUER3_1"
 										name = "Pursuer"
 									}
 								}
 								while = {
 									count = 4
 									create_ship = {
-										design = "NAME_Pursuer3_1"
+										design = "NAME_PURSUER3_1"
 										name = "Pursuer"
 									}
 								}
@@ -2718,21 +2716,21 @@ country_event = {
 								while = {
 									count = 40
 									create_ship = {
-									design = "NAME_Pursuer3_1"
+										design = "NAME_PURSUER3_1"
 										name = "Pursuer"
 									}
 								}
 								while = {
-									count =	8
+									count = 8
 									create_ship = {
-									design = "NAME_Pursuer2_1"
+										design = "NAME_PURSUER2_1"
 										name = "Pursuer"
 									}
 								}
 								while = {
 									count = 1
 									create_ship = {
-									design = "NAME_Pursuer1_1"
+										design = "NAME_PURSUER1_1"
 										name = "Pursuer"
 									}
 								}
@@ -2837,14 +2835,14 @@ country_event = {
 									while = {
 										count = 12
 										create_ship = {
-											design = "NAME_Pursuer2_2"
+											design = "NAME_PURSUER2_2"
 											name = "Pursuer"
 										}
 									}
 									while = {
 										count = 3
 										create_ship = {
-											design = "NAME_Pursuer1_1"
+											design = "NAME_PURSUER1_1"
 											name = "Pursuer"
 										}
 									}
@@ -2941,14 +2939,14 @@ country_event = {
 								while = {
 									count = 20
 									create_ship = {
-										design = "NAME_Pursuer2_3"
+										design = "NAME_PURSUER2_3"
 										name = "Pursuer"
 									}
 								}
 								while = {
 									count = 5
 									create_ship = {
-										design = "NAME_Pursuer1_3"
+										design = "NAME_PURSUER1_3"
 										name = "Pursuer"
 									}
 								}
@@ -3038,14 +3036,14 @@ country_event = {
 									while = {
 										count = 28
 										create_ship = {
-											design = "NAME_Pursuer2_3"
+											design = "NAME_PURSUER2_3"
 											name = "Pursuer"
 										}
 									}
 									while = {
 										count = 7
 										create_ship = {
-											design = "NAME_Pursuer1_3"
+											design = "NAME_PURSUER1_3"
 											name = "Pursuer"
 										}
 									}
@@ -3160,14 +3158,14 @@ country_event = {
 									while = {
 										count = 60
 										create_ship = {
-											design = "NAME_Pursuer2_4"
+											design = "NAME_PURSUER2_4"
 											name = "Pursuer"
 										}
 									}
 									while = {
 										count = 12
 										create_ship = {
-											design = "NAME_Pursuer1_4"
+											design = "NAME_PURSUER1_4"
 											name = "Pursuer"
 										}
 									}
@@ -3270,14 +3268,14 @@ country_event = {
 									while = {
 										count = 100
 										create_ship = {
-											design = "NAME_Pursuer2_4"
+											design = "NAME_PURSUER2_4"
 											name = "Pursuer"
 										}
 									}
 									while = {
 										count = 20
 										create_ship = {
-											design = "NAME_Pursuer1_4"
+											design = "NAME_PURSUER1_4"
 											name = "Pursuer"
 										}
 									}
@@ -3380,14 +3378,14 @@ country_event = {
 									while = {
 										count = 200
 										create_ship = {
-											design = "NAME_Pursuer2_4"
+											design = "NAME_PURSUER2_4"
 											name = "Pursuer"
 										}
 									}
 									while = {
 										count = 50
 										create_ship = {
-											design = "NAME_Pursuer1_4"
+											design = "NAME_PURSUER1_4"
 											name = "Pursuer"
 										}
 									}
@@ -3490,14 +3488,14 @@ country_event = {
 									while = {
 										count = 400
 										create_ship = {
-											design = "NAME_Pursuer2_5"
+											design = "NAME_PURSUER2_5"
 											name = "Pursuer"
 										}
 									}
 									while = {
 										count = 100
 										create_ship = {
-											design = "NAME_Pursuer1_5"
+											design = "NAME_PURSUER1_5"
 											name = "Pursuer"
 										}
 									}
@@ -3600,14 +3598,14 @@ country_event = {
 									while = {
 										count = 10000
 										create_ship = {
-											design = "NAME_Pursuer2_6"
+											design = "NAME_PURSUER2_6"
 											name = "Pursuer"
 										}
 									}
 									while = {
 										count = 2500
 										create_ship = {
-											design = "NAME_Pursuer1_5"
+											design = "NAME_PURSUER1_5"
 											name = "Pursuer"
 										}
 									}
@@ -3924,6 +3922,71 @@ country_event = {
 						change_variable = {
 							which = class_4_singularity_build_count
 							value = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# テスト用 
+country_event = {
+	id = ngm_origin.102
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					save_event_target_as = local_star
+				}
+				create_country = {
+					name = "NAME_Pursuer"
+					type = faction
+					auto_delete = no
+					flag = {
+						icon = {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						establish_communications_no_message = root.owner
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
+						save_global_event_target_as = pursuer_enemy
+						create_fleet = {
+							name = "Pursuer"
+							settings = {
+								spawn_debris = yes
+							}
+							effect = {
+								set_owner = event_target:pursuer_enemy
+								create_ship = {
+									design = "NAME_PURSUER2_1"
+									name = "Pursuer"
+								}
+								set_location = {
+									target = event_target:local_star
+									distance = 80
+								}
+							}
 						}
 					}
 				}
@@ -5625,11 +5688,9 @@ country_event = {
 		add_resource = {
 			influence = 50
 		}
-		event_target:ngm_olympic_founder_planet = {
-			add_modifier = {
-				modifier = ngm_olympic_3_event_modifier
-				years = 1
-			}
+		add_modifier = {
+			modifier = ngm_olympic_3_event_modifier
+			years = 1
 		}
 	}
 }
@@ -5652,7 +5713,7 @@ country_event = {
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
 				modifier = ngm_olympic_4_event_modifier
-				years = 1
+				years = 2
 			}
 		}
 	}
@@ -5677,11 +5738,9 @@ country_event = {
 		add_resource = {
 			energy = 5000
 		}
-		event_target:ngm_olympic_founder_planet = {
-			add_modifier = {
-				modifier = ngm_olympic_5_event_modifier
-				years = 1
-			}
+		add_modifier = {
+			modifier = ngm_olympic_5_event_modifier
+			years = 1
 		}
 	}
 }
@@ -5705,11 +5764,9 @@ country_event = {
 		add_resource = {
 			influence = 100
 		}
-		event_target:ngm_olympic_founder_planet = {
-			add_modifier = {
-				modifier = ngm_olympic_6_event_modifier
-				years = 1
-			}
+		add_modifier = {
+			modifier = ngm_olympic_6_event_modifier
+			years = 2
 		}
 	}
 }
@@ -5759,6 +5816,12 @@ country_event = {
 				modifier = ngm_olympic_8_event_modifier
 				years = 1
 			}
+			while = {
+				count = 2
+				create_pop = {
+					species = event_target:random_species
+				}
+			}
 		}
 	}
 }
@@ -5782,11 +5845,9 @@ country_event = {
 		add_resource = {
 			influence = 100
 		}
-		event_target:ngm_olympic_founder_planet = {
-			add_modifier = {
-				modifier = ngm_olympic_9_event_modifier
-				years = 1
-			}
+		add_modifier = {
+			modifier = ngm_olympic_9_event_modifier
+			years = 5
 		}
 	}
 }
@@ -5809,7 +5870,7 @@ country_event = {
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
 				modifier = ngm_olympic_10_event_modifier
-				years = 1
+				years = 5
 			}
 		}
 	}
@@ -5830,7 +5891,10 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.120.a
-		event_target:ngm_olympic_founder_planet = {
+		every_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
 			add_modifier = {
 				modifier = ngm_olympic_11_event_modifier
 				years = 1
@@ -5858,7 +5922,7 @@ country_event = {
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
 				modifier = ngm_olympic_12_event_modifier
-				years = 1
+				years = 2
 			}
 		}
 	}
@@ -5883,11 +5947,9 @@ country_event = {
 		add_resource = {
 			influence = 50
 		}
-		event_target:ngm_olympic_founder_planet = {
-			add_modifier = {
-				modifier = ngm_olympic_13_event_modifier
-				years = 1
-			}
+		add_modifier = {
+			modifier = ngm_olympic_13_event_modifier
+			years = 5
 		}
 	}
 }
@@ -5910,7 +5972,7 @@ country_event = {
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
 				modifier = ngm_olympic_14_event_modifier
-				years = 1
+				years = 2
 			}
 		}
 	}
@@ -5960,8 +6022,6 @@ country_event = {
 			energy = -1000
 			influence = -50
 		}
-		event_target:ngm_olympic_founder_planet = {
-		}
 	}
 }
 
@@ -5991,6 +6051,10 @@ country_event = {
 				modifier = ngm_olympic_17_event_modifier
 				years = 1
 			}
+			random_owned_pop = {
+				unemploy_pop = yes
+				kill_pop = yes
+			}
 		}
 	}
 }
@@ -6013,7 +6077,7 @@ country_event = {
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
 				modifier = ngm_olympic_18_event_modifier
-				years = 1
+				years = 2
 			}
 		}
 	}
@@ -6035,7 +6099,10 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.200.a
-		event_target:ngm_olympic_founder_planet = {
+		every_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
 			add_modifier = {
 				modifier = ngm_olympic_1_game_modifier
 				years = 1
@@ -6059,7 +6126,11 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.201.a
-		event_target:ngm_olympic_founder_planet = {
+		random_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			save_global_event_target_as = ngm_olympic_game_global_event_target_1
 			add_modifier = {
 				modifier = ngm_olympic_2_game_modifier
 				years = 1
@@ -6083,7 +6154,21 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.202.a
-		event_target:ngm_olympic_founder_planet = {
+		random_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			save_global_event_target_as = ngm_olympic_game_global_event_target_1
+			add_modifier = {
+				modifier = ngm_olympic_3_game_modifier
+				years = 1
+			}
+		}
+		random_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			save_global_event_target_as = ngm_olympic_game_global_event_target_2
 			add_modifier = {
 				modifier = ngm_olympic_3_game_modifier
 				years = 1
@@ -6108,6 +6193,11 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.203.a
+		every_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+		}
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
 				modifier = ngm_olympic_4_game_modifier
@@ -6132,7 +6222,14 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.204.a
-		event_target:ngm_olympic_founder_planet = {
+		random_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			add_resource = {
+				influence = 100
+			}
+			save_global_event_target_as = ngm_olympic_game_global_event_target_1
 			add_modifier = {
 				modifier = ngm_olympic_5_game_modifier
 				years = 1
@@ -6180,12 +6277,6 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.206.a
-		event_target:ngm_olympic_founder_planet = {
-			add_modifier = {
-				modifier = ngm_olympic_7_game_modifier
-				years = 1
-			}
-		}
 	}
 }
 
@@ -6204,12 +6295,6 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.207.a
-		event_target:ngm_olympic_founder_planet = {
-			add_modifier = {
-				modifier = ngm_olympic_8_game_modifier
-				years = 1
-			}
-		}
 	}
 }
 
@@ -6228,10 +6313,12 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.208.a
-		event_target:ngm_olympic_founder_planet = {
-			add_modifier = {
-				modifier = ngm_olympic_9_game_modifier
-				years = 1
+		random_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			add_resource = {
+				influence = 30
 			}
 		}
 	}
@@ -6252,12 +6339,6 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.209.a
-		event_target:ngm_olympic_founder_planet = {
-			add_modifier = {
-				modifier = ngm_olympic_10_game_modifier
-				years = 1
-			}
-		}
 	}
 }
 
@@ -6277,9 +6358,19 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.210.a
+		random_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			save_global_event_target_as = ngm_olympic_game_global_event_target_1
+			add_modifier = {
+				modifier = ngm_olympic_7_game_modifier
+				years = 1
+			}
+		}
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_11_game_modifier
+				modifier = ngm_olympic_8_game_modifier
 				years = 1
 			}
 		}
@@ -6302,10 +6393,19 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.211.a
-		event_target:ngm_olympic_founder_planet = {
+		random_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			save_global_event_target_as = ngm_olympic_game_global_event_target_1
 			add_modifier = {
-				modifier = ngm_olympic_12_game_modifier
+				modifier = ngm_olympic_9_game_modifier
 				years = 1
+			}
+		}
+		event_target:ngm_olympic_founder_planet = {
+			add_resource = {
+				influence = 50
 			}
 		}
 	}
@@ -6326,12 +6426,6 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.212.a
-		event_target:ngm_olympic_founder_planet = {
-			add_modifier = {
-				modifier = ngm_olympic_13_game_modifier
-				years = 1
-			}
-		}
 	}
 }
 
@@ -6350,9 +6444,16 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.213.a
-		event_target:ngm_olympic_founder_planet = {
+		random_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			add_resource = {
+				influence = -50
+			}
+			save_global_event_target_as = ngm_olympic_game_global_event_target_1
 			add_modifier = {
-				modifier = ngm_olympic_14_game_modifier
+				modifier = ngm_olympic_10_game_modifier
 				years = 1
 			}
 		}
@@ -6444,9 +6545,13 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.300.a
+		clear_global_event_target = ngm_olympic_game_global_event_target_1
+		clear_global_event_target = ngm_olympic_game_global_event_target_2
+		clear_global_event_target = ngm_olympic_1win_event_target
+		clear_global_event_target = ngm_olympic_2win_event_target
+		clear_global_event_target = ngm_olympic_3win_event_target
 	}
 }
-
 
 ##################################
 ######  クライシス用イベント #######

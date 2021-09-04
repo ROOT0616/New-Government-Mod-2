@@ -1,7 +1,7 @@
 # ngm_pursuer_1_flag
 # Extradimensional Large Ship
 ship_design = {
-	name = "NAME_Pursuer1_1"
+	name = "NAME_PURSUER1_1"
 	ship_size = large_ship_ed
 	is_event_design = yes
 	section = {
@@ -71,11 +71,11 @@ ship_design = {
 
 # Extradimensional Medium Ship
 ship_design = {
-	name = "NAME_Pursuer2_1"
-	ship_size = medium_ship_ed
+	name = "NAME_PURSUER2_1"
+	ship_size = medium_ship_pursuer
 	is_event_design = yes
 	section = {
-		template = "ed_medium_warship_key"
+		template = "pursuer_medium_warship_key"
 		slot = "mid"
 		component = {
 			slot = "LARGE_GUN_01"
@@ -129,7 +129,7 @@ ship_design = {
 
 # Extradimensional Small Ship
 ship_design = {
-	name = "NAME_Pursuer3_1"
+	name = "NAME_PURSUER3_1"
 	ship_size = small_ship_pursuer
 	is_event_design = yes
 	section = {
@@ -176,7 +176,7 @@ ship_design = {
 # ngm_pursuer_2_flag
 # Extradimensional Large Ship
 ship_design = {
-	name = "NAME_Pursuer1_2"
+	name = "NAME_PURSUER1_2"
 	ship_size = large_ship_ed
 	is_event_design = yes
 	section = {
@@ -246,11 +246,11 @@ ship_design = {
 
 # Extradimensional Medium Ship
 ship_design = {
-	name = "NAME_Pursuer2_2"
-	ship_size = medium_ship_ed
+	name = "NAME_PURSUER2_2"
+	ship_size = medium_ship_pursuer
 	is_event_design = yes
 	section = {
-		template = "ed_medium_warship_key"
+		template = "pursuer_medium_warship_key"
 		slot = "mid"
 		component = {
 			slot = "LARGE_GUN_01"
@@ -351,7 +351,7 @@ ship_design = {
 # ngm_pursuer_3_flag
 # Extradimensional Large Ship
 ship_design = {
-	name = "NAME_Pursuer1_3"
+	name = "NAME_PURSUER1_3"
 	ship_size = large_ship_ed
 	is_event_design = yes
 	section = {
@@ -421,11 +421,11 @@ ship_design = {
 
 # Extradimensional Medium Ship
 ship_design = {
-	name = "NAME_Pursuer2_3"
-	ship_size = medium_ship_ed
+	name = "NAME_PURSUER2_3"
+	ship_size = medium_ship_pursuer
 	is_event_design = yes
 	section = {
-		template = "ed_medium_warship_key"
+		template = "pursuer_medium_warship_key"
 		slot = "mid"
 		component = {
 			slot = "LARGE_GUN_01"
@@ -526,7 +526,7 @@ ship_design = {
 # ngm_pursuer_4_flag
 # Extradimensional Large Ship
 ship_design = {
-	name = "NAME_Pursuer1_4"
+	name = "NAME_PURSUER1_4"
 	ship_size = large_ship_ed
 	is_event_design = yes
 	section = {
@@ -596,11 +596,11 @@ ship_design = {
 
 # Extradimensional Medium Ship
 ship_design = {
-	name = "NAME_Pursuer2_4"
-	ship_size = medium_ship_ed
+	name = "NAME_PURSUER2_4"
+	ship_size = medium_ship_pursuer
 	is_event_design = yes
 	section = {
-		template = "ed_medium_warship_key"
+		template = "pursuer_medium_warship_key"
 		slot = "mid"
 		component = {
 			slot = "LARGE_GUN_01"
@@ -701,7 +701,7 @@ ship_design = {
 # ngm_pursuer_5_flag
 # Extradimensional Large Ship
 ship_design = {
-	name = "NAME_Pursuer1_5"
+	name = "NAME_PURSUER1_5"
 	ship_size = large_ship_ed
 	is_event_design = yes
 	section = {
@@ -772,11 +772,11 @@ ship_design = {
 
 # Extradimensional Medium Ship
 ship_design = {
-	name = "NAME_Pursuer2_5"
-	ship_size = medium_ship_ed
+	name = "NAME_PURSUER2_5"
+	ship_size = medium_ship_pursuer
 	is_event_design = yes
 	section = {
-		template = "ed_medium_warship_key"
+		template = "pursuer_medium_warship_key"
 		slot = "mid"
 		
 		component = {
@@ -879,7 +879,7 @@ ship_design = {
 # ngm_pursuer_6_flag
 # Extradimensional Large Ship
 ship_design = {
-	name = "NAME_Pursuer1_6"
+	name = "NAME_PURSUER1_6"
 	ship_size = large_ship_ed
 	is_event_design = yes
 	section = {
@@ -950,11 +950,11 @@ ship_design = {
 
 # Extradimensional Medium Ship
 ship_design = {
-	name = "NAME_Pursuer2_6"
-	ship_size = medium_ship_ed
+	name = "NAME_PURSUER2_6"
+	ship_size = medium_ship_pursuer
 	is_event_design = yes
 	section = {
-		template = "ed_medium_warship_key"
+		template = "pursuer_medium_warship_key"
 		slot = "mid"
 		
 		component = {

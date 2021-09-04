@@ -756,66 +756,67 @@ ngm_olympic_nominee_level_5 = {
 ngm_olympic_1_event_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
+	trade_value_mult = 0.1
 }
 
 # 2年間当該惑星安定度+10
 ngm_olympic_2_event_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
+	planet_stability_add = 10
 }
 
 # 1年間外交発言力+10%
 ngm_olympic_3_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	diplo_weight_mult = 0.1
 }
 
 # 2年間当該惑星幸福度+10%
 ngm_olympic_4_event_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
+	pop_happiness = 0.1
 }
 
 # 1年間帝国交易価値+10%
 ngm_olympic_5_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	trade_value_mult = 0.1
 }
 
 # 2年間帝国安定度+10
 ngm_olympic_6_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	planet_stability_add = 10
 }
 
 # 1年間当該惑星交易価値+10%
 ngm_olympic_7_event_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
+	trade_value_mult = 0.1
 }
 
 # 1年間当該惑星Pop成長速度+10%
 ngm_olympic_8_event_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
+	pop_growth_speed = 0.1
 }
 
 # 5年間帝国安定度+10
 ngm_olympic_9_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	planet_stability_add = 10
 }
 
 # 5年間当該惑星統合力+10%
 ngm_olympic_10_event_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
+	planet_jobs_unity_produces_mult = 0.1
 }
 
 # 1年間参加国交易価値+5%
 ngm_olympic_11_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	trade_value_mult = 0.05
 }
 
 # 2年間当該惑星交易価値+5%
@@ -823,101 +824,94 @@ ngm_olympic_11_event_modifier = {
 ngm_olympic_12_event_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
+	trade_value_mult = 0.05
+	planet_immigration_pull_mult = 0.2
 }
 
 # 5年間帝国管理許容量+10%
 ngm_olympic_13_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	country_admin_cap_mult = 0.1
 }
 
 # 2年間当該惑星犯罪度+10
 ngm_olympic_14_event_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
+	planet_crime_add = 10
 }
 
 # 1年間惑星幸福度-5%
 ngm_olympic_15_event_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
+	pop_happiness = -0.05
 }
 
 # 2年間帝国Pop幸福度-10%
 ngm_olympic_16_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	pop_happiness = -0.1
 }
 
 # 1年間当該惑星Pop成長速度-10%
 ngm_olympic_17_event_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
+	pop_growth_speed = -0.1
 }
 
 # 2年間当該惑星交易価値-10%
 ngm_olympic_18_event_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
+	trade_value_mult = -0.1
 }
 
 # 1年間全参加国幸福度+10%
 ngm_olympic_1_game_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	pop_happiness = 0.1
 }
 
 # 1年間参加国のうちランダムで1か国幸福度+20%
 ngm_olympic_2_game_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	pop_happiness = 0.2
 }
 
 # 1年間参加国のうちランダムで2か国幸福度+20%
 ngm_olympic_3_game_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	pop_happiness = 0.2
 }
 
-# 1年間参加国のうちランダムで2か国幸福度+20%
 # 1年間全参加国統合力+20%
 ngm_olympic_4_game_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	country_unity_produces_mult = 0.2
 }
 
 # 1年間参加国のうちランダムで1か国統合力+20%
 ngm_olympic_5_game_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	country_unity_produces_mult = 0.2
 }
 
 # 1年間主催国の幸福度+10%
 ngm_olympic_6_game_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	pop_happiness = 0.1
 }
 
 # 1年間参加国のうちランダムで1か国幸福度-10%
 ngm_olympic_7_game_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	pop_happiness = -0.1
 }
 
 # 1年間主催国社会学研究+10%
 ngm_olympic_8_game_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	country_society_tech_research_speed = 0.1
 }
 
 # 1年間参加国のうちランダムで1か国幸福度-10%
 ngm_olympic_9_game_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	pop_happiness = -0.1
 }
 
 # 参加国のうちランダムで1年間統合力-10%
 ngm_olympic_10_game_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 1
+	country_unity_produces_mult = -0.1
 }

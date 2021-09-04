@@ -1,4 +1,3 @@
-
 # Pursuer Small Section
 ship_section_template = {
 	key = "pursuer_warship_small_key"
@@ -27,4 +26,47 @@ ship_section_template = {
 	}
 	
 	small_utility_slots = 5
+}
+
+
+# Pursuer Medium Section
+ship_section_template = {
+	key = "pursuer_medium_warship_key"
+	ship_size = medium_ship_pursuer
+	fits_on_slot = mid
+	entity = "pursuer_01_warship_medium_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "large_gun_01_l"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+	}		
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "medium_gun_02"
+	}		
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "medium_turret"
+		locatorname = "large_gun_01_l"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "medium_gun_01"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "medium_gun_02"
+	}	
+
+	medium_utility_slots = 5
 }
