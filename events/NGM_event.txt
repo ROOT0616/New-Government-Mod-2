@@ -3979,7 +3979,15 @@ country_event = {
 							effect = {
 								set_owner = event_target:pursuer_enemy
 								create_ship = {
+									design = "NAME_PURSUER1_1"
+									name = "Pursuer"
+								}
+								create_ship = {
 									design = "NAME_PURSUER2_1"
+									name = "Pursuer"
+								}
+								create_ship = {
+									design = "NAME_PURSUER3_1"
 									name = "Pursuer"
 								}
 								set_location = {

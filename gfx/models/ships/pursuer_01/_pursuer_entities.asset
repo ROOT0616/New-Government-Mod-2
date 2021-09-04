@@ -25,3 +25,17 @@ entity = {
 	}
 	scale = 0.85
 }
+
+entity = {
+	name = "pursuer_01_warship_large_entity"
+	pdxmesh = "pursuer_01_warship_large_mesh"
+	state = {
+		name = "idle"
+	}
+	state = {
+		name = "attack"
+		looping = no
+		next_state = "idle"
+	}
+	scale = 0.85
+}
