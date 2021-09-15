@@ -12,6 +12,8 @@ objectTypes = {
 		name = "pursuer_01_warship_medium_mesh"
 		file = "gfx/models/ships/pursuer_01/pursuer_01_midle_ship.mesh"
 		scale = 1
+		# animation = { id = "idle"	type = "pursuer_01_midle_ship_frame_idle_animation" }
+		# animation = { id = "attack"	type = "pursuer_01_midle_ship_frame_idle_animation" }
 		meshsettings = {
 			shader = "PdxMeshShip"
 		}
@@ -25,4 +27,31 @@ objectTypes = {
 			shader = "PdxMeshShip"
 		}
 	}
+
+	pdxmesh = {
+		name = "pursuer_01_turret_missile_large_mesh"
+		file = "gfx/models/ships/pursuer_01/pursuer_01_turret_missile_large.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	pdxmesh = {
+		name = "pursuer_01_turret_missile_medium_mesh"
+		file = "gfx/models/ships/pursuer_01/pursuer_01_turret_missile_medium.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	pdxmesh = {
+		name = "pursuer_01_turret_missile_small_mesh"
+		file = "gfx/models/ships/pursuer_01/pursuer_01_turret_missile_small.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
 }

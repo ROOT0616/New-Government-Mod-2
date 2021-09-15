@@ -815,6 +815,17 @@ district_rw_industrial = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_civic = civic_crafters
+			}
+		}
+		text = job_artificer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		text = job_artisan_effect_desc

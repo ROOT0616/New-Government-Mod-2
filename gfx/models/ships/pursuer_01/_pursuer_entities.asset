@@ -39,3 +39,46 @@ entity = {
 	}
 	scale = 0.85
 }
+
+
+entity = {
+	name = "pursuer_01_turret_missile_large_entity"
+	pdxmesh = "pursuer_01_turret_missile_large_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.5
+	
+	game_data = {
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+entity = {
+	name = "pursuer_01_turret_missile_medium_entity"
+	pdxmesh = "pursuer_01_turret_missile_medium_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.5
+	
+	game_data = {
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+entity = {
+	name = "pursuer_01_turret_missile_small_entity"
+	pdxmesh = "pursuer_01_turret_missile_small_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.5
+	
+	game_data = {
+		emissive_recolor_crunch = 2.0
+	}
+}

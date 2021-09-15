@@ -1,0 +1,29 @@
+pursuer_small_turret = {
+	size = small
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "pursuer_01_turret_missile_small_entity"
+		weapon_type_energy = "pursuer_01_turret_missile_small_entity"
+		weapon_type_explosive = "pursuer_01_turret_missile_small_entity" # Failsafe for saved "invalid designs"
+	}
+}
+
+pursuer_medium_turret = {
+	size = medium
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "pursuer_01_turret_missile_medium_entity"
+		weapon_type_energy = "pursuer_01_turret_missile_medium_entity"
+		weapon_type_explosive = "pursuer_01_turret_missile_medium_entity" # Failsafe for saved "invalid designs"
+	}
+}
+
+pursuer_large_turret = {
+	size = large
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "pursuer_01_turret_missile_large_entity"
+		weapon_type_energy = "pursuer_01_turret_missile_large_entity"
+		weapon_type_explosive = "pursuer_01_turret_missile_large_entity" # Failsafe for saved "invalid designs"
+	}
+}

@@ -1,0 +1,129 @@
+###############
+# 船の基礎知識 #
+###############
+船は3つの基本要素から構成されています。
+船の大きさ #共通/船の大きさ.txt
+セクションテンプレート #common/section_templates/*
+コンポーネントテンプレート #common/component_templates/*
+
+この3つを使って、ship_designが完成した船を形にしていきます。#common/global_ship_designs.txt
+
+ship_sizeには、セクションを付けることができるスロットのリストがあります。
+各スロットには名前があり、セクションが取り付けられる場所を指定します。
+例
+	section_slots = { 
+		"north" = { locator = "part1" }
+		"west" = { locator = "part2" }
+		"east" = { locator = "part3" }
+		"south" = { locator = "part4" }
+	}
+	
+セクションテンプレートでは、対応する船のサイズとスロットを指定します。
+例
+	ship_size = name_of_a_shipsize
+	ship_size = name_of_another_shipsize
+	
+	fits_on_slot = "north"
+	fits_on_slot = "a_slot_in_some_other_shipsize"
+	
+セクションでは、コンポーネントのスロットも指定する
+例
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+	small_utility_slots = 1
+	medium_utility_slots = 2
+	large_utility_slots = 3
+	
+船のデザインによって部品はサイズが合うように配置され、武器の部品は"slot_type = weapon" 、その逆は"slot_type = weapon" となります。
+
+完全な船のデザインは、"common/global_ship_designs.txt "で見ることができます。
+
+新しいship_sizeを追加した場合、component_templates内のすべての有効なコンポーネントにそのサイズを追加する必要があります。
+
+############
+# グラフィックス #
+############
+
+グラフィック的には船の構造は上記と同じである。
+中心となるエンティティはgfx_cultureとship_sizeに基づいて選択されます。
+エンティティの名前は、次のようにします。<gfx_culture>_<ship_size_name>_entity
+	例 "mammalian_01_corvette_entity"
+例："corvette_entity "は、現在のグラフィックカルチャ（またはそのフォールバック）が、その名前をプレフィックスとするエンティティを見つけられなかった場合に使用されます。
+
+複数のセクションを持つ船の場合、このエンティティは通常見えませんが（ミリタリーステーションは例外です）、スケルトンを保持します。
+アニメーションは通常、このコアエンティティで行われます。
+このコアエンティティは、ship_sizeスロットで参照される "part1"、"part2 "などのロケータを持ちます。
+
+各セクションテンプレートは、スクリプトファイル（common/section_templates/*）で直接エンティティの名前を指定します。
+ゲームは、実際のエンティティを取得する際に、その名前の前にgfx_cultureの名前を付けます。
+	例：common/component_templates/some_section.txtの場合
+				section_template = {
+						...
+						entity = "some_entity"
+				}
+			現在のgfx_cultureがmammalian_01の場合、ゲームは "mammalian_01_some_entity"を探します。
+セクションエンティティは、スロットで指定されたコアエンティティのロケータにアタッチされます（例："part1"）。
+
+ウェポンエンティティはセクションエンティティと似ていますが、セクション_テンプレート・コンポーネント_スロットスクリプトで指定されたロケータにアタッチされるという違いがあります。
+名前は"<gfx_culture>_<entity found in compnent_template>_entity "となります。
+武器コンポーネントのエンティティにも、"turret_muzzle_01 "というロケータが必要です（これはdefinest.luaで "NGraphics::SHIP_TURRET_PROJECTILE_SPAWN_LOCATOR "として指定されています）。
+
+#########################
+# 特別な船を作る #
+#########################
+プレイヤーがデザインできない船や、すべてのグラフィック文化に対応できない船が必要になることがあります。
+スペースクラウドのような船を作るには、以下のような作業が必要です。
+
+1. ship_size.txtの中から適切なship_sizeを探すか、新しいship_sizeを作成する。
+	新しいship_sizeを作成した場合は
+		is_designable = yes/no #ship designerでこのship_sizeを選択可能にするか？
+		is_space_object = yes/no #スペースオブジェクトはエンジンの痕跡を残さない
+		gfx_culture = { "pirate_01" } 	#どのgfx_cultureに対してこのサイズを有効にするかをオーバーライドする。デフォルトでは、すべてのgfx_cultureに有効です（つまり、各カルチャーに1つのエンティティが必要です）。
+		graphical_culture /no #特定のgfx_cultureの必要性をオーバーライドします。
+										#例："mammalian_01_my_ship_size_entity "の代わりに "my_ship_size_entity"。
+2. section_templatesを "common/section_templates/*"に追加する。
+	繰り返しになりますが、所有者のグラフィックカルチャーに関係なく同じエンティティを使用したい場合は、エンティティ名のカルチャー部分を省きます。
+3. 3. 船にユニークな武器が必要な場合は、weapon_component_templatesを "common/component_templates/*"に追加する。
+4. common/global_ship_designs.txt "に船のデザインを作成する。
+
+ship_size "と "section_templates "の両方にエンティティが必要である。ただし、どちらか一方だけが表示されていなければならない。
+シングルセクションの船の場合、セクションに属するエンティティを可視部分にすることをお勧めします。なぜなら、それによってship_sizeが再利用可能になるからです。
+船に武器がある場合、それぞれのweapon_component_templateはエンティティを持つ必要があり、そのエンティティは "turret_muzzle_01 "というロケータを持つ必要があります。
+
+
+#########################
+# フレームentityと撃破演出 #
+#########################
+「pdxmesh = 」でmesh指定です。「original_frame_mesh」を指定しています。ここではあくまで「こういう名前のファイルを使いますよ」と指示しただけで、実際のファイルの場所を指定する記述も書かなくてはなりません。後述のoriginal_meshes.gfxがそれにあたります。
+
+赤線引いた所は上から"停止""移動""撃破"時の演出効果設定です。
+nameはステータスの状態、animationはその時のアニメーションID。
+基本的にこの２つはこのまま使って下さい。
+animation_blend_timeというのは遷移にかかる時間ということです。
+たとえば撃破された時の爆発演出を長くしたければ、state = { name = "death"　の行のanimation_blend_timeを増やしてください。
+
+start_event = { trigger_once = yes sound = { soundeffect = "amb_battleship_hum" } }
+この行ではその状態の時の音の設定を書いてあります。環境音ってやつです。「ｺﾞｺﾞｺﾞｺﾞｺﾞ」みたいな。自分で好きな音を鳴らしたいときはｺｺを変えるのですが、音関係は若干めんどくさいのでヴァニラ音使ってる人多いです。
+
+state = { name = "death" 以降は撃破された時の爆破演出です。
+①は撃破後経過時間です。画像だと「HP0になったときから5.0秒後」ということです。
+②は爆発する場所の位置設定のIDです。矢印の先であらためてposition以降の記述で位置をきめてます。positionの詳しい説明はセクションentityの解説でします。
+③は爆発効果のCGモデル指定です。
+
+赤線は引いてませんが、
+sound = { soundeffect = ship_destroyed }
+は爆発音です、この場合は４回鳴らしていますが、最後の２発はほぼ同時に聞こえるようにしてますね。音を重ねることで少しボリュームを持たせようとあがいてますね、これは。
+音ファイル用意するのがメンドクサかったんでしょう、ｯﾊｯﾊｯﾊ。
+ちなみに完全に同時に鳴らそうとしても、一個しか反映されません。
+なので微妙に時間をずらしています。
+
+あと、ここの爆発モデルの個数なんですが、制限があるようです。画像ではロケータ５個
+(locator設定がないものは自動的に( 0 0 0 )に位置される)
+のモデル１４個使ってますが、おそらく半分くらいしか反映されてません。
+爆発CGをDLCのファイルから持ってきている記述がありますが("dreadnought_explosion_particle" DLCリヴァイアサン)、ない場合(ヴァニラ)はスルーされるだけでエラーとかにはなりません。
+
+ここまで爆発について色々書きましたが、すごい大きい船でもない限りこんな細かいことは普通しないと思います。（えぇ…(困惑)

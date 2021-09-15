@@ -318,6 +318,46 @@ district_arcology_civilian_industry = {
 		potential = {
 			exists = owner
 			owner = { is_regular_empire = yes }
+			NOT = { owner = { has_civic = civic_crafters } }
+		}
+		modifier = {
+			job_artisan_add = 6
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			owner = { has_civic = civic_crafters }
+		}
+		modifier = {
+			job_artificer_add = 6
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			NOT = { owner = { has_civic = civic_crafters } }
+		}
+		text = job_artisan_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			owner = { has_civic = civic_crafters }
+		}
+		text = job_artificer_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
 		}
 		modifier = {
 			job_artisan_add = 6

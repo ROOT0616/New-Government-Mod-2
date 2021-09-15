@@ -8,26 +8,25 @@ ship_section_template = {
 	
 	component_slot = {
 		name = "MEDIUM_GUN_01"
-		template = "medium_turret"
+		template = "pursuer_medium_turret"
 		locatorname = "medium_gun_01"
 		is_side_slot = yes
 	}
 	component_slot = {
 		name = "MEDIUM_GUN_02"
-		template = "medium_turret"
+		template = "pursuer_medium_turret"
 		locatorname = "medium_gun_02"
 		is_side_slot = yes
 	}
 	component_slot = {
 		name = "MEDIUM_GUN_03"
-		template = "medium_turret"
+		template = "pursuer_medium_turret"
 		locatorname = "medium_gun_03"
 		is_side_slot = yes
 	}
 	
 	small_utility_slots = 5
 }
-
 
 # Pursuer Medium Section
 ship_section_template = {
@@ -39,32 +38,32 @@ ship_section_template = {
 	
 	component_slot = {
 		name = "LARGE_GUN_01"
-		template = "large_turret"
+		template = "pursuer_large_turret"
 		locatorname = "large_gun_01_l"
 	}
 	component_slot = {
 		name = "MEDIUM_GUN_01"
-		template = "medium_turret"
+		template = "pursuer_medium_turret"
 		locatorname = "medium_gun_01"
 	}		
 	component_slot = {
 		name = "MEDIUM_GUN_02"
-		template = "medium_turret"
+		template = "pursuer_medium_turret"
 		locatorname = "medium_gun_02"
 	}		
 	component_slot = {
 		name = "MEDIUM_GUN_03"
-		template = "medium_turret"
+		template = "pursuer_medium_turret"
 		locatorname = "large_gun_01_l"
 	}	
 	component_slot = {
 		name = "SMALL_GUN_01"
-		template = "small_turret"
+		template = "pursuer_small_turret"
 		locatorname = "medium_gun_01"
 	}	
 	component_slot = {
 		name = "SMALL_GUN_02"
-		template = "small_turret"
+		template = "pursuer_small_turret"
 		locatorname = "medium_gun_02"
 	}	
 
@@ -81,55 +80,55 @@ ship_section_template = {
 	
 	component_slot = {
 		name = "LARGE_GUN_01"
-		template = "large_turret"
+		template = "pursuer_large_turret"
 		locatorname = "large_gun_01"
 		is_side_slot = yes
 	}
 	component_slot = {
 		name = "LARGE_GUN_02"
-		template = "large_turret"
+		template = "pursuer_large_turret"
 		locatorname = "large_gun_02"
 		is_side_slot = yes
 	}		
 	component_slot = {
 		name = "LARGE_GUN_03"
-		template = "large_turret"
+		template = "pursuer_large_turret"
 		locatorname = "large_gun_03"
 		is_side_slot = yes
 	}
 	component_slot = {
 		name = "MEDIUM_GUN_01"
-		template = "medium_turret"
+		template = "pursuer_medium_turret"
 		locatorname = "large_gun_01"
 		is_side_slot = yes
 	}
 	component_slot = {
 		name = "MEDIUM_GUN_02"
-		template = "medium_turret"
+		template = "pursuer_medium_turret"
 		locatorname = "large_gun_02"
 		is_side_slot = yes
 	}
 	component_slot = {
 		name = "MEDIUM_GUN_03"
-		template = "medium_turret"
+		template = "pursuer_medium_turret"
 		locatorname = "large_gun_03"
 		is_side_slot = yes
 	}
 	component_slot = {
 		name = "MEDIUM_GUN_04"
-		template = "medium_turret"
+		template = "pursuer_medium_turret"
 		locatorname = "large_gun_01"
 		is_side_slot = yes
 	}
 	component_slot = {
 		name = "SMALL_GUN_01"
-		template = "small_turret"
+		template = "pursuer_small_turret"
 		locatorname = "large_gun_02"
 		is_side_slot = yes
 	}
 	component_slot = {
 		name = "SMALL_GUN_02"
-		template = "small_turret"
+		template = "pursuer_small_turret"
 		locatorname = "large_gun_03"
 		is_side_slot = yes
 	}

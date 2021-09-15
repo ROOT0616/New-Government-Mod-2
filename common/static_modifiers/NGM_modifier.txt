@@ -595,6 +595,11 @@ ngm_space_time_continuum = {
 	planet_jobs_engineering_research_produces_mult = 0.2
 }
 
+# 過去への逃走のAIようにバフ
+ngm_space_time_continuum_ai = {
+	country_alloys_produces_add = 20
+}
+
 # 統合参謀本部に任せる。(消費財1000消費。1年間亜空間移動速度+10%)
 ngm_government1a = {
 	ship_speed_mult = 0.1
@@ -914,4 +919,10 @@ ngm_olympic_9_game_modifier = {
 # 参加国のうちランダムで1年間統合力-10%
 ngm_olympic_10_game_modifier = {
 	country_unity_produces_mult = -0.1
+}
+
+# 参加国のうちランダムで1年間統合力-10%
+ngm_olympic_founder = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	pop_happiness = 0.05
 }
