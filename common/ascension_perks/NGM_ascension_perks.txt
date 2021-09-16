@@ -1,0 +1,121 @@
+# See traditions/README.txt for format
+@ap_evolutionary_mastery_POINTS = 3
+@ap_evolutionary_mastery_COST_MULT = -0.25
+@ap_engineered_evolution_POINTS = 3
+@ap_engineered_evolution_COST_MULT = -0.25
+# テンプレート
+# NGM_l_english.ymlの2461行目で名前設定
+# 命名規則は ap_ngm_〇〇
+# ap_colossus = {
+# 	# 絶対条件ここを満たさないと表示されない
+# 	# この例では特定のDLCを持っていることと
+# 	# このアセンションパークを持っていないこと
+# 	potential = {
+# 		host_has_dlc = "Apocalypse"
+# 		NOT = {
+# 			has_ascension_perk = ap_colossus
+# 		}
+# 	}
+# 
+# 	# アセンションパーク有効時の効果（常時）
+# 	# この例ではロボットの維持費を-10％し
+# 	# Pop製造速度を10％増加させている
+# 	modifier = {
+# 		planet_pops_robotics_upkeep_mult = -0.10
+# 		planet_pop_assembly_mult = 0.10
+# 	}
+# 
+# 	# アセンションパーク有効時の効果（即時）
+# 	# この例ではツールチップ表示とイベントを起こしている
+# 	on_enabled = {
+# 		custom_tooltip = enable_colossus_project
+# 		custom_tooltip = describe_colossus_project
+# 		hidden_effect = {
+# 			country_event = { id = apoc.100 }
+# 		}
+# 	}
+# 
+# 	# 可能条件	ここを満たすと選択できる
+# 	# ここを満たしてなくても表示はされる
+# 	# この例ではtech_titansの技術を持っていることと
+# 	# アセンションパークを三個以上持っていることになる
+# 	possible = {
+# 		has_technology = tech_titans
+# 		custom_tooltip = {
+# 			fail_text = "requires_ascension_perks_3"
+# 			num_ascension_perks > 2
+# 		}
+# 	}
+# 
+# 	# AIの選びやすさ
+# 	ai_weight = {
+# 		factor = 10
+# 		# AIの選びやすさの補正
+# 		# この例では特定の国是を持っている場合10倍選びやすくなる
+# 		# modifier = {
+# 		# 	factor = 10
+# 		# 	OR = {
+# 		# 		has_valid_civic = civic_fanatic_purifiers
+# 		# 		has_valid_civic = civic_machine_terminator
+# 		# 	}
+# 		# }
+# 	}
+# }
+
+# ①銀河規模出店			(銀河規模の企業活動は莫大な利益を生み出す)			(支社コスト-30%、通商協定維持影響力コストをなくす)企業のみ
+ap_ngm_galactic_scale_store = {
+	# 政治形態が企業国家で選択肢に出ないように設定
+	potential = {
+		has_authority = auth_corporate
+		NOT = {
+			has_ascension_perk = ap_ngm_galactic_scale_store
+		}
+	}
+	# 支社のコストを-30％の設定
+	# 通商協定維持影響力コストをなくすはおそらく別のとこで設定しないといけない
+	# 外交行動はゲームルールで設定されている？
+	# 外交行動の影響コストは+-ゼロにもっていくのがいいかもしれない
+	modifier = {
+		planet_branch_offices_cost_mult = -0.3
+	}
+	# アセンションパークの獲得数が3個以上なら取得しやすくしている
+	# 変えておいて
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 10
+			num_ascension_perks > 2
+		}
+	}
+}
+
+# ②恒常的敵対諜報活動		(敵に対しては常に影響を与え続けなければならない)		(外交官+2、解読力+10、宿敵にした相手国の影響力-1)
+ap_ngm_constant_hostile_intelligence_operations = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_constant_hostile_intelligence_operations
+		}
+	}
+	# 外交官+2、解読力+10
+	# 宿敵にした相手国の影響力-1はイベントで行う（設定めんどいから後でやる）
+	modifier = {
+		envoys_add = 2
+		intel_decryption_add = 10
+	}
+	# 	# アセンションパーク有効時の効果（即時）
+	# 	# この例ではツールチップ表示とイベントを起こしている
+	# 	on_enabled = {
+	# 		custom_tooltip = enable_colossus_project
+	# 		hidden_effect = {
+	# 			country_event = { id = apoc.100 }
+	# 		}
+	# 	}
+	# 変えておいて
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 10
+			num_ascension_perks > 2
+		}
+	}
+}

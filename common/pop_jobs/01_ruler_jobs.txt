@@ -27,15 +27,6 @@ head_researcher = {
 			engineering_research = 5
 			society_research = 5
 		}
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = {
-					has_edict = research_subsidies
-				}
-			}
-			energy = 1
-		}
 	}
 
 	planet_modifier = {
@@ -145,6 +136,18 @@ head_researcher = {
 		modifier = {
 			factor = 1.5
 			has_trait = trait_necrophage
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_planet_class = pc_habitat }
+		}
+		modifier = {
+			factor = 0.85
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_artificial = no }
 		}
 		modifier = {
 			factor = 0.01
@@ -276,6 +279,18 @@ high_priest = {
 			factor = 1.5
 			has_trait = trait_necrophage
 		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_planet_class = pc_habitat }
+		}
+		modifier = {
+			factor = 0.85
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_artificial = no }
+		}
 		# crisis purge
 		modifier = {
 			factor = 0.01
@@ -399,6 +414,18 @@ administrator = {
 			factor = 1.5
 			has_trait = trait_necrophage
 		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_planet_class = pc_habitat }
+		}
+		modifier = {
+			factor = 0.85
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_artificial = no }
+		}
 		# crisis purge
 		modifier = {
 			factor = 0.01
@@ -473,6 +500,18 @@ noble = {
 		modifier = {
 			factor = 1.5
 			has_trait = trait_necrophage
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_planet_class = pc_habitat }
+		}
+		modifier = {
+			factor = 0.85
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_artificial = no }
 		}
 		# crisis purge
 		modifier = {
@@ -608,6 +647,18 @@ merchant = {
 			owner = { has_civic = civic_merchant_guilds	}
 			has_trait = trait_robust
 		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_planet_class = pc_habitat }
+		}
+		modifier = {
+			factor = 0.85
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_artificial = no }
+		}
 		# crisis purge
 		modifier = {
 			factor = 0.01
@@ -729,6 +780,18 @@ executive = {
 		modifier = {
 			factor = 5
 			has_job = executive
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_planet_class = pc_habitat }
+		}
+		modifier = {
+			factor = 0.85
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_artificial = no }
 		}
 		# crisis purge
 		modifier = {
