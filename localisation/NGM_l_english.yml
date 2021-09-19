@@ -500,7 +500,7 @@
  civic_ngm_mechanical_faith_desc:0 "この国の信仰は創作物に向けられており、その究極であるロボットは神と我々を繋ぐ存在であると考えられている。"
 
  civic_ngm_missionary_group:0 "伝道者団"
- civic_ngm_missionary_group_desc:0 "§Rまだ§!\nこの国の聖職者は熱心であり、他国に対しても自らの信仰を広めることに注力している。"
+ civic_ngm_missionary_group_desc:0 "この国の聖職者は熱心であり、他国に対しても自らの信仰を広めることに注力している。"
 
  civic_ngm_defender_of_the_faith:0 "信仰の擁護者"
  civic_ngm_defender_of_the_faith_desc:0 "この国の指導者は国家として神を守ることを誓約しており、そのためにはあらゆる犠牲を惜しまない。"
@@ -1721,6 +1721,9 @@
  suppressed_utilitarianism:0 "実利主義を抑圧"
  suppressed_utilitarianism_desc:0 "§H実利主義§!志向は政府によって抑圧されている"
 
+ civic_ngm_missionary_group_modifier:0 "伝道者団の来訪"
+ civic_ngm_missionary_group_modifier_desc:0 "他国から信仰を広められている。"
+
  ngm_ancient_pact:0 "遺物「古代の盟約」"
 
  trait_ngm_knight:0 "騎士道精神"
@@ -2465,11 +2468,44 @@
 #  ap_colossus:0 "名前"
 #  ap_colossus_desc:0 "説明"
 
- ap_ngm_galactic_scale_store:0 "銀河規模出店"
- ap_ngm_galactic_scale_store_desc:0 "銀河規模の企業活動は莫大な利益を生み出す"
-
  ap_ngm_constant_hostile_intelligence_operations:0 "恒常的敵対諜報活動"
  ap_ngm_constant_hostile_intelligence_operations_desc:0 "敵に対しては常に影響を与え続けなければならない"
+
+ ap_ngm_great_constructure_department:0"大規模建築計画局"
+ ap_ngm_great_constructure_department_desc:0"大規模建築を行う際の資源や職人を運用し、調整する省庁を設立する"
+
+ ap_ngm_heaven_consumer:0 "奢侈品の天国"
+ ap_ngm_heaven_consumer_desc:0 "贅沢こそ、市民に与えられる最大の恩返しだ"
+
+ ap_ngm_layer_countries:0 "重層的国家"
+ ap_ngm_layer_countries_desc:0 "社会は多重構造であり、国家の形として正常な形である"
+
+ ap_ngm_bishop_need:0 "司教による請求権の捏造"
+ ap_ngm_bishop_need_desc:0 ""
+
+ ap_ngm_empire_art_association:0 "帝国芸術協会"
+ ap_ngm_empire_art_association_desc:0 "帝国全体の芸術活動を推奨し、芸術を保護する機関を設立する"
+
+ ap_ngm_Intelligence_need:0 "諜報網に基づく請求権の捏造"
+ ap_ngm_Intelligence_need_desc:0 ""
+
+ ap_ngm_ap_ngm_speed_power:0 "スピードこそ命"
+ ap_ngm_speed_power_desc:0 "スピードこそパワー！"
+
+ ap_ngm_relation_old_empire:0 "寵児"
+ ap_ngm_relation_old_empire_desc:0 "偉大なる先人から愛されることは才能である"
+
+ ap_ngm_ministry_constructure:0 "工部省"
+ ap_ngm_ministry_constructure_desc:0 "建設、拡大、箱物。これらはすべて工部省が管轄する"
+
+ ap_ngm_hanicam_house:0 "ハニカムハウス"
+ ap_ngm_hanicam_house_desc:0 "一見するとただの箱であるが、恐るべき技術の結晶たるこの箱は、居住の概念を一変させた"
+
+ ap_ngm_insider_trade:0 "インサイダー取引"
+ ap_ngm_insider_trade_desc:0 "貿易機構との裏取引は、交易による利益を最大化させる"
+
+ ap_ngm_farm_farm:0 "マンデルブロー集合における平面展開定理を利用した大規模農業"
+ ap_ngm_farm_farm_desc:0 "とある博士が提唱した理論により農業は飛躍的な向上を見た"
 
 ##########################
 #####    そのほか    ######

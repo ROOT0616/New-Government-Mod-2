@@ -1996,6 +1996,15 @@ country_event = {
 		has_civic = civic_ngm_missionary_group
 	}
 	immediate = {
+		random_neighbor_country = {
+			limit = {
+				has_country_flag = civic_ngm_missionary_group_country_flag
+			}
+			add_modifier = {
+				modifier = civic_ngm_missionary_group_modifier
+			}
+			set_country_flag = civic_ngm_missionary_group_country_flag
+		}
 	}
 }
 
@@ -3481,7 +3490,7 @@ country_event = {
 	}
 }
 
-# 艦隊が破壊された
+# 追跡者の艦隊が破壊されたとき
 country_event = {
 	id = ngm_origin.101
 	title = ngm_origin.101.name
@@ -5650,6 +5659,19 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.150
+			}
+		}
+	}
 	option = {
 		name = ngm_government.110.a
 		add_resource = {
@@ -5677,6 +5699,19 @@ country_event = {
 	location = event_target:ngm_olympic_founder_planet
 	trigger = {
 		has_global_flag = on_ngm_olympic
+	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.151
+			}
+		}
 	}
 	option = {
 		name = ngm_government.111.a
@@ -5706,6 +5741,19 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.152
+			}
+		}
+	}
 	option = {
 		name = ngm_government.112.a
 		add_resource = {
@@ -5731,6 +5779,19 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.153
+			}
+		}
+	}
 	option = {
 		name = ngm_government.113.a
 		event_target:ngm_olympic_founder_planet = {
@@ -5755,6 +5816,19 @@ country_event = {
 	location = event_target:ngm_olympic_founder_planet
 	trigger = {
 		has_global_flag = on_ngm_olympic
+	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.154
+			}
+		}
 	}
 	option = {
 		name = ngm_government.114.a
@@ -5782,6 +5856,19 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.155
+			}
+		}
+	}
 	option = {
 		name = ngm_government.115.a
 		add_resource = {
@@ -5807,6 +5894,19 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.156
+			}
+		}
+	}
 	option = {
 		name = ngm_government.116.a
 		event_target:ngm_olympic_founder_planet = {
@@ -5831,6 +5931,19 @@ country_event = {
 	location = event_target:ngm_olympic_founder_planet
 	trigger = {
 		has_global_flag = on_ngm_olympic
+	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.157
+			}
+		}
 	}
 	option = {
 		name = ngm_government.117.a
@@ -5863,6 +5976,19 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.158
+			}
+		}
+	}
 	option = {
 		name = ngm_government.118.a
 		add_resource = {
@@ -5888,6 +6014,19 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.159
+			}
+		}
+	}
 	option = {
 		name = ngm_government.119.a
 		event_target:ngm_olympic_founder_planet = {
@@ -5911,6 +6050,19 @@ country_event = {
 	location = event_target:ngm_olympic_founder_planet
 	trigger = {
 		has_global_flag = on_ngm_olympic
+	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.161
+			}
+		}
 	}
 	option = {
 		name = ngm_government.120.a
@@ -5940,6 +6092,19 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.162
+			}
+		}
+	}
 	option = {
 		name = ngm_government.121.a
 		event_target:ngm_olympic_founder_planet = {
@@ -5964,6 +6129,19 @@ country_event = {
 	location = event_target:ngm_olympic_founder_planet
 	trigger = {
 		has_global_flag = on_ngm_olympic
+	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.163
+			}
+		}
 	}
 	option = {
 		name = ngm_government.110.a
@@ -5990,6 +6168,19 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.164
+			}
+		}
+	}
 	option = {
 		name = ngm_government.123.a
 		event_target:ngm_olympic_founder_planet = {
@@ -6013,6 +6204,19 @@ country_event = {
 	location = event_target:ngm_olympic_founder_planet
 	trigger = {
 		has_global_flag = on_ngm_olympic
+	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.165
+			}
+		}
 	}
 	option = {
 		name = ngm_government.124.a
@@ -6039,6 +6243,19 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.165
+			}
+		}
+	}
 	option = {
 		name = ngm_government.125.a
 		add_resource = {
@@ -6062,6 +6279,19 @@ country_event = {
 	location = event_target:ngm_olympic_founder_planet
 	trigger = {
 		has_global_flag = on_ngm_olympic
+	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.166
+			}
+		}
 	}
 	option = {
 		name = ngm_government.126.a
@@ -6095,6 +6325,19 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.167
+			}
+		}
+	}
 	option = {
 		name = ngm_government.127.a
 		event_target:ngm_olympic_founder_planet = {
@@ -6103,6 +6346,319 @@ country_event = {
 				years = 2
 			}
 		}
+	}
+}
+
+# イベント通知
+# 1.地元の好況
+country_event = {
+	id = ngm_government.150
+	title = ngm_government.110.name
+	desc = ngm_government.110.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.110.a
+	}
+}
+
+# 2.テロ行為の事前発覚
+country_event = {
+	id = ngm_government.151
+	title = ngm_government.111.name
+	desc = ngm_government.111.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.111.a
+	}
+}
+
+# 3.外交官の関心
+country_event = {
+	id = ngm_government.152
+	title = ngm_government.112.name
+	desc = ngm_government.112.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.112.a
+	}
+}
+
+# 4.大会への熱狂
+country_event = {
+	id = ngm_government.153
+	title = ngm_government.113.name
+	desc = ngm_government.113.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.113.a
+	}
+}
+
+# 5.国家規模の好景気
+country_event = {
+	id = ngm_government.154
+	title = ngm_government.114.name
+	desc = ngm_government.114.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.114.a
+	}
+}
+
+# 6.テロ組織の粉砕
+country_event = {
+	id = ngm_government.155
+	title = ngm_government.115.name
+	desc = ngm_government.115.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.115.a
+	}
+}
+
+# 7.大会記念品のヒット
+country_event = {
+	id = ngm_government.156
+	title = ngm_government.116.name
+	desc = ngm_government.116.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.116.a
+	}
+}
+
+# 8.移民の流入
+country_event = {
+	id = ngm_government.157
+	title = ngm_government.117.name
+	desc = ngm_government.117.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.117.a
+	}
+}
+
+# 9.国威発揚
+country_event = {
+	id = ngm_government.158
+	title = ngm_government.118.name
+	desc = ngm_government.118.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.118.a
+	}
+}
+
+# 10.歴史的記録
+country_event = {
+	id = ngm_government.159
+	title = ngm_government.119.name
+	desc = ngm_government.119.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.119.a
+	}
+}
+
+# 11.世界的配信
+country_event = {
+	id = ngm_government.160
+	title = ngm_government.120.name
+	desc = ngm_government.120.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.120.a
+	}
+}
+
+# 12.観光地評価
+country_event = {
+	id = ngm_government.161
+	title = ngm_government.121.name
+	desc = ngm_government.121.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.121.a
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_12_event_modifier
+				years = 2
+			}
+		}
+	}
+}
+
+# 13.効率的運営
+country_event = {
+	id = ngm_government.162
+	title = ngm_government.122.name
+	desc = ngm_government.122.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.110.a
+	}
+}
+
+# 14.犯罪流入
+country_event = {
+	id = ngm_government.163
+	title = ngm_government.123.name
+	desc = ngm_government.123.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.123.a
+	}
+}
+
+# 15.大会事故発生
+country_event = {
+	id = ngm_government.164
+	title = ngm_government.124.name
+	desc = ngm_government.124.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.124.a
+	}
+}
+
+# 16.運営の腐敗
+country_event = {
+	id = ngm_government.165
+	title = ngm_government.125.name
+	desc = ngm_government.125.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.125.a
+	}
+}
+
+# 17.テロ発生
+country_event = {
+	id = ngm_government.166
+	title = ngm_government.126.name
+	desc = ngm_government.126.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.126.a
+	}
+}
+
+# 18.予想外の不況
+country_event = {
+	id = ngm_government.167
+	title = ngm_government.127.name
+	desc = ngm_government.127.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.127.a
 	}
 }
 
@@ -6483,17 +7039,271 @@ country_event = {
 	}
 }
 
+# 競技イベント通知
+# 1.息をのむ競技
+# 1年間全参加国幸福度+10%
+country_event = {
+	id = ngm_government.220
+	title = ngm_government.200.name
+	desc = ngm_government.200.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.200.a
+	}
+}
+
+# 2.感動的選手
+# 1年間参加国のうちランダムで1か国幸福度+20%
+country_event = {
+	id = ngm_government.221
+	title = ngm_government.201.name
+	desc = ngm_government.201.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.201.a
+	}
+}
+
+# 3.熾烈な競技
+# 1年間参加国のうちランダムで2か国幸福度+20%
+country_event = {
+	id = ngm_government.222
+	title = ngm_government.202.name
+	desc = ngm_government.202.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.202.a
+	}
+}
+
+# 4.歴史的一戦
+# 1年間参加国のうちランダムで2か国幸福度+20%
+# 1年間全参加国統合力+20%
+country_event = {
+	id = ngm_government.223
+	title = ngm_government.203.name
+	desc = ngm_government.203.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.203.a
+	}
+}
+
+# 5.全銀河記録の樹立
+# 1年間参加国のうちランダムで1か国統合力+20%、影響力+100
+country_event = {
+	id = ngm_government.224
+	title = ngm_government.204.name
+	desc = ngm_government.204.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.204.a
+	}
+}
+
+# 6.観客の熱狂
+# 1年間主催国の幸福度+10%
+country_event = {
+	id = ngm_government.225
+	title = ngm_government.205.name
+	desc = ngm_government.205.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.205.a
+	}
+}
+
+# 7.革新的チーム
+# 参加国のうちランダムで1カ国優勝確率+20%
+country_event = {
+	id = ngm_government.226
+	title = ngm_government.206.name
+	desc = ngm_government.206.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.206.a
+	}
+}
+
+# 8.堅実なチーム
+# 参加国のうちランダムで1カ国優勝確率+20%
+country_event = {
+	id = ngm_government.227
+	title = ngm_government.207.name
+	desc = ngm_government.207.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.207.a
+	}
+}
+
+# 9.競技外での表彰
+# 参加国のうちランダムで1カ国に影響力+30
+country_event = {
+	id = ngm_government.228
+	title = ngm_government.208.name
+	desc = ngm_government.208.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.208.a
+	}
+}
+
+# 10.スリル感のある競技
+# 参加国のうちランダムで1カ国優勝確率+20%
+country_event = {
+	id = ngm_government.229
+	title = ngm_government.209.name
+	desc = ngm_government.209.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.209.a
+	}
+}
+
+# 11.ドーピングの発覚
+# 1年間参加国のうちランダムで1か国幸福度-10%
+# 1年間主催国社会学研究+10%
+country_event = {
+	id = ngm_government.230
+	title = ngm_government.210.name
+	desc = ngm_government.210.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.210.a
+	}
+}
+
+# 12.競技における不正
+# 1年間参加国のうちランダムで1か国幸福度-10%
+# 主催国影響力+50
+country_event = {
+	id = ngm_government.231
+	title = ngm_government.211.name
+	desc = ngm_government.211.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.211.a
+	}
+}
+
+# 13.有力選手の故障
+# 参加国のうちランダムで1カ国優勝確率+20%
+country_event = {
+	id = ngm_government.232
+	title = ngm_government.212.name
+	desc = ngm_government.212.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.212.a
+	}
+}
+
+# 14.選手によるヘイトクライム
+# 参加国のうちランダムで1カ国影響力-50、1年間統合力-10%
+country_event = {
+	id = ngm_government.233
+	title = ngm_government.213.name
+	desc = ngm_government.213.desc
+	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
+	is_triggered_only = yes
+	location = event_target:ngm_olympic_founder_planet
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	option = {
+		name = ngm_government.213.a
+	}
+}
+
 # 閉会式
 country_event = {
 	id = ngm_government.300
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
-		every_playable_country = {
-			country_event = {
-				id = ngm_government.310
-				days = 5
-			}
+		country_event = {
+			id = ngm_government.310
+			days = 5
 		}
 		random_country = {
 			limit = {
@@ -6528,6 +7338,7 @@ country_event = {
 	}
 }
 
+# オリンピック1位
 country_event = {
 	id = ngm_government.301
 	is_triggered_only = yes
@@ -6537,6 +7348,7 @@ country_event = {
 	}
 }
 
+# オリンピック2位
 country_event = {
 	id = ngm_government.302
 	is_triggered_only = yes
@@ -6546,6 +7358,7 @@ country_event = {
 	}
 }
 
+# オリンピック3位
 country_event = {
 	id = ngm_government.303
 	is_triggered_only = yes
@@ -6555,6 +7368,7 @@ country_event = {
 	}
 }
 
+# オリンピック初期化
 country_event = {
 	id = ngm_government.310
 	title = ngm_government.300.name
