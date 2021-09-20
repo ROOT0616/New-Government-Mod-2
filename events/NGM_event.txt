@@ -4921,7 +4921,7 @@ country_event = {
 					}
 				}
 				modifier = {
-					mult = 0.5
+					factor = 0.5
 					NOT = {
 						any_owned_planet = {
 							OR = {
@@ -4940,7 +4940,7 @@ country_event = {
 				weights = {
 					base = 1
 					modifier = {
-						mult = 9999
+						factor = 9999
 						OR = {
 							has_modifier = ngm_olympic_nominee_level_1
 							has_modifier = ngm_olympic_nominee_level_2

@@ -11,6 +11,7 @@
 # レベル4 域内交易路保安局の成立(交易路保護値+5)、域内職業安定局の設立(Pop移住速度+10%、Pop成長速度+5%)
 # レベル5 共通市場事務所の設立(市場手数料-10%、交易価値+10%)、銀河建設公社の設立（建設コスト-10%、区域建造コスト-10%）
 NGM_CEPA_federation = {
+	base_intel = 60
 	icon = "GFX_NGM_CEPA_federation"
 	potential = {
 		always = yes
@@ -289,6 +290,7 @@ NGM_CEPA_federation = {
 # レベル4 統合を通じた力（議長国以外の加盟国のみ、職業からの資源産出+5%）、称号の創設（統治者幸福度+20%）※第一発言者の地位（他の連邦加盟国の外交発言力の30%を奪い取る）
 # レベル5 宮中の拡大（影響力+1）、主要省庁の兼務（布告許容量+1）※王の中の王（影響力+1）
 NGM_personal_union_federation = {
+	base_intel = 60
 	icon = "GFX_NGM_personal_union_federation"
 	#potential
 	potential = {
@@ -353,6 +355,7 @@ NGM_personal_union_federation = {
 		set_federation_flag = enable_federation_cooldowns
 	}
 	ai_weight = {
+		base = 0
 		# Default Vassals
 		modifier = {
 			desc = federation_acceptance_empire
@@ -589,6 +592,7 @@ NGM_personal_union_federation = {
 # レベル4 将校の交流（連邦艦隊許容量への貢献+25%）、強力な弁論術（外交発言力+10%）
 # レベル5 共に強く在れ（危機とグレイ・テンペストに対するダメージ+25%）、強力なリーダーシップ（危機の発生中、外交発言力+20%）
 NGM_permanent_summit_federation = {
+	base_intel = 60
 	icon = "GFX_NGM_permanent_summit_federation"
 	#potential
 	potential = {
@@ -890,6 +894,7 @@ NGM_permanent_summit_federation = {
 # レベル4 銀河宗教大学の設立（リーダーレベル上限+1）、巡礼団の強制（Pop移住速度+30%）※聖戦（非精神主義国家に対して精神主義を強要する宣戦布告事由を得る）
 # レベル5 共に強く在れ（危機とグレイ・テンペストに対するダメージ+25%）、壮麗な儀式（各惑星大祭司職業枠+1、司祭職業枠+3）※地位の神聖さ(影響力+1/月)
 NGM_unification_church_federation = {
+	base_intel = 60
 	icon = "GFX_NGM_unification_church_federation"
 	#potential
 	potential = {

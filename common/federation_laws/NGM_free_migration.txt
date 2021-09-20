@@ -124,6 +124,9 @@ ngm_migration_yes = {
 	potential = {
 		has_federation_flag = federation_CEPA_flag
 	}
+	allow = {
+		always = yes
+	}
 	on_enact = {
 		set_free_migration = yes
 	}

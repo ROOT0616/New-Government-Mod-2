@@ -92,6 +92,442 @@ ap_ngm_constant_hostile_intelligence_operations = {
 	}
 }
 
+#③外交シンクタンク		(常に移り変わる外交に関して専門家団を活用する)			(外交官+2、外交発言力+30%)
+ap_ngm_dipromatic_think_tank = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_dipromatic_think_tank
+		}
+	}
+	modifier = {
+		envoys_add = 2
+		diplo_weight_mult = 0.3
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#④帝国学士院			(研究者を政治的に取りまとめ、研究政策の活用を図る)		(研究選択肢+3、研究力+5%)
+ap_ngm_imperial_academy = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_imperial_academy
+		}
+	}
+	modifier = {
+		num_tech_alternatives_add = 3
+		country_physics_research_produces_mult = 0.05
+		country_society_research_produces_mult = 0.05
+		country_engineering_research_produces_mult = 0.05
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#行政機構の再編		(煩雑な行政機構を調整し、効率的かつ効果的な行政を実現する)	(管理許容量+20%、国是slot+1)
+ap_ngm_administrative_reorganization = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_administrative_reorganization
+		}
+	}
+	modifier = {
+		country_government_civic_points_add = 1
+		country_admin_cap_mult = 0.2
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#⑥津波				(小型艦の波は全銀河を制圧する)					(コルベット建造速度+100%、全艦隊建造速度-50%、艦隊許容量+30)
+ap_ngm_tunami = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_tunami
+		}
+	}
+	modifier = {
+		shipsize_corvette_build_speed_mult = 1
+		starbase_shipyard_build_speed_mult = -0.5
+		country_naval_cap_add = 30
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#⑦静謐				(静かで穏やかな心)						(統合力+20%、研究力+10%)3つ以上アセンションパークを取得しなければならない。平和、中立のみ
+ap_ngm_calm = {
+	potential = {
+		OR = {
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
+			has_ethic = ethic_neutralism
+			has_ethic = ethic_fanatic_neutralism
+		}
+		NOT = {
+			has_ascension_perk = ap_ngm_calm
+		}
+		num_ascension_perks > 2
+	}
+	modifier = {
+		country_unity_produces_mult = 0.2
+		country_physics_research_produces_mult = 0.1
+		country_society_research_produces_mult = 0.1
+		country_engineering_research_produces_mult = 0.1
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#⑧宮廷外交			(魑魅魍魎渦巻く宮廷では様々な交渉が行われうる)			(影響力+2、外交発言力+20%)権威もしくは栄望のみ
+ap_ngm_court_dipromacy = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_court_dipromacy
+		}
+		OR = {
+			has_ethic = ethic_authoritarian
+			has_ethic = ethic_fanatic_authoritarian
+			has_ethic = ethic_honorism
+			has_ethic = ethic_fanatic_honorism
+		}
+	}
+	modifier = {
+		diplo_weight_mult = 0.2
+		country_base_influence_produces_add = 2
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#⑨未来インフラ			(空間を最大限利用したインフラストラクチャーを活用し、常識を超えた社会を構築する)(建造物slot+3、建造物建造速度+20%、区域建造枠+3、区域建造速度+20%、巨大構造物建造枠+2、巨大建造速度+10%)
+ap_ngm_future_infrastructure = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_future_infrastructure
+		}
+	}
+	modifier = {
+		planet_max_buildings_add = 3
+		planet_max_districts_add = 3
+		planet_building_build_speed_mult = 0.2
+		megastructure_build_speed_mult = 0.1
+		country_megastructure_build_cap_add = 2
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#⑩高度防衛計画			(軍官僚や参謀が心血を注いだ防衛計画を採用する)			(ステーション許容量+10、防衛プラットフォームの上限+150、星系基地船体値+50%)
+ap_ngm_advanced_defense_plan = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_advanced_defense_plan
+		}
+	}
+	modifier = {
+		country_starbase_capacity_add = 10
+		starbase_defense_platform_capacity_add = 150
+		shipclass_starbase_damage_mult = 0.5
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#⑪絶対的階級制			(階級は絶対であり、超越することは許されない)			(労働者生産力+15%、労働者政治力-100%、統治者幸福度+10%)権威のみ
+ap_ngm_absolutely_class = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_absolutely_class
+		}
+		OR = {
+			has_ethic = ethic_authoritarian
+			has_ethic = ethic_fanatic_authoritarian
+		}
+	}
+	modifier = {
+		planet_jobs_worker_produces_mult = 0.15
+		pop_cat_worker_political_power = -1
+		pop_cat_ruler_happiness = 0.1
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#⑫象徴的構造物			(この建造物は市民の象徴であり、国家の顔である)			(巨大構造物建造枠+2、巨大構造物速度+10%、巨大構造物コスト-10%)開発もしくは物質のみ
+ap_ngm_Symbolic_structure = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_Symbolic_structure
+		}
+		OR = {
+			has_ethic = ethic_materialist
+			has_ethic = ethic_fanatic_materialist
+			has_ethic = ethic_developmentalism
+			has_ethic = ethic_fanatic_developmentalism
+		}
+	}
+	modifier = {
+		megastructure_build_speed_mult = 0.1
+		country_megastructure_build_cap_add = 2
+		#知らん巨大構造物コスト-10%
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#⑬資源戦略調整省		(各種資源を戦略的に再分配し、効率的に生産力を向上させる)	(職業が消費する資源-5%、建造物のエキゾチックガス・揮発性粉末・レアクリスタル消費量-20%)
+ap_ngm_resource_strategy_adjustment_ministries = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_resource_strategy_adjustment_ministries
+		}
+	}
+	modifier = {
+		planet_jobs_upkeep_mult = -0.05
+		planet_buildings_upkeep_mult = -0.1
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#⑭贅沢は敵だ			(国家目標の達成のために贅沢は許されない)			(Pop維持費-50%)軍国もしくは権威のみ
+ap_ngm_luxury_must_be_enemy = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_luxury_must_be_enemy
+		}
+		OR = {
+			has_ethic = ethic_authoritarian
+			has_ethic = ethic_fanatic_authoritarian
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+	modifier = {
+		planet_pops_upkeep_mult = -0.5
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#⑮帝国の大動脈			(交易網は帝国の大動脈であり、経済のためにも必要不可欠な存在である)(交易価値+30%、交易保護値+20、20Popにつき事務員Job+1、40Popにつき豪商+1)
+ap_ngm_dipromatic_think_tank = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_dipromatic_think_tank
+		}
+	}
+	modifier = {
+		trade_value_mult = 0.3
+		local_trade_protection_add = 20
+		job_clerk_per_pop = 0.05
+		job_merchant_per_pop = 0.025
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#⑯人的資源省			(人的資源を調整し、帝国全体の成長を促す省庁を設立する)		(Pop成長速度+20%、幸福度+5%)
+ap_ngm_dipromatic_think_tank = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_dipromatic_think_tank
+		}
+	}
+	modifier = {
+		pop_growth_speed = 0.2
+		pop_cat_ruler_happiness = 0.05
+		pop_cat_specialist_happiness = 0.05
+		pop_cat_worker_happiness = 0.05
+		pop_cat_simple_drone_happiness = 0.05
+		pop_cat_simple_drone_happiness = 0.05
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#⑰幸福省			(市民。あなたは幸福ですか？)					(幸福度+5%、安定度+40)
+ap_ngm_ministry_of_happiness = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_ministry_of_happiness
+		}
+	}
+	modifier = {
+		pop_cat_ruler_happiness = 0.05
+		pop_cat_specialist_happiness = 0.05
+		pop_cat_worker_happiness = 0.05
+		pop_cat_simple_drone_happiness = 0.05
+		pop_cat_simple_drone_happiness = 0.05
+		planet_stability_add = 40
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#⑱徹底抗戦			(政府が敗北を認めなければ、敗北することはない)			(自国内連射レート+20%、船体値+10%、回避+10%、離脱可能性の減少-50%、厭戦値-30%)
+ap_ngm_victory_or_valhalla = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_victory_or_valhalla
+		}
+	}
+	modifier = {
+		ship_home_territory_fire_rate_mult = 0.2
+		ship_hull_mult = 0.1
+		ship_evasion_mult = 0.1
+		ship_disengage_chance_reduction = -0.5
+		country_war_exhaustion_mult = -0.3
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#⑲帝国統合参謀本部		(優秀な参謀や軍官僚が集い、国軍の効率的かつ優良な運用と戦略構築を行う省庁を設置する)(亜高速移動速度+20%、FTL速度+10%、星系基地許容量+5、防衛ステーションの上限+50、宇宙軍許容量+30、指揮上限+30)
+ap_ngm_empire_joint_chiefs_of_staff = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_empire_joint_chiefs_of_staff
+		}
+	}
+	modifier = {
+		ship_speed_mult = 0.2
+		ship_interstellar_speed_mult = 0.1
+		country_starbase_capacity_add = 5
+		starbase_defense_platform_capacity_add = 50
+		country_naval_cap_add = 30
+		country_command_limit_add = 10		#弱体化した
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+#⑳植民省			(植民活動と人口拡充を促す内的膨張を促す省庁を設置する)		(入植速度+30%、移民流入+20%、Pop成長速度+5%、居住性+25%)
+ap_ngm_colonial_office = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_dipromatic_think_tank
+		}
+	}
+	modifier = {
+		planet_colony_development_speed_mult = 0.3
+		pop_growth_from_immigration = 0.2
+		pop_growth_speed = 0.05
+		pop_environment_tolerance = 0.25
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
+
+# #㉑純潔省			(我が国は他国と一線を画し、純潔性を維持する必要がある)		(他国からの干渉的影響を受けない)
+# ap_ngm_ministry_of_innocence = {
+# 	potential = {
+# 		NOT = {
+# 			has_ascension_perk = ap_ngm_ministry_of_innocence
+# 		}
+# 	}
+# 	modifier = {
+# 		知らん
+# 	}
+# 	ai_weight = {
+# 		factor = 5
+# 		modifier = {
+# 			factor = 5
+# 			num_ascension_perks > 2
+# 		}
+# 	}
+# }
 # ①大規模建築計画局			(大規模建築を行う際の資源や職人を運用し、調整する省庁を設立する)			(巨大構造物建造枠+2、巨大構造物速度+10%、研究選択肢を追加・メガエンジニアリング)（戦艦、シタデル、ゼロポイント発電の研究を完了している）
 ap_ngm_great_constructure_department = {
 	potential = {
@@ -119,7 +555,7 @@ ap_ngm_great_constructure_department = {
 	modifier = {
 		megastructure_build_speed_mult = 0.1
 		country_megastructure_build_cap_add = 2
-		add_research_option = tech_mega_engineering
+		# add_research_option = tech_mega_engineering
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて

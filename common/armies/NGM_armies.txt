@@ -1,15 +1,9 @@
-
-# 2.砲兵軍団	(ミサイルや砲弾で敵を攻撃し、惑星表面を耕す部隊)		(合金:100)(建造期間:150日)(維持費:合金1)(耐久ダメージ:5、士気ダメージ:5)(副次被害300%)(耐久力200)(士気200)
-# 3.機甲部隊	(高耐久力かつ近接高火力で敵に浸透する部隊)			(合金:200)(建造期間:200日)(維持費:合金2)(耐久ダメージ:5、士気ダメージ:6)(副次被害50%)(耐久力300)(士気200)
-# 4.特殊作戦群	(敵に対して高い浸透力を発揮し、高い練度で敵を圧倒する部隊)	(合金:400)(建造期間:500日)(維持費:合金5)(耐久ダメージ:5、士気ダメージ:7)(副次被害20%)(耐久力300)(士気500)
-
 # 航空騎兵師団	(敵陸軍を頭上から制圧し、速度で勝負する部隊)
 # 			コスト：合金:100	建造期間:150日	維持費:エネルギー10
 #				ダメージ : 耐久 , 士気 , 副次的損害  3 , 6 , 200% 
 #				耐久 , 士気  150 , 200
-# ngm_○○_army命名規則
 ngm_air_cavalry_division_army = {
-	# ダメージ 1*200 = 200
+	# ダメージ 1*3 = 3
 	damage = 1
 	#  耐久 0.75*200 = 150
 	health = 0.75
@@ -20,11 +14,13 @@ ngm_air_cavalry_division_army = {
 	# 副次的損害
 	collateral_damage = 1
 	# 戦争疲弊度
-	war_exhaustion = 1 
+	war_exhaustion = 1
 	time = 150
-	icon_frame = 2
+	icon = GFX_army_type_assault
 	# 前提技術
-	prerequisites = { "tech_assault_armies" }
+	prerequisites = {
+		"tech_assault_armies"
+	}
 	resources = {
 		category = armies
 		# コスト
@@ -34,6 +30,189 @@ ngm_air_cavalry_division_army = {
 		# 維持費
 		upkeep = {
 			energy = 10
+		}
+	}
+	show_tech_unlock_if = {
+		OR = {
+			NOT = {
+				has_authority = auth_machine_intelligence
+			}
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_authority = auth_machine_intelligence
+				}
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}
+}
+
+# 砲兵軍団	(ミサイルや砲弾で敵を攻撃し、惑星表面を耕す部隊)
+# 			コスト：合金:100	建造期間:150日	維持費:合金1
+#				ダメージ : 耐久 , 士気 , 副次的損害  6 , 6 , 300% 
+#				耐久 , 士気  200 , 200
+ngm_artillery_division_army = {
+	# ダメージ 2*3 = 6
+	damage = 2
+	#  耐久 1*200 = 200
+	health = 1
+	#  士気 1*200 = 200
+	morale = 1
+	#  士気ダメージ 2*3 = 6
+	morale_damage = 2
+	# 副次的損害
+	collateral_damage = 1.5
+	# 戦争疲弊度
+	war_exhaustion = 1
+	time = 150
+	icon = GFX_army_type_assault
+	# 前提技術
+	prerequisites = {
+		"tech_assault_armies"
+	}
+	resources = {
+		category = armies
+		# コスト
+		cost = {
+			alloys = 100
+		}
+		# 維持費
+		upkeep = {
+			alloys = 1
+		}
+	}
+	show_tech_unlock_if = {
+		OR = {
+			NOT = {
+				has_authority = auth_machine_intelligence
+			}
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_authority = auth_machine_intelligence
+				}
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}
+}
+
+# 機甲部隊	(高耐久力かつ近接高火力で敵に浸透する部隊)
+# 			コスト：合金:200	建造期間:200日	維持費:合金2
+#				ダメージ : 耐久 , 士気 , 副次的損害  9 , 6 , 50% 
+#				耐久 , 士気  300 , 200
+ngm_armor_division_army = {
+	# ダメージ 3*3 = 9
+	damage = 3
+	#  耐久 1.5*200 = 300
+	health = 1.5
+	#  士気 1*200 = 200
+	morale = 1
+	#  士気ダメージ 2*3 = 6
+	morale_damage = 2
+	# 副次的損害
+	collateral_damage = 0.5
+	# 戦争疲弊度
+	war_exhaustion = 1
+	time = 150
+	icon = GFX_army_type_assault
+	# 前提技術
+	prerequisites = {
+		"tech_assault_armies"
+	}
+	resources = {
+		category = armies
+		# コスト
+		cost = {
+			alloys = 200
+		}
+		# 維持費
+		upkeep = {
+			alloys = 2
+		}
+	}
+	show_tech_unlock_if = {
+		OR = {
+			NOT = {
+				has_authority = auth_machine_intelligence
+			}
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				NOT = {
+					has_authority = auth_machine_intelligence
+				}
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}
+}
+
+# 特殊作戦群	(敵に対して高い浸透力を発揮し、高い練度で敵を圧倒する部隊)
+# 			コスト：合金:400	建造期間:450日	維持費:	合金5
+#				ダメージ : 耐久 , 士気 , 副次的損害  6 , 9 , 20% 
+#				耐久 , 士気  300 , 500
+ngm_special_forces_army = {
+	# ダメージ 2*3 = 3
+	damage = 2
+	#  耐久 1.5*200 = 300
+	health = 1.5
+	#  士気 2.5*200 = 500
+	morale = 2.5
+	#  士気ダメージ 3*3 = 9
+	morale_damage = 3
+	# 副次的損害
+	collateral_damage = 0.2
+	# 戦争疲弊度
+	war_exhaustion = 1
+	time = 150
+	icon = GFX_army_type_assault
+	# 前提技術
+	prerequisites = {
+		"tech_assault_armies"
+	}
+	resources = {
+		category = armies
+		# コスト
+		cost = {
+			alloys = 400
+		}
+		# 維持費
+		upkeep = {
+			alloys = 5
 		}
 	}
 	# ここから下はいじらなくていいよ

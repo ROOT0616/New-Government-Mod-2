@@ -38,8 +38,7 @@ small_ship_pursuer = {
 		}
 	}
 	num_target_locators = 0 # 同時にターゲットにできる目標の総数
-	icon_frame = 3 # アイコンフレームのID
-	text_icon = military_size_2 # アイコンのID
+	icon = ship_size_military_2
 	is_space_station = no # ステーションかどうか。船ならno、yesにすると動けない
 	class = shipclass_military # 船のクラス設定
 	is_designable = no # 艦船設計できるかどうか
@@ -62,9 +61,8 @@ medium_ship_pursuer = {
 		}
 	}
 	num_target_locators = 0
+	icon = ship_size_military_4
 	is_space_station = no
-	icon_frame = 4
-	text_icon = military_size_4
 	class = shipclass_military
 	is_designable = no
 }
@@ -86,9 +84,8 @@ large_ship_pursuer = {
 		}
 	}
 	num_target_locators = 0
+	icon = ship_size_military_8
 	is_space_station = no
-	icon_frame = 5
-	text_icon = military_size_8
 	class = shipclass_military
 	is_designable = no
 }
