@@ -3,64 +3,6 @@
 @ap_evolutionary_mastery_COST_MULT = -0.25
 @ap_engineered_evolution_POINTS = 3
 @ap_engineered_evolution_COST_MULT = -0.25
-# テンプレート
-# NGM_l_english.ymlの2461行目で名前設定
-# 命名規則は ap_ngm_〇〇
-# ap_colossus = {
-# 	# 絶対条件ここを満たさないと表示されない
-# 	# この例では特定のDLCを持っていることと
-# 	# このアセンションパークを持っていないこと
-# 	potential = {
-# 		host_has_dlc = "Apocalypse"
-# 		NOT = {
-# 			has_ascension_perk = ap_colossus
-# 		}
-# 	}
-# 
-# 	# アセンションパーク有効時の効果（常時）
-# 	# この例ではロボットの維持費を-10％し
-# 	# Pop製造速度を10％増加させている
-# 	modifier = {
-# 		planet_pops_robotics_upkeep_mult = -0.10
-# 		planet_pop_assembly_mult = 0.10
-# 	}
-# 
-# 	# アセンションパーク有効時の効果（即時）
-# 	# この例ではツールチップ表示とイベントを起こしている
-# 	on_enabled = {
-# 		custom_tooltip = enable_colossus_project
-# 		custom_tooltip = describe_colossus_project
-# 		hidden_effect = {
-# 			country_event = { id = apoc.100 }
-# 		}
-# 	}
-# 
-# 	# 可能条件	ここを満たすと選択できる
-# 	# ここを満たしてなくても表示はされる
-# 	# この例ではtech_titansの技術を持っていることと
-# 	# アセンションパークを三個以上持っていることになる
-# 	possible = {
-# 		has_technology = tech_titans
-# 		custom_tooltip = {
-# 			fail_text = "requires_ascension_perks_3"
-# 			num_ascension_perks > 2
-# 		}
-# 	}
-# 
-# 	# AIの選びやすさ
-# 	ai_weight = {
-# 		factor = 10
-# 		# AIの選びやすさの補正
-# 		# この例では特定の国是を持っている場合10倍選びやすくなる
-# 		# modifier = {
-# 		# 	factor = 10
-# 		# 	OR = {
-# 		# 		has_valid_civic = civic_fanatic_purifiers
-# 		# 		has_valid_civic = civic_machine_terminator
-# 		# 	}
-# 		# }
-# 	}
-# }
 # ②恒常的敵対諜報活動		(敵に対しては常に影響を与え続けなければならない)		(外交官+2、解読力+10、宿敵にした相手国の影響力-1)
 ap_ngm_constant_hostile_intelligence_operations = {
 	potential = {
@@ -287,7 +229,7 @@ ap_ngm_absolutely_class = {
 	}
 	modifier = {
 		planet_jobs_worker_produces_mult = 0.15
-		pop_cat_worker_political_power = -1
+		#知らん労働者政治力－100％
 		pop_cat_ruler_happiness = 0.1
 	}
 	ai_weight = {
@@ -300,10 +242,10 @@ ap_ngm_absolutely_class = {
 }
 
 #⑫象徴的構造物			(この建造物は市民の象徴であり、国家の顔である)			(巨大構造物建造枠+2、巨大構造物速度+10%、巨大構造物コスト-10%)開発もしくは物質のみ
-ap_ngm_Symbolic_structure = {
+ap_ngm_symbolic_structures = {
 	potential = {
 		NOT = {
-			has_ascension_perk = ap_ngm_Symbolic_structure
+			has_ascension_perk = ap_ngm_symbolic_structures
 		}
 		OR = {
 			has_ethic = ethic_materialist
@@ -334,8 +276,11 @@ ap_ngm_resource_strategy_adjustment_ministries = {
 		}
 	}
 	modifier = {
-		planet_jobs_upkeep_mult = -0.05
+		planet_jobs_upkeep_mult = -0.1
 		planet_buildings_upkeep_mult = -0.1
+		planet_buildings_exotic_gases_upkeep_mult = -0.2
+		planet_buildings_rare_crystals_upkeep_mult = -0.2
+		planet_buildings_volatile_motes_upkeep_mult = -0.2
 	}
 	ai_weight = {
 		factor = 5
@@ -510,24 +455,24 @@ ap_ngm_colonial_office = {
 	}
 }
 
-# #㉑純潔省			(我が国は他国と一線を画し、純潔性を維持する必要がある)		(他国からの干渉的影響を受けない)
-# ap_ngm_ministry_of_innocence = {
-# 	potential = {
-# 		NOT = {
-# 			has_ascension_perk = ap_ngm_ministry_of_innocence
-# 		}
-# 	}
-# 	modifier = {
-# 		知らん
-# 	}
-# 	ai_weight = {
-# 		factor = 5
-# 		modifier = {
-# 			factor = 5
-# 			num_ascension_perks > 2
-# 		}
-# 	}
-# }
+#㉑純潔省			(我が国は他国と一線を画し、純潔性を維持する必要がある)		(他国からの干渉的影響を受けない)
+#ap_ngm_ministry_of_innocence = {
+#potential = {
+#NOT = {
+#has_ascension_perk = ap_ngm_ministry_of_innocence
+#}
+#}
+#modifier = {
+#知らん
+#}
+#ai_weight = {
+#factor = 5
+#modifier = {
+#factor = 5
+#num_ascension_perks > 2
+#}
+#}
+#}
 # ①大規模建築計画局			(大規模建築を行う際の資源や職人を運用し、調整する省庁を設立する)			(巨大構造物建造枠+2、巨大構造物速度+10%、研究選択肢を追加・メガエンジニアリング)（戦艦、シタデル、ゼロポイント発電の研究を完了している）
 ap_ngm_great_constructure_department = {
 	potential = {

@@ -121,11 +121,11 @@ free_migration_yes = {
 }
 
 ngm_migration_yes = {
-	potential = {
-		has_federation_flag = federation_CEPA_flag
-	}
 	allow = {
 		always = yes
+	}
+	potential = {
+		has_federation_flag = federation_CEPA_flag
 	}
 	on_enact = {
 		set_free_migration = yes

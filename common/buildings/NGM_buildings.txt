@@ -164,7 +164,7 @@ building_ngm_star_workshop = {
 	}
 }
 
-# 銀河サロン  galaxy_salon		(上流階級の者が集う社交界)							(惑星につき一つ:企業国家の統合力+5、企業国家の外交発言力+3%、豪商+1、役員+1)	:この企業は創業家を中心に会社に多大な貢献を行った社員一家を特別役員として扱っており、企業内の団結や対外交渉などに活躍している、一種の君主制国家の様相を呈している。
+# 銀河サロン  galaxy_salon		(上流階級の者が集う社交界)							(惑星につき一つ:企業国家の統合力+5、企業国家の外交発言力+10、豪商+1、役員+1)	:この企業は創業家を中心に会社に多大な貢献を行った社員一家を特別役員として扱っており、企業内の団結や対外交渉などに活躍している、一種の君主制国家の様相を呈している。
 building_ngm_galaxy_salon = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -180,8 +180,7 @@ building_ngm_galaxy_salon = {
 		}
 	}
 	country_modifier = {
-		diplo_weight_mult = 0.03
-		
+		diplo_weight_mult = 0.05
 	}
 	planet_modifier = {
 		job_merchant_add = 1

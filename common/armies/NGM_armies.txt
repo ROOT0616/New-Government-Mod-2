@@ -14,13 +14,11 @@ ngm_air_cavalry_division_army = {
 	# 副次的損害
 	collateral_damage = 1
 	# 戦争疲弊度
-	war_exhaustion = 1
+	war_exhaustion = 1 
 	time = 150
 	icon = GFX_army_type_assault
 	# 前提技術
-	prerequisites = {
-		"tech_assault_armies"
-	}
+	prerequisites = { "tech_assault_armies" }
 	resources = {
 		category = armies
 		# コスト
@@ -32,31 +30,6 @@ ngm_air_cavalry_division_army = {
 			energy = 10
 		}
 	}
-	show_tech_unlock_if = {
-		OR = {
-			NOT = {
-				has_authority = auth_machine_intelligence
-			}
-			has_valid_civic = civic_machine_assimilator
-		}
-	}
-	potential = {
-		from = {
-			NOR = {
-				has_trait = "trait_mechanical"
-				has_trait = "trait_machine_unit"
-				is_sapient = no
-			}
-		}
-		owner = {
-			OR = {
-				NOT = {
-					has_authority = auth_machine_intelligence
-				}
-				has_valid_civic = civic_machine_assimilator
-			}
-		}
-	}
 }
 
 # 砲兵軍団	(ミサイルや砲弾で敵を攻撃し、惑星表面を耕す部隊)
@@ -64,7 +37,7 @@ ngm_air_cavalry_division_army = {
 #				ダメージ : 耐久 , 士気 , 副次的損害  6 , 6 , 300% 
 #				耐久 , 士気  200 , 200
 ngm_artillery_division_army = {
-	# ダメージ 2*3 = 6
+	# ダメージ 2*3 = 3
 	damage = 2
 	#  耐久 1*200 = 200
 	health = 1
@@ -75,13 +48,11 @@ ngm_artillery_division_army = {
 	# 副次的損害
 	collateral_damage = 1.5
 	# 戦争疲弊度
-	war_exhaustion = 1
+	war_exhaustion = 1 
 	time = 150
 	icon = GFX_army_type_assault
 	# 前提技術
-	prerequisites = {
-		"tech_assault_armies"
-	}
+	prerequisites = { "tech_assault_armies" }
 	resources = {
 		category = armies
 		# コスト
@@ -91,31 +62,6 @@ ngm_artillery_division_army = {
 		# 維持費
 		upkeep = {
 			alloys = 1
-		}
-	}
-	show_tech_unlock_if = {
-		OR = {
-			NOT = {
-				has_authority = auth_machine_intelligence
-			}
-			has_valid_civic = civic_machine_assimilator
-		}
-	}
-	potential = {
-		from = {
-			NOR = {
-				has_trait = "trait_mechanical"
-				has_trait = "trait_machine_unit"
-				is_sapient = no
-			}
-		}
-		owner = {
-			OR = {
-				NOT = {
-					has_authority = auth_machine_intelligence
-				}
-				has_valid_civic = civic_machine_assimilator
-			}
 		}
 	}
 }
@@ -136,13 +82,11 @@ ngm_armor_division_army = {
 	# 副次的損害
 	collateral_damage = 0.5
 	# 戦争疲弊度
-	war_exhaustion = 1
+	war_exhaustion = 1 
 	time = 150
 	icon = GFX_army_type_assault
 	# 前提技術
-	prerequisites = {
-		"tech_assault_armies"
-	}
+	prerequisites = { "tech_assault_armies" }
 	resources = {
 		category = armies
 		# コスト
@@ -152,31 +96,6 @@ ngm_armor_division_army = {
 		# 維持費
 		upkeep = {
 			alloys = 2
-		}
-	}
-	show_tech_unlock_if = {
-		OR = {
-			NOT = {
-				has_authority = auth_machine_intelligence
-			}
-			has_valid_civic = civic_machine_assimilator
-		}
-	}
-	potential = {
-		from = {
-			NOR = {
-				has_trait = "trait_mechanical"
-				has_trait = "trait_machine_unit"
-				is_sapient = no
-			}
-		}
-		owner = {
-			OR = {
-				NOT = {
-					has_authority = auth_machine_intelligence
-				}
-				has_valid_civic = civic_machine_assimilator
-			}
 		}
 	}
 }
@@ -197,13 +116,11 @@ ngm_special_forces_army = {
 	# 副次的損害
 	collateral_damage = 0.2
 	# 戦争疲弊度
-	war_exhaustion = 1
+	war_exhaustion = 1 
 	time = 150
 	icon = GFX_army_type_assault
 	# 前提技術
-	prerequisites = {
-		"tech_assault_armies"
-	}
+	prerequisites = { "tech_assault_armies" }
 	resources = {
 		category = armies
 		# コスト
@@ -239,6 +156,55 @@ ngm_special_forces_army = {
 				}
 				has_valid_civic = civic_machine_assimilator
 			}
+		}
+	}
+}
+
+# 戦闘機械	(ﾀﾀｶｳﾀﾒﾉｷｶｲ ﾀﾀｶｳ?)
+# 			コスト：鉱物:300	建造期間:90日	維持費:	エネルギー5
+#				ダメージ : 耐久 , 士気 , 副次的損害  6 , 6 , 300% 
+#				耐久 , 士気  400 , 
+# ngm_○○_army命名規則
+ngm_combat_machine_army = {
+	# ダメージ 2*3 = 6
+	damage = 2
+	#  耐久 2*200 = 400
+	health = 2
+	#  士気 2.5*200 = 500
+	has_morale = no
+	#  士気ダメージ 2*3 = 6
+	morale_damage = 2
+	# 副次的損害
+	collateral_damage = 3
+	# 戦争疲弊度
+	war_exhaustion = 1 
+	time = 90
+	icon = GFX_army_type_assault
+	# 前提技術
+	prerequisites = { "tech_assault_armies" }
+	resources = {
+		category = armies
+		# コスト
+		cost = {
+			minerals = 300
+		}
+		# 維持費
+		upkeep = {
+			energy = 5
+		}
+	}
+	# ここから下はいじらなくていいよ
+	show_tech_unlock_if = {
+		OR = {
+			NOT = {
+				has_authority = auth_machine_intelligence
+			}
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		owner = {
+			has_tradition = tr_ngm_war_machine
 		}
 	}
 }

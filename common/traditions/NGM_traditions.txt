@@ -3,13 +3,1750 @@
 #	modifier = {}									# applied to country
 #	on_enabled = {}									# scope: country
 #	ai_weight = {}									# scope: country
-	# tradition_swap = {
-	# 	name = tr_my_easter_bunny_tradition
-	# 	inherit_effects = yes	#default: no; set to yes if you are giving it a modifier or want tr_my_easter_bunny_tradition_desc to be used
-	# 	inherit_icon = yes		#default: no
-	# 	inherit_name = yes		#default: no; also sets whether tr_my_easter_bunny_tradition_delayed is used for the description
-	# 	trigger = { }
-	# 	modifier = { }
-	# 	weight = { }		#if there are multiple options, the one with the highest weight is picked
-	# }
+# tradition_swap = {
+# 	name = tr_my_easter_bunny_tradition
+# 	inherit_effects = yes	#default: no; set to yes if you are giving it a modifier or want tr_my_easter_bunny_tradition_desc to be used
+# 	inherit_icon = yes		#default: no
+# 	inherit_name = yes		#default: no; also sets whether tr_my_easter_bunny_tradition_delayed is used for the description
+# 	trigger = { }
+# 	modifier = { }
+# 	weight = { }		#if there are multiple options, the one with the highest weight is picked
+# }
 #}
+tr_ngm_law_first = {
+	modifier = {
+		planet_crime_add = -20
+	}
+	# applied to country
+}
+
+tr_ngm_law_finish = {
+	modifier = {
+	}
+	# applied to country
+}
+
+tr_ngm_human_rights = {
+	modifier = {
+		planet_stability_add = 5
+	}
+	# applied to country
+}
+
+tr_ngm_law_trade = {
+	modifier = {
+		local_trade_protection_add = 5
+	}
+	# applied to country
+}
+
+tr_ngm_law_pirates = {
+	modifier = {
+		piracy_suppression_mult = -0.3
+	}
+	# applied to country
+}
+
+tr_ngm_law_government = {
+	modifier = {
+		country_influence_produces_mult = 0.25
+	}
+	# applied to country
+}
+
+tr_ngm_constitution = {
+	modifier = {
+		country_edict_cap_add = 1
+	}
+	# applied to country
+}
+
+tr_ngm_virture_first = {
+	modifier = {
+		army_attack_damage_mult = 0.2
+	}
+	# applied to country
+}
+
+tr_ngm_virture_finish = {
+	modifier = {
+		country_base_influence_produces_add = 1
+	}
+	# applied to country
+}
+
+tr_ngm_sniper = {
+	modifier = {
+		ship_fire_rate_mult = 0.05
+		#知らん！宿敵の国家犯罪度+10
+	}
+	# applied to country
+}
+
+tr_ngm_penetration = {
+	modifier = {
+		intel_decryption_add = 5
+		#知らん！外交関係にあるすべての国家の犯罪度+5
+	}
+	# applied to country
+}
+
+tr_ngm_chain_harted = {
+	modifier = {
+		max_rivalries = 2
+	}
+	# applied to country
+}
+
+tr_ngm_exclusive = {
+	modifier = {
+		pop_cat_ruler_happiness = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_sabotage = {
+	modifier = {
+		#知らん！宿敵の貿易保護値-15、宿敵の犯罪度+20 = 1
+	}
+	# applied to country
+}
+
+tr_ngm_study_first = {
+	modifier = {
+		species_leader_exp_gain = 0.25
+	}
+	# applied to country
+}
+
+tr_ngm_study_finish = {
+	modifier = {
+		#知らん！完遂時:リーダーが特殊な特性をアンロック。初期リーダーが複数の特性を有している
+	}
+	# applied to country
+}
+
+tr_ngm_restudy = {
+	modifier = {
+		#知らん！地上軍初期経験値+300、艦船初期経験値+300
+	}
+	# applied to country
+}
+
+tr_ngm_leader_study = {
+	modifier = {
+		leader_skill_levels = 2
+	}
+	# applied to country
+}
+
+tr_ngm_program_study = {
+	modifier = {
+		#知らん！	リーダー初期レベル+1
+	}
+	# applied to country
+}
+
+tr_ngm_reprogram = {
+	modifier = {
+		all_technology_research_speed = 0.05
+		country_unity_produces_mult = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_high_study = {
+	modifier = {
+		leaders_cost_mult = -0.33
+	}
+	# applied to country
+}
+
+tr_ngm_ecstasy_first = {
+	modifier = {
+		#知らん！生活水準のユートピアの豊かさをアンロック
+	}
+	# applied to country
+}
+
+tr_ngm_ecstasy_finish = {
+	modifier = {
+		pop_happiness = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_art_good = {
+	modifier = {
+		country_unity_produces_mult = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_art_industry = {
+	modifier = {
+		pop_amenities_usage_mult = 0.25
+	}
+	# applied to country
+}
+
+tr_ngm_groly_supporter = {
+	modifier = {
+		planet_jobs_slave_produces_mult = 0.25
+	}
+	# applied to country
+}
+
+tr_ngm_ecstasy_family = {
+	modifier = {
+		pop_growth_speed = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_long_live = {
+	modifier = {
+		leader_age = 10
+	}
+	# applied to country
+}
+
+tr_ngm_avantgarde_first = {
+	modifier = {
+		country_unity_produces_mult = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_avantgarde_finish = {
+	modifier = {
+		country_government_civic_points_add = 1
+	}
+	# applied to country
+}
+
+tr_ngm_avantgarde_2 = {
+	modifier = {
+		pop_amenities_usage_mult = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_chord = {
+	modifier = {
+		pop_happiness = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_student_art = {
+	modifier = {
+		#知らん！「劇場通」を建設可能とする
+	}
+	# applied to country
+}
+
+tr_ngm_freedom_art = {
+	modifier = {
+		pop_government_ethic_attraction = -0.2
+		country_unity_produces_mult = 0.2
+	}
+	# applied to country
+}
+
+tr_ngm_asymmetric = {
+	modifier = {
+		#知らん！「前衛芸術広場」を建設可能とする
+	}
+	# applied to country
+}
+
+tr_ngm_classic_first = {
+	modifier = {
+		country_unity_produces_mult = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_classic_finish = {
+	modifier = {
+		country_government_civic_points_add = 1
+	}
+	# applied to country
+}
+
+tr_ngm_realism = {
+	modifier = {
+		job_culture_worker_per_pop = 0.04
+	}
+	# applied to country
+}
+
+tr_ngm_acoustics = {
+	modifier = {
+		#知らん！「帝国音楽堂」を建設可能とする
+	}
+	# applied to country
+}
+
+tr_ngm_ministory_culture = {
+	modifier = {
+		country_influence_produces_add = 0.5
+	}
+	# applied to country
+}
+
+tr_ngm_diplomatic_art = {
+	modifier = {
+		diplo_weight_mult = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_authority_art = {
+	modifier = {
+		#知らん！「帝国芸術博物館」を建設可能とする
+	}
+	# applied to country
+}
+
+tr_ngm_academic_first = {
+	modifier = {
+		all_technology_research_speed = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_academic_finish = {
+	modifier = {
+		#知らん！政策"学術政策"の政策をアンロック
+	}
+	# applied to country
+}
+
+tr_ngm_national_academy = {
+	modifier = {
+		planet_jobs_specialistphysics_research_produces_mult = 0.1
+		planet_jobs_specialist_society_research_produces_mult = 0.1
+		planet_jobs_specialist_engineering_research_produces_mult = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_culture_study = {
+	modifier = {
+		country_unity_produces_mult = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_specialist_education = {
+	modifier = {
+		planet_jobs_specialist_produces_mult = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_leader_education = {
+	modifier = {
+		leader_skill_levels = 1
+	}
+	# applied to country
+}
+
+tr_ngm_high_education = {
+	modifier = {
+		all_technology_research_speed = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_memory_first = {
+	modifier = {
+		country_edict_cap_add = 1
+	}
+	# applied to country
+}
+
+tr_ngm_memory_finish = {
+	modifier = {
+		#知らん！記憶の布告"を追加
+	}
+	# applied to country
+}
+
+tr_ngm_record = {
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_past = {
+	modifier = {
+		all_technology_research_speed = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_memory2 = {
+	modifier = {
+		job_death_chronicler_per_pop = 0.4
+	}
+	# applied to country
+}
+
+tr_ngm_crime_record = {
+	modifier = {
+		planet_crime_add = -10
+	}
+	# applied to country
+}
+
+tr_ngm_trade_record = {
+	modifier = {
+		country_trade_fee = -0.05
+	}
+	# applied to country
+}
+
+tr_ngm_freedom_first = {
+	modifier = {
+		planet_crime_mult = -0.05
+	}
+	# applied to country
+}
+
+tr_ngm_freedom_finish = {
+	modifier = {
+		#知らん！宿敵の国家の奴隷幸福度-20%
+	}
+	# applied to country
+}
+
+tr_ngm_freedom_broad = {
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+		pop_amenities_usage_mult = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_freedom_association = {
+	modifier = {
+		pop_factions_influence_produces_mult = 0.25
+	}
+	# applied to country
+}
+
+tr_ngm_freedom_ega = {
+	modifier = {
+		leaders_unity_cost_mult = -0.2
+		country_leader_pool_size = 2
+	}
+	# applied to country
+}
+
+tr_ngm_freedom_immigrant = {
+	modifier = {
+		planet_immigration_pull_add = 0.2
+	}
+	# applied to country
+}
+
+tr_ngm_freedom2 = {
+	modifier = {
+		pop_happiness = 0.05
+		planet_stability_add = 5
+	}
+	# applied to country
+}
+
+tr_ngm_order_first = {
+	modifier = {
+		#知らん！  帝国膨張度ペナルティ-10%
+	}
+	# applied to country
+}
+
+tr_ngm_order_finish = {
+	modifier = {
+		ship_weapon_range_mult = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_no_voice = {
+	modifier = {
+		pop_government_ethic_attraction = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_appropriate = {
+	modifier = {
+		country_resettlement_cost_mult = -0.3
+	}
+	# applied to country
+}
+
+tr_ngm_ministry_engagement = {
+	modifier = {
+		#知らん！ 宿敵1つあたりの影響力収入+1
+	}
+	# applied to country
+}
+
+tr_ngm_right_place = {
+	modifier = {
+		pop_decline_speed = -0.5
+	}
+	# applied to country
+}
+
+tr_ngm_orderly = {
+	modifier = {
+		planet_housing_mult = 0.2
+	}
+	# applied to country
+}
+
+tr_ngm_neighbor_first = {
+	modifier = {
+		first_contact_speed_mult = 0.25
+	}
+	# applied to country
+}
+
+tr_ngm_neighbor_finish = {
+	modifier = {
+		#知らん！  5種類以上の種族がいる惑星でPop成長速度+10%、交易価値+10%、統合力+10%、流入魅力+10%
+	}
+	# applied to country
+}
+
+tr_ngm_ambassador = {
+	modifier = {
+		#知らん！  大使館の受け入れ+20
+	}
+	# applied to country
+}
+
+tr_ngm_salad = {
+	modifier = {
+		pop_ethic_xenophile_attraction_mult = 0.25
+		country_unity_produces_mult = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_talk = {
+	modifier = {
+		country_border_friction_mult = -0.5
+	}
+	# applied to country
+}
+
+tr_ngm_free_move = {
+	modifier = {
+		planet_immigration_pull_add = 0.3
+	}
+	# applied to country
+}
+
+tr_ngm_acceptance = {
+	modifier = {
+		country_unity_produces_mult = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_enemy_first = {
+	modifier = {
+		country_naval_cap_mult = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_enemy_finish = {
+	modifier = {
+		ship_weapon_damage = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_paranoia = {
+	modifier = {
+		max_rivalries = 2
+	}
+	# applied to country
+}
+
+tr_ngm_battle_ambass = {
+	modifier = {
+		envoys_add = 1
+	}
+	# applied to country
+}
+
+tr_ngm_coarse_food = {
+	modifier = {
+		planet_pops_food_upkeep_mult = -0.2
+	}
+	# applied to country
+}
+
+tr_ngm_transcendental = {
+	modifier = {
+		country_influence_produces_add = 1
+	}
+	# applied to country
+}
+
+tr_ngm_battle_speach = {
+	modifier = {
+		diplo_weight_mult = 0.2
+	}
+	# applied to country
+}
+
+tr_ngm_nature_first = {
+	modifier = {
+		deposit_blockers_cost_mult = -0.33
+		planet_clear_blocker_time_mult = -0.2
+	}
+	# applied to country
+}
+
+tr_ngm_nature_finish = {
+	modifier = {
+		category_biology_research_speed_mult = 0.2
+	}
+	# applied to country
+}
+
+tr_ngm_nature2 = {
+	modifier = {
+		pop_habitability = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_nature_growth = {
+	modifier = {
+		pop_growth_speed = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_nature_research = {
+	modifier = {
+		country_society_research_produces_add = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_food_nature = {
+	modifier = {
+		planet_jobs_food_produces_mult = 0.2
+		job_farmer_per_pop = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_ecology = {
+	modifier = {
+		planet_jobs_consumer_goods_upkeep_mult = -0.2
+	}
+	# applied to country
+}
+
+tr_ngm_machine_first = {
+	modifier = {
+		#知らん！	政策"ロボット職権"をアンロック
+	}
+	# applied to country
+}
+
+tr_ngm_machine_finish = {
+	modifier = {
+		planet_pops_robotics_upkeep_mult = -0.2
+	}
+	# applied to country
+}
+
+tr_ngm_war_machine = {
+	modifier = {
+		# 知らん！  地上軍"戦闘機械"を建造可能
+	}
+	# applied to country
+}
+
+tr_ngm_desighn = {
+	modifier = {
+		shipsize_starbase_outpost_hull_mult = 0.3
+		shipsize_starbase_starport_hull_mult = 0.3
+		shipsize_starbase_starhold_hull_mult = 0.3
+		shipsize_starbase_starfortress_hull_mult = 0.3
+		shipsize_starbase_citadel_hull_mult = 0.3
+	}
+	# applied to country
+}
+
+tr_ngm_machine_depart = {
+	modifier = {
+		#知らん！	ロボット建造コスト-20%
+	}
+	# applied to country
+}
+
+tr_ngm_robot_depart = {
+	modifier = {
+		job_robot_caretaker_per_pop = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_machine_human = {
+	modifier = {
+		ROBOT_species_trait_points_add = 2
+	}
+	# applied to country
+}
+
+tr_ngm_official_first = {
+	modifier = {
+		country_admin_cap_mult = 0.2
+	}
+	# applied to country
+}
+
+tr_ngm_official_finish = {
+	modifier = {
+		country_government_civic_points_add = 1
+	}
+	# applied to country
+}
+
+tr_ngm_human_resources = {
+	modifier = {
+		leaders_cost_mult = -0.2
+	}
+	# applied to country
+}
+
+tr_ngm_note = {
+	modifier = {
+		edicts_cost_mult = -0.3
+	}
+	# applied to country
+}
+
+tr_ngm_document = {
+	modifier = {
+		country_edict_cap_add = 1
+	}
+	# applied to country
+}
+
+tr_ngm_general_affairs = {
+	modifier = {
+		country_admin_cap_mult = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_cabinet = {
+	modifier = {
+		country_base_influence_produces_add = 1
+	}
+	# applied to country
+}
+
+tr_ngm_officer_first = {
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_officer_finish = {
+	modifier = {
+		#知らん！  布告"国防計画"をアンロック
+	}
+	# applied to country
+}
+
+tr_ngm_navy_depart = {
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.2
+	}
+	# applied to country
+}
+
+tr_ngm_officer_1 = {
+	modifier = {
+		ship_speed_mult = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_logistics_hq = {
+	modifier = {
+		ships_upkeep_mult = -0.2
+		armies_upkeep_mult = -0.1
+	}
+	# applied to country
+}
+
+tr_ngm_military_Bureau = {
+	modifier = {
+		army_damage_mult = 0.1
+		ship_fire_rate_mult = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_weapons_depart = {
+	modifier = {
+		category_propulsion_research_speed_mult = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_navy_first = {
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_navy_finish = {
+	modifier = {
+		country_naval_cap_add = 10
+		country_naval_cap_mult = 0.1
+	}
+	# applied to country
+}
+
+tr_ngm_voyage = {
+	modifier = {
+		ship_evasion_mult = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_maintenance = {
+	modifier = {
+		ship_hull_mult = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_logistics = {
+	modifier = {
+		ships_upkeep_mult = -0.2
+	}
+	# applied to country
+}
+
+tr_ngm_excellence_officer = {
+	modifier = {
+		country_command_limit_add = 10
+	}
+	# applied to country
+}
+
+tr_ngm_deposition_admiral = {
+	modifier = {
+		ship_fire_rate_mult = 0.05
+	}
+	# applied to country
+}
+
+tr_ngm_planet_army_adopt = {
+	modifier = {
+		armies_cost_mult = -0.2
+	}
+}
+
+tr_ngm_planet_army_finish = {
+	modifier = {
+		army_defense_health_mult = 100
+	}
+}
+
+tr_ngm_severe_general = {
+	modifier = {
+		army_collateral_damage_mult = -0.3
+	}
+}
+
+tr_ngm_military_police = {
+	possible = {
+		has_tradition = tr_ngm_severe_general
+	}
+	modifier = {
+		#知らん  地上軍のいる惑星の安定度+20
+	}
+}
+
+tr_ngm_iren_discipline = {
+	modifier = {
+		army_defense_morale_mult = 0.33
+		army_attack_morale_mult = 0.33
+	}
+}
+
+tr_ngm_planet_supply_point = {
+	modifier = {
+		armies_upkeep_mult = -0.3
+	}
+}
+
+tr_ngm_brave_and_resolute = {
+	possible = {
+		has_tradition = tr_ngm_iren_discipline
+		has_tradition = tr_ngm_planet_supply_point
+	}
+	modifier = {
+		army_attack_damage_mult = 0.2
+		army_defense_damage_mult = 0.2
+	}
+}
+
+#(1.上流階級:統治者幸福度+5%  /2.密室政治:派閥からの影響力+30%  /3.パトロン:統合力+10%  /4.栄典:リーダー経験値取得+33%  /5.階級社会:リーダースキル上限+1)(取得時：統治者経験値+20%)(完遂時:統治者スキル上限+2)
+tr_ngm_noble_adopt = {
+	modifier = {
+		species_leader_exp_gain = 0.1
+	}
+}
+
+tr_ngm_noble_finish = {
+	modifier = {
+		ruler_skill_levels = 2		#違う
+	}
+}
+
+tr_ngm_upper_class = {
+	possible = {
+		has_tradition = tr_ngm_noble_adopt
+	}
+	modifier = {
+		pop_cat_ruler_happiness = 0.05
+	}
+}
+
+tr_ngm_backroom_politics = {
+	possible = {
+		has_tradition = tr_ngm_upper_class
+	}
+	modifier = {
+		pop_factions_influence_produces_add = 0.3
+	}
+}
+
+tr_ngm_patron = {
+	modifier = {
+		country_base_unity_produces_add = 0.1
+	}
+}
+
+tr_ngm_honor = {
+	modifier = {
+		species_leader_exp_gain = 0.33
+	}
+}
+
+tr_ngm_class_politics = {
+	possible = {
+		has_tradition = tr_ngm_patron
+		has_tradition = tr_ngm_honor
+	}
+	modifier = {
+		leader_skill_levels = 1
+	}
+}
+
+#(1.大衆社会:Popの降下速度-20%  /2.大衆文化:職業からの統合力+10%  /3.大衆経済:交易価値+10%  /4.民衆政治:労働者幸福度+5%、労働者政治力+10%  /5.忠実な大衆:統治志向魅力+10%  )(取得時：労働者生産力+5%)(完遂時:労働者幸福度+5%)
+tr_ngm_mass_adopt = {
+	modifier = {
+		planet_jobs_worker_produces_mult = 0.05
+	}
+}
+
+tr_ngm_mass_finish = {
+	modifier = {
+		pop_cat_worker_happiness = 0.05
+	}
+}
+
+tr_ngm_mass_society = {
+	modifier = {
+		pop_demotion_time_mult = -0.2
+	}
+}
+
+tr_ngm_mass_culture = {
+	possible = {
+		has_tradition = tr_ngm_mass_society
+	}
+	modifier = {
+		#しらん
+	}
+}
+
+tr_ngm_mass_economy = {
+	modifier = {
+		trade_value_mult = 0.1
+	}
+}
+
+tr_ngm_peoples_politics = {
+	modifier = {
+		pop_cat_worker_happiness = 0.05
+		#知らん
+	}
+}
+
+tr_ngm_faithful_mass = {
+	possible = {
+		has_tradition = tr_ngm_mass_economy
+		has_tradition = tr_ngm_peoples_politics
+	}
+	modifier = {
+		pop_government_ethic_attraction = 0.1
+	}
+}
+
+#(1.建築計画:建造物建築速度+10%  /2.値引き交渉:市場手数料-5%  /3.インフラ投資:区域建造コスト-10%  /4.建材局:建造物建築コスト-10%  /5.巨大建築局:巨大構造物建造枠+1  )
+#(取得時：建築物slot+1)(完遂時:巨大構造物建築速度+10%)
+tr_ngm_building_adopt = {
+	modifier = {
+		planet_max_buildings_add = 1
+	}
+}
+
+tr_ngm_building_finish = {
+	modifier = {
+		megastructure_build_speed_mult = 0.1
+	}
+}
+
+tr_ngm_building_plan = {
+	modifier = {
+		building_time_mult = -0.09
+	}
+}
+
+tr_ngm_discount_negotiation = {
+	possible = {
+		has_tradition = tr_ngm_building_plan
+	}
+	modifier = {
+		country_trade_fee = -0.05
+	}
+}
+
+tr_ngm_infrastructure_investment = {
+	modifier = {
+		planet_districts_cost_mult = -0.1
+	}
+}
+
+tr_ngm_materials_bareau = {
+	modifier = {
+		planet_buildings_cost_mult = -0.1
+	}
+}
+
+tr_ngm_megastructure_bareau = {
+	possible = {
+		has_tradition = tr_ngm_infrastructure_investment
+		has_tradition = tr_ngm_materials_bareau
+	}
+	modifier = {
+		country_megastructure_build_cap_add = 1
+	}
+}
+
+#(1.外交官団の拡大:使節+1  /2.友好のための介入:解読力+5  /3.友好宣言:大使館の受け入れ+30  /4.条約局:外交協定の維持影響力コスト-50%  /5.拡張交渉:開拓前哨地建造影響力コスト-20%  )
+#(取得時：ファーストコンタクト速度+30%)(完遂時:他国との友好度+30)
+tr_ngm_longing_adopt = {
+	modifier = {
+		first_contact_clues_add = 2		#違う
+	}
+}
+
+tr_ngm_longing_finish = {
+	modifier = {
+		country_trust_growth = 0.1		#違う
+	}
+}
+
+tr_ngm_expansion_diplomatic_corps = {
+	modifier = {
+		envoys_add = 1
+	}
+}
+
+tr_ngm_intervention_for_friendship = {
+	possible = {
+		has_tradition = tr_ngm_expansion_diplomatic_corps
+	}
+	modifier = {
+		intel_decryption_add = 30
+	}
+}
+
+tr_ngm_friendship_declaration = {
+	modifier = {
+		#知らん
+	}
+}
+
+tr_ngm_treaty_bureau = {
+	modifier = {
+		diplomacy_influence_upkeep_mult = -0.5
+	}
+}
+
+tr_ngm_extended_negotiations = {
+	possible = {
+		has_tradition = tr_ngm_friendship_declaration
+		has_tradition = tr_ngm_treaty_bureau
+	}
+	modifier = {
+		country_starbase_influence_cost_mult = -0.2
+	}
+}
+
+#(1.強固な指揮統制:非均衡ボーナス+20%  /2.効率的行政組織:管理許容量+10  /3.きめ細やかな法令:布告許容量+1  /4.ゲリラ戦術:非均衡ボーナス+50%  /5.効率的管理:管理許容量を超過していないとき、Jobの生産力+10%  )
+#(取得時：管理許容量を超過していないとき、外交発言力+20%)
+#(完遂時:宿敵内での亜高速移動速度+20%)
+tr_ngm_adversity_adopt = {
+	possible = {
+		#empire_sprawl_not_over_cap_trigger=0
+	}
+	modifier = {
+		#知らんdiplo_weight_mult = 0.2
+	}
+}
+
+tr_ngm_adversity_finish = {
+}
+
+tr_ngm_strong_command_and_control = {
+	modifier = {
+		force_disparity_fire_rate_mult = 0.2
+	}
+}
+
+tr_ngm_purify_corruption = {
+	possible = {
+		has_tradition = tr_ngm_strong_command_and_control
+	}
+	modifier = {
+		country_admin_cap_mult = 0.03		#変えた
+	}
+}
+
+tr_ngm_cancellation_of_administratively_infarction = {
+	modifier = {
+		country_edict_cap_add = 1
+	}
+}
+
+tr_ngm_guerrilla_tactics = {
+	modifier = {
+		force_disparity_fire_rate_mult = 0.5
+	}
+}
+
+tr_ngm_efficient_management = {
+	possible = {
+		has_tradition = tr_ngm_cancellation_of_administratively_infarction
+		has_tradition = tr_ngm_guerrilla_tactics
+		#知らん
+	}
+	modifier = {
+		#しらん#あってる？base_job_output_mult=0.1（間違ってる）
+	}
+}
+
+#(1.巨大艦隊:艦隊許容量+20  /2.大規模な艦隊司令部:艦隊指揮上限+10  /3.工廠国家:宇宙軍許容量を超過しているときに職業による資源+5%  /4.膨張した官僚機構:管理許容量超過ペナルティ-30%  /5.堅実な国家指針：布告コスト-20％)
+#(取得時：管理許容量を超過しているとき、外交発言力+30%)(完遂時:管理許容量を超過しているとき、影響力+30%)
+tr_ngm_margin_adopt = {
+	possible = {
+		#知らんempire_sprawl_over_cap_trigger=0
+	}
+	modifier = {
+		diplo_weight_mult = 0.3
+	}
+}
+
+tr_ngm_margin_finish = {
+	possible = {
+		#知らんempire_sprawl_over_cap_trigger=0
+	}
+	modifier = {
+		country_base_influence_produces_add = 0.3
+	}
+}
+
+tr_ngm_giant_fleet = {
+	modifier = {
+		country_naval_cap_mult = 0.2
+	}
+}
+
+tr_ngm_large_fleet_command = {
+	possible = {
+		has_tradition = tr_ngm_giant_fleet
+	}
+	modifier = {
+		country_command_limit_add = 20
+	}
+}
+
+tr_ngm_weapons_arsenal_country = {
+	possible = {
+		#知らんempire_sprawl_over_cap_trigger=0
+	}
+	modifier = {
+		#知らん#あってる？base_job_output_mult=0.1(間違ってる)
+	}
+}
+
+tr_ngm_rock_solid_bureaucracy = {
+	modifier = {
+		empire_size_penalty_mult = -0.3
+	}
+}
+
+tr_ngm_steady_national_guidelines = {
+	possible = {
+		has_tradition = tr_ngm_weapons_arsenal_country
+		has_tradition = tr_ngm_rock_solid_bureaucracy
+	}
+	modifier = {
+		edicts_cost_mult = -0.2
+	}
+}
+
+#(1.綿密な折衝:国境摩擦-20%  /2.隙のない外交官:情報基礎値+5  /3.経済外交:経済力による外交発言力+10%  /4.連邦軍:自国の連邦艦隊許容量への貢献値+50%  /5.棍棒外交:艦隊による外交発言力+10%  )
+#(取得時：使節+1)(完遂時:外交発言力+20%)
+tr_ngm_friendship_adopt = {
+	modifier = {
+		envoys_add = 1
+	}
+}
+
+tr_ngm_friendship_finish = {
+	modifier = {
+		diplo_weight_mult = 0.2
+	}
+}
+
+tr_ngm_in_depth_negotiations = {
+	modifier = {
+		country_border_friction_mult = -0.2
+	}
+}
+
+tr_ngm_diplomat_without_a_gap = {
+	possible = {
+		has_tradition = tr_ngm_in_depth_negotiations
+	}
+	modifier = {
+		add_base_country_intel = 5
+	}
+}
+
+tr_ngm_economic_diplomacy = {
+	modifier = {
+		diplo_weight_economy_mult = 0.1
+	}
+}
+
+tr_ngm_federal_army = {
+	modifier = {
+	}
+}
+
+tr_ngm_big_stick_diplomacy = {
+	possible = {
+		has_tradition = tr_ngm_economic_diplomacy
+		has_tradition = tr_ngm_federal_army
+	}
+	modifier = {
+		federation_naval_cap_contribution_mult = 0.5
+	}
+}
+
+#(1.外交的拡張:外交発言力+10%  /2.使節団:使節+1  /3.植民地覇権:植民地建造速度+20%  /4.宗主国の圧力:艦隊許容量+20  /5.服属する権威:従属国の友好度+30  )
+#(取得時：属国の受け入れ+10)(完遂時:属国受け入れ時の距離補正をなくす)
+tr_ngm_suzerain_adopt = {
+	modifier = {
+		#属国の受け入れ+10
+	}
+}
+
+tr_ngm_suzerain_finish = {
+	possible = {
+		has_tradition = tr_ngm_delegation
+		has_tradition = tr_ngm_authority_to_belong
+	}
+	modifier = {
+		#属国受け入れ時の距離補正をなくす
+	}
+}
+
+tr_ngm_diplomatic_expansion = {
+	possible = {
+		has_tradition = tr_ngm_suzerain_adopt
+	}
+	modifier = {
+		diplo_weight_mult = 0.1
+	}
+}
+
+tr_ngm_delegation = {
+	possible = {
+		has_tradition = tr_ngm_diplomatic_expansion
+	}
+	modifier = {
+		envoys_add = 1
+	}
+}
+
+tr_ngm_colonial_hegemony = {
+	possible = {
+		has_tradition = tr_ngm_suzerain_adopt
+	}
+	modifier = {
+		planet_colony_development_speed_mult = 0.2
+	}
+}
+
+tr_ngm_suzerainty_pressure = {
+	possible = {
+		has_tradition = tr_ngm_suzerain_adopt
+	}
+	modifier = {
+		country_naval_cap_add = 20
+	}
+}
+
+tr_ngm_authority_to_belong = {
+	possible = {
+		has_tradition = tr_ngm_colonial_hegemony
+		has_tradition = tr_ngm_suzerainty_pressure
+	}
+	modifier = {
+		country_subject_trust_cap_add = 30		#違う気がする
+	}
+}
+
+#(1.陸軍圧力:地上軍コスト-10%、地上軍建設速度-10%  /2.艦隊圧力:艦隊建造速度-20%  /3.外交圧力:外交発言力+20%  /4.圧力を支える行政力:管理許容量+20  /5.強制的友好:友好度+20  )
+#(取得時：使節+1)(完遂時:政策"介入政策"のアンロック)
+tr_ngm_strong_pressure_adopt = {
+	modifier = {
+		envoys_add = 1
+	}
+}
+
+tr_ngm_strong_pressure_finish = {
+	#(完遂時:政策"介入政策"のアンロック)
+}
+
+tr_ngm_army_pressure = {
+	modifier = {
+		armies_cost_mult = -0.1
+		planet_army_build_time_mult = -0.1
+	}
+}
+
+tr_ngm_fleet_pressure = {
+	possible = {
+		has_tradition = tr_ngm_army_pressure
+	}
+	modifier = {
+		#知らん
+	}
+}
+
+tr_ngm_diplomatic_pressure = {
+	modifier = {
+		diplo_weight_mult = 0.2
+	}
+}
+
+tr_ngm_administration_to_support_pressure = {
+	modifier = {
+		country_admin_cap_add = 20
+	}
+}
+
+tr_ngm_compulsory_friendship = {
+	possible = {
+		has_tradition = tr_ngm_diplomatic_pressure
+		has_tradition = tr_ngm_administration_to_support_pressure
+	}
+	modifier = {
+		#知らん
+	}
+}
+
+#(1.常駐諜報員:使節+1  /2.暗号解読班:解読力+5  /3.恒常的妨害:宿敵の貿易保護値-5  /4.諜報学校:解読力+5、暗号力+5  /5.影のフィクサー:開拓前哨地の影響力コスト-50%  )
+#(取得時：基礎情報値+5)(完遂時:政策"諜報政策"のアンロック)
+tr_ngm_intervention_adopt = {
+	modifier = {
+		add_base_country_intel = 5
+	}
+}
+
+tr_ngm_intervention_finish = {
+	#知らん政策"諜報政策"のアンロック
+}
+
+tr_ngm_resident_intelligence_officer = {
+	modifier = {
+		envoys_add = 1
+	}
+}
+
+tr_ngm_cryptanalysis_team = {
+	possible = {
+		has_tradition = tr_ngm_resident_intelligence_officer
+	}
+	modifier = {
+		intel_decryption_add = 5
+	}
+}
+
+tr_ngm_constant_obstruction = {
+	#知らん宿敵の貿易保護値-5
+}
+
+tr_ngm_intelligence_school = {
+	modifier = {
+		intel_decryption_add = 5
+		intel_encryption_add = 5
+	}
+}
+
+tr_ngm_shadow_fixer = {
+	possible = {
+		has_tradition = tr_ngm_constant_obstruction
+		has_tradition = tr_ngm_intelligence_school
+	}
+	modifier = {
+		starbase_buildings_influence_cost_mult = 0.5
+	}
+}
+
+#(1.大艦巨砲主義:コルベット建造速度-5%、戦艦建造速度+5%  /2.巨人軍:地上軍「巨人軍」を建造可能とする  /3.巨大建築:巨大構造物建築枠+1  /4.巨大な発言力:外交発言力+10%  /5.巨大な帝国:開拓前哨地建造コスト-20%、国境摩擦+20%)
+#(取得時：ステーション船体値+10%)(完遂時:船体値+10%)
+tr_ngm_gigantic_adopt = {
+	modifier = {
+		shipclass_starbase_hull_mult = 0.1
+	}
+}
+
+tr_ngm_gigantic_finish = {
+	modifier = {
+		#知らん
+	}
+}
+
+tr_ngm_dreadnought = {
+	modifier = {
+		shipsize_corvette_build_speed_mult = 0.05
+		shipsize_battleship_build_speed_mult = -0.05
+	}
+}
+
+tr_ngm_giants = {
+	#知らん巨人軍:地上軍「巨人軍」を建造可能とする
+}
+
+tr_ngm_megastructure = {
+	modifier = {
+		country_megastructure_build_cap_add = 1
+	}
+}
+
+tr_ngm_gians_voice = {
+	modifier = {
+		diplo_weight_mult = 0.3
+	}
+}
+
+tr_ngm_mighty_empire = {
+	modifier = {
+		starbase_buildings_influence_cost_mult = -0.2
+		country_border_friction_mult = 0.2
+	}
+}
+
+#(1.情報資産の拡大:交易価値+10%  /2.情報資産の保護:交易保護値+5  /3.諜報局の設置:解読力+5  /4.防諜局の設置:暗号力+5  /5.情報犯罪の取り締まり:全惑星で犯罪度-10)
+#(取得時：情報基礎値+5)(完遂時:解読力+10)
+tr_ngm_information_adopt = {
+	modifier = {
+		add_base_country_intel = 5
+	}
+}
+
+tr_ngm_information_finish = {
+	modifier = {
+		intel_decryption_add = 10
+	}
+}
+
+tr_ngm_expansion_of_information_assets = {
+	modifier = {
+		trade_value_mult = 0.1
+	}
+}
+
+tr_ngm_protection_of_information_assets = {
+	possible = {
+		has_tradition = tr_ngm_expansion_of_information_assets
+	}
+	modifier = {
+		local_trade_protection_add = 5
+	}
+}
+
+tr_ngm_establishment_of_intelligence_bureau = {
+	modifier = {
+		intel_decryption_add = 5
+	}
+}
+
+tr_ngm_establishment_of_counterintelligence_bureau = {
+	modifier = {
+		intel_encryption_add = 5
+	}
+}
+
+tr_ngm_control_of_information_crime = {
+	possible = {
+		has_tradition = tr_ngm_establishment_of_intelligence_bureau
+		has_tradition = tr_ngm_establishment_of_counterintelligence_bureau
+	}
+	modifier = {
+		planet_crime_add = -10
+	}
+}
+
+#(1.憲法訴訟:幸福度+5%  /2.事前法令審査:布告コスト-25%  /3.法務局の拡充:布告許容量+1  /4.議員権限の強化:統治志向魅力+33%  /5.立法機関の確立:影響力+1  )
+#(取得時：安定度+5)(完遂時:布告許容量+2)
+tr_ngm_legislation_adopt = {
+	modifier = {
+		planet_stability_add = 5
+	}
+}
+
+tr_ngm_legislation_finish = {
+	modifier = {
+		country_edict_cap_add = 2
+	}
+}
+
+tr_ngm_constitutional_lawsuit = {
+	modifier = {
+		pop_happiness = 0.05
+	}
+}
+
+tr_ngm_preliminary_legal_review = {
+	possible = {
+		has_tradition = tr_ngm_constitutional_lawsuit
+	}
+	modifier = {
+		edicts_cost_mult = -0.25
+	}
+}
+
+tr_ngm_expansion_of_the_legal_affairs_bureau = {
+	modifier = {
+		country_edict_cap_add = 1
+	}
+}
+
+tr_ngm_strengthening_parliamentary_authority = {
+	modifier = {
+		pop_government_ethic_attraction = 0.33
+	}
+}
+
+tr_ngm_establishment_of_legislative_institution = {
+	possible = {
+		has_tradition = tr_ngm_expansion_of_the_legal_affairs_bureau
+		has_tradition = tr_ngm_establishment_of_legislative_institution
+	}
+	modifier = {
+		country_influence_produces_add = 1
+	}
+}
+
+#(1.ガス法:エキゾチックガス生産+10%  /2.エネルギー粉末精製:揮発性粉末生産+10%  /3.結晶生産体制:レアクリスタル生産+10%  /4.最先端工業:化学技師、透過技師、ガス精製技師の維持費-35%  /5.先端工場:「先端工場」を建設可能とする)
+#(取得時：ステーション生産+10%)(完遂時:各戦略資源生産量+10%)
+tr_ngm_purification_adopt = {
+	modifier = {
+		station_gatherers_produces_mult = 0.1
+	}
+}
+
+tr_ngm_purification_finish = {
+	modifier = {
+		country_base_volatile_motes_produces_add = 0.1
+		country_base_exotic_gases_produces_add = 0.1
+		country_base_rare_crystals_produces_add = 0.1		#違う
+	}
+}
+
+tr_ngm_gas_law = {
+	modifier = {
+		country_base_exotic_gases_produces_add = 0.1
+	}
+}
+
+tr_ngm_energy_powder_refining = {
+	modifier = {
+		country_base_volatile_motes_produces_add = 0.1
+	}
+}
+
+tr_ngm_crystal_production_system = {
+	modifier = {
+		country_base_rare_crystals_produces_add = 0.1
+	}
+}
+
+tr_ngm_latast_industrial = {
+	possible = {
+		has_tradition = tr_ngm_gas_law
+		has_tradition = tr_ngm_energy_powder_refining
+		has_tradition = tr_ngm_crystal_production_system
+	}
+	modifier = {
+		#知らん化学技師、透過技師、ガス精製技師の維持費-35%
+	}
+}
+
+tr_ngm_advanced_factory = {
+	possible = {
+		has_tradition = tr_ngm_gas_law
+		has_tradition = tr_ngm_energy_powder_refining
+		has_tradition = tr_ngm_crystal_production_system
+	}
+	modifier = {
+		#知らん「先端工場」を建設可能とする
+	}
+}
+
+#(1.鉱業法:すべての惑星の鉱物区域+3  /2.惑星探査:ステーション生産+10%  /3.食品工業:すべての惑星の農業区域+3  /4.大量生産体制:造船速度+30%  /5.産業研究:研究（産業学）速度+10%)
+#(取得時：食料生産量+10%)(完遂時:鉱物生産量+10%)
+tr_ngm_production_adopt = {
+	modifier = {
+		country_food_produces_mult = 0.1
+	}
+}
+
+tr_ngm_production_finish = {
+	modifier = {
+		country_minerals_produces_mult = 0.1
+	}
+}
+
+tr_ngm_mining_act = {
+	modifier = {
+		#知らん
+	}
+}
+
+tr_ngm_planetary_exploration = {
+	possible = {
+		has_tradition = tr_ngm_mining_act
+	}
+	modifier = {
+		station_gatherers_produces_mult = 0.1
+	}
+}
+
+tr_ngm_food_industry = {
+	modifier = {
+		#知らん
+	}
+}
+
+tr_ngm_mass_production_system = {
+	modifier = {
+		#知らん
+	}
+}
+
+tr_ngm_industrial_research = {
+	possible = {
+		has_tradition = tr_ngm_food_industry
+		has_tradition = tr_ngm_mass_production_system
+	}
+	modifier = {
+		category_industry_research_speed_mult = 0.1
+	}
+}
+
+#(1.相続税の緩和:統治者幸福度+10% /2.世襲称号:統合力+10% /3.技術の継承:リーダースキル上限+2  /4.領地相続:農民、鉱山労働者の生産+5%  /5.世襲国家:安定度+5)
+#(取得時：統治者Popの資源生産+5%)(完遂時:40Popごとに貴族Job+1)
+tr_ngm_hereditary_adopt = {
+	modifier = {
+		planet_jobs_ruler_produces_mult = 0.05
+	}
+}
+
+tr_ngm_hereditary_finish = {
+	modifier = {
+		job_noble_per_pop = 0.025
+	}
+}
+
+tr_ngm_inheritance_tax_relief = {
+	modifier = {
+		pop_cat_ruler_happiness = 0.1
+	}
+}
+
+tr_ngm_hereditary_title = {
+	possible = {
+		has_tradition = tr_ngm_inheritance_tax_relief
+	}
+	modifier = {
+		country_unity_produces_mult = 0.1
+	}
+}
+
+tr_ngm_inheritance_of_technology = {
+	modifier = {
+		leader_skill_levels = 2
+	}
+}
+
+tr_ngm_territory_inheritance = {
+	modifier = {
+		planet_farmers_produces_mult = 0.05
+		planet_miners_produces_mult = 0.05
+	}
+}
+
+tr_ngm_hereditary_nation = {
+	possible = {
+		has_tradition = tr_ngm_inheritance_of_technology
+		has_tradition = tr_ngm_territory_inheritance
+	}
+	modifier = {
+		planet_stability_add = 5
+	}
+}

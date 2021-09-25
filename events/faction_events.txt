@@ -2,7 +2,9 @@
 # Pop Faction Events
 # by Maximilian Olbers
 ###############################
+
 namespace = factions
+
 # A faction is formed
 pop_faction_event = {
 	id = factions.1
@@ -92,30 +94,27 @@ pop_faction_event = {
 				is_pop_faction_type = NGM_supremacy
 			}
 			success_text = {
-				hidden:owner = {
-					NOT = {
-						has_country_flag = first_faction
-					}
-				}
+				hidden:owner = { NOT = { has_country_flag = first_faction } }
 				text = factions.1.desc.firstfinisher
 			}
 		}
 	}
+
 	picture = GFX_evt_galactic_senate
 	show_sound = event_factions
+
 	is_triggered_only = yes
+	
 	trigger = {
 		#NOT = {
 		#	owner = { has_country_flag = first_faction }
 		#}
 	}
+	
 	after = {
-		hidden_effect = {
-			owner = {
-				set_country_flag = first_faction
-			}
-		}
+		hidden_effect = { owner = { set_country_flag = first_faction } }
 	}
+
 	option = {
 		name = OK
 		hidden_effect = {
@@ -135,16 +134,18 @@ country_event = {
 	id = factions.10
 	hide_window = yes
 	is_triggered_only = yes
+
 	trigger = {
 		is_country_type = default
 		from = {
 			is_guardian_country = yes
 		}
 	}
+
 	immediate = {
 		set_timed_country_flag = {
 			flag = killed_guardian
-			days = 7200			# 20 year
+			days = 7200 # 20 year
 		}
 	}
 }
@@ -154,6 +155,7 @@ country_event = {
 	id = factions.11
 	hide_window = yes
 	is_triggered_only = yes
+
 	trigger = {
 		OR = {
 			is_country_type = default
@@ -164,15 +166,16 @@ country_event = {
 			is_country_type = default
 		}
 	}
+
 	immediate = {
 		set_timed_country_flag = {
 			flag = recent_comms_timed
-			days = 3600			# 10 years
+			days = 3600 # 10 years
 		}
 		from = {
 			set_timed_country_flag = {
 				flag = recent_comms_timed
-				days = 3600				# 10 years
+				days = 3600 # 10 years
 			}
 		}
 	}
@@ -183,16 +186,16 @@ country_event = {
 	id = factions.12
 	hide_window = yes
 	is_triggered_only = yes
+
 	trigger = {
-		from = {
-			is_country_type = primitive
-		}
+		from = { is_country_type = primitive }
 		is_country_type = default
 	}
+
 	immediate = {
 		set_timed_country_flag = {
 			flag = recent_primitive_invasion
-			days = 7200			# 20 years
+			days = 7200 # 20 years
 		}
 	}
 }
@@ -202,33 +205,24 @@ country_event = {
 	id = factions.13
 	hide_window = yes
 	is_triggered_only = yes
+
 	immediate = {
 		from = {
 			if = {
-				limit = {
-					is_war_participant = {
-						who = root
-						side = attackers
-					}
-				}
+				limit = { is_war_participant = { who = root side = attackers } }
 				root = {
 					set_timed_country_flag = {
 						flag = entered_war_as_attacker
-						days = 7200						# 20 years
+						days = 7200 # 20 years
 					}
 				}
 			}
 			else_if = {
-				limit = {
-					is_war_participant = {
-						who = root
-						side = defenders
-					}
-				}
+				limit = { is_war_participant = { who = root side = defenders } }
 				root = {
 					set_timed_country_flag = {
 						flag = entered_war_as_defender
-						days = 7200						# 20 years
+						days = 7200 # 20 years
 					}
 				}
 			}
@@ -251,6 +245,7 @@ country_event = {
 #		}
 #	}
 #}
+
 # Industrialist Recent Monster Extermination
 # This = owner of fleet 1 (combatant)
 # From = owner of fleet 2 (destroyed)
@@ -260,6 +255,7 @@ country_event = {
 # 	id = factions.330
 # 	hide_window = yes
 # 	is_triggered_only = yes
+
 # 	trigger = {
 # 		is_country_type = default
 # 		from = {
@@ -275,6 +271,7 @@ country_event = {
 # 		}
 # 		fromfrom.solar_system = {
 # 			has_star_flag = hostile_system
+			
 # 			count_fleet_in_system = {
 # 				count < 1
 # 				limit = {
@@ -294,6 +291,7 @@ country_event = {
 # 			}
 # 		}
 # 	}
+
 # 	immediate = {
 # 		set_timed_country_flag = {
 # 			flag = recent_monster_extermination_timed
@@ -301,17 +299,20 @@ country_event = {
 # 		}
 # 	}
 # }
+
 # Xenoist 1000
+
 # Xenoist Uplift Demand
 planet_event = {
 	id = factions.1005
 	hide_window = yes
 	is_triggered_only = yes
+
 	immediate = {
 		owner = {
 			set_timed_country_flag = {
 				flag = recent_uplift_timed
-				days = 7200				# 20 years
+				days = 7200 # 20 years
 			}
 		}
 	}
@@ -328,125 +329,92 @@ country_event = {
 			text = newline
 			success_text = {
 				text = factions.2000.desc.imperialist
-				event_target:TargetFaction = {
-					is_pop_faction_type = imperialist
-				}
+				event_target:TargetFaction = { is_pop_faction_type = imperialist }
 			}
 			success_text = {
 				text = factions.2000.desc.isolationist
-				event_target:TargetFaction = {
-					is_pop_faction_type = isolationist
-				}
+				event_target:TargetFaction = { is_pop_faction_type = isolationist }
 			}
 			success_text = {
 				text = factions.2000.desc.progressive
-				event_target:TargetFaction = {
-					is_pop_faction_type = progressive
-				}
+				event_target:TargetFaction = { is_pop_faction_type = progressive }
 			}
 			success_text = {
 				text = factions.2000.desc.prosperity
-				event_target:TargetFaction = {
-					is_pop_faction_type = prosperity
-				}
+				event_target:TargetFaction = { is_pop_faction_type = prosperity }
 			}
 			success_text = {
 				text = factions.2000.desc.supremacist
-				event_target:TargetFaction = {
-					is_pop_faction_type = supremacist
-				}
+				event_target:TargetFaction = { is_pop_faction_type = supremacist }
 			}
 			success_text = {
 				text = factions.2000.desc.technologist
-				event_target:TargetFaction = {
-					is_pop_faction_type = technologist
-				}
+				event_target:TargetFaction = { is_pop_faction_type = technologist }
 			}
 			success_text = {
 				text = factions.2000.desc.totalitarian
-				event_target:TargetFaction = {
-					is_pop_faction_type = totalitarian
-				}
+				event_target:TargetFaction = { is_pop_faction_type = totalitarian }
 			}
 			success_text = {
 				text = factions.2000.desc.traditionalist
-				event_target:TargetFaction = {
-					is_pop_faction_type = traditionalist
-				}
+				event_target:TargetFaction = { is_pop_faction_type = traditionalist }
 			}
 			success_text = {
 				text = factions.2000.desc.xenoist
-				event_target:TargetFaction = {
-					is_pop_faction_type = xenoist
-				}
+				event_target:TargetFaction = { is_pop_faction_type = xenoist }
 			}
 			success_text = {
 				text = factions.2000.desc.manifesti
-				event_target:TargetFaction = {
-					is_pop_faction_type = manifesti
-				}
+				event_target:TargetFaction = { is_pop_faction_type = manifesti }
 			}
 			# 資本主義
 			success_text = {
 				text = factions.2000.desc.NGM_mammonism
-				event_target:TargetFaction = {
-					is_pop_faction_type = NGM_mammonism
-				}
+				event_target:TargetFaction = { is_pop_faction_type = NGM_mammonism }
 			}
 			# 社会主義
 			success_text = {
 				text = factions.2000.desc.NGM_collectivism
-				event_target:TargetFaction = {
-					is_pop_faction_type = NGM_collectivism
-				}
+				event_target:TargetFaction = { is_pop_faction_type = NGM_collectivism }
 			}
 			# 保全主義
 			success_text = {
 				text = factions.2000.desc.NGM_environmentalism
-				event_target:TargetFaction = {
-					is_pop_faction_type = NGM_environmentalism
-				}
+				event_target:TargetFaction = { is_pop_faction_type = NGM_environmentalism }
 			}
 			# 開発主義
 			success_text = {
 				text = factions.2000.desc.NGM_industrialism
-				event_target:TargetFaction = {
-					is_pop_faction_type = NGM_industrialism
-				}
+				event_target:TargetFaction = { is_pop_faction_type = NGM_industrialism }
 			}
 			# 介入主義
 			success_text = {
 				text = factions.2000.desc.NGM_hawks
-				event_target:TargetFaction = {
-					is_pop_faction_type = NGM_hawks
-				}
+				event_target:TargetFaction = { is_pop_faction_type = NGM_hawks }
 			}
 			# 中立主義
 			success_text = {
 				text = factions.2000.desc.NGM_doves
-				event_target:TargetFaction = {
-					is_pop_faction_type = NGM_doves
-				}
+				event_target:TargetFaction = { is_pop_faction_type = NGM_doves }
 			}
 			# 栄望主義
 			success_text = {
 				text = factions.2000.desc.NGM_reputation
-				event_target:TargetFaction = {
-					is_pop_faction_type = NGM_reputation
-				}
+				event_target:TargetFaction = { is_pop_faction_type = NGM_reputation }
 			}
 			# 実利主義
 			success_text = {
 				text = factions.2000.desc.NGM_supremacy
-				event_target:TargetFaction = {
-					is_pop_faction_type = NGM_supremacy
-				}
+				event_target:TargetFaction = { is_pop_faction_type = NGM_supremacy }
 			}
 		}
 	}
+
 	picture = GFX_evt_alien_propaganda
 	show_sound = event_factions
+
 	is_triggered_only = yes
+
 	option = {
 		name = OK
 	}
@@ -456,69 +424,68 @@ country_event = {
 # Manifesti Destiny
 # By Gemma Thomson
 #########################################
+
 namespace = manifesti
+
 #Triggered by chance from on_five_year_pulse = {}
 planet_event = {
 	id = manifesti.1
 	title = manifesti.1.name
 	desc = manifesti.1.desc
 	picture = GFX_evt_tradestation_interior
-	show_sound = event_celebration
+    show_sound = event_celebration
 	location = root
+
 	is_triggered_only = yes
+
 	trigger = {
 		years_passed > 10
 		has_owner = yes
-		any_country = {
-			NOT = {
-				has_country_flag = manifesti_spawned
-			}
-		}
+        any_country = {
+            NOT = { has_country_flag = manifesti_spawned }
+        }
 		owner = {
-			is_ai = no
+            is_ai = no
 			is_regular_empire = yes
-			has_encountered_other_species = yes
+		    has_encountered_other_species = yes
 			is_at_war = no
 			NOR = {
-				is_homicidal = yes
+                is_homicidal = yes
 				is_fanatic = yes
-				has_valid_civic = civic_warrior_culture				#Keeps entertainers
-				has_country_flag = manifesti_spawned
+                has_valid_civic = civic_warrior_culture #Keeps entertainers
+                has_country_flag = manifesti_spawned
 			}
 		}
 		is_occupied_flag = no
 		OR = {
 			has_building = building_holo_theatres
 			has_building = building_hyper_entertainment_forum
-			has_building = building_autochthon_monument
-			has_building = building_corporate_monument
-			has_building = building_noble_estates
-			has_building = building_commercial_zone
-			has_district = district_hab_cultural
+            has_building = building_autochthon_monument
+            has_building = building_corporate_monument
+            has_building = building_noble_estates
+            has_building = building_commercial_zone
+            has_district = district_hab_cultural
 		}
 	}
+
 	immediate = {
 		save_event_target_as = manifesti_world
-		owner = {
-			set_country_flag = manifesti_spawned
-		}
+        owner = { set_country_flag = manifesti_spawned }
 	}
+
 	option = {
 		name = manifesti.1.a
 		begin_event_chain = {
 			event_chain = manifesti_chain
 			target = owner
 		}
-		add_modifier = {
-			modifier = planet_manifesti_joy
-			days = 720
-		}
-		hidden_effect = {
-			planet_event = {
-				id = manifesti.5
-				days = 59
-			}
-		}
+        add_modifier = {
+            modifier = planet_manifesti_joy
+            days = 720
+        }
+        hidden_effect = {
+            planet_event = { id = manifesti.5 days = 59 }
+        }
 	}
 }
 
@@ -527,86 +494,66 @@ planet_event = {
 	id = manifesti.5
 	title = manifesti.5.name
 	desc = {
-		text = manifesti.5.desc
-		trigger = {
-			NOT = {
-				has_planet_flag = manifesti_investigate
-			}
-		}
-	}
+        text = manifesti.5.desc
+        trigger = { NOT = { has_planet_flag = manifesti_investigate } }
+    }
 	desc = {
-		text = manifesti.5.investigated.desc
-		trigger = {
-			has_planet_flag = manifesti_investigate
-		}
-	}
+        text = manifesti.5.investigated.desc
+        trigger = { has_planet_flag = manifesti_investigate }
+    }
 	picture = GFX_evt_city_planet
-	show_sound = event_cityscape
+    show_sound = event_cityscape
 	location = root
+
 	is_triggered_only = yes
+
 	trigger = {
-		is_occupied_flag = no
-		owner = {
-			has_event_chain = "manifesti_chain"
-		}
+        is_occupied_flag = no
+		owner = { has_event_chain = "manifesti_chain" }
 	}
+
 	immediate = {
-		owner = {
-			add_event_chain_counter = {
-				event_chain = "manifesti_chain"
-				counter = "manifesti_rise"
-				amount = 1
-			}
-			random_owned_planet = {
-				limit = {
-					num_pops > 7
-				}
-				save_event_target_as = manifesti_world				#Can be the same world as ROOT if needs be
-			}
-		}
+        owner = {
+            add_event_chain_counter = {
+                event_chain = "manifesti_chain"
+                counter = "manifesti_rise"
+                amount = 1
+            }
+            random_owned_planet = {
+                limit = { num_pops > 7 }
+                save_event_target_as = manifesti_world #Can be the same world as ROOT if needs be
+            }
+        }
 	}
-	option = {
-		#Let them continue
+
+	option = { #Let them continue
 		name = manifesti.5.a
-		hidden_effect = {
-			event_target:manifesti_world = {
-				planet_event = {
-					id = manifesti.15
-					days = 245
-				}
-			}
-		}
+        hidden_effect = {
+            event_target:manifesti_world = {
+                planet_event = { id = manifesti.15 days = 245 }
+            }
+        }
 	}
-	option = {
-		#Make arrests
+	option = { #Make arrests
 		name = manifesti.5.b
-		if = {
-			limit = {
-				owner = {
-					is_authoritarian = yes
-				}
-			}
-			owner = {
-				add_resource = {
-					influence = -10
-				}
-			}
-		}
-		else = {
-			owner = {
-				add_resource = {
-					influence = -20
-				}
-			}
-		}
-		hidden_effect = {
-			event_target:manifesti_world = {
-				planet_event = {
-					id = manifesti.10
-					days = 93
-				}
-			}
-		}
+        if = {
+            limit = {
+                owner = { is_authoritarian = yes }
+            }
+            owner = {
+                add_resource = { influence = -10 }
+            }
+        }
+        else = {
+            owner = {
+                add_resource = { influence = -20 }
+            }
+        }
+        hidden_effect = {
+            event_target:manifesti_world = {
+                planet_event = { id = manifesti.10 days = 93 }
+            }
+        }
 	}
 }
 
@@ -616,29 +563,31 @@ planet_event = {
 	title = manifesti.10.name
 	desc = manifesti.10.desc
 	picture = GFX_evt_surreal_visions
-	show_sound = event_mystic_reveal
+    show_sound = event_mystic_reveal
 	location = root
+
 	is_triggered_only = yes
+
 	trigger = {
-		is_occupied_flag = no
-		owner = {
-			has_event_chain = "manifesti_chain"
-		}
+        is_occupied_flag = no
+		owner = { has_event_chain = "manifesti_chain" }
 	}
+
 	immediate = {
-		owner = {
-			add_event_chain_counter = {
-				event_chain = "manifesti_chain"
-				counter = "manifesti_rise"
-				amount = 1
-			}
-		}
+        owner = {
+            add_event_chain_counter = {
+                event_chain = "manifesti_chain"
+                counter = "manifesti_rise"
+                amount = 1
+            }
+        }
 	}
+
 	option = {
 		name = manifesti.10.a
-		root = {
-			remove_modifier = planet_manifesti_joy
-		}
+        root = {
+            remove_modifier = planet_manifesti_joy
+        }
 	}
 }
 
@@ -648,87 +597,66 @@ planet_event = {
 	title = manifesti.15.name
 	desc = manifesti.15.desc
 	picture = GFX_evt_smugglers_in_bar
-	show_sound = event_cityscape
+    show_sound = event_cityscape
 	location = root
+
 	is_triggered_only = yes
+
 	trigger = {
-		owner = {
-			has_event_chain = "manifesti_chain"
-		}
+		owner = { has_event_chain = "manifesti_chain" }
 	}
+
 	immediate = {
-		owner = {
-			add_event_chain_counter = {
-				event_chain = "manifesti_chain"
-				counter = "manifesti_rise"
-				amount = 1
-			}
-			random_owned_planet = {
-				#Manifesti spreads
-				limit = {
-					num_pops > 7
-				}
-				save_event_target_as = manifesti_world				#Can be the same world as ROOT if needs be
-				add_modifier = {
-					modifier = planet_manifesti_uslurp_mod
-					days = 360
-				}
-			}
-		}
+        owner = {
+            add_event_chain_counter = {
+                event_chain = "manifesti_chain"
+                counter = "manifesti_rise"
+                amount = 1
+            }
+            random_owned_planet = { #Manifesti spreads
+                limit = {
+                    num_pops > 7
+                }
+                save_event_target_as = manifesti_world #Can be the same world as ROOT if needs be
+                add_modifier = { modifier = planet_manifesti_uslurp_mod days = 360 }
+            }
+        }
 	}
-	option = {
-		#Let them continue
+
+	option = { #Let them continue
 		name = manifesti.15.a
-		owner = {
-			add_modifier = {
-				modifier = manifesti_uslurp_mod
-				days = 360
-			}
-		}
-		hidden_effect = {
-			event_target:manifesti_world = {
-				planet_event = {
-					id = manifesti.20
-					days = 145
-				}
-			}
-		}
+        owner = {
+            add_modifier = { modifier = manifesti_uslurp_mod days = 360 }
+        }
+        hidden_effect = {
+            event_target:manifesti_world = {
+                planet_event = { id = manifesti.20 days = 145 }
+            }
+        }
 	}
-	option = {
-		#Make arrests
+	option = { #Make arrests
 		name = manifesti.15.b
-		trigger = {
-			owner = {
-				is_egalitarian = no
-			}
-		}
-		if = {
-			limit = {
-				owner = {
-					is_authoritarian = yes
-				}
-			}
-			owner = {
-				add_resource = {
-					influence = -10
-				}
-			}
-		}
-		else = {
-			owner = {
-				add_resource = {
-					influence = -20
-				}
-			}
-		}
-		hidden_effect = {
-			event_target:manifesti_world = {
-				planet_event = {
-					id = manifesti.10
-					days = 93
-				}
-			}
-		}
+        trigger = {
+            owner = { is_egalitarian = no }
+        }
+        if = {
+            limit = {
+                owner = { is_authoritarian = yes }
+            }
+            owner = {
+                add_resource = { influence = -10 }
+            }
+        }
+        else = {
+            owner = {
+                add_resource = { influence = -20 }
+            }
+        }
+        hidden_effect = {
+            event_target:manifesti_world = {
+                planet_event = { id = manifesti.10 days = 93 }
+            }
+        }
 	}
 }
 
@@ -738,163 +666,151 @@ planet_event = {
 	title = manifesti.20.name
 	desc = manifesti.20.desc
 	picture = GFX_evt_surreal_visions
-	show_sound = event_mystic_reveal
+    show_sound = event_mystic_reveal
 	location = root
+
 	is_triggered_only = yes
+
 	trigger = {
-		owner = {
-			has_event_chain = "manifesti_chain"
-		}
+		owner = { has_event_chain = "manifesti_chain" }
 	}
+
 	immediate = {
-		owner = {
-			add_event_chain_counter = {
-				event_chain = "manifesti_chain"
-				counter = "manifesti_rise"
-				amount = 1
-			}
-		}
+        owner = {
+            add_event_chain_counter = {
+                event_chain = "manifesti_chain"
+                counter = "manifesti_rise"
+                amount = 1
+            }
+        }
 	}
-	option = {
-		#Let them continue
+
+	option = { #Let them continue
 		name = manifesti.20.a
-		owner = {
-			add_modifier = {
-				modifier = manifesti_reflections_mod
-				days = 720
-			}
-		}
-		hidden_effect = {
-			planet_event = {
-				id = manifesti.25
-				days = 156
-			}
-		}
+        owner = {
+            add_modifier = {
+                modifier = manifesti_reflections_mod
+                days = 720
+            }
+        }
+        hidden_effect = {
+            planet_event = { id = manifesti.25 days = 156 }
+        }
 	}
-	option = {
-		#Make arrests
+	option = { #Make arrests
 		name = manifesti.20.b
-		hidden_effect = {
-			planet_event = {
-				id = manifesti.10
-				days = 93
-			}
-		}
+        hidden_effect = {
+            planet_event = { id = manifesti.10 days = 93 }
+        }
 	}
 }
 
 # Rumours of a new faction
 planet_event = {
-	id = manifesti.25
+    id = manifesti.25
 	title = manifesti.25.name
 	desc = manifesti.25.desc
 	picture = GFX_evt_announcement
-	show_sound = event_factions
+    show_sound = event_factions
 	location = capital_scope
 	is_triggered_only = yes
+
 	trigger = {
-		owner = {
-			has_event_chain = "manifesti_chain"
-		}
+		owner = { has_event_chain = "manifesti_chain" }
 	}
-	immediate = {
-	}
-	option = {
-		name = INTERESTING
-		hidden_effect = {
-			owner = {
-				country_event = {
-					id = manifesti.26
-					days = 20
-				}				#Forces evaluation of the Manifesti faction
-			}
-		}
-	}
-	option = {
-		name = manifesti.25.b
-	}
-	after = {
-		owner = {
-			set_timed_country_flag = {
-				flag = manifesti_faction
-				days = 955
-			}			#Matches faction on_create, plus some of the evaluation event delay above
-		}
-	}
+
+    immediate = { }
+
+    option = {
+        name = INTERESTING
+        hidden_effect = {
+            owner = {
+                country_event = { id = manifesti.26 days = 20 } #Forces evaluation of the Manifesti faction
+            }
+        }
+    }
+    option = {
+        name = manifesti.25.b
+    }
+
+    after = {
+        owner = {
+            set_timed_country_flag = { flag = manifesti_faction days = 955 } #Matches faction on_create, plus some of the evaluation event delay above
+        }
+    }
 }
 
 country_event = {
-	id = manifesti.26
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		enable_faction_of_type = manifesti
-	}
+    id = manifesti.26
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        enable_faction_of_type = manifesti
+    }
 }
 
 # Manifesti faction in decline (via faction on_destroy OR faction on_create + time delay | from = pop_faction )
 country_event = {
-	id = manifesti.30
+    id = manifesti.30
 	title = manifesti.30.name
 	desc = manifesti.30.desc
 	picture = GFX_evt_galactic_senate
-	show_sound = event_factions
+    show_sound = event_factions
 	location = capital_scope
-	is_triggered_only = yes
-	trigger = {
-		exists = pop_faction
-		any_pop_faction = {
-			is_pop_faction_type = manifesti
-			faction_approval < 0.35
-		}
-		NOT = {
-			has_country_flag = manifesti_decline
-		}
-	}
-	immediate = {
-		set_country_flag = manifesti_decline		#Can force removal of the faction even if the timed "manifesti_faction" flag remains active
-		every_owned_pop = {
-			limit = {
-				OR = {
-					#Those eligible to join the faction (in lieu of a has_faction trigger for pops)
-					has_ethic = ethic_egalitarian
-					has_ethic = ethic_fanatic_egalitarian
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-			}
-			set_pop_flag = manifesti_bored
-		}
-	}
-	option = {
-		name = manifesti.30.a
-		add_modifier = {
-			modifier = manifesti_sweet_dreams_mod
-			days = 2880			#8 years
-		}
-		add_resource = {
-			society_research = 1800
-		}
-		end_event_chain = manifesti_chain
-	}
-	option = {
-		name = manifesti.30.b
-		exclusive_trigger = {
-			OR = {
-				is_authoritarian = yes
-				is_militarist = yes
-				is_xenophobe = yes
-			}
-		}
-		add_modifier = {
-			modifier = manifesti_sweet_dreams_mod
-			days = 1440			#4 years
-		}
-		add_resource = {
-			society_research = 1800
-		}
-		end_event_chain = manifesti_chain
-	}
+    is_triggered_only = yes
+
+    trigger = {
+        exists = pop_faction
+        any_pop_faction = {
+            is_pop_faction_type = manifesti
+            faction_approval < 0.35
+        }
+        NOT = {
+            has_country_flag = manifesti_decline
+        }
+    }
+
+    immediate = {
+        set_country_flag = manifesti_decline #Can force removal of the faction even if the timed "manifesti_faction" flag remains active
+        every_owned_pop = {
+            limit = {
+                OR = { #Those eligible to join the faction (in lieu of a has_faction trigger for pops)
+                    has_ethic = ethic_egalitarian
+                    has_ethic = ethic_fanatic_egalitarian
+                    has_ethic = ethic_xenophile
+                    has_ethic = ethic_fanatic_xenophile
+                    has_ethic = ethic_pacifist
+                    has_ethic = ethic_fanatic_pacifist
+                }
+            }
+            set_pop_flag = manifesti_bored
+        }
+    }
+
+    option = {
+        name = manifesti.30.a
+        add_modifier = {
+            modifier = manifesti_sweet_dreams_mod
+            days = 2880 #8 years
+        }
+        add_resource = { society_research = 1800 }
+        end_event_chain = manifesti_chain
+    }
+    option = {
+        name = manifesti.30.b
+        exclusive_trigger = {
+            OR = {
+                is_authoritarian = yes
+                is_militarist = yes
+                is_xenophobe = yes
+            }
+        }
+        add_modifier = {
+            modifier = manifesti_sweet_dreams_mod
+            days = 1440 #4 years
+        }
+        add_resource = { society_research = 1800 }
+        end_event_chain = manifesti_chain
+    }
 }

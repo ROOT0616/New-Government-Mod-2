@@ -1,8 +1,764 @@
-#tradition_christmas = {
-#	adoption_bonus = "tr_christmas_adopt"		# 必須、採用ボーナスとなる伝統の鍵
-#	finish_bonus = "tr_christmas_finish"		# 必須、採用ボーナスとなる伝統の鍵、コストは不可
-#	traditions = {								# このカテゴリーの伝統的なキーのリスト、採用と仕上げのボーナスは自動的に追加されます。
-#		"tr_my_santa_claus_tradition"
-#		...
-#	}
-#}
+# 法令
+# 1.人権法:人権保障に関する法典は、中々整備されにくい
+# 2.交易法:交易や貿易に関する規定は円滑な取引に必要である
+# 3.海賊取締法:海賊は有史以来の知的生命体の敵である
+# 4.行政法典の拡充:行政法の拡充は行政の範囲を明確にし、官僚の職務を行いやすくする
+# 5.憲法:各種法典の原則を規定する法の存在は権利の観点からは必要である
+tradition_ngm_law = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_law_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_law_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_human_rights"
+		"tr_ngm_law_trade"
+		"tr_ngm_law_pirates"
+		"tr_ngm_law_government"
+		"tr_ngm_constitution"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 悪徳
+# 1.狙い撃ち:敵対する船であれば、集中攻撃することが確実だ
+# 2.浸透:敵対国家に対しては常に浸透する必要がある
+# 3.憎しみの連鎖:相手を憎むことで相手は誰かを憎むようになるだろう
+# 4.独占:利益や富は最も強き者のものになる
+# 5.破壊工作:敵を密かに破壊し、妨害することで我が国に利益が生まれる
+tradition_ngm_virture = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_virture_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_virture_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_sniper"
+		"tr_ngm_penetration"
+		"tr_ngm_chain_harted"
+		"tr_ngm_exclusive"
+		"tr_ngm_sabotage"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 研鑽
+# 1.訓練の見直し:軍事訓練は適宜見直され、適切な教育体系へと編成される
+# 2.指導者研修の高度化:各界指導者には特殊な教育を行うことで効率を強化する
+# 3.教育プログラムの見直し:各界の指導者に行われる教育プログラムを現代的に編集するべきだ
+# 4.高等教育の拡大:国民全体に高等教育が受けられるような体制を生み出す
+# 5.行政学院の整備:行政の専門家を生み出すためには専用の教育が必要である
+tradition_ngm_study = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_study_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_study_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_restudy"
+		"tr_ngm_leader_study"
+		"tr_ngm_program_study"
+		"tr_ngm_reprogram"
+		"tr_ngm_high_study"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 逸楽
+# 1.芸術の推奨:人々の心を豊かにするのは芸術である
+# 2.娯楽産業:娯楽とは人生である
+# 3.繁栄を支える者:華やかな生活を維持するためには目に見えないところで働く者が必要である
+# 4.奔放な家族:家族計画など存在しない
+# 5.長寿化:豊かな生活は社会の長寿化を生み出した
+tradition_ngm_ecstasy = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_ecstasy_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_ecstasy_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_art_good"
+		"tr_ngm_art_industry"
+		"tr_ngm_groly_supporter"
+		"tr_ngm_ecstasy_family"
+		"tr_ngm_long_live"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 前衛
+# 1.アバンギャルド:実験的な芸術様式は先取に富んでいる
+# 2.究極の和音:不安にする音と言われても、これは芸術なのだ
+# 3.学生芸術の推奨:若さにあふれる芸術は一つの分野を生み出している
+# 4.芸術の自由:芸術にあらゆる制約は不要である
+# 5.非対称芸術:考えるな感じろ
+tradition_ngm_avantgarde = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_avantgarde_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_avantgarde_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_avantgarde_2"
+		"tr_ngm_chord"
+		"tr_ngm_student_art"
+		"tr_ngm_freedom_art"
+		"tr_ngm_asymmetric"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 古典
+# 1.写実:実際に存在するものを映し、表現することで感動を生む
+# 2.音響学の極地:音であっても聴覚以外を感激させることは可能である。
+# 3.文化大臣の設置:文化を推奨し、保護する役所は必要だ
+# 4.芸術外交:芸術を通じて平和外交は新たな外交方法として注目される
+# 5.芸術の権威:古くから存在する芸術はほかの模範となり、再生産が行われている
+tradition_ngm_classic = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_classic_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_classic_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_realism"
+		"tr_ngm_acoustics"
+		"tr_ngm_ministory_culture"
+		"tr_ngm_diplomatic_art"
+		"tr_ngm_authority_art"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 学術
+# 1.国立大学:各地に存在する国立大学は安価で重層的な高等教育を社会に保障する
+# 2.文化教育の推奨:教養教育は社会を構成する各員に必要である
+# 3.専門家教育:専門家には専門家らしい教育プログラムが用意される
+# 4.指導者教育:指導者への教育は特殊なものでなくてはならない
+# 5.高度研究機関:一般の研究機関よりもより優遇され、すばらしい施設の整った研究機関を設立する
+tradition_ngm_academic = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_academic_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_academic_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_national_academy"
+		"tr_ngm_culture_study"
+		"tr_ngm_specialist_education"
+		"tr_ngm_leader_education"
+		"tr_ngm_high_education"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 記憶
+# 1.緻密な記録:忘れ去られることなく保存が行われる。
+# 2.過去の参照:未来は過去である
+# 3.記憶の追求:記憶は完全である
+# 4.犯罪記録:過ちは記録される
+# 5.価格記録:数時間前は安かった
+tradition_ngm_memory = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_memory_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_memory_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_record"
+		"tr_ngm_past"
+		"tr_ngm_memory2"
+		"tr_ngm_crime_record"
+		"tr_ngm_trade_record"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 自由
+# 1.報道の自由:知る権利は市民に保障される重要な権利だ
+# 2.結社の自由:政治や自己利益のための結社は市民に認められた権利である
+# 3.機会均等:どのような人であっても能力に応じた職や地位を目指すことができる
+# 4.移民の自由:移動の自由は星間国家においても重要な権利である
+# 5.自由権の保証:自由権は、他者を侵害する場合を除いて強固に保証される
+tradition_ngm_freedom = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_freedom_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_freedom_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_freedom_broad"
+		"tr_ngm_freedom_association"
+		"tr_ngm_freedom_ega"
+		"tr_ngm_freedom_immigrant"
+		"tr_ngm_freedom2"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 秩序
+# 1.無言の同調:......  
+# 2.適切な居場所:国家は市民の居場所を規定する。例外はない
+# 3.国家宣伝省:国家の方針や方向は耳障りのいい言葉で説明される
+# 4.適材適所:国家は市民の適性を理解している
+# 5.整然とした居住区:地位に基づく一人当たりの割り当て面積を超えることは許されない
+tradition_ngm_order = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_order_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_order_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_no_voice"
+		"tr_ngm_appropriate"
+		"tr_ngm_ministry_engagement"
+		"tr_ngm_right_place"
+		"tr_ngm_orderly"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 善隣
+# 1.国際的大使館:各国の大使館では外交以外の交流活動も頻繁に行われる。これは我が国のイメージを大きく向上させることができる
+# 2.人種のサラダボウル:種族の混在こそが我が国の特色だ
+# 3.対話の試み:対話こそ未来への道しるべだ
+# 4.移動の自由:自由な移動は国家により保証される
+# 5.受容社会:社会として、他者を受け入れる余地がある
+tradition_ngm_neighbor = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_neighbor_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_neighbor_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_ambassador"
+		"tr_ngm_salad"
+		"tr_ngm_talk"
+		"tr_ngm_free_move"
+		"tr_ngm_acceptance"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 敵視
+# 1.パラノイア:かの国は我が国を狙っているに違いない
+# 2.敵対的使節:かの国で敵対的活動を行うための使節が用意されている
+# 3.粗食:かの国に勝つために、食事を切り詰める
+# 4.超然的敵対存在:どのようなものかは関わらず、かの国は敵だ
+# 5.敵対的演説:かの国は敵だ！
+tradition_ngm_enemy = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_enemy_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_enemy_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_paranoia"
+		"tr_ngm_battle_ambass"
+		"tr_ngm_coarse_food"
+		"tr_ngm_transcendental"
+		"tr_ngm_battle_speach"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 自然
+# 1.大自然:大いなる自然は日々の生活である
+# 2.自然出生:自然に基づいた出生こそ、成長に役立つのだ
+# 3.自然研究:自然を研究することは、自然と同一化する機会である
+# 4.農業振興:食料生産の向上は自然との合一である
+# 5.エコロジー:産業を維持するために廃棄物は最小限にされる
+tradition_ngm_nature = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_nature_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_nature_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_nature2"
+		"tr_ngm_nature_growth"
+		"tr_ngm_nature_research"
+		"tr_ngm_food_nature"
+		"tr_ngm_ecology"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 機械
+# 1.戦争機械:戦争をこなすためだけに開発された悲しき機械
+# 2.グランドデザイン:大規模デザインは工業デザインの極致である
+# 3.機械局:機械デザインとロボットに関する政策を取り扱う役所を設立する
+# 4.ロボット技師会:ロボット技師の職員組合は技術の継承と労働環境の保全に役立つ
+# 5.機械人:ロボットの極致は、すなわち知的生命体である
+tradition_ngm_machine = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_machine_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_machine_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_war_machine"
+		"tr_ngm_desighn"
+		"tr_ngm_machine_depart"
+		"tr_ngm_robot_depart"
+		"tr_ngm_machine_human"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 官吏
+# 1.人事院:官僚や行政官の人事を統括し、効率化を進める
+# 2.尚書省:行政文書を管理し、円滑な行政を実現する
+# 3.公文書館:重要文書を保管し、文書行政を補完する
+# 4.総務省:各省庁を調整し、専門省庁の意見と利害を整合させる
+# 5.内閣府:行政の頂点を補佐し、補完する部局
+tradition_ngm_official = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_official_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_official_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_human_resources"
+		"tr_ngm_note"
+		"tr_ngm_document"
+		"tr_ngm_general_affairs"
+		"tr_ngm_cabinet"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 将校
+# 1.艦政本部:艦隊整備の担当部署は、艦船建造のことを日々考えている
+# 2.参謀第1課:作戦計画を立案する部局は常にあらゆる事態に備えている
+# 3.後方勤務司令部:補給部門を統括する司令部は常時国軍の運用に気遣っている
+# 4.軍務局:政府と軍部の交渉は緊密かつ迅速に行われるべきで、そのための担当部局も存在する
+# 5.兵器局:新兵器の開発や運用は兵器局により担われている
+tradition_ngm_officer = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_officer_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_officer_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_navy_depart"
+		"tr_ngm_officer_1"
+		"tr_ngm_logistics_hq"
+		"tr_ngm_military_Bureau"
+		"tr_ngm_weapons_depart"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 宙軍
+# 1.柔軟な航宙士官:柔軟な対応を認められた士官は艦船の生存性を向上させている
+# 2.厳格な整備兵:整備兵の厳格さは艦船の耐久性を向上させている
+# 3.緻密な補給士官:緻密に構築された補給計画は艦船の維持能力を劇的に改善させた
+# 4.有能な参謀:専門教育を受けた幕僚チームは艦隊能力を強化している
+# 5.沈着な提督:慌てることなく、的確な命令を行い続ける提督は、国家の枢要である
+tradition_ngm_navy = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_navy_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_navy_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_voyage"
+		"tr_ngm_maintenance"
+		"tr_ngm_logistics"
+		"tr_ngm_excellence_officer"
+		"tr_ngm_deposition_admiral"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 星軍
+# 1.厳格な将兵:将兵の規律は厳格に統制されている
+# 2.憲兵隊:治安担当の将兵は規律の維持だけではなく、治安維持にも役に立つ
+# 3.鉄の規律:不動の規律は国軍の枢要である
+# 4.地上補給拠点:補給拠点の設立は軍の維持に大きな影響を与えている
+# 5.勇猛果敢:一歩も引くな！
+tradition_ngm_planet_army = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_planet_army_adopt"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_planet_army_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_severe_general"
+		"tr_ngm_military_police"
+		"tr_ngm_iren_discipline"
+		"tr_ngm_planet_supply_point"
+		"tr_ngm_brave_and_resolute"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 高貴
+# 1.上流階級:社会の上層部こそ、国家である
+# 2.密室政治:非公開の場のほうが何かと決めやすい
+# 3.パトロン:富を有する者は文化を保護する義務がある
+# 4.栄典:有能な者は称えられる
+# 5.階級社会:政治的エリートが国家を牽引するのだ
+tradition_ngm_noble = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_noble_adopt"
+	finish_bonus = "tr_ngm_noble_finish"
+	traditions = {
+		"tr_ngm_upper_class"
+		"tr_ngm_backroom_politics"
+		"tr_ngm_patron"
+		"tr_ngm_honor"
+		"tr_ngm_class_politics"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 大衆
+# 1.大衆社会:一般民衆は社会を牽引していく存在だ
+# 2.大衆文化:広く受け入れられる文化は国家の統合に役立つ
+# 3.大衆経済:国家経済を牽引するのは一般民衆だ
+# 4.民衆政治:多数派の政治は、一般論的な正義を生み出しやすい
+# 5.忠実な大衆:大衆は国家に引っ張られる
+tradition_ngm_mass = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_mass_adopt"
+	finish_bonus = "tr_ngm_mass_finish"
+	traditions = {
+		"tr_ngm_mass_society"
+		"tr_ngm_mass_culture"
+		"tr_ngm_mass_economy"
+		"tr_ngm_peoples_politics"
+		"tr_ngm_faithful_mass"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 建築
+# 1.建築計画:事前計画は建築を容易にする
+# 2.値引き交渉:大量購入は値引きにつながる
+# 3.インフラ投資:インフラの投資は、基本にして応用である
+# 4.建材局:各種建築材料は専門機関による調達が効率的だ
+# 5.巨大建築局:巨大建築は専門官庁により監督される
+tradition_ngm_building = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_building_adopt"
+	finish_bonus = "tr_ngm_building_finish"
+	traditions = {
+		"tr_ngm_building_plan"
+		"tr_ngm_discount_negotiation"
+		"tr_ngm_infrastructure_investment"
+		"tr_ngm_materials_bareau"
+		"tr_ngm_megastructure_bareau"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 切望
+# 1.外交官団の拡大:我が国の偉大さを広げるために外交を拡張していく
+# 2.友好のための介入:友好関係を維持するための工作は欠かせない
+# 3.友好宣言:友好関係を宣言し、第三者に影響を与える
+# 4.条約局:各条約を管理し、問題が発生しないよう確認を行う部署を設立する
+# 5.拡張交渉:あらゆる交渉は必要ではないかな？
+tradition_ngm_longing = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_longing_adopt"
+	finish_bonus = "tr_ngm_longing_finish"
+	traditions = {
+		"tr_ngm_expansion_diplomatic_corps"
+		"tr_ngm_intervention_for_friendship"
+		"tr_ngm_friendship_declaration"
+		"tr_ngm_treaty_bureau"
+		"tr_ngm_extended_negotiations"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 逆境
+# 1.強固な指揮統制:逸脱は許されない
+# 2.効率的行政組織:ただでさえ大きな組織が不健全化しないようにできる限り効率的に組み替える
+# 3.きめ細やかな法令:手の届かない部分を補うためにきめ細やかな法令が整備されている
+# 4.ゲリラ戦術:大軍であっても、戦い方によっては勝つことができる
+# 5.効率的管理:最大効率で全てを管理する
+tradition_ngm_adversity = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_adversity_adopt"
+	finish_bonus = "tr_ngm_adversity_finish"
+	traditions = {
+		"tr_ngm_strong_command_and_control"
+		"tr_ngm_purify_corruption"
+		"tr_ngm_cancellation_of_administratively_infarction"
+		"tr_ngm_guerrilla_tactics"
+		"tr_ngm_efficient_management"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 余裕
+# 1.巨大艦隊:我が国ほど大きい艦隊があるだろうか
+# 2.大規模な艦隊司令部:
+# 3.軍事国家:軍事力は有しているだけで優越的立ち位置を維持することができる
+# 4.膨張した官僚機構:国家の手足は遠くまで届くのだ
+# 5.国家的影響:我が国は偉大である
+tradition_ngm_margin = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_margin_adopt"
+	finish_bonus = "tr_ngm_margin_finish"
+	traditions = {
+		"tr_ngm_giant_fleet"
+		"tr_ngm_large_fleet_command"
+		"tr_ngm_weapons_arsenal_country"
+		"tr_ngm_rock_solid_bureaucracy"
+		"tr_ngm_steady_national_guidelines"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 友誼
+# 1.綿密な折衝:緻密かつ広範な話し合いにより各種問題を顕在化する前に解決する
+# 2.隙のない外交官:この国の外交官は一切の言質を与えず、浮ついたところはない
+# 3.経済外交:経済力は外交に活用可能である
+# 4.連邦軍:国際協力体制を支えることは友好関係の構築にも必要じゃないかな
+# 5.棍棒外交:やあ、話し合おうじゃないか
+tradition_ngm_friendship = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_friendship_adopt"
+	finish_bonus = "tr_ngm_friendship_finish"
+	traditions = {
+		"tr_ngm_in_depth_negotiations"
+		"tr_ngm_diplomat_without_a_gap"
+		"tr_ngm_economic_diplomacy"
+		"tr_ngm_federal_army"
+		"tr_ngm_big_stick_diplomacy"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 宗主
+# 1.外交的拡張:拡張は軍事力や先取によるものだけが含まれているのではない
+# 2.使節団:外交を行うための使節団をより拡張していく
+# 3.植民地覇権:植民地の拡大は国家の拡大である
+# 4.宗主国の圧力:宗主国として、属国には必要な影響を行使する。そうだろう？
+# 5.服属する権威:我々に服属するのは自然なことだ
+tradition_ngm_suzerain = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_suzerain_adopt"
+	finish_bonus = "tr_ngm_suzerain_finish"
+	traditions = {
+		"tr_ngm_diplomatic_expansion"
+		"tr_ngm_delegation"
+		"tr_ngm_colonial_hegemony"
+		"tr_ngm_suzerainty_pressure"
+		"tr_ngm_authority_to_belong"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 強圧
+# 1.陸軍圧力:地上軍がいるのだが、言うことを聞かないかい？
+# 2.艦隊圧力:艦隊もいるが、言うことを聞かないかい？
+# 3.外交圧力:みんながそう言っているが、言うことは聞かないかい？
+# 4.圧力を支える行政力:ハッタリであろうと、実力であろうと、それを支える基礎力が必要だ
+# 5.強制的友好:友達だろう？
+tradition_ngm_strong_pressure = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_strong_pressure_adopt"
+	finish_bonus = "tr_ngm_strong_pressure_finish"
+	traditions = {
+		"tr_ngm_army_pressure"
+		"tr_ngm_fleet_pressure"
+		"tr_ngm_diplomatic_pressure"
+		"tr_ngm_administration_to_support_pressure"
+		"tr_ngm_compulsory_friendship"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 介入
+# 1.常駐諜報員:各国大使館には諜報員も常駐しているのだ
+# 2.暗号解読班:簡易暗号など平文と同等だ
+# 3.恒常的妨害:絶え間ない諜報活動は相手を疲弊させる
+# 4.諜報学校:諜報員を育てるためには隠れた教育機関が必要だ
+# 5.影のフィクサー:我々こそが世界を操る
+tradition_ngm_intervention = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_intervention_adopt"
+	finish_bonus = "tr_ngm_intervention_finish"
+	traditions = {
+		"tr_ngm_resident_intelligence_officer"
+		"tr_ngm_cryptanalysis_team"
+		"tr_ngm_constant_obstruction"
+		"tr_ngm_intelligence_school"
+		"tr_ngm_shadow_fixer"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 巨大
+# 1.大艦巨砲主義:大きい！  強い！
+# 3.巨大建築:巨大な建築はロマンがある
+# 4.巨大な発言力:大声で話せば皆振り向く
+# 5.巨大な帝国:我が国は、デカい
+tradition_ngm_gigantic = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_gigantic_adopt"
+	finish_bonus = "tr_ngm_gigantic_finish"
+	traditions = {
+		"tr_ngm_dreadnought"
+		"tr_ngm_giants"
+		"tr_ngm_megastructure"
+		"tr_ngm_gians_voice"
+		"tr_ngm_mighty_empire"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 情報
+# 1.情報資産の拡大:情報資産とは、目に見えないが価値のあるものである
+# 2.情報資産の保護:情報資産は目に見えないが、資産であることに違いはない
+# 3.諜報局の設置:他者の情報を知るための役所は常に求められている
+# 4.防諜局の設置:防諜を専門に行う役所は常に求められている
+# 5.情報犯罪の取り締まり:情報犯罪は防ぐことが難しい分、取り締まりに注力する必要がある
+tradition_ngm_information = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_information_adopt"
+	finish_bonus = "tr_ngm_information_finish"
+	traditions = {
+		"tr_ngm_expansion_of_information_assets"
+		"tr_ngm_protection_of_information_assets"
+		"tr_ngm_establishment_of_intelligence_bureau"
+		"tr_ngm_establishment_of_counterintelligence_bureau"
+		"tr_ngm_control_of_information_crime"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 立法
+# 1.憲法訴訟:憲法に反する立法は認められない
+# 2.事前法令審査:法令を整備する前に専門家や受益者等の意見を事前に確認することができる
+# 3.法務局の拡充:法律を登記し、敷衍させるための役所を各地に設立する
+# 4.議員権限の強化:議員は特権的に政治的な影響力を行使することができる
+# 5.立法機関の確立:立法機関は独立的に権限を行使する
+tradition_ngm_legislation = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_legislation_adopt"
+	finish_bonus = "tr_ngm_legislation_finish"
+	traditions = {
+		"tr_ngm_constitutional_lawsuit"
+		"tr_ngm_preliminary_legal_review"
+		"tr_ngm_expansion_of_the_legal_affairs_bureau"
+		"tr_ngm_strengthening_parliamentary_authority"
+		"tr_ngm_establishment_of_legislative_institution"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 精製
+# 1.ガス法:精神を変容させるガスの運用については法制度の整備が求められる
+# 2.エネルギー粉末精製:エネルギーを有する粉末の生産体制構築は社会に必要である
+# 3.結晶生産体制:クリスタル生産の安定化は社会的に必要とされている
+# 4.最先端工業:最先端の工業は人々を豊かにするのだろうか
+# 5.先端工場:最先端の工場では最先端の物品が製造されるのだろうか
+tradition_ngm_purification = {
+	tree_template = "tree_2_3"
+	adoption_bonus = "tr_ngm_purification_adopt"
+	finish_bonus = "tr_ngm_purification_finish"
+	traditions = {
+		"tr_ngm_gas_law"
+		"tr_ngm_energy_powder_refining"
+		"tr_ngm_crystal_production_system"
+		"tr_ngm_latast_industrial"
+		"tr_ngm_advanced_factory"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 生産
+# 1.鉱業法:鉱業に関する法制度を改善し、効率的かつ安全な鉱山を作り上げる
+# 2.惑星探査:惑星規模で再探査を義務付け、隠れた資源を探し出す
+# 3.食品工業:食品を工場で作った方が安上がりで安全である
+# 4.大量生産体制:作っては作り、作っては作り......
+# 5.産業研究:産業開発のための研究発展は経済の両輪である
+tradition_ngm_production = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_production_adopt"
+	finish_bonus = "tr_ngm_production_finish"
+	traditions = {
+		"tr_ngm_mining_act"
+		"tr_ngm_planetary_exploration"
+		"tr_ngm_food_industry"
+		"tr_ngm_mass_production_system"
+		"tr_ngm_industrial_research"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+
+# 世襲
+# 1.相続税の緩和:世襲のために税制度はゆがめられる
+# 2.世襲称号:各員の称号は生まれたときから得られるかが決まっている
+# 3.技術の継承:特殊な技術は教育ではなく、家に属する
+# 4.領地相続:土地は売買されず、家に属する
+# 5.世襲国家:家に属するのは国も例外ではない
+tradition_ngm_hereditary = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_hereditary_adopt"
+	finish_bonus = "tr_ngm_hereditary_finish"
+	traditions = {
+		"tr_ngm_inheritance_tax_relief"
+		"tr_ngm_hereditary_title"
+		"tr_ngm_inheritance_of_technology"
+		"tr_ngm_territory_inheritance"
+		"tr_ngm_hereditary_nation"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
