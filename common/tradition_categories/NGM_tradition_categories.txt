@@ -343,28 +343,28 @@ tradition_ngm_official = {
 	}
 }
 
-# 将校
-# 1.艦政本部:艦隊整備の担当部署は、艦船建造のことを日々考えている
-# 2.参謀第1課:作戦計画を立案する部局は常にあらゆる事態に備えている
-# 3.後方勤務司令部:補給部門を統括する司令部は常時国軍の運用に気遣っている
-# 4.軍務局:政府と軍部の交渉は緊密かつ迅速に行われるべきで、そのための担当部局も存在する
-# 5.兵器局:新兵器の開発や運用は兵器局により担われている
-tradition_ngm_officer = {
-	tree_template = "tree_11_12"
-	adoption_bonus = "tr_ngm_officer_first"	# required; key of tradition that serves as adoption bonus
-	finish_bonus = "tr_ngm_officer_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
-	traditions = {
-		# list of tradition keys in this category; adoption and finish bonus are added automatically
-		"tr_ngm_navy_depart"
-		"tr_ngm_officer_1"
-		"tr_ngm_logistics_hq"
-		"tr_ngm_military_Bureau"
-		"tr_ngm_weapons_depart"
-	}
-	ai_weight = {
-		factor = 10
-	}
-}
+# # 将校
+# # 1.艦政本部:艦隊整備の担当部署は、艦船建造のことを日々考えている
+# # 2.参謀第1課:作戦計画を立案する部局は常にあらゆる事態に備えている
+# # 3.後方勤務司令部:補給部門を統括する司令部は常時国軍の運用に気遣っている
+# # 4.軍務局:政府と軍部の交渉は緊密かつ迅速に行われるべきで、そのための担当部局も存在する
+# # 5.兵器局:新兵器の開発や運用は兵器局により担われている
+# tradition_ngm_officer = {
+# 	tree_template = "tree_11_12"
+# 	adoption_bonus = "tr_ngm_officer_first"	# required; key of tradition that serves as adoption bonus
+# 	finish_bonus = "tr_ngm_officer_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+# 	traditions = {
+# 		# list of tradition keys in this category; adoption and finish bonus are added automatically
+# 		"tr_ngm_navy_depart"
+# 		"tr_ngm_officer_1"
+# 		"tr_ngm_logistics_hq"
+# 		"tr_ngm_military_Bureau"
+# 		"tr_ngm_weapons_depart"
+# 	}
+# 	ai_weight = {
+# 		factor = 10
+# 	}
+# }
 
 # 宙軍
 # 1.柔軟な航宙士官:柔軟な対応を認められた士官は艦船の生存性を向上させている
@@ -634,6 +634,7 @@ tradition_ngm_intervention = {
 
 # 巨大
 # 1.大艦巨砲主義:大きい！  強い！
+# 2.巨人軍:遺伝子改良で生み出された巨人軍は山風すら跳ね返す
 # 3.巨大建築:巨大な建築はロマンがある
 # 4.巨大な発言力:大声で話せば皆振り向く
 # 5.巨大な帝国:我が国は、デカい
@@ -704,7 +705,7 @@ tradition_ngm_legislation = {
 # 4.最先端工業:最先端の工業は人々を豊かにするのだろうか
 # 5.先端工場:最先端の工場では最先端の物品が製造されるのだろうか
 tradition_ngm_purification = {
-	tree_template = "tree_2_3"
+	tree_template = "tree_11_12"
 	adoption_bonus = "tr_ngm_purification_adopt"
 	finish_bonus = "tr_ngm_purification_finish"
 	traditions = {

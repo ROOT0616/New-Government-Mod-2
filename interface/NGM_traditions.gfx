@@ -1,0 +1,1631 @@
+spriteTypes = {
+	# 法令
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_law"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_law"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_law"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_law"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_human_rights"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_law_trade"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_law_pirates"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_law_government"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_constitution"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+	# 悪徳
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_virture"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_virture"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_virture"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_virture"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_sniper"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_penetration"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_chain_harted"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_exclusive"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_sabotage"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+	# 研鑽
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_study"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_study"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_study"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_study"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_restudy"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_leader_study"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_program_study"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_reprogram"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_high_study"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 逸楽
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_ecstasy"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_ecstasy"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_ecstasy"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_ecstasy"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_art_good"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_art_industry"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_groly_supporter"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_ecstasy_family"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_long_live"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 前衛
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_avantgarde"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_avantgarde"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_avantgarde"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_avantgarde"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_avantgarde_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_chord"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_student_art"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_freedom_art"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_asymmetric"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 古典
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_classic"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_classic"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_classic"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_classic"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_avantgarde_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_chord"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_student_art"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_freedom_art"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_asymmetric"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 学術
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_academic"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_academic"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_academic"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_academic"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_national_academy"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_culture_study"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_specialist_education"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_leader_education"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_high_education"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+	
+	# 記憶
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_memory"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_memory"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_memory"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_memory"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_record"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_past"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_memory2"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_crime_record"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_trade_record"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 自由
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_freedom"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_freedom"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_freedom"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_freedom"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_freedom_broad"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_freedom_association"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_freedom_ega"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_freedom_immigrant"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_freedom2"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 秩序
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_order"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_order"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_order"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_order"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_no_voice"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_appropriate"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_ministry_engagement"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_right_place"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_orderly"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 善隣
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_neighbor"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_neighbor"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_neighbor"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_neighbor"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_ambassador"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_salad"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_talk"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_free_move"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_acceptance"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 敵視
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_enemy"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_enemy"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_enemy"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_enemy"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_paranoia"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_battle_ambass"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_coarse_food"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_transcendental"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_battle_speach"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 自然
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_nature"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_nature"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_nature"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_nature"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_nature2"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_nature_growth"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_nature_research"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_food_nature"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_ecology"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 機械
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_machine"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_machine"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_machine"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_machine"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_war_machine"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_desighn"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_machine_depart"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_robot_depart"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_machine_human"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 官吏
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_official"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_official"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_official"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_official"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_human_resources"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_note"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_document"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_general_affairs"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_cabinet"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+	
+	# # 将校
+	# spriteType = {
+	# 	name = "GFX_tradition_hex_bg_tradition_ngm_officer"
+	# 	textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_tradition_category_bg_tradition_ngm_officer"
+	# 	textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	# }
+
+	# corneredTileSpriteType = {
+	# 	name = "GFX_tradition_category_tile_tradition_ngm_officer"
+	# 	textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	# 	borderSize = { x=140 y=140 }
+	# 	effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_tradition_category_icon_tradition_ngm_officer"
+	# 	textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_tr_ngm_navy_depart"
+	# 	textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_tr_ngm_officer_1"
+	# 	textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_tr_ngm_logistics_hq"
+	# 	textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_tr_ngm_military_Bureau"
+	# 	textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_tr_ngm_weapons_depart"
+	# 	textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	# }
+
+	# 宙軍
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_navy"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_navy"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_navy"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_navy"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_voyage"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_maintenance"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_logistics"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_excellence_officer"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_deposition_admiral"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 星軍
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_planet_army"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_planet_army"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_planet_army"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_planet_army"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_severe_general"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_military_police"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_iren_discipline"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_planet_supply_point"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_brave_and_resolute"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 高貴
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_noble"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_noble"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_noble"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_noble"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_upper_class"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_backroom_politics"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_patron"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_honor"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_class_politics"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 大衆
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_mass"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_mass"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_mass"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_mass"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_mass_society"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_mass_culture"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_mass_economy"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_peoples_politics"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_faithful_mass"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 建築
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_building"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_building"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_building"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_building"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_building_plan"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_discount_negotiation"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_infrastructure_investment"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_materials_bareau"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_megastructure_bareau"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 切望
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_longing"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_longing"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_longing"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_longing"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_expansion_diplomatic_corps"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_intervention_for_friendship"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_friendship_declaration"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_treaty_bureau"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_extended_negotiations"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 逆境
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_adversity"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_adversity"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_adversity"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_adversity"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_strong_command_and_control"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_purify_corruption"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_cancellation_of_administratively_infarction"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_guerrilla_tactics"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_efficient_management"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 余裕
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_margin"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_margin"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_margin"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_margin"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_giant_fleet"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_large_fleet_command"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_weapons_arsenal_country"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_rock_solid_bureaucracy"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_steady_national_guidelines"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 友誼
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_friendship"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_friendship"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_friendship"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_friendship"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_in_depth_negotiations"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_diplomat_without_a_gap"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_economic_diplomacy"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_federal_army"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_big_stick_diplomacy"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 宗主
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_suzerain"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_suzerain"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_suzerain"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_suzerain"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_diplomatic_expansion"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_delegation"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_colonial_hegemony"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_suzerainty_pressure"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_authority_to_belong"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 強圧
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_strong_pressure"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_strong_pressure"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_strong_pressure"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_strong_pressure"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_army_pressure"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_fleet_pressure"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_diplomatic_pressure"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_administration_to_support_pressure"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_compulsory_friendship"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 介入
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_intervention"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_intervention"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_intervention"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_intervention"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_resident_intelligence_officer"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_cryptanalysis_team"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_constant_obstruction"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_intelligence_school"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_shadow_fixer"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 巨大
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_gigantic"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_gigantic"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_gigantic"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_gigantic"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_dreadnought"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_giants"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_megastructure"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_gians_voice"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_mighty_empire"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 情報
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_information"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_information"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_information"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_information"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_expansion_of_information_assets"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_protection_of_information_assets"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_establishment_of_intelligence_bureau"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_establishment_of_counterintelligence_bureau"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_control_of_information_crime"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 立法
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_legislation"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_legislation"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_legislation"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_legislation"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_constitutional_lawsuit"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_preliminary_legal_review"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_expansion_of_the_legal_affairs_bureau"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_strengthening_parliamentary_authority"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_establishment_of_legislative_institution"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 精製
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_purification"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_purification"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_purification"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_purification"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_gas_law"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_energy_powder_refining"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_crystal_production_system"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_latast_industrial"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_advanced_factory"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 生産
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_production"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_production"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_production"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_production"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_mining_act"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_planetary_exploration"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_food_industry"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_mass_production_system"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_industrial_research"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	# 世襲
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_hereditary"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_hereditary"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_hereditary"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_hereditary"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_inheritance_tax_relief"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_hereditary_title"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_inheritance_of_technology"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_territory_inheritance"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_hereditary_nation"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
+}
