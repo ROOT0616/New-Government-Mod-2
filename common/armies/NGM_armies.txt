@@ -132,15 +132,6 @@ ngm_special_forces_army = {
 			alloys = 5
 		}
 	}
-	# ここから下はいじらなくていいよ
-	show_tech_unlock_if = {
-		OR = {
-			NOT = {
-				has_authority = auth_machine_intelligence
-			}
-			has_valid_civic = civic_machine_assimilator
-		}
-	}
 	potential = {
 		from = {
 			NOR = {
@@ -164,7 +155,6 @@ ngm_special_forces_army = {
 # 			コスト：鉱物:300	建造期間:90日	維持費:	エネルギー5
 #				ダメージ : 耐久 , 士気 , 副次的損害  6 , 6 , 300% 
 #				耐久 , 士気  400 , 
-# ngm_○○_army命名規則
 ngm_combat_machine_army = {
 	# ダメージ 2*3 = 6
 	damage = 2
@@ -179,9 +169,7 @@ ngm_combat_machine_army = {
 	# 戦争疲弊度
 	war_exhaustion = 1 
 	time = 90
-	icon = GFX_army_type_assault
-	# 前提技術
-	prerequisites = { "tech_assault_armies" }
+	icon = GFX_army_type_machine_assault
 	resources = {
 		category = armies
 		# コスト
@@ -194,17 +182,49 @@ ngm_combat_machine_army = {
 		}
 	}
 	# ここから下はいじらなくていいよ
-	show_tech_unlock_if = {
-		OR = {
-			NOT = {
-				has_authority = auth_machine_intelligence
-			}
-			has_valid_civic = civic_machine_assimilator
-		}
-	}
 	potential = {
 		owner = {
 			has_tradition = tr_ngm_war_machine
+		}
+	}
+}
+
+# 2.巨人軍	(デカい！)
+# 			コスト：鉱物:300	建造期間:90日	維持費:	エネルギー2
+#				ダメージ : 耐久 , 士気 , 副次的損害  7.5 , 9 , 200% 
+#				耐久 , 士気  800 , 500
+ngm_special_forces_army = {
+	# ダメージ 2.5*3 = 7.5
+	damage = 2
+	#  耐久 4*200 = 800
+	health = 4
+	#  士気 2.5*200 = 500
+	morale = 2.5
+	#  士気ダメージ 3*3 = 9
+	morale_damage = 3
+	# 副次的損害
+	collateral_damage = 2
+	# 戦争疲弊度
+	war_exhaustion = 1 
+	time = 150
+	icon = GFX_army_type_xenomorph
+	# 前提技術
+	prerequisites = { "tech_assault_armies" }
+	resources = {
+		category = armies
+		# コスト
+		cost = {
+			minerals = 300
+		}
+		# 維持費
+		upkeep = {
+			energy = 2
+		}
+	}
+	# ここから下はいじらなくていいよ
+	potential = {
+		owner = {
+			has_tradition = tr_ngm_giants
 		}
 	}
 }

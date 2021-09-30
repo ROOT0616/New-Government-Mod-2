@@ -559,3 +559,374 @@ building_ngm_planet_rating_agency = {
 		factor = 1
 	}
 }
+
+# 名称：サービス付き高官向け料亭（帝国首都にのみ建造可能）
+# 生産物：統合力+10
+# 維持費：エネルギー10
+# 企業帝国補正：外交発言力+20%
+# 惑星補正：犯罪度+100、犯罪度+20%、惑星を所有する国家の暗号力-7、安定度+20、豪商の職業枠+1、役員+1、事務員+2
+# 説明文：政府高官や富裕層の贈賄や裏交渉の場として利用される娯楽施設。裏カジノや闇銀行も併設されており、犯罪企業や現地政府の影響力を拡大させるとともに、腐敗を進行させていっている......
+building_ngm_sa_ko_ryo = {
+	base_buildtime = @b1_time
+	branch_office_building = yes
+	base_cap_amount = 1
+	potential = {
+		has_branch_office = yes
+		is_capital = yes
+		branch_office_owner = {
+			has_civic = civic_criminal_heritage
+			NOT = {
+				is_ai = yes
+			}
+		}
+	}
+	planet_modifier = {
+		planet_crime_add = 100
+		planet_crime_mult = 0.2
+		intel_encryption_add = -7
+		planet_stability_add = 20
+		job_merchant_add = 1
+		job_executive_add = 1
+		job_clerk_add = 2
+	}
+	country_modifier = {
+		diplo_weight_mult = 0.2
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		produces = {
+			unity = 10
+		}
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# 伝統等でアンロックされる建築
+#   ①劇場通	theatergoer	(鉱物500)(惑星に1つ)(消費財2)(学生や貧乏芸術家が集まり、自己表現を行う地域)	(惑星効果:快適度+10%)(住居+3、快適度+5)	(エンターテイナー+3)
+building_ngm_theatergoer = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = amenity
+	potential = {
+		owner = {
+			has_tradition = tr_ngm_student_art
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_gestalt = no
+				}
+			}
+			consumer_goods = 2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_gestalt = yes
+				}
+			}
+			energy = 3
+		}
+	}
+	planet_modifier = {
+		planet_housing_add = 3
+		planet_amenities_add = 5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_entertainer_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 3
+		}
+	}
+}
+
+#   ②前衛芸術広場	avant_garde_art_square	(鉱物500)(惑星に1つ)(消費財2)(これは、なんでしょう?)				(惑星効果:快適度+10%)(快適度+10)	(エンターテイナー+2、文化人+1)
+building_ngm_avant_garde_art_square = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = amenity
+	potential = {
+		owner = {
+			has_tradition = tr_ngm_asymmetric
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_gestalt = no
+				}
+			}
+			consumer_goods = 2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_gestalt = yes
+				}
+			}
+			energy = 3
+		}
+	}
+	planet_modifier = {
+		planet_amenities_mult = 0.1
+		planet_amenities_add = 10
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_entertainer_add = 2
+			job_culture_worker_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 2
+			job_evaluator_add = 1
+		}
+	}
+}
+
+#   ③帝国音楽堂	Iimperial_concert_hall	(鉱物500)(惑星に1つ)(消費財2)(荘厳な音楽で人々を圧倒し、感動させる芸術施設)	(惑星効果:統合力+10%)(統合力+5)		(文化人+2)
+building_ngm_Iimperial_concert_hall = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = amenity
+	potential = {
+		owner = {
+			has_tradition = tr_ngm_acoustics
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_gestalt = no
+				}
+			}
+			consumer_goods = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_gestalt = yes
+				}
+			}
+			energy = 2
+		}
+	}
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+		country_unity_produces_add = 5
+		job_culture_worker_add = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_culture_worker_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_evaluator_add = 2
+		}
+	}
+}
+
+#   ④帝国芸術博物館	imperial_art_museum	(鉱物500)(惑星に1つ)(消費財2)(威圧感と芸術性で人々を夢中にさせる博物館)		(惑星効果:統合力+10%)(統合力+10)	(文化人+3)
+building_ngm_imperial_art_museum = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = amenity
+	potential = {
+		owner = {
+			has_tradition = tr_ngm_authority_art
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_gestalt = no
+				}
+			}
+			consumer_goods = 2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_gestalt = yes
+				}
+			}
+			energy = 3
+		}
+	}
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+		country_unity_produces_add = 10
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_culture_worker_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_evaluator_add = 3
+		}
+	}
+}
+
+#   ⑤先端工場	premise_workshop	(鉱物500)(惑星に1つ)(エネルギー5)(最先端の工場は最先端の物品を生み出すのだろうか)(惑星効果:合金生産量+5%、消費財生産量+5%)(職人+2、合金技師+2、各種精製技師+1ずつ)
+building_ngm_premise_workshop = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = manufacturing
+	potential = {
+		owner = {
+			has_tradition = tr_ngm_advanced_factory
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_gestalt = no
+				}
+			}
+			consumer_goods = 5
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_gestalt = yes
+				}
+			}
+			energy = 7
+		}
+	}
+	planet_modifier = {
+		planet_jobs_alloys_produces_mult = 0.05
+		planet_jobs_consumer_goods_produces_mult = 0.05
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_artisan_add = 2
+			job_foundry_add = 2
+			job_chemist_add = 1
+			job_translucer_add = 1
+			job_gas_refiner_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_artisan_drone_add = 2
+			job_alloy_drone_add = 2
+			job_chemist_drone_add = 1
+			job_translucer_drone_add = 1
+			job_gas_refiner_drone_add = 1
+		}
+	}
+}

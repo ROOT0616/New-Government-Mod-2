@@ -343,28 +343,28 @@ tradition_ngm_official = {
 	}
 }
 
-# # 将校
-# # 1.艦政本部:艦隊整備の担当部署は、艦船建造のことを日々考えている
-# # 2.参謀第1課:作戦計画を立案する部局は常にあらゆる事態に備えている
-# # 3.後方勤務司令部:補給部門を統括する司令部は常時国軍の運用に気遣っている
-# # 4.軍務局:政府と軍部の交渉は緊密かつ迅速に行われるべきで、そのための担当部局も存在する
-# # 5.兵器局:新兵器の開発や運用は兵器局により担われている
-# tradition_ngm_officer = {
-# 	tree_template = "tree_11_12"
-# 	adoption_bonus = "tr_ngm_officer_first"	# required; key of tradition that serves as adoption bonus
-# 	finish_bonus = "tr_ngm_officer_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
-# 	traditions = {
-# 		# list of tradition keys in this category; adoption and finish bonus are added automatically
-# 		"tr_ngm_navy_depart"
-# 		"tr_ngm_officer_1"
-# 		"tr_ngm_logistics_hq"
-# 		"tr_ngm_military_Bureau"
-# 		"tr_ngm_weapons_depart"
-# 	}
-# 	ai_weight = {
-# 		factor = 10
-# 	}
-# }
+# 将校
+# 1.艦政本部:艦隊整備の担当部署は、艦船建造のことを日々考えている
+# 2.参謀第1課:作戦計画を立案する部局は常にあらゆる事態に備えている
+# 3.後方勤務司令部:補給部門を統括する司令部は常時国軍の運用に気遣っている
+# 4.軍務局:政府と軍部の交渉は緊密かつ迅速に行われるべきで、そのための担当部局も存在する
+# 5.兵器局:新兵器の開発や運用は兵器局により担われている
+tradition_ngm_officer = {
+	tree_template = "tree_11_12"
+	adoption_bonus = "tr_ngm_officer_first"	# required; key of tradition that serves as adoption bonus
+	finish_bonus = "tr_ngm_officer_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	traditions = {
+		# list of tradition keys in this category; adoption and finish bonus are added automatically
+		"tr_ngm_navy_depart"
+		"tr_ngm_officer_1"
+		"tr_ngm_logistics_hq"
+		"tr_ngm_military_bureau"
+		"tr_ngm_weapons_depart"
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
 
 # 宙軍
 # 1.柔軟な航宙士官:柔軟な対応を認められた士官は艦船の生存性を向上させている

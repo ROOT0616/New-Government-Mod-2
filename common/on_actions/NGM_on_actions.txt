@@ -43,6 +43,10 @@ on_leader_spawned = {
 		ngm_civic.7
 		# 特権階級のプライド
 		ngm_federation.1
+		# 研鑽	リーダーが特殊な特性をアンロック。初期リーダーが複数の特性を有している
+		ngm_tradition.2
+		# 研鑽	教育プログラムの見直し:リーダー初期レベル+1
+		ngm_tradition.3
 	}
 }
 

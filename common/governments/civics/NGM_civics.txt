@@ -808,7 +808,7 @@ civic_ngm_federation_of_the_galaxies = {
 	random_weight = {
 		base = 5
 	}
-	description = civic_tooltip_ngm_heroes_of_society_effects
+	description = "civic_tooltip_ngm_heroes_of_society_effects"
 	modifier = {
 		pop_factions_produces_mult = 0.1
 		species_leader_exp_gain = 0.2
@@ -833,7 +833,7 @@ civic_ngm_environmental_democracy = {
 	random_weight = {
 		base = 5
 	}
-	description = civic_tooltip_ngm_superintendent_of_wilderness_effects
+	description = "civic_tooltip_ngm_superintendent_of_wilderness_effects"
 	modifier = {
 		pop_environment_tolerance = 0.05
 		pop_growth_speed = 0.1
@@ -857,7 +857,7 @@ civic_ngm_religious_republicanism = {
 	random_weight = {
 		base = 5
 	}
-	description = civic_tooltip_ngm_high_priest_effects
+	description = "civic_tooltip_ngm_high_priest_effects"
 	modifier = {
 		country_unity_produces_mult = 0.1
 		planet_stability_add = 5
@@ -881,7 +881,7 @@ civic_ngm_peoples_democracy = {
 	random_weight = {
 		base = 5
 	}
-	description = civic_tooltip_ngm_secretary_effects
+	description = "civic_tooltip_ngm_secretary_effects"
 	modifier = {
 		pop_happiness = 0.05
 		planet_jobs_worker_produces_mult = 0.05
@@ -905,7 +905,7 @@ civic_ngm_cyberdemocracy = {
 	random_weight = {
 		base = 5
 	}
-	description = civic_tooltip_technocracy_effects
+	description = "civic_tooltip_technocracy_effects"
 	modifier = {
 		country_physics_research_produces_mult = 0.05
 		country_society_research_produces_mult = 0.05
@@ -930,7 +930,7 @@ civic_ngm_aristocratic_republicanism = {
 	random_weight = {
 		base = 5
 	}
-	description = civic_tooltip_ngm_crest_bearer_effects
+	description = "civic_tooltip_ngm_crest_bearer_effects"
 	modifier = {
 		country_base_influence_produces_add = 0.5
 		planet_stability_add = 5
@@ -954,7 +954,7 @@ civic_ngm_chief_secretary_system = {
 	random_weight = {
 		base = 5
 	}
-	description = civic_tooltip_ngm_secretary_effects
+	description = "civic_tooltip_ngm_secretary_effects"
 	modifier = {
 		planet_stability_add = 10
 		country_consumer_goods_produces_mult = 0.05
@@ -979,7 +979,7 @@ civic_ngm_war_lord = {
 	random_weight = {
 		base = 5
 	}
-	description = civic_tooltip_ngm_senior_advisor_effects
+	description = "civic_tooltip_ngm_senior_advisor_effects"
 	modifier = {
 		max_rivalries = 3
 		planet_army_build_speed_mult = 0.5
@@ -1004,7 +1004,7 @@ civic_ngm_communist_dictatorship = {
 	random_weight = {
 		base = 5
 	}
-	description = civic_tooltip_ngm_secretary_effects
+	description = "civic_tooltip_ngm_secretary_effects"
 	modifier = {
 		army_defense_health_mult = 0.2
 		planet_jobs_worker_produces_mult = 0.05
@@ -1028,7 +1028,7 @@ civic_ngm_demagoguery = {
 	random_weight = {
 		base = 5
 	}
-	description = civic_tooltip_ngm_pacifist_effects
+	description = "civic_tooltip_ngm_pacifist_effects"
 	modifier = {
 		planet_stability_add = 10
 	}
@@ -1051,7 +1051,7 @@ civic_ngm_order_of_chivalry = {
 	random_weight = {
 		base = 5
 	}
-	description = civic_tooltip_ngm_senior_advisor_effects
+	description = "civic_tooltip_ngm_senior_advisor_effects"
 	modifier = {
 		ship_fire_rate_mult = 0.05
 		army_morale = 0.2
@@ -1075,6 +1075,7 @@ civic_ngm_honorary_imperialism = {
 	random_weight = {
 		base = 5
 	}
+	description = "civic_tooltip_ngm_crest_bearer_effects"
 	modifier = {
 		planet_stability_add = 10
 		country_unity_produces_mult = 0.1
@@ -3620,6 +3621,7 @@ civic_ngm_corporate_empire = {
 		diplo_weight_mult = 0.1
 		job_clerk_per_pop = 0.04
 	}
+	description = "civic_tooltip_ngm_corporate_empire_effects"
 	random_weight = {
 		base = 5
 	}
@@ -3643,6 +3645,7 @@ civic_ngm_high_tech_company = {
 		country_society_research_produces_mult = 0.1
 		country_engineering_research_produces_mult = 0.1
 	}
+	description = "civic_tooltip_ngm_high_tech_company_effects"
 }
 
 # 3.重厚長大産業	smokestack_industry	(企業、開発主義である)					:合金生産量+10%、消費財生産量+10%、造船速度+5%			:星間工場群		(惑星規模に広がるコンビナート群)						(惑星につき一つ:企業国家の合金+5、企業国家の消費財+5、職人+1、冶金技師+1)	:この企業は重化学工業を中心とした大規模な工業製品を取り扱っており、その工場が惑星表面を覆うほどの工業化が進んでいる。
@@ -3667,6 +3670,7 @@ civic_ngm_smokestack_industry = {
 		country_consumer_goods_produces_mult = 0.1
 		starbase_shipyard_build_speed_mult = 0.05
 	}
+	description = "civic_tooltip_ngm_smokestack_industry_effects"
 }
 
 # 4.世襲役員	hereditary_officers	(企業、栄望主義である)					:使節+1、統合力+10%、安定度+5					:銀河サロン		(上流階級の者が集う社交界)							(惑星につき一つ:企業国家の統合力+5、企業国家の外交発言力+10、豪商+1、役員+1)	:この企業は創業家を中心に会社に多大な貢献を行った社員一家を特別役員として扱っており、企業内の団結や対外交渉などに活躍している、一種の君主制国家の様相を呈している。
@@ -3677,6 +3681,11 @@ civic_ngm_hereditary_officers = {
 				text = civic_tooltip_honorism
 				value = ethic_honorism
 				value = ethic_fanatic_honorism
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_criminal_heritage
 			}
 		}
 		authority = {
@@ -3691,6 +3700,7 @@ civic_ngm_hereditary_officers = {
 		country_unity_produces_mult = 0.1
 		planet_stability_add = 5
 	}
+	description = "civic_tooltip_ngm_hereditary_officers_effects"
 }
 
 # 5.財閥	zaibatsu		(企業、権威主義である)					:管理許容量+20%、交易価値+10%					:M&Aセンター		(他社を評価、買収することを目的とした企業)					(惑星につき一つ:惑星の交易価値+30%、豪商+1、事務員+2)				:この企業は一部の持株会社が多くの企業を支配する形をとっており、ごく少数の役員やエリートによる決定が絶対視されている。
@@ -3714,6 +3724,7 @@ civic_ngm_zaibatsu = {
 		country_admin_cap_mult = 0.2
 		trade_value_mult = 0.1
 	}
+	description = "civic_tooltip_ngm_zaibatsu_effects"
 }
 
 # 6.金融企業	financial_enterprises	(企業、資本主義、実利主義である。開発主義ではない)	:エネルギー+10%、交易価値+20%					:銀河銀行		(銀河規模に広がる投資、貯蓄、資産運用を行う銀行)				(惑星につき一つ:企業国家のエネルギー+10、惑星の交易価値+5%、事務員+3)		:この企業はコンサルティングや債権、電子通貨、金融商品等を取り扱うことに長けており、それらの産業が中心となって企業が運営されている。
@@ -3747,6 +3758,7 @@ civic_ngm_financial_enterprises = {
 		country_energy_produces_mult = 0.1
 		trade_value_mult = 0.2
 	}
+	description = "civic_tooltip_ngm_financial_enterprises_effects"
 }
 
 # 7.情報企業	information_company	(企業、物質主義である)					:解読力+5、暗号力+5、交易価値+20%				:星間広告代理店		(情報を加工し、大衆に敷衍しやすい言葉で洗脳を行う企業)				(惑星につき一つ:企業国家の快適度+10、惑星の快適度+5、事務員+3)			:この企業はSNSや広告、システムエンジニアリングなどの目に見えないものを取り扱うことが多く、総じてそれらに対する造詣が深い。
@@ -3771,6 +3783,7 @@ civic_ngm_information_company = {
 		intel_encryption_add = 5
 		trade_value_mult = 0.2
 	}
+	description = "civic_tooltip_ngm_information_company_effects"
 }
 
 # 8.社会企業	social_enterprise	(企業、資本主義ではない)				:幸福度+10%、安定度+10（奴隷使用不可。社会福祉固定）		:企業病院		(できるだけ安価に高品質な医療や福祉を行うことを目的とした社有の医療機関)	(惑星につき一つ:企業国家の社会学+10、惑星のPop成長速度+5%、医療従事者+1)	:この企業は利益だけではなく社員や顧客の幸福や利益を追求することを目指している。
@@ -3794,6 +3807,7 @@ civic_ngm_social_enterprise = {
 		pop_happiness = 0.1
 		planet_stability_add = 10
 	}
+	description = "civic_tooltip_ngm_social_enterprise_effects"
 }
 
 # 9.ゼネコン	general_contractor	(企業、開発主義である)					:建築コスト-10%、建築速度-10%、メガエンジニアリングコスト-10%	:惑星規模建築センター	(惑星で何らかの建築が行われる際に重機や物資、人員を提供する企業)		(惑星につき一つ:企業国家の鉱物+20、惑星の区域建造コスト-10%、事務員+2)		:この企業はインフラ建築や材料調達に関しての専門企業で、大規模な建築が行われる際にはこの企業の関与がないことはほとんどない。
@@ -3819,6 +3833,7 @@ civic_ngm_general_contractor = {
 		# megastructure_build_cost_mult = -0.1
 		megastructure_build_speed_mult = 0.1
 	}
+	description = "civic_tooltip_ngm_general_contractor_effects"
 }
 
 # 10.農業企業	agricultural_company	(企業、環境主義である)					:食料生産量+30%、居住性+10%					:企業農園		(社有の大規模な農園で、惑星特有の農作物取り扱っている。)			(惑星につき一つ:企業国家の食料+20、農民+3)					:この企業は農業を中心としており、自然と共生しつつ農業生産を行うことで環境系企業として存続している。
@@ -3842,6 +3857,7 @@ civic_ngm_agricultural_company = {
 		country_food_produces_mult = 0.3
 		pop_environment_tolerance = 0.1
 	}
+	description = "civic_tooltip_ngm_agricultural_company_effects"
 }
 
 # 11.運送企業	shipping_company	(企業)							:交易価値+20%、移民速度+10%、強制移住コス-20%			:社有宇宙港		(物資や旅客を効率的かつ高速に取り扱うための会社専用の宇宙港)			(惑星につき一つ:惑星の交易価値+10、支社の価値+30%、事務員+2)		:この企業は物資等の輸送や運輸、旅客運送により利益を得ており、輸送分野における実績は並ぶものがない。
@@ -3859,6 +3875,7 @@ civic_ngm_shipping_company = {
 		planet_immigration_pull_mult = 0.1
 		country_resettlement_cost_mult = -0.2
 	}
+	description = "civic_tooltip_ngm_shipping_company_effects"
 }
 
 # 12.運用会社	operating_company	(企業、資本主義、実利主義である)			:交易価値+10%、エネルギー+10%、統治者幸福度+5%			:惑星信託銀行		(惑星単位で資産や有価証券を運用して利益を追求する企業)				(惑星につき一つ:惑星の交易価値+30%、支社の価値+30%、豪商+1、事務員+3)	:この企業は出資者やクライアントの資産を最大化することを目指しており、倫理観を無視した投資運用を行い、利益を追求する。
@@ -3885,6 +3902,7 @@ civic_ngm_operating_company = {
 		country_energy_produces_mult = 0.1
 		pop_cat_ruler_happiness = 0.05
 	}
+	description = "civic_tooltip_ngm_operating_company_effects"
 }
 
 # 13.産業スパイ	industrial_espionage	(企業、実利主義である)					:交易価値+10%、解読力+10、研究力+5%				:企業諜報機関		(自社以外のあらゆる情報を収集し、他者に売却する企業)				(惑星につき一つ:企業帝国の解読力+5、惑星の犯罪度+5、事務員+2)		:この企業は国家や企業の情報を奪い、それを利用してあらゆる利益を獲得している。
@@ -3911,6 +3929,7 @@ civic_ngm_industrial_espionage = {
 		country_society_research_produces_mult = 0.1
 		country_engineering_research_produces_mult = 0.1
 	}
+	description = "civic_tooltip_ngm_industrial_espionage_effects"
 }
 
 # 14.格付会社	rating_company	(企業、栄望主義である)					:交易価値+10%、外交発言力+10%、統合力+10%			:惑星格付会社		(あらゆるものを格付けし、判断基準を創出する企業)				(惑星につき一つ:企業帝国の統合力+10、惑星の統合力+5%、事務員+2)		:この企業は人物や企業、国家、栄典を各付けし、他者の判断基準を作ることを生業としている。
@@ -3935,4 +3954,33 @@ civic_ngm_rating_company = {
 		diplo_weight_mult = 0.1
 		country_unity_produces_mult = 0.1
 	}
+	description = "civic_tooltip_ngm_rating_company_effects"
+}
+
+# 寝業師		(企業、「犯罪の系譜」を取得している。)	：利用可能な使節の数+1、外交発言力+10%、安定度+5
+# 説明：この国では裏取引や事前交渉が極めて重要な立ち位置を占めており、裏で様々な取引をこなしている。あくまで、交渉として 
+# 名称：サービス付き高官向け料亭（帝国首都にのみ建造可能）
+# 生産物：統合力+10
+# 維持費：エネルギー10
+# 企業帝国補正：外交発言力+20%
+# 惑星補正：犯罪度+100、犯罪度+20%、惑星を所有する国家の暗号力-7、安定度+20、豪商の職業枠+1、役員+1、事務員+2
+# 説明文：政府高官や富裕層の贈賄や裏交渉の場として利用される娯楽施設。裏カジノや闇銀行も併設されており、犯罪企業や現地政府の影響力を拡大させるとともに、腐敗を進行させていっている......
+civic_ngm_underhanded_trick = {
+	possible = {
+		civics = {
+			value = civic_criminal_heritage
+		}
+		authority = {
+			value = auth_corporate
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		envoys_add = 1
+		diplo_weight_mult = 0.1
+		planet_stability_add = 5
+	}
+	description = "civic_tooltip_ngm_underhanded trick_effects"
 }

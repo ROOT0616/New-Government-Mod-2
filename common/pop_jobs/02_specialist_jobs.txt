@@ -1537,7 +1537,16 @@ chemist = {
 			volatile_motes = 2
 		}
 		upkeep = {
-			minerals = 10
+			minerals = 6.5
+		}
+		# 最先端工業:化学技師、透過技師、ガス精製技師の維持費-35%
+		upkeep = {
+			trigger = {
+				NOT = {
+					has_tradition = tr_ngm_latast_industrial
+				}
+			}
+			minerals = 3.5
 		}
 	}
 
@@ -1606,7 +1615,16 @@ translucer = {
 			rare_crystals = 2
 		}
 		upkeep = {
-			minerals = 10
+			minerals = 6.5
+		}
+		# 最先端工業:化学技師、透過技師、ガス精製技師の維持費-35%
+		upkeep = {
+			trigger = {
+				NOT = {
+					has_tradition = tr_ngm_latast_industrial
+				}
+			}
+			minerals = 3.5
 		}
 	}
 
@@ -1686,7 +1704,16 @@ gas_refiner = {
 			exotic_gases = 2
 		}
 		upkeep = {
-			minerals = 10
+			minerals = 6.5
+		}
+		# 最先端工業:化学技師、透過技師、ガス精製技師の維持費-35%
+		upkeep = {
+			trigger = {
+				NOT = {
+					has_tradition = tr_ngm_latast_industrial
+				}
+			}
+			minerals = 3.5
 		}
 	}
 

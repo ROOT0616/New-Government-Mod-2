@@ -1,9 +1,9 @@
-# See traditions/README.txt for format
 @ap_evolutionary_mastery_POINTS = 3
 @ap_evolutionary_mastery_COST_MULT = -0.25
 @ap_engineered_evolution_POINTS = 3
 @ap_engineered_evolution_COST_MULT = -0.25
-# ②恒常的敵対諜報活動		(敵に対しては常に影響を与え続けなければならない)		(外交官+2、解読力+10、宿敵にした相手国の影響力-1)
+
+# ②恒常的敵対諜報活動		(敵に対しては常に影響を与え続けなければならない)		(外交官+2、解読力+10、宿敵にした相手国の影響力-1)まだ
 ap_ngm_constant_hostile_intelligence_operations = {
 	potential = {
 		NOT = {
@@ -11,20 +11,11 @@ ap_ngm_constant_hostile_intelligence_operations = {
 		}
 	}
 	# 外交官+2、解読力+10
-	# 宿敵にした相手国の影響力-1はイベントで行う（設定めんどいから後でやる）
+	# 宿敵にした相手国の影響力-1はイベントで行う
 	modifier = {
 		envoys_add = 2
 		intel_decryption_add = 10
 	}
-	# 	# アセンションパーク有効時の効果（即時）
-	# 	# この例ではツールチップ表示とイベントを起こしている
-	# 	on_enabled = {
-	# 		custom_tooltip = enable_colossus_project
-	# 		hidden_effect = {
-	# 			country_event = { id = apoc.100 }
-	# 		}
-	# 	}
-	# 変えておいて
 	ai_weight = {
 		factor = 5
 		modifier = {
@@ -160,8 +151,8 @@ ap_ngm_court_dipromacy = {
 		}
 	}
 	modifier = {
-		diplo_weight_mult = 0.2
 		country_base_influence_produces_add = 2
+		diplo_weight_mult = 0.2
 	}
 	ai_weight = {
 		factor = 5
@@ -229,7 +220,7 @@ ap_ngm_absolutely_class = {
 	}
 	modifier = {
 		planet_jobs_worker_produces_mult = 0.15
-		#知らん労働者政治力－100％
+		pop_cat_worker_political_power = -1
 		pop_cat_ruler_happiness = 0.1
 	}
 	ai_weight = {
@@ -241,7 +232,7 @@ ap_ngm_absolutely_class = {
 	}
 }
 
-#⑫象徴的構造物			(この建造物は市民の象徴であり、国家の顔である)			(巨大構造物建造枠+2、巨大構造物速度+10%、巨大構造物コスト-10%)開発もしくは物質のみ
+#⑫象徴的構造物			(この建造物は市民の象徴であり、国家の顔である)			(巨大構造物建造枠+2、巨大構造物速度+10%、合金生産+5%)開発もしくは物質のみ
 ap_ngm_symbolic_structures = {
 	potential = {
 		NOT = {
@@ -257,7 +248,7 @@ ap_ngm_symbolic_structures = {
 	modifier = {
 		megastructure_build_speed_mult = 0.1
 		country_megastructure_build_cap_add = 2
-		#知らん巨大構造物コスト-10%
+		country_alloys_produces_mult = 0.05
 	}
 	ai_weight = {
 		factor = 5
@@ -317,10 +308,10 @@ ap_ngm_luxury_must_be_enemy = {
 }
 
 #⑮帝国の大動脈			(交易網は帝国の大動脈であり、経済のためにも必要不可欠な存在である)(交易価値+30%、交易保護値+20、20Popにつき事務員Job+1、40Popにつき豪商+1)
-ap_ngm_dipromatic_think_tank = {
+ap_ngm_the_empires_main_artery = {
 	potential = {
 		NOT = {
-			has_ascension_perk = ap_ngm_dipromatic_think_tank
+			has_ascension_perk = ap_ngm_the_empires_main_artery
 		}
 	}
 	modifier = {
@@ -339,19 +330,15 @@ ap_ngm_dipromatic_think_tank = {
 }
 
 #⑯人的資源省			(人的資源を調整し、帝国全体の成長を促す省庁を設立する)		(Pop成長速度+20%、幸福度+5%)
-ap_ngm_dipromatic_think_tank = {
+ap_ngm_ministry_of_human_resources = {
 	potential = {
 		NOT = {
-			has_ascension_perk = ap_ngm_dipromatic_think_tank
+			has_ascension_perk = ap_ngm_ministry_of_human_resources
 		}
 	}
 	modifier = {
 		pop_growth_speed = 0.2
-		pop_cat_ruler_happiness = 0.05
-		pop_cat_specialist_happiness = 0.05
-		pop_cat_worker_happiness = 0.05
-		pop_cat_simple_drone_happiness = 0.05
-		pop_cat_simple_drone_happiness = 0.05
+		pop_happiness = 0.05
 	}
 	ai_weight = {
 		factor = 5
@@ -370,11 +357,7 @@ ap_ngm_ministry_of_happiness = {
 		}
 	}
 	modifier = {
-		pop_cat_ruler_happiness = 0.05
-		pop_cat_specialist_happiness = 0.05
-		pop_cat_worker_happiness = 0.05
-		pop_cat_simple_drone_happiness = 0.05
-		pop_cat_simple_drone_happiness = 0.05
+		pop_happiness = 0.05
 		planet_stability_add = 40
 	}
 	ai_weight = {
@@ -409,7 +392,7 @@ ap_ngm_victory_or_valhalla = {
 	}
 }
 
-#⑲帝国統合参謀本部		(優秀な参謀や軍官僚が集い、国軍の効率的かつ優良な運用と戦略構築を行う省庁を設置する)(亜高速移動速度+20%、FTL速度+10%、星系基地許容量+5、防衛ステーションの上限+50、宇宙軍許容量+30、指揮上限+30)
+#⑲帝国統合参謀本部		(優秀な参謀や軍官僚が集い、国軍の効率的かつ優良な運用と戦略構築を行う省庁を設置する)(亜高速移動速度+20%、FTL速度+10%、星系基地許容量+5、防衛ステーションの上限+50、宇宙軍許容量+30、指揮上限+10)
 ap_ngm_empire_joint_chiefs_of_staff = {
 	potential = {
 		NOT = {
@@ -437,7 +420,7 @@ ap_ngm_empire_joint_chiefs_of_staff = {
 ap_ngm_colonial_office = {
 	potential = {
 		NOT = {
-			has_ascension_perk = ap_ngm_dipromatic_think_tank
+			has_ascension_perk = ap_ngm_colonial_office
 		}
 	}
 	modifier = {
@@ -455,24 +438,24 @@ ap_ngm_colonial_office = {
 	}
 }
 
-#㉑純潔省			(我が国は他国と一線を画し、純潔性を維持する必要がある)		(他国からの干渉的影響を受けない)
-#ap_ngm_ministry_of_innocence = {
-#potential = {
-#NOT = {
-#has_ascension_perk = ap_ngm_ministry_of_innocence
-#}
-#}
-#modifier = {
-#知らん
-#}
-#ai_weight = {
-#factor = 5
-#modifier = {
-#factor = 5
-#num_ascension_perks > 2
-#}
-#}
-#}
+#㉑純潔省			(我が国は他国と一線を画し、純潔性を維持する必要がある)		(他国からの干渉的影響を受けない)まだ
+# ap_ngm_ministry_of_innocence = {
+# 	potential = {
+# 		NOT = {
+# 			has_ascension_perk = ap_ngm_ministry_of_innocence
+# 		}
+# 	}
+# 	modifier = {
+# 	}
+# 	ai_weight = {
+# 		factor = 5
+# 		modifier = {
+# 			factor = 5
+# 			num_ascension_perks > 2
+# 		}
+# 	}
+# }
+
 # ①大規模建築計画局			(大規模建築を行う際の資源や職人を運用し、調整する省庁を設立する)			(巨大構造物建造枠+2、巨大構造物速度+10%、研究選択肢を追加・メガエンジニアリング)（戦艦、シタデル、ゼロポイント発電の研究を完了している）
 ap_ngm_great_constructure_department = {
 	potential = {
@@ -489,7 +472,7 @@ ap_ngm_great_constructure_department = {
 			has_technology = tech_starbase_5
 		}
 		custom_tooltip = {
-			fail_text = "tech_battleships"
+			fail_text = "requires_tech_battleships"
 			has_technology = tech_battleships
 		}
 		custom_tooltip = {
@@ -500,7 +483,12 @@ ap_ngm_great_constructure_department = {
 	modifier = {
 		megastructure_build_speed_mult = 0.1
 		country_megastructure_build_cap_add = 2
-		# add_research_option = tech_mega_engineering
+	}
+	on_enabled = {
+		custom_tooltip = enable_mega_engineering_project
+		hidden_effect = {
+			country_event = { id = ngm_tradition.1 }
+		}
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて
@@ -544,11 +532,9 @@ ap_ngm_layer_countries = {
 			has_ascension_perk = ap_ngm_layer_countries
 		}
 	}
-	# 属国化要求受容度+50%
-	# 属国との友好度+50
-	# pass
 	modifier = {
-		planet_branch_offices_cost_mult = -0.3
+		country_subject_acceptance_add = 50
+		country_subject_trust_cap_add = 50
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて
@@ -648,11 +634,9 @@ ap_ngm_speed_power = {
 			has_ascension_perk = ap_ngm_speed_power
 		}
 	}
-	# 亜高速移動速度+20%
-	# 区域建造速度+10%
-	# 知らん！
 	modifier = {
 		ship_speed_mult = 0.4
+		planet_building_build_speed_mult = 0.1
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて
@@ -673,9 +657,6 @@ ap_ngm_relation_old_empire = {
 		}
 	}
 	# 没落帝国、覚醒帝国からの関係+100
-	# 知らん！
-	modifier = {
-	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて
 	ai_weight = {
@@ -694,11 +675,9 @@ ap_ngm_ministry_constructure = {
 			has_ascension_perk = ap_ngm_ministry_constructure
 		}
 	}
-	# 建造物建造コスト-20%
-	# 住居+30%
 	modifier = {
-		planet_buildings_cost_mult = -0.3
-		planet_housing_mult = 0.5
+		planet_buildings_cost_mult = -0.2
+		planet_housing_mult = 0.3
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて
@@ -722,9 +701,9 @@ ap_ngm_hanicam_house = {
 	# 建造物建造コスト-20%
 	# 住居+30%
 	modifier = {
-		ship_colonizerunity_cost_mult = -0.3
-		planet_buildings_cost_mult = -0.3
-		planet_housing_mult = 0.4
+		ship_colonizerunity_cost_mult = -0.5
+		planet_buildings_cost_mult = -0.2
+		planet_housing_mult = 0.3
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて

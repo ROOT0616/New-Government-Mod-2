@@ -2,17 +2,17 @@ spriteTypes = {
 	# 法令
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_law"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_law.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_law"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_law.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_law"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_law.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -49,17 +49,17 @@ spriteTypes = {
 	# 悪徳
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_virture"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_virture.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_virture"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_virture.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_virture"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_virture.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -96,17 +96,17 @@ spriteTypes = {
 	# 研鑽
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_study"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_study.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_study"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_study.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_study"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_study.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -144,17 +144,17 @@ spriteTypes = {
 	# 逸楽
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_ecstasy"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_ecstasy.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_ecstasy"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_ecstasy.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_ecstasy"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_ecstasy.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -192,17 +192,17 @@ spriteTypes = {
 	# 前衛
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_avantgarde"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_avantgarde.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_avantgarde"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_avantgarde.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_avantgarde"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_avantgarde.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -240,17 +240,17 @@ spriteTypes = {
 	# 古典
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_classic"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_classic.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_classic"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_classic.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_classic"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_classic.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -261,44 +261,44 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_tr_ngm_avantgarde_2"
+		name = "GFX_tr_ngm_realism"
 		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tr_ngm_chord"
+		name = "GFX_tr_ngm_acoustics"
 		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tr_ngm_student_art"
+		name = "GFX_tr_ngm_ministory_culture"
 		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tr_ngm_freedom_art"
+		name = "GFX_tr_ngm_diplomatic_art"
 		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tr_ngm_asymmetric"
+		name = "GFX_tr_ngm_authority_art"
 		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
 	}
 
 	# 学術
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_academic"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_academic.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_academic"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_academic.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_academic"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_academic.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -336,17 +336,17 @@ spriteTypes = {
 	# 記憶
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_memory"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_memory.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_memory"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_memory.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_memory"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_memory.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -384,17 +384,17 @@ spriteTypes = {
 	# 自由
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_freedom"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_freedom.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_freedom"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_freedom.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_freedom"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_freedom.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -432,17 +432,17 @@ spriteTypes = {
 	# 秩序
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_order"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_order.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_order"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_order.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_order"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_order.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -480,17 +480,17 @@ spriteTypes = {
 	# 善隣
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_neighbor"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_neighbor.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_neighbor"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_neighbor.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_neighbor"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_neighbor.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -528,17 +528,17 @@ spriteTypes = {
 	# 敵視
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_enemy"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_enemy.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_enemy"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_enemy.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_enemy"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_enemy.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -576,17 +576,17 @@ spriteTypes = {
 	# 自然
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_nature"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_nature.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_nature"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_nature.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_nature"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_nature.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -610,7 +610,7 @@ spriteTypes = {
 		name = "GFX_tr_ngm_nature_research"
 		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
 	}
-
+	
 	spriteType = {
 		name = "GFX_tr_ngm_food_nature"
 		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
@@ -624,17 +624,17 @@ spriteTypes = {
 	# 機械
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_machine"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_machine.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_machine"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_machine.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_machine"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_machine.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -672,17 +672,17 @@ spriteTypes = {
 	# 官吏
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_official"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_official.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_official"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_official.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_official"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_official.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -717,68 +717,68 @@ spriteTypes = {
 		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
 	}
 	
-	# # 将校
-	# spriteType = {
-	# 	name = "GFX_tradition_hex_bg_tradition_ngm_officer"
-	# 	textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
-	# }
+	# 将校
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_officer"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_officer.dds"
+	}
 
-	# spriteType = {
-	# 	name = "GFX_tradition_category_bg_tradition_ngm_officer"
-	# 	textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
-	# }
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_officer"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_officer.dds"
+	}
 
-	# corneredTileSpriteType = {
-	# 	name = "GFX_tradition_category_tile_tradition_ngm_officer"
-	# 	textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
-	# 	borderSize = { x=140 y=140 }
-	# 	effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-	# }
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_officer"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_officer.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
 
-	# spriteType = {
-	# 	name = "GFX_tradition_category_icon_tradition_ngm_officer"
-	# 	textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
-	# }
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_officer"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
 
-	# spriteType = {
-	# 	name = "GFX_tr_ngm_navy_depart"
-	# 	textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
-	# }
+	spriteType = {
+		name = "GFX_tr_ngm_navy_depart"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
 
-	# spriteType = {
-	# 	name = "GFX_tr_ngm_officer_1"
-	# 	textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
-	# }
+	spriteType = {
+		name = "GFX_tr_ngm_officer_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
 
-	# spriteType = {
-	# 	name = "GFX_tr_ngm_logistics_hq"
-	# 	textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
-	# }
+	spriteType = {
+		name = "GFX_tr_ngm_logistics_hq"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
 
-	# spriteType = {
-	# 	name = "GFX_tr_ngm_military_Bureau"
-	# 	textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
-	# }
+	spriteType = {
+		name = "GFX_tr_ngm_military_bureau"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
 
-	# spriteType = {
-	# 	name = "GFX_tr_ngm_weapons_depart"
-	# 	textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
-	# }
+	spriteType = {
+		name = "GFX_tr_ngm_weapons_depart"
+		textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
+	}
 
 	# 宙軍
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_navy"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_navy.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_navy"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_navy.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_navy"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_navy.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -816,17 +816,17 @@ spriteTypes = {
 	# 星軍
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_planet_army"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_planet_army.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_planet_army"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_planet_army.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_planet_army"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_planet_army.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -864,17 +864,17 @@ spriteTypes = {
 	# 高貴
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_noble"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_noble.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_noble"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_noble.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_noble"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_noble.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -912,17 +912,17 @@ spriteTypes = {
 	# 大衆
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_mass"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_mass.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_mass"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_mass.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_mass"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_mass.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -960,17 +960,17 @@ spriteTypes = {
 	# 建築
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_building"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_building.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_building"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_building.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_building"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_building.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1008,17 +1008,17 @@ spriteTypes = {
 	# 切望
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_longing"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_longing.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_longing"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_longing.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_longing"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_longing.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1056,17 +1056,17 @@ spriteTypes = {
 	# 逆境
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_adversity"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_adversity.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_adversity"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_adversity.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_adversity"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_adversity.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1104,17 +1104,17 @@ spriteTypes = {
 	# 余裕
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_margin"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_margin.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_margin"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_margin.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_margin"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_margin.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1152,17 +1152,17 @@ spriteTypes = {
 	# 友誼
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_friendship"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_friendship.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_friendship"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_friendship.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_friendship"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_friendship.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1200,17 +1200,17 @@ spriteTypes = {
 	# 宗主
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_suzerain"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_suzerain.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_suzerain"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_suzerain.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_suzerain"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_suzerain.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1248,17 +1248,17 @@ spriteTypes = {
 	# 強圧
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_strong_pressure"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_strong_pressure.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_strong_pressure"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_strong_pressure.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_strong_pressure"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_strong_pressure.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1296,17 +1296,17 @@ spriteTypes = {
 	# 介入
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_intervention"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_intervention.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_intervention"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_intervention.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_intervention"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_intervention.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1344,17 +1344,17 @@ spriteTypes = {
 	# 巨大
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_gigantic"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_gigantic.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_gigantic"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_gigantic.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_gigantic"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_gigantic.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1392,17 +1392,17 @@ spriteTypes = {
 	# 情報
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_information"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_information.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_information"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_information.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_information"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_information.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1440,17 +1440,17 @@ spriteTypes = {
 	# 立法
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_legislation"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_legislation.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_legislation"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_legislation.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_legislation"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_legislation.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1488,17 +1488,17 @@ spriteTypes = {
 	# 精製
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_purification"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_purification.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_purification"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_purification.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_purification"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_purification.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1536,17 +1536,17 @@ spriteTypes = {
 	# 生産
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_production"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_production.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_production"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_production.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_production"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_production.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1584,17 +1584,17 @@ spriteTypes = {
 	# 世襲
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_hereditary"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_discovery.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_hereditary.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_hereditary"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_hereditary.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_hereditary"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_hereditary.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}

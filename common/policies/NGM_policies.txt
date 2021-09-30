@@ -3803,3 +3803,313 @@ ngm_policies_broadcast_law = {
 		}
 	}
 }
+
+# 伝統等でアンロックされる政策
+# 1.労働法				(労働者の権利や自由を規定し、企業活動に影響を与える)labor_law
+#   ①企業規制		business_regulations	(労働者幸福度+10%)			(労働者は国民で、国民の権利は保証されるべきだ)
+#   ②労働者優先	workers_priority			(労働者幸福度+5%)				(労働者の過度な搾取は国家を損ねている)
+#   〇③一般規制	general_regulation														(過度な規制や緩和は社会の不安定を招く)
+#   ④企業優先		corporate_priority		(労働者生産量+5%)				(労働者利益よりも企業利益こそが国家への利益へ直結する)
+#   ⑤規制緩和		deregulation					(労働者生産量+10%、無職の召使Jobをアンロック)	(労働に値しない者は、値する者に仕えることで社会を回転させる)
+ngm_policies_labor_law = {
+	potential = {
+		has_tradition = tr_ngm_law_finish
+	}
+	option = {
+		name = "NAME_NGM_business_regulations"		# 企業規制	business_regulations
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_labor_law_business_regulations
+		}
+		modifier = {
+			pop_cat_worker_happiness = 0.1
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_workers_priority"		# 労働者優先	workers_priority
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_labor_law_workers_priority
+		}
+		modifier = {
+			pop_cat_worker_happiness = 0.05
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_general_regulation"		# ☆一般規制	general_regulation
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_labor_law_general_regulation
+		}
+		modifier = {
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_corporate_priority"		# 企業優先	corporate_priority
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_labor_law_corporate_priority
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.05
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_deregulation"		# 規制緩和	deregulation
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_labor_law_deregulation
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.1
+		}
+		AI_weight = {
+			weight = 10
+			modifier = {
+				factor = 1.5
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+	}
+}
+
+# 2.学術政策(国家の研究に関しての方針を規定する) academic_policy
+#   ①政府主導		government_led 			(研究選択肢+5)		(政府が研究の優先度を決定する)
+#   〇②国家後援 country_support 											(国家による研究優遇は常識の範囲に収まる)
+#   ③民間主導  	nongovernmental_initiative	(研究速度+10%)		(政府よりも民間研究機関が国家の研究を担う)
+ngm_policies_academic_policy = {
+	potential = {
+		has_tradition = tr_ngm_academic_finish
+	}
+	option = {
+		name = "NAME_NGM_government_led"		# 政府主導		government_led
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_academic_policy_government_led
+		}
+		modifier = {
+			num_tech_alternatives_add = 5
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_country_support"		# ☆国家後援 country_support
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_academic_policy_country_support
+		}
+		modifier = {
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_nongovernmental_initiative"		# 民間主導  	nongovernmental_initiative
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_academic_policy_nongovernmental_initiative
+		}
+		modifier = {
+			all_technology_research_speed = 0.1
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+}
+
+# 3.介入政策	intervention_policy	(他国に対する介入方針を決定する)
+#   ①公然としの介入	public_intervention	(外交発言力+20%)(相手に対する介入は公然と行うことが公正だ)
+#   〇②介入の手控え	holding_back_on_intervention	(暗号力+5)	(介入を控え、自分の行動を見直すべきだ。内政不干渉である)
+#   ③秘匿した介入 concealed_intervention (解読力+10)	(表にできないような介入を隠れて行っていく)
+ngm_policies_intervention_policy = {
+	potential = {
+		has_tradition = tr_ngm_strong_pressure_finish
+	}
+	option = {
+		name = "NAME_NGM_public_intervention"		# 公然としの介入	public_intervention
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_intervention_policy_public_intervention
+		}
+		modifier = {
+			diplo_weight_mult = 0.2
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_holding_back_on_intervention"		# ☆介入の手控え	holding_back_on_intervention
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_intervention_policy_holding_back_on_intervention
+		}
+		modifier = {
+			intel_encryption_add = 5
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_concealed_intervention"		# 秘匿した介入 concealed_intervention
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_intervention_policy_concealed_intervention
+		}
+		modifier = {
+			intel_decryption_add = 10
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+}
+
+# 4.諜報政策	intelligence_policy	(情報こそすべてを制する)
+#   ①対外注力	focusing_on_foreign_policy	(解読力+10)	(相手の情報を得ることこそが自国を守る)
+#   〇②バランス	balance	(情報基礎値+5)	(攻めるも守るも優劣はつけがたい)
+#   ③防諜注力	counterintelligence	(暗号力+10)	(相手に情報を隠すことこそが自国を守る)
+ngm_policies_intelligence_policy = {
+	potential = {
+		has_tradition = tr_ngm_intervention_finish
+	}
+	option = {
+		name = "NAME_NGM_focusing_on_foreign_policy"		# 対外注力	focusing_on_foreign_policy
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_intelligence_policy_focusing_on_foreign_policy
+		}
+		modifier = {
+			intel_decryption_add = 10
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_balance"		# ☆バランス	balance
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_intelligence_policy_balance
+		}
+		modifier = {
+			add_base_country_intel = 5
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_counterintelligence"		# 防諜注力	counterintelligence
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_intelligence_policy_counterintelligence
+		}
+		modifier = {
+			intel_encryption_add = 10
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+}
+
+# 5.ロボット職権	robotics	(ロボットに与えられる権限や職域の方針を決定する)
+#   ①自由意志	free_will	(ロボット維持費-10%)	(ロボットの職権や職域は、ロボット自身の希望と成果を基準に決められる)
+#   ②上司指導	managerial_guidance	(ロボット製造速度+10%)	(ロボットの職権や職域は、上司が決定を行う)
+#   ③適正優先	appropriate_priority	(ロボット生産量+10%)	(ロボットの職権や職域は、ロボット自身の適正が重視される)
+ngm_policies_robotics = {
+	potential = {
+		has_tradition = tr_ngm_machine_first
+	}
+	option = {
+		name = "NAME_NGM_free_will"		# 自由意志	free_will
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_robotics_free_will
+		}
+		modifier = {
+			planet_pops_robotics_upkeep_mult = -0.1
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_managerial_guidance"		# ☆上司指導	managerial_guidance
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_robotics_managerial_guidance
+		}
+		modifier = {
+			planet_pop_assembly_mult = 0.1
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_appropriate_priority"		# 適正優先	appropriate_priority
+		potential = {
+			always = yes
+		}
+		policy_flags = {
+			ngm_robotics_appropriate_priority
+		}
+		modifier = {
+			planet_jobs_robotic_produces_mult = 0.1
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+}

@@ -3,8 +3,16 @@ trait_ngm_youth_politics = {
 	cost = 0
 	custom_tooltip = Youth_Politics
 	potential_crossbreeding_chance = 0.1
-	opposites = { "trait_ngm_elder_politics" }
-	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE PRESAPIENT LITHOID }
+	opposites = {
+		"trait_ngm_elder_politics"
+	}
+	allowed_archetypes = {
+		BIOLOGICAL
+		ROBOT
+		MACHINE
+		PRESAPIENT
+		LITHOID
+	}
 	initial = no
 	randomized = no
 	modification = no
@@ -17,15 +25,22 @@ trait_ngm_elder_politics = {
 	cost = 0
 	custom_tooltip = Elder_Politics
 	potential_crossbreeding_chance = 0.1
-	opposites = { "trait_ngm_youth_politics" }
-	allowed_archetypes = { BIOLOGICAL ROBOT MACHINE PRESAPIENT LITHOID }
+	opposites = {
+		"trait_ngm_youth_politics"
+	}
+	allowed_archetypes = {
+		BIOLOGICAL
+		ROBOT
+		MACHINE
+		PRESAPIENT
+		LITHOID
+	}
 	initial = no
 	modification = no
 	randomized = no
-    leader_age_min = 60
-    leader_age_max = 100
+	leader_age_min = 60
+	leader_age_max = 100
 }
-
 
 # 政府後見
 # 総督:リーダー経験値取得+20%。職からの統合力+10%、職からの管理許容量+10%
@@ -36,52 +51,63 @@ leader_trait_ngm_governor_government_guardianship = {
 	cost = 0
 	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
-	leader_trait = { governor }
-	leader_class = { governor }
-	initial = no
-	randomized = no
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
 	modifier = {
 		species_leader_exp_gain = 0.2
 		planet_jobs_unity_produces_mult = 0.1
 		country_admin_cap_mult = 0.1
 	}
 }
+
 leader_trait_ngm_scientist_government_guardianship = {
 	cost = 0
 	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
-	leader_trait = { scientist }
-	leader_class = { scientist }
-	initial = no
-	randomized = no
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
 	modifier = {
 		species_leader_exp_gain = 0.2
 		science_ship_survey_speed = 0.1
 		all_technology_research_speed = 0.05
 	}
 }
+
 leader_trait_ngm_admiral_government_guardianship = {
 	cost = 0
 	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
-	leader_trait = { admiral }
-	leader_class = { admiral }
-	initial = no
-	randomized = no
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
 	modifier = {
 		species_leader_exp_gain = 0.2
 		ships_upkeep_mult = -0.1
 		ship_speed_mult = 0.1
 	}
 }
+
 leader_trait_ngm_general_government_guardianship = {
 	cost = 0
 	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
-	leader_trait = { general }
-	leader_class = { general }
-	initial = no
-	randomized = no
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
 	modifier = {
 		species_leader_exp_gain = 0.2
 		armies_upkeep_mult = -0.1
@@ -89,18 +115,561 @@ leader_trait_ngm_general_government_guardianship = {
 	}
 }
 
-# 特性
+# 伝統でとれるリーダー特性(英雄以外)
+# 総督
+# 1.経済学者	economist	(交易価値+10%)(この総督は経済理論の専門家である)
+leader_trait_ngm_economist = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		trade_value_mult = 0.1
+	}
+}
 
+# 2.調整家	coordinator	(安定度+10)(この総督は政治利益の調整により今の地位を手に入れた)
+leader_trait_ngm_coordinator = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		planet_stability_add = 10
+	}
+}
+
+# 3.上流	governor_upstream	(統合力+10%、寿命+20年)(この総督は生まれながらにして社会の上層部にいる)
+leader_trait_ngm_governor_upstream = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+		leader_age = 20
+	}
+}
+
+# 4.叩き上げ	governor_veteran	(職業による資源算出+3%、リーダー経験値取得+10%)(この総督は自らの能力によってこの地位に上り詰めた)
+leader_trait_ngm_governor_veteran = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		planet_jobs_produces_mult = 0.03
+		species_leader_exp_gain = 0.1
+	}
+}
+
+# 科学者
+# 1.科学官僚	scientocrats	(調査速度-5%、アノマリー研究速度+20%、研究速度+5%)(この科学者は官僚出身である)
+leader_trait_ngm_scientocrats = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		science_ship_survey_speed = -0.05
+		ship_anomaly_research_speed_mult = 0.2
+		all_technology_research_speed = 0.05
+	}
+}
+
+# 2.軍出身	army_brat	(調査速度+10%、軍事学の研究速度+10%)(この科学者は軍人出身である)
+leader_trait_ngm_army_brat = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		science_ship_survey_speed = 0.1
+		category_military_theory_research_speed_mult = 0.1
+	}
+}
+
+# 3.直感	intuition		(調査速度+5%、アノマリー研究速度+10%)(この科学者は自らの感覚と技術でここまで上り詰めた)
+leader_trait_ngm_intuition = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		science_ship_survey_speed = 0.05
+		ship_anomaly_research_speed_mult = 0.1
+	}
+}
+
+# 4.柔軟性	flexibility	(調査速度+10%、アノマリー研究速度+5%)(この科学者は現状を把握し、実情に合わせて結果を出す)
+leader_trait_ngm_flexibility = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		science_ship_survey_speed = 0.1
+		ship_anomaly_research_speed_mult = 0.05
+	}
+}
+
+# 5.上流	scientist_upstream	(研究速度+5%、調査速度+5%、寿命+20年)(この科学者は生まれながらにして社会の上層部にいる)
+leader_trait_ngm_scientist_upstream = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		all_technology_research_speed = 0.05
+		science_ship_survey_speed = 0.05
+		leader_age = 20
+	}
+}
+
+# 6.叩き上げ	scientist_veteran	(研究速度+10%、リーダー経験値取得+10%)(この科学者は自らの能力によってこの地位に上り詰めた)
+leader_trait_ngm_scientist_veteran = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		all_technology_research_speed = 0.1
+		species_leader_exp_gain = 0.1
+	}
+}
+
+# 提督
+# 1.軍官僚	admiral_military_bureaucracy	(船体値+5%、艦船維持費-5%、亜光速移動速度+5%)(この提督は官僚出身である)
+leader_trait_ngm_admiral_military_bureaucracy = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		ship_hull_mult = 0.05
+		ships_upkeep_mult = -0.05
+		ship_speed_mult = 0.05
+	}
+}
+
+# 2.参謀出身	admiral_from_the_general_staff	(武器射程+5%、武器ダメージ+5%、回避+5%)(この提督は有能な参謀として頭角を現した)
+leader_trait_ngm_admiral_from_the_general_staff = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		ship_weapon_range_mult = 0.05
+		ship_weapon_damage = 0.05
+		ship_evasion_mult = 0.05 
+	}
+}
+
+# 3.柔軟性	admiral_flexibility	(船体値+10%、戦闘離脱の可能性+15%)(この提督は現状を把握し、実情に合わせて命令を下す)
+leader_trait_ngm_admiral_flexibility = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		ship_hull_mult = 0.1
+		ship_disengage_chance_mult = 0.15
+	}
+}
+
+# 4.果断	admiral_decisive		(武器ダメージ+5%、亜光速移動速度+10%、)(この提督は決定したことを遂行することを重要視している)
+leader_trait_ngm_admiral_decisive = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		ship_weapon_damage = 0.05
+		ship_speed_mult = 0.1
+	}
+}
+
+# 5.幕僚チーム	admiral_staff_team	(センサー範囲+1、船体値+5%、亜光速移動速度+10%)(この提督を補佐する参謀、副官等の幕僚チームは極めて有能である)
+leader_trait_ngm_admiral_staff_team = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		ship_sensor_range_add = 1
+		ship_hull_mult = 0.05
+		ship_speed_mult = 0.1
+	}
+}
+
+# 6.上流	admiral_upstream	(亜光速移動速度+10%、緊急FTL時の損傷リスク-10%、寿命+20年)(この提督は生まれながらにして社会の上層部にいる)
+leader_trait_ngm_admiral_upstream = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		ship_speed_mult = 0.1
+		ship_emergency_ftl_mult = -0.1
+		leader_age = 20
+	}
+}
+
+# 7.叩き上げ	admiral_veteran	(回避+5%、艦船連射レート+10%、リーダー経験値取得+10%)(この提督は自らの能力によってこの地位に上り詰めた)
+leader_trait_ngm_admiral_veteran = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		ship_evasion_mult = 0.05
+		ship_fire_rate_mult = 0.1
+		species_leader_exp_gain = 0.1
+	}
+}
+
+# 将軍
+# 1.軍官僚	general_military_bureaucracy	(地上軍副次的損害-10%、地上軍維持費-10%)(この将軍は官僚出身である)
+leader_trait_ngm_general_military_bureaucracy = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		army_collateral_damage_mult = -0.1
+		armies_upkeep_mult = -0.1
+	}
+}
+
+# 2.参謀出身	general_from_the_general_staff	(地上軍士気ダメージ+15%、地上軍耐久度+10%)(この将軍は有能な参謀として頭角を現した)
+leader_trait_ngm_general_from_the_general_staff = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		army_morale_damage_mult = 0.15
+		army_health = 0.1
+	}
+}
+
+# 3.柔軟性	general_flexibility	(地上軍ダメージ+10%、地上軍戦闘離脱の可能性+10%)(この将軍は現状を把握し、実情に合わせて命令を下す)
+leader_trait_ngm_general_flexibility = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		army_damage_mult = 0.1
+		army_disengage_chance_mult = 0.1
+	}
+}
+
+# 4.果断	general_decisive		(地上軍ダメージ+10%、地上軍士気ダメージ+10%)(この将軍は決定したことを遂行することを重要視している)
+leader_trait_ngm_general_decisive = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		army_damage_mult = 0.1
+		army_morale_damage_mult = 0.1
+	}
+}
+
+# 5.幕僚チーム	general_staff_team	(地上軍ダメージ+5%、地上軍耐久+10%)(この将軍を補佐する参謀、副官等の幕僚チームは極めて有能である)
+leader_trait_ngm_general_staff_team = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		army_damage_mult = 0.05
+		army_health = 0.1
+	}
+}
+
+# 6.上流		general_upstream	(地上軍士気+5%、地上軍副次的損害-50%、寿命+20年)(この総督は生まれながらにして社会の上層部にいる)
+leader_trait_ngm_general_upstream = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		army_morale = 0.05
+		army_collateral_damage_mult = -0.5
+		leader_age = 20
+	}
+}
+
+# 7.叩き上げ	general_veteran	(地上軍ダメージ+5%、地上軍の士気+5%、地上軍戦闘離脱の可能性+10%、リーダー経験値取得+10%)(この将軍は自らの能力によってこの地位に上り詰めた)
+leader_trait_ngm_general_veteran = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		army_damage_mult = 0.05
+		army_morale = 0.05
+		army_disengage_chance_mult = 0.1
+		species_leader_exp_gain = 0.1
+	}
+}
+
+# 特性
 # trait_ngm_knight	騎士道精神	：2p	統合力+10%、犯罪度-10%	(この種族は弱きものを助け、社会正義を全うすべきだという強い信念を有した高潔性を有している。)
 trait_ngm_knight = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_gentle"
 		"trait_ngm_rascal"
 		"trait_ngm_totemowarui"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_unity_produces_mult = 0.1
 		planet_crime_mult = -0.1
@@ -113,13 +682,16 @@ trait_ngm_knight = {
 # trait_ngm_gentle	紳士      	：1p	統合力+5%、犯罪度-5%	(この種族は常に丁寧で、物腰柔らかな傾向がある。。)
 trait_ngm_gentle = {
 	cost = 1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_knight"
 		"trait_ngm_rascal"
 		"trait_ngm_totemowarui"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_unity_produces_mult = 0.05
 		planet_crime_mult = -0.05
@@ -132,13 +704,16 @@ trait_ngm_gentle = {
 # trait_ngm_rascal	悪漢      	：-1p	統合力-5%、犯罪度+5%	(この種族は利己主義的で、自分の利益を最優先する傾向がある。)
 trait_ngm_rascal = {
 	cost = -1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_knight"
 		"trait_ngm_gentle"
 		"trait_ngm_totemowarui"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_unity_produces_mult = -0.05
 		planet_crime_mult = 0.05
@@ -151,13 +726,16 @@ trait_ngm_rascal = {
 # trait_ngm_totemowarui	巨悪      	：-2p	統合力-10%、犯罪度10%	(この種族は自己利益を最大化することに余念がなく、その方法を気にしない。)
 trait_ngm_totemowarui = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_knight"
 		"trait_ngm_gentle"
 		"trait_ngm_rascal"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_unity_produces_mult = -0.1
 		planet_crime_mult = 0.1
@@ -170,11 +748,14 @@ trait_ngm_totemowarui = {
 # trait_ngm_healing	治癒遺伝子	：2p	Pop成長速度+5%、リーダー寿命+10年、地上軍耐久度+30%	(この種族の遺伝子は特殊で、自己複製能力が高く、多少の怪我や病気はすぐに治癒する。)
 trait_ngm_healing = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_unhealing"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_growth_speed = 0.05
 		leader_age = 10
@@ -188,11 +769,14 @@ trait_ngm_healing = {
 # trait_ngm_unhealing	修復不能  	：-2p	Pop成長速度-5%、リーダー寿命-10年、地上軍耐久度-30%	(この種族の遺伝子は特殊で、自己複製能力が低く、多少の怪我や病気が命取りとなる。)
 trait_ngm_unhealing = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_healing"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_growth_speed = -0.05
 		leader_age = -10
@@ -206,11 +790,14 @@ trait_ngm_unhealing = {
 # trait_ngm_assimilation	身体的同化	：1p	居住性+10%、Popの移住-10%	(この種族は、身体的な同化機能が高く、どのような環境であれ、ある程度の順応性を有する。ただし、順応には時間がかかるため、新たな環境への移動を躊躇することが多い。)
 trait_ngm_assimilation = {
 	cost = 1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_unadaptation"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_environment_tolerance = 0.1
 		pop_growth_from_immigration = -0.1
@@ -223,11 +810,14 @@ trait_ngm_assimilation = {
 # trait_ngm_unadaptation	適応不足  	：-2p	居住性-10%、Popの移住+10%	(この種族は、身体的な同化機能が低く、自分の身体に合った環境への移動をより好む傾向がある。)
 trait_ngm_unadaptation = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_assimilation"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_environment_tolerance = -0.1
 		pop_growth_from_immigration = 0.1
@@ -240,12 +830,15 @@ trait_ngm_unadaptation = {
 # trait_ngm_division	生体分裂  	：2p	Pop成長速度+10%				(この種族は無性生殖が可能で、身体を分裂左折ことが可能である。)
 trait_ngm_division = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_MPMD"
 		"trait_ngm_LMLD"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_growth_speed = 0.1
 	}
@@ -257,12 +850,15 @@ trait_ngm_division = {
 # trait_ngm_MPMD		多産多死  	：0p	Pop成長速度+5%、リーダー寿命-30年	(この種族は多産の傾向があるが、多くの子供が未成熟ゆえに生き残ることが難しく、成長したとしても虚弱体質の傾向がある。)
 trait_ngm_MPMD = {
 	cost = 0
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_division"
 		"trait_ngm_LMLD"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_growth_speed = 0.05
 		leader_age = -30
@@ -275,12 +871,15 @@ trait_ngm_MPMD = {
 # trait_ngm_LMLD		少子長命  	：0p	Pop成長速度-5%、リーダー寿命+30年	(この種族は長命のため、社会の過剰拡大を防ぐため繁殖を控える傾向がある。)
 trait_ngm_LMLD = {
 	cost = 0
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_division"
 		"trait_ngm_MPMD"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_growth_speed = -0.05
 		leader_age = 30
@@ -293,11 +892,14 @@ trait_ngm_LMLD = {
 # trait_ngm_abn_growth	異常発達  	：1p	Pop成長速度+20%、防衛軍強度+20%、統合力-20%、研究力-10%	(この種族は放射線や人為的遺伝子操作の影響により身体的機能が発達する傾向が強い。しかし、知力については原始的な傾向にあるため、研究や創作には向かず、自らの土地を守ることに興味を示す。)
 trait_ngm_abn_growth = {
 	cost = 1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_Lost_species"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_growth_speed = 0.2
 		army_defense_health_mult = 0.2
@@ -314,11 +916,14 @@ trait_ngm_abn_growth = {
 # trait_ngm_Lost_species	失われし種	：1p 	Pop成長速度-50%、統合力+20%、研究力+20%			(この種族は失われた技術により強化された後がみられる。それにより知力は大幅に強化されているが、身体的能力が総じて低い。)
 trait_ngm_Lost_species = {
 	cost = 1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_abn_growth"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_growth_speed = -0.5
 		planet_jobs_unity_produces_mult = 0.2
@@ -334,14 +939,17 @@ trait_ngm_Lost_species = {
 # trait_ngm_turf		縄張り意識	：-2p	強制移住コスト+25%、Popの流入-10%、防衛軍士気+10%、住居使用量+5%	(この種族は自らの範囲を重要視しており、それを維持することに執念を見せる。)
 trait_ngm_turf = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_Movement"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_resettlement_cost_mult = 0.25
-		pop_growth_from_immigration = -0.10
+		pop_growth_from_immigration = -0.1
 		army_defense_morale_mult = 0.1
 		pop_housing_usage_mult = 0.05
 	}
@@ -353,15 +961,18 @@ trait_ngm_turf = {
 # trait_ngm_Movement	移動性社会	：2p	強制移住コスト-25%、Popの流入+10%、住居使用量-5%、侵攻軍士気＋10%	(この種族は転居や移住を好んでおり、そのためにはあらゆる行動をとりうる。)
 trait_ngm_Movement = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_turf"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_resettlement_cost_mult = -0.25
-		pop_growth_from_immigration = 0.10
-		army_attack_morale_mult = 0.10
+		pop_growth_from_immigration = 0.1
+		army_attack_morale_mult = 0.1
 		pop_housing_usage_mult = -0.05
 	}
 	slave_cost = {
@@ -372,11 +983,14 @@ trait_ngm_Movement = {
 # trait_ngm_empathy	共感      	：1p	職業による統合力+5%、統治志向への魅力+10%、犯罪度-5%	(この種族は、他者に対する思いやりの感情が強い。)
 trait_ngm_empathy = {
 	cost = 1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_resentment"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_unity_produces_mult = 0.05
 		pop_government_ethic_attraction = 0.1
@@ -390,11 +1004,14 @@ trait_ngm_empathy = {
 # trait_ngm_resentment	反感      	：-1p	職業による統合力-5%、統治志向への魅力-10%、犯罪度+5%	(この種族は、他者に対して常に反感を覚えている。)
 trait_ngm_resentment = {
 	cost = -1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_empathy"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_unity_produces_mult = -0.05
 		pop_government_ethic_attraction = -0.1
@@ -408,7 +1025,7 @@ trait_ngm_resentment = {
 # trait_ngm_magnetism		磁性      	：2p	物理学+20%、合金生産-5%、					(この種族はほのかに磁性を有しており、物理学的技術発展に寄与している。)
 trait_ngm_magnetism = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_radioactive"
 		"trait_ngm_jack_o_lantern"
@@ -418,7 +1035,10 @@ trait_ngm_magnetism = {
 		"trait_ngm_flying"
 		"trait_ngm_swift_horse"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_physics_research_produces_mult = 0.2
 		planet_jobs_alloys_produces_mult = -0.05
@@ -431,7 +1051,7 @@ trait_ngm_magnetism = {
 # trait_ngm_radioactive		放射性血液	：2p	物理学+10%、エネルギー+5%					(この種族の血液には放射性物質が含まれている。)
 trait_ngm_radioactive = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_magnetism"
 		"trait_ngm_jack_o_lantern"
@@ -441,7 +1061,10 @@ trait_ngm_radioactive = {
 		"trait_ngm_flying"
 		"trait_ngm_swift_horse"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_physics_research_produces_mult = 0.1
 		planet_jobs_energy_produces_mult = 0.05
@@ -454,7 +1077,7 @@ trait_ngm_radioactive = {
 # trait_ngm_jack_o_lantern	鬼火      	：2p	地上軍ダメージ+15%、合金生産+5%、		(この種族は自在に火を操ることが可能である。)
 trait_ngm_jack_o_lantern = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_magnetism"
 		"trait_ngm_radioactive"
@@ -464,7 +1087,10 @@ trait_ngm_jack_o_lantern = {
 		"trait_ngm_flying"
 		"trait_ngm_swift_horse"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_alloys_produces_mult = 0.05
 		army_damage_mult = 0.15
@@ -477,7 +1103,7 @@ trait_ngm_jack_o_lantern = {
 # trait_ngm_optical_adapt		光学適応  	：2p	地上軍耐久度+30%、住居使用量-5%、快適度消費-5%、犯罪発生+5%	(この種族は光学的に周囲へ溶け込むことで隠れることができる。)
 trait_ngm_optical_adapt = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_magnetism"
 		"trait_ngm_radioactive"
@@ -487,7 +1113,10 @@ trait_ngm_optical_adapt = {
 		"trait_ngm_flying"
 		"trait_ngm_swift_horse"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		army_health = 0.3
 		pop_housing_usage_mult = -0.05
@@ -502,7 +1131,7 @@ trait_ngm_optical_adapt = {
 # trait_ngm_hardness		硬質器官  	：2p	地上軍ダメージ+20%、地上軍耐久度+20%、鉱物生産+5%		(この種族は体の一部を硬化させることができる。)
 trait_ngm_hardness = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_magnetism"
 		"trait_ngm_radioactive"
@@ -512,7 +1141,10 @@ trait_ngm_hardness = {
 		"trait_ngm_flying"
 		"trait_ngm_swift_horse"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		army_damage_mult = 0.2
 		army_health = 0.2
@@ -526,7 +1158,7 @@ trait_ngm_hardness = {
 # trait_ngm_neural_block		神経遮断  	：2p	地上軍士気+40%、リーダー寿命+5年				(この種族は痛覚神経を一時的に遮断させ、痛みを避けることができる。)
 trait_ngm_neural_block = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_magnetism"
 		"trait_ngm_radioactive"
@@ -536,7 +1168,10 @@ trait_ngm_neural_block = {
 		"trait_ngm_flying"
 		"trait_ngm_swift_horse"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		army_morale = 0.4
 		leader_age = 5
@@ -549,7 +1184,7 @@ trait_ngm_neural_block = {
 # trait_ngm_flying		飛行器官  	：2p	回避+5%、軍用機ダメージ+10%					(この種族は飛行することができる。)
 trait_ngm_flying = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_magnetism"
 		"trait_ngm_radioactive"
@@ -559,7 +1194,10 @@ trait_ngm_flying = {
 		"trait_ngm_neural_block"
 		"trait_ngm_swift_horse"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		ship_evasion_mult = 0.05
 		ship_armor_damage_mult = 0.1
@@ -572,7 +1210,7 @@ trait_ngm_flying = {
 # trait_ngm_swift_horse		俊足      	：3p	地上軍ダメージ+10%、地上軍耐久度+10%、地上軍士気+10%		(この種族は恐ろしい速度で走ることができる。)
 trait_ngm_swift_horse = {
 	cost = 3
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_magnetism"
 		"trait_ngm_radioactive"
@@ -582,7 +1220,10 @@ trait_ngm_swift_horse = {
 		"trait_ngm_neural_block"
 		"trait_ngm_flying"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		army_damage_mult = 0.1
 		army_health = 0.1
@@ -596,13 +1237,16 @@ trait_ngm_swift_horse = {
 # trait_ngm_clairvoyance	千里眼    	：3p	食料算出量+5%、地上軍士気+10%、軍用機ダメージ+10%			(この種族は通常の視界以上のものを見ることができる。)
 trait_ngm_clairvoyance = {
 	cost = 3
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_sixth_sense"
 		"trait_ngm_sluggish"
 		"trait_ngm_degeneration"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		country_food_produces_mult = 0.05
 		army_damage_mult = 0.1
@@ -616,13 +1260,16 @@ trait_ngm_clairvoyance = {
 # trait_ngm_sixth_sense	第六感    	：5p	地上軍士気+10%、回避+10%、研究力+5%					(この種族は予知能力のような形で一時的に未来を知ることができる。)
 trait_ngm_sixth_sense = {
 	cost = 5
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		trait_ngm_clairvoyance
 		"trait_ngm_sluggish"
 		"trait_ngm_degeneration"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		army_morale = 0.1
 		ship_evasion_mult = 0.1
@@ -638,7 +1285,7 @@ trait_ngm_sixth_sense = {
 # trait_ngm_sluggish	鈍い感覚  	：-3p	回避-10%、研究力-5%							(この種族は5感が鈍く、周囲を知るために時間がかかる。)
 trait_ngm_sluggish = {
 	cost = -3
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_clairvoyance"
 		"trait_ngm_sixth_sense"
@@ -647,7 +1294,10 @@ trait_ngm_sluggish = {
 	species_potential_add = {
 		is_species_class = HUM
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		ship_evasion_mult = -0.1
 		planet_jobs_physics_research_produces_mult = -0.05
@@ -662,13 +1312,16 @@ trait_ngm_sluggish = {
 # trait_ngm_degeneration	退化した眼	：-5p	回避-15%、研究力-5%、地上軍士気-10%					(この種族は眼が退化しており、周囲を探る方法が限られている。)
 trait_ngm_degeneration = {
 	cost = -5
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_clairvoyance"
 		"trait_ngm_sixth_sense"
 		"trait_ngm_sluggish"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		ship_evasion_mult = -0.15
 		planet_jobs_physics_research_produces_mult = -0.05
@@ -684,14 +1337,17 @@ trait_ngm_degeneration = {
 # trait_ngm_confusion	混乱      	：-2p	地上軍士気-5%、研究力-5%						(この種族はちょっとしたことで落ち着きを失い、混乱した状態となる。)
 trait_ngm_confusion = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_derangement"
 		"trait_ngm_melancholy"
 		"trait_ngm_enervated"
 		"trait_ngm_death_heart"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		army_morale = -0.05
 		planet_jobs_physics_research_produces_mult = -0.05
@@ -706,14 +1362,17 @@ trait_ngm_confusion = {
 # trait_ngm_derangement	錯乱      	：-2p	研究力-10%、Popの快適度使用量+10%					(この種族は混沌に満ちており、冷静さを失っている。)
 trait_ngm_derangement = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_confusion"
 		"trait_ngm_melancholy"
 		"trait_ngm_enervated"
 		"trait_ngm_death_heart"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_physics_research_produces_mult = -0.1
 		planet_jobs_society_research_produces_mult = -0.1
@@ -728,14 +1387,17 @@ trait_ngm_derangement = {
 # trait_ngm_melancholy	憂鬱      	：-3p	Popの快適度使用量+10%、幸福度-10%					(この種族は常に憂鬱で、落ち込んだ状態で生活している。)
 trait_ngm_melancholy = {
 	cost = -3
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_confusion"
 		"trait_ngm_derangement"
 		"trait_ngm_enervated"
 		"trait_ngm_death_heart"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_amenities_usage_mult = 0.1
 		pop_happiness = -0.1
@@ -748,14 +1410,17 @@ trait_ngm_melancholy = {
 # trait_ngm_enervated	惰弱      	：-4p	鉱物生産量-10%、食料生産量-10%、地上軍耐久度-10%			(この種族は身体が弱く、熱心に動くことができない。)
 trait_ngm_enervated = {
 	cost = -4
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_confusion"
 		"trait_ngm_derangement"
 		"trait_ngm_melancholy"
 		"trait_ngm_death_heart"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_minerals_produces_mult = -0.1
 		planet_jobs_food_produces_mult = -0.1
@@ -769,14 +1434,17 @@ trait_ngm_enervated = {
 # trait_ngm_death_heart	心の死    	：-4p	研究力-10%、統合力-10%、Popの快適度使用量-15%				(この種族は心を失っており、熱心さがない。)
 trait_ngm_death_heart = {
 	cost = -4
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_confusion"
 		"trait_ngm_derangement"
 		"trait_ngm_melancholy"
 		"trait_ngm_enervated"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_physics_research_produces_mult = -0.1
 		planet_jobs_society_research_produces_mult = -0.1
@@ -792,13 +1460,16 @@ trait_ngm_death_heart = {
 # trait_ngm_huge		巨大      	：3p	Popの食料消費量+10%、住居使用量+15%、地上軍ダメージ+20%、地上軍耐久度+20%、家畜からの食料+3、Popの鉱物・エネルギー・食料生産+10％	(この種族の身体は銀河基準からしても巨大である。)
 trait_ngm_huge = {
 	cost = 3
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_big"
 		"trait_ngm_small"
 		"trait_ngm_minimum"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_pops_organics_food_upkeep_mult = 0.1
 		pop_housing_usage_mult = 0.15
@@ -817,13 +1488,16 @@ trait_ngm_huge = {
 # trait_ngm_big		大型      	：2p	Popの食料消費量+5%、住居使用量+10%、地上軍ダメージ+10%、地上軍耐久度+10%、家畜からの食料+1、Popの鉱物・エネルギー・食料生産+5％		(この種族の身体は銀河基準からしても大柄である。)
 trait_ngm_big = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_huge"
 		"trait_ngm_small"
 		"trait_ngm_minimum"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_pops_organics_food_upkeep_mult = 0.05
 		pop_housing_usage_mult = 0.1
@@ -842,13 +1516,16 @@ trait_ngm_big = {
 # trait_ngm_small		小型      	：-2p	Popの食料消費量-5%、住居使用量-10%、地上軍ダメージ-10%、地上軍耐久度-10%、家畜からの食料-1、Popの鉱物・エネルギー・食料生産-5％		(この種族の身体は銀河基準からしても小型である。)
 trait_ngm_small = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_huge"
 		"trait_ngm_big"
 		"trait_ngm_minimum"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_pops_organics_food_upkeep_mult = -0.05
 		pop_housing_usage_mult = -0.1
@@ -867,13 +1544,16 @@ trait_ngm_small = {
 # trait_ngm_minimum	極小      	：-3p	Popの食料消費量-10%、住居使用量-15%、地上軍ダメージ-20%、地上軍耐久度-20%、家畜からの食料-3、Popの鉱物・エネルギー・食料生産-10％	(この種族の身体は銀河基準からしても極小である。)
 trait_ngm_minimum = {
 	cost = -3
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_huge"
 		"trait_ngm_big"
 		"trait_ngm_small"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_pops_organics_food_upkeep_mult = -0.1
 		pop_housing_usage_mult = -0.15
@@ -892,13 +1572,16 @@ trait_ngm_minimum = {
 # trait_ngm_hunting	狩猟文化  	：-3p	食料生産-20%、居住性-5%	(この種族の社会は狩猟により食料を確保している。)
 trait_ngm_hunting = {
 	cost = -3
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_collecting"
 		"trait_ngm_h_g"
 		"trait_ngm_agriculture"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_food_produces_mult = -0.2
 		pop_environment_tolerance = -0.05
@@ -911,13 +1594,16 @@ trait_ngm_hunting = {
 # trait_ngm_collecting	採取文化        ：-3p	食料生産-20%、居住性-5%	(この種族の社会は採取により食料を確保している。)
 trait_ngm_collecting = {
 	cost = -3
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_hunting"
 		"trait_ngm_h_g"
 		"trait_ngm_agriculture"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_food_produces_mult = -0.2
 		pop_environment_tolerance = -0.05
@@ -930,13 +1616,16 @@ trait_ngm_collecting = {
 # trait_ngm_h_g		狩猟採取文化    ：-2p	食料生産-10%、居住性-3%	(この種族の社会は狩猟や採取により食料を確保している。)
 trait_ngm_h_g = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_hunting"
 		"trait_ngm_collecting"
 		"trait_ngm_agriculture"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_food_produces_mult = -0.1
 		pop_environment_tolerance = -0.03
@@ -949,13 +1638,16 @@ trait_ngm_h_g = {
 # trait_ngm_agriculture	農耕文化        ：2p	食料生産+10%、居住性+3%	(この種族の社会は農業に基盤が置かれている。)
 trait_ngm_agriculture = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_hunting"
 		"trait_ngm_collecting"
 		"trait_ngm_h_g"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_food_produces_mult = 0.1
 		pop_environment_tolerance = 0.03
@@ -968,12 +1660,15 @@ trait_ngm_agriculture = {
 # trait_ngm_elder_verbal		複雑な言語      ：-1p	Popの快適度使用量+25%、統合力+5%	(この種族の語彙や文法は極めて難しい。)
 trait_ngm_elder_verbal = {
 	cost = -1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_elder_non_verbal"
 		"trait_ngm_elder_non_character"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_amenities_usage_mult = 0.25
 		planet_jobs_unity_produces_mult = 0.05
@@ -986,12 +1681,15 @@ trait_ngm_elder_verbal = {
 # trait_ngm_elder_non_verbal	非言語社会      ：-2p	研究力-10%、統合力-5%、Pop成長速度+3%	(この種族には言語という概念が存在しない。)
 trait_ngm_elder_non_verbal = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_elder_verbal"
 		"trait_ngm_elder_non_character"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_physics_research_produces_mult = -0.1
 		planet_jobs_society_research_produces_mult = -0.1
@@ -1007,12 +1705,15 @@ trait_ngm_elder_non_verbal = {
 # trait_ngm_elder_non_character	無文字社会      ：-2p	研究力-10%				(この種族には文字という概念が存在しない。)
 trait_ngm_elder_non_character = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_elder_verbal"
 		"trait_ngm_elder_non_verbal"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_physics_research_produces_mult = -0.1
 		planet_jobs_society_research_produces_mult = -0.1
@@ -1026,13 +1727,16 @@ trait_ngm_elder_non_character = {
 # trait_ngm_delicious		美味な肉体      ：0p	家畜からの食料+2					(この種族は美味しい！)
 trait_ngm_delicious = {
 	cost = 0
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_unappetizing"
 		"trait_ngm_speckled_w_white"
 		"trait_ngm_Toxic"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_livestock_food_produces_add = 2
 	}
@@ -1044,13 +1748,16 @@ trait_ngm_delicious = {
 # trait_ngm_unappetizing		不味い肉体      ：+1p	家畜からの食料-2、Popの食料消費量-10%			(この種族は不味い！)
 trait_ngm_unappetizing = {
 	cost = 1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_delicious"
 		"trait_ngm_speckled_w_white"
 		"trait_ngm_Toxic"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_livestock_food_produces_add = -2
 		planet_pops_organics_food_upkeep_mult = -0.1
@@ -1063,13 +1770,16 @@ trait_ngm_unappetizing = {
 # trait_ngm_speckled_w_white	霜降り          ：-1p	家畜からの食料+1、Popの食料消費量+10%、リーダー寿命-5年	(この種族は全身が霜降りである。)
 trait_ngm_speckled_w_white = {
 	cost = -1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_delicious"
 		"trait_ngm_unappetizing"
 		"trait_ngm_Toxic"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_livestock_food_produces_add = 1
 		planet_pops_organics_food_upkeep_mult = 0.1
@@ -1083,13 +1793,16 @@ trait_ngm_speckled_w_white = {
 # trait_ngm_Toxic			有毒            ：-1p	家畜からの食料-3、職業による快適度-10%			(この種族の肉は有毒である。)
 trait_ngm_Toxic = {
 	cost = -1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_delicious"
 		"trait_ngm_unappetizing"
 		"trait_ngm_speckled_w_white"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_livestock_food_produces_add = -3
 		planet_amenities_mult = -0.1
@@ -1102,11 +1815,14 @@ trait_ngm_Toxic = {
 # trait_ngm_complex_heredity	複雑な遺伝構造  ：1p	社会学+15%、遺伝子改造コスト+20%	(この種族の遺伝子は極めて複雑である。)
 trait_ngm_complex_heredity = {
 	cost = 1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_simple_heredity"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_society_research_produces_mult = 0.15
 		modify_species_cost_mult = 0.2
@@ -1119,11 +1835,14 @@ trait_ngm_complex_heredity = {
 # trait_ngm_simple_heredity	単純な遺伝構造  ：-1p	社会学-15%、遺伝子改造コスト-20%	(この種族の遺伝子は極めて単純である。)
 trait_ngm_simple_heredity = {
 	cost = -1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_complex_heredity"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_society_research_produces_mult = -0.15
 		modify_species_cost_mult = -0.2
@@ -1136,11 +1855,14 @@ trait_ngm_simple_heredity = {
 # trait_ngm_sensitization		感光性          ：-1p	快適度使用量+10%	(この種族は極めて光に弱く、光を避ける傾向にある。)
 trait_ngm_sensitization = {
 	cost = -1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_like_light"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_amenities_usage_mult = 0.1
 	}
@@ -1152,11 +1874,14 @@ trait_ngm_sensitization = {
 # trait_ngm_like_light		好光性          ：-1p	住居使用量+10%		(この種族は光を好み、日光を浴びることを好む。)
 trait_ngm_like_light = {
 	cost = -1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_sensitization"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_housing_usage_mult = 0.1
 	}
@@ -1168,11 +1893,14 @@ trait_ngm_like_light = {
 # trait_ngm_indoor	インドア派      ：-1p	住居使用量+10%	(この種族は屋内での活動を好む。)
 trait_ngm_indoor = {
 	cost = -1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_outdoor"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_housing_usage_mult = 0.1
 	}
@@ -1184,11 +1912,14 @@ trait_ngm_indoor = {
 # trait_ngm_outdoor	アウトドア派    ：+1p	住居使用量-10%	(この種族は屋外での活動を好む。)
 trait_ngm_outdoor = {
 	cost = 1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_indoor"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_housing_usage_mult = -0.1
 	}
@@ -1200,11 +1931,14 @@ trait_ngm_outdoor = {
 # trait_ngm_multitasking	マルチタスク    ：+1p	研究力+5%	(この種族は器用で、同時に仕事を行うことができる。)
 trait_ngm_multitasking = {
 	cost = 1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_clumsy"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_energy_produces_mult = 0.05
 		planet_jobs_minerals_produces_mult = 0.05
@@ -1218,11 +1952,14 @@ trait_ngm_multitasking = {
 # trait_ngm_clumsy	不器用          ：-1p	研究力-5%	(この種族は不器用で、同時に仕事を行うことが苦手である。)
 trait_ngm_clumsy = {
 	cost = -1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_multitasking"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_physics_research_produces_mult = -0.05
 		planet_jobs_society_research_produces_mult = -0.05
@@ -1236,12 +1973,15 @@ trait_ngm_clumsy = {
 # trait_ngm_reversing_theory		理論的後進      ：-1p	物理学-10%	(この種族は理論構築が苦手であり、うまく物理学を扱えない。)
 trait_ngm_reversing_theory = {
 	cost = -1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_reversing_culture"
 		"trait_ngm_reversing_technologies"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_physics_research_produces_mult = -0.1
 	}
@@ -1253,12 +1993,15 @@ trait_ngm_reversing_theory = {
 # trait_ngm_reversing_culture		文化的後進      ：-1p	社会学-10%	(この種族の社会学的発展は遅れており、銀河規模の社会を取り扱い切れていない。)
 trait_ngm_reversing_culture = {
 	cost = -1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_reversing_theory"
 		"trait_ngm_reversing_technologies"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_society_research_produces_mult = -0.1
 	}
@@ -1270,12 +2013,15 @@ trait_ngm_reversing_culture = {
 # trait_ngm_reversing_technologies	技術的後進      ：-1p	工学-10%	(この種族の工学技術は遅れており、機械構築などは苦手である。)
 trait_ngm_reversing_technologies = {
 	cost = -1
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_reversing_theory"
 		"trait_ngm_reversing_culture"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_engineering_research_produces_mult = -0.1
 	}
@@ -1287,11 +2033,14 @@ trait_ngm_reversing_technologies = {
 # trait_ngm_individuality		優秀な個性      ：3p	リーダー取得経験値+10%、リーダースキル上限+2	(この種族は個々の個性を伸ばすことを重要視している。)
 trait_ngm_individuality = {
 	cost = 3
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_non_individuality"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		species_leader_exp_gain = 0.1
 		leader_skill_levels = 2
@@ -1304,11 +2053,14 @@ trait_ngm_individuality = {
 # trait_ngm_non_individuality	無個性          ：-3p	リーダー取得経験値-10%、リーダースキル上限-2	(この種族は個々の個性を均一化することを重要視している。)
 trait_ngm_non_individuality = {
 	cost = -3
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_individuality"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		species_leader_exp_gain = -0.1
 		leader_skill_levels = -2
@@ -1321,11 +2073,14 @@ trait_ngm_non_individuality = {
 # trait_ngm_sociability		社交性          ：2p	職業による快適度+10%、職業による統合力+5%	(この種族は社交的だ。)
 trait_ngm_sociability = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_introversion"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_amenities_mult = 0.1
 		planet_jobs_unity_produces_mult = 0.05
@@ -1338,11 +2093,14 @@ trait_ngm_sociability = {
 # trait_ngm_introversion		内向性          ：-2p	職業による快適度-10%、職業による統合力-5%	(この種族は内向的だ。)
 trait_ngm_introversion = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_sociability"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_amenities_mult = -0.1
 		planet_jobs_unity_produces_mult = -0.05
@@ -1355,13 +2113,16 @@ trait_ngm_introversion = {
 # trait_ngm_spirit_release	精神的開放  	：-4p	統治志向魅力-30%	(この種族は精神的な束縛を嫌う。)
 trait_ngm_spirit_release = {
 	cost = -4
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_spirit_freedom"
 		"trait_ngm_spirit_authority"
 		"trait_ngm_spirit_subordination"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_government_ethic_attraction = -0.3
 	}
@@ -1373,13 +2134,16 @@ trait_ngm_spirit_release = {
 # trait_ngm_spirit_freedom	精神的自由  	：-2p	統治志向魅力-15%	(この種族は精神的な自由を重視している。)
 trait_ngm_spirit_freedom = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_spirit_release"
 		"trait_ngm_spirit_authority"
 		"trait_ngm_spirit_subordination"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_government_ethic_attraction = -0.15
 	}
@@ -1391,13 +2155,16 @@ trait_ngm_spirit_freedom = {
 # trait_ngm_spirit_authority	精神的権威  	：2p	統治志向魅力+15%	(この種族は精神的に誰かに従うことに慣れている。)
 trait_ngm_spirit_authority = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_spirit_release"
 		"trait_ngm_spirit_freedom"
 		"trait_ngm_spirit_subordination"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_government_ethic_attraction = 0.15
 	}
@@ -1409,13 +2176,16 @@ trait_ngm_spirit_authority = {
 # trait_ngm_spirit_subordination	精神的従属	：4p	統治志向魅力+30%	(この種族は精神的に誰かの管理下に置かれることを好んでいる。)
 trait_ngm_spirit_subordination = {
 	cost = 4
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_spirit_release"
 		"trait_ngm_spirit_freedom"
 		"trait_ngm_spirit_authority"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		pop_government_ethic_attraction = 0.3
 	}
@@ -1427,11 +2197,14 @@ trait_ngm_spirit_subordination = {
 # trait_ngm_liar		嘘吐き      	：-2p	職業による快適度-10%	(この種族は小さい嘘をつくことを好み、しばし周囲を疲弊させる。)
 trait_ngm_liar = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_honest"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_amenities_mult = -0.1
 	}
@@ -1443,11 +2216,14 @@ trait_ngm_liar = {
 # trait_ngm_honest	正直者      	：2p	職業による快適度+10%	(この種族は正直者で、周囲に気持ちの良い関係を構築する。)
 trait_ngm_honest = {
 	cost = 2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_liar"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_amenities_mult = 0.1
 	}
@@ -1459,14 +2235,17 @@ trait_ngm_honest = {
 # trait_ngm_heart_less	無心        	：-2p	食料算出量-15%		(この種族は心を込めて食物を作ることができない。)
 trait_ngm_heart_less = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_debauchery"
 		"trait_ngm_tired"
 		"trait_ngm_stupidity"
 		"trait_ngm_spendthrift"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_food_produces_mult = -0.15
 	}
@@ -1478,14 +2257,17 @@ trait_ngm_heart_less = {
 # trait_ngm_debauchery	放蕩        	：-2p	エネルギー算出量-15%	(この種族はエネルギーを無駄にする傾向がある。)
 trait_ngm_debauchery = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_heart_less"
 		"trait_ngm_tired"
 		"trait_ngm_stupidity"
 		"trait_ngm_spendthrift"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_energy_produces_mult = -0.15
 	}
@@ -1497,14 +2279,17 @@ trait_ngm_debauchery = {
 # trait_ngm_tired		疲労感      	：-2p	鉱物産出量-15%		(この種族は疲労しやすく、鉱物生産が苦手である。)
 trait_ngm_tired = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_heart_less"
 		"trait_ngm_debauchery"
 		"trait_ngm_stupidity"
 		"trait_ngm_spendthrift"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_minerals_produces_mult = -0.15
 	}
@@ -1516,14 +2301,17 @@ trait_ngm_tired = {
 # trait_ngm_stupidity	愚鈍      	：-2p	研究力-10%		(この種族は知力が低く、うまく研究を進めることができない。)
 trait_ngm_stupidity = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_heart_less"
 		"trait_ngm_debauchery"
 		"trait_ngm_tired"
 		"trait_ngm_spendthrift"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		planet_jobs_physics_research_produces_mult = -0.1
 		planet_jobs_society_research_produces_mult = -0.1
@@ -1537,16 +2325,19 @@ trait_ngm_stupidity = {
 # trait_ngm_spendthrift	浪費家      	：-2p	交易価値-25%		(この種族は浪費癖があり、交易をうまく行うことができない。)
 trait_ngm_spendthrift = {
 	cost = -2
-	potential_crossbreeding_chance = 1.0
+	potential_crossbreeding_chance = 1
 	opposites = {
 		"trait_ngm_heart_less"
 		"trait_ngm_debauchery"
 		"trait_ngm_tired"
 		"trait_ngm_stupidity"
 	}
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
-		trade_value_mult = -0.25	
+		trade_value_mult = -0.25
 	}
 	slave_cost = {
 		energy = 50
@@ -1560,8 +2351,11 @@ trait_ngm_merchant_from_ancient = {
 	cost = 0
 	initial = no
 	modification = no
-	potential_crossbreeding_chance = 1.0
-	allowed_archetypes = { BIOLOGICAL LITHOID }
+	potential_crossbreeding_chance = 1
+	allowed_archetypes = {
+		BIOLOGICAL
+		LITHOID
+	}
 	modifier = {
 		trade_value_mult = 0.3
 		pop_housing_usage_mult = -0.3
@@ -1575,35 +2369,19 @@ trait_ngm_merchant_from_ancient = {
 }
 
 # 以下、対応するポートレートのみ選択可能。
-
 # trait_ngm_Advanced_finger	高度な手指（ヒューマノイド）：2p	合金生産+10%							(この種族の手指は器用で、うまく加工を行うことができる。)
-
 # trait_ngm_homicide		同族殺し（ヒューマノイド）  ：-2p	統合力-10%、安定度-5%、軍国主義魅力＋10%、平和主義魅力-10%	(この種族は互いに殺し合いを行う悪習がある。)
-
 # trait_ngm_beautiful_fur 	美しい毛並み（哺乳類）      ：2p	職業による快適度+10%、居住性+5%					(この種族の毛並みは長く、美しい。)
-
 # trait_ngm_violence_instinct	暴力的本能（哺乳類）        ：-2p	地上軍士気-10%、統合力-5%、地上軍士気＋5%			(この種族は本能的に粗暴である。)
-
 # trait_ngm_scantily_clad		身軽な身体（鳥）            ：2p	回避+5%、住居使用量-10%						(この種族は体重が少ない割に筋肉量が多く、身軽に動くことができる。)
-
 # trait_ngm_chicken head		鳥頭（鳥）                  ：-2p	研究力-10%、統合力-5%、幸福度＋5%、統治志向魅力＋10%		(この種族の脳は小さく、すぐ忘れてしまう。)
-
 # trait_ngm_efficient_metabolism	効率的代謝（爬虫類）        ：2p	食料消費量-15%							(この種族の代謝効率は極めて高く、少ない食料で生きていける。)
-
 # trait_ngm_external_temperature	外温性（爬虫類）            ：-2p	居住性-5%、リーダーの寿命＋5年					(この種族は外部の温度に体温を左右されるため、居住について課題が多い。)
-
 # trait_ngm_elder_rational_body	合理的身体機能（虫）        ：2p	居住性+10%							(この種族の身体は極めて合理的で、あらゆる環境に適応できる。)
-
 # trait_ngm_metamorphosis		変態（虫）                  ：-2p	Pop成長速度-10%、住居使用量-5%					(この種族は幼体から成体になる間に大きな形態変化を必要とするほか、変態時に突然死することも多い。)
-
 # trait_ngm_flexible_muscle	柔軟な筋肉（軟体人）        ：2p	鉱物生産量+5%、地上軍ダメージ+10%				(この種族の筋肉は柔軟で、強度も高い。)
-
 # trait_ngm_corrosiveness_mucus	腐食性粘液（軟体人）        ：-2p	Pop消費財消費量+10%、地上軍攻撃力+5%				(この種族が分泌する粘液は腐食性で、様々なものを壊すことが多い。)
-
 # trait_ngm_disassembly		高分子分解（菌類）          ：2p	Pop成長速度+10%							(この種族は様々なものを分解し、栄養とすることができる。)
-
 # trait_ngm_spore			変性胞子（菌類）            ：-2p	職業による快適度-10%、居住性-5%、統合力+5%			(この種族の胞子は周囲に予測可能性の低い影響を与える。)
-
 # trait_ngm_photosynthesis	光合成（植物）              ：2p	食料消費量-20%、居住性+5%					(この種族は光合成により栄養を手に入れることができる。)
-
 # trait_ngm_slowness		遅速性（植物）              ：-2p	地上軍耐久度-30%、住居使用量+10%、リーダー寿命＋15年		(この種族の足は遅く、動作が緩慢である。)
