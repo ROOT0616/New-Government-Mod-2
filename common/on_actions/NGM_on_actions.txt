@@ -50,6 +50,33 @@ on_leader_spawned = {
 	}
 }
 
+
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		# 狙い撃ち
+		ngm_tradition.6
+		# 透浸
+		ngm_tradition.8
+		# 破壊工作
+		ngm_tradition.10
+		# 恒常的妨害
+		ngm_tradition.12
+		# 国家宣伝省
+		ngm_tradition.14
+		# 善隣完遂時
+		ngm_tradition.16
+		# 憲兵隊
+		ngm_tradition.18
+		# 余裕取得時
+		ngm_tradition.20
+		# 余裕完遂時
+		ngm_tradition.22
+		# 3.軍事国家
+		ngm_tradition.24
+	}
+}
+
 # this = country
 on_yearly_pulse_country = {
 	events = {

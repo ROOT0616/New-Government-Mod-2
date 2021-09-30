@@ -4465,7 +4465,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_civic = civic_citizen_service	
+				has_civic = civic_citizen_service
 			}
 			force_remove_civic = civic_citizen_service
 		}
@@ -5944,6 +5944,2220 @@ country_event = {
 				has_civic = civic_ngm_underhanded_trick
 			}
 			force_remove_civic = civic_ngm_underhanded_trick
+		}
+	}
+}
+
+# 狙い撃ち:艦船連射レート+5%、宿敵の犯罪度+10		伝統取得時
+country_event = {
+	id = ngm_tradition.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_sniper
+	}
+	immediate = {
+		if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sniper_debuff_1
+					has_country_flag = country_flag_tr_ngm_sniper_debuff_1
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sniper_debuff_1
+			set_country_flag = country_flag_tr_ngm_sniper_debuff_1
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sniper_debuff_2
+					has_country_flag = country_flag_tr_ngm_sniper_debuff_2
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sniper_debuff_2
+			set_country_flag = country_flag_tr_ngm_sniper_debuff_2
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sniper_debuff_3
+					has_country_flag = country_flag_tr_ngm_sniper_debuff_3
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sniper_debuff_3
+			set_country_flag = country_flag_tr_ngm_sniper_debuff_3
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_3
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sniper_debuff_4
+					has_country_flag = country_flag_tr_ngm_sniper_debuff_4
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sniper_debuff_4
+			set_country_flag = country_flag_tr_ngm_sniper_debuff_4
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_4
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sniper_debuff_5
+					has_country_flag = country_flag_tr_ngm_sniper_debuff_5
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sniper_debuff_5
+			set_country_flag = country_flag_tr_ngm_sniper_debuff_5
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sniper_debuff_6
+					has_country_flag = country_flag_tr_ngm_sniper_debuff_6
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sniper_debuff_6
+			set_country_flag = country_flag_tr_ngm_sniper_debuff_6
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_6
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sniper_debuff_7
+					has_country_flag = country_flag_tr_ngm_sniper_debuff_7
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sniper_debuff_7
+			set_country_flag = country_flag_tr_ngm_sniper_debuff_7
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_7
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sniper_debuff_8
+					has_country_flag = country_flag_tr_ngm_sniper_debuff_8
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sniper_debuff_8
+			set_country_flag = country_flag_tr_ngm_sniper_debuff_8
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_8
+				}
+			}
+		}
+	}
+}
+
+# 狙い撃ち:艦船連射レート+5%、宿敵の犯罪度+10		月ごとのチェック
+country_event = {
+	id = ngm_tradition.6
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_sniper
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sniper_debuff_1
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sniper_debuff_1
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_1
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sniper_debuff_1
+				}
+				remove_modifier = tr_ngm_sniper_debuff_1
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sniper_debuff_2
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sniper_debuff_2
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_2
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sniper_debuff_2
+				}
+				remove_modifier = tr_ngm_sniper_debuff_2
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sniper_debuff_3
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sniper_debuff_3
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_3
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sniper_debuff_3
+				}
+				remove_modifier = tr_ngm_sniper_debuff_3
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sniper_debuff_4
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sniper_debuff_4
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_4
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sniper_debuff_4
+				}
+				remove_modifier = tr_ngm_sniper_debuff_4
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sniper_debuff_5
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sniper_debuff_5
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_5
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sniper_debuff_5
+				}
+				remove_modifier = tr_ngm_sniper_debuff_5
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sniper_debuff_6
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sniper_debuff_6
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_6
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sniper_debuff_6
+				}
+				remove_modifier = tr_ngm_sniper_debuff_6
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sniper_debuff_7
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sniper_debuff_7
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_7
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sniper_debuff_7
+				}
+				remove_modifier = tr_ngm_sniper_debuff_7
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sniper_debuff_8
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sniper_debuff_8
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sniper_debuff_8
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sniper_debuff_8
+				}
+				remove_modifier = tr_ngm_sniper_debuff_8
+			}
+		}
+	}
+}
+
+# 浸透:解読度+5、外交関係にあるすべての国家の犯罪度+5		伝統取得時
+country_event = {
+	id = ngm_tradition.7
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_penetration
+	}
+	immediate = {
+		if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_penetration_debuff_1
+					has_country_flag = country_flag_tr_ngm_penetration_debuff_1
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_penetration_debuff_1
+			set_country_flag = country_flag_tr_ngm_penetration_debuff_1
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_penetration_debuff_2
+					has_country_flag = country_flag_tr_ngm_penetration_debuff_2
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_penetration_debuff_2
+			set_country_flag = country_flag_tr_ngm_penetration_debuff_2
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_penetration_debuff_3
+					has_country_flag = country_flag_tr_ngm_penetration_debuff_3
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_penetration_debuff_3
+			set_country_flag = country_flag_tr_ngm_penetration_debuff_3
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_3
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_penetration_debuff_4
+					has_country_flag = country_flag_tr_ngm_penetration_debuff_4
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_penetration_debuff_4
+			set_country_flag = country_flag_tr_ngm_penetration_debuff_4
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_4
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_penetration_debuff_5
+					has_country_flag = country_flag_tr_ngm_penetration_debuff_5
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_penetration_debuff_5
+			set_country_flag = country_flag_tr_ngm_penetration_debuff_5
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_penetration_debuff_6
+					has_country_flag = country_flag_tr_ngm_penetration_debuff_6
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_penetration_debuff_6
+			set_country_flag = country_flag_tr_ngm_penetration_debuff_6
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_6
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_penetration_debuff_7
+					has_country_flag = country_flag_tr_ngm_penetration_debuff_7
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_penetration_debuff_7
+			set_country_flag = country_flag_tr_ngm_penetration_debuff_7
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_7
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_penetration_debuff_8
+					has_country_flag = country_flag_tr_ngm_penetration_debuff_8
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_penetration_debuff_8
+			set_country_flag = country_flag_tr_ngm_penetration_debuff_8
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_8
+				}
+			}
+		}
+	}
+}
+
+# 浸透:解読度+5、外交関係にあるすべての国家の犯罪度+5		月ごとのチェック
+country_event = {
+	id = ngm_tradition.8
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_penetration
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_penetration_debuff_1
+			}
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+					NOT = {
+						has_modifier = tr_ngm_penetration_debuff_1
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_penetration_debuff_2
+			}
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+					NOT = {
+						has_modifier = tr_ngm_penetration_debuff_2
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_penetration_debuff_3
+			}
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+					NOT = {
+						has_modifier = tr_ngm_penetration_debuff_3
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_3
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_penetration_debuff_4
+			}
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+					NOT = {
+						has_modifier = tr_ngm_penetration_debuff_4
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_4
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_penetration_debuff_5
+			}
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+					NOT = {
+						has_modifier = tr_ngm_penetration_debuff_5
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_penetration_debuff_6
+			}
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+					NOT = {
+						has_modifier = tr_ngm_penetration_debuff_6
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_6
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_penetration_debuff_7
+			}
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+					NOT = {
+						has_modifier = tr_ngm_penetration_debuff_7
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_7
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_penetration_debuff_8
+			}
+			every_playable_country = {
+				limit = {
+					has_established_contact = root
+					NOT = {
+						has_modifier = tr_ngm_penetration_debuff_8
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_8
+				}
+			}
+		}
+	}
+}
+
+# 自由:完遂時:宿敵宣言した国家の奴隷幸福度-20%		伝統取得時
+country_event = {
+	id = ngm_tradition.9
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_freedom_finish
+	}
+	immediate = {
+		if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_1
+					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_1
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_1
+			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_1
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_2
+					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_2
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_2
+			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_2
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_3
+					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_3
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_3
+			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_3
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_3
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_4
+					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_4
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_4
+			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_4
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_4
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_5
+					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_5
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_5
+			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_5
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_6
+					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_6
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_6
+			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_6
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_6
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_7
+					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_7
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_7
+			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_7
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_7
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_8
+					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_8
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_8
+			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_8
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_8
+				}
+			}
+		}
+	}
+}
+
+# 自由:完遂時:宿敵宣言した国家の奴隷幸福度-20%		月ごとのチェック
+country_event = {
+	id = ngm_tradition.10
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_freedom_finish
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_1
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_freedom_finish_debuff_1
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_1
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_freedom_finish_debuff_1
+				}
+				remove_modifier = tr_ngm_freedom_finish_debuff_1
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_2
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_freedom_finish_debuff_2
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_2
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_freedom_finish_debuff_2
+				}
+				remove_modifier = tr_ngm_freedom_finish_debuff_2
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_3
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_freedom_finish_debuff_3
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_3
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_freedom_finish_debuff_3
+				}
+				remove_modifier = tr_ngm_freedom_finish_debuff_3
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_4
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_freedom_finish_debuff_4
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_4
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_freedom_finish_debuff_4
+				}
+				remove_modifier = tr_ngm_freedom_finish_debuff_4
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_5
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_freedom_finish_debuff_5
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_5
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_freedom_finish_debuff_5
+				}
+				remove_modifier = tr_ngm_freedom_finish_debuff_5
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_6
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_freedom_finish_debuff_6
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_6
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_freedom_finish_debuff_6
+				}
+				remove_modifier = tr_ngm_freedom_finish_debuff_6
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_7
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_freedom_finish_debuff_7
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_7
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_freedom_finish_debuff_7
+				}
+				remove_modifier = tr_ngm_freedom_finish_debuff_7
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_8
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_freedom_finish_debuff_8
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_freedom_finish_debuff_8
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_freedom_finish_debuff_8
+				}
+				remove_modifier = tr_ngm_freedom_finish_debuff_8
+			}
+		}
+	}
+}
+
+# 破壊工作:宿敵の貿易保護値-15、宿敵の犯罪度+20		伝統取得時
+country_event = {
+	id = ngm_tradition.11
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_sabotage
+	}
+	immediate = {
+		if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sabotage_debuff_1
+					has_country_flag = country_flag_tr_ngm_sabotage_debuff_1
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sabotage_debuff_1
+			set_country_flag = country_flag_tr_ngm_sabotage_debuff_1
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sabotage_debuff_2
+					has_country_flag = country_flag_tr_ngm_sabotage_debuff_2
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sabotage_debuff_2
+			set_country_flag = country_flag_tr_ngm_sabotage_debuff_2
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sabotage_debuff_3
+					has_country_flag = country_flag_tr_ngm_sabotage_debuff_3
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sabotage_debuff_3
+			set_country_flag = country_flag_tr_ngm_sabotage_debuff_3
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_3
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sabotage_debuff_4
+					has_country_flag = country_flag_tr_ngm_sabotage_debuff_4
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sabotage_debuff_4
+			set_country_flag = country_flag_tr_ngm_sabotage_debuff_4
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_4
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sabotage_debuff_5
+					has_country_flag = country_flag_tr_ngm_sabotage_debuff_5
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sabotage_debuff_5
+			set_country_flag = country_flag_tr_ngm_sabotage_debuff_5
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sabotage_debuff_6
+					has_country_flag = country_flag_tr_ngm_sabotage_debuff_6
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sabotage_debuff_6
+			set_country_flag = country_flag_tr_ngm_sabotage_debuff_6
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_6
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sabotage_debuff_7
+					has_country_flag = country_flag_tr_ngm_sabotage_debuff_7
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sabotage_debuff_7
+			set_country_flag = country_flag_tr_ngm_sabotage_debuff_7
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_7
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_sabotage_debuff_8
+					has_country_flag = country_flag_tr_ngm_sabotage_debuff_8
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_sabotage_debuff_8
+			set_country_flag = country_flag_tr_ngm_sabotage_debuff_8
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_8
+				}
+			}
+		}
+	}
+}
+
+# 破壊工作:宿敵の貿易保護値-15、宿敵の犯罪度+20		月ごとのチェック
+country_event = {
+	id = ngm_tradition.12
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_sabotage
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sabotage_debuff_1
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sabotage_debuff_1
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_1
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sabotage_debuff_1
+				}
+				remove_modifier = tr_ngm_sabotage_debuff_1
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sabotage_debuff_2
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sabotage_debuff_2
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_2
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sabotage_debuff_2
+				}
+				remove_modifier = tr_ngm_sabotage_debuff_2
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sabotage_debuff_3
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sabotage_debuff_3
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_3
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sabotage_debuff_3
+				}
+				remove_modifier = tr_ngm_sabotage_debuff_3
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sabotage_debuff_4
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sabotage_debuff_4
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_4
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sabotage_debuff_4
+				}
+				remove_modifier = tr_ngm_sabotage_debuff_4
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sabotage_debuff_5
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sabotage_debuff_5
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_5
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sabotage_debuff_5
+				}
+				remove_modifier = tr_ngm_sabotage_debuff_5
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sabotage_debuff_6
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sabotage_debuff_6
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_6
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sabotage_debuff_6
+				}
+				remove_modifier = tr_ngm_sabotage_debuff_6
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sabotage_debuff_7
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sabotage_debuff_7
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_7
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sabotage_debuff_7
+				}
+				remove_modifier = tr_ngm_sabotage_debuff_7
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_sabotage_debuff_8
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_sabotage_debuff_8
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_sabotage_debuff_8
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_sabotage_debuff_8
+				}
+				remove_modifier = tr_ngm_sabotage_debuff_8
+			}
+		}
+	}
+}
+
+# 恒常的妨害:宿敵の貿易保護値-5		伝統取得時
+country_event = {
+	id = ngm_tradition.11
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_constant_obstruction
+	}
+	immediate = {
+		if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_1
+					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_1
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_1
+			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_1
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_2
+					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_2
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_2
+			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_2
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_3
+					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_3
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_3
+			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_3
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_3
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_4
+					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_4
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_4
+			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_4
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_4
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_5
+					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_5
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_5
+			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_5
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_6
+					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_6
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_6
+			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_6
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_6
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_7
+					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_7
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_7
+			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_7
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_7
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_8
+					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_8
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_8
+			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_8
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_8
+				}
+			}
+		}
+	}
+}
+
+# 恒常的妨害:宿敵の貿易保護値-5		月ごとのチェック
+country_event = {
+	id = ngm_tradition.12
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_constant_obstruction
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_1
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_constant_obstruction_debuff_1
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_1
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_constant_obstruction_debuff_1
+				}
+				remove_modifier = tr_ngm_constant_obstruction_debuff_1
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_2
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_constant_obstruction_debuff_2
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_2
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_constant_obstruction_debuff_2
+				}
+				remove_modifier = tr_ngm_constant_obstruction_debuff_2
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_3
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_constant_obstruction_debuff_3
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_3
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_constant_obstruction_debuff_3
+				}
+				remove_modifier = tr_ngm_constant_obstruction_debuff_3
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_4
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_constant_obstruction_debuff_4
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_4
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_constant_obstruction_debuff_4
+				}
+				remove_modifier = tr_ngm_constant_obstruction_debuff_4
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_5
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_constant_obstruction_debuff_5
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_5
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_constant_obstruction_debuff_5
+				}
+				remove_modifier = tr_ngm_constant_obstruction_debuff_5
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_6
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_constant_obstruction_debuff_6
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_6
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_constant_obstruction_debuff_6
+				}
+				remove_modifier = tr_ngm_constant_obstruction_debuff_6
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_7
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_constant_obstruction_debuff_7
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_7
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_constant_obstruction_debuff_7
+				}
+				remove_modifier = tr_ngm_constant_obstruction_debuff_7
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_8
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_constant_obstruction_debuff_8
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_constant_obstruction_debuff_8
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_constant_obstruction_debuff_8
+				}
+				remove_modifier = tr_ngm_constant_obstruction_debuff_8
+			}
+		}
+	}
+}
+
+# 国家宣伝省:宿敵1つあたりの影響力収入+1		伝統取得時
+country_event = {
+	id = ngm_tradition.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_ministry_engagement
+	}
+	immediate = {
+		if = {
+			limit = {
+				num_rivals = 1
+			}
+			add_modifier = {
+				modifier = tr_ngm_ministry_engagement_buff_1
+			}
+		}
+		else_if = {
+			limit = {
+				num_rivals = 2
+			}
+			add_modifier = {
+				modifier = tr_ngm_ministry_engagement_buff_2
+			}
+		}
+		else_if = {
+			limit = {
+				num_rivals = 3
+			}
+			add_modifier = {
+				modifier = tr_ngm_ministry_engagement_buff_3
+			}
+		}
+		else_if = {
+			limit = {
+				num_rivals = 4
+			}
+			add_modifier = {
+				modifier = tr_ngm_ministry_engagement_buff_4
+			}
+		}
+		else_if = {
+			limit = {
+				num_rivals = 5
+			}
+			add_modifier = {
+				modifier = tr_ngm_ministry_engagement_buff_5
+			}
+		}
+	}
+}
+
+# 国家宣伝省:宿敵1つあたりの影響力収入+1		月ごとのチェック
+country_event = {
+	id = ngm_tradition.14
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_ministry_engagement
+	}
+	immediate = {
+		if = {
+			limit = {
+				num_rivals = 1
+			}
+			add_modifier = {
+				modifier = tr_ngm_ministry_engagement_buff_1
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_2
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_2
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_3
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_3
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_4
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_4
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_5
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_5
+			}
+		}
+		else_if = {
+			limit = {
+				num_rivals = 2
+			}
+			add_modifier = {
+				modifier = tr_ngm_ministry_engagement_buff_2
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_1
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_1
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_3
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_3
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_4
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_4
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_5
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_5
+			}
+		}
+		else_if = {
+			limit = {
+				num_rivals = 3
+			}
+			add_modifier = {
+				modifier = tr_ngm_ministry_engagement_buff_3
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_1
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_1
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_2
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_2
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_4
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_4
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_5
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_5
+			}
+		}
+		else_if = {
+			limit = {
+				num_rivals = 4
+			}
+			add_modifier = {
+				modifier = tr_ngm_ministry_engagement_buff_4
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_1
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_1
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_2
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_2
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_3
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_3
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_5
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_5
+			}
+		}
+		else_if = {
+			limit = {
+				num_rivals = 5
+			}
+			add_modifier = {
+				modifier = tr_ngm_ministry_engagement_buff_5
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_1
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_1
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_2
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_2
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_3
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_3
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_4
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_4
+			}
+		}
+	}
+}
+
+# 善隣完遂時:5種類以上の種族がいる惑星でPop成長速度+10%、交易価値+10%、統合力+10%、流入魅力+10%		伝統取得時
+country_event = {
+	id = ngm_tradition.15
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_neighbor_finish
+	}
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				num_species >= 5
+			}
+			add_modifier = {
+				modifier = tr_ngm_neighbor_finish_buff
+			}
+		}
+	}
+}
+
+# 善隣完遂時:5種類以上の種族がいる惑星でPop成長速度+10%、交易価値+10%、統合力+10%、流入魅力+10%		月ごとのチェック
+country_event = {
+	id = ngm_tradition.16
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_ministry_engagement
+	}
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				num_species >= 5
+				NOT = {
+					has_modifier = tr_ngm_neighbor_finish_buff
+				}
+			}
+			add_modifier = {
+				modifier = tr_ngm_neighbor_finish_buff
+			}
+		}
+	}
+}
+
+# 憲兵隊:地上軍のいる惑星の安定度+20		伝統取得時
+country_event = {
+	id = ngm_tradition.17
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_military_police
+	}
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				num_armies >= 5
+			}
+			add_modifier = {
+				modifier = tr_ngm_military_police_buff
+			}
+		}
+	}
+}
+
+# 憲兵隊:地上軍のいる惑星の安定度+20		月ごとのチェック
+country_event = {
+	id = ngm_tradition.18
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_military_police
+	}
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				num_armies >= 10
+				NOT = {
+					has_modifier = tr_ngm_military_police_buff
+				}
+			}
+			add_modifier = {
+				modifier = tr_ngm_military_police_buff
+			}
+		}
+		every_owned_planet = {
+			limit = {
+				num_armies < 10
+				has_modifier = tr_ngm_military_police_buff
+			}
+			remove_modifier = tr_ngm_military_police_buff
+		}
+	}
+}
+
+# 余裕取得時：管理許容量を超過しているとき、外交発言力+30%		伝統取得時
+country_event = {
+	id = ngm_tradition.19
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_margin_adopt
+	}
+	immediate = {
+		if = {
+			limit = {
+				empire_sprawl_over_cap > 0 
+			}
+			add_modifier = {
+				modifier = tr_ngm_margin_adopt_buff
+			}
+		}
+	}
+}
+
+# 余裕取得時：管理許容量を超過しているとき、外交発言力+30%		月ごとのチェック
+country_event = {
+	id = ngm_tradition.20
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_margin_adopt
+	}
+	immediate = {
+		if = {
+			limit = {
+				empire_sprawl_over_cap > 0 
+			}
+			add_modifier = {
+				modifier = tr_ngm_margin_adopt_buff
+			}
+		}
+		else = {
+			remove_modifier = tr_ngm_margin_adopt_buff
+		}
+	}
+}
+
+# 余裕完遂時:管理許容量を超過しているとき、影響力+30%		伝統取得時
+country_event = {
+	id = ngm_tradition.21
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_margin_finish
+	}
+	immediate = {
+		if = {
+			limit = {
+				empire_sprawl_over_cap > 0 
+			}
+			add_modifier = {
+				modifier = tr_ngm_margin_finish_buff
+			}
+		}
+	}
+}
+
+# 余裕完遂時:管理許容量を超過しているとき、影響力+30%		月ごとのチェック
+country_event = {
+	id = ngm_tradition.22
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_margin_finish
+	}
+	immediate = {
+		if = {
+			limit = {
+				empire_sprawl_over_cap > 0 
+			}
+			add_modifier = {
+				modifier = tr_ngm_margin_finish_buff
+			}
+		}
+		else = {
+			remove_modifier = tr_ngm_margin_finish_buff
+		}
+	}
+}
+
+# 3.軍事国家:宇宙軍許容量を超過しているときに職業による資源+5%		伝統取得時
+country_event = {
+	id = ngm_tradition.23
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_weapons_arsenal_country
+	}
+	immediate = {
+		if = {
+			limit = {
+				empire_sprawl_over_cap > 0 
+			}
+			add_modifier = {
+				modifier = tr_ngm_weapons_arsenal_country_buff
+			}
+		}
+	}
+}
+
+# 3.軍事国家:宇宙軍許容量を超過しているときに職業による資源+5%		月ごとのチェック
+country_event = {
+	id = ngm_tradition.24
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_weapons_arsenal_country
+	}
+	immediate = {
+		if = {
+			limit = {
+				empire_sprawl_over_cap > 0 
+			}
+			add_modifier = {
+				modifier = tr_ngm_weapons_arsenal_country_buff
+			}
+		}
+		else = {
+			remove_modifier = tr_ngm_weapons_arsenal_country_buff
 		}
 	}
 }

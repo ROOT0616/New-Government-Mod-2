@@ -15,19 +15,19 @@ triggered_opinion_ap_ngm_relation_old_empire = {
 	}
 }
 
-# 国際的大使館:他国の意見の受け入れが§G+10§!増加する
-triggered_opinion_tr_ngm_ambassador = {
-	trigger = {
-		is_country_type = default
-		FROM = {
-			has_tradition = tr_ngm_ambassador
-		}
-	}
+# # 国際的大使館:他国の意見の受け入れが§G+10§!増加する
+# triggered_opinion_tr_ngm_ambassador = {
+# 	trigger = {
+# 		is_country_type = default
+# 		FROM = {
+# 			has_tradition = tr_ngm_ambassador
+# 		}
+# 	}
 
-	opinion = {
-		base = 10
-	}
-}
+# 	opinion = {
+# 		base = 10
+# 	}
+# }
 
 # 切望:他国との友好度+30
 triggered_opinion_tr_ngm_longing_finish = {
@@ -43,15 +43,15 @@ triggered_opinion_tr_ngm_longing_finish = {
 	}
 }
 
-# 宗主	取得時：属国の受け入れ+10
-triggered_opinion_tr_ngm_suzerain_adopt = {
-	trigger = {
-		FROM = {
-			has_tradition = tr_ngm_suzerain_adopt
-		}
-	}
+# # 宗主	取得時：属国の受け入れ+10
+# triggered_opinion_tr_ngm_suzerain_adopt = {
+# 	trigger = {
+# 		FROM = {
+# 			has_tradition = tr_ngm_suzerain_adopt
+# 		}
+# 	}
 
-	opinion = {
-		base = 10
-	}
-}
+# 	opinion = {
+# 		base = 10
+# 	}
+# }
