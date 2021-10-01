@@ -9390,6 +9390,11 @@ country_event = {
 	show_sound = event_galactic_market
 	is_triggered_only = yes
 	immediate = {
+		event_target:ngm_olympic_founder_planet = {
+			add_modifier = {
+				modifier = ngm_olympic_founder_planet_modifier
+			}
+		}
 		every_playable_country = {
 			limit = {
 				is_galactic_community_member = yes
@@ -9449,6 +9454,7 @@ country_event = {
 		}
 	}
 	picture = GFX_evt_financial_instruments
+	show_sound = event_galactic_market
 	location = event_target:ngm_olympic_founder_planet
 	immediate = {
 		event_target:ngm_olympic_founder_planet.solar_system = {
@@ -9551,7 +9557,6 @@ country_event = {
 
 # ↓半年後
 # 開催規模決定(選択期間半年)
-# 近くに開催される大会において、我が国の演出と選手団の規模について議論が上がっている。壮麗なものとすればもちろん国威を示すことができるが、選手団にその費用は用意できないという相談があった。我が国としてはどのように支援するべきであろうか。(主催国、参加国双方発生。時間切れの選択肢として最低限が選択される。)
 # (大規模、質実充実、最低限の3種類。それぞれエネルギー3k、1k、0の消費で、大規模であれば、開会式で影響力を獲得する。)
 country_event = {
 	id = ngm_government.107
@@ -9623,8 +9628,6 @@ country_event = {
 
 # ↓8か月後
 # 開会式
-# ●●において△△の大会が開催された。開会にあたり式典が行われ、最新鋭の技術を利用したホログラムや機械的なアピールが行われ、市民たちは熱狂の渦に置かれた。各国の選手たちの入場もつつがなく行われ、居住性に合わせたドームの中で行進が行われた。
-# 入場の後には□□の国家元首である××により開会の宣言が起こなわれ、今から大会が開催される。「すばらしい」
 # (開催規模決定の準備に応じて影響力を200、50、10を獲得)
 country_event = {
 	id = ngm_government.108

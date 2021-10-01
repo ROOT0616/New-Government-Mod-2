@@ -1746,6 +1746,9 @@
  ngm_olympic_nominee_level_5:0 "強化された国際大会候補地の競争力格付け：§G完璧§!"
  ngm_olympic_nominee_level_5_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§G完璧§!。 "
 
+ ngm_olympic_founder_planet_modifier:0 "国際大会開催地"
+ ngm_olympic_founder_planet_modifier_desc:0 ""
+
  ngm_olympic_1_event_modifier:0 "地元の好況"
  ngm_olympic_1_event_modifier_desc:0 ""
 
@@ -2534,7 +2537,7 @@
  ngm_government.103.desc.phobe:0 "$ngm_government.103.desc$"
 
  ngm_government.105.name:0 "§H国際大会§!：設立"
- ngm_government.105.desc:0 "銀河文化の中心が§Y[From.GetName]§!領内の§Y[ngm_olympic_founder_planet.GetName]§!に現れた。 §Y[From.GetAdj]§!管理当局は、 中立的な大会運営機構を通じて国際的な文化活動を推進している。"
+ ngm_government.105.desc:0 "銀河文化の中心が§Y[ngm_olympic_founder.GetName]§!領内の§Y[ngm_olympic_founder_planet.GetName]§!に現れた。 §Y[ngm_olympic_founder.GetAdj]§!管理当局は、 中立的な大会運営機構を通じて国際的な文化活動を推進している。"
  ngm_government.105.desc.phobe:0 "§Y[From.GetName]§!のいかがわしい異星人が国際文化を名目に異様な文化の混入を推進しようとしている。 もちろん嫌悪感を催すことだが、 我々にはこの文化事業に参加する選択肢もある。 "
 
  ngm_government.106.name:0 "§H次期国際大会の誕生§!"
