@@ -3,7 +3,7 @@
 @ap_engineered_evolution_POINTS = 3
 @ap_engineered_evolution_COST_MULT = -0.25
 
-# ②恒常的敵対諜報活動		(敵に対しては常に影響を与え続けなければならない)		(外交官+2、解読力+10、宿敵にした相手国の影響力-1)まだ
+# ②恒常的敵対諜報活動		(敵に対しては常に影響を与え続けなければならない)		(外交官+2、解読力+10、宿敵にした相手国の影響力-1)
 ap_ngm_constant_hostile_intelligence_operations = {
 	potential = {
 		NOT = {

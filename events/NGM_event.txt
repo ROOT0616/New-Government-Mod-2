@@ -3521,24 +3521,24 @@ country_event = {
 			15 = {
 				add_monthly_resource_mult = {
 					resource = engineering_research
-					value = @tier3researchreward
-					min = @tier3researchmin
+					value = @tier5researchreward
+					min = @tier5researchmin
 					max = @tier5researchmax
 				}
 			}
 			15 = {
 				add_monthly_resource_mult = {
 					resource = physics_research
-					value = @tier3researchreward
-					min = @tier3researchmin
+					value = @tier5researchreward
+					min = @tier5researchmin
 					max = @tier5researchmax
 				}
 			}
 			15 = {
 				add_monthly_resource_mult = {
 					resource = society_research
-					value = @tier3researchreward
-					min = @tier3researchmin
+					value = @tier5researchreward
+					min = @tier5researchmin
 					max = @tier5researchmax
 				}
 			}
@@ -3550,8 +3550,8 @@ country_event = {
 					fail_effects = {
 						add_monthly_resource_mult = {
 							resource = engineering_research
-							value = @tier3researchreward
-							min = @tier3researchmin
+							value = @tier5researchreward
+							min = @tier5researchmin
 							max = @tier5researchmax
 						}
 					}
@@ -3565,8 +3565,8 @@ country_event = {
 					fail_effects = {
 						add_monthly_resource_mult = {
 							resource = physics_research
-							value = @tier3researchreward
-							min = @tier3researchmin
+							value = @tier5researchreward
+							min = @tier5researchmin
 							max = @tier5researchmax
 						}
 					}
@@ -3580,8 +3580,8 @@ country_event = {
 					fail_effects = {
 						add_monthly_resource_mult = {
 							resource = society_research
-							value = @tier3researchreward
-							min = @tier3researchmin
+							value = @tier5researchreward
+							min = @tier5researchmin
 							max = @tier5researchmax
 						}
 					}
@@ -3655,24 +3655,24 @@ country_event = {
 			15 = {
 				add_monthly_resource_mult = {
 					resource = engineering_research
-					value = @tier3researchreward
-					min = @tier3researchmin
+					value = @tier5researchreward
+					min = @tier5researchmin
 					max = @tier5researchmax
 				}
 			}
 			15 = {
 				add_monthly_resource_mult = {
 					resource = physics_research
-					value = @tier3researchreward
-					min = @tier3researchmin
+					value = @tier5researchreward
+					min = @tier5researchmin
 					max = @tier5researchmax
 				}
 			}
 			15 = {
 				add_monthly_resource_mult = {
 					resource = society_research
-					value = @tier3researchreward
-					min = @tier3researchmin
+					value = @tier5researchreward
+					min = @tier5researchmin
 					max = @tier5researchmax
 				}
 			}
@@ -3684,8 +3684,8 @@ country_event = {
 					fail_effects = {
 						add_monthly_resource_mult = {
 							resource = engineering_research
-							value = @tier3researchreward
-							min = @tier3researchmin
+							value = @tier5researchreward
+							min = @tier5researchmin
 							max = @tier5researchmax
 						}
 					}
@@ -3699,8 +3699,8 @@ country_event = {
 					fail_effects = {
 						add_monthly_resource_mult = {
 							resource = physics_research
-							value = @tier3researchreward
-							min = @tier3researchmin
+							value = @tier5researchreward
+							min = @tier5researchmin
 							max = @tier5researchmax
 						}
 					}
@@ -3714,8 +3714,8 @@ country_event = {
 					fail_effects = {
 						add_monthly_resource_mult = {
 							resource = society_research
-							value = @tier3researchreward
-							min = @tier3researchmin
+							value = @tier5researchreward
+							min = @tier5researchmin
 							max = @tier5researchmax
 						}
 					}
@@ -4261,6 +4261,8 @@ country_event = {
 					10 = {
 						add_trait = leader_trait_ngm_governor_veteran
 					}
+					40 = {
+					}
 				}
 			}
 		}
@@ -4301,6 +4303,8 @@ country_event = {
 					}
 					10 = {
 						add_trait = leader_trait_ngm_scientist_veteran
+					}
+					60 = {
 					}
 				}
 			}
@@ -4347,6 +4351,8 @@ country_event = {
 					10 = {
 						add_trait = leader_trait_ngm_admiral_veteran
 					}
+					70 = {
+					}
 				}
 			}
 		}
@@ -4355,7 +4361,7 @@ country_event = {
 				NOT = {
 					has_leader_flag = flag_civic_ngm_advanced_glory_system
 				}
-				leader_class = admiral
+				leader_class = general
 			}
 			set_leader_flag = flag_civic_ngm_advanced_glory_system
 			if = {
@@ -4391,6 +4397,8 @@ country_event = {
 					}
 					10 = {
 						add_trait = leader_trait_ngm_general_veteran
+					}
+					70 = {
 					}
 				}
 			}
@@ -8044,7 +8052,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				empire_sprawl_over_cap > 0 
+				empire_sprawl_over_cap > 0
 			}
 			add_modifier = {
 				modifier = tr_ngm_margin_adopt_buff
@@ -8064,7 +8072,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				empire_sprawl_over_cap > 0 
+				empire_sprawl_over_cap > 0
 			}
 			add_modifier = {
 				modifier = tr_ngm_margin_adopt_buff
@@ -8087,7 +8095,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				empire_sprawl_over_cap > 0 
+				empire_sprawl_over_cap > 0
 			}
 			add_modifier = {
 				modifier = tr_ngm_margin_finish_buff
@@ -8107,7 +8115,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				empire_sprawl_over_cap > 0 
+				empire_sprawl_over_cap > 0
 			}
 			add_modifier = {
 				modifier = tr_ngm_margin_finish_buff
@@ -8130,7 +8138,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				empire_sprawl_over_cap > 0 
+				empire_sprawl_over_cap > 0
 			}
 			add_modifier = {
 				modifier = tr_ngm_weapons_arsenal_country_buff
@@ -8150,7 +8158,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				empire_sprawl_over_cap > 0 
+				empire_sprawl_over_cap > 0
 			}
 			add_modifier = {
 				modifier = tr_ngm_weapons_arsenal_country_buff
@@ -8158,6 +8166,374 @@ country_event = {
 		}
 		else = {
 			remove_modifier = tr_ngm_weapons_arsenal_country_buff
+		}
+	}
+}
+
+# ②恒常的敵対諜報活動		宿敵にした相手国の影響力-1
+country_event = {
+	id = ngm_tradition.25
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_ascension_perk = ap_ngm_constant_hostile_intelligence_operations
+	}
+	immediate = {
+		if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_ap_ngm_chio_debuff_1
+					has_country_flag = country_flag_ap_ngm_chio_debuff_1
+				}
+			}
+			set_global_flag = global_flag_ap_ngm_chio_debuff_1
+			set_country_flag = country_flag_ap_ngm_chio_debuff_1
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_ap_ngm_chio_debuff_2
+					has_country_flag = country_flag_ap_ngm_chio_debuff_2
+				}
+			}
+			set_global_flag = global_flag_ap_ngm_chio_debuff_2
+			set_country_flag = country_flag_ap_ngm_chio_debuff_2
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_ap_ngm_chio_debuff_3
+					has_country_flag = country_flag_ap_ngm_chio_debuff_3
+				}
+			}
+			set_global_flag = global_flag_ap_ngm_chio_debuff_3
+			set_country_flag = country_flag_ap_ngm_chio_debuff_3
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_3
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_ap_ngm_chio_debuff_4
+					has_country_flag = country_flag_ap_ngm_chio_debuff_4
+				}
+			}
+			set_global_flag = global_flag_ap_ngm_chio_debuff_4
+			set_country_flag = country_flag_ap_ngm_chio_debuff_4
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_4
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_ap_ngm_chio_debuff_5
+					has_country_flag = country_flag_ap_ngm_chio_debuff_5
+				}
+			}
+			set_global_flag = global_flag_ap_ngm_chio_debuff_5
+			set_country_flag = country_flag_ap_ngm_chio_debuff_5
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_ap_ngm_chio_debuff_6
+					has_country_flag = country_flag_ap_ngm_chio_debuff_6
+				}
+			}
+			set_global_flag = global_flag_ap_ngm_chio_debuff_6
+			set_country_flag = country_flag_ap_ngm_chio_debuff_6
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_6
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_ap_ngm_chio_debuff_7
+					has_country_flag = country_flag_ap_ngm_chio_debuff_7
+				}
+			}
+			set_global_flag = global_flag_ap_ngm_chio_debuff_7
+			set_country_flag = country_flag_ap_ngm_chio_debuff_7
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_7
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NAND = {
+					has_global_flag = global_flag_ap_ngm_chio_debuff_8
+					has_country_flag = country_flag_ap_ngm_chio_debuff_8
+				}
+			}
+			set_global_flag = global_flag_ap_ngm_chio_debuff_8
+			set_country_flag = country_flag_ap_ngm_chio_debuff_8
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_8
+				}
+			}
+		}
+	}
+}
+
+# ②恒常的敵対諜報活動		宿敵にした相手国の影響力-1)		月ごとのチェック
+country_event = {
+	id = ngm_tradition.26
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_ascension_perk = ap_ngm_constant_hostile_intelligence_operations
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = country_flag_ap_ngm_chio_debuff_1
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = ap_ngm_chio_debuff_1
+					}
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_1
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = ap_ngm_chio_debuff_1
+				}
+				remove_modifier = ap_ngm_chio_debuff_1
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_ap_ngm_chio_debuff_2
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = ap_ngm_chio_debuff_2
+					}
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_2
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = ap_ngm_chio_debuff_2
+				}
+				remove_modifier = ap_ngm_chio_debuff_2
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_ap_ngm_chio_debuff_3
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = ap_ngm_chio_debuff_3
+					}
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_3
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = ap_ngm_chio_debuff_3
+				}
+				remove_modifier = ap_ngm_chio_debuff_3
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_ap_ngm_chio_debuff_4
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = ap_ngm_chio_debuff_4
+					}
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_4
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = ap_ngm_chio_debuff_4
+				}
+				remove_modifier = ap_ngm_chio_debuff_4
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_ap_ngm_chio_debuff_5
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = ap_ngm_chio_debuff_5
+					}
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_5
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = ap_ngm_chio_debuff_5
+				}
+				remove_modifier = ap_ngm_chio_debuff_5
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_ap_ngm_chio_debuff_6
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = ap_ngm_chio_debuff_6
+					}
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_6
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = ap_ngm_chio_debuff_6
+				}
+				remove_modifier = ap_ngm_chio_debuff_6
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_ap_ngm_chio_debuff_7
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = ap_ngm_chio_debuff_7
+					}
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_7
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = ap_ngm_chio_debuff_7
+				}
+				remove_modifier = ap_ngm_chio_debuff_7
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_ap_ngm_chio_debuff_8
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = ap_ngm_chio_debuff_8
+					}
+				}
+				add_modifier = {
+					modifier = ap_ngm_chio_debuff_8
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = ap_ngm_chio_debuff_8
+				}
+				remove_modifier = ap_ngm_chio_debuff_8
+			}
 		}
 	}
 }
@@ -8845,13 +9221,6 @@ country_event = {
 				# can use add or mult
 				base = 1
 				modifier = {
-					add = 75
-					check_variable = {
-						which = expel_pop_var
-						value = 5
-					}
-				}
-				modifier = {
 					add = 50
 					check_variable = {
 						which = ngm_olympic_rating
@@ -8976,6 +9345,10 @@ country_event = {
 			}
 			set_variable = {
 				which = ngm_olympic_rating
+				value = 0
+			}
+			set_variable = {
+				which = ngm_olympic_game_rating
 				value = 0
 			}
 		}
@@ -9604,7 +9977,7 @@ country_event = {
 }
 
 # イベント表
-# 1.地元の好況(大会開催以来開催地の景気は向上している。観光客を中心とした消費の上昇と土地価格等の向上は惑星規模の経済を大きく発展させている。地元企業や住民はこの好景気により多大な利益を得ている。)
+# 1.地元の好況
 # エネルギー2k
 # 1年間当該惑星交易価値+10%
 country_event = {
@@ -9645,7 +10018,7 @@ country_event = {
 	}
 }
 
-# 2.テロ行為の事前発覚(惑星の治安当局は大会において大規模なテロ行為を行おうとした犯罪組織を未然に摘発することに成功したした。その組織は大会会場において原始的な中性子爆弾を炸裂させようとしたが、その材料入手の経路から組織摘発につながった。)
+# 2.テロ行為の事前発覚
 # 影響力+50
 # 2年間当該惑星安定度+10
 country_event = {
@@ -9686,7 +10059,7 @@ country_event = {
 	}
 }
 
-# 3.外交官の関心(この大会は世界的な注目を集めており、各国の外交官においても例外ではない。外交官の多くも選手の督励や観戦のために会場に集まっており、主催国の印象向上や外交的アピールの場としても利用されている。)
+# 3.外交官の関心
 # 影響力+50
 # 1年間外交発言力+10%
 country_event = {
@@ -9725,7 +10098,7 @@ country_event = {
 	}
 }
 
-# 4.大会への熱狂(市民達は現在世界規模の大規模大会への関心を強めており、その開催と大会の内容に熱狂を続けている。至る所で大会の話題に花が咲き、市民は大会を心から楽しんでいる。)
+# 4.大会への熱狂
 # 2年間当該惑星幸福度+10%
 country_event = {
 	id = ngm_government.113
@@ -9762,7 +10135,7 @@ country_event = {
 	}
 }
 
-# 5.国家規模の好景気(大会開催以来〇〇の景気は向上している。観光客を中心とした消費の上昇と土地価格等の向上は国家規模の経済を大きく発展させている。企業や市民はこの好景気により多大な利益を得ている。)
+# 5.国家規模の好景気
 # エネルギー5k
 # 1年間帝国交易価値+10%
 country_event = {
@@ -9801,7 +10174,7 @@ country_event = {
 	}
 }
 
-# 6.テロ組織の粉砕(〇〇の治安当局は大会において大規模なテロ行為を行おうとした犯罪組織を未然に摘発することに成功したした。その組織は大会会場において多数の中性子爆弾を炸裂させようとしたが、その材料入手の経路から組織摘発につながった。)
+# 6.テロ組織の粉砕
 # 影響力+100
 # 2年間帝国安定度+10
 country_event = {
@@ -9840,7 +10213,7 @@ country_event = {
 	}
 }
 
-# 7.大会記念品のヒット(大会が開催されるにあたり、大会マスコットやさまざまな記念品が飛ぶように売れている。これらの経済効果は一時的であろうが、絶大な利益を産んでいる)
+# 7.大会記念品のヒット
 # 1年間当該惑星交易価値+10%
 country_event = {
 	id = ngm_government.116
@@ -9877,7 +10250,7 @@ country_event = {
 	}
 }
 
-# 8.移民の流入(大会に合わせて観光客が惑星に詰めかけている。その中には〇〇への移住希望者が含まれており、入境当局は移民を許可した。そのことから観光客の中にも移住希望者が出ており、惑星人口は上昇傾向にある。)
+# 8.移民の流入
 # 当該惑星に全銀河のPopのうちランダムに2Pop発生
 # 1年間当該惑星Pop成長速度+10%
 country_event = {
@@ -9921,7 +10294,7 @@ country_event = {
 	}
 }
 
-# 9.国威発揚(大会は〇〇の経済的、文化的威信を示しており、国威発揚の側面を見せている。住民は大会誘致に成功した政府を支持し、各国の外交官や観光客に自国の宣伝を行うことに成功した。)
+# 9.国威発揚
 # 影響力+100
 # 5年間帝国安定度+10
 country_event = {
@@ -9960,7 +10333,7 @@ country_event = {
 	}
 }
 
-# 10.歴史的記録(この大会の実施と経過は全銀河史に残る偉業であると〇〇の文化人は主張している。この声を受けて現地当局は大会の歴史を記すプロジェクトを開始し、永遠に大会を記録しようと努力している。)
+# 10.歴史的記録
 # 5年間当該惑星統合力+10%
 country_event = {
 	id = ngm_government.119
@@ -9997,7 +10370,7 @@ country_event = {
 	}
 }
 
-# 11.世界的配信(この銀河的大会は全銀河で報道されており、その合間に行われる企業の宣伝活動やパブリックビューイングにおける経済活動は全銀河的な好景気を生んでいる。)
+# 11.世界的配信
 # 1年間参加国交易価値+5%
 country_event = {
 	id = ngm_government.120
@@ -10037,7 +10410,7 @@ country_event = {
 	}
 }
 
-# 12.観光地評価(〇〇における大会は銀河中でも評価されており、観光地としての名声が高まっている。そのため、多くの観光客が〇〇に集まっており、経済的な利益を生んでいる。)
+# 12.観光地評価
 # 2年間当該惑星交易価値+5%
 # 2年間当該惑星移民流入+20%
 country_event = {
@@ -10075,7 +10448,7 @@ country_event = {
 	}
 }
 
-# 13.効率的運営(大会の運営は滞りなく行われており、その経験と知識は国家運営においても転用され、効率的な行政に繋げることが可能である)
+# 13.効率的運営
 # 影響力+50
 # 5年間帝国管理許容量+10%
 country_event = {
@@ -10114,7 +10487,7 @@ country_event = {
 	}
 }
 
-# 14.犯罪流入(大会が開催されるにあたり、開催地には多くの人的流入が発生した。無論多くは観光客や大会関係者ではあるが、その中には犯罪者もまぎれており、開催地での治安悪化が報告されている。)
+# 14.犯罪流入
 # 2年間当該惑星犯罪度+10
 country_event = {
 	id = ngm_government.123
@@ -10151,7 +10524,7 @@ country_event = {
 	}
 }
 
-# 15.大会事故発生(大会が開催され、協議が進んでいる中で会場の照明が落下する事故が発生した。幸いにも死傷者は出なかったが、会場の設備等の再点検が行われ、開催地の住民は不安視している。)
+# 15.大会事故発生
 # 1年間惑星幸福度-5%
 country_event = {
 	id = ngm_government.124
@@ -10188,7 +10561,7 @@ country_event = {
 	}
 }
 
-# 16.運営の腐敗(大会の運営に対して「偶然」行われた金融調査の結果、大会役員の数名が大規模な汚職をしていたことが発覚した。国家の最高クラスの政治家がかかわっているとも考えられたが証拠は見つからなかった。しかし、今回の大会の誘致や会場建設等に大きな汚職事件が見つかったことは国家的威信を失うこととなった。)
+# 16.運営の腐敗
 # エネルギー-1k
 # 影響力-50
 country_event = {
@@ -10224,7 +10597,7 @@ country_event = {
 	}
 }
 
-# 17.テロ発生(大会に多くの観光客が集まる中、突然発生した爆発は多くの命を奪った。反政府勢力を自称するテロ組織は会場近辺で中性子爆弾を破裂させ、数十万人の命を一瞬で奪い去った。幸いなことに選手や外交官、政府高官に犠牲者は出ておらず、会場自体も無事であった。大会運営は苦渋の決断として大会を継続させることを決めたが、遺族は不満を示しており、現地から逃げる者もいる。)
+# 17.テロ発生
 # 惑星上のPopをランダムに1Pop殺害
 # 2年間帝国Pop幸福度-10%
 # 1年間当該惑星Pop成長速度-10%
@@ -10271,7 +10644,7 @@ country_event = {
 	}
 }
 
-# 18.予想外の不況(大会の誘致は経済に大きな影響を与えるとされてきた。しかし、膨大な資金を投下したにもかかわらず経済的効果は殆ど現れなかった。あらゆる投資が効果をなしておらず、以外にも不況が訪れている。)
+# 18.予想外の不況
 # 2年間当該惑星交易価値-10%
 country_event = {
 	id = ngm_government.127
@@ -10510,12 +10883,6 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.121.a
-		event_target:ngm_olympic_founder_planet = {
-			add_modifier = {
-				modifier = ngm_olympic_12_event_modifier
-				years = 2
-			}
-		}
 	}
 }
 
@@ -10622,7 +10989,7 @@ country_event = {
 }
 
 # 競技イベント
-# 1.息をのむ競技(しんと静まった会場の中で繰り広げられる競技は全銀河に放送されている。意図的に静かにしているわけではなく、皆無意識に息をのんでいるのだ。それほどまでに皆を引き込む試合はまだ続いている。)
+# 1.息をのむ競技
 # 1年間全参加国幸福度+10%
 country_event = {
 	id = ngm_government.200
@@ -10634,6 +11001,19 @@ country_event = {
 	location = event_target:ngm_olympic_founder_planet
 	trigger = {
 		has_global_flag = on_ngm_olympic
+	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.220
+			}
+		}
 	}
 	option = {
 		name = ngm_government.200.a
@@ -10649,7 +11029,7 @@ country_event = {
 	}
 }
 
-# 2.感動的選手(△△の選手団の団長は大会の有力選手である。何度も繰り返し傷病や成績不良による挫折を味わいながら這い上がった経歴を持つ団長は母国では英雄詩されており、彼の活躍は多くの人に感動を与えている。)
+# 2.感動的選手
 # 1年間参加国のうちランダムで1か国幸福度+20%
 country_event = {
 	id = ngm_government.201
@@ -10661,6 +11041,19 @@ country_event = {
 	location = event_target:ngm_olympic_founder_planet
 	trigger = {
 		has_global_flag = on_ngm_olympic
+	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.221
+			}
+		}
 	}
 	option = {
 		name = ngm_government.201.a
@@ -10677,7 +11070,7 @@ country_event = {
 	}
 }
 
-# 3.熾烈な競技(大会の有力国である●●と〇〇による競技は絶対に譲れない熱気がある。人々も熾烈なこの競技の結果を予測できておらず、予想外の追い抜きが繰り返されるたびに歓声をあげている。)
+# 3.熾烈な競技
 # 1年間参加国のうちランダムで2か国幸福度+20%
 country_event = {
 	id = ngm_government.202
@@ -10690,13 +11083,26 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.222
+			}
+		}
+	}
 	option = {
 		name = ngm_government.202.a
 		random_playable_country = {
 			limit = {
 				is_galactic_community_member = yes
 			}
-			save_global_event_target_as = ngm_olympic_game_global_event_target_1
+			save_global_event_target_as = ngm_olympic_game_global_event_target_2
 			add_modifier = {
 				modifier = ngm_olympic_3_game_modifier
 				years = 1
@@ -10706,7 +11112,7 @@ country_event = {
 			limit = {
 				is_galactic_community_member = yes
 			}
-			save_global_event_target_as = ngm_olympic_game_global_event_target_2
+			save_global_event_target_as = ngm_olympic_game_global_event_target_3
 			add_modifier = {
 				modifier = ngm_olympic_3_game_modifier
 				years = 1
@@ -10729,6 +11135,19 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.223
+			}
+		}
+	}
 	option = {
 		name = ngm_government.203.a
 		every_playable_country = {
@@ -10738,6 +11157,26 @@ country_event = {
 		}
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
+				modifier = ngm_olympic_5_game_modifier
+				years = 1
+			}
+		}
+		random_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			save_global_event_target_as = ngm_olympic_game_global_event_target_4
+			add_modifier = {
+				modifier = ngm_olympic_4_game_modifier
+				years = 1
+			}
+		}
+		random_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			save_global_event_target_as = ngm_olympic_game_global_event_target_5
+			add_modifier = {
 				modifier = ngm_olympic_4_game_modifier
 				years = 1
 			}
@@ -10745,7 +11184,7 @@ country_event = {
 	}
 }
 
-# 5.全銀河記録の樹立(競技のとある試合において記録された成績は銀河で記録されたもののなかで、最も高い成績となった。全銀河記録の樹立に選手だけではなく人々も熱狂している。)
+# 5.全銀河記録の樹立
 # 1年間参加国のうちランダムで1か国統合力+20%、影響力+100
 country_event = {
 	id = ngm_government.204
@@ -10758,6 +11197,19 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.224
+			}
+		}
+	}
 	option = {
 		name = ngm_government.204.a
 		random_playable_country = {
@@ -10767,16 +11219,16 @@ country_event = {
 			add_resource = {
 				influence = 100
 			}
-			save_global_event_target_as = ngm_olympic_game_global_event_target_1
+			save_global_event_target_as = ngm_olympic_game_global_event_target_6
 			add_modifier = {
-				modifier = ngm_olympic_5_game_modifier
+				modifier = ngm_olympic_6_game_modifier
 				years = 1
 			}
 		}
 	}
 }
 
-# 6.観客の熱狂(大会の観客は選手たちの白熱する競技に熱狂しており、歓声は惑星中に広がっている。特に主催国である●●での熱狂ぶりは甚だしく、市民は競技に夢中である。)
+# 6.観客の熱狂
 # 1年間主催国の幸福度+10%
 country_event = {
 	id = ngm_government.205
@@ -10789,18 +11241,31 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.225
+			}
+		}
+	}
 	option = {
 		name = ngm_government.205.a
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_6_game_modifier
+				modifier = ngm_olympic_7_game_modifier
 				years = 1
 			}
 		}
 	}
 }
 
-# 7.革新的チーム(△△の選手団は大会の有力候補である。天才的選手の直感に任せた勝利は派手さもあって人々からも人気であり、勝利に向かって進んでいる。)
+# 7.革新的チーム
 # 参加国のうちランダムで1カ国優勝確率+20%
 country_event = {
 	id = ngm_government.206
@@ -10813,12 +11278,35 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.226
+			}
+		}
+	}
 	option = {
 		name = ngm_government.206.a
+		random_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			save_global_event_target_as = ngm_olympic_game_global_event_target_7
+			change_variable = {
+				which = ngm_olympic_game_rating
+				value = 1
+			}
+		}
 	}
 }
 
-# 8.堅実なチーム(△△の選手団は大会の有力候補である。堅実に努力を重ねた優秀な選手が行う堅実な勝利は人々からも大いに認められており、優勝へと邁進している。)
+# 8.堅実なチーム
 # 参加国のうちランダムで1カ国優勝確率+20%
 country_event = {
 	id = ngm_government.207
@@ -10831,12 +11319,35 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.227
+			}
+		}
+	}
 	option = {
 		name = ngm_government.207.a
+		random_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			save_global_event_target_as = ngm_olympic_game_global_event_target_8
+			change_variable = {
+				which = ngm_olympic_game_rating
+				value = 1
+			}
+		}
 	}
 }
 
-# 9.競技外での表彰(△△の選手団は日ごろの行いが素晴らしく、会場付近では自発的にごみ拾いを、選手団の中でも謙虚で礼儀正しい。その選手団の行為に対して現地当局は感謝状を発行し、選手団も恭しく受け取った。)
+# 9.競技外での表彰
 # 参加国のうちランダムで1カ国に影響力+30
 country_event = {
 	id = ngm_government.208
@@ -10849,6 +11360,19 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.228
+			}
+		}
+	}
 	option = {
 		name = ngm_government.208.a
 		random_playable_country = {
@@ -10858,11 +11382,12 @@ country_event = {
 			add_resource = {
 				influence = 30
 			}
+			save_global_event_target_as = ngm_olympic_game_global_event_target_9
 		}
 	}
 }
 
-# 10.スリル感のある競技(△△選手団は当初有力候補ではなかった。しかし、試合が開始すると頭角を現した。各試合の最終局面で一気に勝利へと追い込むさまはスリル感もあって全銀河を虜にしている。)
+# 10.スリル感のある競技
 # 参加国のうちランダムで1カ国優勝確率+20%
 country_event = {
 	id = ngm_government.209
@@ -10875,12 +11400,35 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.229
+			}
+		}
+	}
 	option = {
 		name = ngm_government.209.a
+		random_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			save_global_event_target_as = ngm_olympic_game_global_event_target_10
+			change_variable = {
+				which = ngm_olympic_game_rating
+				value = 1
+			}
+		}
 	}
 }
 
-# 11.ドーピングの発覚(厳正な審判団はあることに気が付いた。△△の選手団の様子がおかしいのである。審判団の追求と調査により△△選手団が違法薬物による瞬時の能力向上を行っていたことが発覚した。△△選手団の一部は失格となった。)
+# 11.ドーピングの発覚
 # 1年間参加国のうちランダムで1か国幸福度-10%
 # 1年間主催国社会学研究+10%
 country_event = {
@@ -10894,28 +11442,41 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.230
+			}
+		}
+	}
 	option = {
 		name = ngm_government.210.a
 		random_playable_country = {
 			limit = {
 				is_galactic_community_member = yes
 			}
-			save_global_event_target_as = ngm_olympic_game_global_event_target_1
+			save_global_event_target_as = ngm_olympic_game_global_event_target_11
 			add_modifier = {
-				modifier = ngm_olympic_7_game_modifier
+				modifier = ngm_olympic_8_game_modifier
 				years = 1
 			}
 		}
 		event_target:ngm_olympic_founder_planet = {
 			add_modifier = {
-				modifier = ngm_olympic_8_game_modifier
+				modifier = ngm_olympic_9_game_modifier
 				years = 1
 			}
 		}
 	}
 }
 
-# 12.競技における不正(厳正な審判団はあることに気が付いた。△△の選手団の様子がおかしいのである。審判団の追求と調査により不正なデータを結果に反映させるようクラッキングが行われていたのだ。△△選手団の一部は失格となった。)
+# 12.競技における不正
 # 1年間参加国のうちランダムで1か国幸福度-10%
 # 主催国影響力+50
 country_event = {
@@ -10929,15 +11490,28 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.231
+			}
+		}
+	}
 	option = {
 		name = ngm_government.211.a
 		random_playable_country = {
 			limit = {
 				is_galactic_community_member = yes
 			}
-			save_global_event_target_as = ngm_olympic_game_global_event_target_1
+			save_global_event_target_as = ngm_olympic_game_global_event_target_12
 			add_modifier = {
-				modifier = ngm_olympic_9_game_modifier
+				modifier = ngm_olympic_10_game_modifier
 				years = 1
 			}
 		}
@@ -10949,7 +11523,7 @@ country_event = {
 	}
 }
 
-# 13.有力選手の故障(△△の選手団のうち最も有力視されている選手が発熱し、最高のパフォーマンスができない状態にある。そのため△△の選手団の成績は確実に落ちており、優勝の確立は下がっている。)
+# 13.有力選手の故障
 # 参加国のうちランダムで1カ国優勝確率+20%
 country_event = {
 	id = ngm_government.212
@@ -10962,12 +11536,35 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.232
+			}
+		}
+	}
 	option = {
 		name = ngm_government.212.a
+		random_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			save_global_event_target_as = ngm_olympic_game_global_event_target_13
+			change_variable = {
+				which = ngm_olympic_game_rating
+				value = 1
+			}
+		}
 	}
 }
 
-# 14.選手によるヘイトクライム(△△の選手団の数名が開催惑星の市民に対して信じられないほどの差別的発言を行っていたことが発覚された。融和と平和の祭典で差別的発言を行ったことは許されない行為であり、△△の政府は弁明に追われている。)
+# 14.選手によるヘイトクライム
 # 参加国のうちランダムで1カ国影響力-50、1年間統合力-10%
 country_event = {
 	id = ngm_government.213
@@ -10980,6 +11577,19 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					is_same_value = root
+				}
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.233
+			}
+		}
+	}
 	option = {
 		name = ngm_government.213.a
 		random_playable_country = {
@@ -10989,9 +11599,9 @@ country_event = {
 			add_resource = {
 				influence = -50
 			}
-			save_global_event_target_as = ngm_olympic_game_global_event_target_1
+			save_global_event_target_as = ngm_olympic_game_global_event_target_14
 			add_modifier = {
-				modifier = ngm_olympic_10_game_modifier
+				modifier = ngm_olympic_11_game_modifier
 				years = 1
 			}
 		}
@@ -11260,14 +11870,57 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
-		country_event = {
-			id = ngm_government.310
-			days = 5
+		every_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.310
+				days = 5
+			}
 		}
 		random_country = {
 			limit = {
 				is_country_type = default
 				has_country_flag = ngm_olympic_nomination_eligible
+			}
+			weights = {
+				base = 1
+				modifier = {
+					add = 50
+					check_variable = {
+						which = ngm_olympic_game_rating
+						value = 4
+					}
+				}
+				modifier = {
+					add = 40
+					check_variable = {
+						which = ngm_olympic_game_rating
+						value = 3
+					}
+				}
+				modifier = {
+					add = 30
+					check_variable = {
+						which = ngm_olympic_game_rating
+						value = 2
+					}
+				}
+				modifier = {
+					add = 20
+					check_variable = {
+						which = ngm_olympic_game_rating
+						value = 1
+					}
+				}
+				modifier = {
+					add = 10
+					check_variable = {
+						which = ngm_olympic_game_rating
+						value = 0
+					}
+				}
 			}
 			country_event = {
 				id = ngm_government.301
@@ -11279,6 +11932,44 @@ country_event = {
 				is_country_type = default
 				has_country_flag = ngm_olympic_nomination_eligible
 			}
+			weights = {
+				base = 1
+				modifier = {
+					add = 50
+					check_variable = {
+						which = ngm_olympic_game_rating
+						value = 4
+					}
+				}
+				modifier = {
+					add = 40
+					check_variable = {
+						which = ngm_olympic_game_rating
+						value = 3
+					}
+				}
+				modifier = {
+					add = 30
+					check_variable = {
+						which = ngm_olympic_game_rating
+						value = 2
+					}
+				}
+				modifier = {
+					add = 20
+					check_variable = {
+						which = ngm_olympic_game_rating
+						value = 1
+					}
+				}
+				modifier = {
+					add = 10
+					check_variable = {
+						which = ngm_olympic_game_rating
+						value = 0
+					}
+				}
+			}
 			country_event = {
 				id = ngm_government.302
 				days = 2
@@ -11289,45 +11980,114 @@ country_event = {
 				is_country_type = default
 				has_country_flag = ngm_olympic_nomination_eligible
 			}
+			weights = {
+				base = 1
+				modifier = {
+					add = 50
+					check_variable = {
+						which = ngm_olympic_game_rating
+						value = 4
+					}
+				}
+				modifier = {
+					add = 40
+					check_variable = {
+						which = ngm_olympic_game_rating
+						value = 3
+					}
+				}
+				modifier = {
+					add = 30
+					check_variable = {
+						which = ngm_olympic_game_rating
+						value = 2
+					}
+				}
+				modifier = {
+					add = 20
+					check_variable = {
+						which = ngm_olympic_game_rating
+						value = 1
+					}
+				}
+				modifier = {
+					add = 10
+					check_variable = {
+						which = ngm_olympic_game_rating
+						value = 0
+					}
+				}
+			}
 			country_event = {
 				id = ngm_government.303
 				days = 3
 			}
 		}
+		country_event = {
+			id = ngm_government.311
+			days = 10
+		}
 	}
 }
 
 # オリンピック1位
+# 1位は影響力+300と5年間統合力算出+20%、5年間外交発言力+10%
 country_event = {
 	id = ngm_government.301
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
 		save_global_event_target_as = ngm_olympic_1win_event_target
+		set_country_flag = ngm_olympic_1win_event_flag
+		add_resource = {
+			influence = 300
+		}
+		add_modifier = {
+			modifier = ngm_olympic_1win_modifier
+			years = 5
+		}
 	}
 }
 
 # オリンピック2位
+# 2位は影響力+150と5年間統合力算出+10%、
 country_event = {
 	id = ngm_government.302
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
 		save_global_event_target_as = ngm_olympic_2win_event_target
+		set_country_flag = ngm_olympic_2win_event_flag
+		add_resource = {
+			influence = 150
+		}
+		add_modifier = {
+			modifier = ngm_olympic_2win_modifier
+			years = 5
+		}
 	}
 }
 
 # オリンピック3位
+# 3位は影響力+100と5年間統合力算出+10%
 country_event = {
 	id = ngm_government.303
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
 		save_global_event_target_as = ngm_olympic_3win_event_target
+		set_country_flag = ngm_olympic_3win_event_flag
+		add_resource = {
+			influence = 100
+		}
+		add_modifier = {
+			modifier = ngm_olympic_3win_modifier
+			years = 5
+		}
 	}
 }
 
-# オリンピック初期化
+# オリンピック 閉会式 通知
 country_event = {
 	id = ngm_government.310
 	title = ngm_government.300.name
@@ -11341,8 +12101,63 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.300.a
+		if = {
+			limit = {
+				NOR = {
+					has_country_flag = ngm_olympic_1win_event_flag
+					has_country_flag = ngm_olympic_2win_event_flag
+					has_country_flag = ngm_olympic_3win_event_flag
+				}
+			}
+			add_modifier = {
+				modifier = ngm_olympic_buff_modifier
+				years = 2
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = ngm_olympic_1win_event_flag
+			}
+			remove_country_flag = ngm_olympic_1win_event_flag
+		}
+		if = {
+			limit = {
+				has_country_flag = ngm_olympic_2win_event_flag
+			}
+			remove_country_flag = ngm_olympic_2win_event_flag
+		}
+		if = {
+			limit = {
+				has_country_flag = ngm_olympic_3win_event_flag
+			}
+			remove_country_flag = ngm_olympic_3win_event_flag
+		}
+	}
+}
+
+# オリンピック 初期化
+country_event = {
+	id = ngm_government.311
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_global_flag = on_ngm_olympic
+	}
+	immediate = {
 		clear_global_event_target = ngm_olympic_game_global_event_target_1
 		clear_global_event_target = ngm_olympic_game_global_event_target_2
+		clear_global_event_target = ngm_olympic_game_global_event_target_3
+		clear_global_event_target = ngm_olympic_game_global_event_target_4
+		clear_global_event_target = ngm_olympic_game_global_event_target_5
+		clear_global_event_target = ngm_olympic_game_global_event_target_6
+		clear_global_event_target = ngm_olympic_game_global_event_target_7
+		clear_global_event_target = ngm_olympic_game_global_event_target_8
+		clear_global_event_target = ngm_olympic_game_global_event_target_9
+		clear_global_event_target = ngm_olympic_game_global_event_target_10
+		clear_global_event_target = ngm_olympic_game_global_event_target_11
+		clear_global_event_target = ngm_olympic_game_global_event_target_12
+		clear_global_event_target = ngm_olympic_game_global_event_target_13
+		clear_global_event_target = ngm_olympic_game_global_event_target_14
 		clear_global_event_target = ngm_olympic_1win_event_target
 		clear_global_event_target = ngm_olympic_2win_event_target
 		clear_global_event_target = ngm_olympic_3win_event_target

@@ -891,45 +891,70 @@ ngm_olympic_3_game_modifier = {
 	pop_happiness = 0.2
 }
 
-# 1年間全参加国統合力+20%
+# 1年間参加国のうちランダムで2か国幸福度+20%
 ngm_olympic_4_game_modifier = {
-	country_unity_produces_mult = 0.2
+	pop_happiness = 0.2
 }
 
-# 1年間参加国のうちランダムで1か国統合力+20%
+# 1年間全参加国統合力+20%
 ngm_olympic_5_game_modifier = {
 	country_unity_produces_mult = 0.2
 }
 
-# 1年間主催国の幸福度+10%
+# 1年間参加国のうちランダムで1か国統合力+20%
 ngm_olympic_6_game_modifier = {
+	country_unity_produces_mult = 0.2
+}
+
+# 1年間主催国の幸福度+10%
+ngm_olympic_7_game_modifier = {
 	pop_happiness = 0.1
 }
 
 # 1年間参加国のうちランダムで1か国幸福度-10%
-ngm_olympic_7_game_modifier = {
+ngm_olympic_8_game_modifier = {
 	pop_happiness = -0.1
 }
 
 # 1年間主催国社会学研究+10%
-ngm_olympic_8_game_modifier = {
+ngm_olympic_9_game_modifier = {
 	country_society_tech_research_speed = 0.1
 }
 
 # 1年間参加国のうちランダムで1か国幸福度-10%
-ngm_olympic_9_game_modifier = {
+ngm_olympic_10_game_modifier = {
 	pop_happiness = -0.1
 }
 
 # 参加国のうちランダムで1年間統合力-10%
-ngm_olympic_10_game_modifier = {
+ngm_olympic_11_game_modifier = {
 	country_unity_produces_mult = -0.1
 }
 
-# 参加国のうちランダムで1年間統合力-10%
-ngm_olympic_founder = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	pop_happiness = 0.05
+# オリンピック1位
+# 1位は影響力+300と5年間統合力算出+20%、5年間外交発言力+10%
+ngm_olympic_1win_modifier = {
+	country_unity_produces_mult = 0.2
+	diplo_weight_mult = 0.1
+}
+
+# オリンピック2位
+# 2位は影響力+150と5年間統合力算出+10%
+ngm_olympic_2win_modifier = {
+	country_unity_produces_mult = 0.1
+
+}
+
+# オリンピック3位
+# 3位は影響力+100と5年間統合力算出+10%
+ngm_olympic_3win_modifier = {
+	country_unity_produces_mult = 0.1
+}
+
+# オリンピック 参加賞
+# 統合力算出+5%
+ngm_olympic_buff_modifier = {
+	country_unity_produces_mult = 0.
 }
 
 # 狙い撃ち:艦船連射レート+5%、宿敵の犯罪度+10
@@ -1115,4 +1140,30 @@ tr_ngm_margin_finish_buff = {
 # 3.軍事国家:宇宙軍許容量を超過しているときに職業による資源+5%
 tr_ngm_weapons_arsenal_country_buff = {
 	planet_jobs_produces_mult = 0.05
+}
+
+# 恒常的敵対諜報活動		宿敵にした相手国の影響力-1
+ap_ngm_chio_debuff_1 = {
+	country_base_influence_produces_add = -1
+}
+ap_ngm_chio_debuff_2 = {
+	country_base_influence_produces_add = -1
+}
+ap_ngm_chio_debuff_3 = {
+	country_base_influence_produces_add = -1
+}
+ap_ngm_chio_debuff_4 = {
+	country_base_influence_produces_add = -1
+}
+ap_ngm_chio_debuff_5 = {
+	country_base_influence_produces_add = -1
+}
+ap_ngm_chio_debuff_6 = {
+	country_base_influence_produces_add = -1
+}
+ap_ngm_chio_debuff_7 = {
+	country_base_influence_produces_add = -1
+}
+ap_ngm_chio_debuff_8 = {
+	country_base_influence_produces_add = -1
 }

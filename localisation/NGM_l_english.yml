@@ -1442,14 +1442,9 @@
 
  civic_tooltip_ngm_high_priest_effects:0 "£building£ §Y首都建造物§!が提供する£job_administrator£ §Y$job_administrator$§!枠の一部が £job_high_priest£§Y$job_high_priest_plural$§!枠に置き換わる"
 
-#######################
-#####    特性    ######
-#######################
-
- trait_ngm_youth_politics:0 "青年政治"
- trait_ngm_youth_politics_desc:0 "§Lこの政府の高官は若者に支配されており、新進気鋭の政府高官により多くの決定がなされている。しかし、それは労連で熟達した経験者の引退を早める傾向にあり、突発的な決定を生み出してしまう傾向にある。§!"
- trait_ngm_elder_politics:0 "長老政治"
- trait_ngm_elder_politics_desc:0 "§Lこの政府の高官は高齢の者に支配されており、熟達した政府高官により多くの決定がなされている。しかし、それは新参者の政府参加を妨げやすく、新たな思想を受け入れる素地を減らしてしまう傾向にある。§!"
+##############################
+#####    リーダー特性    ######
+##############################
 
  leader_trait_ngm_governor_government_guardianship:0 "政府後見"
  leader_trait_ngm_governor_government_guardianship_desc:0 "このリーダーは政府により強力な支援が与えられている"
@@ -1532,7 +1527,9 @@
  leader_trait_ngm_general_veteran:0 "叩き上げ"
  leader_trait_ngm_general_veteran_desc:0 "この将軍は自らの能力によってこの地位に上り詰めた"
 
- civic_tooltip_ngm_not_removed:0 "§Rゲーム開始後の追加削除不可§!\n§Y(ゲーム開始後に追加、削除すると元に戻されます。)§!"
+##########################
+#####    惑星特性    ######
+##########################
 
  civic_tooltip_ngm_prosperity_advocate_effects:0 "平和の期間が5年続くごとに労働者生産量§G+1%§!§Y（最大50年分）§!\n平和の期間が5年続くごとに交易価値§G+2.5%§!§Y（最大50年分）§!"
  civic_ngm_prosperity_1_advocate_modifier:0 "平和の期間が5年"
@@ -1728,6 +1725,15 @@
 
  tr_ngm_weapons_arsenal_country_buff:0 "軍事国家"
 
+ ap_ngm_chio_debuff_1:0 "恒常的敵対諜報活動"
+ ap_ngm_chio_debuff_2:0 "$ap_ngm_chio_debuff_1$"
+ ap_ngm_chio_debuff_3:0 "$ap_ngm_chio_debuff_1$"
+ ap_ngm_chio_debuff_4:0 "$ap_ngm_chio_debuff_1$"
+ ap_ngm_chio_debuff_5:0 "$ap_ngm_chio_debuff_1$"
+ ap_ngm_chio_debuff_6:0 "$ap_ngm_chio_debuff_1$"
+ ap_ngm_chio_debuff_7:0 "$ap_ngm_chio_debuff_1$"
+ ap_ngm_chio_debuff_8:0 "$ap_ngm_chio_debuff_1$"
+
  ngm_olympic_nominee_desc_intro:0 "この惑星は、 将来の国際大会の基盤として候補になっている。 "
  ngm_olympic_nominee_level_1:0 "国際大会候補地の競争力格付け：§R脆弱§!"
  ngm_olympic_nominee_level_1_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§R脆弱§!。 "
@@ -1739,6 +1745,105 @@
  ngm_olympic_nominee_level_4_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§G特例§!。 "
  ngm_olympic_nominee_level_5:0 "強化された国際大会候補地の競争力格付け：§G完璧§!"
  ngm_olympic_nominee_level_5_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§G完璧§!。 "
+
+ ngm_olympic_1_event_modifier:0 "地元の好況"
+ ngm_olympic_1_event_modifier_desc:0 ""
+
+ ngm_olympic_2_event_modifier:0 "テロ行為の事前発覚"
+ ngm_olympic_2_event_modifier_desc:0 ""
+
+ ngm_olympic_3_event_modifier:0 "外交官の関心"
+ ngm_olympic_3_event_modifier_desc:0 ""
+
+ ngm_olympic_4_event_modifier:0 "大会への熱狂"
+ ngm_olympic_4_event_modifier_desc:0 ""
+
+ ngm_olympic_5_event_modifier:0 "国家規模の好景気"
+ ngm_olympic_5_event_modifier_desc:0 ""
+
+ ngm_olympic_6_event_modifier:0 "テロ組織の粉砕"
+ ngm_olympic_6_event_modifier_desc:0 ""
+
+ ngm_olympic_7_event_modifier:0 "大会記念品のヒット"
+ ngm_olympic_7_event_modifier_desc:0 ""
+
+ ngm_olympic_8_event_modifier:0 "移民の流入"
+ ngm_olympic_8_event_modifier_desc:0 ""
+
+ ngm_olympic_9_event_modifier:0 "国威発揚"
+ ngm_olympic_9_event_modifier_desc:0 ""
+
+ ngm_olympic_10_event_modifier:0 "歴史的記録"
+ ngm_olympic_10_event_modifier_desc:0 ""
+
+ ngm_olympic_11_event_modifier:0 "世界的配信"
+ ngm_olympic_11_event_modifier_desc:0 ""
+
+ ngm_olympic_12_event_modifier:0 "観光地評価"
+ ngm_olympic_12_event_modifier_desc:0 ""
+
+ ngm_olympic_13_event_modifier:0 "効率的運営"
+ ngm_olympic_13_event_modifier_desc:0 ""
+
+ ngm_olympic_14_event_modifier:0 "犯罪流入"
+ ngm_olympic_14_event_modifier_desc:0 ""
+
+ ngm_olympic_15_event_modifier:0 "大会事故発生"
+ ngm_olympic_15_event_modifier_desc:0 ""
+
+ ngm_olympic_16_event_modifier:0 "テロ発生"
+ ngm_olympic_16_event_modifier_desc:0 ""
+
+ ngm_olympic_17_event_modifier:0 "テロ発生"
+ ngm_olympic_17_event_modifier_desc:0 ""
+
+ ngm_olympic_18_event_modifier:0 "予想外の不況"
+ ngm_olympic_18_event_modifier_desc:0 ""
+
+ ngm_olympic_1_game_modifier:0 "息をのむ競技"
+ ngm_olympic_1_game_modifier_desc:0 ""
+
+ ngm_olympic_2_game_modifier:0 "感動的選手"
+ ngm_olympic_2_game_modifier_desc:0 ""
+
+ ngm_olympic_3_game_modifier:0 "熾烈な競技"
+ ngm_olympic_3_game_modifier_desc:0 ""
+
+ ngm_olympic_4_game_modifier:0 "歴史的一戦"
+ ngm_olympic_4_game_modifier_desc:0 ""
+
+ ngm_olympic_5_game_modifier:0 "歴史的一戦"
+ ngm_olympic_5_game_modifier_desc:0 ""
+
+ ngm_olympic_6_game_modifier:0 "全銀河記録の樹立"
+ ngm_olympic_6_game_modifier_desc:0 ""
+
+ ngm_olympic_7_game_modifier:0 "観客の熱狂"
+ ngm_olympic_7_game_modifier_desc:0 ""
+
+ ngm_olympic_8_game_modifier:0 "ドーピングの発覚"
+ ngm_olympic_8_game_modifier_desc:0 ""
+
+ ngm_olympic_9_game_modifier:0 "ドーピングの発覚"
+ ngm_olympic_9_game_modifier_desc:0 ""
+
+ ngm_olympic_10_game_modifier:0 "競技における不正"
+ ngm_olympic_10_game_modifier_desc:0 ""
+
+ ngm_olympic_11_game_modifier:0 "選手によるヘイトクライム"
+ ngm_olympic_11_game_modifier_desc:0 ""
+
+ ngm_olympic_1win_modifier:0 "オリンピック1位"
+ ngm_olympic_1win_modifier_desc:0 ""
+
+ ngm_olympic_2win_modifier:0 "オリンピック2位"
+ ngm_olympic_2win_modifier_desc:0 ""
+
+ ngm_olympic_3win_modifier:0 "オリンピック3位"
+ ngm_olympic_3win_modifier_desc:0 ""
+
+ ngm_olympic_buff_modifier:0 "オリンピック 参加賞"
+ ngm_olympic_buff_modifier_desc:0 ""
 
  first_covid_a_planet_modifier:0 "1-a"
  first_covid_a_planet_modifier_desc:0 ""
@@ -1773,30 +1878,22 @@
  civic_ngm_war_prosperity_is_war_country_modifier:0 "戦時経済"
  civic_ngm_war_prosperity_is_war_country_modifier_desc:0 "国家に張りをもたらす戦いにより経済は有機的な活況を見せている。"
 
- ngm_government1a:0 "統合参謀本部に任せる。"
- ngm_government1b:0 "前線指揮官の見解を聞こう。"
- ngm_government1c:0 "陸軍のやり方に一理あるようだ。"
- ngm_government1d:0 "ふむ。私の意見ではな......"
+ ngm_government1a:0 "作戦会議"
+ ngm_government1b:0 "$ngm_government1a$"
+ ngm_government1c:0 "$ngm_government1a$"
+ ngm_government1d:0 "$ngm_government1a$"
 
- ngm_government2a:0 "よろしい。直ちに軍事パレードだ。"
- ngm_government2c:0 "軍事パレードではなく、追悼集会をしよう。"
- ngm_government2d:0 "盛大にやろうじゃないか。"
- ngm_government2e:0 "英雄を讃え、勲章を配ろう。"
+ ngm_government2a:0 "軍事パレード"
+ ngm_government2c:0 "$ngm_government2a$"
+ ngm_government2d:0 "$ngm_government2a$"
+ ngm_government2e:0 "$ngm_government2a$"
 
- ngm_government3a:0 "すぐに鎮圧しろ！"
- ngm_government3d:0 "群衆に呼びかけ、軍の支持集会を開け。"
- ngm_government3e:0 "とある施設なら中で叫んでくれて構わない。"
+ ngm_government3a:0 "厭戦活動"
+ ngm_government3d:0 "$厭戦活動$"
+ ngm_government3e:0 "$厭戦活動$"
 
  ngm_with_honor_1_modifier:0 "死は無であるが、敗北と不名誉に生きることは、まさに日常の死なのだ。"
  ngm_with_honor_2_modifier:0 "屈辱を与えられた。"
-
- civic_tooltip_ngm_dissection_effects:0 "異種族は強制で奴隷化"
-
- civic_tooltip_ngm_pest_control_effects:0 "開発主義国家に対して、§G$casus_belli_cb_ngm_pest_control$§!の開戦事由を得る。 \n（勝利すると開発主義の志向を保全主義に転向させ、相手を属国化させる。さらに、終戦時に戦争相手へ社会学研究力をあげる）。"
-
- civic_tooltip_ngm_remorseless_justice_effects:0 "終末軌道爆撃以外選択不可"
-
- civic_tooltip_mechanical_faith_effects:0 "§Rゲーム開始後の追加削除不可§!\n§Y(ゲーム開始後に追加、削除すると元に戻されます。)§!\n\n精神主義派閥がロボットに怒らなくなる。\nロボットを非合法化できない。\nロボットの人権を市民権に固定。"
 
  mod_weapon_role_point_defense_weapon_fire_rate_mult:0 "対空砲連射レート"
  mod_country_sr_living_metal_produces_mult:0 "月間 $sr_living_metal$"
@@ -1853,6 +1950,15 @@
 
  civic_ngm_missionary_group_modifier:0 "伝道者団の来訪"
  civic_ngm_missionary_group_modifier_desc:0 "他国から信仰を広められている。"
+
+##########################
+#####    種族特性    ######
+##########################
+
+ trait_ngm_youth_politics:0 "青年政治"
+ trait_ngm_youth_politics_desc:0 "§Lこの政府の高官は若者に支配されており、新進気鋭の政府高官により多くの決定がなされている。しかし、それは労連で熟達した経験者の引退を早める傾向にあり、突発的な決定を生み出してしまう傾向にある。§!"
+ trait_ngm_elder_politics:0 "長老政治"
+ trait_ngm_elder_politics_desc:0 "§Lこの政府の高官は高齢の者に支配されており、熟達した政府高官により多くの決定がなされている。しかし、それは新参者の政府参加を妨げやすく、新たな思想を受け入れる素地を減らしてしまう傾向にある。§!"
 
  ngm_ancient_pact:0 "遺物「古代の盟約」"
 
@@ -2462,11 +2568,11 @@
  ngm_government.113.a:0 "おお！  すばらしい！"
 
  ngm_government.114.name:0 "国家規模の好景気"
- ngm_government.114.desc:0 "大会開催以来§Y[ngm_olympic_founder_planet.GetName]§!の景気は向上している。観光客を中心とした消費の上昇と土地価格等の向上は国家規模の経済を大きく発展させている。企業や市民はこの好景気により多大な利益を得ている。"
+ ngm_government.114.desc:0 "大会開催以来§Y[ngm_olympic_founder.GetName]§!の景気は向上している。観光客を中心とした消費の上昇と土地価格等の向上は国家規模の経済を大きく発展させている。企業や市民はこの好景気により多大な利益を得ている。"
  ngm_government.114.a:0 "チャリン！"
 
  ngm_government.115.name:0 "テロ組織の粉砕"
- ngm_government.115.desc:0 "§Y[ngm_olympic_founder_planet.GetName]§!の治安当局は大会において大規模なテロ行為を行おうとした犯罪組織を未然に摘発することに成功したした。その組織は大会会場において多数の中性子爆弾を炸裂させようとしたが、その材料入手の経路から組織摘発につながった。"
+ ngm_government.115.desc:0 "§Y[ngm_olympic_founder.GetName]§!の治安当局は大会において大規模なテロ行為を行おうとした犯罪組織を未然に摘発することに成功したした。その組織は大会会場において多数の中性子爆弾を炸裂させようとしたが、その材料入手の経路から組織摘発につながった。"
  ngm_government.115.a:0 "治安当局の働きは素晴らしい"
 
  ngm_government.116.name:0 "大会記念品のヒット"
@@ -2478,7 +2584,7 @@
  ngm_government.117.a:0 "人々の移動が活性化するというのか......"
 
  ngm_government.118.name:0 "国威発揚"
- ngm_government.118.desc:0 "大会は§Y[ngm_olympic_founder_planet.GetName]§!の経済的、文化的威信を示しており、国威発揚の側面を見せている。住民は大会誘致に成功した政府を支持し、各国の外交官や観光客に自国の宣伝を行うことに成功した。"
+ ngm_government.118.desc:0 "大会は§Y[ngm_olympic_founder.GetName]§!の経済的、文化的威信を示しており、国威発揚の側面を見せている。住民は大会誘致に成功した政府を支持し、各国の外交官や観光客に自国の宣伝を行うことに成功した。"
  ngm_government.118.a:0 "国家の威容を示すのに大会は役立つ"
 
  ngm_government.119.name:0 "歴史的記録"
@@ -2522,59 +2628,59 @@
  ngm_government.200.a:0 "ゴクリ......"
 
  ngm_government.201.name:0 "感動的選手"
- ngm_government.201.desc:0 "△△の選手団の団長は大会の有力選手である。何度も繰り返し傷病や成績不良による挫折を味わいながら這い上がった経歴を持つ団長は母国では英雄詩されており、彼の活躍は多くの人に感動を与えている。"
+ ngm_government.201.desc:0 "§Y[ngm_olympic_game_global_event_target_1.GetName]§!の選手団の団長は大会の有力選手である。何度も繰り返し傷病や成績不良による挫折を味わいながら這い上がった経歴を持つ団長は母国では英雄詩されており、彼の活躍は多くの人に感動を与えている。"
  ngm_government.201.a:0 "感動をありがとう！"
 
  ngm_government.202.name:0 "熾烈な競技"
- ngm_government.202.desc:0 "大会の有力国である●●と〇〇による競技は絶対に譲れない熱気がある。人々も熾烈なこの競技の結果を予測できておらず、予想外の追い抜きが繰り返されるたびに歓声をあげている。"
+ ngm_government.202.desc:0 "大会の有力国である§Y[ngm_olympic_game_global_event_target_2.GetName]§!と§Y[ngm_olympic_game_global_event_target_3.GetName]§!による競技は絶対に譲れない熱気がある。人々も熾烈なこの競技の結果を予測できておらず、予想外の追い抜きが繰り返されるたびに歓声をあげている。"
  ngm_government.202.a:0 "手に汗握る試合だ......"
 
  ngm_government.203.name:0 "歴史的一戦"
- ngm_government.203.desc:0 "歴史的に熾烈な競争を続けている●●と〇〇による競技は絶対に譲れない熱気がある。人々も熾烈なこの競技の結果を予測できておらず、予想外の追い抜きが繰り返されるたびに歓声をあげている。"
+ ngm_government.203.desc:0 "歴史的に熾烈な競争を続けている§Y[ngm_olympic_game_global_event_target_4.GetName]§!と§Y[ngm_olympic_game_global_event_target_5.GetName]§!による競技は絶対に譲れない熱気がある。人々も熾烈なこの競技の結果を予測できておらず、予想外の追い抜きが繰り返されるたびに歓声をあげている。"
  ngm_government.203.a:0 "これほどの大会は見たことがない！"
 
  ngm_government.204.name:0 "全銀河記録の樹立"
- ngm_government.204.desc:0 "競技のとある試合において記録された成績は銀河で記録されたもののなかで、最も高い成績となった。全銀河記録の樹立に選手だけではなく人々も熱狂している。"
+ ngm_government.204.desc:0 "競技のとある試合において§Y[ngm_olympic_game_global_event_target_6.GetName]§!が記録した成績は銀河で記録されたもののなかで、最も高い成績となった。全銀河記録の樹立に選手だけではなく人々も熱狂している。"
  ngm_government.204.a:0 "すばらしい！"
 
  ngm_government.205.name:0 "観客の熱狂"
- ngm_government.205.desc:0 "大会の観客は選手たちの白熱する競技に熱狂しており、歓声は惑星中に広がっている。特に主催国である●●での熱狂ぶりは甚だしく、市民は競技に夢中である。"
+ ngm_government.205.desc:0 "大会の観客は選手たちの白熱する競技に熱狂しており、歓声は惑星中に広がっている。特に主催国である§Y[ngm_olympic_founder.GetName]§!での熱狂ぶりは甚だしく、市民は競技に夢中である。"
  ngm_government.205.a:0 "ワ―――――――――――！"
 
  ngm_government.206.name:0 "革新的チーム"
- ngm_government.206.desc:0 "△△の選手団は大会の有力候補である。天才的選手の直感に任せた勝利は派手さもあって人々からも人気であり、勝利に向かって進んでいる。"
+ ngm_government.206.desc:0 "§Y[ngm_olympic_game_global_event_target_7.GetName]§!の選手団は大会の有力候補である。天才的選手の直感に任せた勝利は派手さもあって人々からも人気であり、勝利に向かって進んでいる。"
  ngm_government.206.a:0 "革新的なことはいいことだ"
 
  ngm_government.207.name:0 "堅実なチーム"
- ngm_government.207.desc:0 "△△の選手団は大会の有力候補である。堅実に努力を重ねた優秀な選手が行う堅実な勝利は人々からも大いに認められており、優勝へと邁進している。"
+ ngm_government.207.desc:0 "§Y[ngm_olympic_game_global_event_target_8.GetName]§!の選手団は大会の有力候補である。堅実に努力を重ねた優秀な選手が行う堅実な勝利は人々からも大いに認められており、優勝へと邁進している。"
  ngm_government.207.a:0 "堅実に行こうじゃないか"
 
  ngm_government.208.name:0 "競技外での表彰"
- ngm_government.208.desc:0 "△△の選手団は日ごろの行いが素晴らしく、会場付近では自発的にごみ拾いを、選手団の中でも謙虚で礼儀正しい。その選手団の行為に対して現地当局は感謝状を発行し、選手団も恭しく受け取った。"
+ ngm_government.208.desc:0 "§Y[ngm_olympic_game_global_event_target_9.GetName]§!の選手団は日ごろの行いが素晴らしく、会場付近では自発的にごみ拾いを、選手団の中でも謙虚で礼儀正しい。その選手団の行為に対して現地当局は感謝状を発行し、選手団も恭しく受け取った。"
  ngm_government.208.a:0 "すばらしい心がけだ"
 
  ngm_government.209.name:0 "スリル感のある競技"
- ngm_government.209.desc:0 "△△選手団は当初有力候補ではなかった。しかし、試合が開始すると頭角を現した。各試合の最終局面で一気に勝利へと追い込むさまはスリル感もあって全銀河を虜にしている。"
+ ngm_government.209.desc:0 "§Y[ngm_olympic_game_global_event_target_10.GetName]§!選手団は当初有力候補ではなかった。しかし、試合が開始すると頭角を現した。各試合の最終局面で一気に勝利へと追い込むさまはスリル感もあって全銀河を虜にしている。"
  ngm_government.209.a:0 "毎日でも見ていたい。"
 
  ngm_government.210.name:0 "ドーピングの発覚"
- ngm_government.210.desc:0 "厳正な審判団はあることに気が付いた。△△の選手団の様子がおかしいのである。審判団の追求と調査により△△選手団が違法薬物による瞬時の能力向上を行っていたことが発覚した。△△選手団の一部は失格となった。"
+ ngm_government.210.desc:0 "厳正な審判団はあることに気が付いた。§Y[ngm_olympic_game_global_event_target_11.GetName]§!の選手団の様子がおかしいのである。審判団の追求と調査により§Y[ngm_olympic_game_global_event_target_11.GetName]§!選手団が違法薬物による瞬時の能力向上を行っていたことが発覚した。§Y[ngm_olympic_game_global_event_target_11.GetName]§!選手団の一部は失格となった。"
  ngm_government.210.a:0 "信じられない......."
 
  ngm_government.211.name:0 "競技における不正"
- ngm_government.211.desc:0 "厳正な審判団はあることに気が付いた。△△の選手団の様子がおかしいのである。審判団の追求と調査により不正なデータを結果に反映させるようクラッキングが行われていたのだ。△△選手団の一部は失格となった。"
+ ngm_government.211.desc:0 "厳正な審判団はあることに気が付いた。§Y[ngm_olympic_game_global_event_target_12.GetName]§!の選手団の様子がおかしいのである。審判団の追求と調査により不正なデータを結果に反映させるようクラッキングが行われていたのだ。§Y[ngm_olympic_game_global_event_target_12.GetName]§!選手団の一部は失格となった。"
  ngm_government.211.a:0 "ひどいものだ"
 
  ngm_government.212.name:0 "有力選手の故障"
- ngm_government.212.desc:0 "△△の選手団のうち最も有力視されている選手が発熱し、最高のパフォーマンスができない状態にある。そのため△△の選手団の成績は確実に落ちており、優勝の確立は下がっている。"
+ ngm_government.212.desc:0 "§Y[ngm_olympic_game_global_event_target_13.GetName]§!の選手団のうち最も有力視されている選手が発熱し、最高のパフォーマンスができない状態にある。そのため§Y[ngm_olympic_game_global_event_target_13.GetName]§!の選手団の成績は確実に落ちており、優勝の確立は下がっている。"
  ngm_government.212.a:0 "悲しいことだ"
 
  ngm_government.213.name:0 "選手によるヘイトクライム"
- ngm_government.213.desc:0 "△△の選手団の数名が開催惑星の市民に対して信じられないほどの差別的発言を行っていたことが発覚された。融和と平和の祭典で差別的発言を行ったことは許されない行為であり、△△の政府は弁明に追われている。"
+ ngm_government.213.desc:0 "§Y[ngm_olympic_game_global_event_target_14.GetName]§!の選手団の数名が開催惑星の市民に対して信じられないほどの差別的発言を行っていたことが発覚された。融和と平和の祭典で差別的発言を行ったことは許されない行為であり、§Y[ngm_olympic_game_global_event_target_14.GetName]§!の政府は弁明に追われている。"
  ngm_government.213.a:0 "ふざけるな！"
 
  ngm_government.300.name:0 "閉会式"
- ngm_government.300.desc:0 "●●における△△の大会が終了した。終了にあたる式典では今まで盛り上がった市民も冷めやらぬ中、優秀な成績を残した国家の表彰が行われた。最も優秀な成績を残した〇〇にはブリリアント合金によるトロフィーが贈られ、それに準じる◆◆と■■にもクリアナイト合金のメダルが贈られた。彼らの名前は会場付近のオベリスクに記名されて永遠に称えられる。\n□□の国家元首である××により閉会の宣言が行えわれ、大会は無事終了した。"
+ ngm_government.300.desc:0 "§Y[ngm_olympic_founder_planet.GetName]§!における国際大会の大会が終了した。終了にあたる式典では今まで盛り上がった市民も冷めやらぬ中、優秀な成績を残した国家の表彰が行われた。最も優秀な成績を残した§Y[ngm_olympic_1win_event_target.GetName]§!にはブリリアント合金によるトロフィーが贈られ、それに準じる§Y[ngm_olympic_2win_event_target.GetName]§!と§Y[ngm_olympic_3win_event_target.GetName]§!にもクリアナイト合金のメダルが贈られた。彼らの名前は会場付近のオベリスクに記名されて永遠に称えられる。\n§Y[ngm_olympic_founder.GetName]§!の国家元首である[ngm_olympic_founder.GetAdj]により閉会の宣言が行えわれ、大会は無事終了した。"
  ngm_government.300.a:0 "良くも悪くも、終えることができたな"
 
  ngm_crisis.2.name:0 "不穏な気配"
@@ -3273,10 +3379,10 @@
  tradition_ngm_suzerain:0 "宗主"
  tradition_ngm_suzerain_desc:0 "植民と属国化。これこそが'平和'で安定的な拡張が可能である"
  tr_ngm_suzerain_adopt:0 "宗主の伝統"
- tr_ngm_suzerain_adopt_effect:0 "まだ　属国の受け入れ+10"
- tr_ngm_suzerain_adopt_desc:0 "まだ　属国の受け入れ+10"
+ #tr_ngm_suzerain_adopt_effect:0 "属国の受け入れ+10"
+ #tr_ngm_suzerain_adopt_desc:0 "属国の受け入れ+10"
  tr_ngm_suzerain_finish:0 "宗主の伝統の完成"
- tr_ngm_suzerain_finish_desc:0 "属国受け入れ時の距離補正をなくす\nアセンションパークをアンロック：§G+1§!"
+ #tr_ngm_suzerain_finish_desc:0 "属国受け入れ時の距離補正をなくす\nアセンションパークをアンロック：§G+1§!"
  tr_ngm_diplomatic_expansion:0 "外交的拡張"
  tr_ngm_diplomatic_expansion_desc:0 "§Y外交発言力§!を§G10%§!増加させる。"
  tr_ngm_diplomatic_expansion_delayed:0 "拡張は軍事力や先取によるものだけが含まれているのではない"
@@ -3628,6 +3734,16 @@
  enable_mega_engineering_project:0 "§H技術選択肢：§!メガエンジニアリング\n\n"
 
  empire_not_ethic:0 "$TRIGGER_FAIL$帝国は必要な条件を満たしてない。 "
+
+ civic_tooltip_ngm_dissection_effects:0 "異種族は強制で奴隷化"
+
+ civic_tooltip_ngm_pest_control_effects:0 "開発主義国家に対して、§G$casus_belli_cb_ngm_pest_control$§!の開戦事由を得る。 \n（勝利すると開発主義の志向を保全主義に転向させ、相手を属国化させる。さらに、終戦時に戦争相手へ社会学研究力をあげる）。"
+
+ civic_tooltip_ngm_remorseless_justice_effects:0 "終末軌道爆撃以外選択不可"
+
+ civic_tooltip_mechanical_faith_effects:0 "§Rゲーム開始後の追加削除不可§!\n§Y(ゲーム開始後に追加、削除すると元に戻されます。)§!\n\n精神主義派閥がロボットに怒らなくなる。\nロボットを非合法化できない。\nロボットの人権を市民権に固定。"
+
+ civic_tooltip_ngm_not_removed:0 "§Rゲーム開始後の追加削除不可§!\n§Y(ゲーム開始後に追加、削除すると元に戻されます。)§!"
 
 # :0 ""
 # _desc:0 ""
