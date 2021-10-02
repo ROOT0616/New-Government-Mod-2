@@ -11227,6 +11227,10 @@ country_event = {
 				modifier = ngm_olympic_6_game_modifier
 				years = 1
 			}
+			change_variable = {
+				which = ngm_olympic_game_rating
+				value = 3
+			}
 		}
 	}
 }
@@ -11303,7 +11307,7 @@ country_event = {
 			save_global_event_target_as = ngm_olympic_game_global_event_target_7
 			change_variable = {
 				which = ngm_olympic_game_rating
-				value = 1
+				value = 2
 			}
 		}
 	}
@@ -11344,7 +11348,7 @@ country_event = {
 			save_global_event_target_as = ngm_olympic_game_global_event_target_8
 			change_variable = {
 				which = ngm_olympic_game_rating
-				value = 1
+				value = 2
 			}
 		}
 	}
