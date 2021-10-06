@@ -5967,7 +5967,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sniper_debuff_1
 					has_country_flag = country_flag_tr_ngm_sniper_debuff_1
 				}
@@ -5985,7 +5985,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sniper_debuff_2
 					has_country_flag = country_flag_tr_ngm_sniper_debuff_2
 				}
@@ -6003,7 +6003,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sniper_debuff_3
 					has_country_flag = country_flag_tr_ngm_sniper_debuff_3
 				}
@@ -6021,7 +6021,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sniper_debuff_4
 					has_country_flag = country_flag_tr_ngm_sniper_debuff_4
 				}
@@ -6039,7 +6039,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sniper_debuff_5
 					has_country_flag = country_flag_tr_ngm_sniper_debuff_5
 				}
@@ -6057,7 +6057,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sniper_debuff_6
 					has_country_flag = country_flag_tr_ngm_sniper_debuff_6
 				}
@@ -6075,7 +6075,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sniper_debuff_7
 					has_country_flag = country_flag_tr_ngm_sniper_debuff_7
 				}
@@ -6093,7 +6093,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sniper_debuff_8
 					has_country_flag = country_flag_tr_ngm_sniper_debuff_8
 				}
@@ -6335,7 +6335,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_penetration_debuff_1
 					has_country_flag = country_flag_tr_ngm_penetration_debuff_1
 				}
@@ -6353,7 +6353,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_penetration_debuff_2
 					has_country_flag = country_flag_tr_ngm_penetration_debuff_2
 				}
@@ -6371,7 +6371,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_penetration_debuff_3
 					has_country_flag = country_flag_tr_ngm_penetration_debuff_3
 				}
@@ -6389,7 +6389,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_penetration_debuff_4
 					has_country_flag = country_flag_tr_ngm_penetration_debuff_4
 				}
@@ -6407,7 +6407,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_penetration_debuff_5
 					has_country_flag = country_flag_tr_ngm_penetration_debuff_5
 				}
@@ -6425,7 +6425,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_penetration_debuff_6
 					has_country_flag = country_flag_tr_ngm_penetration_debuff_6
 				}
@@ -6443,7 +6443,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_penetration_debuff_7
 					has_country_flag = country_flag_tr_ngm_penetration_debuff_7
 				}
@@ -6461,7 +6461,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_penetration_debuff_8
 					has_country_flag = country_flag_tr_ngm_penetration_debuff_8
 				}
@@ -6631,7 +6631,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_1
 					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_1
 				}
@@ -6649,7 +6649,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_2
 					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_2
 				}
@@ -6667,7 +6667,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_3
 					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_3
 				}
@@ -6685,7 +6685,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_4
 					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_4
 				}
@@ -6703,7 +6703,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_5
 					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_5
 				}
@@ -6721,7 +6721,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_6
 					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_6
 				}
@@ -6739,7 +6739,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_7
 					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_7
 				}
@@ -6757,7 +6757,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_freedom_finish_debuff_8
 					has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_8
 				}
@@ -6999,7 +6999,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sabotage_debuff_1
 					has_country_flag = country_flag_tr_ngm_sabotage_debuff_1
 				}
@@ -7017,7 +7017,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sabotage_debuff_2
 					has_country_flag = country_flag_tr_ngm_sabotage_debuff_2
 				}
@@ -7035,7 +7035,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sabotage_debuff_3
 					has_country_flag = country_flag_tr_ngm_sabotage_debuff_3
 				}
@@ -7053,7 +7053,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sabotage_debuff_4
 					has_country_flag = country_flag_tr_ngm_sabotage_debuff_4
 				}
@@ -7071,7 +7071,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sabotage_debuff_5
 					has_country_flag = country_flag_tr_ngm_sabotage_debuff_5
 				}
@@ -7089,7 +7089,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sabotage_debuff_6
 					has_country_flag = country_flag_tr_ngm_sabotage_debuff_6
 				}
@@ -7107,7 +7107,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sabotage_debuff_7
 					has_country_flag = country_flag_tr_ngm_sabotage_debuff_7
 				}
@@ -7125,7 +7125,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_sabotage_debuff_8
 					has_country_flag = country_flag_tr_ngm_sabotage_debuff_8
 				}
@@ -7367,7 +7367,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_1
 					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_1
 				}
@@ -7385,7 +7385,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_2
 					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_2
 				}
@@ -7403,7 +7403,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_3
 					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_3
 				}
@@ -7421,7 +7421,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_4
 					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_4
 				}
@@ -7439,7 +7439,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_5
 					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_5
 				}
@@ -7457,7 +7457,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_6
 					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_6
 				}
@@ -7475,7 +7475,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_7
 					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_7
 				}
@@ -7493,7 +7493,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_8
 					has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_8
 				}
@@ -8181,7 +8181,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_ap_ngm_chio_debuff_1
 					has_country_flag = country_flag_ap_ngm_chio_debuff_1
 				}
@@ -8199,7 +8199,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_ap_ngm_chio_debuff_2
 					has_country_flag = country_flag_ap_ngm_chio_debuff_2
 				}
@@ -8217,7 +8217,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_ap_ngm_chio_debuff_3
 					has_country_flag = country_flag_ap_ngm_chio_debuff_3
 				}
@@ -8235,7 +8235,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_ap_ngm_chio_debuff_4
 					has_country_flag = country_flag_ap_ngm_chio_debuff_4
 				}
@@ -8253,7 +8253,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_ap_ngm_chio_debuff_5
 					has_country_flag = country_flag_ap_ngm_chio_debuff_5
 				}
@@ -8271,7 +8271,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_ap_ngm_chio_debuff_6
 					has_country_flag = country_flag_ap_ngm_chio_debuff_6
 				}
@@ -8289,7 +8289,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_ap_ngm_chio_debuff_7
 					has_country_flag = country_flag_ap_ngm_chio_debuff_7
 				}
@@ -8307,7 +8307,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NAND = {
+				NOR = {
 					has_global_flag = global_flag_ap_ngm_chio_debuff_8
 					has_country_flag = country_flag_ap_ngm_chio_debuff_8
 				}

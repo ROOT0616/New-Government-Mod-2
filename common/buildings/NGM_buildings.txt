@@ -563,8 +563,8 @@ building_ngm_planet_rating_agency = {
 # 名称：サービス付き高官向け料亭（帝国首都にのみ建造可能）
 # 生産物：統合力+10
 # 維持費：エネルギー10
-# 企業帝国補正：外交発言力+20%
-# 惑星補正：犯罪度+100、犯罪度+20%、惑星を所有する国家の暗号力-7、安定度+20、豪商の職業枠+1、役員+1、事務員+2
+# 企業帝国補正：外交発言力+25%
+# 惑星補正：犯罪度+100、犯罪度+15%、惑星を所有する国家の暗号力-7、安定度+20、豪商の職業枠+1、役員+1、事務員+2
 # 説明文：政府高官や富裕層の贈賄や裏交渉の場として利用される娯楽施設。裏カジノや闇銀行も併設されており、犯罪企業や現地政府の影響力を拡大させるとともに、腐敗を進行させていっている......
 building_ngm_sa_ko_ryo = {
 	base_buildtime = @b1_time
@@ -582,15 +582,17 @@ building_ngm_sa_ko_ryo = {
 	}
 	planet_modifier = {
 		planet_crime_add = 100
-		planet_crime_mult = 0.2
+		planet_crime_mult = 0.15
 		intel_encryption_add = -7
-		planet_stability_add = 20
+		planet_stability_add = 25
 		job_merchant_add = 1
 		job_executive_add = 1
 		job_clerk_add = 2
+		branch_office_value_mult = 0.05
 	}
 	country_modifier = {
-		diplo_weight_mult = 0.2
+		diplo_weight_mult = 0.25
+		country_base_influence_produces_add = 0.5
 	}
 	resources = {
 		category = planet_branch_office_buildings
