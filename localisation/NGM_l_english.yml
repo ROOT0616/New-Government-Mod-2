@@ -133,7 +133,7 @@
  decision_end_planet_requisition_policy_effects_short:0 "惑星規模の徴用政策をやめる"
 
  decision_ngm_olympic_nomination:0 "国際大会の開催地に推薦"
- decision_ngm_olympic_nomination_desc:0 "銀国際大会の開催地となることは、 単なる栄誉のみならず利益ももたらす。 国際大会は気まぐれだが、 我々が充分なインセンティブを提供すれば、 ビッグプレーヤーたちをこの惑星に惹きつけられるかもしれない。 "
+ decision_ngm_olympic_nomination_desc:0 "国際大会の開催地となることは、 単なる栄誉のみならず利益ももたらす。 国際大会は気まぐれだが、 我々が充分なインセンティブを提供すれば、 ビッグプレーヤーたちをこの惑星に惹きつけられるかもしれない。 "
  decision_ngm_olympic_nomination_effects:0 "地元の状況に応じて、 §Y大会誘致競争の格付け§!補正がこの惑星に適用される。 格付けが高いほど、 この惑星が§H国際大会§!の主催場所となる確率が上がる。"
  decision_ngm_olympic_nomination_effects_short:0 "この惑星を国際的文化事業である§H国際大会§!の開催候補地として提案する。 "
 
@@ -1005,8 +1005,6 @@
  NAME_NGM_loop_kil:0 "このループを断ち切る"
  NAME_NGM_loop_kil_desc:0 "qmb↓dcp"
 
-
- policy_ngm_policies_research_ethics:0 "研究倫理"
  policy_ngm_policies_research_ethics:0 "研究倫理"
  policy_ngm_policies_research_ethics_desc:0 "倫理規範に基づく研究規制について"
  research_ethics_no_ethic_name:0 "無制限倫理"
@@ -2430,6 +2428,9 @@
  NGM_UC_CP_desc:0 "民衆は各国の聖地を巡礼しなければならず、そのことで少しの富を教団は得ることができる。"
  federation_NGM_UC_CP_effect:0 "Pop移住速度+30%"
 
+ NGM_holy_wars:0 "聖戦"
+ NGM_holy_wars_desc:0 ""
+
  NGM_UC_GC:0 "壮麗な儀式"
  NGM_UC_GC_desc:0 "見る者すべてが魅了される素晴らしい儀式でこの宗教の偉大さを知らしめる。"
  federation_NGM_UC_GC_effect:0 "各惑星大祭司職業枠+1、司祭職業枠+3"
@@ -2466,8 +2467,6 @@
  war_goal_wg_ngm_holy_wars:0 "聖戦"
  war_goal_wg_ngm_holy_wars_desc:0 ""
  NGM_holy_wars_effect:0 "聖戦"
- NGM_holy_wars:0 "聖戦"
- NGM_holy_wars_desc:0 ""
 
 ##########################
 #####    イベント    ######
@@ -2717,7 +2716,7 @@
  ap_ngm_constant_hostile_intelligence_operations_desc:0 "敵に対しては常に影響を与え続けなければならない"
 
  ap_ngm_dipromatic_think_tank:0 "外交シンクタンク"
- ap_ngm_dipromatic_think_tank_desc:0 "常に移り変わる外交に関して専門家団を活用する "
+ ap_ngm_dipromatic_think_tank_desc:0 "常に移り変わる外交に関して専門家団を活用する"
 
  ap_ngm_imperial_academy:0 "帝国学士院"
  ap_ngm_imperial_academy_desc:0 "研究者を政治的に取りまとめ、研究政策の活用を図る"

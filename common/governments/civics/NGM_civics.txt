@@ -467,6 +467,11 @@ civic_ngm_imaginary_socialism = {
 # 1.根本的な狂気		:(この国の政府は根本的にどこかがおかしい。言葉にすることが難しいこの違和感の正体は当事者しか知りえないが、当事者に説明することはできず、謎の能力を発揮する。)安定度-10、外交発言力-10%、艦船連射レート+10%、労働者生産量+10%
 civic_ngm_fundamental_insanity = {
 	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
 		civics = {
 			NOR = {
 				# value = civic_ngm_fundamental_insanity
@@ -494,6 +499,11 @@ civic_ngm_fundamental_insanity = {
 # 2.個性的な合理主義者	:(この国の政府は合理的な判断を行い、合理的判断による結果を尊重するが、どこか独善的で個性的な行動や思考形態がみられることがあり、予測可能性が低い。)快適度生産-10%、消費財消費量+20%、研究力+10%、戦略資源生産量+10%
 civic_ngm_individualistic_rationalist = {
 	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
 		civics = {
 			NOR = {
 				value = civic_ngm_fundamental_insanity
@@ -529,6 +539,11 @@ civic_ngm_individualistic_rationalist = {
 # 3.形式主義的な根回し屋	:(この国の政府は秘密会議室における事前の相談や根回しを行うことを好み、表向きには形式を重視する態度を見せることが多い。そのため真相を知らない者には合理的かつスムーズな要望と利害調整を行っているように見えるが、裏では熾烈な切り捨てと隠れた合意形成が行われている。)幸福度-10%、使節+1、外交発言力+20%、
 civic_ngm_formalist_rootkeeper = {
 	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
 		civics = {
 			NOR = {
 				value = civic_ngm_fundamental_insanity
@@ -555,6 +570,11 @@ civic_ngm_formalist_rootkeeper = {
 # 4.芸術家肌のうっかり屋	:(この国の政府は芸術的感性や娯楽に優れているが、外交面では約束やプロトコルを忘れることが多い。)外交発言力-20%、統合力+30%
 civic_ngm_artistically_inclined_careless_person = {
 	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
 		civics = {
 			NOR = {
 				value = civic_ngm_fundamental_insanity
@@ -580,6 +600,11 @@ civic_ngm_artistically_inclined_careless_person = {
 # 5.堅実な手腕		:(この国の政府は極めて堅実な運営を行い、確固たる基盤を築き上げることに成功している。)研究力+5%、統合力+5%、外交発言力+5%、艦船連射レート+5%
 civic_ngm_steady_hand = {
 	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
 		civics = {
 			NOR = {
 				value = civic_ngm_fundamental_insanity
@@ -608,6 +633,11 @@ civic_ngm_steady_hand = {
 # 6.毒舌な処世術師	:(この国の政府は基本的に口が悪く相手に良い印象を与えないが、実益に基づいた処世術に長けており、裏でコツコツと努力をしている。)信用値-20、交易価値-10%、生産量+5%、外交発言力+10%、
 civic_ngm_the_toxic_survivalist = {
 	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
 		civics = {
 			NOR = {
 				value = civic_ngm_fundamental_insanity
@@ -635,6 +665,11 @@ civic_ngm_the_toxic_survivalist = {
 # 7.マイペースな苦労人	:(この国の政府は忍耐力があり、他国の対応に常に苦労しつつ独自のペースで安全保障計画を執り行っている。しかし、そういった態度から各国から信頼され、国民からも強い信頼を寄せられている。)建艦速度+10%、艦隊許容量-5%、信用値+30、消費財消費量-20%、ステーション耐久度+20%
 civic_ngm_hard_worker_with_a_slow_pace = {
 	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
 		civics = {
 			NOR = {
 				value = civic_ngm_fundamental_insanity
@@ -667,6 +702,11 @@ civic_ngm_hard_worker_with_a_slow_pace = {
 # 8.冷酷な現実主義者	:(この国の政府は恐ろしく現実主義であり、数時間前の味方を裏切ることも躊躇なく、内政も苛烈で効率的ある。しかし、その態度は国民からも他国からも積極的に支持されない。)信用値-30、幸福度-10%、外交発言力+20%、艦船連射レート+10%、統治者生産量+10%
 civic_ngm_ruthless_realist = {
 	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
 		civics = {
 			NOR = {
 				value = civic_ngm_fundamental_insanity
@@ -696,6 +736,13 @@ civic_ngm_ruthless_realist = {
 # 〇ノーマル
 # 円滑な交通 smooth_traffic		亜光移動速度+10%、交易価値+5%
 civic_ngm_smooth_traffic = {
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -707,6 +754,13 @@ civic_ngm_smooth_traffic = {
 
 # 船舶保護プロトコル ship_protection_protocol	回避+20%、緊急FTL時損害-30%、艦船連射レート-10%
 civic_ngm_ship_protection_protocol = {
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -719,6 +773,13 @@ civic_ngm_ship_protection_protocol = {
 
 # 宙間警備本部 space_security_headquarters		海賊抑止力+5、交易保護値+5、交易価値+5%
 civic_ngm_space_security_headquarters = {
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -732,6 +793,13 @@ civic_ngm_space_security_headquarters = {
 
 # 乱脈的出生率 random_birth_rate		(この国では出生率がコントロールできていない。)(ゲーム開始後の追加削除不可)Pop成長率+10%、幸福度-5%、住居使用量+5%
 civic_ngm_random_birth_rate = {
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -745,6 +813,13 @@ civic_ngm_random_birth_rate = {
 
 # 貿易国家 trading_nations		交易価値+10%、市場手数料-5%、犯罪度+5
 civic_ngm_trading_nations = {
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -757,6 +832,13 @@ civic_ngm_trading_nations = {
 
 # 仮想的社会 virtual_society		幸福度+10%、居住性+5%、Pop成長速度-10%
 civic_ngm_virtual_society = {
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -769,6 +851,13 @@ civic_ngm_virtual_society = {
 
 # 健康的習慣 healthy_habits			(この国の国民は運動と食事、適度な日向ぼっこにより健康的な生活を送っている。)(ゲーム開始後の追加削除不可)リーダー寿命+10年、幸福度+5%
 civic_ngm_healthy_habits = {
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
@@ -781,6 +870,13 @@ civic_ngm_healthy_habits = {
 
 # 文化高権 cultural_hegemony		統合力+10%、リーダー取得経験値+10%
 civic_ngm_cultural_hegemony = {
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
 	random_weight = {
 		base = 5
 	}
