@@ -921,9 +921,12 @@ living_standard_stratified = {
 			exists = from
 		}
 		custom_tooltip = {
-			fail_text = empire_nor_honorism_capitalism_utilitarianism
+			fail_text = empire_nor_authoritarian_honorism_capitalism_utilitarianism
 			from = {
 				OR = {
+					# 権威主義
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
 					# 栄望主義
 					has_ethic = ethic_honorism
 					has_ethic = ethic_fanatic_honorism

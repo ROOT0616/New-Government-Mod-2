@@ -63,9 +63,6 @@ building_ngm_ginga_department_store = {
 		branch_office_owner = {
 			has_civic = civic_ngm_corporate_empire
 			is_criminal_syndicate = no
-			NOT = {
-				is_ai = yes
-			}
 		}
 	}
 	planet_modifier = {
@@ -85,9 +82,6 @@ building_ngm_ginga_department_store = {
 			energy = 2
 		}
 	}
-	ai_weight = {
-		factor = 1
-	}
 }
 
 # 企業大学校  business_school		(経済や経営を学ぶ者の専門大学)							(惑星につき一つ:企業国家の研究算出各々+10、研究者+1)				:この企業は高度な技術を運用した工業製品を取り扱っており、極めて高度な製品はあらゆる産業の礎となっている。
@@ -100,9 +94,6 @@ building_ngm_business_school = {
 		branch_office_owner = {
 			has_civic = civic_ngm_high_tech_company
 			is_criminal_syndicate = no
-			NOT = {
-				is_ai = yes
-			}
 		}
 	}
 	planet_modifier = {
@@ -122,9 +113,6 @@ building_ngm_business_school = {
 			energy = 2
 		}
 	}
-	ai_weight = {
-		factor = 1
-	}
 }
 
 # 星間工場群	star_workshop	(惑星規模に広がるコンビナート群)						(惑星につき一つ:企業国家の合金+5、企業国家の消費財+5、職人+1、冶金技師+1)	:この企業は重化学工業を中心とした大規模な工業製品を取り扱っており、その工場が惑星表面を覆うほどの工業化が進んでいる。
@@ -137,9 +125,6 @@ building_ngm_star_workshop = {
 		branch_office_owner = {
 			has_civic = civic_ngm_smokestack_industry
 			is_criminal_syndicate = no
-			NOT = {
-				is_ai = yes
-			}
 		}
 	}
 	planet_modifier = {
@@ -159,9 +144,6 @@ building_ngm_star_workshop = {
 			energy = 2
 		}
 	}
-	ai_weight = {
-		factor = 1
-	}
 }
 
 # 銀河サロン  galaxy_salon		(上流階級の者が集う社交界)							(惑星につき一つ:企業国家の統合力+5、企業国家の外交発言力+10、豪商+1、役員+1)	:この企業は創業家を中心に会社に多大な貢献を行った社員一家を特別役員として扱っており、企業内の団結や対外交渉などに活躍している、一種の君主制国家の様相を呈している。
@@ -174,9 +156,6 @@ building_ngm_galaxy_salon = {
 		branch_office_owner = {
 			has_civic = civic_ngm_hereditary_officers
 			is_criminal_syndicate = no
-			NOT = {
-				is_ai = yes
-			}
 		}
 	}
 	country_modifier = {
@@ -198,9 +177,6 @@ building_ngm_galaxy_salon = {
 			energy = 2
 		}
 	}
-	ai_weight = {
-		factor = 1
-	}
 }
 
 # M&Aセンター m_a_center		(他社を評価、買収することを目的とした企業)					(惑星につき一つ:企業国家の外交発言力+10%、惑星の交易価値+30%、豪商+1、事務員+2)	:この企業は一部の持株会社が多くの企業を支配する形をとっており、ごく少数の役員やエリートによる決定が絶対視されている。
@@ -213,9 +189,6 @@ building_ngm_m_a_center = {
 		branch_office_owner = {
 			has_civic = civic_ngm_zaibatsu
 			is_criminal_syndicate = no
-			NOT = {
-				is_ai = yes
-			}
 		}
 	}
 	country_modifier = {
@@ -235,9 +208,6 @@ building_ngm_m_a_center = {
 			energy = 2
 		}
 	}
-	ai_weight = {
-		factor = 1
-	}
 }
 
 # 銀河銀行  galactic_bank		(銀河規模に広がる投資、貯蓄、資産運用を行う銀行)				(惑星につき一つ:企業国家のエネルギー+10、惑星の交易価値+5%、事務員+3)		:この企業はコンサルティングや債権、電子通貨、金融商品等を取り扱うことに長けており、それらの産業が中心となって企業が運営されている。
@@ -250,9 +220,6 @@ building_ngm_galactic_bank = {
 		branch_office_owner = {
 			has_civic = civic_ngm_financial_enterprises
 			is_criminal_syndicate = no
-			NOT = {
-				is_ai = yes
-			}
 		}
 	}
 	planet_modifier = {
@@ -271,9 +238,6 @@ building_ngm_galactic_bank = {
 			energy = 2
 		}
 	}
-	ai_weight = {
-		factor = 1
-	}
 }
 
 # 星間広告代理店	interstellar_advertising_agency	(情報を加工し、大衆に敷衍しやすい言葉で洗脳を行う企業)				(惑星につき一つ:企業国家の快適度+10、惑星の快適度+5、事務員+3)			:この企業はSNSや広告、システムエンジニアリングなどの目に見えないものを取り扱うことが多く、総じてそれらに対する造詣が深い。
@@ -286,9 +250,6 @@ building_ngm_IAA = {
 		branch_office_owner = {
 			has_civic = civic_ngm_information_company
 			is_criminal_syndicate = no
-			NOT = {
-				is_ai = yes
-			}
 		}
 	}
 	country_modifier = {
@@ -307,9 +268,6 @@ building_ngm_IAA = {
 			energy = 2
 		}
 	}
-	ai_weight = {
-		factor = 1
-	}
 }
 
 # 企業病院	corporate_hospital	(できるだけ安価に高品質な医療や福祉を行うことを目的とした社有の医療機関)	(惑星につき一つ:企業国家の社会学+10、惑星のPop成長速度+5%、医療従事者+1)	:この企業は利益だけではなく社員や顧客の幸福や利益を追求することを目指している。
@@ -322,9 +280,6 @@ building_ngm_corporate_hospital = {
 		branch_office_owner = {
 			has_civic = civic_ngm_social_enterprise
 			is_criminal_syndicate = no
-			NOT = {
-				is_ai = yes
-			}
 		}
 	}
 	planet_modifier = {
@@ -343,9 +298,6 @@ building_ngm_corporate_hospital = {
 			energy = 2
 		}
 	}
-	ai_weight = {
-		factor = 1
-	}
 }
 
 # 惑星規模建築センター planetary_scale_building_center	(惑星で何らかの建築が行われる際に重機や物資、人員を提供する企業)		(惑星につき一つ:企業国家の鉱物+20、惑星の区域建造コスト-10%、事務員+2)		:この企業はインフラ建築や材料調達に関しての専門企業で、大規模な建築が行われる際にはこの企業の関与がないことはほとんどない。
@@ -358,9 +310,6 @@ building_ngm_planetary_scale_building_center = {
 		branch_office_owner = {
 			has_civic = civic_ngm_general_contractor
 			is_criminal_syndicate = no
-			NOT = {
-				is_ai = yes
-			}
 		}
 	}
 	planet_modifier = {
@@ -379,9 +328,6 @@ building_ngm_planetary_scale_building_center = {
 			energy = 2
 		}
 	}
-	ai_weight = {
-		factor = 1
-	}
 }
 
 # 企業農園	corporate_plantation	(社有の大規模な農園で、惑星特有の農作物取り扱っている。)			(惑星につき一つ:企業国家の食料+20、農民+3)					:この企業は農業を中心としており、自然と共生しつつ農業生産を行うことで環境系企業として存続している。
@@ -394,9 +340,6 @@ building_ngm_corporate_plantation = {
 		branch_office_owner = {
 			has_civic = civic_ngm_agricultural_company
 			is_criminal_syndicate = no
-			NOT = {
-				is_ai = yes
-			}
 		}
 	}
 	planet_modifier = {
@@ -414,9 +357,6 @@ building_ngm_corporate_plantation = {
 			energy = 2
 		}
 	}
-	ai_weight = {
-		factor = 1
-	}
 }
 
 # 社有宇宙港  society_cosmic_port		(物資や旅客を効率的かつ高速に取り扱うための会社専用の宇宙港)			(惑星につき一つ:惑星の交易価値+10、支社の価値+30%、事務員+2)			:この企業は物資等の輸送や運輸、旅客運送により利益を得ており、輸送分野における実績は並ぶものがない。
@@ -429,9 +369,6 @@ building_ngm_society_cosmic_port = {
 		branch_office_owner = {
 			has_civic = civic_ngm_shipping_company
 			is_criminal_syndicate = no
-			NOT = {
-				is_ai = yes
-			}
 		}
 	}
 	planet_modifier = {
@@ -448,9 +385,6 @@ building_ngm_society_cosmic_port = {
 			energy = 2
 		}
 	}
-	ai_weight = {
-		factor = 1
-	}
 }
 
 # 惑星信託銀行	planet_trust_bank	(惑星単位で資産や有価証券を運用して利益を追求する企業)				(惑星につき一つ:惑星の交易価値+30%、支社の価値+30%、豪商+1、事務員+3)		:この企業は出資者やクライアントの資産を最大化することを目指しており、倫理観を無視した投資運用を行い、利益を追求する。
@@ -463,9 +397,6 @@ building_ngm_planet_trust_bank = {
 		branch_office_owner = {
 			has_civic = civic_ngm_operating_company
 			is_criminal_syndicate = no
-			NOT = {
-				is_ai = yes
-			}
 		}
 	}
 	planet_modifier = {
@@ -483,9 +414,6 @@ building_ngm_planet_trust_bank = {
 			energy = 2
 		}
 	}
-	ai_weight = {
-		factor = 1
-	}
 }
 
 # 企業諜報機関	corporate_espionage	(自社以外のあらゆる情報を収集し、他者に売却する企業)				(惑星につき一つ:企業帝国の解読力+5、惑星の犯罪度+5、事務員+2)			:この企業は国家や企業の情報を奪い、それを利用してあらゆる利益を獲得している。
@@ -498,9 +426,6 @@ building_ngm_corporate_espionage = {
 		branch_office_owner = {
 			has_civic = civic_ngm_industrial_espionage
 			is_criminal_syndicate = no
-			NOT = {
-				is_ai = yes
-			}
 		}
 	}
 	country_modifier = {
@@ -519,9 +444,6 @@ building_ngm_corporate_espionage = {
 			energy = 2
 		}
 	}
-	ai_weight = {
-		factor = 1
-	}
 }
 
 # 惑星格付会社	planet_rating_agency	(あらゆるものを格付けし、判断基準を創出する企業)				(惑星につき一つ:企業帝国の統合力+10、惑星の統合力+5%、事務員+2)
@@ -534,9 +456,6 @@ building_ngm_planet_rating_agency = {
 		branch_office_owner = {
 			has_civic = civic_ngm_rating_company
 			is_criminal_syndicate = no
-			NOT = {
-				is_ai = yes
-			}
 		}
 	}
 	planet_modifier = {
@@ -555,9 +474,6 @@ building_ngm_planet_rating_agency = {
 			energy = 2
 		}
 	}
-	ai_weight = {
-		factor = 1
-	}
 }
 
 # 名称：サービス付き高官向け料亭（帝国首都にのみ建造可能）
@@ -569,7 +485,7 @@ building_ngm_planet_rating_agency = {
 building_ngm_sa_ko_ryo = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
-	base_cap_amount = 1
+	position_priority = 0
 	potential = {
 		has_branch_office = yes
 		is_capital = yes
@@ -604,9 +520,6 @@ building_ngm_sa_ko_ryo = {
 			energy = 10
 		}
 	}
-	ai_weight = {
-		factor = 1
-	}
 }
 
 # 伝統等でアンロックされる建築
@@ -615,6 +528,7 @@ building_ngm_theatergoer = {
 	base_buildtime = 360
 	base_cap_amount = 1
 	category = amenity
+	position_priority = 100
 	potential = {
 		owner = {
 			has_tradition = tr_ngm_student_art
@@ -670,6 +584,12 @@ building_ngm_theatergoer = {
 			job_maintenance_drone_add = 3
 		}
 	}
+	ai_resource_production = {
+		unity = 10
+		trigger = { 
+			always = yes
+		}
+	}
 }
 
 #   ②前衛芸術広場	avant_garde_art_square	(鉱物500)(惑星に1つ)(消費財2)(これは、なんでしょう?)				(惑星効果:快適度+10%)(快適度+10)	(エンターテイナー+2、文化人+1)
@@ -677,6 +597,7 @@ building_ngm_avant_garde_art_square = {
 	base_buildtime = 360
 	base_cap_amount = 1
 	category = amenity
+	position_priority = 100
 	potential = {
 		owner = {
 			has_tradition = tr_ngm_asymmetric
@@ -734,6 +655,12 @@ building_ngm_avant_garde_art_square = {
 			job_evaluator_add = 1
 		}
 	}
+	ai_resource_production = {
+		unity = 10
+		trigger = { 
+			always = yes
+		}
+	}
 }
 
 #   ③帝国音楽堂	Iimperial_concert_hall	(鉱物500)(惑星に1つ)(消費財2)(荘厳な音楽で人々を圧倒し、感動させる芸術施設)	(惑星効果:統合力+10%)(統合力+5)		(文化人+2)
@@ -741,6 +668,7 @@ building_ngm_Iimperial_concert_hall = {
 	base_buildtime = 360
 	base_cap_amount = 1
 	category = amenity
+	position_priority = 100
 	potential = {
 		owner = {
 			has_tradition = tr_ngm_acoustics
@@ -797,6 +725,12 @@ building_ngm_Iimperial_concert_hall = {
 			job_evaluator_add = 2
 		}
 	}
+	ai_resource_production = {
+		unity = 10
+		trigger = { 
+			always = yes
+		}
+	}
 }
 
 #   ④帝国芸術博物館	imperial_art_museum	(鉱物500)(惑星に1つ)(消費財2)(威圧感と芸術性で人々を夢中にさせる博物館)		(惑星効果:統合力+10%)(統合力+10)	(文化人+3)
@@ -804,6 +738,7 @@ building_ngm_imperial_art_museum = {
 	base_buildtime = 360
 	base_cap_amount = 1
 	category = amenity
+	position_priority = 100
 	potential = {
 		owner = {
 			has_tradition = tr_ngm_authority_art
@@ -859,6 +794,12 @@ building_ngm_imperial_art_museum = {
 			job_evaluator_add = 3
 		}
 	}
+	ai_resource_production = {
+		unity = 20
+		trigger = { 
+			always = yes
+		}
+	}
 }
 
 #   ⑤先端工場	premise_workshop	(鉱物500)(惑星に1つ)(エネルギー5)(最先端の工場は最先端の物品を生み出すのだろうか)(惑星効果:合金生産量+5%、消費財生産量+5%)(職人+2、合金技師+2、各種精製技師+1ずつ)
@@ -866,6 +807,7 @@ building_ngm_premise_workshop = {
 	base_buildtime = 360
 	base_cap_amount = 1
 	category = manufacturing
+	position_priority = 100
 	potential = {
 		owner = {
 			has_tradition = tr_ngm_advanced_factory
@@ -927,6 +869,16 @@ building_ngm_premise_workshop = {
 			job_chemist_drone_add = 1
 			job_translucer_drone_add = 1
 			job_gas_refiner_drone_add = 1
+		}
+	}
+	ai_resource_production = {
+		alloys = 20
+		consumer_goods = 20
+		rare_crystals = 10
+		exotic_gases = 10
+		volatile_motes = 10
+		trigger = { 
+			always = yes
 		}
 	}
 }

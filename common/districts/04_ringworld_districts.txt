@@ -180,16 +180,6 @@ district_rw_hive = {
 		job_synapse_drone_add = 2
 	}
 
-	# 金融資本主義
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_civic = civic_ngm_financing
-			}
-		}
-		job_merchant_add = 1
-	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -270,16 +260,6 @@ district_rw_nexus = {
 		job_technician_drone_add = 2
 	}
 
-	# 金融資本主義
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_civic = civic_ngm_financing
-			}
-		}
-		job_merchant_add = 1
-	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner

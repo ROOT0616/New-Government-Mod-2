@@ -267,8 +267,7 @@ ap_ngm_resource_strategy_adjustment_ministries = {
 		}
 	}
 	modifier = {
-		planet_jobs_upkeep_mult = -0.1
-		planet_buildings_upkeep_mult = -0.1
+		planet_jobs_productive_upkeep_mult = -0.1
 		planet_buildings_exotic_gases_upkeep_mult = -0.2
 		planet_buildings_rare_crystals_upkeep_mult = -0.2
 		planet_buildings_volatile_motes_upkeep_mult = -0.2

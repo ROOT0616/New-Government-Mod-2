@@ -267,6 +267,7 @@ civic_ngm_separation_of_powers = {
 			NOR = {
 				value = ethic_utilitarianism
 				value = ethic_fanatic_utilitarianism
+				value = ethic_gestalt_consciousness
 			}
 		}
 		authority = {
@@ -657,7 +658,7 @@ civic_ngm_the_toxic_survivalist = {
 	modifier = {
 		country_trust_cap_add = -20
 		trade_value_mult = -0.1
-		planet_jobs_produces_mult = 0.05
+		planet_jobs_productive_produces_mult = 0.05
 		diplo_weight_mult = 0.1
 	}
 }

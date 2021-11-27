@@ -408,8 +408,8 @@ building_capital = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -931,8 +931,8 @@ building_major_capital = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -942,8 +942,8 @@ building_major_capital = {
 			owner = { has_technology = tech_capital_productivity_2 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -1479,8 +1479,8 @@ building_system_capital = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -1490,8 +1490,8 @@ building_system_capital = {
 			owner = { has_technology = tech_capital_productivity_2 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -1501,8 +1501,8 @@ building_system_capital = {
 			owner = { has_technology = tech_capital_productivity_3 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -1866,8 +1866,8 @@ building_machine_capital = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -1966,8 +1966,8 @@ building_machine_major_capital = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -1977,8 +1977,8 @@ building_machine_major_capital = {
 			owner = { has_technology = tech_capital_productivity_2 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -2093,8 +2093,8 @@ building_machine_system_capital = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -2104,8 +2104,8 @@ building_machine_system_capital = {
 			owner = { has_technology = tech_capital_productivity_2 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -2115,8 +2115,8 @@ building_machine_system_capital = {
 			owner = { has_technology = tech_capital_productivity_3 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -2213,8 +2213,8 @@ building_hive_capital = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -2302,8 +2302,8 @@ building_hive_major_capital = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -2313,8 +2313,8 @@ building_hive_major_capital = {
 			owner = { has_technology = tech_capital_productivity_2 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -2324,8 +2324,8 @@ building_hive_major_capital = {
 			owner = { has_technology = tech_capital_productivity_3 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -2909,8 +2909,8 @@ building_hab_major_capital = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -3224,8 +3224,8 @@ building_resort_major_capital = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -3423,8 +3423,8 @@ building_slave_major_capital = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -3766,8 +3766,8 @@ building_imperial_capital = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -3777,8 +3777,8 @@ building_imperial_capital = {
 			owner = { has_technology = tech_capital_productivity_2 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -3788,8 +3788,8 @@ building_imperial_capital = {
 			owner = { has_technology = tech_capital_productivity_3 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -4074,8 +4074,8 @@ building_imperial_machine_capital = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -4085,8 +4085,8 @@ building_imperial_machine_capital = {
 			owner = { has_technology = tech_capital_productivity_2 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -4096,8 +4096,8 @@ building_imperial_machine_capital = {
 			owner = { has_technology = tech_capital_productivity_3 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -4180,8 +4180,8 @@ building_imperial_hive_capital = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -4191,8 +4191,8 @@ building_imperial_hive_capital = {
 			owner = { has_technology = tech_capital_productivity_2 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -4202,8 +4202,8 @@ building_imperial_hive_capital = {
 			owner = { has_technology = tech_capital_productivity_3 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 

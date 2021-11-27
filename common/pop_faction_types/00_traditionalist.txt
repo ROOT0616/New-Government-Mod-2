@@ -1,26 +1,26 @@
 ##############################
 # Traditionalist Faction
 ##############################
+
 traditionalist = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_spiritualist
+
 	unique = yes
 	support_multiplier = 1
+
 	resources = {
 		category = pop_factions
 		produces = {
 			influence = 2
 		}
 	}
+
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		NOT = {
-			has_country_flag = suppress_vanilla_factions
-		}
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOT = { has_country_flag = suppress_vanilla_factions }
 		count_owned_pop = {
 			count >= 5
 			limit = {

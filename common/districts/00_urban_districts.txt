@@ -197,17 +197,6 @@ district_hive = {
 		planet_max_buildings_add = 1
 	}
 
-	# 金融資本主義
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_civic = civic_ngm_financing
-			}
-		}
-		job_merchant_add = 1
-	}
-
 	triggered_planet_modifier = {
 		potential = {
 			is_planet_class = pc_hive
@@ -301,17 +290,6 @@ district_nexus = {
 		planet_housing_add = 5
 		job_maintenance_drone_add = 3
 		planet_max_buildings_add = 1
-	}
-	
-	# 金融資本主義
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_civic = civic_ngm_financing
-			}
-		}
-		job_merchant_add = 1
 	}
 
 	triggered_planet_modifier = {

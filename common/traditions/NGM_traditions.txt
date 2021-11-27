@@ -1253,7 +1253,7 @@ tr_ngm_efficient_management = {
 		has_tradition = tr_ngm_guerrilla_tactics
 	}
 	modifier = {
-		planet_jobs_produces_mult = 0.1
+		planet_jobs_productive_produces_mult = 0.1
 	}
 }
 
@@ -1722,7 +1722,7 @@ tr_ngm_strengthening_parliamentary_authority = {
 tr_ngm_establishment_of_legislative_institution = {
 	possible = {
 		has_tradition = tr_ngm_expansion_of_the_legal_affairs_bureau
-		has_tradition = tr_ngm_establishment_of_legislative_institution
+		# has_tradition = tr_ngm_establishment_of_legislative_institution
 	}
 	modifier = {
 		country_influence_produces_add = 1

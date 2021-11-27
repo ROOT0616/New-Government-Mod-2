@@ -9569,6 +9569,7 @@ country_event = {
 	trigger = {
 		has_global_flag = on_ngm_olympic
 	}
+	# 開会式
 	immediate = {
 		country_event = {
 			id = ngm_government.108
@@ -9969,6 +9970,93 @@ country_event = {
 				country_event = {
 					id = ngm_government.127
 					days = 90
+				}
+			}
+		}
+		# 競技イベント
+		random_list = {
+			1 = {
+				country_event = {
+					id = ngm_government.200
+					days = 105
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.201
+					days = 105
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.202
+					days = 105
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.203
+					days = 105
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.204
+					days = 105
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.205
+					days = 105
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.206
+					days = 105
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.207
+					days = 105
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.208
+					days = 105
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.209
+					days = 105
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.210
+					days = 105
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.211
+					days = 105
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.212
+					days = 105
+				}
+			}
+			1 = {
+				country_event = {
+					id = ngm_government.213
+					days = 105
 				}
 			}
 		}
@@ -12247,260 +12335,5 @@ country_event = {
 		clear_global_event_target = ngm_olympic_1win_event_target
 		clear_global_event_target = ngm_olympic_2win_event_target
 		clear_global_event_target = ngm_olympic_3win_event_target
-	}
-}
-
-##################################
-######  クライシス用イベント #######
-##################################
-namespace = ngm_crisis
-## 	クライシスイベントの始まり
-event = {
-	## イベントの基本情報
-	id = ngm_crisis.0
-	hide_window = yes
-	## イベントの発生条件
-	is_triggered_only = yes
-	fire_only_once = yes
-	## イベントの効果
-	immediate = {
-		observer_event = {
-			id = ngm_crisis.1
-		}
-		random_galaxy_planet = {
-			limit = {
-				owner = {
-					is_country_type = default
-				}
-				num_pops >= 100
-			}
-			planet_event = {
-				id = ngm_crisis.2
-			}
-		}
-	}
-}
-
-## 	クライシスイベントの始まり
-observer_event = {
-	id = ngm_crisis.1
-	title = "ngm_crisis.1.name"
-	desc = "ngm_crisis.1.desc"
-	show_sound = event_default
-	picture = "GFX_evt_city_ruins"
-	is_triggered_only = yes
-	option = {
-		name = "OK"
-	}
-}
-
-## 	惑星にウイルスを沸かす
-planet_event = {
-	id = ngm_crisis.2
-	title = ngm_crisis.2.name
-	desc = ngm_crisis.2.desc
-	picture = GFX_evt_announcement
-	show_sound = event_activating_unknown_technology
-	fire_only_once = yes
-	is_triggered_only = yes
-	immediate = {
-		set_global_flag = ngm_first_covid_global_flag
-		set_planet_flag = ngm_covid_planet_flag
-		planet_event = {
-			id = ngm_crisis.3
-			days = 1
-		}
-	}
-	option = {
-		name = ngm_crisis.2.a
-		trigger = {
-			owner = {
-				OR = {
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
-				}
-			}
-		}
-		hidden_effect = {
-			set_global_flag = ngm_militarist_covid_global_flag
-		}
-	}
-	option = {
-		name = ngm_crisis.2.b
-		trigger = {
-			owner = {
-				OR = {
-					has_ethic = ethic_conservationism
-					has_ethic = ethic_fanatic_conservationism
-				}
-			}
-		}
-		hidden_effect = {
-			set_global_flag = ngm_conservationism_covid_global_flag
-		}
-	}
-	option = {
-		name = ngm_crisis.2.c
-		trigger = {
-			owner = {
-				OR = {
-					has_ethic = ethic_materialist
-					has_ethic = ethic_fanatic_materialist
-				}
-			}
-		}
-		hidden_effect = {
-			set_global_flag = ngm_materialist_covid_global_flag
-		}
-	}
-	option = {
-		name = ngm_crisis.2.d
-		trigger = {
-			owner = {
-				NOR = {
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
-					has_ethic = ethic_conservationism
-					has_ethic = ethic_fanatic_conservationism
-					has_ethic = ethic_materialist
-					has_ethic = ethic_fanatic_materialist
-				}
-			}
-		}
-		hidden_effect = {
-			random_list = {
-				20 = {
-					set_global_flag = ngm_militarist_covid_global_flag
-				}
-				20 = {
-					set_global_flag = ngm_conservationism_covid_global_flag
-				}
-				20 = {
-					set_global_flag = ngm_materialist_covid_global_flag
-				}
-			}
-		}
-	}
-}
-
-planet_event = {
-	id = ngm_crisis.3
-	title = ngm_crisis.3.name
-	desc = ngm_crisis.3.desc
-	picture = GFX_evt_announcement
-	show_sound = event_activating_unknown_technology
-	is_triggered_only = yes
-	trigger = {
-		has_global_flag = ngm_first_covid_global_flag
-		has_planet_flag = ngm_covid_planet_flag
-		# mid_game_years_passed >= 0
-	}
-	immediate = {
-		if = {
-			limit = {
-				has_global_flag = ngm_militarist_covid_global_flag
-			}
-			add_modifier = {
-				modifier = first_covid_a_planet_modifier
-			}
-		}
-		if = {
-			limit = {
-				has_global_flag = ngm_conservationism_covid_global_flag
-			}
-			add_modifier = {
-				modifier = first_covid_b_planet_modifier
-			}
-		}
-		if = {
-			limit = {
-				has_global_flag = ngm_materialist_covid_global_flag
-			}
-			add_modifier = {
-				modifier = first_covid_c_planet_modifier
-			}
-		}
-	}
-	option = {
-		name = "OK"
-		while = {
-			count = 10
-			random_owned_pop = {
-				limit = {
-					species = {
-						is_robotic = no
-					}
-				}
-				unemploy_pop = yes
-				kill_pop = yes
-			}
-		}
-	}
-}
-
-event = {
-	id = ngm_crisis.4
-	title = "ngm_crisis.4.name"
-	desc = "ngm_crisis.4.desc"
-	picture = GFX_evt_announcement
-	show_sound = event_activating_unknown_technology
-	# hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		every_system = {
-			limit = {
-				any_system_planet = {
-					has_planet_flag = ngm_covid_planet_flag
-				}
-			}
-			random_system_planet = {
-				limit = {
-					NOT = {
-						has_planet_flag = ngm_covid_planet_flag
-					}
-					has_building = yes
-				}
-				planet_event = {
-					id = ngm_crisis.3
-				}
-			}
-		}
-		every_system = {
-			limit = {
-				any_system_planet = {
-					has_planet_flag = ngm_covid_planet_flag
-				}
-			}
-			random_system = {
-				limit = {
-					distance = {
-						source = PREV
-						use_bypasses = no
-						min_jumps = 1
-						max_jumps = 6
-					}
-					any_system_planet = {
-						NOT = {
-							has_planet_flag = ngm_covid_planet_flag
-						}
-						has_building = yes
-					}
-				}
-				random_system_planet = {
-					limit = {
-						NOT = {
-							has_planet_flag = ngm_covid_planet_flag
-						}
-						has_building = yes
-					}
-					planet_event = {
-						id = ngm_crisis.3
-					}
-				}
-			}
-		}
-	}
-	option = {
-		name = "OK"
 	}
 }

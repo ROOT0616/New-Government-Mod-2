@@ -14,8 +14,6 @@ ngm_policies_population_stance = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -48,8 +46,6 @@ ngm_policies_population_stance = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -123,12 +119,13 @@ ngm_policies_population_stance = {
 # 父権的な国家干渉 state_intervention    :安定度+10、幸福度-5%、権威主義魅力+20%    (個人とはもろく、国家の安定のためには国家自身による個人への関与と指導こそが必要なのである。)(権威主義のみ)
 ngm_policies_civil_law = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -138,8 +135,6 @@ ngm_policies_civil_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -184,8 +179,6 @@ ngm_policies_civil_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -229,8 +222,6 @@ ngm_policies_civil_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -249,8 +240,6 @@ ngm_policies_civil_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -296,8 +285,6 @@ ngm_policies_civil_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -361,12 +348,13 @@ ngm_policies_civil_law = {
 # 秩序と安寧の国        order_peace            :犯罪度-20、幸福度-10%、権威主義魅力+20%    (我が国は世界で最も治安のよい国である。そう語った者は詐欺罪で起訴された。)(権威主義のみ)
 ngm_policies_criminal_law = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -376,8 +364,6 @@ ngm_policies_criminal_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -422,8 +408,6 @@ ngm_policies_criminal_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -460,8 +444,6 @@ ngm_policies_criminal_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -480,8 +462,6 @@ ngm_policies_criminal_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -518,8 +498,6 @@ ngm_policies_criminal_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -568,12 +546,13 @@ ngm_policies_criminal_law = {
 # 議会なしno_system        :派閥満足度-15%、権威主義魅力+20%、影響力+1    (議会すら要らない。)(民主制以外)
 ngm_policies_parliamentarism = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -583,8 +562,6 @@ ngm_policies_parliamentarism = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -611,8 +588,6 @@ ngm_policies_parliamentarism = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -639,8 +614,6 @@ ngm_policies_parliamentarism = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -665,8 +638,6 @@ ngm_policies_parliamentarism = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -694,8 +665,6 @@ ngm_policies_parliamentarism = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -729,8 +698,6 @@ ngm_policies_parliamentarism = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -774,12 +741,13 @@ ngm_policies_parliamentarism = {
 # 選挙なし  not_e     :布告コスト-10%、権威主義魅力+20%        (選挙など要らぬ。)(民主制以外)
 ngm_policies_electoral_system = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -789,8 +757,6 @@ ngm_policies_electoral_system = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -818,8 +784,6 @@ ngm_policies_electoral_system = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -847,8 +811,6 @@ ngm_policies_electoral_system = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -873,8 +835,6 @@ ngm_policies_electoral_system = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -899,8 +859,6 @@ ngm_policies_electoral_system = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -926,8 +884,6 @@ ngm_policies_electoral_system = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -954,8 +910,6 @@ ngm_policies_electoral_system = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -996,12 +950,13 @@ ngm_policies_electoral_system = {
 # 選挙なしno_e    :影響力+0.5        (選挙など要らぬのだよ。)(権威主義のみ)
 ngm_policies_election_law = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -1011,8 +966,6 @@ ngm_policies_election_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -1041,8 +994,6 @@ ngm_policies_election_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1062,8 +1013,6 @@ ngm_policies_election_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -1092,8 +1041,6 @@ ngm_policies_election_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -1122,8 +1069,6 @@ ngm_policies_election_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -1154,8 +1099,6 @@ ngm_policies_election_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -1178,8 +1121,6 @@ ngm_policies_election_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -1206,8 +1147,6 @@ ngm_policies_election_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1226,8 +1165,6 @@ ngm_policies_election_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -1255,12 +1192,13 @@ ngm_policies_election_law = {
 # 資格任用制	布告許容量+1	管理許容量+20
 ngm_policies_civil_service_appointments_system = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -1270,8 +1208,6 @@ ngm_policies_civil_service_appointments_system = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1317,8 +1253,6 @@ ngm_policies_civil_service_appointments_system = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1351,8 +1285,6 @@ ngm_policies_civil_service_appointments_system = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1391,12 +1323,13 @@ ngm_policies_civil_service_appointments_system = {
 # 逆進課税制度	Counterproductive taxation system	労働者幸福度-10%、エネルギー生産量+10%
 ngm_policies_taxation_system = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -1406,8 +1339,6 @@ ngm_policies_taxation_system = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1441,8 +1372,6 @@ ngm_policies_taxation_system = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1468,8 +1397,6 @@ ngm_policies_taxation_system = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1507,12 +1434,13 @@ ngm_policies_taxation_system = {
 # 所得税の廃止    max_income    :エネルギー生産-30%、統治者生産量+10%、幸福度+15%(所得税は個人の利潤を最大化させるためには不要の存在である。)(資本主義のみ)
 ngm_policies_income_tax = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -1522,8 +1450,6 @@ ngm_policies_income_tax = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -1568,8 +1494,6 @@ ngm_policies_income_tax = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1606,8 +1530,6 @@ ngm_policies_income_tax = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1644,8 +1566,6 @@ ngm_policies_income_tax = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1664,8 +1584,6 @@ ngm_policies_income_tax = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1686,8 +1604,6 @@ ngm_policies_income_tax = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1708,8 +1624,6 @@ ngm_policies_income_tax = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -1751,12 +1665,14 @@ ngm_policies_income_tax = {
 # 法人税の廃止    max_corp_tax    :交易価値+30%、労働者幸福度-15%、資本主義魅力+10%    (企業はできる限り自由であるべきだ。国家からでさえも。)(資本主義のみ)
 ngm_policies_corporation_tax = {
 	potential = {
+		NOR = {
+			has_ethic = ethic_gestalt_consciousness
+			has_authority = auth_corporate
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -1766,8 +1682,6 @@ ngm_policies_corporation_tax = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -1796,8 +1710,6 @@ ngm_policies_corporation_tax = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1818,8 +1730,6 @@ ngm_policies_corporation_tax = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1840,8 +1750,6 @@ ngm_policies_corporation_tax = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1860,8 +1768,6 @@ ngm_policies_corporation_tax = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1882,8 +1788,6 @@ ngm_policies_corporation_tax = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -1904,8 +1808,6 @@ ngm_policies_corporation_tax = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -1936,12 +1838,13 @@ ngm_policies_corporation_tax = {
 # 無秩序の芸術	The Art of Disorder	統治志向魅力-10%、統合力+20%、消費財消費量+10%
 ngm_policies_cultural_policy = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -1951,8 +1854,6 @@ ngm_policies_cultural_policy = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2000,8 +1901,6 @@ ngm_policies_cultural_policy = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2027,8 +1926,6 @@ ngm_policies_cultural_policy = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2067,8 +1964,6 @@ ngm_policies_cultural_policy = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2097,12 +1992,13 @@ ngm_policies_cultural_policy = {
 # 簡素な儀式    simple_ceremony    :影響力-0.5、統合力-10%、消費財消費-10%、実利主義魅力+10%    (金だけではなく、時間も惜しい。早く安くしてくれ。)(実利主義、物質主義のみ)
 ngm_policies_national_ceremony = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -2112,8 +2008,6 @@ ngm_policies_national_ceremony = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -2177,8 +2071,6 @@ ngm_policies_national_ceremony = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2199,8 +2091,6 @@ ngm_policies_national_ceremony = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2219,8 +2109,6 @@ ngm_policies_national_ceremony = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2241,8 +2129,6 @@ ngm_policies_national_ceremony = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -2307,12 +2193,13 @@ ngm_policies_national_ceremony = {
 # 自作農家優遇	preferential treatment for farmers	食料生産量+20%、鉱物生産量-5%
 ngm_policies_agricultural_policy = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -2322,8 +2209,6 @@ ngm_policies_agricultural_policy = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2348,8 +2233,6 @@ ngm_policies_agricultural_policy = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2379,8 +2262,6 @@ ngm_policies_agricultural_policy = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2402,12 +2283,13 @@ ngm_policies_agricultural_policy = {
 # 母語教育	mother tongue training	統合力+15%、エネルギー消費-5%、研究力-5%
 ngm_policies_language_policy = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -2417,8 +2299,6 @@ ngm_policies_language_policy = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2462,8 +2342,6 @@ ngm_policies_language_policy = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2484,8 +2362,6 @@ ngm_policies_language_policy = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2517,6 +2393,9 @@ ngm_policies_language_policy = {
 # このループを断ち切る            loop_kil:    (qmb↓dcp)
 ngm_policies_loop_method = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		has_technology = tech_akx_worm_3
 	}
 	option = {
@@ -2572,12 +2451,13 @@ ngm_policies_loop_method = {
 # 特別異種族倫理規範kill_ethic    :社会学研究+20%、信用値-40、排他主義魅力+10%        (我が民族は生命倫理規範を守護し、尊重されるべきだ。無論、我々のみであるが。)(排他主義のみ)
 ngm_policies_research_ethics = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -2587,8 +2467,6 @@ ngm_policies_research_ethics = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -2651,8 +2529,6 @@ ngm_policies_research_ethics = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2676,8 +2552,6 @@ ngm_policies_research_ethics = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2696,8 +2570,6 @@ ngm_policies_research_ethics = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -2742,8 +2614,6 @@ ngm_policies_research_ethics = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -2805,8 +2675,6 @@ ngm_policies_research_ethics = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -2854,12 +2722,13 @@ ngm_policies_research_ethics = {
 # SNS禁止ban_restriction        :統合力-10%、労働者幸福度-5%、安定度+10、統治志向魅力+10%     (現実と向き合う。)
 ngm_policies_SNS_regulation = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -2869,8 +2738,6 @@ ngm_policies_SNS_regulation = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2892,8 +2759,6 @@ ngm_policies_SNS_regulation = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2914,8 +2779,6 @@ ngm_policies_SNS_regulation = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2934,8 +2797,6 @@ ngm_policies_SNS_regulation = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2957,8 +2818,6 @@ ngm_policies_SNS_regulation = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -2984,12 +2843,13 @@ ngm_policies_SNS_regulation = {
 # 軍需品輸出推進法vh_exp    :合金生産量+10%、地上軍与ダメージ+15%、軍国主義魅力+10%    (死の商人？  何とでも呼びたまえ。お買い上げありがとうございます！)(軍国主義、介入主義、資本主義のみ)
 ngm_policies_weapon_export_law = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -2999,8 +2859,6 @@ ngm_policies_weapon_export_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -3039,8 +2897,6 @@ ngm_policies_weapon_export_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -3061,8 +2917,6 @@ ngm_policies_weapon_export_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -3081,8 +2935,6 @@ ngm_policies_weapon_export_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -3103,8 +2955,6 @@ ngm_policies_weapon_export_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -3180,12 +3030,13 @@ ngm_policies_weapon_export_law = {
 # 国民愛国義務法  lov_duty    :幸福度-10%、暗号力+5、犯罪度-10%(権威、排他、介入のみ) (国民は国家を愛するべきであり、例外は認められない。)
 ngm_policies_information_law = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -3195,8 +3046,6 @@ ngm_policies_information_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -3230,8 +3079,6 @@ ngm_policies_information_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -3253,8 +3100,6 @@ ngm_policies_information_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -3273,8 +3118,6 @@ ngm_policies_information_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -3295,8 +3138,6 @@ ngm_policies_information_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -3332,12 +3173,13 @@ ngm_policies_information_law = {
 # 略奪許可    plunder_m    :侵攻軍与ダメージ+20%、地上軍維持費-20%、信用値-10    (戦果として略奪を行うことは認められるべきである。)(実利、軍国、排他のみ)
 ngm_policies_martial_law = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -3347,8 +3189,6 @@ ngm_policies_martial_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -3370,8 +3210,6 @@ ngm_policies_martial_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -3392,8 +3230,6 @@ ngm_policies_martial_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -3412,8 +3248,6 @@ ngm_policies_martial_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -3443,8 +3277,6 @@ ngm_policies_martial_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -3496,12 +3328,13 @@ ngm_policies_martial_law = {
 # 憲兵の司法警察権    MP_p    :兵士1人あたりの犯罪度-1、安定度+10、幸福度-5%、軍国主義魅力+10%(軍による一般治安維持は苛烈だが強固な安心を国民に届ける。)(軍国、権威のみ)
 ngm_policies_sheriffs_law = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -3511,8 +3344,6 @@ ngm_policies_sheriffs_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -3542,8 +3373,6 @@ ngm_policies_sheriffs_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -3571,8 +3400,6 @@ ngm_policies_sheriffs_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -3591,8 +3418,6 @@ ngm_policies_sheriffs_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -3614,8 +3439,6 @@ ngm_policies_sheriffs_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -3649,12 +3472,13 @@ ngm_policies_sheriffs_law = {
 # 国家統制    nat_broad    :統合力-10%、安定度+5、国家志向魅力+20%    (民間放送は国民を惑わす存在であり、認めることはできない。)(権威、軍国、実利のみ)
 ngm_policies_broadcast_law = {
 	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+		}
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
-			is_country_type = awakened_marauders
 		}
 	}
 	option = {
@@ -3664,8 +3488,6 @@ ngm_policies_broadcast_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -3696,8 +3518,6 @@ ngm_policies_broadcast_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -3718,8 +3538,6 @@ ngm_policies_broadcast_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		policy_flags = {
@@ -3738,8 +3556,6 @@ ngm_policies_broadcast_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {
@@ -3767,8 +3583,6 @@ ngm_policies_broadcast_law = {
 				is_country_type = default
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-				is_country_type = primitive
-				is_country_type = awakened_marauders
 			}
 		}
 		valid = {

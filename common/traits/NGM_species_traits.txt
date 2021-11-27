@@ -50,6 +50,8 @@ trait_ngm_elder_politics = {
 leader_trait_ngm_governor_government_guardianship = {
 	cost = 0
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		governor
@@ -67,6 +69,8 @@ leader_trait_ngm_governor_government_guardianship = {
 leader_trait_ngm_scientist_government_guardianship = {
 	cost = 0
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		scientist
@@ -84,6 +88,8 @@ leader_trait_ngm_scientist_government_guardianship = {
 leader_trait_ngm_admiral_government_guardianship = {
 	cost = 0
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		admiral
@@ -101,6 +107,8 @@ leader_trait_ngm_admiral_government_guardianship = {
 leader_trait_ngm_general_government_guardianship = {
 	cost = 0
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		general
@@ -121,6 +129,8 @@ leader_trait_ngm_general_government_guardianship = {
 leader_trait_ngm_economist = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		governor
@@ -142,6 +152,8 @@ leader_trait_ngm_economist = {
 leader_trait_ngm_coordinator = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		governor
@@ -163,6 +175,8 @@ leader_trait_ngm_coordinator = {
 leader_trait_ngm_governor_upstream = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		governor
@@ -185,6 +199,8 @@ leader_trait_ngm_governor_upstream = {
 leader_trait_ngm_governor_veteran = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		governor
@@ -198,7 +214,7 @@ leader_trait_ngm_governor_veteran = {
 		}
 	}
 	modifier = {
-		planet_jobs_produces_mult = 0.03
+		planet_jobs_productive_produces_mult = 0.03
 		species_leader_exp_gain = 0.1
 	}
 }
@@ -208,6 +224,8 @@ leader_trait_ngm_governor_veteran = {
 leader_trait_ngm_scientocrats = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		scientist
@@ -231,6 +249,8 @@ leader_trait_ngm_scientocrats = {
 leader_trait_ngm_army_brat = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		scientist
@@ -253,6 +273,8 @@ leader_trait_ngm_army_brat = {
 leader_trait_ngm_intuition = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		scientist
@@ -275,6 +297,8 @@ leader_trait_ngm_intuition = {
 leader_trait_ngm_flexibility = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		scientist
@@ -297,6 +321,8 @@ leader_trait_ngm_flexibility = {
 leader_trait_ngm_scientist_upstream = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		scientist
@@ -320,6 +346,8 @@ leader_trait_ngm_scientist_upstream = {
 leader_trait_ngm_scientist_veteran = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		scientist
@@ -343,6 +371,8 @@ leader_trait_ngm_scientist_veteran = {
 leader_trait_ngm_admiral_military_bureaucracy = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		admiral
@@ -366,6 +396,8 @@ leader_trait_ngm_admiral_military_bureaucracy = {
 leader_trait_ngm_admiral_from_the_general_staff = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		admiral
@@ -389,6 +421,8 @@ leader_trait_ngm_admiral_from_the_general_staff = {
 leader_trait_ngm_admiral_flexibility = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		admiral
@@ -411,6 +445,8 @@ leader_trait_ngm_admiral_flexibility = {
 leader_trait_ngm_admiral_decisive = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		admiral
@@ -433,6 +469,8 @@ leader_trait_ngm_admiral_decisive = {
 leader_trait_ngm_admiral_staff_team = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		admiral
@@ -456,6 +494,8 @@ leader_trait_ngm_admiral_staff_team = {
 leader_trait_ngm_admiral_upstream = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		admiral
@@ -479,6 +519,8 @@ leader_trait_ngm_admiral_upstream = {
 leader_trait_ngm_admiral_veteran = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		admiral
@@ -503,6 +545,8 @@ leader_trait_ngm_admiral_veteran = {
 leader_trait_ngm_general_military_bureaucracy = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		general
@@ -525,6 +569,8 @@ leader_trait_ngm_general_military_bureaucracy = {
 leader_trait_ngm_general_from_the_general_staff = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		general
@@ -547,6 +593,8 @@ leader_trait_ngm_general_from_the_general_staff = {
 leader_trait_ngm_general_flexibility = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		general
@@ -569,6 +617,8 @@ leader_trait_ngm_general_flexibility = {
 leader_trait_ngm_general_decisive = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		general
@@ -591,6 +641,8 @@ leader_trait_ngm_general_decisive = {
 leader_trait_ngm_general_staff_team = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		general
@@ -613,6 +665,8 @@ leader_trait_ngm_general_staff_team = {
 leader_trait_ngm_general_upstream = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		general
@@ -636,6 +690,8 @@ leader_trait_ngm_general_upstream = {
 leader_trait_ngm_general_veteran = {
 	cost = 1
 	modification = no
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
 	leader_trait = {
 		general
