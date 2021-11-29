@@ -380,6 +380,55 @@ guiTypes = {
 			clicksound = confirm_click
 		}
 		
+		### Species Gender
+		containerWindowType = {
+			name = "gender"
+			size = { width = 100 height = 100 }
+			position = { x = 820 y = 67 }
+
+
+			instantTextBoxType = {
+				name = "gender_label"
+				font = "malgun_goth_24"
+				position = { x = 0 y = 0 }
+				maxWidth = 200
+				text = "GENDER"
+				format = left
+				alwaysTransparent = yes
+				#text_color_code = "R"
+			}
+
+			buttonType = {
+				name = "male"
+				quadTextureSprite = "GFX_button_male"
+				position = { x = -4 y = 30 }
+				clicksound = select_click
+			}
+
+			buttonType = {
+				name = "female"
+				quadTextureSprite = "GFX_button_female"
+				position = { x = 31 y = 30 }
+				clicksound = select_click
+			}
+
+			buttonType = {
+				name = "indeterminable"
+				quadTextureSprite = "GFX_button_no_gender" #TODO
+				position = { x = 66 y = 30 }
+				clicksound = select_click
+			}
+
+			instantTextBoxType = {
+				name = "gender_selected"
+				font = "cg_16b"
+				position = { x = 0 y = 75 }
+				maxWidth = 200
+				text = ""
+				format = left
+				alwaysTransparent = yes
+			}
+		}
 	}
 
 	###################
@@ -3575,155 +3624,6 @@ guiTypes = {
 			position = { x = -290 y = -40 }
 			orientation = LOWER_RIGHT
 			#shortcut = "RETURN"
-		}
-	}
-	
-	#######################
-	# Ship gfx-culture
-	#######################
-	containerWindowType = {
-		name = "ship_gfx_culture_editor"
-		moveable = @movable_editors
-		position = { x = -400 y = -50 }
-		size = { width = 1030 height = 400 }
-		orientation = center
-		
-		background = {
-			name = "background"
-			spriteType = "GFX_subwindow_tile_plain_solid"
-		}
-
-		iconType = {
-			name = "hex_bg"
-			spriteType = "GFX_hex_bg"
-			position = { x = -10 y = -8 }
-			alwaysTransparent = yes
-		}
-		
-		iconType = {
-			name = "header_line"
-			spriteType = "GFX_line"
-			position = { x = 6 y = 26 }
-		}
-		
-		instantTextBoxType = {
-			name = "label"
-			font = "malgun_goth_24"
-			position = { x = 16 y = 7 }
-			maxWidth = 230
-			text =	 "SHIP_GRAPHICS"
-			format = left
-			alwaysTransparent = yes
-		}
-		
-		containerWindowType = {
-			name = "grid_window"
-			position = { x = 7 y = 43 }
-			size = { width = 1020 height = 318 }
-			orientation = upper_left
-			moveable = no
-			margin = { top = 2 bottom = 2 }
-			verticalScrollBar = "right_vertical_slider"
-
-			background = {
-				name = "background"
-				spriteType = "GFX_invisible"
-			}
-
-			gridBoxType = {
-				name = "grid"
-				position = { x = 0 y = 0 }
-				size = { width = 1010 height = 305 }
-				slotSize = { width = 338 height = 138 }
-				max_slots_horizontal = 3
-				format = UPPER_LEFT
-			}
-		}
-		
-		buttonType = {
-			name = "cancel"
-			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 8 }
-			Orientation = "UPPER_RIGHT"
-			shortCut = "ESCAPE"
-			pdx_tooltip = "CLOSE_TITLE"
-			clicksound = "back_click"
-		}
-		buttonType={
-			name = "back"
-			font = "cg_16b"
-			spriteType = "GFX_galactic_object_button"
-			buttonText = "BACK"
-			position = { x = 0 y = -40 }
-			orientation = LOWER_LEFT
-			shortcut = "BACKSPACE"
-			clicksound = back_click
-		}
-		buttonType={
-			name = "apply_and_close"
-			font = "cg_16b"
-			spriteType = "GFX_galactic_object_button"
-			buttonText = "NEXT"
-			position = { x = -290 y = -40 }
-			orientation = LOWER_RIGHT
-			#shortcut = "RETURN"
-			clicksound = confirm_click
-		}
-	}
-
-	###
-	containerWindowType = {
-		name = "ship_appearance_entry"
-		size = { width = 320 height = 130 }
-		position = { x = 0 y = 5 }
-
-		containerWindowType = {
-			name = "background"
-			position = { x = 1 y = -4 }
-			size = { width = 340 height = 138 }
-
-			background = {
-				name = "click"
-				spriteType = "GFX_clean_frame_area"
-				clicksound = select_click
-			}
-		}	
-
-		containerWindowType = {
-			name = "selected"
-			position = { x = 0 y = -5 }
-			size = { width = 342 height = 140 }
-
-			background = {
-				name = "selected_bg"
-				spriteType = "GFX_glow_tile_orange"
-				alwaysTransparent = yes
-			}
-		}	
-
-		buttonType = {
-			name = "render_target"
-			quadTextureSprite = "GFX_dummy_3d_graphical_culture_preview"
-			position = { x = 6 y = 1 }
-			size = { x = 329 y = 128 }
-			alwaysTransparent = yes
-		}
-		
-		instantTextBoxType = {
-			name = "culture"
-			font = "cg_16b"
-			position = { x = 0 y = 105 }
-			maxWidth = 340
-			text =	 ""
-			format = centre
-			alwaysTransparent = yes
-		}
-		
-		buttonType = {
-			name = "missing_dlc_overlay"
-			quadTextureSprite = "GFX_ship_culture_locked_overlay"
-			position = { x = 6 y = 1 }
-			size = { x = 355 y = 127 }
 		}
 	}
 	
