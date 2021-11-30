@@ -13,8 +13,8 @@ on_game_start_country = {
 		ngm_civic.7
 		# 繁栄主義者
 		ngm_civic.8
-		# ゲーム開始後の追加削除不可の国是
-		ngm_civic.11
+		# # ゲーム開始後の追加削除不可の国是
+		# ngm_civic.11
 		# 刑罰の金銭代替
 		ngm_civic.14
 		# 実験的物質の発見
@@ -82,8 +82,8 @@ on_monthly_pulse_country = {
 # this = country
 on_yearly_pulse_country = {
 	events = {
-		# ゲーム開始後の追加削除不可の国是
-		ngm_civic.12
+		# # ゲーム開始後の追加削除不可の国是
+		# ngm_civic.12
 		# 伝道者団
 		ngm_civic.22
 	}
