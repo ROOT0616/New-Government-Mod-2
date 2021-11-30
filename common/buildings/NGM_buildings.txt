@@ -490,8 +490,8 @@ building_ngm_sa_ko_ryo = {
 		has_branch_office = yes
 		is_capital = yes
 		branch_office_owner = {
-			has_civic = civic_criminal_heritage
-			has_civic = civic_ngm_underhanded_trick
+			has_valid_civic = civic_ngm_underhanded_trick
+			is_criminal_syndicate = yes
 		}
 	}
 	planet_modifier = {
