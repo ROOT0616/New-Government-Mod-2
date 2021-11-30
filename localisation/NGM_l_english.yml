@@ -739,7 +739,6 @@
 
  civic_ngm_underhanded_trick:0 "寝業師"
  civic_ngm_underhanded_trick_desc:0 "この国では裏取引や事前交渉が極めて重要な立ち位置を占めており、裏で様々な取引をこなしている。あくまで、交渉として "
- civic_tooltip_ngm_underhanded_trick_effects:0 "企業建造物、サービス付き高官向け料亭が建設可能になる。\n企業帝国補正：外交発言力§G+25%§!\n惑星補正：犯罪度§G+100§!\n犯罪度§G+15%§!\n惑星を所有する国家の暗号力§G-7§!\n安定度§G+20§!\n豪商の職業枠§G+1§!\n役員§G+1§!\n事務員§G+2§!"
 
 #######################
 #####    政策    ######
@@ -2776,7 +2775,7 @@
  ap_ngm_great_constructure_department:0 "大規模建築計画局"
  ap_ngm_great_constructure_department_desc:0 "大規模建築を行う際の資源や職人を運用し、調整する省庁を設立する"
 
- ap_ngm_heaven_consumer:0 "奢侈品の天国"
+ ap_ngm_heaven_consumer:0 "奢し品の天国"
  ap_ngm_heaven_consumer_desc:0 "贅沢こそ、市民に与えられる最大の恩返しだ"
 
  ap_ngm_layer_countries:0 "重層的国家"
@@ -3734,6 +3733,7 @@
  civic_tooltip_ngm_operating_company_effects:0 "\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_planet_trust_bank$§!が建設できる\n"
  civic_tooltip_ngm_industrial_espionage_effects:0 "\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_corporate_espionage$§!が建設できる\n"
  civic_tooltip_ngm_rating_company_effects:0 "\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_planet_rating_agency$§!が建設できる\n"
+ civic_tooltip_ngm_underhanded_trick_effects:0 "\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_sa_ko_ryo$§!が建設できる\n"
 
  empire_nor_honorism_socialism_egalitarian:0 "$TRIGGER_FAIL$帝国は必要な§Y$ethic_egalitarian$§!、§Y$ethic_honorism$§!もしくは§Y$ethic_socialism$§!の志向を採用していない。 "
  empire_nor_honorism_socialism_capitalism_utilitarianism_materialist:0 "$TRIGGER_FAIL$帝国は必要な§Y$ethic_materialist$§!、§Y$ethic_honorism$§!、§Y$ethic_utilitarianism$§!、§Y$ethic_capitalism$§!もしくは§Y$ethic_socialism$§!の志向を採用していない。 "
