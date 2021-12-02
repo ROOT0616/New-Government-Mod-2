@@ -64,3 +64,66 @@ r_ngm_ancient_pact = {
 		}
 	}
 }
+galactic__emperors_imperial_decree_no.7216_approval_of_the_imperial_amusement_park_lordship = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_omnicodex"
+	sound = "relic_activation_the_omnicodex"
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			influence = 200
+		}
+	}
+	ai_weight = {
+		weight = 100
+	}
+	# パッシブ効果	：請求権作成コスト+9999%、開拓前哨地建造コスト+9999%、外交発言力+100%。統合力+30%、交易価値+100%、
+	#Pop成長速度+100%、統合力+30%、交易価値+100%、星系基地建設のコスト+999999999%、請求権作成の影響力+1000%
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		starbase_outpost_alloys_cost_mult = 9999.99
+		country_claim_influence_cost_mult = 10
+		country_unity_produces_mult = 0.3
+		trade_value_mult = 1
+		pop_growth_speed = 1
+	}
+	triggered_country_modifier = {
+		potential = {
+			is_ai = no
+		}
+		diplo_weight_mult = 0.5
+	}
+	triggered_country_modifier = {
+		potential = {
+			is_ai = yes
+		}
+		diplo_weight_mult = 1
+	}
+	score = 10
+	# アクティブ効果	：帝国補正：Pop成長速度+100%、統合力+50% みかん
+	active_effect = {
+		add_modifier = {
+			modifier = "ngm_ancient_pact"
+			days = @triumph_duration
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+		}
+	}
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = {
+				has_modifier = relic_activation_cooldown
+			}
+		}
+	}
+}
