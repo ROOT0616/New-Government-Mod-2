@@ -20,6 +20,12 @@ building_bureau_of_ceremonies = {
 	planet_modifier = {
 		job_bureau_of_ceremonies_add = 2
 	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_bureau_of_ceremonies_effect_desc
+	}
 }
 
 # 初期建築物「永久の宮殿」 Perpetual Palace （古代から続くこの地を治める者のための宮殿で、列強の君主や元首が集い交渉を行うことも多かったためか、壮麗な建築でいまだに陰りを見せていない。）
@@ -45,6 +51,36 @@ building_ngm_perpetual_palace = {
 		planet_max_buildings_add = 16
 		planet_max_districts_add = 10
 	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_noble_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_administrator_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_ngm_crest_bearer_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_ngm_senior_advisor_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_clerk_effect_desc
+	}
 	resources = {
 		category = planet_buildings
 		upkeep = {
@@ -69,6 +105,12 @@ building_ngm_ginga_department_store = {
 		branch_office_value_mult = 0.2
 		job_clerk_add = 3
 		planet_amenities_add = 5
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_clerk_effect_desc
 	}
 	resources = {
 		category = planet_branch_office_buildings
@@ -98,6 +140,12 @@ building_ngm_business_school = {
 	}
 	planet_modifier = {
 		job_researcher_add = 1
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_researcher_effect_desc
 	}
 	resources = {
 		category = planet_branch_office_buildings
@@ -130,6 +178,18 @@ building_ngm_star_workshop = {
 	planet_modifier = {
 		job_artisan_add = 1
 		job_foundry_add = 1
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_artisan_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_foundry_effect_desc
 	}
 	resources = {
 		category = planet_branch_office_buildings
@@ -165,6 +225,18 @@ building_ngm_galaxy_salon = {
 		job_merchant_add = 1
 		job_executive_add = 1
 	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_merchant_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_executive_effect_desc
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		produces = {
@@ -199,6 +271,18 @@ building_ngm_m_a_center = {
 		job_merchant_add = 1
 		job_clerk_add = 2
 	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_merchant_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_clerk_effect_desc
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -225,6 +309,12 @@ building_ngm_galactic_bank = {
 	planet_modifier = {
 		trade_value_mult = 0.05
 		job_clerk_add = 3
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_clerk_effect_desc
 	}
 	resources = {
 		category = planet_branch_office_buildings
@@ -259,6 +349,12 @@ building_ngm_IAA = {
 		planet_amenities_add = 5
 		job_clerk_add = 3
 	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_clerk_effect_desc
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -285,6 +381,12 @@ building_ngm_corporate_hospital = {
 	planet_modifier = {
 		pop_growth_speed = 0.05
 		job_healthcare_add = 1
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_healthcare_effect_desc
 	}
 	resources = {
 		category = planet_branch_office_buildings
@@ -317,6 +419,12 @@ building_ngm_planetary_scale_building_center = {
 		planet_districts_cost_mult = -0.1
 		job_clerk_add = 2
 	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_clerk_effect_desc
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		produces = {
@@ -345,6 +453,12 @@ building_ngm_corporate_plantation = {
 	}
 	planet_modifier = {
 		job_farmer_add = 3
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_farmer_effect_desc
 	}
 	resources = {
 		category = planet_branch_office_buildings
@@ -377,6 +491,12 @@ building_ngm_society_cosmic_port = {
 		branch_office_value_mult = 0.3
 		job_clerk_add = 2
 	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_clerk_effect_desc
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -405,6 +525,18 @@ building_ngm_planet_trust_bank = {
 		branch_office_value_mult = 0.3
 		job_merchant_add = 1
 		job_clerk_add = 3
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_merchant_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_clerk_effect_desc
 	}
 	resources = {
 		category = planet_branch_office_buildings
@@ -436,6 +568,12 @@ building_ngm_corporate_espionage = {
 		planet_crime_add = 5
 		job_clerk_add = 2
 	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_clerk_effect_desc
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -462,6 +600,12 @@ building_ngm_planet_rating_agency = {
 	planet_modifier = {
 		planet_jobs_unity_produces_mult = 0.05
 		job_clerk_add = 2
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_clerk_effect_desc
 	}
 	resources = {
 		category = planet_branch_office_buildings
@@ -508,6 +652,24 @@ building_ngm_sa_ko_ryo = {
 	country_modifier = {
 		diplo_weight_mult = 0.25
 		country_base_influence_produces_add = 0.5
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_merchant_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_executive_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_clerk_effect_desc
 	}
 	resources = {
 		category = planet_branch_office_buildings
@@ -585,6 +747,12 @@ building_ngm_theatergoer = {
 			job_maintenance_drone_add = 3
 		}
 	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_entertainer_effect_desc
+	}
 	ai_resource_production = {
 		unity = 10
 		trigger = { 
@@ -656,6 +824,18 @@ building_ngm_avant_garde_art_square = {
 			job_evaluator_add = 1
 		}
 	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_entertainer_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_culture_worker_effect_desc
+	}
 	ai_resource_production = {
 		unity = 10
 		trigger = { 
@@ -726,6 +906,12 @@ building_ngm_Iimperial_concert_hall = {
 			job_evaluator_add = 2
 		}
 	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_culture_worker_effect_desc
+	}
 	ai_resource_production = {
 		unity = 10
 		trigger = { 
@@ -794,6 +980,12 @@ building_ngm_imperial_art_museum = {
 		modifier = {
 			job_evaluator_add = 3
 		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_culture_worker_effect_desc
 	}
 	ai_resource_production = {
 		unity = 20
@@ -871,6 +1063,36 @@ building_ngm_premise_workshop = {
 			job_translucer_drone_add = 1
 			job_gas_refiner_drone_add = 1
 		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_artisan_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_foundry_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_chemist_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_translucer_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = job_gas_refiner_effect_desc
 	}
 	ai_resource_production = {
 		alloys = 20
