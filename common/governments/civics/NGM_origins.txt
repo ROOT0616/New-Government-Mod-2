@@ -76,3 +76,30 @@ origin_ngm_escape_to_the_past = {
 		base = 0
 	}
 }
+
+# 銀河帝国アクアリウム
+origin_ngm_galactic_empire_aquarium = {
+	is_origin = yes
+	# icon = "gfx/interface/icons/governments/origins/origins_ngm_escape_to_the_past.dds"
+	# picture = GFX_origin_ngm_escape_to_the_past
+	potential = {
+		always = yes
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+			OR = {
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	description = "origin_tooltip_ngm_galactic_empire_aquarium"
+	random_weight = {
+		base = 5
+	}
+
+}

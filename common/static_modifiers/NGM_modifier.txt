@@ -582,6 +582,17 @@ ngm_ancient_pact = {
 	starbase_shipyard_build_speed_mult = 5
 }
 
+# 銀河皇帝勅許第7216号「帝立遊園領邦の認可」
+# パッシブ効果	Pop成長速度+100%、統合力+50%、交易価値+100%、星系基地建設のコスト+999999999%、請求権作成の影響力+1000%
+# アクティブ効果	：建造物建造コスト-30%、区域建造コスト-30%、巨大構造物建造コスト-10%、市場手数料-5%
+ngm_r_galactic_empire_aquarium = {
+	planet_buildings_cost_mult = -0.3
+	planet_districts_cost_mult = -0.3
+	megastructures_alloys_cost_mult = -0.1
+	megastructures_influence_cost_mult = -0.1
+	country_trade_fee = -0.05
+}
+
 # 開始時、20年の間Pop成長速度+200%、Pop製造速度+200%、流入魅力+100%の惑星特性（国家再興の決意 Determination to Rebuild ）を付与
 ngm_determination_to_rebuild = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"

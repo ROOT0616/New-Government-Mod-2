@@ -228,7 +228,9 @@ ngm_special_forces_army = {
 		}
 	}
 }
-naval_fleet = {#海軍艦隊、耐久度ダメージ6、士気ダメージ5、耐久度350、士気300
+
+#海軍艦隊、耐久度ダメージ6、士気ダメージ5、耐久度350、士気300
+ngm_naval_fleet = {
 	defensive = yes
 	is_pop_spawned = yes
 	damage = 2.4

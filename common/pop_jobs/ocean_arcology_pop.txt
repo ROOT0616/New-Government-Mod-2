@@ -1,4 +1,4 @@
-tide_engineer = {
+ngm_tide_engineer = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
 	building_icon = building_institute
@@ -136,7 +136,7 @@ tide_engineer = {
 	}
 }
 
-gardener = {
+ngm_gardener = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
 	building_icon = building_institute
@@ -274,7 +274,7 @@ gardener = {
 	}
 }
 
-aquaculture_technician = {
+ngm_aquaculture_technician = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
 	building_icon = building_institute
@@ -414,7 +414,7 @@ aquaculture_technician = {
 	
 }
 
-executive_cast = {
+ngm_executive_cast = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
 	building_icon = building_institute
@@ -551,7 +551,7 @@ executive_cast = {
 	
 }
 
-cast = {
+ngm_cast = {
 	category = specialist
 	condition_string = WORKER_JOB_TRIGGER
 	building_icon = building_institute
@@ -687,8 +687,7 @@ cast = {
 	
 }
 
-
-admiral = {#
+ngm_admiral = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
 	building_icon = building_institute
@@ -703,9 +702,9 @@ admiral = {#
 		is_sapient = yes
 	}
 
-	possible = {
-		ruler_job_check_trigger = yes
-	}
+	# possible = {
+	# 	ruler_job_check_trigger = yes
+	# }
 
 	country_modifier = {
 		country_naval_cap_add = 5

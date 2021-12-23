@@ -37,7 +37,7 @@ ngm_district_arcology_marine_housing = {
 
 	planet_modifier = {
 		planet_housing_add = 20
-		job_cast_add = 2
+		job_ngm_cast_add = 2
 		planet_amenities_add = 5
 	}
 
@@ -151,9 +151,9 @@ ngm_district_arcology_marine_administrative_Organization = {
 
 	planet_modifier = {
 		planet_housing_add = 5
-		job_cast_add = 3
-		job_executive_cast_add = 1
-		job_admiral_add = 1
+		job_ngm_cast_add = 3
+		job_ngm_executive_cast_add = 1
+		job_ngm_admiral_add = 1
 		job_bureaucrat_add = 2
 	}
 
@@ -187,8 +187,8 @@ ngm_district_arcology_marine_health_care = {
 	planet_modifier = {
 		job_healthcare_add = 2
 		job_researcher_add = 1
-		job_executive_cast_add = 1
-		job_cast_add = 2
+		job_ngm_executive_cast_add = 1
+		job_ngm_cast_add = 2
 		planet_housing_add = 10
 	}
 
@@ -221,9 +221,9 @@ ngm_district_arcology_marine_water_park = {
 	}
 
 	planet_modifier = {
-		job_gardener_add = 4
-		job_executive_cast_add = 1
-		job_cast_add = 3
+		job_ngm_gardener_add = 4
+		job_ngm_executive_cast_add = 1
+		job_ngm_cast_add = 3
 		planet_housing_add = 10
 	}
 
@@ -257,8 +257,8 @@ ngm_district_arcology_marine_drunkness_street = {
 
 	planet_modifier = {
 		job_entertainer_add = 1
-		job_executive_cast_add = 2
-		job_cast_add = 1
+		job_ngm_executive_cast_add = 2
+		job_ngm_cast_add = 1
 		job_clerk_add = 3
 		planet_housing_add = 20
 	}
@@ -291,8 +291,8 @@ ngm_district_arcology_marine_tidal_laboratory = {
 	}
 
 	planet_modifier = {
-		job_tide_engineer_add = 2
-		job_tide_engineer_add = 4
+		job_ngm_tide_engineer_add = 2
+		job_ngm_tide_engineer_add = 4
 		planet_housing_add = 5
 	}
 
@@ -328,7 +328,7 @@ ngm_district_arcology_marine_Fisheries_Research = {
 		job_angler_add = 1
 		job_pearl_diver_add = 1
 		planet_housing_add = 10
-		job_aquaculture_technician_add = 2
+		job_ngm_aquaculture_technician_add = 2
 	}
 
 
@@ -361,7 +361,7 @@ ngm_district_arcology_marine_villa = {
 	planet_modifier = {
 		planet_housing_add = 8
 		job_clerk_add = 2
-		job_executive_cast_add = 2
+		job_ngm_executive_cast_add = 2
 		pop_cat_ruler_happiness = 3
 	}
 
