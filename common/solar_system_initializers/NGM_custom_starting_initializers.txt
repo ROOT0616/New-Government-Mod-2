@@ -346,14 +346,14 @@ ngm_buffer_state_starting_init = {
 	}
 }
 
-# 銀河帝国アクアリウム
-ngm_buffer_state_starting_init = {
+# 銀河帝国アクアリウム 首都星系
+ngm_galactic_empire_aquarium_starting_init = {
 	class = "rl_trinary_stars"
 	flags = {
 		empire_home_system
 	}
 	init_effect = {
-		save_global_event_target_as = ngm_buffer_state_starting_system
+		save_global_event_target_as = ngm_galactic_empire_aquarium_starting_system
 		every_neighbor_system = {
 			set_star_flag = empire_cluster
 			every_neighbor_system = {
@@ -362,159 +362,27 @@ ngm_buffer_state_starting_init = {
 		}
 		generate_home_system_resources = yes
 	}
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 80
-	}
+	# 第1星系
 	planet = {
 		count = 1
-		class = star
+		class = "pc_a_star"
 		orbit_distance = 0
 		orbit_angle = 0
 		size = {
-			min = 60
-			max = 80
+			min = 20
+			max = 30
 		}
 		change_orbit = 30
-		has_ring = yes
 		planet = {
 			count = 1
-			class = pc_asteroid
+			class = "pc_molten"
 			orbit_distance = 30
 			orbit_angle = 0
 		}
 		planet = {
-			count = 5
-			class = pc_asteroid
-			orbit_distance = 0
-			orbit_angle = 60
-		}
-		planet = {
-			count = {
-				min = 1
-				max = 3
-			}
-			orbit_angle = {
-				min = 90
-				max = 270
-			}
-			class = random_non_colonizable
-			orbit_distance = 15
-			satellite_naming_policy = lower_case_latin_letters
-			change_orbit = @base_moon_distance
-			moon = {
-				count = {
-					min = 0
-					max = 1
-				}
-				class = random_non_colonizable
-				orbit_angle = {
-					min = 90
-					max = 270
-				}
-				orbit_distance = 5
-			}
-		}
-		planet = {
-			count = {
-				min = 1
-				max = 3
-			}
-			class = pc_asteroid
-			orbit_distance = 0
-			orbit_angle = {
-				min = 40
-				max = 100
-			}
-		}
-		planet = {
-			count = {
-				min = 1
-				max = 2
-			}
-			orbit_distance = 20
-			class = random_non_colonizable
-			orbit_angle = {
-				min = 90
-				max = 270
-			}
-		}
-		planet = {
 			count = 1
 			orbit_distance = 15
-			class = "pc_alpine"
-			has_ring = yes
-			orbit_angle = {
-				min = 90
-				max = 270
-			}
-			size = {
-				min = 25
-				max = 30
-			}
-			init_effect = {
-				add_modifier = {
-					modifier = ultra_rich
-				}
-				add_deposit = d_zro_deposit_2
-			}
-			change_orbit = @base_moon_distance
-			moon = {
-				count = {
-					min = 0
-					max = 1
-				}
-				class = random_non_colonizable
-				orbit_angle = {
-					min = 90
-					max = 270
-				}
-				orbit_distance = 5
-			}
-		}
-	}
-	planet = {
-		count = 1
-		class = star
-		orbit_distance = 290
-		orbit_angle = 120
-		size = {
-			min = 25
-			max = 30
-		}
-		has_ring = yes
-		satellite_naming_policy = upper_case_roman_numerals
-		change_orbit = 30
-		planet = {
-			count = {
-				min = 1
-				max = 3
-			}
-			orbit_angle = {
-				min = 90
-				max = 270
-			}
-			class = random_non_colonizable
-			orbit_distance = 25
-			satellite_naming_policy = lower_case_latin_letters
-			change_orbit = @base_moon_distance
-			moon = {
-				count = {
-					min = 0
-					max = 1
-				}
-				class = random_non_colonizable
-				orbit_angle = {
-					min = 90
-					max = 270
-				}
-				orbit_distance = 5
-			}
-		}
-		planet = {
-			count = 1
-			orbit_distance = 20
-			class = "pc_relic"
+			class = "pc_ocean"
 			has_ring = yes
 			orbit_angle = {
 				min = 90
@@ -530,78 +398,22 @@ ngm_buffer_state_starting_init = {
 				prevent_anomaly = yes
 			}
 			init_effect = {
-				save_event_target_as = ngm_buffer_state
+				save_event_target_as = ngm_galactic_empire_aquarium
 				set_planet_flag = cant_build_here
 				set_planet_flag = cant_target_this_planet
 			}
 			init_effect = {
 				generate_empire_home_planet = yes
 			}
-			init_effect = {
-				add_deposit = d_industrial_sector
-				add_deposit = d_central_spire
-			}
-			change_orbit = @base_moon_distance
-			moon = {
-				count = 1
-				class = random_non_colonizable
-				orbit_angle = {
-					min = 90
-					max = 270
-				}
-				orbit_distance = 5
-			}
 		}
 		planet = {
-			count = {
-				min = 1
-				max = 3
-			}
-			class = pc_asteroid
-			orbit_distance = 0
-			orbit_angle = {
-				min = 40
-				max = 100
-			}
-		}
-		planet = {
-			count = {
-				min = 1
-				max = 2
-			}
-			orbit_distance = 15
-			class = random_non_colonizable
+			count = 1
+			orbit_distance = 20
+			class = "pc_arctic"
 			orbit_angle = {
 				min = 90
 				max = 270
 			}
-		}
-	}
-	planet = {
-		count = 1
-		class = star
-		orbit_distance = 0
-		orbit_angle = 120
-		size = {
-			min = 20
-			max = 30
-		}
-		has_ring = no
-		satellite_naming_policy = upper_case_roman_numerals
-		change_orbit = 30
-		planet = {
-			count = {
-				min = 1
-				max = 3
-			}
-			orbit_angle = {
-				min = 90
-				max = 270
-			}
-			class = random_non_colonizable
-			orbit_distance = 25
-			satellite_naming_policy = lower_case_latin_letters
-			change_orbit = @base_moon_distance
 			moon = {
 				count = 1
 				class = random_non_colonizable
@@ -614,27 +426,50 @@ ngm_buffer_state_starting_init = {
 		}
 		planet = {
 			count = 1
+			class = "pc_gas_giant"
 			orbit_distance = 20
-			class = "pc_gaia"
-			has_ring = yes
 			orbit_angle = {
-				min = 90
-				max = 270
+				min = 40
+				max = 100
 			}
-			size = {
-				min = 25
-				max = 30
-			}
-			init_effect = {
-				add_modifier = {
-					modifier = lush_planet
+			moon = {
+				count = 1
+				class = "pc_ocean"
+				orbit_angle = {
+					min = 10
+					max = 170
 				}
-				add_modifier = {
-					modifier = natural_beauty
-				}
-				add_deposit = d_alien_pets_deposit
+				orbit_distance = 5
 			}
-			change_orbit = @base_moon_distance
+			moon = {
+				count = 1
+				class = random_non_colonizable
+				orbit_angle = {
+					min = 190
+					max = 350
+				}
+				orbit_distance = 5
+			}
+		}
+	}
+	# 第2星系
+	planet = {
+		count = 1
+		class = "pc_g_star"
+		orbit_distance = 290
+		orbit_angle = 120
+		size = {
+			min = 25
+			max = 30
+		}
+		satellite_naming_policy = upper_case_roman_numerals
+		change_orbit = 30
+		planet = {
+			count = 1
+			class = "pc_molten"
+			orbit_distance = 30
+			orbit_angle = 0
+			has_ring = yes
 			moon = {
 				count = 1
 				class = random_non_colonizable
@@ -646,48 +481,171 @@ ngm_buffer_state_starting_init = {
 			}
 		}
 		planet = {
-			count = {
-				min = 0
-				max = 3
+			count = 1
+			class = "pc_gas_giant"
+			orbit_distance = 20
+			orbit_angle = {
+				min = 40
+				max = 100
 			}
-			class = pc_asteroid
-			orbit_distance = 0
+			has_ring = yes
+			moon = {
+				count = 1
+				class = random_non_colonizable
+				orbit_angle = {
+					min = 190
+					max = 350
+				}
+				orbit_distance = 5
+			}
+		}
+		planet = {
+			count = 1
+			class = "pc_barren"
+			orbit_distance = 15
 			orbit_angle = {
 				min = 40
 				max = 100
 			}
 		}
 		planet = {
-			count = {
-				min = 0
-				max = 1
-			}
+			count = 1
+			class = "pc_barren_cold"
 			orbit_distance = 15
-			class = random_non_colonizable
+			orbit_angle = {
+				min = 40
+				max = 100
+			}
+		}
+	}
+	# 第3星系
+	planet = {
+		count = 1
+		class = "pc_k_star"
+		orbit_distance = 0
+		orbit_angle = 120
+		size = {
+			min = 20
+			max = 30
+		}
+		has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
+		change_orbit = 30
+		planet = {
+			count = 1
+			class = "pc_continental"
+			orbit_distance = 15
+			orbit_angle = {
+				min = 40
+				max = 100
+			}
+		}
+		planet = {
+			count = 1
+			class = "pc_barren_cold"
+			orbit_distance = 15
+			orbit_angle = {
+				min = 40
+				max = 100
+			}
+			moon = {
+				count = 1
+				class = random_non_colonizable
+				orbit_angle = {
+					min = 90
+					max = 270
+				}
+				orbit_distance = 5
+			}
+		}
+	}
+}
+
+# 銀河帝国アクアリウム パルサー星系
+ngm_galactic_empire_aquarium_starting_pulsar = {
+	class = "rl_trinary_stars"
+	# flags = {
+	# 	empire_home_system
+	# }
+	init_effect = {
+		save_global_event_target_as = ngm_galactic_empire_aquarium_pulsar_system
+	}
+	# 第1星系
+	planet = {
+		count = 1
+		class = "pc_pulsar"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = {
+			min = 60
+			max = 80
+		}
+		change_orbit = 30
+		planet = {
+			count = 1
+			class = "pc_frozen"
+			orbit_distance = 30
 			orbit_angle = {
 				min = 90
 				max = 270
 			}
 		}
+		planet = {
+			count = 1
+			class = "pc_barren_cold"
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			moon = {
+				count = 1
+				class = random_non_colonizable
+				orbit_angle = {
+					min = 90
+					max = 270
+				}
+				orbit_distance = 5
+			}
+		}
 	}
-	neighbor_system = {
-		trigger = {
-			num_guaranteed_colonies >= 2
-		}
-		hyperlane_jumps = {
-			min = 1
-			max = @jumps
-		}
-		initializer = "neighbor_t1"
+}
+
+# 銀河帝国アクアリウム ブラックホール星系
+ngm_galactic_empire_aquarium_starting_black_hole = {
+	class = "rl_trinary_stars"
+	# flags = {
+	# 	empire_home_system
+	# }
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 30
 	}
-	neighbor_system = {
-		trigger = {
-			num_guaranteed_colonies >= 1
+	init_effect = {
+		save_global_event_target_as = ngm_galactic_empire_aquarium_black_hole_system
+	}
+	# 第1星系
+	planet = {
+		count = 1
+		class = "pc_black_hole"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = {
+			min = 60
+			max = 80
 		}
-		hyperlane_jumps = {
-			min = 1
-			max = @jumps
+		change_orbit = 30
+		planet = {
+			count = 1
+			class = pc_asteroid
+			orbit_distance = 30
+			orbit_angle = 0
 		}
-		initializer = "neighbor_t1_first_colony"
+		planet = {
+			count = 9
+			class = pc_asteroid
+			orbit_distance = 0
+			orbit_angle = 36
+		}
 	}
 }
