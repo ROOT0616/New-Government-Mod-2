@@ -528,461 +528,6 @@ country_event = {
 	}
 }
 
-# # ゲーム開始後の追加削除不可の国是
-	# country_event = {
-	# 	id = ngm_civic.11
-	# 	hide_window = yes
-	# 	is_triggered_only = yes
-	# 	trigger = {
-	# 		OR = {
-	# 			has_civic = civic_ngm_random_birth_rate
-	# 			has_civic = civic_ngm_healthy_habits
-	# 			has_civic = civic_ngm_ultimate_freedom_of_thought
-	# 			has_civic = civic_ngm_The_Struggle_for_Struggle
-	# 			has_civic = civic_ngm_mechanical_faith
-	# 			has_civic = civic_ngm_economic_primitivism
-	# 			has_civic = civic_ngm_deregulation
-	# 			has_civic = civic_ngm_mastermind
-	# 			has_civic = civic_ngm_glorious_isolation
-	# 			has_civic = civic_ngm_breakdown_prevention_method
-	# 			has_civic = civic_ngm_destructive_digging
-	# 			has_civic = civic_ngm_irreversible_industrialization
-	# 			has_civic = civic_ngm_experimental_substance
-	# 		}
-	# 	}
-	# 	immediate = {
-	# 		if = {
-	# 			limit = {
-	# 				has_civic = civic_ngm_random_birth_rate
-	# 			}
-	# 			set_country_flag = civic_ngm_random_birth_rate_flag
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				has_civic = civic_ngm_healthy_habits
-	# 			}
-	# 			set_country_flag = civic_ngm_healthy_habits_flag
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				has_civic = civic_ngm_ultimate_freedom_of_thought
-	# 			}
-	# 			set_country_flag = civic_ngm_ultimate_freedom_of_thought_flag
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				has_civic = civic_ngm_The_Struggle_for_Struggle
-	# 			}
-	# 			set_country_flag = civic_ngm_The_Struggle_for_Struggle_flag
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				has_civic = civic_ngm_mechanical_faith
-	# 			}
-	# 			set_country_flag = civic_ngm_mechanical_faith_flag
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				has_civic = civic_ngm_experimental_substance
-	# 			}
-	# 			set_country_flag = civic_ngm_experimental_substance_flag
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				has_civic = civic_ngm_economic_primitivism
-	# 			}
-	# 			set_country_flag = civic_ngm_economic_primitivism_flag
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				has_civic = civic_ngm_deregulation
-	# 			}
-	# 			set_country_flag = civic_ngm_deregulation_flag
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				has_civic = civic_ngm_mastermind
-	# 			}
-	# 			set_country_flag = civic_ngm_mastermind_flag
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				has_civic = civic_ngm_glorious_isolation
-	# 			}
-	# 			set_country_flag = civic_ngm_glorious_isolation_flag
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				has_civic = civic_ngm_breakdown_prevention_method
-	# 			}
-	# 			set_country_flag = civic_ngm_breakdown_prevention_method_flag
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				has_civic = civic_ngm_destructive_digging
-	# 			}
-	# 			set_country_flag = civic_ngm_destructive_digging_flag
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				has_civic = civic_ngm_irreversible_industrialization
-	# 			}
-	# 			set_country_flag = civic_ngm_irreversible_industrialization_flag
-	# 		}
-	# 	}
-	# }
-
-	# country_event = {
-	# 	id = ngm_civic.12
-	# 	hide_window = yes
-	# 	is_triggered_only = yes
-	# 	trigger = {
-	# 		OR = {
-	# 			has_civic = civic_ngm_random_birth_rate
-	# 			has_civic = civic_ngm_healthy_habits
-	# 			has_civic = civic_ngm_ultimate_freedom_of_thought
-	# 			has_civic = civic_ngm_The_Struggle_for_Struggle
-	# 			has_civic = civic_ngm_mechanical_faith
-	# 			has_civic = civic_ngm_economic_primitivism
-	# 			has_civic = civic_ngm_deregulation
-	# 			has_civic = civic_ngm_mastermind
-	# 			has_civic = civic_ngm_glorious_isolation
-	# 			has_civic = civic_ngm_breakdown_prevention_method
-	# 			has_civic = civic_ngm_destructive_digging
-	# 			has_civic = civic_ngm_irreversible_industrialization
-	# 			has_civic = civic_ngm_experimental_substance
-	# 			has_country_flag = civic_ngm_random_birth_rate_flag
-	# 			has_country_flag = civic_ngm_healthy_habits_flag
-	# 			has_country_flag = civic_ngm_ultimate_freedom_of_thought_flag
-	# 			has_country_flag = civic_ngm_The_Struggle_for_Struggle_flag
-	# 			has_country_flag = civic_ngm_mechanical_faith_flag
-	# 			has_country_flag = civic_ngm_economic_primitivism_flag
-	# 			has_country_flag = civic_ngm_deregulation_flag
-	# 			has_country_flag = civic_ngm_mastermind_flag
-	# 			has_country_flag = civic_ngm_glorious_isolation_flag
-	# 			has_country_flag = civic_ngm_breakdown_prevention_method_flag
-	# 			has_country_flag = civic_ngm_destructive_digging_flag
-	# 			has_country_flag = civic_ngm_irreversible_industrialization_flag
-	# 			has_country_flag = civic_ngm_experimental_substance_flag
-	# 		}
-	# 	}
-	# 	immediate = {
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_civic = civic_ngm_random_birth_rate
-	# 				}
-	# 				has_country_flag = civic_ngm_random_birth_rate_flag
-	# 			}
-	# 			force_add_civic = civic_ngm_random_birth_rate
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				has_civic = civic_ngm_random_birth_rate
-	# 				NOT = {
-	# 					has_country_flag = civic_ngm_random_birth_rate_flag
-	# 				}
-	# 			}
-	# 			force_remove_civic = civic_ngm_random_birth_rate
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_civic = civic_ngm_healthy_habits
-	# 				}
-	# 				has_country_flag = civic_ngm_healthy_habits_flag
-	# 			}
-	# 			force_add_civic = civic_ngm_healthy_habits
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_country_flag = civic_ngm_healthy_habits_flag
-	# 				}
-	# 				has_civic = civic_ngm_healthy_habits
-	# 			}
-	# 			force_remove_civic = civic_ngm_healthy_habits
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_civic = civic_ngm_ultimate_freedom_of_thought
-	# 				}
-	# 				has_country_flag = civic_ngm_ultimate_freedom_of_thought_flag
-	# 			}
-	# 			force_add_civic = civic_ngm_ultimate_freedom_of_thought
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_country_flag = civic_ngm_ultimate_freedom_of_thought_flag
-	# 				}
-	# 				has_civic = civic_ngm_ultimate_freedom_of_thought
-	# 			}
-	# 			force_remove_civic = civic_ngm_ultimate_freedom_of_thought
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_civic = civic_ngm_The_Struggle_for_Struggle
-	# 				}
-	# 				has_country_flag = civic_ngm_The_Struggle_for_Struggle_flag
-	# 			}
-	# 			force_add_civic = civic_ngm_The_Struggle_for_Struggle
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_country_flag = civic_ngm_The_Struggle_for_Struggle_flag
-	# 				}
-	# 				has_civic = civic_ngm_The_Struggle_for_Struggle
-	# 			}
-	# 			force_remove_civic = civic_ngm_The_Struggle_for_Struggle
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_civic = civic_ngm_mechanical_faith
-	# 				}
-	# 				has_country_flag = civic_ngm_mechanical_faith_flag
-	# 			}
-	# 			force_add_civic = civic_ngm_mechanical_faith
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_country_flag = civic_ngm_mechanical_faith_flag
-	# 				}
-	# 				has_civic = civic_ngm_mechanical_faith
-	# 			}
-	# 			force_remove_civic = civic_ngm_mechanical_faith
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_civic = civic_ngm_experimental_substance
-	# 				}
-	# 				has_country_flag = civic_ngm_experimental_substance_flag
-	# 			}
-	# 			force_add_civic = civic_ngm_experimental_substance
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_country_flag = civic_ngm_experimental_substance_flag
-	# 				}
-	# 				has_civic = civic_ngm_experimental_substance
-	# 			}
-	# 			force_remove_civic = civic_ngm_experimental_substance
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_civic = civic_ngm_economic_primitivism
-	# 				}
-	# 				has_country_flag = civic_ngm_economic_primitivism_flag
-	# 			}
-	# 			force_add_civic = civic_ngm_economic_primitivism
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_country_flag = civic_ngm_economic_primitivism_flag
-	# 				}
-	# 				has_civic = civic_ngm_economic_primitivism
-	# 			}
-	# 			force_add_civic = civic_ngm_economic_primitivism
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_civic = civic_ngm_deregulation
-	# 				}
-	# 				has_country_flag = civic_ngm_deregulation_flag
-	# 			}
-	# 			force_add_civic = civic_ngm_deregulation
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_country_flag = civic_ngm_deregulation_flag
-	# 				}
-	# 				has_civic = civic_ngm_deregulation
-	# 			}
-	# 			force_remove_civic = civic_ngm_deregulation
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_civic = civic_ngm_mastermind
-	# 				}
-	# 				has_country_flag = civic_ngm_mastermind_flag
-	# 			}
-	# 			force_add_civic = civic_ngm_mastermind
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_country_flag = civic_ngm_mastermind_flag
-	# 				}
-	# 				has_civic = civic_ngm_mastermind
-	# 			}
-	# 			force_remove_civic = civic_ngm_mastermind
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_civic = civic_ngm_glorious_isolation
-	# 				}
-	# 				has_country_flag = civic_ngm_glorious_isolation_flag
-	# 			}
-	# 			force_add_civic = civic_ngm_glorious_isolation
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_country_flag = civic_ngm_glorious_isolation_flag
-	# 				}
-	# 				has_civic = civic_ngm_glorious_isolation
-	# 			}
-	# 			force_remove_civic = civic_ngm_glorious_isolation
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_civic = civic_ngm_breakdown_prevention_method
-	# 				}
-	# 				has_country_flag = civic_ngm_breakdown_prevention_method_flag
-	# 			}
-	# 			force_add_civic = civic_ngm_breakdown_prevention_method
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_country_flag = civic_ngm_breakdown_prevention_method_flag
-	# 				}
-	# 				has_civic = civic_ngm_breakdown_prevention_method
-	# 			}
-	# 			force_remove_civic = civic_ngm_breakdown_prevention_method
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_civic = civic_ngm_destructive_digging
-	# 				}
-	# 				has_country_flag = civic_ngm_destructive_digging_flag
-	# 			}
-	# 			force_add_civic = civic_ngm_destructive_digging
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_country_flag = civic_ngm_destructive_digging_flag
-	# 				}
-	# 				has_civic = civic_ngm_destructive_digging
-	# 			}
-	# 			force_remove_civic = civic_ngm_destructive_digging
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_civic = civic_ngm_irreversible_industrialization
-	# 				}
-	# 				has_country_flag = civic_ngm_irreversible_industrialization_flag
-	# 			}
-	# 			force_add_civic = civic_ngm_irreversible_industrialization
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 		if = {
-	# 			limit = {
-	# 				NOT = {
-	# 					has_country_flag = civic_ngm_irreversible_industrialization_flag
-	# 				}
-	# 				has_civic = civic_ngm_irreversible_industrialization
-	# 			}
-	# 			force_remove_civic = civic_ngm_irreversible_industrialization
-	# 			add_resource = {
-	# 				influence = 250
-	# 			}
-	# 		}
-	# 	}
-	# }
-# 
-
 # 刑罰の金銭代替		惑星の犯罪度*1の交易価値を惑星に付与
 country_event = {
 	id = ngm_civic.14
@@ -4009,6 +3554,379 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+
+# 銀河帝国アクアリウム	生成イベント
+country_event = {
+	id = ngm_origin.1000
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_galactic_empire_aquarium
+	}
+	immediate = {
+		add_relic = r_ngm_geid
+		set_global_flag = ngm_galactic_empire_aquarium_global_flag
+		set_country_flag = ngm_galactic_empire_aquarium_country_flag
+		# Tag our old home planet
+		capital_scope = {
+			save_event_target_as = previous_home_planet
+			solar_system = {
+				save_event_target_as = previous_home_system
+			}
+			if = {
+				limit = {
+					exists = sector
+				}
+				sector = {
+					leader = {
+						unassign_leader = this
+						save_event_target_as = ngm_galactic_empire_aquarium_gov
+					}
+				}
+			}
+			else = {
+				root = {
+					random_owned_leader = {
+						limit = {
+							leader_class = governor
+						}
+						save_event_target_as = ngm_galactic_empire_aquarium_gov
+					}
+				}
+			}
+		}
+		set_spawn_system_batch = begin
+		no_scope = {
+			spawn_system = {
+				min_distance >= 450
+				max_distance <= 450
+				min_orientation_angle = 135
+				max_orientation_angle = 135
+				initializer = "ngm_galactic_empire_aquarium_starting_init"
+				hyperlane = no
+				effect = {
+					save_global_event_target_as = ngm_galactic_empire_aquarium1
+				}
+			}
+			last_created_system = {
+				set_name = "Aquarium"
+			}
+			event_target:ngm_galactic_empire_aquarium1 = {
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 20
+					min_orientation_angle = 0
+					max_orientation_angle = 0
+					initializer = "ngm_galactic_empire_aquarium_starting_pulsar"
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = ngm_galactic_empire_aquarium2
+					}
+				}
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 20
+					min_orientation_angle = 180
+					max_orientation_angle = 180
+					initializer = "ngm_galactic_empire_aquarium_starting_black_hole"
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = ngm_galactic_empire_aquarium3
+					}
+				}
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 20
+					min_orientation_angle = 90
+					max_orientation_angle = 90
+					initializer = "ngm_galactic_empire_aquarium_starting_upper_gate"
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = ngm_galactic_empire_aquarium4
+					}
+				}
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 20
+					min_orientation_angle = -90
+					max_orientation_angle = -90
+					initializer = "ngm_galactic_empire_aquarium_starting_under_gate"
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = ngm_galactic_empire_aquarium5
+					}
+				}
+			}
+		}
+		# add hyperlanes
+		event_target:ngm_galactic_empire_aquarium1 = {
+			add_hyperlane = {
+				from = event_target:ngm_galactic_empire_aquarium1
+				to = event_target:ngm_galactic_empire_aquarium2
+			}
+			add_hyperlane = {
+				from = event_target:ngm_galactic_empire_aquarium1
+				to = event_target:ngm_galactic_empire_aquarium3
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium4 = {
+			add_hyperlane = {
+				from = event_target:ngm_galactic_empire_aquarium4
+				to = event_target:ngm_galactic_empire_aquarium2
+			}
+			add_hyperlane = {
+				from = event_target:ngm_galactic_empire_aquarium4
+				to = event_target:ngm_galactic_empire_aquarium3
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium5 = {
+			add_hyperlane = {
+				from = event_target:ngm_galactic_empire_aquarium5
+				to = event_target:ngm_galactic_empire_aquarium2
+			}
+			add_hyperlane = {
+				from = event_target:ngm_galactic_empire_aquarium5
+				to = event_target:ngm_galactic_empire_aquarium3
+			}
+		}
+		set_spawn_system_batch = end
+		# Add a wormhole
+		random_system = {
+			limit = {
+				NOR = {
+					has_natural_wormhole = yes
+					starting_system = yes
+					has_star_flag = empire_cluster
+				}
+				distance = {
+					source = prev
+					min_distance >= 500
+				}
+			}
+			event_target:ngm_galactic_empire_aquarium4 = { # done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
+					spawn_natural_wormhole = {
+					bypass_type = wormhole
+					random_pos = yes
+					orbit_angle = 360
+				}
+			}
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 360
+			}
+			link_wormholes = event_target:ngm_galactic_empire_aquarium4
+		}
+		random_system = {
+			limit = {
+				NOR = {
+					has_natural_wormhole = yes
+					starting_system = yes
+					has_star_flag = empire_cluster
+				}
+				distance = {
+					source = prev
+					min_distance >= 500
+				}
+			}
+			event_target:ngm_galactic_empire_aquarium5 = { # done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
+					spawn_natural_wormhole = {
+					bypass_type = wormhole
+					random_pos = yes
+					orbit_angle = 360
+				}
+			}
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 360
+			}
+			link_wormholes = event_target:ngm_galactic_empire_aquarium5
+		}
+		# Add a starbase
+		event_target:ngm_galactic_empire_aquarium_starting_system = {
+			create_starbase = {
+				size = "starbase_starport"
+				module = "shipyard"
+				building = "crew_quarters"
+				owner = root
+				effect = {
+					save_event_target_as = ngm_galactic_empire_aquarium_starbase
+				}
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium_pulsar_system = {
+			create_starbase = {
+				size = "starbase_starport"
+				module = "shipyard"
+				building = "crew_quarters"
+				owner = root
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium_black_hole_system = {
+			create_starbase = {
+				size = "starbase_starport"
+				module = "shipyard"
+				building = "crew_quarters"
+				owner = root
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium_upper_gate_system = {
+			create_starbase = {
+				size = "starbase_starport"
+				module = "shipyard"
+				building = "crew_quarters"
+				owner = root
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium_under_gate_system = {
+			# Add a starbase
+			create_starbase = {
+				size = "starbase_starport"
+				module = "shipyard"
+				building = "crew_quarters"
+				owner = root
+			}
+		}
+		# Buildings
+		event_target:ngm_galactic_empire_aquarium = {
+			set_owner = root
+			set_controller = root
+			set_capital = yes
+			set_sector_capital = yes
+			sector = {
+				assign_leader = event_target:ngm_galactic_empire_aquarium_gov
+			}
+			if = {
+				limit = {
+					owner = {
+						is_ai = yes
+					}
+				}
+				while = {
+					count = 15
+					create_pop = {
+						species = owner_main_species
+					}
+				}
+			}
+			add_deposit = d_fungal_forest
+			add_building = building_ngm_garden_palace
+			add_building = building_ngm_aquarium_central_gate
+			add_building = building__ngm_great_ocean_temple
+			add_building = building_bureaucratic_1
+			add_building = building_factory_1
+			while = {
+				count = 3
+				add_district = district_city
+				add_district = district_industrial
+				add_district = district_generator
+				add_district = district_mining
+			}
+			if = {
+				limit = {
+					owner = {
+						is_regular_empire = yes
+					}
+				}
+				add_building = building_capital
+				add_district = district_farming
+				add_district = district_farming
+				add_district = district_farming
+			}
+			else_if = {
+				limit = {
+					owner = {
+						is_hive_empire = yes
+					}
+				}
+				add_building = building_hive_capital
+				add_building = building_spawning_pool
+			}
+			else_if = {
+				limit = {
+					owner = {
+						is_machine_empire = yes
+					}
+				}
+				add_building = building_machine_capital
+				add_building = building_machine_assembly_plant
+			}
+		}
+		# Move player ships
+		every_owned_fleet = {
+			limit = {
+				any_owned_ship = {
+					OR = {
+						is_ship_size = constructor
+						is_ship_size = corvette
+						is_ship_size = science
+					}
+				}
+			}
+			set_location = event_target:ngm_galactic_empire_aquarium
+			if = {
+				limit = {
+					any_owned_ship = {
+						is_ship_size = corvette
+					}
+				}
+				set_home_base = event_target:ngm_galactic_empire_aquarium
+			}
+		}
+		# Remove the old home planet
+		event_target:previous_home_planet = {
+			every_owned_pop = {
+				if = {
+					limit = {
+						is_robot_pop = no
+						is_sapient = yes
+					}
+					modify_species = {
+						ideal_planet_class = pc_ocean
+					}
+				}
+				unemploy_pop = yes
+				resettle_pop = {
+					pop = this
+					planet = event_target:ngm_galactic_empire_aquarium
+				}
+			}
+			change_pc = pc_nuked
+			destroy_colony = yes
+			reroll_planet = yes
+		}
+		event_target:ngm_galactic_empire_aquarium = {
+			every_owned_pop = {
+				unemploy_pop = yes
+				clear_pop_category = yes
+			}
+			check_planet_employment = yes
+		}
+		# unclaim the old home system
+		event_target:previous_home_system = {
+			every_fleet_in_system = {
+				delete_fleet = this
+			}
+			remove_star_flag = empire_home_system
+			remove_star_flag = empire_cluster
+			every_neighbor_system = {
+				remove_star_flag = empire_cluster
+				every_neighbor_system = {
+					remove_star_flag = empire_cluster
+				}
+			}
+		}
+		# Set species homeworld
+		owner_species = {
+			set_species_homeworld = event_target:ngm_galactic_empire_aquarium
+		}
+		every_owned_pop_species = {
+			set_species_homeworld = event_target:ngm_galactic_empire_aquarium
+		}
+		add_research_option = tech_wormhole_stabilization
 	}
 }
 

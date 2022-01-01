@@ -239,6 +239,10 @@
  origin_ngm_escape_to_the_past_desc:0 " この国の種族は苛烈な運命をたどる時代から逃げ去り、未来を変えるために再度過去へと戻った。\n しかし、その運命から抗う手法は追跡者を生み、定期的な襲撃を受けることとなる。"
  origin_tooltip_ngm_escape_to_the_past:0 "120か月に1度未来からの艦隊が襲撃する。打ち勝つことによって技術のデブリを取得することが可能となる。\n\n首都惑星に特殊な特性「時空超越機」\n物理学研究§G+20%§!、Pop成長速度§G+10%§!"
 
+ origin_ngm_galactic_empire_aquarium:0 "銀河帝国アクアリウム"
+ origin_ngm_galactic_empire_aquarium_desc:0 "この国家は古き良き銀河帝国のアミューズメントパークとして存在した。その娯楽性から各国から攻撃の対象とならなかった。しかし、それ故に緩やかな衰退を遂げていっている。\nついにこのままではいけないことに気が付き銀河社会に恐る恐る足を踏み入れたが、かつてあったあらゆる知識は失われており、拡張する勇気は持ちえなかったのである。\nしかし、豊かなアミューズメントパークは健在である。\n§Rこの起源を選ぶ国が2カ国以上あるとバグります。§!"
+ origin_tooltip_ngm_galactic_empire_aquarium:0 "銀河の外延部に存在する特殊な星系群と首都惑星から開始。\n\n拡張に関して極めて大きな制約を課せられる。\n\n特殊な建築物を建造可能\n\n"
+
 #######################
 #####    国是    ######
 #######################
@@ -1442,6 +1446,66 @@
 
  civic_tooltip_ngm_high_priest_effects:0 "£building£ §Y首都建造物§!が提供する£job_administrator£ §Y$job_administrator$§!枠の一部が £job_high_priest£§Y$job_high_priest_plural$§!枠に置き換わる"
 
+ planet_ngm_tide_engineer:0 "潮流技師"
+ ngm_tide_engineer:0 "潮流技師"
+ ngm_tide_engineer_desc:0 "流体工学を理解し、それを利用して経済的利益を生み出すことができる技術者"
+ job_ngm_tide_engineer:0 "潮流技師"
+ job_ngm_tide_engineer_plural:0 "潮流技師"
+ job_ngm_tide_engineer_desc:0 "流体工学を理解し、それを利用して経済的利益を生み出すことができる技術者"
+ mod_job_ngm_tide_engineer_add:0 "潮流技師の職業枠"
+ mod_job_ngm_tide_engineer_per_pop:0 "$VALUE$ POP につき$job_ngm_tide_engineer$の職業枠§G+1§!"
+ mod_job_ngm_tide_engineer_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_tide_engineer_add£ §G+1§!"
+
+ planet_ngm_gardener:0 "庭園管理者"
+ ngm_gardener:0 "庭園管理者"
+ ngm_gardener_desc:0 "アクアリウムを管理し、生態系を研究する文化的職務を担う専門家"
+ job_ngm_gardener:0 "庭園管理者"
+ job_ngm_gardener_plural:0 "庭園管理者"
+ job_ngm_gardener_desc:0 "アクアリウムを管理し、生態系を研究する文化的職務を担う専門家"
+ mod_job_ngm_gardener_add:0 "庭園管理者の職業枠"
+ mod_job_ngm_gardener_per_pop:0 "$VALUE$ POP につき$job_ngm_gardener$の職業枠§G+1§!"
+ mod_job_ngm_gardener_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_gardener_add£ §G+1§!"
+
+ planet_ngm_aquaculture_technician:0 "養殖技術者"
+ ngm_aquaculture_technician:0 "養殖技術者"
+ ngm_aquaculture_technician_desc:0 "食料品等を人工的に増大させて利益を生みだす技術者)(ディシジョンで消費財は変更可能"
+ job_ngm_aquaculture_technician:0 "養殖技術者"
+ job_ngm_aquaculture_technician_plural:0 "養殖技術者"
+ job_ngm_aquaculture_technician_desc:0 "食料品等を人工的に増大させて利益を生みだす技術者)(ディシジョンで消費財は変更可能"
+ mod_job_ngm_aquaculture_technician_add:0 "養殖技術者の職業枠"
+ mod_job_ngm_aquaculture_technician_per_pop:0 "$VALUE$ POP につき$job_ngm_aquaculture_technician$の職業枠§G+1§!"
+ mod_job_ngm_aquaculture_technician_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_aquaculture_technician_add£ §G+1§!"
+
+ planet_ngm_executive_cast:0 "エグゼティブキャスト"
+ ngm_executive_cast:0 "エグゼティブキャスト"
+ ngm_executive_cast_desc:0 "上流階級を中心としたさまざまなお客様を満足させ、安全を守る専門職員"
+ job_ngm_executive_cast:0 "エグゼティブキャスト"
+ job_ngm_executive_cast_plural:0 "エグゼティブキャスト"
+ job_ngm_executive_cast_desc:0 "上流階級を中心としたさまざまなお客様を満足させ、安全を守る専門職員"
+ mod_job_ngm_executive_cast_add:0 "エグゼティブキャストの職業枠"
+ mod_job_ngm_executive_cast_per_pop:0 "$VALUE$ POP につき$job_ngm_executive_cast$の職業枠§G+1§!"
+ mod_job_ngm_executive_cast_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_executive_cast_add£ §G+1§!"
+
+ planet_ngm_cast:0 "キャスト"
+ ngm_cast:0 "キャスト"
+ ngm_cast_desc:0 "テーマパークを維持管理し、お客様の安全と暴挙を防ぐ職員"
+ job_ngm_cast:0 "キャスト"
+ job_ngm_cast_plural:0 "キャスト"
+ job_ngm_cast_desc:0 "テーマパークを維持管理し、お客様の安全と暴挙を防ぐ職員"
+ mod_job_ngm_cast_add:0 "キャストの職業枠"
+ mod_job_ngm_cast_per_pop:0 "$VALUE$ POP につき$job_ngm_cast$の職業枠§G+1§!"
+ mod_job_ngm_cast_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_cast_add£ §G+1§!"
+
+ planet_ngm_admiral:0 "海軍将校"
+ ngm_admiral:0 "海軍将校"
+ ngm_admiral_desc:0 "惑星上の海軍艦隊を指揮し、運用を行う軍事技術の専門家"
+ job_ngm_admiral:0 "海軍将校"
+ job_ngm_admiral_plural:0 "海軍将校"
+ job_ngm_admiral_desc:0 "惑星上の海軍艦隊を指揮し、運用を行う軍事技術の専門家"
+ mod_job_ngm_admiral_add:0 "海軍将校の職業枠"
+ mod_job_ngm_admiral_per_pop:0 "$VALUE$ POP につき$job_ngm_admiral_plural$の職業枠§G+1§!"
+ mod_job_ngm_admiral_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_admiral_add£ §G+1§!"
+
 ##############################
 #####    リーダー特性    ######
 ##############################
@@ -1954,6 +2018,10 @@
  civic_ngm_missionary_group_modifier:0 "伝道者団の来訪"
  civic_ngm_missionary_group_modifier_desc:0 "他国から信仰を広められている。"
 
+ ngm_ancient_pact:0 "遺物「古代の盟約」"
+
+ ngm_r_galactic_empire_aquarium:0 "銀河皇帝勅許第7216号「帝立遊園領邦の認可」"
+
 ##########################
 #####    種族特性    ######
 ##########################
@@ -1962,8 +2030,6 @@
  trait_ngm_youth_politics_desc:0 "§Lこの政府の高官は若者に支配されており、新進気鋭の政府高官により多くの決定がなされている。しかし、それは労連で熟達した経験者の引退を早める傾向にあり、突発的な決定を生み出してしまう傾向にある。§!"
  trait_ngm_elder_politics:0 "長老政治"
  trait_ngm_elder_politics_desc:0 "§Lこの政府の高官は高齢の者に支配されており、熟達した政府高官により多くの決定がなされている。しかし、それは新参者の政府参加を妨げやすく、新たな思想を受け入れる素地を減らしてしまう傾向にある。§!"
-
- ngm_ancient_pact:0 "遺物「古代の盟約」"
 
  trait_ngm_knight:0 "騎士道精神"
  trait_ngm_knight_desc:0 "この種族は弱きものを助け、社会正義を全うすべきだという強い信念を有した高潔性を有している。"
@@ -3595,6 +3661,78 @@
  tr_ngm_hereditary_nation:0 "世襲国家"
  tr_ngm_hereditary_nation_desc:0 "全惑星の§Y安定度§!を§G5§!増加させる。"
  tr_ngm_hereditary_nation_delayed:0 "家に属するのは国も例外ではない"
+
+###################################
+#####   海洋エキュメノ起源    ######
+###################################
+
+ ngm_naval_fleet:0"海軍艦隊"
+ ngm_naval_fleet_desc:0"惑星を防衛する艦船や艦艇"
+
+ r_ngm_geid:0"銀河皇帝勅許第7216号「帝立遊園領邦の認可」"
+ r_ngm_geid_desc:0"全銀河の統治者にして天界を統べる法秩序の体現者。神聖にして不可侵である銀河帝国第27代皇帝である余、ポチャヌルス8世は銀河帝国全体の福祉のために帝立遊園の設立を許す。帝立遊園の長は世襲とし、王と同格の公爵位を授け、余の宮廷において式部官長の地位を授ける。なお、領邦としての帝立遊園はその自律的権利を制約される。制約内容は....."
+
+ ngm_district_arcology_marine_housing:0"ウォーター＝マンションアーコロジー"
+ ngm_district_arcology_marine_housing_desc:0"中下流向けの別荘や職員住居、宿泊施設として存在する大規模集合居住区域"
+ ngm_district_arcology_marine_administrative_Organization:0"管理機構アーコロジー"
+ ngm_district_arcology_marine_administrative_Organization_desc:0"この娯楽空間を管理し、外敵から防衛するための真面目な職員が働く数少ない広いオフィス群"
+ ngm_district_arcology_marine_health_care:0"健康医療アーコロジー"
+ ngm_district_arcology_marine_health_care_desc:0"海洋技術や生命体活性化研究を元に健康や医療を提供するためのメディカルツーリズム施設"
+ ngm_district_arcology_marine_water_park:0"水遊庭園アーコロジー"
+ ngm_district_arcology_marine_water_park_desc:0"アクアリウムを維持管理し、解説と研究を行う機関と観光客へ広大な空間の展示観覧に費やされる空間"
+ ngm_district_arcology_marine_drunkness_street:0"交易歓楽アーコロジー"
+ ngm_district_arcology_marine_drunkness_street_desc:0"惑星における商取引の中心地で、観光客や住民への物流や物品供給を行うための商業地帯"
+ ngm_district_arcology_marine_tidal_laboratory:0"潮流工学アーコロジー"
+ ngm_district_arcology_marine_tidal_laboratory_desc:0"海流と流体工学を利用した発電や研究が行われる発電研究機関群"
+ ngm_district_arcology_marine_Fisheries_Research:0"水産研究アーコロジー"
+ ngm_district_arcology_marine_Fisheries_Research_desc:0"広大な海洋を利用した食料品や天然生産品を製造する地域"
+ ngm_district_arcology_marine_villa:0"アクア＝ヴィラアーコロジー"
+ ngm_district_arcology_marine_villa_desc:0"上流階級向けの別荘や邸宅、高級ホテル等の住宅と豊かな生活をサポートする職員の職場群"
+
+ building_ngm_garden_palace:0"遊園宮"
+ building_ngm_garden_palace_desc:0"膨大な遊園地を管理し、VIPを接待するために作られた壮麗かつ機能的な宮殿"
+
+ building_ngm_aquarium_central_gate:0"アクアリウム中央ゲート"
+ building_ngm_aquarium_central_gate_desc:0
+
+ building__ngm_great_ocean_temple:0"海洋大神殿"
+ building__ngm_great_ocean_temple_desc:0"かつて存在した銀河帝国の戴冠式をはじめとした重要式典が行われた、銀河と海洋に関する神々を祭る大神殿"
+
+ building_ngm_ocean_child_park:0"惑星児童遊園"
+ building_ngm_ocean_child_park_desc:0"子供向けアトラクションやお子様向けレストランが広がる遊園地やショッピングモール"
+
+ building_ngm_ocean_aqua_park:0"アクアリウムテーマパーク"
+ building_ngm_ocean_aqua_park_desc:0"青年期世代向けのアクアリウムをイメージしたアトラクションや庭園が広がる娯楽施設"
+
+ building_ngm_ocean_tower_casino:0"タワーカジノ"
+ building_ngm_ocean_tower_casino_desc:0"上流階級から中下流階級までもを網羅した大規模な賭博場"
+
+ building_ngm_ocean_imp_stad:0"帝立競技場"
+ building_ngm_ocean_imp_stad_desc:0"銀河皇帝の愛した帝冠様式で作られた壮麗で様々な式典や競技を行うことができるスタジアム"
+
+ building_ngm_ocean_galactic_yoshiwara:0"泡園"
+ building_ngm_ocean_galactic_yoshiwara_desc:0"大人向けの娯楽を提供する夜間を中心とした娯楽施設"
+
+ building_ngm_ocean_sight_office:0"観光管理局"
+ building_ngm_ocean_sight_office_desc:0"観光客に関する行政事務処理や手続き、書類整理を行う官庁"
+
+ building_ngm_ocean_medical_land:0"惑星健康ランド"
+ building_ngm_ocean_medical_land_desc:0"心身の疾患を治癒し、静養を目的とした観光客が集う観光用医療施設"
+
+ building_ngm_ocean_research_cente:0"銀河教養センター"
+ building_ngm_ocean_research_cente_desc:0"教養市民層や上流階級が集うハイセンスでハイカルチャーな観光施設"
+
+ building_ngm_ocean_hotel_street:0"ホテル群"
+ building_ngm_ocean_hotel_street_desc:0"
+
+ building_ngm_ocean_high_resort:0"高級リゾート"
+ building_ngm_ocean_high_resort_desc:0"
+
+ building_ngm_ocean_resure_land:0"レジャーランド"
+ building_ngm_ocean_resure_land_desc:0"
+
+ building_ngm_ocean_business_orbit_elev:0"商用軌道エレベーター"
+ building_ngm_ocean_business_orbit_elev_desc:0
 
 ########################################
 #####    Required technologies    ######
