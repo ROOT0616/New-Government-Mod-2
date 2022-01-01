@@ -421,33 +421,44 @@ ngm_galactic_empire_aquarium_starting_init = {
 					min = 90
 					max = 270
 				}
-				orbit_distance = 5
+				orbit_distance = 10
 			}
 			init_effect = {
 				create_species = {
-					name = random
-					class = MOL
-					portrait = mol7
+					name = "フォンボンバンション"
+					class = FUN
+					portrait = fun16
 					homeworld = THIS
-					namelist = "MOL2"
+					namelist = "FUN4"
 					traits = {
-						trait = "trait_extremely_adaptive"
-						trait = "trait_slow_breeders"
-						trait = "trait_sedentary"
-						trait = "trait_pc_gaia_preference"
+						trait= "trait_hive_mind"
+						trait= "trait_extremely_adaptive"
+						trait= "trait_rapid_breeders"
+						trait= "trait_talented"
+						trait= "trait_quick_learners"
+						trait= "trait_nomadic"
+						trait= "trait_plantoid_phototrophic"
+						trait= "trait_ngm_assimilation"
+						trait= "trait_ngm_resentment"
+						trait= "trait_ngm_complex_heredity"
+						trait= "trait_ngm_turf"
+						trait= "trait_ngm_hunting"
+						trait= "trait_ngm_like_light"
 					}
 				}
 				create_country = {
-					name = random
-					authority = auth_democratic
+					name = "フォンボン自然公園"
+					authority = auth_hive_mind
 					civics = {
-						civic = civic_secret_of_fire
-						civic = civic_the_wheel
+						civic = civic_hive_devouring_swarm
+						civic = civic_hive_strength_of_legions
+						civic = civic_hive_subspace_ephapse
+						civic = civic_hive_pooled_knowledge
+						civic = civic_hive_catalytic_processing
 					}
 					species = last_created_species
 					ethos = {
-						ethic = "ethic_fanatic_pacifist"
-						ethic = "ethic_materialist"
+						ethic = "ethic_gestalt_consciousness"
 					}
 					origin = "origin_enlightened" # 宇宙進出した場合のみ表示されるようにすべき
 					flag = {
@@ -504,7 +515,7 @@ ngm_galactic_empire_aquarium_starting_init = {
 					min = 10
 					max = 170
 				}
-				orbit_distance = 5
+				orbit_distance = 10
 			}
 			moon = {
 				count = 1
@@ -513,7 +524,7 @@ ngm_galactic_empire_aquarium_starting_init = {
 					min = 190
 					max = 350
 				}
-				orbit_distance = 5
+				orbit_distance = 10
 			}
 		}
 	}
@@ -542,7 +553,7 @@ ngm_galactic_empire_aquarium_starting_init = {
 					min = 90
 					max = 270
 				}
-				orbit_distance = 5
+				orbit_distance = 10
 			}
 		}
 		planet = {
@@ -561,7 +572,7 @@ ngm_galactic_empire_aquarium_starting_init = {
 					min = 190
 					max = 350
 				}
-				orbit_distance = 5
+				orbit_distance = 10
 			}
 		}
 		planet = {
@@ -620,7 +631,7 @@ ngm_galactic_empire_aquarium_starting_init = {
 					min = 90
 					max = 270
 				}
-				orbit_distance = 5
+				orbit_distance = 10
 			}
 		}
 	}
@@ -628,7 +639,7 @@ ngm_galactic_empire_aquarium_starting_init = {
 
 # 銀河帝国アクアリウム パルサー星系
 ngm_galactic_empire_aquarium_starting_pulsar = {
-	class = "rl_trinary_stars"
+	class = "sc_pulsar"
 	# flags = {
 	# 	empire_home_system
 	# }
@@ -670,7 +681,7 @@ ngm_galactic_empire_aquarium_starting_pulsar = {
 					min = 90
 					max = 270
 				}
-				orbit_distance = 5
+				orbit_distance = 10
 			}
 		}
 	}
@@ -678,7 +689,7 @@ ngm_galactic_empire_aquarium_starting_pulsar = {
 
 # 銀河帝国アクアリウム ブラックホール星系
 ngm_galactic_empire_aquarium_starting_black_hole = {
-	class = "rl_trinary_stars"
+	class = "sc_black_hole"
 	# flags = {
 	# 	empire_home_system
 	# }
@@ -711,6 +722,192 @@ ngm_galactic_empire_aquarium_starting_black_hole = {
 			class = pc_asteroid
 			orbit_distance = 0
 			orbit_angle = 36
+		}
+	}
+}
+
+# 銀河帝国アクアリウム アッパーゲート星系
+ngm_galactic_empire_aquarium_starting_upper_gate = {
+	class = "sc_b"
+	init_effect = {
+		save_global_event_target_as = ngm_galactic_empire_aquarium_upper_gate_system
+	}
+	# 第1星系
+	planet = {
+		count = 1
+		class = "pc_b_star"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = {
+			min = 60
+			max = 80
+		}
+		change_orbit = 30
+		planet = {
+			count = 1
+			class = "pc_molten"
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			moon = {
+				count = 2
+				class = random_non_colonizable
+				orbit_angle = {
+					min = 90
+					max = 270
+				}
+				orbit_distance = 10
+			}
+		}
+		planet = {
+			count = 1
+			class = "pc_gas_giant"
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			moon = {
+				count = 2
+				class = random_non_colonizable
+				orbit_angle = {
+					min = 90
+					max = 270
+				}
+				orbit_distance = 10
+			}
+		}
+		planet = {
+			count = 1
+			class = "pc_ocean"
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			moon = {
+				count = 1
+				class = random_non_colonizable
+				orbit_angle = {
+					min = 90
+					max = 270
+				}
+				orbit_distance = 10
+			}
+		}
+		planet = {
+			count = 1
+			class = "pc_nuked"
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+		}
+		planet = {
+			count = 1
+			class = "pc_barren_cold"
+			has_ring = yes
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+		}
+	}
+}
+
+# 銀河帝国アクアリウム アンダーゲート星系
+ngm_galactic_empire_aquarium_starting_under_gate = {
+	class = "sc_f"
+	init_effect = {
+		save_global_event_target_as = ngm_galactic_empire_aquarium_under_gate_system
+	}
+	# 第1星系
+	planet = {
+		count = 1
+		class = "pc_f_star"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = {
+			min = 60
+			max = 80
+		}
+		change_orbit = 30
+		planet = {
+			count = 1
+			class = "pc_molten"
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			moon = {
+				count = 2
+				class = random_non_colonizable
+				orbit_angle = {
+					min = 90
+					max = 270
+				}
+				orbit_distance = 10
+			}
+		}
+		planet = {
+			count = 1
+			class = "pc_gas_giant"
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			moon = {
+				count = 2
+				class = random_non_colonizable
+				orbit_angle = {
+					min = 90
+					max = 270
+				}
+				orbit_distance = 10
+			}
+		}
+		planet = {
+			count = 1
+			class = "pc_ocean"
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			moon = {
+				count = 1
+				class = random_non_colonizable
+				orbit_angle = {
+					min = 90
+					max = 270
+				}
+				orbit_distance = 10
+			}
+		}
+		planet = {
+			count = 1
+			class = "pc_nuked"
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+		}
+		planet = {
+			count = 1
+			class = "pc_barren_cold"
+			has_ring = yes
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
 		}
 	}
 }
