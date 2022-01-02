@@ -5,8 +5,14 @@
 building_ngm_garden_palace = {
 	base_buildtime = 360
 	base_cap_amount = 1
+	position_priority = 0
 	can_build = no
-	category = amenity
+	category = government
+	potential = {
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -21,6 +27,7 @@ building_ngm_garden_palace = {
 		diplo_weight_mult = 0.1
 	}
 	planet_modifier = {
+		planet_max_buildings_add = 3
 		job_noble_add = 1
 		job_ngm_crest_bearer_add = 1
 		job_ngm_executive_cast_add = 2
@@ -38,8 +45,14 @@ building_ngm_garden_palace = {
 building_ngm_aquarium_central_gate = {
 	base_buildtime = 360
 	base_cap_amount = 1
+	position_priority = 1
 	can_build = no
 	category = government
+	potential = {
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -59,11 +72,17 @@ building_ngm_aquarium_central_gate = {
 }
 
 #3.海洋大神殿        (帝国補正:統合力+20%、影響力+1)    (惑星補正:統合力+25%、安定度+10)    (大祭司+1、司祭+4)    (かつて存在した銀河帝国の戴冠式をはじめとした重要式典が行われた、銀河と海洋に関する神々を祭る大神殿)
-building__ngm_great_ocean_temple = {
+building_ngm_great_ocean_temple = {
 	base_buildtime = 360
 	base_cap_amount = 1
+	position_priority = 2
 	can_build = no
 	category = government
+	potential = {
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -85,7 +104,6 @@ building__ngm_great_ocean_temple = {
 		job_priest_add = 4
 	}
 }
-
 
 #1.惑星児童遊園			(child_park)	(Pop成長速度+5%、快適度+10%)		(エンターテイナー+1、スタッフ+2)				(子供向けアトラクションやお子様向けレストランが広がる遊園地やショッピングモール)
 building_ngm_ocean_child_park = {

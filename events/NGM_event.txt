@@ -3759,100 +3759,26 @@ country_event = {
 		}
 		event_target:ngm_galactic_empire_aquarium_pulsar_system = {
 			create_starbase = {
-				size = "starbase_starport"
-				module = "shipyard"
-				building = "crew_quarters"
+				size = starbase_outpost
 				owner = root
 			}
 		}
 		event_target:ngm_galactic_empire_aquarium_black_hole_system = {
 			create_starbase = {
-				size = "starbase_starport"
-				module = "shipyard"
-				building = "crew_quarters"
+				size = starbase_outpost
 				owner = root
 			}
 		}
 		event_target:ngm_galactic_empire_aquarium_upper_gate_system = {
 			create_starbase = {
-				size = "starbase_starport"
-				module = "shipyard"
-				building = "crew_quarters"
+				size = starbase_outpost
 				owner = root
 			}
 		}
 		event_target:ngm_galactic_empire_aquarium_under_gate_system = {
-			# Add a starbase
 			create_starbase = {
-				size = "starbase_starport"
-				module = "shipyard"
-				building = "crew_quarters"
+				size = starbase_outpost
 				owner = root
-			}
-		}
-		# Buildings
-		event_target:ngm_galactic_empire_aquarium = {
-			set_owner = root
-			set_controller = root
-			set_capital = yes
-			set_sector_capital = yes
-			sector = {
-				assign_leader = event_target:ngm_galactic_empire_aquarium_gov
-			}
-			if = {
-				limit = {
-					owner = {
-						is_ai = yes
-					}
-				}
-				while = {
-					count = 15
-					create_pop = {
-						species = owner_main_species
-					}
-				}
-			}
-			add_deposit = d_fungal_forest
-			add_building = building_ngm_garden_palace
-			add_building = building_ngm_aquarium_central_gate
-			add_building = building__ngm_great_ocean_temple
-			add_building = building_bureaucratic_1
-			add_building = building_factory_1
-			while = {
-				count = 3
-				add_district = district_city
-				add_district = district_industrial
-				add_district = district_generator
-				add_district = district_mining
-			}
-			if = {
-				limit = {
-					owner = {
-						is_regular_empire = yes
-					}
-				}
-				add_building = building_capital
-				add_district = district_farming
-				add_district = district_farming
-				add_district = district_farming
-			}
-			else_if = {
-				limit = {
-					owner = {
-						is_hive_empire = yes
-					}
-				}
-				add_building = building_hive_capital
-				add_building = building_spawning_pool
-			}
-			else_if = {
-				limit = {
-					owner = {
-						is_machine_empire = yes
-					}
-				}
-				add_building = building_machine_capital
-				add_building = building_machine_assembly_plant
 			}
 		}
 		# Move player ships
@@ -3927,6 +3853,59 @@ country_event = {
 			set_species_homeworld = event_target:ngm_galactic_empire_aquarium
 		}
 		add_research_option = tech_wormhole_stabilization
+		country_event = {
+			id = ngm_origin.1001
+		}
+	}
+}
+
+# 銀河帝国アクアリウム	生成イベント
+country_event = {
+	id = ngm_origin.1001
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_galactic_empire_aquarium
+	}
+	immediate = {	
+		# Buildings
+		event_target:ngm_galactic_empire_aquarium = {
+			set_owner = root
+			set_controller = root
+			set_capital = yes
+			set_sector_capital = yes
+			sector = {
+				assign_leader = event_target:ngm_galactic_empire_aquarium_gov
+			}
+			if = {
+				limit = {
+					owner = {
+						is_ai = yes
+					}
+				}
+				while = {
+					count = 15
+					create_pop = {
+						species = owner_main_species
+					}
+				}
+			}
+			add_deposit = d_fungal_forest
+			add_building = building_capital
+			add_building = building_ngm_garden_palace
+			add_building = building_ngm_aquarium_central_gate
+			add_building = building_ngm_great_ocean_temple
+			add_building = building_bureaucratic_1
+			add_building = building_factory_1
+			while = {
+				count = 3
+				add_district = district_city
+				add_district = district_industrial
+				add_district = district_generator
+				add_district = district_mining
+				add_district = district_farming
+			}
+		}
 	}
 }
 
