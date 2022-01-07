@@ -3625,6 +3625,9 @@ country_event = {
 						save_global_event_target_as = ngm_galactic_empire_aquarium2
 					}
 				}
+				last_created_system = {
+					set_name = "Park Clock"
+				}
 				spawn_system = {
 					min_distance >= 5
 					max_distance <= 5
@@ -3635,6 +3638,9 @@ country_event = {
 					effect = {
 						save_global_event_target_as = ngm_galactic_empire_aquarium3
 					}
+				}
+				last_created_system = {
+					set_name = "Park Out"
 				}
 				spawn_system = {
 					min_distance >= 5
@@ -3647,6 +3653,9 @@ country_event = {
 						save_global_event_target_as = ngm_galactic_empire_aquarium4
 					}
 				}
+				last_created_system = {
+					set_name = "Upper Gate"
+				}
 				spawn_system = {
 					min_distance >= 5
 					max_distance <= 5
@@ -3657,6 +3666,9 @@ country_event = {
 					effect = {
 						save_global_event_target_as = ngm_galactic_empire_aquarium5
 					}
+				}
+				last_created_system = {
+					set_name = "Under Gate"
 				}
 			}
 		}
