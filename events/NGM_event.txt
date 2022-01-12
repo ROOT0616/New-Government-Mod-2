@@ -3871,7 +3871,7 @@ country_event = {
 	}
 }
 
-# 銀河帝国アクアリウム	生成イベント
+# 銀河帝国アクアリウム	建築物生成イベント
 country_event = {
 	id = ngm_origin.1001
 	hide_window = yes
@@ -3910,14 +3910,11 @@ country_event = {
 			add_building = building_bureaucratic_1
 			add_building = building_factory_1
 			add_building = building_research_lab_1
-			while = {
-				count = 3
-				add_district = district_city
-				add_district = district_industrial
-				add_district = district_generator
-				add_district = district_mining
-				add_district = district_farming
-			}
+			add_district = ngm_district_fishery_research_arcology
+			add_district = ngm_district_arcology_marine_housing
+			add_district = ngm_district_arcology_marine_administrative_Organization
+			add_district = ngm_district_arcology_marine_health_care
+			add_district = ngm_district_arcology_marine_water_park
 		}
 	}
 }
