@@ -3743,6 +3743,58 @@ country_event = {
 					min_distance >= 500
 				}
 			}
+			event_target:ngm_galactic_empire_aquarium4 = { # done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
+					spawn_natural_wormhole = {
+					bypass_type = wormhole
+					random_pos = yes
+					orbit_angle = 240
+				}
+			}
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 240
+			}
+			link_wormholes = event_target:ngm_galactic_empire_aquarium4
+		}
+		random_system = {
+			limit = {
+				NOR = {
+					has_natural_wormhole = yes
+					starting_system = yes
+					has_star_flag = empire_cluster
+				}
+				distance = {
+					source = prev
+					min_distance >= 500
+				}
+			}
+			event_target:ngm_galactic_empire_aquarium4 = { # done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
+					spawn_natural_wormhole = {
+					bypass_type = wormhole
+					random_pos = yes
+					orbit_angle = 120
+				}
+			}
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 120
+			}
+			link_wormholes = event_target:ngm_galactic_empire_aquarium4
+		}
+		random_system = {
+			limit = {
+				NOR = {
+					has_natural_wormhole = yes
+					starting_system = yes
+					has_star_flag = empire_cluster
+				}
+				distance = {
+					source = prev
+					min_distance >= 500
+				}
+			}
 			event_target:ngm_galactic_empire_aquarium5 = { # done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
 					spawn_natural_wormhole = {
 					bypass_type = wormhole
@@ -3754,6 +3806,58 @@ country_event = {
 				bypass_type = wormhole
 				random_pos = yes
 				orbit_angle = 360
+			}
+			link_wormholes = event_target:ngm_galactic_empire_aquarium5
+		}
+		random_system = {
+			limit = {
+				NOR = {
+					has_natural_wormhole = yes
+					starting_system = yes
+					has_star_flag = empire_cluster
+				}
+				distance = {
+					source = prev
+					min_distance >= 500
+				}
+			}
+			event_target:ngm_galactic_empire_aquarium5 = { # done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
+					spawn_natural_wormhole = {
+					bypass_type = wormhole
+					random_pos = yes
+					orbit_angle = 240
+				}
+			}
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 240
+			}
+			link_wormholes = event_target:ngm_galactic_empire_aquarium5
+		}
+		random_system = {
+			limit = {
+				NOR = {
+					has_natural_wormhole = yes
+					starting_system = yes
+					has_star_flag = empire_cluster
+				}
+				distance = {
+					source = prev
+					min_distance >= 500
+				}
+			}
+			event_target:ngm_galactic_empire_aquarium5 = { # done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
+					spawn_natural_wormhole = {
+					bypass_type = wormhole
+					random_pos = yes
+					orbit_angle = 120
+				}
+			}
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 120
 			}
 			link_wormholes = event_target:ngm_galactic_empire_aquarium5
 		}
@@ -3865,8 +3969,18 @@ country_event = {
 			set_species_homeworld = event_target:ngm_galactic_empire_aquarium
 		}
 		add_research_option = tech_wormhole_stabilization
+		owner = {
+			set_country_flag = encountered_first_wormhole
+			add_seen_bypass_type = wormhole
+		}
 		country_event = {
 			id = ngm_origin.1001
+		}
+		country_event = {
+			id = game_start.9
+		}
+		country_event = {
+			id = distar.3043
 		}
 	}
 }

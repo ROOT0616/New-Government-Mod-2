@@ -4,7 +4,7 @@ pc_ngm_ocean = {
 	icon = GFX_planet_type_ocean
 
 	climate = "wet"
-	# initial = yes
+	initial = no
 
 	atmosphere_color		= hsv { 0.58 0.5 0.9 }		#DONE
 	atmosphere_intensity	= 1.0
@@ -22,7 +22,7 @@ pc_ngm_ocean = {
 		pop_growth_speed = 0.50
 		planet_max_buildings_add = 12
 	}
-
+	picture = pc_ocean
 	chance_of_ring = 0.2
 
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }

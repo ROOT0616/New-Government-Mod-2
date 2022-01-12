@@ -403,6 +403,7 @@ ngm_galactic_empire_aquarium_starting_init = {
 				set_planet_flag = cant_target_this_planet
 			}
 			init_effect = {
+				set_name = "Galactic Aquarium"
 				generate_empire_home_planet = yes
 			}
 		}
@@ -424,6 +425,7 @@ ngm_galactic_empire_aquarium_starting_init = {
 				orbit_distance = 10
 			}
 			init_effect = {
+				set_name = "Fombon Nature Park"
 				create_species = {
 					name = "フォンボンバンション"
 					class = FUN
