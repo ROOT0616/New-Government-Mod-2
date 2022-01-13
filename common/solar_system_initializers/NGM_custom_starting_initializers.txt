@@ -801,11 +801,17 @@ ngm_galactic_empire_aquarium_starting_upper_gate = {
 		}
 		planet = {
 			count = 1
-			class = "pc_nuked"
+			class = random_non_colonizable
 			orbit_distance = 30
 			orbit_angle = {
 				min = 90
 				max = 270
+			}
+			init_effect = {
+				add_modifier = {
+					modifier = "terraforming_candidate"
+					days = -1
+				}
 			}
 		}
 		planet = {
@@ -894,11 +900,17 @@ ngm_galactic_empire_aquarium_starting_under_gate = {
 		}
 		planet = {
 			count = 1
-			class = "pc_nuked"
+			class = random_non_colonizable
 			orbit_distance = 30
 			orbit_angle = {
 				min = 90
 				max = 270
+			}
+			init_effect = {
+				add_modifier = {
+					modifier = "terraforming_candidate"
+					days = -1
+				}
 			}
 		}
 		planet = {
