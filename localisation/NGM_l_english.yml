@@ -132,6 +132,36 @@
  decision_end_requisition_policy_desc:0 "惑星規模の徴用政策なんて政府にとって不利益だ \n やめさせろ！"
  decision_end_planet_requisition_policy_effects_short:0 "惑星規模の徴用政策をやめる"
 
+ decision_planet_ngm_stonefish:0 "ストーンフィッシュ"
+ decision_planet_ngm_stonefish_desc:0 ""
+
+ ngm_stonefish:0 "ストーンフィッシュ"
+ ngm_stonefish_desc:0 ""
+
+ decision_planet_ngm_luxury_jewelry:0 "ラグジュアリー・ジェリー"
+ decision_planet_ngm_luxury_jewelry_desc:0 ""
+
+ ngm_luxury_jewelry:0 "ラグジュアリー・ジェリー"
+ ngm_luxury_jewelry_desc:0 ""
+
+ decision_planet_ngm_energy_oyster:0 "エナジー・オイスター"
+ decision_planet_ngm_energy_oyster_desc:0 ""
+
+ ngm_energy_oyster:0 "エナジー・オイスター"
+ ngm_energy_oyster_desc:0 ""
+
+ decision_planet_ngm_white_goldfish:0 "白金魚"
+ decision_planet_ngm_white_goldfish_desc:0 ""
+
+ ngm_white_goldfish:0 "白金魚"
+ ngm_white_goldfish_desc:0 ""
+
+ ngm_seaweed:0 "海綿藻"
+ ngm_seaweed_desc:0 ""
+
+ decision_planet_ngm_seaweed:0 "海綿藻"
+ decision_planet_ngm_seaweed_desc:0 ""
+
  decision_ngm_olympic_nomination:0 "国際大会の開催地に推薦"
  decision_ngm_olympic_nomination_desc:0 "国際大会の開催地となることは、 単なる栄誉のみならず利益ももたらす。 国際大会は気まぐれだが、 我々が充分なインセンティブを提供すれば、 ビッグプレーヤーたちをこの惑星に惹きつけられるかもしれない。 "
  decision_ngm_olympic_nomination_effects:0 "地元の状況に応じて、 §Y大会誘致競争の格付け§!補正がこの惑星に適用される。 格付けが高いほど、 この惑星が§H国際大会§!の主催場所となる確率が上がる。"
@@ -166,6 +196,9 @@
 
  ngm_combat_machine_army:0 "戦闘機械"
  ngm_combat_machine_army_desc:0 "ﾀﾀｶｳﾀﾒﾉｷｶｲ ﾀﾀｶｳ?"
+
+ ngm_naval_fleet:0 "海軍艦隊"
+ ngm_naval_fleet_desc:0 "惑星を防衛する艦船や艦艇"
 
 #######################
 #####    志向    ######
@@ -1269,7 +1302,10 @@
  tech_ceremony_theory_second_desc:0 "式典担当の官僚の効率的運用や、より安価で手軽に権威を象徴する式典を行うための研究"
 
  tech_ad_high_degree_of_local_autonomy:0 "高度な地方自治"
- tech_ad_high_degree_of_local_autonomy_desc:0 "高度な地方自治の説明"
+ tech_ad_high_degree_of_local_autonomy_desc:0 ""
+
+ tech_ngm_developmental_fish_farming:0 "発展型魚類養殖"
+ tech_ngm_developmental_fish_farming_desc:0 ""
 
 #######################
 #####    資源    ######
@@ -1287,6 +1323,51 @@
 
  building_ngm_perpetual_palace:0 "永久の宮殿"
  building_ngm_perpetual_palace_desc:0 "古代から続くこの地を治める者のための宮殿で、列強の君主や元首が集い交渉を行うことも多かったためか、壮麗な建築でいまだに陰りを見せていない。現在も支配者の宮殿や国際会議場としてだけではなく、政府機関や上流階級の住居として使用されている。"
+
+ building_ngm_garden_palace:0 "遊園宮"
+ building_ngm_garden_palace_desc:0 "膨大な遊園地を管理し、VIPを接待するために作られた壮麗かつ機能的な宮殿"
+
+ building_ngm_aquarium_central_gate:0 "アクアリウム中央ゲート"
+ building_ngm_aquarium_central_gate_desc:0 "かつて存在した銀河帝国の戴冠式をはじめとした重要式典が行われた、銀河と海洋に関する神々を祭る大神殿"
+
+ building_ngm_great_ocean_temple:0 "海洋大神殿"
+ building_ngm_great_ocean_temple_desc:0 "かつて存在した銀河帝国の戴冠式をはじめとした重要式典が行われた、銀河と海洋に関する神々を祭る大神殿"
+
+ building_ngm_ocean_child_park:0 "惑星児童遊園"
+ building_ngm_ocean_child_park_desc:0 "子供向けアトラクションやお子様向けレストランが広がる遊園地やショッピングモール"
+
+ building_ngm_ocean_aqua_park:0 "アクアリウムテーマパーク"
+ building_ngm_ocean_aqua_park_desc:0 "青年期世代向けのアクアリウムをイメージしたアトラクションや庭園が広がる娯楽施設"
+
+ building_ngm_ocean_tower_casino:0 "タワーカジノ"
+ building_ngm_ocean_tower_casino_desc:0 "上流階級から中下流階級までもを網羅した大規模な賭博場"
+
+ building_ngm_ocean_imp_stad:0 "帝立競技場"
+ building_ngm_ocean_imp_stad_desc:0 "銀河皇帝の愛した帝冠様式で作られた壮麗で様々な式典や競技を行うことができるスタジアム"
+
+ building_ngm_ocean_galactic_yoshiwara:0 "泡園"
+ building_ngm_ocean_galactic_yoshiwara_desc:0 "大人向けの娯楽を提供する夜間を中心とした娯楽施設"
+
+ building_ngm_ocean_sight_office:0 "観光管理局"
+ building_ngm_ocean_sight_office_desc:0 "観光客に関する行政事務処理や手続き、書類整理を行う官庁"
+
+ building_ngm_ocean_medical_land:0 "惑星健康ランド"
+ building_ngm_ocean_medical_land_desc:0 "心身の疾患を治癒し、静養を目的とした観光客が集う観光用医療施設"
+
+ building_ngm_ocean_research_cente:0 "銀河教養センター"
+ building_ngm_ocean_research_cente_desc:0 "教養市民層や上流階級が集うハイセンスでハイカルチャーな観光施設"
+
+ building_ngm_ocean_hotel_street:0 "ホテル群"
+ building_ngm_ocean_hotel_street_desc:0 "低所得層から高所得層、各国要人にも対応できる素晴らしいサービスを提供する宿泊施設群"
+
+ building_ngm_ocean_high_resort:0 "高級リゾート"
+ building_ngm_ocean_high_resort_desc:0 "高所得層向けの瀟洒な自然やスポーツを楽しむことができる会員制の観光地域"
+
+ building_ngm_ocean_resure_land:0 "レジャーランド"
+ building_ngm_ocean_resure_land_desc:0 "スポーツや自然を多くの人が楽しむことができる大衆的な観光施設"
+
+ building_ngm_ocean_business_orbit_elev:0 "商用軌道エレベーター"
+ building_ngm_ocean_business_orbit_elev_desc:0 "大気への影響や効率性を考えて大気圏外での船舶理着艦を可能とする民生用の軌道エレベーター"
 
  building_ngm_ginga_department_store:0 "銀河百貨店"
  building_ngm_ginga_department_store_desc:0 "全銀河の嗜好品が集まる集合商業施設"
@@ -1347,6 +1428,42 @@
 
  building_ngm_premise_workshop:0 "先端工場"
  building_ngm_premise_workshop_desc:0 "最先端の工場は最先端の物品を生み出すのだろうか"
+
+#######################
+#####    区域    ######
+#######################
+
+ ngm_district_arcology_marine_villa:0 "アクア＝ヴィラアーコロジー"
+ ngm_district_arcology_marine_villa_plural:0 "アクア＝ヴィラアーコロジー"
+ ngm_district_arcology_marine_villa_desc:0 "上流階級向けの別荘や邸宅、高級ホテル等の住宅と豊かな生活をサポートする職員の職場群"
+
+ ngm_district_arcology_marine_housing:0 "ウォーター＝マンションアーコロジー"
+ ngm_district_arcology_marine_housing_plural:0 "ウォーター＝マンションアーコロジー"
+ ngm_district_arcology_marine_housing_desc:0 "中下流向けの別荘や職員住居、宿泊施設として存在する大規模集合居住区域"
+
+ ngm_district_arcology_marine_administrative_Organization:0 "管理機構アーコロジー"
+ ngm_district_arcology_marine_administrative_Organization_plural:0 "管理機構アーコロジー"
+ ngm_district_arcology_marine_administrative_Organization_desc:0 "この娯楽空間を管理し、外敵から防衛するための真面目な職員が働く数少ない広いオフィス群"
+
+ ngm_district_arcology_marine_health_care:0 "健康医療アーコロジー"
+ ngm_district_arcology_marine_health_care_plural:0 "健康医療アーコロジー"
+ ngm_district_arcology_marine_health_care_desc:0 "海洋技術や生命体活性化研究を元に健康や医療を提供するためのメディカルツーリズム施設"
+
+ ngm_district_arcology_marine_water_park:0 "水遊庭園アーコロジー"
+ ngm_district_arcology_marine_water_park_plural:0 "水遊庭園アーコロジー"
+ ngm_district_arcology_marine_water_park_desc:0 "アクアリウムを維持管理し、解説と研究を行う機関と観光客へ広大な空間の展示観覧に費やされる空間"
+
+ ngm_district_arcology_marine_drunkness_street:0 "交易歓楽アーコロジー"
+ ngm_district_arcology_marine_drunkness_street_plural:0 "交易歓楽アーコロジー"
+ ngm_district_arcology_marine_drunkness_street_desc:0 "惑星における商取引の中心地で、観光客や住民への物流や物品供給を行うための商業地帯"
+
+ ngm_district_arcology_marine_tidal_laboratory:0 "潮流工学アーコロジー"
+ ngm_district_arcology_marine_tidal_laboratory_plural:0 "潮流工学アーコロジー"
+ ngm_district_arcology_marine_tidal_laboratory_desc:0 "海流と流体工学を利用した発電や研究が行われる発電研究機関群"
+
+ ngm_district_arcology_marine_fisheries_research:0 "水産研究アーコロジー"
+ ngm_district_arcology_marine_fisheries_research_plural:0 "水産研究アーコロジー"
+ ngm_district_arcology_marine_fisheries_research_desc:0 "広大な海洋を利用した食料品や天然生産品を製造する地域"
 
 #######################
 #####    仕事    ######
@@ -2507,11 +2624,26 @@
  ngm_migration_yes_desc:0 "$free_migration_yes_desc$"
 
 #######################
+#####    惑星    ######
+#######################
+
+ pc_ngm_ocean:0 "海洋型エキュメノポリス"
+ pc_ngm_ocean_desc:0 ""
+ pc_ngm_ocean_adj:0 ""
+ pc_ngm_ocean_tile:0 ""
+ pc_ngm_ocean_tile_desc:0 ""
+ trait_pc_ngm_ocean_preference:0 "海洋型エキュメノポリスを好む"
+ trait_pc_ngm_ocean_preference_desc:0 "§L気が遠くなるほどの長きにわたる進化もしくは巧みな遺伝子操作の結果として、 遺伝子レベルでどの気候を好むかが決まっている。 §!"
+
+#######################
 #####    遺物    ######
 #######################
 
  r_ngm_ancient_pact:0 "古代の盟約"
  r_ngm_ancient_pact_desc:0 "古代の列強間の協定で、緊急時に強力な自衛力を求められたうえで、平時には他国の脅威にならない経済国家であることを求められる条文。所有国は永久にこれを守らなくてはならない。"
+
+ r_ngm_geid:0 "銀河皇帝勅許第7216号「帝立遊園領邦の認可」"
+ r_ngm_geid_desc:0 "全銀河の統治者にして天界を統べる法秩序の体現者。神聖にして不可侵である銀河帝国第27代皇帝である余、ポチャヌルス8世は銀河帝国全体の福祉のために帝立遊園の設立を許す。帝立遊園の長は世襲とし、王と同格の公爵位を授け、余の宮廷において式部官長の地位を授ける。なお、領邦としての帝立遊園はその自律的権利を制約される。制約内容は....."
 
 ##########################
 #####    戦争目標    ######
@@ -3113,8 +3245,8 @@
  tradition_ngm_neighbor:0 "善隣"
  tradition_ngm_neighbor_desc:0 "敵ではないものはすべて友人であり、敵であることが証明されなければ友人であるのだ"
  tr_ngm_neighbor_first:0 "善隣の伝統"
- #tr_ngm_neighbor_first_effect:0 "REPLACE_ME"
- #tr_ngm_neighbor_first_desc:0 "REPLACE_ME"
+ #tr_ngm_neighbor_first_effect:0 ""
+ #tr_ngm_neighbor_first_desc:0 ""
  tr_ngm_neighbor_finish:0 "善隣の伝統の完成"
  tr_ngm_neighbor_finish_desc:0 "5種類以上の種族がいる惑星で§YPop成長速度§!§G+10%§!、§Y交易価値§!§G+10%§!、§Y統合力§!§G+10%§!、§Y流入魅力§!§G+10%§!増加させる \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_ambassador:0 "国際的大使館"
@@ -3136,8 +3268,8 @@
  tradition_ngm_enemy:0 "敵視"
  tradition_ngm_enemy_desc:0 "あらゆる存在を疑い、自己と数少ない信頼できる仲間のために、強固な対応を維持する"
  tr_ngm_enemy_first:0 "敵視の伝統"
- #tr_ngm_enemy_first_effect:0 "REPLACE_ME"
- #tr_ngm_enemy_first_desc:0 "REPLACE_ME"
+ #tr_ngm_enemy_first_effect:0 ""
+ #tr_ngm_enemy_first_desc:0 ""
  tr_ngm_enemy_finish:0 "敵視の伝統の完成"
  tr_ngm_enemy_finish_desc:0 "§Y艦船武器ダメージ§!を§G+10%§!増加させる \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_paranoia:0 "パラノイア"
@@ -3159,8 +3291,8 @@
  tradition_ngm_nature:0 "自然"
  tradition_ngm_nature_desc:0 "惑星環境の維持と繁栄は銀河に住まう者の義務だ"
  tr_ngm_nature_first:0 "自然の伝統"
- #tr_ngm_nature_first_effect:0 "REPLACE_ME"
- #tr_ngm_nature_first_desc:0 "REPLACE_ME"
+ #tr_ngm_nature_first_effect:0 ""
+ #tr_ngm_nature_first_desc:0 ""
  tr_ngm_nature_finish:0 "自然の伝統の完成"
  tr_ngm_nature_finish_desc:0 "§Y研究速度(生物学)§!を§G+20%§!増加させる \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_nature2:0 "大自然"
@@ -3205,8 +3337,8 @@
  tradition_ngm_official:0 "官吏"
  tradition_ngm_official_desc:0 "書類により統治される国家は強大でゆるぎない"
  tr_ngm_official_first:0 "官吏の伝統"
- #tr_ngm_official_first_effect:0 "REPLACE_ME"
- #tr_ngm_official_first_desc:0 "REPLACE_ME"
+ #tr_ngm_official_first_effect:0 ""
+ #tr_ngm_official_first_desc:0 ""
  tr_ngm_official_finish:0 "官吏の伝統の完成"
  tr_ngm_official_finish_desc:0 "§Y国是slot§!を§G+1§!増加させる \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_human_resources:0 "人事院"
@@ -3661,78 +3793,6 @@
  tr_ngm_hereditary_nation:0 "世襲国家"
  tr_ngm_hereditary_nation_desc:0 "全惑星の§Y安定度§!を§G5§!増加させる。"
  tr_ngm_hereditary_nation_delayed:0 "家に属するのは国も例外ではない"
-
-###################################
-#####   海洋エキュメノ起源    ######
-###################################
-
- ngm_naval_fleet:0 "海軍艦隊"
- ngm_naval_fleet_desc:0 "惑星を防衛する艦船や艦艇"
-
- r_ngm_geid:0 "銀河皇帝勅許第7216号「帝立遊園領邦の認可」"
- r_ngm_geid_desc:0 "全銀河の統治者にして天界を統べる法秩序の体現者。神聖にして不可侵である銀河帝国第27代皇帝である余、ポチャヌルス8世は銀河帝国全体の福祉のために帝立遊園の設立を許す。帝立遊園の長は世襲とし、王と同格の公爵位を授け、余の宮廷において式部官長の地位を授ける。なお、領邦としての帝立遊園はその自律的権利を制約される。制約内容は....."
-
- ngm_district_arcology_marine_housing:0 "ウォーター＝マンションアーコロジー"
- ngm_district_arcology_marine_housing_desc:0 "中下流向けの別荘や職員住居、宿泊施設として存在する大規模集合居住区域"
- ngm_district_arcology_marine_administrative_Organization:0 "管理機構アーコロジー"
- ngm_district_arcology_marine_administrative_Organization_desc:0 "この娯楽空間を管理し、外敵から防衛するための真面目な職員が働く数少ない広いオフィス群"
- ngm_district_arcology_marine_health_care:0 "健康医療アーコロジー"
- ngm_district_arcology_marine_health_care_desc:0 "海洋技術や生命体活性化研究を元に健康や医療を提供するためのメディカルツーリズム施設"
- ngm_district_arcology_marine_water_park:0 "水遊庭園アーコロジー"
- ngm_district_arcology_marine_water_park_desc:0 "アクアリウムを維持管理し、解説と研究を行う機関と観光客へ広大な空間の展示観覧に費やされる空間"
- ngm_district_arcology_marine_drunkness_street:0 "交易歓楽アーコロジー"
- ngm_district_arcology_marine_drunkness_street_desc:0 "惑星における商取引の中心地で、観光客や住民への物流や物品供給を行うための商業地帯"
- ngm_district_arcology_marine_tidal_laboratory:0 "潮流工学アーコロジー"
- ngm_district_arcology_marine_tidal_laboratory_desc:0 "海流と流体工学を利用した発電や研究が行われる発電研究機関群"
- ngm_district_arcology_marine_Fisheries_Research:0 "水産研究アーコロジー"
- ngm_district_arcology_marine_Fisheries_Research_desc:0 "広大な海洋を利用した食料品や天然生産品を製造する地域"
- ngm_district_arcology_marine_villa:0 "アクア＝ヴィラアーコロジー"
- ngm_district_arcology_marine_villa_desc:0 "上流階級向けの別荘や邸宅、高級ホテル等の住宅と豊かな生活をサポートする職員の職場群"
-
- building_ngm_garden_palace:0 "遊園宮"
- building_ngm_garden_palace_desc:0 "膨大な遊園地を管理し、VIPを接待するために作られた壮麗かつ機能的な宮殿"
-
- building_ngm_aquarium_central_gate:0 "アクアリウム中央ゲート"
- building_ngm_aquarium_central_gate_desc:0 "かつて存在した銀河帝国の戴冠式をはじめとした重要式典が行われた、銀河と海洋に関する神々を祭る大神殿"
-
- building_ngm_great_ocean_temple:0 "海洋大神殿"
- building_ngm_great_ocean_temple_desc:0 "かつて存在した銀河帝国の戴冠式をはじめとした重要式典が行われた、銀河と海洋に関する神々を祭る大神殿"
-
- building_ngm_ocean_child_park:0 "惑星児童遊園"
- building_ngm_ocean_child_park_desc:0 "子供向けアトラクションやお子様向けレストランが広がる遊園地やショッピングモール"
-
- building_ngm_ocean_aqua_park:0 "アクアリウムテーマパーク"
- building_ngm_ocean_aqua_park_desc:0 "青年期世代向けのアクアリウムをイメージしたアトラクションや庭園が広がる娯楽施設"
-
- building_ngm_ocean_tower_casino:0 "タワーカジノ"
- building_ngm_ocean_tower_casino_desc:0 "上流階級から中下流階級までもを網羅した大規模な賭博場"
-
- building_ngm_ocean_imp_stad:0 "帝立競技場"
- building_ngm_ocean_imp_stad_desc:0 "銀河皇帝の愛した帝冠様式で作られた壮麗で様々な式典や競技を行うことができるスタジアム"
-
- building_ngm_ocean_galactic_yoshiwara:0 "泡園"
- building_ngm_ocean_galactic_yoshiwara_desc:0 "大人向けの娯楽を提供する夜間を中心とした娯楽施設"
-
- building_ngm_ocean_sight_office:0 "観光管理局"
- building_ngm_ocean_sight_office_desc:0 "観光客に関する行政事務処理や手続き、書類整理を行う官庁"
-
- building_ngm_ocean_medical_land:0 "惑星健康ランド"
- building_ngm_ocean_medical_land_desc:0 "心身の疾患を治癒し、静養を目的とした観光客が集う観光用医療施設"
-
- building_ngm_ocean_research_cente:0 "銀河教養センター"
- building_ngm_ocean_research_cente_desc:0 "教養市民層や上流階級が集うハイセンスでハイカルチャーな観光施設"
-
- building_ngm_ocean_hotel_street:0 "ホテル群"
- building_ngm_ocean_hotel_street_desc:0 "
-
- building_ngm_ocean_high_resort:0 "高級リゾート"
- building_ngm_ocean_high_resort_desc:0 "
-
- building_ngm_ocean_resure_land:0 "レジャーランド"
- building_ngm_ocean_resure_land_desc:0 "
-
- building_ngm_ocean_business_orbit_elev:0 "商用軌道エレベーター"
- building_ngm_ocean_business_orbit_elev_desc:0
 
 ########################################
 #####    Required technologies    ######

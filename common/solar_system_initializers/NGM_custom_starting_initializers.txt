@@ -382,7 +382,7 @@ ngm_galactic_empire_aquarium_starting_init = {
 		planet = {
 			count = 1
 			orbit_distance = 15
-			class = "pc_ocean"
+			class = "pc_ngm_ocean"
 			has_ring = yes
 			orbit_angle = {
 				min = 90
@@ -403,6 +403,7 @@ ngm_galactic_empire_aquarium_starting_init = {
 				set_planet_flag = cant_target_this_planet
 			}
 			init_effect = {
+				set_name = "Galactic Aquarium"
 				generate_empire_home_planet = yes
 			}
 		}
@@ -424,6 +425,7 @@ ngm_galactic_empire_aquarium_starting_init = {
 				orbit_distance = 10
 			}
 			init_effect = {
+				set_name = "Fombon Nature Park"
 				create_species = {
 					name = "フォンボンバンション"
 					class = FUN
@@ -799,11 +801,17 @@ ngm_galactic_empire_aquarium_starting_upper_gate = {
 		}
 		planet = {
 			count = 1
-			class = "pc_nuked"
+			class = random_non_colonizable
 			orbit_distance = 30
 			orbit_angle = {
 				min = 90
 				max = 270
+			}
+			init_effect = {
+				add_modifier = {
+					modifier = "terraforming_candidate"
+					days = -1
+				}
 			}
 		}
 		planet = {
@@ -892,11 +900,17 @@ ngm_galactic_empire_aquarium_starting_under_gate = {
 		}
 		planet = {
 			count = 1
-			class = "pc_nuked"
+			class = random_non_colonizable
 			orbit_distance = 30
 			orbit_angle = {
 				min = 90
 				max = 270
+			}
+			init_effect = {
+				add_modifier = {
+					modifier = "terraforming_candidate"
+					days = -1
+				}
 			}
 		}
 		planet = {

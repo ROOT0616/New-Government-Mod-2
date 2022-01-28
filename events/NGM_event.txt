@@ -3625,6 +3625,9 @@ country_event = {
 						save_global_event_target_as = ngm_galactic_empire_aquarium2
 					}
 				}
+				last_created_system = {
+					set_name = "Park Clock"
+				}
 				spawn_system = {
 					min_distance >= 5
 					max_distance <= 5
@@ -3635,6 +3638,9 @@ country_event = {
 					effect = {
 						save_global_event_target_as = ngm_galactic_empire_aquarium3
 					}
+				}
+				last_created_system = {
+					set_name = "Park Out"
 				}
 				spawn_system = {
 					min_distance >= 5
@@ -3647,6 +3653,9 @@ country_event = {
 						save_global_event_target_as = ngm_galactic_empire_aquarium4
 					}
 				}
+				last_created_system = {
+					set_name = "Upper Gate"
+				}
 				spawn_system = {
 					min_distance >= 5
 					max_distance <= 5
@@ -3657,6 +3666,9 @@ country_event = {
 					effect = {
 						save_global_event_target_as = ngm_galactic_empire_aquarium5
 					}
+				}
+				last_created_system = {
+					set_name = "Under Gate"
 				}
 			}
 		}
@@ -3853,13 +3865,23 @@ country_event = {
 			set_species_homeworld = event_target:ngm_galactic_empire_aquarium
 		}
 		add_research_option = tech_wormhole_stabilization
+		owner = {
+			set_country_flag = encountered_first_wormhole
+			add_seen_bypass_type = wormhole
+		}
 		country_event = {
 			id = ngm_origin.1001
+		}
+		country_event = {
+			id = game_start.9
+		}
+		country_event = {
+			id = distar.3043
 		}
 	}
 }
 
-# 銀河帝国アクアリウム	生成イベント
+# 銀河帝国アクアリウム	建築物生成イベント
 country_event = {
 	id = ngm_origin.1001
 	hide_window = yes
@@ -3897,14 +3919,12 @@ country_event = {
 			add_building = building_ngm_great_ocean_temple
 			add_building = building_bureaucratic_1
 			add_building = building_factory_1
-			while = {
-				count = 3
-				add_district = district_city
-				add_district = district_industrial
-				add_district = district_generator
-				add_district = district_mining
-				add_district = district_farming
-			}
+			add_building = building_research_lab_1
+			add_district = ngm_district_arcology_marine_fisheries_research
+			add_district = ngm_district_arcology_marine_housing
+			add_district = ngm_district_arcology_marine_administrative_Organization
+			add_district = ngm_district_arcology_marine_health_care
+			add_district = ngm_district_arcology_marine_water_park
 		}
 	}
 }
@@ -8960,6 +8980,10 @@ country_event = {
 		}
 	}
 }
+
+#############################
+######  オリンピックイベント #######
+#############################
 
 # オリンピック開催地抽選開始
 country_event = {
