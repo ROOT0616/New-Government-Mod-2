@@ -149,6 +149,42 @@ forced_labor = {
 	planet_jobs_engineering_research_produces_mult = -0.3
 }
 
+# 1.養殖種類変更（水産研究アーコロジー）(研究で選択肢追加)
+# ①ストーンフィッシュ        (鉱物+10)
+ngm_stonefish = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon_frame = 1
+	planets_minerals_produces_add = 10
+}
+
+# ②ラグジュアリー・ジェリー    (交易価値+7)
+ngm_luxury_jewelry = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon_frame = 1
+	trade_value_add = 7
+}
+
+# ③エナジー・オイスター        (エネルギー+10)
+ngm_energy_oyster = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon_frame = 1
+	planets_energy_produces_add = 10
+}
+
+# ④白金魚            (合金+5)
+ngm_white_goldfish = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon_frame = 1
+	planets_alloys_produces_add = 5
+}
+
+# ⑤海綿藻            (消費財+5)    (デフォルト)
+ngm_seaweed = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon_frame = 1
+	planets_consumer_goods_produces_add = 5
+}
+
 # 繁栄主義者		平和の期間が5年続くごとに労働者生産量+1%、交易価値+2.5%（最大50年分）
 civic_ngm_prosperity_1_advocate_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"

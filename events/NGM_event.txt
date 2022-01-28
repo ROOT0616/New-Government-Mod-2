@@ -3920,7 +3920,7 @@ country_event = {
 			add_building = building_bureaucratic_1
 			add_building = building_factory_1
 			add_building = building_research_lab_1
-			add_district = ngm_district_fishery_research_arcology
+			add_district = ngm_district_arcology_marine_fisheries_research
 			add_district = ngm_district_arcology_marine_housing
 			add_district = ngm_district_arcology_marine_administrative_Organization
 			add_district = ngm_district_arcology_marine_health_care
@@ -8980,6 +8980,10 @@ country_event = {
 		}
 	}
 }
+
+#############################
+######  オリンピックイベント #######
+#############################
 
 # オリンピック開催地抽選開始
 country_event = {

@@ -132,6 +132,36 @@
  decision_end_requisition_policy_desc:0 "惑星規模の徴用政策なんて政府にとって不利益だ \n やめさせろ！"
  decision_end_planet_requisition_policy_effects_short:0 "惑星規模の徴用政策をやめる"
 
+ decision_planet_ngm_stonefish:0 "ストーンフィッシュ"
+ decision_planet_ngm_stonefish_desc:0 ""
+
+ ngm_stonefish:0 "ストーンフィッシュ"
+ ngm_stonefish_desc:0 ""
+
+ decision_planet_ngm_luxury_jewelry:0 "ラグジュアリー・ジェリー"
+ decision_planet_ngm_luxury_jewelry_desc:0 ""
+
+ ngm_luxury_jewelry:0 "ラグジュアリー・ジェリー"
+ ngm_luxury_jewelry_desc:0 ""
+
+ decision_planet_ngm_energy_oyster:0 "エナジー・オイスター"
+ decision_planet_ngm_energy_oyster_desc:0 ""
+
+ ngm_energy_oyster:0 "エナジー・オイスター"
+ ngm_energy_oyster_desc:0 ""
+
+ decision_planet_ngm_white_goldfish:0 "白金魚"
+ decision_planet_ngm_white_goldfish_desc:0 ""
+
+ ngm_white_goldfish:0 "白金魚"
+ ngm_white_goldfish_desc:0 ""
+
+ ngm_seaweed:0 "海綿藻"
+ ngm_seaweed_desc:0 ""
+
+ decision_planet_ngm_seaweed:0 "海綿藻"
+ decision_planet_ngm_seaweed_desc:0 ""
+
  decision_ngm_olympic_nomination:0 "国際大会の開催地に推薦"
  decision_ngm_olympic_nomination_desc:0 "国際大会の開催地となることは、 単なる栄誉のみならず利益ももたらす。 国際大会は気まぐれだが、 我々が充分なインセンティブを提供すれば、 ビッグプレーヤーたちをこの惑星に惹きつけられるかもしれない。 "
  decision_ngm_olympic_nomination_effects:0 "地元の状況に応じて、 §Y大会誘致競争の格付け§!補正がこの惑星に適用される。 格付けが高いほど、 この惑星が§H国際大会§!の主催場所となる確率が上がる。"
@@ -1272,7 +1302,10 @@
  tech_ceremony_theory_second_desc:0 "式典担当の官僚の効率的運用や、より安価で手軽に権威を象徴する式典を行うための研究"
 
  tech_ad_high_degree_of_local_autonomy:0 "高度な地方自治"
- tech_ad_high_degree_of_local_autonomy_desc:0 "高度な地方自治の説明"
+ tech_ad_high_degree_of_local_autonomy_desc:0 ""
+
+ tech_ngm_developmental_fish_farming:0 "発展型魚類養殖"
+ tech_ngm_developmental_fish_farming_desc:0 ""
 
 #######################
 #####    資源    ######
@@ -1400,9 +1433,9 @@
 #####    区域    ######
 #######################
 
- ngm_district_fishery_research_arcology:0 "水産研究アーコロジー"
- ngm_district_fishery_research_arcology_plural:0 "水産研究アーコロジー"
- ngm_district_fishery_research_arcology_desc:0 "広大な海洋を利用した食料品や天然生産品を製造する地域"
+ ngm_district_arcology_marine_villa:0 "アクア＝ヴィラアーコロジー"
+ ngm_district_arcology_marine_villa_plural:0 "アクア＝ヴィラアーコロジー"
+ ngm_district_arcology_marine_villa_desc:0 "上流階級向けの別荘や邸宅、高級ホテル等の住宅と豊かな生活をサポートする職員の職場群"
 
  ngm_district_arcology_marine_housing:0 "ウォーター＝マンションアーコロジー"
  ngm_district_arcology_marine_housing_plural:0 "ウォーター＝マンションアーコロジー"
@@ -1428,13 +1461,9 @@
  ngm_district_arcology_marine_tidal_laboratory_plural:0 "潮流工学アーコロジー"
  ngm_district_arcology_marine_tidal_laboratory_desc:0 "海流と流体工学を利用した発電や研究が行われる発電研究機関群"
 
- ngm_district_arcology_marine_Fisheries_Research:0 "水産研究アーコロジー"
- ngm_district_arcology_marine_Fisheries_Research_plural:0 "水産研究アーコロジー"
- ngm_district_arcology_marine_Fisheries_Research_desc:0 "広大な海洋を利用した食料品や天然生産品を製造する地域"
-
- ngm_district_arcology_marine_villa:0 "アクア＝ヴィラアーコロジー"
- ngm_district_arcology_marine_villa_plural:0 "アクア＝ヴィラアーコロジー"
- ngm_district_arcology_marine_villa_desc:0 "上流階級向けの別荘や邸宅、高級ホテル等の住宅と豊かな生活をサポートする職員の職場群"
+ ngm_district_arcology_marine_fisheries_research:0 "水産研究アーコロジー"
+ ngm_district_arcology_marine_fisheries_research_plural:0 "水産研究アーコロジー"
+ ngm_district_arcology_marine_fisheries_research_desc:0 "広大な海洋を利用した食料品や天然生産品を製造する地域"
 
 #######################
 #####    仕事    ######
@@ -3216,8 +3245,8 @@
  tradition_ngm_neighbor:0 "善隣"
  tradition_ngm_neighbor_desc:0 "敵ではないものはすべて友人であり、敵であることが証明されなければ友人であるのだ"
  tr_ngm_neighbor_first:0 "善隣の伝統"
- #tr_ngm_neighbor_first_effect:0 "REPLACE_ME"
- #tr_ngm_neighbor_first_desc:0 "REPLACE_ME"
+ #tr_ngm_neighbor_first_effect:0 ""
+ #tr_ngm_neighbor_first_desc:0 ""
  tr_ngm_neighbor_finish:0 "善隣の伝統の完成"
  tr_ngm_neighbor_finish_desc:0 "5種類以上の種族がいる惑星で§YPop成長速度§!§G+10%§!、§Y交易価値§!§G+10%§!、§Y統合力§!§G+10%§!、§Y流入魅力§!§G+10%§!増加させる \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_ambassador:0 "国際的大使館"
@@ -3239,8 +3268,8 @@
  tradition_ngm_enemy:0 "敵視"
  tradition_ngm_enemy_desc:0 "あらゆる存在を疑い、自己と数少ない信頼できる仲間のために、強固な対応を維持する"
  tr_ngm_enemy_first:0 "敵視の伝統"
- #tr_ngm_enemy_first_effect:0 "REPLACE_ME"
- #tr_ngm_enemy_first_desc:0 "REPLACE_ME"
+ #tr_ngm_enemy_first_effect:0 ""
+ #tr_ngm_enemy_first_desc:0 ""
  tr_ngm_enemy_finish:0 "敵視の伝統の完成"
  tr_ngm_enemy_finish_desc:0 "§Y艦船武器ダメージ§!を§G+10%§!増加させる \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_paranoia:0 "パラノイア"
@@ -3262,8 +3291,8 @@
  tradition_ngm_nature:0 "自然"
  tradition_ngm_nature_desc:0 "惑星環境の維持と繁栄は銀河に住まう者の義務だ"
  tr_ngm_nature_first:0 "自然の伝統"
- #tr_ngm_nature_first_effect:0 "REPLACE_ME"
- #tr_ngm_nature_first_desc:0 "REPLACE_ME"
+ #tr_ngm_nature_first_effect:0 ""
+ #tr_ngm_nature_first_desc:0 ""
  tr_ngm_nature_finish:0 "自然の伝統の完成"
  tr_ngm_nature_finish_desc:0 "§Y研究速度(生物学)§!を§G+20%§!増加させる \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_nature2:0 "大自然"
@@ -3308,8 +3337,8 @@
  tradition_ngm_official:0 "官吏"
  tradition_ngm_official_desc:0 "書類により統治される国家は強大でゆるぎない"
  tr_ngm_official_first:0 "官吏の伝統"
- #tr_ngm_official_first_effect:0 "REPLACE_ME"
- #tr_ngm_official_first_desc:0 "REPLACE_ME"
+ #tr_ngm_official_first_effect:0 ""
+ #tr_ngm_official_first_desc:0 ""
  tr_ngm_official_finish:0 "官吏の伝統の完成"
  tr_ngm_official_finish_desc:0 "§Y国是slot§!を§G+1§!増加させる \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_human_resources:0 "人事院"

@@ -1413,7 +1413,6 @@ decision_ngm_olympic_nomination = {
 					modifier = {
 						factor = 0.5
 						from = {
-
 							has_monthly_income = {
 								resource = unity
 								value <= 800
@@ -1684,5 +1683,293 @@ decision_revoke_ngm_olympic_nomination = {
 	}
 	ai_weight = {
 		weight = 0
+	}
+}
+
+# 1.養殖種類変更（水産研究アーコロジー）(研究で選択肢追加)
+# ①ストーンフィッシュ        (鉱物+10)
+decision_planet_ngm_stonefish = {
+	owned_planets_only = yes
+	enactment_time = 0
+	potential = {
+		NOT = {
+			has_planet_flag = do_ngm_do
+		}
+		has_district = ngm_district_arcology_marine_fisheries_research
+	}
+	allow = {
+		NOT = {
+			has_modifier = "ngm_stonefish"
+		}
+	}
+	prerequisites = {
+		tech_ngm_developmental_fish_farming
+	}
+	effect = {
+		add_modifier = {
+			modifier = "ngm_stonefish"
+		}
+		# if = {
+		# 	limit = {
+		# 		has_modifier = ngm_stonefish
+		# 	}
+		# 	remove_modifier = ngm_stonefish
+		# }
+		if = {
+			limit = {
+				has_modifier = ngm_luxury_jewelry
+			}
+			remove_modifier = ngm_luxury_jewelry
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_energy_oyster
+			}
+			remove_modifier = ngm_energy_oyster
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_white_goldfish
+			}
+			remove_modifier = ngm_white_goldfish
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_seaweed
+			}
+			remove_modifier = ngm_seaweed
+		}
+	}
+	ai_weight = {
+		weight = 0.1
+	}
+}
+
+# ②ラグジュアリー・ジェリー luxury_jewelry   (交易価値+7)
+decision_planet_ngm_luxury_jewelry = {
+	owned_planets_only = yes
+	enactment_time = 0
+	potential = {
+		NOT = {
+			has_planet_flag = do_ngm_do
+		}
+		has_district = ngm_district_arcology_marine_fisheries_research
+	}
+	allow = {
+		NOT = {
+			has_modifier = "ngm_luxury_jewelry"
+		}
+	}
+	prerequisites = {
+		tech_ngm_developmental_fish_farming
+	}
+	effect = {
+		add_modifier = {
+			modifier = "ngm_luxury_jewelry"
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_stonefish
+			}
+			remove_modifier = ngm_stonefish
+		}
+		# if = {
+		# 	limit = {
+		# 		has_modifier = ngm_luxury_jewelry
+		# 	}
+		# 	remove_modifier = ngm_luxury_jewelry
+		# }
+		if = {
+			limit = {
+				has_modifier = ngm_energy_oyster
+			}
+			remove_modifier = ngm_energy_oyster
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_white_goldfish
+			}
+			remove_modifier = ngm_white_goldfish
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_seaweed
+			}
+			remove_modifier = ngm_seaweed
+		}
+	}
+	ai_weight = {
+		weight = 0.1
+	}
+}
+
+# ③エナジー・オイスター  energy_oyster      (エネルギー+10)
+decision_planet_ngm_energy_oyster = {
+	owned_planets_only = yes
+	enactment_time = 0
+	potential = {
+		NOT = {
+			has_planet_flag = do_ngm_do
+		}
+		has_district = ngm_district_arcology_marine_fisheries_research
+	}
+	allow = {
+		NOT = {
+			has_modifier = "ngm_energy_oyster"
+		}
+	}
+	prerequisites = {
+		tech_ngm_developmental_fish_farming
+	}
+	effect = {
+		add_modifier = {
+			modifier = "ngm_energy_oyster"
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_stonefish
+			}
+			remove_modifier = ngm_stonefish
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_luxury_jewelry
+			}
+			remove_modifier = ngm_luxury_jewelry
+		}
+		# if = {
+		# 	limit = {
+		# 		has_modifier = ngm_energy_oyster
+		# 	}
+		# 	remove_modifier = ngm_energy_oyster
+		# }
+		if = {
+			limit = {
+				has_modifier = ngm_white_goldfish
+			}
+			remove_modifier = ngm_white_goldfish
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_seaweed
+			}
+			remove_modifier = ngm_seaweed
+		}
+	}
+	ai_weight = {
+		weight = 0.1
+	}
+}
+
+# ④白金魚     white_goldfish       (合金+5)
+decision_planet_ngm_white_goldfish = {
+	owned_planets_only = yes
+	enactment_time = 0
+	potential = {
+		NOT = {
+			has_planet_flag = do_ngm_do
+		}
+		has_district = ngm_district_arcology_marine_fisheries_research
+	}
+	allow = {
+		NOT = {
+			has_modifier = "ngm_white_goldfish"
+		}
+	}
+	prerequisites = {
+		tech_ngm_developmental_fish_farming
+	}
+	effect = {
+		add_modifier = {
+			modifier = "ngm_white_goldfish"
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_stonefish
+			}
+			remove_modifier = ngm_stonefish
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_luxury_jewelry
+			}
+			remove_modifier = ngm_luxury_jewelry
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_energy_oyster
+			}
+			remove_modifier = ngm_energy_oyster
+		}
+		# if = {
+		# 	limit = {
+		# 		has_modifier = ngm_white_goldfish
+		# 	}
+		# 	remove_modifier = ngm_white_goldfish
+		# }
+		if = {
+			limit = {
+				has_modifier = ngm_seaweed
+			}
+			remove_modifier = ngm_seaweed
+		}
+	}
+	ai_weight = {
+		weight = 0.1
+	}
+}
+
+# ⑤海綿藻   seaweed         (消費財+5)    (デフォルト)
+decision_planet_ngm_seaweed = {
+	owned_planets_only = yes
+	enactment_time = 0
+	potential = {
+		NOT = {
+			has_planet_flag = do_ngm_do
+		}
+		has_district = ngm_district_arcology_marine_fisheries_research
+	}
+	allow = {
+		NOT = {
+			has_modifier = "ngm_seaweed"
+		}
+	}
+	effect = {
+		add_modifier = {
+			modifier = "ngm_seaweed"
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_stonefish
+			}
+			remove_modifier = ngm_stonefish
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_luxury_jewelry
+			}
+			remove_modifier = ngm_luxury_jewelry
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_energy_oyster
+			}
+			remove_modifier = ngm_energy_oyster
+		}
+		if = {
+			limit = {
+				has_modifier = ngm_white_goldfish
+			}
+			remove_modifier = ngm_white_goldfish
+		}
+		# if = {
+		# 	limit = {
+		# 		has_modifier = ngm_seaweed
+		# 	}
+		# 	remove_modifier = ngm_seaweed
+		# }
+	}
+	ai_weight = {
+		weight = 0.1
 	}
 }

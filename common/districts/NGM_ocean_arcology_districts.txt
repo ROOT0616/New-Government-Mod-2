@@ -1,5 +1,5 @@
-#水産研究アーコロジー            	(建造費:鉱物300)(維持費:エネルギー5)    (住居+10、養殖技術者+2、釣り人+1、真珠取り+1)                    (広大な海洋を利用した食料品や天然生産品を製造する地域)
-ngm_district_fishery_research_arcology = {
+#アクア＝ヴィラアーコロジー          (建造費:鉱物300)(維持費:エネルギー5)    (住居+10、快適度+10、事務員+2、エグゼクティブキャスト+2) 
+ngm_district_arcology_marine_villa = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	show_on_uncolonized = {
@@ -28,9 +28,9 @@ ngm_district_fishery_research_arcology = {
 	}
 	planet_modifier = {
 		planet_housing_add = 10
-		job_ngm_aquaculture_technician_add = 2
-		job_angler_add = 1
-		job_pearl_diver_add = 1
+		planet_amenities_add = 10
+		job_clerk_add = 2
+		job_ngm_executive_cast_add = 2
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -582,7 +582,7 @@ ngm_district_arcology_marine_tidal_laboratory = {
 }
 
 #水産研究アーコロジー            	(建造費:鉱物300)(維持費:エネルギー5)    (住居+10、養殖技術者+2、釣り人+1、真珠取り+1) 
-ngm_district_arcology_marine_Fisheries_Research = {
+ngm_district_arcology_marine_fisheries_research = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	show_on_uncolonized = {
@@ -614,89 +614,6 @@ ngm_district_arcology_marine_Fisheries_Research = {
 		job_pearl_diver_add = 1
 		job_ngm_aquaculture_technician_add = 2
 		job_angler_add = 1
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_public_works
-			}
-		}
-		modifier = {
-			planet_housing_add = 10
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_1
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_2
-				NOT = {
-					has_valid_civic = civic_agrarian_idyll
-				}
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_interstellar_franchising
-			}
-		}
-		modifier = {
-			job_clerk_add = 5
-		}
-	}
-}
-
-#アクア＝ヴィラアーコロジー          (建造費:鉱物300)(維持費:エネルギー5)    (住居+10、快適度+10、事務員+2、エグゼクティブキャスト+2) 
-ngm_district_arcology_marine_villa = {
-	base_buildtime = 600
-	is_capped_by_modifier = no
-	show_on_uncolonized = {
-		uses_district_set = ngm_ocean_district
-	}
-	potential = {
-		owner = {
-			has_origin = origin_ngm_galactic_empire_aquarium
-		}
-		uses_district_set = ngm_ocean_district
-	}
-	conversion_ratio = 1
-	convert_to = {
-		district_city
-		district_nexus
-		district_hive
-	}
-	resources = {
-		category = planet_districts
-		cost = {
-			minerals = 300
-		}
-		upkeep = {
-			energy = 5
-		}
-	}
-	planet_modifier = {
-		planet_housing_add = 10
-		planet_amenities_add = 10
-		job_clerk_add = 2
-		job_ngm_executive_cast_add = 2
 	}
 	triggered_planet_modifier = {
 		potential = {
