@@ -688,7 +688,7 @@ cast = {
 }
 
 
-admiral = {#
+ngm_ocean_admiral = {#
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
 	building_icon = building_institute
@@ -714,6 +714,284 @@ admiral = {#
 		pop_defense_armies_add = 4
 		planet_crime_add = -15
 
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_erudite
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_robot_logic_engines
+				has_trait = trait_intelligent
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_natural_engineers
+				has_trait = trait_natural_physicists
+				has_trait = trait_natural_sociologists
+			}
+		}
+		modifier = {
+			factor = 5
+			has_job = head_researcher
+		}
+		modifier = {
+			factor = 0.65
+			has_trait = trait_presapient_proles
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_latent_psionic
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_psionic
+		}
+		modifier = {
+			factor = 0.1
+			has_trait = trait_enigmatic_intelligence_failed
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_enigmatic_intelligence
+				has_trait = trait_enigmatic_intelligence_poor
+			}
+		}
+		modifier = {
+			factor = 2
+				has_trait = trait_presapient_natural_intellectuals
+		}
+		modifier = {
+			factor = 2
+				has_trait = trait_brainslug
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_robust
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_planet_class = pc_habitat }
+		}
+		modifier = {
+			factor = 0.85
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_artificial = no }
+		}
+		modifier = {
+			factor = 0.01
+			exists = planet
+			exists = planet.controller
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+}
+#植民地官僚(専門家)    (管理許容量+5、帝国膨張度ペナルティ-5%、Pop流入速度+5%、居住性+5)    (植民地行政を執り行う専門官僚)
+ngm_colonize_Phyllocrats = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_institute
+	clothes_texture_index = 1
+	icon = administrator
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		specialist_job_check_trigger = yes
+	}
+
+	country_modifier = {
+		country_admin_cap_add = 5
+		empire_size_penalty_mult = -0.05
+		
+	}
+	planet_modifier = {
+		pop_growth_from_immigration = 0.05
+		pop_environment_tolerance = 0.05
+
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_erudite
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_robot_logic_engines
+				has_trait = trait_intelligent
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_natural_engineers
+				has_trait = trait_natural_physicists
+				has_trait = trait_natural_sociologists
+			}
+		}
+		modifier = {
+			factor = 5
+			has_job = head_researcher
+		}
+		modifier = {
+			factor = 0.65
+			has_trait = trait_presapient_proles
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_latent_psionic
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_psionic
+		}
+		modifier = {
+			factor = 0.1
+			has_trait = trait_enigmatic_intelligence_failed
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_enigmatic_intelligence
+				has_trait = trait_enigmatic_intelligence_poor
+			}
+		}
+		modifier = {
+			factor = 2
+				has_trait = trait_presapient_natural_intellectuals
+		}
+		modifier = {
+			factor = 2
+				has_trait = trait_brainslug
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_robust
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_planet_class = pc_habitat }
+		}
+		modifier = {
+			factor = 0.85
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_artificial = no }
+		}
+		modifier = {
+			factor = 0.01
+			exists = planet
+			exists = planet.controller
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+}
+
+#開拓事業者(労働者)    (鉱物+3、食料+4)  
+ngm_colonize_Business_pioneers = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_institute
+	clothes_texture_index = 1
+	icon = miner
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		worker_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_researchers
+		produces = {
+			minerals = 3
+			food = 4
+		}
 	}
 
 	weight = {
