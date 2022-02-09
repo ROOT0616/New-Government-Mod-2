@@ -453,3 +453,128 @@ building_ocean_business_orbit_elev= {
 
 	}
 }
+building_colonis_ministry_of_colonization = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = government
+	potential ={
+		owner = {
+			has_origin = "colonial_syndrome"
+		}
+	}
+	empire_limit={
+		base = 1
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1200
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	planet_modifier = {
+		pop_growth_speed = 0.5
+		pop_growth_from_immigration = 0.3
+		job_bureaucrat_add = 2
+		job_administrator_add = 2
+		job_clerk_add = 2
+		job_ngm_colonize_Phyllocrats_add = 3
+	}
+}
+#2.〇植民事務局    (行政官+1、官僚+1、植民地官僚+2、事務員+2)    (居住性+20%、Pop流入速度+10%)        (この役所は肥大化した植民省の出先機関であり、植民地を現場で管理している。)
+building_colonis_child_park = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = government
+	potential ={
+		owner = {
+			owner = {
+				has_origin = "colonial_syndrome"
+			}
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = 0.2
+		pop_growth_from_immigration = 0.1
+		job_administrator_add = 1
+		job_bureaucrat_add = 1
+		job_ngm_colonize_Phyllocrats_add = 2
+		job_clerk_add = 2
+	}
+}
+#3.植民事業団    (植民地官僚+1、開拓者+2、開拓事業者+5)        (居住性+10%、Pop流入速度+10%)        (植民地事務局の最下級事務所であり、様々な事務処理をこの役所で行うことができる。)
+building_colonis_colonial_enterprise_corp= {
+	base_buildtime = 360
+	category = government
+	potential ={
+		owner = {
+			owner = {
+				has_origin = "colonial_syndrome"
+			}
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			rare_crystals = 40
+		}
+		upkeep = {
+			energy = 2
+			rare_crystals = 1
+		}
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = 0.1
+		pop_growth_from_immigration = 0.1
+		job_ngm_colonize_Phyllocrats_add = 1
+		job_ngm_colonize_Business_pioneers_add = 5
+		job_colonist_add = 2
+	}
+}
+#4.植民住宅    (開拓者+1、開拓事業者+4、事務員+1)        (住居+15、Pop流入速度+5%)        (植民地で働く人のための簡易な住居とそれを支える市街地)
+building_colonis_housing {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = government
+	potential ={
+		owner = {
+			owner = {
+				has_origin = "colonial_syndrome"
+			}
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			exotic_gases = 20
+		}
+		upkeep = {
+			energy = 1
+			exotic_gases = 1
+		}
+	}
+
+	planet_modifier = {
+		pop_growth_from_immigration = 0.05
+		job_colonist_add = 1
+		job_clerk_add = 1
+		job_ngm_colonize_Business_pioneers_add = 4
+
+	}
+}
