@@ -1488,7 +1488,7 @@
  mod_job_ngm_secretary_per_pop:0 "$VALUE$ POP につき$job_ngm_secretary$の職業枠§G+1§!"
  mod_job_ngm_secretary_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_secretary_add£ §G+1§!"
  job_ngm_secretary_effect_desc:0 "£job_ngm_secretary£ $job_ngm_secretary_plural$は£mod_planet_stability_add£ §Y$PLANET_STABILITY_TITLE$§!と £engineering£ §Y工学§!と§Y社会主義魅力§!を生産する"
- civic_tooltip_ngm_secretary_effects:0 "£building£ §Y首都建造物§!が提供する£job_administrator£ §Y$job_administrator$§!枠の一部が £job_ngm_secretary£§Y$job_ngm_secretary_plural$§!枠に置き換わる"
+ civic_tooltip_ngm_secretary_effects:0 "£building£ §Y首都建造物§!が提供する£job_politician£ §Y$job_politician$§!枠の一部が £job_ngm_secretary£§Y$job_ngm_secretary_plural$§!枠に置き換わる"
 
  planet_ngm_pacifist:0 "宣撫官"
  ngm_pacifist:0 "宣撫官"
@@ -1500,7 +1500,7 @@
  mod_job_ngm_pacifist_per_pop:0 "$VALUE$ POP につき$job_ngm_pacifist$の職業枠§G+1§!"
  mod_job_ngm_pacifist_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_pacifist_add£ §G+1§!"
  job_ngm_pacifist_effect_desc:0 "£job_ngm_pacifist£ $job_ngm_pacifist_plural$は§Y労働者幸福度§!、§Y労働者生産力§!、§Y実利主義魅力§!を生産する"
- civic_tooltip_ngm_pacifist_effects:0 "£building£ §Y首都建造物§!が提供する£job_administrator£ §Y$job_administrator$§!枠の一部が £job_ngm_pacifist£§Y$job_ngm_pacifist_plural$§!枠に置き換わる"
+ civic_tooltip_ngm_pacifist_effects:0 "£building£ §Y首都建造物§!が提供する£job_politician£ §Y$job_politician$§!枠の一部が £job_ngm_pacifist£§Y$job_ngm_pacifist_plural$§!枠に置き換わる"
 
  planet_ngm_crest_bearer:0 "紋章官"
  ngm_crest_bearer:0 "紋章官"
@@ -1512,7 +1512,7 @@
  mod_job_ngm_crest_bearer_per_pop:0 "$VALUE$ POP につき$job_ngm_crest_bearer$の職業枠§G+1§!"
  mod_job_ngm_crest_bearer_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_crest_bearer_add£ §G+1§!"
  job_ngm_crest_bearer_effect_desc:0 "£job_ngm_crest_bearer£ $job_ngm_crest_bearer_plural$は£unity£ §Y$unity$§!と£influence£ §Y$influence$§!と§Y栄望主義魅力§!を生産する"
- civic_tooltip_ngm_crest_bearer_effects:0 "£building£ §Y首都建造物§!が提供する£job_administrator£ §Y$job_administrator$§!枠の一部が £job_ngm_crest_bearer£§Y$job_ngm_crest_bearer_plural$§!枠に置き換わる"
+ civic_tooltip_ngm_crest_bearer_effects:0 "£building£ §Y首都建造物§!が提供する£job_politician£ §Y$job_politician$§!枠の一部が £job_ngm_crest_bearer£§Y$job_ngm_crest_bearer_plural$§!枠に置き換わる"
 
  planet_ngm_senior_advisor:0 "高級参謀"
  ngm_senior_advisor:0 "高級参謀"
@@ -1524,7 +1524,7 @@
  mod_job_ngm_senior_advisor_per_pop:0 "$VALUE$ POP につき$job_ngm_senior_advisor$の職業枠§G+1§!"
  mod_job_ngm_senior_advisor_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_senior_advisor_add£ §G+1§!"
  job_ngm_senior_advisor_effect_desc:0 "£job_ngm_senior_advisor£ $job_ngm_senior_advisor_plural$は £mod_planet_stability_add£ §Y$PLANET_STABILITY_TITLE$§!と £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§!と§Y栄望主義魅力§!を増加させ、 £defense_army£ §Y防衛軍§!を編成する"
- civic_tooltip_ngm_senior_advisor_effects:0 "£building£ §Y首都建造物§!が提供する£job_administrator£ §Y$job_administrator$§!枠の一部が £job_ngm_senior_advisor£§Y$job_ngm_senior_advisor_plural$§!枠に置き換わる"
+ civic_tooltip_ngm_senior_advisor_effects:0 "£building£ §Y首都建造物§!が提供する£job_politician£ §Y$job_politician$§!枠の一部が £job_ngm_senior_advisor£§Y$job_ngm_senior_advisor_plural$§!枠に置き換わる"
 
  planet_ngm_heroes_of_society:0 "社会的英雄"
  ngm_heroes_of_society:0 "社会的英雄"
@@ -1536,7 +1536,7 @@
  mod_job_ngm_heroes_of_society_pop:0 "$VALUE$ POP につき$job_ngm_heroes_of_society$の職業枠§G+1§!"
  mod_job_ngm_heroes_of_society_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_heroes_of_society_add£ §G+1§!"
  job_ngm_heroes_of_society_effect_desc:0 "£job_ngm_heroes_of_society£ $job_ngm_heroes_of_society_plural$は £mod_planet_stability_add£ §Y$PLANET_STABILITY_TITLE$§!と £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!を産出する"
- civic_tooltip_ngm_heroes_of_society_effects:0 "£building£ §Y首都建造物§!が提供する£job_administrator£ §Y$job_administrator$§!枠の一部が £job_ngm_heroes_of_society£§Y$job_ngm_heroes_of_society_plural$§!枠に置き換わる"
+ civic_tooltip_ngm_heroes_of_society_effects:0 "£building£ §Y首都建造物§!が提供する£job_politician£ §Y$job_politician$§!枠の一部が £job_ngm_heroes_of_society£§Y$job_ngm_heroes_of_society_plural$§!枠に置き換わる"
 
  planet_ngm_superintendent_of_wilderness:0 "大自然監督官"
  ngm_superintendent_of_wilderness:0 "大自然監督官"
@@ -1548,7 +1548,7 @@
  mod_job_ngm_superintendent_of_wilderness_per_pop:0 "$VALUE$ POP につき$job_ngm_superintendent_of_wilderness$の職業枠§G+1§!"
  mod_job_ngm_superintendent_of_wilderness_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_superintendent_of_wilderness_add£ §G+1§!"
  job_ngm_superintendent_of_wilderness_effect_desc:0 "£job_ngm_superintendent_of_wilderness£ $job_ngm_superintendent_of_wilderness_plural$は £unity£ §Y$unity$§!と£society£ §Y$society_research$§!と £mod_pop_environment_tolerance£ §Y$MOD_POP_ENVIRONMENT_TOLERANCE$§!を産出する"
- civic_tooltip_ngm_superintendent_of_wilderness_effects:0 "£building£ §Y首都建造物§!が提供する£job_administrator£ §Y$job_administrator$§!枠の一部が £job_ngm_superintendent_of_wilderness£§Y$job_ngm_superintendent_of_wilderness_plural$§!枠に置き換わる"
+ civic_tooltip_ngm_superintendent_of_wilderness_effects:0 "£building£ §Y首都建造物§!が提供する£job_politician£ §Y$job_politician$§!枠の一部が £job_ngm_superintendent_of_wilderness£§Y$job_ngm_superintendent_of_wilderness_plural$§!枠に置き換わる"
 
  planet_ngm_influencer:0 "インフルエンサー"
  ngm_influencer:0 "インフルエンサー"
@@ -1561,7 +1561,7 @@
  mod_job_ngm_influencer_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_influencer_add£ §G+1§!"
  job_ngm_influencer_effect_desc:0 "£job_ngm_influencer£ $job_ngm_influencer_plural$は、 §Y統治志向魅力§!を向上し、£influence£ §Y$influence$§!と £society£ §Y$society_research$§! を産出する"
 
- civic_tooltip_ngm_high_priest_effects:0 "£building£ §Y首都建造物§!が提供する£job_administrator£ §Y$job_administrator$§!枠の一部が £job_high_priest£§Y$job_high_priest_plural$§!枠に置き換わる"
+ civic_tooltip_ngm_high_priest_effects:0 "£building£ §Y首都建造物§!が提供する£job_politician£ §Y$job_politician$§!枠の一部が £job_high_priest£§Y$job_high_priest_plural$§!枠に置き換わる"
 
  planet_ngm_tide_engineer:0 "潮流技師"
  ngm_tide_engineer:0 "潮流技師"
@@ -3343,7 +3343,7 @@
  tr_ngm_official_finish_desc:0 "§Y国是slot§!を§G+1§!増加させる \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_human_resources:0 "人事院"
  tr_ngm_human_resources_desc:0 "§Yリーダー雇用コスト§!を§G20%§!減少させる。"
- tr_ngm_human_resources_delayed:0 "官僚や行政官の人事を統括し、効率化を進める"
+ tr_ngm_human_resources_delayed:0 "官僚や政治家の人事を統括し、効率化を進める"
  tr_ngm_note:0 "尚書省"
  tr_ngm_note_desc:0 "§Y布告コスト§!を§G30%§!減少させる。"
  tr_ngm_note_delayed:0 "行政文書を管理し、円滑な行政を実現する"

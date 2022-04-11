@@ -283,7 +283,7 @@ civic_ngm_separation_of_powers = {
 	modifier = {
 		planet_crime_mult = -0.1
 		country_base_influence_produces_add = 1
-		country_election_influence_cost_mult = 1
+		country_election_cost_mult = 1
 	}
 }
 
@@ -310,7 +310,7 @@ civic_ngm_kakistocracy = {
 		planet_crime_mult = 0.5
 		planet_stability_add = -10
 		pop_happiness = -0.2
-		country_election_influence_cost_mult = -0.5
+		country_election_cost_mult = -0.5
 		country_energy_produces_mult = 0.2
 		trade_value_mult = 0.2
 		country_base_influence_produces_add = 1
@@ -888,7 +888,7 @@ civic_ngm_cultural_hegemony = {
 }
 
 # 〇政治制度規定
-# 銀河連邦 federation_of_the_galaxies 	(民主制、受容主義) 派閥影響力収入+10%、リーダー経験値取得+20%、リーダースキル上限+1、行政官の一人を社会的英雄に置換え。	
+# 銀河連邦 federation_of_the_galaxies 	(民主制、受容主義) 派閥影響力収入+10%、リーダー経験値取得+20%、リーダースキル上限+1、政治家の一人を社会的英雄に置換え。	
 civic_ngm_federation_of_the_galaxies = {
 	possible = {
 		ethics = {
@@ -913,7 +913,7 @@ civic_ngm_federation_of_the_galaxies = {
 	}
 }
 
-# 環境民主制 environmental_democracy	(民主制、保全主義) 居住性+5%、Pop成長速度+10%、	行政官の一人を大自然監督官に置換え。
+# 環境民主制 environmental_democracy	(民主制、保全主義) 居住性+5%、Pop成長速度+10%、	政治家の一人を大自然監督官に置換え。
 civic_ngm_environmental_democracy = {
 	possible = {
 		ethics = {
@@ -937,7 +937,7 @@ civic_ngm_environmental_democracy = {
 	}
 }
 
-# 宗教共和制 religious_republicanism 	(民主制、精神主義) 統合力+10%、安定度+5、行政官の一人を大祭司に置換え。
+# 宗教共和制 religious_republicanism 	(民主制、精神主義) 統合力+10%、安定度+5、政治家の一人を大祭司に置換え。
 civic_ngm_religious_republicanism = {
 	possible = {
 		ethics = {
@@ -961,7 +961,7 @@ civic_ngm_religious_republicanism = {
 	}
 }
 
-# 人民民主制 peoples_democracy	(民主制、社会主義) Pop幸福度+5%、労働者生産量+5%、行政官の一人を書記に置換え。
+# 人民民主制 peoples_democracy	(民主制、社会主義) Pop幸福度+5%、労働者生産量+5%、政治家の一人を書記に置換え。
 civic_ngm_peoples_democracy = {
 	possible = {
 		ethics = {
@@ -985,7 +985,7 @@ civic_ngm_peoples_democracy = {
 	}
 }
 
-# サイバー民主制 cyberdemocracy	(民主制、物質主義) 研究力+5%、管理許容量+10%、行政官の一人を科学総裁に置換え。
+# サイバー民主制 cyberdemocracy	(民主制、物質主義) 研究力+5%、管理許容量+10%、政治家の一人を科学総裁に置換え。
 civic_ngm_cyberdemocracy = {
 	possible = {
 		ethics = {
@@ -1010,7 +1010,7 @@ civic_ngm_cyberdemocracy = {
 	}
 }
 
-# 貴族共和制 aristocratic_republicanism	(寡頭制、栄望主義) 影響力+0.5、安定度+5、行政官の一人を紋章官に置換え。
+# 貴族共和制 aristocratic_republicanism	(寡頭制、栄望主義) 影響力+0.5、安定度+5、政治家の一人を紋章官に置換え。
 civic_ngm_aristocratic_republicanism = {
 	possible = {
 		ethics = {
@@ -1034,7 +1034,7 @@ civic_ngm_aristocratic_republicanism = {
 	}
 }
 
-# 書記長制 chief_secretary_system	(寡頭制、社会主義) 安定度+10、消費財生産量+5%、合金生産量+5%、行政官の一人を書記に置換え。
+# 書記長制 chief_secretary_system	(寡頭制、社会主義) 安定度+10、消費財生産量+5%、合金生産量+5%、政治家の一人を書記に置換え。
 civic_ngm_chief_secretary_system = {
 	possible = {
 		ethics = {
@@ -1059,7 +1059,7 @@ civic_ngm_chief_secretary_system = {
 	}
 }
 
-# 戦争卿 war_lord		(独裁制、軍国主義) 宿敵の最大数+3、地上軍編成速度-50%、艦隊建造コスト-5%、行政官の一人を高級参謀に置換え。
+# 戦争卿 war_lord		(独裁制、軍国主義) 宿敵の最大数+3、地上軍編成速度-50%、艦隊建造コスト-5%、政治家の一人を高級参謀に置換え。
 civic_ngm_war_lord = {
 	possible = {
 		ethics = {
@@ -1084,7 +1084,7 @@ civic_ngm_war_lord = {
 	}
 }
 
-# 共産独裁制 communist_dictatorship	(独裁制、社会主義) 防衛軍耐久度+20%、労働者生産量+5%、行政官の一人を書記に置換え。
+# 共産独裁制 communist_dictatorship	(独裁制、社会主義) 防衛軍耐久度+20%、労働者生産量+5%、政治家の一人を書記に置換え。
 civic_ngm_communist_dictatorship = {
 	possible = {
 		ethics = {
@@ -1108,7 +1108,7 @@ civic_ngm_communist_dictatorship = {
 	}
 }
 
-# 衆愚扇動制 demagoguery	(独裁制、実利主義) 安定度+10、行政官の一人を宣撫官に置換え。
+# 衆愚扇動制 demagoguery	(独裁制、実利主義) 安定度+10、政治家の一人を宣撫官に置換え。
 civic_ngm_demagoguery = {
 	possible = {
 		ethics = {
@@ -1131,7 +1131,7 @@ civic_ngm_demagoguery = {
 	}
 }
 
-# 騎士団 order_of_chivalry		(君主制、軍国主義) 艦船連射レート+5%、地上軍士気+20%、行政官の一人を高級参謀に置換え。
+# 騎士団 order_of_chivalry		(君主制、軍国主義) 艦船連射レート+5%、地上軍士気+20%、政治家の一人を高級参謀に置換え。
 civic_ngm_order_of_chivalry = {
 	possible = {
 		ethics = {
@@ -1155,7 +1155,7 @@ civic_ngm_order_of_chivalry = {
 	}
 }
 
-# 名誉帝制 honorary_imperialism	(君主制、栄望主義) 安定度+10、統合力+10%、リーダースキル上限+2、行政官の一人を紋章官に置換え。
+# 名誉帝制 honorary_imperialism	(君主制、栄望主義) 安定度+10、統合力+10%、リーダースキル上限+2、政治家の一人を紋章官に置換え。
 civic_ngm_honorary_imperialism = {
 	possible = {
 		ethics = {
@@ -2726,7 +2726,7 @@ civic_ngm_development_dictatorship = {
 	}
 }
 
-# 重商主義		commercialism(この国では貿易により通貨を蓄えることを重視しており、貿易利潤を求めている。)(資本)			行政官が交易価値+3を産む、交易価値+10%、市場手数料+5%
+# 重商主義		commercialism(この国では貿易により通貨を蓄えることを重視しており、貿易利潤を求めている。)(資本)			政治家が交易価値+3を産む、交易価値+10%、市場手数料+5%
 civic_ngm_commercialism = {
 	possible = {
 		ethics = {

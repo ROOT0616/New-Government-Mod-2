@@ -44,7 +44,7 @@ tr_ngm_law_government = {
 # 5.憲法:布告許容量+1
 tr_ngm_constitution = {
 	modifier = {
-		country_edict_cap_add = 1
+		country_edict_fund_add = 50
 	}
 }
 
@@ -293,10 +293,10 @@ tr_ngm_classic_finish = {
 	}
 }
 
-# 1.写実:40Popにつき文化人+1
+# 1.写実:50Popにつき文化人+1
 tr_ngm_realism = {
 	modifier = {
-		job_culture_worker_per_pop = 0.04
+		job_culture_worker_per_pop = 0.02
 	}
 }
 
@@ -382,7 +382,7 @@ tr_ngm_high_education = {
 # 取得時：布告許容量+1
 tr_ngm_memory_first = {
 	modifier = {
-		country_edict_cap_add = 1
+		country_edict_fund_add = 50
 	}
 }
 
@@ -784,7 +784,7 @@ tr_ngm_note = {
 # 3.公文書館:布告許容量+1
 tr_ngm_document = {
 	modifier = {
-		country_edict_cap_add = 1
+		country_edict_fund_add = 50
 	}
 }
 
@@ -1235,7 +1235,7 @@ tr_ngm_purify_corruption = {
 # 3.きめ細やかな法令:布告許容量+1
 tr_ngm_cancellation_of_administratively_infarction = {
 	modifier = {
-		country_edict_cap_add = 1
+		country_edict_fund_add = 50
 	}
 }
 
@@ -1486,7 +1486,7 @@ tr_ngm_diplomatic_pressure = {
 # 4.圧力を支える行政力:管理許容量+20
 tr_ngm_administration_to_support_pressure = {
 	modifier = {
-		country_admin_cap_add = 20
+		empire_size_mult = -0.05
 	}
 }
 
@@ -1683,7 +1683,7 @@ tr_ngm_legislation_adopt = {
 tr_ngm_legislation_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		country_edict_cap_add = 2
+		country_edict_fund_add = 100
 	}
 }
 
@@ -1707,7 +1707,7 @@ tr_ngm_preliminary_legal_review = {
 # 3.法務局の拡充:布告許容量+1
 tr_ngm_expansion_of_the_legal_affairs_bureau = {
 	modifier = {
-		country_edict_cap_add = 1
+		country_edict_fund_add = 50
 	}
 }
 

@@ -1,6 +1,6 @@
 #1.遊園宮        (帝国補正:市場手数料-10%、外交発言力+10%)garden palace
 #(惑星補正:住居+5、快適度+10、交易価値+10%)
-#(貴族+1、行政官+1、紋章官+1、高級参謀+1、事務員+5、エグゼクティブキャスト+2、キャスト+3)
+#(貴族+1、政治家+1、紋章官+1、高級参謀+1、事務員+5、エグゼクティブキャスト+2、キャスト+3)
 #(膨大な遊園地を管理し、VIPを接待するために作られた壮麗かつ機能的な宮殿)
 building_ngm_garden_palace = {
 	base_buildtime = 360
@@ -246,7 +246,7 @@ building_ngm_ocean_galactic_yoshiwara = {
 	}
 }
 
-#6.観光管理局			(sight_office)	(移民流入+50%、交易価値+10%)		(行政官+1、官僚+2、事務員+3)					(観光客に関する行政事務処理や手続き、書類整理を行う官庁)
+#6.観光管理局			(sight_office)	(移民流入+50%、交易価値+10%)		(政治家+1、官僚+2、事務員+3)					(観光客に関する行政事務処理や手続き、書類整理を行う官庁)
 building_ngm_ocean_sight_office= {
 	base_buildtime = 360
 	base_cap_amount = 1
@@ -269,7 +269,7 @@ building_ngm_ocean_sight_office= {
 	planet_modifier = {
 		planet_immigration_pull_mult = 0.5
 		trade_value_mult = 0.1
-		job_administrator_add = 1
+		job_politician_add = 1
 		job_bureaucrat_add = 2
 		job_clerk_add = 3
 	}

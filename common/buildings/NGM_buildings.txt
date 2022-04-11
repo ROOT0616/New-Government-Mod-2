@@ -29,7 +29,7 @@ building_bureau_of_ceremonies = {
 }
 
 # 初期建築物「永久の宮殿」 Perpetual Palace （古代から続くこの地を治める者のための宮殿で、列強の君主や元首が集い交渉を行うことも多かったためか、壮麗な建築でいまだに陰りを見せていない。）
-# 維持費：エネルギー10、消費財5。住居+5、快適度+5、貴族Job+1、行政官+1、紋章官+1、高級参謀+1、事務員+10、建築物Slot+16、
+# 維持費：エネルギー10、消費財5。住居+5、快適度+5、貴族Job+1、政治家+1、紋章官+1、高級参謀+1、事務員+10、建築物Slot+16、
 building_ngm_perpetual_palace = {
 	base_buildtime = @b2_time
 	can_build = no
@@ -44,7 +44,7 @@ building_ngm_perpetual_palace = {
 		planet_housing_add = 5
 		planet_amenities_add = 5
 		job_noble_add = 1
-		job_administrator_add = 1
+		job_politician_add = 1
 		job_ngm_crest_bearer_add = 1
 		job_ngm_senior_advisor_add = 1
 		job_clerk_add = 10
@@ -61,7 +61,7 @@ building_ngm_perpetual_palace = {
 		trigger = {
 			exists = owner
 		}
-		text = job_administrator_effect_desc
+		text = job_politician_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
@@ -844,7 +844,7 @@ building_ngm_avant_garde_art_square = {
 	}
 }
 
-#   ③帝国音楽堂	Iimperial_concert_hall	(鉱物500)(惑星に1つ)(消費財2)(荘厳な音楽で人々を圧倒し、感動させる芸術施設)	(惑星効果:統合力+10%)(統合力+5)		(文化人+2)
+#   ③帝国音楽堂	Iimperial_concert_hall	(鉱物500)(惑星に1つ)(消費財2)(荘厳な音楽で人々を圧倒し、感動させる芸術施設)	(惑星効果:統合力+5%)(統合力+10)		(文化人+1)
 building_ngm_Iimperial_concert_hall = {
 	base_buildtime = 360
 	base_cap_amount = 1
@@ -880,9 +880,8 @@ building_ngm_Iimperial_concert_hall = {
 		}
 	}
 	planet_modifier = {
-		planet_jobs_unity_produces_mult = 0.1
-		country_unity_produces_add = 5
-		job_culture_worker_add = 2
+		planet_jobs_unity_produces_mult = 0.05
+		country_unity_produces_add = 10
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -892,7 +891,7 @@ building_ngm_Iimperial_concert_hall = {
 			}
 		}
 		modifier = {
-			job_culture_worker_add = 2
+			job_culture_worker_add = 1
 		}
 	}
 	triggered_planet_modifier = {
@@ -903,7 +902,7 @@ building_ngm_Iimperial_concert_hall = {
 			}
 		}
 		modifier = {
-			job_evaluator_add = 2
+			job_evaluator_add = 1
 		}
 	}
 	triggered_desc = {
@@ -920,7 +919,7 @@ building_ngm_Iimperial_concert_hall = {
 	}
 }
 
-#   ④帝国芸術博物館	imperial_art_museum	(鉱物500)(惑星に1つ)(消費財2)(威圧感と芸術性で人々を夢中にさせる博物館)		(惑星効果:統合力+10%)(統合力+10)	(文化人+3)
+#   ④帝国芸術博物館	imperial_art_museum	(鉱物500)(惑星に1つ)(消費財2)(威圧感と芸術性で人々を夢中にさせる博物館)		(惑星効果:統合力+15%)(統合力+10)
 building_ngm_imperial_art_museum = {
 	base_buildtime = 360
 	base_cap_amount = 1
@@ -956,36 +955,8 @@ building_ngm_imperial_art_museum = {
 		}
 	}
 	planet_modifier = {
-		planet_jobs_unity_produces_mult = 0.1
+		planet_jobs_unity_produces_mult = 0.15
 		country_unity_produces_add = 10
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-			}
-		}
-		modifier = {
-			job_culture_worker_add = 3
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		modifier = {
-			job_evaluator_add = 3
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-		}
-		text = job_culture_worker_effect_desc
 	}
 	ai_resource_production = {
 		unity = 20

@@ -38,7 +38,7 @@ ethic_fanatic_socialism = {
 	}
 
 	random_weight = {
-		value = 150
+		base = 150
 	}
 }
 
@@ -60,7 +60,7 @@ ethic_socialism = {
 	}
 
 	random_weight = {
-		value = 100
+		base = 100
 	}
 
 	pop_attraction_tag = {
@@ -155,7 +155,7 @@ ethic_socialism = {
 	}
 
 	country_attraction = {
-		value = 1
+		base = 1
 		modifier = {
 			factor = 0
 			NOR = {
@@ -242,7 +242,7 @@ ethic_socialism = {
 
 	# from = planet
 	pop_attraction = {
-		value = 1
+		base = 1
 
 		modifier = {
 			factor = 0
@@ -318,7 +318,7 @@ ethic_fanatic_capitalism = {
 	}
 
 	random_weight = {
-		value = 150
+		base = 150
 	}
 }
 
@@ -340,7 +340,7 @@ ethic_capitalism = {
 	}
 
 	random_weight = {
-		value = 100
+		base = 100
 	}
 
 	pop_attraction_tag = {
@@ -435,7 +435,7 @@ ethic_capitalism = {
 	}
 
 	country_attraction = {
-		value = 1
+		base = 1
 		modifier = {
 			factor = 0
 			NOR = {
@@ -522,7 +522,7 @@ ethic_capitalism = {
 
 	# from = planet
 	pop_attraction = {
-		value = 1
+		base = 1
 
 		modifier = {
 			factor = 0
@@ -589,7 +589,7 @@ ethic_fanatic_interventionism = {
 	}
 
 	random_weight = {
-		value = 150
+		base = 150
 	}
 }
 
@@ -609,7 +609,7 @@ ethic_interventionism = {
 	}
 
 	random_weight = {
-		value = 100
+		base = 100
 	}
 
 	pop_attraction_tag = {
@@ -704,7 +704,7 @@ ethic_interventionism = {
 	}
 
 	country_attraction = {
-		value = 1
+		base = 1
 		modifier = {
 			factor = 0
 			NOR = {
@@ -791,7 +791,7 @@ ethic_interventionism = {
 
 	# from = planet
 	pop_attraction = {
-		value = 1
+		base = 1
 
 		modifier = {
 			factor = 0
@@ -858,7 +858,7 @@ ethic_fanatic_neutralism = {
 	}
 
 	random_weight = {
-		value = 150
+		base = 150
 	}
 }
 
@@ -877,7 +877,7 @@ ethic_neutralism = {
 	}
 
 	random_weight = {
-		value = 100
+		base = 100
 	}
 
 	pop_attraction_tag = {
@@ -972,7 +972,7 @@ ethic_neutralism = {
 	}
 
 	country_attraction = {
-		value = 1
+		base = 1
 		modifier = {
 			factor = 0
 			NOR = {
@@ -1059,7 +1059,7 @@ ethic_neutralism = {
 
 	# from = planet
 	pop_attraction = {
-		value = 1
+		base = 1
 
 		modifier = {
 			factor = 0
@@ -1126,7 +1126,7 @@ ethic_fanatic_conservationism = {
 	}
 
 	random_weight = {
-		value = 150
+		base = 150
 	}
 }
 
@@ -1146,7 +1146,7 @@ ethic_conservationism = {
 	}
 
 	random_weight = {
-		value = 100
+		base = 100
 	}
 
 	pop_attraction_tag = {
@@ -1241,7 +1241,7 @@ ethic_conservationism = {
 	}
 
 	country_attraction = {
-		value = 1
+		base = 1
 		modifier = {
 			factor = 0
 			NOR = {
@@ -1328,7 +1328,7 @@ ethic_conservationism = {
 
 	# from = planet
 	pop_attraction = {
-		value = 1
+		base = 1
 
 		modifier = {
 			factor = 0
@@ -1396,7 +1396,7 @@ ethic_fanatic_developmentalism = {
 	}
 
 	random_weight = {
-		value = 150
+		base = 150
 	}
 }
 
@@ -1416,7 +1416,7 @@ ethic_developmentalism = {
 	}
 
 	random_weight = {
-		value = 100
+		base = 100
 	}
 
 	pop_attraction_tag = {
@@ -1511,7 +1511,7 @@ ethic_developmentalism = {
 	}
 
 	country_attraction = {
-		value = 1
+		base = 1
 		modifier = {
 			factor = 0
 			NOR = {
@@ -1598,7 +1598,7 @@ ethic_developmentalism = {
 
 	# from = planet
 	pop_attraction = {
-		value = 1
+		base = 1
 
 		modifier = {
 			factor = 0
@@ -1675,7 +1675,7 @@ ethic_fanatic_honorism = {
 	}
 
 	random_weight = {
-		value = 150
+		base = 150
 	}
 }
 
@@ -1698,7 +1698,7 @@ ethic_honorism = {
 	}
 
 	random_weight = {
-		value = 100
+		base = 100
 	}
 
 	pop_attraction_tag = {
@@ -1793,7 +1793,7 @@ ethic_honorism = {
 	}
 
 	country_attraction = {
-		value = 1
+		base = 1
 		modifier = {
 			factor = 0
 			NOR = {
@@ -1880,7 +1880,7 @@ ethic_honorism = {
 
 	# from = planet
 	pop_attraction = {
-		value = 1
+		base = 1
 
 		modifier = {
 			factor = 0
@@ -1956,7 +1956,7 @@ ethic_fanatic_utilitarianism = {
 	}
 
 	random_weight = {
-		value = 150
+		base = 150
 	}
 }
 
@@ -1984,7 +1984,7 @@ ethic_utilitarianism = {
 	}
 
 	random_weight = {
-		value = 100
+		base = 100
 	}
 
 	pop_attraction_tag = {
@@ -2079,7 +2079,7 @@ ethic_utilitarianism = {
 	}
 
 	country_attraction = {
-		value = 1
+		base = 1
 		modifier = {
 			factor = 0
 			NOR = {
@@ -2166,7 +2166,7 @@ ethic_utilitarianism = {
 
 	# from = planet
 	pop_attraction = {
-		value = 1
+		base = 1
 
 		modifier = {
 			factor = 0
