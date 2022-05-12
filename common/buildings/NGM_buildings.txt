@@ -1,4 +1,4 @@
-#儀典局	  式部官x2 エネルギ200  鉱石400
+# 1.儀典局	  式部官x2 エネルギ200  鉱石400
 #式武官   統合力10 影響力1 → 勲章0.02
 building_bureau_of_ceremonies = {
 	base_buildtime = 360
@@ -28,7 +28,7 @@ building_bureau_of_ceremonies = {
 	}
 }
 
-# 初期建築物「永久の宮殿」 Perpetual Palace （古代から続くこの地を治める者のための宮殿で、列強の君主や元首が集い交渉を行うことも多かったためか、壮麗な建築でいまだに陰りを見せていない。）
+# 2.初期建築物「永久の宮殿」 Perpetual Palace 
 # 維持費：エネルギー10、消費財5。住居+5、快適度+5、貴族Job+1、政治家+1、紋章官+1、高級参謀+1、事務員+10、建築物Slot+16、
 building_ngm_perpetual_palace = {
 	base_buildtime = @b2_time
@@ -89,7 +89,7 @@ building_ngm_perpetual_palace = {
 	}
 }
 
-# 銀河百貨店	ginga_department_store	(全銀河の嗜好品が集まる集合商業施設)						(惑星につき一つ:支社の価値+20%、惑星快適度+5、事務員+3)
+# 3.銀河百貨店	ginga_department_store							(惑星につき一つ:支社の価値+20%、惑星快適度+5、事務員+3)
 building_ngm_ginga_department_store = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -126,7 +126,7 @@ building_ngm_ginga_department_store = {
 	}
 }
 
-# 企業大学校  business_school		(経済や経営を学ぶ者の専門大学)							(惑星につき一つ:企業国家の研究算出各々+10、研究者+1)				:この企業は高度な技術を運用した工業製品を取り扱っており、極めて高度な製品はあらゆる産業の礎となっている。
+# 4.企業大学校  business_school		(惑星につき一つ:企業国家の研究算出各々+10、研究者+1)				:この企業は高度な技術を運用した工業製品を取り扱っており、極めて高度な製品はあらゆる産業の礎となっている。
 building_ngm_business_school = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -163,7 +163,7 @@ building_ngm_business_school = {
 	}
 }
 
-# 星間工場群	star_workshop	(惑星規模に広がるコンビナート群)						(惑星につき一つ:企業国家の合金+5、企業国家の消費財+5、職人+1、冶金技師+1)	:この企業は重化学工業を中心とした大規模な工業製品を取り扱っており、その工場が惑星表面を覆うほどの工業化が進んでいる。
+# 5.星間工場群	star_workshop	(惑星規模に広がるコンビナート群)						(惑星につき一つ:企業国家の合金+5、企業国家の消費財+5、職人+1、冶金技師+1)	:この企業は重化学工業を中心とした大規模な工業製品を取り扱っており、その工場が惑星表面を覆うほどの工業化が進んでいる。
 building_ngm_star_workshop = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -206,7 +206,7 @@ building_ngm_star_workshop = {
 	}
 }
 
-# 銀河サロン  galaxy_salon		(上流階級の者が集う社交界)							(惑星につき一つ:企業国家の統合力+5、企業国家の外交発言力+10、豪商+1、役員+1)	:この企業は創業家を中心に会社に多大な貢献を行った社員一家を特別役員として扱っており、企業内の団結や対外交渉などに活躍している、一種の君主制国家の様相を呈している。
+# 6.銀河サロン  galaxy_salon		(惑星につき一つ:企業国家の統合力+5、企業国家の外交発言力+5%、豪商+1、役員+1)	:この企業は創業家を中心に会社に多大な貢献を行った社員一家を特別役員として扱っており、企業内の団結や対外交渉などに活躍している、一種の君主制国家の様相を呈している。
 building_ngm_galaxy_salon = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -251,7 +251,7 @@ building_ngm_galaxy_salon = {
 	}
 }
 
-# M&Aセンター m_a_center		(他社を評価、買収することを目的とした企業)					(惑星につき一つ:企業国家の外交発言力+10%、惑星の交易価値+30%、豪商+1、事務員+2)	:この企業は一部の持株会社が多くの企業を支配する形をとっており、ごく少数の役員やエリートによる決定が絶対視されている。
+# 7.M&Aセンター m_a_center		(惑星につき一つ:企業国家の外交発言力+10%、惑星の交易価値+30%、豪商+1、事務員+2)	:この企業は一部の持株会社が多くの企業を支配する形をとっており、ごく少数の役員やエリートによる決定が絶対視されている。
 building_ngm_m_a_center = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -294,7 +294,7 @@ building_ngm_m_a_center = {
 	}
 }
 
-# 銀河銀行  galactic_bank		(銀河規模に広がる投資、貯蓄、資産運用を行う銀行)				(惑星につき一つ:企業国家のエネルギー+10、惑星の交易価値+5%、事務員+3)		:この企業はコンサルティングや債権、電子通貨、金融商品等を取り扱うことに長けており、それらの産業が中心となって企業が運営されている。
+# 8.銀河銀行  galactic_bank		(惑星につき一つ:企業国家のエネルギー+10、惑星の交易価値+5%、事務員+3)		:この企業はコンサルティングや債権、電子通貨、金融商品等を取り扱うことに長けており、それらの産業が中心となって企業が運営されている。
 building_ngm_galactic_bank = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -330,7 +330,7 @@ building_ngm_galactic_bank = {
 	}
 }
 
-# 星間広告代理店	interstellar_advertising_agency	(情報を加工し、大衆に敷衍しやすい言葉で洗脳を行う企業)				(惑星につき一つ:企業国家の快適度+10、惑星の快適度+5、事務員+3)			:この企業はSNSや広告、システムエンジニアリングなどの目に見えないものを取り扱うことが多く、総じてそれらに対する造詣が深い。
+# 9.星間広告代理店	interstellar_advertising_agency	(惑星につき一つ:企業国家の快適度+10、惑星の快適度+5、事務員+3)			:この企業はSNSや広告、システムエンジニアリングなどの目に見えないものを取り扱うことが多く、総じてそれらに対する造詣が深い。
 building_ngm_IAA = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -366,7 +366,7 @@ building_ngm_IAA = {
 	}
 }
 
-# 企業病院	corporate_hospital	(できるだけ安価に高品質な医療や福祉を行うことを目的とした社有の医療機関)	(惑星につき一つ:企業国家の社会学+10、惑星のPop成長速度+5%、医療従事者+1)	:この企業は利益だけではなく社員や顧客の幸福や利益を追求することを目指している。
+# 10.企業病院	corporate_hospital	(惑星につき一つ:企業国家の社会学+10、惑星のPop成長速度+5%、医療従事者+1)	:この企業は利益だけではなく社員や顧客の幸福や利益を追求することを目指している。
 building_ngm_corporate_hospital = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -402,7 +402,7 @@ building_ngm_corporate_hospital = {
 	}
 }
 
-# 惑星規模建築センター planetary_scale_building_center	(惑星で何らかの建築が行われる際に重機や物資、人員を提供する企業)		(惑星につき一つ:企業建築可能slotを3つ追加、企業国家の鉱物+20、惑星の区域建造コスト-10%、事務員+2)		:この企業はインフラ建築や材料調達に関しての専門企業で、大規模な建築が行われる際にはこの企業の関与がないことはほとんどない。
+# 11.惑星規模建築センター planetary_scale_building_center	(惑星で何らかの建築が行われる際に重機や物資、人員を提供する企業)		(惑星につき一つ:企業建築可能slotを3つ追加、企業国家の鉱物+20、惑星の区域建造コスト-10%、事務員+2)		:この企業はインフラ建築や材料調達に関しての専門企業で、大規模な建築が行われる際にはこの企業の関与がないことはほとんどない。
 building_ngm_planetary_scale_building_center = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -439,7 +439,7 @@ building_ngm_planetary_scale_building_center = {
 	}
 }
 
-# 企業農園	corporate_plantation	(社有の大規模な農園で、惑星特有の農作物取り扱っている。)			(惑星につき一つ:企業国家の食料+20、農民+3)					:この企業は農業を中心としており、自然と共生しつつ農業生産を行うことで環境系企業として存続している。
+# 12.企業農園	corporate_plantation	(社有の大規模な農園で、惑星特有の農作物取り扱っている。)			(惑星につき一つ:企業国家の食料+20、農民+3)					:この企業は農業を中心としており、自然と共生しつつ農業生産を行うことで環境系企業として存続している。
 building_ngm_corporate_plantation = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -474,7 +474,7 @@ building_ngm_corporate_plantation = {
 	}
 }
 
-# 社有宇宙港  society_cosmic_port		(物資や旅客を効率的かつ高速に取り扱うための会社専用の宇宙港)			(惑星につき一つ:惑星の交易価値+10、支社の価値+30%、事務員+2)			:この企業は物資等の輸送や運輸、旅客運送により利益を得ており、輸送分野における実績は並ぶものがない。
+# 13.社有宇宙港  society_cosmic_port		(物資や旅客を効率的かつ高速に取り扱うための会社専用の宇宙港)			(惑星につき一つ:惑星の交易価値+10、支社の価値+30%、事務員+2)			:この企業は物資等の輸送や運輸、旅客運送により利益を得ており、輸送分野における実績は並ぶものがない。
 building_ngm_society_cosmic_port = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -508,7 +508,7 @@ building_ngm_society_cosmic_port = {
 	}
 }
 
-# 惑星信託銀行	planet_trust_bank	(惑星単位で資産や有価証券を運用して利益を追求する企業)				(惑星につき一つ:惑星の交易価値+30%、支社の価値+30%、豪商+1、事務員+3)		:この企業は出資者やクライアントの資産を最大化することを目指しており、倫理観を無視した投資運用を行い、利益を追求する。
+# 14.惑星信託銀行	planet_trust_bank	(惑星単位で資産や有価証券を運用して利益を追求する企業)				(惑星につき一つ:惑星の交易価値+30%、支社の価値+30%、豪商+1、事務員+3)		:この企業は出資者やクライアントの資産を最大化することを目指しており、倫理観を無視した投資運用を行い、利益を追求する。
 building_ngm_planet_trust_bank = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -549,7 +549,7 @@ building_ngm_planet_trust_bank = {
 	}
 }
 
-# 企業諜報機関	corporate_espionage	(自社以外のあらゆる情報を収集し、他者に売却する企業)				(惑星につき一つ:企業帝国の解読力+5、惑星の犯罪度+5、事務員+2)			:この企業は国家や企業の情報を奪い、それを利用してあらゆる利益を獲得している。
+# 15.企業諜報機関	corporate_espionage	(自社以外のあらゆる情報を収集し、他者に売却する企業)				(惑星につき一つ:企業帝国の解読力+5、惑星の犯罪度+5、事務員+2)			:この企業は国家や企業の情報を奪い、それを利用してあらゆる利益を獲得している。
 building_ngm_corporate_espionage = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -585,7 +585,7 @@ building_ngm_corporate_espionage = {
 	}
 }
 
-# 惑星格付会社	planet_rating_agency	(あらゆるものを格付けし、判断基準を創出する企業)				(惑星につき一つ:企業帝国の統合力+10、惑星の統合力+5%、事務員+2)
+# 16.惑星格付会社	planet_rating_agency	(あらゆるものを格付けし、判断基準を創出する企業)				(惑星につき一つ:企業帝国の統合力+10、惑星の統合力+5%、事務員+2)
 building_ngm_planet_rating_agency = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -621,12 +621,11 @@ building_ngm_planet_rating_agency = {
 	}
 }
 
-# 名称：サービス付き高官向け料亭（帝国首都にのみ建造可能）
+# 17.サービス付き高官向け料亭（帝国首都にのみ建造可能）
 # 生産物：統合力+10
 # 維持費：エネルギー10
 # 企業帝国補正：外交発言力+25%
 # 惑星補正：犯罪度+100、犯罪度+15%、惑星を所有する国家の暗号力-7、安定度+20、豪商の職業枠+1、役員+1、事務員+2
-# 説明文：政府高官や富裕層の贈賄や裏交渉の場として利用される娯楽施設。裏カジノや闇銀行も併設されており、犯罪企業や現地政府の影響力を拡大させるとともに、腐敗を進行させていっている......
 building_ngm_sa_ko_ryo = {
 	base_buildtime = @b1_time
 	branch_office_building = yes
@@ -686,7 +685,7 @@ building_ngm_sa_ko_ryo = {
 }
 
 # 伝統等でアンロックされる建築
-#   ①劇場通	theatergoer	(鉱物500)(惑星に1つ)(消費財2)(学生や貧乏芸術家が集まり、自己表現を行う地域)	(惑星効果:快適度+10%)(住居+3、快適度+5)	(エンターテイナー+3)
+# 18.劇場通	theatergoer	(鉱物500)(惑星に1つ)(消費財2)	(惑星効果:快適度+10%)(住居+3、快適度+5)	(エンターテイナー+3)
 building_ngm_theatergoer = {
 	base_buildtime = 360
 	base_cap_amount = 1
@@ -761,7 +760,7 @@ building_ngm_theatergoer = {
 	}
 }
 
-#   ②前衛芸術広場	avant_garde_art_square	(鉱物500)(惑星に1つ)(消費財2)(これは、なんでしょう?)				(惑星効果:快適度+10%)(快適度+10)	(エンターテイナー+2、文化人+1)
+# 19.前衛芸術広場	avant_garde_art_square	(鉱物500)(惑星に1つ)(消費財2)				(惑星効果:快適度+10%)(快適度+10)	(エンターテイナー+2、文化人+1)
 building_ngm_avant_garde_art_square = {
 	base_buildtime = 360
 	base_cap_amount = 1
@@ -844,7 +843,7 @@ building_ngm_avant_garde_art_square = {
 	}
 }
 
-#   ③帝国音楽堂	Iimperial_concert_hall	(鉱物500)(惑星に1つ)(消費財2)(荘厳な音楽で人々を圧倒し、感動させる芸術施設)	(惑星効果:統合力+5%)(統合力+10)		(文化人+1)
+# 20.帝国音楽堂	Iimperial_concert_hall	(鉱物500)(惑星に1つ)(消費財2)	(惑星効果:統合力+5%)(統合力+10)		(文化人+1)
 building_ngm_Iimperial_concert_hall = {
 	base_buildtime = 360
 	base_cap_amount = 1
@@ -919,7 +918,7 @@ building_ngm_Iimperial_concert_hall = {
 	}
 }
 
-#   ④帝国芸術博物館	imperial_art_museum	(鉱物500)(惑星に1つ)(消費財2)(威圧感と芸術性で人々を夢中にさせる博物館)		(惑星効果:統合力+15%)(統合力+10)
+# 21.帝国芸術博物館	imperial_art_museum	(鉱物500)(惑星に1つ)(消費財2)		(惑星効果:統合力+15%)(統合力+10)
 building_ngm_imperial_art_museum = {
 	base_buildtime = 360
 	base_cap_amount = 1
@@ -966,7 +965,7 @@ building_ngm_imperial_art_museum = {
 	}
 }
 
-#   ⑤先端工場	premise_workshop	(鉱物500)(惑星に1つ)(エネルギー5)(最先端の工場は最先端の物品を生み出すのだろうか)(惑星効果:合金生産量+5%、消費財生産量+5%)(職人+2、合金技師+2、各種精製技師+1ずつ)
+# 22.先端工場	premise_workshop	(鉱物500)(惑星に1つ)(エネルギー5)(惑星効果:合金生産量+5%、消費財生産量+5%)(職人+2、合金技師+2、各種精製技師+1ずつ)
 building_ngm_premise_workshop = {
 	base_buildtime = 360
 	base_cap_amount = 1
@@ -1074,5 +1073,458 @@ building_ngm_premise_workshop = {
 		trigger = { 
 			always = yes
 		}
+	}
+}
+
+# 23.遊園宮        (帝国補正:市場手数料-10%、外交発言力+10%)garden palace
+#(惑星補正:住居+5、快適度+10、交易価値+10%)
+#(貴族+1、政治家+1、紋章官+1、高級参謀+1、事務員+5、エグゼクティブキャスト+2、キャスト+3)
+building_ngm_garden_palace = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	position_priority = 0
+	can_build = no
+	category = government
+	potential = {
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	country_modifier = {
+		country_trade_fee = -0.1
+		diplo_weight_mult = 0.1
+	}
+	planet_modifier = {
+		planet_max_buildings_add = 3
+		job_noble_add = 1
+		job_ngm_crest_bearer_add = 1
+		job_ngm_executive_cast_add = 2
+		job_ngm_cast_add = 3
+		job_bureaucrat_add =1
+		job_ngm_senior_advisor_add = 1
+		job_clerk_add = 5
+		trade_value_mult = 0.1
+		planet_housing_add = 5
+		planet_amenities_add = 10
+	}
+}
+
+# 24.アクアリウム中央ゲート(帝国補正:移民流入魅力+30%、)    (惑星補正:交易価値+30%、移民流入+20%)
+building_ngm_aquarium_central_gate = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	position_priority = 1
+	can_build = no
+	category = government
+	potential = {
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	country_modifier = {
+		planet_immigration_pull_mult = 0.3
+	}
+	planet_modifier = {
+		trade_value_mult = 0.3
+		planet_immigration_pull_mult = 0.2
+	}
+}
+
+# 25.海洋大神殿        (帝国補正:統合力+20%、影響力+1)    (惑星補正:統合力+25%、安定度+10)    (大祭司+1、司祭+4) 
+building_ngm_great_ocean_temple = {	
+	base_buildtime = 360
+	base_cap_amount = 1
+	position_priority = 2
+	can_build = no
+	category = government
+	potential = {
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	country_modifier = {
+		country_unity_produces_mult = 0.2
+		country_base_influence_produces_add = 1
+	}
+	planet_modifier = {
+		planet_stability_add = 10
+		planet_jobs_unity_produces_mult = 0.25
+		job_high_priest_add = 1
+		job_priest_add = 4
+	}
+}
+
+# 26.惑星児童遊園			(child_park)	(Pop成長速度+5%、快適度+10%)		(エンターテイナー+1、スタッフ+2)
+building_ngm_ocean_child_park = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = amenity
+	potential ={
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	planet_modifier = {
+		pop_growth_speed = 0.05
+		planet_amenities_mult = 0.1
+		job_entertainer_add = 1
+		job_ngm_cast_add = 2
+	}
+}
+
+# 27.アクアリウムテーマパーク	(aqua_park)	(交易価値+20%、移民流入+10%)		(エンターテイナー+1、エグゼクティブスタッフ+1、スタッフ+2)
+building_ngm_ocean_aqua_park= {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = amenity
+	potential ={
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	planet_modifier = {
+		trade_value_mult = 0.2
+		planet_immigration_pull_mult = 0.1
+		job_entertainer_add = 1
+		job_ngm_executive_cast_add = 1
+		job_ngm_cast_add = 2
+	}
+}
+
+# 28.タワーカジノ			(tower_casino)	(交易価値+30%、犯罪度+40%、移民流入+20%)(エグゼクティブスタッフ+3、スタッフ+2)				(上流階級から中下流階級までもを網羅した大規模な賭博場)
+building_ngm_ocean_tower_casino = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = trade
+	potential ={
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1200
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+
+	planet_modifier = {
+		trade_value_mult = 0.3
+		planet_crime_mult = 0.4
+		planet_immigration_pull_mult = 0.2
+		job_ngm_executive_cast_add = 3
+		job_ngm_cast_add = 2
+	}
+}
+
+# 29.帝立競技場			(imp_stad)	(交易価値+20%、統合力+10%)		(エンターテイナー+2、スタッフ+2)				(銀河皇帝の愛した帝冠様式で作られた壮麗で様々な式典や競技を行うことができるスタジアム)
+building_ngm_ocean_imp_stad = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = trade
+	potential ={
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		trade_value_mult = 0.2
+		planet_jobs_unity_produces_mult = 0.1
+	}
+}
+
+# 30.泡園				(bubble_land)	(交易価値+10%、犯罪度+10%、移民流入+10%)(エンターテイナー+2、エグゼクティブキャスト+2)			(大人向けの娯楽を提供する夜間を中心とした娯楽施設)
+building_ngm_ocean_galactic_yoshiwara = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = trade
+	potential ={
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		trade_value_mult = 0.2
+		planet_crime_mult = 0.1
+		planet_immigration_pull_mult = 0.1
+		job_entertainer_add = 2
+		job_ngm_executive_cast_add = 2
+	}
+}
+
+# 31.観光管理局			(sight_office)	(移民流入+50%、交易価値+10%)		(政治家+1、官僚+2、事務員+3)					(観光客に関する行政事務処理や手続き、書類整理を行う官庁)
+building_ngm_ocean_sight_office= {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = trade
+	potential ={
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_immigration_pull_mult = 0.5
+		trade_value_mult = 0.1
+		job_politician_add = 1
+		job_bureaucrat_add = 2
+		job_clerk_add = 3
+	}
+}
+
+# 32.惑星健康ランド		(medical_land)	(Pop成長速度+15%、幸福度+10%)		(医療従事者+3、スタッフ+3)					(心身の疾患を治癒し、静養を目的とした観光客が集う観光用医療施設)
+building_ngm_ocean_medical_land= {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = trade
+	potential ={
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		pop_growth_speed = 0.15
+		pop_happiness = 0.1
+		job_ngm_cast_add = 3
+		job_healthcare_add = 3
+	}
+}
+
+# 33.銀河教養センター		(research_cente)(統合力+10%、研究+5%)			(科学総裁+1、文化人+2、研究者+1)				(教養市民層や上流階級が集うハイセンスでハイカルチャーな観光施設)
+building_ngm_ocean_research_cente= {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = trade
+	potential ={
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
+		job_head_researcher_add = 1
+		job_culture_worker_add = 2
+		job_researcher_add = 1
+	}
+}
+
+# 34.ホテル群			(hotel_ippai)	(住居+20、快適度+10、移民流入+20%)	(エグゼクティブスタッフ+1、スタッフ+3)				()
+building_ngm_ocean_hotel_street= {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = trade
+	potential ={
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 20
+		planet_amenities_add = 10
+		planet_immigration_pull_mult = 0.2
+		job_ngm_executive_cast_add = 1
+		job_ngm_cast_add = 3
+
+	}
+}
+
+# 35.高級リゾート			(high_resort)	(住居+10、快適度+20、移民流入+10%)	(エグゼクティブスタッフ+3、スタッフ+2)				()
+building_ngm_ocean_high_resort= {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = trade
+	potential ={
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 10
+		planet_amenities_add = 20
+		planet_immigration_pull_mult = 0.1
+		job_ngm_executive_cast_add = 3
+		job_ngm_cast_add = 2
+
+	}
+}
+
+# 36.レジャーランド		(resure_land)	(快適度+20%、Pop成長速度+5%)		(エグゼクティブスタッフ+1、スタッフ+2)				()
+building_ngm_ocean_resure_land = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = trade
+	potential ={
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_mult = 0.2
+		pop_growth_speed = 0.05
+		job_ngm_executive_cast_add = 1
+		job_ngm_cast_add = 2
+
+	}
+}
+
+# 37.商用軌道エレベーター		(orbit_elev)	(交易価値+20%)				(豪商+1、事務員+5) 						()
+building_ngm_ocean_business_orbit_elev= {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = trade
+	potential ={
+		owner = {
+			has_relic = "r_ngm_geid"
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+			alloys = 100
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		trade_value_mult = 0.2
+		job_merchant_add = 1
+		job_clerk_add = 5
+
 	}
 }
