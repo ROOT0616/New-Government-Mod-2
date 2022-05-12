@@ -6,28 +6,21 @@ NGM_collectivism = {
 	guiding_ethic = ethic_socialism
 	unique = yes
 	support_multiplier = 1
+
 	resources = {
 		category = pop_factions
 		produces = {
-			influence = 2
+			unity = 0.5
 		}
 	}
+
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		NOT = {
-			has_country_flag = suppress_vanilla_factions
-		}
-		count_owned_pop = {
-			count >= 5
-			limit = {
-				has_ethic = ethic_socialism
-			}
-		}
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOT = { has_country_flag = suppress_vanilla_factions }
 	}
+
 	parameters = {
 		empire = {
 			type = country
@@ -36,41 +29,44 @@ NGM_collectivism = {
 			}
 		}
 	}
+
 	can_join_pre_triggers = {
 		is_enslaved = no
 		is_being_purged = no
 	}
+
 	can_join_faction = {
-		NOT = {
+		NOR = { 
 			has_trait = trait_nerve_stapled
+			has_trait = trait_zombie
 		}
 		OR = {
 			has_ethic = ethic_socialism
 			has_ethic = ethic_fanatic_socialism
 		}
 	}
+
 	attraction = {
-		base = 100
+		base = 150
+
 		modifier = {
 			factor = 1.25
 			exists = from
 			from = {
 				exists = leader
-				leader = {
-					leader_class = ruler
-				}
+				leader = { leader_class = ruler }
 			}
 		}
+
 		modifier = {
 			factor = 0.75
 			exists = from
 			from = {
-				NOT = {
-					exists = leader
-				}
+				NOT = { exists = leader }
 			}
 		}
 	}
+
 	leader = {
 		base = 100
 		modifier = {
@@ -78,12 +74,15 @@ NGM_collectivism = {
 			is_event_leader = yes
 		}
 	}
+
 	demand = {
 		title = "FACTION_OUTRAGED_GC"
 		unfulfilled_title = "FACTION_OUTRAGED_GC"
 		desc = "FACTION_OUTRAGED_GC_DESC"
+
 		fulfilled_effect = -20
 		unfulfilled_effect = -0.001
+
 		potential = {
 			exists = owner
 			owner = {
@@ -210,11 +209,11 @@ NGM_collectivism = {
 			}
 		}
 	}
+
 	on_create = {
-		pop_faction_event = {
-			id = factions.1
-		}
+		pop_faction_event = { id = factions.1 }
 	}
+
 	on_destroy = {
 		if = {
 			limit = {
@@ -229,62 +228,50 @@ NGM_collectivism = {
 			remove_modifier = suppressed_socialism
 		}
 	}
+
 	actions = {
 		embrace_faction = {
 			title = "EMBRACE_FACTION"
 			description = "EMBRACE_FACTION_DESC"
+
 			cost = {
-				influence = 500
+				unity = 5000
 			}
+
 			potential = {
 				exists = owner
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = {
-							is_subject_type = dominion
-						}
+						NOT = { is_subject_type = dominion }
 					}
 				}
 			}
+
 			valid = {
 				custom_tooltip = {
 					fail_text = EMBRACE_FACTION_COOLDOWN
 					parameter:empire = {
-						NOT = {
-							has_modifier = embraced_faction_timer
-						}
+						NOT = { has_modifier = embraced_faction_timer }
 					}
 				}
-				support > 0.2
+				support > 0.20
 				parameter:empire = {
 					NOT = {
 						has_ethic = "ethic_fanatic_socialism"
 					}
 				}
 			}
+
 			effect = {
-				add_modifier = {
-					modifier = embraced_faction
-					days = 3600
-				}
+				add_modifier = { modifier = embraced_faction days = 3600 }
 				parameter:empire = {
-					shift_ethic = ethic_socialism
+					shift_ethic = ethic_spiritualist
 					hidden_effect = {
-						add_modifier = {
-							modifier = embraced_faction_timer
-							days = 3600
-						}
+						add_modifier = { modifier = embraced_faction_timer days = 3600 }
 						every_pop_faction = {
-							limit = {
-								NOT = {
-									is_same_value = root
-								}
-							}
-							add_modifier = {
-								modifier = embraced_another_faction
-								days = 3600
-							}
+							limit = { NOT = { is_same_value = root } }
+							add_modifier = { modifier = embraced_another_faction days = 3600 }
 						}
 					}
 				}
@@ -302,18 +289,17 @@ NGM_collectivism = {
 									level >= 1
 								}
 							}
-							country_event = {
-								id = factions.2000
-							}
+							country_event = { id = factions.2000 }
 						}
 					}
 				}
 			}
+
 			ai_weight = {
 				base = 1
 				modifier = {
 					factor = 0
-					support < 0.5
+					support < 0.50
 					owner = {
 						has_ethic = ethic_socialism
 					}

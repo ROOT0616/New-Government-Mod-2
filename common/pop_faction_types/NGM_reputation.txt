@@ -6,28 +6,21 @@ NGM_reputation = {
 	guiding_ethic = ethic_honorism
 	unique = yes
 	support_multiplier = 1
+
 	resources = {
 		category = pop_factions
 		produces = {
-			influence = 2
+			unity = 0.5
 		}
 	}
+
 	is_potential = {
 		years_passed > 10
 		has_encountered_other_species = yes
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		NOT = {
-			has_country_flag = suppress_vanilla_factions
-		}
-		count_owned_pop = {
-			count >= 5
-			limit = {
-				has_ethic = ethic_honorism
-			}
-		}
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOT = { has_country_flag = suppress_vanilla_factions }
 	}
+
 	parameters = {
 		empire = {
 			type = country
@@ -36,45 +29,49 @@ NGM_reputation = {
 			}
 		}
 	}
+
 	can_join_pre_triggers = {
 		is_enslaved = no
 		is_being_purged = no
+		is_robot_pop = no
 	}
+
 	can_join_faction = {
-		NOT = {
+		NOR = { 
 			has_trait = trait_nerve_stapled
+			has_trait = trait_zombie
 		}
 		OR = {
 			has_ethic = ethic_honorism
 			has_ethic = ethic_fanatic_honorism
 		}
 	}
+
 	attraction = {
-		base = 100
+		base = 150
+
 		modifier = {
 			factor = 1.25
 			exists = from
 			from = {
 				exists = leader
-				leader = {
-					leader_class = ruler
-				}
+				leader = { leader_class = ruler }
 			}
 		}
+
 		modifier = {
 			factor = 0.75
 			exists = from
 			from = {
-				NOT = {
-					exists = leader
-				}
+				NOT = { exists = leader }
 			}
 		}
 	}
+
 	leader = {
 		base = 100
 		modifier = {
-			factor = 0
+			factor = 0.0
 			is_event_leader = yes
 		}
 	}
@@ -254,9 +251,11 @@ NGM_reputation = {
 		embrace_faction = {
 			title = "EMBRACE_FACTION"
 			description = "EMBRACE_FACTION_DESC"
+
 			cost = {
-				influence = 500
+				unity = 5000
 			}
+
 			potential = {
 				exists = owner
 				owner = {
