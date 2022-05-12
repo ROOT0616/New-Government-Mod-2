@@ -1,4 +1,4 @@
-#1.外見的立憲制度		寡頭制、独裁制、君主制、権威主義	安定度+5、派閥からの最大影響力収入+20%、専門家からの政治力+100％
+#1.外見的立憲制度		寡頭制、独裁制、君主制、権威主義	安定度+5 布告基金＋30
 civic_sham_constitutionalism = {
 	possible = {
 		ethics = {
@@ -27,12 +27,11 @@ civic_sham_constitutionalism = {
 	}
 	modifier = {
 		planet_stability_add = 5
-		pop_factions_produces_mult = 0.2
-		pop_cat_specialist_political_power = 1
+		country_edict_fund_add = 30
 	}
 }
 
-#2.実質的立憲制度		君主制					派閥からの最大影響力収入+20%、使節+1、労働者の政治力+100％
+#2.実質的立憲制度		君主制	安定度+5 布告基金＋50
 civic_substantive_constitutionalism = {
 	possible = {
 		civics = {
@@ -48,13 +47,12 @@ civic_substantive_constitutionalism = {
 		base = 5
 	}
 	modifier = {
-		pop_factions_produces_mult = 0.2
-		pop_cat_worker_political_power = 1
-		envoys_add = 1
+		planet_stability_add = 5
+		country_edict_fund_add = 50
 	}
 }
 
-#3.ノブレス＝オブリージュ	栄望主義。社会主義、資本主義ではない	50popあたりの貴族Job+1、幸福度+5％、統合力+10％
+#3.ノブレス＝オブリージュ	栄望主義。社会主義、資本主義ではない	25popあたりの貴族Job+1 リーダー維持費-20% リーダースキル上限＋1
 civic_noblesse_oblige = {
 	possible = {
 		ethics = {
@@ -76,13 +74,13 @@ civic_noblesse_oblige = {
 		base = 5
 	}
 	modifier = {
-		pop_happiness = 0.05
-		country_unity_produces_mult = 0.1
-		job_noble_per_pop = 0.02
+		leaders_upkeep_mult = -0.2
+		leader_skill_levels = 1
+		job_noble_per_pop = 0.04
 	}
 }
 
-#4.戦力の不保持	狂平和、狂中立	艦隊許容量-80％、消費財、食料生産量+20％、交易保護値+5、使節+1,ステーションダメージ+50％ 経済力からの発言力50％
+#4.戦力の不保持	狂平和、狂中立	艦隊許容量-80％、消費財、食料生産量+30％、交易保護値+5、信用度＋50 （平和主義派閥の満足度＋5） 経済力からの発言力50％ まだ
 civic_non_retention_of_force = {
 	possible = {
 		ethics = {
@@ -95,17 +93,14 @@ civic_non_retention_of_force = {
 	}
 	modifier = {
 		local_trade_protection_add = 5
-		envoys_add = 1
-		country_food_produces_mult = 0.2
-		country_consumer_goods_produces_mult = 0.2
-		DIPLO_WEIGHT_ECONOMY_MULT = 0.25
+		country_food_produces_mult = 0.3
+		country_consumer_goods_produces_mult = 0.3
+		DIPLO_WEIGHT_ECONOMY_MULT = 0.5
 		country_naval_cap_mult = -0.8
-		shipclass_starbase_damage_mult = 2
-		shipclass_military_station_damage_mult = 1
 	}
 }
 
-#5.象徴君主制			民主制					安定度+5、統合力+10％、使節+1
+#5.象徴君主制			民主制					影響力＋0.5 統合力+10％
 civic_symbolic_monarchy = {
 	possible = {
 		authority = {
@@ -119,13 +114,12 @@ civic_symbolic_monarchy = {
 		base = 5
 	}
 	modifier = {
-		planet_stability_add = 5
-		envoys_add = 1
+		country_base_influence_produces_add = 0.5
 		country_unity_produces_mult = 0.1
 	}
 }
 
-#6.詰め込み教育			物質主義				各研究力+10％、幸福度-10％
+#6.詰め込み教育			物質主義				各研究力+10％ 統合力-10％
 civic_cramming_for_education = {
 	possible = {
 		ethics = {
@@ -140,7 +134,7 @@ civic_cramming_for_education = {
 		base = 5
 	}
 	modifier = {
-		pop_happiness = -0.1
+		country_unity_produces_mult = -0.1
 		country_physics_research_produces_mult = 0.1
 		country_society_research_produces_mult = 0.1
 		country_engineering_research_produces_mult = 0.1
@@ -148,31 +142,32 @@ civic_cramming_for_education = {
 }
 
 #7.緩やかな建築基準法		物質主義				住居使用量-10％、快適度使用量+10％
-civic_lax_building_codes = {
-	possible = {
-		ethics = {
-			OR = {
-				text = civic_tooltip_materialist
-				value = ethic_materialist
-				value = ethic_fanatic_materialist
-			}
-			NOR = {
-				text = civic_tooltip_not_egalitarian
-				value = ethic_egalitarian
-				value = ethic_fanatic_egalitarian
-			}
-		}
-	}
-	random_weight = {
-		base = 5
-	}
-	modifier = {
-		pop_amenities_usage_mult = 0.1
-		pop_housing_usage_mult = -0.1
-	}
-}
+	# civic_lax_building_codes = {
+	# 	possible = {
+	# 		ethics = {
+	# 			OR = {
+	# 				text = civic_tooltip_materialist
+	# 				value = ethic_materialist
+	# 				value = ethic_fanatic_materialist
+	# 			}
+	# 			NOR = {
+	# 				text = civic_tooltip_not_egalitarian
+	# 				value = ethic_egalitarian
+	# 				value = ethic_fanatic_egalitarian
+	# 			}
+	# 		}
+	# 	}
+	# 	random_weight = {
+	# 		base = 5
+	# 	}
+	# 	modifier = {
+	# 		pop_amenities_usage_mult = 0.1
+	# 		pop_housing_usage_mult = -0.1
+	# 	}
+	# }
+#
 
-#8.真実と和解委員会		受容主義、中立主義。権威主義、実利主義、狂信的資本主義ではない				幸福度+10％、統合力+10％、使節+1
+#8.真実と和解委員会		受容主義、中立主義。権威主義、実利主義、狂信的資本主義ではない				幸福度+10％、統合力+10％
 civic_truth_and_reconciliation_commission = {
 	possible = {
 		ethics = {
@@ -197,37 +192,37 @@ civic_truth_and_reconciliation_commission = {
 	}
 	modifier = {
 		pop_happiness = 0.1
-		planet_stability_add = 5
-		envoys_add = 1
 		country_unity_produces_mult = 0.1
 	}
 }
 
 #9.国家祭祀			精神主義				統合力+20％、精神主義魅力+10％
-civic_national_sacrifice = {
-	possible = {
-		ethics = {
-			OR = {
-				text = civic_tooltip_spiritualist
-				value = ethic_spiritualist
-				value = ethic_fanatic_spiritualist
-			}
-		}
-	}
-	random_weight = {
-		base = 5
-	}
-	modifier = {
-		country_unity_produces_mult = 0.1
-		pop_ethic_spiritualist_attraction_mult = 0.1
-	}
-}
+	# civic_national_sacrifice = {
+	# 	possible = {
+	# 		ethics = {
+	# 			OR = {
+	# 				text = civic_tooltip_spiritualist
+	# 				value = ethic_spiritualist
+	# 				value = ethic_fanatic_spiritualist
+	# 			}
+	# 		}
+	# 	}
+	# 	random_weight = {
+	# 		base = 5
+	# 	}
+	# 	modifier = {
+	# 		country_unity_produces_mult = 0.1
+	# 		pop_ethic_spiritualist_attraction_mult = 0.1
+	# 	}
+	# }
+# 
 
-#10.新自由主義			狂資本主義				交易価値+10％ 合金、消費財生産量+10％、労働者幸福度-20％
+#10.新自由主義			狂資本主義＆狂開発				交易価値+10％ 合金、消費財生産量+10％、労働者幸福度-20％
 civic_neoliberalism = {
 	possible = {
 		ethics = {
 			value = ethic_fanatic_capitalism
+			value = ethic_fanatic_developmentalism
 		}
 	}
 	random_weight = {
@@ -260,7 +255,7 @@ civic_ngm_manifest_destiny = {
 	}
 }
 
-#12.三権分立 寡頭制、独裁制ではない、実利主義ではない）	犯罪度-10%	影響力+1	選挙影響力コスト+100%
+#12.三権分立 寡頭制、独裁制ではない、実利主義ではない 犯罪度-10% 布告基金＋40 選挙影響力コスト+100%
 civic_ngm_separation_of_powers = {
 	possible = {
 		ethics = {
@@ -282,13 +277,14 @@ civic_ngm_separation_of_powers = {
 	}
 	modifier = {
 		planet_crime_mult = -0.1
-		country_base_influence_produces_add = 1
+		country_edict_fund_add = 40
 		country_election_cost_mult = 1
 	}
 }
 
-#13.カキストクラシー 実利主義。社会主義ではない	犯罪度+50%	安定度-10	幸福度-20%	選挙影響力コスト-50%	エネルギー生産量+20%	交易価値+20%	影響力+1
+#13.カキストクラシー 実利主義。社会主義ではない	犯罪度+100% 安定度+75 月間エネルギー-20% 統合力-10% 選挙影響力コスト-50% 影響力+2 取り消し不可
 civic_ngm_kakistocracy = {
+	modification = no
 	possible = {
 		ethics = {
 			OR = {
@@ -307,17 +303,16 @@ civic_ngm_kakistocracy = {
 		base = 5
 	}
 	modifier = {
-		planet_crime_mult = 0.5
-		planet_stability_add = -10
-		pop_happiness = -0.2
+		planet_crime_mult = 1
+		planet_stability_add = 75
+		country_energy_produces_mult = -0.2
+		country_unity_produces_mult = -0.1
 		country_election_cost_mult = -0.5
-		country_energy_produces_mult = 0.2
-		trade_value_mult = 0.2
-		country_base_influence_produces_add = 1
+		country_base_influence_produces_add = 2
 	}
 }
 
-#14.啓蒙主義 介入主義、受容主義。実利主義ではない	原地文明啓蒙速度+10%	従属国統合速度+50%	関係改善速度+10%
+#14.啓蒙主義 介入主義、受容主義。実利主義ではない	原地文明啓蒙速度+25% 従属国統合速度+30% 関係改善速度+10% まだ
 civic_ngm_enlightenment = {
 	possible = {
 		ethics = {
@@ -340,9 +335,7 @@ civic_ngm_enlightenment = {
 	}
 	modifier = {
 		envoy_improve_relations_mult = 0.1
-		country_trust_growth = 0.1
-		country_subject_acceptance_add = 2
-		country_subject_integration_speed_add = 2
+		country_subject_integration_speed_add = 25
 	}
 }
 
@@ -394,7 +387,7 @@ civic_ngm_elder_politics = {
 	}
 }
 
-#17.高度な栄典制度	栄望主義のみ	影響力+1	リーダースキル+1	リーダースキル上限+1	リーダー経験値+25%	リーダー雇用費用+50%	リーダー維持費+20%
+#17.高度な栄典制度	栄望主義のみ	リーダースキル+1	リーダースキル上限+1	リーダー経験値+25%	リーダー雇用費用+50%	リーダー維持費+20%
 civic_ngm_advanced_glory_system = {
 	possible = {
 		ethics = {
@@ -409,7 +402,6 @@ civic_ngm_advanced_glory_system = {
 		base = 5
 	}
 	modifier = {
-		country_base_influence_produces_add = 1
 		leader_skill_levels = 1
 		species_leader_exp_gain = 0.25
 		leaders_cost_mult = 0.5
@@ -417,7 +409,7 @@ civic_ngm_advanced_glory_system = {
 	}
 }
 
-#18.教養主義	物質主義	研究速度+10%	統合力+10%	エネルギー生産-5%	交易価値-5%
+#18.教養主義	物質主義	研究速度+10%	統合力+10%	エネルギー生産-10%	交易価値-20%
 civic_ngm_culturism = {
 	possible = {
 		ethics = {
@@ -432,12 +424,10 @@ civic_ngm_culturism = {
 		base = 5
 	}
 	modifier = {
-		country_physics_research_produces_mult = 0.05
-		country_society_research_produces_mult = 0.05
-		country_engineering_research_produces_mult = 0.05
+		all_technology_research_speed = 0.1
 		country_unity_produces_mult = 0.1
-		country_energy_produces_mult = -0.05
-		trade_value_mult = -0.05
+		country_energy_produces_mult = -0.1
+		trade_value_mult = -0.2
 	}
 }
 
@@ -465,7 +455,7 @@ civic_ngm_imaginary_socialism = {
 }
 
 # 下記相互排他
-# 20.根本的な狂気		:安定度-10、外交発言力-10%、艦船連射レート+10%、労働者生産量+10%
+# 20.根本的な狂気		:安定度-10 外交発言力-25% 艦船連射レート+10% 専門家生産量+5%
 civic_ngm_fundamental_insanity = {
 	possible = {
 		ethics = {
@@ -491,13 +481,13 @@ civic_ngm_fundamental_insanity = {
 	}
 	modifier = {
 		planet_stability_add = -10
-		diplo_weight_mult = -0.1
+		diplo_weight_mult = -0.25
 		ship_fire_rate_mult = 0.1
-		planet_jobs_worker_produces_mult = 0.1
+		planet_jobs_specialist_produces_mult = 0.05
 	}
 }
 
-# 21.個性的な合理主義者	:快適度生産-10%、消費財消費量+20%、研究力+10%、戦略資源生産量+10%
+# 21.個性的な合理主義者	:消費財消費量+100% 研究力+15% 戦略資源生産量+20%
 civic_ngm_individualistic_rationalist = {
 	possible = {
 		ethics = {
@@ -522,22 +512,17 @@ civic_ngm_individualistic_rationalist = {
 		base = 5
 	}
 	modifier = {
-		planet_amenities_mult = -0.1
-		planet_pops_consumer_goods_upkeep_mult = 0.2
-		country_physics_research_produces_mult = 0.05
-		country_society_research_produces_mult = 0.05
-		country_engineering_research_produces_mult = 0.05
-		country_volatile_motes_produces_mult = 0.1
-		country_rare_crystals_produces_mult = 0.1
-		country_exotic_gases_produces_mult = 0.1
-		country_sr_dark_matter_produces_mult = 0.1
-		country_sr_zro_produces_mult = 0.1
-		country_sr_living_metal_produces_mult = 0.1
-		country_nanites_produces_mult = 0.1
+		planet_pops_consumer_goods_upkeep_mult = 1
+		country_physics_research_produces_mult = 0.15
+		country_society_research_produces_mult = 0.15
+		country_engineering_research_produces_mult = 0.15
+		country_volatile_motes_produces_mult = 0.2
+		country_rare_crystals_produces_mult = 0.2
+		country_exotic_gases_produces_mult = 0.2
 	}
 }
 
-# 22.形式主義的な根回し屋	:幸福度-10%、使節+1、外交発言力+20%、
+# 22.形式主義的な根回し屋	:幸福度-20% 艦船連射レート-5% 使節+2 外交発言力＋10% 統合力＋10%
 civic_ngm_formalist_rootkeeper = {
 	possible = {
 		ethics = {
@@ -562,13 +547,14 @@ civic_ngm_formalist_rootkeeper = {
 		base = 5
 	}
 	modifier = {
-		pop_happiness = -0.1
-		envoys_add = 1
-		diplo_weight_mult = 0.2
+		pop_happiness = -0.2
+		envoys_add = 2
+		diplo_weight_mult = 0.1
+		country_unity_produces_mult = 0.1
 	}
 }
 
-# 23.芸術家肌のうっかり屋	:外交発言力-20%、統合力+30%
+# 23.芸術家肌のうっかり屋	:外交発言力-40%、統合力+25%
 civic_ngm_artistically_inclined_careless_person = {
 	possible = {
 		ethics = {
@@ -593,12 +579,12 @@ civic_ngm_artistically_inclined_careless_person = {
 		base = 5
 	}
 	modifier = {
-		diplo_weight_mult = -0.2
-		country_unity_produces_mult = 0.3
+		diplo_weight_mult = -0.4
+		country_unity_produces_mult = 0.25
 	}
 }
 
-# 24.堅実な手腕		:研究力+5%、統合力+5%、外交発言力+5%、艦船連射レート+5%
+# 24.堅実な手腕		:亜高速移動+5% FTL移動速度+5% 市場手数料-5% 労働者生産+5%
 civic_ngm_steady_hand = {
 	possible = {
 		ethics = {
@@ -623,15 +609,14 @@ civic_ngm_steady_hand = {
 		base = 5
 	}
 	modifier = {
-		country_physics_research_produces_mult = 0.05
-		country_society_research_produces_mult = 0.05
-		country_engineering_research_produces_mult = 0.05
-		diplo_weight_mult = 0.05
-		ship_fire_rate_mult = 0.05
+		ship_speed_mult = 0.05
+		ship_interstellar_speed_mult = 0.05
+		country_trade_fee = -0.05
+		planet_jobs_produces_mult = 0.05
 	}
 }
 
-# 25.毒舌な処世術師	:信用値-20、交易価値-10%、生産量+5%、外交発言力+10%、
+# 25.毒舌な処世術師	:信用値-20 交易価値-10% 生産量+5% 外交発言力+10%
 civic_ngm_the_toxic_survivalist = {
 	possible = {
 		ethics = {
@@ -663,7 +648,7 @@ civic_ngm_the_toxic_survivalist = {
 	}
 }
 
-# 26.マイペースな苦労人	:建艦速度+10%、艦隊許容量-5%、信用値+30、消費財消費量-20%、ステーション耐久度+20%
+# 26.マイペースな苦労人	:建艦速度+10% 艦隊許容量-50% 信用値+30 消費財消費量-20% ステーション耐久度+20%
 civic_ngm_hard_worker_with_a_slow_pace = {
 	possible = {
 		ethics = {
@@ -689,7 +674,7 @@ civic_ngm_hard_worker_with_a_slow_pace = {
 	}
 	modifier = {
 		starbase_shipyard_build_speed_mult = 0.1
-		country_naval_cap_mult = -0.05
+		country_naval_cap_mult = -0.5
 		country_trust_cap_add = 30
 		planet_pops_consumer_goods_upkeep_mult = -0.2
 		shipsize_starbase_outpost_hull_mult = 0.2
@@ -700,7 +685,7 @@ civic_ngm_hard_worker_with_a_slow_pace = {
 	}
 }
 
-# 27.冷酷な現実主義者	:信用値-30、幸福度-10%、外交発言力+20%、艦船連射レート+10%、統治者生産量+10%
+# 27.冷酷な現実主義者	:信用値-30、幸福度-10%、外交発言力+20%、艦船連射レート+10%、基礎情報値+10 まだ
 civic_ngm_ruthless_realist = {
 	possible = {
 		ethics = {
@@ -730,7 +715,7 @@ civic_ngm_ruthless_realist = {
 		pop_happiness = -0.1
 		diplo_weight_mult = 0.2
 		ship_fire_rate_mult = 0.1
-		planet_jobs_ruler_produces_mult = 0.1
+
 	}
 }
 
