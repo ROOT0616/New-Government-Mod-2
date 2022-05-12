@@ -1,15 +1,5 @@
 # ※セクター首都にのみ布告可能
 # ※それぞれ惑星の算出するエネルギー-10%、幸福度+10%
-# 1.絶対君主制(鉱業、農業)
-# 2.象徴君主制(統合力)
-# 3.地方独裁制(工業)
-# 4.金権支配制(交易価値)
-# 5.AI補助統治(研究力)
-# 6.首長優位制(最大多数の派閥幸福度)
-# 7.議会優位制(全派閥の幸福度)
-# 8.宗教支配制(統合力+)
-# 9.中央支配体制(エネルギー消費なし)
-# 10.高度な地方自治(初期の社会学研究)
 
 # 1.絶対君主制 territorial_monarchy(鉱業、農業)
 ngm_territorial_monarchy = {
@@ -69,7 +59,7 @@ ngm_religious_domination = {
 	planet_jobs_unity_produces_mult = 0.1
 }
 
-#犯罪抑止力-10％	安定度5％	エネルギー-5
+# 9.ドローン警備隊 犯罪抑止力-10％	安定度5％	エネルギー-5
 patrolling_society = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_colony_settlement.dds"
 	icon_frame = 1
@@ -77,7 +67,7 @@ patrolling_society = {
 	planet_crime_add = -10
 }
 
-#犯罪抑止力-30％	安定度15％	エネルギー10 合金3
+# 10.衛星による監視 犯罪抑止力-30％	安定度15％	エネルギー10 合金3
 fanatic_patrolling_society = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_colony_settlement.dds"
 	icon_frame = 1
@@ -88,7 +78,7 @@ fanatic_patrolling_society = {
 	planet_jobs_alloys_produces_mult = -0.1
 }
 
-#犯罪抑止力-50％	安定度30％	エネルギー20 合金5
+# 11.完全なる人民の監視 犯罪抑止力-50％	安定度30％	エネルギー20 合金5
 hyper_fanatic_patrolling_society = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_colony_settlement.dds"
 	icon_frame = 1
@@ -101,7 +91,7 @@ hyper_fanatic_patrolling_society = {
 	planet_jobs_alloys_produces_mult = -0.2
 }
 
-#志向魅力-20％					研究力10％	統合力10％
+# 12.自由言論を推奨する 志向魅力-20％					研究力10％	統合力10％
 free_speech = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
 	icon_frame = 1
@@ -112,7 +102,7 @@ free_speech = {
 	planet_jobs_engineering_research_produces_mult = 0.1
 }
 
-#志向魅力-50％	安定度-10％			研究力15％	統合力15％
+# 13.大自由討論会を定期時に行う 志向魅力-50％	安定度-10％			研究力15％	統合力15％
 fanatic_free_speech = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
 	icon_frame = 1
@@ -124,7 +114,7 @@ fanatic_free_speech = {
 	planet_jobs_engineering_research_produces_mult = 0.15
 }
 
-#惑星規模の徴用政策 消費財維持費-30% 犯罪度-10% 合金+10%		安定度-20 幸福度-20
+# 14.惑星規模の徴用政策 消費財維持費-30% 犯罪度-10% 合金+10%		安定度-20 幸福度-20
 requisition_policy = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_expel_population.dds"
 	icon_frame = 1
@@ -135,7 +125,7 @@ requisition_policy = {
 	planet_pops_consumer_goods_upkeep_mult = -0.3
 }
 
-#強制労働 食糧、鉱物、エネルギー+10%		幸福度-10％ 研究、統合力-30%
+# 15.強制労働 食糧、鉱物、エネルギー+10%		幸福度-10％ 研究、統合力-30%
 forced_labor = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_archaeology.dds"
 	icon_frame = 1
@@ -149,43 +139,43 @@ forced_labor = {
 	planet_jobs_engineering_research_produces_mult = -0.3
 }
 
-# 1.養殖種類変更（水産研究アーコロジー）(研究で選択肢追加)
-# ①ストーンフィッシュ        (鉱物+10)
+# 養殖種類変更（水産研究アーコロジー）(研究で選択肢追加)
+# 16.ストーンフィッシュ        (鉱物+10)
 ngm_stonefish = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
 	icon_frame = 1
 	planets_minerals_produces_add = 10
 }
 
-# ②ラグジュアリー・ジェリー    (交易価値+7)
+# 17.ラグジュアリー・ジェリー    (交易価値+7)
 ngm_luxury_jewelry = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
 	icon_frame = 1
 	trade_value_add = 7
 }
 
-# ③エナジー・オイスター        (エネルギー+10)
+# 18.エナジー・オイスター        (エネルギー+10)
 ngm_energy_oyster = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
 	icon_frame = 1
 	planets_energy_produces_add = 10
 }
 
-# ④白金魚            (合金+5)
+# 19.白金魚            (合金+5)
 ngm_white_goldfish = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
 	icon_frame = 1
 	planets_alloys_produces_add = 5
 }
 
-# ⑤海綿藻            (消費財+5)    (デフォルト)
+# 20.海綿藻            (消費財+5)    (デフォルト)
 ngm_seaweed = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
 	icon_frame = 1
 	planets_consumer_goods_produces_add = 5
 }
 
-# 繁栄主義者		平和の期間が5年続くごとに労働者生産量+1%、交易価値+2.5%（最大50年分）
+# 21.繁栄主義者		平和の期間が5年続くごとに労働者生産量+1%、交易価値+2.5%（最大50年分）
 civic_ngm_prosperity_1_advocate_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
@@ -247,7 +237,7 @@ civic_ngm_prosperity_10_advocate_modifier = {
 	trade_value_mult = 0.25
 }
 
-# 刑罰の金銭代替		惑星の犯罪度*1の交易価値を惑星に付与、交易価値+10%、犯罪度+10、犯罪度+10%
+# 22.刑罰の金銭代替		惑星の犯罪度*1の交易価値を惑星に付与、交易価値+10%、犯罪度+10、犯罪度+10%
 civic_ngm_money_penalty_1_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 1
@@ -499,7 +489,7 @@ civic_ngm_money_penalty_50_modifier = {
 	trade_value_add = 50
 }
 
-# 戦争経済	戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+10%、建艦速度+10%。
+# 23.戦争経済	戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+10%、建艦速度+10%。
 # 非戦争時の鉱物、合金、交易価値、消費財生産量-20%、建艦速度+20%
 civic_ngm_war_prosperity_not_war_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
