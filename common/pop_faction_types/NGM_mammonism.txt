@@ -15,10 +15,25 @@ NGM_mammonism = {
 	}
 
 	is_potential = {
-		years_passed > 10
-		has_encountered_other_species = yes
-		NOT = { has_ethic = ethic_gestalt_consciousness }
-		NOT = { has_country_flag = suppress_vanilla_factions }
+		is_faction_allowed = yes
+
+		if = {
+			limit = {
+				has_faction = NGM_mammonism
+				any_pop_faction = {
+					is_pop_faction_type = NGM_mammonism
+					num_pops >= 5
+				}
+			}
+		}
+		else = {
+			count_owned_pop = {
+				count >= 5
+				limit = {
+					has_ethic = ethic_capitalism
+				}
+			}
+		}
 	}
 
 	parameters = {
@@ -37,10 +52,7 @@ NGM_mammonism = {
 	}
 
 	can_join_faction = {
-		NOR = { 
-			has_trait = trait_nerve_stapled
-			has_trait = trait_zombie
-		}
+		can_think = yes
 		OR = {
 			has_ethic = ethic_capitalism
 			has_ethic = ethic_fanatic_capitalism
@@ -217,9 +229,7 @@ NGM_mammonism = {
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = {
-							is_subject_type = dominion
-						}
+						NOT = { any_agreement = { agreement_preset = preset_dominion } }
 					}
 				}
 			}
