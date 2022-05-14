@@ -92,7 +92,7 @@ building_ngm_perpetual_palace = {
 # 3.銀河百貨店	ginga_department_store							(惑星につき一つ:支社の価値+20%、惑星快適度+5、事務員+3)
 building_ngm_ginga_department_store = {
 	base_buildtime = @b1_time
-	branch_office_building = yes
+	owner_type = corporate
 	base_cap_amount = 1
 	potential = {
 		has_branch_office = yes
@@ -129,7 +129,7 @@ building_ngm_ginga_department_store = {
 # 4.企業大学校  business_school		(惑星につき一つ:企業国家の研究算出各々+10、研究者+1)				:この企業は高度な技術を運用した工業製品を取り扱っており、極めて高度な製品はあらゆる産業の礎となっている。
 building_ngm_business_school = {
 	base_buildtime = @b1_time
-	branch_office_building = yes
+	owner_type = corporate
 	base_cap_amount = 1
 	potential = {
 		has_branch_office = yes
@@ -166,7 +166,7 @@ building_ngm_business_school = {
 # 5.星間工場群	star_workshop	(惑星規模に広がるコンビナート群)						(惑星につき一つ:企業国家の合金+5、企業国家の消費財+5、職人+1、冶金技師+1)	:この企業は重化学工業を中心とした大規模な工業製品を取り扱っており、その工場が惑星表面を覆うほどの工業化が進んでいる。
 building_ngm_star_workshop = {
 	base_buildtime = @b1_time
-	branch_office_building = yes
+	owner_type = corporate
 	base_cap_amount = 1
 	potential = {
 		has_branch_office = yes
@@ -209,7 +209,7 @@ building_ngm_star_workshop = {
 # 6.銀河サロン  galaxy_salon		(惑星につき一つ:企業国家の統合力+5、企業国家の外交発言力+5%、豪商+1、役員+1)	:この企業は創業家を中心に会社に多大な貢献を行った社員一家を特別役員として扱っており、企業内の団結や対外交渉などに活躍している、一種の君主制国家の様相を呈している。
 building_ngm_galaxy_salon = {
 	base_buildtime = @b1_time
-	branch_office_building = yes
+	owner_type = corporate
 	base_cap_amount = 1
 	potential = {
 		has_branch_office = yes
@@ -254,7 +254,7 @@ building_ngm_galaxy_salon = {
 # 7.M&Aセンター m_a_center		(惑星につき一つ:企業国家の外交発言力+10%、惑星の交易価値+30%、豪商+1、事務員+2)	:この企業は一部の持株会社が多くの企業を支配する形をとっており、ごく少数の役員やエリートによる決定が絶対視されている。
 building_ngm_m_a_center = {
 	base_buildtime = @b1_time
-	branch_office_building = yes
+	owner_type = corporate
 	base_cap_amount = 1
 	potential = {
 		has_branch_office = yes
@@ -297,7 +297,7 @@ building_ngm_m_a_center = {
 # 8.銀河銀行  galactic_bank		(惑星につき一つ:企業国家のエネルギー+10、惑星の交易価値+5%、事務員+3)		:この企業はコンサルティングや債権、電子通貨、金融商品等を取り扱うことに長けており、それらの産業が中心となって企業が運営されている。
 building_ngm_galactic_bank = {
 	base_buildtime = @b1_time
-	branch_office_building = yes
+	owner_type = corporate
 	base_cap_amount = 1
 	potential = {
 		has_branch_office = yes
@@ -333,7 +333,7 @@ building_ngm_galactic_bank = {
 # 9.星間広告代理店	interstellar_advertising_agency	(惑星につき一つ:企業国家の快適度+10、惑星の快適度+5、事務員+3)			:この企業はSNSや広告、システムエンジニアリングなどの目に見えないものを取り扱うことが多く、総じてそれらに対する造詣が深い。
 building_ngm_IAA = {
 	base_buildtime = @b1_time
-	branch_office_building = yes
+	owner_type = corporate
 	base_cap_amount = 1
 	potential = {
 		has_branch_office = yes
@@ -369,7 +369,7 @@ building_ngm_IAA = {
 # 10.企業病院	corporate_hospital	(惑星につき一つ:企業国家の社会学+10、惑星のPop成長速度+5%、医療従事者+1)	:この企業は利益だけではなく社員や顧客の幸福や利益を追求することを目指している。
 building_ngm_corporate_hospital = {
 	base_buildtime = @b1_time
-	branch_office_building = yes
+	owner_type = corporate
 	base_cap_amount = 1
 	potential = {
 		has_branch_office = yes
@@ -405,7 +405,7 @@ building_ngm_corporate_hospital = {
 # 11.惑星規模建築センター planetary_scale_building_center	(惑星で何らかの建築が行われる際に重機や物資、人員を提供する企業)		(惑星につき一つ:企業建築可能slotを3つ追加、企業国家の鉱物+20、惑星の区域建造コスト-10%、事務員+2)		:この企業はインフラ建築や材料調達に関しての専門企業で、大規模な建築が行われる際にはこの企業の関与がないことはほとんどない。
 building_ngm_planetary_scale_building_center = {
 	base_buildtime = @b1_time
-	branch_office_building = yes
+	owner_type = corporate
 	base_cap_amount = 1
 	potential = {
 		has_branch_office = yes
@@ -442,7 +442,7 @@ building_ngm_planetary_scale_building_center = {
 # 12.企業農園	corporate_plantation	(社有の大規模な農園で、惑星特有の農作物取り扱っている。)			(惑星につき一つ:企業国家の食料+20、農民+3)					:この企業は農業を中心としており、自然と共生しつつ農業生産を行うことで環境系企業として存続している。
 building_ngm_corporate_plantation = {
 	base_buildtime = @b1_time
-	branch_office_building = yes
+	owner_type = corporate
 	base_cap_amount = 1
 	potential = {
 		has_branch_office = yes
@@ -477,7 +477,7 @@ building_ngm_corporate_plantation = {
 # 13.社有宇宙港  society_cosmic_port		(物資や旅客を効率的かつ高速に取り扱うための会社専用の宇宙港)			(惑星につき一つ:惑星の交易価値+10、支社の価値+30%、事務員+2)			:この企業は物資等の輸送や運輸、旅客運送により利益を得ており、輸送分野における実績は並ぶものがない。
 building_ngm_society_cosmic_port = {
 	base_buildtime = @b1_time
-	branch_office_building = yes
+	owner_type = corporate
 	base_cap_amount = 1
 	potential = {
 		has_branch_office = yes
@@ -511,7 +511,7 @@ building_ngm_society_cosmic_port = {
 # 14.惑星信託銀行	planet_trust_bank	(惑星単位で資産や有価証券を運用して利益を追求する企業)				(惑星につき一つ:惑星の交易価値+30%、支社の価値+30%、豪商+1、事務員+3)		:この企業は出資者やクライアントの資産を最大化することを目指しており、倫理観を無視した投資運用を行い、利益を追求する。
 building_ngm_planet_trust_bank = {
 	base_buildtime = @b1_time
-	branch_office_building = yes
+	owner_type = corporate
 	base_cap_amount = 1
 	potential = {
 		has_branch_office = yes
@@ -552,7 +552,7 @@ building_ngm_planet_trust_bank = {
 # 15.企業諜報機関	corporate_espionage	(自社以外のあらゆる情報を収集し、他者に売却する企業)				(惑星につき一つ:企業帝国の解読力+5、惑星の犯罪度+5、事務員+2)			:この企業は国家や企業の情報を奪い、それを利用してあらゆる利益を獲得している。
 building_ngm_corporate_espionage = {
 	base_buildtime = @b1_time
-	branch_office_building = yes
+	owner_type = corporate
 	base_cap_amount = 1
 	potential = {
 		has_branch_office = yes
@@ -588,7 +588,7 @@ building_ngm_corporate_espionage = {
 # 16.惑星格付会社	planet_rating_agency	(あらゆるものを格付けし、判断基準を創出する企業)				(惑星につき一つ:企業帝国の統合力+10、惑星の統合力+5%、事務員+2)
 building_ngm_planet_rating_agency = {
 	base_buildtime = @b1_time
-	branch_office_building = yes
+	owner_type = corporate
 	base_cap_amount = 1
 	potential = {
 		has_branch_office = yes
@@ -628,7 +628,7 @@ building_ngm_planet_rating_agency = {
 # 惑星補正：犯罪度+100、犯罪度+15%、惑星を所有する国家の暗号力-7、安定度+20、豪商の職業枠+1、役員+1、事務員+2
 building_ngm_sa_ko_ryo = {
 	base_buildtime = @b1_time
-	branch_office_building = yes
+	owner_type = corporate
 	position_priority = 0
 	potential = {
 		has_branch_office = yes

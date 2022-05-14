@@ -2380,6 +2380,7 @@
 
  pft_NGM_mammonism:0 "拝金主義"
  pft_NGM_mammonism_desc:0 "拝金主義者は利益の追求と資本の安定化をより重視する。"
+ format.pop_faction.NGM_mammonism:0 "[This.Owner.GetSpeciesName]<NGM_mammonism_names_1><NGM_mammonism_names_2>"
  MAMMONISM_TRADE_SUPREMACY:0 "貿易至上主義"
  MAMMONISM_TRADE_SUPREMACY_DESC:0 "外交政策が重商主義であれば、 [Root.GetName]は喜ぶだろう。 "
  MAMMONISM_TRADE_PROFIT:0 "貿易利益"
@@ -2389,6 +2390,7 @@
 
  pft_NGM_collectivism:0 "共産主義"
  pft_NGM_collectivism_desc:0 "共産主義者は経済的、出自的平等を目指し、社会の平等化を目指す。"
+ format.pop_faction.NGM_collectivism:0 "[This.Owner.GetSpeciesName]<NGM_collectivism_names_1><NGM_collectivism_names_2>"
  COLLECTIVISM_SOCIAL_WELFARE:0 "社会福祉"
  COLLECTIVISM_SOCIAL_WELFARE_DESC:0 "われわれの帝国のすべての住民が§Y社会福祉§!もしくは§Yユートピアの豊かさ§!の中で暮らさせることは、 [Root.GetName]を大いに喜ぶだろう。"
  COLLECTIVISM_MILITARY_SERVICE:0 "平等の兵役"
@@ -2398,6 +2400,7 @@
 
  pft_NGM_environmentalism:0 "環境主義"
  pft_NGM_environmentalism_desc:0 "環境主義者は惑星の環境を維持し、生命体の保全を重視する。"
+ format.pop_faction.NGM_environmentalism:0 "[This.Owner.GetSpeciesName]<NGM_environmentalism_names_1><NGM_environmentalism_names_2>"
  ENVIRONMENTALISM_PLANET_PRESERVATION:0 "惑星保存"
  ENVIRONMENTALISM_PLANET_PRESERVATION_DESC:0 "テラフォーミングを行えば、[Root.GetName]はを大いに喜ぶだろう。"
  ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE:0 "農業の維持"
@@ -2405,6 +2408,7 @@
 
  pft_NGM_industrialism:0 "産業主義"
  pft_NGM_industrialism_desc:0 "産業主義者は開発を重視し、工業化をより推し進めようとする。"
+ format.pop_faction.NGM_industrialism:0 "[This.Owner.GetSpeciesName]<NGM_industrialism_names_1><NGM_industrialism_names_2>"
  INDUSTRIALISM_CIVILIAN_FACTORY:0 "民間工業化"
  INDUSTRIALISM_CIVILIAN_FACTORY_DESC:0 "一定の消費財生産が得られれば[Root.GetName]はを大いに喜ぶだろう。"
  INDUSTRIALISM_MILITARY_FACTORY:0 "軍事工業化"
@@ -2414,12 +2418,15 @@
 
  pft_NGM_hawks:0 "タカ派"
  pft_NGM_hawks_desc:0 "タカ派は他国に積極的に関与して自国の存在を誇示しようとする。"
+ format.pop_faction.NGM_hawks:0 "[This.Owner.GetSpeciesName]<NGM_hawks_names_1>"
 
  pft_NGM_doves:0 "ハト派"
  pft_NGM_doves_desc:0 "ハト派は他国と距離を置き、できるかぎり安定的な立ち位置を目指そうとする。"
+ format.pop_faction.NGM_doves:0 "[This.Owner.GetSpeciesName]<NGM_doves_names_1>"
 
  pft_NGM_reputation:0 "名誉主義"
  pft_NGM_reputation_desc:0 "名誉主義者は名誉を重んじ、地位と名誉が維持されるべきであると考えている。"
+ format.pop_faction.NGM_reputation:0 "[This.Owner.GetSpeciesName]<NGM_reputation_names_1>"
  REPUTATION_MONARCHIST:0 "君主主義者"
  REPUTATION_MONARCHIST_DESC:0 "§Y君主制な統治形態§!の下での生活に、 [Root.GetName]は喜ぶだろう。 "
  REPUTATION_NATIONAL_INFLUENCE:0 "国家的影響"
@@ -2430,6 +2437,7 @@
 
  pft_NGM_supremacy:0 "自己至上主義"
  pft_NGM_supremacy_desc:0 "自己至上主義者は自分の利益を最大化させ、他社よりも自分を維持することを重視している。"
+ format.pop_faction.NGM_supremacy:0 "[This.Owner.GetSpeciesName]<NGM_supremacy_names_1>"
 
  factions.1.desc.NGM_mammonism:0 "メンバーは商業的利益を重視しており、経済活動の重視を訴えている。 \n\n"
  factions.1.desc.NGM_collectivism:0 "メンバーは経済的平等と唱えており、国民の均一化と経済的平等の解消を求めている。 \n\n"
@@ -3955,5 +3963,7 @@
 
  civic_tooltip_ngm_not_removed:0 "§Rゲーム開始後の追加削除不可§!\n§Y(ゲーム開始後に追加、削除すると元に戻されます。)§!"
 
+
+ NAME_Pursuer:0 "追跡者"
 # :0 ""
 # _desc:0 ""
