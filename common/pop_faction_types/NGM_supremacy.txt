@@ -175,7 +175,7 @@ NGM_supremacy = {
 		}
 		trigger = {
 			owner = {
-				has_policy_flag = trade_conversion_consumer_goods
+				has_policy_flag = trade_policy_default
 			}
 		}
 	}
