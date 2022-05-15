@@ -80,7 +80,7 @@ ethic_socialism = {
 				has_ethic = ethic_socialism
 				has_ethic = ethic_fanatic_socialism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_collectivism
 		}
 	}
 
@@ -88,7 +88,7 @@ ethic_socialism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_collectivism }
 		}
 	}
 
@@ -208,12 +208,12 @@ ethic_socialism = {
 				has_ethic = ethic_socialism
 				has_ethic = ethic_fanatic_socialism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_collectivism
 		}
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_collectivism }
 		}
 		modifier = {
 			factor = 1.5
@@ -360,7 +360,7 @@ ethic_capitalism = {
 				has_ethic = ethic_capitalism
 				has_ethic = ethic_fanatic_capitalism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_mammonism
 		}
 	}
 
@@ -368,7 +368,7 @@ ethic_capitalism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_mammonism }
 		}
 	}
 
@@ -488,12 +488,12 @@ ethic_capitalism = {
 				has_ethic = ethic_capitalism
 				has_ethic = ethic_fanatic_capitalism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_mammonism
 		}
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_mammonism }
 		}
 		modifier = {
 			factor = 1.5
@@ -629,7 +629,7 @@ ethic_interventionism = {
 				has_ethic = ethic_interventionism
 				has_ethic = ethic_fanatic_interventionism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_hawks
 		}
 	}
 
@@ -637,7 +637,7 @@ ethic_interventionism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_hawks }
 		}
 	}
 
@@ -757,12 +757,12 @@ ethic_interventionism = {
 				has_ethic = ethic_interventionism
 				has_ethic = ethic_fanatic_interventionism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_hawks
 		}
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_hawks }
 		}
 		modifier = {
 			factor = 1.5
@@ -897,7 +897,7 @@ ethic_neutralism = {
 				has_ethic = ethic_neutralism
 				has_ethic = ethic_fanatic_neutralism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_doves
 		}
 	}
 
@@ -905,7 +905,7 @@ ethic_neutralism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_doves }
 		}
 	}
 
@@ -1025,12 +1025,12 @@ ethic_neutralism = {
 				has_ethic = ethic_neutralism
 				has_ethic = ethic_fanatic_neutralism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_doves
 		}
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_doves }
 		}
 		modifier = {
 			factor = 1.5
@@ -1166,7 +1166,7 @@ ethic_conservationism = {
 				has_ethic = ethic_conservationism
 				has_ethic = ethic_fanatic_conservationism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_environmentalism
 		}
 	}
 
@@ -1174,7 +1174,7 @@ ethic_conservationism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_environmentalism }
 		}
 	}
 
@@ -1294,12 +1294,12 @@ ethic_conservationism = {
 				has_ethic = ethic_conservationism
 				has_ethic = ethic_fanatic_conservationism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_environmentalism
 		}
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_environmentalism }
 		}
 		modifier = {
 			factor = 1.5
@@ -1436,7 +1436,7 @@ ethic_developmentalism = {
 				has_ethic = ethic_developmentalism
 				has_ethic = ethic_fanatic_developmentalism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_industrialism
 		}
 	}
 
@@ -1444,7 +1444,7 @@ ethic_developmentalism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_industrialism }
 		}
 	}
 
@@ -1564,12 +1564,12 @@ ethic_developmentalism = {
 				has_ethic = ethic_developmentalism
 				has_ethic = ethic_fanatic_developmentalism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_industrialism
 		}
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_industrialism }
 		}
 		modifier = {
 			factor = 1.5
@@ -1718,7 +1718,7 @@ ethic_honorism = {
 				has_ethic = ethic_honorism
 				has_ethic = ethic_fanatic_honorism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_reputation
 		}
 	}
 
@@ -1726,7 +1726,7 @@ ethic_honorism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_reputation }
 		}
 	}
 
@@ -1846,12 +1846,12 @@ ethic_honorism = {
 				has_ethic = ethic_honorism
 				has_ethic = ethic_fanatic_honorism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_reputation
 		}
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_reputation }
 		}
 		modifier = {
 			factor = 1.5
@@ -2004,7 +2004,7 @@ ethic_utilitarianism = {
 				has_ethic = ethic_utilitarianism
 				has_ethic = ethic_fanatic_utilitarianism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_supremacy
 		}
 	}
 
@@ -2012,7 +2012,7 @@ ethic_utilitarianism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_supremacy }
 		}
 	}
 
@@ -2132,12 +2132,12 @@ ethic_utilitarianism = {
 				has_ethic = ethic_utilitarianism
 				has_ethic = ethic_fanatic_utilitarianism
 			}
-			has_faction = totalitarian
+			has_faction = NGM_supremacy
 		}
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = totalitarian }
+			ruler = { leader_of_faction = NGM_supremacy }
 		}
 		modifier = {
 			factor = 1.5
