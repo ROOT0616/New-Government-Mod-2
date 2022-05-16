@@ -502,7 +502,7 @@
  civic_ngm_disdain_for_others:0 "他者蔑視"
  civic_ngm_disdain_for_others_desc:0 "この国は他国や他者を公然と罵倒し、自尊心を満足させる。"
 
- civic_ngm_gentlemanly_disgust:0 "紳士的嫌悪"
+ civic_ngm_gentlemanly_disgust:0 "紳士的距離感"
  civic_ngm_gentlemanly_disgust_desc:0 "この国の排他的態度は紳士的で、公然とした罵倒や侮辱はほとんどないが、厳然と他者を拒否する。"
 
  civic_ngm_erasure:0 "痕跡の抹消"
@@ -730,7 +730,7 @@
  civic_ngm_producer_consumer_society:0 "高度生産消費社会"
  civic_ngm_producer_consumer_society_desc:0 "たくさん作り、たくさん使い、たくさん捨てる。"
 
- civic_ngm_corporate_empire:0 "企業帝国"
+ civic_ngm_corporate_empire:0 "財閥"
  civic_ngm_corporate_empire_desc:0 "この企業はあらゆる産業に拡大しており、取り扱わない内容はないほど拡大しており、その頂点に一部のエリートが君臨している。"
 
  civic_ngm_high_tech_company:0 "ハイテク企業"
@@ -742,8 +742,8 @@
  civic_ngm_hereditary_officers:0 "世襲役員"
  civic_ngm_hereditary_officers_desc:0 "この企業は創業家を中心に会社に多大な貢献を行った社員一家を特別役員として扱っており、企業内の団結や対外交渉などに活躍している、一種の君主制国家の様相を呈している。"
 
- civic_ngm_zaibatsu:0 "財閥"
- civic_ngm_zaibatsu_desc:0 "この企業は一部の持株会社が多くの企業を支配する形をとっており、ごく少数の役員やエリートによる決定が絶対視されている。"
+ #  civic_ngm_zaibatsu:0 "財閥"
+ #  civic_ngm_zaibatsu_desc:0 "この企業は一部の持株会社が多くの企業を支配する形をとっており、ごく少数の役員やエリートによる決定が絶対視されている。"
 
  civic_ngm_financial_enterprises:0 "金融企業"
  civic_ngm_financial_enterprises_desc:0 "この企業はコンサルティングや債権、電子通貨、金融商品等を取り扱うことに長けており、それらの産業が中心となって企業が運営されている。"
@@ -1382,13 +1382,13 @@
  building_ngm_m_a_center:0 "M&Aセンター"
  building_ngm_m_a_center_desc:0 "他社を評価、買収することを目的とした企業"
 
- building_ngm_galactic_bank:0 "銀河銀行"
+ building_ngm_galactic_bank:0 "ギャラクティックバンク"
  building_ngm_galactic_bank_desc:0 "銀河規模に広がる投資、貯蓄、資産運用を行う銀行"
 
  building_ngm_IAA:0 "星間広告代理店"
  building_ngm_IAA_desc:0 "情報を加工し、大衆に敷衍しやすい言葉で洗脳を行う企業"
 
- building_ngm_corporate_hospital:0 "企業病院"
+ building_ngm_corporate_hospital:0 "コーポレートメディカルセンター"
  building_ngm_corporate_hospital_desc:0 "できるだけ安価に高品質な医療や福祉を行うことを目的とした社有の医療機関"
 
  building_ngm_planetary_scale_building_center:0 "惑星規模建築センター"
@@ -3928,7 +3928,7 @@
  civic_tooltip_ngm_corporate_empire_effects:0 "\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_ginga_department_store$§!が建設できる\n"
  civic_tooltip_ngm_high_tech_company_effects:0 "\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_business_school$§!が建設できる\n"
  civic_tooltip_ngm_smokestack_industry_effects:0 "\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_star_workshop$§!が建設できる\n"
- civic_tooltip_ngm_hereditary_officers_effects:0 "\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_galaxy_salon$§!が建設できる\n"
+ civic_tooltip_ngm_hereditary_officers_effects:0 "\nCEOを世襲化\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_galaxy_salon$§!が建設できる\n"
  civic_tooltip_ngm_zaibatsu_effects:0 "\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_m_a_center$§!が建設できる\n"
  civic_tooltip_ngm_financial_enterprises_effects:0 "\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_galactic_bank$§!が建設できる\n"
  civic_tooltip_ngm_information_company_effects:0 "\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_IAA$§!が建設できる\n"

@@ -489,7 +489,7 @@ civic_ngm_money_penalty_50_modifier = {
 	trade_value_add = 50
 }
 
-# 23.戦争経済	戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+10%、建艦速度+10%。
+# 23.戦争経済	戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+20%、建艦速度+20%。
 # 非戦争時の鉱物、合金、交易価値、消費財生産量-20%、建艦速度+20%
 civic_ngm_war_prosperity_not_war_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
@@ -505,13 +505,13 @@ civic_ngm_war_prosperity_not_war_country_modifier = {
 civic_ngm_war_prosperity_is_war_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
-	planet_jobs_minerals_produces_mult = 0.1
-	planet_jobs_alloys_produces_mult = 0.1
-	planet_jobs_consumer_goods_produces_mult = 0.1
-	trade_value_mult = 0.1
+	planet_jobs_minerals_produces_mult = 0.2
+	planet_jobs_alloys_produces_mult = 0.2
+	planet_jobs_consumer_goods_produces_mult = 0.2
+	trade_value_mult = 0.2
 }
 civic_ngm_war_prosperity_is_war_country_modifier = {
-	starbase_shipyard_build_speed_mult = 0.1
+	starbase_shipyard_build_speed_mult = 0.2
 }
 
 # 〇社会主義
@@ -596,7 +596,7 @@ promoted_utilitarianism = {
 
 # 伝道者団の来訪
 civic_ngm_missionary_group_modifier = {
-	pop_ethic_spiritualist_attraction_mult = 0.2
+	pop_ethic_spiritualist_attraction_mult = 0.4
 }
 
 # 遺物「古代の盟約」（古代の列強間の協定で、緊急時に強力な自衛力を求められたうえで、平時には他国の脅威にならない経済国家であることを求められる条文。所有国は永久にこれを守らなくてはならない。）

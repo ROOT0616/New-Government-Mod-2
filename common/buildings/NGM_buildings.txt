@@ -294,7 +294,7 @@ building_ngm_m_a_center = {
 	}
 }
 
-# 8.銀河銀行  galactic_bank		(惑星につき一つ:企業国家のエネルギー+10、惑星の交易価値+5%、事務員+3)		:この企業はコンサルティングや債権、電子通貨、金融商品等を取り扱うことに長けており、それらの産業が中心となって企業が運営されている。
+# 8.ギャラクティックバンク  galactic_bank		(惑星につき一つ:企業国家のエネルギー+10、惑星の交易価値+5%、事務員+3)		:この企業はコンサルティングや債権、電子通貨、金融商品等を取り扱うことに長けており、それらの産業が中心となって企業が運営されている。
 building_ngm_galactic_bank = {
 	base_buildtime = @b1_time
 	owner_type = corporate
@@ -366,7 +366,7 @@ building_ngm_IAA = {
 	}
 }
 
-# 10.企業病院	corporate_hospital	(惑星につき一つ:企業国家の社会学+10、惑星のPop成長速度+5%、医療従事者+1)	:この企業は利益だけではなく社員や顧客の幸福や利益を追求することを目指している。
+# 10.コーポレートメディカルセンター	corporate_hospital	(惑星につき一つ:企業国家の社会学+10、惑星のPop成長速度+5%、医療従事者+1)	:この企業は利益だけではなく社員や顧客の幸福や利益を追求することを目指している。
 building_ngm_corporate_hospital = {
 	base_buildtime = @b1_time
 	owner_type = corporate
@@ -549,7 +549,7 @@ building_ngm_planet_trust_bank = {
 	}
 }
 
-# 15.企業諜報機関	corporate_espionage	(自社以外のあらゆる情報を収集し、他者に売却する企業)				(惑星につき一つ:企業帝国の解読力+5、惑星の犯罪度+5、事務員+2)			:この企業は国家や企業の情報を奪い、それを利用してあらゆる利益を獲得している。
+# 15.企業諜報機関	corporate_espionage	(自社以外のあらゆる情報を収集し、他者に売却する企業)				(惑星につき一つ:財閥の解読力+5、惑星の犯罪度+5、事務員+2)			:この企業は国家や企業の情報を奪い、それを利用してあらゆる利益を獲得している。
 building_ngm_corporate_espionage = {
 	base_buildtime = @b1_time
 	owner_type = corporate
@@ -585,7 +585,7 @@ building_ngm_corporate_espionage = {
 	}
 }
 
-# 16.惑星格付会社	planet_rating_agency	(あらゆるものを格付けし、判断基準を創出する企業)				(惑星につき一つ:企業帝国の統合力+10、惑星の統合力+5%、事務員+2)
+# 16.惑星格付会社	planet_rating_agency	(あらゆるものを格付けし、判断基準を創出する企業)				(惑星につき一つ:財閥の統合力+10、惑星の統合力+5%、事務員+2)
 building_ngm_planet_rating_agency = {
 	base_buildtime = @b1_time
 	owner_type = corporate
@@ -624,7 +624,7 @@ building_ngm_planet_rating_agency = {
 # 17.サービス付き高官向け料亭（帝国首都にのみ建造可能）
 # 生産物：統合力+10
 # 維持費：エネルギー10
-# 企業帝国補正：外交発言力+25%
+# 財閥補正：外交発言力+25%
 # 惑星補正：犯罪度+100、犯罪度+15%、惑星を所有する国家の暗号力-7、安定度+20、豪商の職業枠+1、役員+1、事務員+2
 building_ngm_sa_ko_ryo = {
 	base_buildtime = @b1_time
