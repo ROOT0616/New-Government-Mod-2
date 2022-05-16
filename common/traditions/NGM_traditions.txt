@@ -13,10 +13,10 @@ tr_ngm_law_finish = {
 	}
 }
 
-# 3.人権法:惑星の安定度+5
+# 3.人権法:幸福度+5%
 tr_ngm_human_rights = {
 	modifier = {
-		planet_stability_add = 5
+		pop_happiness = 0.05
 	}
 }
 
@@ -34,14 +34,14 @@ tr_ngm_law_pirates = {
 	}
 }
 
-# 6.行政法典の拡充:影響力算出+25%
+# 6.行政法典の拡充:帝国規模影響量-10%
 tr_ngm_law_government = {
 	modifier = {
-		country_influence_produces_mult = 0.25
+		empire_size_penalty_mult = -0.1
 	}
 }
 
-# 7.憲法:布告許容量+1
+# 7.憲法:布告基金+50
 tr_ngm_constitution = {
 	modifier = {
 		country_edict_fund_add = 50
@@ -49,22 +49,23 @@ tr_ngm_constitution = {
 }
 
 # ②悪徳(悪の基準とは、偽善者が作ったまやかしにすぎない
-# 8.取得時：地上軍ダメージ+20%
+# 8.取得時：地上軍ダメージ+20%、副次ダメージ+20%
 tr_ngm_virture_first = {
 	modifier = {
-		army_attack_damage_mult = 0.2
+		army_damage_mult = 0.2
+		army_collateral_damage_mult = 0.2
 	}
 }
 
-# 9.完遂時:影響力+1
+# 9.完遂時:解読力+10
 tr_ngm_virture_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		country_base_influence_produces_add = 1
+		intel_decryption_add = 10
 	}
 }
 
-# 10.狙い撃ち:艦船連射レート+5%、宿敵の犯罪度+10
+# 10.狙い撃ち:艦船連射レート+5%、宿敵の犯罪度+20
 tr_ngm_sniper = {
 	on_enabled = {
 		hidden_effect = {
@@ -78,7 +79,7 @@ tr_ngm_sniper = {
 	}
 }
 
-# 11.透浸:解読度+5、外交関係にあるすべての国家の犯罪度+5
+# 11.透浸:外交関係にあるすべての国家の犯罪度+20
 tr_ngm_penetration = {
 	on_enabled = {
 		hidden_effect = {
@@ -86,10 +87,6 @@ tr_ngm_penetration = {
 				id = ngm_tradition.7
 			}
 		}
-	}
-	modifier = {
-		intel_decryption_add = 5
-		# spy_network_daily_value_mult = 0.25
 	}
 }
 
@@ -100,10 +97,11 @@ tr_ngm_chain_harted = {
 	}
 }
 
-# 13.独占:統治者の幸福度+10%
+# 13.独占:統治者の幸福度+20%、交易価値+15%、統治者消費財維持コスト+10%
 tr_ngm_exclusive = {
 	modifier = {
-		pop_cat_ruler_happiness = 0.1
+		pop_cat_ruler_happiness = 0.2
+		trade_value_mult = 0.15
 	}
 }
 
@@ -144,24 +142,25 @@ tr_ngm_restudy = {
 	}
 }
 
-# 18.指導者研修の高度化:リーダーレベル上限+2
+# 18.指導者研修の高度化:リーダーレベル上限+1、研究協定から得られる研究力+10%
 tr_ngm_leader_study = {
 	modifier = {
-		leader_skill_levels = 2
+		leader_skill_levels = 1
 	}
 }
 
-# 19.教育プログラムの見直し:リーダー初期レベル+1
+# 19.資格採用の強化:リーダー初期レベル+1
 tr_ngm_program_study = {
 	modifier = {
+		leader_skill_levels = 1
 	}
 }
 
-# 20.高等教育の拡大:研究速度+5%、統合力+10%
+# 20.高等教育の拡大:研究速度+5%、統合力+5%
 tr_ngm_reprogram = {
 	modifier = {
 		all_technology_research_speed = 0.05
-		country_unity_produces_mult = 0.1
+		country_unity_produces_mult = 0.05
 	}
 }
 
@@ -173,17 +172,18 @@ tr_ngm_high_study = {
 }
 
 # 逸楽(快楽の園は常に我らを誘惑し、快楽におぼれさせる)
-# 22.取得時：生活水準のユートピアの豊かさをアンロック
+# 22.取得時：幸福度+5%
 tr_ngm_ecstasy_first = {
 	modifier = {
+		pop_happiness = 0.05
 	}
 }
 
-# 23.完遂時:幸福度+10%
+# 23.完遂時:消費財消費量-10%,生活水準のユートピアの豊かさをアンロック
 tr_ngm_ecstasy_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		pop_happiness = 0.1
+		planet_pops_consumer_goods_upkeep_mult = -0.1
 	}
 }
 
@@ -201,17 +201,19 @@ tr_ngm_art_industry = {
 	}
 }
 
-# 26.繁栄を支える者:奴隷の生産量+25%
+# 26.繁栄を支える者:奴隷の生産量+10%、奴隷幸福+10%
 tr_ngm_groly_supporter = {
 	modifier = {
-		planet_jobs_slave_produces_mult = 0.25
+		planet_jobs_slave_produces_mult = 0.1
+		pop_cat_slave_happiness = 0.1
 	}
 }
 
-# 27.奔放な家族:Pop成長速度+5%
+# 27.奔放な家族:Pop成長速度+5%、安定度-5
 tr_ngm_ecstasy_family = {
 	modifier = {
 		pop_growth_speed = 0.05
+		planet_stability_add = -5
 	}
 }
 
@@ -230,7 +232,7 @@ tr_ngm_avantgarde_first = {
 	}
 }
 
-# 30.完遂時:取得している国是をすべて削除する
+# 30.完遂時:'+影響力250,取得している国是をすべて削除する
 tr_ngm_avantgarde_finish = {
 	modifier = {
 		ascension_perks_add = 1
@@ -239,6 +241,9 @@ tr_ngm_avantgarde_finish = {
 	on_enabled = {
 		country_event = {
 			id = ngm_tradition.4
+		}
+		add_resource = {
+			influence = 250
 		}
 	}
 }
@@ -285,11 +290,12 @@ tr_ngm_classic_first = {
 	}
 }
 
-# 37.完遂時:国是slot+1
+# 37.完遂時:国是slot+1,政体変更コスト+20%
 tr_ngm_classic_finish = {
 	modifier = {
 		ascension_perks_add = 1
 		country_government_civic_points_add = 1
+
 	}
 }
 
@@ -306,17 +312,19 @@ tr_ngm_acoustics = {
 	}
 }
 
-# 40.文化大臣の設置:影響力+0.5
+# 40.統合力+10、月間忠誠度+1
 tr_ngm_ministory_culture = {
 	modifier = {
-		country_influence_produces_add = 0.5
+		country_unity_produces_add = 10
+		monthly_loyalty = 1
 	}
 }
 
-# 41.芸術外交:外交発言力+10%
+# 41.芸術外交:外交発言力+5%、流入魅力+10%
 tr_ngm_diplomatic_art = {
 	modifier = {
 		diplo_weight_mult = 0.1
+		planet_immigration_pull_mult = 0.1
 	}
 }
 
@@ -327,10 +335,10 @@ tr_ngm_authority_art = {
 }
 
 # 学術(教育と研究の推進こそが未来への道筋なのである)
-# 43.取得時：研究力+5%
+# 43.取得時：アノマリー発見+25%
 tr_ngm_academic_first = {
 	modifier = {
-		all_technology_research_speed = 0.05
+		ship_anomaly_generation_chance_mult = 0.25
 	}
 }
 
@@ -379,17 +387,18 @@ tr_ngm_high_education = {
 }
 
 # 記憶(過去を記憶し、記録し続けることは将来への一助となるだろう)
-# 50.取得時：布告許容量+1
+# 50.取得時：布告基金+30
 tr_ngm_memory_first = {
 	modifier = {
 		country_edict_fund_add = 50
 	}
 }
 
-# 51.完遂時:"pjob_un
+# 51.完遂時:遺物クールダウン期間-33%
 tr_ngm_memory_finish = {
 	modifier = {
 		ascension_perks_add = 1
+		relic_activation_cooldown = -0.33
 	}
 }
 
@@ -429,10 +438,11 @@ tr_ngm_trade_record = {
 }
 
 # 自由(各個人の判断と責任により社会は維持されている)
-# 57.取得時：惑星犯罪度-5%
+# 57.取得時：惑星犯罪度-5%、惑星安定度+5
 tr_ngm_freedom_first = {
 	modifier = {
 		planet_crime_mult = -0.05
+		planet_stability_add = 5
 	}
 }
 
@@ -458,14 +468,14 @@ tr_ngm_freedom_broad = {
 	}
 }
 
-# 60.結社の自由:派閥影響力収入+25%
+# 60.結社の自由:派閥収入+20%
 tr_ngm_freedom_association = {
 	modifier = {
-		pop_factions_influence_produces_mult = 0.25
+		pop_factions_produces_mult = 0.2
 	}
 }
 
-# 61.機会均等:リーダー選択肢+2、リーダー雇用コスト-20%
+# 61.機会均等:リーダー選択肢+2、リーダー雇用コスト-20%,リーダー選択不可の種族権利を禁止
 tr_ngm_freedom_ega = {
 	modifier = {
 		leaders_unity_cost_mult = -0.2
@@ -473,41 +483,43 @@ tr_ngm_freedom_ega = {
 	}
 }
 
-# 62.移民の自由:流入魅力+20%
+# 62.移民の自由:流入魅力+20%、流出圧力+10%
 tr_ngm_freedom_immigrant = {
 	modifier = {
-		planet_immigration_pull_add = 0.2
+		planet_immigration_pull_mult = 0.2
+		planet_emigration_push_mult = 0.1
 	}
 }
 
-# 63.自由権の保証:幸福度+5%、安定度+5
+# 63.自由権の保証:幸福度+5%、派閥幸福度+5%
 tr_ngm_freedom2 = {
 	modifier = {
 		pop_happiness = 0.05
-		planet_stability_add = 5
+		faction_approval = 0.05
 	}
 }
 
 # 秩序(共同体と社会。権威や権力による命令と)
-# 64.取得時：帝国膨張度ペナルティ-10%
+# 64.取得時：帝国規模影響量-10%
 tr_ngm_order_first = {
 	modifier = {
 		empire_size_penalty_mult = -0.1
 	}
 }
 
-# 65.完遂時:艦船武器射程+5%
+# 65.完遂時:連射レート+5%
 tr_ngm_order_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		ship_weapon_range_mult = 0.05
+		ship_fire_rate_mult = 0.05
 	}
 }
 
-# 66.無言の同調:国家志向魅力+10%
+# 66.無言の同調:統治志向魅力+25%、幸福度-5％
 tr_ngm_no_voice = {
 	modifier = {
-		pop_government_ethic_attraction = 0.1
+		pop_government_ethic_attraction = 0.25
+		pop_happiness = -0.05
 	}
 }
 
@@ -539,7 +551,7 @@ tr_ngm_orderly = {
 }
 
 # 善隣(敵ではないものはすべて友人であり、敵であることが証明されなければ友人であるのだ)
-# 71.取得時：ファーストコンタクト速度+25%
+# 71.取得時：ファーストコンタクト速度+25%、ファーストコンタクト時の姿勢を敵対的にできない
 tr_ngm_neighbor_first = {
 	modifier = {
 		first_contact_speed_mult = 0.25
@@ -576,10 +588,11 @@ tr_ngm_talk = {
 	}
 }
 
-# 76.移動の自由:流入魅力+30%
+# 76.移動の自由:流入魅力+30%、流出圧力+10%
 tr_ngm_free_move = {
 	modifier = {
-		planet_immigration_pull_add = 0.3
+		planet_immigration_pull_mult = 0.3
+		planet_emigration_push_mult = 0.1
 	}
 }
 
@@ -613,17 +626,18 @@ tr_ngm_paranoia = {
 	}
 }
 
-# 81.敵対的使節:使節+1
+# 81.浸透度10%、秘密工作コスト-10%
 tr_ngm_battle_ambass = {
 	modifier = {
-		envoys_add = 1
+		spy_power_cost_mult = 0.1
 	}
 }
 
-# 82.粗食:Pop食料消費-20%
+# 82.臥薪嘗胆:食料消費量-10%、消費財消費量-10%
 tr_ngm_coarse_food = {
 	modifier = {
-		planet_pops_food_upkeep_mult = -0.2
+		planet_pops_food_upkeep_mult = -0.1
+		planet_pops_consumer_goods_upkeep_mult = -0.1
 	}
 }
 
@@ -634,7 +648,7 @@ tr_ngm_transcendental = {
 	}
 }
 
-# 84.敵対的演説:外交発言力+20%
+# 84.敵対的演説:宿敵の外交発言力-10%
 tr_ngm_battle_speach = {
 	modifier = {
 		diplo_weight_mult = 0.2
@@ -733,13 +747,13 @@ tr_ngm_machine_depart = {
 	}
 }
 
-# 97.ロボット技師会:20Popごとにロボット製造者Job+1
+# 97.ロボット技師会:33Popごとにロボット製造者Job+1
 tr_ngm_robot_depart = {
 	possible = {
 		has_technology = tech_robotic_workers
 	}
 	modifier = {
-		job_roboticist_per_pop = 0.05
+		job_roboticist_per_pop = 0.03
 	}
 }
 
@@ -751,10 +765,10 @@ tr_ngm_machine_human = {
 }
 
 # 官吏(書類により統治される国家は強大でゆるぎない)
-# 99.取得時：管理許容量+20%
+# 99.取得時：帝国規模影響-5%
 tr_ngm_official_first = {
 	modifier = {
-		country_admin_cap_mult = 0.2
+		empire_size_penalty_mult = -0.05
 	}
 }
 
@@ -781,17 +795,17 @@ tr_ngm_note = {
 	}
 }
 
-# 103.公文書館:布告許容量+1
+# 103.公文書館:布告基金+50
 tr_ngm_document = {
 	modifier = {
 		country_edict_fund_add = 50
 	}
 }
 
-# 104.総務省:管理許容量+10%
+# 104.総務省:帝国規模影響量-15%
 tr_ngm_general_affairs = {
 	modifier = {
-		country_admin_cap_mult = 0.1
+		empire_size_penalty_mult = -0.15
 	}
 }
 
@@ -817,17 +831,18 @@ tr_ngm_officer_finish = {
 	}
 }
 
-# 108.艦政本部:造船速度+20%
+# 108.艦政本部:造船速度+15%
 tr_ngm_navy_depart = {
 	modifier = {
-		starbase_shipyard_build_speed_mult = 0.2
+		starbase_shipyard_build_speed_mult = 0.15
 	}
 }
 
-# 109.参謀第1課:亜高速移動速度+5%
+# 109.参謀第1課:亜高速移動速度+5%、地上軍編成速度+10%
 tr_ngm_officer_1 = {
 	modifier = {
 		ship_speed_mult = 0.05
+		planet_army_build_speed_mult = 0.1
 	}
 }
 
@@ -899,7 +914,7 @@ tr_ngm_excellence_officer = {
 	}
 }
 
-# 119.沈着な提督:艦船連射レート+5%
+# 119.冷静沈着な提督:艦船連射レート+5%
 tr_ngm_deposition_admiral = {
 	modifier = {
 		ship_fire_rate_mult = 0.05
@@ -991,13 +1006,13 @@ tr_ngm_upper_class = {
 	}
 }
 
-# 130.密室政治:派閥からの影響力+30%
+# 130.密室政治:派閥幸福度+10%
 tr_ngm_backroom_politics = {
 	possible = {
 		has_tradition = tr_ngm_upper_class
 	}
 	modifier = {
-		pop_factions_influence_produces_add = 0.3
+		faction_approval = 0.1
 	}
 }
 
@@ -1201,10 +1216,14 @@ tr_ngm_extended_negotiations = {
 }
 
 # 逆境(我が国は脆弱であるが、だからこそできることもある)
-# 155.取得時：管理許容量を超過していないとき、外交発言力+20%
+# 155.取得時：ステーション耐久+33%
 tr_ngm_adversity_adopt = {
 	modifier = {
-		diplo_weight_mult = 0.2
+		shipsize_starbase_outpost_hull_mult = 0.33
+		shipsize_starbase_starport_hull_mult = 0.33
+		shipsize_starbase_starhold_hull_mult = 0.33
+		shipsize_starbase_starfortress_hull_mult = 0.33
+		shipsize_starbase_citadel_hull_mult = 0.33
 	}
 }
 
@@ -1222,13 +1241,13 @@ tr_ngm_strong_command_and_control = {
 	}
 }
 
-# 158.効率的行政組織:管理許容量+10
+# 158.効率的行政組織:帝国規模影響-5%
 tr_ngm_purify_corruption = {
 	possible = {
 		has_tradition = tr_ngm_strong_command_and_control
 	}
 	modifier = {
-		country_admin_cap_mult = 0.03		#変えた
+		empire_size_penalty_mult = -0.05
 	}
 }
 
@@ -1258,20 +1277,19 @@ tr_ngm_efficient_management = {
 }
 
 # 余裕(強国である我が国は余裕を持った対応が求められる)
-# 162.取得時：管理許容量を超過しているとき、外交発言力+30%
+# 162.取得時：帝国規模影響-10%
 tr_ngm_margin_adopt = {
 	modifier = {
-		# diplo_weight_mult = 0.3
+		empire_size_penalty_mult = -0.1
 	}
 }
 
 # 163.余裕の伝統の完成
-# 管理許容量を超過しているとき、影響力を+30%増加させる
+# 帝国規模影響-10%
 tr_ngm_margin_finish = {
-	# 完遂時:管理許容量を超過しているとき、影響力+30%
 	modifier = {
 		ascension_perks_add = 1
-		# country_base_influence_produces_add = 0.3
+		empire_size_penalty_mult = -0.1
 	}
 }
 
@@ -1298,10 +1316,10 @@ tr_ngm_weapons_arsenal_country = {
 	}
 }
 
-# 167.膨張した官僚機構:管理許容量超過ペナルティ-30%
+# 167.膨張した官僚機構:布告基金+50
 tr_ngm_rock_solid_bureaucracy = {
 	modifier = {
-		empire_size_penalty_mult = -0.3
+		country_edict_fund_add = 50
 	}
 }
 
@@ -1375,14 +1393,15 @@ tr_ngm_big_stick_diplomacy = {
 }
 
 # 宗主(植民と属国化。これこそが"平和"で安定的な拡張が可能である)
-# 176.取得時：属国の受け入れ+10
+# 176.取得時：忠誠度月間+1
 tr_ngm_suzerain_adopt = {
 	modifier = {
 		country_subject_acceptance_add = 10
+		monthly_loyalty = 1
 	}
 }
 
-# 177.完遂時:属国受け入れ時の距離補正をなくすまだ
+# 177.完遂時:複数の従属国を保有することへのペナルティの対象にはならない
 tr_ngm_suzerain_finish = {
 	possible = {
 		has_tradition = tr_ngm_delegation
@@ -1394,13 +1413,13 @@ tr_ngm_suzerain_finish = {
 	}
 }
 
-# 178.外交的拡張:外交発言力+10%
+# 178.外交的拡張:艦隊供出:属国の艦隊貢献+20%
 tr_ngm_diplomatic_expansion = {
 	possible = {
 		has_tradition = tr_ngm_suzerain_adopt
 	}
 	modifier = {
-		diplo_weight_mult = 0.1
+		country_vassal_naval_capacity_contribution_mult = 0.2
 	}
 }
 
@@ -1424,13 +1443,13 @@ tr_ngm_colonial_hegemony = {
 	}
 }
 
-# 181.宗主国の圧力:艦隊許容量+20
+# 181.宗主国の圧力:忠誠度月間+1
 tr_ngm_suzerainty_pressure = {
 	possible = {
 		has_tradition = tr_ngm_suzerain_adopt
 	}
 	modifier = {
-		country_naval_cap_add = 20
+		monthly_loyalty = 1
 	}
 }
 
@@ -1485,10 +1504,10 @@ tr_ngm_diplomatic_pressure = {
 	}
 }
 
-# 188.圧力を支える行政力:管理許容量+20
+# 188.圧力を支える行政力:官僚の算出する統合力+20%
 tr_ngm_administration_to_support_pressure = {
 	modifier = {
-		empire_size_mult = -0.05
+		planet_bureaucrats_time_produces_mult = 0.2
 	}
 }
 
@@ -1681,11 +1700,11 @@ tr_ngm_legislation_adopt = {
 	}
 }
 
-# 212.完遂時:布告許容量+2
+# 212.完遂時:布告基金+80
 tr_ngm_legislation_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		country_edict_fund_add = 100
+		country_edict_fund_add = 80
 	}
 }
 
@@ -1696,17 +1715,17 @@ tr_ngm_constitutional_lawsuit = {
 	}
 }
 
-# 214.事前法令審査:布告コスト-25%
+# 214.事前法令審査:官僚の算出する統合力+20%
 tr_ngm_preliminary_legal_review = {
 	possible = {
 		has_tradition = tr_ngm_constitutional_lawsuit
 	}
 	modifier = {
-		edicts_cost_mult = -0.25
+		planet_bureaucrats_time_produces_mult = 0.2
 	}
 }
 
-# 215.法務局の拡充:布告許容量+1
+# 215.法務局の拡充:布告基金+50
 tr_ngm_expansion_of_the_legal_affairs_bureau = {
 	modifier = {
 		country_edict_fund_add = 50

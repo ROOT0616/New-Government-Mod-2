@@ -1690,6 +1690,9 @@ first_contact_protocol = {
 		modifier = {}
 
 		valid = {
+			NOT = {
+				has_tradition = tr_ngm_neighbor_first
+			}
 			is_pacifist = no
 			is_xenophile = no
 		}
