@@ -2,7 +2,7 @@
 bureau_of_ceremonies = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_bureau_of_ceremonies
+	building_icon = building_ngm_bureau_of_ceremonies
 	clothes_texture_index = 3
 	possible_pre_triggers = {
 		has_owner = yes
@@ -29,7 +29,7 @@ bureau_of_ceremonies = {
 ngm_secretary = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
-	# building_icon = building_bureau_of_ceremonies
+	# building_icon = building_ngm_bureau_of_ceremonies
 	clothes_texture_index = 3
 	possible_pre_triggers = {
 		has_owner = yes
@@ -56,7 +56,7 @@ ngm_secretary = {
 ngm_pacifist = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
-	# building_icon = building_bureau_of_ceremonies
+	# building_icon = building_ngm_bureau_of_ceremonies
 	clothes_texture_index = 3
 	possible_pre_triggers = {
 		has_owner = yes
@@ -78,7 +78,7 @@ ngm_pacifist = {
 ngm_crest_bearer = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
-	# building_icon = building_bureau_of_ceremonies
+	# building_icon = building_ngm_bureau_of_ceremonies
 	clothes_texture_index = 3
 	possible_pre_triggers = {
 		has_owner = yes
@@ -106,7 +106,7 @@ ngm_crest_bearer = {
 ngm_senior_advisor = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
-	# building_icon = building_bureau_of_ceremonies
+	# building_icon = building_ngm_bureau_of_ceremonies
 	clothes_texture_index = 3
 	possible_pre_triggers = {
 		has_owner = yes
@@ -152,7 +152,7 @@ ngm_heroes_of_society = {
 ngm_superintendent_of_wilderness = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
-	# building_icon = building_bureau_of_ceremonies
+	# building_icon = building_ngm_bureau_of_ceremonies
 	clothes_texture_index = 3
 	possible_pre_triggers = {
 		has_owner = yes
@@ -176,11 +176,11 @@ ngm_superintendent_of_wilderness = {
 	}
 }
 
-# 8.インフルエンサー influencer  影響力+0.1、社会研究+5、統治志向魅力+5%
+# 8.インフルエンサー influencer  影響力+0.3,統合力＋2,統治志向魅力＋5%
 ngm_influencer = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
-	# building_icon = building_bureau_of_ceremonies
+	# building_icon = building_ngm_bureau_of_ceremonies
 	clothes_texture_index = 3
 	possible_pre_triggers = {
 		has_owner = yes
@@ -194,8 +194,8 @@ ngm_influencer = {
 	resources = {
 		category = planet_ngm_influencer
 		produces = {
-			influence = 0.1
-			society_research = 5
+			influence = 0.3
+			unity = 2
 		}
 	}
 	weight = {

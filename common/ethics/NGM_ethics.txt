@@ -1,9 +1,8 @@
 # ☆志向
-# 〇社会主義：労働者幸福度+5%、布告「5か年計画」を宣言可能。  狂：労働者幸福度+10%、統治者幸福度-5%、布告「5か年計画」を宣言可能。	〇資本主義：統治者幸福度+5%、交易価値+10%	狂：統治者幸福度+10%、交易価値+10%、労働者幸福度-10%
-# 〇介入主義：使節+1、解読力+2			狂：関係-30、使節+2、解読力+5			〇中立主義：関係+20、暗号力+5	狂：連邦結束度月-5、関係+50、暗号力+10（対外）
-# 〇保全主義：居住性＋5%、農業生産量+10%  	狂：居住性+10%、農業生産量+20%、鉱物生産量-10%	〇開発主義：鉱物生産+5%、建築スロット＋2    狂：鉱物生産+10%、建築スロット+2、区域建造速度+10%、居住性-5%
-# 〇栄望主義：Pop30あたり貴族職業枠＋1、統治者の幸福度＋10%、開戦自由「名誉にかけて」勝利時影響力＋100  狂：Pop20あたり貴族職業枠＋1、統治者の幸福度＋20%、戦争疲弊-20%、開戦自由「名誉にかけて」勝利時影響力＋100、	〇実利主義  奴隷の使用許可、30Popあたりインフルエンサー職業枠+1、奴隷の購入コスト-10%    狂：奴隷の使用許可、20Popあたりインフルエンサー職業枠+1、奴隷購入コスト-20%、戦時中の艦隊製造速度+10%（思想）
-# ※インフルエンサージョブ  統治者  影響力+0.1、社会研究+5、統治志向魅力+5%（現代社会で様々なコンテンツを利用して他者の思考や行動に影響を与える有力者）
+# 〇社会主義：〇資本主義
+# 〇介入主義：〇中立主義
+# 〇保全主義：〇開発主義
+# 〇栄望主義：〇実利主義
 
 ethic_categories = {
 	ngm_soc_or_cap = {}
@@ -16,7 +15,7 @@ ethic_categories = {
 
 }
 
-# 〇社会主義：労働者幸福度+5%、布告「5か年計画」を宣言可能。  狂：労働者幸福度+10%、統治者幸福度-5%、布告「5か年計画」を宣言可能。	
+# 〇社会主義：労働者生産＋2.5%、布告「5か年計画」を宣言可能。  狂：労働者生産+5%,交易価値－10、布告「5か年計画」を宣言可能。	
 # ユートピアの豊かさ、学術特権を使用可能
 ethic_fanatic_socialism = {
 	cost = 2
@@ -27,8 +26,8 @@ ethic_fanatic_socialism = {
 
 	regular_variant = ethic_socialism
 	country_modifier = {
-		pop_cat_worker_happiness = 0.1
-		pop_cat_ruler_happiness = -0.05
+		planet_jobs_worker_produces_mult = 0.05
+		trade_value_add = -10
 	}
 
 	tags = {
@@ -50,7 +49,7 @@ ethic_socialism = {
 	fanatic_variant = ethic_fanatic_socialism
 
 	country_modifier = {
-		pop_cat_worker_happiness = 0.05
+		planet_jobs_worker_produces_mult = 0.025
 	}
 
 	tags = {
@@ -569,7 +568,7 @@ ethic_capitalism = {
 	}
 }
 
-# 〇介入主義：使節+1、解読力+2			狂：関係-30、使節+2、解読力+5	
+# 〇介入主義：解読力＋10			狂：解読力＋15 最大信用－30
 ethic_fanatic_interventionism = {
 	cost = 2
 	category = "ngm_int_or_neu"
@@ -580,8 +579,7 @@ ethic_fanatic_interventionism = {
 	regular_variant = ethic_interventionism
 
 	country_modifier = {
-		envoys_add = 2
-		intel_decryption_add = 5
+		intel_decryption_add = 15
 		country_trust_cap_add = -30
 	}
 
@@ -601,8 +599,7 @@ ethic_interventionism = {
 	fanatic_variant = ethic_fanatic_interventionism
 
 	country_modifier = {
-		envoys_add = 1
-		intel_decryption_add = 2
+		intel_decryption_add = 10
 	}
 
 	tags = {
@@ -838,7 +835,7 @@ ethic_interventionism = {
 	}
 }
 
-# 〇中立主義：関係+20、暗号力+5	狂：(連邦結束度月-5)、関係+50、暗号力+10（対外）
+# 〇中立主義：暗号力＋10	狂：暗号力＋15 外交影響力コストー5％ 使節-1
 ethic_fanatic_neutralism = {
 	cost = 2
 	category = "ngm_int_or_neu"
@@ -849,8 +846,9 @@ ethic_fanatic_neutralism = {
 	regular_variant = ethic_neutralism
 
 	country_modifier = {
-		country_trust_cap_add = 50
-		intel_encryption_add = 10
+		intel_encryption_add = 15
+		diplomacy_upkeep_mult = -0.05
+		envoys_add = -1
 	}
 	
 
@@ -870,7 +868,7 @@ ethic_neutralism = {
 	fanatic_variant = ethic_fanatic_neutralism
 
 	country_modifier = {
-		intel_encryption_add = 5
+		intel_encryption_add = 10
 	}
 
 	tags = {
@@ -1645,7 +1643,7 @@ ethic_developmentalism = {
 	}
 }
 
-# 〇栄望主義：Pop25あたり貴族職業枠＋1、統治者の幸福度＋10%、開戦自由「名誉にかけて」勝利時影響力＋100  狂：Pop20あたり貴族職業枠＋1、統治者の幸福度＋20%、戦争疲弊-20%、
+# 〇栄望主義：Pop25あたり貴族職業枠＋1、統治者の幸福度＋10%、開戦自由「名誉にかけて」勝利時影響力＋100  狂：統治者の幸福度+20% 20Popごとに貴族+1 戦争疲弊増加－10% 布告基金－30
 # 開戦自由「名誉にかけて」勝利時影響力＋100、
 # ユートピアの豊かさ、階級制経済、学術特権を使用可能
 ethic_fanatic_honorism = {
@@ -1666,6 +1664,8 @@ ethic_fanatic_honorism = {
 	country_modifier = {
 		pop_cat_ruler_happiness = 0.2
 		job_noble_per_pop = 0.05
+		country_war_exhaustion_mult = -0.1
+		country_edict_fund_add = -30
 	}
 
 	tags = {
@@ -1927,8 +1927,7 @@ ethic_honorism = {
 	}
 }
 
-# 	〇実利主義  奴隷の使用許可、25Popあたりインフルエンサー職業枠+1、奴隷の購入コスト-10%    狂：奴隷の使用許可、20Popあたりインフルエンサー職業枠+1、奴隷購入コスト-20%、
-# 戦時中の艦隊製造速度+10%（思想）
+# 	〇実利主義  奴隷の使用許可、25Popごとにインフルエンサー+1 奴隷市場-20%    狂：20Popごとにインフルエンサー+1 奴隷市場-50% アノマリー発見率-10%
 # 階級制経済、学術特権を使用可能、社会福祉は選択できない
 ethic_fanatic_utilitarianism = {
 	cost = 2
@@ -1946,8 +1945,8 @@ ethic_fanatic_utilitarianism = {
 
 	country_modifier = {
 		job_ngm_influencer_per_pop = 0.05
-		slave_market_cost_mult = -0.2
-		starbase_defensive_war_ship_build_speed_mult = 0.1
+		slave_market_cost_mult = -0.5
+		ship_anomaly_generation_chance_mult = -0.1
 	}
 
 	tags = {
@@ -1975,7 +1974,7 @@ ethic_utilitarianism = {
 
 	country_modifier = {
 		job_ngm_influencer_per_pop = 0.04
-		slave_market_cost_mult = -0.1
+		slave_market_cost_mult = -0.2
 	}
 
 	tags = {
