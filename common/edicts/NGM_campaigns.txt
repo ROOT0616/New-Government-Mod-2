@@ -218,7 +218,7 @@ awarding_medalsto_faction_leaders_campaign = {
 	}
 }
 
-#軍人への勲章授与（陸軍士気+10%、艦隊射撃レート+10%）
+#軍人への勲章授与（陸軍士気+10%、艦隊射撃レート+10%、戦争疲弊増加-10%）
 awarding_medals_to_military_personnel_campaign = {
 	length = @campaignDuration
 	icon = "GFX_edict_type_time"
@@ -229,9 +229,9 @@ awarding_medals_to_military_personnel_campaign = {
 		}
 	}
 	modifier = {
-		army_attack_morale_mult = 0.1
-		army_defense_morale_mult = 0.1
+		army_morale = 0.1
 		ship_fire_rate_mult = 0.1
+		country_war_exhaustion_mult = -0.1
 	}
 	potential = {
 		has_technology = tech_ceremony_theory
@@ -439,7 +439,7 @@ awarding_medals_to_military_personnel_campaign = {
 	}
 }
 
-#統治層への勲章授与（惑星安定度+10）
+#統治層への勲章授与（惑星安定度+10,戦争疲弊増加-10%）
 awarding_medals_to_the_ruling_class_campaign = {
 	length = @campaignDuration
 	icon = "GFX_edict_type_time"
@@ -451,6 +451,7 @@ awarding_medals_to_the_ruling_class_campaign = {
 	}
 	modifier = {
 		planet_stability_add = 10
+		country_war_exhaustion_mult = -0.1
 	}
 	potential = {
 		has_technology = tech_ceremony_theory
@@ -1077,33 +1078,33 @@ ngm_five_year_plan5_campaign = {
 
 # 〇栄望主義：開戦自由「名誉にかけて」勝利時影響力＋100
 # 戦時中の艦隊製造速度+10%（思想）
-ngm_honorism_wartime_fleet = {
-	length = -1
-	icon = "GFX_edict_type_policy"
-	edict_cap_usage = 0
+	# ngm_honorism_wartime_fleet = {
+	# 	length = -1
+	# 	icon = "GFX_edict_type_policy"
+	# 	edict_cap_usage = 0
 
-	resources = {
-		category = edicts
-		cost = {
-			influence = 50
-		}
-	}
+	# 	resources = {
+	# 		category = edicts
+	# 		cost = {
+	# 			influence = 50
+	# 		}
+	# 	}
 
-	potential = {
-		has_ethic = ethic_fanatic_honorism
-	}
-	allow = {
-		is_at_war = yes
-	}
+	# 	potential = {
+	# 		has_ethic = ethic_fanatic_honorism
+	# 	}
+	# 	allow = {
+	# 		is_at_war = yes
+	# 	}
 
-	modifier = {
-		starbase_shipyard_build_speed_mult = 0.1
-	}
+	# 	modifier = {
+	# 		starbase_shipyard_build_speed_mult = 0.1
+	# 	}
 
-	ai_weight = {
-		weight = @EdictMedPrio
-	}
-}
+	# 	ai_weight = {
+	# 		weight = @EdictMedPrio
+	# 	}
+# }
 
 # 伝統等でアンロックされる布告
 # 1.記憶の布告
