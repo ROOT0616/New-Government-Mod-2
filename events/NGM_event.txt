@@ -8329,7 +8329,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_tradition = tr_ngm_constant_obstruction
+		has_tradition = tr_ngm_suzerain_adopt
 	}
 	immediate = {
 		every_subject = {
@@ -8373,9 +8373,9 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_modifier = tr_ngm_suzerainty_pressure_modifier
+				has_modifier = tr_ngm_ministory_culture_modifier
 			}
-			remove_modifier = tr_ngm_suzerainty_pressure_modifier
+			remove_modifier = tr_ngm_ministory_culture_modifier
 		}
 	}
 }
