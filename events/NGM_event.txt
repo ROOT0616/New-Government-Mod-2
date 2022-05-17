@@ -5894,10 +5894,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sniper_debuff_1
 			set_country_flag = country_flag_tr_ngm_sniper_debuff_1
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_1
 				}
@@ -5912,10 +5909,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sniper_debuff_2
 			set_country_flag = country_flag_tr_ngm_sniper_debuff_2
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_2
 				}
@@ -5930,10 +5924,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sniper_debuff_3
 			set_country_flag = country_flag_tr_ngm_sniper_debuff_3
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_3
 				}
@@ -5948,10 +5939,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sniper_debuff_4
 			set_country_flag = country_flag_tr_ngm_sniper_debuff_4
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_4
 				}
@@ -5966,10 +5954,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sniper_debuff_5
 			set_country_flag = country_flag_tr_ngm_sniper_debuff_5
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_5
 				}
@@ -5984,10 +5969,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sniper_debuff_6
 			set_country_flag = country_flag_tr_ngm_sniper_debuff_6
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_6
 				}
@@ -6002,10 +5984,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sniper_debuff_7
 			set_country_flag = country_flag_tr_ngm_sniper_debuff_7
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_7
 				}
@@ -6020,10 +5999,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sniper_debuff_8
 			set_country_flag = country_flag_tr_ngm_sniper_debuff_8
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_8
 				}
@@ -6045,13 +6021,7 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sniper_debuff_1
 			}
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-					NOT = {
-						has_modifier = tr_ngm_sniper_debuff_1
-					}
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_1
 				}
@@ -6059,7 +6029,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sniper_debuff_1
 				}
@@ -6070,13 +6040,7 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sniper_debuff_2
 			}
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-					NOT = {
-						has_modifier = tr_ngm_sniper_debuff_2
-					}
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_2
 				}
@@ -6084,7 +6048,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sniper_debuff_2
 				}
@@ -6095,13 +6059,7 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sniper_debuff_3
 			}
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-					NOT = {
-						has_modifier = tr_ngm_sniper_debuff_3
-					}
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_3
 				}
@@ -6109,7 +6067,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sniper_debuff_3
 				}
@@ -6120,13 +6078,7 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sniper_debuff_4
 			}
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-					NOT = {
-						has_modifier = tr_ngm_sniper_debuff_4
-					}
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_4
 				}
@@ -6134,7 +6086,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sniper_debuff_4
 				}
@@ -6145,13 +6097,7 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sniper_debuff_5
 			}
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-					NOT = {
-						has_modifier = tr_ngm_sniper_debuff_5
-					}
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_5
 				}
@@ -6159,7 +6105,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sniper_debuff_5
 				}
@@ -6170,13 +6116,7 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sniper_debuff_6
 			}
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-					NOT = {
-						has_modifier = tr_ngm_sniper_debuff_6
-					}
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_6
 				}
@@ -6184,7 +6124,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sniper_debuff_6
 				}
@@ -6195,13 +6135,7 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sniper_debuff_7
 			}
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-					NOT = {
-						has_modifier = tr_ngm_sniper_debuff_7
-					}
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_7
 				}
@@ -6209,7 +6143,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sniper_debuff_7
 				}
@@ -6220,13 +6154,7 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sniper_debuff_8
 			}
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-					NOT = {
-						has_modifier = tr_ngm_sniper_debuff_8
-					}
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_8
 				}
@@ -6234,7 +6162,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sniper_debuff_8
 				}
@@ -6606,10 +6534,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_1
 			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_1
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_freedom_finish_debuff_1
 				}
@@ -6624,10 +6549,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_2
 			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_2
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_freedom_finish_debuff_2
 				}
@@ -6642,10 +6564,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_3
 			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_3
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_freedom_finish_debuff_3
 				}
@@ -6660,10 +6579,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_4
 			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_4
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_freedom_finish_debuff_4
 				}
@@ -6678,10 +6594,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_5
 			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_5
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_freedom_finish_debuff_5
 				}
@@ -6696,10 +6609,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_6
 			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_6
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_freedom_finish_debuff_6
 				}
@@ -6714,10 +6624,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_7
 			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_7
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_freedom_finish_debuff_7
 				}
@@ -6732,10 +6639,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_freedom_finish_debuff_8
 			set_country_flag = country_flag_tr_ngm_freedom_finish_debuff_8
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_freedom_finish_debuff_8
 				}
@@ -6757,9 +6661,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_1
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_freedom_finish_debuff_1
 					}
@@ -6771,7 +6674,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_freedom_finish_debuff_1
 				}
@@ -6782,9 +6685,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_2
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_freedom_finish_debuff_2
 					}
@@ -6796,7 +6698,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_freedom_finish_debuff_2
 				}
@@ -6807,9 +6709,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_3
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_freedom_finish_debuff_3
 					}
@@ -6821,7 +6722,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_freedom_finish_debuff_3
 				}
@@ -6832,9 +6733,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_4
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_freedom_finish_debuff_4
 					}
@@ -6846,7 +6746,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_freedom_finish_debuff_4
 				}
@@ -6857,9 +6757,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_5
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_freedom_finish_debuff_5
 					}
@@ -6871,7 +6770,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_freedom_finish_debuff_5
 				}
@@ -6882,9 +6781,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_6
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_freedom_finish_debuff_6
 					}
@@ -6896,7 +6794,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_freedom_finish_debuff_6
 				}
@@ -6907,9 +6805,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_7
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_freedom_finish_debuff_7
 					}
@@ -6921,7 +6818,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_freedom_finish_debuff_7
 				}
@@ -6932,9 +6829,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_freedom_finish_debuff_8
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_freedom_finish_debuff_8
 					}
@@ -6946,7 +6842,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_freedom_finish_debuff_8
 				}
@@ -6974,10 +6870,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sabotage_debuff_1
 			set_country_flag = country_flag_tr_ngm_sabotage_debuff_1
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_1
 				}
@@ -6992,10 +6885,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sabotage_debuff_2
 			set_country_flag = country_flag_tr_ngm_sabotage_debuff_2
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_2
 				}
@@ -7010,10 +6900,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sabotage_debuff_3
 			set_country_flag = country_flag_tr_ngm_sabotage_debuff_3
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_3
 				}
@@ -7028,10 +6915,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sabotage_debuff_4
 			set_country_flag = country_flag_tr_ngm_sabotage_debuff_4
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_4
 				}
@@ -7046,10 +6930,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sabotage_debuff_5
 			set_country_flag = country_flag_tr_ngm_sabotage_debuff_5
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_5
 				}
@@ -7064,10 +6945,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sabotage_debuff_6
 			set_country_flag = country_flag_tr_ngm_sabotage_debuff_6
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_6
 				}
@@ -7082,10 +6960,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sabotage_debuff_7
 			set_country_flag = country_flag_tr_ngm_sabotage_debuff_7
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_7
 				}
@@ -7100,10 +6975,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_sabotage_debuff_8
 			set_country_flag = country_flag_tr_ngm_sabotage_debuff_8
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_8
 				}
@@ -7125,9 +6997,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sabotage_debuff_1
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_sabotage_debuff_1
 					}
@@ -7139,7 +7010,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sabotage_debuff_1
 				}
@@ -7150,9 +7021,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sabotage_debuff_2
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_sabotage_debuff_2
 					}
@@ -7164,7 +7034,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sabotage_debuff_2
 				}
@@ -7175,9 +7045,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sabotage_debuff_3
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_sabotage_debuff_3
 					}
@@ -7189,7 +7058,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sabotage_debuff_3
 				}
@@ -7200,9 +7069,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sabotage_debuff_4
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_sabotage_debuff_4
 					}
@@ -7214,7 +7082,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sabotage_debuff_4
 				}
@@ -7225,9 +7093,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sabotage_debuff_5
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_sabotage_debuff_5
 					}
@@ -7239,7 +7106,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sabotage_debuff_5
 				}
@@ -7250,9 +7117,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sabotage_debuff_6
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_sabotage_debuff_6
 					}
@@ -7264,7 +7130,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sabotage_debuff_6
 				}
@@ -7275,9 +7141,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sabotage_debuff_7
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_sabotage_debuff_7
 					}
@@ -7289,7 +7154,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sabotage_debuff_7
 				}
@@ -7300,9 +7165,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_sabotage_debuff_8
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_sabotage_debuff_8
 					}
@@ -7314,7 +7178,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_sabotage_debuff_8
 				}
@@ -7342,10 +7206,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_1
 			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_1
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_constant_obstruction_debuff_1
 				}
@@ -7360,10 +7221,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_2
 			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_2
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_constant_obstruction_debuff_2
 				}
@@ -7378,10 +7236,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_3
 			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_3
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_constant_obstruction_debuff_3
 				}
@@ -7396,10 +7251,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_4
 			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_4
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_constant_obstruction_debuff_4
 				}
@@ -7414,10 +7266,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_5
 			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_5
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_constant_obstruction_debuff_5
 				}
@@ -7432,10 +7281,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_6
 			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_6
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_constant_obstruction_debuff_6
 				}
@@ -7450,10 +7296,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_7
 			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_7
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_constant_obstruction_debuff_7
 				}
@@ -7468,10 +7311,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_constant_obstruction_debuff_8
 			set_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_8
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_constant_obstruction_debuff_8
 				}
@@ -7493,9 +7333,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_1
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_constant_obstruction_debuff_1
 					}
@@ -7507,7 +7346,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_constant_obstruction_debuff_1
 				}
@@ -7518,9 +7357,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_2
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_constant_obstruction_debuff_2
 					}
@@ -7532,7 +7370,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_constant_obstruction_debuff_2
 				}
@@ -7543,9 +7381,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_3
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_constant_obstruction_debuff_3
 					}
@@ -7557,7 +7394,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_constant_obstruction_debuff_3
 				}
@@ -7568,9 +7405,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_4
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_constant_obstruction_debuff_4
 					}
@@ -7582,7 +7418,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_constant_obstruction_debuff_4
 				}
@@ -7593,9 +7429,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_5
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_constant_obstruction_debuff_5
 					}
@@ -7607,7 +7442,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_constant_obstruction_debuff_5
 				}
@@ -7618,9 +7453,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_6
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_constant_obstruction_debuff_6
 					}
@@ -7632,7 +7466,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_constant_obstruction_debuff_6
 				}
@@ -7643,9 +7477,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_7
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_constant_obstruction_debuff_7
 					}
@@ -7657,7 +7490,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_constant_obstruction_debuff_7
 				}
@@ -7668,9 +7501,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_constant_obstruction_debuff_8
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_constant_obstruction_debuff_8
 					}
@@ -7682,7 +7514,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_constant_obstruction_debuff_8
 				}
@@ -8156,10 +7988,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_ap_ngm_chio_debuff_1
 			set_country_flag = country_flag_ap_ngm_chio_debuff_1
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = ap_ngm_chio_debuff_1
 				}
@@ -8174,10 +8003,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_ap_ngm_chio_debuff_2
 			set_country_flag = country_flag_ap_ngm_chio_debuff_2
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = ap_ngm_chio_debuff_2
 				}
@@ -8192,10 +8018,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_ap_ngm_chio_debuff_3
 			set_country_flag = country_flag_ap_ngm_chio_debuff_3
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = ap_ngm_chio_debuff_3
 				}
@@ -8210,10 +8033,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_ap_ngm_chio_debuff_4
 			set_country_flag = country_flag_ap_ngm_chio_debuff_4
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = ap_ngm_chio_debuff_4
 				}
@@ -8228,10 +8048,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_ap_ngm_chio_debuff_5
 			set_country_flag = country_flag_ap_ngm_chio_debuff_5
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = ap_ngm_chio_debuff_5
 				}
@@ -8246,10 +8063,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_ap_ngm_chio_debuff_6
 			set_country_flag = country_flag_ap_ngm_chio_debuff_6
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = ap_ngm_chio_debuff_6
 				}
@@ -8264,10 +8078,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_ap_ngm_chio_debuff_7
 			set_country_flag = country_flag_ap_ngm_chio_debuff_7
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = ap_ngm_chio_debuff_7
 				}
@@ -8282,10 +8093,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_ap_ngm_chio_debuff_8
 			set_country_flag = country_flag_ap_ngm_chio_debuff_8
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = ap_ngm_chio_debuff_8
 				}
@@ -8294,7 +8102,7 @@ country_event = {
 	}
 }
 
-# ②恒常的敵対諜報活動		宿敵にした相手国の影響力-1)		月ごとのチェック
+# ②恒常的敵対諜報活動		宿敵にした相手国の影響力-1		月ごとのチェック
 country_event = {
 	id = ngm_tradition.26
 	hide_window = yes
@@ -8307,9 +8115,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_ap_ngm_chio_debuff_1
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = ap_ngm_chio_debuff_1
 					}
@@ -8321,7 +8128,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = ap_ngm_chio_debuff_1
 				}
@@ -8332,9 +8139,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_ap_ngm_chio_debuff_2
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = ap_ngm_chio_debuff_2
 					}
@@ -8346,7 +8152,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = ap_ngm_chio_debuff_2
 				}
@@ -8357,9 +8163,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_ap_ngm_chio_debuff_3
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = ap_ngm_chio_debuff_3
 					}
@@ -8371,7 +8176,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = ap_ngm_chio_debuff_3
 				}
@@ -8382,9 +8187,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_ap_ngm_chio_debuff_4
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = ap_ngm_chio_debuff_4
 					}
@@ -8396,7 +8200,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = ap_ngm_chio_debuff_4
 				}
@@ -8407,9 +8211,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_ap_ngm_chio_debuff_5
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = ap_ngm_chio_debuff_5
 					}
@@ -8421,7 +8224,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = ap_ngm_chio_debuff_5
 				}
@@ -8432,9 +8235,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_ap_ngm_chio_debuff_6
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = ap_ngm_chio_debuff_6
 					}
@@ -8446,7 +8248,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = ap_ngm_chio_debuff_6
 				}
@@ -8457,9 +8259,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_ap_ngm_chio_debuff_7
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = ap_ngm_chio_debuff_7
 					}
@@ -8471,7 +8272,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = ap_ngm_chio_debuff_7
 				}
@@ -8482,9 +8283,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_ap_ngm_chio_debuff_8
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = ap_ngm_chio_debuff_8
 					}
@@ -8496,7 +8296,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = ap_ngm_chio_debuff_8
 				}
@@ -8676,10 +8476,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_battle_speach_1
 			set_country_flag = country_flag_tr_ngm_battle_speach_1
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_battle_speach_modifier_1
 				}
@@ -8694,10 +8491,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_battle_speach_2
 			set_country_flag = country_flag_tr_ngm_battle_speach_2
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_battle_speach_modifier_2
 				}
@@ -8712,10 +8506,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_battle_speach_3
 			set_country_flag = country_flag_tr_ngm_battle_speach_3
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_battle_speach_modifier_3
 				}
@@ -8730,10 +8521,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_battle_speach_4
 			set_country_flag = country_flag_tr_ngm_battle_speach_4
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_battle_speach_modifier_4
 				}
@@ -8748,10 +8536,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_battle_speach_5
 			set_country_flag = country_flag_tr_ngm_battle_speach_5
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_battle_speach_modifier_5
 				}
@@ -8766,10 +8551,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_battle_speach_6
 			set_country_flag = country_flag_tr_ngm_battle_speach_6
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_battle_speach_modifier_6
 				}
@@ -8784,10 +8566,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_battle_speach_7
 			set_country_flag = country_flag_tr_ngm_battle_speach_7
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_battle_speach_modifier_7
 				}
@@ -8802,10 +8581,7 @@ country_event = {
 			}
 			set_global_flag = global_flag_tr_ngm_battle_speach_8
 			set_country_flag = country_flag_tr_ngm_battle_speach_8
-			every_playable_country = {
-				limit = {
-					has_rival  = this
-				}
+			every_rival_country = {
 				add_modifier = {
 					modifier = tr_ngm_battle_speach_modifier_8
 				}
@@ -8827,9 +8603,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_battle_speach_1
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_battle_speach_modifier_1
 					}
@@ -8841,7 +8616,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_battle_speach_modifier_1
 				}
@@ -8852,9 +8627,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_battle_speach_2
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_battle_speach_modifier_2
 					}
@@ -8866,7 +8640,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_battle_speach_modifier_2
 				}
@@ -8879,7 +8653,6 @@ country_event = {
 			}
 			every_playable_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_battle_speach_modifier_3
 					}
@@ -8891,7 +8664,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_battle_speach_modifier_3
 				}
@@ -8902,9 +8675,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_battle_speach_4
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_battle_speach_modifier_4
 					}
@@ -8916,7 +8688,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_battle_speach_modifier_4
 				}
@@ -8927,9 +8699,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_battle_speach_5
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_battle_speach_modifier_5
 					}
@@ -8941,7 +8712,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_battle_speach_modifier_5
 				}
@@ -8952,9 +8723,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_battle_speach_6
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_battle_speach_modifier_6
 					}
@@ -8966,7 +8736,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_battle_speach_modifier_6
 				}
@@ -8977,9 +8747,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_battle_speach_7
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_battle_speach_modifier_7
 					}
@@ -8991,7 +8760,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_battle_speach_modifier_7
 				}
@@ -9002,9 +8771,8 @@ country_event = {
 			limit = {
 				has_country_flag = country_flag_tr_ngm_battle_speach_8
 			}
-			every_playable_country = {
+			every_rival_country = {
 				limit = {
-					has_rival  = this
 					NOT = {
 						has_modifier = tr_ngm_battle_speach_modifier_8
 					}
@@ -9016,7 +8784,7 @@ country_event = {
 			every_playable_country = {
 				limit = {
 					NOT = {
-						has_rival  = this
+						is_rival  = root
 					}
 					has_modifier = tr_ngm_battle_speach_modifier_8
 				}
