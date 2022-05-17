@@ -312,11 +312,17 @@ tr_ngm_acoustics = {
 	}
 }
 
-# 40.統合力+10、月間忠誠度+1
+# 40.文化大臣の設置:統合力+10、月間忠誠度+1
 tr_ngm_ministory_culture = {
+	on_enabled = {
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.30
+			}
+		}
+	}
 	modifier = {
 		country_unity_produces_add = 10
-		monthly_loyalty = 1
 	}
 }
 
@@ -650,8 +656,12 @@ tr_ngm_transcendental = {
 
 # 84.敵対的演説:宿敵の外交発言力-10%
 tr_ngm_battle_speach = {
-	modifier = {
-		diplo_weight_mult = 0.2
+	on_enabled = {
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.34
+			}
+		}
 	}
 }
 
@@ -1342,11 +1352,11 @@ tr_ngm_friendship_adopt = {
 	}
 }
 
-# 170完遂時:外交発言力+20%
+# 170完遂時:連邦参加による団結度へのペナルティ-25%
 tr_ngm_friendship_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		diplo_weight_mult = 0.2
+		federation_join_malus_mult = -0.25
 	}
 }
 
@@ -1395,9 +1405,12 @@ tr_ngm_big_stick_diplomacy = {
 # 宗主(植民と属国化。これこそが"平和"で安定的な拡張が可能である)
 # 176.取得時：忠誠度月間+1
 tr_ngm_suzerain_adopt = {
-	modifier = {
-		country_subject_acceptance_add = 10
-		monthly_loyalty = 1
+	on_enabled = {
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.27
+			}
+		}
 	}
 }
 
@@ -1413,7 +1426,7 @@ tr_ngm_suzerain_finish = {
 	}
 }
 
-# 178.外交的拡張:艦隊供出:属国の艦隊貢献+20%
+# 178.外交的拡張:属国による宇宙軍許容量への貢献+20%
 tr_ngm_diplomatic_expansion = {
 	possible = {
 		has_tradition = tr_ngm_suzerain_adopt
@@ -1448,8 +1461,12 @@ tr_ngm_suzerainty_pressure = {
 	possible = {
 		has_tradition = tr_ngm_suzerain_adopt
 	}
-	modifier = {
-		monthly_loyalty = 1
+	on_enabled = {
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.30
+			}
+		}
 	}
 }
 
@@ -1507,7 +1524,7 @@ tr_ngm_diplomatic_pressure = {
 # 188.圧力を支える行政力:官僚の算出する統合力+20%
 tr_ngm_administration_to_support_pressure = {
 	modifier = {
-		planet_bureaucrats_time_produces_mult = 0.2
+		planet_bureaucrats_unity_produces_mult = 0.2
 	}
 }
 

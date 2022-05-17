@@ -3717,8 +3717,9 @@ country_event = {
 					min_distance >= 500
 				}
 			}
-			event_target:ngm_galactic_empire_aquarium4 = { # done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
-					spawn_natural_wormhole = {
+			event_target:ngm_galactic_empire_aquarium4 = {
+				# done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
+				spawn_natural_wormhole = {
 					bypass_type = wormhole
 					random_pos = yes
 					orbit_angle = 360
@@ -3743,8 +3744,9 @@ country_event = {
 					min_distance >= 500
 				}
 			}
-			event_target:ngm_galactic_empire_aquarium5 = { # done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
-					spawn_natural_wormhole = {
+			event_target:ngm_galactic_empire_aquarium5 = {
+				# done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
+				spawn_natural_wormhole = {
 					bypass_type = wormhole
 					random_pos = yes
 					orbit_angle = 360
@@ -3889,7 +3891,7 @@ country_event = {
 	trigger = {
 		has_origin = origin_ngm_galactic_empire_aquarium
 	}
-	immediate = {	
+	immediate = {
 		# Buildings
 		event_target:ngm_galactic_empire_aquarium = {
 			set_owner = root
@@ -8456,6 +8458,526 @@ country_event = {
 	}
 }
 
+# 宗主取得時:忠誠度月間+1		伝統取得時
+country_event = {
+	id = ngm_tradition.27
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_suzerain_adopt
+	}
+	immediate = {
+		every_subject = {
+			add_modifier = {
+				modifier = tr_ngm_suzerain_adopt_modifier
+			}
+		}
+	}
+}
+
+# 宗主取得時:忠誠度月間+1		月ごとチェック
+country_event = {
+	id = ngm_tradition.28
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_constant_obstruction
+	}
+	immediate = {
+		every_subject = {
+			limit = {
+				NOT = {
+					has_modifier = tr_ngm_suzerain_adopt_modifier
+				}
+			}
+			add_modifier = {
+				modifier = tr_ngm_suzerain_adopt_modifier
+			}
+		}
+	}
+}
+
+# 宗主取得時:忠誠度月間+1		解除月ごとチェック
+country_event = {
+	id = ngm_tradition.29
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_subject = no
+		OR = {
+			has_modifier = tr_ngm_suzerain_adopt_modifier
+			has_modifier = tr_ngm_suzerainty_pressure_modifier
+			has_modifier = tr_ngm_ministory_culture_modifier
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = tr_ngm_suzerain_adopt_modifier
+			}
+			remove_modifier = tr_ngm_suzerain_adopt_modifier
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_suzerainty_pressure_modifier
+			}
+			remove_modifier = tr_ngm_suzerainty_pressure_modifier
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_suzerainty_pressure_modifier
+			}
+			remove_modifier = tr_ngm_suzerainty_pressure_modifier
+		}
+	}
+}
+
+# 宗主国の圧力:忠誠度月間+1		伝統取得時
+country_event = {
+	id = ngm_tradition.30
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_suzerainty_pressure
+	}
+	immediate = {
+		every_subject = {
+			add_modifier = {
+				modifier = tr_ngm_suzerainty_pressure_modifier
+			}
+		}
+	}
+}
+
+# 宗主国の圧力:忠誠度月間+1		月ごとチェック
+country_event = {
+	id = ngm_tradition.31
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_suzerainty_pressure
+	}
+	immediate = {
+		every_subject = {
+			limit = {
+				NOT = {
+					has_modifier = tr_ngm_suzerainty_pressure_modifier
+				}
+			}
+			add_modifier = {
+				modifier = tr_ngm_suzerainty_pressure_modifier
+			}
+		}
+	}
+}
+
+# 40.文化大臣の設置:月間忠誠度+1	伝統取得時
+country_event = {
+	id = ngm_tradition.32
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_ministory_culture
+	}
+	immediate = {
+		every_subject = {
+			add_modifier = {
+				modifier = tr_ngm_ministory_culture_modifier
+			}
+		}
+	}
+}
+
+# 40.文化大臣の設置:月間忠誠度+1		月ごとチェック
+country_event = {
+	id = ngm_tradition.33
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_ministory_culture
+	}
+	immediate = {
+		every_subject = {
+			limit = {
+				NOT = {
+					has_modifier = tr_ngm_ministory_culture_modifier
+				}
+			}
+			add_modifier = {
+				modifier = tr_ngm_ministory_culture_modifier
+			}
+		}
+	}
+}
+
+# 84.敵対的演説:宿敵の外交発言力-10%
+country_event = {
+	id = ngm_tradition.34
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_battle_speach
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_tr_ngm_battle_speach_1
+					has_country_flag = country_flag_tr_ngm_battle_speach_1
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_battle_speach_1
+			set_country_flag = country_flag_tr_ngm_battle_speach_1
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_tr_ngm_battle_speach_2
+					has_country_flag = country_flag_tr_ngm_battle_speach_2
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_battle_speach_2
+			set_country_flag = country_flag_tr_ngm_battle_speach_2
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_tr_ngm_battle_speach_3
+					has_country_flag = country_flag_tr_ngm_battle_speach_3
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_battle_speach_3
+			set_country_flag = country_flag_tr_ngm_battle_speach_3
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_3
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_tr_ngm_battle_speach_4
+					has_country_flag = country_flag_tr_ngm_battle_speach_4
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_battle_speach_4
+			set_country_flag = country_flag_tr_ngm_battle_speach_4
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_4
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_tr_ngm_battle_speach_5
+					has_country_flag = country_flag_tr_ngm_battle_speach_5
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_battle_speach_5
+			set_country_flag = country_flag_tr_ngm_battle_speach_5
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_tr_ngm_battle_speach_6
+					has_country_flag = country_flag_tr_ngm_battle_speach_6
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_battle_speach_6
+			set_country_flag = country_flag_tr_ngm_battle_speach_6
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_6
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_tr_ngm_battle_speach_7
+					has_country_flag = country_flag_tr_ngm_battle_speach_7
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_battle_speach_7
+			set_country_flag = country_flag_tr_ngm_battle_speach_7
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_7
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_tr_ngm_battle_speach_8
+					has_country_flag = country_flag_tr_ngm_battle_speach_8
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_battle_speach_8
+			set_country_flag = country_flag_tr_ngm_battle_speach_8
+			every_playable_country = {
+				limit = {
+					is_rival = this
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_8
+				}
+			}
+		}
+	}
+}
+
+# 84.敵対的演説:宿敵の外交発言力-10%		月ごとのチェック
+country_event = {
+	id = ngm_tradition.35
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_battle_speach
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_battle_speach_1
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_battle_speach_modifier_1
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_1
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_battle_speach_modifier_1
+				}
+				remove_modifier = tr_ngm_battle_speach_modifier_1
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_battle_speach_2
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_battle_speach_modifier_2
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_2
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_battle_speach_modifier_2
+				}
+				remove_modifier = tr_ngm_battle_speach_modifier_2
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_battle_speach_3
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_battle_speach_modifier_3
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_3
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_battle_speach_modifier_3
+				}
+				remove_modifier = tr_ngm_battle_speach_modifier_3
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_battle_speach_4
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_battle_speach_modifier_4
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_4
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_battle_speach_modifier_4
+				}
+				remove_modifier = tr_ngm_battle_speach_modifier_4
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_battle_speach_5
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_battle_speach_modifier_5
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_5
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_battle_speach_modifier_5
+				}
+				remove_modifier = tr_ngm_battle_speach_modifier_5
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_battle_speach_6
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_battle_speach_modifier_6
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_6
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_battle_speach_modifier_6
+				}
+				remove_modifier = tr_ngm_battle_speach_modifier_6
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_battle_speach_7
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_battle_speach_modifier_7
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_7
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_battle_speach_modifier_7
+				}
+				remove_modifier = tr_ngm_battle_speach_modifier_7
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_battle_speach_8
+			}
+			every_playable_country = {
+				limit = {
+					is_rival = this
+					NOT = {
+						has_modifier = tr_ngm_battle_speach_modifier_8
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_battle_speach_modifier_8
+				}
+			}
+			every_playable_country = {
+				limit = {
+					NOT = {
+						is_rival = this
+					}
+					has_modifier = tr_ngm_battle_speach_modifier_8
+				}
+				remove_modifier = tr_ngm_battle_speach_modifier_8
+			}
+		}
+	}
+}
+
 #############################
 ######  政府用イベント #######
 #############################
@@ -8984,7 +9506,6 @@ country_event = {
 #############################
 ######  オリンピックイベント #######
 #############################
-
 # オリンピック開催地抽選開始
 country_event = {
 	id = ngm_government.100

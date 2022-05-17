@@ -1,4 +1,4 @@
-version="1.34.12"
+version="1.34.13"
 tags={
 	"Diplomacy"
 	"Economy"
