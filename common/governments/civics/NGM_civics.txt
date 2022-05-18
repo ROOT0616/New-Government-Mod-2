@@ -2289,6 +2289,7 @@ civic_ngm_missionary_group = {
 	random_weight = {
 		base = 5
 	}
+	description = civic_ngm_missionary_group_effect
 	modifier = {
 		envoys_add = 1
 		country_trust_cap_add = -100

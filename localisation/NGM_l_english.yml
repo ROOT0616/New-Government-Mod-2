@@ -71,49 +71,47 @@
  decision_planet_patrolling_desc:0 "Let's guard this planet with drones."
  d_patrolling_society_deposit:0 "Drone security district."
  d_patrolling_society_deposit_desc:0 "This planet is being guarded by drones."
-  
+
  decision_end_patrolling:0 "Stop the drone security."
  decision_end_patrolling_desc:0 "It's a horrible thing to have drones flying around the city stop them!"
  decision_end_planet_patrolling_society_effects_short:0 "End security of the city by drones."
- 
+
  fanatic_patrolling_society:0 "Satellite surveillance."
  fanatic_patrolling_society_desc:0 "The planet is being monitored by satellite throughout the city."
  decision_planet_fanatic_patrolling:0 "Satellite surveillance"
  decision_planet_fanatic_patrolling_desc:0 "Monitor everyone by satellite!"
- 
+
  decision_end_fanatic_patrolling:0 "We're going to stop monitoring by satellite."
  decision_end_fanatic_patrolling_desc:0 "The citizens are scared. Stop the satellite surveillance now!"
- fanatic_patrolling_society:0 "We're going to stop monitoring by satellite."
  decision_end_planet_fanatic_patrolling_society_effects_short:0 "End the security of the city by satellite."
 
  hyper_fanatic_patrolling_society:0 "Complete People's Watch"
  hyper_fanatic_patrolling_society_desc:0 "This planet is being monitored by satellites, drones throughout the city."
  decision_planet_hyper_fanatic_patrolling:0 "Complete People's Watch"
  decision_planet_hyper_fanatic_patrolling_desc:0 "Monitor everyone with satellites and drones!"
- 
+
  decision_end_hyper_fanatic_patrolling:0 "Cease total people's oversight."
  decision_end_hyper_fanatic_patrolling_desc:0 "The citizens are scared. Stop the satellite, drone surveillance now!"
- hyper_fanatic_patrolling_society:0 "We're going to stop monitoring by satellite."
  decision_end_planet_hyper_fanatic_patrolling_society_effects_short:0 "Satellites, drones to end city security."
- 
+
  free_speech:0 "I encourage free speech."
  free_speech_desc:0 "I encourage you to have a free discussion."
  decision_planet_free_speech:0 "free speech"
  decision_planet_free_speech_desc:0 "I encourage you to have a free discussion."
- 
+
  decision_end_free_speech:0 "I will stop encouraging free speech."
  decision_end_free_speech_desc:0 "Encouraging free speech is a disservice to the government. Make it stop!"
  decision_end_planet_free_speech_effects_short:0 "Stop encouraging free speech."
- 
+
  fanatic_free_speech:0 "The Great Free Debate will be held at regular times."
  fanatic_free_speech_desc:0 "Regularly hold meetings where free discussion can take place."
  decision_planet_fanatic_free_speech:0 "The Great Free Debate will be held at regular times."
  decision_planet_fanatic_free_speech_desc:0 "Regularly hold meetings where free discussion can take place."
- 
+
  decision_end_fanatic_free_speech:0 "Stop encouraging free speech."
  decision_end_fanatic_free_speech_desc:0 "Encouraging free speech is a disservice to the government. Make it stop!"
  decision_end_planet_fanatic_free_speech_effects_short:0 "Stop encouraging free speech."
- 
+
  forced_labor:0 "Perform forced labor"
  forced_labor_desc:0 "Perform forced labor"
  decision_planet_forced_labor:0 "Perform forced labor."
@@ -122,15 +120,45 @@
  decision_end_forced_labor:0 "Stop forced labor."
  decision_end_forced_labor_desc:0 "Forced labor is a disservice to the government. Make it stop!"
  decision_end_planet_forced_labor_effects_short:0 "Stop forced labor."
- 
+
  requisition_policy:0 "Make a planetary scale commandeering policy."
  requisition_policy_desc:0 "Make a planetary scale commandeering policy."
  decision_planet_requisition_policy:0 "Make a planetary scale commandeering policy."
  decision_planet_requisition_policy_desc:0 "Make a planetary scale commandeering policy."
- 
+
  decision_end_requisition_policy:0 "Stop the planetary-scale sequestration policy."
  decision_end_requisition_policy_desc:0 "A planetary-scale sequestration policy is a disservice to the government. Make it stop!"
  decision_end_planet_requisition_policy_effects_short:0 "Stop the planetary-scale sequestration policy."
+
+ decision_planet_ngm_stonefish:0 "ストーンフィッシュ"
+ decision_planet_ngm_stonefish_desc:0 ""
+
+ ngm_stonefish:0 "ストーンフィッシュ"
+ ngm_stonefish_desc:0 ""
+
+ decision_planet_ngm_luxury_jewelry:0 "ラグジュアリー・ジェリー"
+ decision_planet_ngm_luxury_jewelry_desc:0 ""
+
+ ngm_luxury_jewelry:0 "ラグジュアリー・ジェリー"
+ ngm_luxury_jewelry_desc:0 ""
+
+ decision_planet_ngm_energy_oyster:0 "エナジー・オイスター"
+ decision_planet_ngm_energy_oyster_desc:0 ""
+
+ ngm_energy_oyster:0 "エナジー・オイスター"
+ ngm_energy_oyster_desc:0 ""
+
+ decision_planet_ngm_white_goldfish:0 "白金魚"
+ decision_planet_ngm_white_goldfish_desc:0 ""
+
+ ngm_white_goldfish:0 "白金魚"
+ ngm_white_goldfish_desc:0 ""
+
+ ngm_seaweed:0 "海綿藻"
+ ngm_seaweed_desc:0 ""
+
+ decision_planet_ngm_seaweed:0 "海綿藻"
+ decision_planet_ngm_seaweed_desc:0 ""
 
  decision_ngm_olympic_nomination:0 "国際大会の開催地に推薦"
  decision_ngm_olympic_nomination_desc:0 "国際大会の開催地となることは、 単なる栄誉のみならず利益ももたらす。 国際大会は気まぐれだが、 我々が充分なインセンティブを提供すれば、 ビッグプレーヤーたちをこの惑星に惹きつけられるかもしれない。 "
@@ -147,7 +175,7 @@
  decision_revoke_ngm_olympic_nomination:0 "推薦を取り下げる"
  decision_revoke_ngm_olympic_nomination_effect:0 "§H既に投資したものは払い戻されない。 §!"
  decision_revoke_ngm_olympic_nomination_desc:0 "時には注目の的になりたくないことだってある。 "
- 
+
 ########################
 #####    地上軍    ######
 ########################
@@ -166,6 +194,9 @@
 
  ngm_combat_machine_army:0 "戦闘機械"
  ngm_combat_machine_army_desc:0 "ﾀﾀｶｳﾀﾒﾉｷｶｲ ﾀﾀｶｳ?"
+
+ ngm_naval_fleet:0 "海軍艦隊"
+ ngm_naval_fleet_desc:0 "惑星を防衛する艦船や艦艇"
 
 #######################
 #####    志向    ######
@@ -239,6 +270,10 @@
  origin_ngm_escape_to_the_past_desc:0 " This nation's race fled from a time of torment and doom, and returned to the past to change the future.\n However, their methods of resisting their fate have given rise to trackers and regular raids."
  origin_tooltip_ngm_escape_to_the_past:0 "Once every 120 months, a fleet from the future attacks. By defeating them, it is possible to acquire technological debris.\n\nCapital planet has special characteristics「space-time continuum」\nPhysics Research speed§G+20%§!、Pop grows§G+10%§!"
 
+ origin_ngm_galactic_empire_aquarium:0 "銀河帝国アクアリウム"
+ origin_ngm_galactic_empire_aquarium_desc:0 "この国家は古き良き銀河帝国のアミューズメントパークとして存在した。その娯楽性から各国から攻撃の対象とならなかった。しかし、それ故に緩やかな衰退を遂げていっている。\nついにこのままではいけないことに気が付き銀河社会に恐る恐る足を踏み入れたが、かつてあったあらゆる知識は失われており、拡張する勇気は持ちえなかったのである。\nしかし、豊かなアミューズメントパークは健在である。\n§Rこの起源を選ぶ国が2カ国以上あるとバグります。§!"
+ origin_tooltip_ngm_galactic_empire_aquarium:0 "銀河の外延部に存在する特殊な星系群と首都惑星から開始。\n\n拡張に関して極めて大きな制約を課せられる。\n\n特殊な建築物を建造可能\n\n"
+
 #######################
 #####    国是    ######
 #######################
@@ -301,31 +336,31 @@
 
  civic_ngm_imaginary_socialism:0 "Imaginary Socialism"
  civic_ngm_imaginary_socialism_desc:0 "This socialist state, with its ideal of a paradise with society and the people working together, is on a journey towards an ideal and unattainable goal. Many unattainable tasks remain, but in general, the government is acting in the interest of the people."
- 
+
  civic_ngm_fundamental_insanity:0 "Fundamental insanity"
  civic_ngm_fundamental_insanity_desc:0 "There is something fundamentally wrong with the government of this country. Only the people concerned can know the nature of this sense of discomfort, which is difficult to put into words, but it cannot be explained to them, and it exhibits a mysterious ability."
- 
+
  civic_ngm_individualistic_rationalist:0 "Individualistic rationalist"
  civic_ngm_individualistic_rationalist_desc:0 "The government of this country makes rational decisions and respects the consequences of rational decisions, but may exhibit somewhat self-righteous and individualistic behavior and thought forms that are not predictable."
- 
+
  civic_ngm_formalist_rootkeeper:0 "Formalist rootkeeper"
  civic_ngm_formalist_rootkeeper_desc:0 "The government of this country prefers to conduct prior consultations and rootkeeping in secret chambers, and often displays an ostensibly formalistic attitude. As a result, to those who do not know the truth, it appears to be a rational and smooth process of making requests and adjusting interests, but behind the scenes there is fierce truncation and hidden consensus building."
- 
+
  civic_ngm_artistically_inclined_careless_person:0 "Careless person with artistic skin"
  civic_ngm_artistically_inclined_careless_person_desc:0 "The government of this country has excellent artistic sensibilities and entertainment, but in diplomacy it often forgets its promises and protocols."
- 
+
  civic_ngm_steady_hand:0 "Steady hand"
  civic_ngm_steady_hand_desc:0 "The government of this country is extremely solidly run and has succeeded in building a solid foundation."
- 
+
  civic_ngm_the_toxic_survivalist:0 "Tongue-in-cheek survivalist"
  civic_ngm_the_toxic_survivalist_desc:0 "The government of this country is basically a foul-mouthed man who does not make a good impression on others, but he is skilled in the art of practical survival and works hard behind the scenes."
 
  civic_ngm_hard_worker_with_a_slow_pace:0 "Hard worker with a slow pace"
  civic_ngm_hard_worker_with_a_slow_pace_desc:0 "The government of this country is patient and implements its security plans at its own pace, always struggling to deal with other countries. But because of this attitude, it is trusted by many countries and has strong confidence in its people."
- 
+
  civic_ngm_ruthless_realist:0 "Ruthless realist"
  civic_ngm_ruthless_realist_desc:0 "The government of this country is frighteningly pragmatic, not hesitating to betray its allies of a few hours ago, and its internal politics are harsh and efficient. However, this attitude is not actively supported by the people or by other countries."
- 
+
  civic_ngm_smooth_traffic:0 "Smooth traffic"
  civic_ngm_smooth_traffic_desc:0 "A smooth traffic system is necessary at all times and in all circumstances."
 
@@ -520,6 +555,7 @@
 
  civic_ngm_missionary_group:0 "Missionary group"
  civic_ngm_missionary_group_desc:0 "§R yet §! \nThe clergy in this country are zealous and focused on spreading their faith to other countries."
+ civic_ngm_missionary_group_effect:0 "Neighborhood Spiritualism Attractiveness +40%"
 
  civic_ngm_defender_of_the_faith:0 "Defender of the faith"
  civic_ngm_defender_of_the_faith_desc:0 "The leaders of this country are committed to protecting God as a nation and are willing to make any sacrifice to do so."
@@ -1260,12 +1296,15 @@
 
  tech_ceremony_theory:0 "Ceremony Theory1"
  tech_ceremony_theory_desc:0 "Research into the efficient operation of the bureaucracy in charge of ceremonies and how to conduct ceremonies that symbolize authority more cheaply and easily."
- 
+
  tech_ceremony_theory_second:0 "Ceremony Theory2"
  tech_ceremony_theory_second_desc:0 "Research into the efficient operation of the bureaucracy in charge of ceremonies and how to conduct ceremonies that symbolize authority more cheaply and easily."
 
  tech_ad_high_degree_of_local_autonomy:0 "High degree of local autonomy"
  tech_ad_high_degree_of_local_autonomy_desc:0 "Advanced local government explained"
+
+ tech_ngm_developmental_fish_farming:0 "発展型魚類養殖"
+ tech_ngm_developmental_fish_farming_desc:0 ""
 
 #######################
 #####    資源    ######
@@ -1326,6 +1365,51 @@
  building_ngm_planet_rating_agency:0 "Planet Rating Agency"
  building_ngm_planet_rating_agency_desc:0 "A company that rates everything and creates standards for judgment"
 
+ building_ngm_ocean_business_orbit_elev:0 "商用軌道エレベーター"
+ building_ngm_ocean_business_orbit_elev_desc:0 "大気への影響や効率性を考えて大気圏外での船舶理着艦を可能とする民生用の軌道エレベーター"
+
+ building_ngm_ginga_department_store:0 "銀河百貨店"
+ building_ngm_ginga_department_store_desc:0 "全銀河の嗜好品が集まる集合商業施設"
+
+ building_ngm_business_school:0 "企業大学校"
+ building_ngm_business_school_desc:0 "経済や経営を学ぶ者の専門大学"
+
+ building_ngm_star_workshop:0 "星間工場群"
+ building_ngm_star_workshop_desc:0 "惑星規模に広がるコンビナート群"
+
+ building_ngm_galaxy_salon:0 "銀河サロン"
+ building_ngm_galaxy_salon_desc:0 "上流階級の者が集う社交界"
+
+ building_ngm_m_a_center:0 "M&Aセンター"
+ building_ngm_m_a_center_desc:0 "他社を評価、買収することを目的とした企業"
+
+ building_ngm_galactic_bank:0 "ギャラクティックバンク"
+ building_ngm_galactic_bank_desc:0 "銀河規模に広がる投資、貯蓄、資産運用を行う銀行"
+
+ building_ngm_IAA:0 "星間広告代理店"
+ building_ngm_IAA_desc:0 "情報を加工し、大衆に敷衍しやすい言葉で洗脳を行う企業"
+
+ building_ngm_corporate_hospital:0 "コーポレートメディカルセンター"
+ building_ngm_corporate_hospital_desc:0 "できるだけ安価に高品質な医療や福祉を行うことを目的とした社有の医療機関"
+
+ building_ngm_planetary_scale_building_center:0 "惑星規模建築センター"
+ building_ngm_planetary_scale_building_center_desc:0 "惑星で何らかの建築が行われる際に重機や物資、人員を提供する企業"
+
+ building_ngm_corporate_plantation:0 "企業農園"
+ building_ngm_corporate_plantation_desc:0 "社有の大規模な農園で、惑星特有の農作物取り扱っている。"
+
+ building_ngm_society_cosmic_port:0 "社有宇宙港"
+ building_ngm_society_cosmic_port_desc:0 "物資や旅客を効率的かつ高速に取り扱うための会社専用の宇宙港"
+
+ building_ngm_planet_trust_bank:0 "惑星信託銀行"
+ building_ngm_planet_trust_bank_desc:0 "惑星単位で資産や有価証券を運用して利益を追求する企業"
+
+ building_ngm_corporate_espionage:0 "企業諜報機関"
+ building_ngm_corporate_espionage_desc:0 "自社以外のあらゆる情報を収集し、他者に売却する企業"
+
+ building_ngm_planet_rating_agency:0 "惑星格付会社"
+ building_ngm_planet_rating_agency_desc:0 "あらゆるものを格付けし、判断基準を創出する企業"
+
  building_ngm_sa_ko_ryo:0 "サービス付き高官向け料亭"
  building_ngm_sa_ko_ryo_desc:0 "政府高官や富裕層の贈賄や裏交渉の場として利用される娯楽施設。裏カジノや闇銀行も併設されており、犯罪企業や現地政府の影響力を拡大させるとともに、腐敗を進行させていっている......"
 
@@ -1345,6 +1429,42 @@
  building_ngm_premise_workshop_desc:0 "最先端の工場は最先端の物品を生み出すのだろうか"
 
 #######################
+#####    区域    ######
+#######################
+
+ ngm_district_arcology_marine_villa:0 "アクア＝ヴィラアーコロジー"
+ ngm_district_arcology_marine_villa_plural:0 "アクア＝ヴィラアーコロジー"
+ ngm_district_arcology_marine_villa_desc:0 "上流階級向けの別荘や邸宅、高級ホテル等の住宅と豊かな生活をサポートする職員の職場群"
+
+ ngm_district_arcology_marine_housing:0 "ウォーター＝マンションアーコロジー"
+ ngm_district_arcology_marine_housing_plural:0 "ウォーター＝マンションアーコロジー"
+ ngm_district_arcology_marine_housing_desc:0 "中下流向けの別荘や職員住居、宿泊施設として存在する大規模集合居住区域"
+
+ ngm_district_arcology_marine_administrative_Organization:0 "管理機構アーコロジー"
+ ngm_district_arcology_marine_administrative_Organization_plural:0 "管理機構アーコロジー"
+ ngm_district_arcology_marine_administrative_Organization_desc:0 "この娯楽空間を管理し、外敵から防衛するための真面目な職員が働く数少ない広いオフィス群"
+
+ ngm_district_arcology_marine_health_care:0 "健康医療アーコロジー"
+ ngm_district_arcology_marine_health_care_plural:0 "健康医療アーコロジー"
+ ngm_district_arcology_marine_health_care_desc:0 "海洋技術や生命体活性化研究を元に健康や医療を提供するためのメディカルツーリズム施設"
+
+ ngm_district_arcology_marine_water_park:0 "水遊庭園アーコロジー"
+ ngm_district_arcology_marine_water_park_plural:0 "水遊庭園アーコロジー"
+ ngm_district_arcology_marine_water_park_desc:0 "アクアリウムを維持管理し、解説と研究を行う機関と観光客へ広大な空間の展示観覧に費やされる空間"
+
+ ngm_district_arcology_marine_drunkness_street:0 "交易歓楽アーコロジー"
+ ngm_district_arcology_marine_drunkness_street_plural:0 "交易歓楽アーコロジー"
+ ngm_district_arcology_marine_drunkness_street_desc:0 "惑星における商取引の中心地で、観光客や住民への物流や物品供給を行うための商業地帯"
+
+ ngm_district_arcology_marine_tidal_laboratory:0 "潮流工学アーコロジー"
+ ngm_district_arcology_marine_tidal_laboratory_plural:0 "潮流工学アーコロジー"
+ ngm_district_arcology_marine_tidal_laboratory_desc:0 "海流と流体工学を利用した発電や研究が行われる発電研究機関群"
+
+ ngm_district_arcology_marine_fisheries_research:0 "水産研究アーコロジー"
+ ngm_district_arcology_marine_fisheries_research_plural:0 "水産研究アーコロジー"
+ ngm_district_arcology_marine_fisheries_research_desc:0 "広大な海洋を利用した食料品や天然生産品を製造する地域"
+
+#######################
 #####    仕事    ######
 #######################
 
@@ -1355,6 +1475,7 @@
  job_bureau_of_ceremonies_desc:0 "Administer and create ceremonies and honors and give greater authority to their conferral."
  job_bureau_of_ceremonies_plural:0 "Board of the ceremonies"
  mod_job_bureau_of_ceremonies_add:0 "$job_bureau_of_ceremonies$ Jobs"
+ job_bureau_of_ceremonies_effect_desc:0 "£job_bureau_of_ceremonies£ $job_bureau_of_ceremonies_plural$は、 £unity£ §Y$unity$§!と£influence£ §Y$influence$§!を消費して £ngm_order_of_merit£ §Y勲章§!を産出する"
 
  planet_ngm_secretary:0 "Secretary"
  ngm_secretary:0 "Secretary"
@@ -1437,8 +1558,69 @@
  mod_job_ngm_influencer_add:0 "$job_ngm_influencer$ Jobs"
  mod_job_ngm_influencer_per_pop:0 "§G+1§! $job_ngm_influencer$ Job per $VALUE$ Pops"
  mod_job_ngm_influencer_per_pop_short:0 "\n§G+1§! £mod_job_ngm_influencer_add£ per $VALUE$ £pop£"
+ job_ngm_influencer_effect_desc:0 "£job_ngm_influencer£ $job_ngm_influencer_plural$は、 §Y統治志向魅力§!を向上し、£influence£ §Y$influence$§!と £society£ §Y$society_research$§! を産出する"
 
  civic_tooltip_ngm_high_priest_effects:0 "£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_high_priest£ §Y$job_high_priest_plural$§!"
+
+ planet_ngm_tide_engineer:0 "潮流技師"
+ ngm_tide_engineer:0 "潮流技師"
+ ngm_tide_engineer_desc:0 "流体工学を理解し、それを利用して経済的利益を生み出すことができる技術者"
+ job_ngm_tide_engineer:0 "潮流技師"
+ job_ngm_tide_engineer_plural:0 "潮流技師"
+ job_ngm_tide_engineer_desc:0 "流体工学を理解し、それを利用して経済的利益を生み出すことができる技術者"
+ mod_job_ngm_tide_engineer_add:0 "潮流技師の職業枠"
+ mod_job_ngm_tide_engineer_per_pop:0 "$VALUE$ POP につき$job_ngm_tide_engineer$の職業枠§G+1§!"
+ mod_job_ngm_tide_engineer_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_tide_engineer_add£ §G+1§!"
+
+ planet_ngm_gardener:0 "庭園管理者"
+ ngm_gardener:0 "庭園管理者"
+ ngm_gardener_desc:0 "アクアリウムを管理し、生態系を研究する文化的職務を担う専門家"
+ job_ngm_gardener:0 "庭園管理者"
+ job_ngm_gardener_plural:0 "庭園管理者"
+ job_ngm_gardener_desc:0 "アクアリウムを管理し、生態系を研究する文化的職務を担う専門家"
+ mod_job_ngm_gardener_add:0 "庭園管理者の職業枠"
+ mod_job_ngm_gardener_per_pop:0 "$VALUE$ POP につき$job_ngm_gardener$の職業枠§G+1§!"
+ mod_job_ngm_gardener_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_gardener_add£ §G+1§!"
+
+ planet_ngm_aquaculture_technician:0 "養殖技術者"
+ ngm_aquaculture_technician:0 "養殖技術者"
+ ngm_aquaculture_technician_desc:0 "食料品等を人工的に増大させて利益を生みだす技術者)(ディシジョンで消費財は変更可能"
+ job_ngm_aquaculture_technician:0 "養殖技術者"
+ job_ngm_aquaculture_technician_plural:0 "養殖技術者"
+ job_ngm_aquaculture_technician_desc:0 "食料品等を人工的に増大させて利益を生みだす技術者)(ディシジョンで消費財は変更可能"
+ mod_job_ngm_aquaculture_technician_add:0 "養殖技術者の職業枠"
+ mod_job_ngm_aquaculture_technician_per_pop:0 "$VALUE$ POP につき$job_ngm_aquaculture_technician$の職業枠§G+1§!"
+ mod_job_ngm_aquaculture_technician_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_aquaculture_technician_add£ §G+1§!"
+
+ planet_ngm_executive_cast:0 "エグゼティブキャスト"
+ ngm_executive_cast:0 "エグゼティブキャスト"
+ ngm_executive_cast_desc:0 "上流階級を中心としたさまざまなお客様を満足させ、安全を守る専門職員"
+ job_ngm_executive_cast:0 "エグゼティブキャスト"
+ job_ngm_executive_cast_plural:0 "エグゼティブキャスト"
+ job_ngm_executive_cast_desc:0 "上流階級を中心としたさまざまなお客様を満足させ、安全を守る専門職員"
+ mod_job_ngm_executive_cast_add:0 "エグゼティブキャストの職業枠"
+ mod_job_ngm_executive_cast_per_pop:0 "$VALUE$ POP につき$job_ngm_executive_cast$の職業枠§G+1§!"
+ mod_job_ngm_executive_cast_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_executive_cast_add£ §G+1§!"
+
+ planet_ngm_cast:0 "キャスト"
+ ngm_cast:0 "キャスト"
+ ngm_cast_desc:0 "テーマパークを維持管理し、お客様の安全と暴挙を防ぐ職員"
+ job_ngm_cast:0 "キャスト"
+ job_ngm_cast_plural:0 "キャスト"
+ job_ngm_cast_desc:0 "テーマパークを維持管理し、お客様の安全と暴挙を防ぐ職員"
+ mod_job_ngm_cast_add:0 "キャストの職業枠"
+ mod_job_ngm_cast_per_pop:0 "$VALUE$ POP につき$job_ngm_cast$の職業枠§G+1§!"
+ mod_job_ngm_cast_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_cast_add£ §G+1§!"
+
+ planet_ngm_admiral:0 "海軍将校"
+ ngm_admiral:0 "海軍将校"
+ ngm_admiral_desc:0 "惑星上の海軍艦隊を指揮し、運用を行う軍事技術の専門家"
+ job_ngm_admiral:0 "海軍将校"
+ job_ngm_admiral_plural:0 "海軍将校"
+ job_ngm_admiral_desc:0 "惑星上の海軍艦隊を指揮し、運用を行う軍事技術の専門家"
+ mod_job_ngm_admiral_add:0 "海軍将校の職業枠"
+ mod_job_ngm_admiral_per_pop:0 "$VALUE$ POP につき$job_ngm_admiral_plural$の職業枠§G+1§!"
+ mod_job_ngm_admiral_per_pop_short:0 "\n$VALUE$ £pop£ につき £mod_job_ngm_admiral_add£ §G+1§!"
 
 ##############################
 #####    リーダー特性    ######
@@ -1723,6 +1905,21 @@
 
  tr_ngm_weapons_arsenal_country_buff:0 "軍事国家"
 
+ tr_ngm_ministory_culture_modifier:0 "文化大臣の設置"
+
+ tr_ngm_suzerain_adopt_modifier:0 "宗主"
+
+ tr_ngm_suzerainty_pressure_modifier:0 "宗主国の圧力"
+
+ tr_ngm_battle_speach_modifier_1:0 "敵対的演説"
+ tr_ngm_battle_speach_modifier_2:0 "$tr_ngm_battle_speach_modifier_1$"
+ tr_ngm_battle_speach_modifier_3:0 "$tr_ngm_battle_speach_modifier_1$"
+ tr_ngm_battle_speach_modifier_4:0 "$tr_ngm_battle_speach_modifier_1$"
+ tr_ngm_battle_speach_modifier_5:0 "$tr_ngm_battle_speach_modifier_1$"
+ tr_ngm_battle_speach_modifier_6:0 "$tr_ngm_battle_speach_modifier_1$"
+ tr_ngm_battle_speach_modifier_7:0 "$tr_ngm_battle_speach_modifier_1$"
+ tr_ngm_battle_speach_modifier_8:0 "$tr_ngm_battle_speach_modifier_1$"
+
  ap_ngm_chio_debuff_1:0 "恒常的敵対諜報活動"
  ap_ngm_chio_debuff_2:0 "$ap_ngm_chio_debuff_1$"
  ap_ngm_chio_debuff_3:0 "$ap_ngm_chio_debuff_1$"
@@ -1952,6 +2149,10 @@
  civic_ngm_missionary_group_modifier:0 "Visit of the Missionaries"
  civic_ngm_missionary_group_modifier_desc:0 "The faith is being spread from other countries."
 
+ ngm_ancient_pact:0 "Relic:The Ancient Pact"
+
+ ngm_r_galactic_empire_aquarium:0 "銀河皇帝勅許第7216号「帝立遊園領邦の認可」"
+
 ##########################
 #####    種族特性    ######
 ##########################
@@ -1960,8 +2161,6 @@
  trait_ngm_youth_politics_desc:0 "§LThe high office of this government is dominated by youth, and many decisions are made by up-and-coming government officials. However, this tends to hasten the retirement of experienced people who are proficient in labor relations, and it tends to produce spur-of-the-moment decisions.§!"
  trait_ngm_elder_politics:0 "Elder politics"
  trait_ngm_elder_politics_desc:0 "§LThe government is dominated by older officials, and many decisions are made by seasoned government officials. However, this tends to discourage newcomers from joining the government and reduces the receptivity to new ideas.§!"
-
- ngm_ancient_pact:0 "Relic:The Ancient Pact"
 
  trait_ngm_knight:0 "Chivalry"
  trait_ngm_knight_desc:0 "This race has a high integrity with a strong belief that they should help the weak and fulfill social justice."
@@ -2197,6 +2396,7 @@
 
  pft_NGM_mammonism:0 "The Master"
  pft_NGM_mammonism_desc:0 "Usury is more concerned with the pursuit of profit and the stabilization of capital."
+ format.pop_faction.NGM_mammonism:0 "[This.Owner.GetSpeciesName]<NGM_mammonism_names_1><NGM_mammonism_names_2>"
  MAMMONISM_TRADE_SUPREMACY:0 "Trade Supremacy"
  MAMMONISM_TRADE_SUPREMACY_DESC:0 "If our foreign policy is heavy commercialism, [Root.GetName] will be pleased. "
  MAMMONISM_TRADE_PROFIT:0 "Trade profits"
@@ -2206,6 +2406,7 @@
 
  pft_NGM_collectivism:0 "Communism"
  pft_NGM_collectivism_desc:0 "Communists aim for economic and origin equality and for social equalization."
+ format.pop_faction.NGM_collectivism:0 "[This.Owner.GetSpeciesName]<NGM_collectivism_names_1><NGM_collectivism_names_2>"
  COLLECTIVISM_SOCIAL_WELFARE:0 "Social welfare"
  COLLECTIVISM_SOCIAL_WELFARE_DESC:0 "It would please [Root.GetName] greatly to let all the inhabitants of our empire live in §Ysocial welfare§! or §Yutopian abundance§!."
  COLLECTIVISM_MILITARY_SERVICE:0 "Equal military service"
@@ -2215,6 +2416,7 @@
 
  pft_NGM_environmentalism:0 "Environmentalism"
  pft_NGM_environmentalism_desc:0 "Environmentalists emphasize the maintenance of the planetary environment and the preservation of life forms."
+ format.pop_faction.NGM_environmentalism:0 "[This.Owner.GetSpeciesName]<NGM_environmentalism_names_1><NGM_environmentalism_names_2>"
  ENVIRONMENTALISM_PLANET_PRESERVATION:0 "Planet Preservation"
  ENVIRONMENTALISM_PLANET_PRESERVATION_DESC:0 "[Root.GetName] will be very pleased with the terraforming."
  ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE:0 "Maintain agriculture"
@@ -2222,6 +2424,7 @@
 
  pft_NGM_industrialism:0 "industrialism"
  pft_NGM_industrialism_desc:0 "Industrialists emphasize development and try to push for more industrialization."
+ format.pop_faction.NGM_industrialism:0 "[This.Owner.GetSpeciesName]<NGM_industrialism_names_1><NGM_industrialism_names_2>"
  INDUSTRIALISM_CIVILIAN_FACTORY:0 "Private industrialisation"
  INDUSTRIALISM_CIVILIAN_FACTORY_DESC:0 "[Root.GetName] will be very happy if we get a certain amount of consumer goods production."
  INDUSTRIALISM_MILITARY_FACTORY:0 "Military industrialisation"
@@ -2231,12 +2434,15 @@
 
  pft_NGM_hawks:0 "Hawks"
  pft_NGM_hawks_desc:0 "The hawks are actively involved in other countries and try to show off their presence."
+ format.pop_faction.NGM_hawks:0 "[This.Owner.GetSpeciesName]<NGM_hawks_names_1>"
 
  pft_NGM_doves:0 "Doves"
  pft_NGM_doves_desc:0 "The doves keep their distance from other countries and try to achieve as stable a position as possible."
+ format.pop_faction.NGM_doves:0 "[This.Owner.GetSpeciesName]<NGM_doves_names_1>"
 
  pft_NGM_reputation:0 "Reputation"
  pft_NGM_reputation_desc:0 "Honorists value honor and believe that status and honor should be maintained."
+ format.pop_faction.NGM_reputation:0 "[This.Owner.GetSpeciesName]<NGM_reputation_names_1>"
  REPUTATION_MONARCHIST:0 "Monarchists"
  REPUTATION_MONARCHIST_DESC:0 "[Root.GetName] will be happy to live under a §Ymonarchical§! form of governance. "
  REPUTATION_NATIONAL_INFLUENCE:0 "The impact of the country"
@@ -2247,6 +2453,7 @@
 
  pft_NGM_supremacy:0 "Self-importance"
  pft_NGM_supremacy_desc:0 "Self-supremacists are focused on maximizing their own profits and keeping themselves above other companies."
+ format.pop_faction.NGM_supremacy:0 "[This.Owner.GetSpeciesName]<NGM_supremacy_names_1>"
 
  factions.1.desc.NGM_mammonism:0 "The members are focused on commercial interests and are calling for greater emphasis on economic activities. \n\n"
  factions.1.desc.NGM_collectivism:0 "The members advocate economic equality and seek to equalize the population and eliminate economic inequality. \n\n"
@@ -2439,11 +2646,26 @@
  ngm_migration_yes_desc:0 "$free_migration_yes_desc$"
 
 #######################
+#####    惑星    ######
+#######################
+
+ pc_ngm_ocean:0 "海洋型エキュメノポリス"
+ pc_ngm_ocean_desc:0 ""
+ pc_ngm_ocean_adj:0 ""
+ pc_ngm_ocean_tile:0 ""
+ pc_ngm_ocean_tile_desc:0 ""
+ trait_pc_ngm_ocean_preference:0 "海洋型エキュメノポリスを好む"
+ trait_pc_ngm_ocean_preference_desc:0 "§L気が遠くなるほどの長きにわたる進化もしくは巧みな遺伝子操作の結果として、 遺伝子レベルでどの気候を好むかが決まっている。 §!"
+
+#######################
 #####    遺物    ######
 #######################
 
  r_ngm_ancient_pact:0 "The Ancient Pact"
  r_ngm_ancient_pact_desc:0 "An ancient agreement between powers, an article that requires a powerful self-defense force in times of emergency and an economic state that does not pose a threat to other nations in times of peace. Owning countries must abide by it in perpetuity."
+
+ r_ngm_geid:0 "銀河皇帝勅許第7216号「帝立遊園領邦の認可」"
+ r_ngm_geid_desc:0 "全銀河の統治者にして天界を統べる法秩序の体現者。神聖にして不可侵である銀河帝国第27代皇帝である余、ポチャヌルス8世は銀河帝国全体の福祉のために帝立遊園の設立を許す。帝立遊園の長は世襲とし、王と同格の公爵位を授け、余の宮廷において式部官長の地位を授ける。なお、領邦としての帝立遊園はその自律的権利を制約される。制約内容は....."
 
 ##########################
 #####    戦争目標    ######
@@ -2552,7 +2774,7 @@
  ngm_government.107.c:0 "最低限"
 
  ngm_government.108.name:0 "開会式"
- ngm_government.108.desc:0 "§Y[ngm_olympic_founder_planet.GetName]§!において大会が開催された。開会にあたり式典が行われ、最新鋭の技術を利用したホログラムや機械的なアピールが行われ、市民たちは熱狂の渦に置かれた。各国の選手たちの入場もつつがなく行われ、居住性に合わせたドームの中で行進が行われた。\n入場の後には§Y[ngm_olympic_founder.GetAdj]§!の国家元首により開会の宣言が起こなわれ、今から大会が開催される。"
+ ngm_government.108.desc:0 "§Y[ngm_olympic_founder_planet.GetName]§!において大会が開催された。開会にあたり式典が行われ、最新鋭の技術を利用したホログラムや機械的なアピールが行われ、市民たちは熱狂の渦に置かれた。各国の選手たちの入場もつつがなく行われ、居住性に合わせたドームの中で行進が行われた。\n入場の後には§Y[From.GetName]§!の国家元首により開会の宣言が起こなわれ、今から大会が開催される。"
  ngm_government.108.a:0 "すばらしい"
 
  ngm_government.110.name:0 "地元の好況"
@@ -2714,6 +2936,7 @@
 
  ap_ngm_constant_hostile_intelligence_operations:0 "恒常的敵対諜報活動"
  ap_ngm_constant_hostile_intelligence_operations_desc:0 "敵に対しては常に影響を与え続けなければならない"
+ ap_ngm_constant_hostile_intelligence_operations_effect:0 "宿敵にした相手国の影響力-1"
 
  ap_ngm_dipromatic_think_tank:0 "外交シンクタンク"
  ap_ngm_dipromatic_think_tank_desc:0 "常に移り変わる外交に関して専門家団を活用する"
@@ -2769,7 +2992,7 @@
  ap_ngm_colonial_office:0 "植民省"
  ap_ngm_colonial_office_desc:0 "植民活動と人口拡充を促す内的膨張を促す省庁を設置する"
 
- ap_ngm_ministry_of_innocence:0 "純潔省"
+ ap_ngm_ministry_of_innocence:0 "社会秩序維持局"
  ap_ngm_ministry_of_innocence_desc:0 "我が国は他国と一線を画し、純潔性を維持する必要がある"
 
  ap_ngm_great_constructure_department:0 "大規模建築計画局"
@@ -2820,19 +3043,19 @@
  tr_ngm_law_finish:0 "法令の伝統の完成"
  tr_ngm_law_finish_desc:0 "§Y労働法政策§!をアンロックする \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_human_rights:0 "人権法"
- tr_ngm_human_rights_desc:0 "惑星の§Y安定度§!が§G+5%§!増加させる。"
+ tr_ngm_human_rights_desc:0 "惑星の§Y幸福度%§!が§G+5%§!増加させる。"
  tr_ngm_human_rights_delayed:0 "人権保障に関する法典は、中々整備されにくい"
  tr_ngm_law_trade:0 "交易法"
  tr_ngm_law_trade_desc:0 "交易の§Y保護値§!が§G+5%§!増加させる。"
  tr_ngm_law_trade_delayed:0 "交易や貿易に関する規定は円滑な取引に必要である"
  tr_ngm_law_pirates:0 "海賊行為"
- tr_ngm_law_pirates_desc:0 "§Y海賊行為の増加§!が§G-30%§!減少させる"
+ tr_ngm_law_pirates_desc:0 "§Y海賊行為の増加§!が§G30%§!減少させる"
  tr_ngm_law_pirates_delayed:0 "海賊は有史以来の知的生命体の敵である"
  tr_ngm_law_government:0 "行政法典の拡充"
- tr_ngm_law_government_desc:0 "§Y影響力算出§!を§G+25%§!増加させる"
+ tr_ngm_law_government_desc:0 "§Y帝国規模影響量§!を§G10%§!増加減少させる"
  tr_ngm_law_government_delayed:0 "行政法の拡充は行政の範囲を明確にし、官僚の職務を行いやすくする"
  tr_ngm_constitution:0 "憲法"
- tr_ngm_constitution_desc:0 "§Y布告許容量§!が§G+1§!増加させる"
+ tr_ngm_constitution_desc:0 "§Y布告基金§!を§G+50§!増加させる"
  tr_ngm_constitution_delayed:0 "各種法典の原則を規定する法の存在は権利の観点からは必要である"
 
  tradition_ngm_virture:0 "悪徳"
@@ -2841,18 +3064,18 @@
  #tr_ngm_virture_first_effect:0 "tr_ngm_virture_first_effect"
  #tr_ngm_virture_first_desc:0 "tr_ngm_virture_first_desc"
  tr_ngm_virture_finish:0 "悪徳の伝統の完成"
- tr_ngm_virture_finish_desc:0 "§Y影響力の産出§!を§G+1§!増加させる \nアセンションパークをアンロック：§G+1§!"
+ tr_ngm_virture_finish_desc:0 "§Y解読力§!を§G+1§!増加させる \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_sniper:0 "狙い撃ち"
- tr_ngm_sniper_desc:0 "§Y艦船連射レート§!が§G5%§!増加する。宿敵の§Y犯罪度§!が§R10§!増加させる。"
+ tr_ngm_sniper_desc:0 "§Y艦船連射レート§!が§G5%§!増加する。宿敵の§Y犯罪度§!が§R+20§!増加させる。"
  tr_ngm_sniper_delayed:0 "敵対する船であれば、集中攻撃することが確実だ"
  tr_ngm_penetration:0 "浸透"
- tr_ngm_penetration_desc:0 "§Y解読力§!が§G5§!増加する。外交関係にある§Rすべての国家§!の§Y犯罪度§!が§R5§!増加させる。"
+ tr_ngm_penetration_desc:0 "外交関係にある§Rすべての国家§!の§Y犯罪度§!が§R+20§!増加させる。"
  tr_ngm_penetration_delayed:0 "敵対国家に対しては常に浸透する必要がある"
  tr_ngm_chain_harted:0 "憎しみの連鎖"
  tr_ngm_chain_harted_desc:0 "§Y宿敵§!の最大数が§G2§!増加させる。"
  tr_ngm_chain_harted_delayed:0 "相手を憎むことで相手は誰かを憎むようになるだろう"
  tr_ngm_exclusive:0 "独占"
- tr_ngm_exclusive_desc:0 "§Y統治者の幸福度§!が§G10%§!増加させる。"
+ tr_ngm_exclusive_desc:0 "§Y統治者の幸福度§!が§G20%§!増加し、§Y交易価値§!が§G15%§!増加させ、§Y統治者維持費§!が§R+10%§!する。"
  tr_ngm_exclusive_delayed:0 "利益や富は最も強き者のものになる"
  tr_ngm_sabotage:0 "破壊工作"
  tr_ngm_sabotage_desc:0 "§Y宿敵§!の§Y貿易保護値§!が§R15§!減少し、§Y宿敵§!の§Y犯罪度§!が§R20§!増加させる。"
@@ -2869,13 +3092,13 @@
  tr_ngm_restudy_desc:0 "§Y地上軍初期経験値§!が§G300§!増加し、§Y艦船初期経験値§!が§G300§!増加させる。"
  tr_ngm_restudy_delayed:0 "軍事訓練は適宜見直され、適切な教育体系へと編成される"
  tr_ngm_leader_study:0 "指導者研修の高度化"
- tr_ngm_leader_study_desc:0 "§Yリーダーレベル§!の上限を§G2§!増加させる。"
+ tr_ngm_leader_study_desc:0 "§Yリーダーレベル§!の上限を§G1§!増加させる。"
  tr_ngm_leader_study_delayed:0 "各界指導者には特殊な教育を行うことで効率を強化する"
- tr_ngm_program_study:0 "教育プログラムの見直し"
+ tr_ngm_program_study:0 "資格採用の強化"
  tr_ngm_program_study_desc:0 "§Yリーダーの初期レベル§!を§G1§!増加させる。"
  tr_ngm_program_study_delayed:0 "各界の指導者に行われる教育プログラムを現代的に編集するべきだ"
  tr_ngm_reprogram:0 "高等教育の拡大"
- tr_ngm_reprogram_desc:0 "§Y研究速度§!を§G5%§!増加する。§Y統合力§!を§G10%§!増加させる。"
+ tr_ngm_reprogram_desc:0 "§Y研究速度§!を§G5%§!増加する。§Y統合力§!を§G5%§!増加させる。"
  tr_ngm_reprogram_delayed:0 "国民全体に高等教育が受けられるような体制を生み出す"
  tr_ngm_high_study:0 "行政学院の整備"
  tr_ngm_high_study_desc:0 "§Yリーダーの雇用費用§!を§G33%§!減少させる。"
@@ -2884,10 +3107,10 @@
  tradition_ngm_ecstasy:0 "逸楽"
  tradition_ngm_ecstasy_desc:0 "快楽の園は常に我らを誘惑し、快楽におぼれさせる"
  tr_ngm_ecstasy_first:0 "逸楽の伝統"
- tr_ngm_ecstasy_first_effect:0 "生活水準の§Yユートピア§!の豊かさをアンロック"
- tr_ngm_ecstasy_first_desc:0 "生活水準の§Yユートピア§!の豊かさをアンロック"
+ tr_ngm_ecstasy_first_effect:0 "§Y幸福度§!を§G10%§!増加させる。"
+ tr_ngm_ecstasy_first_desc:0 "§Y幸福度§!を§G10%§!増加させる。"
  tr_ngm_ecstasy_finish:0 "逸楽の伝統の完成"
- tr_ngm_ecstasy_finish_desc:0 "§Y幸福度§!を§G10%§!増加させる。 \nアセンションパークをアンロック：§G+1§!"
+ tr_ngm_ecstasy_finish_desc:0 " 生活水準の§Yユートピア§!の豊かさをアンロック\nアセンションパークをアンロック：§G+1§!"
  tr_ngm_art_good:0 "芸術の推奨"
  tr_ngm_art_good_desc:0 "§Y統合力§!を§G10%§!増加させる。"
  tr_ngm_art_good_delayed:0 "人々の心を豊かにするのは芸術である"
@@ -2895,10 +3118,10 @@
  tr_ngm_art_industry_desc:0 "§Y快適度§!を§G25%§!増加させる。"
  tr_ngm_art_industry_delayed:0 "娯楽とは人生である"
  tr_ngm_groly_supporter:0 "繁栄を支える者"
- tr_ngm_groly_supporter_desc:0 "§Y奴隷の生産量§!を§G25%§!増加させる。"
+ tr_ngm_groly_supporter_desc:0 "§Y奴隷の生産量§!を§G10%§!増加させ、§Y奴隷の幸福度§!を§G10%§!増加させる。"
  tr_ngm_groly_supporter_delayed:0 "華やかな生活を維持するためには目に見えないところで働く者が必要である"
  tr_ngm_ecstasy_family:0 "奔放な家族"
- tr_ngm_ecstasy_family_desc:0 "§YPop成長速度§!を§G5%§!増加させる。"
+ tr_ngm_ecstasy_family_desc:0 "§YPop成長速度§!を§G5%§!増加させ、§Y安定度§!を§R-5§!増加させる。"
  tr_ngm_ecstasy_family_delayed:0 "家族計画など存在しない"
  tr_ngm_long_live:0 "長寿化"
  tr_ngm_long_live_desc:0 "§Yリーダー寿命§!を§G10年§!増加させる。"
@@ -2941,10 +3164,10 @@
  tr_ngm_acoustics_desc:0 "Y建造物§!§G帝国音楽堂§!を建設可能とする。"
  tr_ngm_acoustics_delayed:0 "音であっても聴覚以外を感激させることは可能である。"
  tr_ngm_ministory_culture:0 "文化大臣の設置"
- tr_ngm_ministory_culture_desc:0 "毎月の§Y影響力§!収入を§G0.5§!増加させる。"
+ tr_ngm_ministory_culture_desc:0 "毎月の§Y統合力算出を§!を§G+10§!増加させ、毎月の§Y忠誠度§!を§G1§!増加させる。"
  tr_ngm_ministory_culture_delayed:0 "文化を推奨し、保護する役所は必要だ"
  tr_ngm_diplomatic_art:0 "芸術外交"
- tr_ngm_diplomatic_art_desc:0 "§Y外交発言力§!を§G10%§!増加させる。"
+ tr_ngm_diplomatic_art_desc:0 "§Y外交発言力§!を§G5%§!増加させ、§Y流入魅力§!を§G10§!増加させる。"
  tr_ngm_diplomatic_art_delayed:0 "芸術を通じて平和外交は新たな外交方法として注目される"
  tr_ngm_authority_art:0 "芸術の権威"
  tr_ngm_authority_art_desc:0 "§Y建造物§!§G帝国芸術博物館§!を建設可能とする。"
@@ -2953,12 +3176,12 @@
  tradition_ngm_academic:0 "学術"
  tradition_ngm_academic_desc:0 "教育と研究の推進こそが未来への道筋なのである"
  tr_ngm_academic_first:0 "学術の伝統"
- tr_ngm_academic_first_effect:0 "tr_ngm_academic_first_effect"
- tr_ngm_academic_first_desc:0 "tr_ngm_academic_first_desc"
+ tr_ngm_academic_first_effect:0 "§Yアノマリー発見率§!を§G+25%§!させる"
+ tr_ngm_academic_first_desc:0 "アノマリー発見+25%"
  tr_ngm_academic_finish:0 "学術の伝統の完成"
  tr_ngm_academic_finish_desc:0 "§Y学術政策§!をアンロックする \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_national_academy:0 "国立大学"
- tr_ngm_national_academy_desc:0 "§Yすべての専門家§!による"Y研究力§!を§G10%§!増加する。"
+ tr_ngm_national_academy_desc:0 "§Yすべての専門家§!による§Y研究力§!を§G10%§!増加する。"
  tr_ngm_national_academy_delayed:0 "各地に存在する国立大学は安価で重層的な高等教育を社会に保障する"
  tr_ngm_culture_study:0 "文化教育の推奨"
  tr_ngm_culture_study_desc:0 "§Y統合力§!を§G10%§!増加する。"
@@ -2976,7 +3199,7 @@
  tradition_ngm_memory:0 "記憶"
  tradition_ngm_memory_desc:0 "過去を記憶し、記録し続けることは将来への一助となるだろう"
  tr_ngm_memory_first:0 "記憶の伝統"
- #tr_ngm_memory_first_effect:0 "tr_ngm_memory_first_effect"
+ tr_ngm_memory_first_effect:0 "§Y布告基金§!を§G+50§!増加させる"
  #tr_ngm_memory_first_desc:0 "tr_ngm_memory_first_desc"
  tr_ngm_memory_finish:0 "記憶の伝統の完成"
  tr_ngm_memory_finish_desc:0 "記憶の布告の§Y覇権の記憶§!、§Y栄華の記憶§!、§Y堅忍の記憶§!をアンロックする。 \nアセンションパークをアンロック：§G+1§!"
@@ -3007,16 +3230,16 @@
  tr_ngm_freedom_broad_desc:0 "§Y統合力§!を§G5%§!増加し、§Y快適度§!を§G10%§!増加させる。"
  tr_ngm_freedom_broad_delayed:0 "知る権利は市民に保障される重要な権利だ"
  tr_ngm_freedom_association:0 "結社の自由"
- tr_ngm_freedom_association_desc:0 "§Y派閥影響力収入§!を§G25%§!増加させる。"
+ tr_ngm_freedom_association_desc:0 "§Y派閥収入§!を§G20%§!増加させる。"
  tr_ngm_freedom_association_delayed:0 "政治や自己利益のための結社は市民に認められた権利である"
  tr_ngm_freedom_ega:0 "機会均等"
  tr_ngm_freedom_ega_desc:0 "§Yリーダー選択肢§!を§G2§!増加し、§Yリーダー雇用コスト§!を§G20%§!減少させる。"
  tr_ngm_freedom_ega_delayed:0 "どのような人であっても能力に応じた職や地位を目指すことができる"
  tr_ngm_freedom_immigrant:0 "移民の自由"
- tr_ngm_freedom_immigrant_desc:0 "§Y移民流入魅力§!を§G20%§!増加させる。"
+ tr_ngm_freedom_immigrant_desc:0 "§Y移民流入魅力§!を§G20%§!増加させ、§Y移民流出圧力§!を§G10%§!増加させる。"
  tr_ngm_freedom_immigrant_delayed:0 "移動の自由は星間国家においても重要な権利である"
  tr_ngm_freedom2:0 "自由権の保証"
- tr_ngm_freedom2_desc:0 "§YPop幸福度§!を§G5%§!増加し、全惑星の§Y安定度§!を§G5§!増加させる。"
+ tr_ngm_freedom2_desc:0 "§YPop幸福度§!を§G5%§!増加し、§Y派閥満足度§!を§G5§!増加させる。"
  tr_ngm_freedom2_delayed:0 "自由権は、他者を侵害する場合を除いて強固に保証される"
 
  tradition_ngm_order:0 "秩序"
@@ -3025,9 +3248,9 @@
  #tr_ngm_order_first_effect:0 "tr_ngm_order_first_effect"
  #tr_ngm_order_first_desc:0 "tr_ngm_order_first_desc"
  tr_ngm_order_finish:0 "秩序の伝統の完成"
- tr_ngm_order_finish_desc:0 "§Y艦船武器射程§!を§G+5%§!増加させる \nアセンションパークをアンロック：§G+1§!"
+ tr_ngm_order_finish_desc:0 "§Y艦船武器連射レート§!を§G+5%§!増加させる \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_no_voice:0 "無言の同調"
- tr_ngm_no_voice_desc:0 "§Y国家志向魅力§!を§G10%§!増加させる。"
+ tr_ngm_no_voice_desc:0 "§Y国家志向魅力§!を§G25%§!増加させ、§Y幸福度§!を§G5%§!減少させる。"
  tr_ngm_no_voice_delayed:0 "......"
  tr_ngm_appropriate:0 "適切な居場所"
  tr_ngm_appropriate_desc:0 "§Y強制移住コスト§!を§G30%§!減少させる。"
@@ -3045,8 +3268,8 @@
  tradition_ngm_neighbor:0 "善隣"
  tradition_ngm_neighbor_desc:0 "敵ではないものはすべて友人であり、敵であることが証明されなければ友人であるのだ"
  tr_ngm_neighbor_first:0 "善隣の伝統"
- #tr_ngm_neighbor_first_effect:0 "REPLACE_ME"
- #tr_ngm_neighbor_first_desc:0 "REPLACE_ME"
+ tr_ngm_neighbor_first_effect:0 "§Yファーストコンタクト速度§!を§G25%§!増加させ、ファーストコンタクト時の姿勢を敵対的にできない"
+ #tr_ngm_neighbor_first_desc:0 ""
  tr_ngm_neighbor_finish:0 "善隣の伝統の完成"
  tr_ngm_neighbor_finish_desc:0 "5種類以上の種族がいる惑星で§YPop成長速度§!§G+10%§!、§Y交易価値§!§G+10%§!、§Y統合力§!§G+10%§!、§Y流入魅力§!§G+10%§!増加させる \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_ambassador:0 "国際的大使館"
@@ -3059,7 +3282,7 @@
  tr_ngm_talk_desc:0 "§Y国境摩擦§!を§G50%§!減少させる。"
  tr_ngm_talk_delayed:0 "対話こそ未来への道しるべだ"
  tr_ngm_free_move:0 "移動の自由"
- tr_ngm_free_move_desc:0 "§Y移民流入魅力§!を§G30%§!増加させる。"
+ tr_ngm_free_move_desc:0 "§Y移民流入魅力§!を§G30%§!増加させ、§Y移民流出圧力§!を§G10%§!増加させる。"
  tr_ngm_free_move_delayed:0 "自由な移動は国家により保証される"
  tr_ngm_acceptance:0 "受容社会"
  tr_ngm_acceptance_desc:0 "§Y統合力§!を§G10%§!増加させる。"
@@ -3068,17 +3291,17 @@
  tradition_ngm_enemy:0 "敵視"
  tradition_ngm_enemy_desc:0 "あらゆる存在を疑い、自己と数少ない信頼できる仲間のために、強固な対応を維持する"
  tr_ngm_enemy_first:0 "敵視の伝統"
- #tr_ngm_enemy_first_effect:0 "REPLACE_ME"
- #tr_ngm_enemy_first_desc:0 "REPLACE_ME"
+ #tr_ngm_enemy_first_effect:0 ""
+ #tr_ngm_enemy_first_desc:0 ""
  tr_ngm_enemy_finish:0 "敵視の伝統の完成"
  tr_ngm_enemy_finish_desc:0 "§Y艦船武器ダメージ§!を§G+10%§!増加させる \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_paranoia:0 "パラノイア"
  tr_ngm_paranoia_desc:0 "§Y宿敵§!の最大数を§G2§!増加させる。"
  tr_ngm_paranoia_delayed:0 "かの国は我が国を狙っているに違いない"
  tr_ngm_battle_ambass:0 "敵対的使節"
- tr_ngm_battle_ambass_desc:0 "§Y使節§!の数を§G1§!増加させる。"
+ tr_ngm_battle_ambass_desc:0 "§Y浸透度§!の数を§G10§!増加させる。"
  tr_ngm_battle_ambass_delayed:0 "かの国で敵対的活動を行うための使節が用意されている"
- tr_ngm_coarse_food:0 "粗食"
+ tr_ngm_coarse_food:0 "臥薪嘗胆"
  tr_ngm_coarse_food_desc:0 "§YPop食料消費§!を§G20%§!減少させる。"
  tr_ngm_coarse_food_delayed:0 "かの国に勝つために、食事を切り詰める"
  tr_ngm_transcendental:0 "超然的敵対存在"
@@ -3091,8 +3314,8 @@
  tradition_ngm_nature:0 "自然"
  tradition_ngm_nature_desc:0 "惑星環境の維持と繁栄は銀河に住まう者の義務だ"
  tr_ngm_nature_first:0 "自然の伝統"
- #tr_ngm_nature_first_effect:0 "REPLACE_ME"
- #tr_ngm_nature_first_desc:0 "REPLACE_ME"
+ #tr_ngm_nature_first_effect:0 ""
+ #tr_ngm_nature_first_desc:0 ""
  tr_ngm_nature_finish:0 "自然の伝統の完成"
  tr_ngm_nature_finish_desc:0 "§Y研究速度(生物学)§!を§G+20%§!増加させる \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_nature2:0 "大自然"
@@ -3128,7 +3351,7 @@
  tr_ngm_machine_depart_desc:0 "§Yロボット建造コスト§!を§G20%§!減少させる。"
  tr_ngm_machine_depart_delayed:0 "機械デザインとロボットに関する政策を取り扱う役所を設立する"
  tr_ngm_robot_depart:0 "ロボット技師会"
- tr_ngm_robot_depart_desc:0 "§Y20Popごと§!に§Yロボット製造者Job§!を§G1§!増加させる。"
+ tr_ngm_robot_depart_desc:0 "§Y33Popごと§!に§Yロボット製造者Job§!を§G1§!増加させる。"
  tr_ngm_robot_depart_delayed:0 "ロボット技師の職員組合は技術の継承と労働環境の保全に役立つ"
  tr_ngm_machine_human:0 "機械人"
  tr_ngm_machine_human_desc:0 "§Yロボット特性§!を§G2§!増加させる。"
@@ -3137,21 +3360,21 @@
  tradition_ngm_official:0 "官吏"
  tradition_ngm_official_desc:0 "書類により統治される国家は強大でゆるぎない"
  tr_ngm_official_first:0 "官吏の伝統"
- #tr_ngm_official_first_effect:0 "REPLACE_ME"
- #tr_ngm_official_first_desc:0 "REPLACE_ME"
+ #tr_ngm_official_first_effect:0 ""
+ #tr_ngm_official_first_desc:0 ""
  tr_ngm_official_finish:0 "官吏の伝統の完成"
  tr_ngm_official_finish_desc:0 "§Y国是slot§!を§G+1§!増加させる \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_human_resources:0 "人事院"
  tr_ngm_human_resources_desc:0 "§Yリーダー雇用コスト§!を§G20%§!減少させる。"
- tr_ngm_human_resources_delayed:0 "官僚や行政官の人事を統括し、効率化を進める"
+ tr_ngm_human_resources_delayed:0 "官僚や政治家の人事を統括し、効率化を進める"
  tr_ngm_note:0 "尚書省"
  tr_ngm_note_desc:0 "§Y布告コスト§!を§G30%§!減少させる。"
  tr_ngm_note_delayed:0 "行政文書を管理し、円滑な行政を実現する"
  tr_ngm_document:0 "公文書館"
- tr_ngm_document_desc:0 "§Y布告許容量§!を§G1§!増加させる。"
+ tr_ngm_document_desc:0 "§Y布告基金§!を§G+50§!増加させる。"
  tr_ngm_document_delayed:0 "重要文書を保管し、文書行政を補完する"
  tr_ngm_general_affairs:0 "総務省"
- tr_ngm_general_affairs_desc:0 "§Y管理許容量§!を§G10%§!増加させる。"
+ tr_ngm_general_affairs_desc:0 "§Y帝国規模影響量%§!を§G15%§!減少させる。"
  tr_ngm_general_affairs_delayed:0 "各省庁を調整し、専門省庁の意見と利害を整合させる"
  tr_ngm_cabinet:0 "内閣府"
  tr_ngm_cabinet_desc:0 "§Y月間影響力算出§!§G+1§!"
@@ -3165,10 +3388,10 @@
  tr_ngm_officer_finish:0 "将校の伝統の完成"
  tr_ngm_officer_finish_desc:0 "国防計画の布告の§Y甲種国防計画§!、§Y乙種国防計画§!、§Y丙種国防計画§!をアンロックする。 \nアセンションパークをアンロック：§G+1§!"
  tr_ngm_navy_depart:0 "艦政本部"
- tr_ngm_navy_depart_desc:0 "§Y造船速度§!を§G20%§!上昇させる。"
+ tr_ngm_navy_depart_desc:0 "§Y造船速度§!を§G15%§!上昇させる。"
  tr_ngm_navy_depart_delayed:0 "艦隊整備の担当部署は、艦船建造のことを日々考えている"
  tr_ngm_officer_1:0 "参謀第1課"
- tr_ngm_officer_1_desc:0 "§Y亜高速移動速度§!を§G5%§!上昇させる。"
+ tr_ngm_officer_1_desc:0 "§Y亜高速移動速度§!を§G5%§!上昇させ、§Y地上軍編成速度§!を§G10%§!上昇させる。"
  tr_ngm_officer_1_delayed:0 "作戦計画を立案する部局は常にあらゆる事態に備えている"
  tr_ngm_logistics_hq:0 "後方勤務司令部"
  tr_ngm_logistics_hq_desc:0 "§Y艦船維持費§!を§G20%§!減少させ、§Y地上軍維持コスト§!を§G10%§!減少させる"
@@ -3199,7 +3422,7 @@
  tr_ngm_excellence_officer:0 "有能な参謀"
  tr_ngm_excellence_officer_desc:0 "§Y指揮上限§!§G+10§!"
  tr_ngm_excellence_officer_delayed:0 "専門教育を受けた幕僚チームは艦隊能力を強化している"
- tr_ngm_deposition_admiral:0 "沈着な提督"
+ tr_ngm_deposition_admiral:0 "冷静沈着な提督"
  tr_ngm_deposition_admiral_desc:0 "§Y艦隊連射レート§!を§G5%§!上昇させる。"
  tr_ngm_deposition_admiral_delayed:0 "慌てることなく、的確な命令を行い続ける提督は、国家の枢要である"
 
@@ -3237,7 +3460,7 @@
  tr_ngm_upper_class_desc:0 "§Y統治者幸福度§!を§G5%§!上昇させる。"
  tr_ngm_upper_class_delayed:0 "社会の上層部こそ、国家である"
  tr_ngm_backroom_politics:0 "密室政治"
- tr_ngm_backroom_politics_desc:0 "§Y派閥からの影響力収入§!を§G30%§!上昇させる。"
+ tr_ngm_backroom_politics_desc:0 "§Y派閥満足度§!を§G310§!増加させる。"
  tr_ngm_backroom_politics_delayed:0 "非公開の場のほうが何かと決めやすい"
  tr_ngm_patron:0 "パトロン"
  tr_ngm_patron_desc:0 "§Y統合力§!を§G10%§!増加させる。"
@@ -3328,8 +3551,8 @@
  tr_ngm_strong_command_and_control:0 "強固な指揮統制"
  tr_ngm_strong_command_and_control_desc:0 "非均衡ボーナスを§G+20%§!増加させる"
  tr_ngm_strong_command_and_control_delayed:0 "逸脱は許されない"
- tr_ngm_purify_corruption:0 "汚職の殲滅"
- tr_ngm_purify_corruption_desc:0 "管理許容量を§G+10§!増加させる"
+ tr_ngm_purify_corruption:0 "効率的行政組織"
+ tr_ngm_purify_corruption_desc:0 "帝国規模影響を§G5§!減少させる"
  tr_ngm_purify_corruption_delayed:0 "ただでさえ大きな組織が不健全化しないようにできる限り効率的に組み替える"
  tr_ngm_cancellation_of_administratively_infarction:0 "行政における梗塞の改善"
  tr_ngm_cancellation_of_administratively_infarction_desc:0 "§Y布告許容量§!を§G1§!増加させる。"
@@ -3344,10 +3567,10 @@
  tradition_ngm_margin:0 "余裕"
  tradition_ngm_margin_desc:0 "強国である我が国は余裕を持った対応が求められる"
  tr_ngm_margin_adopt:0 "余裕の伝統"
- #tr_ngm_margin_adopt_effect:0 "tr_ngm_margin_adopt_effect"
+ tr_ngm_margin_adopt_effect:0 "§Y帝国規模影響量§!を§G10%§!増加減少させる"
  #tr_ngm_margin_adopt_desc:0 "tr_ngm_margin_adopt_desc"
  tr_ngm_margin_finish:0 "余裕の伝統の完成"
- tr_ngm_margin_finish_desc:0 "§Y管理許容量§!を超過しているとき、§Y影響力§!を§G+30%§!増加させる\nアセンションパークをアンロック：§G+1§!"
+ tr_ngm_margin_finish_desc:0 "§Y帝国規模影響量§!を§G10%§!増加減少させる\nアセンションパークをアンロック：§G+1§!"
  tr_ngm_giant_fleet:0 "巨大艦隊"
  tr_ngm_giant_fleet_desc:0 "艦船許容量§G+20§!"
  tr_ngm_giant_fleet_delayed:0 "我が国ほど大きい艦隊があるだろうか"
@@ -3358,7 +3581,7 @@
  tr_ngm_weapons_arsenal_country_desc:0 "§Y宇宙軍許容量を超過しているとき§!、§GJobの生産力+10%§!"
  tr_ngm_weapons_arsenal_country_delayed:0 "軍事力は有しているだけで優越的立ち位置を維持することができる"
  tr_ngm_rock_solid_bureaucracy:0 "膨張した官僚機構"
- tr_ngm_rock_solid_bureaucracy_desc:0 "管理許容量超過ペナルティ§G-30%§!"
+ tr_ngm_rock_solid_bureaucracy_desc:0 "§Y布告基金§!を§G+50§!増加させる"
  tr_ngm_rock_solid_bureaucracy_delayed:0 "国家の手足は遠くまで届くのだ"
  tr_ngm_steady_national_guidelines:0 "堅実な国家指針"
  tr_ngm_steady_national_guidelines_desc:0 "§Y月間影響力算出§!§G+1§!"
@@ -3370,7 +3593,7 @@
  #tr_ngm_friendship_adopt_effect:0 "tr_ngm_friendship_adopt_effect"
  #tr_ngm_friendship_adopt_desc:0 "tr_ngm_friendship_adopt_desc"
  tr_ngm_friendship_finish:0 "友誼の伝統の完成"
- tr_ngm_friendship_finish_desc:0 "§Y外交発言力§!を§G+20%§!を増加させる\nアセンションパークをアンロック：§G+1§!"
+ tr_ngm_friendship_finish_desc:0 "§Y連邦参加による団結度へのペナルティ§!を§G25%§!を減少させる\nアセンションパークをアンロック：§G+1§!"
  tr_ngm_in_depth_negotiations:0 "綿密な折衝"
  tr_ngm_in_depth_negotiations_desc:0 "§Y国境摩擦§!を§G20%§!減少させる。"
  tr_ngm_in_depth_negotiations_delayed:0 "緻密かつ広範な話し合いにより各種問題を顕在化する前に解決する"
@@ -3390,12 +3613,12 @@
  tradition_ngm_suzerain:0 "宗主"
  tradition_ngm_suzerain_desc:0 "植民と属国化。これこそが'平和'で安定的な拡張が可能である"
  tr_ngm_suzerain_adopt:0 "宗主の伝統"
- #tr_ngm_suzerain_adopt_effect:0 "属国の受け入れ+10"
- #tr_ngm_suzerain_adopt_desc:0 "属国の受け入れ+10"
+ tr_ngm_suzerain_adopt_effect:0 "忠誠度月間§G+1§!"
+ tr_ngm_suzerain_adopt_desc:0 "毎月の§Y忠誠度§!を§G1§!増加させる。"
  tr_ngm_suzerain_finish:0 "宗主の伝統の完成"
  #tr_ngm_suzerain_finish_desc:0 "属国受け入れ時の距離補正をなくす\nアセンションパークをアンロック：§G+1§!"
  tr_ngm_diplomatic_expansion:0 "外交的拡張"
- tr_ngm_diplomatic_expansion_desc:0 "§Y外交発言力§!を§G10%§!増加させる。"
+ tr_ngm_diplomatic_expansion_desc:0 "§Y属国による宇宙軍許容量への貢献§!を§G20%§!増加させる。"
  tr_ngm_diplomatic_expansion_delayed:0 "拡張は軍事力や先取によるものだけが含まれているのではない"
  tr_ngm_delegation:0 "使節団"
  tr_ngm_delegation_desc:0 "§Y使節§!の数を§G1§!増加させる。"
@@ -3404,7 +3627,7 @@
  tr_ngm_colonial_hegemony_desc:0 "植民地建造速度§G+20%§!"
  tr_ngm_colonial_hegemony_delayed:0 "植民地の拡大は国家の拡大である"
  tr_ngm_suzerainty_pressure:0 "宗主国の圧力"
- tr_ngm_suzerainty_pressure_desc:0 "艦船許容量§G+20§!"
+ tr_ngm_suzerainty_pressure_desc:0 "毎月§Y忠誠度§!§G1§!"
  tr_ngm_suzerainty_pressure_delayed:0 "宗主国として、属国には必要な影響を行使する。そうだろう？"
  tr_ngm_authority_to_belong:0 "服属する権威"
  tr_ngm_authority_to_belong_desc:0 "従属国の友好度§G+30§!"
@@ -3427,7 +3650,7 @@
  tr_ngm_diplomatic_pressure_desc:0 "§Y外交発言力§!を§G20%§!増加させる。"
  tr_ngm_diplomatic_pressure_delayed:0 "みんながそう言っているが、言うことは聞かないかい？"
  tr_ngm_administration_to_support_pressure:0 "圧力を支える行政力"
- tr_ngm_administration_to_support_pressure_desc:0 "管理許容量§G+20§!"
+ tr_ngm_administration_to_support_pressure_desc:0 "官僚の算出する統合力§G+20%§!"
  tr_ngm_administration_to_support_pressure_delayed:0 "ハッタリであろうと、実力であろうと、それを支える基礎力が必要だ"
  tr_ngm_compulsory_friendship:0 "強制的友好"
  tr_ngm_compulsory_friendship_desc:0 "友好度§G+20§!"
@@ -3508,15 +3731,15 @@
  #tr_ngm_legislation_adopt_effect:0 "tr_ngm_legislation_adopt_effect"
  #tr_ngm_legislation_adopt_desc:0 "tr_ngm_legislation_adopt_desc"
  tr_ngm_legislation_finish:0 "立法の伝統の完成"
- tr_ngm_legislation_finish_desc:0 "§Y布告許容量§!を§G+2§!増加させる\nアセンションパークをアンロック：§G+1§!"
+ tr_ngm_legislation_finish_desc:0 "§Y布告基金§!を§G+80§!増加させる\nアセンションパークをアンロック：§G+1§!"
  tr_ngm_constitutional_lawsuit:0 "憲法訴訟"
  tr_ngm_constitutional_lawsuit_desc:0 "幸福度§G+5%§!"
  tr_ngm_constitutional_lawsuit_delayed:0 "憲法に反する立法は認められない"
  tr_ngm_preliminary_legal_review:0 "事前法令審査"
- tr_ngm_preliminary_legal_review_desc:0 "§Y布告コスト§!を§G25%§!減少させる。"
+ tr_ngm_preliminary_legal_review_desc:0 "官僚の算出する統合力§G+20%§!"
  tr_ngm_preliminary_legal_review_delayed:0 "法令を整備する前に専門家や受益者等の意見を事前に確認することができる"
  tr_ngm_expansion_of_the_legal_affairs_bureau:0 "法務局の拡充"
- tr_ngm_expansion_of_the_legal_affairs_bureau_desc:0 "§Y布告許容量§!を§G1§!増加させる。"
+ tr_ngm_expansion_of_the_legal_affairs_bureau_desc:0 "§Y布告基金§!を§G+50§!増加させる"
  tr_ngm_expansion_of_the_legal_affairs_bureau_delayed:0 "法律を登記し、敷衍させるための役所を各地に設立する"
  tr_ngm_strengthening_parliamentary_authority:0 "議員権限の強化"
  tr_ngm_strengthening_parliamentary_authority_desc:0 "統治志向魅力§!を§G10%§!増加させる。"
@@ -3733,10 +3956,11 @@
  civic_tooltip_ngm_operating_company_effects:0 "\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_planet_trust_bank$§!が建設できる\n"
  civic_tooltip_ngm_industrial_espionage_effects:0 "\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_corporate_espionage$§!が建設できる\n"
  civic_tooltip_ngm_rating_company_effects:0 "\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_planet_rating_agency$§!が建設できる\n"
+ civic_tooltip_ngm_underhanded_trick_effects:0 "\n$BRANCH_OFFICE_BUILDING$に£building£ §Y$building_ngm_sa_ko_ryo$§!が建設できる\n"
 
  empire_nor_honorism_socialism_egalitarian:0 "$TRIGGER_FAIL$帝国は必要な§Y$ethic_egalitarian$§!、§Y$ethic_honorism$§!もしくは§Y$ethic_socialism$§!の志向を採用していない。 "
  empire_nor_honorism_socialism_capitalism_utilitarianism_materialist:0 "$TRIGGER_FAIL$帝国は必要な§Y$ethic_materialist$§!、§Y$ethic_honorism$§!、§Y$ethic_utilitarianism$§!、§Y$ethic_capitalism$§!もしくは§Y$ethic_socialism$§!の志向を採用していない。 "
- empire_nor_honorism_capitalism_utilitarianism:0 "$TRIGGER_FAIL$帝国は必要な§Y$ethic_honorism$§!、§Y$ethic_capitalism$§!もしくは§Y$ethic_utilitarianism$§!の志向を採用していない。 "
+ empire_nor_authoritarian_honorism_capitalism_utilitarianism:0 "$TRIGGER_FAIL$帝国は必要な§Y$ethic_authoritarian$§!、§Y$ethic_honorism$§!、§Y$ethic_capitalism$§!もしくは§Y$ethic_utilitarianism$§!の志向を採用していない。 "
  empire_is_utilitarianism:0 "$TRIGGER_FAIL$我々の帝国は§Y$ethic_utilitarianism$§!の志向を採用している。 "
  empire_is_capitalism:0 "$TRIGGER_FAIL$我々の帝国は§Y$ethic_capitalism$§!の志向を採用している。 "
 
@@ -3754,7 +3978,7 @@
 
  civic_tooltip_mechanical_faith_effects:0 "§RCannot be added or removed after the game has started.§!\n§Y(If you add or remove them after the game starts, they will be restored.)§!\n\nThe spiritualist faction will no longer be angry with robots.\nWe can't outlaw robots.\nFix robot human rights to citizenship."
 
- civic_tooltip_ngm_not_removed:0 "§RCannot be added or removed after the game has started.§!\n§Y(If you add or remove them after the game starts, they will be restored.)§!"
+ NAME_Pursuer:0 "追跡者"
 
 # :0 ""
 # _desc:0 ""

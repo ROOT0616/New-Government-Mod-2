@@ -3,11 +3,19 @@
 @ap_engineered_evolution_POINTS = 3
 @ap_engineered_evolution_COST_MULT = -0.25
 
-# ②恒常的敵対諜報活動		(敵に対しては常に影響を与え続けなければならない)		(外交官+2、解読力+10、宿敵にした相手国の影響力-1)
+# 1.恒常的敵対諜報活動	外交官+2、解読力+10、宿敵にした相手国の影響力-1
 ap_ngm_constant_hostile_intelligence_operations = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_constant_hostile_intelligence_operations
+		}
+	}
+	on_enabled = {
+		custom_tooltip = ap_ngm_constant_hostile_intelligence_operations_effect
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.25
+			}
 		}
 	}
 	# 外交官+2、解読力+10
@@ -25,7 +33,7 @@ ap_ngm_constant_hostile_intelligence_operations = {
 	}
 }
 
-#③外交シンクタンク		(常に移り変わる外交に関して専門家団を活用する)			(外交官+2、外交発言力+30%)
+# 2.外交シンクタンク	外交官+2、外交発言力+30%
 ap_ngm_dipromatic_think_tank = {
 	potential = {
 		NOT = {
@@ -45,7 +53,7 @@ ap_ngm_dipromatic_think_tank = {
 	}
 }
 
-#④帝国学士院			(研究者を政治的に取りまとめ、研究政策の活用を図る)		(研究選択肢+3、研究力+5%)
+# 3.帝国学士院	研究選択肢+3、研究力+5%
 ap_ngm_imperial_academy = {
 	potential = {
 		NOT = {
@@ -67,7 +75,7 @@ ap_ngm_imperial_academy = {
 	}
 }
 
-#行政機構の再編		(煩雑な行政機構を調整し、効率的かつ効果的な行政を実現する)	(管理許容量+20%、国是slot+1)
+# 4.行政機構の再編	管理許容量+20%、国是slot+1
 ap_ngm_administrative_reorganization = {
 	potential = {
 		NOT = {
@@ -87,7 +95,7 @@ ap_ngm_administrative_reorganization = {
 	}
 }
 
-#⑥津波				(小型艦の波は全銀河を制圧する)					(コルベット建造速度+100%、全艦隊建造速度-50%、艦隊許容量+30)
+# 5.津波	コルベット建造速度+100%、全艦隊建造速度-50%、艦隊許容量+30
 ap_ngm_tunami = {
 	potential = {
 		NOT = {
@@ -108,7 +116,7 @@ ap_ngm_tunami = {
 	}
 }
 
-#⑦静謐				(静かで穏やかな心)						(統合力+20%、研究力+10%)3つ以上アセンションパークを取得しなければならない。平和、中立のみ
+# 6.静謐	統合力+20%、研究力+10%	3つ以上アセンションパークを取得しなければならない。平和、中立のみ
 ap_ngm_calm = {
 	potential = {
 		OR = {
@@ -137,7 +145,7 @@ ap_ngm_calm = {
 	}
 }
 
-#⑧宮廷外交			(魑魅魍魎渦巻く宮廷では様々な交渉が行われうる)			(影響力+2、外交発言力+20%)権威もしくは栄望のみ
+# 7.宮廷外交	影響力+2、外交発言力+20%	権威もしくは栄望のみ
 ap_ngm_court_dipromacy = {
 	potential = {
 		NOT = {
@@ -163,7 +171,7 @@ ap_ngm_court_dipromacy = {
 	}
 }
 
-#⑨未来インフラ			(空間を最大限利用したインフラストラクチャーを活用し、常識を超えた社会を構築する)(建造物slot+3、建造物建造速度+20%、区域建造枠+3、区域建造速度+20%、巨大構造物建造枠+2、巨大建造速度+10%)
+# 8.未来インフラ	建造物slot+3、建造物建造速度+20%、区域建造枠+3、区域建造速度+20%、巨大構造物建造枠+2、巨大建造速度+10%
 ap_ngm_future_infrastructure = {
 	potential = {
 		NOT = {
@@ -186,7 +194,7 @@ ap_ngm_future_infrastructure = {
 	}
 }
 
-#⑩高度防衛計画			(軍官僚や参謀が心血を注いだ防衛計画を採用する)			(ステーション許容量+10、防衛プラットフォームの上限+150、星系基地船体値+50%)
+# 9.高度防衛計画	ステーション許容量+10、防衛プラットフォームの上限+150、星系基地船体値+50%
 ap_ngm_advanced_defense_plan = {
 	potential = {
 		NOT = {
@@ -207,7 +215,7 @@ ap_ngm_advanced_defense_plan = {
 	}
 }
 
-#⑪絶対的階級制			(階級は絶対であり、超越することは許されない)			(労働者生産力+15%、労働者政治力-100%、統治者幸福度+10%)権威のみ
+# 10.絶対的階級制	労働者生産力+15%、労働者政治力-100%、統治者幸福度+10%		権威のみ
 ap_ngm_absolutely_class = {
 	potential = {
 		NOT = {
@@ -232,7 +240,7 @@ ap_ngm_absolutely_class = {
 	}
 }
 
-#⑫象徴的構造物			(この建造物は市民の象徴であり、国家の顔である)			(巨大構造物建造枠+2、巨大構造物速度+10%、合金生産+5%)開発もしくは物質のみ
+# 11.象徴的構造物	巨大構造物建造枠+2、巨大構造物速度+10%、合金生産+5%		開発もしくは物質のみ
 ap_ngm_symbolic_structures = {
 	potential = {
 		NOT = {
@@ -259,7 +267,7 @@ ap_ngm_symbolic_structures = {
 	}
 }
 
-#⑬資源戦略調整省		(各種資源を戦略的に再分配し、効率的に生産力を向上させる)	(職業が消費する資源-5%、建造物のエキゾチックガス・揮発性粉末・レアクリスタル消費量-20%)
+# 12.資源戦略調整省	職業が消費する資源-5%、建造物のエキゾチックガス・揮発性粉末・レアクリスタル消費量-20%
 ap_ngm_resource_strategy_adjustment_ministries = {
 	potential = {
 		NOT = {
@@ -281,7 +289,7 @@ ap_ngm_resource_strategy_adjustment_ministries = {
 	}
 }
 
-#⑭贅沢は敵だ			(国家目標の達成のために贅沢は許されない)			(Pop維持費-50%)軍国もしくは権威のみ
+# 13.贅沢は敵だ	Pop維持費-50%	軍国もしくは権威のみ
 ap_ngm_luxury_must_be_enemy = {
 	potential = {
 		NOT = {
@@ -306,7 +314,7 @@ ap_ngm_luxury_must_be_enemy = {
 	}
 }
 
-#⑮帝国の大動脈			(交易網は帝国の大動脈であり、経済のためにも必要不可欠な存在である)(交易価値+30%、交易保護値+20、20Popにつき事務員Job+1、40Popにつき豪商+1)
+# 14.帝国の大動脈	交易価値+30%、交易保護値+20、20Popにつき事務員Job+1、40Popにつき豪商+1
 ap_ngm_the_empires_main_artery = {
 	potential = {
 		NOT = {
@@ -328,7 +336,7 @@ ap_ngm_the_empires_main_artery = {
 	}
 }
 
-#⑯人的資源省			(人的資源を調整し、帝国全体の成長を促す省庁を設立する)		(Pop成長速度+20%、幸福度+5%)
+# 15.人的資源省	Pop成長速度+20%、幸福度+5%
 ap_ngm_ministry_of_human_resources = {
 	potential = {
 		NOT = {
@@ -348,7 +356,7 @@ ap_ngm_ministry_of_human_resources = {
 	}
 }
 
-#⑰幸福省			(市民。あなたは幸福ですか？)					(幸福度+5%、安定度+40)
+# 16.幸福省	幸福度+5%、安定度+40)
 ap_ngm_ministry_of_happiness = {
 	potential = {
 		NOT = {
@@ -368,7 +376,7 @@ ap_ngm_ministry_of_happiness = {
 	}
 }
 
-#⑱徹底抗戦			(政府が敗北を認めなければ、敗北することはない)			(自国内連射レート+20%、船体値+10%、回避+10%、離脱可能性の減少-50%、厭戦値-30%)
+# 17.徹底抗戦	自国内連射レート+20%、船体値+10%、回避+10%、離脱可能性の減少-50%、厭戦値-30%
 ap_ngm_victory_or_valhalla = {
 	potential = {
 		NOT = {
@@ -391,7 +399,7 @@ ap_ngm_victory_or_valhalla = {
 	}
 }
 
-#⑲帝国統合参謀本部		(優秀な参謀や軍官僚が集い、国軍の効率的かつ優良な運用と戦略構築を行う省庁を設置する)(亜高速移動速度+20%、FTL速度+10%、星系基地許容量+5、防衛ステーションの上限+50、宇宙軍許容量+30、指揮上限+10)
+# 18.帝国統合参謀本部	亜高速移動速度+20%、FTL速度+10%、星系基地許容量+5、防衛ステーションの上限+50、宇宙軍許容量+30、指揮上限+10
 ap_ngm_empire_joint_chiefs_of_staff = {
 	potential = {
 		NOT = {
@@ -415,7 +423,7 @@ ap_ngm_empire_joint_chiefs_of_staff = {
 	}
 }
 
-#⑳植民省			(植民活動と人口拡充を促す内的膨張を促す省庁を設置する)		(入植速度+30%、移民流入+20%、Pop成長速度+5%、居住性+25%)
+# 19.植民省	入植速度+30%、移民流入+20%、Pop成長速度+5%、居住性+25%
 ap_ngm_colonial_office = {
 	potential = {
 		NOT = {
@@ -437,25 +445,33 @@ ap_ngm_colonial_office = {
 	}
 }
 
-#㉑純潔省			(我が国は他国と一線を画し、純潔性を維持する必要がある)		(他国からの干渉的影響を受けない)まだ
-# ap_ngm_ministry_of_innocence = {
-# 	potential = {
-# 		NOT = {
-# 			has_ascension_perk = ap_ngm_ministry_of_innocence
-# 		}
-# 	}
-# 	modifier = {
-# 	}
-# 	ai_weight = {
-# 		factor = 5
-# 		modifier = {
-# 			factor = 5
-# 			num_ascension_perks > 2
-# 		}
-# 	}
-# }
+# 20.社会秩序維持局	他国からの干渉的影響を受けない
+ap_ngm_ministry_of_innocence = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_ministry_of_innocence
+		}
+	}
+	on_enabled = {
+		custom_tooltip = ap_ngm_ministry_of_innocence_effect
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.25
+			}
+		}
+	}
+	modifier = {
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks > 2
+		}
+	}
+}
 
-# ①大規模建築計画局			(大規模建築を行う際の資源や職人を運用し、調整する省庁を設立する)			(巨大構造物建造枠+2、巨大構造物速度+10%、研究選択肢を追加・メガエンジニアリング)（戦艦、シタデル、ゼロポイント発電の研究を完了している）
+# 21.大規模建築計画局	巨大構造物建造枠+2、巨大構造物速度+10%、研究選択肢を追加・メガエンジニアリング	戦艦、シタデル、ゼロポイント発電の研究を完了している
 ap_ngm_great_constructure_department = {
 	potential = {
 		NOT = {
@@ -500,7 +516,7 @@ ap_ngm_great_constructure_department = {
 	}
 }
 
-# ㉖奢侈品の天国			(贅沢こそ、市民に与えられる最大の恩返しだ)			(幸福度+50%、消費財消費量+100%)
+# 22.奢侈品の天国	幸福度+50%、消費財消費量+100%
 ap_ngm_heaven_consumer = {
 	potential = {
 		NOT = {
@@ -524,7 +540,7 @@ ap_ngm_heaven_consumer = {
 	}
 }
 
-# ㉗重層的国家			(社会は多重構造であり、国家の形として正常な形である)		(属国化要求受容度+50%、属国との友好度+50)
+# 23.重層的国家	属国化要求受容度+50%、属国との友好度+50
 ap_ngm_layer_countries = {
 	potential = {
 		NOT = {
@@ -546,7 +562,7 @@ ap_ngm_layer_countries = {
 	}
 }
 
-# ①司教による請求権の捏造			()			(請求権コスト-50%、統合力+20%）精神のみ
+# 24.司教による請求権の捏造	請求権コスト-50%、統合力+20%	精神のみ
 ap_ngm_bishop_need = {
 	potential = {
 		NOT = {
@@ -574,7 +590,7 @@ ap_ngm_bishop_need = {
 	}
 }
 
-# ㉙帝国芸術協会			(帝国全体の芸術活動を推奨し、芸術を保護する機関を設立する)	(統合力+20%、Jobによる統合力算出+20%、20Popにつき文化人Job+1)
+# 25.帝国芸術協会	統合力+20%、Jobによる統合力算出+20%、20Popにつき文化人Job+1
 ap_ngm_empire_art_association = {
 	potential = {
 		NOT = {
@@ -600,7 +616,7 @@ ap_ngm_empire_art_association = {
 	}
 }
 
-# 諜報網に基づく請求権の捏造			()			(請求権コスト-50%、暗号力+10、解読力+10)精神以外
+# 26.諜報網に基づく請求権の捏造	請求権コスト-50%、暗号力+10、解読力+10	精神以外
 ap_ngm_Intelligence_need = {
 	potential = {
 		NOT = {
@@ -626,7 +642,7 @@ ap_ngm_Intelligence_need = {
 	}
 }
 
-# ㉛スピードこそ命		(スピードこそパワー！)						(亜高速移動速度+20%、区域建造速度+10%、建造物速度+10%)
+# 27.スピードこそ命	亜高速移動速度+20%、区域建造速度+10%、建造物速度+10%
 ap_ngm_speed_power = {
 	potential = {
 		NOT = {
@@ -648,7 +664,7 @@ ap_ngm_speed_power = {
 	}
 }
 
-# ㉜寵児				(偉大なる先人から愛されることは才能である)			(没落帝国、覚醒帝国からの関係+100)
+# 28.寵児	没落帝国、覚醒帝国からの関係+100
 ap_ngm_relation_old_empire = {
 	potential = {
 		NOT = {
@@ -667,7 +683,7 @@ ap_ngm_relation_old_empire = {
 	}
 }
 
-# ㊲工部省			(建設、拡大、箱物。これらはすべて工部省が管轄する)		(建造物建造コスト-20%、区域建造コスト-20%、住居+30%)
+# 29.工部省	建造物建造コスト-20%、区域建造コスト-20%、住居+30%
 ap_ngm_ministry_constructure = {
 	potential = {
 		NOT = {
@@ -689,7 +705,7 @@ ap_ngm_ministry_constructure = {
 	}
 }
 
-#㊳ハニカムハウス		(一見するとただの箱であるが、恐るべき技術の結晶たるこの箱は、居住の概念を一変させた)	(コロニー船建造コスト-50%、区域建造コスト-20%、住居使用量-30%)
+# 30.ハニカムハウス	コロニー船建造コスト-50%、区域建造コスト-20%、住居使用量-30%
 ap_ngm_hanicam_house = {
 	potential = {
 		NOT = {
@@ -715,7 +731,7 @@ ap_ngm_hanicam_house = {
 	}
 }
 
-# ㊴インサイダー取引		(貿易機構との裏取引は、交易による利益を最大化させる)		(市場手数料-10%、交易価値+20%)
+# 31.インサイダー取引	市場手数料-10%、交易価値+20%
 ap_ngm_insider_trade = {
 	potential = {
 		NOT = {
@@ -739,7 +755,7 @@ ap_ngm_insider_trade = {
 	}
 }
 
-# ㊵マンデルブロー集合における平面展開定理を利用した大規模農業(とある博士が提唱した理論により農業は飛躍的な向上を見た)	(農業区域の農民数+10、農業区域の住居+3、惑星における農業区域最大数+5)
+# 32.マンデルブロー集合における平面展開定理を利用した大規模農業	農業区域の農民数+10、農業区域の住居+3、惑星における農業区域最大数+5
 ap_ngm_farm_farm = {
 	potential = {
 		NOT = {
