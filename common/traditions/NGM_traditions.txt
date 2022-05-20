@@ -322,7 +322,7 @@ tr_ngm_ministory_culture = {
 		}
 	}
 	modifier = {
-		country_unity_produces_add = 10
+		country_base_unity_produces_add = 10
 	}
 }
 
@@ -650,7 +650,7 @@ tr_ngm_coarse_food = {
 # 83.超然的敵対存在:影響力+1
 tr_ngm_transcendental = {
 	modifier = {
-		country_influence_produces_add = 1
+		country_base_influence_produces_add = 1
 	}
 }
 
@@ -699,7 +699,7 @@ tr_ngm_nature_growth = {
 # 89.自然研究:社会学+10%
 tr_ngm_nature_research = {
 	modifier = {
-		country_society_research_produces_add = 0.1
+		country_society_research_produces_mult = 0.1
 	}
 }
 
@@ -1763,7 +1763,7 @@ tr_ngm_establishment_of_legislative_institution = {
 		# has_tradition = tr_ngm_establishment_of_legislative_institution
 	}
 	modifier = {
-		country_influence_produces_add = 1
+		country_base_influence_produces_add = 1
 	}
 }
 
