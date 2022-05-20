@@ -1929,6 +1929,10 @@
  ap_ngm_chio_debuff_7:0 "$ap_ngm_chio_debuff_1$"
  ap_ngm_chio_debuff_8:0 "$ap_ngm_chio_debuff_1$"
 
+ ap_ngm_dipromatic_think_tank_modifier:0 "外交シンクタンク"
+
+ ap_ngm_layer_countries_modifier:0 "重層的国家"
+
  ngm_olympic_nominee_desc_intro:0 "この惑星は、 将来の国際大会の基盤として候補になっている。 "
  ngm_olympic_nominee_level_1:0 "国際大会候補地の競争力格付け：§R脆弱§!"
  ngm_olympic_nominee_level_1_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§R脆弱§!。 "
@@ -2940,6 +2944,7 @@
 
  ap_ngm_dipromatic_think_tank:0 "外交シンクタンク"
  ap_ngm_dipromatic_think_tank_desc:0 "常に移り変わる外交に関して専門家団を活用する"
+ ap_ngm_dipromatic_think_tank_effect:0 "月間忠誠度+1"
 
  ap_ngm_imperial_academy:0 "帝国学士院"
  ap_ngm_imperial_academy_desc:0 "研究者を政治的に取りまとめ、研究政策の活用を図る"
@@ -2994,6 +2999,7 @@
 
  ap_ngm_ministry_of_innocence:0 "社会秩序維持局"
  ap_ngm_ministry_of_innocence_desc:0 "我が国は他国と一線を画し、純潔性を維持する必要がある"
+ ap_ngm_ministry_of_innocence_effect:0 "他国から諜報以外の方法で内政的悪影響を受けない"
 
  ap_ngm_great_constructure_department:0 "大規模建築計画局"
  ap_ngm_great_constructure_department_desc:0 "大規模建築を行う際の資源や職人を運用し、調整する省庁を設立する"
@@ -3003,6 +3009,7 @@
 
  ap_ngm_layer_countries:0 "重層的国家"
  ap_ngm_layer_countries_desc:0 "社会は多重構造であり、国家の形として正常な形である"
+ ap_ngm_layer_countries_effect:0 "月間忠誠度+2"
 
  ap_ngm_bishop_need:0 "司教による請求権の捏造"
  ap_ngm_bishop_need_desc:0 ""
@@ -3018,6 +3025,7 @@
 
  ap_ngm_relation_old_empire:0 "寵児"
  ap_ngm_relation_old_empire_desc:0 "偉大なる先人から愛されることは才能である"
+ ap_ngm_relation_old_empire_effect:0 "没落帝国、覚醒帝国からの関係+100"
 
  ap_ngm_ministry_constructure:0 "工部省"
  ap_ngm_ministry_constructure_desc:0 "建設、拡大、箱物。これらはすべて工部省が管轄する"
