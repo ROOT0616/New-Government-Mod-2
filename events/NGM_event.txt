@@ -9029,6 +9029,8 @@ country_event = {
 			has_modifier = tr_ngm_suzerainty_pressure_modifier
 			has_modifier = tr_ngm_ministory_culture_modifier
 			has_modifier = civic_ngm_missionary_group_modifier
+			has_modifier = ap_ngm_dipromatic_think_tank_modifier
+			has_modifier = ap_ngm_layer_countries_modifier
 		}
 	}
 	immediate = {
@@ -9055,6 +9057,18 @@ country_event = {
 				has_modifier = civic_ngm_missionary_group_modifier
 			}
 			remove_modifier = civic_ngm_missionary_group_modifier
+		}
+		if = {
+			limit = {
+				has_modifier = ap_ngm_dipromatic_think_tank_modifier
+			}
+			remove_modifier = ap_ngm_dipromatic_think_tank_modifier
+		}
+		if = {
+			limit = {
+				has_modifier = ap_ngm_layer_countries_modifier
+			}
+			remove_modifier = ap_ngm_layer_countries_modifier
 		}
 	}
 }
@@ -9590,6 +9604,94 @@ country_event = {
 					has_modifier = tr_ngm_battle_speach_modifier_8
 				}
 				remove_modifier = tr_ngm_battle_speach_modifier_8
+			}
+		}
+	}
+}
+
+# 2.外交シンクタンク	外交官+2 外交発言力+20% 月間忠誠度+1
+country_event = {
+	id = ngm_tradition.36
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_ascension_perk = ap_ngm_dipromatic_think_tank
+	}
+	immediate = {
+		every_subject = {
+			limit = {
+				NOT = {
+					has_ascension_perk = ap_ngm_ministry_of_innocence
+				}
+			}
+			add_modifier = {
+				modifier = ap_ngm_dipromatic_think_tank_modifier
+			}
+		}
+	}
+}
+
+# 2.外交シンクタンク	外交官+2 外交発言力+20% 月間忠誠度+1 月ごとチェック
+country_event = {
+	id = ngm_tradition.37
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_ascension_perk = ap_ngm_dipromatic_think_tank
+	}
+	immediate = {
+		every_subject = {
+			limit = {
+				NOT = {
+					has_modifier = ap_ngm_dipromatic_think_tank_modifier
+				}
+			}
+			add_modifier = {
+				modifier = ap_ngm_dipromatic_think_tank_modifier
+			}
+		}
+	}
+}
+
+# 23.重層的国家	月間忠誠度+2
+country_event = {
+	id = ngm_tradition.38
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_ascension_perk = ap_ngm_layer_countries
+	}
+	immediate = {
+		every_subject = {
+			limit = {
+				NOT = {
+					has_ascension_perk = ap_ngm_ministry_of_innocence
+				}
+			}
+			add_modifier = {
+				modifier = ap_ngm_layer_countries_modifier
+			}
+		}
+	}
+}
+
+# 23.重層的国家	月間忠誠度+2 月ごとチェック
+country_event = {
+	id = ngm_tradition.39
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_ascension_perk = ap_ngm_layer_countries
+	}
+	immediate = {
+		every_subject = {
+			limit = {
+				NOT = {
+					has_modifier = ap_ngm_layer_countries_modifier
+				}
+			}
+			add_modifier = {
+				modifier = ap_ngm_layer_countries_modifier
 			}
 		}
 	}

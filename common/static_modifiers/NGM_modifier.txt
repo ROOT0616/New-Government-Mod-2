@@ -1196,3 +1196,13 @@ ap_ngm_chio_debuff_7 = {
 ap_ngm_chio_debuff_8 = {
 	country_base_influence_produces_add = -1
 }
+
+# 2.外交シンクタンク	外交官+2 外交発言力+20% 月間忠誠度+1
+ap_ngm_dipromatic_think_tank_modifier = {
+	monthly_loyalty = 1
+}
+
+# 23.重層的国家	月間忠誠度+2
+ap_ngm_layer_countries_modifier = {
+	monthly_loyalty = 2
+}

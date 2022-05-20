@@ -1,8 +1,3 @@
-@ap_evolutionary_mastery_POINTS = 3
-@ap_evolutionary_mastery_COST_MULT = -0.25
-@ap_engineered_evolution_POINTS = 3
-@ap_engineered_evolution_COST_MULT = -0.25
-
 # 1.恒常的敵対諜報活動	外交官+2、解読力+10、宿敵にした相手国の影響力-1
 ap_ngm_constant_hostile_intelligence_operations = {
 	potential = {
@@ -33,16 +28,24 @@ ap_ngm_constant_hostile_intelligence_operations = {
 	}
 }
 
-# 2.外交シンクタンク	外交官+2、外交発言力+30%
+# 2.外交シンクタンク	外交官+2 外交発言力+20% 月間忠誠度+1
 ap_ngm_dipromatic_think_tank = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_dipromatic_think_tank
 		}
 	}
+	on_enabled = {
+		custom_tooltip = ap_ngm_dipromatic_think_tank_effect
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.36
+			}
+		}
+	}
 	modifier = {
 		envoys_add = 2
-		diplo_weight_mult = 0.3
+		diplo_weight_mult = 0.2
 	}
 	ai_weight = {
 		factor = 5
@@ -53,15 +56,20 @@ ap_ngm_dipromatic_think_tank = {
 	}
 }
 
-# 3.帝国学士院	研究選択肢+3、研究力+5%
+# 3.帝国学士院	研究選択肢+2 研究力+5% 「帝国芸術協会」と相互排他
 ap_ngm_imperial_academy = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_imperial_academy
 		}
 	}
+	possible = {
+		NOT = {
+			has_ascension_perk = ap_ngm_empire_art_association
+		}
+	}
 	modifier = {
-		num_tech_alternatives_add = 3
+		num_tech_alternatives_add = 2
 		country_physics_research_produces_mult = 0.05
 		country_society_research_produces_mult = 0.05
 		country_engineering_research_produces_mult = 0.05
@@ -69,22 +77,25 @@ ap_ngm_imperial_academy = {
 	ai_weight = {
 		factor = 5
 		modifier = {
-			factor = 5
-			num_ascension_perks > 2
+			factor = 10
+			is_materialist = yes
 		}
 	}
 }
 
-# 4.行政機構の再編	管理許容量+20%、国是slot+1
+# 4.行政機構の再編	国是Slot+1 帝国規模による影響-25%	3つ以上アセンションパークを取得しなければならない。
 ap_ngm_administrative_reorganization = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_administrative_reorganization
 		}
 	}
+	possible = {
+		num_ascension_perks > 3
+	}
 	modifier = {
 		country_government_civic_points_add = 1
-		country_admin_cap_mult = 0.2
+		empire_size_penalty_mult = -0.25
 	}
 	ai_weight = {
 		factor = 5
@@ -95,17 +106,22 @@ ap_ngm_administrative_reorganization = {
 	}
 }
 
-# 5.津波	コルベット建造速度+100%、全艦隊建造速度-50%、艦隊許容量+30
+# 5.津波	コルベット建造速度+100% コルベット建造コスト-10％ 全艦隊建造速度-50% 艦隊許容量+50 艦隊指揮上限+20	4つ以上アセンションパークを取得しなければならない。
 ap_ngm_tunami = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_tunami
 		}
 	}
+	possible = {
+		num_ascension_perks > 4
+	}
 	modifier = {
 		shipsize_corvette_build_speed_mult = 1
+		ship_corvette_cost_mult = -0.1
 		starbase_shipyard_build_speed_mult = -0.5
-		country_naval_cap_add = 30
+		country_naval_cap_add = 50
+		country_command_limit_add = 20
 	}
 	ai_weight = {
 		factor = 5
@@ -116,7 +132,7 @@ ap_ngm_tunami = {
 	}
 }
 
-# 6.静謐	統合力+20%、研究力+10%	3つ以上アセンションパークを取得しなければならない。平和、中立のみ
+# 6.静謐	統合力+25% 研究力+10% 平和、中立のみ
 ap_ngm_calm = {
 	potential = {
 		OR = {
@@ -128,7 +144,6 @@ ap_ngm_calm = {
 		NOT = {
 			has_ascension_perk = ap_ngm_calm
 		}
-		num_ascension_perks > 2
 	}
 	modifier = {
 		country_unity_produces_mult = 0.2
@@ -145,7 +160,7 @@ ap_ngm_calm = {
 	}
 }
 
-# 7.宮廷外交	影響力+2、外交発言力+20%	権威もしくは栄望のみ
+# 7.宮廷外交	影響力+2、外交発言力+20% 	2つ以上アセンションパークを取得しなければならない。	権威もしくは栄望のみ
 ap_ngm_court_dipromacy = {
 	potential = {
 		NOT = {
@@ -157,6 +172,9 @@ ap_ngm_court_dipromacy = {
 			has_ethic = ethic_honorism
 			has_ethic = ethic_fanatic_honorism
 		}
+	}
+	possible = {
+		num_ascension_perks > 2
 	}
 	modifier = {
 		country_base_influence_produces_add = 2
@@ -171,19 +189,21 @@ ap_ngm_court_dipromacy = {
 	}
 }
 
-# 8.未来インフラ	建造物slot+3、建造物建造速度+20%、区域建造枠+3、区域建造速度+20%、巨大構造物建造枠+2、巨大建造速度+10%
+# 8.未来インフラ	建造物slot+2 建造物建造速度+20% 区域建造枠+3 区域建造速度+20% 巨大建造速度+10% 3つ以上アセンションパークを取得しなければならない。
 ap_ngm_future_infrastructure = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_future_infrastructure
 		}
 	}
+	possible = {
+		num_ascension_perks > 3
+	}
 	modifier = {
-		planet_max_buildings_add = 3
+		planet_max_buildings_add = 2
 		planet_max_districts_add = 3
 		planet_building_build_speed_mult = 0.2
 		megastructure_build_speed_mult = 0.1
-		country_megastructure_build_cap_add = 2
 	}
 	ai_weight = {
 		factor = 5
@@ -194,12 +214,15 @@ ap_ngm_future_infrastructure = {
 	}
 }
 
-# 9.高度防衛計画	ステーション許容量+10、防衛プラットフォームの上限+150、星系基地船体値+50%
+# 9.高度防衛計画	ステーション許容量+10、防衛プラットフォームの上限+150、星系基地船体値+50% 3つ以上アセンションパークを取得しなければならない。
 ap_ngm_advanced_defense_plan = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_advanced_defense_plan
 		}
+	}
+	possible = {
+		num_ascension_perks > 3
 	}
 	modifier = {
 		country_starbase_capacity_add = 10
@@ -240,7 +263,7 @@ ap_ngm_absolutely_class = {
 	}
 }
 
-# 11.象徴的構造物	巨大構造物建造枠+2、巨大構造物速度+10%、合金生産+5%		開発もしくは物質のみ
+# 11.象徴的構造物	巨大構造物建造枠+1 巨大構造物速度+20% 合金生産+10%	3つ以上アセンションパークを取得しなければならない。	開発もしくは物質のみ
 ap_ngm_symbolic_structures = {
 	potential = {
 		NOT = {
@@ -253,10 +276,13 @@ ap_ngm_symbolic_structures = {
 			has_ethic = ethic_fanatic_developmentalism
 		}
 	}
+	possible = {
+		num_ascension_perks > 3
+	}
 	modifier = {
-		megastructure_build_speed_mult = 0.1
-		country_megastructure_build_cap_add = 2
-		country_alloys_produces_mult = 0.05
+		megastructure_build_speed_mult = 0.2
+		country_megastructure_build_cap_add = 1
+		country_alloys_produces_mult = 0.1
 	}
 	ai_weight = {
 		factor = 5
@@ -267,18 +293,21 @@ ap_ngm_symbolic_structures = {
 	}
 }
 
-# 12.資源戦略調整省	職業が消費する資源-5%、建造物のエキゾチックガス・揮発性粉末・レアクリスタル消費量-20%
+# 12.資源戦略調整省	職業が消費する資源-10% 建造物のエキゾチックガス・揮発性粉末・レアクリスタル消費量-10% 2つ以上アセンションパークを取得しなければならない。	開発もしくは物質のみ
 ap_ngm_resource_strategy_adjustment_ministries = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_resource_strategy_adjustment_ministries
 		}
 	}
+	possible = {
+		num_ascension_perks > 3
+	}
 	modifier = {
 		planet_jobs_productive_upkeep_mult = -0.1
-		planet_buildings_exotic_gases_upkeep_mult = -0.2
-		planet_buildings_rare_crystals_upkeep_mult = -0.2
-		planet_buildings_volatile_motes_upkeep_mult = -0.2
+		planet_buildings_exotic_gases_upkeep_mult = -0.1
+		planet_buildings_rare_crystals_upkeep_mult = -0.1
+		planet_buildings_volatile_motes_upkeep_mult = -0.1
 	}
 	ai_weight = {
 		factor = 5
@@ -289,7 +318,7 @@ ap_ngm_resource_strategy_adjustment_ministries = {
 	}
 }
 
-# 13.贅沢は敵だ	Pop維持費-50%	軍国もしくは権威のみ
+# 13.贅沢は敵だ	Pop維持費-50% 戦争疲弊-20% 地上軍士気+10%	軍国もしくは権威のみ
 ap_ngm_luxury_must_be_enemy = {
 	potential = {
 		NOT = {
@@ -304,6 +333,8 @@ ap_ngm_luxury_must_be_enemy = {
 	}
 	modifier = {
 		planet_pops_upkeep_mult = -0.5
+		country_war_exhaustion_mult = -0.2
+		army_morale = 0.1
 	}
 	ai_weight = {
 		factor = 5
@@ -314,16 +345,20 @@ ap_ngm_luxury_must_be_enemy = {
 	}
 }
 
-# 14.帝国の大動脈	交易価値+30%、交易保護値+20、20Popにつき事務員Job+1、40Popにつき豪商+1
+# 14.帝国の大動脈	交易価値+20% 交易保護値+20 市場手数料-5％ 20Popにつき事務員Job+1 40Popにつき豪商+1 3つ以上アセンションパークを取得しなければならない。
 ap_ngm_the_empires_main_artery = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_the_empires_main_artery
 		}
 	}
+	possible = {
+		num_ascension_perks > 3
+	}
 	modifier = {
 		trade_value_mult = 0.3
 		local_trade_protection_add = 20
+		country_trade_fee = -0.05
 		job_clerk_per_pop = 0.05
 		job_merchant_per_pop = 0.025
 	}
@@ -336,16 +371,21 @@ ap_ngm_the_empires_main_artery = {
 	}
 }
 
-# 15.人的資源省	Pop成長速度+20%、幸福度+5%
+# 15.人的資源省	Pop成長速度+25% リーダー経験値取得+10% リーダースキル上限+1 リーダー寿命+10年 2つ以上アセンションパークを取得しなければならない。
 ap_ngm_ministry_of_human_resources = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_ministry_of_human_resources
 		}
 	}
+	possible = {
+		num_ascension_perks > 2
+	}
 	modifier = {
-		pop_growth_speed = 0.2
-		pop_happiness = 0.05
+		pop_growth_speed = 0.25
+		species_leader_exp_gain = 0.1
+		leader_skill_levels = 1
+		leader_age = 10
 	}
 	ai_weight = {
 		factor = 5
@@ -356,12 +396,15 @@ ap_ngm_ministry_of_human_resources = {
 	}
 }
 
-# 16.幸福省	幸福度+5%、安定度+40)
+# 16.幸福省	幸福度+5%、安定度+40 3つ以上アセンションパークを取得しなければならない。
 ap_ngm_ministry_of_happiness = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_ministry_of_happiness
 		}
+	}
+	possible = {
+		num_ascension_perks > 3
 	}
 	modifier = {
 		pop_happiness = 0.05
@@ -376,12 +419,15 @@ ap_ngm_ministry_of_happiness = {
 	}
 }
 
-# 17.徹底抗戦	自国内連射レート+20%、船体値+10%、回避+10%、離脱可能性の減少-50%、厭戦値-30%
+# 17.徹底抗戦	自国内連射レート+20%、船体値+10%、回避+10%、離脱可能性の減少-50%、厭戦値-30% 2つ以上アセンションパークを取得しなければならない。
 ap_ngm_victory_or_valhalla = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_victory_or_valhalla
 		}
+	}
+	possible = {
+		num_ascension_perks > 2
 	}
 	modifier = {
 		ship_home_territory_fire_rate_mult = 0.2
@@ -399,20 +445,23 @@ ap_ngm_victory_or_valhalla = {
 	}
 }
 
-# 18.帝国統合参謀本部	亜高速移動速度+20%、FTL速度+10%、星系基地許容量+5、防衛ステーションの上限+50、宇宙軍許容量+30、指揮上限+10
+# 18.帝国統合参謀本部	亜高速移動速度+20% 星系基地許容量+10 防衛ステーションの上限+50 宇宙軍許容量+40 指揮上限+10 地上軍士気+20% 2つ以上アセンションパークを取得しなければならない。
 ap_ngm_empire_joint_chiefs_of_staff = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_empire_joint_chiefs_of_staff
 		}
 	}
+	possible = {
+		num_ascension_perks > 2
+	}
 	modifier = {
 		ship_speed_mult = 0.2
-		ship_interstellar_speed_mult = 0.1
-		country_starbase_capacity_add = 5
+		country_starbase_capacity_add = 10
 		starbase_defense_platform_capacity_add = 50
 		country_naval_cap_add = 30
-		country_command_limit_add = 10		#弱体化した
+		country_command_limit_add = 10
+		army_morale = 0.2
 	}
 	ai_weight = {
 		factor = 5
@@ -423,7 +472,7 @@ ap_ngm_empire_joint_chiefs_of_staff = {
 	}
 }
 
-# 19.植民省	入植速度+30%、移民流入+20%、Pop成長速度+5%、居住性+25%
+# 19.植民省	入植速度+30%、移民流入+20%、居住性+25%
 ap_ngm_colonial_office = {
 	potential = {
 		NOT = {
@@ -433,7 +482,6 @@ ap_ngm_colonial_office = {
 	modifier = {
 		planet_colony_development_speed_mult = 0.3
 		pop_growth_from_immigration = 0.2
-		pop_growth_speed = 0.05
 		pop_environment_tolerance = 0.25
 	}
 	ai_weight = {
@@ -445,7 +493,7 @@ ap_ngm_colonial_office = {
 	}
 }
 
-# 20.社会秩序維持局	他国からの干渉的影響を受けない
+# 20.社会秩序維持局	他国から諜報以外の方法で内政的悪影響を受けない。 統治志向魅力+20％
 ap_ngm_ministry_of_innocence = {
 	potential = {
 		NOT = {
@@ -461,6 +509,7 @@ ap_ngm_ministry_of_innocence = {
 		}
 	}
 	modifier = {
+		pop_government_ethic_attraction = 0.2
 	}
 	ai_weight = {
 		factor = 5
@@ -471,12 +520,15 @@ ap_ngm_ministry_of_innocence = {
 	}
 }
 
-# 21.大規模建築計画局	巨大構造物建造枠+2、巨大構造物速度+10%、研究選択肢を追加・メガエンジニアリング	戦艦、シタデル、ゼロポイント発電の研究を完了している
+# 21.大規模建築計画局	巨大構造物建造枠+2、巨大構造物速度+10%、研究選択肢を追加・メガエンジニアリング	戦艦、シタデル、ゼロポイント発電の研究を完了している 4つ以上アセンションパークを取得しなければならない。
 ap_ngm_great_constructure_department = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_great_constructure_department
 		}
+	}
+	possible = {
+		num_ascension_perks > 4
 	}
 	# 巨大構造物建造枠+2
 	# 巨大構造物速度+10%
@@ -516,18 +568,16 @@ ap_ngm_great_constructure_department = {
 	}
 }
 
-# 22.奢侈品の天国	幸福度+50%、消費財消費量+100%
+# 22.奢侈品の天国	幸福度+40% 消費財消費量+200%
 ap_ngm_heaven_consumer = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_heaven_consumer
 		}
 	}
-	# 幸福度+50%
-	# 消費財消費量+100%
 	modifier = {
-		planet_pops_consumer_goods_upkeep_mult = 1
-		pop_happiness = 0.5
+		planet_pops_consumer_goods_upkeep_mult = 2
+		pop_happiness = 0.4
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて
@@ -540,16 +590,22 @@ ap_ngm_heaven_consumer = {
 	}
 }
 
-# 23.重層的国家	属国化要求受容度+50%、属国との友好度+50
+# 23.重層的国家	月間忠誠度+2
 ap_ngm_layer_countries = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_layer_countries
 		}
 	}
+	on_enabled = {
+		custom_tooltip = ap_ngm_layer_countries_effect
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.38
+			}
+		}
+	}
 	modifier = {
-		country_subject_acceptance_add = 50
-		country_subject_trust_cap_add = 50
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて
@@ -562,7 +618,7 @@ ap_ngm_layer_countries = {
 	}
 }
 
-# 24.司教による請求権の捏造	請求権コスト-50%、統合力+20%	精神のみ
+# 24.司教による請求権の捏造	請求権コスト-50%、統合力+20% 2つ以上アセンションパークを取得しなければならない。	精神のみ
 ap_ngm_bishop_need = {
 	potential = {
 		NOT = {
@@ -573,8 +629,9 @@ ap_ngm_bishop_need = {
 			has_ethic = ethic_fanatic_spiritualist
 		}
 	}
-	# 請求権コスト-50%
-	# 統合力+20%
+	possible = {
+		num_ascension_perks > 2
+	}
 	modifier = {
 		country_unity_produces_mult = 0.2
 		country_claim_influence_cost_mult = -0.5
@@ -590,20 +647,22 @@ ap_ngm_bishop_need = {
 	}
 }
 
-# 25.帝国芸術協会	統合力+20%、Jobによる統合力算出+20%、20Popにつき文化人Job+1
+# 25.帝国芸術協会	統合力+10% Jobによる統合力算出+15% 25Popにつき文化人Job+1 「帝国学士院」と相互排他
 ap_ngm_empire_art_association = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_empire_art_association
 		}
 	}
-	# 統合力+20%
-	# Jobによる統合力算出+20%
-	# 20Popにつき文化人Job+1
+	possible = {
+		NOT = {
+			has_ascension_perk = ap_ngm_imperial_academy
+		}
+	}
 	modifier = {
-		country_unity_produces_mult = 0.2
-		planet_jobs_unity_produces_mult = 0.2
-		job_culture_worker_per_pop = 0.05
+		country_unity_produces_mult = 0.1
+		planet_jobs_unity_produces_mult = 0.15
+		job_culture_worker_per_pop = 0.04
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて
@@ -616,16 +675,16 @@ ap_ngm_empire_art_association = {
 	}
 }
 
-# 26.諜報網に基づく請求権の捏造	請求権コスト-50%、暗号力+10、解読力+10	精神以外
+# 26.諜報網に基づく請求権の捏造	請求権コスト-50%、暗号力+10、解読力+10 4つ以上アセンションパークを取得しなければならない。 精神以外
 ap_ngm_Intelligence_need = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_Intelligence_need
 		}
 	}
-	# 請求権コスト-50%
-	# 暗号力+10
-	# 解読力+10
+	possible = {
+		num_ascension_perks > 4
+	}
 	modifier = {
 		country_claim_influence_cost_mult = -0.5
 		intel_decryption_add = 10
@@ -664,14 +723,17 @@ ap_ngm_speed_power = {
 	}
 }
 
-# 28.寵児	没落帝国、覚醒帝国からの関係+100
+# 28.寵児	没落帝国、覚醒帝国からの関係+100  5つ以上アセンションパークを取得しなければならない。
 ap_ngm_relation_old_empire = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_relation_old_empire
 		}
 	}
-	# 没落帝国、覚醒帝国からの関係+100
+	possible = {
+		num_ascension_perks > 5
+	}
+	custom_tooltip = ap_ngm_relation_old_empire_effect
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて
 	ai_weight = {
@@ -705,20 +767,18 @@ ap_ngm_ministry_constructure = {
 	}
 }
 
-# 30.ハニカムハウス	コロニー船建造コスト-50%、区域建造コスト-20%、住居使用量-30%
+# 30.ハニカムハウス コロニー船建造コスト-50% 区域建造コスト-20% 住居使用量-30% 惑星荒廃度-10%
 ap_ngm_hanicam_house = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_hanicam_house
 		}
 	}
-	# コロニー船建造コスト-50%
-	# 建造物建造コスト-20%
-	# 住居+30%
 	modifier = {
 		ship_colonizerunity_cost_mult = -0.5
-		planet_buildings_cost_mult = -0.2
-		planet_housing_mult = 0.3
+		planet_structures__cost_mult = -0.2
+		pop_housing_usage_mult = -0.3
+		planet_orbital_bombardment_damage = -0.1
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて
@@ -731,18 +791,20 @@ ap_ngm_hanicam_house = {
 	}
 }
 
-# 31.インサイダー取引	市場手数料-10%、交易価値+20%
+# 31.インサイダー取引	市場手数料-10% 交易価値+20% 解読力+10  3つ以上アセンションパークを取得しなければならない。
 ap_ngm_insider_trade = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_insider_trade
 		}
 	}
-	# 市場手数料-10%
-	# 交易価値+20%
+	possible = {
+		num_ascension_perks > 3
+	}
 	modifier = {
 		trade_value_mult = 0.2
 		country_trade_fee = -0.1
+		intel_decryption_add = 10
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて
@@ -755,18 +817,16 @@ ap_ngm_insider_trade = {
 	}
 }
 
-# 32.マンデルブロー集合における平面展開定理を利用した大規模農業	農業区域の農民数+10、農業区域の住居+3、惑星における農業区域最大数+5
+# 32.マンデルブロー集合における平面展開定理を利用した大規模農業	農業区域の最大数+10 農業区域の建造速度+200% 2Pop当たりの農民のJob+1
 ap_ngm_farm_farm = {
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_ngm_farm_farm
 		}
 	}
-	# 農業区域の農民数+10
-	# 惑星における農業区域最大数+5
 	modifier = {
-		district_farming_max = 5
-		planet_district_farming_build_speed_mult = 0.5
+		district_farming_max = 10
+		planet_district_farming_build_speed_mult = 2
 		job_farmer_per_pop = 0.5
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている

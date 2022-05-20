@@ -1929,6 +1929,10 @@
  ap_ngm_chio_debuff_7:0 "$ap_ngm_chio_debuff_1$"
  ap_ngm_chio_debuff_8:0 "$ap_ngm_chio_debuff_1$"
 
+ ap_ngm_dipromatic_think_tank_modifier:0 "外交シンクタンク"
+
+ ap_ngm_layer_countries_modifier:0 "重層的国家"
+
  ngm_olympic_nominee_desc_intro:0 "この惑星は、 将来の国際大会の基盤として候補になっている。 "
  ngm_olympic_nominee_level_1:0 "国際大会候補地の競争力格付け：§R脆弱§!"
  ngm_olympic_nominee_level_1_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§R脆弱§!。 "
@@ -2940,6 +2944,7 @@
 
  ap_ngm_dipromatic_think_tank:0 "Diplomatic think tank"
  ap_ngm_dipromatic_think_tank_desc:0 "Utilize a team of experts on constantly shifting diplomacy"
+ ap_ngm_dipromatic_think_tank_effect:0 "Moon loyalty +1"
 
  ap_ngm_imperial_academy:0 "Imperial Academy"
  ap_ngm_imperial_academy_desc:0 "to organize researchers politically and to make use of research policy"
@@ -2994,6 +2999,7 @@
 
  ap_ngm_ministry_of_innocence:0 "Ministry for the maintenance of social order"
  ap_ngm_ministry_of_innocence_desc:0 "Our country needs to set itself apart from other countries and maintain its purity."
+ ap_ngm_ministry_of_innocence_effect:0 "No adverse internal political effects from other countries by means other than intelligence"
 
  ap_ngm_great_constructure_department:0 "Great Construction Planning Department"
  ap_ngm_great_constructure_department_desc:0 "Establish a ministry to operate and coordinate resources and craftsmen in carrying out large-scale construction."
@@ -3003,6 +3009,7 @@
 
  ap_ngm_layer_countries:0 "multilayered nation"
  ap_ngm_layer_countries_desc:0 "Society is a multilayered structure, which is a normal form of state."
+ ap_ngm_layer_countries_effect:0 "Moon loyalty +2"
 
  ap_ngm_bishop_need:0 "fabrication of claims by bishops"
  ap_ngm_bishop_need_desc:0 ""
@@ -3018,6 +3025,7 @@
 
  ap_ngm_relation_old_empire:0 "Favored Child"
  ap_ngm_relation_old_empire_desc:0 "To be loved by our great predecessors is a gift."
+ ap_ngm_relation_old_empire_effect:0 "Relationship +100 from fallen empire, awakening empire"
 
  ap_ngm_ministry_constructure:0 "Ministry of Works"
  ap_ngm_ministry_constructure_desc:0 "Construction, expansion, and box building. All of these are under the jurisdiction of the Ministry of Works."
