@@ -203,3 +203,10 @@ on_system_lost = {
 		# ngm_government.106
 	}
 }
+
+on_country_destroyed = {
+	events = {
+		ngm_penetration.1
+	}
+}
+
