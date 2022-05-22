@@ -705,6 +705,7 @@ ngm_with_honor_1_modifier = {
 
 # 屈辱を与えられた
 ngm_with_honor_2_modifier = {
+	country_base_influence_produces_add = -2
 	pop_happiness = -0.1
 	planet_stability_add = -10
 	trade_value_mult = -0.1
