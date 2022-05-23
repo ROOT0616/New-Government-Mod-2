@@ -18,6 +18,30 @@ tradition_ngm_law = {
 	}
 	ai_weight = {
 		factor = 10
+		modifier = {
+			factor = 0.5
+			is_criminal_syndicate = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_civic = civic_hive_devouring_swarm
+		}
+		modifier = {
+			factor = 0.5
+			has_civic = civic_cutthroat_politics
+		}
+		modifier = {
+			factor = 0.5
+			has_civic = civic_ngm_kakistocracy
+		}
+		modifier = {
+			factor = 2
+			has_civic = civic_police_state
+		}
+		modifier = {
+			factor = 2
+			has_civic = civic_ngm_order_of_chivalry
+		}
 	}
 }
 
@@ -40,7 +64,31 @@ tradition_ngm_virture = {
 		"tr_ngm_sabotage"
 	}
 	ai_weight = {
-		factor = 10
+		factor = 5
+		modifier = {
+			factor = 4
+			is_criminal_syndicate = yes
+		}
+		modifier = {
+			factor = 4
+			has_civic = civic_hive_devouring_swarm
+		}
+		modifier = {
+			factor = 4
+			has_civic = civic_cutthroat_politics
+		}
+		modifier = {
+			factor = 4
+			has_civic = civic_ngm_kakistocracy
+		}
+		modifier = {
+			factor = 0.5
+			has_civic = civic_police_state
+		}
+		modifier = {
+			factor = 0.5
+			has_civic = civic_ngm_order_of_chivalry
+		}
 	}
 }
 
@@ -64,6 +112,14 @@ tradition_ngm_study = {
 	}
 	ai_weight = {
 		factor = 10
+		modifier = {
+			factor = 2
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_spiritualist = yes
+		}
 	}
 }
 
@@ -156,6 +212,14 @@ tradition_ngm_academic = {
 	}
 	ai_weight = {
 		factor = 10
+		modifier = {
+			factor = 2
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_spiritualist = yes
+		}
 	}
 }
 
@@ -179,6 +243,14 @@ tradition_ngm_memory = {
 	}
 	ai_weight = {
 		factor = 10
+		modifier = {
+			factor = 2
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_spiritualist = yes
+		}
 	}
 }
 
@@ -673,6 +745,14 @@ tradition_ngm_information = {
 	}
 	ai_weight = {
 		factor = 10
+		modifier = {
+			factor = 2
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_spiritualist = yes
+		}
 	}
 }
 
