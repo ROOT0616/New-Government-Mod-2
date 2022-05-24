@@ -5257,9 +5257,29 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_civic = civic_corporate_anglers
+			}
+			force_remove_civic = civic_corporate_anglers
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
 				has_civic = civic_corporate_crafters
 			}
 			force_remove_civic = civic_corporate_crafters
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_civic = civic_permanent_employment
+			}
+			force_remove_civic = civic_permanent_employment
 			change_variable = {
 				which = tr_ngm_avantgarde_finish_variable
 				value = 1
@@ -10740,7 +10760,7 @@ country_event = {
 }
 
 # 前衛(新たな試みと反秩序こそ自己を表現することができる)
-# 完遂時:国是を削除分選択1
+# 完遂時:国是を削除分追加分岐
 country_event = {
 	id = ngm_tradition.40
 	title = ngm_tradition.40.name
@@ -10753,9 +10773,98 @@ country_event = {
 			value > 0
 		}
 	}
+	# バニラ通常帝国用国是
 	option = {
 		name = ngm_tradition.40.a
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.41
+			}
+		}
+	}
+	# バニラ企業帝国用国是
+	option = {
+		name = ngm_tradition.40.b
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.57
+			}
+		}
+	}
+	# バニラ集合意識
+	option = {
+		name = ngm_tradition.40.c
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.50
+			}
+		}
+	}
+	# バニラ機械集合意識
+	option = {
+		name = ngm_tradition.40.d
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.53
+			}
+		}
+	}
+	# 追加通常帝国用国是
+	option = {
+		name = ngm_tradition.40.e
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+		# hidden_effect = {
+		# 	country_event = {
+		# 		id = ngm_tradition.61
+		# 	}
+		# }
+	}
+	# 追加企業帝国用国是
+	option = {
+		name = ngm_tradition.40.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+		# hidden_effect = {
+		# 	country_event = {
+		# 		id = ngm_tradition.1
+		# 	}
+		# }
+	}
+	# 閉じる
+	option = {
+		name = ngm_tradition.40.g
+	}
+}
+
+# 完遂時:国是を削除分追加1 バニラ通常帝国用国是
+country_event = {
+	id = ngm_tradition.41
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
+	picture = GFX_evt_announcement
+	is_triggered_only = yes
+	trigger = {
+		check_variable = {
+			which = tr_ngm_avantgarde_finish_variable
+			value > 0
+		}
+	}
+	option = {
+		name = ngm_tradition.41.a
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOR = {
 				has_ethic = ethic_egalitarian
 				has_ethic = ethic_fanatic_egalitarian
@@ -10779,8 +10888,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.40.b
+		name = ngm_tradition.41.b
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			has_authority = auth_imperial
 			OR = {
 				has_ethic = ethic_authoritarian
@@ -10806,8 +10921,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.40.c
+		name = ngm_tradition.41.c
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			has_authority = auth_democratic
 			OR = {
 				has_ethic = ethic_egalitarian
@@ -10833,8 +10954,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.40.d
+		name = ngm_tradition.41.d
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_authority = auth_oligarchic
 				has_authority = auth_dictatorial
@@ -10864,8 +10991,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.40.e
+		name = ngm_tradition.41.e
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_authority = auth_dictatorial
 				has_authority = auth_imperial
@@ -10885,14 +11018,15 @@ country_event = {
 			}
 		}
 	}
+	# 次へ
 	option = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.f
+		name = ngm_tradition.41.f
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.41
+				id = ngm_tradition.42
 			}
 		}
 	}
@@ -10900,10 +11034,10 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.g
+		name = ngm_tradition.41.g
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.48
+				id = ngm_tradition.49
 			}
 		}
 	}
@@ -10911,7 +11045,18 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.h
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
 		hidden_effect = {
 			set_variable = {
 				which = tr_ngm_avantgarde_finish_variable
@@ -10921,11 +11066,11 @@ country_event = {
 	}
 }
 
-# 完遂時:国是を削除分選択2
+# 完遂時:国是を削除分追加2
 country_event = {
-	id = ngm_tradition.41
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
+	id = ngm_tradition.42
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
 	picture = GFX_evt_announcement
 	is_triggered_only = yes
 	trigger = {
@@ -10935,8 +11080,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.41.a
+		name = ngm_tradition.42.a
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_authority = auth_democratic
 				has_authority = auth_oligarchic
@@ -10952,13 +11103,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.41
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.41.b
+		name = ngm_tradition.42.b
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_ethic = ethic_militarist
 				has_ethic = ethic_fanatic_militarist
@@ -10984,13 +11141,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.41
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.41.c
+		name = ngm_tradition.42.c
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_ethic = ethic_materialist
 				has_ethic = ethic_fanatic_materialist
@@ -11012,13 +11175,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.41
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.41.d
+		name = ngm_tradition.42.d
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			has_authority = auth_imperial
 			NOT = {
 				has_civic = civic_feudal_realm
@@ -11031,13 +11200,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.41
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.41.e
+		name = ngm_tradition.42.e
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOT = { 
 				has_ethic = ethic_fanatic_egalitarian
 			}
@@ -11052,6 +11227,29 @@ country_event = {
 				value = 1
 			}
 			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	# 次へ
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.43
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
 				id = ngm_tradition.41
 			}
 		}
@@ -11060,18 +11258,7 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.f
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.42
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.g
+		name = ngm_tradition.41.h
 		hidden_effect = {
 			country_event = {
 				id = ngm_tradition.40
@@ -11082,7 +11269,7 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.h
+		name = ngm_tradition.41.i
 		hidden_effect = {
 			set_variable = {
 				which = tr_ngm_avantgarde_finish_variable
@@ -11092,11 +11279,11 @@ country_event = {
 	}
 }
 
-# 完遂時:国是を削除分選択3
+# 完遂時:国是を削除分追加3
 country_event = {
-	id = ngm_tradition.42
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
+	id = ngm_tradition.43
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
 	picture = GFX_evt_announcement
 	is_triggered_only = yes
 	trigger = {
@@ -11106,8 +11293,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.42.a
+		name = ngm_tradition.43.a
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_ethic = ethic_egalitarian
 				has_ethic = ethic_fanatic_egalitarian
@@ -11123,17 +11316,23 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.42
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
 		allow = {
 			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
+			NOT = {
 				has_civic = civic_environmentalist
 			}
 		}
-		name = ngm_tradition.42.b
+		name = ngm_tradition.43.b
 		force_add_civic = civic_environmentalist
 		hidden_effect = {
 			subtract_variable = {
@@ -11141,13 +11340,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.42
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.42.c
+		name = ngm_tradition.43.c
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_ethic = ethic_authoritarian
 				has_ethic = ethic_fanatic_authoritarian
@@ -11163,13 +11368,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.42
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.42.d
+		name = ngm_tradition.43.d
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_ethic = ethic_pacifist
 				has_ethic = ethic_fanatic_pacifist
@@ -11196,13 +11407,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.42
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.42.e
+		name = ngm_tradition.43.e
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_ethic = ethic_militarist
 				has_ethic = ethic_fanatic_militarist
@@ -11221,6 +11438,29 @@ country_event = {
 				value = 1
 			}
 			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	# 次へ
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.44
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
 				id = ngm_tradition.42
 			}
 		}
@@ -11229,10 +11469,10 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.f
+		name = ngm_tradition.41.h
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.43
+				id = ngm_tradition.40
 			}
 		}
 	}
@@ -11240,18 +11480,7 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.41
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
+		name = ngm_tradition.41.i
 		hidden_effect = {
 			set_variable = {
 				which = tr_ngm_avantgarde_finish_variable
@@ -11261,11 +11490,11 @@ country_event = {
 	}
 }
 
-# 完遂時:国是を削除分選択4
+# 完遂時:国是を削除分追加4
 country_event = {
-	id = ngm_tradition.43
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
+	id = ngm_tradition.44
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
 	picture = GFX_evt_announcement
 	is_triggered_only = yes
 	trigger = {
@@ -11275,8 +11504,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.43.a
+		name = ngm_tradition.44.a
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_ethic = ethic_militarist
 				has_ethic = ethic_fanatic_militarist
@@ -11292,13 +11527,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.43
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.43.b
+		name = ngm_tradition.44.b
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_ethic = ethic_xenophile
 				has_ethic = ethic_fanatic_xenophile
@@ -11317,13 +11558,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.43
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.43.c
+		name = ngm_tradition.44.c
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOT = {
 				has_civic = civic_cutthroat_politics
 			}
@@ -11335,13 +11582,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.43
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.43.d
+		name = ngm_tradition.44.d
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			has_authority = auth_oligarchic
 			NOR = {
 				has_ethic = ethic_xenophobe
@@ -11358,13 +11611,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.43
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.43.e
+		name = ngm_tradition.44.e
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_ethic = ethic_pacifist
 				has_ethic = ethic_fanatic_pacifist
@@ -11388,6 +11647,29 @@ country_event = {
 				value = 1
 			}
 			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	# 次へ
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.45
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
 				id = ngm_tradition.43
 			}
 		}
@@ -11396,10 +11678,10 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.f
+		name = ngm_tradition.41.h
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.44
+				id = ngm_tradition.40
 			}
 		}
 	}
@@ -11407,18 +11689,7 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.42
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
+		name = ngm_tradition.41.i
 		hidden_effect = {
 			set_variable = {
 				which = tr_ngm_avantgarde_finish_variable
@@ -11428,11 +11699,11 @@ country_event = {
 	}
 }
 
-# 完遂時:国是を削除分選択5
+# 完遂時:国是を削除分追加5
 country_event = {
-	id = ngm_tradition.44
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
+	id = ngm_tradition.45
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
 	picture = GFX_evt_announcement
 	is_triggered_only = yes
 	trigger = {
@@ -11442,8 +11713,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.44.a
+		name = ngm_tradition.45.a
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_authority = auth_democratic
 				has_authority = auth_oligarchic
@@ -11460,13 +11737,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.44
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.44.b
+		name = ngm_tradition.45.b
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOT = {
 				has_civic = civic_mining_guilds
 			}
@@ -11478,13 +11761,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.44
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.44.c
+		name = ngm_tradition.45.c
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			has_authority = auth_democratic
 			NOT = {
 				has_civic = civic_parliamentary_system
@@ -11497,13 +11786,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.44
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.44.d
+		name = ngm_tradition.45.d
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOT = {
 				has_civic = civic_efficient_bureaucracy
 			}
@@ -11515,13 +11810,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.44
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.44.e
+		name = ngm_tradition.45.e
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_ethic = ethic_militarist
 				has_ethic = ethic_fanatic_militarist
@@ -11537,6 +11838,29 @@ country_event = {
 				value = 1
 			}
 			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	# 次へ
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.46
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
 				id = ngm_tradition.44
 			}
 		}
@@ -11545,10 +11869,10 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.f
+		name = ngm_tradition.41.h
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.45
+				id = ngm_tradition.40
 			}
 		}
 	}
@@ -11556,18 +11880,7 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.43
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
+		name = ngm_tradition.41.i
 		hidden_effect = {
 			set_variable = {
 				which = tr_ngm_avantgarde_finish_variable
@@ -11577,11 +11890,11 @@ country_event = {
 	}
 }
 
-# 完遂時:国是を削除分選択6
+# 完遂時:国是を削除分追加6
 country_event = {
-	id = ngm_tradition.45
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
+	id = ngm_tradition.46
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
 	picture = GFX_evt_announcement
 	is_triggered_only = yes
 	trigger = {
@@ -11591,8 +11904,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.45.a
+		name = ngm_tradition.46.a
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOT = {
 				has_civic = civic_functional_architecture
 			}
@@ -11604,13 +11923,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.45
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.45.b
+		name = ngm_tradition.46.b
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOR = {
 				has_ethic = ethic_egalitarian
 				has_ethic = ethic_fanatic_egalitarian
@@ -11635,13 +11960,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.45
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.45.c
+		name = ngm_tradition.46.c
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			has_ethic = ethic_fanatic_egalitarian
 			NOR = {
 				has_ethic = ethic_xenophobe
@@ -11662,13 +11993,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.45
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.45.d
+		name = ngm_tradition.46.d
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			has_ethic = ethic_fanatic_xenophobe
 			OR = {
 				has_ethic = ethic_militarist
@@ -11694,13 +12031,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.45
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.45.e
+		name = ngm_tradition.46.e
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_ethic = ethic_fanatic_militarist
 				has_ethic = ethic_militarist
@@ -11731,6 +12074,29 @@ country_event = {
 				value = 1
 			}
 			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	# 次へ
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.47
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
 				id = ngm_tradition.45
 			}
 		}
@@ -11739,10 +12105,10 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.f
+		name = ngm_tradition.41.h
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.46
+				id = ngm_tradition.40
 			}
 		}
 	}
@@ -11750,18 +12116,7 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.44
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
+		name = ngm_tradition.41.i
 		hidden_effect = {
 			set_variable = {
 				which = tr_ngm_avantgarde_finish_variable
@@ -11771,11 +12126,11 @@ country_event = {
 	}
 }
 
-# 完遂時:国是を削除分選択7
+# 完遂時:国是を削除分追加7
 country_event = {
-	id = ngm_tradition.46
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
+	id = ngm_tradition.47
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
 	picture = GFX_evt_announcement
 	is_triggered_only = yes
 	trigger = {
@@ -11785,8 +12140,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.46.a
+		name = ngm_tradition.47.a
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOR = {
 				has_ethic = ethic_spiritualist
 				has_ethic = ethic_fanatic_spiritualist
@@ -11802,13 +12163,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.46
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.46.b
+		name = ngm_tradition.47.b
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOR = {
 				has_civic = civic_exalted_priesthood
 				has_civic = civic_aristocratic_elite
@@ -11825,13 +12192,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.46
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.46.c
+		name = ngm_tradition.47.c
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOR = {
 				has_ethic = ethic_gestalt_consciousness
 				has_ethic = ethic_pacifist
@@ -11856,13 +12229,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.46
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.46.d
+		name = ngm_tradition.47.d
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOR = {
 				has_civic = civic_fanatic_purifiers
 				has_civic = civic_inwards_perfection
@@ -11878,13 +12257,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.46
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.46.e
+		name = ngm_tradition.47.e
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOT = { 
 				has_origin = origin_necrophage
 			}
@@ -11908,6 +12293,29 @@ country_event = {
 				value = 1
 			}
 			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	# 次へ
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.48
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
 				id = ngm_tradition.46
 			}
 		}
@@ -11916,10 +12324,10 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.f
+		name = ngm_tradition.41.h
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.47
+				id = ngm_tradition.40
 			}
 		}
 	}
@@ -11927,18 +12335,7 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.45
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
+		name = ngm_tradition.41.i
 		hidden_effect = {
 			set_variable = {
 				which = tr_ngm_avantgarde_finish_variable
@@ -11948,11 +12345,11 @@ country_event = {
 	}
 }
 
-# 完遂時:国是を削除分選択8
+# 完遂時:国是を削除分追加8
 country_event = {
-	id = ngm_tradition.47
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
+	id = ngm_tradition.48
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
 	picture = GFX_evt_announcement
 	is_triggered_only = yes
 	trigger = {
@@ -11962,8 +12359,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.47.a
+		name = ngm_tradition.48.a
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOT = {
 				has_civic = civic_fanatic_purifiers
 			}
@@ -11978,13 +12381,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.47
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.47.b
+		name = ngm_tradition.48.b
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOT = {
 				has_origin = origin_lithoid
 			}
@@ -12002,13 +12411,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.47
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.47.c
+		name = ngm_tradition.48.c
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOT = {
 				has_civic = civic_crafters
 			}
@@ -12020,13 +12435,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.47
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.47.d
+		name = ngm_tradition.48.d
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOR = {
 				has_civic = civic_warrior_culture
 				has_civic = civic_shared_burden
@@ -12043,13 +12464,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.47
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.47.e
+		name = ngm_tradition.48.e
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			owner_main_species = {
 				OR = {
 					is_species_class = FUN
@@ -12070,6 +12497,29 @@ country_event = {
 				value = 1
 			}
 			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	# 次へ
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
 				id = ngm_tradition.47
 			}
 		}
@@ -12078,10 +12528,10 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.f
+		name = ngm_tradition.41.h
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.48
+				id = ngm_tradition.40
 			}
 		}
 	}
@@ -12089,18 +12539,7 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.46
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
+		name = ngm_tradition.41.i
 		hidden_effect = {
 			set_variable = {
 				which = tr_ngm_avantgarde_finish_variable
@@ -12110,11 +12549,11 @@ country_event = {
 	}
 }
 
-# 完遂時:国是を削除分選択9
+# 完遂時:国是を削除分追加9
 country_event = {
-	id = ngm_tradition.48
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
+	id = ngm_tradition.49
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
 	picture = GFX_evt_announcement
 	is_triggered_only = yes
 	trigger = {
@@ -12124,8 +12563,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.48.a
+		name = ngm_tradition.49.a
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			NOR = {
 				has_origin = origin_post_apocalyptic
 				has_origin = origin_shattered_ring
@@ -12146,13 +12591,19 @@ country_event = {
 				value = 1
 			}
 			country_event = {
-				id = ngm_tradition.48
+				id = ngm_tradition.40
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.48.b
+		name = ngm_tradition.49.b
 		allow = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
 			OR = {
 				has_ethic = ethic_xenophobe
 				has_ethic = ethic_fanatic_xenophobe
@@ -12175,12 +12626,73 @@ country_event = {
 				value = 1
 			}
 			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	# 次へ
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.41
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
 				id = ngm_tradition.48
 			}
 		}
 	}
 	option = {
-		name = ngm_tradition.48.c
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
+		hidden_effect = {
+			set_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 0
+			}
+		}
+	}
+}
+
+# 完遂時:国是を削除分追加10 バニラ集合意識
+country_event = {
+	id = ngm_tradition.50
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
+	picture = GFX_evt_announcement
+	is_triggered_only = yes
+	trigger = {
+		check_variable = {
+			which = tr_ngm_avantgarde_finish_variable
+			value > 0
+		}
+	}
+	option = {
+		name = ngm_tradition.50.a
 		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
@@ -12199,7 +12711,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.48.d
+		name = ngm_tradition.50.b
 		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
@@ -12218,7 +12730,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.48.e
+		name = ngm_tradition.50.c
 		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
@@ -12237,56 +12749,7 @@ country_event = {
 		}
 	}
 	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.f
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.40
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.47
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
-		hidden_effect = {
-			set_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 0
-			}
-		}
-	}
-}
-
-# 完遂時:国是を削除分選択10
-country_event = {
-	id = ngm_tradition.49
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
-	picture = GFX_evt_announcement
-	is_triggered_only = yes
-	trigger = {
-		check_variable = {
-			which = tr_ngm_avantgarde_finish_variable
-			value > 0
-		}
-	}
-	option = {
-		name = ngm_tradition.49.a
+		name = ngm_tradition.50.d
 		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
@@ -12305,7 +12768,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.b
+		name = ngm_tradition.50.e
 		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
@@ -12323,8 +12786,69 @@ country_event = {
 			id = ngm_tradition.49
 		}
 	}
+	# 次へ
 	option = {
-		name = ngm_tradition.49.c
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.51
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.52
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
+		hidden_effect = {
+			set_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 0
+			}
+		}
+	}
+}
+
+# 完遂時:国是を削除分追加11
+country_event = {
+	id = ngm_tradition.51
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
+	picture = GFX_evt_announcement
+	is_triggered_only = yes
+	trigger = {
+		check_variable = {
+			which = tr_ngm_avantgarde_finish_variable
+			value > 0
+		}
+	}
+	option = {
+		name = ngm_tradition.51.a
 		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
@@ -12343,7 +12867,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.d
+		name = ngm_tradition.51.b
 		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
@@ -12362,7 +12886,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.e
+		name = ngm_tradition.51.c
 		allow = {
 		}
 		force_add_civic = civic_corvee_system
@@ -12377,56 +12901,7 @@ country_event = {
 		}
 	}
 	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.f
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.43
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.41
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
-		hidden_effect = {
-			set_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 0
-			}
-		}
-	}
-}
-
-# 完遂時:国是を削除分選択11
-country_event = {
-	id = ngm_tradition.50
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
-	picture = GFX_evt_announcement
-	is_triggered_only = yes
-	trigger = {
-		check_variable = {
-			which = tr_ngm_avantgarde_finish_variable
-			value > 0
-		}
-	}
-	option = {
-		name = ngm_tradition.49.a
+		name = ngm_tradition.51.d
 		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
@@ -12445,7 +12920,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.b
+		name = ngm_tradition.51.e
 		allow = {
 			has_authority = auth_hive_mind
 			NOR = {
@@ -12468,8 +12943,69 @@ country_event = {
 			id = ngm_tradition.49
 		}
 	}
+	# 次へ
 	option = {
-		name = ngm_tradition.49.c
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.52
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.50
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
+		hidden_effect = {
+			set_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 0
+			}
+		}
+	}
+}
+
+# 完遂時:国是を削除分追加12
+country_event = {
+	id = ngm_tradition.52
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
+	picture = GFX_evt_announcement
+	is_triggered_only = yes
+	trigger = {
+		check_variable = {
+			which = tr_ngm_avantgarde_finish_variable
+			value > 0
+		}
+	}
+	option = {
+		name = ngm_tradition.52.a
 		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
@@ -12494,7 +13030,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.d
+		name = ngm_tradition.52.b
 		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
@@ -12516,7 +13052,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.e
+		name = ngm_tradition.52.c
 		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
@@ -12538,56 +13074,7 @@ country_event = {
 		}
 	}
 	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.f
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.43
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.41
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
-		hidden_effect = {
-			set_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 0
-			}
-		}
-	}
-}
-
-# 完遂時:国是を削除分選択12
-country_event = {
-	id = ngm_tradition.51
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
-	picture = GFX_evt_announcement
-	is_triggered_only = yes
-	trigger = {
-		check_variable = {
-			which = tr_ngm_avantgarde_finish_variable
-			value > 0
-		}
-	}
-	option = {
-		name = ngm_tradition.49.a
+		name = ngm_tradition.52.d
 		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
@@ -12614,8 +13101,69 @@ country_event = {
 			}
 		}
 	}
+	# 次へ
 	option = {
-		name = ngm_tradition.49.b
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.50
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.51
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
+		hidden_effect = {
+			set_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 0
+			}
+		}
+	}
+}
+
+# 完遂時:国是を削除分追加13 バニラ機械集合意識
+country_event = {
+	id = ngm_tradition.53
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
+	picture = GFX_evt_announcement
+	is_triggered_only = yes
+	trigger = {
+		check_variable = {
+			which = tr_ngm_avantgarde_finish_variable
+			value > 0
+		}
+	}
+	option = {
+		name = ngm_tradition.53.a
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -12641,7 +13189,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.c
+		name = ngm_tradition.53.b
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -12668,7 +13216,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.d
+		name = ngm_tradition.53.c
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -12691,7 +13239,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.e
+		name = ngm_tradition.53.d
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -12710,56 +13258,7 @@ country_event = {
 		}
 	}
 	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.f
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.43
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.41
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
-		hidden_effect = {
-			set_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 0
-			}
-		}
-	}
-}
-
-# 完遂時:国是を削除分選択13
-country_event = {
-	id = ngm_tradition.52
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
-	picture = GFX_evt_announcement
-	is_triggered_only = yes
-	trigger = {
-		check_variable = {
-			which = tr_ngm_avantgarde_finish_variable
-			value > 0
-		}
-	}
-	option = {
-		name = ngm_tradition.49.a
+		name = ngm_tradition.53.e
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -12777,8 +13276,69 @@ country_event = {
 			}
 		}
 	}
+	# 次へ
 	option = {
-		name = ngm_tradition.49.b
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.54
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.56
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
+		hidden_effect = {
+			set_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 0
+			}
+		}
+	}
+}
+
+# 完遂時:国是を削除分追加14
+country_event = {
+	id = ngm_tradition.54
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
+	picture = GFX_evt_announcement
+	is_triggered_only = yes
+	trigger = {
+		check_variable = {
+			which = tr_ngm_avantgarde_finish_variable
+			value > 0
+		}
+	}
+	option = {
+		name = ngm_tradition.54.a
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -12797,7 +13357,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.c
+		name = ngm_tradition.54.b
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -12816,7 +13376,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.d
+		name = ngm_tradition.54.c
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -12835,7 +13395,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.e
+		name = ngm_tradition.54.d
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -12854,56 +13414,7 @@ country_event = {
 		}
 	}
 	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.f
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.43
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.41
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
-		hidden_effect = {
-			set_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 0
-			}
-		}
-	}
-}
-
-# 完遂時:国是を削除分選択14
-country_event = {
-	id = ngm_tradition.53
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
-	picture = GFX_evt_announcement
-	is_triggered_only = yes
-	trigger = {
-		check_variable = {
-			which = tr_ngm_avantgarde_finish_variable
-			value > 0
-		}
-	}
-	option = {
-		name = ngm_tradition.49.a
+		name = ngm_tradition.54.e
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -12921,8 +13432,69 @@ country_event = {
 			}
 		}
 	}
+	# 次へ
 	option = {
-		name = ngm_tradition.49.b
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.55
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.53
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
+		hidden_effect = {
+			set_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 0
+			}
+		}
+	}
+}
+
+# 完遂時:国是を削除分追加15
+country_event = {
+	id = ngm_tradition.55
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
+	picture = GFX_evt_announcement
+	is_triggered_only = yes
+	trigger = {
+		check_variable = {
+			which = tr_ngm_avantgarde_finish_variable
+			value > 0
+		}
+	}
+	option = {
+		name = ngm_tradition.55.a
 		allow = {
 			OR = {
 				has_authority = auth_ancient_machine_intelligence
@@ -12944,7 +13516,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.c
+		name = ngm_tradition.55.b
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -12963,7 +13535,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.d
+		name = ngm_tradition.55.c
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -12982,7 +13554,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.e
+		name = ngm_tradition.55.d
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -13001,56 +13573,7 @@ country_event = {
 		}
 	}
 	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.f
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.43
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.41
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
-		hidden_effect = {
-			set_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 0
-			}
-		}
-	}
-}
-
-# 完遂時:国是を削除分選択15
-country_event = {
-	id = ngm_tradition.54
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
-	picture = GFX_evt_announcement
-	is_triggered_only = yes
-	trigger = {
-		check_variable = {
-			which = tr_ngm_avantgarde_finish_variable
-			value > 0
-		}
-	}
-	option = {
-		name = ngm_tradition.49.a
+		name = ngm_tradition.55.e
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -13068,8 +13591,69 @@ country_event = {
 			}
 		}
 	}
+	# 次へ
 	option = {
-		name = ngm_tradition.49.b
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.56
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.54
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
+		hidden_effect = {
+			set_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 0
+			}
+		}
+	}
+}
+
+# 完遂時:国是を削除分追加16
+country_event = {
+	id = ngm_tradition.56
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
+	picture = GFX_evt_announcement
+	is_triggered_only = yes
+	trigger = {
+		check_variable = {
+			which = tr_ngm_avantgarde_finish_variable
+			value > 0
+		}
+	}
+	option = {
+		name = ngm_tradition.56.a
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -13088,7 +13672,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.c
+		name = ngm_tradition.56.b
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -13111,7 +13695,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.d
+		name = ngm_tradition.56.c
 		allow = {
 			has_authority = auth_machine_intelligence
 			NOT = {
@@ -13132,15 +13716,76 @@ country_event = {
 			}
 		}
 	}
+	# 次へ
 	option = {
-		name = ngm_tradition.49.e
 		allow = {
-			has_authority = auth_corporate
-			NOT = {
-				has_civic = civic_franchising
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.53
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.55
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
+		hidden_effect = {
+			set_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 0
+			}
+		}
+	}
+}
+
+# 完遂時:国是を削除分追加17 バニラ企業帝国用国是
+country_event = {
+	id = ngm_tradition.57
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
+	picture = GFX_evt_announcement
+	is_triggered_only = yes
+	trigger = {
+		check_variable = {
+			which = tr_ngm_avantgarde_finish_variable
+			value > 0
+		}
+	}
+	option = {
+		name = ngm_tradition.57.a
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
 			}
 			NOT = {
-				has_civic = civic_galactic_sovereign_megacorp
+				has_civic = civic_franchising
 			}
 		}
 		force_add_civic = civic_franchising
@@ -13155,10 +13800,109 @@ country_event = {
 		}
 	}
 	option = {
+		name = ngm_tradition.57.b
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_trading_posts
+			}
+		}
+		force_add_civic = civic_trading_posts
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.57.c
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_media_conglomerate
+			}
+			NOT = {
+				has_civic = civic_idealistic_foundation
+			}
+		}
+		force_add_civic = civic_media_conglomerate
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.57.d
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_naval_contractors
+			}
+			NOT = {
+				has_civic = civic_citizen_service
+			}
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		force_add_civic = civic_naval_contractors
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.57.e
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_free_traders
+			}
+		}
+		force_add_civic = civic_free_traders
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	# 次へ
+	option = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.f
+		name = ngm_tradition.41.f
 		hidden_effect = {
 			country_event = {
 				id = ngm_tradition.43
@@ -13169,7 +13913,7 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.g
+		name = ngm_tradition.41.g
 		hidden_effect = {
 			country_event = {
 				id = ngm_tradition.41
@@ -13180,7 +13924,18 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.h
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
 		hidden_effect = {
 			set_variable = {
 				which = tr_ngm_avantgarde_finish_variable
@@ -13190,12 +13945,11 @@ country_event = {
 	}
 }
 
-# まだ
-# 完遂時:国是を削除分選択16
+# 完遂時:国是を削除分追加18
 country_event = {
-	id = ngm_tradition.53
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
+	id = ngm_tradition.58
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
 	picture = GFX_evt_announcement
 	is_triggered_only = yes
 	trigger = {
@@ -13205,7 +13959,732 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.a
+		name = ngm_tradition.58.a
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_private_prospectors
+			}
+		}
+		force_add_civic = civic_private_prospectors
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.58.b
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_gospel_of_the_masses
+			}
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		force_add_civic = civic_gospel_of_the_masses
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.58.c
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_ruthless_competition
+			}
+			NOT = {
+				has_civic = civic_meritocracy
+			}
+		}
+		force_add_civic = civic_ruthless_competition
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.58.d
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_criminal_heritage
+			}
+		}
+		force_add_civic = civic_criminal_heritage
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.58.e
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_private_military_companies
+			}
+			NOT = {
+				has_civic = civic_warrior_culture
+			}
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		force_add_civic = civic_private_military_companies
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	# 次へ
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.43
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.41
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
+		hidden_effect = {
+			set_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 0
+			}
+		}
+	}
+}
+
+# 完遂時:国是を削除分追加19
+country_event = {
+	id = ngm_tradition.59
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
+	picture = GFX_evt_announcement
+	is_triggered_only = yes
+	trigger = {
+		check_variable = {
+			which = tr_ngm_avantgarde_finish_variable
+			value > 0
+		}
+	}
+	option = {
+		name = ngm_tradition.59.a
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_indentured_assets
+			}
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			NOR = {
+				has_civic = civic_corporate_hedonism
+				has_civic = civic_slaver_guilds
+				has_civic = civic_pleasure_seekers
+			}
+		}
+		force_add_civic = civic_indentured_assets
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.59.b
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_brand_loyalty
+			}
+			NOT = {
+				has_civic = civic_beacon_of_liberty
+			}
+		}
+		force_add_civic = civic_brand_loyalty
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.59.c
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_public_relations_specialists
+			}
+			NOT = {
+				has_civic = civic_diplomatic_corps
+			}
+		}
+		force_add_civic = civic_public_relations_specialists
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.59.d
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_death_cult_corporate
+			}
+			NOT = {
+				has_origin = origin_necrophage
+			}
+			NOR = {
+				has_civic = civic_fanatic_purifiers
+				has_civic = civic_inwards_perfection
+				has_civic = civic_death_cult
+			}
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		force_add_civic = civic_death_cult_corporate
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.59.e
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_corporate_catalytic_processing
+			}
+			NOT = {
+				has_origin = origin_lithoid
+			}
+			NOT = {
+				has_civic = civic_catalytic_processing
+			}
+		}
+		force_add_civic = civic_corporate_catalytic_processing
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	# 次へ
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.43
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.41
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
+		hidden_effect = {
+			set_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 0
+			}
+		}
+	}
+}
+
+# 完遂時:国是を削除分追加20
+country_event = {
+	id = ngm_tradition.60
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
+	picture = GFX_evt_announcement
+	is_triggered_only = yes
+	trigger = {
+		check_variable = {
+			which = tr_ngm_avantgarde_finish_variable
+			value > 0
+		}
+	}
+	option = {
+		name = ngm_tradition.60.a
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_civic = civic_corporate_hedonism
+			}
+			NOR = {
+				has_civic = civic_pleasure_seekers
+				has_civic = civic_indentured_assets
+				has_civic = civic_slaver_guilds
+			}
+		}
+		force_add_civic = civic_corporate_hedonism
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.60.b
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_corporate_anglers
+			}
+			NOT = {
+				has_civic = civic_agrarian_idyll
+			}
+			NOR = {
+				has_origin = origin_post_apocalyptic
+				has_origin = origin_shattered_ring
+				has_origin = origin_void_dwellers
+				has_origin = origin_subterranean
+			}
+		}
+		force_add_civic = civic_corporate_anglers
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.60.c
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_corporate_crafters
+			}
+			NOT = {
+				has_civic = civic_crafters
+			}
+		}
+		force_add_civic = civic_corporate_crafters
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.60.d
+		allow = {
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_permanent_employment
+			}
+			NOR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			NOR = {
+				has_origin = origin_necrophage
+				has_origin = origin_mechanists
+				has_origin = origin_clone_army
+			}
+		}
+		force_add_civic = civic_permanent_employment
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	# 次へ
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.43
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.41
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
+		hidden_effect = {
+			set_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 0
+			}
+		}
+	}
+}
+
+# 完遂時:国是を削除分追加21 追加通常帝国用国是
+country_event = {
+	id = ngm_tradition.61
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
+	picture = GFX_evt_announcement
+	is_triggered_only = yes
+	trigger = {
+		check_variable = {
+			which = tr_ngm_avantgarde_finish_variable
+			value > 0
+		}
+	}
+	option = {
+		name = ngm_tradition.61.a
+		allow = {
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+			OR = {
+				has_authority = auth_dictatorial
+				has_authority = auth_oligarchic
+				has_authority = auth_imperial
+			}
+			NOT = {
+				has_civic = civic_substantive_constitutionalism
+			}
+			NOT = {
+				has_civic = civic_sham_constitutionalism
+			}
+		}
+		force_add_civic = civic_sham_constitutionalism
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.61.b
+		allow = {
+			NOT = {
+				has_civic = civic_sham_constitutionalism
+			}
+			NOT = {
+				has_civic = civic_substantive_constitutionalism
+			}
+			has_authority = auth_imperial
+		}
+		force_add_civic = civic_substantive_constitutionalism
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.61.c
+		allow = {
+		}
+		force_add_civic = civic_corvee_system
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.61.d
+		allow = {
+		}
+		force_add_civic = civic_corvee_system
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.61.e
+		allow = {
+		}
+		force_add_civic = civic_corvee_system
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.49
+			}
+		}
+	}
+	# 次へ
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.f
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.43
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.g
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.41
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
+		hidden_effect = {
+			set_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 0
+			}
+		}
+	}
+}
+
+# 完遂時:国是を削除分追加22
+country_event = {
+	id = ngm_tradition.62
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
+	picture = GFX_evt_announcement
+	is_triggered_only = yes
+	trigger = {
+		check_variable = {
+			which = tr_ngm_avantgarde_finish_variable
+			value > 0
+		}
+	}
+	option = {
+		name = ngm_tradition.62.a
 		allow = {
 		}
 		force_add_civic = civic_byzantine_bureaucracy
@@ -13220,7 +14699,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.b
+		name = ngm_tradition.62.b
 		allow = {
 		}
 		force_add_civic = civic_corvee_system
@@ -13235,7 +14714,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.c
+		name = ngm_tradition.62.c
 		allow = {
 		}
 		force_add_civic = civic_corvee_system
@@ -13250,7 +14729,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.d
+		name = ngm_tradition.62.d
 		allow = {
 		}
 		force_add_civic = civic_corvee_system
@@ -13265,7 +14744,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.e
+		name = ngm_tradition.62.e
 		allow = {
 		}
 		force_add_civic = civic_corvee_system
@@ -13279,11 +14758,12 @@ country_event = {
 			}
 		}
 	}
+	# 次へ
 	option = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.f
+		name = ngm_tradition.41.f
 		hidden_effect = {
 			country_event = {
 				id = ngm_tradition.43
@@ -13294,7 +14774,7 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.g
+		name = ngm_tradition.41.g
 		hidden_effect = {
 			country_event = {
 				id = ngm_tradition.41
@@ -13305,7 +14785,18 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.h
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
 		hidden_effect = {
 			set_variable = {
 				which = tr_ngm_avantgarde_finish_variable
@@ -13315,11 +14806,11 @@ country_event = {
 	}
 }
 
-# 完遂時:国是を削除分選択17
+# 完遂時:国是を削除分追加23
 country_event = {
-	id = ngm_tradition.53
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
+	id = ngm_tradition.63
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
 	picture = GFX_evt_announcement
 	is_triggered_only = yes
 	trigger = {
@@ -13329,7 +14820,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.a
+		name = ngm_tradition.63.a
 		allow = {
 		}
 		force_add_civic = civic_byzantine_bureaucracy
@@ -13344,7 +14835,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.b
+		name = ngm_tradition.63.b
 		allow = {
 		}
 		force_add_civic = civic_corvee_system
@@ -13359,7 +14850,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.c
+		name = ngm_tradition.63.c
 		allow = {
 		}
 		force_add_civic = civic_corvee_system
@@ -13374,7 +14865,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.d
+		name = ngm_tradition.63.d
 		allow = {
 		}
 		force_add_civic = civic_corvee_system
@@ -13389,7 +14880,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.e
+		name = ngm_tradition.63.e
 		allow = {
 		}
 		force_add_civic = civic_corvee_system
@@ -13403,11 +14894,12 @@ country_event = {
 			}
 		}
 	}
+	# 次へ
 	option = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.f
+		name = ngm_tradition.41.f
 		hidden_effect = {
 			country_event = {
 				id = ngm_tradition.43
@@ -13418,7 +14910,7 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.g
+		name = ngm_tradition.41.g
 		hidden_effect = {
 			country_event = {
 				id = ngm_tradition.41
@@ -13429,7 +14921,18 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.h
+		name = ngm_tradition.41.h
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		allow = {
+			always = yes
+		}
+		name = ngm_tradition.41.i
 		hidden_effect = {
 			set_variable = {
 				which = tr_ngm_avantgarde_finish_variable
@@ -13439,11 +14942,11 @@ country_event = {
 	}
 }
 
-# 完遂時:国是を削除分選択18
+# 完遂時:国是を削除分追加24
 country_event = {
-	id = ngm_tradition.53
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
+	id = ngm_tradition.64
+	title = ngm_tradition.41.name
+	desc = ngm_tradition.41.desc
 	picture = GFX_evt_announcement
 	is_triggered_only = yes
 	trigger = {
@@ -13453,7 +14956,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.a
+		name = ngm_tradition.64.a
 		allow = {
 		}
 		force_add_civic = civic_byzantine_bureaucracy
@@ -13468,7 +14971,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.b
+		name = ngm_tradition.64.b
 		allow = {
 		}
 		force_add_civic = civic_corvee_system
@@ -13483,7 +14986,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.c
+		name = ngm_tradition.64.c
 		allow = {
 		}
 		force_add_civic = civic_corvee_system
@@ -13498,7 +15001,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.d
+		name = ngm_tradition.64.d
 		allow = {
 		}
 		force_add_civic = civic_corvee_system
@@ -13513,7 +15016,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.49.e
+		name = ngm_tradition.64.e
 		allow = {
 		}
 		force_add_civic = civic_corvee_system
@@ -13527,11 +15030,12 @@ country_event = {
 			}
 		}
 	}
+	# 次へ
 	option = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.f
+		name = ngm_tradition.41.f
 		hidden_effect = {
 			country_event = {
 				id = ngm_tradition.43
@@ -13542,7 +15046,7 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.g
+		name = ngm_tradition.41.g
 		hidden_effect = {
 			country_event = {
 				id = ngm_tradition.41
@@ -13553,101 +15057,10 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.h
+		name = ngm_tradition.41.h
 		hidden_effect = {
-			set_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 0
-			}
-		}
-	}
-}
-
-# 完遂時:国是を削除分選択19
-country_event = {
-	id = ngm_tradition.53
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
-	picture = GFX_evt_announcement
-	is_triggered_only = yes
-	trigger = {
-		check_variable = {
-			which = tr_ngm_avantgarde_finish_variable
-			value > 0
-		}
-	}
-	option = {
-		name = ngm_tradition.49.a
-		allow = {
-		}
-		force_add_civic = civic_byzantine_bureaucracy
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
 			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.b
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.c
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.d
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.e
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
+				id = ngm_tradition.40
 			}
 		}
 	}
@@ -13655,649 +15068,7 @@ country_event = {
 		allow = {
 			always = yes
 		}
-		name = ngm_tradition.40.f
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.43
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.41
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
-		hidden_effect = {
-			set_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 0
-			}
-		}
-	}
-}
-
-# 完遂時:国是を削除分選択20
-country_event = {
-	id = ngm_tradition.53
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
-	picture = GFX_evt_announcement
-	is_triggered_only = yes
-	trigger = {
-		check_variable = {
-			which = tr_ngm_avantgarde_finish_variable
-			value > 0
-		}
-	}
-	option = {
-		name = ngm_tradition.49.a
-		allow = {
-		}
-		force_add_civic = civic_byzantine_bureaucracy
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.b
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.c
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.d
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.e
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.f
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.43
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.41
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
-		hidden_effect = {
-			set_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 0
-			}
-		}
-	}
-}
-
-# 完遂時:国是を削除分選択21
-country_event = {
-	id = ngm_tradition.53
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
-	picture = GFX_evt_announcement
-	is_triggered_only = yes
-	trigger = {
-		check_variable = {
-			which = tr_ngm_avantgarde_finish_variable
-			value > 0
-		}
-	}
-	option = {
-		name = ngm_tradition.49.a
-		allow = {
-		}
-		force_add_civic = civic_byzantine_bureaucracy
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.b
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.c
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.d
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.e
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.f
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.43
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.41
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
-		hidden_effect = {
-			set_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 0
-			}
-		}
-	}
-}
-
-# 完遂時:国是を削除分選択22
-country_event = {
-	id = ngm_tradition.53
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
-	picture = GFX_evt_announcement
-	is_triggered_only = yes
-	trigger = {
-		check_variable = {
-			which = tr_ngm_avantgarde_finish_variable
-			value > 0
-		}
-	}
-	option = {
-		name = ngm_tradition.49.a
-		allow = {
-		}
-		force_add_civic = civic_byzantine_bureaucracy
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.b
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.c
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.d
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.e
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.f
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.43
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.41
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
-		hidden_effect = {
-			set_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 0
-			}
-		}
-	}
-}
-
-# 完遂時:国是を削除分選択23
-country_event = {
-	id = ngm_tradition.53
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
-	picture = GFX_evt_announcement
-	is_triggered_only = yes
-	trigger = {
-		check_variable = {
-			which = tr_ngm_avantgarde_finish_variable
-			value > 0
-		}
-	}
-	option = {
-		name = ngm_tradition.49.a
-		allow = {
-		}
-		force_add_civic = civic_byzantine_bureaucracy
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.b
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.c
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.d
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.e
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.f
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.43
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.41
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
-		hidden_effect = {
-			set_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 0
-			}
-		}
-	}
-}
-
-# 完遂時:国是を削除分選択24
-country_event = {
-	id = ngm_tradition.53
-	title = ngm_tradition.40.name
-	desc = ngm_tradition.40.desc
-	picture = GFX_evt_announcement
-	is_triggered_only = yes
-	trigger = {
-		check_variable = {
-			which = tr_ngm_avantgarde_finish_variable
-			value > 0
-		}
-	}
-	option = {
-		name = ngm_tradition.49.a
-		allow = {
-		}
-		force_add_civic = civic_byzantine_bureaucracy
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.b
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.c
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.d
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		name = ngm_tradition.49.e
-		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-			country_event = {
-				id = ngm_tradition.49
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.f
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.43
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.g
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.41
-			}
-		}
-	}
-	option = {
-		allow = {
-			always = yes
-		}
-		name = ngm_tradition.40.h
+		name = ngm_tradition.41.i
 		hidden_effect = {
 			set_variable = {
 				which = tr_ngm_avantgarde_finish_variable
