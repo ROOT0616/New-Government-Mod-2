@@ -12888,21 +12888,6 @@ country_event = {
 	option = {
 		name = ngm_tradition.51.c
 		allow = {
-		}
-		force_add_civic = civic_corvee_system
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-		}
-		country_event = {
-			id = ngm_tradition.49
-		}
-	}
-	option = {
-		name = ngm_tradition.51.d
-		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
 				has_civic = civic_hive_pooled_knowledge
@@ -12920,7 +12905,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.51.e
+		name = ngm_tradition.51.d
 		allow = {
 			has_authority = auth_hive_mind
 			NOR = {
@@ -12933,6 +12918,31 @@ country_event = {
 			}
 		}
 		force_add_civic = civic_hive_devouring_swarm
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		country_event = {
+			id = ngm_tradition.49
+		}
+	}
+	option = {
+		name = ngm_tradition.51.e
+		allow = {
+			has_authority = auth_hive_mind
+			NOT = {
+				has_civic = civic_hive_empath
+			}
+			NOT = {
+				has_civic = civic_hive_devouring_swarm
+			}
+			NOT = {
+				has_origin = origin_necrophage
+			}
+		}
+		force_add_civic = civic_hive_empath
 		hidden_effect = {
 			subtract_variable = {
 				which = tr_ngm_avantgarde_finish_variable
@@ -13009,31 +13019,6 @@ country_event = {
 		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
-				has_civic = civic_hive_empath
-			}
-			NOT = {
-				has_civic = civic_hive_devouring_swarm
-			}
-			NOT = {
-				has_origin = origin_necrophage
-			}
-		}
-		force_add_civic = civic_hive_empath
-		hidden_effect = {
-			subtract_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-		}
-		country_event = {
-			id = ngm_tradition.49
-		}
-	}
-	option = {
-		name = ngm_tradition.52.b
-		allow = {
-			has_authority = auth_hive_mind
-			NOT = {
 				has_civic = civic_hive_memorialist
 			}
 			NOT = { 
@@ -13052,7 +13037,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.52.c
+		name = ngm_tradition.52.b
 		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
@@ -13074,7 +13059,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = ngm_tradition.52.d
+		name = ngm_tradition.52.c
 		allow = {
 			has_authority = auth_hive_mind
 			NOT = {
@@ -13905,7 +13890,7 @@ country_event = {
 		name = ngm_tradition.41.f
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.43
+				id = ngm_tradition.58
 			}
 		}
 	}
@@ -13916,7 +13901,7 @@ country_event = {
 		name = ngm_tradition.41.g
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.41
+				id = ngm_tradition.60
 			}
 		}
 	}
@@ -14090,7 +14075,7 @@ country_event = {
 		name = ngm_tradition.41.f
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.43
+				id = ngm_tradition.59
 			}
 		}
 	}
@@ -14101,7 +14086,7 @@ country_event = {
 		name = ngm_tradition.41.g
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.41
+				id = ngm_tradition.57
 			}
 		}
 	}
@@ -14294,7 +14279,7 @@ country_event = {
 		name = ngm_tradition.41.f
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.43
+				id = ngm_tradition.60
 			}
 		}
 	}
@@ -14305,7 +14290,7 @@ country_event = {
 		name = ngm_tradition.41.g
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.41
+				id = ngm_tradition.58
 			}
 		}
 	}
@@ -14472,7 +14457,7 @@ country_event = {
 		name = ngm_tradition.41.f
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.43
+				id = ngm_tradition.59
 			}
 		}
 	}
@@ -14483,7 +14468,7 @@ country_event = {
 		name = ngm_tradition.41.g
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.41
+				id = ngm_tradition.57
 			}
 		}
 	}
