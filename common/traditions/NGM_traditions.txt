@@ -236,7 +236,6 @@ tr_ngm_avantgarde_first = {
 tr_ngm_avantgarde_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		country_government_civic_points_add = 1
 	}
 	on_enabled = {
 		country_event = {
