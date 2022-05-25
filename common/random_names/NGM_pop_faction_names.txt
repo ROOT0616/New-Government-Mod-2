@@ -193,7 +193,7 @@ pop_faction_name_format = {
 	}
 	lookups = "[This.Owner.GetSpeciesName]<NGM_reputation_names_1>"
 	# format = "[This.Owner.GetSpeciesName]<NGM_reputation_names_1>"
-	format = format.pop_faction.
+	format = format.pop_faction.NGM_reputation
 }
 
 # NGM_supremacy
