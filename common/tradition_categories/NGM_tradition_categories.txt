@@ -18,29 +18,34 @@ tradition_ngm_law = {
 	}
 	ai_weight = {
 		factor = 10
+		
 		modifier = {
 			factor = 0.5
-			is_criminal_syndicate = yes
+			has_ethic = ethic_authoritarian
 		}
 		modifier = {
 			factor = 0.5
-			has_civic = civic_hive_devouring_swarm
+			has_ethic = ethic_utilitarianism
 		}
 		modifier = {
-			factor = 0.5
-			has_civic = civic_cutthroat_politics
+			factor = 0
+			has_ethic = ethic_fanatic_authoritarian
 		}
 		modifier = {
-			factor = 0.5
-			has_civic = civic_ngm_kakistocracy
+			factor = 0
+			has_ethic = ethic_fanatic_utilitarianism
+		}
+		modifier = {
+			factor = 1.5
+			has_authority = auth_democratic
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_egalitarian
 		}
 		modifier = {
 			factor = 2
-			has_civic = civic_police_state
-		}
-		modifier = {
-			factor = 2
-			has_civic = civic_ngm_order_of_chivalry
+			has_ethic = ethic_fanatic_egalitarian
 		}
 	}
 }
@@ -67,27 +72,31 @@ tradition_ngm_virture = {
 		factor = 5
 		modifier = {
 			factor = 4
-			is_criminal_syndicate = yes
+			has_civic = civic_criminal_heritage
 		}
 		modifier = {
 			factor = 4
-			has_civic = civic_hive_devouring_swarm
+			has_civic = civic_ngm_underhanded_trick
 		}
 		modifier = {
-			factor = 4
-			has_civic = civic_cutthroat_politics
+			factor = 3
+			has_civic = civic_ngm_mastermind
 		}
 		modifier = {
-			factor = 4
+			factor = 3
 			has_civic = civic_ngm_kakistocracy
 		}
 		modifier = {
-			factor = 0.5
-			has_civic = civic_police_state
+			factor = 3
+			has_civic = civic_fanatic_purifiers
 		}
 		modifier = {
-			factor = 0.5
-			has_civic = civic_ngm_order_of_chivalry
+			factor = 3
+			has_civic = civic_barbaric_despoilers
+		}
+		modifier = {
+			factor = 3
+			has_civic = civic_machine_terminator
 		}
 	}
 }
@@ -113,12 +122,48 @@ tradition_ngm_study = {
 	ai_weight = {
 		factor = 10
 		modifier = {
-			factor = 2
-			is_materialist = yes
+			factor = 0.75
+			has_ethic = ethic_authoritarian
 		}
 		modifier = {
 			factor = 0.5
-			is_spiritualist = yes
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_honorism
+		}
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_honorism
+		}
+		modifier = {
+			factor = 1.5
+			has_civic = civic_ngm_longing_for_the_future
+		}
+		modifier = {
+			factor = 1.5
+			has_civic = civic_meritocracy
+		}
+		modifier = {
+			factor = 1.5
+			has_civic = civic_idealistic_foundation
+		}
+		modifier = {
+			factor = 1.5
+			has_civic = civic_machine_predictive_analysis
+		}
+		modifier = {
+			factor = 1.5
+			has_civic = civic_hive_natural_neural_network
+		}
+		modifier = {
+			factor = 1.5
+			has_civic = civic_ngm_go_along_with
+		}
+		modifier = {
+			factor = 1.5
+			has_civic = civic_noblesse_oblige
 		}
 	}
 }
@@ -212,14 +257,6 @@ tradition_ngm_academic = {
 	}
 	ai_weight = {
 		factor = 10
-		modifier = {
-			factor = 2
-			is_materialist = yes
-		}
-		modifier = {
-			factor = 0.5
-			is_spiritualist = yes
-		}
 	}
 }
 
@@ -243,14 +280,6 @@ tradition_ngm_memory = {
 	}
 	ai_weight = {
 		factor = 10
-		modifier = {
-			factor = 2
-			is_materialist = yes
-		}
-		modifier = {
-			factor = 0.5
-			is_spiritualist = yes
-		}
 	}
 }
 
@@ -745,14 +774,6 @@ tradition_ngm_information = {
 	}
 	ai_weight = {
 		factor = 10
-		modifier = {
-			factor = 2
-			is_materialist = yes
-		}
-		modifier = {
-			factor = 0.5
-			is_spiritualist = yes
-		}
 	}
 }
 
