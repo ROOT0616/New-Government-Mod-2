@@ -14,13 +14,11 @@ ngm_air_cavalry_division_army = {
 	# 副次的損害
 	collateral_damage = 1
 	# 戦争疲弊度
-	war_exhaustion = 1
+	war_exhaustion = 1 
 	time = 150
 	icon = GFX_army_type_assault
 	# 前提技術
-	prerequisites = {
-		"tech_assault_armies"
-	}
+	prerequisites = { "tech_assault_armies" }
 	resources = {
 		category = armies
 		# コスト
@@ -50,18 +48,16 @@ ngm_artillery_division_army = {
 	# 副次的損害
 	collateral_damage = 1.5
 	# 戦争疲弊度
-	war_exhaustion = 1
+	war_exhaustion = 1 
 	time = 150
 	icon = GFX_army_type_assault
 	# 前提技術
-	prerequisites = {
-		"tech_assault_armies"
-	}
+	prerequisites = { "tech_assault_armies" }
 	resources = {
 		category = armies
 		# コスト
 		cost = {
-			alloys = 100
+		alloys = 100
 		}
 		# 維持費
 		upkeep = {
@@ -86,13 +82,11 @@ ngm_armor_division_army = {
 	# 副次的損害
 	collateral_damage = 0.5
 	# 戦争疲弊度
-	war_exhaustion = 1
+	war_exhaustion = 1 
 	time = 150
 	icon = GFX_army_type_assault
 	# 前提技術
-	prerequisites = {
-		"tech_assault_armies"
-	}
+	prerequisites = { "tech_assault_armies" }
 	resources = {
 		category = armies
 		# コスト
@@ -122,13 +116,11 @@ ngm_special_forces_army = {
 	# 副次的損害
 	collateral_damage = 0.2
 	# 戦争疲弊度
-	war_exhaustion = 1
+	war_exhaustion = 1 
 	time = 150
 	icon = GFX_army_type_assault
 	# 前提技術
-	prerequisites = {
-		"tech_assault_armies"
-	}
+	prerequisites = { "tech_assault_armies" }
 	resources = {
 		category = armies
 		# コスト
@@ -175,10 +167,9 @@ ngm_combat_machine_army = {
 	# 副次的損害
 	collateral_damage = 3
 	# 戦争疲弊度
-	war_exhaustion = 1
+	war_exhaustion = 1 
 	time = 90
-	icon = GFX_army_type_robot
-	has_species = no
+	icon = GFX_army_type_machine_assault
 	resources = {
 		category = armies
 		# コスト
@@ -191,8 +182,10 @@ ngm_combat_machine_army = {
 		}
 	}
 	# ここから下はいじらなくていいよ
-	potential_country = {
-		has_tradition = tr_ngm_war_machine
+	potential = {
+		owner = {
+			has_tradition = tr_ngm_war_machine
+		}
 	}
 }
 
@@ -212,14 +205,11 @@ ngm_special_forces_army = {
 	# 副次的損害
 	collateral_damage = 2
 	# 戦争疲弊度
-	war_exhaustion = 1
+	war_exhaustion = 1 
 	time = 150
-	icon = GFX_army_type_machine_assault
-	has_species = no
+	icon = GFX_army_type_xenomorph
 	# 前提技術
-	prerequisites = {
-		"tech_assault_armies"
-	}
+	prerequisites = { "tech_assault_armies" }
 	resources = {
 		category = armies
 		# コスト
@@ -232,8 +222,10 @@ ngm_special_forces_army = {
 		}
 	}
 	# ここから下はいじらなくていいよ
-	potential_country = {
-		has_tradition = tr_ngm_giants
+	potential = {
+		owner = {
+			has_tradition = tr_ngm_giants
+		}
 	}
 }
 
@@ -245,11 +237,12 @@ ngm_naval_fleet = {
 	health = 1.75
 	morale = 1.5
 	morale_damage = 1.7
-	collateral_damage = 0
-	war_exhaustion = 0
+	collateral_damage = 0.0
+	war_exhaustion = 0.0 
 	#icon = GFX_army_type_defensive
+
 	potential = {
-		planet = {
+		planet ={
 			has_district = ngm_district_arcology_marine_villa
 		}
 	}

@@ -2270,7 +2270,7 @@ civic_ngm_mechanical_faith = {
 	}
 }
 
-# 92.伝道者団		missionary_group (精神、介入)	使節+1、隣国の精神主義魅力+40%、信用値-10
+# 92.伝道者団		missionary_group(精神、介入)	使節+1、隣国の精神主義魅力+40%、信用値-10
 civic_ngm_missionary_group = {
 	possible = {
 		ethics = {
@@ -3702,7 +3702,7 @@ civic_ngm_producer_consumer_society = {
 	}
 }
 
-# 企業国是
+# 国是
 # 151.財閥	corporate_empire	(企業、栄望主義or権威主義である)			:交易価値+20%、外交発言力+10%、25Popあたり事務員+1		:銀河百貨店		(全銀河の嗜好品が集まる集合商業施設)						(惑星につき一つ:企業国家の交易価値+10、事務員+3)				:この企業はあらゆる産業に拡大しており、取り扱わない内容はないほど拡大しており、その頂点に一部のエリートが君臨している。
 civic_ngm_corporate_empire = {
 	possible = {

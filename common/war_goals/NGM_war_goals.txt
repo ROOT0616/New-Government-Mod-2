@@ -97,13 +97,13 @@ wg_ngm_with_honor = {
 	on_status_quo = {
 		add_modifier = {
 			modifier = ngm_with_honor_2_modifier
-			years = 2
+			years = 1
 		}
 	}
 	# Run when target surrenders after claims are ceded
 	on_accept = {
 		add_resource = {
-			influence = 150
+			influence = 100
 		}
 		add_modifier = {
 			modifier = ngm_with_honor_1_modifier
@@ -117,7 +117,7 @@ wg_ngm_with_honor = {
 		}
 	}
 	ai_weight = {
-		weight = 100
+		weight = 2
 	}
 }
 
@@ -221,7 +221,7 @@ wg_ngm_pest_control = {
 			from = {
 				set_subject_of = {
 					who = root
-					preset = preset_protectorate
+					subject_type = vassal
 				}
 			}
 		}
@@ -337,7 +337,7 @@ wg_ngm_pest_control = {
 		}
 	}
 	ai_weight = {
-		weight = 100
+		weight = 5
 	}
 }
 
@@ -383,7 +383,7 @@ wg_ngm_holy_wars = {
 			from = {
 				set_subject_of = {
 					who = root
-					preset = preset_protectorate
+					subject_type = vassal
 				}
 			}
 		}
