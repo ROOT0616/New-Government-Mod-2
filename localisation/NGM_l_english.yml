@@ -289,19 +289,19 @@ l_english:
 
  civic_non_retention_of_force:0 "Non-Retention of Force"
  civic_non_retention_of_force_desc:0 "This country possesses an armed space force for defense only and does not recognize war as an invocation of state rights. It recognizes only a few ‘space police’ and ‘riot police’ for counter-piracy, but does not allow the use and possession of any military force or other force."
- 
+
  civic_symbolic_monarchy:0 "Symbolic Monarchy"
  civic_symbolic_monarchy_desc:0 "A ‘symbolic monarchy’ is a monarchy that acknowledges the existence of a monarch, but in which the monarch has no functions related to national government, but merely functions that symbolize the unity of the people and the permanence of the nation in a spiritual and psychological sense."
 
  civic_cramming_for_education:0 "Cramming Education"
  civic_cramming_for_education_desc:0 "Cramming is a method of education that places an emphasis on increasing the amount of knowledge by rote, or aims to increase knowledge."
- 
+
  civic_lax_building_codes:0 "Loose Building Codes"
  civic_lax_building_codes_desc:0 "Building codes in this country are extremely loose and restrictive, which means that many citizens are forced into cramped and uncomfortable rooms. However, this allows for a large number of buildings and facilities to be provided for."
  
  civic_truth_and_reconciliation_commission:0 "Truth and Reconciliation Commission"
  civic_truth_and_reconciliation_commission_desc:0 "In this country, reflection on former dictatorships, wars and acts of genocide has led to the public discovery and disclosure of wrongs for the past, present and future in the interest of national, ethnic and communal harmony. The permanent committees established for this purpose have had no small impact on national integration."
- 
+
  civic_national_sacrifice:0 "National Rituals"
  civic_national_sacrifice_desc:0 "In this country, aside from religious freedom, the emphasis is on state-sponsored rituals and ceremonies, which are performed throughout the country. Bureaucrats in the ceremonial field occupy important positions in the country and the people look forward to the same ceremonies as the festivals."
  
@@ -743,8 +743,8 @@ l_english:
  civic_ngm_hereditary_officers:0 "Hereditary Officers"
  civic_ngm_hereditary_officers_desc:0 "The company treats the founding family and other employees who have made significant contributions to the company as special officers, and they play an active role in the company's internal unity and external negotiations, giving the company the appearance of a kind of monarchy."
 
- civic_ngm_zaibatsu:0 "Zaibatsu"
- civic_ngm_zaibatsu_desc:0 "This is a form of corporate governance in which a few holding companies control many companies, and the decisions made by a very small number of executives and elites are considered absolute."
+#  civic_ngm_zaibatsu:0 "Zaibatsu"
+#  civic_ngm_zaibatsu_desc:0 "This is a form of corporate governance in which a few holding companies control many companies, and the decisions made by a very small number of executives and elites are considered absolute."
 
  civic_ngm_financial_enterprises:0 "Financial Enterprises"
  civic_ngm_financial_enterprises_desc:0 "This company excels in consulting, dealing with receivables, electronic currency, and financial products, and these industries are the core of the company's operations."
@@ -788,7 +788,7 @@ l_english:
  NAME_one_child:0 "One-Child Policy"
  population_stance_one_child_name:0 "One-Child Policy"
  NAME_one_child_desc:0 "Limits couples to one child per couple to mitigate rapid population growth, with fines for the second child."
- 
+
  policy_ngm_policies_civil_service_appointments_system:0 "Civil Service Appointment System"
  policy_ngm_policies_civil_service_appointments_system_system_desc:0 "The manner in which officials are appointed is pivotal in determining the movement of the state's limbs."
  NAME_spoils_system:0 "Spoils System"
@@ -1427,6 +1427,9 @@ l_english:
 
  building_ngm_premise_workshop:0 "Premise Workshop"
  building_ngm_premise_workshop_desc:0 "Will state-of-the-art factories produce state-of-the-art goods?"
+
+ building_ngm_advanced_research_institutes:0 "Advanced Research Institutes"
+ building_ngm_advanced_research_institutes_desc:0 "A national research institute that conducts cutting-edge research that would not normally be considered"
 
 #######################
 #####    区域    ######
@@ -2914,7 +2917,7 @@ l_english:
  ngm_government.300.a:0 "Well, for better or worse, you got to finish."
 
  ngm_tradition.40.name:0 "National Policy Review Council (Civic Selection)"
- ngm_tradition.40.desc:0 "§RIf you choose to close, the civic will not be added, so we recommend that you do not press close until you have finished your selection.§!\n§RPlease note that you will not be able to return the wrong selection.§!"
+ ngm_tradition.40.desc:0 "Here you can select a civic that will replace the one deleted in the avant-garde. Only the civics added in vanilla or in NGM2 can be selected.\n\n§RIf you choose to close, the civic will not be added, so we recommend that you do not press close until you have finished your selection.§!§R\nPlease note that you will not be able to return the wrong selection.§!"
  ngm_tradition.40.a:0 "civic for Vanilla Normal Empire"
  ngm_tradition.40.b:0 "civic for vanilla corporate empire"
  ngm_tradition.40.c:0 "vanilla collective consciousness"
@@ -2924,7 +2927,7 @@ l_english:
  ngm_tradition.40.g:0 "§RClose§!"
 
  ngm_tradition.41.name:0 "Additional Civic"
- ngm_tradition.41.desc:0 "§RIf you choose to close, the civic will not be added, so we recommend that you do not press close until you have finished your selection.§!\n§RPlease note that you will not be able to return the wrong selection.§!"
+ ngm_tradition.41.desc:0 "Here you can select a civic that will replace the one deleted in the avant-garde. Only the civics added in vanilla or in NGM2 can be selected.\n\n§RIf you choose to close, the civic will not be added, so we recommend that you do not press close until you have finished your selection.§!§R\nPlease note that you will not be able to return the wrong selection.§!"
  ngm_tradition.41.a:0 "$civic_corvee_system$"
  ngm_tradition.41.b:0 "$civic_imperial_cult$"
  ngm_tradition.41.c:0 "$civic_beacon_of_liberty$"
@@ -3464,7 +3467,7 @@ l_english:
  #tr_ngm_avantgarde_first_effect:0 "tr_ngm_avantgarde_first_effect"
  #tr_ngm_avantgarde_first_desc:0 "tr_ngm_avantgarde_first_desc"
  tr_ngm_avantgarde_finish:0 "Complete Vanguard Tradition"
- tr_ngm_avantgarde_finish_desc:0 "Retrieving §Y national policy§! Delete all of the §Y Unlock the \nAscension Park!：§G+1§!"
+ tr_ngm_avantgarde_finish_desc:0 "Retrieving §Ycivic§! are all deleted.\n§Y Unlock the Ascension Park!：§G+1§!"
  tr_ngm_avantgarde_2:0 "Avant-garde"
  tr_ngm_avantgarde_2_desc:0 "§Y comfort level§! is increased by §G10%§! increase."
  tr_ngm_avantgarde_2_delayed:0 "Experimental art styles are forward-thinking."
