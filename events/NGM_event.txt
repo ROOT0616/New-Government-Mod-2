@@ -11203,7 +11203,7 @@ country_event = {
 			NOT = {
 				has_authority = auth_corporate
 			}
-			NOT = { 
+			NOT = {
 				has_ethic = ethic_fanatic_egalitarian
 			}
 			NOT = {
@@ -12260,7 +12260,7 @@ country_event = {
 			NOT = {
 				has_authority = auth_corporate
 			}
-			NOT = { 
+			NOT = {
 				has_origin = origin_necrophage
 			}
 			NOR = {
@@ -12441,7 +12441,7 @@ country_event = {
 			NOR = {
 				has_civic = civic_warrior_culture
 				has_civic = civic_shared_burden
-				has_civic = civic_slaver_guilds # would enslave hedonists
+				has_civic = civic_slaver_guilds				# would enslave hedonists
 			}
 			NOT = {
 				has_civic = civic_pleasure_seekers
@@ -13011,9 +13011,10 @@ country_event = {
 			NOT = {
 				has_civic = civic_hive_memorialist
 			}
-			NOT = { 
+			NOT = {
 				has_civic = civic_hive_devouring_swarm
-			} #Includes Terravore
+			}
+			#Includes Terravore
 		}
 		force_add_civic = civic_hive_memorialist
 		hidden_effect = {
@@ -20924,7 +20925,7 @@ country_event = {
 	}
 }
 
-# 研究取引
+# 研究取引 贈与 国選び
 country_event = {
 	id = ngm_government.8
 	title = ngm_government.8.name
@@ -20933,11 +20934,13 @@ country_event = {
 	show_sound = event_activating_unknown_technology
 	is_triggered_only = yes
 	immediate = {
+		set_global_flag = ngm_technology_trade_now_global_flag
+		save_global_event_target_as = ngm_technology_trade_0
 		random_playable_country = {
 			limit = {
 				has_communications = owner
 			}
-			save_event_target_as = ngm_technology_trade_1
+			save_global_event_target_as = ngm_technology_trade_1
 			random_playable_country = {
 				limit = {
 					has_communications = owner
@@ -20945,7 +20948,7 @@ country_event = {
 						is_same_value = event_target:ngm_technology_trade_1
 					}
 				}
-				save_event_target_as = ngm_technology_trade_2
+				save_global_event_target_as = ngm_technology_trade_2
 				random_playable_country = {
 					limit = {
 						has_communications = owner
@@ -20956,7 +20959,7 @@ country_event = {
 							is_same_value = event_target:ngm_technology_trade_2
 						}
 					}
-					save_event_target_as = ngm_technology_trade_3
+					save_global_event_target_as = ngm_technology_trade_3
 					random_playable_country = {
 						limit = {
 							has_communications = owner
@@ -20970,7 +20973,7 @@ country_event = {
 								is_same_value = event_target:ngm_technology_trade_3
 							}
 						}
-						save_event_target_as = ngm_technology_trade_4
+						save_global_event_target_as = ngm_technology_trade_4
 						random_playable_country = {
 							limit = {
 								has_communications = owner
@@ -20987,7 +20990,7 @@ country_event = {
 									is_same_value = event_target:ngm_technology_trade_4
 								}
 							}
-							save_event_target_as = ngm_technology_trade_5
+							save_global_event_target_as = ngm_technology_trade_5
 							random_playable_country = {
 								limit = {
 									has_communications = owner
@@ -21007,7 +21010,7 @@ country_event = {
 										is_same_value = event_target:ngm_technology_trade_5
 									}
 								}
-								save_event_target_as = ngm_technology_trade_6
+								save_global_event_target_as = ngm_technology_trade_6
 								random_playable_country = {
 									limit = {
 										has_communications = owner
@@ -21030,7 +21033,7 @@ country_event = {
 											is_same_value = event_target:ngm_technology_trade_6
 										}
 									}
-									save_event_target_as = ngm_technology_trade_7
+									save_global_event_target_as = ngm_technology_trade_7
 									random_playable_country = {
 										limit = {
 											has_communications = owner
@@ -21056,7 +21059,7 @@ country_event = {
 												is_same_value = event_target:ngm_technology_trade_7
 											}
 										}
-										save_event_target_as = ngm_technology_trade_8
+										save_global_event_target_as = ngm_technology_trade_8
 										random_playable_country = {
 											limit = {
 												has_communications = owner
@@ -21085,7 +21088,7 @@ country_event = {
 													is_same_value = event_target:ngm_technology_trade_8
 												}
 											}
-											save_event_target_as = ngm_technology_trade_9
+											save_global_event_target_as = ngm_technology_trade_9
 											random_playable_country = {
 												limit = {
 													has_communications = owner
@@ -21117,7 +21120,7 @@ country_event = {
 														is_same_value = event_target:ngm_technology_trade_9
 													}
 												}
-												save_event_target_as = ngm_technology_trade_10
+												save_global_event_target_as = ngm_technology_trade_10
 												random_playable_country = {
 													limit = {
 														has_communications = owner
@@ -21152,7 +21155,88 @@ country_event = {
 															is_same_value = event_target:ngm_technology_trade_10
 														}
 													}
-													save_event_target_as = ngm_technology_trade_11
+													save_global_event_target_as = ngm_technology_trade_11
+													random_playable_country = {
+														limit = {
+															has_communications = owner
+															NOT = {
+																is_same_value = event_target:ngm_technology_trade_1
+															}
+															NOT = {
+																is_same_value = event_target:ngm_technology_trade_2
+															}
+															NOT = {
+																is_same_value = event_target:ngm_technology_trade_3
+															}
+															NOT = {
+																is_same_value = event_target:ngm_technology_trade_4
+															}
+															NOT = {
+																is_same_value = event_target:ngm_technology_trade_5
+															}
+															NOT = {
+																is_same_value = event_target:ngm_technology_trade_6
+															}
+															NOT = {
+																is_same_value = event_target:ngm_technology_trade_7
+															}
+															NOT = {
+																is_same_value = event_target:ngm_technology_trade_8
+															}
+															NOT = {
+																is_same_value = event_target:ngm_technology_trade_9
+															}
+															NOT = {
+																is_same_value = event_target:ngm_technology_trade_10
+															}
+															NOT = {
+																is_same_value = event_target:ngm_technology_trade_11
+															}
+														}
+														save_global_event_target_as = ngm_technology_trade_12
+														random_playable_country = {
+															limit = {
+																has_communications = owner
+																NOT = {
+																	is_same_value = event_target:ngm_technology_trade_1
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_technology_trade_2
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_technology_trade_3
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_technology_trade_4
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_technology_trade_5
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_technology_trade_6
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_technology_trade_7
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_technology_trade_8
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_technology_trade_9
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_technology_trade_10
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_technology_trade_11
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_technology_trade_12
+																}
+															}
+															save_global_event_target_as = ngm_technology_trade_13
+														}
+													}
 												}
 											}
 										}
@@ -21167,23 +21251,3519 @@ country_event = {
 	}
 	option = {
 		name = ngm_government.8.a
-		# allow = {
-		# 	resource_stockpile_compare = { resource = energy value >= 1000 }
-		# }
 		trigger = {
 			exists = event_target:ngm_technology_trade_1
 		}
 		hidden_effect = {
-			
-			random_country = {
+			country_event = {
+				id = ngm_government.9
+			}
+			set_country_flag = ngm_technology_trade_1_country_flag
+		}
+	}
+	option = {
+		name = ngm_government.8.b
+		trigger = {
+			exists = event_target:ngm_technology_trade_2
+		}
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.9
+			}
+		}
+	}
+	option = {
+		name = ngm_government.8.c
+		trigger = {
+			exists = event_target:ngm_technology_trade_3
+		}
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.9
+			}
+		}
+	}
+	option = {
+		name = ngm_government.8.d
+		trigger = {
+			exists = event_target:ngm_technology_trade_4
+		}
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.9
+			}
+		}
+	}
+	option = {
+		name = ngm_government.8.e
+		trigger = {
+			exists = event_target:ngm_technology_trade_5
+		}
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.9
+			}
+		}
+	}
+	option = {
+		name = ngm_government.8.f
+		trigger = {
+			exists = event_target:ngm_technology_trade_6
+		}
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.9
+			}
+		}
+	}
+	option = {
+		name = ngm_government.8.g
+		trigger = {
+			exists = event_target:ngm_technology_trade_7
+		}
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.9
+			}
+		}
+	}
+	option = {
+		name = ngm_government.8.h
+		trigger = {
+			exists = event_target:ngm_technology_trade_8
+		}
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.9
+			}
+		}
+	}
+	option = {
+		name = ngm_government.8.i
+		trigger = {
+			exists = event_target:ngm_technology_trade_9
+		}
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.9
+			}
+		}
+	}
+	option = {
+		name = ngm_government.8.j
+		trigger = {
+			exists = event_target:ngm_technology_trade_10
+		}
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.9
+			}
+		}
+	}
+	option = {
+		name = ngm_government.8.k
+		trigger = {
+			exists = event_target:ngm_technology_trade_11
+		}
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.9
+			}
+		}
+	}
+	option = {
+		name = ngm_government.8.l
+		trigger = {
+			exists = event_target:ngm_technology_trade_12
+		}
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.9
+			}
+		}
+	}
+	option = {
+		name = ngm_government.8.m
+		trigger = {
+			exists = event_target:ngm_technology_trade_13
+		}
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.9
+			}
+		}
+	}
+	# 閉じる
+	option = {
+		name = ngm_government.8.n
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_now_global_flag
+			clear_global_event_target = ngm_technology_trade_0
+			clear_global_event_target = ngm_technology_trade_1
+			clear_global_event_target = ngm_technology_trade_2
+			clear_global_event_target = ngm_technology_trade_3
+			clear_global_event_target = ngm_technology_trade_4
+			clear_global_event_target = ngm_technology_trade_5
+			clear_global_event_target = ngm_technology_trade_6
+			clear_global_event_target = ngm_technology_trade_7
+			clear_global_event_target = ngm_technology_trade_8
+			clear_global_event_target = ngm_technology_trade_9
+			clear_global_event_target = ngm_technology_trade_10
+			clear_global_event_target = ngm_technology_trade_11
+			clear_global_event_target = ngm_technology_trade_12
+			clear_global_event_target = ngm_technology_trade_13
+		}
+	}
+}
+
+# 研究取引 贈与 分野振り分け
+country_event = {
+	id = ngm_government.9
+	title = ngm_government.9.name
+	desc = ngm_government.9.desc
+	picture = GFX_evt_intelligence_report
+	show_sound = event_activating_unknown_technology
+	is_triggered_only = yes
+	# 物理学tier1
+	option = {
+		name = ngm_government.9.a
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.10
+			}
+		}
+	}
+	# 物理学tier2
+	option = {
+		name = ngm_government.9.b
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.11
+			}
+		}
+	}
+	# 物理学tier3
+	option = {
+		name = ngm_government.9.c
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.12
+			}
+		}
+	}
+	# 物理学tier4
+	option = {
+		name = ngm_government.9.d
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.13
+			}
+		}
+	}
+	# 物理学tier5
+	option = {
+		name = ngm_government.9.e
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.14
+			}
+		}
+	}
+	# # 社会学tier1
+	# option = {
+	# 	name = ngm_government.9.f
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = ngm_government.15
+	# 		}
+	# 	}
+	# }
+	# # 社会学tier2
+	# option = {
+	# 	name = ngm_government.9.g
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = ngm_government.16
+	# 		}
+	# 	}
+	# }
+	# # 社会学tier3
+	# option = {
+	# 	name = ngm_government.9.h
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = ngm_government.17
+	# 		}
+	# 	}
+	# }
+	# # 社会学tier4
+	# option = {
+	# 	name = ngm_government.9.i
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = ngm_government.18
+	# 		}
+	# 	}
+	# }
+	# # 社会学tier5
+	# option = {
+	# 	name = ngm_government.9.j
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = ngm_government.19
+	# 		}
+	# 	}
+	# }
+	# # 工学tier1
+	# option = {
+	# 	name = ngm_government.9.k
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = ngm_government.20
+	# 		}
+	# 	}
+	# }
+	# # 工学tier2
+	# option = {
+	# 	name = ngm_government.9.l
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = ngm_government.21
+	# 		}
+	# 	}
+	# }
+	# # 工学tier3
+	# option = {
+	# 	name = ngm_government.9.m
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = ngm_government.22
+	# 		}
+	# 	}
+	# }
+	# # 工学tier4
+	# option = {
+	# 	name = ngm_government.9.n
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = ngm_government.23
+	# 		}
+	# 	}
+	# }
+	# # 工学tier5
+	# option = {
+	# 	name = ngm_government.9.o
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = ngm_government.24
+	# 		}
+	# 	}
+	# }
+	# 閉じる
+	option = {
+		name = ngm_government.8.n
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_now_global_flag
+			clear_global_event_target = ngm_technology_trade_0
+			clear_global_event_target = ngm_technology_trade_1
+			clear_global_event_target = ngm_technology_trade_2
+			clear_global_event_target = ngm_technology_trade_3
+			clear_global_event_target = ngm_technology_trade_4
+			clear_global_event_target = ngm_technology_trade_5
+			clear_global_event_target = ngm_technology_trade_6
+			clear_global_event_target = ngm_technology_trade_7
+			clear_global_event_target = ngm_technology_trade_8
+			clear_global_event_target = ngm_technology_trade_9
+			clear_global_event_target = ngm_technology_trade_10
+			clear_global_event_target = ngm_technology_trade_11
+			clear_global_event_target = ngm_technology_trade_12
+			clear_global_event_target = ngm_technology_trade_13
+		}
+	}
+}
+
+# 研究取引 贈与 物理学tier1
+country_event = {
+	id = ngm_government.10
+	title = ngm_government.10.name
+	desc = ngm_government.10.desc
+	picture = GFX_evt_intelligence_report
+	show_sound = event_activating_unknown_technology
+	is_triggered_only = yes
+	# ゼロG研究施設
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_space_science_1
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_space_science_1_global_flag
+			if = {
 				limit = {
-					exists = event_target:ngm_technology_trade_1
+					has_country_flag = ngm_technology_trade_1_country_flag
 				}
-				country_event = {
-					id = ngm_government.9
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
 				}
 			}
 		}
+	}
+	# 量子論
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_physics_1
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_physics_1_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# 管理AI
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_administrative_ai
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_administrative_ai_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# 力場調整
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_power_plant_2
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_power_plant_2_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# 自動探索プロトコル
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_automated_exploration
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_automated_exploration_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# 核融合発電
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_fusion_power
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_fusion_power_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# 青色レーザー
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_lasers_2
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_lasers_2_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# 量子ファイアウォール
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_encryption_1
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_encryption_1_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# 量子ハッキング
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_decryption_1
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_decryption_1_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# エキゾチック物質研究所
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_basic_science_lab_2
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_basic_science_lab_2_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# 小型封じ込めフィールド
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_space_science_2
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_space_science_2_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# 人工知能制御のコロニー船
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_cryostasis_1
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_cryostasis_1_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# 戦闘特化コンピュータ
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_combat_computers_1
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_combat_computers_1_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# 火器管制補助システム
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_auxiliary_fire_control
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_auxiliary_fire_control_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# 改良デフレクター
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_shields_2
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_shields_2_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# 広域エネルギー管理
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_power_hub_1
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_power_hub_1_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# 改良型リアクターブースター
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_technology = tech_reactor_boosters_2
+		}
+		hidden_effect = {
+			set_global_flag = ngm_technology_trade_tech_reactor_boosters_2_global_flag
+			if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_1
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_2
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_3
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_4
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_5
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_6
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_7
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_8
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_9
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_10
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_11
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_12
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_technology_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_technology_trade_13
+					}
+					country_event = {
+						id = ngm_government.25
+					}
+				}
+			}
+		}
+	}
+	# 閉じる
+	option = {
+		name = ngm_government.8.n
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_now_global_flag
+			clear_global_event_target = ngm_technology_trade_0
+			clear_global_event_target = ngm_technology_trade_1
+			clear_global_event_target = ngm_technology_trade_2
+			clear_global_event_target = ngm_technology_trade_3
+			clear_global_event_target = ngm_technology_trade_4
+			clear_global_event_target = ngm_technology_trade_5
+			clear_global_event_target = ngm_technology_trade_6
+			clear_global_event_target = ngm_technology_trade_7
+			clear_global_event_target = ngm_technology_trade_8
+			clear_global_event_target = ngm_technology_trade_9
+			clear_global_event_target = ngm_technology_trade_10
+			clear_global_event_target = ngm_technology_trade_11
+			clear_global_event_target = ngm_technology_trade_12
+			clear_global_event_target = ngm_technology_trade_13
+		}
+	}
+}
+
+# 研究取引 贈与 受け取り側
+country_event = {
+	id = ngm_government.25
+	title = ngm_government.25.name
+	desc = ngm_government.25.desc
+	picture = GFX_evt_intelligence_report
+	show_sound = event_activating_unknown_technology
+	is_triggered_only = yes
+	option = {
+		name = ngm_government.10.a
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_space_science_1_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_space_science_1
+			}
+		}
+		give_technology = {
+			tech = tech_space_science_1
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_space_science_1_global_flag
+			random_country = {
+				limit = {
+					is_same_value = event_target:ngm_technology_trade_0
+				}
+				country_event = {
+					id = ngm_government.26
+				}
+			}
+		}
+	}
+	option = {
+		name = ngm_government.10.b
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_physics_1_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_physics_1
+			}
+		}
+		give_technology = {
+			tech = tech_physics_1
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_physics_1_global_flag
+		}
+	}
+	# 断る
+	option = {
+		name = ngm_government.25.a
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_space_science_1_global_flag
+			random_country = {
+				limit = {
+					is_same_value = event_target:ngm_technology_trade_0
+				}
+				country_event = {
+					id = ngm_government.27
+				}
+			}
+		}
+	}
+}
+
+# 研究取引 贈与 受理
+country_event = {
+	id = ngm_government.26
+	title = ngm_government.26.name
+	desc = ngm_government.26.desc
+	picture = GFX_evt_intelligence_report
+	show_sound = event_activating_unknown_technology
+	is_triggered_only = yes
+	option = {
+		name = ok
+		hidden_effect = {
+			remove_country_flag = ngm_technology_trade_1_country_flag
+			remove_global_flag = ngm_technology_trade_now_global_flag
+			clear_global_event_target = ngm_technology_trade_0
+			clear_global_event_target = ngm_technology_trade_1
+			clear_global_event_target = ngm_technology_trade_2
+			clear_global_event_target = ngm_technology_trade_3
+			clear_global_event_target = ngm_technology_trade_4
+			clear_global_event_target = ngm_technology_trade_5
+			clear_global_event_target = ngm_technology_trade_6
+			clear_global_event_target = ngm_technology_trade_7
+			clear_global_event_target = ngm_technology_trade_8
+			clear_global_event_target = ngm_technology_trade_9
+			clear_global_event_target = ngm_technology_trade_10
+			clear_global_event_target = ngm_technology_trade_11
+			clear_global_event_target = ngm_technology_trade_12
+			clear_global_event_target = ngm_technology_trade_13
+		}
+	}
+}
+
+# 研究取引 贈与 拒否
+country_event = {
+	id = ngm_government.27
+	title = ngm_government.27.name
+	desc = ngm_government.27.desc
+	picture = GFX_evt_intelligence_report
+	show_sound = event_activating_unknown_technology
+	is_triggered_only = yes
+	option = {
+		name = ok
 	}
 }
 
