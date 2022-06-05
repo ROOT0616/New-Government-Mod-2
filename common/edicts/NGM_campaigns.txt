@@ -1078,34 +1078,29 @@ ngm_five_year_plan5_campaign = {
 
 # 〇栄望主義：開戦自由「名誉にかけて」勝利時影響力＋100
 # 戦時中の艦隊製造速度+10%（思想）
-	# ngm_honorism_wartime_fleet = {
-	# 	length = -1
-	# 	icon = "GFX_edict_type_policy"
-	# 	edict_cap_usage = 0
-
-	# 	resources = {
-	# 		category = edicts
-	# 		cost = {
-	# 			influence = 50
-	# 		}
-	# 	}
-
-	# 	potential = {
-	# 		has_ethic = ethic_fanatic_honorism
-	# 	}
-	# 	allow = {
-	# 		is_at_war = yes
-	# 	}
-
-	# 	modifier = {
-	# 		starbase_shipyard_build_speed_mult = 0.1
-	# 	}
-
-	# 	ai_weight = {
-	# 		weight = @EdictMedPrio
-	# 	}
+# ngm_honorism_wartime_fleet = {
+# 	length = -1
+# 	icon = "GFX_edict_type_policy"
+# 	edict_cap_usage = 0
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+# 			influence = 50
+# 		}
+# 	}
+# 	potential = {
+# 		has_ethic = ethic_fanatic_honorism
+# 	}
+# 	allow = {
+# 		is_at_war = yes
+# 	}
+# 	modifier = {
+# 		starbase_shipyard_build_speed_mult = 0.1
+# 	}
+# 	ai_weight = {
+# 		weight = @EdictMedPrio
+# 	}
 # }
-
 # 伝統等でアンロックされる布告
 # 1.記憶の布告
 #   ①覇権の記憶	memories_of_hegemony	(影響力100)(キャンセルするまで有効)(我が国の覇権を記録し、後世へ伝える)(統合力+10%、艦船連射レート+10%、地上軍士気+20%)
@@ -1113,27 +1108,23 @@ ngm_memories_of_hegemony = {
 	length = -1
 	icon = "GFX_edict_type_policy"
 	edict_cap_usage = 1
-
 	resources = {
 		category = edicts
 		cost = {
 			influence = 100
 		}
 	}
-
 	potential = {
 		has_tradition = tr_ngm_memory_finish
 	}
 	allow = {
 		always = yes
 	}
-
 	modifier = {
 		country_unity_produces_mult = 0.1
 		ship_fire_rate_mult = 0.1
 		army_morale = 0.2
 	}
-
 	ai_weight = {
 		weight = @EdictMedPrio
 	}
@@ -1144,27 +1135,23 @@ ngm_memories_of_glory = {
 	length = -1
 	icon = "GFX_edict_type_policy"
 	edict_cap_usage = 1
-
 	resources = {
 		category = edicts
 		cost = {
 			influence = 100
 		}
 	}
-
 	potential = {
 		has_tradition = tr_ngm_memory_finish
 	}
 	allow = {
 		always = yes
 	}
-
 	modifier = {
 		country_unity_produces_mult = 0.1
 		trade_value_mult = 0.2
 		diplo_weight_economy_mult = 0.2
 	}
-
 	ai_weight = {
 		weight = @EdictMedPrio
 	}
@@ -1175,32 +1162,27 @@ ngm_memoirs_of_perseverance = {
 	length = -1
 	icon = "GFX_edict_type_policy"
 	edict_cap_usage = 1
-
 	resources = {
 		category = edicts
 		cost = {
 			influence = 100
 		}
 	}
-
 	potential = {
 		has_tradition = tr_ngm_memory_finish
 	}
 	allow = {
 		always = yes
 	}
-
 	modifier = {
 		country_unity_produces_mult = 0.1
 		planet_pops_consumer_goods_upkeep_mult = -0.2
 		country_alloys_produces_mult = 0.1
 	}
-
 	ai_weight = {
 		weight = @EdictMedPrio
 	}
 }
-
 
 # 2.国防計画
 #   ①甲種国防計画	class_A_national_defense_plan	(影響力100)(キャンセルするまで有効)(統合参謀本部が立案した国防計画を実施する)(造船速度+20%、艦隊許容量+50、艦隊指揮上限+10)
@@ -1208,27 +1190,23 @@ ngm_class_A_national_defense_plan = {
 	length = -1
 	icon = "GFX_edict_type_policy"
 	edict_cap_usage = 1
-
 	resources = {
 		category = edicts
 		cost = {
 			influence = 100
 		}
 	}
-
 	potential = {
 		has_tradition = tr_ngm_officer_finish
 	}
 	allow = {
 		always = yes
 	}
-
 	modifier = {
 		starbase_shipyard_build_speed_mult = 0.2
 		country_naval_cap_add = 50
 		country_command_limit_add = 10
 	}
-
 	ai_weight = {
 		weight = @EdictMedPrio
 	}
@@ -1239,26 +1217,22 @@ ngm_class_B_national_defense_plan = {
 	length = -1
 	icon = "GFX_edict_type_policy"
 	edict_cap_usage = 1
-
 	resources = {
 		category = edicts
 		cost = {
 			influence = 100
 		}
 	}
-
 	potential = {
 		has_tradition = tr_ngm_officer_finish
 	}
 	allow = {
 		always = yes
 	}
-
 	modifier = {
 		country_energy_produces_mult = 0.2
 		country_alloys_produces_mult = 0.1
 	}
-
 	ai_weight = {
 		weight = @EdictMedPrio
 	}
@@ -1269,28 +1243,44 @@ ngm_class_C_national_defense_plan = {
 	length = -1
 	icon = "GFX_edict_type_policy"
 	edict_cap_usage = 1
-
 	resources = {
 		category = edicts
 		cost = {
 			influence = 100
 		}
 	}
-
 	potential = {
 		has_tradition = tr_ngm_officer_finish
 	}
 	allow = {
 		always = yes
 	}
-
 	modifier = {
 		starbase_shipyard_build_cost_mult = -0.1
 		ships_upkeep_mult = -0.2
 		armies_cost_mult = -0.2
 	}
-
 	ai_weight = {
 		weight = @EdictMedPrio
+	}
+}
+
+# 研究取引 贈与
+ngm_technology_trade_options_menu = {
+	length = 0
+	icon = "GFX_edict_type_policy"
+	potential = {
+		is_ai = no
+		not = {
+			has_global_flag = ngm_technology_trade_now_global_flag
+		}
+	}
+	effect = {
+		# custom_tooltip = ryika_abdw_options_menu_tt
+		hidden_effect = {
+			country_event = {
+				id = ngm_government.8
+			}
+		}
 	}
 }
