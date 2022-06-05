@@ -21427,6 +21427,12 @@ country_event = {
 	# 物理学tier1
 	option = {
 		name = ngm_government.9.a
+		trigger = {
+			can_research_tier = {
+				area = physics
+				tier = 1
+			}
+		}
 		hidden_effect = {
 			country_event = {
 				id = ngm_government.10
@@ -21436,6 +21442,12 @@ country_event = {
 	# 物理学tier2
 	option = {
 		name = ngm_government.9.b
+		trigger = {
+			can_research_tier = {
+				area = physics
+				tier = 2
+			}
+		}
 		hidden_effect = {
 			country_event = {
 				id = ngm_government.11
@@ -21445,6 +21457,12 @@ country_event = {
 	# 物理学tier3
 	option = {
 		name = ngm_government.9.c
+		trigger = {
+			can_research_tier = {
+				area = physics
+				tier = 3
+			}
+		}
 		hidden_effect = {
 			country_event = {
 				id = ngm_government.12
@@ -21454,6 +21472,12 @@ country_event = {
 	# 物理学tier4
 	option = {
 		name = ngm_government.9.d
+		trigger = {
+			can_research_tier = {
+				area = physics
+				tier = 4
+			}
+		}
 		hidden_effect = {
 			country_event = {
 				id = ngm_government.13
@@ -21463,6 +21487,12 @@ country_event = {
 	# 物理学tier5
 	option = {
 		name = ngm_government.9.e
+		trigger = {
+			can_research_tier = {
+				area = physics
+				tier = 5
+			}
+		}
 		hidden_effect = {
 			country_event = {
 				id = ngm_government.14
