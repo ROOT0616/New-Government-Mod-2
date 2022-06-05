@@ -21771,7 +21771,7 @@ country_event = {
 	}
 	# 量子論
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.b
 		trigger = {
 			has_technology = tech_physics_1
 		}
@@ -21950,7 +21950,7 @@ country_event = {
 	}
 	# 管理AI
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.c
 		trigger = {
 			has_technology = tech_administrative_ai
 		}
@@ -22129,7 +22129,7 @@ country_event = {
 	}
 	# 力場調整
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.d
 		trigger = {
 			has_technology = tech_power_plant_2
 		}
@@ -22308,7 +22308,7 @@ country_event = {
 	}
 	# 自動探索プロトコル
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.e
 		trigger = {
 			has_technology = tech_automated_exploration
 		}
@@ -22487,7 +22487,7 @@ country_event = {
 	}
 	# 核融合発電
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.f
 		trigger = {
 			has_technology = tech_fusion_power
 		}
@@ -22666,7 +22666,7 @@ country_event = {
 	}
 	# 青色レーザー
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.g
 		trigger = {
 			has_technology = tech_lasers_2
 		}
@@ -22845,7 +22845,7 @@ country_event = {
 	}
 	# 量子ファイアウォール
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.h
 		trigger = {
 			has_technology = tech_encryption_1
 		}
@@ -23024,7 +23024,7 @@ country_event = {
 	}
 	# 量子ハッキング
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.i
 		trigger = {
 			has_technology = tech_decryption_1
 		}
@@ -23203,7 +23203,7 @@ country_event = {
 	}
 	# エキゾチック物質研究所
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.j
 		trigger = {
 			has_technology = tech_basic_science_lab_2
 		}
@@ -23382,7 +23382,7 @@ country_event = {
 	}
 	# 小型封じ込めフィールド
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.k
 		trigger = {
 			has_technology = tech_space_science_2
 		}
@@ -23561,7 +23561,7 @@ country_event = {
 	}
 	# 人工知能制御のコロニー船
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.l
 		trigger = {
 			has_technology = tech_cryostasis_1
 		}
@@ -23740,7 +23740,7 @@ country_event = {
 	}
 	# 戦闘特化コンピュータ
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.m
 		trigger = {
 			has_technology = tech_combat_computers_1
 		}
@@ -23919,7 +23919,7 @@ country_event = {
 	}
 	# 火器管制補助システム
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.n
 		trigger = {
 			has_technology = tech_auxiliary_fire_control
 		}
@@ -24098,7 +24098,7 @@ country_event = {
 	}
 	# 改良デフレクター
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.o
 		trigger = {
 			has_technology = tech_shields_2
 		}
@@ -24277,7 +24277,7 @@ country_event = {
 	}
 	# 広域エネルギー管理
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.p
 		trigger = {
 			has_technology = tech_power_hub_1
 		}
@@ -24456,7 +24456,7 @@ country_event = {
 	}
 	# 改良型リアクターブースター
 	option = {
-		name = ngm_government.10.a
+		name = ngm_government.10.q
 		trigger = {
 			has_technology = tech_reactor_boosters_2
 		}
@@ -24664,6 +24664,7 @@ country_event = {
 	picture = GFX_evt_intelligence_report
 	show_sound = event_activating_unknown_technology
 	is_triggered_only = yes
+	# ゼロG研究施設
 	option = {
 		name = ngm_government.10.a
 		trigger = {
@@ -24689,6 +24690,7 @@ country_event = {
 			}
 		}
 	}
+	# 量子論
 	option = {
 		name = ngm_government.10.b
 		trigger = {
@@ -24706,11 +24708,382 @@ country_event = {
 			remove_global_flag = ngm_technology_trade_tech_physics_1_global_flag
 		}
 	}
+	# 管理AI
+	option = {
+		name = ngm_government.10.c
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_administrative_ai_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_administrative_ai
+			}
+		}
+		give_technology = {
+			tech = tech_administrative_ai
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_administrative_ai_global_flag
+		}
+	}
+	# 力場調整
+	option = {
+		name = ngm_government.10.d
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_power_plant_2_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_power_plant_2
+			}
+		}
+		give_technology = {
+			tech = tech_power_plant_2
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_power_plant_2_global_flag
+		}
+	}
+	# 自動探索プロトコル
+	option = {
+		name = ngm_government.10.e
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_automated_exploration_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_automated_exploration
+			}
+		}
+		give_technology = {
+			tech = tech_automated_exploration
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_automated_exploration_global_flag
+		}
+	}
+	# 核融合発電
+	option = {
+		name = ngm_government.10.f
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_automated_exploration_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_automated_exploration
+			}
+		}
+		give_technology = {
+			tech = tech_automated_exploration
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_automated_exploration_global_flag
+		}
+	}
+	# 青色レーザー
+	option = {
+		name = ngm_government.10.g
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_lasers_2_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_lasers_2
+			}
+		}
+		give_technology = {
+			tech = tech_lasers_2
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_lasers_2_global_flag
+		}
+	}
+	# 量子ファイアウォール
+	option = {
+		name = ngm_government.10.h
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_encryption_1_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_encryption_1
+			}
+		}
+		give_technology = {
+			tech = tech_encryption_1
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_encryption_1_global_flag
+		}
+	}
+	# 量子ハッキング
+	option = {
+		name = ngm_government.10.i
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_decryption_1_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_decryption_1
+			}
+		}
+		give_technology = {
+			tech = tech_decryption_1
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_decryption_1_global_flag
+		}
+	}
+	# エキゾチック物質研究所
+	option = {
+		name = ngm_government.10.j
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_basic_science_lab_2_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_basic_science_lab_2
+			}
+		}
+		give_technology = {
+			tech = tech_basic_science_lab_2
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_basic_science_lab_2_global_flag
+		}
+	}
+	# 小型封じ込めフィールド
+	option = {
+		name = ngm_government.10.k
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_space_science_2_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_space_science_2
+			}
+		}
+		give_technology = {
+			tech = tech_space_science_2
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_space_science_2_global_flag
+		}
+	}
+	# 人工知能制御のコロニー船
+	option = {
+		name = ngm_government.10.l
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_cryostasis_1_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_cryostasis_1
+			}
+		}
+		give_technology = {
+			tech = tech_cryostasis_1
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_cryostasis_1_global_flag
+		}
+	}
+	# 戦闘特化コンピュータ
+	option = {
+		name = ngm_government.10.m
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_combat_computers_1_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_combat_computers_1
+			}
+		}
+		give_technology = {
+			tech = tech_combat_computers_1
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_combat_computers_1_global_flag
+		}
+	}
+	# 火器管制補助システム
+	option = {
+		name = ngm_government.10.n
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_auxiliary_fire_control_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_auxiliary_fire_control
+			}
+		}
+		give_technology = {
+			tech = tech_auxiliary_fire_control
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_auxiliary_fire_control_global_flag
+		}
+	}
+	# 改良デフレクター
+	option = {
+		name = ngm_government.10.o
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_shields_2_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_shields_2
+			}
+		}
+		give_technology = {
+			tech = tech_shields_2
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_shields_2_global_flag
+		}
+	}
+	# 広域エネルギー管理
+	option = {
+		name = ngm_government.10.p
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_power_hub_1_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_power_hub_1
+			}
+		}
+		give_technology = {
+			tech = tech_power_hub_1
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_power_hub_1_global_flag
+		}
+	}
+	# 改良型リアクターブースター
+	option = {
+		name = ngm_government.10.q
+		trigger = {
+			has_global_flag = ngm_technology_trade_tech_reactor_boosters_2_global_flag
+		}
+		allow = {
+			NOT = {
+				has_technology = tech_reactor_boosters_2
+			}
+		}
+		give_technology = {
+			tech = tech_reactor_boosters_2
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_technology_trade_tech_reactor_boosters_2_global_flag
+		}
+	}
 	# 断る
 	option = {
 		name = ngm_government.25.a
 		hidden_effect = {
-			remove_global_flag = ngm_technology_trade_tech_space_science_1_global_flag
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_space_science_1_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_space_science_1_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_physics_1_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_physics_1_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_administrative_ai_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_administrative_ai_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_power_plant_2_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_power_plant_2_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_automated_exploration_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_automated_exploration_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_automated_exploration_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_automated_exploration_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_lasers_2_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_lasers_2_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_encryption_1_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_encryption_1_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_decryption_1_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_decryption_1_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_basic_science_lab_2_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_basic_science_lab_2_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_space_science_2_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_space_science_2_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_cryostasis_1_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_cryostasis_1_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_combat_computers_1_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_combat_computers_1_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_auxiliary_fire_control_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_auxiliary_fire_control_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_shields_2_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_shields_2_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_power_hub_1_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_power_hub_1_global_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = ngm_technology_trade_tech_reactor_boosters_2_global_flag
+				}
+				remove_global_flag = ngm_technology_trade_tech_reactor_boosters_2_global_flag
+			}
 			random_country = {
 				limit = {
 					is_same_value = event_target:ngm_technology_trade_0
