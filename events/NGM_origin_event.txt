@@ -1,0 +1,2376 @@
+###############################
+#######  起源用イベント ########
+###############################
+namespace = ngm_origin
+# 律儀な古代の緩衝国家	生成イベント
+country_event = {
+	id = ngm_origin.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_buffer_state
+	}
+	immediate = {
+		add_relic = r_ngm_ancient_pact
+		set_global_flag = ngm_buffer_state_global_flag
+		set_country_flag = ngm_buffer_state_country_flag
+		# Tag our old home planet
+		capital_scope = {
+			save_event_target_as = previous_home_planet
+			solar_system = {
+				save_event_target_as = previous_home_system
+			}
+			if = {
+				limit = {
+					exists = sector
+				}
+				sector = {
+					leader = {
+						unassign_leader = this
+						save_event_target_as = ngm_buffer_gov
+					}
+				}
+			}
+			else = {
+				root = {
+					random_owned_leader = {
+						limit = {
+							leader_class = governor
+						}
+						save_event_target_as = ngm_buffer_gov
+					}
+				}
+			}
+		}
+		# Spawn the Birch World System
+		no_scope = {
+			set_spawn_system_batch = begin
+			spawn_system = {
+				min_distance >= 200
+				max_distance <= 300
+				initializer = "ngm_buffer_state_starting_init"
+				hyperlane = yes
+			}
+			last_created_system = {
+				set_name = "Buffer Zoon"
+			}
+			set_spawn_system_batch = end
+		}
+		event_target:ngm_buffer_state_starting_system = {
+			set_star_flag = empire_cluster
+			set_star_flag = empire_home_system
+			# Add a starbase
+			create_starbase = {
+				size = "starbase_starport"
+				module = "shipyard"
+				building = "crew_quarters"
+				owner = root
+				effect = {
+					save_event_target_as = ngm_buffer_starbase
+				}
+			}
+		}
+		# Buildings
+		event_target:ngm_buffer_state = {
+			set_owner = root
+			set_controller = root
+			set_capital = yes
+			set_sector_capital = yes
+			sector = {
+				assign_leader = event_target:ngm_buffer_gov
+			}
+			if = {
+				limit = {
+					owner = {
+						is_ai = yes
+					}
+				}
+				while = {
+					count = 15
+					create_pop = {
+						species = owner_main_species
+					}
+				}
+			}
+			add_deposit = d_fungal_forest
+			add_building = building_bureaucratic_1
+			add_building = building_factory_1
+			add_modifier = {
+				modifier = ngm_determination_to_rebuild
+				years = 20
+			}
+			while = {
+				count = 3
+				add_district = district_city
+				add_district = district_industrial
+				add_district = district_generator
+				add_district = district_mining
+			}
+			if = {
+				limit = {
+					owner = {
+						is_regular_empire = yes
+					}
+				}
+				add_building = building_capital
+				add_building = building_ngm_perpetual_palace
+				add_district = district_farming
+				add_district = district_farming
+				add_district = district_farming
+			}
+			else_if = {
+				limit = {
+					owner = {
+						is_hive_empire = yes
+					}
+				}
+				add_building = building_hive_capital
+				add_building = building_spawning_pool
+			}
+			else_if = {
+				limit = {
+					owner = {
+						is_machine_empire = yes
+					}
+				}
+				add_building = building_machine_capital
+				add_building = building_machine_assembly_plant
+			}
+		}
+		# Move player ships
+		every_owned_fleet = {
+			limit = {
+				any_owned_ship = {
+					OR = {
+						is_ship_size = constructor
+						is_ship_size = corvette
+						is_ship_size = science
+					}
+				}
+			}
+			set_location = event_target:ngm_buffer_starbase
+			if = {
+				limit = {
+					any_owned_ship = {
+						is_ship_size = corvette
+					}
+				}
+				set_home_base = event_target:ngm_buffer_starbase
+			}
+		}
+		# Remove the old home planet
+		event_target:previous_home_planet = {
+			every_owned_pop = {
+				if = {
+					limit = {
+						is_robot_pop = no
+						is_sapient = yes
+					}
+					modify_species = {
+						ideal_planet_class = pc_relic
+					}
+				}
+				unemploy_pop = yes
+				resettle_pop = {
+					pop = this
+					planet = event_target:ngm_buffer_state
+				}
+			}
+			change_pc = pc_nuked
+			destroy_colony = yes
+			reroll_planet = yes
+		}
+		event_target:ngm_buffer_state = {
+			every_owned_pop = {
+				unemploy_pop = yes
+				clear_pop_category = yes
+			}
+			check_planet_employment = yes
+		}
+		# unclaim the old home system
+		event_target:previous_home_system = {
+			every_fleet_in_system = {
+				delete_fleet = this
+			}
+			remove_star_flag = empire_home_system
+			remove_star_flag = empire_cluster
+			every_neighbor_system = {
+				remove_star_flag = empire_cluster
+				every_neighbor_system = {
+					remove_star_flag = empire_cluster
+				}
+			}
+		}
+		# Set species homeworld
+		owner_species = {
+			set_species_homeworld = event_target:ngm_buffer_state
+		}
+		every_owned_pop_species = {
+			set_species_homeworld = event_target:ngm_buffer_state
+		}
+		country_event = {
+			id = ngm_origin.2
+		}
+	}
+}
+
+# 律儀な古代の緩衝国家	ハイパーレーン形成イベント
+country_event = {
+	id = ngm_origin.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_system = {
+			limit = {
+				distance = {
+					type = euclidean
+					source = prev
+					min_distance >= 50
+					max_distance <= 100
+				}
+			}
+			random_list = {
+				25 = {
+					add_hyperlane = {
+						from = this
+						to = event_target:ngm_buffer_state_starting_system
+					}
+				}
+				75 = {
+				}
+			}
+		}
+		every_system = {
+			limit = {
+				distance = {
+					type = euclidean
+					source = prev
+					min_distance >= 0
+					max_distance <= 20
+				}
+			}
+			add_hyperlane = {
+				from = this
+				to = event_target:ngm_buffer_state_starting_system
+			}
+		}
+		event_target:ngm_buffer_state_starting_system = {
+			while = {
+				count = 12
+				random_system_planet = {
+					limit = {
+						OR = {
+							is_asteroid = yes
+							is_planet_class = pc_barren
+							is_planet_class = pc_barren_cold
+							is_planet_class = pc_toxic
+							is_planet_class = pc_frozen
+						}
+					}
+					random_list = {
+						20 = {
+							set_deposit = d_energy_2
+						}
+						20 = {
+							set_deposit = d_minerals_2
+						}
+						20 = {
+							set_deposit = d_rare_crystals_2
+						}
+						20 = {
+							set_deposit = d_exotic_gases_2
+						}
+						20 = {
+							set_deposit = d_volatile_motes_2
+						}
+						20 = {
+							set_deposit = d_dark_matter_deposit_3
+						}
+						20 = {
+							set_deposit = d_zro_deposit_3
+						}
+						20 = {
+							set_deposit = d_living_metal_deposit
+							set_deposit = d_living_metal_deposit
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# 過去への逃走 始まり
+country_event = {
+	id = ngm_origin.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+	immediate = {
+		# AIには合金とバフ
+		if = {
+			limit = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			owner = {
+				add_resource = {
+					alloys = 2500
+				}
+				add_modifier = {
+					modifier = ngm_space_time_continuum_ai
+				}
+			}
+		}
+		every_owned_planet = {
+			add_modifier = {
+				modifier = ngm_space_time_continuum
+			}
+		}
+		country_event = {
+			id = ngm_origin.4
+			days = 3600
+		}
+	}
+}
+
+# 過去への逃走 10年
+country_event = {
+	id = ngm_origin.4
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+	immediate = {
+		# AIには合金
+		if = {
+			limit = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			owner = {
+				add_resource = {
+					alloys = 2500
+				}
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					save_event_target_as = local_star
+				}
+				create_country = {
+					name = "NAME_Pursuer"
+					type = faction
+					auto_delete = no
+					flag = {
+						icon = {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						establish_communications_no_message = root.owner
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
+						save_global_event_target_as = pursuer_enemy
+						create_fleet = {
+							name = "Pursuer"
+							settings = {
+								spawn_debris = yes
+							}
+							effect = {
+								set_owner = event_target:pursuer_enemy
+								while = {
+									count = 16
+									create_ship = {
+										design = "NAME_PURSUER_SMALL_A"
+										name = "Pursuer"
+									}
+								}
+								set_location = {
+									target = event_target:local_star
+									distance = 80
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.5
+			days = 3600			#10年後
+		}
+		country_event = {
+			id = ngm_origin.100
+		}
+	}
+}
+
+# 過去への逃走 20年
+country_event = {
+	id = ngm_origin.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+	immediate = {
+		# AIには合金
+		if = {
+			limit = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			owner = {
+				add_resource = {
+					alloys = 2500
+				}
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					save_event_target_as = local_star
+				}
+				create_country = {
+					name = "NAME_Pursuer"
+					type = faction
+					auto_delete = no
+					flag = {
+						icon = {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						establish_communications_no_message = root.owner
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
+						save_global_event_target_as = pursuer_enemy
+						create_fleet = {
+							name = "Pursuer"
+							settings = {
+								spawn_debris = yes
+							}
+							effect = {
+								set_owner = event_target:pursuer_enemy
+								while = {
+									count = 28
+									create_ship = {
+										design = "NAME_PURSUER_SMALL_A"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 4
+									create_ship = {
+										design = "NAME_PURSUER_SMALL_A"
+										name = "Pursuer"
+									}
+								}
+								set_location = {
+									target = event_target:local_star
+									distance = 80
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.6
+			days = 3600			#10年後
+		}
+		country_event = {
+			id = ngm_origin.100
+		}
+	}
+}
+
+# 過去への逃走 30年
+country_event = {
+	id = ngm_origin.6
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+	immediate = {
+		# AIには合金
+		if = {
+			limit = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			owner = {
+				add_resource = {
+					alloys = 3000
+				}
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					save_event_target_as = local_star
+				}
+				create_country = {
+					name = "NAME_Pursuer"
+					type = faction
+					auto_delete = no
+					flag = {
+						icon = {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						establish_communications_no_message = root.owner
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
+						save_global_event_target_as = pursuer_enemy
+						create_fleet = {
+							name = "Pursuer"
+							settings = {
+								spawn_debris = yes
+							}
+							effect = {
+								set_owner = event_target:pursuer_enemy
+								while = {
+									count = 40
+									create_ship = {
+										design = "NAME_PURSUER_SMALL_A"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 8
+									create_ship = {
+										design = "NAME_PURSUER_MEDIUM_A"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 1
+									create_ship = {
+										design = "NAME_PURSUER_LARGE_A"
+										name = "Pursuer"
+									}
+								}
+								set_location = {
+									target = event_target:local_star
+									distance = 80
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.7
+			days = 3600			#10年後
+		}
+		country_event = {
+			id = ngm_origin.100
+		}
+	}
+}
+
+# 過去への逃走 40年
+country_event = {
+	id = ngm_origin.7
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+	immediate = {
+		# AIには合金
+		if = {
+			limit = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			owner = {
+				add_resource = {
+					alloys = 3500
+				}
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					save_event_target_as = local_star
+				}
+				create_country = {
+					name = "NAME_Pursuer"
+					type = faction
+					auto_delete = no
+					flag = {
+						icon = {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						establish_communications_no_message = root.owner
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
+						save_global_event_target_as = pursuer_enemy
+						create_fleet = {
+							name = "Pursuer"
+							settings = {
+								spawn_debris = yes
+							}
+							effect = {
+								set_owner = event_target:pursuer_enemy
+								while = {
+									count = 60
+									create_ship = {
+										design = "NAME_PURSUER_SMALL_B"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 12
+									create_ship = {
+										design = "NAME_PURSUER_MEDIUM_B"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 3
+									create_ship = {
+										design = "NAME_PURSUER_LARGE_A"
+										name = "Pursuer"
+									}
+								}
+								set_location = {
+									target = event_target:local_star
+									distance = 80
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.8
+			days = 3600			#10年後
+		}
+		country_event = {
+			id = ngm_origin.100
+		}
+	}
+}
+
+# 過去への逃走 50年
+country_event = {
+	id = ngm_origin.8
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+	immediate = {
+		# AIには合金
+		if = {
+			limit = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			owner = {
+				add_resource = {
+					alloys = 4000
+				}
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					save_event_target_as = local_star
+				}
+				create_country = {
+					name = "NAME_Pursuer"
+					type = faction
+					auto_delete = no
+					flag = {
+						icon = {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						establish_communications_no_message = root.owner
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
+						save_global_event_target_as = pursuer_enemy
+						create_fleet = {
+							name = "Pursuer"
+							settings = {
+								spawn_debris = yes
+							}
+							effect = {
+								set_owner = event_target:pursuer_enemy
+								while = {
+									count = 100
+									create_ship = {
+										design = "NAME_PURSUER_SMALL_C"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 20
+									create_ship = {
+										design = "NAME_PURSUER_MEDIUM_C"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 5
+									create_ship = {
+										design = "NAME_PURSUER_LARGE_C"
+										name = "Pursuer"
+									}
+								}
+								set_location = {
+									target = event_target:local_star
+									distance = 80
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.9
+			days = 3600			#10年後
+		}
+		country_event = {
+			id = ngm_origin.100
+		}
+	}
+}
+
+# 過去への逃走 60年
+country_event = {
+	id = ngm_origin.9
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+	immediate = {
+		# AIには合金
+		if = {
+			limit = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			owner = {
+				add_resource = {
+					alloys = 5000
+				}
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					save_event_target_as = local_star
+				}
+				create_country = {
+					name = "NAME_Pursuer"
+					type = faction
+					auto_delete = no
+					flag = {
+						icon = {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						establish_communications_no_message = root.owner
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
+						save_global_event_target_as = pursuer_enemy
+						create_fleet = {
+							name = "Pursuer"
+							settings = {
+								spawn_debris = yes
+							}
+							effect = {
+								set_owner = event_target:pursuer_enemy
+								while = {
+									count = 140
+									create_ship = {
+										design = "NAME_PURSUER_SMALL_D"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 28
+									create_ship = {
+										design = "NAME_PURSUER_MEDIUM_C"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 7
+									create_ship = {
+										design = "NAME_PURSUER_LARGE_C"
+										name = "Pursuer"
+									}
+								}
+								set_location = {
+									target = event_target:local_star
+									distance = 80
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.10
+			days = 3600			#10年後
+		}
+		country_event = {
+			id = ngm_origin.100
+		}
+	}
+}
+
+# 過去への逃走 70年
+country_event = {
+	id = ngm_origin.10
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+	immediate = {
+		# AIには合金
+		if = {
+			limit = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			owner = {
+				add_resource = {
+					alloys = 5000
+				}
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					save_event_target_as = local_star
+				}
+				create_country = {
+					name = "NAME_Pursuer"
+					type = faction
+					auto_delete = no
+					flag = {
+						icon = {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						establish_communications_no_message = root.owner
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
+						save_global_event_target_as = pursuer_enemy
+						create_fleet = {
+							name = "Pursuer"
+							settings = {
+								spawn_debris = yes
+							}
+							effect = {
+								set_owner = event_target:pursuer_enemy
+								while = {
+									count = 200
+									create_ship = {
+										design = "NAME_PURSUER_SMALL_D"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 60
+									create_ship = {
+										design = "NAME_PURSUER_MEDIUM_D"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 12
+									create_ship = {
+										design = "NAME_PURSUER_LARGE_D"
+										name = "Pursuer"
+									}
+								}
+								set_location = {
+									target = event_target:local_star
+									distance = 80
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.11
+			days = 3600			#10年後
+		}
+		country_event = {
+			id = ngm_origin.100
+		}
+	}
+}
+
+# 過去への逃走 80年
+country_event = {
+	id = ngm_origin.11
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+	immediate = {
+		# AIには合金
+		if = {
+			limit = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			owner = {
+				add_resource = {
+					alloys = 5000
+				}
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					save_event_target_as = local_star
+				}
+				create_country = {
+					name = "NAME_Pursuer"
+					type = faction
+					auto_delete = no
+					flag = {
+						icon = {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						establish_communications_no_message = root.owner
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
+						save_global_event_target_as = pursuer_enemy
+						create_fleet = {
+							name = "Pursuer"
+							settings = {
+								spawn_debris = yes
+							}
+							effect = {
+								set_owner = event_target:pursuer_enemy
+								while = {
+									count = 320
+									create_ship = {
+										design = "NAME_PURSUER_SMALL_E"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 100
+									create_ship = {
+										design = "NAME_PURSUER_MEDIUM_D"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 20
+									create_ship = {
+										design = "NAME_PURSUER_LARGE_D"
+										name = "Pursuer"
+									}
+								}
+								set_location = {
+									target = event_target:local_star
+									distance = 80
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.12
+			days = 3600			#10年後
+		}
+		country_event = {
+			id = ngm_origin.100
+		}
+	}
+}
+
+# 過去への逃走 90年
+country_event = {
+	id = ngm_origin.12
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+	immediate = {
+		# AIには合金
+		if = {
+			limit = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			owner = {
+				add_resource = {
+					alloys = 5000
+				}
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					save_event_target_as = local_star
+				}
+				create_country = {
+					name = "NAME_Pursuer"
+					type = faction
+					auto_delete = no
+					flag = {
+						icon = {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						establish_communications_no_message = root.owner
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
+						save_global_event_target_as = pursuer_enemy
+						create_fleet = {
+							name = "Pursuer"
+							settings = {
+								spawn_debris = yes
+							}
+							effect = {
+								set_owner = event_target:pursuer_enemy
+								while = {
+									count = 500
+									create_ship = {
+										design = "NAME_PURSUER_SMALL_E"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 200
+									create_ship = {
+										design = "NAME_PURSUER_MEDIUM_D"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 50
+									create_ship = {
+										design = "NAME_PURSUER_LARGE_D"
+										name = "Pursuer"
+									}
+								}
+								set_location = {
+									target = event_target:local_star
+									distance = 80
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.13
+			days = 3600			#10年後
+		}
+		country_event = {
+			id = ngm_origin.100
+		}
+	}
+}
+
+# 過去への逃走 100年
+country_event = {
+	id = ngm_origin.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+	immediate = {
+		# AIには合金
+		if = {
+			limit = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			owner = {
+				add_resource = {
+					alloys = 5000
+				}
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					save_event_target_as = local_star
+				}
+				create_country = {
+					name = "NAME_Pursuer"
+					type = faction
+					auto_delete = no
+					flag = {
+						icon = {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						establish_communications_no_message = root.owner
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
+						save_global_event_target_as = pursuer_enemy
+						create_fleet = {
+							name = "Pursuer"
+							settings = {
+								spawn_debris = yes
+							}
+							effect = {
+								set_owner = event_target:pursuer_enemy
+								while = {
+									count = 1000
+									create_ship = {
+										design = "NAME_PURSUER_SMALL_E"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 400
+									create_ship = {
+										design = "NAME_PURSUER_MEDIUM_E"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 100
+									create_ship = {
+										design = "NAME_PURSUER_LARGE_E"
+										name = "Pursuer"
+									}
+								}
+								set_location = {
+									target = event_target:local_star
+									distance = 80
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.14
+			days = 18000			#50年後
+		}
+		country_event = {
+			id = ngm_origin.100
+		}
+	}
+}
+
+# 過去への逃走 150年
+country_event = {
+	id = ngm_origin.14
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+	immediate = {
+		# AIには合金
+		if = {
+			limit = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			owner = {
+				add_resource = {
+					alloys = 5000
+				}
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					save_event_target_as = local_star
+				}
+				create_country = {
+					name = "NAME_Pursuer"
+					type = faction
+					auto_delete = no
+					flag = {
+						icon = {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						establish_communications_no_message = root.owner
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
+						save_global_event_target_as = pursuer_enemy
+						create_fleet = {
+							name = "Pursuer"
+							settings = {
+								spawn_debris = yes
+							}
+							effect = {
+								set_owner = event_target:pursuer_enemy
+								while = {
+									count = 50000
+									create_ship = {
+										design = "NAME_PURSUER_SMALL_F"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 10000
+									create_ship = {
+										design = "NAME_PURSUER_MEDIUM_F"
+										name = "Pursuer"
+									}
+								}
+								while = {
+									count = 2500
+									create_ship = {
+										design = "NAME_PURSUER_LARGE_E"
+										name = "Pursuer"
+									}
+								}
+								set_location = {
+									target = event_target:local_star
+									distance = 80
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ngm_origin.100
+		}
+	}
+}
+
+# 過去への逃走 来襲通知用
+country_event = {
+	id = ngm_origin.100
+	title = ngm_origin.100.name
+	desc = ngm_origin.100.desc
+	picture = GFX_evt_ship_in_orbit
+	show_sound = event_activating_unknown_technology
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_escape_to_the_past
+	}
+}
+
+# 追跡者の艦隊が破壊されたとき
+country_event = {
+	id = ngm_origin.101
+	title = ngm_origin.101.name
+	desc = ngm_origin.101.desc
+	picture = GFX_evt_crisis_defeated
+	show_sound = event_celebration
+	location = root
+	is_triggered_only = yes
+	trigger = {
+		exists = event_target:pursuer_enemy
+		from = {
+			is_same_value = event_target:pursuer_enemy
+		}
+	}
+	immediate = {
+		event_target:pursuer_enemy = {
+			destroy_country = yes
+		}
+		hidden_effect = {
+			add_resource = {
+				alloys = 600000
+			}
+		}
+	}
+	option = {
+		name = ngm_origin.101.a
+		locked_random_list = {
+			15 = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier5researchreward
+					min = @tier5researchmin
+					max = @tier5researchmax
+				}
+			}
+			15 = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier5researchreward
+					min = @tier5researchmin
+					max = @tier5researchmax
+				}
+			}
+			15 = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier5researchreward
+					min = @tier5researchmin
+					max = @tier5researchmax
+				}
+			}
+			10 = {
+				add_random_research_option = {
+					add_progress = 0.3
+					area = engineering
+					ignore_prereqs = yes
+					fail_effects = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier5researchreward
+							min = @tier5researchmin
+							max = @tier5researchmax
+						}
+					}
+				}
+			}
+			10 = {
+				add_random_research_option = {
+					add_progress = 0.3
+					area = physics
+					ignore_prereqs = yes
+					fail_effects = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier5researchreward
+							min = @tier5researchmin
+							max = @tier5researchmax
+						}
+					}
+				}
+			}
+			10 = {
+				add_random_research_option = {
+					add_progress = 0.3
+					area = society
+					ignore_prereqs = yes
+					fail_effects = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier5researchreward
+							min = @tier5researchmin
+							max = @tier5researchmax
+						}
+					}
+				}
+			}
+			5 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = nano_forge_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			5 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = skydome_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			5 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = dimensional_fabricator_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			5 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = affluence_center_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			3 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = nourishment_center_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			2 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = class_4_singularity_build_count
+							value = 1
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = ngm_origin.101.b
+		locked_random_list = {
+			15 = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier5researchreward
+					min = @tier5researchmin
+					max = @tier5researchmax
+				}
+			}
+			15 = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier5researchreward
+					min = @tier5researchmin
+					max = @tier5researchmax
+				}
+			}
+			15 = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = @tier5researchreward
+					min = @tier5researchmin
+					max = @tier5researchmax
+				}
+			}
+			10 = {
+				add_random_research_option = {
+					add_progress = 0.3
+					area = engineering
+					ignore_prereqs = yes
+					fail_effects = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier5researchreward
+							min = @tier5researchmin
+							max = @tier5researchmax
+						}
+					}
+				}
+			}
+			10 = {
+				add_random_research_option = {
+					add_progress = 0.3
+					area = physics
+					ignore_prereqs = yes
+					fail_effects = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = @tier5researchreward
+							min = @tier5researchmin
+							max = @tier5researchmax
+						}
+					}
+				}
+			}
+			10 = {
+				add_random_research_option = {
+					add_progress = 0.3
+					area = society
+					ignore_prereqs = yes
+					fail_effects = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = @tier5researchreward
+							min = @tier5researchmin
+							max = @tier5researchmax
+						}
+					}
+				}
+			}
+			5 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = nano_forge_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			5 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = skydome_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			5 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = dimensional_fabricator_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			5 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = affluence_center_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			3 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = nourishment_center_build_count
+							value = 1
+						}
+					}
+				}
+			}
+			2 = {
+				hidden_effect = {
+					owner = {
+						change_variable = {
+							which = class_4_singularity_build_count
+							value = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# テスト用 
+country_event = {
+	id = ngm_origin.102
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					save_event_target_as = local_star
+				}
+				create_country = {
+					name = "NAME_Pursuer"
+					type = faction
+					auto_delete = no
+					flag = {
+						icon = {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						establish_communications_no_message = root.owner
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
+						save_global_event_target_as = pursuer_enemy
+						create_fleet = {
+							name = "Pursuer"
+							settings = {
+								spawn_debris = yes
+							}
+							effect = {
+								set_owner = event_target:pursuer_enemy
+								# create_ship = {
+								# 	name = "Pursuer"
+								# 	design = "NAME_PURSUER_LARGE_A"
+								# 	graphical_culture = "pursuer_large"
+								# }
+								# create_ship = {
+								# 	name = "Pursuer"
+								# 	design = "NAME_PURSUER_MEDIUM_A"
+								# 	graphical_culture = "pursuer_midle"
+								# }
+								create_ship = {
+									name = "Pursuer"
+									design = "NAME_PURSUER_SMALL_A"
+									graphical_culture = "pursuer_small"
+								}
+								set_location = {
+									target = event_target:local_star
+									distance = 80
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ngm_origin.103
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					save_event_target_as = local_star
+				}
+				create_country = {
+					name = "NAME_Pursuer"
+					type = faction
+					auto_delete = no
+					flag = {
+						icon = {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						establish_communications_no_message = root.owner
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
+						save_global_event_target_as = pursuer_enemy
+						create_fleet = {
+							name = "Pursuer"
+							settings = {
+								spawn_debris = yes
+							}
+							effect = {
+								set_owner = event_target:pursuer_enemy
+								# create_ship = {
+								# 	name = "Pursuer"
+								# 	design = "NAME_PURSUER_LARGE_A"
+								# 	graphical_culture = "pursuer_large"
+								# }
+								create_ship = {
+									name = "Pursuer"
+									design = "NAME_PURSUER_MEDIUM_A"
+									graphical_culture = "pursuer_midle"
+								}
+								# create_ship = {
+								# 	name = "Pursuer"
+								# 	design = "NAME_PURSUER_SMALL_A"
+								# 	graphical_culture = "pursuer_small"
+								# }
+								set_location = {
+									target = event_target:local_star
+									distance = 80
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ngm_origin.104
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_star = yes
+					}
+					save_event_target_as = local_star
+				}
+				create_country = {
+					name = "NAME_Pursuer"
+					type = faction
+					auto_delete = no
+					flag = {
+						icon = {
+							category = "special"
+							file = "extradimensional_02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"black"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						establish_communications_no_message = root.owner
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
+						save_global_event_target_as = pursuer_enemy
+						create_fleet = {
+							name = "Pursuer"
+							settings = {
+								spawn_debris = yes
+							}
+							effect = {
+								set_owner = event_target:pursuer_enemy
+								create_ship = {
+									name = "Pursuer"
+									design = "NAME_PURSUER_LARGE_A"
+									graphical_culture = "pursuer_large"
+								}
+								# create_ship = {
+								# 	name = "Pursuer"
+								# 	design = "NAME_PURSUER_MEDIUM_A"
+								# 	graphical_culture = "pursuer_midle"
+								# }
+								# create_ship = {
+								# 	name = "Pursuer"
+								# 	design = "NAME_PURSUER_SMALL_A"
+								# 	graphical_culture = "pursuer_small"
+								# }
+								set_location = {
+									target = event_target:local_star
+									distance = 80
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# 銀河帝国アクアリウム	生成イベント
+country_event = {
+	id = ngm_origin.1000
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_galactic_empire_aquarium
+	}
+	immediate = {
+		add_relic = r_ngm_geid
+		set_global_flag = ngm_galactic_empire_aquarium_global_flag
+		set_country_flag = ngm_galactic_empire_aquarium_country_flag
+		# Tag our old home planet
+		capital_scope = {
+			save_event_target_as = previous_home_planet
+			solar_system = {
+				save_event_target_as = previous_home_system
+			}
+			if = {
+				limit = {
+					exists = sector
+				}
+				sector = {
+					leader = {
+						unassign_leader = this
+						save_event_target_as = ngm_galactic_empire_aquarium_gov
+					}
+				}
+			}
+			else = {
+				root = {
+					random_owned_leader = {
+						limit = {
+							leader_class = governor
+						}
+						save_event_target_as = ngm_galactic_empire_aquarium_gov
+					}
+				}
+			}
+		}
+		set_spawn_system_batch = begin
+		no_scope = {
+			spawn_system = {
+				min_distance >= 450
+				max_distance <= 450
+				min_orientation_angle = 135
+				max_orientation_angle = 135
+				initializer = "ngm_galactic_empire_aquarium_starting_init"
+				hyperlane = no
+				effect = {
+					save_global_event_target_as = ngm_galactic_empire_aquarium1
+				}
+			}
+			last_created_system = {
+				set_name = "Aquarium"
+			}
+			event_target:ngm_galactic_empire_aquarium1 = {
+				spawn_system = {
+					min_distance >= 5
+					max_distance <= 5
+					min_orientation_angle = 0
+					max_orientation_angle = 0
+					initializer = "ngm_galactic_empire_aquarium_starting_pulsar"
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = ngm_galactic_empire_aquarium2
+					}
+				}
+				last_created_system = {
+					set_name = "Park Clock"
+				}
+				spawn_system = {
+					min_distance >= 5
+					max_distance <= 5
+					min_orientation_angle = 180
+					max_orientation_angle = 180
+					initializer = "ngm_galactic_empire_aquarium_starting_black_hole"
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = ngm_galactic_empire_aquarium3
+					}
+				}
+				last_created_system = {
+					set_name = "Park Out"
+				}
+				spawn_system = {
+					min_distance >= 5
+					max_distance <= 5
+					min_orientation_angle = 90
+					max_orientation_angle = 90
+					initializer = "ngm_galactic_empire_aquarium_starting_upper_gate"
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = ngm_galactic_empire_aquarium4
+					}
+				}
+				last_created_system = {
+					set_name = "Upper Gate"
+				}
+				spawn_system = {
+					min_distance >= 5
+					max_distance <= 5
+					min_orientation_angle = -90
+					max_orientation_angle = -90
+					initializer = "ngm_galactic_empire_aquarium_starting_under_gate"
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = ngm_galactic_empire_aquarium5
+					}
+				}
+				last_created_system = {
+					set_name = "Under Gate"
+				}
+			}
+		}
+		# add hyperlanes
+		event_target:ngm_galactic_empire_aquarium1 = {
+			add_hyperlane = {
+				from = event_target:ngm_galactic_empire_aquarium1
+				to = event_target:ngm_galactic_empire_aquarium2
+			}
+			add_hyperlane = {
+				from = event_target:ngm_galactic_empire_aquarium1
+				to = event_target:ngm_galactic_empire_aquarium3
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium4 = {
+			add_hyperlane = {
+				from = event_target:ngm_galactic_empire_aquarium4
+				to = event_target:ngm_galactic_empire_aquarium2
+			}
+			add_hyperlane = {
+				from = event_target:ngm_galactic_empire_aquarium4
+				to = event_target:ngm_galactic_empire_aquarium3
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium5 = {
+			add_hyperlane = {
+				from = event_target:ngm_galactic_empire_aquarium5
+				to = event_target:ngm_galactic_empire_aquarium2
+			}
+			add_hyperlane = {
+				from = event_target:ngm_galactic_empire_aquarium5
+				to = event_target:ngm_galactic_empire_aquarium3
+			}
+		}
+		set_spawn_system_batch = end
+		# Add a wormhole
+		random_system = {
+			limit = {
+				NOR = {
+					has_natural_wormhole = yes
+					starting_system = yes
+					has_star_flag = empire_cluster
+				}
+				distance = {
+					source = prev
+					min_distance >= 500
+				}
+			}
+			event_target:ngm_galactic_empire_aquarium4 = {
+				# done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
+				spawn_natural_wormhole = {
+					bypass_type = wormhole
+					random_pos = yes
+					orbit_angle = 360
+				}
+			}
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 360
+			}
+			link_wormholes = event_target:ngm_galactic_empire_aquarium4
+		}
+		random_system = {
+			limit = {
+				NOR = {
+					has_natural_wormhole = yes
+					starting_system = yes
+					has_star_flag = empire_cluster
+				}
+				distance = {
+					source = prev
+					min_distance >= 500
+				}
+			}
+			event_target:ngm_galactic_empire_aquarium5 = {
+				# done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
+				spawn_natural_wormhole = {
+					bypass_type = wormhole
+					random_pos = yes
+					orbit_angle = 360
+				}
+			}
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 360
+			}
+			link_wormholes = event_target:ngm_galactic_empire_aquarium5
+		}
+		# Add a starbase
+		event_target:ngm_galactic_empire_aquarium_starting_system = {
+			create_starbase = {
+				size = "starbase_starport"
+				module = "shipyard"
+				building = "crew_quarters"
+				owner = root
+				effect = {
+					save_event_target_as = ngm_galactic_empire_aquarium_starbase
+				}
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium_pulsar_system = {
+			create_starbase = {
+				size = starbase_outpost
+				owner = root
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium_black_hole_system = {
+			create_starbase = {
+				size = starbase_outpost
+				owner = root
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium_upper_gate_system = {
+			create_starbase = {
+				size = starbase_outpost
+				owner = root
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium_under_gate_system = {
+			create_starbase = {
+				size = starbase_outpost
+				owner = root
+			}
+		}
+		# Move player ships
+		every_owned_fleet = {
+			limit = {
+				any_owned_ship = {
+					OR = {
+						is_ship_size = constructor
+						is_ship_size = corvette
+						is_ship_size = science
+					}
+				}
+			}
+			set_location = event_target:ngm_galactic_empire_aquarium
+			if = {
+				limit = {
+					any_owned_ship = {
+						is_ship_size = corvette
+					}
+				}
+				set_home_base = event_target:ngm_galactic_empire_aquarium
+			}
+		}
+		# Remove the old home planet
+		event_target:previous_home_planet = {
+			every_owned_pop = {
+				if = {
+					limit = {
+						is_robot_pop = no
+						is_sapient = yes
+					}
+					modify_species = {
+						ideal_planet_class = pc_ocean
+					}
+				}
+				unemploy_pop = yes
+				resettle_pop = {
+					pop = this
+					planet = event_target:ngm_galactic_empire_aquarium
+				}
+			}
+			change_pc = pc_nuked
+			destroy_colony = yes
+			reroll_planet = yes
+		}
+		event_target:ngm_galactic_empire_aquarium = {
+			every_owned_pop = {
+				unemploy_pop = yes
+				clear_pop_category = yes
+			}
+			check_planet_employment = yes
+		}
+		# unclaim the old home system
+		event_target:previous_home_system = {
+			every_fleet_in_system = {
+				delete_fleet = this
+			}
+			remove_star_flag = empire_home_system
+			remove_star_flag = empire_cluster
+			every_neighbor_system = {
+				remove_star_flag = empire_cluster
+				every_neighbor_system = {
+					remove_star_flag = empire_cluster
+				}
+			}
+		}
+		# Set species homeworld
+		owner_species = {
+			set_species_homeworld = event_target:ngm_galactic_empire_aquarium
+		}
+		every_owned_pop_species = {
+			set_species_homeworld = event_target:ngm_galactic_empire_aquarium
+		}
+		add_research_option = tech_wormhole_stabilization
+		owner = {
+			set_country_flag = encountered_first_wormhole
+			add_seen_bypass_type = wormhole
+		}
+		country_event = {
+			id = ngm_origin.1001
+		}
+		country_event = {
+			id = game_start.9
+		}
+		country_event = {
+			id = distar.3043
+		}
+	}
+}
+
+# 銀河帝国アクアリウム	建築物生成イベント
+country_event = {
+	id = ngm_origin.1001
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_galactic_empire_aquarium
+	}
+	immediate = {
+		# Buildings
+		event_target:ngm_galactic_empire_aquarium = {
+			set_owner = root
+			set_controller = root
+			set_capital = yes
+			set_sector_capital = yes
+			sector = {
+				assign_leader = event_target:ngm_galactic_empire_aquarium_gov
+			}
+			if = {
+				limit = {
+					owner = {
+						is_ai = yes
+					}
+				}
+				while = {
+					count = 15
+					create_pop = {
+						species = owner_main_species
+					}
+				}
+			}
+			add_deposit = d_fungal_forest
+			add_building = building_capital
+			add_building = building_ngm_garden_palace
+			add_building = building_ngm_aquarium_central_gate
+			add_building = building_ngm_great_ocean_temple
+			add_building = building_bureaucratic_1
+			add_building = building_factory_1
+			add_building = building_research_lab_1
+			add_district = ngm_district_arcology_marine_fisheries_research
+			add_district = ngm_district_arcology_marine_housing
+			add_district = ngm_district_arcology_marine_administrative_Organization
+			add_district = ngm_district_arcology_marine_health_care
+			add_district = ngm_district_arcology_marine_water_park
+		}
+	}
+}
