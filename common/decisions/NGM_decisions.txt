@@ -1973,3 +1973,29 @@ decision_planet_ngm_seaweed = {
 		weight = 0.1
 	}
 }
+
+ngm_debug_tools_5 = {
+	owned_planets_only = yes
+	enactment_time = 0
+	potential = {
+		owner = {
+			has_ethic = ethic_fanatic_egalitarian
+			has_ethic = ethic_fanatic_materialist
+			has_ethic = ethic_developmentalism
+			has_ethic = ethic_honorism
+			has_origin = origin_mechanists
+			has_country_flag = ngm_debug_tools_0
+		}
+	}
+	effect = {
+		# custom_tooltip = ryika_abdw_options_menu_tt
+		hidden_effect = {
+			while = {
+				count = 5
+				create_pop = {
+					species = owner_main_species
+				}
+			}
+		}
+	}
+}

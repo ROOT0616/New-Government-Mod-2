@@ -1078,29 +1078,30 @@ ngm_five_year_plan5_campaign = {
 
 # 〇栄望主義：開戦自由「名誉にかけて」勝利時影響力＋100
 # 戦時中の艦隊製造速度+10%（思想）
-# ngm_honorism_wartime_fleet = {
-# 	length = -1
-# 	icon = "GFX_edict_type_policy"
-# 	edict_cap_usage = 0
-# 	resources = {
-# 		category = edicts
-# 		cost = {
-# 			influence = 50
-# 		}
-# 	}
-# 	potential = {
-# 		has_ethic = ethic_fanatic_honorism
-# 	}
-# 	allow = {
-# 		is_at_war = yes
-# 	}
-# 	modifier = {
-# 		starbase_shipyard_build_speed_mult = 0.1
-# 	}
-# 	ai_weight = {
-# 		weight = @EdictMedPrio
-# 	}
+	# ngm_honorism_wartime_fleet = {
+	# 	length = -1
+	# 	icon = "GFX_edict_type_policy"
+	# 	edict_cap_usage = 0
+	# 	resources = {
+	# 		category = edicts
+	# 		cost = {
+	# 			influence = 50
+	# 		}
+	# 	}
+	# 	potential = {
+	# 		has_ethic = ethic_fanatic_honorism
+	# 	}
+	# 	allow = {
+	# 		is_at_war = yes
+	# 	}
+	# 	modifier = {
+	# 		starbase_shipyard_build_speed_mult = 0.1
+	# 	}
+	# 	ai_weight = {
+	# 		weight = @EdictMedPrio
+	# 	}
 # }
+
 # 伝統等でアンロックされる布告
 # 1.記憶の布告
 #   ①覇権の記憶	memories_of_hegemony	(影響力100)(キャンセルするまで有効)(我が国の覇権を記録し、後世へ伝える)(統合力+10%、艦船連射レート+10%、地上軍士気+20%)
@@ -1279,8 +1280,111 @@ ngm_technology_trade_options_menu = {
 		# custom_tooltip = ryika_abdw_options_menu_tt
 		hidden_effect = {
 			country_event = {
-				id = ngm_government.8
+				id = ngm_tech_trade.8
 			}
 		}
 	}
 }
+
+ngm_debug_tools_0 = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_ethic = ethic_fanatic_egalitarian
+		has_ethic = ethic_fanatic_materialist
+		has_ethic = ethic_developmentalism
+		has_ethic = ethic_honorism
+		has_origin = origin_mechanists
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = ngm_debug_tools_0
+		}
+	}
+}
+
+ngm_debug_tools_00 = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_ethic = ethic_fanatic_egalitarian
+		has_ethic = ethic_fanatic_materialist
+		has_ethic = ethic_developmentalism
+		has_ethic = ethic_honorism
+		has_origin = origin_mechanists
+		has_country_flag = ngm_debug_tools_0
+	}
+	effect = {
+		hidden_effect = {
+			remove_country_flag = ngm_debug_tools_0
+		}
+	}
+}
+
+ngm_debug_tools_1 = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_ethic = ethic_fanatic_egalitarian
+		has_ethic = ethic_fanatic_materialist
+		has_ethic = ethic_developmentalism
+		has_ethic = ethic_honorism
+		has_origin = origin_mechanists
+		has_country_flag = ngm_debug_tools_0
+	}
+	modifier = {
+		empire_size_mult = -0.5
+	}
+}
+
+ngm_debug_tools_2 = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_ethic = ethic_fanatic_egalitarian
+		has_ethic = ethic_fanatic_materialist
+		has_ethic = ethic_developmentalism
+		has_ethic = ethic_honorism
+		has_origin = origin_mechanists
+		has_country_flag = ngm_debug_tools_0
+	}
+	modifier = {
+		all_technology_research_speed = 2
+	}
+}
+
+ngm_debug_tools_3 = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_ethic = ethic_fanatic_egalitarian
+		has_ethic = ethic_fanatic_materialist
+		has_ethic = ethic_developmentalism
+		has_ethic = ethic_honorism
+		has_origin = origin_mechanists
+		has_country_flag = ngm_debug_tools_0
+	}
+	modifier = {
+		planet_building_build_speed_mult = 2
+	}
+}
+
+ngm_debug_tools_4 = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_ethic = ethic_fanatic_egalitarian
+		has_ethic = ethic_fanatic_materialist
+		has_ethic = ethic_developmentalism
+		has_ethic = ethic_honorism
+		has_origin = origin_mechanists
+		has_country_flag = ngm_debug_tools_0
+	}
+	modifier = {
+		country_produces_mult = 1
+		country_base_alloys_produces_add = 200
+		country_base_minerals_produces_add = 200
+		country_base_unity_produces_add = 200
+	}
+}
+
