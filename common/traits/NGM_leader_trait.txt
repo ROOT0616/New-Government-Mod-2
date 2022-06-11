@@ -1,0 +1,666 @@
+
+# 政府後見 総督:リーダー経験値取得+20%。職からの統合力+10%、職からの管理許容量+10%
+leader_trait_ngm_governor_government_guardianship = {
+	cost = 0
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	modifier = {
+		species_leader_exp_gain = 0.2
+		planet_jobs_unity_produces_mult = 0.1
+		country_admin_cap_mult = 0.1
+	}
+}
+
+# 政府後見 研究者: リーダー経験値取得+20%。調査速度+10%、研究速度+5%
+leader_trait_ngm_scientist_government_guardianship = {
+	cost = 0
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	modifier = {
+		species_leader_exp_gain = 0.2
+		science_ship_survey_speed = 0.1
+		all_technology_research_speed = 0.05
+	}
+}
+
+# 政府後見 提督: リーダー経験値取得+20%。艦隊維持費-10%、亜空間移動速度+10%
+leader_trait_ngm_admiral_government_guardianship = {
+	cost = 0
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	modifier = {
+		species_leader_exp_gain = 0.2
+		ships_upkeep_mult = -0.1
+		ship_speed_mult = 0.1
+	}
+}
+
+# 政府後見 将軍: リーダー経験値取得+20%。地上軍維持費-10%、地上軍士気+20%
+leader_trait_ngm_general_government_guardianship = {
+	cost = 0
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	modifier = {
+		species_leader_exp_gain = 0.2
+		armies_upkeep_mult = -0.1
+		army_morale = 0.2
+	}
+}
+
+# 伝統でとれるリーダー特性(英雄以外)
+# 1.経済学者 総督	economist	(交易価値+10%)(この総督は経済理論の専門家である)
+leader_trait_ngm_economist = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		trade_value_mult = 0.1
+	}
+}
+
+# 2.調整家 総督	coordinator	(安定度+10)(この総督は政治利益の調整により今の地位を手に入れた)
+leader_trait_ngm_coordinator = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		planet_stability_add = 10
+	}
+}
+
+# 3.上流 総督	governor_upstream	(統合力+10%、寿命+20年)(この総督は生まれながらにして社会の上層部にいる)
+leader_trait_ngm_governor_upstream = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+		leader_age = 20
+	}
+}
+
+# 4.叩き上げ 総督	governor_veteran	(職業による資源算出+3%、リーダー経験値取得+10%)(この総督は自らの能力によってこの地位に上り詰めた)
+leader_trait_ngm_governor_veteran = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		planet_jobs_productive_produces_mult = 0.03
+		species_leader_exp_gain = 0.1
+	}
+}
+
+# 1.科学官僚 科学者	scientocrats	(調査速度-5%、アノマリー研究速度+20%、研究速度+5%)(この科学者は官僚出身である)
+leader_trait_ngm_scientocrats = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		science_ship_survey_speed = -0.05
+		ship_anomaly_research_speed_mult = 0.2
+		all_technology_research_speed = 0.05
+	}
+}
+
+# 2.軍出身 科学者	army_brat	(調査速度+10%、軍事学の研究速度+10%)(この科学者は軍人出身である)
+leader_trait_ngm_army_brat = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		science_ship_survey_speed = 0.1
+		category_military_theory_research_speed_mult = 0.1
+	}
+}
+
+# 3.直感 科学者	intuition		(調査速度+5%、アノマリー研究速度+10%)(この科学者は自らの感覚と技術でここまで上り詰めた)
+leader_trait_ngm_intuition = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		science_ship_survey_speed = 0.05
+		ship_anomaly_research_speed_mult = 0.1
+	}
+}
+
+# 4.柔軟性 科学者	flexibility	(調査速度+10%、アノマリー研究速度+5%)(この科学者は現状を把握し、実情に合わせて結果を出す)
+leader_trait_ngm_flexibility = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		science_ship_survey_speed = 0.1
+		ship_anomaly_research_speed_mult = 0.05
+	}
+}
+
+# 5.上流 科学者	scientist_upstream	(研究速度+5%、調査速度+5%、寿命+20年)(この科学者は生まれながらにして社会の上層部にいる)
+leader_trait_ngm_scientist_upstream = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		all_technology_research_speed = 0.05
+		science_ship_survey_speed = 0.05
+		leader_age = 20
+	}
+}
+
+# 6.叩き上げ 科学者	scientist_veteran	(研究速度+10%、リーダー経験値取得+10%)(この科学者は自らの能力によってこの地位に上り詰めた)
+leader_trait_ngm_scientist_veteran = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		all_technology_research_speed = 0.1
+		species_leader_exp_gain = 0.1
+	}
+}
+
+# 1.軍官僚 提督	admiral_military_bureaucracy	(船体値+5%、艦船維持費-5%、亜光速移動速度+5%)(この提督は官僚出身である)
+leader_trait_ngm_admiral_military_bureaucracy = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		ship_hull_mult = 0.05
+		ships_upkeep_mult = -0.05
+		ship_speed_mult = 0.05
+	}
+}
+
+# 2.参謀出身 提督	admiral_from_the_general_staff	(武器射程+5%、武器ダメージ+5%、回避+5%)(この提督は有能な参謀として頭角を現した)
+leader_trait_ngm_admiral_from_the_general_staff = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		ship_weapon_range_mult = 0.05
+		ship_weapon_damage = 0.05
+		ship_evasion_mult = 0.05 
+	}
+}
+
+# 3.柔軟性 提督	admiral_flexibility	(船体値+10%、戦闘離脱の可能性+15%)(この提督は現状を把握し、実情に合わせて命令を下す)
+leader_trait_ngm_admiral_flexibility = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		ship_hull_mult = 0.1
+		ship_disengage_chance_mult = 0.15
+	}
+}
+
+# 4.果断 提督	admiral_decisive		(武器ダメージ+5%、亜光速移動速度+10%、)(この提督は決定したことを遂行することを重要視している)
+leader_trait_ngm_admiral_decisive = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		ship_weapon_damage = 0.05
+		ship_speed_mult = 0.1
+	}
+}
+
+# 5.幕僚チーム 提督	admiral_staff_team	(センサー範囲+1、船体値+5%、亜光速移動速度+10%)(この提督を補佐する参謀、副官等の幕僚チームは極めて有能である)
+leader_trait_ngm_admiral_staff_team = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		ship_sensor_range_add = 1
+		ship_hull_mult = 0.05
+		ship_speed_mult = 0.1
+	}
+}
+
+# 6.上流 提督	admiral_upstream	(亜光速移動速度+10%、緊急FTL時の損傷リスク-10%、寿命+20年)(この提督は生まれながらにして社会の上層部にいる)
+leader_trait_ngm_admiral_upstream = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		ship_speed_mult = 0.1
+		ship_emergency_ftl_mult = -0.1
+		leader_age = 20
+	}
+}
+
+# 7.叩き上げ 提督	admiral_veteran	(回避+5%、艦船連射レート+10%、リーダー経験値取得+10%)(この提督は自らの能力によってこの地位に上り詰めた)
+leader_trait_ngm_admiral_veteran = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		admiral
+	}
+	leader_class = {
+		admiral
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		ship_evasion_mult = 0.05
+		ship_fire_rate_mult = 0.1
+		species_leader_exp_gain = 0.1
+	}
+}
+
+# 将軍
+# 1.軍官僚	general_military_bureaucracy	(地上軍副次的損害-10%、地上軍維持費-10%)(この将軍は官僚出身である)
+leader_trait_ngm_general_military_bureaucracy = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		army_collateral_damage_mult = -0.1
+		armies_upkeep_mult = -0.1
+	}
+}
+
+# 2.参謀出身	general_from_the_general_staff	(地上軍士気ダメージ+15%、地上軍耐久度+10%)(この将軍は有能な参謀として頭角を現した)
+leader_trait_ngm_general_from_the_general_staff = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		army_morale_damage_mult = 0.15
+		army_health = 0.1
+	}
+}
+
+# 3.柔軟性	general_flexibility	(地上軍ダメージ+10%、地上軍戦闘離脱の可能性+10%)(この将軍は現状を把握し、実情に合わせて命令を下す)
+leader_trait_ngm_general_flexibility = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		army_damage_mult = 0.1
+		army_disengage_chance_mult = 0.1
+	}
+}
+
+# 4.果断	general_decisive		(地上軍ダメージ+10%、地上軍士気ダメージ+10%)(この将軍は決定したことを遂行することを重要視している)
+leader_trait_ngm_general_decisive = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		army_damage_mult = 0.1
+		army_morale_damage_mult = 0.1
+	}
+}
+
+# 5.幕僚チーム	general_staff_team	(地上軍ダメージ+5%、地上軍耐久+10%)(この将軍を補佐する参謀、副官等の幕僚チームは極めて有能である)
+leader_trait_ngm_general_staff_team = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		army_damage_mult = 0.05
+		army_health = 0.1
+	}
+}
+
+# 6.上流		general_upstream	(地上軍士気+5%、地上軍副次的損害-50%、寿命+20年)(この総督は生まれながらにして社会の上層部にいる)
+leader_trait_ngm_general_upstream = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		army_morale = 0.05
+		army_collateral_damage_mult = -0.5
+		leader_age = 20
+	}
+}
+
+# 7.叩き上げ	general_veteran	(地上軍ダメージ+5%、地上軍の士気+5%、地上軍戦闘離脱の可能性+10%、リーダー経験値取得+10%)(この将軍は自らの能力によってこの地位に上り詰めた)
+leader_trait_ngm_general_veteran = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ngm_government_guardianship.dds"
+	leader_trait = {
+		general
+	}
+	leader_class = {
+		general
+	}
+	leader_potential_add = {
+		from = {
+			has_tradition = tr_ngm_study_finish
+		}
+	}
+	modifier = {
+		army_damage_mult = 0.05
+		army_morale = 0.05
+		army_disengage_chance_mult = 0.1
+		species_leader_exp_gain = 0.1
+	}
+}

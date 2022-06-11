@@ -1717,7 +1717,6 @@
 #####    惑星特性    ######
 ##########################
 
- civic_tooltip_ngm_prosperity_advocate_effects:0 "平和の期間が5年続くごとに労働者生産量§G+1%§!§Y（最大50年分）§!\n平和の期間が5年続くごとに交易価値§G+2.5%§!§Y（最大50年分）§!"
  civic_ngm_prosperity_1_advocate_modifier:0 "平和の期間が5年"
  civic_ngm_prosperity_1_advocate_modifier_desc:0 "この国は平和で、平和は富をもたらす。"
  civic_ngm_prosperity_2_advocate_modifier:0 "平和の期間が10年"
@@ -1739,7 +1738,6 @@
  civic_ngm_prosperity_10_advocate_modifier:0 "平和の期間が50年"
  civic_ngm_prosperity_10_advocate_modifier_desc:0 "この国は平和で、永遠の平和は永遠の繁栄をもたらす。"
 
- civic_tooltip_ngm_money_penalty_effects:0 "惑星の犯罪度§G*1§!の交易価値を惑星に付与(§G+50§!が上限)"
  civic_ngm_money_penalty_1_modifier:0 "刑罰の金銭代替"
  civic_ngm_money_penalty_1_modifier_desc:0 ""
  civic_ngm_money_penalty_2_modifier:0 "刑罰の金銭代替"
@@ -2074,9 +2072,6 @@
  third_covid_c_planet_modifier:0 "3-c"
  third_covid_c_planet_modifier_desc:0 ""
 
- civic_tooltip_ngm_experimental_substance_effects:0 "§Rゲーム開始後の追加削除不可§!\n§Y(ゲーム開始後に追加、削除すると元に戻されます。)\n\n§!首都惑星に各戦略資源特性を1つずつ付与"
-
- civic_tooltip_ngm_war_prosperity_effects:0 "戦時中の鉱物,合金,消費財生産量§G+10%§!\n戦時中の交易価値生産量§G+10%§!\n戦時中の建艦速度§G+10%§!\n非戦時中の鉱物,合金,消費財生産量§R-10%§!\n非戦時中の交易価値生産量§R-10%§!\n非戦時中の建艦速度§R-20%§!"
  civic_ngm_war_prosperity_not_war_modifier:0 "非戦時経済"
  civic_ngm_war_prosperity_not_war_modifier_desc:0 "怠惰な平和により、資源や産業の有機的な結合は失われている。"
  civic_ngm_war_prosperity_not_war_country_modifier:0 "非戦時経済"
@@ -4754,14 +4749,41 @@
 
  empire_not_ethic:0 "$TRIGGER_FAIL$帝国は必要な条件を満たしてない。 "
 
- civic_tooltip_ngm_dissection_effects:0 "異種族は強制で奴隷化"
+ civic_tooltip_ngm_manifest_destiny_effects:0 "外交スタンスが拡張主義者から変更できない"
 
- civic_tooltip_ngm_pest_control_effects:0 "開発主義国家に対して、§G$casus_belli_cb_ngm_pest_control$§!の開戦事由を得る。 \n（勝利すると開発主義の志向を保全主義に転向させ、相手を属国化させる。さらに、終戦時に戦争相手へ社会学研究力をあげる）。"
+ civic_tooltip_ngm_youth_politics_effects:0 "初期リーダー年が10－20歳になる"
+
+ civic_tooltip_ngm_elder_politics_effects:0 "初期リーダー年が60－100歳になる"
+
+ civic_tooltip_ngm_accept_everyone_effects:0 "難民政策を無制限許容で固定"
 
  civic_tooltip_ngm_remorseless_justice_effects:0 "終末軌道爆撃以外選択不可"
 
- civic_tooltip_mechanical_faith_effects:0 "§Rゲーム開始後の追加削除不可§!\n§Y(ゲーム開始後に追加、削除すると元に戻されます。)§!\n\n精神主義派閥がロボットに怒らなくなる。\nロボットを非合法化できない。\nロボットの人権を市民権に固定。"
+ civic_tooltip_ngm_dissection_effects:0 "異種族は強制で奴隷化"
 
+ civic_ngm_erasure:0 "無制限爆撃以外選択不可\n他者痕跡の抹消の開戦事由を取得（総力戦）\n異種族を浄化しなくてはならない。"
+
+ civic_tooltip_ngm_military_industrial_complex_effects:0 "兵士が交易価値を1生み出す"
+
+ civic_tooltip_ngm_war_prosperity_effects:0 "戦時中の鉱物,合金,消費財生産量§G+10%§!\n戦時中の交易価値生産量§G+10%§!\n戦時中の建艦速度§G+10%§!\n非戦時中の鉱物,合金,消費財生産量§R-10%§!\n非戦時中の交易価値生産量§R-10%§!\n非戦時中の建艦速度§R-20%§!"
+
+ civic_tooltip_ngm_military_regime_effects:0 "兵士が統合力を1生み出す"
+
+ civic_tooltip_ngm_commercialism_effects:0 "政治家が交易価値+3を産む"
+
+ civic_tooltip_ngm_financing_effects:0 "都市区域が豪商1を産む"
+
+ civic_tooltip_ngm_nature_faith_effects:0 "司祭が算出する社会学+1\n司祭が居住性+1%を算出"
+
+ civic_tooltip_ngm_prosperity_advocate_effects:0 "平和の期間が5年続くごとに労働者生産量§G+1%§!§Y（最大50年分）§!\n平和の期間が5年続くごとに交易価値§G+2.5%§!§Y（最大50年分）§!"
+
+ civic_tooltip_mechanical_faith_effects:0 "精神主義派閥がロボットに怒らなくなる。\nロボットを非合法化できない。\nロボットの人権を市民権に固定。"
+
+ civic_tooltip_ngm_money_penalty_effects:0 "惑星の犯罪度§G*1§!の交易価値を惑星に付与(§G+50§!が上限)"
+
+ civic_tooltip_ngm_pest_control_effects:0 "開発主義国家に対して、§G$casus_belli_cb_ngm_pest_control$§!の開戦事由を得る。 \n（勝利すると開発主義の志向を保全主義に転向させ、相手を属国化させる。さらに、終戦時に戦争相手へ社会学研究力をあげる）。"
+
+ civic_tooltip_ngm_experimental_substance_effects:0 "首都惑星に各戦略資源特性を2つずつ付与"
 
  NAME_Pursuer:0 "追跡者"
 
