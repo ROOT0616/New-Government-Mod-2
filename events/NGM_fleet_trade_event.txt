@@ -953,6 +953,45 @@ country_event = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_11
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_12
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_13
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
 		}
 	}
 	option = {
@@ -1086,6 +1125,45 @@ country_event = {
 				random_country = {
 					limit = {
 						is_same_empire = event_target:ngm_fleet_trade_10
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_11
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_12
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_13
 					}
 					country_event = {
 						id = ngm_fleet_trade.3
@@ -1231,6 +1309,45 @@ country_event = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_11
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_12
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_13
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
 		}
 	}
 	option = {
@@ -1364,6 +1481,45 @@ country_event = {
 				random_country = {
 					limit = {
 						is_same_empire = event_target:ngm_fleet_trade_10
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_11
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_12
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_13
 					}
 					country_event = {
 						id = ngm_fleet_trade.3
@@ -1509,6 +1665,45 @@ country_event = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_11
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_12
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_13
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
 		}
 	}
 	option = {
@@ -1642,6 +1837,45 @@ country_event = {
 				random_country = {
 					limit = {
 						is_same_empire = event_target:ngm_fleet_trade_10
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_11
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_12
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_13
 					}
 					country_event = {
 						id = ngm_fleet_trade.3
@@ -1787,6 +2021,45 @@ country_event = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_11
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_12
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_13
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
 		}
 	}
 	option = {
@@ -1920,6 +2193,45 @@ country_event = {
 				random_country = {
 					limit = {
 						is_same_empire = event_target:ngm_fleet_trade_10
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_11
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_12
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_13
 					}
 					country_event = {
 						id = ngm_fleet_trade.3
@@ -2065,6 +2377,45 @@ country_event = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_11
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_12
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_13
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
 		}
 	}
 	option = {
@@ -2198,6 +2549,45 @@ country_event = {
 				random_country = {
 					limit = {
 						is_same_empire = event_target:ngm_fleet_trade_10
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_11
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_12
+					}
+					country_event = {
+						id = ngm_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ngm_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:ngm_fleet_trade_13
 					}
 					country_event = {
 						id = ngm_fleet_trade.3
@@ -2567,7 +2957,7 @@ country_event = {
 	}
 	# 断る
 	option = {
-		name = ngm_fleet_trade.3.k
+		name = ngm_fleet_trade.3.b
 		hidden_effect = {
 			if = {
 				limit = {
