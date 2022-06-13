@@ -607,13 +607,13 @@ country_event = {
 	immediate = {
 		random_owned_fleet = {
 			limit = {
-				is_civilian = no
+				is_ship_class = shipclass_military
 			}
 			save_global_event_target_as = ngm_fleet_trade_fleet_1
 			owner = {
 				random_owned_fleet = {
 					limit = {
-						is_civilian = no
+						is_ship_class = shipclass_military
 						NOT = {
 							is_same_value = event_target:ngm_fleet_trade_fleet_1
 						}
@@ -622,7 +622,7 @@ country_event = {
 					owner = {
 						random_owned_fleet = {
 							limit = {
-								is_civilian = no
+								is_ship_class = shipclass_military
 								NOT = {
 									is_same_value = event_target:ngm_fleet_trade_fleet_1
 								}
@@ -634,7 +634,7 @@ country_event = {
 							owner = {
 								random_owned_fleet = {
 									limit = {
-										is_civilian = no
+										is_ship_class = shipclass_military
 										NOT = {
 											is_same_value = event_target:ngm_fleet_trade_fleet_1
 										}
@@ -649,7 +649,7 @@ country_event = {
 									owner = {
 										random_owned_fleet = {
 											limit = {
-												is_civilian = no
+												is_ship_class = shipclass_military
 												NOT = {
 													is_same_value = event_target:ngm_fleet_trade_fleet_1
 												}
@@ -667,7 +667,7 @@ country_event = {
 											owner = {
 												random_owned_fleet = {
 													limit = {
-														is_civilian = no
+														is_ship_class = shipclass_military
 														NOT = {
 															is_same_value = event_target:ngm_fleet_trade_fleet_1
 														}
@@ -688,7 +688,7 @@ country_event = {
 													owner = {
 														random_owned_fleet = {
 															limit = {
-																is_civilian = no
+																is_ship_class = shipclass_military
 																NOT = {
 																	is_same_value = event_target:ngm_fleet_trade_fleet_1
 																}
@@ -712,7 +712,7 @@ country_event = {
 															owner = {
 																random_owned_fleet = {
 																	limit = {
-																		is_civilian = no
+																		is_ship_class = shipclass_military
 																		NOT = {
 																			is_same_value = event_target:ngm_fleet_trade_fleet_1
 																		}
@@ -739,7 +739,7 @@ country_event = {
 																	owner = {
 																		random_owned_fleet = {
 																			limit = {
-																				is_civilian = no
+																				is_ship_class = shipclass_military
 																				NOT = {
 																					is_same_value = event_target:ngm_fleet_trade_fleet_1
 																				}
@@ -769,7 +769,7 @@ country_event = {
 																			owner = {
 																				random_owned_fleet = {
 																					limit = {
-																						is_civilian = no
+																						is_ship_class = shipclass_military
 																						NOT = {
 																							is_same_value = event_target:ngm_fleet_trade_fleet_1
 																						}

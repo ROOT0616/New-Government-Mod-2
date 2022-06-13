@@ -1293,6 +1293,9 @@
  edict_ngm_technology_trade_options_menu:0 "研究取引 贈与"
  edict_ngm_technology_trade_options_menu_desc:0 ""
 
+ edict_ngm_fleet_trade_options_menu:0 "艦隊 贈与"
+ edict_ngm_fleet_trade_options_menu_desc:0 ""
+
 #######################
 #####    技術    ######
 #######################
@@ -3386,18 +3389,18 @@
  ngm_fleet_trade.2.j:0 "[ngm_fleet_trade_fleet_10.GetName]"
  ngm_fleet_trade.1.n:0 "やはりやめておこう。"
 
- ngm_tech_trade.3.name:0 "艦隊 贈与 受理"
- ngm_tech_trade.3.desc:0 "§Y[ngm_technology_trade_0.GetName]§!より技術を提供するという申し出があった。この技術を共有することにより世界的な技術発展と国際協調を推し進めることができるというのだ。"
- ngm_tech_trade.3.a:0 "ありがたくいただこう"
- ngm_tech_trade.3.b:0 "残念だが、お断りしよう"
+ ngm_fleet_trade.3.name:0 "艦隊 贈与 受理"
+ ngm_fleet_trade.3.desc:0 "§Y[ngm_technology_trade_0.GetName]§!より技術を提供するという申し出があった。この技術を共有することにより世界的な技術発展と国際協調を推し進めることができるというのだ。"
+ ngm_fleet_trade.3.a:0 "ありがたくいただこう"
+ ngm_fleet_trade.3.b:0 "残念だが、お断りしよう"
 
- ngm_tech_trade.4.name:0 "艦隊 贈与 受理"
- ngm_tech_trade.4.desc:0 "先日送付した艦隊提供に関しては快く受け入れられた。このことは国際協調に大きな貢献をするだろう。"
- ngm_tech_trade.4.a:0 "素晴らしい"
+ ngm_fleet_trade.4.name:0 "艦隊 贈与 受理"
+ ngm_fleet_trade.4.desc:0 "先日送付した艦隊提供に関しては快く受け入れられた。このことは国際協調に大きな貢献をするだろう。"
+ ngm_fleet_trade.4.a:0 "素晴らしい"
 
- ngm_tech_trade.4.name:0 "艦隊 贈与 拒否"
- ngm_tech_trade.4.desc:0 "我が国の好意は受け入れられなかった。国際協調の時代に対して強かな拒絶があるとは想定できなかった。"
- ngm_tech_trade.4.a:0 "残念だ"
+ ngm_fleet_trade.4.name:0 "艦隊 贈与 拒否"
+ ngm_fleet_trade.4.desc:0 "我が国の好意は受け入れられなかった。国際協調の時代に対して強かな拒絶があるとは想定できなかった。"
+ ngm_fleet_trade.4.a:0 "残念だ"
 
  ngm_tradition.40.name:0 "国家方針策定評議会臨時会（国是選択）"
  ngm_tradition.40.desc:0 "ここでは、前衛で削除された国是の代わりになる国是を選択することができます。バニラで追加される国是やNGM2で追加される国是のみが選択可能です。\n\n§R閉じるを選択した場合は国是が追加されないため、選択を終えるまでは閉じるを押さないことをお勧めします。§!§R\n誤って選択した場合も戻すことはできないのでご注意ください。§!"
