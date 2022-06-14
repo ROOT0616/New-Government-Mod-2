@@ -77145,9 +77145,19 @@ country_event = {
 				}
 			}
 		}
+		ai_chance = {
+			factor = 0
+		}
 	}
 	option = {
 		name = ngm_tech_trade.25.b
+		ai_chance = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
 		trigger = {
 			OR = {
 				has_ethic = ethic_gestalt_consciousness
@@ -77156,2029 +77166,2029 @@ country_event = {
 			}
 		}
 		hidden_effect = {				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_basic_science_lab_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_basic_science_lab_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_space_science_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_space_science_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_space_science_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_space_science_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_physics_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_physics_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_administrative_ai_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_administrative_ai_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_cryostasis_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_cryostasis_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_automated_exploration_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_automated_exploration_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_combat_computers_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_combat_computers_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_auxiliary_fire_control_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_auxiliary_fire_control_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_encryption_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_encryption_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_decryption_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_decryption_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_fusion_power_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_fusion_power_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_reactor_boosters_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_reactor_boosters_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_reactor_boosters_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_reactor_boosters_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_shields_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_shields_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_power_plant_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_power_plant_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_power_hub_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_power_hub_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_lasers_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_lasers_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_experimental_subspace_navigation_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_experimental_subspace_navigation_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_hyper_relays_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_hyper_relays_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_curator_lab_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_curator_lab_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_archeology_lab_ancrel_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_archeology_lab_ancrel_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_archeology_lab_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_archeology_lab_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_space_science_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_space_science_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_space_science_4_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_space_science_4_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_physics_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_physics_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_self_aware_logic_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_self_aware_logic_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_consumer_good_refinement_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_consumer_good_refinement_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_encryption_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_encryption_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_decryption_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_decryption_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_cold_fusion_power_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_cold_fusion_power_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_shields_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_shields_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_shield_rechargers_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_shield_rechargers_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_sensors_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_sensors_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_power_plant_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_power_plant_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_power_hub_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_power_hub_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_hyper_drive_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_hyper_drive_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_ftl_inhibitor_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_ftl_inhibitor_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_lasers_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_lasers_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_plasma_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_plasma_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_disruptors_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_disruptors_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_pd_tracking_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_pd_tracking_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mining_drone_weapon_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mining_drone_weapon_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_space_cloud_weapon_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_space_cloud_weapon_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mine_volatile_motes_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mine_volatile_motes_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_volatile_motes_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_volatile_motes_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_lgate_activation_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_lgate_activation_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_basic_science_lab_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_basic_science_lab_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_global_research_initiative_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_global_research_initiative_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_space_science_5_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_space_science_5_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_cryostasis_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_cryostasis_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_combat_computers_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_combat_computers_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_antimatter_power_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_antimatter_power_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_shields_4_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_shields_4_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_planetary_shield_generator_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_planetary_shield_generator_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_sensors_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_sensors_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_power_plant_4_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_power_plant_4_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_hyper_drive_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_hyper_drive_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_wormhole_stabilization_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_wormhole_stabilization_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_lasers_4_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_lasers_4_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_plasma_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_plasma_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_disruptors_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_disruptors_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_energy_torpedoes_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_energy_torpedoes_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mine_dark_matter_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mine_dark_matter_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_gateway_activation_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_gateway_activation_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_physics_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_physics_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_sapient_ai_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_sapient_ai_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_positronic_implants_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_positronic_implants_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_combat_computers_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_combat_computers_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_combat_computers_autonomous_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_combat_computers_autonomous_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_synchronized_defences_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_synchronized_defences_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_consumer_good_refinement_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_consumer_good_refinement_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_encryption_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_encryption_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_decryption_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_decryption_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_zero_point_power_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_zero_point_power_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_shields_5_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_shields_5_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_sensors_4_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_sensors_4_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_lasers_5_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_lasers_5_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_energy_lance_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_energy_lance_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_energy_lance_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_energy_lance_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_plasma_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_plasma_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_arc_emitter_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_arc_emitter_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_arc_emitter_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_arc_emitter_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_disruptors_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_disruptors_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_energy_torpedoes_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_energy_torpedoes_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_pd_tracking_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_pd_tracking_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_science_nexus_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_science_nexus_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_sentry_array_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_sentry_array_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_gateway_construction_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_gateway_construction_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_dyson_sphere_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_dyson_sphere_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_matter_decompressor_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_matter_decompressor_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_quantum_catapult_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_quantum_catapult_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_jump_drive_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_jump_drive_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_extradimensional_weapon_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_extradimensional_weapon_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_corvette_build_speed_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_corvette_build_speed_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_corvette_hull_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_corvette_hull_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_strike_craft_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_strike_craft_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_ship_armor_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_ship_armor_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_powered_exoskeletons_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_powered_exoskeletons_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_space_mining_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_space_mining_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_space_mining_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_space_mining_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mining_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mining_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mineral_purification_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mineral_purification_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_alloys_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_alloys_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_luxuries_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_luxuries_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_engineering_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_engineering_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_robotic_workers_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_robotic_workers_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_afterburners_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_afterburners_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_assembly_pattern_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_assembly_pattern_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mass_drivers_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mass_drivers_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_missiles_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_missiles_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_orbital_trash_dispersal_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_orbital_trash_dispersal_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_robomodding_m_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_robomodding_m_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_robomodding_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_robomodding_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_repeatable_lcluster_clue_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_repeatable_lcluster_clue_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_destroyers_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_destroyers_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_corvette_hull_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_corvette_hull_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_destroyer_build_speed_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_destroyer_build_speed_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_destroyer_hull_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_destroyer_hull_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_starbase_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_starbase_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_modular_engineering_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_modular_engineering_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_strike_craft_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_strike_craft_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_ship_armor_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_ship_armor_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_crystal_armor_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_crystal_armor_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_thrusters_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_thrusters_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_defense_platform_hull_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_defense_platform_hull_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_space_mining_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_space_mining_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_space_mining_4_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_space_mining_4_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mining_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mining_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mineral_purification_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mineral_purification_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_advanced_metallurgy_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_advanced_metallurgy_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_engineering_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_engineering_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_droid_workers_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_droid_workers_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_housing_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_housing_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mass_drivers_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mass_drivers_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_autocannons_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_autocannons_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_missiles_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_missiles_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_swarmer_missiles_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_swarmer_missiles_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_torpedoes_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_torpedoes_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mine_betharian_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mine_betharian_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mine_exotic_gases_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mine_exotic_gases_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_exotic_gases_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_exotic_gases_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mine_rare_crystals_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mine_rare_crystals_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_rare_crystals_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_rare_crystals_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_nanite_transmutation_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_nanite_transmutation_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_robomodding_points_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_robomodding_points_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_micro_replicators_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_micro_replicators_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_cruisers_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_cruisers_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_destroyer_hull_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_destroyer_hull_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_cruiser_build_speed_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_cruiser_build_speed_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_cruiser_hull_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_cruiser_hull_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_starbase_4_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_starbase_4_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_habitat_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_habitat_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_space_defense_station_improvement_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_space_defense_station_improvement_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_strike_craft_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_strike_craft_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_ship_armor_4_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_ship_armor_4_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_thrusters_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_thrusters_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_space_mining_5_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_space_mining_5_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mining_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mining_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_alloys_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_alloys_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_luxuries_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_luxuries_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_afterburners_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_afterburners_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_construction_templates_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_construction_templates_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_housing_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_housing_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mass_drivers_4_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mass_drivers_4_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_kinetic_artillery_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_kinetic_artillery_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_autocannons_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_autocannons_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_flak_batteries_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_flak_batteries_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_missiles_4_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_missiles_4_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_torpedoes_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_torpedoes_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_binary_motivators_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_binary_motivators_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_self_assembling_components_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_self_assembling_components_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_battleships_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_battleships_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_cruiser_hull_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_cruiser_hull_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_battleship_build_speed_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_battleship_build_speed_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_battleship_hull_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_battleship_hull_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_starbase_5_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_starbase_5_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_habitat_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_habitat_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_habitat_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_habitat_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_ship_armor_5_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_ship_armor_5_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_crystal_armor_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_crystal_armor_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_thrusters_4_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_thrusters_4_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_advanced_metallurgy_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_advanced_metallurgy_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_engineering_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_engineering_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_synthetic_workers_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_synthetic_workers_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_synthetic_leaders_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_synthetic_leaders_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mass_drivers_5_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mass_drivers_5_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_kinetic_artillery_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_kinetic_artillery_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mass_accelerator_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mass_accelerator_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mass_accelerator_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mass_accelerator_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_autocannons_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_autocannons_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_flak_batteries_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_flak_batteries_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_missiles_5_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_missiles_5_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_swarmer_missiles_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_swarmer_missiles_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_torpedoes_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_torpedoes_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_robomodding_points_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_robomodding_points_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_nanite_assemblers_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_nanite_assemblers_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mega_assembly_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mega_assembly_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_nanite_repair_system_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_nanite_repair_system_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_titans_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_titans_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_juggernaut_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_juggernaut_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_battleship_hull_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_battleship_hull_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_titan_hull_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_titan_hull_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_titan_hull_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_titan_hull_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mega_engineering_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mega_engineering_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_ring_world_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_ring_world_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mine_living_metal_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mine_living_metal_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_gargantuan_evolution_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_gargantuan_evolution_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_space_trading_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_space_trading_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_eco_simulation_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_eco_simulation_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_hydroponics_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_hydroponics_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_food_processing_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_food_processing_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_society_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_society_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_alien_life_studies_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_alien_life_studies_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_dense_jungle_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_dense_jungle_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_quicksand_basin_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_quicksand_basin_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_noxious_swamp_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_noxious_swamp_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_massive_glacier_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_massive_glacier_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_toxic_kelp_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_toxic_kelp_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_deep_sinkhole_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_deep_sinkhole_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_genome_mapping_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_genome_mapping_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_ground_defense_planning_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_ground_defense_planning_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_planetary_unification_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_planetary_unification_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_adaptive_bureaucracy_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_adaptive_bureaucracy_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_neural_implants_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_neural_implants_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_hyper_entertainment_forum_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_hyper_entertainment_forum_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_heritage_site_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_heritage_site_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_space_whale_weapon_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_space_whale_weapon_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_gene_crops_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_gene_crops_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_society_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_society_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_arcane_deciphering_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_arcane_deciphering_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_colonization_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_colonization_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_colonization_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_colonization_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mountain_range_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mountain_range_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_volcano_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_volcano_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_dangerous_wildlife_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_dangerous_wildlife_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_terrestrial_sculpting_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_terrestrial_sculpting_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_vitality_boosters_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_vitality_boosters_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_epigenetic_triggers_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_epigenetic_triggers_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_cloning_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_cloning_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_gene_banks_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_gene_banks_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_doctrine_fleet_size_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_doctrine_fleet_size_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_doctrine_fleet_size_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_doctrine_fleet_size_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_interstellar_fleet_traditions_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_interstellar_fleet_traditions_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_doctrine_navy_size_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_doctrine_navy_size_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_centralized_command_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_centralized_command_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_global_defense_grid_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_global_defense_grid_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_galactic_ambitions_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_galactic_ambitions_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_interstellar_campaigns_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_interstellar_campaigns_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_colonial_centralization_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_colonial_centralization_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_planetary_infrastructure_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_planetary_infrastructure_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_subdermal_stimulation_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_subdermal_stimulation_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_effective_bureaucracy_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_effective_bureaucracy_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_colonial_bureaucracy_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_colonial_bureaucracy_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_living_state_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_living_state_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_autonomous_agents_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_autonomous_agents_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_artificial_moral_codes_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_artificial_moral_codes_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_unity_of_purpose_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_unity_of_purpose_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_holographic_rituals_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_holographic_rituals_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_hive_cluster_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_hive_cluster_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_slave_colonies_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_slave_colonies_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_xeno_diplomacy_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_xeno_diplomacy_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_capital_productivity_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_capital_productivity_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_amoeba_strike_craft_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_amoeba_strike_craft_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_adaptive_combat_algorithms_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_adaptive_combat_algorithms_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_xeno_tourism_agency_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_xeno_tourism_agency_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_executive_retreat_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_executive_retreat_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_interstellar_economics_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_interstellar_economics_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_prescient_data_modeling_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_prescient_data_modeling_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_nano_vitality_crops_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_nano_vitality_crops_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_food_processing_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_food_processing_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_colonization_4_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_colonization_4_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_tomb_world_adaption_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_tomb_world_adaption_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_ecological_adaptation_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_ecological_adaptation_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_gene_tailoring_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_gene_tailoring_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_glandular_acclimation_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_glandular_acclimation_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_gene_expressions_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_gene_expressions_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_selected_lineages_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_selected_lineages_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_regenerative_hull_tissue_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_regenerative_hull_tissue_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_doctrine_fleet_size_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_doctrine_fleet_size_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_refit_standards_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_refit_standards_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_command_matrix_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_command_matrix_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_doctrine_navy_size_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_doctrine_navy_size_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_combat_training_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_combat_training_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_psionic_theory_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_psionic_theory_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_telepathy_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_telepathy_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_galactic_administration_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_galactic_administration_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_global_production_strategy_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_global_production_strategy_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_galactic_bureaucracy_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_galactic_bureaucracy_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_collective_self_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_collective_self_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_embodied_dynamism_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_embodied_dynamism_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_synthetic_thought_patterns_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_synthetic_thought_patterns_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_collective_production_methods_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_collective_production_methods_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_resource_processing_algorithms_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_resource_processing_algorithms_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_paradise_dome_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_paradise_dome_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_hypercomms_forum_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_hypercomms_forum_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_autocurating_vault_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_autocurating_vault_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_consecration_fields_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_consecration_fields_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_hive_confluence_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_hive_confluence_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_psionic_barrier_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_psionic_barrier_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_penal_colonies_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_penal_colonies_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_resort_colonies_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_resort_colonies_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_housing_agrarian_idyll_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_housing_agrarian_idyll_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_xeno_relations_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_xeno_relations_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_capital_productivity_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_capital_productivity_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mine_zro_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mine_zro_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_society_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_society_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_tracking_implants_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_tracking_implants_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_transcendent_faith_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_transcendent_faith_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_biomechanics_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_biomechanics_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_neuroregeneration_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_neuroregeneration_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_galactic_markets_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_galactic_markets_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_nutrient_replication_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_nutrient_replication_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_colonization_5_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_colonization_5_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_climate_restoration_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_climate_restoration_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_gene_seed_purification_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_gene_seed_purification_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_morphogenetic_field_mastery_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_morphogenetic_field_mastery_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_capacity_boosters_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_capacity_boosters_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_doctrine_fleet_size_4_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_doctrine_fleet_size_4_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_doctrine_fleet_size_5_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_doctrine_fleet_size_5_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_doctrine_navy_size_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_doctrine_navy_size_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_doctrine_navy_size_4_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_doctrine_navy_size_4_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_precognition_interface_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_precognition_interface_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_thought_enforcement_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_thought_enforcement_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_manifest_destiny_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_manifest_destiny_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_galactic_campaigns_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_galactic_campaigns_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_planetary_infrastructure_2_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_planetary_infrastructure_2_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_capital_productivity_3_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_capital_productivity_3_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_strategic_coordination_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_strategic_coordination_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_interstellar_assembly_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_interstellar_assembly_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mega_art_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mega_art_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_mega_shipyard_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_mega_shipyard_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_genetic_resequencing_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_genetic_resequencing_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_psi_jump_drive_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_psi_jump_drive_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_ascension_theory_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_ascension_theory_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_psionic_shield_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_psionic_shield_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_swarm_strike_craft_1_global_flag
 					}
 					remove_global_flag = ngm_technology_trade_tech_swarm_strike_craft_1_global_flag
 				}				
-            if = {
+        if = {
 					limit = {
 						has_global_flag = ngm_technology_trade_tech_scourge_missile_1_global_flag
 					}
