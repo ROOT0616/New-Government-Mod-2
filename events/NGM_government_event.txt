@@ -524,9 +524,128 @@ country_event = {
 	}
 }
 
-#############################
+##################################
 ######  オリンピックイベント #######
-#############################
+##################################
+# 10年ごとに起動
+event = {
+	id = ngm_government.90
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = resolution_ngm_olympic_form_passed_global_flag
+	}
+	immediate = {
+		every_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			country_event = {
+				id = ngm_government.91
+			}
+		}
+	}
+}
+
+# 参加人数確認
+country_event = {
+	id = ngm_government.91
+	title = ngm_government.91.name
+	desc = ngm_government.91.desc
+	is_triggered_only = yes
+	option = {
+		name = ngm_government.91.a
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = ngm_olympic_participation_1
+					}
+				}
+				set_global_flag = ngm_olympic_participation_1
+				country_event = {
+					id = ngm_government.92
+					days = 45
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = ngm_olympic_participation_2
+					}
+				}
+				set_global_flag = ngm_olympic_participation_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = ngm_olympic_participation_3
+					}
+				}
+				set_global_flag = ngm_olympic_participation_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = ngm_olympic_participation_4
+					}
+				}
+				set_global_flag = ngm_olympic_participation_4
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = ngm_government.91.b
+	}
+}
+
+# 参加人数集計
+country_event = {
+	id = ngm_government.92
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = ngm_olympic_participation_4
+			}
+			country_event = {
+				id = ngm_government.100
+			}
+			remove_global_flag = ngm_olympic_participation_1
+			remove_global_flag = ngm_olympic_participation_2
+			remove_global_flag = ngm_olympic_participation_3
+			remove_global_flag = ngm_olympic_participation_4
+		}
+		else = {
+			every_playable_country = {
+				limit = {
+					is_galactic_community_member = yes
+				}
+				remove_global_flag = ngm_olympic_participation_1
+				remove_global_flag = ngm_olympic_participation_2
+				remove_global_flag = ngm_olympic_participation_3
+				country_event = {
+					id = ngm_government.93
+				}
+			}
+		}
+	}
+}
+
+# オリンピック人数集まらない
+country_event = {
+	id = ngm_government.93
+	title = ngm_government.93.name
+	desc = ngm_government.93.desc
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
 # オリンピック開催地抽選開始
 country_event = {
 	id = ngm_government.100
@@ -968,10 +1087,6 @@ country_event = {
 				id = ngm_government.102
 				days = 360
 			}
-		}
-		country_event = {
-			id = ngm_government.106
-			days = 1800
 		}
 		begin_event_chain = {
 			event_chain = ngm_olympic_chain

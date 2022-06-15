@@ -130,9 +130,7 @@ resolution_ngm_olympic_form = {
 		custom_tooltip = resolution_ngm_olympic_form_effect_success
 		hidden_effect = {
 			# Kickoff the Forming the Market event chain
-			country_event = {
-				id = ngm_government.100
-			}
+			set_global_flag = resolution_ngm_olympic_form_passed_global_flag
 			set_global_flag = galactic_community_resolution_passed
 			set_timed_country_flag = {
 				flag = galactic_community_resolution_passed_general
