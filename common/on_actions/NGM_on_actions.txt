@@ -51,7 +51,6 @@ on_leader_spawned = {
 	}
 }
 
-
 # this = country
 on_monthly_pulse_country = {
 	events = {
@@ -156,8 +155,10 @@ on_five_year_pulse = {
 # No scope, like on_game_start
 on_decade_pulse = {
 	events = {
+		ngm_government.90
 	}
 }
+
 # No scope, like on_game_start
 on_mid_game_pulse = {
 	events = {
