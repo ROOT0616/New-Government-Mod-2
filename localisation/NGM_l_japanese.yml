@@ -2496,6 +2496,11 @@
  resolution_ngm_olympic_form_desc:0 "国際政治に縛られない事実上の銀河的交易は、 異種族同士が初めて出会った時点から存在した。 \n\n我々は銀河のリーダーとして、 皆が利益を得られるようにすべく、 §Yこの商業フォーラムを公認する§!べき時が来ている。 "
  resolution_ngm_olympic_form_effect_success:0 "$ngm_government.100.name$」イベントチェーンを開始する。"
 
+ resolution_category_ngm_olympic_end:0 "国際大会を終了する"
+ resolution_ngm_olympic_end:0 "国際大会の停止"
+ resolution_ngm_olympic_end_desc:0 ""
+ resolution_ngm_olympic_end_effect_success:0 "$ngm_government.100.name$」イベントチェーンを終了する。"
+
  NGM_CEPA_federation:0 "包括的経済連携協定"
  NGM_CEPA_federation_desc:0 "この連邦は、緩やかな経済的共同体の確立と経済的深化を目指している。"
 
@@ -2750,6 +2755,14 @@
  ngm_government.7.a:0 "誰かを支持しよう！"
  ngm_government.7.b:0 "政府は提督を支持する。"
  ngm_government.7.c:0 "政府は将軍を支持する。"
+
+ ngm_government.91.name:0 "§H開催賛成人数確認§!"
+ ngm_government.91.desc:0 "開催賛成かの意思を問う"
+ ngm_government.91.a:0 "賛成"
+ ngm_government.91.b:0 "反対"
+
+ ngm_government.93.name:0 "§H反対多数のばあい§!"
+ ngm_government.93.desc:0 "オリンピックイベントはなし"
 
  ngm_government.100.name:0 "§H国際大会の開催§!"
  ngm_government.100.desc:0 "宇宙の中で我々は孤独ではないということが判明したそのときより、 国家間外交に縛られない形で、 事国際的文化事業を行うべきだという声は見られた。 新しい国境が発見され、 古い国境が引かれ直されたとき、 銀河の指導者たちは今こそ§Y国際的文化活動に投資§!し、 皆が利益を享受すべきであるとの合意に至った。 \n\n今後数年のうちに、 各国政府機関や大会主催機関は国際的大会を開催することとなるだろう。 そのような国際大会が[Root.GetAdj]の勢力圏内で開催されたならば、 我々の利益に繋がることはまちがいない。 そのために、 我々は§Y惑星のひとつを推薦§!するべきだ。 "
