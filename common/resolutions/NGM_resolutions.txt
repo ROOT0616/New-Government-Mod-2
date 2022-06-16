@@ -154,17 +154,6 @@ resolution_ngm_olympic_form = {
 			}
 		}
 	}
-	potential = {
-		is_gestalt = no
-		is_homicidal = no
-		count_relation = {
-			limit = {
-				is_country_type = default
-				is_homicidal = no
-			}
-			count >= 3
-		}
-	}
 	allow = {
 		custom_tooltip = {
 			fail_text = "resolution_already_active"
@@ -248,6 +237,14 @@ resolution_ngm_olympic_end = {
 	}
 	potential = {
 		is_active_resolution = "resolution_ngm_olympic_form"
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"
+			NOT = {
+				is_active_resolution = "resolution_ngm_olympic_end"
+			}
+		}
 	}
 	ai_weight = {
 		weight = @resolution_weight_popular
