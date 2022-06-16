@@ -2738,6 +2738,44 @@ country_event = {
 				amount = 50
 			}
 		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
 	}
 	option = {
 		name = ngm_fleet_trade.3.a
@@ -2760,6 +2798,44 @@ country_event = {
 			add_trust = {
 				who = event_target:ngm_fleet_trade_0
 				amount = 50
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 	}
@@ -2786,6 +2862,44 @@ country_event = {
 				amount = 50
 			}
 		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
 	}
 	option = {
 		name = ngm_fleet_trade.3.a
@@ -2808,6 +2922,44 @@ country_event = {
 			add_trust = {
 				who = event_target:ngm_fleet_trade_0
 				amount = 50
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 	}
@@ -2834,6 +2986,44 @@ country_event = {
 				amount = 50
 			}
 		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
 	}
 	option = {
 		name = ngm_fleet_trade.3.a
@@ -2856,6 +3046,44 @@ country_event = {
 			add_trust = {
 				who = event_target:ngm_fleet_trade_0
 				amount = 50
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 	}
@@ -2882,6 +3110,44 @@ country_event = {
 				amount = 50
 			}
 		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
 	}
 	option = {
 		name = ngm_fleet_trade.3.a
@@ -2904,6 +3170,44 @@ country_event = {
 			add_trust = {
 				who = event_target:ngm_fleet_trade_0
 				amount = 50
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 	}
@@ -2930,6 +3234,44 @@ country_event = {
 				amount = 50
 			}
 		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
 	}
 	option = {
 		name = ngm_fleet_trade.3.a
@@ -2952,6 +3294,44 @@ country_event = {
 			add_trust = {
 				who = event_target:ngm_fleet_trade_0
 				amount = 50
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
 			}
 		}
 	}
@@ -3028,6 +3408,44 @@ country_event = {
 				}
 			}
 		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:ngm_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
 	}
 }
 
@@ -3036,7 +3454,7 @@ country_event = {
 	id = ngm_fleet_trade.4
 	title = ngm_fleet_trade.4.name
 	desc = ngm_fleet_trade.4.desc
-	picture = GFX_evt_fleet_neutral
+	picture = GFX_evt_fleet_good
 	show_sound = event_finding_loot
 	is_triggered_only = yes
 	option = {
@@ -3154,7 +3572,7 @@ country_event = {
 	id = ngm_fleet_trade.5
 	title = ngm_fleet_trade.5.name
 	desc = ngm_fleet_trade.5.desc
-	picture = GFX_evt_fleet_neutral
+	picture = GFX_evt_fleet_evil
 	show_sound = event_finding_loot
 	is_triggered_only = yes
 	option = {
