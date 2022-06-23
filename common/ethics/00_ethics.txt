@@ -196,6 +196,23 @@ ethic_authoritarian = {
 				observation_outpost_owner = { has_ethic = ethic_authoritarian }
 			}
 		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_authoritarian
+			}
+		}
 		modifier = {
 			factor = 2
 			NOR = {
@@ -475,6 +492,23 @@ ethic_egalitarian = {
 					has_mission = native_indoctrination
 				}
 				observation_outpost_owner = { has_ethic = ethic_egalitarian }
+			}
+		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_egalitarian
 			}
 		}
 		modifier = {
@@ -900,6 +934,23 @@ ethic_xenophobe = {
 				observation_outpost_owner = { has_ethic = ethic_xenophobe }
 			}
 		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_xenophobe
+			}
+		}
 	}
 
 	#from = planet
@@ -1255,6 +1306,23 @@ ethic_xenophile = {
 				observation_outpost_owner = { has_ethic = ethic_xenophile }
 			}
 		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_xenophile
+			}
+		}
 	}
 
 	# from = planet
@@ -1590,6 +1658,23 @@ ethic_militarist = {
 				observation_outpost_owner = { has_ethic = ethic_militarist }
 			}
 		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_militarist
+			}
+		}
 		modifier = {
 			factor = 2 #If the empire is losing planets, militarism should increase
 			any_relation = {
@@ -1908,6 +1993,23 @@ ethic_pacifist = {
 				observation_outpost_owner = { has_ethic = ethic_pacifist }
 			}
 		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_pacifist
+			}
+		}
 	}
 
 	# from = planet
@@ -2128,6 +2230,23 @@ ethic_spiritualist = {
 					has_mission = native_indoctrination
 				}
 				observation_outpost_owner = { has_ethic = ethic_spiritualist }
+			}
+		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_spiritualist
 			}
 		}
 		modifier = {
@@ -2416,6 +2535,23 @@ ethic_materialist = {
 					has_mission = native_indoctrination
 				}
 				observation_outpost_owner = { has_ethic = ethic_materialist }
+			}
+		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_materialist
 			}
 		}
 		modifier = {

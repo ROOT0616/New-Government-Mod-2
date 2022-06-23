@@ -201,6 +201,23 @@ ethic_socialism = {
 				observation_outpost_owner = { has_ethic = ethic_socialism }
 			}
 		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_socialism
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_socialism
+			}
+		}
 		modifier = {
 			factor = 2
 			NOR = {
@@ -481,6 +498,23 @@ ethic_capitalism = {
 				observation_outpost_owner = { has_ethic = ethic_capitalism }
 			}
 		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_capitalism
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_capitalism
+			}
+		}
 		modifier = {
 			factor = 2
 			NOR = {
@@ -746,6 +780,23 @@ ethic_interventionism = {
 					has_mission = native_indoctrination
 				}
 				observation_outpost_owner = { has_ethic = ethic_interventionism }
+			}
+		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_interventionism
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_interventionism
 			}
 		}
 		modifier = {
@@ -1017,6 +1068,23 @@ ethic_neutralism = {
 				observation_outpost_owner = { has_ethic = ethic_neutralism }
 			}
 		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_neutralism
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_neutralism
+			}
+		}
 		modifier = {
 			factor = 2
 			NOR = {
@@ -1284,6 +1352,23 @@ ethic_conservationism = {
 					has_mission = native_indoctrination
 				}
 				observation_outpost_owner = { has_ethic = ethic_conservationism }
+			}
+		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_conservationism
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_conservationism
 			}
 		}
 		modifier = {
@@ -1554,6 +1639,23 @@ ethic_developmentalism = {
 					has_mission = native_indoctrination
 				}
 				observation_outpost_owner = { has_ethic = ethic_developmentalism }
+			}
+		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_developmentalism
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_developmentalism
 			}
 		}
 		modifier = {
@@ -1840,6 +1942,23 @@ ethic_honorism = {
 				observation_outpost_owner = { has_ethic = ethic_honorism }
 			}
 		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_honorism
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_honorism
+			}
+		}
 		modifier = {
 			factor = 2
 			NOR = {
@@ -2123,6 +2242,23 @@ ethic_utilitarianism = {
 					has_mission = native_indoctrination
 				}
 				observation_outpost_owner = { has_ethic = ethic_utilitarianism }
+			}
+		}
+		# 志向の矯正
+		modifier = {
+			factor = 20
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+		}
+		modifier = {
+			factor = 10
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			owner.overlord = {
+				has_ethic = ethic_utilitarianism
 			}
 		}
 		modifier = {

@@ -1206,3 +1206,8 @@ ap_ngm_dipromatic_think_tank_modifier = {
 ap_ngm_layer_countries_modifier = {
 	monthly_loyalty = 2
 }
+
+# 志向の矯正
+ngm_ethics_force_loyalty_1 = {
+	monthly_loyalty = -1.5
+}

@@ -1940,6 +1940,8 @@
 
  ap_ngm_layer_countries_modifier:0 "重層的国家"
 
+ ngm_ethics_force_loyalty_1:0 "志向の矯正"
+
  ngm_olympic_nominee_desc_intro:0 "この惑星は、 将来の国際大会の基盤として候補になっている。 "
  ngm_olympic_nominee_level_1:0 "国際大会候補地の競争力格付け：§R脆弱§!"
  ngm_olympic_nominee_level_1_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§R脆弱§!。 "
@@ -4651,6 +4653,13 @@
  tr_ngm_hereditary_nation:0 "世襲国家"
  tr_ngm_hereditary_nation_desc:0 "全惑星の§Y安定度§!を§G5§!増加させる。"
  tr_ngm_hereditary_nation_delayed:0 "家に属するのは国も例外ではない"
+
+##########################
+#####    貿易取引    ######
+##########################
+
+ trade_action_ngm_ethics_force:0 "志向矯正"
+ trade_action_ngm_ethics_force_desc:0 "§L卑しい属国が高貴なる宗主国の志向にそうのは当然である。 それは博愛と啓蒙への反応なのだ！§!"
 
 ########################################
 #####    Required technologies    ######

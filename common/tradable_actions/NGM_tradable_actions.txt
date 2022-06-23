@@ -1,0 +1,88 @@
+# これらのアクションは貿易取引で交換され、帝国にモディファイアやその他の種類の効果を与えることができます。
+
+# 例を挙げます。
+
+# trade_action_my_example_action = {。
+# 	# これが'yes'に設定された場合、アクションは発射され、その後トレードディールから削除される。
+# 	# もし'no'であれば、貿易取引は少なくとも10年続く条約として扱われる。
+# 	fire_and_forget = no
+
+# 	# そのアクションが貿易取引ビューのリストに表示されるかどうかを決定する。
+# 	# SCOPE: アクションを "与える "国
+# 	# FROM: アクションを "受け取る "国
+# 	potential = {
+# 		has_overlord = from
+# 		is_specialist_subject_type = { TYPE = bulwark }.
+# 	}
+
+# 	# このトリガーが'no'を返した場合、その貿易取引はキャンセルされます。日次でチェックされます。fire_and_forgetが'no'の場合のみ関連します。
+# 	# SCOPE: アクションを "与える "国
+# 	# FROM: アクションを "受信 "する国
+# 	active = {
+# 		ハズ_オーバーロード = から
+# 		is_specialist_subject_type = { TYPE = bulwark }.
+# 	}
+
+# 	# 取引が成立した際に発生する効果
+# 	# SCOPE アクションを「与える」国
+# 	# FROM アクションを "受け取る "国
+# 	on_traded_effect = { (取引された時の効果)
+# 		from = {
+# 			set_galactic_custodian = yes
+# 		}
+# 	}
+
+# 	# 取引終了時に発生するエフェクトです。fire_and_forgetが'no'の場合のみ関係する。
+# 	# SCOPE アクションを "与える "国
+# 	# FROM FROM: そのアクションを "受け取る "国. 貿易取引はどちらかの国が亡くなるとキャンセルされるため、有効であることは保証されない。
+# 	on_deal_ended_sender_effect = {。
+# 	}
+
+# 	# 取引が終了した時に発動するエフェクト。fire_and_forgetが'no'の場合のみ関係する。
+# 	# SCOPE アクションを "受信 "する国
+# 	# FROM FROM: そのアクションを "与える "国. 貿易取引はどちらかの国が死ぬとキャンセルされるため、有効であることは保証されない。
+# 	on_deal_ended_recipient_effect = {。
+# 		set_galactic_custodian = no
+# 	}
+
+# 	# AIが貿易取引での行動をどの程度評価するかを決めるために使用される。
+# 	ai_weight = {
+# 		重み = 1
+
+# 		モディファイア = {
+# 			重み = 2
+# 			from = {
+# 				銀河系管理人 = no
+# 			}
+# 		}
+# 	}
+# }
+
+# 志向の矯正
+trade_action_ngm_ethics_force = {
+	fire_and_forget = no
+	potential = {
+		has_overlord_dlc = yes
+		has_overlord = FROM
+		NOT = {
+			is_action_active = {
+				action = trade_action_ngm_ethics_force
+				with_country = FROM
+			}
+		}
+	}
+	active = {
+		has_overlord = FROM
+	}
+	on_traded_effect = {
+		add_modifier = {
+			modifier = ngm_ethics_force_loyalty_1
+		}
+	}
+	on_deal_ended_sender_effect = {
+		remove_modifier = ngm_ethics_force_loyalty_1
+	}
+	ai_weight = {
+		weight = 2
+	}
+}
