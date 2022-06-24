@@ -75,12 +75,232 @@ trade_action_ngm_ethics_force = {
 		has_overlord = FROM
 	}
 	on_traded_effect = {
+		custom_tooltip = trade_action_ngm_ethics_force_effect
 		add_modifier = {
 			modifier = ngm_ethics_force_loyalty_1
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_authoritarian = yes
+				}
+			}
+			shift_ethic = ethic_authoritarian
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_egalitarian = yes
+				}
+			}
+			shift_ethic = ethic_egalitarian
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_xenophobe = yes
+				}
+			}
+			shift_ethic = ethic_xenophobe
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_xenophile = yes
+				}
+			}
+			shift_ethic = ethic_xenophile
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_militarist = yes
+				}
+			}
+			shift_ethic = ethic_militarist
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_pacifist = yes
+				}
+			}
+			shift_ethic = ethic_pacifist
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_materialist = yes
+				}
+			}
+			shift_ethic = ethic_materialist
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_spiritualist = yes
+				}
+			}
+			shift_ethic = ethic_spiritualist
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_socialism = yes
+				}
+			}
+			shift_ethic = ethic_socialism
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_capitalism = yes
+				}
+			}
+			shift_ethic = ethic_capitalism
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_interventionism = yes
+				}
+			}
+			shift_ethic = ethic_interventionism
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_neutralism = yes
+				}
+			}
+			shift_ethic = ethic_neutralism
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_developmentalism = yes
+				}
+			}
+			shift_ethic = ethic_developmentalism
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_conservationism = yes
+				}
+			}
+			shift_ethic = ethic_conservationism
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_utilitarianism = yes
+				}
+			}
+			shift_ethic = ethic_utilitarianism
+		}
+		FROM = {
+			add_trust = {
+				who = ROOT
+				amount = -100
+			}
+			add_modifier = {
+				modifier = ngm_ethics_force_loyalty_2
+			}
 		}
 	}
 	on_deal_ended_sender_effect = {
 		remove_modifier = ngm_ethics_force_loyalty_1
+		if = {
+			limit = {
+				is_authoritarian = yes
+			}
+			shift_ethic = ethic_authoritarian
+		}
+		if = {
+			limit = {
+				is_egalitarian = yes
+			}
+			shift_ethic = ethic_egalitarian
+		}
+		if = {
+			limit = {
+				is_xenophobe = yes
+			}
+			shift_ethic = ethic_xenophobe
+		}
+		if = {
+			limit = {
+				is_xenophile = yes
+			}
+			shift_ethic = ethic_xenophile
+		}
+		if = {
+			limit = {
+				is_militarist = yes
+			}
+			shift_ethic = ethic_militarist
+		}
+		if = {
+			limit = {
+				is_pacifist = yes
+			}
+			shift_ethic = ethic_pacifist
+		}
+		if = {
+			limit = {
+				is_materialist = yes
+			}
+			shift_ethic = ethic_materialist
+		}
+		if = {
+			limit = {
+				is_spiritualist = yes
+			}
+			shift_ethic = ethic_spiritualist
+		}
+		if = {
+			limit = {
+				is_socialism = yes
+			}
+			shift_ethic = ethic_socialism
+		}
+		if = {
+			limit = {
+				is_capitalism = yes
+			}
+			shift_ethic = ethic_capitalism
+		}
+		if = {
+			limit = {
+				is_interventionism = yes
+			}
+			shift_ethic = ethic_interventionism
+		}
+		if = {
+			limit = {
+				is_neutralism = yes
+			}
+			shift_ethic = ethic_neutralism
+		}
+		if = {
+			limit = {
+				is_developmentalism = yes
+			}
+			shift_ethic = ethic_developmentalism
+		}
+		if = {
+			limit = {
+				is_conservationism = yes
+			}
+			shift_ethic = ethic_conservationism
+		}
+		if = {
+			limit = {
+				is_utilitarianism = yes
+			}
+			shift_ethic = ethic_utilitarianism
+		}
 	}
 	ai_weight = {
 		weight = 2

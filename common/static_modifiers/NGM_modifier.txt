@@ -1209,5 +1209,10 @@ ap_ngm_layer_countries_modifier = {
 
 # 志向の矯正
 ngm_ethics_force_loyalty_1 = {
-	monthly_loyalty = -1.5
+	monthly_loyalty = -3.0
+}
+
+# 志向の矯正
+ngm_ethics_force_loyalty_2 = {
+	country_trust_growth = -0.5
 }

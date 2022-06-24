@@ -203,7 +203,22 @@ ethic_socialism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 20
+			factor = 5
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			OR = {
+				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_capitalism
+			}
+			owner.overlord = {
+				OR = {
+					has_ethic = ethic_fanatic_socialism
+					has_ethic = ethic_socialism
+				}
+			}
+		}
+		modifier = {
+			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {
@@ -211,7 +226,7 @@ ethic_socialism = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {
@@ -500,7 +515,22 @@ ethic_capitalism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 20
+			factor = 5
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			OR = {
+				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_socialism
+			}
+			owner.overlord = {
+				OR = {
+					has_ethic = ethic_fanatic_capitalism
+					has_ethic = ethic_capitalism
+				}
+			}
+		}
+		modifier = {
+			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {
@@ -508,7 +538,7 @@ ethic_capitalism = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {
@@ -784,7 +814,22 @@ ethic_interventionism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 20
+			factor = 5
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			OR = {
+				has_ethic = ethic_fanatic_neutralism
+				has_ethic = ethic_neutralism
+			}
+			owner.overlord = {
+				OR = {
+					has_ethic = ethic_fanatic_interventionism
+					has_ethic = ethic_interventionism
+				}
+			}
+		}
+		modifier = {
+			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {
@@ -792,7 +837,7 @@ ethic_interventionism = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {
@@ -1070,7 +1115,22 @@ ethic_neutralism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 20
+			factor = 5
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			OR = {
+				has_ethic = ethic_fanatic_interventionism
+				has_ethic = ethic_interventionism
+			}
+			owner.overlord = {
+				OR = {
+					has_ethic = ethic_fanatic_neutralism
+					has_ethic = ethic_neutralism
+				}
+			}
+		}
+		modifier = {
+			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {
@@ -1078,7 +1138,7 @@ ethic_neutralism = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {
@@ -1356,7 +1416,22 @@ ethic_conservationism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 20
+			factor = 5
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			OR = {
+				has_ethic = ethic_fanatic_developmentalism
+				has_ethic = ethic_developmentalism
+			}
+			owner.overlord = {
+				OR = {
+					has_ethic = ethic_fanatic_conservationism
+					has_ethic = ethic_conservationism
+				}
+			}
+		}
+		modifier = {
+			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {
@@ -1364,7 +1439,7 @@ ethic_conservationism = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {
@@ -1643,7 +1718,22 @@ ethic_developmentalism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 20
+			factor = 5
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			OR = {
+				has_ethic = ethic_fanatic_conservationism
+				has_ethic = ethic_conservationism
+			}
+			owner.overlord = {
+				OR = {
+					has_ethic = ethic_fanatic_developmentalism
+					has_ethic = ethic_developmentalism
+				}
+			}
+		}
+		modifier = {
+			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {
@@ -1651,7 +1741,7 @@ ethic_developmentalism = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {
@@ -1944,7 +2034,22 @@ ethic_honorism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 20
+			factor = 5
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			OR = {
+				has_ethic = ethic_fanatic_utilitarianism
+				has_ethic = ethic_utilitarianism
+			}
+			owner.overlord = {
+				OR = {
+					has_ethic = ethic_fanatic_honorism
+					has_ethic = ethic_honorism
+				}
+			}
+		}
+		modifier = {
+			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {
@@ -1952,7 +2057,7 @@ ethic_honorism = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {
@@ -2046,7 +2151,7 @@ ethic_honorism = {
 	}
 }
 
-# 	〇実利主義  奴隷の使用許可、25Popごとにインフルエンサー+1 奴隷市場-20%    狂：20Popごとにインフルエンサー+1 奴隷市場-50% アノマリー発見率-10%
+# 〇実利主義  奴隷の使用許可、25Popごとにインフルエンサー+1 奴隷市場-20%    狂：20Popごとにインフルエンサー+1 奴隷市場-50% アノマリー発見率-10%
 # 階級制経済、学術特権を使用可能、社会福祉は選択できない
 ethic_fanatic_utilitarianism = {
 	cost = 2
@@ -2246,7 +2351,22 @@ ethic_utilitarianism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 20
+			factor = 5
+			is_subject = yes
+			has_modifier = ngm_ethics_force_loyalty_1
+			OR = {
+				has_ethic = ethic_fanatic_honorism
+				has_ethic = ethic_honorism
+			}
+			owner.overlord = {
+				OR = {
+					has_ethic = ethic_fanatic_utilitarianism
+					has_ethic = ethic_utilitarianism
+				}
+			}
+		}
+		modifier = {
+			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {
@@ -2254,7 +2374,7 @@ ethic_utilitarianism = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			owner.overlord = {

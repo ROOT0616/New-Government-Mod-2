@@ -1,0 +1,63 @@
+# 〇社会主義
+is_socialism = {
+	OR = {
+		has_ethic = ethic_socialism
+		has_ethic = ethic_fanatic_socialism
+	}
+}
+
+# 〇資本主義
+is_capitalism = {
+	OR = {
+		has_ethic = ethic_capitalism
+		has_ethic = ethic_fanatic_capitalism
+	}
+}
+
+# 〇介入主義
+is_interventionism = {
+	OR = {
+		has_ethic = ethic_interventionism
+		has_ethic = ethic_fanatic_interventionism
+	}
+}
+
+# 〇中立主義
+is_neutralism = {
+	OR = {
+		has_ethic = ethic_neutralism
+		has_ethic = ethic_fanatic_neutralism
+	}
+}
+
+# 〇保全主義
+is_conservationism = {
+	OR = {
+		has_ethic = ethic_conservationism
+		has_ethic = ethic_fanatic_conservationism
+	}
+}
+
+# 〇開発主義
+is_developmentalism = {
+	OR = {
+		has_ethic = ethic_developmentalism
+		has_ethic = ethic_fanatic_developmentalism
+	}
+}
+
+# 〇栄望主義
+is_honorism = {
+	OR = {
+		has_ethic = ethic_honorism
+		has_ethic = ethic_fanatic_honorism
+	}
+}
+
+# 〇実利主義
+is_utilitarianism = {
+	OR = {
+		has_ethic = ethic_utilitarianism
+		has_ethic = ethic_fanatic_utilitarianism
+	}
+}
