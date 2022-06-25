@@ -198,7 +198,7 @@ ethic_authoritarian = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
@@ -511,7 +511,7 @@ ethic_egalitarian = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
@@ -966,7 +966,7 @@ ethic_xenophobe = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
@@ -1353,7 +1353,7 @@ ethic_xenophile = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
@@ -1720,7 +1720,7 @@ ethic_militarist = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
@@ -2070,7 +2070,7 @@ ethic_pacifist = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
@@ -2324,7 +2324,7 @@ ethic_spiritualist = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
@@ -2644,7 +2644,7 @@ ethic_materialist = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
