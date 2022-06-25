@@ -45,23 +45,18 @@ ethic_socialism = {
 	cost = 1
 	category = "ngm_soc_or_cap"
 	category_value = 1
-
 	fanatic_variant = ethic_fanatic_socialism
-
 	country_modifier = {
 		planet_jobs_worker_produces_mult = 0.025
 	}
-
 	tags = {
 		ETHIC_ALLOWS_UTOPIA
 		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
 		ETHIC_DISALLOWS_SLAVERY
 	}
-
 	random_weight = {
 		base = 100
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_SOCIALISM_POS
 		trigger = {
@@ -71,7 +66,6 @@ ethic_socialism = {
 			}
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
@@ -82,7 +76,6 @@ ethic_socialism = {
 			has_faction = NGM_collectivism
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
@@ -90,35 +83,8 @@ ethic_socialism = {
 			ruler = { leader_of_faction = NGM_collectivism }
 		}
 	}
-
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_SLAVERY_POS
-		trigger = {
-			any_enslaved_species = {
-				is_same_species = root
-				is_robotic = no
-			}
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_XENO_SLAVES_POS
-		trigger = {
-			any_enslaved_species = {
-				not = { is_same_species = root }
-				is_robotic = no
-			}
-			NOT = {
-				any_enslaved_species = {
-					is_same_species = root
-					is_robotic = no
-				}
-			}
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_CONSUMER_GOODS_NEG
+		desc = POP_ATTRACTION_CONSUMER_GOODS_POS
 		trigger = {
 			any_owned_planet = {
 				any_owned_pop = {
@@ -132,27 +98,13 @@ ethic_socialism = {
 		}
 	}
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_AUTOCRATIC_GOV_POS
+		desc = POP_ATTRACTION_ENSLAVED_POS
 		trigger = {
-			has_election_type = none
-		}
-	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DEMOCRATIC_GOV_NEG
-		trigger = {
-			has_election_type = democratic
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DECADENT_POS
-		trigger = {
-			any_owned_species = {
-				has_trait = "trait_decadent"
+			any_enslaved_species = {
+				is_robotic = no
 			}
 		}
 	}
-
 	country_attraction = {
 		base = 1
 		modifier = {
@@ -203,7 +155,7 @@ ethic_socialism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
@@ -247,13 +199,6 @@ ethic_socialism = {
 			ruler = { leader_of_faction = NGM_collectivism }
 		}
 		modifier = {
-			factor = 1.5
-			has_federation = yes
-			federation = {
-				has_federation_type = hegemony_federation
-			}
-		}
-		modifier = {
 			factor = 2
 			has_ethic = ethic_socialism
 		}
@@ -261,61 +206,59 @@ ethic_socialism = {
 			factor = 3
 			has_ethic = ethic_fanatic_socialism
 		}
+		# 社会主義の帝国と外交
 		modifier = {
-			factor = 1.25
-			has_election_type = none
+			factor = 1.5
+			any_relation = {
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+					has_commercial_pact = root
+				}
+				OR = {
+					has_ethic = ethic_socialism
+					has_ethic = ethic_fanatic_socialism
+				}
+			}
 		}
 		modifier = {
-			factor = 0.75
-			has_election_type = democratic
+			factor = 2.0
+			any_relation = {
+				is_subject = no
+				has_migration_access = root
+				OR = {
+					has_ethic = ethic_socialism
+					has_ethic = ethic_fanatic_socialism
+				}
+			}
+		}
+		# 企業国家
+		modifier = {
+			factor = 0.25
+			has_authority = auth_corporate
 		}
 	}
-
 	# from = planet
 	pop_attraction = {
 		base = 1
-
 		modifier = {
 			factor = 0
 			has_trait = trait_hive_mind
 		}
+		# 高い生活水準
 		modifier = {
-			factor = 1.25
-			has_trait = "trait_decadent"
-		}
-		modifier = {
-			factor = 1.5
-			is_enslaved = no
-			from = {
-				any_enslaved_species = {
-					is_same_species = root
-					is_robotic = no
-				}
-			}
-		}
-		modifier = {
-			factor = 1.25
-			is_enslaved = no
-			from = {
-				any_enslaved_species = {
-					NOT = { is_same_species = root }
-					is_robotic = no
-				}
-				NOT = {
-					any_enslaved_species = {
-						is_same_species = root
-						is_robotic = no
-					}
-				}
-			}
-		}
-		modifier = {
-			factor = 0.75
+			factor = 1.50
 			OR = {
 				has_living_standard = { type = living_standard_utopian }
 				has_living_standard = { type = living_standard_good }
 				has_living_standard = { type = living_standard_shared_burden }
 			}
+		}
+		# 奴隷化されたPOP
+		modifier = {
+			factor = 2.50
+			is_enslaved = yes
+			is_robot_pop = no
 		}
 	}
 }
@@ -357,23 +300,18 @@ ethic_capitalism = {
 	cost = 1
 	category = "ngm_soc_or_cap"
 	category_value = 3
-
 	fanatic_variant = ethic_fanatic_capitalism
-
 	country_modifier = {
 		pop_cat_ruler_happiness = 0.05
 		trade_value_mult = 0.1
 	}
-
 	tags = {
 		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
 	}
-
 	random_weight = {
 		base = 100
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_CAPITALISM_POS
 		trigger = {
@@ -383,7 +321,6 @@ ethic_capitalism = {
 			}
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
@@ -394,7 +331,6 @@ ethic_capitalism = {
 			has_faction = NGM_mammonism
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
@@ -402,69 +338,6 @@ ethic_capitalism = {
 			ruler = { leader_of_faction = NGM_mammonism }
 		}
 	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_SLAVERY_POS
-		trigger = {
-			any_enslaved_species = {
-				is_same_species = root
-				is_robotic = no
-			}
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_XENO_SLAVES_POS
-		trigger = {
-			any_enslaved_species = {
-				not = { is_same_species = root }
-				is_robotic = no
-			}
-			NOT = {
-				any_enslaved_species = {
-					is_same_species = root
-					is_robotic = no
-				}
-			}
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_CONSUMER_GOODS_NEG
-		trigger = {
-			any_owned_planet = {
-				any_owned_pop = {
-					OR = {
-						has_living_standard = { type = living_standard_utopian }
-						has_living_standard = { type = living_standard_good }
-						has_living_standard = { type = living_standard_shared_burden }
-					}
-				}
-			}
-		}
-	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_AUTOCRATIC_GOV_POS
-		trigger = {
-			has_election_type = none
-		}
-	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DEMOCRATIC_GOV_NEG
-		trigger = {
-			has_election_type = democratic
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DECADENT_POS
-		trigger = {
-			any_owned_species = {
-				has_trait = "trait_decadent"
-			}
-		}
-	}
-
 	country_attraction = {
 		base = 1
 		modifier = {
@@ -515,7 +388,7 @@ ethic_capitalism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
@@ -559,13 +432,6 @@ ethic_capitalism = {
 			ruler = { leader_of_faction = NGM_mammonism }
 		}
 		modifier = {
-			factor = 1.5
-			has_federation = yes
-			federation = {
-				has_federation_type = hegemony_federation
-			}
-		}
-		modifier = {
 			factor = 2
 			has_ethic = ethic_capitalism
 		}
@@ -573,38 +439,55 @@ ethic_capitalism = {
 			factor = 3
 			has_ethic = ethic_fanatic_capitalism
 		}
+		# 通商協定
 		modifier = {
-			factor = 1.25
-			has_election_type = none
+			factor = 1.5
+			any_relation = {
+				NOT = { is_same_species = root }
+				is_subject = no
+				has_commercial_pact = root
+			}
+		}
+		# 資本主義の帝国と外交
+		modifier = {
+			factor = 1.5
+			any_relation = {
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+					has_commercial_pact = root
+				}
+				OR = {
+					has_ethic = ethic_capitalism
+					has_ethic = ethic_fanatic_capitalism
+				}
+			}
 		}
 		modifier = {
-			factor = 0.75
-			has_election_type = democratic
+			factor = 2.0
+			any_relation = {
+				is_subject = no
+				has_migration_access = root
+				OR = {
+					has_ethic = ethic_capitalism
+					has_ethic = ethic_fanatic_capitalism
+				}
+			}
+		}
+		# 企業国家
+		modifier = {
+			factor = 3.00
+			has_authority = auth_corporate
 		}
 	}
-
 	# from = planet
 	pop_attraction = {
 		base = 1
-
 		modifier = {
 			factor = 0
 			has_trait = trait_hive_mind
 		}
-		modifier = {
-			factor = 1.25
-			has_trait = "trait_decadent"
-		}
-		modifier = {
-			factor = 1.5
-			is_enslaved = no
-			from = {
-				any_enslaved_species = {
-					is_same_species = root
-					is_robotic = no
-				}
-			}
-		}
+		# 奴隷化されたPOP
 		modifier = {
 			factor = 1.25
 			is_enslaved = no
@@ -621,6 +504,7 @@ ethic_capitalism = {
 				}
 			}
 		}
+		# 高い生活水準
 		modifier = {
 			factor = 0.75
 			OR = {
@@ -654,25 +538,19 @@ ethic_fanatic_interventionism = {
 		base = 150
 	}
 }
-
 ethic_interventionism = {
 	cost = 1
 	category = "ngm_int_or_neu"
 	category_value = 1
-
 	fanatic_variant = ethic_fanatic_interventionism
-
 	country_modifier = {
 		intel_decryption_add = 10
 	}
-
 	tags = {
 	}
-
 	random_weight = {
 		base = 100
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_INTERVENTIONISM_POS
 		trigger = {
@@ -682,7 +560,6 @@ ethic_interventionism = {
 			}
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
@@ -693,7 +570,6 @@ ethic_interventionism = {
 			has_faction = NGM_hawks
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
@@ -701,69 +577,72 @@ ethic_interventionism = {
 			ruler = { leader_of_faction = NGM_hawks }
 		}
 	}
-
+	# 内向きの成熟の国是
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_SLAVERY_POS
+		desc = POP_ATTRACTION_INWARDS_PERFECTION_NEG
 		trigger = {
-			any_enslaved_species = {
-				is_same_species = root
-				is_robotic = no
+			has_valid_civic = civic_inwards_perfection
+		}
+	}
+	# 狂信的浄化の国是
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_FANATIC_PURIFIERS_NEG
+		trigger = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+	}
+	# 異種族と外交
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_XENO_DIPLOMACY_POS
+		trigger = {
+			any_relation = {
+				NOT = { is_same_species = root }
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+					has_commercial_pact = root
+				}
 			}
 		}
 	}
-
+	# 同胞が異種族の奴隷にされている
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_XENO_SLAVES_POS
+		desc = POP_ATTRACTION_ENSLAVEMENT_OF_SPECIES_NEG
 		trigger = {
-			any_enslaved_species = {
-				not = { is_same_species = root }
-				is_robotic = no
-			}
-			NOT = {
+			any_relation = {
+				NOT = { is_same_species = root }
 				any_enslaved_species = {
-					is_same_species = root
 					is_robotic = no
+					is_same_species = root
 				}
 			}
 		}
 	}
-
+	# 同胞が異種族に浄化された
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_CONSUMER_GOODS_NEG
+		desc = POP_ATTRACTION_PURGING_OF_SPECIES_NEG
 		trigger = {
-			any_owned_planet = {
-				any_owned_pop = {
-					OR = {
-						has_living_standard = { type = living_standard_utopian }
-						has_living_standard = { type = living_standard_good }
-						has_living_standard = { type = living_standard_shared_burden }
-					}
+			any_relation = {
+				has_opinion_modifier = {
+					who = root
+					modifier = opinion_genocidal_our_species
 				}
 			}
 		}
 	}
+	# 敵国と隣接している
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_AUTOCRATIC_GOV_POS
+		desc = POP_ATTRACTION_NEIGHBOR_RIVALS_POS
 		trigger = {
-			has_election_type = none
-		}
-	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DEMOCRATIC_GOV_NEG
-		trigger = {
-			has_election_type = democratic
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DECADENT_POS
-		trigger = {
-			any_owned_species = {
-				has_trait = "trait_decadent"
+			any_neighbor_country = {
+				OR = {
+					is_hostile_to = from
+					is_domineering_to = from
+					is_rival = from
+				}
 			}
 		}
 	}
-
 	country_attraction = {
 		base = 1
 		modifier = {
@@ -814,7 +693,7 @@ ethic_interventionism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
@@ -858,13 +737,6 @@ ethic_interventionism = {
 			ruler = { leader_of_faction = NGM_hawks }
 		}
 		modifier = {
-			factor = 1.5
-			has_federation = yes
-			federation = {
-				has_federation_type = hegemony_federation
-			}
-		}
-		modifier = {
 			factor = 2
 			has_ethic = ethic_interventionism
 		}
@@ -872,60 +744,77 @@ ethic_interventionism = {
 			factor = 3
 			has_ethic = ethic_fanatic_interventionism
 		}
+		# 内向きの成熟の国是
 		modifier = {
-			factor = 1.25
-			has_election_type = none
+			factor = 0.5
+			has_valid_civic = civic_inwards_perfection
 		}
+		# 狂信的浄化の国是
 		modifier = {
-			factor = 0.75
-			has_election_type = democratic
+			factor = 0.33
+			has_valid_civic = civic_fanatic_purifiers
+		}
+		# 異種族と外交
+		modifier = {
+			factor = 1.33
+			any_relation = {
+				NOT = { is_same_species = root }
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+					has_commercial_pact = root
+				}
+			}
+		}
+		# 同胞が異種族に浄化された
+		modifier = {
+			factor = 0.25
+			is_same_species = root
+			any_relation = {
+				has_opinion_modifier = {
+					who = root
+					modifier = opinion_genocidal_our_species
+				}
+			}
+		}
+		# 同胞が異種族の奴隷にされている
+		modifier = {
+			factor = 0.5
+			is_same_species = root
+			any_relation = {
+				NOT = { is_same_species = root }
+				any_enslaved_species = {
+					is_robotic = no
+					is_same_species = root
+				}
+			}
 		}
 	}
-
 	# from = planet
 	pop_attraction = {
 		base = 1
-
 		modifier = {
 			factor = 0
 			has_trait = trait_hive_mind
 		}
-		modifier = {
-			factor = 1.25
-			has_trait = "trait_decadent"
-		}
+		# 敵国と隣接している
 		modifier = {
 			factor = 1.5
-			is_enslaved = no
-			from = {
-				any_enslaved_species = {
-					is_same_species = root
-					is_robotic = no
-				}
+			OR = {
+				has_citizenship_rights = yes
+				can_be_military_leader = yes
 			}
-		}
-		modifier = {
-			factor = 1.25
-			is_enslaved = no
 			from = {
-				any_enslaved_species = {
-					NOT = { is_same_species = root }
-					is_robotic = no
-				}
-				NOT = {
-					any_enslaved_species = {
-						is_same_species = root
-						is_robotic = no
+				owner = {
+					any_neighbor_country = {
+						from = { is_neighbor_of = prev }
+						OR = {
+							is_hostile_to = from.owner
+							is_domineering_to = from.owner
+							is_rival = from.owner
+						}
 					}
 				}
-			}
-		}
-		modifier = {
-			factor = 0.75
-			OR = {
-				has_living_standard = { type = living_standard_utopian }
-				has_living_standard = { type = living_standard_good }
-				has_living_standard = { type = living_standard_shared_burden }
 			}
 		}
 	}
@@ -960,20 +849,15 @@ ethic_neutralism = {
 	cost = 1
 	category = "ngm_int_or_neu"
 	category_value = 3
-
 	fanatic_variant = ethic_fanatic_neutralism
-
 	country_modifier = {
 		intel_encryption_add = 10
 	}
-
 	tags = {
 	}
-
 	random_weight = {
 		base = 100
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_NEUTRALISM_POS
 		trigger = {
@@ -983,7 +867,6 @@ ethic_neutralism = {
 			}
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
@@ -994,7 +877,6 @@ ethic_neutralism = {
 			has_faction = NGM_doves
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
@@ -1002,69 +884,36 @@ ethic_neutralism = {
 			ruler = { leader_of_faction = NGM_doves }
 		}
 	}
-
+	# 内向きの成熟の国是
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_SLAVERY_POS
+		desc = POP_ATTRACTION_INWARDS_PERFECTION_POS
 		trigger = {
-			any_enslaved_species = {
-				is_same_species = root
-				is_robotic = no
+			has_valid_civic = civic_inwards_perfection
+		}
+	}
+	# 長期間の平和
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_EMPIRE_PEACEFUL_POS
+		trigger = {
+			years_of_peace = {
+				value > 20
+				delay = 50
 			}
 		}
 	}
-
+	# 敵国と隣接している
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_XENO_SLAVES_POS
+		desc = POP_ATTRACTION_NEIGHBOR_RIVALS_NEG
 		trigger = {
-			any_enslaved_species = {
-				not = { is_same_species = root }
-				is_robotic = no
-			}
-			NOT = {
-				any_enslaved_species = {
-					is_same_species = root
-					is_robotic = no
+			any_neighbor_country = {
+				OR = {
+					is_hostile_to = from
+					is_domineering_to = from
+					is_rival = from
 				}
 			}
 		}
 	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_CONSUMER_GOODS_NEG
-		trigger = {
-			any_owned_planet = {
-				any_owned_pop = {
-					OR = {
-						has_living_standard = { type = living_standard_utopian }
-						has_living_standard = { type = living_standard_good }
-						has_living_standard = { type = living_standard_shared_burden }
-					}
-				}
-			}
-		}
-	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_AUTOCRATIC_GOV_POS
-		trigger = {
-			has_election_type = none
-		}
-	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DEMOCRATIC_GOV_NEG
-		trigger = {
-			has_election_type = democratic
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DECADENT_POS
-		trigger = {
-			any_owned_species = {
-				has_trait = "trait_decadent"
-			}
-		}
-	}
-
 	country_attraction = {
 		base = 1
 		modifier = {
@@ -1115,7 +964,7 @@ ethic_neutralism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
@@ -1159,13 +1008,6 @@ ethic_neutralism = {
 			ruler = { leader_of_faction = NGM_doves }
 		}
 		modifier = {
-			factor = 1.5
-			has_federation = yes
-			federation = {
-				has_federation_type = hegemony_federation
-			}
-		}
-		modifier = {
 			factor = 2
 			has_ethic = ethic_neutralism
 		}
@@ -1173,60 +1015,78 @@ ethic_neutralism = {
 			factor = 3
 			has_ethic = ethic_fanatic_neutralism
 		}
+		# 内向きの成熟の国是
 		modifier = {
-			factor = 1.25
-			has_election_type = none
+			factor = 1.5
+			has_valid_civic = civic_inwards_perfection
+		}
+		# 長期間の平和
+		modifier = {
+			factor = 1.33
+			is_country_type = default
+			years_of_peace = {
+				value > 20
+				delay = 50
+			}
 		}
 		modifier = {
-			factor = 0.75
-			has_election_type = democratic
+			factor = 1.33
+			is_country_type = default
+			years_of_peace = {
+				value > 40
+				delay = 50
+			}
+		}
+		modifier = {
+			factor = 1.33
+			is_country_type = default
+			years_of_peace = {
+				value > 60
+				delay = 50
+			}
+		}
+		modifier = {
+			factor = 1.33
+			is_country_type = default
+			years_of_peace = {
+				value > 80
+				delay = 50
+			}
+		}
+		modifier = {
+			factor = 1.33
+			is_country_type = default
+			years_of_peace = {
+				value > 100
+				delay = 50
+			}
 		}
 	}
-
 	# from = planet
 	pop_attraction = {
 		base = 1
-
 		modifier = {
 			factor = 0
 			has_trait = trait_hive_mind
 		}
+		# 敵国と隣接している
 		modifier = {
-			factor = 1.25
-			has_trait = "trait_decadent"
-		}
-		modifier = {
-			factor = 1.5
-			is_enslaved = no
-			from = {
-				any_enslaved_species = {
-					is_same_species = root
-					is_robotic = no
-				}
+			factor = 0.5
+			OR = {
+				has_citizenship_rights = yes
+				can_be_military_leader = yes
 			}
-		}
-		modifier = {
-			factor = 1.25
-			is_enslaved = no
 			from = {
-				any_enslaved_species = {
-					NOT = { is_same_species = root }
-					is_robotic = no
-				}
-				NOT = {
-					any_enslaved_species = {
-						is_same_species = root
-						is_robotic = no
+				owner = {
+					any_neighbor_country = {
+						from = { is_neighbor_of = prev }
+						OR = {
+							is_hostile_to = from.owner
+							is_domineering_to = from.owner
+							is_rival = from.owner
+						}
 					}
 				}
-			}
-		}
-		modifier = {
-			factor = 0.75
-			OR = {
-				has_living_standard = { type = living_standard_utopian }
-				has_living_standard = { type = living_standard_good }
-				has_living_standard = { type = living_standard_shared_burden }
 			}
 		}
 	}
@@ -1260,21 +1120,16 @@ ethic_conservationism = {
 	cost = 1
 	category = "ngm_con_or_dev"
 	category_value = 1
-
 	fanatic_variant = ethic_fanatic_conservationism
-
 	country_modifier = {
 		pop_environment_tolerance = 0.05
 		planet_jobs_food_produces_mult = 0.1
 	}
-
 	tags = {
 	}
-
 	random_weight = {
 		base = 100
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_CONSERVATIONISM_POS
 		trigger = {
@@ -1284,7 +1139,6 @@ ethic_conservationism = {
 			}
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
@@ -1295,7 +1149,6 @@ ethic_conservationism = {
 			has_faction = NGM_environmentalism
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
@@ -1303,69 +1156,15 @@ ethic_conservationism = {
 			ruler = { leader_of_faction = NGM_environmentalism }
 		}
 	}
-
+	# ロボティクスPOP
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_SLAVERY_POS
-		trigger = {
-			any_enslaved_species = {
-				is_same_species = root
-				is_robotic = no
-			}
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_XENO_SLAVES_POS
-		trigger = {
-			any_enslaved_species = {
-				not = { is_same_species = root }
-				is_robotic = no
-			}
-			NOT = {
-				any_enslaved_species = {
-					is_same_species = root
-					is_robotic = no
-				}
-			}
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_CONSUMER_GOODS_NEG
-		trigger = {
-			any_owned_planet = {
-				any_owned_pop = {
-					OR = {
-						has_living_standard = { type = living_standard_utopian }
-						has_living_standard = { type = living_standard_good }
-						has_living_standard = { type = living_standard_shared_burden }
-					}
-				}
-			}
-		}
-	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_AUTOCRATIC_GOV_POS
-		trigger = {
-			has_election_type = none
-		}
-	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DEMOCRATIC_GOV_NEG
-		trigger = {
-			has_election_type = democratic
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DECADENT_POS
+		desc = POP_ATTRACTION_ROBOTS_NEG
 		trigger = {
 			any_owned_species = {
-				has_trait = "trait_decadent"
+				is_robotic = yes
 			}
 		}
 	}
-
 	country_attraction = {
 		base = 1
 		modifier = {
@@ -1416,7 +1215,7 @@ ethic_conservationism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
@@ -1460,13 +1259,6 @@ ethic_conservationism = {
 			ruler = { leader_of_faction = NGM_environmentalism }
 		}
 		modifier = {
-			factor = 1.5
-			has_federation = yes
-			federation = {
-				has_federation_type = hegemony_federation
-			}
-		}
-		modifier = {
 			factor = 2
 			has_ethic = ethic_conservationism
 		}
@@ -1474,61 +1266,82 @@ ethic_conservationism = {
 			factor = 3
 			has_ethic = ethic_fanatic_conservationism
 		}
+		# 内向きの成熟の国是
 		modifier = {
-			factor = 1.25
-			has_election_type = none
+			factor = 1.5
+			has_valid_civic = civic_inwards_perfection
+		}
+		# 保全主義の帝国と外交
+		modifier = {
+			factor = 1.5
+			any_relation = {
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+					has_commercial_pact = root
+				}
+				OR = {
+					has_ethic = ethic_conservationism
+					has_ethic = ethic_fanatic_conservationism
+				}
+			}
 		}
 		modifier = {
-			factor = 0.75
-			has_election_type = democratic
+			factor = 2.0
+			any_relation = {
+				is_subject = no
+				has_migration_access = root
+				OR = {
+					has_ethic = ethic_conservationism
+					has_ethic = ethic_fanatic_conservationism
+				}
+			}
+		}
+		# テラフォーミング
+		modifier = {
+			factor = 2
+			any_owned_planet = {
+				OR = {
+					is_terraformed = yes
+					is_terraforming = yes
+				}
+			}
+		}
+		# 自然との対話
+		modifier = {
+			factor = 1.1
+			is_country_type = default
+			has_technology = "tech_psionic_theory"
+		}
+		modifier = {
+			factor = 1.5
+			is_country_type = default
+			has_ascension_perk = ap_mind_over_matter
+		}
+		modifier = {
+			factor = 1.5
+			is_country_type = default
+			has_ascension_perk = ap_transcendence
 		}
 	}
-
 	# from = planet
 	pop_attraction = {
 		base = 1
-
 		modifier = {
 			factor = 0
 			has_trait = trait_hive_mind
 		}
 		modifier = {
-			factor = 1.25
-			has_trait = "trait_decadent"
+			factor = 1.1
+			has_trait = trait_latent_psionic
 		}
 		modifier = {
-			factor = 1.5
-			is_enslaved = no
-			from = {
-				any_enslaved_species = {
-					is_same_species = root
-					is_robotic = no
-				}
-			}
+			factor = 1.2
+			has_trait = trait_psionic
 		}
 		modifier = {
-			factor = 1.25
-			is_enslaved = no
-			from = {
-				any_enslaved_species = {
-					NOT = { is_same_species = root }
-					is_robotic = no
-				}
-				NOT = {
-					any_enslaved_species = {
-						is_same_species = root
-						is_robotic = no
-					}
-				}
-			}
-		}
-		modifier = {
-			factor = 0.75
-			OR = {
-				has_living_standard = { type = living_standard_utopian }
-				has_living_standard = { type = living_standard_good }
-				has_living_standard = { type = living_standard_shared_burden }
-			}
+			factor = 0.25
+			is_robot_pop = yes
 		}
 	}
 }
@@ -1562,21 +1375,16 @@ ethic_developmentalism = {
 	cost = 1
 	category = "ngm_con_or_dev"
 	category_value = 3
-
 	fanatic_variant = ethic_fanatic_developmentalism
-
 	country_modifier = {
 		planet_jobs_minerals_produces_mult = 0.05
 		planet_max_buildings_add = 2
 	}
-
 	tags = {
 	}
-
 	random_weight = {
 		base = 100
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_DEVELOPMENTALISM_POS
 		trigger = {
@@ -1586,7 +1394,6 @@ ethic_developmentalism = {
 			}
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
@@ -1597,7 +1404,6 @@ ethic_developmentalism = {
 			has_faction = NGM_industrialism
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
@@ -1605,69 +1411,33 @@ ethic_developmentalism = {
 			ruler = { leader_of_faction = NGM_industrialism }
 		}
 	}
-
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_SLAVERY_POS
-		trigger = {
-			any_enslaved_species = {
-				is_same_species = root
-				is_robotic = no
-			}
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_XENO_SLAVES_POS
-		trigger = {
-			any_enslaved_species = {
-				not = { is_same_species = root }
-				is_robotic = no
-			}
-			NOT = {
-				any_enslaved_species = {
-					is_same_species = root
-					is_robotic = no
-				}
-			}
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_CONSUMER_GOODS_NEG
-		trigger = {
-			any_owned_planet = {
-				any_owned_pop = {
-					OR = {
-						has_living_standard = { type = living_standard_utopian }
-						has_living_standard = { type = living_standard_good }
-						has_living_standard = { type = living_standard_shared_burden }
-					}
-				}
-			}
-		}
-	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_AUTOCRATIC_GOV_POS
-		trigger = {
-			has_election_type = none
-		}
-	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DEMOCRATIC_GOV_NEG
-		trigger = {
-			has_election_type = democratic
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DECADENT_POS
+		desc = POP_ATTRACTION_CYBORGS_POS
 		trigger = {
 			any_owned_species = {
-				has_trait = "trait_decadent"
+				has_trait = trait_cybernetic
 			}
 		}
 	}
-
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_ROBOTS_POS
+		trigger = {
+			any_owned_species = {
+					is_robotic = yes
+			}
+		}
+	}
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_STRONG_POS
+		trigger = {
+			any_owned_species = {
+				OR = {
+					has_trait = "trait_strong"
+					has_trait = "trait_very_strong"
+				}
+			}
+		}
+	}
 	country_attraction = {
 		base = 1
 		modifier = {
@@ -1718,7 +1488,7 @@ ethic_developmentalism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
@@ -1762,13 +1532,6 @@ ethic_developmentalism = {
 			ruler = { leader_of_faction = NGM_industrialism }
 		}
 		modifier = {
-			factor = 1.5
-			has_federation = yes
-			federation = {
-				has_federation_type = hegemony_federation
-			}
-		}
-		modifier = {
 			factor = 2
 			has_ethic = ethic_developmentalism
 		}
@@ -1776,61 +1539,65 @@ ethic_developmentalism = {
 			factor = 3
 			has_ethic = ethic_fanatic_developmentalism
 		}
+		# 開発主義の帝国と外交
+		modifier = {
+			factor = 1.5
+			any_relation = {
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+					has_commercial_pact = root
+				}
+				OR = {
+					has_ethic = ethic_developmentalism
+					has_ethic = ethic_fanatic_developmentalism
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_relation = {
+				is_subject = no
+				has_migration_access = root
+				OR = {
+					has_ethic = ethic_developmentalism
+					has_ethic = ethic_fanatic_developmentalism
+				}
+			}
+		}
+		# 巨大構造物
+		modifier = {
+			factor = 2.00
+			has_any_megastructure = yes
+		}
+		# 機械主義の国是
 		modifier = {
 			factor = 1.25
-			has_election_type = none
-		}
-		modifier = {
-			factor = 0.75
-			has_election_type = democratic
+			has_origin = origin_mechanists
 		}
 	}
-
 	# from = planet
 	pop_attraction = {
 		base = 1
-
 		modifier = {
 			factor = 0
 			has_trait = trait_hive_mind
 		}
 		modifier = {
-			factor = 1.25
-			has_trait = "trait_decadent"
+			factor = 2.0
+			is_robot_pop = yes
 		}
 		modifier = {
 			factor = 1.5
-			is_enslaved = no
-			from = {
-				any_enslaved_species = {
-					is_same_species = root
-					is_robotic = no
-				}
-			}
+			has_trait = "trait_cybernetic"
 		}
 		modifier = {
-			factor = 1.25
-			is_enslaved = no
-			from = {
-				any_enslaved_species = {
-					NOT = { is_same_species = root }
-					is_robotic = no
-				}
-				NOT = {
-					any_enslaved_species = {
-						is_same_species = root
-						is_robotic = no
-					}
-				}
-			}
+			factor = 1.1
+			has_trait = "trait_strong"
 		}
 		modifier = {
-			factor = 0.75
-			OR = {
-				has_living_standard = { type = living_standard_utopian }
-				has_living_standard = { type = living_standard_good }
-				has_living_standard = { type = living_standard_shared_burden }
-			}
+			factor = 1.2
+			has_trait = "trait_very_strong"
 		}
 	}
 }
@@ -1875,24 +1642,19 @@ ethic_honorism = {
 	cost = 1
 	category = "ngm_hon_or_uti"
 	category_value = 1
-
 	fanatic_variant = ethic_fanatic_honorism
-
 	country_modifier = {
 		pop_cat_ruler_happiness = 0.1
 		job_noble_per_pop = 0.04
 	}
-
 	tags = {
 		ETHIC_ALLOWS_UTOPIA
 		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
 	}
-
 	random_weight = {
 		base = 100
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_HONORISM_POS
 		trigger = {
@@ -1902,7 +1664,6 @@ ethic_honorism = {
 			}
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
@@ -1913,7 +1674,6 @@ ethic_honorism = {
 			has_faction = NGM_reputation
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
@@ -1921,69 +1681,6 @@ ethic_honorism = {
 			ruler = { leader_of_faction = NGM_reputation }
 		}
 	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_SLAVERY_POS
-		trigger = {
-			any_enslaved_species = {
-				is_same_species = root
-				is_robotic = no
-			}
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_XENO_SLAVES_POS
-		trigger = {
-			any_enslaved_species = {
-				not = { is_same_species = root }
-				is_robotic = no
-			}
-			NOT = {
-				any_enslaved_species = {
-					is_same_species = root
-					is_robotic = no
-				}
-			}
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_CONSUMER_GOODS_NEG
-		trigger = {
-			any_owned_planet = {
-				any_owned_pop = {
-					OR = {
-						has_living_standard = { type = living_standard_utopian }
-						has_living_standard = { type = living_standard_good }
-						has_living_standard = { type = living_standard_shared_burden }
-					}
-				}
-			}
-		}
-	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_AUTOCRATIC_GOV_POS
-		trigger = {
-			has_election_type = none
-		}
-	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DEMOCRATIC_GOV_NEG
-		trigger = {
-			has_election_type = democratic
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DECADENT_POS
-		trigger = {
-			any_owned_species = {
-				has_trait = "trait_decadent"
-			}
-		}
-	}
-
 	country_attraction = {
 		base = 1
 		modifier = {
@@ -2034,7 +1731,7 @@ ethic_honorism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
@@ -2078,13 +1775,6 @@ ethic_honorism = {
 			ruler = { leader_of_faction = NGM_reputation }
 		}
 		modifier = {
-			factor = 1.5
-			has_federation = yes
-			federation = {
-				has_federation_type = hegemony_federation
-			}
-		}
-		modifier = {
 			factor = 2
 			has_ethic = ethic_honorism
 		}
@@ -2092,27 +1782,54 @@ ethic_honorism = {
 			factor = 3
 			has_ethic = ethic_fanatic_honorism
 		}
+		# 専制政治
 		modifier = {
 			factor = 1.25
 			has_election_type = none
 		}
+		# ノブレス・オブリージュ
 		modifier = {
-			factor = 0.75
-			has_election_type = democratic
+			factor = 1.50
+			has_valid_civic = civic_noblesse_oblige
+		}
+		# 象徴君主制
+		modifier = {
+			factor = 1.50
+			has_valid_civic = civic_symbolic_monarchy
+		}
+		# 栄望主義の帝国と外交
+		modifier = {
+			factor = 1.5
+			any_relation = {
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+					has_commercial_pact = root
+				}
+				OR = {
+					has_ethic = ethic_honorism
+					has_ethic = ethic_fanatic_honorism
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_relation = {
+				is_subject = no
+				has_migration_access = root
+				OR = {
+					has_ethic = ethic_honorism
+					has_ethic = ethic_fanatic_honorism
+				}
+			}
 		}
 	}
-
 	# from = planet
 	pop_attraction = {
 		base = 1
-
 		modifier = {
 			factor = 0
 			has_trait = trait_hive_mind
-		}
-		modifier = {
-			factor = 1.25
-			has_trait = "trait_decadent"
 		}
 		modifier = {
 			factor = 1.5
@@ -2138,14 +1855,6 @@ ethic_honorism = {
 						is_robotic = no
 					}
 				}
-			}
-		}
-		modifier = {
-			factor = 0.75
-			OR = {
-				has_living_standard = { type = living_standard_utopian }
-				has_living_standard = { type = living_standard_good }
-				has_living_standard = { type = living_standard_shared_burden }
 			}
 		}
 	}
@@ -2187,29 +1896,23 @@ ethic_utilitarianism = {
 	cost = 1
 	category = "ngm_hon_or_uti"
 	category_value = 3
-
 	playable = {
 		NOT = {
 			has_authority = auth_imperial
 		}
 	}
-
 	fanatic_variant = ethic_fanatic_utilitarianism
-
 	country_modifier = {
 		job_ngm_influencer_per_pop = 0.04
 		slave_market_cost_mult = -0.2
 	}
-
 	tags = {
 		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
 	}
-
 	random_weight = {
 		base = 100
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_UTILITARIANISM_POS
 		trigger = {
@@ -2219,7 +1922,6 @@ ethic_utilitarianism = {
 			}
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
@@ -2230,7 +1932,6 @@ ethic_utilitarianism = {
 			has_faction = NGM_supremacy
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
@@ -2238,69 +1939,6 @@ ethic_utilitarianism = {
 			ruler = { leader_of_faction = NGM_supremacy }
 		}
 	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_SLAVERY_POS
-		trigger = {
-			any_enslaved_species = {
-				is_same_species = root
-				is_robotic = no
-			}
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_XENO_SLAVES_POS
-		trigger = {
-			any_enslaved_species = {
-				not = { is_same_species = root }
-				is_robotic = no
-			}
-			NOT = {
-				any_enslaved_species = {
-					is_same_species = root
-					is_robotic = no
-				}
-			}
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_CONSUMER_GOODS_NEG
-		trigger = {
-			any_owned_planet = {
-				any_owned_pop = {
-					OR = {
-						has_living_standard = { type = living_standard_utopian }
-						has_living_standard = { type = living_standard_good }
-						has_living_standard = { type = living_standard_shared_burden }
-					}
-				}
-			}
-		}
-	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_AUTOCRATIC_GOV_POS
-		trigger = {
-			has_election_type = none
-		}
-	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DEMOCRATIC_GOV_NEG
-		trigger = {
-			has_election_type = democratic
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_DECADENT_POS
-		trigger = {
-			any_owned_species = {
-				has_trait = "trait_decadent"
-			}
-		}
-	}
-
 	country_attraction = {
 		base = 1
 		modifier = {
@@ -2351,7 +1989,7 @@ ethic_utilitarianism = {
 		}
 		# 志向の矯正
 		modifier = {
-			factor = 5
+			factor = 2
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			OR = {
@@ -2395,13 +2033,6 @@ ethic_utilitarianism = {
 			ruler = { leader_of_faction = NGM_supremacy }
 		}
 		modifier = {
-			factor = 1.5
-			has_federation = yes
-			federation = {
-				has_federation_type = hegemony_federation
-			}
-		}
-		modifier = {
 			factor = 2
 			has_ethic = ethic_utilitarianism
 		}
@@ -2409,38 +2040,60 @@ ethic_utilitarianism = {
 			factor = 3
 			has_ethic = ethic_fanatic_utilitarianism
 		}
+		# 実利主義の帝国と外交
+		modifier = {
+			factor = 1.5
+			any_relation = {
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+					has_commercial_pact = root
+				}
+				OR = {
+					has_ethic = ethic_utilitarianism
+					has_ethic = ethic_fanatic_utilitarianism
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			any_relation = {
+				is_subject = no
+				has_migration_access = root
+				OR = {
+					has_ethic = ethic_utilitarianism
+					has_ethic = ethic_fanatic_utilitarianism
+				}
+			}
+		}
+		# カキストクラシー
+		modifier = {
+			factor = 3.00
+			has_valid_civic = civic_noblesse_oblige
+		}
 		modifier = {
 			factor = 1.25
-			has_election_type = none
-		}
-		modifier = {
-			factor = 0.75
-			has_election_type = democratic
+			is_country_type = default
+			has_policy_flag = ai_full_rights
 		}
 	}
-
 	# from = planet
 	pop_attraction = {
 		base = 1
-
 		modifier = {
 			factor = 0
 			has_trait = trait_hive_mind
 		}
+		# 高い生活水準
 		modifier = {
-			factor = 1.25
-			has_trait = "trait_decadent"
-		}
-		modifier = {
-			factor = 1.5
-			is_enslaved = no
-			from = {
-				any_enslaved_species = {
-					is_same_species = root
-					is_robotic = no
-				}
+			factor = 0.5
+			OR = {
+				has_living_standard = { type = living_standard_utopian }
+				has_living_standard = { type = living_standard_good }
+				has_living_standard = { type = living_standard_shared_burden }
 			}
 		}
+		# 奴隷化されたPOP
 		modifier = {
 			factor = 1.25
 			is_enslaved = no
@@ -2458,11 +2111,12 @@ ethic_utilitarianism = {
 			}
 		}
 		modifier = {
-			factor = 0.75
-			OR = {
-				has_living_standard = { type = living_standard_utopian }
-				has_living_standard = { type = living_standard_good }
-				has_living_standard = { type = living_standard_shared_burden }
+			factor = 1.5
+			from = {
+				any_owned_species = {
+					NOT = { is_same_species = root }
+					has_trait = "trait_charismatic"
+				}
 			}
 		}
 	}
