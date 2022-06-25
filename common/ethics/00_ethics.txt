@@ -205,7 +205,7 @@ ethic_authoritarian = {
 				has_ethic = ethic_fanatic_egalitarian
 				has_ethic = ethic_egalitarian
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_authoritarian
 					has_ethic = ethic_authoritarian
@@ -216,7 +216,7 @@ ethic_authoritarian = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_authoritarian
 			}
 		}
@@ -224,7 +224,7 @@ ethic_authoritarian = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_authoritarian
 			}
 		}
@@ -518,7 +518,7 @@ ethic_egalitarian = {
 				has_ethic = ethic_fanatic_authoritarian
 				has_ethic = ethic_authoritarian
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_egalitarian
 					has_ethic = ethic_egalitarian
@@ -529,7 +529,7 @@ ethic_egalitarian = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_egalitarian
 			}
 		}
@@ -537,7 +537,7 @@ ethic_egalitarian = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_egalitarian
 			}
 		}
@@ -973,7 +973,7 @@ ethic_xenophobe = {
 				has_ethic = ethic_fanatic_xenophile
 				has_ethic = ethic_xenophile
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_xenophobe
 					has_ethic = ethic_xenophobe
@@ -984,7 +984,7 @@ ethic_xenophobe = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_xenophobe
 			}
 		}
@@ -992,7 +992,7 @@ ethic_xenophobe = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_xenophobe
 			}
 		}
@@ -1360,7 +1360,7 @@ ethic_xenophile = {
 				has_ethic = ethic_fanatic_xenophobe
 				has_ethic = ethic_xenophobe
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_xenophile
 					has_ethic = ethic_xenophile
@@ -1371,7 +1371,7 @@ ethic_xenophile = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_xenophile
 			}
 		}
@@ -1379,7 +1379,7 @@ ethic_xenophile = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_xenophile
 			}
 		}
@@ -1727,7 +1727,7 @@ ethic_militarist = {
 				has_ethic = ethic_fanatic_pacifist
 				has_ethic = ethic_pacifist
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_militarist
 					has_ethic = ethic_militarist
@@ -1738,7 +1738,7 @@ ethic_militarist = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_militarist
 			}
 		}
@@ -1746,7 +1746,7 @@ ethic_militarist = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_militarist
 			}
 		}
@@ -2077,7 +2077,7 @@ ethic_pacifist = {
 				has_ethic = ethic_fanatic_militarist
 				has_ethic = ethic_militarist
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_pacifist
 					has_ethic = ethic_pacifist
@@ -2088,7 +2088,7 @@ ethic_pacifist = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_pacifist
 			}
 		}
@@ -2096,7 +2096,7 @@ ethic_pacifist = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_pacifist
 			}
 		}
@@ -2331,7 +2331,7 @@ ethic_spiritualist = {
 				has_ethic = ethic_fanatic_materialist
 				has_ethic = ethic_materialist
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_spiritualist
 					has_ethic = ethic_spiritualist
@@ -2342,7 +2342,7 @@ ethic_spiritualist = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_spiritualist
 			}
 		}
@@ -2350,7 +2350,7 @@ ethic_spiritualist = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_spiritualist
 			}
 		}
@@ -2651,7 +2651,7 @@ ethic_materialist = {
 				has_ethic = ethic_fanatic_spiritualist
 				has_ethic = ethic_spiritualist
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_materialist
 					has_ethic = ethic_materialist
@@ -2662,7 +2662,7 @@ ethic_materialist = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_materialist
 			}
 		}
@@ -2670,7 +2670,7 @@ ethic_materialist = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_materialist
 			}
 		}

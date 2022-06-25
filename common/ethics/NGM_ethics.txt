@@ -210,7 +210,7 @@ ethic_socialism = {
 				has_ethic = ethic_fanatic_capitalism
 				has_ethic = ethic_capitalism
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_socialism
 					has_ethic = ethic_socialism
@@ -221,7 +221,7 @@ ethic_socialism = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_socialism
 			}
 		}
@@ -229,7 +229,7 @@ ethic_socialism = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_socialism
 			}
 		}
@@ -522,7 +522,7 @@ ethic_capitalism = {
 				has_ethic = ethic_fanatic_socialism
 				has_ethic = ethic_socialism
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_capitalism
 					has_ethic = ethic_capitalism
@@ -533,7 +533,7 @@ ethic_capitalism = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_capitalism
 			}
 		}
@@ -541,7 +541,7 @@ ethic_capitalism = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_capitalism
 			}
 		}
@@ -821,7 +821,7 @@ ethic_interventionism = {
 				has_ethic = ethic_fanatic_neutralism
 				has_ethic = ethic_neutralism
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_interventionism
 					has_ethic = ethic_interventionism
@@ -832,7 +832,7 @@ ethic_interventionism = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_interventionism
 			}
 		}
@@ -840,7 +840,7 @@ ethic_interventionism = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_interventionism
 			}
 		}
@@ -1122,7 +1122,7 @@ ethic_neutralism = {
 				has_ethic = ethic_fanatic_interventionism
 				has_ethic = ethic_interventionism
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_neutralism
 					has_ethic = ethic_neutralism
@@ -1133,7 +1133,7 @@ ethic_neutralism = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_neutralism
 			}
 		}
@@ -1141,7 +1141,7 @@ ethic_neutralism = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_neutralism
 			}
 		}
@@ -1423,7 +1423,7 @@ ethic_conservationism = {
 				has_ethic = ethic_fanatic_developmentalism
 				has_ethic = ethic_developmentalism
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_conservationism
 					has_ethic = ethic_conservationism
@@ -1434,7 +1434,7 @@ ethic_conservationism = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_conservationism
 			}
 		}
@@ -1442,7 +1442,7 @@ ethic_conservationism = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_conservationism
 			}
 		}
@@ -1725,7 +1725,7 @@ ethic_developmentalism = {
 				has_ethic = ethic_fanatic_conservationism
 				has_ethic = ethic_conservationism
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_developmentalism
 					has_ethic = ethic_developmentalism
@@ -1736,7 +1736,7 @@ ethic_developmentalism = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_developmentalism
 			}
 		}
@@ -1744,7 +1744,7 @@ ethic_developmentalism = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_developmentalism
 			}
 		}
@@ -2041,7 +2041,7 @@ ethic_honorism = {
 				has_ethic = ethic_fanatic_utilitarianism
 				has_ethic = ethic_utilitarianism
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_honorism
 					has_ethic = ethic_honorism
@@ -2052,7 +2052,7 @@ ethic_honorism = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_honorism
 			}
 		}
@@ -2060,7 +2060,7 @@ ethic_honorism = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_honorism
 			}
 		}
@@ -2358,7 +2358,7 @@ ethic_utilitarianism = {
 				has_ethic = ethic_fanatic_honorism
 				has_ethic = ethic_honorism
 			}
-			owner.overlord = {
+			overlord = {
 				OR = {
 					has_ethic = ethic_fanatic_utilitarianism
 					has_ethic = ethic_utilitarianism
@@ -2369,7 +2369,7 @@ ethic_utilitarianism = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_fanatic_utilitarianism
 			}
 		}
@@ -2377,7 +2377,7 @@ ethic_utilitarianism = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
-			owner.overlord = {
+			overlord = {
 				has_ethic = ethic_utilitarianism
 			}
 		}
