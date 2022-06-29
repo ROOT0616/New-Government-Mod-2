@@ -216,6 +216,9 @@ ethic_authoritarian = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOT = {
+				has_ethic = ethic_fanatic_authoritarian
+			}
 			overlord = {
 				has_ethic = ethic_fanatic_authoritarian
 			}
@@ -224,6 +227,10 @@ ethic_authoritarian = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOR = {
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_authoritarian
+			}
 			overlord = {
 				has_ethic = ethic_authoritarian
 			}
@@ -529,6 +536,9 @@ ethic_egalitarian = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOT = {
+				has_ethic = ethic_fanatic_egalitarian
+			}
 			overlord = {
 				has_ethic = ethic_fanatic_egalitarian
 			}
@@ -537,6 +547,10 @@ ethic_egalitarian = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOR = {
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_egalitarian
+			}
 			overlord = {
 				has_ethic = ethic_egalitarian
 			}
@@ -984,6 +998,9 @@ ethic_xenophobe = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOT = {
+				has_ethic = ethic_fanatic_xenophobe
+			}
 			overlord = {
 				has_ethic = ethic_fanatic_xenophobe
 			}
@@ -992,6 +1009,10 @@ ethic_xenophobe = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOR = {
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_xenophobe
+			}
 			overlord = {
 				has_ethic = ethic_xenophobe
 			}
@@ -1371,6 +1392,9 @@ ethic_xenophile = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOT = {
+				has_ethic = ethic_fanatic_xenophile
+			}
 			overlord = {
 				has_ethic = ethic_fanatic_xenophile
 			}
@@ -1379,6 +1403,10 @@ ethic_xenophile = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOR = {
+					has_ethic = ethic_fanatic_xenophile
+					has_ethic = ethic_xenophile
+			}
 			overlord = {
 				has_ethic = ethic_xenophile
 			}
@@ -1738,6 +1766,9 @@ ethic_militarist = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOT = {
+				has_ethic = ethic_fanatic_militarist
+			}
 			overlord = {
 				has_ethic = ethic_fanatic_militarist
 			}
@@ -1746,6 +1777,10 @@ ethic_militarist = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOR = {
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_militarist
+			}
 			overlord = {
 				has_ethic = ethic_militarist
 			}
@@ -2088,6 +2123,9 @@ ethic_pacifist = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOT = {
+				has_ethic = ethic_fanatic_pacifist
+			}
 			overlord = {
 				has_ethic = ethic_fanatic_pacifist
 			}
@@ -2096,6 +2134,10 @@ ethic_pacifist = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOR = {
+					has_ethic = ethic_fanatic_pacifist
+					has_ethic = ethic_pacifist
+			}
 			overlord = {
 				has_ethic = ethic_pacifist
 			}
@@ -2342,6 +2384,9 @@ ethic_spiritualist = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOT = {
+				has_ethic = ethic_fanatic_spiritualist
+			}
 			overlord = {
 				has_ethic = ethic_fanatic_spiritualist
 			}
@@ -2350,6 +2395,10 @@ ethic_spiritualist = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOR = {
+					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_spiritualist
+			}
 			overlord = {
 				has_ethic = ethic_spiritualist
 			}
@@ -2662,6 +2711,9 @@ ethic_materialist = {
 			factor = 10
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOT = {
+				has_ethic = ethic_fanatic_materialist
+			}
 			overlord = {
 				has_ethic = ethic_fanatic_materialist
 			}
@@ -2670,6 +2722,10 @@ ethic_materialist = {
 			factor = 5
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
+			NOR = {
+					has_ethic = ethic_fanatic_materialist
+					has_ethic = ethic_materialist
+			}
 			overlord = {
 				has_ethic = ethic_materialist
 			}

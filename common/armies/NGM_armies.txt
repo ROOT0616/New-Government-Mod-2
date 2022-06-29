@@ -169,6 +169,7 @@ ngm_combat_machine_army = {
 	# 戦争疲弊度
 	war_exhaustion = 1 
 	time = 90
+	has_species = no
 	icon = GFX_army_type_machine_assault
 	resources = {
 		category = armies
@@ -207,6 +208,7 @@ ngm_special_forces_army = {
 	# 戦争疲弊度
 	war_exhaustion = 1 
 	time = 150
+	has_species = no
 	icon = GFX_army_type_xenomorph
 	# 前提技術
 	prerequisites = { "tech_assault_armies" }
