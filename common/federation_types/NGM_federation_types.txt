@@ -356,48 +356,11 @@ NGM_personal_union_federation = {
 	}
 	ai_weight = {
 		base = 0
-		# Default Vassals
 		modifier = {
 			desc = federation_acceptance_empire
 			add = 50000
 			from = {
-				is_subject_type = tributary
-			}
-		}
-		# Zenith of Fallen Empires
-		modifier = {
-			desc = federation_acceptance_empire
-			add = 50000
-			from = {
-				is_subject_type = dominion
-			}
-		}
-		modifier = {
-			desc = federation_acceptance_empire
-			add = 50000
-			from = {
-				is_subject_type = satellite
-			}
-		}
-		modifier = {
-			desc = federation_acceptance_empire
-			add = 50000
-			from = {
-				is_subject_type = signatory
-			}
-		}
-		modifier = {
-			desc = federation_acceptance_empire
-			add = 50000
-			from = {
-				is_subject_type = thrall
-			}
-		}
-		modifier = {
-			desc = federation_acceptance_empire
-			add = 50000
-			from = {
-				is_subject_type = scion
+				is_subject = yes
 			}
 		}
 		# Decentralized Empires 2.7

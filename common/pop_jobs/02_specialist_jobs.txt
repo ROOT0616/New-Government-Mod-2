@@ -167,7 +167,9 @@ priest = {
 		produces = {
 			trigger = {
 				exists = owner
-				has_civic = civic_ngm_nature_faith
+				owner = {
+					has_civic = civic_ngm_nature_faith
+				}
 			}
 			society_research = 1
 		}
@@ -840,8 +842,10 @@ chemist = {
 		# 最先端工業:化学技師、透過技師、ガス精製技師の維持費-35%
 		upkeep = {
 			trigger = {
-				NOT = {
-					has_tradition = tr_ngm_latast_industrial
+				owner = {
+					NOT = {
+						has_tradition = tr_ngm_latast_industrial
+					}
 				}
 			}
 			minerals = 3.5
@@ -893,8 +897,10 @@ translucer = {
 		# 最先端工業:化学技師、透過技師、ガス精製技師の維持費-35%
 		upkeep = {
 			trigger = {
-				NOT = {
-					has_tradition = tr_ngm_latast_industrial
+				owner = {
+					NOT = {
+						has_tradition = tr_ngm_latast_industrial
+					}
 				}
 			}
 			minerals = 3.5
@@ -951,8 +957,10 @@ gas_refiner = {
 		# 最先端工業:化学技師、透過技師、ガス精製技師の維持費-35%
 		upkeep = {
 			trigger = {
-				NOT = {
-					has_tradition = tr_ngm_latast_industrial
+				owner = {
+					NOT = {
+						has_tradition = tr_ngm_latast_industrial
+					}
 				}
 			}
 			minerals = 3.5

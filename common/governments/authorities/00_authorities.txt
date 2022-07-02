@@ -269,10 +269,7 @@ auth_corporate = {
 	max_election_candidates = 4
 	localization_postfix = corporate
 
-	if = {
-		limit = { has_civic = civic_ngm_hereditary_officers }
-		has_heir = yes
-	}
+	has_heir = yes
 	has_agendas = yes
 
 	playable = { host_has_dlc = "Megacorp" }
