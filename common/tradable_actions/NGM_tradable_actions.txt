@@ -103,10 +103,6 @@ trade_action_ngm_ethics_force = {
 				}
 				has_ethic = ethic_authoritarian
 			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
 			shift_ethic = ethic_authoritarian
 		}
 		if = {
@@ -128,10 +124,6 @@ trade_action_ngm_ethics_force = {
 					has_ethic = ethic_fanatic_egalitarian
 				}
 				has_ethic = ethic_egalitarian
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
 			}
 			shift_ethic = ethic_egalitarian
 		}
@@ -155,10 +147,6 @@ trade_action_ngm_ethics_force = {
 				}
 				has_ethic = ethic_xenophobe
 			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
 			shift_ethic = ethic_xenophobe
 		}
 		if = {
@@ -180,10 +168,6 @@ trade_action_ngm_ethics_force = {
 					has_ethic = ethic_fanatic_xenophile
 				}
 				has_ethic = ethic_xenophile
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
 			}
 			shift_ethic = ethic_xenophile
 		}
@@ -207,10 +191,6 @@ trade_action_ngm_ethics_force = {
 				}
 				has_ethic = ethic_militarist
 			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
 			shift_ethic = ethic_militarist
 		}
 		if = {
@@ -232,10 +212,6 @@ trade_action_ngm_ethics_force = {
 					has_ethic = ethic_fanatic_pacifist
 				}
 				has_ethic = ethic_pacifist
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
 			}
 			shift_ethic = ethic_pacifist
 		}
@@ -263,10 +239,6 @@ trade_action_ngm_ethics_force = {
 				}
 				has_ethic = ethic_materialist
 			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
 			shift_ethic = ethic_materialist
 		}
 		if = {
@@ -288,10 +260,6 @@ trade_action_ngm_ethics_force = {
 					has_ethic = ethic_fanatic_spiritualist
 				}
 				has_ethic = ethic_spiritualist
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
 			}
 			shift_ethic = ethic_spiritualist
 		}
@@ -315,10 +283,6 @@ trade_action_ngm_ethics_force = {
 				}
 				has_ethic = ethic_socialism
 			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
 			shift_ethic = ethic_socialism
 		}
 		if = {
@@ -340,10 +304,6 @@ trade_action_ngm_ethics_force = {
 					has_ethic = ethic_fanatic_capitalism
 				}
 				has_ethic = ethic_capitalism
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
 			}
 			shift_ethic = ethic_capitalism
 		}
@@ -367,10 +327,6 @@ trade_action_ngm_ethics_force = {
 				}
 				has_ethic = ethic_interventionism
 			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
 			shift_ethic = ethic_interventionism
 		}
 		if = {
@@ -392,10 +348,6 @@ trade_action_ngm_ethics_force = {
 					has_ethic = ethic_fanatic_neutralism
 				}
 				has_ethic = ethic_neutralism
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
 			}
 			shift_ethic = ethic_neutralism
 		}
@@ -419,10 +371,6 @@ trade_action_ngm_ethics_force = {
 				}
 				has_ethic = ethic_developmentalism
 			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
 			shift_ethic = ethic_developmentalism
 		}
 		if = {
@@ -444,10 +392,6 @@ trade_action_ngm_ethics_force = {
 					has_ethic = ethic_fanatic_conservationism
 				}
 				has_ethic = ethic_conservationism
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
 			}
 			shift_ethic = ethic_conservationism
 		}
@@ -471,10 +415,6 @@ trade_action_ngm_ethics_force = {
 				}
 				has_ethic = ethic_honorism
 			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
 			shift_ethic = ethic_honorism
 		}
 		if = {
@@ -496,10 +436,6 @@ trade_action_ngm_ethics_force = {
 					has_ethic = ethic_fanatic_utilitarianism
 				}
 				has_ethic = ethic_utilitarianism
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
 			}
 			shift_ethic = ethic_utilitarianism
 		}
