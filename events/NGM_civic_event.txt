@@ -69,9 +69,6 @@ country_event = {
 		has_civic = civic_ngm_elder_politics
 	}
 	immediate = {
-		# limit = {
-		# 	is_species = THIS
-		# }
 		modify_species = {
 			species = THIS			# species to modify
 			base = auto			# new base species; default: auto (uses species)

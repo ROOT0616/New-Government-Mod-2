@@ -97,6 +97,10 @@ on_yearly_pulse_country = {
 		# 伝道者団
 		ngm_civic.22
 	}
+	random_events = {
+		100 = ngm_government.10	# 完全なる統合
+		400 = 0
+	}
 }
 
 # this = country
