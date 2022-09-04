@@ -79,573 +79,575 @@ trade_action_ngm_ethics_force = {
 		add_modifier = {
 			modifier = ngm_ethics_force_loyalty_1
 		}
-		set_variable = {
-			which = ngm_ethics_force_variable
-			value = 0
-		}
-		if = {
-			limit = {
-				FROM = {
+		hidden_effect = {
+			set_variable = {
+				which = ngm_ethics_force_variable
+				value = 0
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_authoritarian = yes
+					}
+					is_authoritarian = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_authoritarian
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_authoritarian
+					}
+					has_ethic = ethic_authoritarian
+				}
+				shift_ethic = ethic_authoritarian
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_egalitarian = yes
+					}
+					is_egalitarian = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_egalitarian
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_egalitarian
+					}
+					has_ethic = ethic_egalitarian
+				}
+				shift_ethic = ethic_egalitarian
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_xenophobe = yes
+					}
+					is_xenophobe = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_xenophobe
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_xenophobe
+					}
+					has_ethic = ethic_xenophobe
+				}
+				shift_ethic = ethic_xenophobe
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_xenophile = yes
+					}
+					is_xenophile = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_xenophile
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_xenophile
+					}
+					has_ethic = ethic_xenophile
+				}
+				shift_ethic = ethic_xenophile
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_militarist = yes
+					}
+					is_militarist = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_militarist
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_ethic = ethic_militarist
+				}
+				shift_ethic = ethic_militarist
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_pacifist = yes
+					}
+					is_pacifist = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_pacifist
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_pacifist
+					}
+					has_ethic = ethic_pacifist
+				}
+				shift_ethic = ethic_pacifist
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_materialist = yes
+					}
+					change_variable = {
+						which = ngm_ethics_force_variable
+						value = 1
+					}
+					is_materialist = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_materialist
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_materialist
+					}
+					has_ethic = ethic_materialist
+				}
+				shift_ethic = ethic_materialist
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_spiritualist = yes
+					}
+					is_spiritualist = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_spiritualist
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_spiritualist
+					}
+					has_ethic = ethic_spiritualist
+				}
+				shift_ethic = ethic_spiritualist
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_socialism = yes
+					}
+					is_socialism = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_socialism
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_socialism
+					}
+					has_ethic = ethic_socialism
+				}
+				shift_ethic = ethic_socialism
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_capitalism = yes
+					}
+					is_capitalism = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_capitalism
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_capitalism
+					}
+					has_ethic = ethic_capitalism
+				}
+				shift_ethic = ethic_capitalism
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_interventionism = yes
+					}
+					is_interventionism = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_interventionism
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_interventionism
+					}
+					has_ethic = ethic_interventionism
+				}
+				shift_ethic = ethic_interventionism
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_neutralism = yes
+					}
+					is_neutralism = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_neutralism
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_neutralism
+					}
+					has_ethic = ethic_neutralism
+				}
+				shift_ethic = ethic_neutralism
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_developmentalism = yes
+					}
+					is_developmentalism = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_developmentalism
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_developmentalism
+					}
+					has_ethic = ethic_developmentalism
+				}
+				shift_ethic = ethic_developmentalism
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_conservationism = yes
+					}
+					is_conservationism = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_conservationism
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_conservationism
+					}
+					has_ethic = ethic_conservationism
+				}
+				shift_ethic = ethic_conservationism
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_honorism = yes
+					}
+					is_honorism = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_honorism
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_honorism
+					}
+					has_ethic = ethic_honorism
+				}
+				shift_ethic = ethic_honorism
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_utilitarianism = yes
+					}
+					is_utilitarianism = no
+				}
+				subtract_variable = {
+					which = ngm_ethics_force_variable
+					value = 1
+				}
+				shift_ethic = ethic_utilitarianism
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_ethic = ethic_fanatic_utilitarianism
+					}
+					has_ethic = ethic_utilitarianism
+				}
+				shift_ethic = ethic_utilitarianism
+			}
+			FROM = {
+				add_trust = {
+					who = ROOT
+					amount = -100
+				}
+				add_modifier = {
+					modifier = ngm_ethics_force_loyalty_2
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_authoritarian = yes
+					}
 					is_authoritarian = yes
 				}
-				is_authoritarian = no
-			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_authoritarian
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_authoritarian
+				change_variable = {
+					which = ngm_ethics_force_variable
+					value = 2
 				}
-				has_ethic = ethic_authoritarian
 			}
-			shift_ethic = ethic_authoritarian
-		}
-		if = {
-			limit = {
-				FROM = {
+			if = {
+				limit = {
+					FROM = {
+						is_egalitarian = yes
+					}
 					is_egalitarian = yes
 				}
-				is_egalitarian = no
-			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_egalitarian
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_egalitarian
+				change_variable = {
+					which = ngm_ethics_force_variable
+					value = 2
 				}
-				has_ethic = ethic_egalitarian
 			}
-			shift_ethic = ethic_egalitarian
-		}
-		if = {
-			limit = {
-				FROM = {
+			if = {
+				limit = {
+					FROM = {
+						is_xenophobe = yes
+					}
 					is_xenophobe = yes
 				}
-				is_xenophobe = no
-			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_xenophobe
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_xenophobe
+				change_variable = {
+					which = ngm_ethics_force_variable
+					value = 2
 				}
-				has_ethic = ethic_xenophobe
 			}
-			shift_ethic = ethic_xenophobe
-		}
-		if = {
-			limit = {
-				FROM = {
+			if = {
+				limit = {
+					FROM = {
+						is_xenophile = yes
+					}
 					is_xenophile = yes
 				}
-				is_xenophile = no
-			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_xenophile
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_xenophile
+				change_variable = {
+					which = ngm_ethics_force_variable
+					value = 2
 				}
-				has_ethic = ethic_xenophile
 			}
-			shift_ethic = ethic_xenophile
-		}
-		if = {
-			limit = {
-				FROM = {
+			if = {
+				limit = {
+					FROM = {
+						is_militarist = yes
+					}
 					is_militarist = yes
 				}
-				is_militarist = no
-			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_militarist
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_militarist
+				change_variable = {
+					which = ngm_ethics_force_variable
+					value = 2
 				}
-				has_ethic = ethic_militarist
 			}
-			shift_ethic = ethic_militarist
-		}
-		if = {
-			limit = {
-				FROM = {
+			if = {
+				limit = {
+					FROM = {
+						is_pacifist = yes
+					}
 					is_pacifist = yes
 				}
-				is_pacifist = no
-			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_pacifist
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_pacifist
+				change_variable = {
+					which = ngm_ethics_force_variable
+					value = 2
 				}
-				has_ethic = ethic_pacifist
 			}
-			shift_ethic = ethic_pacifist
-		}
-		if = {
-			limit = {
-				FROM = {
+			if = {
+				limit = {
+					FROM = {
+						is_materialist = yes
+					}
 					is_materialist = yes
 				}
 				change_variable = {
 					which = ngm_ethics_force_variable
-					value = 1
+					value = 2
 				}
-				is_materialist = no
 			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_materialist
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_materialist
-				}
-				has_ethic = ethic_materialist
-			}
-			shift_ethic = ethic_materialist
-		}
-		if = {
-			limit = {
-				FROM = {
+			if = {
+				limit = {
+					FROM = {
+						is_spiritualist = yes
+					}
 					is_spiritualist = yes
 				}
-				is_spiritualist = no
-			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_spiritualist
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_spiritualist
+				change_variable = {
+					which = ngm_ethics_force_variable
+					value = 2
 				}
-				has_ethic = ethic_spiritualist
 			}
-			shift_ethic = ethic_spiritualist
-		}
-		if = {
-			limit = {
-				FROM = {
+			if = {
+				limit = {
+					FROM = {
+						is_socialism = yes
+					}
 					is_socialism = yes
 				}
-				is_socialism = no
-			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_socialism
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_socialism
+				change_variable = {
+					which = ngm_ethics_force_variable
+					value = 2
 				}
-				has_ethic = ethic_socialism
 			}
-			shift_ethic = ethic_socialism
-		}
-		if = {
-			limit = {
-				FROM = {
+			if = {
+				limit = {
+					FROM = {
+						is_capitalism = yes
+					}
 					is_capitalism = yes
 				}
-				is_capitalism = no
-			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_capitalism
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_capitalism
+				change_variable = {
+					which = ngm_ethics_force_variable
+					value = 2
 				}
-				has_ethic = ethic_capitalism
 			}
-			shift_ethic = ethic_capitalism
-		}
-		if = {
-			limit = {
-				FROM = {
+			if = {
+				limit = {
+					FROM = {
+						is_interventionism = yes
+					}
 					is_interventionism = yes
 				}
-				is_interventionism = no
-			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_interventionism
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_interventionism
+				change_variable = {
+					which = ngm_ethics_force_variable
+					value = 2
 				}
-				has_ethic = ethic_interventionism
 			}
-			shift_ethic = ethic_interventionism
-		}
-		if = {
-			limit = {
-				FROM = {
+			if = {
+				limit = {
+					FROM = {
+						is_neutralism = yes
+					}
 					is_neutralism = yes
 				}
-				is_neutralism = no
-			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_neutralism
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_neutralism
+				change_variable = {
+					which = ngm_ethics_force_variable
+					value = 2
 				}
-				has_ethic = ethic_neutralism
 			}
-			shift_ethic = ethic_neutralism
-		}
-		if = {
-			limit = {
-				FROM = {
+			if = {
+				limit = {
+					FROM = {
+						is_developmentalism = yes
+					}
 					is_developmentalism = yes
 				}
-				is_developmentalism = no
-			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_developmentalism
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_developmentalism
+				change_variable = {
+					which = ngm_ethics_force_variable
+					value = 2
 				}
-				has_ethic = ethic_developmentalism
 			}
-			shift_ethic = ethic_developmentalism
-		}
-		if = {
-			limit = {
-				FROM = {
+			if = {
+				limit = {
+					FROM = {
+						is_conservationism = yes
+					}
 					is_conservationism = yes
 				}
-				is_conservationism = no
-			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_conservationism
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_conservationism
+				change_variable = {
+					which = ngm_ethics_force_variable
+					value = 2
 				}
-				has_ethic = ethic_conservationism
 			}
-			shift_ethic = ethic_conservationism
-		}
-		if = {
-			limit = {
-				FROM = {
+			if = {
+				limit = {
+					FROM = {
+						is_honorism = yes
+					}
 					is_honorism = yes
 				}
-				is_honorism = no
-			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_honorism
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_honorism
+				change_variable = {
+					which = ngm_ethics_force_variable
+					value = 2
 				}
-				has_ethic = ethic_honorism
 			}
-			shift_ethic = ethic_honorism
-		}
-		if = {
-			limit = {
-				FROM = {
+			if = {
+				limit = {
+					FROM = {
+						is_utilitarianism = yes
+					}
 					is_utilitarianism = yes
 				}
-				is_utilitarianism = no
-			}
-			subtract_variable = {
-				which = ngm_ethics_force_variable
-				value = 1
-			}
-			shift_ethic = ethic_utilitarianism
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_ethic = ethic_fanatic_utilitarianism
+				change_variable = {
+					which = ngm_ethics_force_variable
+					value = 2
 				}
-				has_ethic = ethic_utilitarianism
 			}
-			shift_ethic = ethic_utilitarianism
-		}
-		FROM = {
-			add_trust = {
-				who = ROOT
-				amount = -100
-			}
-			add_modifier = {
-				modifier = ngm_ethics_force_loyalty_2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_authoritarian = yes
+			if = {
+				check_variable = {
+					which = ngm_ethics_force_variable
+					value >= 10
 				}
-				is_authoritarian = yes
+				copy_ethos_and_authority = from
 			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_egalitarian = yes
-				}
-				is_egalitarian = yes
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_xenophobe = yes
-				}
-				is_xenophobe = yes
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_xenophile = yes
-				}
-				is_xenophile = yes
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_militarist = yes
-				}
-				is_militarist = yes
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_pacifist = yes
-				}
-				is_pacifist = yes
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_materialist = yes
-				}
-				is_materialist = yes
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_spiritualist = yes
-				}
-				is_spiritualist = yes
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_socialism = yes
-				}
-				is_socialism = yes
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_capitalism = yes
-				}
-				is_capitalism = yes
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_interventionism = yes
-				}
-				is_interventionism = yes
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_neutralism = yes
-				}
-				is_neutralism = yes
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_developmentalism = yes
-				}
-				is_developmentalism = yes
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_conservationism = yes
-				}
-				is_conservationism = yes
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_honorism = yes
-				}
-				is_honorism = yes
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					is_utilitarianism = yes
-				}
-				is_utilitarianism = yes
-			}
-			change_variable = {
-				which = ngm_ethics_force_variable
-				value = 2
-			}
-		}
-		if = {
-			check_variable = {
-				which = ngm_ethics_force_variable
-				value >= 4
-			}
-			copy_ethos_and_authority = from
 		}
 	}
 	on_deal_ended_sender_effect = {
