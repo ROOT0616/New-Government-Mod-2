@@ -313,7 +313,7 @@ ngm_tide_engineer = {
 			factor = 1.5
 			has_trait = trait_void_dweller_1
 			exists = planet
-			planet = { is_planet_class = pc_habitat }
+			planet = { uses_habitat_capitals = yes }
 		}
 		modifier = {
 			factor = 0.85
@@ -445,7 +445,7 @@ ngm_gardener = {
 			factor = 1.5
 			has_trait = trait_void_dweller_1
 			exists = planet
-			planet = { is_planet_class = pc_habitat }
+			planet = { uses_habitat_capitals = yes }
 		}
 		modifier = {
 			factor = 0.85
@@ -578,7 +578,7 @@ ngm_aquaculture_technician = {
 			factor = 1.5
 			has_trait = trait_void_dweller_1
 			exists = planet
-			planet = { is_planet_class = pc_habitat }
+			planet = { uses_habitat_capitals = yes }
 		}
 		modifier = {
 			factor = 0.85
@@ -709,7 +709,7 @@ ngm_executive_cast = {
 			factor = 1.5
 			has_trait = trait_void_dweller_1
 			exists = planet
-			planet = { is_planet_class = pc_habitat }
+			planet = { uses_habitat_capitals = yes }
 		}
 		modifier = {
 			factor = 0.85
@@ -840,7 +840,7 @@ ngm_cast = {
 			factor = 1.5
 			has_trait = trait_void_dweller_1
 			exists = planet
-			planet = { is_planet_class = pc_habitat }
+			planet = { uses_habitat_capitals = yes }
 		}
 		modifier = {
 			factor = 0.85
@@ -973,7 +973,7 @@ ngm_admiral = {
 			factor = 1.5
 			has_trait = trait_void_dweller_1
 			exists = planet
-			planet = { is_planet_class = pc_habitat }
+			planet = { uses_habitat_capitals = yes }
 		}
 		modifier = {
 			factor = 0.85
