@@ -18,24 +18,6 @@ traditionalist = {
 
 	is_potential = {
 		is_faction_allowed = yes
-
-		if = {
-			limit = {
-				has_faction = traditionalist
-				any_pop_faction = {
-					is_pop_faction_type = traditionalist
-					num_pops >= 5
-				}
-			}
-		}
-		else = {
-			count_owned_pop = {
-				count >= 5
-				limit = {
-					has_ethic = ethic_spiritualist
-				}
-			}
-		}
 	}
 
 	parameters = {
@@ -302,6 +284,28 @@ traditionalist = {
 		}
 	}
 
+	demand = { # "TRADITIONALIST_PSIONIC_TEACHINGS"
+		title = "TRADITIONALIST_PSIONIC_TEACHINGS"
+		unfulfilled_title = "TRADITIONALIST_NO_PSIONIC_TEACHINGS"
+		desc = "TRADITIONALIST_PSIONIC_TEACHINGS_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				has_origin = origin_shroudwalker_apprentice
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_technology = tech_psionic_theory
+			}
+		}
+	}
+
 	demand = { # "TRADITIONALIST_FLESH_IS_STRONG"
 		title = "TRADITIONALIST_FLESH_IS_STRONG"
 		unfulfilled_title = "TRADITIONALIST_FLESH_IS_WEAK"
@@ -320,7 +324,7 @@ traditionalist = {
 		trigger = {
 			owner = {
 				NOT = {
-					has_country_flag = flesh_weakened
+					has_tradition = tr_cybernetics_transubstantiation_synthesis
 				}
 			}
 		}
@@ -422,6 +426,47 @@ traditionalist = {
 		trigger = {
 			owner = {
 				has_modifier = proclaim_religious_finding
+			}
+		}
+	}
+
+	demand = {
+		title = TRADITIONALIST_FEDERATION
+		unfulfilled_title = TRADITIONALIST_FEDERATION_NOT_SPIRITUALIST
+		desc = TRADITIONALIST_FEDERATION_DESC
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner.federation
+			has_federations_dlc = yes
+		}
+
+		trigger = {
+			owner.federation = { has_federation_type = spiritualist_federation }
+		}
+	}
+
+	demand = {
+		title = TRADITIONALIST_FEDERATION_ANTI
+		unfulfilled_title = TRADITIONALIST_FEDERATION_ANTI_NOT_RESEARCH
+		desc = TRADITIONALIST_FEDERATION_ANTI_DESC
+
+		unfulfilled_effect = -10
+		fulfilled_effect = 0.001
+
+		potential = {
+			exists = owner.federation
+			owner.federation = { has_federation_type = research_federation }
+		}
+
+		trigger = {
+			OR = {
+				NOT = { exists = owner.federation }
+				owner.federation = {
+					NOT = { has_federation_type = research_federation }
+				}
 			}
 		}
 	}

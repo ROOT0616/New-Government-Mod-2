@@ -269,7 +269,6 @@ auth_corporate = {
 	max_election_candidates = 4
 	localization_postfix = corporate
 
-	has_heir = yes
 	has_agendas = yes
 
 	playable = { host_has_dlc = "Megacorp" }
@@ -279,6 +278,8 @@ auth_corporate = {
 				value = ethic_gestalt_consciousness
 				value = ethic_fanatic_egalitarian
 				value = ethic_fanatic_authoritarian
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
 			}
 		}
 	}
@@ -296,18 +297,6 @@ auth_corporate = {
 	country_modifier = {
 		country_unity_produces_mult = 0.1
 		empire_size_penalty_mult = 0.25
-	}
-
-	possible = {
-		ethics = {
-			NOR = {
-				value = ethic_gestalt_consciousness
-				value = ethic_fanatic_egalitarian
-				value = ethic_fanatic_authoritarian
-				value = ethic_socialism
-				value = ethic_fanatic_socialism
-			}
-		}
 	}
 
 	tags = {
