@@ -18,11 +18,16 @@ district_city = {
 	}
 
 	potential = {
-		exists = owner
-		owner = {
-			OR = {
-				is_regular_empire = yes
-				is_country_type = primitive
+		OR = {
+			NOT = { exists = owner } #this condition is needed for galaxy generation
+			AND = {
+				exists = owner
+				owner = {
+					OR = {
+						is_regular_empire = yes
+						is_country_type = primitive
+					}
+				}
 			}
 		}
 		OR = {
@@ -134,7 +139,7 @@ district_city = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
+			owner = { has_active_tradition = tr_mercantile_trickle_up_economics }
 		}
 		modifier = {
 			job_clerk_add = 1
@@ -641,6 +646,7 @@ district_industrial = {
 				is_regular_empire = yes
 				is_crafter_empire = no
 			}
+			NOT = { has_designation = col_foundry }
 		}
 		text = job_artisan_effect_desc
 	}
@@ -652,6 +658,7 @@ district_industrial = {
 				is_regular_empire = yes
 				is_crafter_empire = yes
 			}
+			NOT = { has_designation = col_foundry }
 		}
 		text = job_artificer_effect_desc
 	}
@@ -674,6 +681,7 @@ district_industrial = {
 				is_regular_empire = yes
 				is_catalytic_empire = no
 			}
+			NOT = { has_designation = col_factory }
 		}
 		text = job_foundry_effect_desc
 	}
@@ -685,6 +693,7 @@ district_industrial = {
 				is_regular_empire = yes
 				is_catalytic_empire = yes
 			}
+			NOT = { has_designation = col_factory }
 		}
 		text = job_catalytic_technician_effect_desc
 	}
@@ -847,7 +856,7 @@ district_srw_commercial = {
 	triggered_desc = {
 		text = job_clerk_effect_desc
 	}
-	
+
 	triggered_desc = {
 		text = job_merchant_effect_desc
 		trigger = {
