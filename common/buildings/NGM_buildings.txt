@@ -5,13 +5,14 @@ building_ngm_bureau_of_ceremonies = {
 	base_cap_amount = 1
 	category = government
 	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
 		owner = {
 			is_gestalt = no
-			NOT = {
-				has_country_flag = build_ngm_bureau_of_ceremonies
-			}
 		}
 	}
+	
+	empire_limit = 1
 	prerequisites = {
 		"tech_ceremony_theory"
 	}
@@ -49,21 +50,6 @@ building_ngm_bureau_of_ceremonies = {
 	on_destroy = {
 		owner = {
 			remove_country_flag = build_ngm_bureau_of_ceremonies
-		}
-	}
-	on_queued = {
-		owner = {
-			set_country_flag = build_ngm_bureau_of_ceremonies
-		}
-	}
-	on_unqueued = {
-		owner = {
-			if = {
-				limit = {
-					has_country_flag = build_ngm_bureau_of_ceremonies
-				}
-				remove_country_flag = build_ngm_bureau_of_ceremonies
-			}
 		}
 	}
 }
@@ -1207,7 +1193,7 @@ building_ngm_Iimperial_concert_hall = {
 	}
 	planet_modifier = {
 		planet_jobs_unity_produces_mult = 0.05
-		country_unity_produces_add = 10
+		n = 10
 	}
 	triggered_planet_modifier = {
 		potential = {
