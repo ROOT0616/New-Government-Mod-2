@@ -573,9 +573,33 @@ country_event = {
 			set_country_flag = ngm_fleet_trade_13_country_flag
 		}
 	}
-	# 閉じる
+	# 国選択リセット
 	option = {
 		name = ngm_fleet_trade.1.n
+		country_event = {
+			id = ngm_fleet_trade.1
+		}
+		hidden_effect = {
+			remove_global_flag = ngm_fleet_trade_now_global_flag
+			clear_global_event_target = ngm_fleet_trade_0
+			clear_global_event_target = ngm_fleet_trade_1
+			clear_global_event_target = ngm_fleet_trade_2
+			clear_global_event_target = ngm_fleet_trade_3
+			clear_global_event_target = ngm_fleet_trade_4
+			clear_global_event_target = ngm_fleet_trade_5
+			clear_global_event_target = ngm_fleet_trade_6
+			clear_global_event_target = ngm_fleet_trade_7
+			clear_global_event_target = ngm_fleet_trade_8
+			clear_global_event_target = ngm_fleet_trade_9
+			clear_global_event_target = ngm_fleet_trade_10
+			clear_global_event_target = ngm_fleet_trade_11
+			clear_global_event_target = ngm_fleet_trade_12
+			clear_global_event_target = ngm_fleet_trade_13
+		}
+	}
+	# 閉じる
+	option = {
+		name = ngm_fleet_trade.1.o
 		hidden_effect = {
 			remove_global_flag = ngm_fleet_trade_now_global_flag
 			clear_global_event_target = ngm_fleet_trade_0
