@@ -208,11 +208,9 @@ ethic_authoritarian = {
 				has_ethic = ethic_fanatic_authoritarian
 				AND = {
 					is_country_type = primitive
+					has_country_flag = preftl_societal_enlightenment_pact
 					capital_scope = {
 						has_observation_outpost = yes
-						observation_outpost = {
-							has_mission = native_indoctrination
-						}
 						observation_outpost_owner = {
 							OR = {
 								has_ethic = ethic_fanatic_authoritarian
@@ -227,22 +225,18 @@ ethic_authoritarian = {
 		modifier = {
 			factor = 20
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_fanatic_authoritarian }
 			}
 		}
 		modifier = {
 			factor = 10
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_authoritarian }
 			}
 		}
@@ -287,6 +281,7 @@ ethic_authoritarian = {
 		}
 		modifier = {
 			factor = 2
+			is_country_type = default
 			NOR = {
 				has_ethic = ethic_authoritarian
 				has_ethic = ethic_fanatic_authoritarian
@@ -615,22 +610,18 @@ ethic_egalitarian = {
 		modifier = {
 			factor = 20
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_fanatic_egalitarian }
 			}
 		}
 		modifier = {
 			factor = 10
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_egalitarian }
 			}
 		}
@@ -675,6 +666,7 @@ ethic_egalitarian = {
 		}
 		modifier = {
 			factor = 2
+			is_country_type = default
 			NOR = {
 				has_ethic = ethic_egalitarian
 				has_ethic = ethic_fanatic_egalitarian
@@ -1027,11 +1019,9 @@ ethic_xenophobe = {
 				has_ethic = ethic_fanatic_xenophobe
 				AND = {
 					is_country_type = primitive
+					has_country_flag = preftl_societal_enlightenment_pact
 					capital_scope = {
 						has_observation_outpost = yes
-						observation_outpost = {
-							has_mission = native_indoctrination
-						}
 						observation_outpost_owner = {
 							OR = {
 								has_ethic = ethic_fanatic_xenophobe
@@ -1044,6 +1034,7 @@ ethic_xenophobe = {
 		}
 		modifier = {
 			factor = 2
+			is_country_type = default
 			NOR = {
 				has_ethic = ethic_xenophobe
 				has_ethic = ethic_fanatic_xenophobe
@@ -1133,22 +1124,18 @@ ethic_xenophobe = {
 		modifier = {
 			factor = 20
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_fanatic_xenophobe }
 			}
 		}
 		modifier = {
 			factor = 10
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_xenophobe }
 			}
 		}
@@ -1271,6 +1258,8 @@ ethic_fanatic_xenophile = {
 	country_modifier = {
 		trade_value_mult = 0.20
 		envoys_add = 2
+		show_only_custom_tooltip = no
+		custom_tooltip = fan_xenophile_insight_gain
 	}
 
 	random_weight = {
@@ -1299,6 +1288,8 @@ ethic_xenophile = {
 	country_modifier = {
 		trade_value_mult = 0.10
 		envoys_add = 1
+		show_only_custom_tooltip = no
+		custom_tooltip = xenophile_insight_gain
 	}
 
 	random_weight = {
@@ -1490,11 +1481,9 @@ ethic_xenophile = {
 				has_ethic = ethic_fanatic_xenophile
 				AND = {
 					is_country_type = primitive
+					has_country_flag = preftl_societal_enlightenment_pact
 					capital_scope = {
 						has_observation_outpost = yes
-						observation_outpost = {
-							has_mission = native_indoctrination
-						}
 						observation_outpost_owner = {
 							OR = {
 								has_ethic = ethic_fanatic_xenophile
@@ -1507,6 +1496,7 @@ ethic_xenophile = {
 		}
 		modifier = {
 			factor = 2
+			is_country_type = default
 			NOR = {
 				has_ethic = ethic_xenophile
 				has_ethic = ethic_fanatic_xenophile
@@ -1515,7 +1505,6 @@ ethic_xenophile = {
 		}
 		modifier = {
 			factor = 1.5
-			is_country_type = default
 			exists = ruler
 			ruler = { leader_of_faction = xenoist }
 		}
@@ -1580,22 +1569,18 @@ ethic_xenophile = {
 		modifier = {
 			factor = 20
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_fanatic_xenophile }
 			}
 		}
 		modifier = {
 			factor = 10
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_xenophile }
 			}
 		}
@@ -1922,7 +1907,7 @@ ethic_militarist = {
 	}
 
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_NO_OFFENSIVE_WARS_NEG
+		desc = POP_ATTRACTION_NO_WARS_NEG
 		trigger = {
 			has_policy_flag = no_wars
 		}
@@ -1939,11 +1924,9 @@ ethic_militarist = {
 				has_ethic = ethic_fanatic_militarist
 				AND = {
 					is_country_type = primitive
+					has_country_flag = preftl_societal_enlightenment_pact
 					capital_scope = {
 						has_observation_outpost = yes
-						observation_outpost = {
-							has_mission = native_indoctrination
-						}
 						observation_outpost_owner = {
 							OR = {
 								has_ethic = ethic_fanatic_militarist
@@ -1957,6 +1940,7 @@ ethic_militarist = {
 
 		modifier = {
 			factor = 2
+			is_country_type = default
 			NOR = {
 				has_ethic = ethic_militarist
 				has_ethic = ethic_fanatic_militarist
@@ -2084,22 +2068,18 @@ ethic_militarist = {
 		modifier = {
 			factor = 20
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_fanatic_militarist }
 			}
 		}
 		modifier = {
 			factor = 10
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_militarist }
 			}
 		}
@@ -2362,11 +2342,9 @@ ethic_pacifist = {
 				has_ethic = ethic_fanatic_pacifist
 				AND = {
 					is_country_type = primitive
+					has_country_flag = preftl_societal_enlightenment_pact
 					capital_scope = {
 						has_observation_outpost = yes
-						observation_outpost = {
-							has_mission = native_indoctrination
-						}
 						observation_outpost_owner = {
 							OR = {
 								has_ethic = ethic_fanatic_pacifist
@@ -2379,6 +2357,7 @@ ethic_pacifist = {
 		}
 		modifier = {
 			factor = 2
+			is_country_type = default
 			NOR = {
 				has_ethic = ethic_pacifist
 				has_ethic = ethic_fanatic_pacifist
@@ -2456,22 +2435,18 @@ ethic_pacifist = {
 		modifier = {
 			factor = 20
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_fanatic_pacifist }
 			}
 		}
 		modifier = {
 			factor = 10
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_pacifist }
 			}
 		}
@@ -2757,11 +2732,9 @@ ethic_spiritualist = {
 				has_ethic = ethic_fanatic_spiritualist
 				AND = {
 					is_country_type = primitive
+					has_country_flag = preftl_societal_enlightenment_pact
 					capital_scope = {
 						has_observation_outpost = yes
-						observation_outpost = {
-							has_mission = native_indoctrination
-						}
 						observation_outpost_owner = {
 							OR = {
 								has_ethic = ethic_fanatic_spiritualist
@@ -2776,22 +2749,18 @@ ethic_spiritualist = {
 		modifier = {
 			factor = 20
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_fanatic_spiritualist }
 			}
 		}
 		modifier = {
 			factor = 10
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_spiritualist }
 			}
 		}
@@ -2836,6 +2805,7 @@ ethic_spiritualist = {
 		}
 		modifier = {
 			factor = 2
+			is_country_type = default
 			NOR = {
 				has_ethic = ethic_spiritualist
 				has_ethic = ethic_fanatic_spiritualist
@@ -3141,11 +3111,9 @@ ethic_materialist = {
 				has_ethic = ethic_fanatic_materialist
 				AND = {
 					is_country_type = primitive
+					has_country_flag = preftl_societal_enlightenment_pact
 					capital_scope = {
 						has_observation_outpost = yes
-						observation_outpost = {
-							has_mission = native_indoctrination
-						}
 						observation_outpost_owner = {
 							OR = {
 								has_ethic = ethic_fanatic_materialist
@@ -3160,22 +3128,18 @@ ethic_materialist = {
 		modifier = {
 			factor = 20
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_fanatic_materialist }
 			}
 		}
 		modifier = {
 			factor = 10
 			is_country_type = primitive
+			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
-				observation_outpost = {
-					has_mission = native_indoctrination
-				}
 				observation_outpost_owner = { has_ethic = ethic_materialist }
 			}
 		}
@@ -3220,6 +3184,7 @@ ethic_materialist = {
 		}
 		modifier = {
 			factor = 2
+			is_country_type = default
 			NOR = {
 				has_ethic = ethic_materialist
 				has_ethic = ethic_fanatic_materialist
