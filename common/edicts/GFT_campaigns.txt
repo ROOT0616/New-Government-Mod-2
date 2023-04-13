@@ -1,0 +1,39 @@
+# 研究取引 贈与
+gft_technology_trade_options_menu = {
+	length = 0
+	icon = "GFX_edict_type_policy"
+	potential = {
+		is_ai = no
+		not = {
+			has_global_flag = gft_technology_trade_now_global_flag
+		}
+	}
+	effect = {
+		# custom_tooltip = ryika_abdw_options_menu_tt
+		hidden_effect = {
+			country_event = {
+				id = gft_tech_trade.1
+			}
+		}
+	}
+}
+
+# 艦隊 贈与
+gft_fleet_trade_options_menu = {
+	length = 0
+	icon = "GFX_edict_type_policy"
+	potential = {
+		is_ai = no
+		not = {
+			has_global_flag = gft_fleet_trade_now_global_flag
+		}
+	}
+	effect = {
+		# custom_tooltip = ryika_abdw_options_menu_tt
+		hidden_effect = {
+			country_event = {
+				id = gft_fleet_trade.1
+			}
+		}
+	}
+}

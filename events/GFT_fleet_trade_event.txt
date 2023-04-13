@@ -1,0 +1,3710 @@
+################################
+######  艦隊贈与用イベント #######
+################################
+namespace = gft_fleet_trade
+# 艦隊 贈与 国選び
+country_event = {
+	id = gft_fleet_trade.1
+	title = gft_fleet_trade.1.name
+	desc = gft_fleet_trade.1.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_finding_loot
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = gft_fleet_trade_now_global_flag
+		save_global_event_target_as = gft_fleet_trade_0
+		random_country = {
+			limit = {
+				has_communications = event_target:gft_fleet_trade_0
+				is_country_type = default
+			}
+			save_global_event_target_as = gft_fleet_trade_1
+			random_country = {
+				limit = {
+					has_communications = event_target:gft_fleet_trade_0
+					is_country_type = default
+					NOT = {
+						is_same_value = event_target:gft_fleet_trade_1
+					}
+				}
+				save_global_event_target_as = gft_fleet_trade_2
+				random_country = {
+					limit = {
+						has_communications = event_target:gft_fleet_trade_0
+						is_country_type = default
+						NOT = {
+							is_same_value = event_target:gft_fleet_trade_1
+						}
+						NOT = {
+							is_same_value = event_target:gft_fleet_trade_2
+						}
+					}
+					save_global_event_target_as = gft_fleet_trade_3
+					random_country = {
+						limit = {
+							has_communications = event_target:gft_fleet_trade_0
+							is_country_type = default
+							NOT = {
+								is_same_value = event_target:gft_fleet_trade_1
+							}
+							NOT = {
+								is_same_value = event_target:gft_fleet_trade_2
+							}
+							NOT = {
+								is_same_value = event_target:gft_fleet_trade_3
+							}
+						}
+						save_global_event_target_as = gft_fleet_trade_4
+						random_country = {
+							limit = {
+								has_communications = event_target:gft_fleet_trade_0
+								is_country_type = default
+								NOT = {
+									is_same_value = event_target:gft_fleet_trade_1
+								}
+								NOT = {
+									is_same_value = event_target:gft_fleet_trade_2
+								}
+								NOT = {
+									is_same_value = event_target:gft_fleet_trade_3
+								}
+								NOT = {
+									is_same_value = event_target:gft_fleet_trade_4
+								}
+							}
+							save_global_event_target_as = gft_fleet_trade_5
+							random_country = {
+								limit = {
+									has_communications = event_target:gft_fleet_trade_0
+									is_country_type = default
+									NOT = {
+										is_same_value = event_target:gft_fleet_trade_1
+									}
+									NOT = {
+										is_same_value = event_target:gft_fleet_trade_2
+									}
+									NOT = {
+										is_same_value = event_target:gft_fleet_trade_3
+									}
+									NOT = {
+										is_same_value = event_target:gft_fleet_trade_4
+									}
+									NOT = {
+										is_same_value = event_target:gft_fleet_trade_5
+									}
+								}
+								save_global_event_target_as = gft_fleet_trade_6
+								random_country = {
+									limit = {
+										has_communications = event_target:gft_fleet_trade_0
+										is_country_type = default
+										NOT = {
+											is_same_value = event_target:gft_fleet_trade_1
+										}
+										NOT = {
+											is_same_value = event_target:gft_fleet_trade_2
+										}
+										NOT = {
+											is_same_value = event_target:gft_fleet_trade_3
+										}
+										NOT = {
+											is_same_value = event_target:gft_fleet_trade_4
+										}
+										NOT = {
+											is_same_value = event_target:gft_fleet_trade_5
+										}
+										NOT = {
+											is_same_value = event_target:gft_fleet_trade_6
+										}
+									}
+									save_global_event_target_as = gft_fleet_trade_7
+									random_country = {
+										limit = {
+											has_communications = event_target:gft_fleet_trade_0
+											is_country_type = default
+											NOT = {
+												is_same_value = event_target:gft_fleet_trade_1
+											}
+											NOT = {
+												is_same_value = event_target:gft_fleet_trade_2
+											}
+											NOT = {
+												is_same_value = event_target:gft_fleet_trade_3
+											}
+											NOT = {
+												is_same_value = event_target:gft_fleet_trade_4
+											}
+											NOT = {
+												is_same_value = event_target:gft_fleet_trade_5
+											}
+											NOT = {
+												is_same_value = event_target:gft_fleet_trade_6
+											}
+											NOT = {
+												is_same_value = event_target:gft_fleet_trade_7
+											}
+										}
+										save_global_event_target_as = gft_fleet_trade_8
+										random_country = {
+											limit = {
+												has_communications = event_target:gft_fleet_trade_0
+												is_country_type = default
+												NOT = {
+													is_same_value = event_target:gft_fleet_trade_1
+												}
+												NOT = {
+													is_same_value = event_target:gft_fleet_trade_2
+												}
+												NOT = {
+													is_same_value = event_target:gft_fleet_trade_3
+												}
+												NOT = {
+													is_same_value = event_target:gft_fleet_trade_4
+												}
+												NOT = {
+													is_same_value = event_target:gft_fleet_trade_5
+												}
+												NOT = {
+													is_same_value = event_target:gft_fleet_trade_6
+												}
+												NOT = {
+													is_same_value = event_target:gft_fleet_trade_7
+												}
+												NOT = {
+													is_same_value = event_target:gft_fleet_trade_8
+												}
+											}
+											save_global_event_target_as = gft_fleet_trade_9
+											random_country = {
+												limit = {
+													has_communications = event_target:gft_fleet_trade_0
+													is_country_type = default
+													NOT = {
+														is_same_value = event_target:gft_fleet_trade_1
+													}
+													NOT = {
+														is_same_value = event_target:gft_fleet_trade_2
+													}
+													NOT = {
+														is_same_value = event_target:gft_fleet_trade_3
+													}
+													NOT = {
+														is_same_value = event_target:gft_fleet_trade_4
+													}
+													NOT = {
+														is_same_value = event_target:gft_fleet_trade_5
+													}
+													NOT = {
+														is_same_value = event_target:gft_fleet_trade_6
+													}
+													NOT = {
+														is_same_value = event_target:gft_fleet_trade_7
+													}
+													NOT = {
+														is_same_value = event_target:gft_fleet_trade_8
+													}
+													NOT = {
+														is_same_value = event_target:gft_fleet_trade_9
+													}
+												}
+												save_global_event_target_as = gft_fleet_trade_10
+												random_country = {
+													limit = {
+														has_communications = event_target:gft_fleet_trade_0
+														is_country_type = default
+														NOT = {
+															is_same_value = event_target:gft_fleet_trade_1
+														}
+														NOT = {
+															is_same_value = event_target:gft_fleet_trade_2
+														}
+														NOT = {
+															is_same_value = event_target:gft_fleet_trade_3
+														}
+														NOT = {
+															is_same_value = event_target:gft_fleet_trade_4
+														}
+														NOT = {
+															is_same_value = event_target:gft_fleet_trade_5
+														}
+														NOT = {
+															is_same_value = event_target:gft_fleet_trade_6
+														}
+														NOT = {
+															is_same_value = event_target:gft_fleet_trade_7
+														}
+														NOT = {
+															is_same_value = event_target:gft_fleet_trade_8
+														}
+														NOT = {
+															is_same_value = event_target:gft_fleet_trade_9
+														}
+														NOT = {
+															is_same_value = event_target:gft_fleet_trade_10
+														}
+													}
+													save_global_event_target_as = gft_fleet_trade_11
+													random_country = {
+														limit = {
+															has_communications = event_target:gft_fleet_trade_0
+															is_country_type = default
+															NOT = {
+																is_same_value = event_target:gft_fleet_trade_1
+															}
+															NOT = {
+																is_same_value = event_target:gft_fleet_trade_2
+															}
+															NOT = {
+																is_same_value = event_target:gft_fleet_trade_3
+															}
+															NOT = {
+																is_same_value = event_target:gft_fleet_trade_4
+															}
+															NOT = {
+																is_same_value = event_target:gft_fleet_trade_5
+															}
+															NOT = {
+																is_same_value = event_target:gft_fleet_trade_6
+															}
+															NOT = {
+																is_same_value = event_target:gft_fleet_trade_7
+															}
+															NOT = {
+																is_same_value = event_target:gft_fleet_trade_8
+															}
+															NOT = {
+																is_same_value = event_target:gft_fleet_trade_9
+															}
+															NOT = {
+																is_same_value = event_target:gft_fleet_trade_10
+															}
+															NOT = {
+																is_same_value = event_target:gft_fleet_trade_11
+															}
+														}
+														save_global_event_target_as = gft_fleet_trade_12
+														random_country = {
+															limit = {
+																has_communications = event_target:gft_fleet_trade_0
+																is_country_type = default
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_1
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_2
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_3
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_4
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_5
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_6
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_7
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_8
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_9
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_10
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_11
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_12
+																}
+															}
+															save_global_event_target_as = gft_fleet_trade_13
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.1.a
+		trigger = {
+			exists = event_target:gft_fleet_trade_1
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_fleet_trade_1
+				is_at_war_with = event_target:gft_fleet_trade_1
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gft_fleet_trade.2
+			}
+			set_country_flag = gft_fleet_trade_1_country_flag
+		}
+	}
+	option = {
+		name = gft_fleet_trade.1.b
+		trigger = {
+			exists = event_target:gft_fleet_trade_2
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_fleet_trade_2
+				is_at_war_with = event_target:gft_fleet_trade_2
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gft_fleet_trade.2
+			}
+			set_country_flag = gft_fleet_trade_2_country_flag
+		}
+	}
+	option = {
+		name = gft_fleet_trade.1.c
+		trigger = {
+			exists = event_target:gft_fleet_trade_3
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_fleet_trade_3
+				is_at_war_with = event_target:gft_fleet_trade_3
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gft_fleet_trade.2
+			}
+			set_country_flag = gft_fleet_trade_3_country_flag
+		}
+	}
+	option = {
+		name = gft_fleet_trade.1.d
+		trigger = {
+			exists = event_target:gft_fleet_trade_4
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_fleet_trade_4
+				is_at_war_with = event_target:gft_fleet_trade_4
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gft_fleet_trade.2
+			}
+			set_country_flag = gft_fleet_trade_4_country_flag
+		}
+	}
+	option = {
+		name = gft_fleet_trade.1.e
+		trigger = {
+			exists = event_target:gft_fleet_trade_5
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_fleet_trade_5
+				is_at_war_with = event_target:gft_fleet_trade_5
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gft_fleet_trade.2
+			}
+			set_country_flag = gft_fleet_trade_5_country_flag
+		}
+	}
+	option = {
+		name = gft_fleet_trade.1.f
+		trigger = {
+			exists = event_target:gft_fleet_trade_6
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_fleet_trade_6
+				is_at_war_with = event_target:gft_fleet_trade_6
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gft_fleet_trade.2
+			}
+			set_country_flag = gft_fleet_trade_6_country_flag
+		}
+	}
+	option = {
+		name = gft_fleet_trade.1.g
+		trigger = {
+			exists = event_target:gft_fleet_trade_7
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_fleet_trade_7
+				is_at_war_with = event_target:gft_fleet_trade_7
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gft_fleet_trade.2
+			}
+			set_country_flag = gft_fleet_trade_7_country_flag
+		}
+	}
+	option = {
+		name = gft_fleet_trade.1.h
+		trigger = {
+			exists = event_target:gft_fleet_trade_8
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_fleet_trade_8
+				is_at_war_with = event_target:gft_fleet_trade_8
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gft_fleet_trade.2
+			}
+			set_country_flag = gft_fleet_trade_8_country_flag
+		}
+	}
+	option = {
+		name = gft_fleet_trade.1.i
+		trigger = {
+			exists = event_target:gft_fleet_trade_9
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_fleet_trade_9
+				is_at_war_with = event_target:gft_fleet_trade_9
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gft_fleet_trade.2
+			}
+			set_country_flag = gft_fleet_trade_9_country_flag
+		}
+	}
+	option = {
+		name = gft_fleet_trade.1.j
+		trigger = {
+			exists = event_target:gft_fleet_trade_10
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_fleet_trade_10
+				is_at_war_with = event_target:gft_fleet_trade_10
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gft_fleet_trade.2
+			}
+			set_country_flag = gft_fleet_trade_10_country_flag
+		}
+	}
+	option = {
+		name = gft_fleet_trade.1.k
+		trigger = {
+			exists = event_target:gft_fleet_trade_11
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_fleet_trade_11
+				is_at_war_with = event_target:gft_fleet_trade_11
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gft_fleet_trade.2
+			}
+			set_country_flag = gft_fleet_trade_11_country_flag
+		}
+	}
+	option = {
+		name = gft_fleet_trade.1.l
+		trigger = {
+			exists = event_target:gft_fleet_trade_12
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_fleet_trade_12
+				is_at_war_with = event_target:gft_fleet_trade_12
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gft_fleet_trade.2
+			}
+			set_country_flag = gft_fleet_trade_12_country_flag
+		}
+	}
+	option = {
+		name = gft_fleet_trade.1.m
+		trigger = {
+			exists = event_target:gft_fleet_trade_13
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_fleet_trade_13
+				is_at_war_with = event_target:gft_fleet_trade_13
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = gft_fleet_trade.2
+			}
+			set_country_flag = gft_fleet_trade_13_country_flag
+		}
+	}
+	# 国選択リセット
+	option = {
+		name = gft_fleet_trade.1.n
+		country_event = {
+			id = gft_fleet_trade.1
+		}
+		hidden_effect = {
+			remove_global_flag = gft_fleet_trade_now_global_flag
+			clear_global_event_target = gft_fleet_trade_0
+			clear_global_event_target = gft_fleet_trade_1
+			clear_global_event_target = gft_fleet_trade_2
+			clear_global_event_target = gft_fleet_trade_3
+			clear_global_event_target = gft_fleet_trade_4
+			clear_global_event_target = gft_fleet_trade_5
+			clear_global_event_target = gft_fleet_trade_6
+			clear_global_event_target = gft_fleet_trade_7
+			clear_global_event_target = gft_fleet_trade_8
+			clear_global_event_target = gft_fleet_trade_9
+			clear_global_event_target = gft_fleet_trade_10
+			clear_global_event_target = gft_fleet_trade_11
+			clear_global_event_target = gft_fleet_trade_12
+			clear_global_event_target = gft_fleet_trade_13
+		}
+	}
+	# 閉じる
+	option = {
+		name = gft_fleet_trade.1.o
+		hidden_effect = {
+			remove_global_flag = gft_fleet_trade_now_global_flag
+			clear_global_event_target = gft_fleet_trade_0
+			clear_global_event_target = gft_fleet_trade_1
+			clear_global_event_target = gft_fleet_trade_2
+			clear_global_event_target = gft_fleet_trade_3
+			clear_global_event_target = gft_fleet_trade_4
+			clear_global_event_target = gft_fleet_trade_5
+			clear_global_event_target = gft_fleet_trade_6
+			clear_global_event_target = gft_fleet_trade_7
+			clear_global_event_target = gft_fleet_trade_8
+			clear_global_event_target = gft_fleet_trade_9
+			clear_global_event_target = gft_fleet_trade_10
+			clear_global_event_target = gft_fleet_trade_11
+			clear_global_event_target = gft_fleet_trade_12
+			clear_global_event_target = gft_fleet_trade_13
+		}
+	}
+}
+
+# 艦隊 贈与 艦隊選び
+country_event = {
+	id = gft_fleet_trade.2
+	title = gft_fleet_trade.2.name
+	desc = gft_fleet_trade.2.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_finding_loot
+	is_triggered_only = yes
+	immediate = {
+		random_owned_fleet = {
+			limit = {
+				is_ship_class = shipclass_military
+			}
+			save_global_event_target_as = gft_fleet_trade_fleet_1
+			owner = {
+				random_owned_fleet = {
+					limit = {
+						is_ship_class = shipclass_military
+						NOT = {
+							is_same_value = event_target:gft_fleet_trade_fleet_1
+						}
+					}
+					save_global_event_target_as = gft_fleet_trade_fleet_2
+					owner = {
+						random_owned_fleet = {
+							limit = {
+								is_ship_class = shipclass_military
+								NOT = {
+									is_same_value = event_target:gft_fleet_trade_fleet_1
+								}
+								NOT = {
+									is_same_value = event_target:gft_fleet_trade_fleet_2
+								}
+							}
+							save_global_event_target_as = gft_fleet_trade_fleet_3
+							owner = {
+								random_owned_fleet = {
+									limit = {
+										is_ship_class = shipclass_military
+										NOT = {
+											is_same_value = event_target:gft_fleet_trade_fleet_1
+										}
+										NOT = {
+											is_same_value = event_target:gft_fleet_trade_fleet_2
+										}
+										NOT = {
+											is_same_value = event_target:gft_fleet_trade_fleet_3
+										}
+									}
+									save_global_event_target_as = gft_fleet_trade_fleet_4
+									owner = {
+										random_owned_fleet = {
+											limit = {
+												is_ship_class = shipclass_military
+												NOT = {
+													is_same_value = event_target:gft_fleet_trade_fleet_1
+												}
+												NOT = {
+													is_same_value = event_target:gft_fleet_trade_fleet_2
+												}
+												NOT = {
+													is_same_value = event_target:gft_fleet_trade_fleet_3
+												}
+												NOT = {
+													is_same_value = event_target:gft_fleet_trade_fleet_4
+												}
+											}
+											save_global_event_target_as = gft_fleet_trade_fleet_5
+											owner = {
+												random_owned_fleet = {
+													limit = {
+														is_ship_class = shipclass_military
+														NOT = {
+															is_same_value = event_target:gft_fleet_trade_fleet_1
+														}
+														NOT = {
+															is_same_value = event_target:gft_fleet_trade_fleet_2
+														}
+														NOT = {
+															is_same_value = event_target:gft_fleet_trade_fleet_3
+														}
+														NOT = {
+															is_same_value = event_target:gft_fleet_trade_fleet_4
+														}
+														NOT = {
+															is_same_value = event_target:gft_fleet_trade_fleet_5
+														}
+													}
+													save_global_event_target_as = gft_fleet_trade_fleet_6
+													owner = {
+														random_owned_fleet = {
+															limit = {
+																is_ship_class = shipclass_military
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_fleet_1
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_fleet_2
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_fleet_3
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_fleet_4
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_fleet_5
+																}
+																NOT = {
+																	is_same_value = event_target:gft_fleet_trade_fleet_6
+																}
+															}
+															save_global_event_target_as = gft_fleet_trade_fleet_7
+															owner = {
+																random_owned_fleet = {
+																	limit = {
+																		is_ship_class = shipclass_military
+																		NOT = {
+																			is_same_value = event_target:gft_fleet_trade_fleet_1
+																		}
+																		NOT = {
+																			is_same_value = event_target:gft_fleet_trade_fleet_2
+																		}
+																		NOT = {
+																			is_same_value = event_target:gft_fleet_trade_fleet_3
+																		}
+																		NOT = {
+																			is_same_value = event_target:gft_fleet_trade_fleet_4
+																		}
+																		NOT = {
+																			is_same_value = event_target:gft_fleet_trade_fleet_5
+																		}
+																		NOT = {
+																			is_same_value = event_target:gft_fleet_trade_fleet_6
+																		}
+																		NOT = {
+																			is_same_value = event_target:gft_fleet_trade_fleet_7
+																		}
+																	}
+																	save_global_event_target_as = gft_fleet_trade_fleet_8
+																	owner = {
+																		random_owned_fleet = {
+																			limit = {
+																				is_ship_class = shipclass_military
+																				NOT = {
+																					is_same_value = event_target:gft_fleet_trade_fleet_1
+																				}
+																				NOT = {
+																					is_same_value = event_target:gft_fleet_trade_fleet_2
+																				}
+																				NOT = {
+																					is_same_value = event_target:gft_fleet_trade_fleet_3
+																				}
+																				NOT = {
+																					is_same_value = event_target:gft_fleet_trade_fleet_4
+																				}
+																				NOT = {
+																					is_same_value = event_target:gft_fleet_trade_fleet_5
+																				}
+																				NOT = {
+																					is_same_value = event_target:gft_fleet_trade_fleet_6
+																				}
+																				NOT = {
+																					is_same_value = event_target:gft_fleet_trade_fleet_7
+																				}
+																				NOT = {
+																					is_same_value = event_target:gft_fleet_trade_fleet_8
+																				}
+																			}
+																			save_global_event_target_as = gft_fleet_trade_fleet_9
+																			owner = {
+																				random_owned_fleet = {
+																					limit = {
+																						is_ship_class = shipclass_military
+																						NOT = {
+																							is_same_value = event_target:gft_fleet_trade_fleet_1
+																						}
+																						NOT = {
+																							is_same_value = event_target:gft_fleet_trade_fleet_2
+																						}
+																						NOT = {
+																							is_same_value = event_target:gft_fleet_trade_fleet_3
+																						}
+																						NOT = {
+																							is_same_value = event_target:gft_fleet_trade_fleet_4
+																						}
+																						NOT = {
+																							is_same_value = event_target:gft_fleet_trade_fleet_5
+																						}
+																						NOT = {
+																							is_same_value = event_target:gft_fleet_trade_fleet_6
+																						}
+																						NOT = {
+																							is_same_value = event_target:gft_fleet_trade_fleet_7
+																						}
+																						NOT = {
+																							is_same_value = event_target:gft_fleet_trade_fleet_9
+																						}
+																					}
+																					save_global_event_target_as = gft_fleet_trade_fleet_10
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.2.a
+		trigger = {
+			exists = event_target:gft_fleet_trade_fleet_1
+		}
+		hidden_effect = {
+			set_global_flag = gft_fleet_trade_1_fleet_flag
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_1
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_2
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_3
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_4
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_5
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_6
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_7
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_8
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_9
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_10
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_11
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_12
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_13
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.2.b
+		trigger = {
+			exists = event_target:gft_fleet_trade_fleet_2
+		}
+		hidden_effect = {
+			set_global_flag = gft_fleet_trade_2_fleet_flag
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_1
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_2
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_3
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_4
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_5
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_6
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_7
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_8
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_9
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_10
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_11
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_12
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_13
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.2.c
+		trigger = {
+			exists = event_target:gft_fleet_trade_fleet_3
+		}
+		hidden_effect = {
+			set_global_flag = gft_fleet_trade_3_fleet_flag
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_1
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_2
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_3
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_4
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_5
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_6
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_7
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_8
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_9
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_10
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_11
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_12
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_13
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.2.d
+		trigger = {
+			exists = event_target:gft_fleet_trade_fleet_4
+		}
+		hidden_effect = {
+			set_global_flag = gft_fleet_trade_4_fleet_flag
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_1
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_2
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_3
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_4
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_5
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_6
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_7
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_8
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_9
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_10
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_11
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_12
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_13
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.2.e
+		trigger = {
+			exists = event_target:gft_fleet_trade_fleet_5
+		}
+		hidden_effect = {
+			set_global_flag = gft_fleet_trade_5_fleet_flag
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_1
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_2
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_3
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_4
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_5
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_6
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_7
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_8
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_9
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_10
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_11
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_12
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_13
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.2.f
+		trigger = {
+			exists = event_target:gft_fleet_trade_fleet_6
+		}
+		hidden_effect = {
+			set_global_flag = gft_fleet_trade_6_fleet_flag
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_1
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_2
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_3
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_4
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_5
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_6
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_7
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_8
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_9
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_10
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_11
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_12
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_13
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.2.g
+		trigger = {
+			exists = event_target:gft_fleet_trade_fleet_7
+		}
+		hidden_effect = {
+			set_global_flag = gft_fleet_trade_7_fleet_flag
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_1
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_2
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_3
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_4
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_5
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_6
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_7
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_8
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_9
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_10
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_11
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_12
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_13
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.2.h
+		trigger = {
+			exists = event_target:gft_fleet_trade_fleet_8
+		}
+		hidden_effect = {
+			set_global_flag = gft_fleet_trade_8_fleet_flag
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_1
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_2
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_3
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_4
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_5
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_6
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_7
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_8
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_9
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_10
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_11
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_12
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_13
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.2.i
+		trigger = {
+			exists = event_target:gft_fleet_trade_fleet_9
+		}
+		hidden_effect = {
+			set_global_flag = gft_fleet_trade_9_fleet_flag
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_1
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_2
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_3
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_4
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_5
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_6
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_7
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_8
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_9
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_10
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_11
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_12
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_13
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.2.j
+		trigger = {
+			exists = event_target:gft_fleet_trade_fleet_10
+		}
+		hidden_effect = {
+			set_global_flag = gft_fleet_trade_10_fleet_flag
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_1_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_1
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_2_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_2
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_3_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_3
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_4_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_4
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_5_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_5
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_6_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_6
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_7_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_7
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_8_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_8
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_9_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_9
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_10_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_10
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_11_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_11
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_12_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_12
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_13_country_flag
+				}
+				random_country = {
+					limit = {
+						is_same_empire = event_target:gft_fleet_trade_13
+					}
+					country_event = {
+						id = gft_fleet_trade.3
+					}
+				}
+			}
+		}
+	}
+	# 閉じる
+	option = {
+		name = gft_fleet_trade.1.n
+		hidden_effect = {
+			remove_global_flag = gft_fleet_trade_now_global_flag
+			clear_global_event_target = gft_fleet_trade_0
+			clear_global_event_target = gft_fleet_trade_1
+			clear_global_event_target = gft_fleet_trade_2
+			clear_global_event_target = gft_fleet_trade_3
+			clear_global_event_target = gft_fleet_trade_4
+			clear_global_event_target = gft_fleet_trade_5
+			clear_global_event_target = gft_fleet_trade_6
+			clear_global_event_target = gft_fleet_trade_7
+			clear_global_event_target = gft_fleet_trade_8
+			clear_global_event_target = gft_fleet_trade_9
+			clear_global_event_target = gft_fleet_trade_10
+			clear_global_event_target = gft_fleet_trade_11
+			clear_global_event_target = gft_fleet_trade_12
+			clear_global_event_target = gft_fleet_trade_13
+			clear_global_event_target = gft_fleet_trade_fleet_1
+			clear_global_event_target = gft_fleet_trade_fleet_2
+			clear_global_event_target = gft_fleet_trade_fleet_3
+			clear_global_event_target = gft_fleet_trade_fleet_4
+			clear_global_event_target = gft_fleet_trade_fleet_5
+			clear_global_event_target = gft_fleet_trade_fleet_6
+			clear_global_event_target = gft_fleet_trade_fleet_7
+			clear_global_event_target = gft_fleet_trade_fleet_8
+			clear_global_event_target = gft_fleet_trade_fleet_9
+			clear_global_event_target = gft_fleet_trade_fleet_10
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_1_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_1_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_2_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_2_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_3_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_3_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_4_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_4_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_5_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_5_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_6_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_6_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_7_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_7_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_8_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_8_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_9_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_9_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_10_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_10_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_11_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_11_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_12_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_12_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_13_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_13_country_flag
+			}
+		}
+	}
+}
+
+# 艦隊 贈与 相手国
+country_event = {
+	id = gft_fleet_trade.3
+	title = gft_fleet_trade.3.name
+	desc = gft_fleet_trade.3.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_finding_loot
+	is_triggered_only = yes
+	option = {
+		name = gft_fleet_trade.3.a
+		trigger = {
+			has_global_flag = gft_fleet_trade_1_fleet_flag
+		}
+		event_target:gft_fleet_trade_fleet_1 = {
+			set_owner = ROOT
+		}
+		hidden_effect = {
+			remove_global_flag = gft_fleet_trade_1_fleet_flag
+			random_country = {
+				limit = {
+					is_same_empire = event_target:gft_fleet_trade_0
+				}
+				country_event = {
+					id = gft_fleet_trade.4
+				}
+			}
+			add_trust = {
+				who = event_target:gft_fleet_trade_0
+				amount = 50
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.3.a
+		trigger = {
+			has_global_flag = gft_fleet_trade_2_fleet_flag
+		}
+		event_target:gft_fleet_trade_fleet_2 = {
+			set_owner = ROOT
+		}
+		hidden_effect = {
+			remove_global_flag = gft_fleet_trade_2_fleet_flag
+			random_country = {
+				limit = {
+					is_same_empire = event_target:gft_fleet_trade_0
+				}
+				country_event = {
+					id = gft_fleet_trade.4
+				}
+			}
+			add_trust = {
+				who = event_target:gft_fleet_trade_0
+				amount = 50
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.3.a
+		trigger = {
+			has_global_flag = gft_fleet_trade_3_fleet_flag
+		}
+		event_target:gft_fleet_trade_fleet_3 = {
+			set_owner = ROOT
+		}
+		hidden_effect = {
+			remove_global_flag = gft_fleet_trade_3_fleet_flag
+			random_country = {
+				limit = {
+					is_same_empire = event_target:gft_fleet_trade_0
+				}
+				country_event = {
+					id = gft_fleet_trade.4
+				}
+			}
+			add_trust = {
+				who = event_target:gft_fleet_trade_0
+				amount = 50
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.3.a
+		trigger = {
+			has_global_flag = gft_fleet_trade_4_fleet_flag
+		}
+		event_target:gft_fleet_trade_fleet_4 = {
+			set_owner = ROOT
+		}
+		hidden_effect = {
+			remove_global_flag = gft_fleet_trade_4_fleet_flag
+			random_country = {
+				limit = {
+					is_same_empire = event_target:gft_fleet_trade_0
+				}
+				country_event = {
+					id = gft_fleet_trade.4
+				}
+			}
+			add_trust = {
+				who = event_target:gft_fleet_trade_0
+				amount = 50
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.3.a
+		trigger = {
+			has_global_flag = gft_fleet_trade_5_fleet_flag
+		}
+		event_target:gft_fleet_trade_fleet_5 = {
+			set_owner = ROOT
+		}
+		hidden_effect = {
+			remove_global_flag = gft_fleet_trade_5_fleet_flag
+			random_country = {
+				limit = {
+					is_same_empire = event_target:gft_fleet_trade_0
+				}
+				country_event = {
+					id = gft_fleet_trade.4
+				}
+			}
+			add_trust = {
+				who = event_target:gft_fleet_trade_0
+				amount = 50
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.3.a
+		trigger = {
+			has_global_flag = gft_fleet_trade_6_fleet_flag
+		}
+		event_target:gft_fleet_trade_fleet_6 = {
+			set_owner = ROOT
+		}
+		hidden_effect = {
+			remove_global_flag = gft_fleet_trade_6_fleet_flag
+			random_country = {
+				limit = {
+					is_same_empire = event_target:gft_fleet_trade_0
+				}
+				country_event = {
+					id = gft_fleet_trade.4
+				}
+			}
+			add_trust = {
+				who = event_target:gft_fleet_trade_0
+				amount = 50
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.3.a
+		trigger = {
+			has_global_flag = gft_fleet_trade_7_fleet_flag
+		}
+		event_target:gft_fleet_trade_fleet_7 = {
+			set_owner = ROOT
+		}
+		hidden_effect = {
+			remove_global_flag = gft_fleet_trade_7_fleet_flag
+			random_country = {
+				limit = {
+					is_same_empire = event_target:gft_fleet_trade_0
+				}
+				country_event = {
+					id = gft_fleet_trade.4
+				}
+			}
+			add_trust = {
+				who = event_target:gft_fleet_trade_0
+				amount = 50
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.3.a
+		trigger = {
+			has_global_flag = gft_fleet_trade_8_fleet_flag
+		}
+		event_target:gft_fleet_trade_fleet_8 = {
+			set_owner = ROOT
+		}
+		hidden_effect = {
+			remove_global_flag = gft_fleet_trade_8_fleet_flag
+			random_country = {
+				limit = {
+					is_same_empire = event_target:gft_fleet_trade_0
+				}
+				country_event = {
+					id = gft_fleet_trade.4
+				}
+			}
+			add_trust = {
+				who = event_target:gft_fleet_trade_0
+				amount = 50
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.3.a
+		trigger = {
+			has_global_flag = gft_fleet_trade_9_fleet_flag
+		}
+		event_target:gft_fleet_trade_fleet_9 = {
+			set_owner = ROOT
+		}
+		hidden_effect = {
+			remove_global_flag = gft_fleet_trade_9_fleet_flag
+			random_country = {
+				limit = {
+					is_same_empire = event_target:gft_fleet_trade_0
+				}
+				country_event = {
+					id = gft_fleet_trade.4
+				}
+			}
+			add_trust = {
+				who = event_target:gft_fleet_trade_0
+				amount = 50
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+	}
+	option = {
+		name = gft_fleet_trade.3.a
+		trigger = {
+			has_global_flag = gft_fleet_trade_10_fleet_flag
+		}
+		event_target:gft_fleet_trade_fleet_10 = {
+			set_owner = ROOT
+		}
+		hidden_effect = {
+			remove_global_flag = gft_fleet_trade_10_fleet_flag
+			random_country = {
+				limit = {
+					is_same_empire = event_target:gft_fleet_trade_0
+				}
+				country_event = {
+					id = gft_fleet_trade.4
+				}
+			}
+			add_trust = {
+				who = event_target:gft_fleet_trade_0
+				amount = 50
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+	}
+	# 断る
+	option = {
+		name = gft_fleet_trade.3.b
+		hidden_effect = {
+			if = {
+				limit = {
+					has_global_flag = gft_fleet_trade_1_fleet_flag
+				}
+				remove_global_flag = gft_fleet_trade_1_fleet_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = gft_fleet_trade_2_fleet_flag
+				}
+				remove_global_flag = gft_fleet_trade_2_fleet_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = gft_fleet_trade_3_fleet_flag
+				}
+				remove_global_flag = gft_fleet_trade_3_fleet_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = gft_fleet_trade_4_fleet_flag
+				}
+				remove_global_flag = gft_fleet_trade_4_fleet_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = gft_fleet_trade_5_fleet_flag
+				}
+				remove_global_flag = gft_fleet_trade_5_fleet_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = gft_fleet_trade_6_fleet_flag
+				}
+				remove_global_flag = gft_fleet_trade_6_fleet_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = gft_fleet_trade_7_fleet_flag
+				}
+				remove_global_flag = gft_fleet_trade_7_fleet_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = gft_fleet_trade_8_fleet_flag
+				}
+				remove_global_flag = gft_fleet_trade_8_fleet_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = gft_fleet_trade_9_fleet_flag
+				}
+				remove_global_flag = gft_fleet_trade_9_fleet_flag
+			}
+			if = {
+				limit = {
+					has_global_flag = gft_fleet_trade_10_fleet_flag
+				}
+				remove_global_flag = gft_fleet_trade_10_fleet_flag
+			}
+			random_country = {
+				limit = {
+					is_same_empire = event_target:gft_fleet_trade_0
+				}
+				country_event = {
+					id = gft_fleet_trade.5
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 4
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value < -300
+				}
+			}
+			modifier = {
+				factor = 0
+				trust = {
+					who = event_target:gft_fleet_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+	}
+}
+
+# 艦隊 贈与 受理
+country_event = {
+	id = gft_fleet_trade.4
+	title = gft_fleet_trade.4.name
+	desc = gft_fleet_trade.4.desc
+	picture = GFX_evt_fleet_good
+	show_sound = event_finding_loot
+	is_triggered_only = yes
+	option = {
+		name = gft_fleet_trade.4.a
+		hidden_effect = {
+			remove_global_flag = gft_fleet_trade_now_global_flag
+			clear_global_event_target = gft_fleet_trade_0
+			clear_global_event_target = gft_fleet_trade_1
+			clear_global_event_target = gft_fleet_trade_2
+			clear_global_event_target = gft_fleet_trade_3
+			clear_global_event_target = gft_fleet_trade_4
+			clear_global_event_target = gft_fleet_trade_5
+			clear_global_event_target = gft_fleet_trade_6
+			clear_global_event_target = gft_fleet_trade_7
+			clear_global_event_target = gft_fleet_trade_8
+			clear_global_event_target = gft_fleet_trade_9
+			clear_global_event_target = gft_fleet_trade_10
+			clear_global_event_target = gft_fleet_trade_11
+			clear_global_event_target = gft_fleet_trade_12
+			clear_global_event_target = gft_fleet_trade_13
+			clear_global_event_target = gft_fleet_trade_fleet_1
+			clear_global_event_target = gft_fleet_trade_fleet_2
+			clear_global_event_target = gft_fleet_trade_fleet_3
+			clear_global_event_target = gft_fleet_trade_fleet_4
+			clear_global_event_target = gft_fleet_trade_fleet_5
+			clear_global_event_target = gft_fleet_trade_fleet_6
+			clear_global_event_target = gft_fleet_trade_fleet_7
+			clear_global_event_target = gft_fleet_trade_fleet_8
+			clear_global_event_target = gft_fleet_trade_fleet_9
+			clear_global_event_target = gft_fleet_trade_fleet_10
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_1_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_1_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_2_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_2_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_3_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_3_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_4_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_4_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_5_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_5_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_6_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_6_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_7_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_7_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_8_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_8_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_9_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_9_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_10_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_10_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_11_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_11_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_12_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_12_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_13_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_13_country_flag
+			}
+		}
+	}
+}
+
+# 艦隊 贈与 拒否
+country_event = {
+	id = gft_fleet_trade.5
+	title = gft_fleet_trade.5.name
+	desc = gft_fleet_trade.5.desc
+	picture = GFX_evt_fleet_evil
+	show_sound = event_finding_loot
+	is_triggered_only = yes
+	option = {
+		name = gft_fleet_trade.5.a
+		hidden_effect = {
+			remove_global_flag = gft_fleet_trade_now_global_flag
+			clear_global_event_target = gft_fleet_trade_0
+			clear_global_event_target = gft_fleet_trade_1
+			clear_global_event_target = gft_fleet_trade_2
+			clear_global_event_target = gft_fleet_trade_3
+			clear_global_event_target = gft_fleet_trade_4
+			clear_global_event_target = gft_fleet_trade_5
+			clear_global_event_target = gft_fleet_trade_6
+			clear_global_event_target = gft_fleet_trade_7
+			clear_global_event_target = gft_fleet_trade_8
+			clear_global_event_target = gft_fleet_trade_9
+			clear_global_event_target = gft_fleet_trade_10
+			clear_global_event_target = gft_fleet_trade_11
+			clear_global_event_target = gft_fleet_trade_12
+			clear_global_event_target = gft_fleet_trade_13
+			clear_global_event_target = gft_fleet_trade_fleet_1
+			clear_global_event_target = gft_fleet_trade_fleet_2
+			clear_global_event_target = gft_fleet_trade_fleet_3
+			clear_global_event_target = gft_fleet_trade_fleet_4
+			clear_global_event_target = gft_fleet_trade_fleet_5
+			clear_global_event_target = gft_fleet_trade_fleet_6
+			clear_global_event_target = gft_fleet_trade_fleet_7
+			clear_global_event_target = gft_fleet_trade_fleet_8
+			clear_global_event_target = gft_fleet_trade_fleet_9
+			clear_global_event_target = gft_fleet_trade_fleet_10
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_1_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_1_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_2_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_2_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_3_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_3_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_4_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_4_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_5_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_5_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_6_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_6_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_7_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_7_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_8_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_8_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_9_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_9_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_10_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_10_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_11_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_11_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_12_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_12_country_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = gft_fleet_trade_13_country_flag
+				}
+				remove_country_flag = gft_fleet_trade_13_country_flag
+			}
+		}
+	}
+}
