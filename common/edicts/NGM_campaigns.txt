@@ -1116,7 +1116,7 @@ ngm_memories_of_hegemony = {
 		}
 	}
 	potential = {
-		has_tradition = tr_ngm_memory_finish
+		has_active_tradition = tr_ngm_memory_finish
 	}
 	allow = {
 		always = yes
@@ -1143,7 +1143,7 @@ ngm_memories_of_glory = {
 		}
 	}
 	potential = {
-		has_tradition = tr_ngm_memory_finish
+		has_active_tradition = tr_ngm_memory_finish
 	}
 	allow = {
 		always = yes
@@ -1170,7 +1170,7 @@ ngm_memoirs_of_perseverance = {
 		}
 	}
 	potential = {
-		has_tradition = tr_ngm_memory_finish
+		has_active_tradition = tr_ngm_memory_finish
 	}
 	allow = {
 		always = yes
@@ -1198,7 +1198,7 @@ ngm_class_A_national_defense_plan = {
 		}
 	}
 	potential = {
-		has_tradition = tr_ngm_officer_finish
+		has_active_tradition = tr_ngm_officer_finish
 	}
 	allow = {
 		always = yes
@@ -1225,7 +1225,7 @@ ngm_class_B_national_defense_plan = {
 		}
 	}
 	potential = {
-		has_tradition = tr_ngm_officer_finish
+		has_active_tradition = tr_ngm_officer_finish
 	}
 	allow = {
 		always = yes
@@ -1239,29 +1239,57 @@ ngm_class_B_national_defense_plan = {
 	}
 }
 
-#   ③丙種国防計画	class_C_national_defense_plan	(影響力100)(キャンセルするまで有効)(統合参謀本部が立案した国防計画を実施する)(造船コスト-10%、地上軍製造コスト-20%、艦船維持費-20%)
-ngm_class_C_national_defense_plan = {
+# 超然的敵対存在	supernatural_adversary	統合力100	この世には、滅ぼさねばならぬ敵がいる	影響力+1、連射レート+10%、射程+10%
+ngm_supernatural_adversary_campaign = {
 	length = -1
 	icon = "GFX_edict_type_policy"
-	edict_cap_usage = 1
+
 	resources = {
 		category = edicts
-		cost = {
-			influence = 100
+		upkeep = {
+			unity = 100
+			multiplier = value:edict_size_effect
 		}
 	}
+
+	modifier = {
+		
+	}
 	potential = {
-		has_tradition = tr_ngm_officer_finish
+		has_active_tradition = tr_ngm_transcendental
 	}
 	allow = {
 		always = yes
 	}
-	modifier = {
-		starbase_shipyard_build_cost_mult = -0.1
-		ships_upkeep_mult = -0.2
-		armies_cost_mult = -0.2
-	}
+
 	ai_weight = {
-		weight = @EdictMedPrio
+		weight = 500
+	}
+}
+
+# 法務局監査	legal_department_audits	統合力100	法律の専門家による監査により、法務執行の遅滞や、不適切な法律運用を監視し、行政の不正や低効率を改善させることができる	帝国規模-15%、帝国基金-20
+ngm_legal_department_audits_campaign = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		upkeep = {
+			unity = 100
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+	}
+	potential = {
+		has_active_tradition = tr_ngm_expansion_of_the_legal_affairs_bureau
+	}
+	allow = {
+		always = yes
+	}
+
+	ai_weight = {
+		weight = 500
 	}
 }

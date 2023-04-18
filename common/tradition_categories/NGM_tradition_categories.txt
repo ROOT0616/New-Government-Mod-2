@@ -191,7 +191,7 @@ tradition_ngm_ecstasy = {
 	}
 }
 
-# 前衛
+# 前衛	古典を取得していない
 # 1.アバンギャルド:実験的な芸術様式は先取に富んでいる
 # 2.究極の和音:不安にする音と言われても、これは芸術なのだ
 # 3.学生芸術の推奨:若さにあふれる芸術は一つの分野を生み出している
@@ -201,6 +201,11 @@ tradition_ngm_avantgarde = {
 	tree_template = "tree_11_12"
 	adoption_bonus = "tr_ngm_avantgarde_first"	# required; key of tradition that serves as adoption bonus
 	finish_bonus = "tr_ngm_avantgarde_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	potential = {
+		NOT = {
+			has_tradition = tradition_ngm_classic
+		}
+	}
 	traditions = {
 		# list of tradition keys in this category; adoption and finish bonus are added automatically
 		"tr_ngm_avantgarde_2"
@@ -214,7 +219,7 @@ tradition_ngm_avantgarde = {
 	}
 }
 
-# 古典
+# 古典	前衛を取得していない
 # 1.写実:実際に存在するものを映し、表現することで感動を生む
 # 2.音響学の極地:音であっても聴覚以外を感激させることは可能である。
 # 3.文化大臣の設置:文化を推奨し、保護する役所は必要だ
@@ -224,6 +229,11 @@ tradition_ngm_classic = {
 	tree_template = "tree_11_12"
 	adoption_bonus = "tr_ngm_classic_first"	# required; key of tradition that serves as adoption bonus
 	finish_bonus = "tr_ngm_classic_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	potential = {
+		NOT = {
+			has_tradition = tradition_ngm_avantgarde
+		}
+	}
 	traditions = {
 		# list of tradition keys in this category; adoption and finish bonus are added automatically
 		"tr_ngm_realism"
@@ -293,6 +303,11 @@ tradition_ngm_freedom = {
 	tree_template = "tree_11_12"
 	adoption_bonus = "tr_ngm_freedom_first"	# required; key of tradition that serves as adoption bonus
 	finish_bonus = "tr_ngm_freedom_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	potential = {
+		NOT = {
+			has_tradition = tradition_ngm_order
+		}
+	}
 	traditions = {
 		# list of tradition keys in this category; adoption and finish bonus are added automatically
 		"tr_ngm_freedom_broad"
@@ -316,6 +331,11 @@ tradition_ngm_order = {
 	tree_template = "tree_11_12"
 	adoption_bonus = "tr_ngm_order_first"	# required; key of tradition that serves as adoption bonus
 	finish_bonus = "tr_ngm_order_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	potential = {
+		NOT = {
+			has_tradition = tradition_ngm_freedom
+		}
+	}
 	traditions = {
 		# list of tradition keys in this category; adoption and finish bonus are added automatically
 		"tr_ngm_no_voice"
@@ -339,6 +359,11 @@ tradition_ngm_neighbor = {
 	tree_template = "tree_11_12"
 	adoption_bonus = "tr_ngm_neighbor_first"	# required; key of tradition that serves as adoption bonus
 	finish_bonus = "tr_ngm_neighbor_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	potential = {
+		NOT = {
+			has_tradition = tradition_ngm_enemy
+		}
+	}
 	traditions = {
 		# list of tradition keys in this category; adoption and finish bonus are added automatically
 		"tr_ngm_ambassador"
@@ -362,6 +387,11 @@ tradition_ngm_enemy = {
 	tree_template = "tree_11_12"
 	adoption_bonus = "tr_ngm_enemy_first"	# required; key of tradition that serves as adoption bonus
 	finish_bonus = "tr_ngm_enemy_finish"	# required; key of tradition that serves as adoption bonus; cannot have cost
+	potential = {
+		NOT = {
+			has_tradition = tradition_ngm_neighbor
+		}
+	}
 	traditions = {
 		# list of tradition keys in this category; adoption and finish bonus are added automatically
 		"tr_ngm_paranoia"
@@ -523,6 +553,11 @@ tradition_ngm_noble = {
 	tree_template = "tree_11_12"
 	adoption_bonus = "tr_ngm_noble_adopt"
 	finish_bonus = "tr_ngm_noble_finish"
+	potential = {
+		NOT = {
+			has_tradition = tradition_ngm_mass
+		}
+	}
 	traditions = {
 		"tr_ngm_upper_class"
 		"tr_ngm_backroom_politics"
@@ -545,6 +580,11 @@ tradition_ngm_mass = {
 	tree_template = "tree_11_12"
 	adoption_bonus = "tr_ngm_mass_adopt"
 	finish_bonus = "tr_ngm_mass_finish"
+	potential = {
+		NOT = {
+			has_tradition = tradition_ngm_noble
+		}
+	}
 	traditions = {
 		"tr_ngm_mass_society"
 		"tr_ngm_mass_culture"
@@ -611,6 +651,11 @@ tradition_ngm_adversity = {
 	tree_template = "tree_11_12"
 	adoption_bonus = "tr_ngm_adversity_adopt"
 	finish_bonus = "tr_ngm_adversity_finish"
+	potential = {
+		NOT = {
+			has_tradition = tradition_ngm_margin
+		}
+	}
 	traditions = {
 		"tr_ngm_strong_command_and_control"
 		"tr_ngm_purify_corruption"
@@ -633,6 +678,11 @@ tradition_ngm_margin = {
 	tree_template = "tree_11_12"
 	adoption_bonus = "tr_ngm_margin_adopt"
 	finish_bonus = "tr_ngm_margin_finish"
+	potential = {
+		NOT = {
+			has_tradition = tradition_ngm_adversity
+		}
+	}
 	traditions = {
 		"tr_ngm_giant_fleet"
 		"tr_ngm_large_fleet_command"

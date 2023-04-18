@@ -208,16 +208,16 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_tradition = tr_ngm_leader_study
+		has_tradition = tr_ngm_program_study
 	}
 	immediate = {
 		every_owned_leader = {
 			limit = {
 				NOT = {
-					has_leader_flag = flag_tr_ngm_leader_study
+					has_leader_flag = flag_tr_ngm_program_study
 				}
 			}
-			set_leader_flag = flag_tr_ngm_leader_study
+			set_leader_flag = flag_tr_ngm_program_study
 			add_experience = 200
 		}
 	}
@@ -412,6 +412,16 @@ country_event = {
 				has_civic = civic_cutthroat_politics
 			}
 			force_remove_civic = civic_cutthroat_politics
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_civic = civic_corporate_dominion
+			}
+			force_remove_civic = civic_corporate_dominion
 			change_variable = {
 				which = tr_ngm_avantgarde_finish_variable
 				value = 1
@@ -659,6 +669,57 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_civic = civic_toxic_baths
+			}
+			force_remove_civic = civic_toxic_baths
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_civic = civic_relentless_industrialists
+			}
+			force_remove_civic = civic_relentless_industrialists
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_civic = civic_scavengers
+			}
+			force_remove_civic = civic_scavengers
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_civic = civic_ascensionists
+			}
+			force_remove_civic = civic_ascensionists
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_civic = civic_eager_explorers
+			}
+			force_remove_civic = civic_eager_explorers
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		# hive
+		if = {
+			limit = {
 				has_civic = civic_hive_subspace_ephapse
 			}
 			force_remove_civic = civic_hive_subspace_ephapse
@@ -787,6 +848,47 @@ country_event = {
 				value = 1
 			}
 		}
+		if = {
+			limit = {
+				has_civic = civic_hive_toxic_baths
+			}
+			force_remove_civic = civic_hive_toxic_baths
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_civic = civic_hive_ascensionists
+			}
+			force_remove_civic = civic_hive_ascensionists
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_civic = civic_hive_cordyceptic_drones
+			}
+			force_remove_civic = civic_hive_cordyceptic_drones
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_civic = civic_hive_stargazers
+			}
+			force_remove_civic = civic_hive_stargazers
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		# Machine Empire
 		if = {
 			limit = {
 				has_civic = civic_machine_servitor
@@ -967,6 +1069,37 @@ country_event = {
 				value = 1
 			}
 		}
+		if = {
+			limit = {
+				has_civic = civic_machine_toxic_baths
+			}
+			force_remove_civic = civic_machine_toxic_baths
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_civic = civic_machine_ascensionists
+			}
+			force_remove_civic = civic_machine_ascensionists
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_civic = civic_machine_exploration_protocol
+			}
+			force_remove_civic = civic_machine_exploration_protocol
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		# Corporate
 		if = {
 			limit = {
 				has_civic = civic_franchising
@@ -1157,6 +1290,57 @@ country_event = {
 				value = 1
 			}
 		}
+		if = {
+			limit = {
+				has_civic = civic_corporate_relentless_industrialists
+			}
+			force_remove_civic = civic_corporate_relentless_industrialists
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_civic = civic_corporate_toxic_baths
+			}
+			force_remove_civic = civic_corporate_toxic_baths
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_civic = civic_corporate_scavengers
+			}
+			force_remove_civic = civic_corporate_scavengers
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_civic = civic_corporate_ascensionists
+			}
+			force_remove_civic = civic_corporate_ascensionists
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_civic = civic_privatized_exploration
+			}
+			force_remove_civic = civic_privatized_exploration
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
+		# NGM2 nomal
 		if = {
 			limit = {
 				has_civic = civic_sham_constitutionalism
@@ -2985,7 +3169,7 @@ country_event = {
 	}
 }
 
-# 狙い撃ち:艦船連射レート+5%、宿敵の犯罪度+10		月ごとのチェック
+# 狙い撃ち:宿敵の犯罪度+30		月ごとのチェック
 country_event = {
 	id = ngm_tradition.6
 	hide_window = yes
@@ -3438,6 +3622,160 @@ country_event = {
 				}
 			}
 		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_tr_ngm_penetration_debuff_9
+					has_country_flag = country_flag_tr_ngm_penetration_debuff_9
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_penetration_debuff_9
+			set_country_flag = country_flag_tr_ngm_penetration_debuff_9
+			every_playable_country = {
+				limit = {
+					NOR = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+						is_same_value = root
+					}
+					has_established_contact = root
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_9
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_tr_ngm_penetration_debuff_10
+					has_country_flag = country_flag_tr_ngm_penetration_debuff_10
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_penetration_debuff_10
+			set_country_flag = country_flag_tr_ngm_penetration_debuff_10
+			every_playable_country = {
+				limit = {
+					NOR = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+						is_same_value = root
+					}
+					has_established_contact = root
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_10
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_tr_ngm_penetration_debuff_11
+					has_country_flag = country_flag_tr_ngm_penetration_debuff_11
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_penetration_debuff_11
+			set_country_flag = country_flag_tr_ngm_penetration_debuff_11
+			every_playable_country = {
+				limit = {
+					NOR = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+						is_same_value = root
+					}
+					has_established_contact = root
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_11
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_tr_ngm_penetration_debuff_12
+					has_country_flag = country_flag_tr_ngm_penetration_debuff_12
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_penetration_debuff_12
+			set_country_flag = country_flag_tr_ngm_penetration_debuff_12
+			every_playable_country = {
+				limit = {
+					NOR = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+						is_same_value = root
+					}
+					has_established_contact = root
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_12
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_tr_ngm_penetration_debuff_13
+					has_country_flag = country_flag_tr_ngm_penetration_debuff_13
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_penetration_debuff_13
+			set_country_flag = country_flag_tr_ngm_penetration_debuff_13
+			every_playable_country = {
+				limit = {
+					NOR = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+						is_same_value = root
+					}
+					has_established_contact = root
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_13
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_tr_ngm_penetration_debuff_14
+					has_country_flag = country_flag_tr_ngm_penetration_debuff_14
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_penetration_debuff_14
+			set_country_flag = country_flag_tr_ngm_penetration_debuff_14
+			every_playable_country = {
+				limit = {
+					NOR = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+						is_same_value = root
+					}
+					has_established_contact = root
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_14
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_tr_ngm_penetration_debuff_15
+					has_country_flag = country_flag_tr_ngm_penetration_debuff_15
+				}
+			}
+			set_global_flag = global_flag_tr_ngm_penetration_debuff_15
+			set_country_flag = country_flag_tr_ngm_penetration_debuff_15
+			every_playable_country = {
+				limit = {
+					NOR = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+						is_same_value = root
+					}
+					has_established_contact = root
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_15
+				}
+			}
+		}
 	}
 }
 
@@ -3663,16 +4001,156 @@ country_event = {
 				}
 			}
 		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_penetration_debuff_9
+			}
+			every_playable_country = {
+				limit = {
+					NOR = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+						is_same_value = root
+					}
+					has_established_contact = root
+					NOT = {
+						has_modifier = tr_ngm_penetration_debuff_9
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_9
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_penetration_debuff_10
+			}
+			every_playable_country = {
+				limit = {
+					NOR = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+						is_same_value = root
+					}
+					has_established_contact = root
+					NOT = {
+						has_modifier = tr_ngm_penetration_debuff_10
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_10
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_penetration_debuff_11
+			}
+			every_playable_country = {
+				limit = {
+					NOR = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+						is_same_value = root
+					}
+					has_established_contact = root
+					NOT = {
+						has_modifier = tr_ngm_penetration_debuff_11
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_11
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_penetration_debuff_12
+			}
+			every_playable_country = {
+				limit = {
+					NOR = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+						is_same_value = root
+					}
+					has_established_contact = root
+					NOT = {
+						has_modifier = tr_ngm_penetration_debuff_12
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_12
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_penetration_debuff_13
+			}
+			every_playable_country = {
+				limit = {
+					NOR = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+						is_same_value = root
+					}
+					has_established_contact = root
+					NOT = {
+						has_modifier = tr_ngm_penetration_debuff_13
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_13
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_penetration_debuff_14
+			}
+			every_playable_country = {
+				limit = {
+					NOR = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+						is_same_value = root
+					}
+					has_established_contact = root
+					NOT = {
+						has_modifier = tr_ngm_penetration_debuff_14
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_14
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_tr_ngm_penetration_debuff_15
+			}
+			every_playable_country = {
+				limit = {
+					NOR = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+						is_same_value = root
+					}
+					has_established_contact = root
+					NOT = {
+						has_modifier = tr_ngm_penetration_debuff_15
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_penetration_debuff_15
+				}
+			}
+		}
 	}
 }
 
-# 自由:完遂時:宿敵宣言した国家の奴隷幸福度-20%		伝統取得時
+# 自由:報道の自由:宿敵宣言した国家の奴隷幸福度-20%
 country_event = {
 	id = ngm_tradition.9
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_tradition = tr_ngm_freedom_finish
+		has_tradition = tr_ngm_freedom_broad
 	}
 	immediate = {
 		if = {
@@ -3838,13 +4316,13 @@ country_event = {
 	}
 }
 
-# 自由:完遂時:宿敵宣言した国家の奴隷幸福度-20%		月ごとのチェック
+# 自由:報道の自由:宿敵宣言した国家の奴隷幸福度-20%		月ごとのチェック
 country_event = {
 	id = ngm_tradition.10
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_tradition = tr_ngm_freedom_finish
+		has_tradition = tr_ngm_freedom_broad
 	}
 	immediate = {
 		if = {
@@ -5327,49 +5805,6 @@ country_event = {
 	}
 }
 
-# 余裕取得時：管理許容量を超過しているとき、外交発言力+30%		伝統取得時
-country_event = {
-	id = ngm_tradition.19
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		has_tradition = tr_ngm_margin_adopt
-	}
-	immediate = {
-		if = {
-			limit = {
-				empire_sprawl_over_cap > 0
-			}
-			add_modifier = {
-				modifier = tr_ngm_margin_adopt_buff
-			}
-		}
-	}
-}
-
-# 余裕取得時：管理許容量を超過しているとき、外交発言力+30%		月ごとのチェック
-country_event = {
-	id = ngm_tradition.20
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		has_tradition = tr_ngm_margin_adopt
-	}
-	immediate = {
-		if = {
-			limit = {
-				empire_sprawl_over_cap > 0
-			}
-			add_modifier = {
-				modifier = tr_ngm_margin_adopt_buff
-			}
-		}
-		else = {
-			remove_modifier = tr_ngm_margin_adopt_buff
-		}
-	}
-}
-
 # 余裕完遂時:管理許容量を超過しているとき、影響力+30%		伝統取得時
 country_event = {
 	id = ngm_tradition.21
@@ -5379,12 +5814,14 @@ country_event = {
 		has_tradition = tr_ngm_margin_finish
 	}
 	immediate = {
-		if = {
+		every_subject = {
 			limit = {
-				empire_sprawl_over_cap > 0
+				NOT = {
+					has_ascension_perk = ap_ngm_ministry_of_innocence
+				}
 			}
 			add_modifier = {
-				modifier = tr_ngm_margin_finish_buff
+				modifier = tr_ngm_margin_finish_modifier
 			}
 		}
 	}
@@ -5399,16 +5836,15 @@ country_event = {
 		has_tradition = tr_ngm_margin_finish
 	}
 	immediate = {
-		if = {
+		every_subject = {
 			limit = {
-				empire_sprawl_over_cap > 0
+				NOT = {
+					has_ascension_perk = ap_ngm_ministry_of_innocence
+				}
 			}
 			add_modifier = {
-				modifier = tr_ngm_margin_finish_buff
+				modifier = tr_ngm_margin_finish_modifier
 			}
-		}
-		else = {
-			remove_modifier = tr_ngm_margin_finish_buff
 		}
 	}
 }
@@ -5624,6 +6060,390 @@ country_event = {
 					modifier = ap_ngm_chio_debuff_8
 				}
 			}
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sniper_debuff_1
+			}
+			remove_modifier = tr_ngm_sniper_debuff_1
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sniper_debuff_2
+			}
+			remove_modifier = tr_ngm_sniper_debuff_2
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sniper_debuff_3
+			}
+			remove_modifier = tr_ngm_sniper_debuff_3
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sniper_debuff_4
+			}
+			remove_modifier = tr_ngm_sniper_debuff_4
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sniper_debuff_5
+			}
+			remove_modifier = tr_ngm_sniper_debuff_5
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sniper_debuff_6
+			}
+			remove_modifier = tr_ngm_sniper_debuff_6
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sniper_debuff_7
+			}
+			remove_modifier = tr_ngm_sniper_debuff_7
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sniper_debuff_8
+			}
+			remove_modifier = tr_ngm_sniper_debuff_8
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_1
+			}
+			remove_modifier = tr_ngm_penetration_debuff_1
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_2
+			}
+			remove_modifier = tr_ngm_penetration_debuff_2
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_3
+			}
+			remove_modifier = tr_ngm_penetration_debuff_3
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_3
+			}
+			remove_modifier = tr_ngm_penetration_debuff_3
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_4
+			}
+			remove_modifier = tr_ngm_penetration_debuff_4
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_5
+			}
+			remove_modifier = tr_ngm_penetration_debuff_5
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_6
+			}
+			remove_modifier = tr_ngm_penetration_debuff_6
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_7
+			}
+			remove_modifier = tr_ngm_penetration_debuff_7
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_8
+			}
+			remove_modifier = tr_ngm_penetration_debuff_8
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_9
+			}
+			remove_modifier = tr_ngm_penetration_debuff_9
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_10
+			}
+			remove_modifier = tr_ngm_penetration_debuff_10
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_11
+			}
+			remove_modifier = tr_ngm_penetration_debuff_11
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_12
+			}
+			remove_modifier = tr_ngm_penetration_debuff_12
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_13
+			}
+			remove_modifier = tr_ngm_penetration_debuff_13
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_14
+			}
+			remove_modifier = tr_ngm_penetration_debuff_14
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_penetration_debuff_15
+			}
+			remove_modifier = tr_ngm_penetration_debuff_15
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_freedom_finish_debuff_1
+			}
+			remove_modifier = tr_ngm_freedom_finish_debuff_1
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_freedom_finish_debuff_2
+			}
+			remove_modifier = tr_ngm_freedom_finish_debuff_2
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_freedom_finish_debuff_2
+			}
+			remove_modifier = tr_ngm_freedom_finish_debuff_2
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_freedom_finish_debuff_3
+			}
+			remove_modifier = tr_ngm_freedom_finish_debuff_3
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_freedom_finish_debuff_4
+			}
+			remove_modifier = tr_ngm_freedom_finish_debuff_4
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_freedom_finish_debuff_5
+			}
+			remove_modifier = tr_ngm_freedom_finish_debuff_5
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_freedom_finish_debuff_6
+			}
+			remove_modifier = tr_ngm_freedom_finish_debuff_6
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_freedom_finish_debuff_7
+			}
+			remove_modifier = tr_ngm_freedom_finish_debuff_7
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_freedom_finish_debuff_8
+			}
+			remove_modifier = tr_ngm_freedom_finish_debuff_8
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sabotage_debuff_1
+			}
+			remove_modifier = tr_ngm_sabotage_debuff_1
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sabotage_debuff_2
+			}
+			remove_modifier = tr_ngm_sabotage_debuff_2
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sabotage_debuff_3
+			}
+			remove_modifier = tr_ngm_sabotage_debuff_3
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sabotage_debuff_4
+			}
+			remove_modifier = tr_ngm_sabotage_debuff_4
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sabotage_debuff_5
+			}
+			remove_modifier = tr_ngm_sabotage_debuff_5
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sabotage_debuff_6
+			}
+			remove_modifier = tr_ngm_sabotage_debuff_6
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sabotage_debuff_7
+			}
+			remove_modifier = tr_ngm_sabotage_debuff_7
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_sabotage_debuff_8
+			}
+			remove_modifier = tr_ngm_sabotage_debuff_8
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_ministory_culture_modifier
+			}
+			remove_modifier = tr_ngm_ministory_culture_modifier
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_territory_inheritance_modifier
+			}
+			remove_modifier = tr_ngm_territory_inheritance_modifier
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_margin_finish_modifier
+			}
+			remove_modifier = tr_ngm_margin_finish_modifier
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_suzerain_adopt_modifier
+			}
+			remove_modifier = tr_ngm_suzerain_adopt_modifier
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_suzerainty_pressure_modifier
+			}
+			remove_modifier = tr_ngm_suzerainty_pressure_modifier
+		}
+		if = {
+			limit = {
+				has_modifier = ap_ngm_layer_countries_modifier
+			}
+			remove_modifier = ap_ngm_layer_countries_modifier
+		}
+		if = {
+			limit = {
+				has_modifier = ap_ngm_dipromatic_think_tank_modifier
+			}
+			remove_modifier = ap_ngm_dipromatic_think_tank_modifier
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_battle_speach_modifier_1
+			}
+			remove_modifier = tr_ngm_battle_speach_modifier_1
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_battle_speach_modifier_2
+			}
+			remove_modifier = tr_ngm_battle_speach_modifier_2
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_battle_speach_modifier_3
+			}
+			remove_modifier = tr_ngm_battle_speach_modifier_3
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_battle_speach_modifier_4
+			}
+			remove_modifier = tr_ngm_battle_speach_modifier_4
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_battle_speach_modifier_5
+			}
+			remove_modifier = tr_ngm_battle_speach_modifier_5
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_battle_speach_modifier_6
+			}
+			remove_modifier = tr_ngm_battle_speach_modifier_6
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_battle_speach_modifier_7
+			}
+			remove_modifier = tr_ngm_battle_speach_modifier_7
+		}
+		if = {
+			limit = {
+				has_modifier = tr_ngm_battle_speach_modifier_8
+			}
+			remove_modifier = tr_ngm_battle_speach_modifier_8
+		}
+		if = {
+			limit = {
+				has_modifier = ap_ngm_chio_debuff_1
+			}
+			remove_modifier = ap_ngm_chio_debuff_1
+		}
+		if = {
+			limit = {
+				has_modifier = ap_ngm_chio_debuff_2
+			}
+			remove_modifier = ap_ngm_chio_debuff_2
+		}
+		if = {
+			limit = {
+				has_modifier = ap_ngm_chio_debuff_3
+			}
+			remove_modifier = ap_ngm_chio_debuff_3
+		}
+		if = {
+			limit = {
+				has_modifier = ap_ngm_chio_debuff_4
+			}
+			remove_modifier = ap_ngm_chio_debuff_4
+		}
+		if = {
+			limit = {
+				has_modifier = ap_ngm_chio_debuff_5
+			}
+			remove_modifier = ap_ngm_chio_debuff_5
+		}
+		if = {
+			limit = {
+				has_modifier = ap_ngm_chio_debuff_6
+			}
+			remove_modifier = ap_ngm_chio_debuff_6
+		}
+		if = {
+			limit = {
+				has_modifier = ap_ngm_chio_debuff_7
+			}
+			remove_modifier = ap_ngm_chio_debuff_7
+		}
+		if = {
+			limit = {
+				has_modifier = ap_ngm_chio_debuff_8
+			}
+			remove_modifier = ap_ngm_chio_debuff_8
 		}
 	}
 }
@@ -5910,7 +6730,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_tradition = tr_ngm_suzerain_adopt
+		has_tradition = tr_ngm_suzerain_finish
 	}
 	immediate = {
 		every_subject = {
@@ -5932,7 +6752,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_tradition = tr_ngm_suzerain_adopt
+		has_tradition = tr_ngm_suzerain_finish
 	}
 	immediate = {
 		every_subject = {
@@ -6007,79 +6827,105 @@ country_event = {
 	}
 }
 
-# 宗主国の圧力:忠誠度月間+1		伝統取得時
-country_event = {
-	id = ngm_tradition.30
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		has_tradition = tr_ngm_suzerainty_pressure
-	}
-	immediate = {
-		every_subject = {
-			limit = {
-				NOT = {
-					has_ascension_perk = ap_ngm_ministry_of_innocence
-				}
-			}
-			add_modifier = {
-				modifier = tr_ngm_suzerainty_pressure_modifier
-			}
-		}
-	}
-}
+# # # 宗主国の圧力:忠誠度月間+1		伝統取得時
+# country_event = {
+# 	id = ngm_tradition.30
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		has_tradition = tr_ngm_diplomatic_art
+# 	}
+# 	immediate = {
+# 		every_subject = {
+# 			limit = {
+# 				NOT = {
+# 					has_ascension_perk = ap_ngm_ministry_of_innocence
+# 				}
+# 			}
+# 			add_modifier = {
+# 				modifier = tr_ngm_suzerainty_pressure_modifier
+# 			}
+# 		}
+# 	}
+# }
 
-# 宗主国の圧力:忠誠度月間+1		月ごとチェック
-country_event = {
-	id = ngm_tradition.31
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		has_tradition = tr_ngm_suzerainty_pressure
-	}
-	immediate = {
-		every_subject = {
-			limit = {
-				NOT = {
-					has_modifier = tr_ngm_suzerainty_pressure_modifier
-				}
-			}
-			add_modifier = {
-				modifier = tr_ngm_suzerainty_pressure_modifier
-			}
-		}
-	}
-}
+# # 宗主国の圧力:忠誠度月間+1		月ごとチェック
+# country_event = {
+# 	id = ngm_tradition.31
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		has_tradition = tr_ngm_diplomatic_art
+# 	}
+# 	immediate = {
+# 		every_subject = {
+# 			limit = {
+# 				NOT = {
+# 					has_modifier = tr_ngm_suzerainty_pressure_modifier
+# 				}
+# 			}
+# 			add_modifier = {
+# 				modifier = tr_ngm_suzerainty_pressure_modifier
+# 			}
+# 		}
+# 	}
+# }
 
-# 40.文化大臣の設置:月間忠誠度+1	伝統取得時
+# 40.芸術外交:月間忠誠度+1	伝統取得時 	237.領地相続:毎月の忠誠心+1
 country_event = {
 	id = ngm_tradition.32
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_tradition = tr_ngm_ministory_culture
+		OR = {
+			has_tradition = tr_ngm_diplomatic_art
+			has_tradition = tr_ngm_territory_inheritance
+		}
 	}
 	immediate = {
-		every_subject = {
+		if = {
 			limit = {
-				NOT = {
-					has_ascension_perk = ap_ngm_ministry_of_innocence
+				has_tradition = tr_ngm_diplomatic_art
+			}
+			every_subject = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_ministory_culture_modifier
 				}
 			}
-			add_modifier = {
-				modifier = tr_ngm_ministory_culture_modifier
+		}
+		if = {
+			limit = {
+				has_tradition = tr_ngm_territory_inheritance
+			}
+			every_subject = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = tr_ngm_territory_inheritance_modifier
+				}
 			}
 		}
 	}
 }
 
-# 40.文化大臣の設置:月間忠誠度+1		月ごとチェック
+# 40.芸術外交:月間忠誠度+1		月ごとチェック
 country_event = {
 	id = ngm_tradition.33
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_tradition = tr_ngm_ministory_culture
+		OR = {
+			has_tradition = tr_ngm_diplomatic_art
+			has_tradition = tr_ngm_territory_inheritance
+		}
 	}
 	immediate = {
 		every_subject = {
@@ -8492,6 +9338,199 @@ country_event = {
 			}
 		}
 	}
+	option = {
+		name = ngm_tradition.49.c
+		allow = {
+			NOT = { host_has_dlc = "Megacorp" }
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
+			NOR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			has_authority = auth_oligarchic
+			NOT = {
+				has_civic = civic_corporate_dominion
+			}
+		}
+		force_add_civic = civic_corporate_dominion
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.49.d
+		allow = {
+			has_toxoids = yes
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
+			NOT = {
+				has_civic = civic_corporate_toxic_baths
+			}
+			NOT = {
+				has_origin = origin_life_seeded
+			}
+			NOT = {
+				has_civic = civic_toxic_baths
+			}
+		}
+		force_add_civic = civic_toxic_baths
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.49.e
+		allow = {
+			has_toxoids = yes
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+			NOR = {
+				has_civic = civic_environmentalist
+				has_civic = civic_agrarian_idyll
+				has_civic = civic_idyllic_bloom
+				has_civic = civic_memorialist
+				has_civic = civic_corporate_relentless_industrialists
+			}
+			NOT = {
+				has_origin = origin_life_seeded
+			}
+			NOT = {
+				has_civic = civic_relentless_industrialists
+			}
+		}
+		force_add_civic = civic_relentless_industrialists
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.49.f
+		allow = {
+			has_toxoids = yes
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
+			NOT = {
+				has_civic = civic_corporate_scavengers
+			}
+			NOT = {
+				has_civic = civic_scavengers
+			}
+		}
+		force_add_civic = civic_scavengers
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.49.g
+		allow = {
+			host_has_dlc = "Utopia"
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			NOT = {
+				has_civic = civic_corporate_ascensionists
+			}
+			NOT = {
+				has_civic = civic_ascensionists
+			}
+		}
+		force_add_civic = civic_ascensionists
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.49.h
+		allow = {
+			has_first_contact_dlc = yes
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			NOT = {
+				has_authority = auth_corporate
+			}
+			NOT = {
+				has_civic = civic_inwards_perfection
+			}
+			NOR = {
+				has_origin = origin_payback
+				has_origin = origin_broken_shackles
+				has_origin = origin_fear_of_the_dark
+			}
+			NOT = {
+				has_civic = civic_eager_explorers
+			}
+		}
+		force_add_civic = civic_eager_explorers
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
 	# 次へ
 	option = {
 		allow = {
@@ -8939,6 +9978,89 @@ country_event = {
 			}
 		}
 		force_add_civic = civic_hive_idyllic_bloom
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.52.d
+		allow = {
+			has_toxoids = yes
+			has_authority = auth_hive_mind
+			NOT = {
+				has_civic = civic_hive_toxic_baths
+			}
+			NOT = {
+				has_origin = origin_life_seeded
+			}
+		}
+		force_add_civic = civic_hive_toxic_baths
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.52.e
+		allow = {
+			host_has_dlc = "Utopia"
+			has_authority = auth_hive_mind
+			NOT = {
+				has_civic = civic_hive_ascensionists
+			}
+		}
+		force_add_civic = civic_hive_ascensionists
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.52.f
+		allow = {
+			has_necroids = yes
+			has_authority = auth_hive_mind
+			NOT = {
+				has_civic = civic_hive_cordyceptic_drones
+			}
+		}
+		force_add_civic = civic_hive_cordyceptic_drones
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.52.g
+		allow = {
+			has_first_contact_dlc = yes
+			has_authority = auth_hive_mind
+			NOT = {
+				has_civic = civic_hive_stargazers
+			}
+		}
+		force_add_civic = civic_hive_stargazers
 		hidden_effect = {
 			subtract_variable = {
 				which = tr_ngm_avantgarde_finish_variable
@@ -9545,6 +10667,7 @@ country_event = {
 	option = {
 		name = ngm_tradition.56.c
 		allow = {
+			host_has_dlc = "Plantoids Species Pack"
 			has_authority = auth_machine_intelligence
 			NOT = {
 				has_civic = civic_machine_catalytic_processing
@@ -9554,6 +10677,73 @@ country_event = {
 			}
 		}
 		force_add_civic = civic_machine_catalytic_processing
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.56.d
+		allow = {
+			has_toxoids = yes
+			has_authority = auth_machine_intelligence
+			NOT = {
+				has_civic = civic_machine_toxic_baths
+			}
+			NOT = {
+				has_origin = origin_life_seeded
+			}
+		}
+		force_add_civic = civic_machine_toxic_baths
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.56.e
+		allow = {
+			host_has_dlc = "Utopia"
+			has_authority = auth_machine_intelligence
+			NOT = {
+				has_civic = civic_machine_ascensionists
+			}
+		}
+		force_add_civic = civic_machine_ascensionists
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.56.f
+		allow = {
+			has_first_contact_dlc = yes
+			has_authority = auth_machine_intelligence
+			NOT = {
+				has_civic = civic_machine_exploration_protocol
+			}
+			NOR = {
+				has_civic = civic_machine_terminator
+				has_civic = civic_machine_assimilator
+			}
+		}
+		force_add_civic = civic_machine_exploration_protocol
 		hidden_effect = {
 			subtract_variable = {
 				which = tr_ngm_avantgarde_finish_variable
@@ -10302,6 +11492,156 @@ country_event = {
 			}
 		}
 		force_add_civic = civic_permanent_employment
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.60.e
+		allow = {
+			has_toxoids = yes
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_corporate_relentless_industrialists
+			}
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+			NOT = {
+				has_origin = origin_life_seeded
+			}
+			OR = {
+				has_civic = civic_environmentalist
+				has_civic = civic_agrarian_idyll
+				has_civic = civic_idyllic_bloom
+				has_civic = civic_memorialist
+				has_civic = civic_relentless_industrialists
+			}
+		}
+		force_add_civic = civic_corporate_relentless_industrialists
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.60.f
+		allow = {
+			has_toxoids = yes
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_corporate_toxic_baths
+			}
+			NOT = {
+				has_origin = origin_life_seeded
+			}
+			NOT = {
+				has_civic = civic_toxic_baths
+			}
+		}
+		force_add_civic = civic_corporate_toxic_baths
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.60.g
+		allow = {
+			has_toxoids = yes
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_corporate_scavengers
+			}
+			NOT = {
+				has_civic = civic_scavengers
+			}
+		}
+		force_add_civic = civic_corporate_scavengers
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.60.h
+		allow = {
+			host_has_dlc = "Utopia"
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_corporate_ascensionists
+			}
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			NOT = {
+				has_civic = civic_ascensionists
+			}
+		}
+		force_add_civic = civic_corporate_ascensionists
+		hidden_effect = {
+			subtract_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+			country_event = {
+				id = ngm_tradition.40
+			}
+		}
+	}
+	option = {
+		name = ngm_tradition.60.i
+		allow = {
+			has_first_contact_dlc = yes
+			OR = {
+				has_authority = auth_corporate
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+			NOT = {
+				has_civic = civic_privatized_exploration
+			}
+			NOR = {
+				has_origin = origin_payback
+				has_origin = origin_broken_shackles
+				has_origin = origin_fear_of_the_dark
+			}
+		}
+		force_add_civic = civic_privatized_exploration
 		hidden_effect = {
 			subtract_variable = {
 				which = tr_ngm_avantgarde_finish_variable
@@ -16269,5 +17609,45 @@ country_event = {
 				value = 0
 			}
 		}
+	}
+}
+
+# 逆境 完遂時:防衛戦争時に亜高速移動速度+20% 開始時
+country_event = {
+	id = ngm_tradition.1001
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_adversity_finish
+		is_at_war = yes
+		any_war = {
+			any_defender = {
+				is_same_value = prevprev
+			}
+		}
+	}
+	immediate = {
+		add_modifier = {
+			modifier = tr_ngm_adversity_finish_modifier
+		}
+	}
+}
+
+# 逆境 完遂時:防衛戦争時に亜高速移動速度+20% 終了時
+country_event = {
+	id = ngm_tradition.1002
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_tradition = tr_ngm_adversity_finish
+		is_at_war = yes
+		any_war = {
+			any_defender = {
+				is_same_value = prevprev
+			}
+		}
+	}
+	immediate = {
+		remove_modifier = tr_ngm_adversity_finish_modifier
 	}
 }

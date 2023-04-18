@@ -46,8 +46,8 @@ on_leader_spawned = {
 		ngm_federation.1
 		# 研鑽	リーダーが特殊な特性をアンロック。初期リーダーが複数の特性を有している
 		ngm_tradition.2
-		# 研鑽	資格採用の強化:リーダー初期レベル+1
-		ngm_tradition.3
+		# # 研鑽	資格採用の強化:リーダー初期レベル+1
+		# ngm_tradition.3
 	}
 }
 
@@ -68,8 +68,6 @@ on_monthly_pulse_country = {
 		ngm_tradition.16
 		# 憲兵隊
 		ngm_tradition.18
-		# 余裕取得時
-		ngm_tradition.20
 		# 余裕完遂時
 		ngm_tradition.22
 		# 3.軍事国家
@@ -80,8 +78,8 @@ on_monthly_pulse_country = {
 		ngm_tradition.28
 		# 宗主取得時 月ごと解除チェック
 		ngm_tradition.29
-		# 181.宗主国の圧力		月ごとチェック
-		ngm_tradition.31
+		# # 181.宗主国の圧力		月ごとチェック
+		# ngm_tradition.31
 		# 40.文化大臣の設置:月間忠誠度+1		月ごとチェック
 		ngm_tradition.33
 		# 84.敵対的演説:宿敵の外交発言力-10%		月ごとチェック
@@ -214,3 +212,21 @@ on_country_destroyed = {
 	}
 }
 
+# 戦争が始まる、戦争に参加するすべての国のために実行される。
+# Root = Country
+# From = War
+on_war_beginning = {
+	events = {
+		# 156.逆境 完遂時:防衛戦争時に亜高速移動速度+20%
+		ngm_tradition.1001
+	}
+}
+
+# A war has ended
+# Root = Loser
+# From = Main Winner
+on_war_ended = {
+	events = {
+		ngm_tradition.1002
+	}
+}

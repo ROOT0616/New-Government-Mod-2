@@ -945,30 +945,30 @@ ngm_olympic_buff_modifier = {
 	country_unity_produces_mult = 0.
 }
 
-# 狙い撃ち:艦船連射レート+5%、宿敵の犯罪度+20
+# 狙い撃ち:宿敵の犯罪度+30
 tr_ngm_sniper_debuff_1 = {
-	planet_crime_add = 20
+	planet_crime_add = 30
 }
 tr_ngm_sniper_debuff_2 = {
-	planet_crime_add = 20
+	planet_crime_add = 30
 }
 tr_ngm_sniper_debuff_3 = {
-	planet_crime_add = 20
+	planet_crime_add = 30
 }
 tr_ngm_sniper_debuff_4 = {
-	planet_crime_add = 20
+	planet_crime_add = 30
 }
 tr_ngm_sniper_debuff_5 = {
-	planet_crime_add = 20
+	planet_crime_add = 30
 }
 tr_ngm_sniper_debuff_6 = {
-	planet_crime_add = 20
+	planet_crime_add = 30
 }
 tr_ngm_sniper_debuff_7 = {
-	planet_crime_add = 20
+	planet_crime_add = 30
 }
 tr_ngm_sniper_debuff_8 = {
-	planet_crime_add = 20
+	planet_crime_add = 30
 }
 
 # 浸透:外交関係にあるすべての国家の犯罪度+20		伝統取得時
@@ -996,8 +996,29 @@ tr_ngm_penetration_debuff_7 = {
 tr_ngm_penetration_debuff_8 = {
 	planet_crime_add = 20
 }
+tr_ngm_penetration_debuff_9 = {
+	planet_crime_add = 20
+}
+tr_ngm_penetration_debuff_10 = {
+	planet_crime_add = 20
+}
+tr_ngm_penetration_debuff_11 = {
+	planet_crime_add = 20
+}
+tr_ngm_penetration_debuff_12 = {
+	planet_crime_add = 20
+}
+tr_ngm_penetration_debuff_13 = {
+	planet_crime_add = 20
+}
+tr_ngm_penetration_debuff_14 = {
+	planet_crime_add = 20
+}
+tr_ngm_penetration_debuff_15 = {
+	planet_crime_add = 20
+}
 
-# 自由:完遂時:宿敵宣言した国家の奴隷幸福度-20%
+# 自由:報道の自由:宿敵宣言した国家の奴隷幸福度-20%
 tr_ngm_freedom_finish_debuff_1 = {
 	pop_cat_slave_happiness = -0.2
 }
@@ -1125,13 +1146,23 @@ tr_ngm_margin_finish_buff = {
 	country_influence_produces_mult = 0.3
 }
 
-# 3.軍事国家:宇宙軍許容量を超過しているときに職業による資源+5%
+# 3.軍事国家:宇宙軍許容量を超過しているときに職業による資源+10%
 tr_ngm_weapons_arsenal_country_buff = {
-	planet_jobs_productive_produces_mult = 0.05
+	planet_jobs_productive_produces_mult = 0.1
 }
 
-# 40.文化大臣の設置:月間忠誠度+1
+# 40.芸術外交:月間忠誠度+1
 tr_ngm_ministory_culture_modifier = {
+	monthly_loyalty = 1
+}
+
+# 237.領地相続:毎月の忠誠心+1
+tr_ngm_territory_inheritance_modifier = {
+	monthly_loyalty = 1
+}
+
+# 宗主取得時：忠誠度月間+1
+tr_ngm_margin_finish_modifier = {
 	monthly_loyalty = 1
 }
 
@@ -1169,6 +1200,11 @@ tr_ngm_battle_speach_modifier_7 = {
 }
 tr_ngm_battle_speach_modifier_8 = {
 	diplo_weight_mult = -0.1
+}
+
+# 156.逆境 完遂時:防衛戦争時に亜高速移動速度+20%
+tr_ngm_adversity_finish_modifier = {
+	ship_speed_mult = 0.2
 }
 
 # 恒常的敵対諜報活動		宿敵にした相手国の影響力-1

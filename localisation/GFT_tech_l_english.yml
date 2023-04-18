@@ -1,18 +1,18 @@
-﻿l_japanese:
+﻿l_english:
 
 #######################
 #####    布告    ######
 #######################
 
- edict_gft_technology_trade_options_menu:0 "研究取引 贈与"
+ edict_gft_technology_trade_options_menu:0 "Research Transactions Gifts"
  edict_gft_technology_trade_options_menu_desc:0 ""
 
 ##########################
 #####    イベント    ######
 ##########################
 
- gft_tech_trade.1.name:0 "研究取引 贈与 国選び"
- gft_tech_trade.1.desc:0 "国際協調と協力を果たすためには、技術力の相互向上を果たす以外にも必要なことがある。\nそう。§R技術自体の取引§!だ。手続的な問題で技術をこちらから指定して送付される形となるので、§Y送付先の国が受け入れるか、どの技術を参照するかはこちらからは§!§R分からない§!。また、§Y相手が対価を支払うかどうかも§!§R確定ではない§!。\nそれでも相手を信用できる、もしくは事態が切迫しているならば取引は有意義なものになるだろう。"
+ gft_tech_trade.1.name:0 "Research Transactions Gifts Country Selection"
+ gft_tech_trade.1.desc:0 ""
  gft_tech_trade.1.a:0 "[gft_technology_trade_1.GetName]"
  gft_tech_trade.1.b:0 "[gft_technology_trade_2.GetName]"
  gft_tech_trade.1.c:0 "[gft_technology_trade_3.GetName]"
@@ -26,30 +26,30 @@
  gft_tech_trade.1.k:0 "[gft_technology_trade_11.GetName]"
  gft_tech_trade.1.l:0 "[gft_technology_trade_12.GetName]"
  gft_tech_trade.1.m:0 "[gft_technology_trade_13.GetName]"
- gft_tech_trade.1.n:0 "他の国家はないだおうか？"
- gft_tech_trade.1.o:0 "やはりやめておこう。"
+ gft_tech_trade.1.n:0 "Are there no other nations?"
+ gft_tech_trade.1.o:0 "close"
 
- gft_tech_trade.2.name:0 "研究取引 贈与 分野振り分け"
- gft_tech_trade.2.desc:0 "政治的決断により技術提供することが決定された。あとは技術官僚の仕事だ。会議に会議を重ね、どの技術を提供するかを議論することとなった。長い長い会議の後、下された結論は......"
- gft_tech_trade.2.a:0 "物理学tier1"
- gft_tech_trade.2.b:0 "物理学tier2"
- gft_tech_trade.2.c:0 "物理学tier3"
- gft_tech_trade.2.d:0 "物理学tier4"
- gft_tech_trade.2.e:0 "物理学tier5"
- gft_tech_trade.2.f:0 "社会学tier1"
- gft_tech_trade.2.g:0 "社会学tier2"
- gft_tech_trade.2.h:0 "社会学tier3"
- gft_tech_trade.2.i:0 "社会学tier4"
- gft_tech_trade.2.j:0 "社会学tier5"
- gft_tech_trade.2.k:0 "工学tier1"
- gft_tech_trade.2.l:0 "工学tier2"
- gft_tech_trade.2.m:0 "工学tier3"
- gft_tech_trade.2.n:0 "工学tier4"
- gft_tech_trade.2.o:0 "工学tier5"
- gft_tech_trade.2.p:0 "Gigastructural Engineering & More (3.7) 分野振り分けへ"
- gft_tech_trade.2.zz:0 "研究取引 贈与 分野振り分けへ"
+ gft_tech_trade.2.name:0 "Research Transactions Gifts Field Assignment"
+ gft_tech_trade.2.desc:0 ""
+ gft_tech_trade.2.a:0 "physics tier1"
+ gft_tech_trade.2.b:0 "physics tier2"
+ gft_tech_trade.2.c:0 "physics tier3"
+ gft_tech_trade.2.d:0 "physics tier4"
+ gft_tech_trade.2.e:0 "physics tier5"
+ gft_tech_trade.2.f:0 "Sociology tier1"
+ gft_tech_trade.2.g:0 "Sociology tier2"
+ gft_tech_trade.2.h:0 "Sociology tier3"
+ gft_tech_trade.2.i:0 "Sociology tier4"
+ gft_tech_trade.2.j:0 "Sociology tier5"
+ gft_tech_trade.2.k:0 "Engineering tier1"
+ gft_tech_trade.2.l:0 "Engineering tier2"
+ gft_tech_trade.2.m:0 "Engineering tier3"
+ gft_tech_trade.2.n:0 "Engineering tier4"
+ gft_tech_trade.2.o:0 "Engineering tier5"
+ gft_tech_trade.2.p:0 "Gigastructural Engineering & More (3.7) Field Assignment"
+ gft_tech_trade.2.zz:0 "Research Transactions Gifts Field Assignment"
 
- gft_tech_trade.3.name:0 "研究取引 贈与 Gigastructural Engineering & More (3.7) 分野振り分け"
+ gft_tech_trade.3.name:0 "Transactions Gifts  Gigastructural Engineering & More (3.7) 分野振り分け"
  gft_tech_trade.3.a:0 "physics tier1"
  gft_tech_trade.3.b:0 "physics tier2"
  gft_tech_trade.3.c:0 "physics tier3"
@@ -68,7 +68,7 @@
  gft_tech_trade.3.p:0 "engineering tier7"
 
 
- gft_tech_trade.10.name:0 "研究取引 贈与physics tier1"
+ gft_tech_trade.10.name:0 "Transactions Gifts physics tier1"
  gft_tech_trade.10.desc:0 ""
  gft_tech_trade.10.a:0 "§Y$tech_basic_science_lab_2$§!"
  gft_tech_trade.10.b:0 "§Y$tech_space_science_1$§!"
@@ -89,7 +89,7 @@
  gft_tech_trade.10.q:0 "§Y$tech_power_hub_1$§!"
  gft_tech_trade.10.r:0 "§Y$tech_lasers_2$§!"
 
- gft_tech_trade.11.name:0 "研究取引 贈与physics tier2"
+ gft_tech_trade.11.name:0 "Transactions Gifts physics tier2"
  gft_tech_trade.11.a:0 "§Y$tech_experimental_subspace_navigation$§!"
  gft_tech_trade.11.b:0 "§Y$tech_cloaking_1$§!"
  gft_tech_trade.11.c:0 "§Y$tech_detection_array$§!"
@@ -126,7 +126,7 @@
  gft_tech_trade.11.ah:0 "§Y$tech_mine_volatile_motes$§!"
  gft_tech_trade.11.ai:0 "§Y$tech_volatile_motes$§!"
 
- gft_tech_trade.12.name:0 "研究取引 贈与physics tier3"
+ gft_tech_trade.12.name:0 "Transactions Gifts physics tier3"
  gft_tech_trade.12.a:0 "§Y$tech_lgate_activation$§!"
  gft_tech_trade.12.b:0 "§Y$tech_cloaking_2$§!"
  gft_tech_trade.12.c:0 "§Y$tech_basic_science_lab_3$§!"
@@ -148,7 +148,7 @@
  gft_tech_trade.12.s:0 "§Y$tech_energy_torpedoes_1$§!"
  gft_tech_trade.12.t:0 "§Y$tech_mine_dark_matter$§!"
 
- gft_tech_trade.13.name:0 "研究取引 贈与physics tier4"
+ gft_tech_trade.13.name:0 "Transactions Gifts physics tier4"
  gft_tech_trade.13.a:0 "§Y$tech_cloaking_3$§!"
  gft_tech_trade.13.b:0 "§Y$tech_gateway_activation$§!"
  gft_tech_trade.13.c:0 "§Y$tech_physics_3$§!"
@@ -173,7 +173,7 @@
  gft_tech_trade.13.v:0 "§Y$tech_energy_torpedoes_2$§!"
  gft_tech_trade.13.w:0 "§Y$tech_pd_tracking_3$§!"
 
- gft_tech_trade.14.name:0 "研究取引 贈与physics tier5"
+ gft_tech_trade.14.name:0 "Transactions Gifts physics tier5"
  gft_tech_trade.14.a:0 "§Y$tech_pk_shielder$§!"
  gft_tech_trade.14.b:0 "§Y$tech_pk_neutron$§!"
  gft_tech_trade.14.c:0 "§Y$tech_dark_matter_detection$§!"
@@ -187,7 +187,7 @@
  gft_tech_trade.14.k:0 "§Y$tech_jump_drive_1$§!"
  gft_tech_trade.14.l:0 "§Y$tech_extradimensional_weapon_1$§!"
 
- gft_tech_trade.15.name:0 "研究取引 贈与society tier1"
+ gft_tech_trade.15.name:0 "Transactions Gifts society tier1"
  gft_tech_trade.15.a:0 "§Y$tech_gargantuan_evolution$§!"
  gft_tech_trade.15.b:0 "§Y$tech_space_trading$§!"
  gft_tech_trade.15.c:0 "§Y$tech_eco_simulation$§!"
@@ -211,7 +211,7 @@
  gft_tech_trade.15.u:0 "§Y$tech_heritage_site$§!"
  gft_tech_trade.15.v:0 "§Y$tech_space_whale_weapon_1$§!"
 
- gft_tech_trade.16.name:0 "研究取引 贈与society tier2"
+ gft_tech_trade.16.name:0 "Transactions Gifts society tier2"
  gft_tech_trade.16.a:0 "§Y$tech_arcane_deciphering$§!"
  gft_tech_trade.16.b:0 "§Y$tech_archeology_lab_ancrel$§!"
  gft_tech_trade.16.c:0 "§Y$tech_archaeostudies$§!"
@@ -258,7 +258,7 @@
  gft_tech_trade.16.ar:0 "§Y$tech_amoeba_strike_craft_1$§!"
  gft_tech_trade.16.as:0 "§Y$tech_adaptive_combat_algorithms$§!"
 
- gft_tech_trade.17.name:0 "研究取引 贈与society tier3"
+ gft_tech_trade.17.name:0 "Transactions Gifts society tier3"
  gft_tech_trade.17.a:0 "§Y$tech_archaeoshield$§!"
  gft_tech_trade.17.b:0 "§Y$tech_archaeoarmor$§!"
  gft_tech_trade.17.c:0 "§Y$tech_archaeo_mass_drivers$§!"
@@ -312,7 +312,7 @@
  gft_tech_trade.17.ay:0 "§Y$tech_capital_productivity_2$§!"
  gft_tech_trade.17.az:0 "§Y$tech_mine_zro$§!"
 
- gft_tech_trade.18.name:0 "研究取引 贈与society tier4"
+ gft_tech_trade.18.name:0 "Transactions Gifts society tier4"
  gft_tech_trade.18.a:0 "§Y$tech_secrets_cybrex$§!"
  gft_tech_trade.18.b:0 "§Y$tech_secrets_league$§!"
  gft_tech_trade.18.c:0 "§Y$tech_secrets_irassian$§!"
@@ -345,7 +345,7 @@
  gft_tech_trade.18.ad:0 "§Y$tech_capital_productivity_3$§!"
  gft_tech_trade.18.ae:0 "§Y$tech_biomechanics$§!"
 
- gft_tech_trade.19.name:0 "研究取引 贈与society tier5"
+ gft_tech_trade.19.name:0 "Transactions Gifts society tier5"
  gft_tech_trade.19.a:0 "§Y$tech_archaeo_pk_devolving_beam$§!"
  gft_tech_trade.19.b:0 "§Y$tech_pk_godray$§!"
  gft_tech_trade.19.c:0 "§Y$tech_cloaking_psi$§!"
@@ -362,7 +362,7 @@
  gft_tech_trade.19.n:0 "§Y$tech_swarm_strike_craft_1$§!"
  gft_tech_trade.19.o:0 "§Y$tech_scourge_missile_1$§!"
 
- gft_tech_trade.20.name:0 "研究取引 贈与engineering tier1"
+ gft_tech_trade.20.name:0 "Transactions Gifts engineering tier1"
  gft_tech_trade.20.a:0 "§Y$tech_corvette_build_speed$§!"
  gft_tech_trade.20.b:0 "§Y$tech_corvette_hull_1$§!"
  gft_tech_trade.20.c:0 "§Y$tech_strike_craft_1$§!"
@@ -385,7 +385,7 @@
  gft_tech_trade.20.t:0 "§Y$tech_robomodding_m$§!"
  gft_tech_trade.20.u:0 "§Y$tech_robomodding$§!"
 
- gft_tech_trade.21.name:0 "研究取引 贈与engineering tier2"
+ gft_tech_trade.21.name:0 "Transactions Gifts engineering tier2"
  gft_tech_trade.21.a:0 "§Y$tech_repeatable_lcluster_clue$§!"
  gft_tech_trade.21.b:0 "§Y$tech_destroyers$§!"
  gft_tech_trade.21.c:0 "§Y$tech_corvette_hull_2$§!"
@@ -425,7 +425,7 @@
  gft_tech_trade.21.ak:0 "§Y$tech_robomodding_points_1$§!"
  gft_tech_trade.21.al:0 "§Y$tech_micro_replicators$§!"
 
- gft_tech_trade.22.name:0 "研究取引 贈与engineering tier3"
+ gft_tech_trade.22.name:0 "Transactions Gifts engineering tier3"
  gft_tech_trade.22.a:0 "§Y$tech_cruisers$§!"
  gft_tech_trade.22.b:0 "§Y$tech_destroyer_hull_2$§!"
  gft_tech_trade.22.c:0 "§Y$tech_cruiser_build_speed$§!"
@@ -453,7 +453,7 @@
  gft_tech_trade.22.y:0 "§Y$tech_binary_motivators$§!"
  gft_tech_trade.22.z:0 "§Y$tech_self_assembling_components$§!"
 
- gft_tech_trade.23.name:0 "研究取引 贈与engineering tier4"
+ gft_tech_trade.23.name:0 "Transactions Gifts engineering tier4"
  gft_tech_trade.23.a:0 "§Y$tech_battleships$§!"
  gft_tech_trade.23.b:0 "§Y$tech_cruiser_hull_2$§!"
  gft_tech_trade.23.c:0 "§Y$tech_battleship_build_speed$§!"
@@ -482,7 +482,7 @@
  gft_tech_trade.23.z:0 "§Y$tech_nanite_assemblers$§!"
  gft_tech_trade.23.aa:0 "§Y$tech_mega_assembly$§!"
 
- gft_tech_trade.24.name:0 "研究取引 贈与engineering tier5"
+ gft_tech_trade.24.name:0 "Transactions Gifts engineering tier5"
  gft_tech_trade.24.a:0 "§Y$tech_colossus$§!"
  gft_tech_trade.24.b:0 "§Y$tech_pk_cracker$§!"
  gft_tech_trade.24.c:0 "§Y$tech_pk_nanobots$§!"
@@ -501,13 +501,13 @@
  gft_tech_trade.24.p:0 "§Y$tech_mine_living_metal$§!"
 
 
- gft_tech_trade.25.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与physics tier1"
+ gft_tech_trade.25.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts physics tier1"
  gft_tech_trade.25.a:0 "§Y$tech_amb_supertensiles$§!"
 
- gft_tech_trade.26.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与physics tier2"
+ gft_tech_trade.26.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts physics tier2"
  gft_tech_trade.26.a:0 "§Y$tech_abstract_1$§!"
 
- gft_tech_trade.27.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与physics tier3"
+ gft_tech_trade.27.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts physics tier3"
  gft_tech_trade.27.a:0 "§Y$tech_particle_accelerator$§!"
  gft_tech_trade.27.b:0 "§Y$tech_penrose_sphere_1$§!"
  gft_tech_trade.27.c:0 "§Y$tech_event_exotic_lab_data$§!"
@@ -517,7 +517,7 @@
  gft_tech_trade.27.g:0 "§Y$tech_proton_d_e$§!"
  gft_tech_trade.27.h:0 "§Y$tech_non_local_r_i$§!"
 
- gft_tech_trade.28.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与physics tier4"
+ gft_tech_trade.28.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts physics tier4"
  gft_tech_trade.28.a:0 "§Y$tech_kugelblitz$§!"
  gft_tech_trade.28.b:0 "§Y$tech_substellar_compressor$§!"
  gft_tech_trade.28.c:0 "§Y$tech_penrose_sphere_2$§!"
@@ -528,7 +528,7 @@
  gft_tech_trade.28.h:0 "§Y$tech_negative_pressure$§!"
  gft_tech_trade.28.i:0 "§Y$tech_giga_power_plant_1$§!"
 
- gft_tech_trade.29.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与physics tier5"
+ gft_tech_trade.29.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts physics tier5"
  gft_tech_trade.29.a:0 "§Y$tech_war_moon_specialization$§!"
  gft_tech_trade.29.b:0 "§Y$tech_matrioshka_brain_2$§!"
  gft_tech_trade.29.c:0 "§Y$tech_quasi_stellar_4$§!"
@@ -629,21 +629,21 @@
  gft_tech_trade.29.ct:0 "§Y$tech_blokkat_gigarelay_core$§!"
  gft_tech_trade.29.cu:0 "§Y$tech_amb_sentient_metal_molecular_foundries$§!"
 
- gft_tech_trade.30.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与physics tier7"
+ gft_tech_trade.30.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts physics tier7"
  gft_tech_trade.30.a:0 "§Y$tech_arcane_g_r$§!"
 
- gft_tech_trade.31.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与society tier1"
+ gft_tech_trade.31.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts society tier1"
  gft_tech_trade.31.a:0 "§Y$tech_blokkat_scrap_research$§!"
 
- gft_tech_trade.32.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与society tier2"
+ gft_tech_trade.32.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts society tier2"
  gft_tech_trade.32.a:0 "§Y$tech_frameworld_harvest_1$§!"
 
- gft_tech_trade.33.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与society tier3"
+ gft_tech_trade.33.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts society tier3"
  gft_tech_trade.33.a:0 "§Y$tech_orbital_elysium$§!"
  gft_tech_trade.33.b:0 "§Y$tech_orbital_artificial_eco$§!"
  gft_tech_trade.33.c:0 "§Y$tech_frameworld_harvest_2$§!"
 
- gft_tech_trade.34.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与society tier4"
+ gft_tech_trade.34.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts society tier4"
  gft_tech_trade.34.a:0 "§Y$tech_yggdrasil_orchid$§!"
  gft_tech_trade.34.b:0 "§Y$tech_terraform_barren$§!"
  gft_tech_trade.34.c:0 "§Y$tech_terraform_toxic$§!"
@@ -658,7 +658,7 @@
  gft_tech_trade.34.l:0 "§Y$tech_maginot_world$§!"
  gft_tech_trade.34.m:0 "§Y$tech_frameworld_harvest_3$§!"
 
- gft_tech_trade.35.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与society tier5"
+ gft_tech_trade.35.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts society tier5"
  gft_tech_trade.35.a:0 "§Y$tech_birch_world_2$§!"
  gft_tech_trade.35.b:0 "§Y$tech_ringworld_buildings$§!"
  gft_tech_trade.35.c:0 "§Y$tech_terraform_molten$§!"
@@ -695,14 +695,14 @@
  gft_tech_trade.35.ah:0 "§Y$tech_blokkat_blokkwork_power_node$§!"
  gft_tech_trade.35.ai:0 "§Y$tech_maginot_firepower_1$§!"
 
- gft_tech_trade.36.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与engineering tier1"
+ gft_tech_trade.36.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts engineering tier1"
  gft_tech_trade.36.a:0 "§Y$tech_blokkat_scrap_damage$§!"
  gft_tech_trade.36.b:0 "§Y$tech_frameworld_defensive_station_2$§!"
  gft_tech_trade.36.c:0 "§Y$tech_frameworld_defensive_station_3$§!"
  gft_tech_trade.36.d:0 "§Y$tech_frameworld_defensive_station_4$§!"
  gft_tech_trade.36.e:0 "§Y$tech_frameworld_defensive_station_5$§!"
 
- gft_tech_trade.37.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与engineering tier3"
+ gft_tech_trade.37.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts engineering tier3"
  gft_tech_trade.37.a:0 "§Y$tech_automated_stripmine_1$§!"
  gft_tech_trade.37.b:0 "§Y$tech_asteroid_manufactory$§!"
  gft_tech_trade.37.c:0 "§Y$tech_engineering_test_site$§!"
@@ -711,7 +711,7 @@
  gft_tech_trade.37.f:0 "§Y$tech_ehof_phase_01$§!"
  gft_tech_trade.37.g:0 "§Y$tech_asteroid_artillery$§!"
 
- gft_tech_trade.38.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与engineering tier4"
+ gft_tech_trade.38.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts engineering tier4"
  gft_tech_trade.38.a:0 "§Y$tech_automated_stripmine_2$§!"
  gft_tech_trade.38.b:0 "§Y$tech_star_lifter$§!"
  gft_tech_trade.38.c:0 "§Y$tech_crystal_megabore$§!"
@@ -733,7 +733,7 @@
  gft_tech_trade.38.s:0 "§Y$tech_defense_nexus_capacity_1$§!"
  gft_tech_trade.38.t:0 "§Y$tech_defense_nexus_production_1$§!"
 
- gft_tech_trade.39.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与engineering tier5"
+ gft_tech_trade.39.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts engineering tier5"
  gft_tech_trade.39.a:0 "§Y$tech_hyperstructural_ass$§!"
  gft_tech_trade.39.b:0 "§Y$tech_nidavellir$§!"
  gft_tech_trade.39.c:0 "§Y$tech_birch_world_3$§!"
@@ -824,20 +824,20 @@
  gft_tech_trade.39.cj:0 "§Y$tech_maginot_systemcraft_upgrade$§!"
  gft_tech_trade.39.ck:0 "§Y$tech_amb_living_metal_infusion$§!"
 
- gft_tech_trade.40.name:0 "Gigastructural Engineering & More (3.7) 研究取引 贈与engineering tier7"
+ gft_tech_trade.40.name:0 "Gigastructural Engineering & More (3.7) Transactions Gifts engineering tier7"
  gft_tech_trade.40.a:0 "§Y$tech_sentient_m_u_1$§!"
  gft_tech_trade.40.b:0 "§Y$tech_sentient_m_u_2$§!"
 
- gft_tech_trade.1001.name:0 "研究取引 贈与 受理"
- gft_tech_trade.1001.desc:0 "§Y[gft_technology_trade_0.GetName]§!より技術を提供するという申し出があった。この技術を共有することにより世界的な技術発展と国際協調を推し進めることができるというのだ。"
- gft_tech_trade.1001.a:0 "残念だが、お断りしよう"
- gft_tech_trade.1001.b:0 "他国の世話にはならない"
- gft_tech_trade.1001.c:0 "ありがたくいただこう"
+ gft_tech_trade.1001.name:0 "Research Transactions Gifts Acceptances"
+ gft_tech_trade.1001.desc:0 "§Y[gft_technology_trade_0.GetName]§! has offered to provide the technology. They say that by sharing this technology, we can promote global technological development and international cooperation."
+ gft_tech_trade.1001.a:0 "I am sorry, but I must decline."
+ gft_tech_trade.1001.b:0 "We will not take care of other countries."
+ gft_tech_trade.1001.c:0 "We shall be grateful."
 
- gft_tech_trade.1002.name:0 "研究取引 贈与 受理"
- gft_tech_trade.1002.desc:0 "先日送付した技術提供に関しては快く受け入れられた。このことは国際協調に大きな貢献をするだろう。"
- gft_tech_trade.1002.a:0 "素晴らしい"
+ gft_tech_trade.1002.name:0 "Research Transactions Gifts acceptance"
+ gft_tech_trade.1002.desc:0 "The technical offer we recently sent has been graciously accepted. This will contribute greatly to international cooperation."
+ gft_tech_trade.1002.a:0 "Wonderful."
 
- gft_tech_trade.1003.name:0 "研究取引 贈与 拒否"
- gft_tech_trade.1003.desc:0 "我が国の好意は受け入れられなかった。国際協調の時代に対して強かな拒絶があるとは想定できなかった。"
- gft_tech_trade.1003.a:0 "残念だ"
+ gft_tech_trade.1003.name:0 "Research Transactions Gifts refusal"
+ gft_tech_trade.1003.desc:0 "Our country's goodwill was not accepted. We could not assume that there would be a strong rejection of the era of international cooperation."
+ gft_tech_trade.1003.a:0 "Too bad."

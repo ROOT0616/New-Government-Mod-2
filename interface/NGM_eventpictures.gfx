@@ -1,13 +1,19 @@
 spriteTypes = {	
 	spriteType = {
 		name = "GFX_origin_ngm_buffer_state"
-		texturefile = "gfx/event_pictures/origin_ngm_buffer_state.dds"
+		texturefile = "gfx/event_pictures/origins/origin_ngm_buffer_state.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes	
 	}
 	spriteType = {
 		name = "GFX_origin_ngm_escape_to_the_past"
-		texturefile = "gfx/event_pictures/origin_ngm_escape_to_the_past.dds"
+		texturefile = "gfx/event_pictures/origins/origin_ngm_escape_to_the_past.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_origin_ngm_galactic_empire_aquarium"
+		texturefile = "gfx/event_pictures/origins/origin_ngm_galactic_empire_aquarium.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes	
 	}

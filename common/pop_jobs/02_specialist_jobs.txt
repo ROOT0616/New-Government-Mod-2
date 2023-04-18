@@ -101,6 +101,16 @@ researcher = {
 			engineering_research = 4
 			society_research = 4
 		}
+		# NGM2	過去の参照
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_active_tradition = tr_ngm_past }
+			}
+			physics_research = 1
+			engineering_research = 1
+			society_research = 1
+		}
 		upkeep = {
 			consumer_goods = 2
 		}
@@ -112,15 +122,13 @@ researcher = {
 			}
 			consumer_goods = 1
 		}
+		# NGM2	サイバー民主制
 		produces = {
 			trigger = {
 				exists = owner
 				owner = { has_valid_civic = civic_ngm_cyberdemocracy }
 			}
 			unity = 1
-		}
-		upkeep = {
-			consumer_goods = 2
 		}
 	}
 
@@ -251,7 +259,7 @@ priest = {
 		produces = {
 			unity = 4
 		}
-		# 自然信仰
+		# NGM2	自然信仰
 		produces = {
 			trigger = {
 				exists = owner
@@ -264,6 +272,30 @@ priest = {
 		upkeep = {
 			consumer_goods = 2
 		}
+		# NGM2	緻密な記録
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_active_tradition = tr_ngm_record }
+			}
+			unity	= 1
+		}
+		# NGM2	総務省
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_active_tradition = tr_ngm_general_affairs }
+			}
+			unity	= 1
+		}
+		# NGM2	膨張した官僚機構
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_active_tradition = tr_ngm_rock_solid_bureaucracy }
+			}
+			unity	= 1
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -273,7 +305,7 @@ priest = {
 		planet_amenities_add = 2
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
-	# 自然信仰
+	# NGM2	自然信仰
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -969,6 +1001,30 @@ bureaucrat = {
 		upkeep = {
 			consumer_goods = 2
 		}
+		# NGM2	緻密な記録
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_active_tradition = tr_ngm_record }
+			}
+			unity	= 1
+		}
+		# NGM2	総務省
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_active_tradition = tr_ngm_general_affairs }
+			}
+			unity	= 1
+		}
+		# NGM2	膨張した官僚機構
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_active_tradition = tr_ngm_rock_solid_bureaucracy }
+			}
+			unity	= 1
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -1137,9 +1193,9 @@ chemist = {
 			volatile_motes = 2
 		}
 		upkeep = {
-			minerals = 6.5
+			minerals = 6
 		}
-		# 最先端工業:化学技師、透過技師、ガス精製技師の維持費-35%
+		# 最先端工業:化学技師、透過技師、ガス精製技師の維持費-40%
 		upkeep = {
 			trigger = {
 				owner = {
@@ -1148,7 +1204,7 @@ chemist = {
 					}
 				}
 			}
-			minerals = 3.5
+			minerals = 4
 		}
 	}
 
@@ -1192,9 +1248,9 @@ translucer = {
 			rare_crystals = 2
 		}
 		upkeep = {
-			minerals = 6.5
+			minerals = 6
 		}
-		# 最先端工業:化学技師、透過技師、ガス精製技師の維持費-35%
+		# 最先端工業:化学技師、透過技師、ガス精製技師の維持費-40%
 		upkeep = {
 			trigger = {
 				owner = {
@@ -1203,7 +1259,7 @@ translucer = {
 					}
 				}
 			}
-			minerals = 3.5
+			minerals = 4
 		}
 	}
 
@@ -1252,9 +1308,9 @@ gas_refiner = {
 			exotic_gases = 2
 		}
 		upkeep = {
-			minerals = 6.5
+			minerals = 6
 		}
-		# 最先端工業:化学技師、透過技師、ガス精製技師の維持費-35%
+		# 最先端工業:化学技師、透過技師、ガス精製技師の維持費-40%
 		upkeep = {
 			trigger = {
 				owner = {
@@ -1263,7 +1319,7 @@ gas_refiner = {
 					}
 				}
 			}
-			minerals = 3.5
+			minerals = 4
 		}
 	}
 

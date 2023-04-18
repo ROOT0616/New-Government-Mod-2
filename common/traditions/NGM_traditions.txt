@@ -1,29 +1,32 @@
 # 法令(法秩序に基づく統治は国家の美徳である
-# 1.取得時：全惑星で犯罪度-20
+# 1.取得時：政策「立法手続」をアンロック
 tr_ngm_law_first = {
+	custom_tooltip_with_modifiers = tr_ngm_law_first_tooltip
 	modifier = {
-		planet_crime_add = -20
 	}
 }
 
 # 2.完遂時:政策"労働法政策"をアンロック
 tr_ngm_law_finish = {
+	custom_tooltip_with_modifiers = tr_ngm_law_finish_tooltip
 	modifier = {
 		ascension_perks_add = 1
 	}
 }
 
-# 3.人権法:幸福度+5%
+# 3.人権法:受容主義魅力+20%	労働者・奴隷幸福度+10%
 tr_ngm_human_rights = {
 	modifier = {
-		pop_happiness = 0.05
+		pop_ethic_xenophile_attraction_mult = 0.2
+		pop_cat_slave_happiness = 0.1
+		pop_cat_worker_happiness = 0.1
 	}
 }
 
-# 4.交易法:保護値+5
+# 4.交易法:政策「交易法」をアンロック
 tr_ngm_law_trade = {
+	custom_tooltip_with_modifiers = tr_ngm_law_trade_tooltip
 	modifier = {
-		local_trade_protection_add = 5
 	}
 }
 
@@ -34,39 +37,39 @@ tr_ngm_law_pirates = {
 	}
 }
 
-# 6.行政法典の拡充:帝国規模影響量-10%
+# 6.行政法典の拡充:星系からの帝国規模-25%
 tr_ngm_law_government = {
 	modifier = {
-		empire_size_penalty_mult = -0.1
+		empire_size_systems_mult = -0.25
 	}
 }
 
-# 7.憲法:布告基金+50
+# 7.憲法:政策「憲法」をアンロック
 tr_ngm_constitution = {
+	custom_tooltip_with_modifiers = tr_ngm_constitution_tooltip
 	modifier = {
-		country_edict_fund_add = 50
 	}
 }
 
 # ②悪徳(悪の基準とは、偽善者が作ったまやかしにすぎない
-# 8.取得時：地上軍ダメージ+20%、副次ダメージ+20%
+# 8.取得時：政策「侮辱法」をアンロック
 tr_ngm_virture_first = {
+	custom_tooltip_with_modifiers = tr_ngm_virture_first_tooltip
 	modifier = {
-		army_damage_mult = 0.2
-		army_collateral_damage_mult = 0.2
 	}
 }
 
-# 9.完遂時:解読力+10
+# 9.完遂時:請求権作成の影響力コスト-20%
 tr_ngm_virture_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		intel_decryption_add = 10
+		country_claim_influence_cost_mult = -0.2
 	}
 }
 
-# 10.狙い撃ち:艦船連射レート+5%、宿敵の犯罪度+20
+# 10.狙い撃ち:宿敵の犯罪度+30
 tr_ngm_sniper = {
+	custom_tooltip_with_modifiers = tr_ngm_sniper_tooltip
 	on_enabled = {
 		hidden_effect = {
 			country_event = {
@@ -74,13 +77,11 @@ tr_ngm_sniper = {
 			}
 		}
 	}
-	modifier = {
-		ship_fire_rate_mult = 0.05
-	}
 }
 
 # 11.透浸:外交関係にあるすべての国家の犯罪度+20
 tr_ngm_penetration = {
+	custom_tooltip_with_modifiers = tr_ngm_penetration_tooltip
 	on_enabled = {
 		hidden_effect = {
 			country_event = {
@@ -97,16 +98,16 @@ tr_ngm_chain_harted = {
 	}
 }
 
-# 13.独占:統治者の幸福度+20%、交易価値+15%、統治者消費財維持コスト+10%
+# 13.独占:統治者幸福度+30%
 tr_ngm_exclusive = {
 	modifier = {
-		pop_cat_ruler_happiness = 0.2
-		trade_value_mult = 0.15
+		pop_cat_ruler_happiness = 0.3
 	}
 }
 
 # 14.破壊工作:宿敵の貿易保護値-15、宿敵の犯罪度+20
 tr_ngm_sabotage = {
+	custom_tooltip_with_modifiers = tr_ngm_sabotage_tooltip
 	on_enabled = {
 		hidden_effect = {
 			country_event = {
@@ -129,6 +130,7 @@ tr_ngm_study_first = {
 
 # 16.完遂時:リーダーが特殊な特性をアンロック。初期リーダーが複数の特性を有している
 tr_ngm_study_finish = {
+	custom_tooltip_with_modifiers = tr_ngm_study_finish_tooltip
 	modifier = {
 		ascension_perks_add = 1
 	}
@@ -145,14 +147,15 @@ tr_ngm_restudy = {
 # 18.指導者研修の高度化:リーダーレベル上限+1、研究協定から得られる研究力+10%
 tr_ngm_leader_study = {
 	modifier = {
+		federation_research_sharing_mult = 0.1
 		leader_skill_levels = 1
 	}
 }
 
 # 19.資格採用の強化:リーダー初期レベル+1
 tr_ngm_program_study = {
+	custom_tooltip_with_modifiers = tr_ngm_program_study_modifiers
 	modifier = {
-		leader_skill_levels = 1
 	}
 }
 
@@ -179,10 +182,11 @@ tr_ngm_ecstasy_first = {
 	}
 }
 
-# 23.完遂時:消費財消費量-10%,生活水準のユートピアの豊かさをアンロック
+# 23.完遂時:生活水準のユートピアの豊かさをアンロック 影響力+1
 tr_ngm_ecstasy_finish = {
+	custom_tooltip_with_modifiers = tr_ngm_ecstasy_finish_tooltip
 	modifier = {
-		ascension_perks_add = 1
+		country_base_influence_produces_add = 1
 		planet_pops_consumer_goods_upkeep_mult = -0.1
 	}
 }
@@ -197,11 +201,11 @@ tr_ngm_art_good = {
 # 25.娯楽産業:快適度+25%
 tr_ngm_art_industry = {
 	modifier = {
-		pop_amenities_usage_mult = 0.25
+		planet_amenities_mult = 0.25
 	}
 }
 
-# 26.繁栄を支える者:奴隷の生産量+10%、奴隷幸福+10%
+# 26.繁栄を支える者:奴隷の生産量+10%、奴隷幸福度+10%
 tr_ngm_groly_supporter = {
 	modifier = {
 		planet_jobs_slave_produces_mult = 0.1
@@ -209,34 +213,33 @@ tr_ngm_groly_supporter = {
 	}
 }
 
-# 27.奔放な家族:Pop成長速度+5%、安定度-5
+# 27.奔放な家族:Pop成長速度度+10%
 tr_ngm_ecstasy_family = {
 	modifier = {
-		pop_growth_speed = 0.05
-		planet_stability_add = -5
+		pop_growth_speed = 0.1
 	}
 }
 
-# 28.長寿化:リーダー寿命+10年
+# 28.長寿化:リーダー寿命+15年
 tr_ngm_long_live = {
 	modifier = {
-		leader_age = 10
+		leader_age = 15
 	}
 }
 
 # 前衛(新たな試みと反秩序こそ自己を表現することができる)
-# 29.取得時：統合力+10%
+# 29.取得時：POPの快適度使用量-15%
 tr_ngm_avantgarde_first = {
 	modifier = {
-		country_unity_produces_mult = 0.1
+		pop_amenities_usage_mult = -0.15
 	}
 }
 
-# 30.完遂時:'+影響力250,取得している国是をすべて削除する
+# 30.完遂時:取得している国是をすべて削除する+影響力250
 tr_ngm_avantgarde_finish = {
+	custom_tooltip_with_modifiers = tr_ngm_avantgarde_finish_tooltip
 	modifier = {
 		ascension_perks_add = 1
-		country_government_civic_points_add = 1
 	}
 	on_enabled = {
 		country_event = {
@@ -248,22 +251,23 @@ tr_ngm_avantgarde_finish = {
 	}
 }
 
-# 31.アバンギャルド:快適度+10%
+# 31.アバンギャルド:快適度+30%
 tr_ngm_avantgarde_2 = {
 	modifier = {
-		pop_amenities_usage_mult = 0.1
+		planet_amenities_mult = 0.3
 	}
 }
 
-# 32.究極の和音:Pop幸福度+5%
+# 32.究極の和音:Pop幸福度+10%
 tr_ngm_chord = {
 	modifier = {
-		pop_happiness = 0.05
+		pop_happiness = 0.1
 	}
 }
 
 # 33.学生芸術の推奨:「劇場通」を建設可能とする
 tr_ngm_student_art = {
+	custom_tooltip_with_modifiers = tr_ngm_student_art_tooltip
 	modifier = {
 	}
 }
@@ -278,19 +282,20 @@ tr_ngm_freedom_art = {
 
 # 35.非対称芸術:「前衛芸術広場」を建設可能とする
 tr_ngm_asymmetric = {
+	custom_tooltip_with_modifiers = tr_ngm_asymmetric_tooltip
 	modifier = {
 	}
 }
 
 # 古典(古きを尊び、先例を尊重することで自己を見つめることができる)
-# 36.取得時：統合力+10%
+# 36.取得時：職業による統合力算出+20%
 tr_ngm_classic_first = {
 	modifier = {
-		country_unity_produces_mult = 0.1
+		planet_jobs_unity_produces_mult = 0.2
 	}
 }
 
-# 37.完遂時:国是slot+1,政体変更コスト+20%
+# 37.完遂時:国是スロット+1
 tr_ngm_classic_finish = {
 	modifier = {
 		ascension_perks_add = 1
@@ -308,34 +313,37 @@ tr_ngm_realism = {
 
 # 39.音響学の極地:「帝国音楽堂」を建設可能とする
 tr_ngm_acoustics = {
+	custom_tooltip_with_modifiers = tr_ngm_acoustics_tooltip
 	modifier = {
 	}
 }
 
-# 40.文化大臣の設置:統合力+10、月間忠誠度+1
+# 40.文化大臣の設置:統合力+10、影響力+0.5
 tr_ngm_ministory_culture = {
+	modifier = {
+		country_base_unity_produces_add = 10
+		country_base_influence_produces_add = 0.5
+	}
+}
+
+# 41.芸術外交:外交発言力+10%、毎月の忠誠心+1
+tr_ngm_diplomatic_art = {
+	custom_tooltip_with_modifiers = tr_ngm_diplomatic_art_tooltip
 	on_enabled = {
 		hidden_effect = {
 			country_event = {
-				id = ngm_tradition.30
+				id = ngm_tradition.32
 			}
 		}
 	}
 	modifier = {
-		country_base_unity_produces_add = 10
-	}
-}
-
-# 41.芸術外交:外交発言力+5%、流入魅力+10%
-tr_ngm_diplomatic_art = {
-	modifier = {
 		diplo_weight_mult = 0.1
-		planet_immigration_pull_mult = 0.1
 	}
 }
 
 # 42.芸術の権威:「帝国芸術博物館」を建設可能とする
 tr_ngm_authority_art = {
+	custom_tooltip_with_modifiers = tr_ngm_authority_art_tooltip
 	modifier = {
 	}
 }
@@ -350,24 +358,27 @@ tr_ngm_academic_first = {
 
 # 44.完遂時:政策"学術政策"の政策をアンロック
 tr_ngm_academic_finish = {
+	custom_tooltip_with_modifiers = tr_ngm_academic_finish_tooltip
 	modifier = {
 		ascension_perks_add = 1
 	}
 }
 
-# 45.国立大学:すべての専門家による研究力+10%
+# 45.国立大学:研究速度+5%	すべての専門家による研究力+10%
 tr_ngm_national_academy = {
 	modifier = {
-		planet_jobs_specialistphysics_research_produces_mult = 0.1
+		all_technology_research_speed = 0.05
+		planet_jobs_specialist_physics_research_produces_mult = 0.1
 		planet_jobs_specialist_society_research_produces_mult = 0.1
 		planet_jobs_specialist_engineering_research_produces_mult = 0.1
 	}
 }
 
-# 46.文化教育の推奨:統合力+10%
+# 46.文化教育の推奨:研究速度+10%、統合力+5%
 tr_ngm_culture_study = {
 	modifier = {
-		country_unity_produces_mult = 0.1
+		all_technology_research_speed = 0.1
+		country_unity_produces_mult = 0.05
 	}
 }
 
@@ -385,18 +396,18 @@ tr_ngm_leader_education = {
 	}
 }
 
-# 49.高度研究機関:研究速度+10% 建築物「高度研究機関」をアンロック
+# 49.高度研究機関:建築物「高度研究機関」をアンロック
 tr_ngm_high_education = {
+	custom_tooltip_with_modifiers = tr_ngm_high_education_tooltip
 	modifier = {
-		all_technology_research_speed = 0.1
 	}
 }
 
 # 記憶(過去を記憶し、記録し続けることは将来への一助となるだろう)
-# 50.取得時：布告基金+30
+# 50.取得時：月間出土品+10
 tr_ngm_memory_first = {
 	modifier = {
-		country_edict_fund_add = 50
+		country_base_minor_artifacts_produces_add = 10
 	}
 }
 
@@ -408,17 +419,17 @@ tr_ngm_memory_finish = {
 	}
 }
 
-# 52.緻密な記録:職業からの統合力+5%
+# 52.緻密な記録:官僚職からの統合力+1
 tr_ngm_record = {
+	custom_tooltip_with_modifiers = tr_ngm_record_tooltip
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.05
 	}
 }
 
-# 53.過去の参照:研究力+5%
+# 53.過去の参照:研究者の産出する研究力+1
 tr_ngm_past = {
+	custom_tooltip_with_modifiers = tr_ngm_past_tooltip
 	modifier = {
-		all_technology_research_speed = 0.05
 	}
 }
 
@@ -429,31 +440,40 @@ tr_ngm_memory2 = {
 	}
 }
 
-# 55.犯罪記録:犯罪度-10
+# 55.:我々は忘れない:職業からの統合力+10%
 tr_ngm_crime_record = {
 	modifier = {
-		planet_crime_add = -10
+		planet_jobs_unity_produces_mult = 0.1
 	}
 }
 
-# 56.価格記録:市場手数料-5%
+# 56.記録法
+# 政策「記録法」をアンロック
 tr_ngm_trade_record = {
+	custom_tooltip_with_modifiers = tr_ngm_trade_record_tooltip
 	modifier = {
-		country_trade_fee = -0.05
 	}
 }
 
 # 自由(各個人の判断と責任により社会は維持されている)
-# 57.取得時：惑星犯罪度-5%、惑星安定度+5
+# 57.取得時：政策「自由権」をアンロック
 tr_ngm_freedom_first = {
+	custom_tooltip_with_modifiers = tr_ngm_trade_record_tooltip
 	modifier = {
-		planet_crime_mult = -0.05
-		planet_stability_add = 5
 	}
 }
 
-# 58.完遂時:宿敵宣言した国家の奴隷幸福度-20%
+# 58.完遂時:派閥統合力収入+20%
 tr_ngm_freedom_finish = {
+	modifier = {
+		ascension_perks_add = 1
+		pop_factions_influence_produces_mult = 0.2
+	}
+}
+
+# 59.報道の自由:宿敵宣言した国家の奴隷幸福度-20% 統治志向魅力-15%
+tr_ngm_freedom_broad = {
+	custom_tooltip_with_modifiers = tr_ngm_freedom_broad_tooltip
 	on_enabled = {
 		hidden_effect = {
 			country_event = {
@@ -462,82 +482,77 @@ tr_ngm_freedom_finish = {
 		}
 	}
 	modifier = {
-		ascension_perks_add = 1
+		pop_government_ethic_attraction = -0.15
 	}
 }
 
-# 59.報道の自由:統合力+5%、快適度+10% 
-tr_ngm_freedom_broad = {
-	modifier = {
-		planet_jobs_unity_produces_mult = 0.05
-		pop_amenities_usage_mult = 0.1
-	}
-}
-
-# 60.結社の自由:派閥収入+20%
+# 60.結社の自由:派閥統合力収入+30% 安定度+10
 tr_ngm_freedom_association = {
 	modifier = {
-		pop_factions_produces_mult = 0.2
+		pop_factions_produces_mult = 0.3
+		planet_stability_add = 10
 	}
 }
 
-# 61.機会均等:リーダー選択肢+2、リーダー雇用コスト-20%,リーダー選択不可の種族権利を禁止
+# 61.機会均等:リーダー選択肢+2、リーダー雇用コスト-20%
 tr_ngm_freedom_ega = {
 	modifier = {
-		leaders_unity_cost_mult = -0.2
+		leaders_cost_mult = -0.2
 		country_leader_pool_size = 2
 	}
 }
 
-# 62.移民の自由:流入魅力+20%、流出圧力+10%
+# 62.移民の自由:Pop移住速度+30%、幸福度+10%
 tr_ngm_freedom_immigrant = {
 	modifier = {
-		planet_immigration_pull_mult = 0.2
-		planet_emigration_push_mult = 0.1
+		planet_immigration_pull_mult = 0.3
+		pop_happiness = 0.1
 	}
 }
 
-# 63.自由権の保証:幸福度+5%、派閥幸福度+5%
+# 63.自由権の保証:派閥幸福度+10%
 tr_ngm_freedom2 = {
 	modifier = {
-		pop_happiness = 0.05
-		faction_approval = 0.05
+		faction_approval = 0.1
 	}
 }
 
 # 秩序(共同体と社会。権威や権力による命令と)
-# 64.取得時：帝国規模影響量-10%
+# 64.取得時：政策「秩序維持」をアンロック
 tr_ngm_order_first = {
+	custom_tooltip_with_modifiers = tr_ngm_order_first_tooltip
 	modifier = {
-		empire_size_penalty_mult = -0.1
 	}
 }
 
-# 65.完遂時:連射レート+5%
+# 65.完遂時:安定度+5、Popからの帝国規模-5％
 tr_ngm_order_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		ship_fire_rate_mult = 0.05
+		planet_stability_add = 5
+		empire_size_pops_mult = -0.05
 	}
 }
 
-# 66.無言の同調:統治志向魅力+25%、幸福度-5％
+# 66.無言の同調:統治志向魅力+40%
 tr_ngm_no_voice = {
 	modifier = {
-		pop_government_ethic_attraction = 0.25
-		pop_happiness = -0.05
+		pop_government_ethic_attraction = 0.4
+		# pop_happiness = -0.05
 	}
 }
 
-# 67.適切な居場所:強制移住コスト-30%
+# 67.適切な居場所:強制移住コスト-30%、住居使用量-15%
 tr_ngm_appropriate = {
 	modifier = {
+		pop_housing_usage_mult = -0.15
 		country_resettlement_cost_mult = -0.3
 	}
 }
 
 # 68.国家宣伝省:宿敵1つあたりの影響力収入+1
 tr_ngm_ministry_engagement = {
+	custom_tooltip_with_modifiers = tr_ngm_ministry_engagement_tooltip
 	modifier = {
 	}
 }
@@ -545,20 +560,22 @@ tr_ngm_ministry_engagement = {
 # 69.適材適所:Popの降下速度-50%
 tr_ngm_right_place = {
 	modifier = {
-		pop_decline_speed = -0.5
+		pop_demotion_time_mult = -0.5
 	}
 }
 
-# 70.整然とした居住区:住宅+20%
+# 70.整然とした居住区:住宅+20%、建造物スロット+1
 tr_ngm_orderly = {
 	modifier = {
 		planet_housing_mult = 0.2
+		planet_max_buildings_add = 1
 	}
 }
 
 # 善隣(敵ではないものはすべて友人であり、敵であることが証明されなければ友人であるのだ)
 # 71.取得時：ファーストコンタクト速度+25%、ファーストコンタクト時の姿勢を敵対的にできない
 tr_ngm_neighbor_first = {
+	custom_tooltip_with_modifiers = tr_ngm_neighbor_first_tooltip
 	modifier = {
 		first_contact_speed_mult = 0.25
 	}
@@ -566,24 +583,33 @@ tr_ngm_neighbor_first = {
 
 # 72.完遂時:5種類以上の種族がいる惑星でPop成長速度+10%、交易価値+10%、統合力+10%、流入魅力+10%
 tr_ngm_neighbor_finish = {
+	custom_tooltip_with_modifiers = tr_ngm_neighbor_finish_tooltip
+	on_enabled = {
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.15
+			}
+		}
+	}
 	modifier = {
 		ascension_perks_add = 1
 		#5種類以上の種族がいる惑星でPop成長速度+10%、交易価値+10%、統合力+10%、流入魅力+10%
 	}
 }
 
-# 73.国際的大使館:他国の意見の受け入れが§G+10§!増加する
+# 73.国際的大使館:他国の意見の受け入れが§G+20§!増加する	使節+1
 tr_ngm_ambassador = {
 	modifier = {
-		diplo_action_acceptance_add = 10
+		envoys_add = 1
+		diplo_action_acceptance_add = 20
 	}
 }
 
-# 74.人種のサラダボウル:受容志向魅力+25%、統合力+5%
+# 74.人種のサラダボウル:受容志向魅力+25%、安定度+10
 tr_ngm_salad = {
 	modifier = {
 		pop_ethic_xenophile_attraction_mult = 0.25
-		country_unity_produces_mult = 0.05
+		planet_stability_add = 10
 	}
 }
 
@@ -594,74 +620,82 @@ tr_ngm_talk = {
 	}
 }
 
-# 76.移動の自由:流入魅力+30%、流出圧力+10%
+# 76.移動の自由:流入魅力+30%	統合力+10%
 tr_ngm_free_move = {
 	modifier = {
 		planet_immigration_pull_mult = 0.3
-		planet_emigration_push_mult = 0.1
-	}
-}
-
-# 77.受容社会:統合力+10%
-tr_ngm_acceptance = {
-	modifier = {
 		country_unity_produces_mult = 0.1
 	}
 }
 
+# 77.受容社会:受容志向魅力+25%、外交発言力+15%
+tr_ngm_acceptance = {
+	modifier = {
+		pop_ethic_xenophile_attraction_mult = 0.25
+		diplo_weight_mult = 0.15
+	}
+}
+
 # 敵視(あらゆる存在を疑い、自己と数少ない信頼できる仲間のために、強固な対応を維持する)
-# 78.取得時：宇宙軍許容量+10%
+# 78.取得時：外交発言力+25%
 tr_ngm_enemy_first = {
 	modifier = {
-		country_naval_cap_mult = 0.1
+		diplo_weight_mult = 0.25
 	}
 }
 
-# 79.完遂時:艦船武器ダメージ+10%
+# 79.完遂時:宿敵から得られる影響力+1
 tr_ngm_enemy_finish = {
+	custom_tooltip_with_modifiers = tr_ngm_enemy_finish_tooltip
 	modifier = {
 		ascension_perks_add = 1
-		ship_weapon_damage = 0.1
+		# country_base_influence_produces_add = value:rivalries_count
 	}
 }
 
-# 80.パラノイア:宿敵の最大数+2
+# 80.パラノイア:排他志向魅力+25%	宿敵の最大数+2
 tr_ngm_paranoia = {
 	modifier = {
+		pop_ethic_xenophobe_attraction_mult = 0.25
 		max_rivalries = 2
 	}
 }
 
-# 81.浸透度10%、秘密工作コスト-10%
+# 81.浸透度+20%、作戦コスト-25%
 tr_ngm_battle_ambass = {
 	modifier = {
-		spy_power_cost_mult = 0.1
+		spy_power_cost_mult = 0.2
+		espionage_operation_cost_mult = -0.25
 	}
 }
 
-# 82.臥薪嘗胆:食料消費量-10%、消費財消費量-10%
+# 82.臥薪嘗胆:食料消費量-25%、消費財消費量-25%
 tr_ngm_coarse_food = {
 	modifier = {
-		planet_pops_food_upkeep_mult = -0.1
-		planet_pops_consumer_goods_upkeep_mult = -0.1
+		planet_pops_food_upkeep_mult = -0.25
+		planet_pops_consumer_goods_upkeep_mult = -0.25
 	}
 }
 
-# 83.超然的敵対存在:影響力+1
+# 83.超然的敵対存在:布告「超然的敵対存在」をアンロック
 tr_ngm_transcendental = {
+	custom_tooltip_with_modifiers = tr_ngm_transcendental_tooltip
 	modifier = {
-		country_base_influence_produces_add = 1
 	}
 }
 
-# 84.敵対的演説:宿敵の外交発言力-10%
+# 84.敵対的演説:排他主義志向魅力+25%、宿敵の外交発言力-10%
 tr_ngm_battle_speach = {
+	custom_tooltip_with_modifiers = tr_ngm_battle_speach_tooltip
 	on_enabled = {
 		hidden_effect = {
 			country_event = {
 				id = ngm_tradition.34
 			}
 		}
+	}
+	modifier = {
+		pop_ethic_xenophobe_attraction_mult = 0.25
 	}
 }
 
@@ -674,11 +708,11 @@ tr_ngm_nature_first = {
 	}
 }
 
-# 86.完遂時:研究速度(生物学)+20%
+# 86.完遂時:Pop成長速度+15%
 tr_ngm_nature_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		category_biology_research_speed_mult = 0.2
+		pop_growth_speed = 0.15
 	}
 }
 
@@ -689,38 +723,40 @@ tr_ngm_nature2 = {
 	}
 }
 
-# 88.自然出生:Pop成長速度+5%
+# 88.自然出生:Pop成長速度度+5%、幸福度+10%
 tr_ngm_nature_growth = {
 	modifier = {
 		pop_growth_speed = 0.05
+		pop_happiness = 0.1
 	}
 }
 
-# 89.自然研究:社会学+10%
+# 89.自然研究:研究速度(生物学)+20%、社会学+10%
 tr_ngm_nature_research = {
 	modifier = {
+		category_biology_research_speed_mult = 0.2
 		country_society_research_produces_mult = 0.1
 	}
 }
 
-# 90.農業振興:食料算出+20%、20Popあたり農民Job+1
+# 90.農業振興:食料産出+25%
 tr_ngm_food_nature = {
 	modifier = {
-		planet_jobs_food_produces_mult = 0.2
-		job_farmer_per_pop = 0.05
+		country_food_produces_mult = 0.25
 	}
 }
 
-# 91.エコロジー:消費財消費量-20%
+# 91.エコロジー:Pop維持費-15%
 tr_ngm_ecology = {
 	modifier = {
-		planet_jobs_consumer_goods_upkeep_mult = -0.2
+		planet_pops_upkeep_mult = -0.15
 	}
 }
 
 # 機械(工業化と製造は自然を支配する理性主義者の手段の一つだ)
 # 92.取得時：政策"ロボット職権"をアンロック
 tr_ngm_machine_first = {
+	custom_tooltip_with_modifiers = tr_ngm_machine_first_tooltip
 	modifier = {
 	}
 }
@@ -735,6 +771,7 @@ tr_ngm_machine_finish = {
 
 # 94.戦争機械:地上軍"戦闘機械"を建造可能
 tr_ngm_war_machine = {
+	custom_tooltip_with_modifiers = tr_ngm_war_machine_tooltip
 	modifier = {
 	}
 }
@@ -757,13 +794,13 @@ tr_ngm_machine_depart = {
 	}
 }
 
-# 97.ロボット技師会:33Popごとにロボット製造者Job+1
+# 97.ロボット技師会:20Popごとにロボット製造者Job+1
 tr_ngm_robot_depart = {
 	possible = {
 		has_technology = tech_robotic_workers
 	}
 	modifier = {
-		job_roboticist_per_pop = 0.03
+		job_roboticist_per_pop = 0.05
 	}
 }
 
@@ -775,10 +812,10 @@ tr_ngm_machine_human = {
 }
 
 # 官吏(書類により統治される国家は強大でゆるぎない)
-# 99.取得時：帝国規模影響-5%
+# 99.取得時：政策「公務員法」をアンロック
 tr_ngm_official_first = {
+	custom_tooltip_with_modifiers = tr_ngm_official_first_tooltip
 	modifier = {
-		empire_size_penalty_mult = -0.05
 	}
 }
 
@@ -790,18 +827,18 @@ tr_ngm_official_finish = {
 	}
 }
 
-
-# 101.人事院:リーダー雇用コスト-20%
+# 101.人事院:リーダー雇用コスト-25%、リーダー維持コスト-50%
 tr_ngm_human_resources = {
 	modifier = {
-		leaders_cost_mult = -0.2
+		leaders_cost_mult = -0.25
+		leader_upkeep_empire_size_mult = -0.5
 	}
 }
 
-# 102.尚書省:布告コスト-30%
+# 102.尚書省:帝国規模-10%
 tr_ngm_note = {
 	modifier = {
-		edicts_cost_mult = -0.3
+		empire_size_mult = -0.1
 	}
 }
 
@@ -812,101 +849,104 @@ tr_ngm_document = {
 	}
 }
 
-# 104.総務省:帝国規模影響量-15%
+# 104.総務省:官僚職からの統合力+1
 tr_ngm_general_affairs = {
+	custom_tooltip_with_modifiers = tr_ngm_general_affairs_tooltip
 	modifier = {
-		empire_size_penalty_mult = -0.15
 	}
 }
 
-# 105.内閣府:影響力+1
+# 105.内閣府:影響力+0.5
 tr_ngm_cabinet = {
 	modifier = {
-		country_base_influence_produces_add = 1
+		country_base_influence_produces_add = 0.5
 	}
 }
 
 # 将校(命令と服従に伴う組織は強力で迅速な行動が可能だ)
-# 106.取得時：合金生産量+5%
+# 106.取得時：宇宙軍許容量+20%、武器射程+10%
 tr_ngm_officer_first = {
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.05
+		country_naval_cap_mult = 0.2
+		ship_weapon_range_mult = 0.1
 	}
 }
 
 # 107.完遂時:布告"国防計画"をアンロック
 tr_ngm_officer_finish = {
+	custom_tooltip_with_modifiers = tr_ngm_officer_finish_tooltip
 	modifier = {
 		ascension_perks_add = 1
 	}
 }
 
-# 108.艦政本部:造船速度+15%
+# 108.艦政本部:造船速度+25%
 tr_ngm_navy_depart = {
 	modifier = {
-		starbase_shipyard_build_speed_mult = 0.15
+		starbase_shipyard_build_speed_mult = 0.25
 	}
 }
 
-# 109.参謀第1課:亜高速移動速度+5%、地上軍編成速度+10%
+# 109.参謀第1課:亜高速移動速度+10%、地上軍編成速度+25%
 tr_ngm_officer_1 = {
 	modifier = {
-		ship_speed_mult = 0.05
-		planet_army_build_speed_mult = 0.1
+		ship_speed_mult = 0.1
+		planet_army_build_speed_mult = 0.25
 	}
 }
 
-# 110.後方勤務司令部:艦船維持費-20%、地上軍維持コスト-10%
+# 110.後方勤務司令部:艦船維持費-20%、地上軍維持コスト-30%
 tr_ngm_logistics_hq = {
 	modifier = {
 		ships_upkeep_mult = -0.2
-		armies_upkeep_mult = -0.1
+		armies_upkeep_mult = -0.3
 	}
 }
 
-# 111.軍務局:地上軍ダメージ+10%、艦隊連射レート+5%
+# 111.軍務局:地上軍ダメージ+20%、艦隊連射レート+5%
 tr_ngm_military_bureau = {
 	modifier = {
-		army_damage_mult = 0.1
+		army_damage_mult = 0.2
 		ship_fire_rate_mult = 0.05
 	}
 }
 
-# 112.兵器局:研究速度(推進システム工学)+10%
+# 112.兵器局:研究速度(工学)+10%
 tr_ngm_weapons_depart = {
 	modifier = {
-		category_propulsion_research_speed_mult = 0.1
+		country_engineering_tech_research_speed = 0.1
 	}
 }
 
 # 宙軍(宇宙を駆ける艦隊は国家暴力装置の根幹である)
-# 113.取得時：艦船建造速度+5%
+# 113.取得時：艦船建造速度+15%、艦隊指揮上限+10
 tr_ngm_navy_first = {
 	modifier = {
-		starbase_shipyard_build_speed_mult = 0.05
+		starbase_shipyard_build_speed_mult = 0.15
+		country_command_limit_add = 10
 	}
 }
 
-# 114.完遂時:艦隊許容量+10、艦隊許容量+10%
+# 114.完遂時:艦隊許容量+10、艦隊許容量+25%
 tr_ngm_navy_finish = {
 	modifier = {
 		ascension_perks_add = 1
 		country_naval_cap_add = 10
-		country_naval_cap_mult = 0.1
+		country_naval_cap_mult = 0.25
 	}
 }
 
-# 115.柔軟な航宙士官:回避+5%
+# 115.柔軟な航宙士官:回避+10%
 tr_ngm_voyage = {
 	modifier = {
-		ship_evasion_mult = 0.05
+		ship_evasion_mult = 0.1
 	}
 }
 
-# 116.厳格な整備兵:船体値+5%
+# 116.厳格な整備兵:船体値+10%
 tr_ngm_maintenance = {
 	modifier = {
-		ship_hull_mult = 0.05
+		ship_hull_mult = 0.1
 	}
 }
 
@@ -917,160 +957,174 @@ tr_ngm_logistics = {
 	}
 }
 
-# 118.有能な参謀:指揮上限+10
+# 118.有能な参謀:艦隊指揮上限+20
 tr_ngm_excellence_officer = {
 	modifier = {
-		country_command_limit_add = 10
+		country_command_limit_add = 20
 	}
 }
 
-# 119.冷静沈着な提督:艦船連射レート+5%
+# 119.冷静沈着な提督:射程+20%
 tr_ngm_deposition_admiral = {
 	modifier = {
-		ship_fire_rate_mult = 0.05
+		ship_weapon_range_mult = 0.2
 	}
 }
 
 # 星軍(人々が居住する惑星を守り、制圧を行うことは軍事の根幹である)
-# 120.取得時：地上軍建造コスト-20%
+# 120.取得時：地上軍初期経験値+200
 tr_ngm_planet_army_adopt = {
 	modifier = {
-		armies_cost_mult = -0.2
+		army_starting_experience_add = 200
 	}
 }
 
-# 121.完遂時:防衛軍耐久+100%
+# 121.完遂時:防衛軍耐久度+200%、防衛軍の士気+100%
 tr_ngm_planet_army_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		army_defense_health_mult = 1
+		army_defense_health_mult = 2
+		army_defense_morale_mult = 1
 	}
 }
 
-# 122.厳格な将兵:副次被害-30%
+# 122.厳格な将兵:地上軍の士気+20%、地上軍副次損害-50%
 tr_ngm_severe_general = {
 	modifier = {
-		army_collateral_damage_mult = -0.3
+		army_morale = 0.2
+		army_collateral_damage_mult = -0.5
 	}
 }
 
-# 123.憲兵隊:地上軍のいる惑星の安定度+20
+# 123.憲兵隊:地上軍のいる惑星の安定度+20 地上軍の士気+20%、地上軍副次損害-50%
 tr_ngm_military_police = {
+	custom_tooltip_with_modifiers = tr_ngm_military_police_tooltip
 	possible = {
 		has_tradition = tr_ngm_severe_general
 	}
 	modifier = {
+		army_experience_gain_mult = 0.5
+		army_health = 0.5
+	}
+	on_enabled = {
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.17
+			}
+		}
 	}
 }
 
-# 124.鉄の規律:地上軍士気+33%
+# 124.鉄の規律:地上軍の士気+25%、地上軍耐久度+20%
 tr_ngm_iren_discipline = {
 	modifier = {
-		army_defense_morale_mult = 0.33
-		army_attack_morale_mult = 0.33
+		army_morale = 0.25
+		army_health = 0.2
 	}
 }
 
-# 125.地上補給拠点:地上軍維持費-30%
+# 125.地上補給拠点:最大占領守備隊数+20
 tr_ngm_planet_supply_point = {
 	modifier = {
-		armies_upkeep_mult = -0.3
+		country_occupation_armies_add = 20
 	}
 }
 
-# 126.勇猛果敢:地上軍ダメージ+20%
+# 126.勇猛果敢:地上軍ダメージ+30%
 tr_ngm_brave_and_resolute = {
 	possible = {
 		has_tradition = tr_ngm_iren_discipline
 		has_tradition = tr_ngm_planet_supply_point
 	}
 	modifier = {
-		army_attack_damage_mult = 0.2
-		army_defense_damage_mult = 0.2
+		army_damage_mult = 0.3
 	}
 }
 
 # ⑲高貴(高貴なるものこそが社会を維持し、率いていく必要がある)
-# 127.取得時：統治者経験値+20%
+# 127.取得時：統治者スキル上限+2
 tr_ngm_noble_adopt = {
 	modifier = {
-		species_leader_exp_gain = 0.1
-	}
-}
-
-# 128.完遂時:統治者スキル上限+2
-tr_ngm_noble_finish = {
-	modifier = {
-		ascension_perks_add = 1
 		ruler_skill_levels = 2
 	}
 }
 
-# 129.上流階級:統治者幸福度+5%
+# 128.完遂時:影響力+1
+tr_ngm_noble_finish = {
+	modifier = {
+		ascension_perks_add = 1
+		country_base_influence_produces_add = 1
+	}
+}
+
+# 129.上流階級:統治者生産+15%、統治者政治力+100%
 tr_ngm_upper_class = {
 	possible = {
 		has_tradition = tr_ngm_noble_adopt
 	}
 	modifier = {
-		pop_cat_ruler_happiness = 0.05
+		planet_jobs_ruler_produces_mult = 0.15
+		pop_cat_ruler_political_power = 1
 	}
 }
 
-# 130.密室政治:派閥幸福度+10%
+# 130.密室政治:派閥統合力収入+15%
 tr_ngm_backroom_politics = {
 	possible = {
 		has_tradition = tr_ngm_upper_class
 	}
 	modifier = {
-		faction_approval = 0.1
+		pop_factions_produces_mult = 0.15
 	}
 }
 
-# 131.パトロン:統合力+10%
+# 131.パトロン:快適度産出+25%
 tr_ngm_patron = {
 	modifier = {
-		country_base_unity_produces_add = 0.1
+		planet_amenities_mult = 0.25
 	}
 }
 
-# 132.栄典:リーダー経験値取得+33%
+# 132.栄典:勲章+0.1、統合力+15%
 tr_ngm_honor = {
 	modifier = {
-		species_leader_exp_gain = 0.33
+		country_base_ngm_order_of_merit_produces_add = 0.1
+		country_unity_produces_mult = 0.15
 	}
 }
 
-# 133.階級社会:リーダースキル上限+1
+# 133.階級社会:権威主義志向魅力+20%、安定度+10
 tr_ngm_class_politics = {
 	possible = {
 		has_tradition = tr_ngm_patron
 		has_tradition = tr_ngm_honor
 	}
 	modifier = {
-		leader_skill_levels = 1
+		pop_ethic_authoritarian_attraction_mult = 0.2
+		planet_stability_add = 10
 	}
 }
 
 # ⑳大衆(一般大衆は国家の根幹であり、大きな推進力となる)
-# 134.取得時：労働者生産力+5%
+# 134.取得時：労働者生産力+10%
 tr_ngm_mass_adopt = {
 	modifier = {
-		planet_jobs_worker_produces_mult = 0.05
+		planet_jobs_worker_produces_mult = 0.1
 	}
 }
 
-# 135.完遂時:労働者幸福度+5%
+# 135.完遂時:影響力+1
 tr_ngm_mass_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		pop_cat_worker_happiness = 0.05
+		country_base_influence_produces_add = 1
 	}
 }
 
-# 136.大衆社会:Popの降下速度-20%
+# 136.大衆社会:安定度+10
 tr_ngm_mass_society = {
 	modifier = {
-		pop_demotion_time_mult = -0.2
+		planet_stability_add = 10
 	}
 }
 
@@ -1084,76 +1138,78 @@ tr_ngm_mass_culture = {
 	}
 }
 
-# 138.大衆経済:交易価値+10%
+# 138.大衆経済:交易価値+20%
 tr_ngm_mass_economy = {
 	modifier = {
-		trade_value_mult = 0.1
+		trade_value_mult = 0.2
 	}
 }
 
-# 139.民衆政治:労働者幸福度+5%、労働者政治力+10%
+# 139.民衆政治:派閥幸福度+10%、労働者政治力+100%
 tr_ngm_peoples_politics = {
 	modifier = {
-		pop_cat_worker_happiness = 0.05
-		pop_cat_worker_political_power = 0.1
+		faction_approval = 0.1
+		pop_cat_worker_political_power = 1
 	}
 }
 
-# 140.忠実な大衆:統治志向魅力+10%
+# 140.忠実な大衆:労働者幸福度+10%
 tr_ngm_faithful_mass = {
 	possible = {
 		has_tradition = tr_ngm_mass_economy
 		has_tradition = tr_ngm_peoples_politics
 	}
 	modifier = {
-		pop_government_ethic_attraction = 0.1
+		pop_cat_worker_happiness = 0.1
 	}
 }
 
 # 建築(宇宙空間等における巨大な建築は人々の心を躍らせる)
-# 141.取得時：建築物slot+1
+# 141.取得時：ステーション建造コスト-25%
 tr_ngm_building_adopt = {
 	modifier = {
-		planet_max_buildings_add = 1
+		
 	}
 }
 
-# 142.完遂時:巨大構造物建築速度+10%
+# 142.完遂時:巨大構造物建築速度+20%
 tr_ngm_building_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		megastructure_build_speed_mult = 0.1
+		megastructure_build_speed_mult = 0.2
 	}
 }
 
-# 143.建築計画:建造物建築速度+10%
+# 143.建築計画:建築物スロット+2、建造物建築速度+10%
 tr_ngm_building_plan = {
 	modifier = {
-		building_time_mult = -0.09
+		planet_max_buildings_add = 2
+		building_time_mult = -0.1
 	}
 }
 
-# 144.値引き交渉:市場手数料-5%
+# 144.植民地建築局:植民地建造速度+20%
 tr_ngm_discount_negotiation = {
 	possible = {
 		has_tradition = tr_ngm_building_plan
 	}
 	modifier = {
-		country_trade_fee = -0.05
+		planet_colony_development_speed_mult = 0.2
 	}
 }
 
-# 145.インフラ投資:区域建造コスト-10%
+# 145.インフラ投資:区域建造コスト-25%
 tr_ngm_infrastructure_investment = {
 	modifier = {
-		planet_districts_cost_mult = -0.1
+		planet_districts_cost_mult = -0.25
 	}
 }
 
-# 146.建材局:建造物建築コスト-10%
+# 146.建材局:建造物建築コスト-20%	市場手数料-5%
 tr_ngm_materials_bareau = {
 	modifier = {
-		planet_buildings_cost_mult = -0.1
+		planet_buildings_cost_mult = -0.2
+		country_trade_fee = -0.05
 	}
 }
 
@@ -1169,41 +1225,42 @@ tr_ngm_megastructure_bareau = {
 }
 
 # 148.切望(他者との積極的な関与は社会から求められている)
-# 取得時：ファーストコンタクト速度+30%
+# 取得時：ファーストコンタクト速度+50%
 tr_ngm_longing_adopt = {
 	modifier = {
-		first_contact_speed_mult = 0.3
+		first_contact_speed_mult = 0.5
 	}
 }
 
-# 149.完遂時:他国との友好度+30
+# 149.完遂時:他国との友好度+50
 tr_ngm_longing_finish = {
+	custom_tooltip_with_modifiers = tr_ngm_longing_finish_tooltip
 	modifier = {
 		ascension_perks_add = 1
 	}
 }
 
-# 150.外交官団の拡大:使節+1
+# 150.外交官団の拡大:使節+2
 tr_ngm_expansion_diplomatic_corps = {
 	modifier = {
-		envoys_add = 1
+		envoys_add = 2
 	}
 }
 
-# 151.友好のための介入:解読力+5
+# 151.友好のための介入:外交発言力+20%
 tr_ngm_intervention_for_friendship = {
 	possible = {
 		has_tradition = tr_ngm_expansion_diplomatic_corps
 	}
 	modifier = {
-		intel_decryption_add = 30
+		diplo_weight_mult = 0.2
 	}
 }
 
-# 152.友好宣言:大使館の受け入れ+30
+# 152.友好宣言:関係改善の効果+25%
 tr_ngm_friendship_declaration = {
 	modifier = {
-		diplo_action_acceptance_add = 30
+		envoy_improve_relations_mult = 0.25
 	}
 }
 
@@ -1214,31 +1271,35 @@ tr_ngm_treaty_bureau = {
 	}
 }
 
-# 154.拡張交渉:開拓前哨地建造影響力コスト-20%
+# 154.拡張交渉:国境摩擦-25%、開拓前哨地建造影響力コスト-20%
 tr_ngm_extended_negotiations = {
 	possible = {
 		has_tradition = tr_ngm_friendship_declaration
 		has_tradition = tr_ngm_treaty_bureau
 	}
 	modifier = {
+		country_border_friction_mult = -0.25
 		country_starbase_influence_cost_mult = -0.2
 	}
 }
 
 # 逆境(我が国は脆弱であるが、だからこそできることもある)
-# 155.取得時：ステーション耐久+33%
+# 155.取得時：ステーション耐久+50%、自国領内での艦船連射レート+10% 軍事的に優れた帝国へのダメージ+10%
 tr_ngm_adversity_adopt = {
 	modifier = {
-		shipsize_starbase_outpost_hull_mult = 0.33
-		shipsize_starbase_starport_hull_mult = 0.33
-		shipsize_starbase_starhold_hull_mult = 0.33
-		shipsize_starbase_starfortress_hull_mult = 0.33
-		shipsize_starbase_citadel_hull_mult = 0.33
+		shipsize_starbase_outpost_hull_mult = 0.5
+		shipsize_starbase_starport_hull_mult = 0.5
+		shipsize_starbase_starhold_hull_mult = 0.5
+		shipsize_starbase_starfortress_hull_mult = 0.5
+		shipsize_starbase_citadel_hull_mult = 0.5
+		ship_home_territory_fire_rate_mult = 0.1
+		damage_vs_superior_empires_mult = 0.1
 	}
 }
 
 # 156.完遂時:防衛戦争時に亜高速移動速度+20%
 tr_ngm_adversity_finish = {
+	custom_tooltip_with_modifiers = tr_ngm_adversity_finish_tooltip
 	modifier = {
 		ascension_perks_add = 1
 	}
@@ -1248,20 +1309,21 @@ tr_ngm_adversity_finish = {
 tr_ngm_strong_command_and_control = {
 	modifier = {
 		force_disparity_fire_rate_mult = 0.2
+		ship_weapon_range_mult = 0.2
 	}
 }
 
-# 158.効率的行政組織:帝国規模影響-5%
+# 158.効率的行政組織:区域の最大数+2
 tr_ngm_purify_corruption = {
 	possible = {
 		has_tradition = tr_ngm_strong_command_and_control
 	}
 	modifier = {
-		empire_size_penalty_mult = -0.05
+		planet_max_districts_add = 2
 	}
 }
 
-# 159.きめ細やかな法令:布告許容量+1
+# 159.きめ細やかな法令:布告資金+50
 tr_ngm_cancellation_of_administratively_infarction = {
 	modifier = {
 		country_edict_fund_add = 50
@@ -1275,7 +1337,7 @@ tr_ngm_guerrilla_tactics = {
 	}
 }
 
-# 161.効率的管理:Jobの生産力+10%
+# 161.効率的管理:すべてPopの資源算出+10%
 tr_ngm_efficient_management = {
 	possible = {
 		has_tradition = tr_ngm_cancellation_of_administratively_infarction
@@ -1287,49 +1349,52 @@ tr_ngm_efficient_management = {
 }
 
 # 余裕(強国である我が国は余裕を持った対応が求められる)
-# 162.取得時：帝国規模影響-10%
+# 162.取得時：帝国規模-10%
 tr_ngm_margin_adopt = {
 	modifier = {
-		empire_size_penalty_mult = -0.1
+		empire_size_mult = -0.1
 	}
 }
 
 # 163.余裕の伝統の完成
-# 帝国規模影響-10%
+# 外交発言力+10%、毎月の忠誠心+1
 tr_ngm_margin_finish = {
+	custom_tooltip_with_modifiers = tr_ngm_margin_finish_tooltip
 	modifier = {
 		ascension_perks_add = 1
-		empire_size_penalty_mult = -0.1
+		diplo_weight_mult = 0.1
 	}
 }
 
-# 164.巨大艦隊:艦隊許容量+20
+# 164.巨大艦隊:艦隊許容量+20、艦隊許容量+20%
 tr_ngm_giant_fleet = {
 	modifier = {
 		country_naval_cap_add = 20
+		country_naval_cap_mult = 0.2
 	}
 }
 
-# 165.大規模な艦隊司令部:艦隊指揮上限+10
+# 165.大規模な艦隊司令部:艦隊指揮上限+30
 tr_ngm_large_fleet_command = {
 	possible = {
 		has_tradition = tr_ngm_giant_fleet
 	}
 	modifier = {
-		country_command_limit_add = 20
+		country_command_limit_add = 30
 	}
 }
 
-# 166.軍事国家:宇宙軍許容量を超過しているときに職業による資源+5%
+# 166.軍事国家:宇宙軍許容量を超過しているときに職業による資源+10%
 tr_ngm_weapons_arsenal_country = {
+	custom_tooltip_with_modifiers = tr_ngm_weapons_arsenal_country_tooltip
 	modifier = {
 	}
 }
 
-# 167.膨張した官僚機構:布告基金+50
+# 167.膨張した官僚機構:官僚職からの統合力+1
 tr_ngm_rock_solid_bureaucracy = {
+	custom_tooltip_with_modifiers = tr_ngm_rock_solid_bureaucracy_tooltip
 	modifier = {
-		country_edict_fund_add = 50
 	}
 }
 
@@ -1340,7 +1405,7 @@ tr_ngm_steady_national_guidelines = {
 		has_tradition = tr_ngm_rock_solid_bureaucracy
 	}
 	modifier = {
-		edicts_cost_mult = -0.2
+		country_base_influence_produces_add = 1
 	}
 }
 
@@ -1352,35 +1417,37 @@ tr_ngm_friendship_adopt = {
 	}
 }
 
-# 170完遂時:連邦参加による団結度へのペナルティ-25%
+# 170完遂時:連邦参加による団結度へのペナルティ-50%
 tr_ngm_friendship_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		federation_join_malus_mult = -0.25
+		federation_join_malus_mult = -0.5
 	}
 }
 
-# 171.綿密な折衝:国境摩擦-20%
+# 171.綿密な折衝:国境摩擦-25%、前哨地建造影響力コスト-20%
 tr_ngm_in_depth_negotiations = {
 	modifier = {
-		country_border_friction_mult = -0.2
+		country_border_friction_mult = -0.25
+		starbase_buildings_influence_cost_mult = -0.2
 	}
 }
 
-# 172.隙のない外交官:情報基礎値+5
+# 172.隙のない外交官:暗号力+10、外交発言力+10%
 tr_ngm_diplomat_without_a_gap = {
 	possible = {
 		has_tradition = tr_ngm_in_depth_negotiations
 	}
 	modifier = {
-		add_base_country_intel = 5
+		intel_encryption_add = 10
+		diplo_weight_mult = 0.1
 	}
 }
 
-# 173.経済外交:経済力による外交発言力+10%
+# 173.経済外交:経済力による外交発言力+25%
 tr_ngm_economic_diplomacy = {
 	modifier = {
-		diplo_weight_economy_mult = 0.1
+		diplo_weight_economy_mult = 0.25
 	}
 }
 
@@ -1391,20 +1458,35 @@ tr_ngm_federal_army = {
 	}
 }
 
-# 175.棍棒外交:艦隊による外交発言力+10%
+# 175.棍棒外交:艦隊による外交発言力+25%
 tr_ngm_big_stick_diplomacy = {
 	possible = {
 		has_tradition = tr_ngm_economic_diplomacy
 		has_tradition = tr_ngm_federal_army
 	}
 	modifier = {
-		diplo_weight_naval_mult = 01
+		diplo_weight_naval_mult = 0.25
 	}
 }
 
 # 宗主(植民と属国化。これこそが"平和"で安定的な拡張が可能である)
-# 176.取得時：忠誠度月間+1
+# 176.取得時：属国の受け入れ値+20
 tr_ngm_suzerain_adopt = {
+	modifier = {
+		country_subject_acceptance_add = 20
+	}
+}
+
+# 177.完遂時:毎月の忠誠心+1
+tr_ngm_suzerain_finish = {
+	custom_tooltip_with_modifiers = tr_ngm_suzerain_finish_tooltip
+	possible = {
+		has_tradition = tr_ngm_delegation
+		has_tradition = tr_ngm_authority_to_belong
+	}
+	modifier = {
+		ascension_perks_add = 1
+	}
 	on_enabled = {
 		hidden_effect = {
 			country_event = {
@@ -1414,25 +1496,13 @@ tr_ngm_suzerain_adopt = {
 	}
 }
 
-# 177.完遂時:複数の従属国を保有することへのペナルティの対象にはならない
-tr_ngm_suzerain_finish = {
-	possible = {
-		has_tradition = tr_ngm_delegation
-		has_tradition = tr_ngm_authority_to_belong
-	}
-	modifier = {
-		ascension_perks_add = 1
-		country_subject_acceptance_add = 20
-	}
-}
-
-# 178.外交的拡張:属国による宇宙軍許容量への貢献+20%
+# 178.外交的拡張:属国による宇宙軍許容量への貢献+25%
 tr_ngm_diplomatic_expansion = {
 	possible = {
 		has_tradition = tr_ngm_suzerain_adopt
 	}
 	modifier = {
-		country_vassal_naval_capacity_contribution_mult = 0.2
+		country_vassal_naval_capacity_contribution_mult = 0.25
 	}
 }
 
@@ -1443,131 +1513,145 @@ tr_ngm_delegation = {
 	}
 	modifier = {
 		envoys_add = 1
+		diplo_weight_mult = 0.15
 	}
 }
 
-# 180.植民地覇権:植民地建造速度+20%
+# 180.植民地覇権:植民地建造速度+30%
 tr_ngm_colonial_hegemony = {
 	possible = {
 		has_tradition = tr_ngm_suzerain_adopt
 	}
 	modifier = {
-		planet_colony_development_speed_mult = 0.2
+		planet_colony_development_speed_mult = 0.3
 	}
 }
 
-# 181.宗主国の圧力:忠誠度月間+1
+# 181.宗主国の圧力:従属国の友好度+50
 tr_ngm_suzerainty_pressure = {
 	possible = {
 		has_tradition = tr_ngm_suzerain_adopt
 	}
-	on_enabled = {
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.30
-			}
-		}
+	modifier = {
+		country_subject_trust_cap_add = 50	
+		
 	}
+	# on_enabled = {
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = ngm_tradition.30
+	# 		}
+	# 	}
+	# }
 }
 
-# 182.服属する権威:従属国の友好度+30
+# 182.服属する権威:属国受諾値+50 従属国との力関係ペナルティ-20%
 tr_ngm_authority_to_belong = {
 	possible = {
 		has_tradition = tr_ngm_colonial_hegemony
 		has_tradition = tr_ngm_suzerainty_pressure
 	}
 	modifier = {
-		country_subject_trust_cap_add = 30		
+		country_subject_acceptance_add = 50
+		country_subject_power_penalty_mult = -0.2
 	}
 }
 
 # 強圧(圧力と強力な関係。これこそが銀河外交の枢軸なり)
-# 183.取得時：使節+1
+# 183.取得時：拒否権のクールダウン-30%
 tr_ngm_strong_pressure_adopt = {
 	modifier = {
-		envoys_add = 1
+		veto_cooldown_mult = -0.3
 	}
 }
 
-# 184完遂時:政策"介入政策"のアンロック
+# 184完遂時:緊急決議のクールダウン-30%
 tr_ngm_strong_pressure_finish = {
 	modifier = {
 		ascension_perks_add = 1
+		emergency_measures_cooldown_mult = -0.3
 	}
 }
 
-# 185.陸軍圧力:地上軍コスト-10%、地上軍建設速度-10%
+# 185.陸軍圧力:地上軍コスト-25%、地上軍の士気+25%
 tr_ngm_army_pressure = {
 	modifier = {
-		armies_cost_mult = -0.1
-		planet_army_build_time_mult = -0.1
+		armies_cost_mult = -0.25
+		army_morale = 0.25
 	}
 }
 
-# 186.艦隊圧力:艦隊建造速度-20%
+# 186.艦隊圧力:艦隊建造速度-25%、艦隊による外交発言力+15%
 tr_ngm_fleet_pressure = {
 	possible = {
 		has_tradition = tr_ngm_army_pressure
 	}
 	modifier = {
-		starbase_shipyard_build_speed_mult = 0.2
+		starbase_shipyard_build_speed_mult = 0.25
+		diplo_weight_naval_mult = 0.15
 	}
 }
 
-# 187.外交圧力:外交発言力+20%
+# 187.外交圧力:使節+1、外交発言力+10%
 tr_ngm_diplomatic_pressure = {
 	modifier = {
-		diplo_weight_mult = 0.2
+		envoys_add = 1
+		diplo_weight_mult = 0.1
 	}
 }
 
-# 188.圧力を支える行政力:官僚の算出する統合力+20%
+# 188.圧力を支える行政力:帝国規模-5%
 tr_ngm_administration_to_support_pressure = {
 	modifier = {
-		planet_bureaucrats_unity_produces_mult = 0.2
+		empire_size_mult = -0.05
 	}
 }
 
-# 189.強制的友好:友好度+20
+# 189.強制的友好:使節+1、関係改善の効果+25%
 tr_ngm_compulsory_friendship = {
 	possible = {
 		has_tradition = tr_ngm_diplomatic_pressure
 		has_tradition = tr_ngm_administration_to_support_pressure
 	}
 	modifier = {
-		country_trust_cap_add = 20
+		envoys_add = 1
+		envoy_improve_relations_mult = 0.25
 	}
 }
 
 # 介入(侵略することだけが他国を圧倒する手段ではない)
-# 190.取得時：基礎情報値+5
+# 190.取得時：介入主義への魅力+25%、外交発言力+20%
 tr_ngm_intervention_adopt = {
 	modifier = {
-		add_base_country_intel = 5
+		pop_ethic_interventionism_attraction_mult = 0.25
+		diplo_weight_mult = 0.2
 	}
 }
 
 # 191.完遂時:政策"諜報政策"のアンロック
 tr_ngm_intervention_finish = {
+	custom_tooltip_with_modifiers = tr_ngm_intervention_finish_tooltip
 	modifier = {
 		ascension_perks_add = 1
 	}
 }
 
-# 192.常駐諜報員:使節+1
+# 192.常駐諜報員:使節+1、浸透度+15%
 tr_ngm_resident_intelligence_officer = {
 	modifier = {
 		envoys_add = 1
+		spy_power_cost_mult = 0.15
 	}
 }
 
-# 193.暗号解読班:解読力+5
+# 193.解読力+5、クローク探知強度+1
 tr_ngm_cryptanalysis_team = {
 	possible = {
 		has_tradition = tr_ngm_resident_intelligence_officer
 	}
 	modifier = {
 		intel_decryption_add = 5
+		ship_cloaking_detection_add = 1
 	}
 }
 
@@ -1590,22 +1674,22 @@ tr_ngm_intelligence_school = {
 	}
 }
 
-# 196.影のフィクサー:開拓前哨地の影響力コスト-50%
+# 196.影のフィクサー:帝国首都に「暗黒結社」（惑星特性）を追加 暗黒結社:影のフィクサージョブ+1 影のフィクサー	影響力+2
 tr_ngm_shadow_fixer = {
+	custom_tooltip_with_modifiers = tr_ngm_shadow_fixer_tooltip
 	possible = {
 		has_tradition = tr_ngm_constant_obstruction
 		has_tradition = tr_ngm_intelligence_school
 	}
 	modifier = {
-		starbase_buildings_influence_cost_mult = 0.5
 	}
 }
 
 # ㉟巨大(大きさこそすべてである)
-# 197.取得時：ステーション船体値+10%
+# 197.取得時：ステーション船体値+25%
 tr_ngm_gigantic_adopt = {
 	modifier = {
-		shipclass_starbase_hull_mult = 0.1
+		shipclass_starbase_hull_mult = 0.25
 	}
 }
 
@@ -1617,88 +1701,95 @@ tr_ngm_gigantic_finish = {
 	}
 }
 
-# 199.大艦巨砲主義:コルベット建造速度-5%、戦艦建造速度+5%
+# 199.大艦巨砲主義:戦艦建造速度+15%、艦船連射レート+5%
 tr_ngm_dreadnought = {
 	modifier = {
-		shipsize_corvette_build_speed_mult = 0.05
-		shipsize_battleship_build_speed_mult = -0.05
+		shipsize_battleship_build_speed_mult = -0.15
+		ship_fire_rate_mult = 0.05
 	}
 }
 
 # 200.巨人軍:地上軍「巨人軍」を建造可能とする
 tr_ngm_giants = {
+	custom_tooltip_with_modifiers = tr_ngm_giants_tooltip
+	modifier = {
+	}
 }
 
-# 201.巨大建築:巨大構造物建築枠+1
+# 201.巨大建築:巨大構造物建築枠+1、巨大構造物建造速度+10%
 tr_ngm_megastructure = {
 	modifier = {
 		country_megastructure_build_cap_add = 1
 	}
 }
 
-# 202.巨大な発言力:外交発言力+10%
+# 202.巨大な発言力:使節+1、外交発言力+20%
 tr_ngm_gians_voice = {
 	modifier = {
-		diplo_weight_mult = 0.3
+		envoys_add = 1
+		diplo_weight_mult = 0.2
 	}
 }
 
-# 203.巨大な帝国:開拓前哨地建造コスト-20%、国境摩擦+20%
+# 203.巨大な帝国:開拓前哨地建造コスト-20%、国境摩擦+40%
 tr_ngm_mighty_empire = {
 	modifier = {
 		starbase_buildings_influence_cost_mult = -0.2
-		country_border_friction_mult = 0.2
+		country_border_friction_mult = 0.4
 	}
 }
 
 # 情報(無形の存在こそがすべてを制するのである)
-# 204.取得時：情報基礎値+5
+# 204.取得時：物理学(コンピュータ)の研究速度+20%
 tr_ngm_information_adopt = {
 	modifier = {
-		add_base_country_intel = 5
+		country_engineering_tech_research_speed = 0.2
 	}
 }
 
-# 205.完遂時:解読力+10
+# 205.完遂時:浸透度減少-50%
 tr_ngm_information_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		intel_decryption_add = 10
+		spy_network_decay_mult = -0.5
 	}
 }
 
-# 206.情報資産の拡大:交易価値+10%
+# 206.透明行動:クローク強度+1
 tr_ngm_expansion_of_information_assets = {
 	modifier = {
-		trade_value_mult = 0.1
+		ship_cloaking_strength_add = 1
 	}
 }
 
-# 207.情報資産の保護:交易保護値+5
+# 207.ひそやかなる監視:クローク探知強度+2
 tr_ngm_protection_of_information_assets = {
 	possible = {
 		has_tradition = tr_ngm_expansion_of_information_assets
 	}
 	modifier = {
-		local_trade_protection_add = 5
+		ship_cloaking_detection_add = 2
 	}
 }
 
-# 208.諜報局の設置:解読力+5
+# 208.諜報局の設置:解読力+5 諜報作戦スキル+2
 tr_ngm_establishment_of_intelligence_bureau = {
 	modifier = {
 		intel_decryption_add = 5
+		espionage_operation_skill_add = 2
 	}
 }
 
-# 209.防諜局の設置:暗号力+5
+# 209.防諜局の設置:暗号力+5、仕掛けられた諜報作戦の難度+2、仕掛けられた諜報作戦に必要な浸透度+10%
 tr_ngm_establishment_of_counterintelligence_bureau = {
 	modifier = {
 		intel_encryption_add = 5
+		espionage_hostile_operation_difficulty_add = 2
+		espionage_hostile_operation_cost_mult = 0.1
 	}
 }
 
-# 210.情報犯罪の取り締まり:全惑星で犯罪度-10
+# 210.情報犯罪の取り締まり:犯罪-10、安定度+10
 tr_ngm_control_of_information_crime = {
 	possible = {
 		has_tradition = tr_ngm_establishment_of_intelligence_bureau
@@ -1706,34 +1797,36 @@ tr_ngm_control_of_information_crime = {
 	}
 	modifier = {
 		planet_crime_add = -10
+		planet_stability_add = 10
 	}
 }
 
 # 立法(法や布告の施行と定着は極めて重要である)
-# 211.取得時：安定度+5
+# 211.取得時：布告資金+50
 tr_ngm_legislation_adopt = {
 	modifier = {
-		planet_stability_add = 5
+		country_edict_fund_add = 50
 	}
 }
 
-# 212.完遂時:布告基金+80
+# 212.完遂時:影響力+1
 tr_ngm_legislation_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		country_edict_fund_add = 80
+		country_base_influence_produces_add = 1
 	}
 }
 
-# 213.憲法訴訟:幸福度+5%
+# 213.憲法訴訟:派閥幸福度+10%
 tr_ngm_constitutional_lawsuit = {
 	modifier = {
-		pop_happiness = 0.05
+		faction_approval = 0.1
 	}
 }
 
-# 214.事前法令審査:官僚の算出する統合力+20%
+# 214.事前法令審査:官僚職からの統合力+1
 tr_ngm_preliminary_legal_review = {
+	custom_tooltip_with_modifiers = tr_ngm_rock_solid_bureaucracy_tooltip
 	possible = {
 		has_tradition = tr_ngm_constitutional_lawsuit
 	}
@@ -1742,83 +1835,86 @@ tr_ngm_preliminary_legal_review = {
 	}
 }
 
-# 215.法務局の拡充:布告基金+50
+# 215.法務局の拡充:布告「法務局監査」をアンロック
 tr_ngm_expansion_of_the_legal_affairs_bureau = {
+	custom_tooltip_with_modifiers = tr_ngm_expansion_of_the_legal_affairs_bureau_tooltip
 	modifier = {
-		country_edict_fund_add = 50
 	}
 }
 
-# 216.議員権限の強化:統治志向魅力+33%
+# 216.議員権限の強化:派閥統合力収入+25%
 tr_ngm_strengthening_parliamentary_authority = {
 	modifier = {
 		pop_government_ethic_attraction = 0.33
 	}
 }
 
-# 217.立法機関の確立:影響力+1
+# 217.立法機関の確立:帝国規模-10%
 tr_ngm_establishment_of_legislative_institution = {
 	possible = {
 		has_tradition = tr_ngm_expansion_of_the_legal_affairs_bureau
 		# has_tradition = tr_ngm_establishment_of_legislative_institution
 	}
 	modifier = {
-		country_base_influence_produces_add = 1
+		empire_size_mult = -0.1
 	}
 }
 
 # 精製(特殊な資源は産業育成の根幹であり、優先して生産されるべきだ)
-# 218.取得時：ステーション生産+10%
+# 218.取得時：ステーション生産+20%
 tr_ngm_purification_adopt = {
 	modifier = {
-		station_gatherers_produces_mult = 0.1
+		station_gatherers_produces_mult = 0.2
 	}
 }
 
-# 219.完遂時:各戦略資源生産量+10%
+# 219.完遂時:戦略資源生産量+25%
 tr_ngm_purification_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		country_base_volatile_motes_produces_add = 0.1
-		country_base_exotic_gases_produces_add = 0.1
-		country_base_rare_crystals_produces_add = 0.1		#違う
+		country_base_volatile_motes_produces_add = 0.25
+		country_base_exotic_gases_produces_add = 0.25
+		country_base_rare_crystals_produces_add = 0.25
 	}
 }
 
-# 220.ガス法:エキゾチックガス生産+10%
+# 220.ガス法:エキゾチックガス生産+25%、ガス精製技師の維持費-35%
 tr_ngm_gas_law = {
 	modifier = {
-		country_base_exotic_gases_produces_add = 0.1
+		country_base_exotic_gases_produces_add = 0.25
 	}
 }
 
-# 221.エネルギー粉末精製:揮発性粉末生産+10%
+# 221.エネルギー粉末精製:揮発性粉末生産+25%、化学技師の維持費-35%
 tr_ngm_energy_powder_refining = {
 	modifier = {
-		country_base_volatile_motes_produces_add = 0.1
+		country_base_volatile_motes_produces_add = 0.25
 	}
 }
 
-# 222.結晶生産体制:レアクリスタル生産+10%
+# 222.結晶生産体制:レアクリスタル生産+25%、透過技師の維持費-35%
 tr_ngm_crystal_production_system = {
 	modifier = {
-		country_base_rare_crystals_produces_add = 0.1
+		country_base_rare_crystals_produces_add = 0.25
 	}
 }
 
 # 223.最先端工業:化学技師、透過技師、ガス精製技師の維持費-35%
 tr_ngm_latast_industrial = {
+	custom_tooltip_with_modifiers = tr_ngm_latast_industrial_tooltip
 	possible = {
 		has_tradition = tr_ngm_gas_law
 		has_tradition = tr_ngm_energy_powder_refining
 		has_tradition = tr_ngm_crystal_production_system
 	}
 	modifier = {
+		
 	}
 }
 
 # 224.先端工場:「先端工場」を建設可能とする
 tr_ngm_advanced_factory = {
+	custom_tooltip_with_modifiers = tr_ngm_expansion_of_the_legal_affairs_bureau_tooltip
 	possible = {
 		has_tradition = tr_ngm_gas_law
 		has_tradition = tr_ngm_energy_powder_refining
@@ -1829,42 +1925,42 @@ tr_ngm_advanced_factory = {
 }
 
 # 生産(基礎的生産物を生み出し、経済根幹を整備するべきだ)
-# 225.取得時：食料生産量+10%
+# 225.取得時：消費財生産+15%
 tr_ngm_production_adopt = {
 	modifier = {
-		country_food_produces_mult = 0.1
+		country_consumer_goods_produces_mult = 0.15
 	}
 }
 
-# 226.完遂時:鉱物生産量+10%
+# 226.完遂時:合金生産+15%
 tr_ngm_production_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		country_minerals_produces_mult = 0.1
+		country_alloys_produces_mult = 0.15
 	}
 }
 
-# 227.鉱業法:すべての惑星の鉱物区域+3
+# 227.鉱業法:鉱物産出+25%
 tr_ngm_mining_act = {
 	modifier = {
-		district_mining_max = 3
+		country_minerals_produces_mult = 0.25
 	}
 }
 
-# 228.惑星探査:ステーション生産+10%
+# 228.惑星探査:ステーション生産+25%
 tr_ngm_planetary_exploration = {
 	possible = {
 		has_tradition = tr_ngm_mining_act
 	}
 	modifier = {
-		station_gatherers_produces_mult = 0.1
+		station_gatherers_produces_mult = 0.25
 	}
 }
 
-# 229.食品工業:すべての惑星の農業区域+3
+# 229.食品工業:食料産出+25%
 tr_ngm_food_industry = {
 	modifier = {
-		district_farming_max = 3
+		country_food_produces_mult = 0.25
 	}
 }
 
@@ -1875,72 +1971,93 @@ tr_ngm_mass_production_system = {
 	}
 }
 
-# 231.産業研究:研究（産業学）速度+10%
+# 231.産業研究:研究（産業学）速度+25%、工学研究+10%
 tr_ngm_industrial_research = {
 	possible = {
 		has_tradition = tr_ngm_food_industry
 		has_tradition = tr_ngm_mass_production_system
 	}
 	modifier = {
-		category_industry_research_speed_mult = 0.1
+		category_industry_research_speed_mult = 0.25
+		country_engineering_tech_research_speed = 0.1
 	}
 }
 
 # 世襲(権力や富は自らが生み出すだけではなく、受け継がれていくものである)
-# 232.取得時：統治者Popの資源生産+5%
+# 232.取得時：統治者Popの幸福度+15%、統治者Popの政治力+100%
 tr_ngm_hereditary_adopt = {
 	modifier = {
-		planet_jobs_ruler_produces_mult = 0.05
+		pop_cat_ruler_happiness = 0.15
+		pop_cat_ruler_political_power = 100
 	}
 }
 
-# 233.完遂時:40Popごとに貴族Job+1
+# 233.完遂時:25Popごとに貴族Job+1
 tr_ngm_hereditary_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		job_noble_per_pop = 0.025
+		job_noble_per_pop = 0.04
 	}
 }
 
-# 234.相続税の緩和:統治者幸福度+10%
+# 234.貴族外交:使節+1、外交発言力+10%
 tr_ngm_inheritance_tax_relief = {
 	modifier = {
 		pop_cat_ruler_happiness = 0.1
 	}
 }
 
-# 235.世襲称号:統合力+10%
+# 235.世襲称号:栄望主義魅力+25%、勲章+0.1
 tr_ngm_hereditary_title = {
 	possible = {
 		has_tradition = tr_ngm_inheritance_tax_relief
 	}
 	modifier = {
-		country_unity_produces_mult = 0.1
+		pop_ethic_honorism_attraction_mult = 0.25
+		country_base_ngm_order_of_merit_produces_add = 0.1
 	}
 }
 
-# 236.技術の継承:リーダースキル上限+2
+# 236.技術の継承:研究速度+10%、統合力+5%
 tr_ngm_inheritance_of_technology = {
 	modifier = {
-		leader_skill_levels = 2
+		all_technology_research_speed = 0.1
+		country_unity_produces_mult = 0.05
 	}
 }
 
-# 237.領地相続:農民、鉱山労働者の生産+5%
+# 237.領地相続:毎月の忠誠心+1
 tr_ngm_territory_inheritance = {
+	custom_tooltip_with_modifiers = tr_ngm_suzerain_finish_tooltip
+	on_enabled = {
+		hidden_effect = {
+			country_event = {
+				id = ngm_tradition.32
+			}
+		}
+	}
 	modifier = {
-		planet_farmers_produces_mult = 0.05
-		planet_miners_produces_mult = 0.05
 	}
 }
 
-# 238.世襲国家:安定度+5
+# 238.世襲国家:安定度+10
 tr_ngm_hereditary_nation = {
 	possible = {
 		has_tradition = tr_ngm_inheritance_of_technology
 		has_tradition = tr_ngm_territory_inheritance
 	}
 	modifier = {
-		planet_stability_add = 5
+		planet_stability_add = 10
+	}
+}
+
+# 238.世襲国家:安定度+10
+tr_ngm_hereditary_nation = {
+	possible = {
+		has_tradition = tr_ngm_inheritance_of_technology
+		has_tradition = tr_ngm_territory_inheritance
+	}
+	modifier = {
+		planet_stability_add = 10
 	}
 }

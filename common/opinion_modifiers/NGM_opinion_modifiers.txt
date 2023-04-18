@@ -29,7 +29,7 @@ triggered_opinion_ap_ngm_relation_old_empire = {
 # 	}
 # }
 
-# 切望:他国との友好度+30
+# 切望:他国との友好度+50
 triggered_opinion_tr_ngm_longing_finish = {
 	trigger = {
 		is_country_type = default
@@ -39,7 +39,7 @@ triggered_opinion_tr_ngm_longing_finish = {
 	}
 
 	opinion = {
-		base = 30
+		base = 50
 	}
 }
 

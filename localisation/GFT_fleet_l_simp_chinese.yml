@@ -1,0 +1,57 @@
+﻿l_simp_chinese:
+
+#######################
+#####    布告    ######
+#######################
+
+ edict_gft_fleet_trade_options_menu:0 "舰队的礼物"
+ edict_gft_fleet_trade_options_menu_desc:0 ""
+
+##########################
+#####    イベント    ######
+##########################
+
+ gft_fleet_trade.1.name:0 "舰队礼品国家选择"
+ gft_fleet_trade.1.desc:0 "国际合作与协作需要的不仅仅是军事能力的相互增强。这就对了。一个舰队的交易。由于程序问题，舰队将由我们指定和发送，我们不知道接受国是否会接受它。也不确定对方是否会付钱。尽管如此，如果你能信任对方或情况紧急，这笔交易将是值得的。"
+ gft_fleet_trade.1.a:0 "[gft_fleet_trade_1.GetName]"
+ gft_fleet_trade.1.b:0 "[gft_fleet_trade_2.GetName]"
+ gft_fleet_trade.1.c:0 "[gft_fleet_trade_3.GetName]"
+ gft_fleet_trade.1.d:0 "[gft_fleet_trade_4.GetName]"
+ gft_fleet_trade.1.e:0 "[gft_fleet_trade_5.GetName]"
+ gft_fleet_trade.1.f:0 "[gft_fleet_trade_6.GetName]"
+ gft_fleet_trade.1.g:0 "[gft_fleet_trade_7.GetName]"
+ gft_fleet_trade.1.h:0 "[gft_fleet_trade_8.GetName]"
+ gft_fleet_trade.1.i:0 "[gft_fleet_trade_9.GetName]"
+ gft_fleet_trade.1.j:0 "[gft_fleet_trade_10.GetName]"
+ gft_fleet_trade.1.k:0 "[gft_fleet_trade_11.GetName]"
+ gft_fleet_trade.1.l:0 "[gft_fleet_trade_12.GetName]"
+ gft_fleet_trade.1.m:0 "[gft_fleet_trade_13.GetName]"
+ gft_fleet_trade.1.n:0 "没有其他州吗？"
+ gft_fleet_trade.1.o:0 "贴近（如书、眼睛、会议等）。"
+
+ gft_fleet_trade.2.name:0 "舰队给予舰队的选择"
+ gft_fleet_trade.2.desc:0 "国际合作与协作需要的不仅仅是军事能力的相互增强。这就对了。一个舰队的交易。由于程序问题，舰队将由我们指定和发送，我们不知道接受国是否会接受它。也不确定对方是否会付钱。尽管如此，如果你能信任对方，或者情况紧急，这笔交易将是值得的。"
+ gft_fleet_trade.2.a:0 "[gft_fleet_trade_fleet_1.GetName]"
+ gft_fleet_trade.2.b:0 "[gft_fleet_trade_fleet_2.GetName]"
+ gft_fleet_trade.2.c:0 "[gft_fleet_trade_fleet_3.GetName]"
+ gft_fleet_trade.2.d:0 "[gft_fleet_trade_fleet_4.GetName]"
+ gft_fleet_trade.2.e:0 "[gft_fleet_trade_fleet_5.GetName]"
+ gft_fleet_trade.2.f:0 "[gft_fleet_trade_fleet_6.GetName]"
+ gft_fleet_trade.2.g:0 "[gft_fleet_trade_fleet_7.GetName]"
+ gft_fleet_trade.2.h:0 "[gft_fleet_trade_fleet_8.GetName]"
+ gft_fleet_trade.2.i:0 "[gft_fleet_trade_fleet_9.GetName]"
+ gft_fleet_trade.2.j:0 "[gft_fleet_trade_fleet_10.GetName]"
+ gft_fleet_trade.1.n:0 "我还是不想做。"
+
+ gft_fleet_trade.3.name:0 "接受舰队的捐赠"
+ gft_fleet_trade.3.desc:0 "§Y[gft_technology_trade_0.GetName]§！已经提出提供一支舰队。该提议是，通过分享这支舰队，我们可以促进全球军事力量的发展和国际合作。"
+ gft_fleet_trade.3.a:0 "我将感激地接受它。"
+ gft_fleet_trade.3.b:0 "我很遗憾地说不。"
+
+ gft_fleet_trade.4.name:0 "接受舰队的礼物"
+ gft_fleet_trade.4.desc:0 "关于我们最近发送的舰队捐赠，已经被慷慨地接受。这将大大促进国际合作。"
+ gft_fleet_trade.4.a:0 "太好了。"
+
+ gft_fleet_trade.5.name:0 "§RFleet，礼物，拒绝。§！"
+ gft_fleet_trade.5.desc:0 "我们国家的恩惠没有被接受。我们无法假设，国际合作的时代会有强烈的拒绝。"
+ gft_fleet_trade.5.a:0 "这是一个遗憾。"

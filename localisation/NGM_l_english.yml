@@ -1871,7 +1871,7 @@
  tr_ngm_penetration_debuff_7:0 "$tr_ngm_penetration_debuff_1$"
  tr_ngm_penetration_debuff_8:0 "$tr_ngm_penetration_debuff_1$"
 
- tr_ngm_freedom_finish_debuff_1:0 "Freedom"
+ tr_ngm_freedom_finish_debuff_1:0 "$tr_ngm_freedom_broad$"
  tr_ngm_freedom_finish_debuff_2:0 "$tr_ngm_freedom_finish_debuff_1$"
  tr_ngm_freedom_finish_debuff_3:0 "$tr_ngm_freedom_finish_debuff_1$"
  tr_ngm_freedom_finish_debuff_4:0 "$tr_ngm_freedom_finish_debuff_1$"
@@ -2988,6 +2988,12 @@
 
  ngm_tradition.49.a:0 "$civic_anglers$"
  ngm_tradition.49.b:0 "$civic_pompous_purists$"
+ ngm_tradition.49.c:0 "$civic_corporate_dominion$"
+ ngm_tradition.49.d:0 "$civic_toxic_baths$"
+ ngm_tradition.49.e:0 "$civic_relentless_industrialists$"
+ ngm_tradition.49.f:0 "$civic_scavengers$"
+ ngm_tradition.49.g:0 "$civic_ascensionists$"
+ ngm_tradition.49.h:0 "$civic_eager_explorers$"
 
  ngm_tradition.50.a:0 "$civic_hive_subspace_ephapse$"
  ngm_tradition.50.b:0 "$civic_hive_natural_neural_network$"
@@ -3004,6 +3010,10 @@
  ngm_tradition.52.a:0 "$civic_hive_memorialist$"
  ngm_tradition.52.b:0 "$civic_hive_catalytic_processing$"
  ngm_tradition.52.c:0 "$civic_hive_idyllic_bloom$"
+ ngm_tradition.52.d:0 "$civic_hive_toxic_baths$"
+ ngm_tradition.52.e:0 "$civic_hive_ascensionists$"
+ ngm_tradition.52.f:0 "$civic_hive_cordyceptic_drones$"
+ ngm_tradition.52.g:0 "$civic_hive_stargazers$"
 
  ngm_tradition.53.a:0 "$civic_machine_servitor$"
  ngm_tradition.53.b:0 "$civic_machine_terminator$"
@@ -3026,6 +3036,9 @@
  ngm_tradition.56.a:0 "$civic_machine_maintenance_protocols$"
  ngm_tradition.56.b:0 "$civic_machine_memorialist$"
  ngm_tradition.56.c:0 "$civic_machine_catalytic_processing$"
+ ngm_tradition.56.d:0 "$civic_machine_toxic_baths$"
+ ngm_tradition.56.e:0 "$civic_machine_ascensionists$"
+ ngm_tradition.56.f:0 "$civic_machine_exploration_protocol$"
 
  ngm_tradition.57.a:0 "$civic_franchising$"
  ngm_tradition.57.b:0 "$civic_trading_posts$"
@@ -3049,6 +3062,11 @@
  ngm_tradition.60.b:0 "$civic_corporate_anglers$"
  ngm_tradition.60.c:0 "$civic_corporate_crafters$"
  ngm_tradition.60.d:0 "$civic_permanent_employment$"
+ ngm_tradition.60.e:0 "$civic_corporate_relentless_industrialists$"
+ ngm_tradition.60.f:0 "$civic_corporate_toxic_baths$"
+ ngm_tradition.60.g:0 "$civic_corporate_scavengers$"
+ ngm_tradition.60.h:0 "$civic_corporate_ascensionists$"
+ ngm_tradition.60.i:0 "$civic_privatized_exploration$"
 
  ngm_tradition.61.a:0 "$civic_sham_constitutionalism$"
  ngm_tradition.61.b:0 "$civic_substantive_constitutionalism$"
@@ -3553,7 +3571,7 @@
  tr_ngm_memory2:0 "Pursuit of Memory"
  tr_ngm_memory2_desc:0 "§Y20Pop§! for each §Y death recorder Job§! for every §G1§! increase."
  tr_ngm_memory2_delayed:0 "Memory is perfect."
- tr_ngm_crime_record:0 "Criminal Record"
+ tr_ngm_crime_record:0 "We Remember"
  tr_ngm_crime_record_desc:0 "Planet's §Y Crime Degree§! is reduced by §G10§! Decreases the"
  tr_ngm_crime_record_delayed:0 "Mistakes are recorded."
  tr_ngm_trade_record:0 "Price Record"
