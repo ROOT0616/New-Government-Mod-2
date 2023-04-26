@@ -1,0 +1,1421 @@
+################################
+######  技術交換用AIイベント #######
+################################
+namespace = gft_ai_tech_trade
+# 技術 贈与 国選び
+country_event = {
+	id = gft_ai_tech_trade.1
+	title = gft_tech_trade.1.name
+	desc = gft_tech_trade.1.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_finding_loot
+	is_triggered_only = yes
+	option = {
+		name = gft_ai_tech_trade.1.a
+		trigger = {
+			exists = event_target:gft_ai_tech_trade_1
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_ai_tech_trade_1
+				is_at_war_with = event_target:gft_ai_tech_trade_1
+			}
+		}
+		save_global_event_target_as = gft_ai_tech_trade_event_target
+		hidden_effect = {
+			event_target:gft_ai_tech_trade_event_target = {
+				country_event = {
+					id = gft_ai_tech_trade.2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_defensive_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_non_aggression_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_cordial_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_loyal_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_patronizing_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_friendly_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_protective_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_embassy = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 750
+				}
+			}
+			modifier = {
+				factor = 100
+				has_research_agreement = event_target:gft_ai_tech_trade_0
+			}
+		}
+	}
+	option = {
+		name = gft_ai_tech_trade.1.b
+		trigger = {
+			exists = event_target:gft_ai_tech_trade_2
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_ai_tech_trade_2
+				is_at_war_with = event_target:gft_ai_tech_trade_2
+			}
+		}
+		save_global_event_target_as = gft_ai_tech_trade_event_target
+		hidden_effect = {
+			event_target:gft_ai_tech_trade_event_target = {
+				country_event = {
+					id = gft_ai_tech_trade.2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_defensive_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_non_aggression_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_cordial_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_loyal_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_patronizing_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_friendly_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_protective_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_embassy = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 750
+				}
+			}
+			modifier = {
+				factor = 100
+				has_research_agreement = event_target:gft_ai_tech_trade_0
+			}
+		}
+	}
+	option = {
+		name = gft_ai_tech_trade.1.c
+		trigger = {
+			exists = event_target:gft_ai_tech_trade_3
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_ai_tech_trade_3
+				is_at_war_with = event_target:gft_ai_tech_trade_3
+			}
+		}
+		save_global_event_target_as = gft_ai_tech_trade_event_target
+		hidden_effect = {
+			event_target:gft_ai_tech_trade_event_target = {
+				country_event = {
+					id = gft_ai_tech_trade.2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_defensive_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_non_aggression_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_cordial_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_loyal_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_patronizing_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_friendly_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_protective_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_embassy = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 750
+				}
+			}
+			modifier = {
+				factor = 100
+				has_research_agreement = event_target:gft_ai_tech_trade_0
+			}
+		}
+	}
+	option = {
+		name = gft_ai_tech_trade.1.d
+		trigger = {
+			exists = event_target:gft_ai_tech_trade_4
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_ai_tech_trade_4
+				is_at_war_with = event_target:gft_ai_tech_trade_4
+			}
+		}
+		save_global_event_target_as = gft_ai_tech_trade_event_target
+		hidden_effect = {
+			event_target:gft_ai_tech_trade_event_target = {
+				country_event = {
+					id = gft_ai_tech_trade.2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_defensive_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_non_aggression_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_cordial_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_loyal_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_patronizing_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_friendly_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_protective_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_embassy = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 750
+				}
+			}
+			modifier = {
+				factor = 100
+				has_research_agreement = event_target:gft_ai_tech_trade_0
+			}
+		}
+	}
+	option = {
+		name = gft_ai_tech_trade.1.e
+		trigger = {
+			exists = event_target:gft_ai_tech_trade_5
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_ai_tech_trade_5
+				is_at_war_with = event_target:gft_ai_tech_trade_5
+			}
+		}
+		save_global_event_target_as = gft_ai_tech_trade_event_target
+		hidden_effect = {
+			event_target:gft_ai_tech_trade_event_target = {
+				country_event = {
+					id = gft_ai_tech_trade.2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_defensive_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_non_aggression_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_cordial_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_loyal_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_patronizing_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_friendly_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_protective_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_embassy = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 750
+				}
+			}
+			modifier = {
+				factor = 100
+				has_research_agreement = event_target:gft_ai_tech_trade_0
+			}
+		}
+	}
+	option = {
+		name = gft_ai_tech_trade.1.f
+		trigger = {
+			exists = event_target:gft_ai_tech_trade_6
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_ai_tech_trade_6
+				is_at_war_with = event_target:gft_ai_tech_trade_6
+			}
+		}
+		save_global_event_target_as = gft_ai_tech_trade_event_target
+		hidden_effect = {
+			event_target:gft_ai_tech_trade_event_target = {
+				country_event = {
+					id = gft_ai_tech_trade.2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_defensive_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_non_aggression_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_cordial_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_loyal_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_patronizing_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_friendly_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_protective_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_embassy = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 750
+				}
+			}
+			modifier = {
+				factor = 100
+				has_research_agreement = event_target:gft_ai_tech_trade_0
+			}
+		}
+	}
+	option = {
+		name = gft_ai_tech_trade.1.g
+		trigger = {
+			exists = event_target:gft_ai_tech_trade_7
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_ai_tech_trade_7
+				is_at_war_with = event_target:gft_ai_tech_trade_7
+			}
+		}
+		save_global_event_target_as = gft_ai_tech_trade_event_target
+		hidden_effect = {
+			event_target:gft_ai_tech_trade_event_target = {
+				country_event = {
+					id = gft_ai_tech_trade.2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_defensive_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_non_aggression_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_cordial_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_loyal_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_patronizing_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_friendly_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_protective_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_embassy = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 750
+				}
+			}
+			modifier = {
+				factor = 100
+				has_research_agreement = event_target:gft_ai_tech_trade_0
+			}
+		}
+	}
+	option = {
+		name = gft_ai_tech_trade.1.h
+		trigger = {
+			exists = event_target:gft_ai_tech_trade_8
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_ai_tech_trade_8
+				is_at_war_with = event_target:gft_ai_tech_trade_8
+			}
+		}
+		save_global_event_target_as = gft_ai_tech_trade_event_target
+		hidden_effect = {
+			event_target:gft_ai_tech_trade_event_target = {
+				country_event = {
+					id = gft_ai_tech_trade.2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_defensive_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_non_aggression_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_cordial_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_loyal_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_patronizing_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_friendly_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_protective_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_embassy = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 750
+				}
+			}
+			modifier = {
+				factor = 100
+				has_research_agreement = event_target:gft_ai_tech_trade_0
+			}
+		}
+	}
+	option = {
+		name = gft_ai_tech_trade.1.i
+		trigger = {
+			exists = event_target:gft_ai_tech_trade_9
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_ai_tech_trade_9
+				is_at_war_with = event_target:gft_ai_tech_trade_9
+			}
+		}
+		save_global_event_target_as = gft_ai_tech_trade_event_target
+		hidden_effect = {
+			event_target:gft_ai_tech_trade_event_target = {
+				country_event = {
+					id = gft_ai_tech_trade.2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_defensive_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_non_aggression_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_cordial_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_loyal_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_patronizing_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_friendly_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_protective_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_embassy = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 750
+				}
+			}
+			modifier = {
+				factor = 100
+				has_research_agreement = event_target:gft_ai_tech_trade_0
+			}
+		}
+	}
+	option = {
+		name = gft_ai_tech_trade.1.j
+		trigger = {
+			exists = event_target:gft_ai_tech_trade_10
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_ai_tech_trade_10
+				is_at_war_with = event_target:gft_ai_tech_trade_10
+			}
+		}
+		save_global_event_target_as = gft_ai_tech_trade_event_target
+		hidden_effect = {
+			event_target:gft_ai_tech_trade_event_target = {
+				country_event = {
+					id = gft_ai_tech_trade.2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_defensive_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_non_aggression_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_cordial_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_loyal_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_patronizing_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_friendly_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_protective_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_embassy = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 750
+				}
+			}
+			modifier = {
+				factor = 100
+				has_research_agreement = event_target:gft_ai_tech_trade_0
+			}
+		}
+	}
+	option = {
+		name = gft_ai_tech_trade.1.k
+		trigger = {
+			exists = event_target:gft_ai_tech_trade_11
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_ai_tech_trade_11
+				is_at_war_with = event_target:gft_ai_tech_trade_11
+			}
+		}
+		save_global_event_target_as = gft_ai_tech_trade_event_target
+		hidden_effect = {
+			event_target:gft_ai_tech_trade_event_target = {
+				country_event = {
+					id = gft_ai_tech_trade.2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_defensive_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_non_aggression_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_cordial_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_loyal_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_patronizing_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_friendly_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_protective_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_embassy = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 750
+				}
+			}
+			modifier = {
+				factor = 100
+				has_research_agreement = event_target:gft_ai_tech_trade_0
+			}
+		}
+	}
+	option = {
+		name = gft_ai_tech_trade.1.l
+		trigger = {
+			exists = event_target:gft_ai_tech_trade_12
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_ai_tech_trade_12
+				is_at_war_with = event_target:gft_ai_tech_trade_12
+			}
+		}
+		save_global_event_target_as = gft_ai_tech_trade_event_target
+		hidden_effect = {
+			event_target:gft_ai_tech_trade_event_target = {
+				country_event = {
+					id = gft_ai_tech_trade.2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_defensive_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_non_aggression_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_cordial_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_loyal_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_patronizing_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_friendly_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_protective_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_embassy = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 750
+				}
+			}
+			modifier = {
+				factor = 100
+				has_research_agreement = event_target:gft_ai_tech_trade_0
+			}
+		}
+	}
+	option = {
+		name = gft_ai_tech_trade.1.m
+		trigger = {
+			exists = event_target:gft_ai_tech_trade_13
+		}
+		allow = {
+			NOR = {
+				is_rival = event_target:gft_ai_tech_trade_13
+				is_at_war_with = event_target:gft_ai_tech_trade_13
+			}
+		}
+		save_global_event_target_as = gft_ai_tech_trade_event_target
+		hidden_effect = {
+			event_target:gft_ai_tech_trade_event_target = {
+				country_event = {
+					id = gft_ai_tech_trade.2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_defensive_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_non_aggression_pact = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_cordial_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_loyal_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_patronizing_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_friendly_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				is_protective_to = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				has_embassy = event_target:gft_ai_tech_trade_0
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 300
+				}
+			}
+			modifier = {
+				factor = 10
+				opinion = {
+					who = event_target:gft_ai_tech_trade_0
+					value > 750
+				}
+			}
+			modifier = {
+				factor = 100
+				has_research_agreement = event_target:gft_ai_tech_trade_0
+			}
+		}
+	}
+	option = {
+		name = close
+		clear_global_event_target = gft_ai_tech_trade_0
+		clear_global_event_target = gft_ai_tech_trade_1
+		clear_global_event_target = gft_ai_tech_trade_2
+		clear_global_event_target = gft_ai_tech_trade_3
+		clear_global_event_target = gft_ai_tech_trade_4
+		clear_global_event_target = gft_ai_tech_trade_5
+		clear_global_event_target = gft_ai_tech_trade_6
+		clear_global_event_target = gft_ai_tech_trade_7
+		clear_global_event_target = gft_ai_tech_trade_8
+		clear_global_event_target = gft_ai_tech_trade_9
+		clear_global_event_target = gft_ai_tech_trade_10
+		clear_global_event_target = gft_ai_tech_trade_11
+		clear_global_event_target = gft_ai_tech_trade_12
+		clear_global_event_target = gft_ai_tech_trade_13
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100000
+				NOT = {
+					exists = event_target:gft_ai_tech_trade_1
+				}
+			}
+		}
+	}
+}
+
+# 研究取引 贈与 受け取り側
+country_event = {
+	id = gft_ai_tech_trade.2
+	title = gft_ai_tech_trade.2.name
+	desc = gft_ai_tech_trade.2.desc
+	picture = GFX_evt_intelligence_report
+	show_sound = event_activating_unknown_technology
+	is_triggered_only = yes
+	option = {
+		name = gft_tech_trade.1001.c
+		allow = {
+			always = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = gft_ai_tech_trade_country_flag
+				}
+			}
+			set_country_flag = gft_ai_tech_trade_country_flag
+		}
+		if = {
+			limit = {
+				exists = event_target:gft_technology_trade_ai_0
+			}
+			copy_random_tech_from = {
+				who = event_target:gft_technology_trade_ai_0
+			}
+			hidden_effect = {
+				add_trust = {
+					who = event_target:gft_technology_trade_ai_0
+					amount = 50
+				}
+			}
+		}
+	}
+}
+
+# 技術 贈与 国
+event = {
+	id = gft_ai_tech_trade.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		years_passed > 10
+	}
+	immediate = {
+		clear_global_event_target = gft_ai_tech_trade_event_target
+		clear_global_event_target = gft_ai_tech_trade_0
+		clear_global_event_target = gft_ai_tech_trade_1
+		clear_global_event_target = gft_ai_tech_trade_2
+		clear_global_event_target = gft_ai_tech_trade_3
+		clear_global_event_target = gft_ai_tech_trade_4
+		clear_global_event_target = gft_ai_tech_trade_5
+		clear_global_event_target = gft_ai_tech_trade_6
+		clear_global_event_target = gft_ai_tech_trade_7
+		clear_global_event_target = gft_ai_tech_trade_8
+		clear_global_event_target = gft_ai_tech_trade_9
+		clear_global_event_target = gft_ai_tech_trade_10
+		clear_global_event_target = gft_ai_tech_trade_11
+		clear_global_event_target = gft_ai_tech_trade_12
+		clear_global_event_target = gft_ai_tech_trade_13
+		random_playable_country = {
+			limit = {
+				is_ai = yes
+			}
+			country_event = {
+				id = gft_ai_tech_trade.6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gft_ai_tech_trade.6
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		country_event = {
+			id = gft_ai_tech_trade.1
+		}
+		save_global_event_target_as = gft_ai_tech_trade_0
+		random_country = {
+			limit = {
+				has_communications = event_target:gft_ai_tech_trade_0
+				is_country_type = default
+			}
+			save_global_event_target_as = gft_ai_tech_trade_1
+			random_country = {
+				limit = {
+					has_communications = event_target:gft_ai_tech_trade_0
+					is_country_type = default
+					NOT = {
+						is_same_value = event_target:gft_ai_tech_trade_1
+					}
+				}
+				save_global_event_target_as = gft_ai_tech_trade_2
+				random_country = {
+					limit = {
+						has_communications = event_target:gft_ai_tech_trade_0
+						is_country_type = default
+						NOT = {
+							is_same_value = event_target:gft_ai_tech_trade_1
+						}
+						NOT = {
+							is_same_value = event_target:gft_ai_tech_trade_2
+						}
+					}
+					save_global_event_target_as = gft_ai_tech_trade_3
+					random_country = {
+						limit = {
+							has_communications = event_target:gft_ai_tech_trade_0
+							is_country_type = default
+							NOT = {
+								is_same_value = event_target:gft_ai_tech_trade_1
+							}
+							NOT = {
+								is_same_value = event_target:gft_ai_tech_trade_2
+							}
+							NOT = {
+								is_same_value = event_target:gft_ai_tech_trade_3
+							}
+						}
+						save_global_event_target_as = gft_ai_tech_trade_4
+						random_country = {
+							limit = {
+								has_communications = event_target:gft_ai_tech_trade_0
+								is_country_type = default
+								NOT = {
+									is_same_value = event_target:gft_ai_tech_trade_1
+								}
+								NOT = {
+									is_same_value = event_target:gft_ai_tech_trade_2
+								}
+								NOT = {
+									is_same_value = event_target:gft_ai_tech_trade_3
+								}
+								NOT = {
+									is_same_value = event_target:gft_ai_tech_trade_4
+								}
+							}
+							save_global_event_target_as = gft_ai_tech_trade_5
+							random_country = {
+								limit = {
+									has_communications = event_target:gft_ai_tech_trade_0
+									is_country_type = default
+									NOT = {
+										is_same_value = event_target:gft_ai_tech_trade_1
+									}
+									NOT = {
+										is_same_value = event_target:gft_ai_tech_trade_2
+									}
+									NOT = {
+										is_same_value = event_target:gft_ai_tech_trade_3
+									}
+									NOT = {
+										is_same_value = event_target:gft_ai_tech_trade_4
+									}
+									NOT = {
+										is_same_value = event_target:gft_ai_tech_trade_5
+									}
+								}
+								save_global_event_target_as = gft_ai_tech_trade_6
+								random_country = {
+									limit = {
+										has_communications = event_target:gft_ai_tech_trade_0
+										is_country_type = default
+										NOT = {
+											is_same_value = event_target:gft_ai_tech_trade_1
+										}
+										NOT = {
+											is_same_value = event_target:gft_ai_tech_trade_2
+										}
+										NOT = {
+											is_same_value = event_target:gft_ai_tech_trade_3
+										}
+										NOT = {
+											is_same_value = event_target:gft_ai_tech_trade_4
+										}
+										NOT = {
+											is_same_value = event_target:gft_ai_tech_trade_5
+										}
+										NOT = {
+											is_same_value = event_target:gft_ai_tech_trade_6
+										}
+									}
+									save_global_event_target_as = gft_ai_tech_trade_7
+									random_country = {
+										limit = {
+											has_communications = event_target:gft_ai_tech_trade_0
+											is_country_type = default
+											NOT = {
+												is_same_value = event_target:gft_ai_tech_trade_1
+											}
+											NOT = {
+												is_same_value = event_target:gft_ai_tech_trade_2
+											}
+											NOT = {
+												is_same_value = event_target:gft_ai_tech_trade_3
+											}
+											NOT = {
+												is_same_value = event_target:gft_ai_tech_trade_4
+											}
+											NOT = {
+												is_same_value = event_target:gft_ai_tech_trade_5
+											}
+											NOT = {
+												is_same_value = event_target:gft_ai_tech_trade_6
+											}
+											NOT = {
+												is_same_value = event_target:gft_ai_tech_trade_7
+											}
+											OR = {
+												is_cordial_to = event_target:gft_ai_tech_trade_0
+												is_loyal_to = event_target:gft_ai_tech_trade_0
+												is_patronizing_to = event_target:gft_ai_tech_trade_0
+												is_friendly_to = event_target:gft_ai_tech_trade_0
+												is_protective_to = event_target:gft_ai_tech_trade_0
+											}
+										}
+										save_global_event_target_as = gft_ai_tech_trade_8
+										random_country = {
+											limit = {
+												has_communications = event_target:gft_ai_tech_trade_0
+												is_country_type = default
+												NOT = {
+													is_same_value = event_target:gft_ai_tech_trade_1
+												}
+												NOT = {
+													is_same_value = event_target:gft_ai_tech_trade_2
+												}
+												NOT = {
+													is_same_value = event_target:gft_ai_tech_trade_3
+												}
+												NOT = {
+													is_same_value = event_target:gft_ai_tech_trade_4
+												}
+												NOT = {
+													is_same_value = event_target:gft_ai_tech_trade_5
+												}
+												NOT = {
+													is_same_value = event_target:gft_ai_tech_trade_6
+												}
+												NOT = {
+													is_same_value = event_target:gft_ai_tech_trade_7
+												}
+												NOT = {
+													is_same_value = event_target:gft_ai_tech_trade_8
+												}
+											}
+											save_global_event_target_as = gft_ai_tech_trade_9
+											random_country = {
+												limit = {
+													has_communications = event_target:gft_ai_tech_trade_0
+													is_country_type = default
+													NOT = {
+														is_same_value = event_target:gft_ai_tech_trade_1
+													}
+													NOT = {
+														is_same_value = event_target:gft_ai_tech_trade_2
+													}
+													NOT = {
+														is_same_value = event_target:gft_ai_tech_trade_3
+													}
+													NOT = {
+														is_same_value = event_target:gft_ai_tech_trade_4
+													}
+													NOT = {
+														is_same_value = event_target:gft_ai_tech_trade_5
+													}
+													NOT = {
+														is_same_value = event_target:gft_ai_tech_trade_6
+													}
+													NOT = {
+														is_same_value = event_target:gft_ai_tech_trade_7
+													}
+													NOT = {
+														is_same_value = event_target:gft_ai_tech_trade_8
+													}
+													NOT = {
+														is_same_value = event_target:gft_ai_tech_trade_9
+													}
+												}
+												save_global_event_target_as = gft_ai_tech_trade_10
+												random_country = {
+													limit = {
+														has_communications = event_target:gft_ai_tech_trade_0
+														is_country_type = default
+														NOT = {
+															is_same_value = event_target:gft_ai_tech_trade_1
+														}
+														NOT = {
+															is_same_value = event_target:gft_ai_tech_trade_2
+														}
+														NOT = {
+															is_same_value = event_target:gft_ai_tech_trade_3
+														}
+														NOT = {
+															is_same_value = event_target:gft_ai_tech_trade_4
+														}
+														NOT = {
+															is_same_value = event_target:gft_ai_tech_trade_5
+														}
+														NOT = {
+															is_same_value = event_target:gft_ai_tech_trade_6
+														}
+														NOT = {
+															is_same_value = event_target:gft_ai_tech_trade_7
+														}
+														NOT = {
+															is_same_value = event_target:gft_ai_tech_trade_8
+														}
+														NOT = {
+															is_same_value = event_target:gft_ai_tech_trade_9
+														}
+														NOT = {
+															is_same_value = event_target:gft_ai_tech_trade_10
+														}
+													}
+													save_global_event_target_as = gft_ai_tech_trade_11
+													random_country = {
+														limit = {
+															has_communications = event_target:gft_ai_tech_trade_0
+															is_country_type = default
+															NOT = {
+																is_same_value = event_target:gft_ai_tech_trade_1
+															}
+															NOT = {
+																is_same_value = event_target:gft_ai_tech_trade_2
+															}
+															NOT = {
+																is_same_value = event_target:gft_ai_tech_trade_3
+															}
+															NOT = {
+																is_same_value = event_target:gft_ai_tech_trade_4
+															}
+															NOT = {
+																is_same_value = event_target:gft_ai_tech_trade_5
+															}
+															NOT = {
+																is_same_value = event_target:gft_ai_tech_trade_6
+															}
+															NOT = {
+																is_same_value = event_target:gft_ai_tech_trade_7
+															}
+															NOT = {
+																is_same_value = event_target:gft_ai_tech_trade_8
+															}
+															NOT = {
+																is_same_value = event_target:gft_ai_tech_trade_9
+															}
+															NOT = {
+																is_same_value = event_target:gft_ai_tech_trade_10
+															}
+															NOT = {
+																is_same_value = event_target:gft_ai_tech_trade_11
+															}
+														}
+														save_global_event_target_as = gft_ai_tech_trade_12
+														random_country = {
+															limit = {
+																has_communications = event_target:gft_ai_tech_trade_0
+																is_country_type = default
+																NOT = {
+																	is_same_value = event_target:gft_ai_tech_trade_1
+																}
+																NOT = {
+																	is_same_value = event_target:gft_ai_tech_trade_2
+																}
+																NOT = {
+																	is_same_value = event_target:gft_ai_tech_trade_3
+																}
+																NOT = {
+																	is_same_value = event_target:gft_ai_tech_trade_4
+																}
+																NOT = {
+																	is_same_value = event_target:gft_ai_tech_trade_5
+																}
+																NOT = {
+																	is_same_value = event_target:gft_ai_tech_trade_6
+																}
+																NOT = {
+																	is_same_value = event_target:gft_ai_tech_trade_7
+																}
+																NOT = {
+																	is_same_value = event_target:gft_ai_tech_trade_8
+																}
+																NOT = {
+																	is_same_value = event_target:gft_ai_tech_trade_9
+																}
+																NOT = {
+																	is_same_value = event_target:gft_ai_tech_trade_10
+																}
+																NOT = {
+																	is_same_value = event_target:gft_ai_tech_trade_11
+																}
+																NOT = {
+																	is_same_value = event_target:gft_ai_tech_trade_12
+																}
+															}
+															save_global_event_target_as = gft_ai_tech_trade_13
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gft_ai_tech_trade.7
+	title = gft_ai_tech_trade.7.name
+	desc = gft_ai_tech_trade.7.desc
+	picture = GFX_evt_intelligence_report
+	show_sound = event_activating_unknown_technology
+	is_triggered_only = yes
+	immediate = {
+		random_playable_country = {
+			copy_random_tech_from = {
+				who = root
+			}
+		}
+	}
+}

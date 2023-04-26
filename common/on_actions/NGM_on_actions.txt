@@ -30,6 +30,14 @@ on_game_start_country = {
 	}
 }
 
+# No scope, like on_game_start
+on_monthly_pulse = {
+	random_events = {
+		90 = 0
+		10 = gft_ai_tech_trade.5
+	}
+}
+
 # 帝国のために新しいリーダーを生成し、募集のために利用できるようになります。
 # scope: country, from: leader
 on_leader_spawned = {
