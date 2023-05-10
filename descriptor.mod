@@ -1,9 +1,9 @@
-version="1.37.20"
+version="1.38.0"
 tags={
 	"Diplomacy"
 	"Economy"
 	"Gameplay"
 }
 name="New Government Mod 2"
-supported_version="3.7.*"
+supported_version="3.8.*"
 remote_file_id="2493984024"
