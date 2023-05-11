@@ -3354,7 +3354,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "civics"
-			size = { width = 310 height = 223 }
+			size = { width = 310 height = 330 }
 			position = { x = 710 y = 50 }
 
 			background = {
@@ -3366,7 +3366,7 @@ guiTypes = {
 			smoothListboxType = {
 				name = "selected_entries"
 				position = { x = 8 y = 8 }
-				size = { x = 294 y = 207 }
+				size = { x = 294 y = 320 }
 				scrollbarType = "standardlistbox_slider"
 				borderSize = { x = 0 y = 0 }
 				spacing = 3
@@ -3375,7 +3375,7 @@ guiTypes = {
 			smoothListboxType = {
 				name = "available_entries"
 				position = { x = 8 y = 15 }
-				size = { x = 294 y = 207 }
+				size = { x = 294 y = 320 }
 				scrollbarType = "standardlistbox_slider"
 				borderSize = { x = 0 y = 0 }
 				spacing = 3
@@ -3384,7 +3384,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "civic_points_left"
-			position = { x = 710 y = 300 }
+			position = { x = 710 y = 380 }
 			font = "malgun_goth_24"
 			maxWidth = 310
 			maxHeight = 20
@@ -3418,8 +3418,8 @@ guiTypes = {
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "NEXT"
-			position = { x = -290 y = -40 }
-			orientation = LOWER_RIGHT
+			position = { x = 290 y = -40 }
+			orientation = LOWER_LEFT
 			#shortcut = "RETURN"
 			clicksound = confirm_click
 		}
