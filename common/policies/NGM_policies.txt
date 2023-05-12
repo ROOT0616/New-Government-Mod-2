@@ -751,6 +751,7 @@ ngm_ritual_raw = {
 	option = {
 		name = "NAME_NGM_Gre_rit"
 		potential = {
+			has_civic = civic_ngm_respect_act
 		}
 		policy_flags = {
 			ngm_flag_Gre_rit
