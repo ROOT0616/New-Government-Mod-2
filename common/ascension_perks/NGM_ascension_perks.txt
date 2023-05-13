@@ -251,7 +251,9 @@ ap_ngm_absolutely_class = {
 	}
 	modifier = {
 		planet_jobs_worker_produces_mult = 0.15
+		planet_jobs_slave_produces_mult = 0.15
 		pop_cat_worker_political_power = -1
+		pop_cat_slave_political_power = -1
 		pop_cat_ruler_happiness = 0.1
 	}
 	ai_weight = {
@@ -590,7 +592,7 @@ ap_ngm_heaven_consumer = {
 	}
 }
 
-# 23.重層的国家	月間忠誠度+2
+# 23.重層的国家	労働者・奴隷幸福度+25%、労働者・奴隷産出+20%、毎月の忠誠心+2
 ap_ngm_layer_countries = {
 	potential = {
 		NOT = {
@@ -606,6 +608,10 @@ ap_ngm_layer_countries = {
 		}
 	}
 	modifier = {
+		pop_cat_worker_happiness = 0.25
+		pop_cat_slave_happiness = 0.25
+		planet_jobs_worker_produces_mult = 0.2
+		planet_jobs_slave_produces_mult = 0.2
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて
@@ -745,7 +751,8 @@ ap_ngm_relation_old_empire = {
 	}
 }
 
-# 29.工部省	建造物建造コスト-20%、区域建造コスト-20%、住居+30%
+# 29.工部省	建造物コスト-25%、住居+50%、巨大構造物建造コスト-15%、巨大構造物同時建造数+2
+
 ap_ngm_ministry_constructure = {
 	potential = {
 		NOT = {
@@ -753,8 +760,11 @@ ap_ngm_ministry_constructure = {
 		}
 	}
 	modifier = {
-		planet_buildings_cost_mult = -0.2
-		planet_housing_mult = 0.3
+		planet_buildings_cost_mult = -0.25
+		planet_housing_mult = 0.5
+		planet
+		country_megastructure_build_cap_add = 2
+
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて

@@ -1,1087 +1,1120 @@
-#人口政策	Population Policy
-# 人口政策なし
-# 一人っ子政策
-ngm_policies_population_stance = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-	}
+#	1.法体系(民法や刑法を中心とした帝国内における法秩序に関して、帝国の法律機関が基調とする法理論を決定する。)
+#　①理性法釈		安定度-10,研究力+5%		(物質主義かつ平等主義 or 実利)	理性はすべてを解決し、成文法もしくは不文の法ではなく、当事者間や第三者の理性に秩序と解決を寄託する法理論
+#　②自由主義法論	安定度+5,幸福度+10%		(平等主義のみ)			少数派への配慮を含め、できる限り個々人に対する自由と平等を保障する法理論
+#　③法秩序大全		安定度+10			(制限なし)			法による秩序は社会を安寧に導き、穏健な社会を実現するための手段であるとする法理論
+#　④共同体法拠		安定度+5,布告基金+20		(平等主義、実利以外)		自己が所属している、組合やギルドなどの共同体を基調とした小型社会の素朴な秩序維持を中核とする法理論
+#　⑤父権主義的法典	安定度+10,犯罪-10,帝国規模+5%	(平等主義、実利以外)		国家が社会的な内容だけではなく、個人間の関係においても家父長的な介入を行うことで秩序維持を行う法理論
+#　⑥勅令論証		安定度+15,布告基金-30		(権威主義のみ)			国家指導者や執行機関の命令が全ての法源であり、命令で規定されていることがすべてであるという法理論
+#　⑦慣習法解		安定度-10,統合力+5%		(精神主義のみ)			成文法などではなく、長く社会を形作ってきた慣習こそが社会を維持する唯一の法であるとする法理論
+ngm_legal_system = {
 	option = {
-		name = "NAME_NGM_population_stance_non_non"		# 人口政策なし
+		name = "NAME_NGM_Hig_low"		#　①理性法釈		安定度-10,研究力+5%		(物質主義かつ平等主義 or 実利)	理性はすべてを解決し、成文法もしくは不文の法ではなく、当事者間や第三者の理性に秩序と解決を寄託する法理論
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+			or = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+			or = {
+				has_ethic = ethic_capitalism
+				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
 			}
 		}
 		policy_flags = {
-			population_stance_non_non
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_authoritarian
-			}
-			modifier = {
-				factor = 0.5
-				has_civic = civic_ngm_kakistocracy
-			}
-			modifier = {
-				factor = 2
-				has_civic = civic_beacon_of_liberty
-			}
-			modifier = {
-				factor = 10
-				has_civic = civic_neoliberalism
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_one_child"		# 一人っ子政策
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			population_stance_one_child
+			ngm_flag_Hig_low
 		}
 		modifier = {
-			pop_growth_speed = -0.2
-			planet_jobs_alloys_produces_mult = 0.1
-			planet_jobs_physics_research_produces_mult = 0.1
-			planet_jobs_society_research_produces_mult = 0.1
-			planet_jobs_engineering_research_produces_mult = 0.1
+			planet_stability_add = -10
+			country_physics_research_produces_mult = 0.05
+			country_society_research_produces_mult = 0.05
+			country_engineering_research_produces_mult = 0.05
 		}
 		AI_weight = {
 			weight = 10
-			# Militarist
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_militarist
+		}
+	}
+	option = {
+		name = "NAME_NGM_Lib_low"		#②自由主義法論	安定度+5,幸福度+10%		(平等主義のみ)			少数派への配慮を含め、できる限り個々人に対する自由と平等を保障する法理論
+		potential = {
+			or = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
 			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_militarist
+		}
+		policy_flags = {
+			ngm_flag_Lib_low
+		}
+		modifier = {
+			planet_stability_add = 5
+			pop_happiness = 0.1
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_Net_low"		#　③法秩序大全		安定度+10			(制限なし)			法による秩序は社会を安寧に導き、穏健な社会を実現するための手段であるとする法理論
+		potential = {
+			or = {
 			}
-			# Socialism
-			modifier = {
-				factor = 1.5
+		}
+		policy_flags = {
+			ngm_flag_Net_low
+		}
+		modifier = {
+			planet_stability_add = 10
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_Com_low"		#　④共同体法拠		安定度+5,布告基金+20		(平等主義、実利以外)		自己が所属している、組合やギルドなどの共同体を基調とした小型社会の素朴な秩序維持を中核とする法理論
+		potential = {
+			not = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Com_low
+		}
+		modifier = {
+			planet_stability_add = 5
+			country_edict_fund_add = 20
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_Pat_low"		#　⑤父権主義的法典	安定度+10,犯罪-10,帝国規模+5%	(平等主義、実利以外)		国家が社会的な内容だけではなく、個人間の関係においても家父長的な介入を行うことで秩序維持を行う法理論
+		potential = {
+			not = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Pat_low
+		}
+		modifier = {
+			planet_stability_add = 10
+			planet_crime_add = -10
+			empire_size_mult = 0.05
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_Ord_low"		#　⑥勅令論証		安定度+15,布告基金-30		(権威主義のみ)			国家指導者や執行機関の命令が全ての法源であり、命令で規定されていることがすべてであるという法理論
+		potential = {
+			or = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		policy_flags = {
+			ngm_flag_Ord_low
+		}
+		modifier = {
+			planet_stability_add = 15
+			country_edict_fund_add = -30
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	option = {
+		name = "NAME_NGM_Con_low"		#　⑦慣習法解		安定度-10,統合力+5%		(精神主義のみ)			成文法などではなく、長く社会を形作ってきた慣習こそが社会を維持する唯一の法であるとする法理論
+		potential = {
+			or = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		policy_flags = {
+			ngm_flag_Con_low
+		}
+		modifier = {
+			planet_stability_add = -10
+			country_unity_produces_mult = 0.05
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+}
+
+#2.選挙法(国民の意見を政策に反映させるための手段として、どのような手法を行うか決定する。)
+ngm_election_law = {
+	#　①比例代表選挙	労働者政治力+20%,派閥統合力収入+50%,統治志向魅力-40%	(権威主義、実利主義ではない)			政党を基調とした選挙を行うことで、より少数派の意見を国政に反映することができる選挙制度
+	option = {
+		name = "NAME_NGM_Par_ele"
+		potential = {
+			not = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Par_ele
+		}
+		modifier = {
+			pop_cat_worker_political_power = 0.2
+			pop_factions_unity_produces_mult = 0.5
+			pop_government_ethic_attraction = -0.4
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　②大選挙区選挙	労働者政治力+20%,派閥統合力収入+10%,布告基金+10		(権威主義、実利主義ではない)			選挙区から複数名の候補を選ぶことで、多数の意見を国政に反映することができる選挙制度
+	option = {
+		name = "NAME_NGM_Big_ele"
+		potential = {
+			not = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Big_ele
+		}
+		modifier = {
+			pop_cat_worker_political_power = 0.2
+			pop_factions_unity_produces_mult = 0.1
+			country_edict_fund_add = 10
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　③小選挙区選挙	労働者政治力+20%,布告基金+30				(権威主義、実利主義ではない)			選挙区から1名の候補を選ぶことで、大多数の民意を強力に国政へ反映することができる選挙制度
+	option = {
+		name = "NAME_NGM_Sma_ele"
+		potential = {
+			not = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Sma_ele
+		}
+		modifier = {
+			pop_cat_worker_political_power = 0.2
+			country_edict_fund_add = 30
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　④代理人選挙		幸福度-10%,帝国規模-5%					(制限なし)					民意を直接国政に反映させることを避け、できる限り抽象化した民意を国政へ反映させる選挙制度
+	option = {
+		name = "NAME_NGM_Age_ele"
+		potential = {
+		}
+		policy_flags = {
+			ngm_flag_Age_ele
+		}
+		modifier = {
+			pop_happiness = -0.1
+			empire_size_mult = -0.05
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑤形骸化選挙Mel_ele		労働者政治力-50%,労働者幸福度-10%			(権威主義or実利主義)				票数調整や、立候補に大きな制限があるなど、形式的にだけ実施される選挙制度
+	option = {
+		name = "NAME_NGM_Mel_ele"
+		potential = {
+			or = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Mel_ele
+		}
+		modifier = {
+			pop_cat_worker_happiness = -0.1
+			pop_cat_worker_political_power = -0.5
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑥名望者選挙Spe_ele		労働者政治力-50%,統治者政治力+50%,派閥統合力収入-30%	(権威主義)					資本家や貴族、高級官僚、科学者、宗教家等の選ばれた者のみが投票を行う選挙制度
+	option = {
+		name = "NAME_NGM_Spe_ele"
+		potential = {
+			or = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		policy_flags = {
+			ngm_flag_Spe_ele
+		}
+		modifier = {
+			pop_cat_ruler_political_power = 0.5
+			pop_cat_worker_political_power = -0.5
+			pop_factions_unity_produces_mult = -0.3
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑦選挙無しNot_ele		労働者政治力-75%,統治志向魅力+30%			(権威主義)					選挙自体を実施しておらず、任命や裏交渉、くじ引き等で代表を選ぶ制度
+	option = {
+		name = "NAME_NGM_Not_ele"
+		potential = {
+			or = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		policy_flags = {
+			ngm_flag_Not_ele
+		}
+		modifier = {
+			pop_factions_unity_produces_mult = 0.3
+			pop_cat_worker_political_power = -0.75
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑧直接選挙(特殊)Dir_ele	安定度+5,幸福度+5%,布告基金+40				(国是:直接民主制を有しているとこれのみの選択)	直接民意を政治に反映させる、この国独特の文化的な選挙制度
+	option = {
+		name = "NAME_NGM_Dir_ele"
+		potential = {
+			or = {
+				has_civic = civic_ngm_direct_democracy
+			}
+		}
+		policy_flags = {
+			ngm_flag_Dir_ele
+		}
+		modifier = {
+			planet_stability_add = 5
+			pop_happiness = 0.05
+			country_edict_fund_add = 40
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+}
+
+#3.議会法(個別の法律や政策を遂行するために、必要な議決の方法や議論の制度について決定する。)
+ngm_parliament_law = {
+	#　①国民議会Pep_Par		布告基金+20,幸福度+10					(平等主義である)					選挙人の意見が直接法律や政府に反映される議会制度
+	option = {
+		name = "NAME_NGM_Par_ele"
+		potential = {
+			or = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		policy_flags = {
+			ngm_flag_Par_ele
+		}
+		modifier = {
+			pop_happiness = 10
+			country_edict_fund_add = 20
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　②衆議院と参議院Gre_Par	布告基金+30						(平等主義である)					選挙人の意見が複数の角度から法律や政府に反映される議会制度
+	option = {
+		name = "NAME_NGM_Gre_Par"
+		potential = {
+			or = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		policy_flags = {
+			ngm_flag_Gre_Par
+		}
+		modifier = {
+			country_edict_fund_add = 30
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　③市民院と連邦院Fed_Par	布告基金+20,帝国規模-5%					(権威主義ではない)					市民の代表機関である議会と、地域の意見を個別に反映させる議会が並立した制度
+	option = {
+		name = "NAME_NGM_Fed_Par"
+		potential = {
+			not = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		policy_flags = {
+			ngm_flag_Fed_Par
+		}
+		modifier = {
+			country_edict_fund_add = 20
+			empire_size_mult = -0.05
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　④庶民院と貴族院Nob_Par	布告基金+20,安定度+10					(栄望主義or権威主義である)			選挙人の意見を反映させる議会と、貴族や有力者、知識人等の意見を反映させる議会が並立した制度
+	option = {
+		name = "NAME_NGM_Nob_Par"
+		potential = {
+			or = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_honorism
+				has_ethic = ethic_fanatic_honorism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Nob_Par
+		}
+		modifier = {
+			country_edict_fund_add = 20
+			planet_stability_add = 10
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑤憲法院c		布告基金+50,労働者幸福度-20%				(平等主義、実利主義ではない)				法の専門家が市民や労働者とは別に専門的に議論と法制定に向けて活動する議会制度
+	option = {
+		name = "NAME_NGM_Con_Par"
+		potential = {
+			not = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Con_Par
+		}
+		modifier = {
+			country_edict_fund_add = 50
+			pop_cat_worker_happiness = -0.2
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑥元老院Sen_Par		布告基金+10,リーダースキル上限+2,リーダー維持費-50%	(平等主義、実利主義ではない)				名望家が国政に参与し、国政や立法に取り掛かる議会制度
+	option = {
+		name = "NAME_NGM_Sen_Par"
+		potential = {
+			not = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Sen_Par
+		}
+		modifier = {
+			country_edict_fund_add = 10
+			leader_skill_levels = 2
+			leaders_upkeep_mult = -0.5
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑦議会無しNot_Par		布告基金-20,統治志向魅力+30%,リーダー雇用コスト-20%	(権威主義or実利主義or国是:直接民主制だとこれで固定)	議会ではなく、国民同士や、権力者同士での会話や判断が国政や法律に直接反映される制度
+	option = {
+		name = "NAME_NGM_Not_Par	"
+		potential = {
+			or = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
+				has_civic = civic_ngm_direct_democracy
+			}
+		}
+		policy_flags = {
+			ngm_flag_Not_Par
+		}
+		modifier = {
+			country_edict_fund_add = -20
+			pop_government_ethic_attraction = 0.3
+			leaders_upkeep_mult = -0.2
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑧翼賛議会(特殊)Agr_Par	布告基金+30,安定度+5					(国是:外見的立憲主義を有しているとこれのみの選択)	政府に忠実、もしくは権力者の発言が議会の力を超越しており、議会が権力者の追認機関となっている制度
+	option = {
+		name = "NAME_NGM_Not_Par	"
+		potential = {
+			or = {
+				has_civic = civic_sham_constitutionalism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Not_Par
+		}
+		modifier = {
+			country_edict_fund_add = 30
+			planet_stability_add = 5
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+}
+
+#4.国税法(国家の収入に関する税に関して、どのような方針で徴収を行うか決定する。)
+ngm_tax_law = {
+	#　①無税の楽園法		エネルギー収入-30%,幸福度+20%,安定度+10		(社会主義以外)			この国には国民に課される税金がない。国家は資源収入や関税等の租税に頼らない方法で歳入を確保している
+	option = {
+		name = "NAME_NGM_Hev_tax"
+		potential = {
+			not = {
+				has_ethic = ethic_socialism
 				has_ethic = ethic_fanatic_socialism
 			}
-			modifier = {
-				factor = 1.25
+		}
+		policy_flags = {
+			ngm_flag_Hev_tax
+		}
+		modifier = {
+			pop_happiness = 0.2
+			planet_stability_add = 10
+			country_energy_produces_mult = -0.3
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　②税負担軽減			エネルギー収入-15%,幸福度+10%			(制限なし)			この国の税は銀河的にみても低額で、国民の負担はかなり緩和されている
+	option = {
+		name = "NAME_NGM_Sho_tax"
+		potential = {
+		}
+		policy_flags = {
+			ngm_flag_Sho_tax
+		}
+		modifier = {
+			pop_happiness = 0.1
+			country_energy_produces_mult = -0.15
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　③軽減税法			エネルギー収入+5%,幸福度+5%			(制限なし)			この国では、生活必需品等の生活に必要な物資を低税率もしくは無税と定めており、歳入と市民生活の間でバランスを維持している
+	option = {
+		name = "NAME_NGM_Hap_tax"
+		potential = {
+		}
+		policy_flags = {
+			ngm_flag_Hap_tax
+		}
+		modifier = {
+			pop_happiness = 0.05
+			country_energy_produces_mult = 0.05
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　④累進課税法			エネルギー収入+10%				(資本主義以外)			この国では、高所得者に高額の税を課すことで、国家全体の収入を確保しつつ、格差に配慮を行っている
+	option = {
+		name = "NAME_NGM_Gra_tax"
+		potential = {
+			not = {
+				has_ethic = ethic_capitalism
+				has_ethic = ethic_fanatic_capitalism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Gra_tax
+		}
+		modifier = {
+			country_energy_produces_mult = 0.1
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑤徹底的調査			エネルギー収入+30%,幸福度-20%			(制限なし)			この国では、税務調査が重要な国家事業となっており、ありとあらゆる方法で税の滞納がないかを探し出す
+	option = {
+		name = "NAME_NGM_Res_tax"
+		potential = {
+		}
+		policy_flags = {
+			ngm_flag_Res_tax
+		}
+		modifier = {
+			pop_happiness = -0.2
+			country_energy_produces_mult = 0.3
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑥代理人法			エネルギー収入+10%,犯罪+30			(実利主義or資本主義のみ)	この国では、国家から徴税権を購入した組織もしくは人物が徴税を代行しており、汚職の温床となっている
+	option = {
+		name = "NAME_NGM_Age_tax"
+		potential = {
+			or = {
+				has_ethic = ethic_capitalism
+				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Age_tax
+		}
+		modifier = {
+			planet_crime_add = 30
+			country_energy_produces_mult = 0.1
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑦金がなくなるまで払え法	エネルギー収入+50%,幸福度-40%,安定度-10		(資本主義以外)			この国の税は銀河的にみても信じられないほど高く、国民は税を払うと、一切の経済活動が困難になる
+	option = {
+		name = "NAME_NGM_All_tax"
+		potential = {
+			not = {
 				has_ethic = ethic_socialism
+				has_ethic = ethic_fanatic_socialism
 			}
-			# Authoritarian
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_authoritarian
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_authoritarian
-			}
-			# Authoritarian
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_egalitarian
-			}
-			# Citizen Service
-			modifier = {
-				factor = 1.5
-				has_civic = civic_citizen_service
-			}
-			# 詰め込み教育
-			modifier = {
-				factor = 2
-				has_civic = civic_cramming_for_education
-			}
+		}
+		policy_flags = {
+			ngm_flag_All_tax
+		}
+		modifier = {
+			pop_happiness = -0.4
+			planet_stability_add = -10
+			country_energy_produces_mult = 0.5
+		}
+		AI_weight = {
+			weight = 10
 		}
 	}
 }
 
-# 一般国家新政策 (特筆ない限り☆がデフォルト)
-# 〇民法(家族や個人、契約に関する法律)civil_law
-# 個人の最大限尊重 individual_respect    :幸福度+10%、安定度-5、平等主義魅力+20%    (個人の権利は他者の権利を侵さない限り最大限尊重され、家族や契約も最大限の自由が認められる。)(平等主義のみ) 
-# 少数派への寛容    minority_tolerance    :幸福度+5%、受容主義魅力+10%        (性的少数派やハンディを背負った者、少数種族など社会的弱者へ保障を与え、社会的平等を目指す。)(受容主義のみ) 
-# ☆穏健な秩序維持 maintaining_order    :なし                     (社会の秩序を守るため、安定的な家族制度と契約の自由を守るべきである。)
-# 家父長的秩序    patriarch        :安定度+5、権威主義魅力+10%        (社会の安定を保つためには古来より重視される血縁集団や地縁集団を基盤に社会を規定すべきである。)(権威主義、軍国主義のみ) 
-# 父権的な国家干渉 state_intervention    :安定度+10、幸福度-5%、権威主義魅力+20%    (個人とはもろく、国家の安定のためには国家自身による個人への関与と指導こそが必要なのである。)(権威主義のみ)
-ngm_policies_civil_law = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
+#5.儀典法(国家の儀礼や儀式に関する規定や、制度について決定する。)
+ngm_ritual_raw = {
+	#　①紋章院		勲章+0.1,統合力+10%,統治者の消費財消費量+2		(栄望のみ)						この国の栄典管理機関は銀河でも有数の名望を有しており、この機関に認められることは銀河規模の栄誉だ
 	option = {
-		name = "NAME_NGM_individual_respect"		# 個人の最大限尊重
+		name = "NAME_NGM_Cor_rit"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_egalitarian
-				has_ethic = "ethic_egalitarian"
-				has_ethic = "ethic_fanatic_egalitarian"
-			}
-		}
-		policy_flags = {
-			civil_law_individual_respect
-		}
-		modifier = {
-			pop_happiness = 0.1
-			planet_stability_add = -5
-			pop_ethic_egalitarian_attraction_mult = 0.2
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_egalitarian
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_authoritarian
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_authoritarian
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_minority_tolerance"		# 少数派への寛容
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_xenophile
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-			}
-		}
-		policy_flags = {
-			civil_law_minority_tolerance
-		}
-		modifier = {
-			pop_happiness = 0.05
-			pop_ethic_xenophile_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_xenophile
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_xenophile
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_xenophobe
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_xenophobe
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_maintaining_order"		# ☆穏健な秩序維持
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			civil_law_maintaining_order
-		}
-		modifier = {
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_patriarch"		# 家父長的秩序
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_authoritarian_or_militarist
-				has_ethic = "ethic_authoritarian"
-				has_ethic = "ethic_fanatic_authoritarian"
-				has_ethic = "ethic_militarist"
-				has_ethic = "ethic_fanatic_militarist"
-			}
-		}
-		policy_flags = {
-			civil_law_patriarch
-		}
-		modifier = {
-			planet_stability_add = 5
-			pop_ethic_authoritarian_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_authoritarian
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_fanatic_authoritarian
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_egalitarian
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM2_state_intervention"		# 父権的な国家干渉
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_authoritarian
-				has_ethic = "ethic_authoritarian"
-				has_ethic = "ethic_fanatic_authoritarian"
-			}
-		}
-		policy_flags = {
-			civil_law_state_intervention
-		}
-		modifier = {
-			planet_stability_add = 10
-			pop_happiness = -0.05
-			pop_ethic_authoritarian_attraction_mult = 0.2
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_interventionism
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_interventionism
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_neutralism
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_neutralism
-			}
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_authoritarian
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_authoritarian
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_egalitarian
-			}
-		}
-	}
-}
-
-# 〇刑法(犯罪者に適応される社会秩序のための法律) criminal_law
-# 刑罰既定の有名無実化    not_in_reality            :犯罪度+20、幸福度+10%、実利主義魅力+20%    (刑罰とはフィクション上の存在である。)(実利主義のみ) 
-# 親告罪の拡大        requires_formal_complaint    :安定度-5、実利主義+10%             (訴えなき者を救済するほど我が国の官憲は暇ではない。)
-# ☆公共の秩序維持    maintaining_order_cri        :なし                        (社会の安全と安定を守るためには最低限の刑罰既定が必要である。)
-# 厳格な刑罰既定        harsh_law            :安定度+5、権威主義魅力+10%             (厳しい刑罰は犯罪者を委縮させ、社会を安全を導く。)
-# 秩序と安寧の国        order_peace            :犯罪度-20、幸福度-10%、権威主義魅力+20%    (我が国は世界で最も治安のよい国である。そう語った者は詐欺罪で起訴された。)(権威主義のみ)
-ngm_policies_criminal_law = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_not_in_reality"		# 刑罰既定の有名無実化
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_utilitarianism
-				has_ethic = "ethic_utilitarianism"
-				has_ethic = "ethic_fanatic_utilitarianism"
-			}
-		}
-		policy_flags = {
-			criminal_law_not_in_reality
-		}
-		modifier = {
-			planet_crime_add = 20
-			pop_happiness = 0.1
-			pop_ethic_utilitarianism_attraction_mult = 0.2
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_utilitarianism
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_utilitarianism
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_honorism
-			}
-			modifier = {
-				factor = 0.75
+			or = {
 				has_ethic = ethic_honorism
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_requires_formal_complaint"		# 親告罪の拡大
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			criminal_law_requires_formal_complaint
-		}
-		modifier = {
-			planet_stability_add = -5
-			pop_ethic_utilitarianism_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_utilitarianism
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_fanatic_utilitarianism
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_honorism
-			}
-			modifier = {
-				factor = 0.75
 				has_ethic = ethic_fanatic_honorism
 			}
 		}
-	}
-	option = {
-		name = "NAME_NGM_maintaining_order_cri"		# ☆公共の秩序維持
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
 		policy_flags = {
-			criminal_law_maintaining_order_cri
+			ngm_flag_Cor_rit
 		}
 		modifier = {
+			country_base_ngm_order_of_merit_produces_add = 0.1
+			country_unity_produces_mult = 0.1
+			ruler_consumer_goods_upkeep_add = 2
 		}
 		AI_weight = {
 			weight = 10
 		}
 	}
+	#　②典礼省		式部官からの勲章+0.2,統合力+20%,統治者の消費財消費量+1	(実利ではない)						この国には栄典を管理する独立機関が存在しており、名誉や勲章の管理を行う大規模官僚機関が保証されている
 	option = {
-		name = "NAME_NGM_harsh_law"		# 厳格な刑罰既定
+		name = "NAME_NGM_Rim_rit"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+			not = {
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
 			}
 		}
 		policy_flags = {
-			criminal_law_harsh_law
+			ngm_flag_Rim_rit
 		}
 		modifier = {
-			planet_stability_add = 5
-			pop_ethic_authoritarian_attraction_mult = 0.1
+			planet_job_bureau_of_ceremonies_ngm_order_of_merit_produces_add = 0.2
+			ruler_consumer_goods_upkeep_add = 1
+			country_unity_produces_mult = 0.2
 		}
 		AI_weight = {
 			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_authoritarian
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_fanatic_authoritarian
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_egalitarian
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_fanatic_egalitarian
-			}
 		}
 	}
+	#　③儀典法		式部官からの勲章+0.1,統合力+10%,Pop維持コスト+10%	(実利ではない)						儀礼を強化することでこの国の存在感を他国に示すことができ、国内外へ大きな影響を与えることができる
 	option = {
-		name = "NAME_NGM_order_peace"		# 秩序と安寧の国
+		name = "NAME_NGM_Ril_rit"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_authoritarian
-				has_ethic = "ethic_authoritarian"
-				has_ethic = "ethic_fanatic_authoritarian"
+			not = {
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
 			}
 		}
 		policy_flags = {
-			criminal_law_order_peace
+			ngm_flag_Ril_rit
 		}
 		modifier = {
-			planet_crime_add = -20
-			pop_happiness = -0.1
-			pop_ethic_authoritarian_attraction_mult = 0.2
+			planet_job_bureau_of_ceremonies_ngm_order_of_merit_produces_add = 0.1
+			country_unity_produces_mult = 0.1
+			planet_pops_upkeep_mult = 0.1
 		}
 		AI_weight = {
 			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_authoritarian
+		}
+	}
+	#　④慣習のみ		統合力+5%						(制限なし)						栄典は少なくとも社会の共有物の一種であり、法典に定めるほどの者ではないが、軽視もしない
+	option = {
+		name = "NAME_NGM_Con_rit"
+		potential = {
+		}
+		policy_flags = {
+			ngm_flag_Con_rit
+		}
+		modifier = {
+			country_unity_produces_mult = 0.05
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑤栄典売却		式部官からの勲章-0.2,式部官に交易価値+10		(栄望ではない)						栄典を国内外に売却することで、収入を確保する。簡単に儲かるというのはよいものだ
+	option = {
+		name = "NAME_NGM_Sel_rit"
+		potential = {
+			not = {
+				has_ethic = ethic_fanatic_honorism
+				has_ethic = ethic_honorism
 			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_authoritarian
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_egalitarian
-			}
+		}
+		policy_flags = {
+			ngm_flag_Sel_rit
+		}
+		modifier = {
+			planet_job_bureau_of_ceremonies_trade_value_produces_add = +10
+			planet_job_bureau_of_ceremonies_ngm_order_of_merit_produces_add = -0.2
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑥反栄典法		労働者幸福度+20%,労働者生産力+10%			(社会主義かつ栄望ではない)				栄典は人心を惑わすものでしかない。その存在は能力の内労働者の生産力を押し下げる可能性を有する
+	option = {
+		name = "NAME_NGM_Ant_rit"
+		potential = {
+		}
+		policy_flags = {
+			ngm_flag_Ant_rit
+		}
+		modifier = {
+			pop_cat_worker_happiness = 0.2
+			planet_jobs_worker_produces_mult = 0.1
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑦高度な栄典制度	統合力+30%,統治者の消費財消費量+1			(国是：称号と敬称の尊重法を有しているとこれのみの選択)	栄典制度は社会の発展とともにあり、そしてこれからも存在していくだろう
+	option = {
+		name = "NAME_NGM_Gre_rit"
+		potential = {
+			has_civic = civic_ngm_respect_act
+		}
+		policy_flags = {
+			ngm_flag_Gre_rit
+		}
+		modifier = {
+			country_unity_produces_mult = 0.3
+			ruler_consumer_goods_upkeep_add = 1
+		}
+		AI_weight = {
+			weight = 10
 		}
 	}
 }
 
-# 〇議会制度（議会に関する制度を規定する。） parliamentarism
-# 三院制    triumvirate_system    :安定度+10、布告コスト+10%            (議論には議論を重ね、組織的な三読制（合せて九回読み合わせるかもしれない）を実現させるべきだ。)(独裁制、企業以外) 
-# 二院制    bicameral_system    :派閥満足度+5%、布告コスト+5%            (一度だけの話し合いでは間違いを犯す可能性がある。念には念を入れて二回目の議論をすべきだ。)(独裁制、企業以外)
-# 一院制    unicameral_system    :影響力+0.5                    (国民の議論を的確に反映させるために議会は必要である。)(独裁制以外。独裁制と君主制以外デフォルト) 
-# 勅撰議会literary_system        :派閥満足度-5%、管理許容量+20%、布告コスト-5%    (国会議員とは、国家において信用できる者が任命されるべきであり、国家に選ばれた者が賛否を示すべきである。)(民主制、企業以外) 
-# 協賛議会support_system        :派閥満足度-10%、布告コスト-10%            (議会は無知蒙昧なる民衆を騙すための機関にすぎない。)(民主制以外。独裁制、君主制デフォルト) 
-# 議会なしno_system        :派閥満足度-15%、権威主義魅力+20%、影響力+1    (議会すら要らない。)(民主制以外)
-ngm_policies_parliamentarism = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
+#6.表現法(表現の自由や情報の自由に関する情報面の規制に関する政策を決定する。)
+ngm_expression_raw = {
+	#　①SNS黄金法		25PopごとにインフルエンサーJob+1、犯罪+10%、暗号力-5、統合力+20%	(実利or平等)				社会と常時オンラインでつながり続け、そしてより多くの注目がよりクリエイティビティへとつながる
 	option = {
-		name = "NAME_NGM_triumvirate_system"		# 三院制
+		name = "NAME_NGM_SNS_cap"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			NOR = {
-				has_authority = auth_dictatorial
-				has_authority = auth_corporate
+			or = {
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
 			}
 		}
 		policy_flags = {
-			parliamentarism_triumvirate_system
+			ngm_flag_SNS_cap
 		}
 		modifier = {
-			planet_stability_add = 10
-			edicts_cost_mult = 0.1
-		}
-		AI_weight = {
-			weight = 5
-		}
-	}
-	option = {
-		name = "NAME_NGM_bicameral_system"		# 二院制
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			NOR = {
-				has_authority = auth_dictatorial
-				has_authority = auth_corporate
-			}
-		}
-		policy_flags = {
-			parliamentarism_bicameral_system
-		}
-		modifier = {
-			faction_modifier_protected_interests = 0.34
-			edicts_cost_mult = 0.05
-		}
-		AI_weight = {
-			weight = 8
-		}
-	}
-	option = {
-		name = "NAME_NGM_unicameral_system"		# 一院制
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			NOT = {
-				has_authority = auth_dictatorial
-			}
-		}
-		policy_flags = {
-			parliamentarism_unicameral_system
-		}
-		modifier = {
-			country_base_influence_produces_add = 0.5
+			intel_encryption_add = -5
+			country_unity_produces_mult = 0.2
+			planet_crime_mult = 0.1
+			job_planet_ngm_influencer_per_pop = 0.04
 		}
 		AI_weight = {
 			weight = 10
 		}
 	}
+	#　②報道権保障		統合力+10%、派閥統合力収入+20%、統治志向魅力-30%			(平等のみ)				報道の権利や言論の自由は最大限保障されており、国家や法による制限は最大限削減されている
 	option = {
-		name = "NAME_NGM_literary_system"		# 勅撰議会literary_system
+		name = "NAME_NGM_Rep_cap"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			NOR = {
-				has_authority = auth_democratic
-				has_authority = auth_corporate
+			or = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
 			}
 		}
 		policy_flags = {
-			parliamentarism_literary_system
+			ngm_flag_Rep_cap
 		}
 		modifier = {
-			faction_modifier_protected_interests = -0.35
-			country_admin_cap_mult = 0.2
-			edicts_cost_mult = -0.05
+			country_unity_produces_mult = 0.1
+			pop_government_ethic_attraction = -0.3
+			pop_factions_unity_produces_mult = 0.2
 		}
 		AI_weight = {
 			weight = 10
 		}
 	}
+	#　③集会の権利		安定度+5、統合力+5%、統治志向魅力-10%					(権威以外)				集会と言論の自由は社会の安定のためには不可欠であり、社会の安定は法と自由のバランスのうえに成り立っている
 	option = {
-		name = "NAME_NGM_support_system"		# 協賛議会support_system
+		name = "NAME_NGM_Meet_cap"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			NOT = {
-				has_authority = auth_democratic
+			not = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
 			}
 		}
 		policy_flags = {
-			parliamentarism_support_system
+			ngm_flag_Meet_cap
 		}
 		modifier = {
-			faction_modifier_protected_interests = -0.68
-			edicts_cost_mult = -0.1
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_authority = auth_imperial
-			}
-			modifier = {
-				factor = 1.25
-				has_authority = auth_dictatorial
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_no_system"		# 議会なしno_system
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			NOT = {
-				has_authority = auth_democratic
-			}
-		}
-		policy_flags = {
-			parliamentarism_no_system
-		}
-		modifier = {
-			faction_modifier_protected_interests = -1
-			pop_ethic_authoritarian_attraction_mult = 0.2
-			country_base_influence_produces_add = 1
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_authority = auth_dictatorial
-			}
-			modifier = {
-				factor = 1.25
-				has_authority = auth_imperial
-			}
-			modifier = {
-				factor = 1.5
-				has_civic = civic_ngm_kakistocracy
-			}
-		}
-	}
-}
-
-# 〇選挙制度 （選挙自体に関する規定）electoral_system
-# 比例代表制party     :派閥満足度+10%、国家志向魅力-10%、幸福度+5%    (議員は政党に属し、政党を基準として議員を選任すべきである。)(独裁、企業以外) 
-# 大選挙区制large     :安定度+10、幸福度+5%、布告コスト+10%        (国内を複数のブロックに分け、一選挙区あたり複数人の議員が当選することが多様な意見を反映することができる。。)(独裁、企業以外)
-# 小選挙区制small     :影響力+0.5                    (国内を多数のブロックに分け、一選挙区辺り一人の議員が当選するようにし、強力な与党が誕生するべきである。)(独裁以外) 
-# ☆混合制  maze     :なし                        (まぜまぜした制度)(独裁、企業以外。)
-# くじ引き制lottery:幸福度+5%、精神主義魅力+10%             (議員は完全にランダムなくじ引きで決定する。)(企業以外) 
-# 指名選挙制desig     :管理許容量+10%、栄望主義魅力+10%        (立候補者と議員定数は同数であり、実質的な信任投票である。)(独裁制、君主制のみ) 
-# 選挙なし  not_e     :布告コスト-10%、権威主義魅力+20%        (選挙など要らぬ。)(民主制以外)
-ngm_policies_electoral_system = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_party"		# 比例代表制party
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			NOR = {
-				has_authority = auth_dictatorial
-				has_authority = auth_corporate
-			}
-		}
-		policy_flags = {
-			electoral_system_party
-		}
-		modifier = {
-			faction_modifier_protected_interests = 0.666
+			country_unity_produces_mult = 0.05
 			pop_government_ethic_attraction = -0.1
-			pop_happiness = 0.05
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_large"		# 大選挙区制large
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			NOR = {
-				has_authority = auth_dictatorial
-				has_authority = auth_corporate
-			}
-		}
-		policy_flags = {
-			electoral_system_large
-		}
-		modifier = {
-			planet_stability_add = 10
-			pop_happiness = 0.05
-			edicts_cost_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_small"		# 小選挙区制small
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			NOT = {	
-				has_authority = auth_dictatorial
-			}
-		}
-		policy_flags = {
-			electoral_system_small
-		}
-		modifier = {
-			country_base_influence_produces_add = 0.5
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_maze"		# 混合制  maze
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			NOR = {
-				has_authority = auth_dictatorial
-				has_authority = auth_corporate
-			}
-		}
-		policy_flags = {
-			electoral_system_maze
-		}
-		modifier = {
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_lottery"		# くじ引き制lottery
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			NOT = {
-				has_authority = auth_corporate
-			}
-		}
-		policy_flags = {
-			electoral_system_lottery
-		}
-		modifier = {
-			pop_happiness = 0.05
-			pop_ethic_spiritualist_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_desig"		# 指名選挙制desig
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				has_authority = auth_dictatorial
-				has_authority = auth_imperial
-			}
-		}
-		policy_flags = {
-			electoral_system_desig
-		}
-		modifier = {
-			country_admin_cap_mult = 0.1
-			pop_ethic_honorism_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_not_e"		# 選挙なし  not_e
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			NOT = {
-				has_authority = auth_democratic
-			}
-		}
-		policy_flags = {
-			electoral_system_not_e
-		}
-		modifier = {
-			edicts_cost_mult = -0.1
-			pop_ethic_authoritarian_attraction_mult = 0.2
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_authority = auth_dictatorial
-			}
-			modifier = {
-				factor = 1.5
-				has_civic = civic_ngm_kakistocracy
-			}
-		}
-	}
-}
-
-# 〇選挙法 （選挙権に関する法律）election_law
-# 成人選挙all_e     :幸福度+5%        (この国では国内の全成人に選挙権は与えられる。)(平等主義、受容主義のみ) 
-# 国民選挙nati_e    :安定度+5        (この国では国籍を有する全成人に選挙権が与えられる。)(特になし) 
-# 性差選挙sexu_e    :布告持続期間+10%    (この国の選挙では性別により投票権が制限されている。)(権威主義、排他主義のみ) 
-# 納税者選挙tax_e    :交易価値+10%        (この国では多額納税者に有利な選挙制度が敷かれている)(資本主義、実利主義のみ) 
-# 資格者選挙qua_e    :研究力+5%        (選挙権は知識や経験を有する知識人にのみ与えられるべきである。)(物質主義、精神主義のみ) 
-# 指名者選挙e_e    :管理許容量+10%        (この国では国家が指名する者に選挙権が与えられる。)(独裁制のみ) 
-# 記名選挙na_e    :国家志向魅力+10%    (この国では投票の際に自分の名前と住所を記入する必要があり、不一致や虚偽記載は犯罪である。)(権威主義のみ) 
-# ☆混合制maze_e    :なし            (いろんな制度がまぜこぜになっている。)(特になし) 
-# 選挙なしno_e    :影響力+0.5        (選挙など要らぬのだよ。)(権威主義のみ)
-ngm_policies_election_law = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_all_e"		# 成人選挙all_e
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_egalitarian_or_xenophile
-				has_ethic = "ethic_egalitarian"
-				has_ethic = "ethic_fanatic_egalitarian"
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-			}
-		}
-		policy_flags = {
-			election_law_all_e
-		}
-		modifier = {
-			pop_happiness = 0.05
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_nati_e"		# 国民選挙nati_e
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			election_law_nati_e
-		}
-		modifier = {
 			planet_stability_add = 5
 		}
 		AI_weight = {
 			weight = 10
 		}
 	}
+	#　④国民安全保護法	暗号力+5,布告コスト-10%							(制限なし)				国民の個人情報や機密事項は保護されるべきであり、最低限の法規制は必要である。
 	option = {
-		name = "NAME_NGM_sexu_e"		# 性差選挙sexu_e
+		name = "NAME_NGM_Def_cap"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_authoritarian_or_xenophobe
-				has_ethic = "ethic_authoritarian"
-				has_ethic = "ethic_fanatic_authoritarian"
-				has_ethic = "ethic_xenophobe"
-				has_ethic = "ethic_fanatic_xenophobe"
-			}
 		}
 		policy_flags = {
-			election_law_sexu_e
+			ngm_flag_Def_cap
 		}
 		modifier = {
-			edict_length_mult = 0.1
+			intel_encryption_add = 5
+			edicts_cost_mult = -0.1
 		}
 		AI_weight = {
 			weight = 10
 		}
 	}
+	#　⑤検閲機関		幸福度-5%、暗号力+7、布告コスト-10%,統治志向魅力+10%			(平等以外)				不必要な言論は社会にとって不要であり、雑音でしかない
 	option = {
-		name = "NAME_NGM_tax_e"		#納税者選挙tax_e 
+		name = "NAME_NGM_Cen_cap"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_capitalism_or_utilitarianism
-				has_ethic = "ethic_capitalism"
-				has_ethic = "ethic_fanatic_capitalism"
-				has_ethic = "ethic_utilitarianism"
-				has_ethic = "ethic_fanatic_utilitarianism"
+			not = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
 			}
 		}
 		policy_flags = {
-			election_law_tax_e
+			ngm_flag_Cen_cap
 		}
 		modifier = {
-			trade_value_mult = 0.1
+			intel_encryption_add = 7
+			edicts_cost_mult = -0.1
+			pop_government_ethic_attraction = 0.1
+			pop_happiness = -0.05
 		}
 		AI_weight = {
 			weight = 10
 		}
 	}
+	#　⑥国営報道		統合力+15%、布告コスト-20%,統治志向魅力+30%、幸福度-15%			(平等、資本以外)			国家の報道とは、社会の要請であり、つまるところは思考を縛る命令である
 	option = {
-		name = "NAME_NGM_qua_e"		# 資格者選挙qua_e
+		name = "NAME_NGM_Nat_cap"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_materialist_or_spiritualist
-				has_ethic = "ethic_materialist"
-				has_ethic = "ethic_fanatic_materialist"
-				has_ethic = "ethic_spiritualist"
-				has_ethic = "ethic_fanatic_spiritualist"
+			not = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_capitalism
+				has_ethic = ethic_fanatic_capitalism
 			}
 		}
 		policy_flags = {
-			election_law_qua_e
+			ngm_flag_Nat_cap
+		}
+		modifier = {
+			country_unity_produces_mult = 0.15
+			edicts_cost_mult = -0.2
+			pop_government_ethic_attraction = 0.3
+			pop_happiness = -0.15
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑦Need to know	暗号力+10、影響力+1,派閥統合力収入-30%、幸福度-20%			(権威or軍国or社会　平等ではない)	知るべき者には情報を、そうでなければ労働を。社会には役割が存在するのだ
+	option = {
+		name = "NAME_NGM_Need_cap"
+		potential = {
+			not = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			or = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_socialism
+				has_ethic = ethic_fanatic_socialism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Need_cap
+		}
+		modifier = {
+			country_base_influence_produces_add = 1
+			intel_encryption_add = 10
+			pop_factions_unity_produces_mult = -0.3
+			pop_happiness = -0.2
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+}
+
+#7.軍法(軍政に関する規定や遂行に関する委細を決定する。)
+ngm_military_law = {
+	#　①軍紀の鬼			連射レート+7%,回避+5%,地上軍の士気+15%,犯罪-10,軍国主義魅力+30%	(軍国主義のみ)				この国の軍の規律は銀河規模で、この軍に並ぶ練度と遵法精神に富んだ集団はそうそう見つけることができない
+	option = {
+		name = "NAME_NGM_Har_dis"
+		potential = {
+			or = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		policy_flags = {
+			ngm_flag_Har_dis
+		}
+		modifier = {
+			pop_ethic_militarist_attraction_mult = 0.3
+			planet_crime_add = -10
+			army_morale = 0.15
+			ship_evasion_add = 0.05
+			ship_fire_rate_mult = 0.07
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　②軍事カリキュラムの拡大	連射レート+5%,回避+5%,地上軍の士気+5%,軍国主義魅力+20%		(平和主義以外)				軍の演習プログラムを見直し、カリキュラムを綿密に再編することで、より効果的な軍事行動を可能にする
+	option = {
+		name = "NAME_NGM_Tra_dis"
+		potential = {
+			not = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		policy_flags = {
+			ngm_flag_Tra_dis
+		}
+		modifier = {
+			pop_ethic_militarist_attraction_mult = 0.2
+			army_morale = 0.05
+			ship_evasion_add = 0.05
+			ship_fire_rate_mult = 0.05
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　③憲兵団			安定度+5,犯罪-10%,兵士は追加で犯罪-5をもたらす、交易保護値+5	(制限なし)				この国の軍は治安維持機関としての側面を有しており、国家の安定のために身を粉にして働いている
+	option = {
+		name = "NAME_NGM_MP_dis"
+		potential = {
+		}
+		policy_flags = {
+			ngm_flag_MP_dis
+		}
+		modifier = {
+			planet_crime_mult = -0.1
+			planet_stability_add = 5
+			local_trade_protection_add = 5
+			planet_job_soldier_crime_produces_add = -5
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　④軍需品輸出			工学研究+10%,合金産出+20%					(制限なし)				この国では軍で得られた知見を基に軍需品の研究と作成を積極的に進めており、国家の生産性向上に寄与している
+	option = {
+		name = "NAME_NGM_Exp_dis"
+		potential = {
+		}
+		policy_flags = {
+			ngm_flag_Exp_dis
+		}
+		modifier = {
+			country_engineering_research_produces_mult = 0.1
+			country_alloys_produces_mult = 0.2
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑤将校地位購入制度		エネルギー収入+10%,統治者幸福度+10,回避-5%,地上軍の士気-10%	(軍国主義or平等主義or栄望主義以外)	この国における軍幹部の地位は金銭で取引されるもので、国家に大いなる収入をもたらしているが、軍事技術の低下を招いている
+	option = {
+		name = "NAME_NGM_Buy_dis"
+		potential = {
+			not = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_honorism
+				has_ethic = ethic_fanatic_honorism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Buy_dis
+		}
+		modifier = {
+			country_energy_produces_mult = 0.1
+			pop_cat_ruler_happiness = 0.1
+			ship_evasion_add = -0.05
+			army_morale = -0.1
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑥略奪の公認			地上軍ダメージ+30%,地上軍作成コスト-20%,副次ダメージ+100%	(平和主義or受容主義or栄望主義以外)	この国の軍は公然と略奪を許可しており、地上戦における彼らの活躍は目を見張るものがあるが、その下には大きな犠牲が伴っている
+	option = {
+		name = "NAME_NGM_Pai_dis"
+		potential = {
+			not = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_honorism
+				has_ethic = ethic_fanatic_honorism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Pai_dis
+		}
+		modifier = {
+			army_damage_mult = 0.3
+			planet_army_build_cost_mult = -0.2
+			army_collateral_damage_mult = 1
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑦非公開横領			エネルギー収入+20%,暗号力-5,兵士は追加で犯罪+1をもたらす	(実利主義のみ)				この国では軍事予算の横領と国軍の腐敗が行われており、軍とは公的犯罪集団と化している
+	option = {
+		name = "NAME_NGM_Pai_dis"
+		potential = {
+			or = {
+				has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
+			}
+		}
+		policy_flags = {
+			ngm_flag_Pai_dis
+		}
+		modifier = {
+			planet_job_soldier_crime_produces_add = 1
+			intel_encryption_add = -5
+			country_energy_produces_mult = 0.2
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+}
+
+#8.研究倫理(諸研究に関する研究方針や倫理規定に関して決定する。)
+ngm_research_law = {
+	#　①教理評議会		統合力+10%,精神主義魅力+20%,超能力技術の出やすさ+10%,研究力-10%	(精神主義のみ)	宗教家による研究方針の審査会がこの国家における研究指針を策定している
+	option = {
+		name = "NAME_NGM_Rel_eth"
+		potential = {
+			or = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		policy_flags = {
+			ngm_flag_Rel_eth
+		}
+		modifier = {
+			country_unity_produces_mult = 0.15
+			pop_ethic_spiritualist_attraction_mult = 0.2
+			country_physics_research_produces_mult = -0.1
+			country_society_research_produces_mult = -0.1
+			country_engineering_research_produces_mult = -0.1
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　②生命倫理委員会	研究力+5%							(制限なし)	生命に対する畏敬を忘れず、最低限の研究倫理を維持することが文明には必要だ
+	option = {
+		name = "NAME_NGM_lif_eth"
+		potential = {
+		}
+		policy_flags = {
+			ngm_flag_lif_eth
 		}
 		modifier = {
 			country_physics_research_produces_mult = 0.05
@@ -1092,1297 +1125,297 @@ ngm_policies_election_law = {
 			weight = 10
 		}
 	}
+	#　③規制緩和		研究力+10%,研究者の消費する消費財+2				(制限なし)	規制を徐々に撤廃することで、研究者のコストの上昇とともに能力をできる限り発揮させることができる
 	option = {
-		name = "NAME_NGM_e_e"		# 指名者選挙e_e
+		name = "NAME_NGM_eas_eth"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			has_authority = auth_dictatorial
 		}
 		policy_flags = {
-			election_law_e_e
+			ngm_flag_eas_eth
 		}
 		modifier = {
-			country_admin_cap_mult = 0.1
+			country_physics_research_produces_mult = 0.1
+			country_society_research_produces_mult = 0.1
+			country_engineering_research_produces_mult = 0.1
+			planet_researcher_consumer_goods_upkeep_add = 2
 		}
 		AI_weight = {
 			weight = 10
 		}
 	}
+	#　④異種族特例倫理規範	研究力+10%,信用値-30,排他主義魅力+20%				(排他主義のみ)	研究の倫理は維持するが、他種族に対する倫理規範は撤廃される。
 	option = {
-		name = "NAME_NGM_na_e"		# 記名選挙na_e
+		name = "NAME_NGM_zen_eth"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_authoritarian
-				has_ethic = "ethic_authoritarian"
-				has_ethic = "ethic_fanatic_authoritarian"
+			or = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
 			}
 		}
 		policy_flags = {
-			election_law_na_e
+			ngm_flag_zen_eth
 		}
 		modifier = {
-			pop_government_ethic_attraction = 0.1
+			country_physics_research_produces_mult = 0.1
+			country_society_research_produces_mult = 0.1
+			country_engineering_research_produces_mult = 0.1
+			pop_ethic_xenophobe_attraction_mult = 0.2
+			country_trust_cap_add = -30
 		}
 		AI_weight = {
 			weight = 10
 		}
 	}
+	#　⑤無制限倫理		研究力+15%,安定度-10,物質主義魅力+30%				(物質主義のみ)	研究に関する規制を撤廃することで、研究の力を最大限に引き出すことができる
 	option = {
-		name = "NAME_NGM_maze_e"		#☆混合制maze_e 
+		name = "NAME_NGM_zen_eth"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			election_law_maze_e
-		}
-		modifier = {
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_no_e"		# 選挙なしno_e
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_authoritarian
-				has_ethic = "ethic_authoritarian"
-				has_ethic = "ethic_fanatic_authoritarian"
-			}
-		}
-		policy_flags = {
-			election_law_no_e
-		}
-		modifier = {
-			country_base_influence_produces_add = 0.5
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-}
-
-# ・公務員任用制度	The civil service appointment system.
-# 猟官制			リーダー雇用費用-50% 市場手数料-7%
-# 混合制			影響力+0.5
-# 資格任用制	布告許容量+1	管理許容量+20
-ngm_policies_civil_service_appointments_system = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_spoils_system"		# 猟官制
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			civil_service_appointments_system_spoils_system
-		}
-		modifier = {
-			leaders_cost_mult = -0.5
-			country_trade_fee = -0.07
-		}
-		AI_weight = {
-			weight = 10
-			# Militarist
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_militarist
-			}
-			modifier = {
-				factor = 2
-				has_ethic = ethic_fanatic_authoritarian
-			}
-			modifier = {
-				factor = 1.5
-				has_civic = civic_ngm_kakistocracy
-			}
-			modifier = {
-				factor = 1.5
-				has_civic = civic_shadow_council
-			}
-			modifier = {
-				factor = 1.5
-				has_civic = civic_feudal_realm
-			}
-			modifier = {
-				factor = 10
-				has_civic = civic_imperial_cult
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_hybrid"		# 混合制
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			civil_service_appointments_system_hybrid
-		}
-		modifier = {
-			country_base_influence_produces_add = 0.5
-		}
-		AI_weight = {
-			weight = 10
-			# Materialist
-			modifier = {
-				factor = 1.5
+			or = {
+				has_ethic = ethic_materialist
 				has_ethic = ethic_fanatic_materialist
 			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_materialist
-			}
-			modifier = {
-				factor = 1.25
-				has_civic = civic_parliamentary_system
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_qualified_appointment_system"		# 資格任用制
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
 		}
 		policy_flags = {
-			civil_service_appointments_system_qualified_appointment_system
+			ngm_flag_zen_eth
 		}
 		modifier = {
-			country_edict_fund_add = 50
-			empire_size_mult = -0.05
+			country_physics_research_produces_mult = 0.15
+			country_society_research_produces_mult = 0.15
+			country_engineering_research_produces_mult = 0.15
+			planet_stability_add = -10
+			pop_ethic_materialist_attraction_mult = 0.3
 		}
 		AI_weight = {
 			weight = 10
-			# Egalitarian
-			modifier = {
-				factor = 5
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 1.2
-				has_ethic = ethic_egalitarian
-			}
-			modifier = {
-				factor = 2
-				has_civic = civic_meritocracy
-			}
-			modifier = {
-				factor = 1.25
-				has_civic = civic_technocracy
-			}
 		}
 	}
 }
 
-# ・納税制度 taxation_system
-# 累進課税制度	Progressive Tax System	統治者幸福度-10%、エネルギー生産量+10%
-# 一般税制度	General tax system
-# 逆進課税制度	Counterproductive taxation system	労働者幸福度-10%、エネルギー生産量+10%
-ngm_policies_taxation_system = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
+#9.言語政策(文化や教育の基本である言語についての規制に関して決定する。)
+ngm_language_policy = {
+	#　①母語保障		統合力+20%,Pop消費財維持費+20%	(精神主義のみ)					民族や出自で存在する母語を保護し、各文化の保護を図る
 	option = {
-		name = "NAME_NGM_progressive_tax_system"		# 累進課税制度
+		name = "NAME_NGM_Mom_lan"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+			or = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
 			}
 		}
 		policy_flags = {
-			taxation_system_progressive_tax_system
+			ngm_flag_Mom_lan
 		}
 		modifier = {
-			planet_jobs_energy_produces_mult = 0.1
-			pop_cat_ruler_happiness = -0.1
+			country_unity_produces_mult = 0.2
+			planet_pops_consumer_goods_upkeep_mult = 0.2
 		}
 		AI_weight = {
 			weight = 10
-			# Egalitarian
-			modifier = {
-				factor = 5
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_egalitarian
-			}
-			modifier = {
-				factor = 2
-				has_civic = civic_shared_burden
-			}
 		}
 	}
+	#　②方言保護		統合力+10%,Pop消費財維持費+10%	(物質主義以外)					地域特有の文化を保護し、独自の伝統を発展させる
 	option = {
-		name = "NAME_NGM_general_tax_system"		# 一般税制度
+		name = "NAME_NGM_Loc_lan"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			taxation_system_general_tax_system
-		}
-		AI_weight = {
-			weight = 10
-			# Materialist
-			modifier = {
-				factor = 1.5
+			not = {
+				has_ethic = ethic_materialist
 				has_ethic = ethic_fanatic_materialist
 			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_materialist
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_counterproductive_taxation_system"		# 逆進課税制度
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
 		}
 		policy_flags = {
-			taxation_system_counterproductive_taxation_system
+			ngm_flag_Loc_lan
 		}
 		modifier = {
-			planet_jobs_energy_produces_mult = 0.1
-			pop_cat_worker_happiness = -0.1
+			country_unity_produces_mult = 0.1
+			planet_pops_consumer_goods_upkeep_mult = 0.1
 		}
 		AI_weight = {
 			weight = 10
-			modifier = {
-				factor = 1.5
-				has_civic = civic_ngm_kakistocracy
+		}
+	}
+	#　③共通語教育		統合力+5%			(制限なし)					首都で利用されている言語を中心とした帝国共通語を作成し、敷衍させる
+	option = {
+		name = "NAME_NGM_Som_lan"
+		potential = {
+		}
+		policy_flags = {
+			ngm_flag_Som_lan
+		}
+		modifier = {
+			country_unity_produces_mult = 0.05
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　④多言語理解		交易価値+5%,受容主義魅力+10%	(排他主義以外)					様々な言語に触れあうことで社会に新たな利益をもたらす
+	option = {
+		name = "NAME_NGM_Glo_lan"
+		potential = {
+			not = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
 			}
-			modifier = {
-				factor = 1.25
-				has_civic = civic_aristocratic_elite
+		}
+		policy_flags = {
+			ngm_flag_Glo_lan
+		}
+		modifier = {
+			trade_value_mult = 0.05
+			pop_ethic_xenophobe_attraction_mult = 0.1
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑤統一語教育		交易価値+10%,統合力-5%		(物質主義のみ)					方言や多言語は作業効率を低下させる存在でしかないのだ
+	option = {
+		name = "NAME_NGM_Joi_lan"
+		potential = {
+			or = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
 			}
-			modifier = {
-				factor = 1.25
-				has_civic = civic_corvee_system
+		}
+		policy_flags = {
+			ngm_flag_Joi_lan
+		}
+		modifier = {
+			trade_value_mult = 0.1
+			country_unity_produces_mult = 0.1
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑥銀河共通語教育	交易価値+20%,統合力-10%		(銀河共同体で銀河共通語の導入が図られている)	利便性にはあらゆる文化や伝統ですら勝つことはできない
+	option = {
+		name = "NAME_NGM_Com_lan"
+		potential = {
+			or = {
+				is_active_resolution = resolution_custodian_galactic_standard 
 			}
+		}
+		policy_flags = {
+			ngm_flag_Com_lan
+		}
+		modifier = {
+			trade_value_mult = 0.1
+			country_unity_produces_mult = 0.1
+		}
+		AI_weight = {
+			weight = 10
 		}
 	}
 }
 
-# 〇所得税(国民の所得にかかる税金について)income_tax
-# 個人所得の禁止    no_income    :エネルギー生産+30%、労働者生産量-5%、幸福度-15%(個人収入は社会の経済的平等を邪魔する悪癖である。)(社会主義のみ) 
-# 極めて高い    vh_income    :エネルギー生産+20%、幸福度-10%            (高い収入を得た個人は国家に相応の税を支払うべきである。)
-# 高い        h_income    :エネルギー生産+10%、幸福度-5%             (高所得者はその利潤の一部を国民に還元させるべきである。)
-# ☆平均        a_income    :なし                         (税とは国家の基本である。)
-# 低い        l_income    :エネルギー生産-10%、幸福度+5%             (より努力した者がより豊かな生活を送ることができる。)
-# 極めて低い    vl_income    :エネルギー生産-20%、幸福度+10%         (努力と能力があるものは豊かになるべきである。)
-# 所得税の廃止    max_income    :エネルギー生産-30%、統治者生産量+10%、幸福度+15%(所得税は個人の利潤を最大化させるためには不要の存在である。)(資本主義のみ)
-ngm_policies_income_tax = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
+#10.スポーツ政策(運動やスポーツに関する規制や推進に関して決定する。)
+ngm_sports_policy = {
+	#　①国家後援		勲章-0.1,統合力+15%,Pop消費財維持費+10%		(式典理論1を研究している)	スポーツ選手やスポーツ事業を国家が支援することで文化事業を敷衍させることができる
 	option = {
-		name = "NAME_NGM_no_income"		# 個人所得の禁止
+		name = "NAME_NGM_N_support"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_socialism
-				has_ethic = "ethic_socialism"
-				has_ethic = "ethic_fanatic_socialism"
+			or = {
+				has_technology = tech_ceremony_theory
 			}
 		}
 		policy_flags = {
-			income_tax_no_income
+			ngm_flag_N_support
 		}
 		modifier = {
-			country_energy_produces_mult = 0.03
-			planet_jobs_worker_produces_mult = -0.05
-			pop_happiness = -0.15
+			country_base_ngm_order_of_merit_produces_add = -0.1
+			country_unity_produces_mult = 0.15
+			planet_pops_consumer_goods_upkeep_mult = 0.1
 		}
 		AI_weight = {
 			weight = 10
-			modifier = {
-				factor = 2
-				has_ethic = ethic_fanatic_socialism
-			}
-			modifier = {
-				factor = 1.75
-				has_ethic = ethic_socialism
-			}
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_egalitarian
-			}
 		}
 	}
+	#　②企業後援		交易価値+15%,統合力+10%,エネルギー収入-5%	(社会主義以外)			企業が宣伝のためにスポーツを支援することで、文化事業を民間に任せることができる
 	option = {
-		name = "NAME_NGM_vh_income"		# 極めて高い
+		name = "NAME_NGM_Co_support"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+			not = {
+				has_ethic = ethic_socialism
+				has_ethic = ethic_fanatic_socialism
 			}
 		}
 		policy_flags = {
-			income_tax_vh_income
+			ngm_flag_Co_support
 		}
 		modifier = {
-			country_energy_produces_mult = 0.2
-			pop_happiness = -0.1
+			trade_value_mult = 0.15
+			country_unity_produces_mult = 0.1
+			country_energy_produces_mult = -0.05
 		}
 		AI_weight = {
 			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_socialism
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_socialism
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 1.125
-				has_ethic = ethic_egalitarian
-			}
 		}
 	}
+	
+	#　③民間ベース支援	幸福度+5,統合力+5%				(制限なし)			地域社会や任意団体によりスポーツ事業が行われており、公的機関の支援は最低限だ
 	option = {
-		name = "NAME_NGM_h_income"		# 高い
+		name = "NAME_NGM_Ci_support"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
 		}
 		policy_flags = {
-			income_tax_h_income
+			ngm_flag_Ci_support
 		}
 		modifier = {
-			country_energy_produces_mult = 0.1
+			pop_happiness = 0.05
+			country_unity_produces_mult = 0.05
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　④各自の努力		リーダー寿命+5年				(制限なし)			選手を自称するのであれば、自らの努力が重要ではないか
+	option = {
+		name = "NAME_NGM_S_support"
+		potential = {
+		}
+		policy_flags = {
+			ngm_flag_S_support
+		}
+		modifier = {
+			leader_age = +5
+		}
+		AI_weight = {
+			weight = 10
+		}
+	}
+	#　⑤仕事優先		労働者生産力+10%,幸福度-5%			(制限なし)			仕事が最優先であり、スポーツはあくまで余暇でしかないのだ
+	option = {
+		name = "NAME_NGM_Work_first"
+		potential = {
+		}
+		policy_flags = {
+			ngm_flag_Work_first
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.1
 			pop_happiness = -0.05
 		}
 		AI_weight = {
 			weight = 10
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_fanatic_socialism
-			}
-			modifier = {
-				factor = 1.125
-				has_ethic = ethic_socialism
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 1.125
-				has_ethic = ethic_egalitarian
-			}
 		}
 	}
+	#　⑥遊んでいる暇はない	職業からの資源+5%,幸福度-10%			(制限なし)			スポーツなどと遊んでいる暇などはなく、労働に勤しむことが必要だ
 	option = {
-		name = "NAME_NGM_a_income"		# ☆平均
+		name = "NAME_NGM_Work_work_work 
+		"
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
 		}
 		policy_flags = {
-			income_tax_a_income
-		}
-		modifier = {
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_l_income"		# 低い
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			income_tax_l_income
-		}
-		modifier = {
-			country_energy_produces_mult = -0.1
-			pop_happiness = 0.05
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_vl_income"		# 極めて低い
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			income_tax_vl_income
-		}
-		modifier = {
-			country_energy_produces_mult = -0.2
-			pop_happiness = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_max_income"		# 所得税の廃止
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_capitalism
-				has_ethic = "ethic_capitalism"
-				has_ethic = "ethic_fanatic_capitalism"
-			}
-		}
-		policy_flags = {
-			income_tax_max_income
-		}
-		modifier = {
-			country_energy_produces_mult = -0.3
-			planet_jobs_ruler_produces_mult = 0.1
-			pop_happiness = 0.15
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_capitalism
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_capitalism
-			}
-		}
-	}
-}
+			ngm_Work_work_work 
 
-# 〇法人税(国家の企業に対する税金について)corporation_tax
-# 私企業の禁止    no_corp_tax    :交易価値-30%、労働者幸福度+15%、社会主義魅力+10%    (企業とは資本家による民衆の搾取機関である。)(社会主義のみ) 
-# 極めて高い    vh_corp_tax    :交易価値-20%、労働者幸福度+10%             (企業が利潤を追い求める際に犠牲となった存在を、企業は救済するべきだ。)
-# 高い        h_corp_tax    :交易価値-10%、労働者幸福度+5%                 (企業の利潤の一部は恵まれない人々に回されるべきだ。)
-# ☆平均        a_corp_tax    :なし                             (企業にかかる税は必要経費である。)
-# 低い        l_corp_tax    :交易価値+10%、労働者幸福度-5%                 (企業活動の制限は国家に対しても悪い影響を与える。)
-# 極めて低い    vl_corp_tax    :交易価値+20%、労働者幸福度-10%             (企業の自由性を確保し、競争力を高めるべきだ。)
-# 法人税の廃止    max_corp_tax    :交易価値+30%、労働者幸福度-15%、資本主義魅力+10%    (企業はできる限り自由であるべきだ。国家からでさえも。)(資本主義のみ)
-ngm_policies_corporation_tax = {
-	potential = {
-		NOR = {
-			has_ethic = ethic_gestalt_consciousness
-			has_authority = auth_corporate
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_no_corp_tax"		# 個人所得の禁止
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_socialism
-				has_ethic = "ethic_socialism"
-				has_ethic = "ethic_fanatic_socialism"
-			}
-		}
-		policy_flags = {
-			income_tax_no_corp_tax
 		}
 		modifier = {
-			trade_value_mult = -0.3
-			pop_cat_worker_happiness = 0.15
-			pop_ethic_socialism_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_vh_corp_tax"		# 極めて高い
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			income_tax_vh_corp_tax
-		}
-		modifier = {
-			trade_value_mult = -0.2
-			pop_cat_worker_happiness = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_h_corp_tax"		# 高い
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			income_tax_h_corp_tax
-		}
-		modifier = {
-			trade_value_mult = -0.1
-			pop_cat_worker_happiness = 0.05
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_a_corp_tax"		# ☆平均
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			income_tax_a_corp_tax
-		}
-		modifier = {
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_l_corp_tax"		# 低い
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			income_tax_l_corp_tax
-		}
-		modifier = {
-			trade_value_mult = 0.1
-			pop_cat_worker_happiness = -0.05
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_vl_corp_tax"		# 極めて低い
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			income_tax_vl_corp_tax
-		}
-		modifier = {
-			trade_value_mult = 0.2
-			pop_cat_worker_happiness = -0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_max_corp_tax"		# 所得税の廃止
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_capitalism
-				has_ethic = "ethic_capitalism"
-				has_ethic = "ethic_fanatic_capitalism"
-			}
-		}
-		policy_flags = {
-			income_tax_max_corp_tax
-		}
-		modifier = {
-			trade_value_mult = 0.3
-			pop_cat_worker_happiness = -0.15
-			pop_ethic_capitalism_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-}
-
-# ・文化政策	cultural policy
-# 国家干渉	state_intervention	統治志向魅力+10%、統合力+5%、専門家幸福度-5%
-# 民間主導	private initiative
-# 国家後援	state sponsorship	エネルギー算出-5%、統合力+10%
-# 無秩序の芸術	The Art of Disorder	統治志向魅力-10%、統合力+20%、消費財消費量+10%
-ngm_policies_cultural_policy = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_state_intervention"		# 国家干渉
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			cultural_policy_state_intervention
-		}
-		modifier = {
-			pop_government_ethic_attraction = 0.1
-			pop_cat_specialist_happiness = -0.05
-			planet_jobs_unity_produces_mult = 0.05
-		}
-		AI_weight = {
-			weight = 10
-			# Authoritarian
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_authoritarian
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_authoritarian
-			}
-			# Militarist
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_militarist
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_militarist
-			}
-			modifier = {
-				factor = 10
-				has_civic = civic_imperial_cult
-			}
-			modifier = {
-				factor = 1.25
-				has_civic = civic_aristocratic_elite
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_private_initiative"		# 民間主導
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			cultural_policy_private_initiative
-		}
-		AI_weight = {
-			weight = 10
-			# Egalitarian
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 1.2
-				has_ethic = ethic_egalitarian
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_state_sponsorship"		# 国家後援
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			cultural_policy_state_sponsorship
-		}
-		modifier = {
-			planet_jobs_unity_produces_mult = 0.1
-			planet_jobs_energy_produces_mult = -0.05
-		}
-		AI_weight = {
-			weight = 10
-			# Authoritarian
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_authoritarian
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_authoritarian
-			}
-			# Materialist
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_materialist
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_materialist
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_the_art_of_disorder"		# 無秩序の芸術
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			cultural_policy_the_art_of_disorder
-		}
-		modifier = {
-			pop_government_ethic_attraction = -0.1
-			planet_jobs_unity_produces_mult = 0.2
-			planet_jobs_consumer_goods_upkeep_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 10
-				has_civic = civic_neoliberalism
-			}
-		}
-	}
-}
-
-# 〇国家祭典(国家がその威儀を示す祭典や儀式に関する規定)national_ceremony
-# 壮麗な儀式    mag_ceremony    :影響力+0.5、統合力+10%、消費財消費+10%、栄望主義魅力+10%    (盛大で比類ない祭典は国家と国民を一つにすることができる。)(栄望主義、精神主義のみ) 
-# 厳格な儀式    rig_ceremony    :統合力+5%、消費財消費+5%                     (プロトコルや豪華さを備えた祭典は国家にとって必要である。)
-# ☆恥じぬ儀式    ceremony    :なし                                 (他国と比べてもそん色ない程度に式典を行うことが一番である。)
-# 必要最低限の儀式unash_ceremony    :統合力-5%、消費財消費-5%                     (できるだけ金をかけず、最低限の必要性を満たすことこそが重要である。)
-# 簡素な儀式    simple_ceremony    :影響力-0.5、統合力-10%、消費財消費-10%、実利主義魅力+10%    (金だけではなく、時間も惜しい。早く安くしてくれ。)(実利主義、物質主義のみ)
-ngm_policies_national_ceremony = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_mag_ceremony"		# 壮麗な儀式
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_honorism_or_spiritualist
-				has_ethic = "ethic_honorism"
-				has_ethic = "ethic_fanatic_honorism"
-				has_ethic = "ethic_spiritualist"
-				has_ethic = "ethic_fanatic_spiritualist"
-			}
-		}
-		policy_flags = {
-			national_ceremony_mag_ceremony
-		}
-		modifier = {
-			country_base_influence_produces_add = 0.5
-			country_unity_produces_mult = 0.1
-			planet_pops_consumer_goods_upkeep_mult = 0.1
-			pop_ethic_honorism_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_honorism
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_honorism
-			}
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_spiritualist
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_spiritualist
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_utilitarianism
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_utilitarianism
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_materialist
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_materialist
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_rig_ceremony"		# 厳格な儀式
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			national_ceremony_rig_ceremony
-		}
-		modifier = {
-			country_base_influence_produces_add = 0.05
-			planet_pops_consumer_goods_upkeep_mult = 0.05
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_ceremony"		# ☆恥じぬ儀式
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			national_ceremony
-		}
-		modifier = {
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_unash_ceremony"		# 必要最低限の儀式unash_ceremony
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			national_ceremony_unash_ceremony
-		}
-		modifier = {
-			country_unity_produces_mult = -0.05
-			planet_pops_consumer_goods_upkeep_mult = -0.05
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_simple_ceremony"		# 簡素な儀式    simple_ceremony
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_utilitarianism_or_materialist
-				has_ethic = "ethic_utilitarianism"
-				has_ethic = "ethic_fanatic_utilitarianism"
-				has_ethic = "ethic_materialist"
-				has_ethic = "ethic_fanatic_materialist"
-			}
-		}
-		policy_flags = {
-			national_ceremony_simple_ceremony
-		}
-		modifier = {
-			country_base_influence_produces_add = -0.5
-			country_unity_produces_mult = -0.1
-			planet_pops_consumer_goods_upkeep_mult = -0.1
-			pop_ethic_utilitarianism_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_utilitarianism
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_utilitarianism
-			}
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_materialist
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_materialist
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_honorism
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_honorism
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_spiritualist
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_spiritualist
-			}
-		}
-	}
-}
-
-# ・農業政策	agricultural policy
-# 大規模農家優遇	Large-scale Farmer Preference	食料生産量+20%、労働者幸福度-10%
-# 農業優遇なし		No agricultural incentives
-# 自作農家優遇	preferential treatment for farmers	食料生産量+20%、鉱物生産量-5%
-ngm_policies_agricultural_policy = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_large_scale_farmer_preference"		# 大規模農家優遇
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			agricultural_policy_large_scale_farmer_preference
-		}
-		modifier = {
-			pop_cat_worker_happiness = -0.1
-			planet_jobs_food_produces_mult = 0.2
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.25
-				has_civic = civic_agrarian_idyll
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_no_agricultural_incentives"		# 農業優遇なし
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			agricultural_policy_no_agricultural_incentives
-		}
-		AI_weight = {
-			weight = 10
-			# Egalitarian
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 1.2
-				has_ethic = ethic_egalitarian
-			}
-			modifier = {
-				factor = 10
-				has_civic = civic_neoliberalism
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_preferential_treatment_for_farmers"		# 自作農家優遇
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			agricultural_policy_preferential_treatment_for_farmers
-		}
-		modifier = {
-			planet_jobs_food_produces_mult = 0.2
-			planet_jobs_minerals_produces_mult = -0.05
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-}
-
-# ・言語政策	language policy
-# 統一言語政策	uniform language policy	交易価値+10%、研究速度+5%、幸福度-10%
-# 共通語政策	common language policy	
-# 母語教育	mother tongue training	統合力+15%、エネルギー消費-5%、研究力-5%
-ngm_policies_language_policy = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_uniform_language_policy"		# 統一言語政策
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			language_policy_uniform_language_policy
-		}
-		modifier = {
-			trade_value_mult = 0.1
+			planet_jobs_produces_mult = 0.05
 			pop_happiness = -0.1
-			all_technology_research_speed = 0.05
 		}
 		AI_weight = {
 			weight = 10
-			# Materialist
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_materialist
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_materialist
-			}
-			# Authoritarian
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_authoritarian
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_authoritarian
-			}
-			modifier = {
-				factor = 10
-				has_civic = civic_imperial_cult
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_common_language_policy"		# 共通語政策
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			language_policy_common_language_policy
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 10
-				has_civic = civic_neoliberalism
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_mother_tongue_training"		# 母語教育
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			language_policy_mother_tongue_training
-		}
-		modifier = {
-			planet_jobs_unity_produces_mult = 0.15
-			all_technology_research_speed = -0.05
-			planet_jobs_energy_produces_mult = -0.05
-		}
-		AI_weight = {
-			weight = 10
-			# Egalitarian
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_egalitarian
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_egalitarian
-			}
 		}
 	}
 }
@@ -2438,1182 +1471,6 @@ ngm_policies_loop_method = {
 		}
 		AI_weight = {
 			weight = 10
-		}
-	}
-}
-
-# 〇研究倫理 (倫理規範に基づく研究規制について)research_ethics
-# 無制限倫理no_ethic        :研究力+15%、信用値-40、物質主義魅力+20%        (倫理など守っては研究などできぬよ。)(物質主義のみ) 
-# 制限の緩和loose_ethic        :研究力+10%、信用値-10、物質主義魅力+10%        (倫理規範という制約は我々研究者を惑わすものである。)
-# ☆生命基礎倫理ethical        :なし                             (生命にかかわる分野において、最低限の倫理が守られるべきだ。)
-# 宗教界の要望religion_ethic    :社会学研究+10%、物理学研究-10%、精神主義魅力+10%    (宗教界は研究という分野に様々な制約を設けており、それらは秩序の維持に不可欠だ。)(精神主義のみ) 
-# 生命倫理の尊重living_ethic    :受容主義魅力+10%、幸福度+5%                (生命や存在はできる限り尊重し、研究の犠牲になるべきではない。)(受容主義、保全主義のみ) 
-# 特別異種族倫理規範kill_ethic    :社会学研究+20%、信用値-40、排他主義魅力+10%        (我が民族は生命倫理規範を守護し、尊重されるべきだ。無論、我々のみであるが。)(排他主義のみ)
-ngm_policies_research_ethics = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_no_ethic"		# 無制限倫理no_ethic
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_materialist
-				has_ethic = "ethic_materialist"
-				has_ethic = "ethic_fanatic_materialist"
-			}
-		}
-		policy_flags = {
-			research_ethics_no_ethic
-		}
-		modifier = {
-			country_physics_research_produces_mult = 0.15
-			country_society_research_produces_mult = 0.15
-			country_engineering_research_produces_mult = 0.15
-			country_trust_cap_add = -40
-			pop_ethic_materialist_attraction_mult = 0.2
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_materialist
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_materialist
-			}
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_utilitarianism
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_utilitarianism
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_spiritualist
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_spiritualist
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_honorism
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_honorism
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_loose_ethic"		# 制限の緩和loose_ethic
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			research_ethics_loose_ethic
-		}
-		modifier = {
-			country_physics_research_produces_mult = 0.1
-			country_society_research_produces_mult = 0.1
-			country_engineering_research_produces_mult = 0.1
-			country_trust_cap_add = -10
-			pop_ethic_materialist_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_ethical"		# ☆生命基礎倫理ethical
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			research_ethics_ethical
-		}
-		modifier = {
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_religion_ethic"		# 宗教界の要望religion_ethic
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_spiritualist
-				has_ethic = "ethic_spiritualist"
-				has_ethic = "ethic_fanatic_spiritualist"
-			}
-		}
-		policy_flags = {
-			research_ethics_religion_ethic
-		}
-		modifier = {
-			country_society_research_produces_mult = 0.1
-			country_physics_research_produces_mult = -0.1
-			pop_ethic_spiritualist_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_spiritualist
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_spiritualist
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_utilitarianism
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_utilitarianism
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_living_ethic"		# 生命倫理の尊重living_ethic
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_xenophile_or_conservationism
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-				has_ethic = "ethic_conservationism"
-				has_ethic = "ethic_fanatic_conservationism"
-			}
-		}
-		policy_flags = {
-			research_ethics_living_ethic
-		}
-		modifier = {
-			pop_ethic_xenophile_attraction_mult = 0.1
-			pop_happiness = 0.05
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_xenophile
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_xenophile
-			}
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_conservationism
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_conservationism
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_xenophobe
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_xenophobe
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_neutralism
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_neutralism
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_kill_ethic"		# 特別異種族倫理規範kill_ethic
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_xenophobe
-				has_ethic = "ethic_xenophobe"
-				has_ethic = "ethic_fanatic_xenophobe"
-			}
-		}
-		policy_flags = {
-			research_ethics_kill_ethic
-		}
-		modifier = {
-			country_society_research_produces_mult = 0.2
-			country_trust_cap_add = -40
-			pop_ethic_xenophobe_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_xenophile
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_xenophile
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_xenophobe
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_xenophobe
-			}
-		}
-	}
-}
-
-# 〇SNS規制 (ソーシャルネットワークサービスの規制に関する法律)SNS_regulation
-# 規制なしno_restriction        :統合力+10%、安定度-5、実利主義魅力+10%             (自由！  拡散！)
-# 企業規制corp_restriction    :統合力+5%、交易価値-5%                     (「この発言は当社規約違反として削除いたしました」)
-# ☆過激思想規制ext_restriction    :なし                                 (過激な発言は誰かを傷つけることとなりうる。)
-# 反国家思想規制nation_restriction:統合力-5%、犯罪度-10%、統治志向魅力+5%             (国家に反することを認めるプラットフォームは存在しない。)
-# SNS禁止ban_restriction        :統合力-10%、労働者幸福度-5%、安定度+10、統治志向魅力+10%     (現実と向き合う。)
-ngm_policies_SNS_regulation = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_no_restriction"		# 規制なしno_restriction
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			SNS_regulation_no_restriction
-		}
-		modifier = {
-			country_unity_produces_mult = 0.1
-			planet_stability_add = -5
-			pop_ethic_utilitarianism_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_corp_restriction"		# 企業規制corp_restriction
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			SNS_regulation_corp_restriction
-		}
-		modifier = {
-			country_unity_produces_mult = 0.05
-			trade_value_mult = -0.05
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_ext_restriction"		# ☆過激思想規制ext_restriction
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			SNS_regulation_ext_restriction
-		}
-		modifier = {
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_nation_restriction"		# 反国家思想規制nation_restriction
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			SNS_regulation_nation_restriction
-		}
-		modifier = {
-			country_unity_produces_mult = -0.05
-			planet_crime_mult = -0.1
-			pop_government_ethic_attraction = 0.05
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_ban_restriction"		# SNS禁止ban_restriction
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			SNS_regulation_ban_restriction
-		}
-		modifier = {
-			country_unity_produces_mult = -0.1
-			pop_cat_worker_happiness = -0.05
-			planet_stability_add = 10
-			pop_government_ethic_attraction = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-}
-
-# 〇武器輸出法(武器輸出に関する法律)weapon_export_law
-# 武器輸出禁止法    no_exp    :建艦速度+10%、地上軍与ダメージ-15%、平和主義魅力+10%    (他国に軍事的便益を図ることは認められず、国内に軍事的リソースを割くべきである。)(平和主義、中立主義のみ) 
-# 武器輸出制限法    lim_exp    :建艦速度+5%、地上軍与ダメージ-10%             (武器輸出は自国に対する脅威となる場合があるため厳格に制約されるべきである。)
-# ☆規制なし    ave_exp    :なし                             (特別な規定を必要とする分野ではない。)
-# 防衛品協力法    hig_exp    :合金生産量+5%、地上軍与ダメージ+10%             (武器輸出は我が国の主要な産業で、できる限り保護すべきだ。)
-# 軍需品輸出推進法vh_exp    :合金生産量+10%、地上軍与ダメージ+15%、軍国主義魅力+10%    (死の商人？  何とでも呼びたまえ。お買い上げありがとうございます！)(軍国主義、介入主義、資本主義のみ)
-ngm_policies_weapon_export_law = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_no_exp"		# 武器輸出禁止法
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_pacifist_or_neutralism
-				has_ethic = "ethic_pacifist"
-				has_ethic = "ethic_fanatic_pacifist"
-				has_ethic = "ethic_neutralism"
-				has_ethic = "ethic_fanatic_neutralism"
-			}
-		}
-		policy_flags = {
-			export_law_no_exp
-		}
-		modifier = {
-			starbase_shipyard_build_speed_mult = 0.1
-			army_damage_mult = -0.15
-			pop_ethic_pacifist_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_pacifist
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_pacifist
-			}
-		}
-	}
-	option = {
-		name = "NAME_NGM_lim_exp"		# 武器輸出制限法
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			export_law_lim_exp
-		}
-		modifier = {
-			starbase_shipyard_build_speed_mult = 0.05
-			army_damage_mult = -0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_ave_exp"		# ☆規制なし
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			export_law_ave_exp
-		}
-		modifier = {
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_hig_exp"		# 防衛品協力法
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			export_law_hig_exp
-		}
-		modifier = {
-			country_alloys_produces_mult = 0.05
-			army_damage_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_vh_exp"		# 軍需品輸出推進法vh_exp
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_militarist_or_interventionism_or_capitalism
-				has_ethic = "ethic_militarist"
-				has_ethic = "ethic_fanatic_militarist"
-				has_ethic = "ethic_interventionism"
-				has_ethic = "ethic_fanatic_interventionism"
-				has_ethic = "ethic_capitalism"
-				has_ethic = "ethic_fanatic_capitalism"
-			}
-		}
-		policy_flags = {
-			export_law_vh_exp
-		}
-		modifier = {
-			country_alloys_produces_mult = 0.1
-			army_damage_mult = 0.15
-			pop_ethic_militarist_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_militarist
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_militarist
-			}
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_interventionism
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_interventionism
-			}
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_capitalism
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_capitalism
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_pacifist
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_pacifist
-			}
-			modifier = {
-				factor = 0.5
-				has_ethic = ethic_fanatic_neutralism
-			}
-			modifier = {
-				factor = 0.75
-				has_ethic = ethic_neutralism
-			}
-		}
-	}
-}
-
-# 〇情報法(国家機密や個人情報の取り扱いに関する法律)information_law
-# 刑法のみ    onl_crim    :暗号力-5、管理許容量+10%、幸福度+5%、交易価値+10%    (刑法に必要最低限のことは書いてあるよ。)(中立主義、受容主義、平等主義のみ) 
-# 国民情報保護法    civ_save    :幸福度+5%、管理許容量+5%、交易価値+5%             (国民に関する情報は国家にとって重要な者ばかりで、特別保護すべきである。)
-# ☆国家安全保障法nat_save    :なし                             (国家機密は守られるべきであり、漏洩等は厳しく罰せられる。)
-# 愛国法        lov_nati    :幸福度-5%、暗号力+5                     (国民は国家を愛し、スパイ行為は厳禁である。)
-# 国民愛国義務法  lov_duty    :幸福度-10%、暗号力+5、犯罪度-10%(権威、排他、介入のみ) (国民は国家を愛するべきであり、例外は認められない。)
-ngm_policies_information_law = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_onl_crim"		# 刑法のみ
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_neutralism_or_xenophile_or_egalitarian
-				has_ethic = "ethic_neutralism"
-				has_ethic = "ethic_fanatic_neutralism"
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-				has_ethic = "ethic_egalitarian"
-				has_ethic = "ethic_fanatic_egalitarian"
-			}
-		}
-		policy_flags = {
-			information_law_onl_crim
-		}
-		modifier = {
-			intel_encryption_add = -5
-			country_admin_cap_mult = 0.1
-			pop_happiness = 0.05
-			trade_value_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_civ_save"		# 国民情報保護法
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			information_law_civ_save
-		}
-		modifier = {
-			pop_happiness = 0.05
-			country_admin_cap_mult = 0.05
-			trade_value_mult = 0.05
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_nat_save"		# ☆国家安全保障法nat_save
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			information_law_nat_save
-		}
-		modifier = {
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_lov_nati"		# 愛国法
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			information_law_lov_nati
-		}
-		modifier = {
-			pop_happiness = -0.05
-			intel_encryption_add = 5
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_lov_duty"		# 国民愛国義務法
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_authoritarian_or_xenophobe_or_interventionism
-				has_ethic = "ethic_authoritarian"
-				has_ethic = "ethic_fanatic_authoritarian"
-				has_ethic = "ethic_xenophobe"
-				has_ethic = "ethic_fanatic_xenophobe"
-				has_ethic = "ethic_interventionism"
-				has_ethic = "ethic_fanatic_interventionism"
-			}
-		}
-		policy_flags = {
-			information_law_lov_duty
-		}
-		modifier = {
-			pop_happiness = -0.1
-			intel_encryption_add = 5
-			planet_crime_mult = -0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-}
-
-# 〇軍法 （軍の行動や規範について定めた法律）martial_law
-# 厳格な軍紀    harsh_mil    :地上軍士気+20%、地上軍維持費+20%、信用値+10         (一糸乱れぬ行動、違反者は厳罰！  そこ！  声が小さい！)
-# 憲兵の拡大    MP        :地上軍士気+10%、地上軍維持費+10%             (憲兵隊が常に軍内部を監察しており、違反は許されない。)
-# ☆軍法会議    court_martial    :なし                             (一般軍紀基準に合格した者のみが配備され、軍事法廷により乱れた行動は厳しく対応される。)
-# 形式的な軍法会議f_court_m    :侵攻軍与ダメージ+10%、地上軍維持費-10%            (軍事法廷は形式的であり、多くの者は軍により守られている。)(実利、軍国のみ) 
-# 略奪許可    plunder_m    :侵攻軍与ダメージ+20%、地上軍維持費-20%、信用値-10    (戦果として略奪を行うことは認められるべきである。)(実利、軍国、排他のみ)
-ngm_policies_martial_law = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_harsh_mil"		# 厳格な軍紀
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			martial_law_harsh_mil
-		}
-		modifier = {
-			army_morale = 0.2
-			armies_cost_mult = 0.2
-			country_trust_cap_add = 10
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_MP"		# 憲兵の拡大
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			martial_law_MP
-		}
-		modifier = {
-			army_morale = 0.1
-			armies_cost_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_court_martial"		# ☆軍法会議
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			martial_law_court_martial
-		}
-		modifier = {
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_f_court_m"		# 形式的な軍法会議f_court_m
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_utilitarianism_or_militarist
-				has_ethic = "ethic_utilitarianism"
-				has_ethic = "ethic_fanatic_utilitarianism"
-				has_ethic = "ethic_militarist"
-				has_ethic = "ethic_fanatic_militarist"
-			}
-		}
-		policy_flags = {
-			martial_law_f_court_m
-		}
-		modifier = {
-			army_attack_damage_mult = 0.1
-			armies_cost_mult = -0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_plunder_m"		# 略奪許可
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_utilitarianism_or_militarist_or_xenophobe
-				has_ethic = "ethic_utilitarianism"
-				has_ethic = "ethic_fanatic_utilitarianism"
-				has_ethic = "ethic_militarist"
-				has_ethic = "ethic_fanatic_militarist"
-				has_ethic = "ethic_xenophobe"
-				has_ethic = "ethic_fanatic_xenophobe"
-			}
-		}
-		policy_flags = {
-			martial_law_plunder_m
-		}
-		modifier = {
-			army_attack_damage_mult = 0.2
-			armies_cost_mult = -0.2
-			country_trust_cap_add = -10
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_militarist
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_militarist
-			}
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_xenophobe
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_xenophobe
-			}
-		}
-	}
-}
-
-# 〇治安法 （警官と治安に関する法律）sheriffs_law
-# 自力救済の拡大        self_s    :幸福度+5%、安定度+5、エネルギー生産+10%、犯罪度+10%        (警官は最後の処理のみ。あとはご自分で)(実利のみ) 
-# 治安職員の非武装    no_wep    :幸福度+5%、安定度+5                        (警官は平和と安定のために非武装で対応する。強盗にも融和的に立ち向かう。あ、撃たれた。)(権威以外) 
-# ☆節度ある治安維持    pub_erd    :なし                                 (国民の自由と苛烈な治安活動は常に天秤にかけられ、バランスを重視すべきだ。)
-# 密告の奨励        betrayal:安定度+5、幸福度-5%、犯罪度-10                 (国民の安全を保つためにお互いが監視役となればよいのだ。)
-# 憲兵の司法警察権    MP_p    :兵士1人あたりの犯罪度-1、安定度+10、幸福度-5%、軍国主義魅力+10%(軍による一般治安維持は苛烈だが強固な安心を国民に届ける。)(軍国、権威のみ)
-ngm_policies_sheriffs_law = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_self_s"		# 自力救済の拡大
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_utilitarianism
-				has_ethic = "ethic_utilitarianism"
-				has_ethic = "ethic_fanatic_utilitarianism"
-			}
-		}
-		policy_flags = {
-			sheriffs_law_self_s
-		}
-		modifier = {
-			pop_happiness = 0.05
-			planet_stability_add = 5
-			country_energy_produces_mult = 0.1
-			planet_crime_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_no_wep"		# 治安職員の非武装
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			NOR = {
-				# text = civic_tooltip_not_authoritarian
-				has_ethic = "ethic_authoritarian"
-				has_ethic = "ethic_fanatic_authoritarian"
-			}
-		}
-		policy_flags = {
-			sheriffs_law_no_wep
-		}
-		modifier = {
-			pop_happiness = 0.05
-			planet_stability_add = 5
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_pub_erd"		# ☆節度ある治安維持
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			sheriffs_law_pub_erd
-		}
-		modifier = {
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_betrayal"		# 密告の奨励
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			sheriffs_law_betrayal
-		}
-		modifier = {
-			planet_stability_add = 5
-			pop_happiness = -0.05
-			planet_crime_mult = -0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_MP_p"		# 憲兵の司法警察権
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_militarist_or_authoritarian
-				has_ethic = "ethic_militarist"
-				has_ethic = "ethic_fanatic_militarist"
-				has_ethic = "ethic_authoritarian"
-				has_ethic = "ethic_fanatic_authoritarian"
-			}
-		}
-		policy_flags = {
-			sheriffs_law_MP_p
-		}
-		modifier = {
-			planet_stability_add = 10
-			pop_happiness = -0.05
-			pop_ethic_militarist_attraction_mult = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-}
-
-# 〇放送法(放送と報道に関する法律)broadcast_law
-# 報道の自由    free_broad    :統合力+10%、安定度-5、国家志向魅力-20%    (報道の自由は誰にも犯すことのできない権利である。)(権威、軍国ではない) 
-# 公共放送    pub_broad    :統合力+5%、国家志向魅力-10%         (国営放送を排し、国民のための公共放送と民間放送が存在する。)
-# ☆官民混合    non_limit    :なし                     (国営放送や民間放送が入り混じっている。)
-# 報道規制    lim_broad    :統合力-5%、国家志向魅力+10%        (国家により一部の報道は禁止されており、法曹が急に中断することがある。)(平等ではない) 
-# 国家統制    nat_broad    :統合力-10%、安定度+5、国家志向魅力+20%    (民間放送は国民を惑わす存在であり、認めることはできない。)(権威、軍国、実利のみ)
-ngm_policies_broadcast_law = {
-	potential = {
-		NOT = {
-			has_ethic = ethic_gestalt_consciousness
-		}
-		OR = {
-			is_country_type = default
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-	}
-	option = {
-		name = "NAME_NGM_free_broad"		# 報道の自由
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			NOR = {
-				# text = civic_tooltip_militarist_nor_authoritarian
-				has_ethic = "ethic_militarist"
-				has_ethic = "ethic_fanatic_militarist"
-				has_ethic = "ethic_authoritarian"
-				has_ethic = "ethic_fanatic_authoritarian"
-			}
-		}
-		policy_flags = {
-			broadcast_law_free_broad
-		}
-		modifier = {
-			country_unity_produces_mult = 0.1
-			planet_stability_add = -5
-			pop_government_ethic_attraction = -0.2
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_pub_broad"		# 公共放送
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			broadcast_law_pub_broad
-		}
-		modifier = {
-			country_unity_produces_mult = 0.05
-			pop_government_ethic_attraction = -0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_non_limit"		# ☆官民混合
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		policy_flags = {
-			broadcast_law_non_limit
-		}
-		modifier = {
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_lim_broad"		# 報道規制
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			NOR = {
-				# text = civic_tooltip_not_egalitarian
-				has_ethic = "ethic_egalitarian"
-				has_ethic = "ethic_fanatic_egalitarian"
-			}
-		}
-		policy_flags = {
-			broadcast_law_lim_broad
-		}
-		modifier = {
-			country_unity_produces_mult = -0.05
-			pop_government_ethic_attraction = 0.1
-		}
-		AI_weight = {
-			weight = 10
-		}
-	}
-	option = {
-		name = "NAME_NGM_nat_broad"		# 国家統制
-		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
-		valid = {
-			OR = {
-				# text = civic_tooltip_authoritarian_or_militarist_or_utilitarianism
-				has_ethic = "ethic_authoritarian"
-				has_ethic = "ethic_fanatic_authoritarian"
-				has_ethic = "ethic_militarist"
-				has_ethic = "ethic_fanatic_militarist"
-				has_ethic = "ethic_utilitarianism"
-				has_ethic = "ethic_fanatic_utilitarianism"
-			}
-		}
-		policy_flags = {
-			broadcast_law_nat_broad
-		}
-		modifier = {
-			country_unity_produces_mult = -0.1
-			planet_stability_add = 5
-			pop_government_ethic_attraction = 0.2
-		}
-		AI_weight = {
-			weight = 10
-			modifier = {
-				factor = 1.5
-				has_ethic = ethic_fanatic_authoritarian
-			}
-			modifier = {
-				factor = 1.25
-				has_ethic = ethic_authoritarian
-			}
 		}
 	}
 }
@@ -3817,7 +1674,6 @@ ngm_policies_academic_policy = {
 # 		}
 # 	}
 # }
-
 # 4.諜報政策	intelligence_policy	(情報こそすべてを制する)
 #   ①対外注力	focusing_on_foreign_policy	(解読力+10)	(相手の情報を得ることこそが自国を守る)
 #   〇②バランス	balance	(情報基礎値+5)	(攻めるも守るも優劣はつけがたい)
