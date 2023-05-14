@@ -31,7 +31,7 @@ civic_sham_constitutionalism = {
 	}
 }
 
-#2.実質的立憲制度		君主制	安定度+5 布告基金＋50
+#2.実質的立憲制度		君主制 狂信的な権威主義ではない 外見的立憲制度を保持していない	安定度+10 派閥統合力収入+20%  まだまだゲーム開始直後に帝国内で派閥が結成される
 civic_substantive_constitutionalism = {
 	possible = {
 		civics = {
@@ -42,17 +42,20 @@ civic_substantive_constitutionalism = {
 		authority = {
 			value = auth_imperial
 		}
+		ethics = {
+			value = ethic_fanatic_authoritarian
+		}
 	}
 	random_weight = {
 		base = 5
 	}
 	modifier = {
-		planet_stability_add = 5
-		country_edict_fund_add = 50
+		planet_stability_add = 10
+		pop_factions_unity_produces_mult = 0.2
 	}
 }
 
-#3.ノブレス＝オブリージュ	栄望主義。社会主義、資本主義ではない	25popあたりの貴族Job+1 リーダー維持費-20% リーダースキル上限＋1
+#3.ノブレス＝オブリージュ	栄望主義。社会主義、資本主義ではない	リーダー雇用上限+1 リーダーの維持費-50% 労働者幸福度+10% 奴隷幸福度+10%
 civic_noblesse_oblige = {
 	possible = {
 		ethics = {
@@ -74,13 +77,14 @@ civic_noblesse_oblige = {
 		base = 5
 	}
 	modifier = {
-		leaders_upkeep_mult = -0.2
-		leader_skill_levels = 1
-		job_noble_per_pop = 0.04
+		country_leader_cap_add = 1
+		leaders_upkeep_mult = -0.5
+		pop_cat_worker_happiness = 0.1
+		pop_cat_slave_happiness = 0.1
 	}
 }
 
-#4.戦力の不保持	狂平和、狂中立	艦隊許容量-80％、消費財、食料生産量+30％、交易保護値+5、信用度＋50 （平和主義派閥の満足度＋5） 経済力からの発言力50％ まだ
+#4.戦力の不保持	狂平和、狂中立	交易保護値+5 jobからの資源算出+15% 帝国規模-15% 経済からの外交発言力+30% 宇宙軍許容量-90%
 civic_non_retention_of_force = {
 	possible = {
 		ethics = {
@@ -93,14 +97,14 @@ civic_non_retention_of_force = {
 	}
 	modifier = {
 		local_trade_protection_add = 5
-		country_food_produces_mult = 0.3
-		country_consumer_goods_produces_mult = 0.3
-		DIPLO_WEIGHT_ECONOMY_MULT = 0.5
-		country_naval_cap_mult = -0.8
+		planet_jobs_productive_produces_mult = 0.15
+		empire_size_mult = -0.15
+		DIPLO_WEIGHT_ECONOMY_MULT = 0.3
+		country_naval_cap_mult = -0.9
 	}
 }
 
-#5.象徴君主制			民主制					影響力＋0.5 統合力+10％
+#5.象徴君主制								安定度+10 統合力+10%
 civic_symbolic_monarchy = {
 	possible = {
 		authority = {
@@ -114,12 +118,12 @@ civic_symbolic_monarchy = {
 		base = 5
 	}
 	modifier = {
-		country_base_influence_produces_add = 0.5
+		planet_stability_add = 10
 		country_unity_produces_mult = 0.1
 	}
 }
 
-#6.詰め込み教育			物質主義				各研究力+10％ 統合力-10％
+#6.詰め込み教育			物質主義				研究速度+10% 幸福度-10%
 civic_cramming_for_education = {
 	possible = {
 		ethics = {
@@ -134,40 +138,34 @@ civic_cramming_for_education = {
 		base = 5
 	}
 	modifier = {
+		all_technology_research_speed = 0.1
 		country_unity_produces_mult = -0.1
-		country_physics_research_produces_mult = 0.1
-		country_society_research_produces_mult = 0.1
-		country_engineering_research_produces_mult = 0.1
 	}
 }
 
-#7.緩やかな建築基準法		物質主義				住居使用量-10％、快適度使用量+10％
-	# civic_lax_building_codes = {
-	# 	possible = {
-	# 		ethics = {
-	# 			OR = {
-	# 				text = civic_tooltip_materialist
-	# 				value = ethic_materialist
-	# 				value = ethic_fanatic_materialist
-	# 			}
-	# 			NOR = {
-	# 				text = civic_tooltip_not_egalitarian
-	# 				value = ethic_egalitarian
-	# 				value = ethic_fanatic_egalitarian
-	# 			}
-	# 		}
-	# 	}
-	# 	random_weight = {
-	# 		base = 5
-	# 	}
-	# 	modifier = {
-	# 		pop_amenities_usage_mult = 0.1
-	# 		pop_housing_usage_mult = -0.1
-	# 	}
-	# }
-#
+#7.緩やかな建築基準法		物質主義				建造物スロット+1 住居使用量-20% 快適度使用量+20%
+civic_lax_building_codes = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		planet_max_buildings_add = 1
+		pop_housing_usage_mult = -0.2
+		pop_amenities_usage_mult = 0.2
+	}
+}
 
-#8.真実と和解委員会		受容主義、中立主義。権威主義、実利主義、狂信的資本主義ではない				幸福度+10％、統合力+10％
+
+#8.真実と和解委員会		受容主義、中立主義。権威主義、実利主義、狂信的資本主義ではない				受容主義志向魅力+20% 幸福度+10% 統合力+10%
 civic_truth_and_reconciliation_commission = {
 	possible = {
 		ethics = {
@@ -191,33 +189,33 @@ civic_truth_and_reconciliation_commission = {
 		base = 5
 	}
 	modifier = {
+		pop_ethic_xenophile_attraction_mult = 0.2
 		pop_happiness = 0.1
 		country_unity_produces_mult = 0.1
 	}
 }
 
 #9.国家祭祀			精神主義				統合力+20％、精神主義魅力+10％
-	# civic_national_sacrifice = {
-	# 	possible = {
-	# 		ethics = {
-	# 			OR = {
-	# 				text = civic_tooltip_spiritualist
-	# 				value = ethic_spiritualist
-	# 				value = ethic_fanatic_spiritualist
-	# 			}
-	# 		}
-	# 	}
-	# 	random_weight = {
-	# 		base = 5
-	# 	}
-	# 	modifier = {
-	# 		country_unity_produces_mult = 0.1
-	# 		pop_ethic_spiritualist_attraction_mult = 0.1
-	# 	}
-	# }
-# 
+civic_national_sacrifice = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		country_unity_produces_mult = 0.1
+		pop_ethic_spiritualist_attraction_mult = 0.1
+	}
+}
 
-#10.新自由主義			狂資本主義＆狂開発				交易価値+10％ 合金、消費財生産量+10％、労働者幸福度-20％
+#10.新自由主義			狂資本主義＆狂開発				交易価値+25% 合金生産量+15% 消費財生産量+15% Pop維持費+20% 労働者幸福度-20%
 civic_neoliberalism = {
 	possible = {
 		ethics = {
@@ -229,10 +227,11 @@ civic_neoliberalism = {
 		base = 5
 	}
 	modifier = {
-		trade_value_mult = 0.1
+		trade_value_mult = 0.25
+		country_alloys_produces_mult = 0.15
+		country_consumer_goods_produces_mult = 0.15
+		planet_pops_upkeep_mult = 0.2
 		pop_cat_worker_happiness = -0.2
-		country_consumer_goods_produces_mult = 0.1
-		country_alloys_produces_mult = 0.1
 	}
 }
 
