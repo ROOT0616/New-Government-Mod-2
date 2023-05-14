@@ -77,41 +77,41 @@ origin_ngm_escape_to_the_past = {
 	}
 }
 
-# 銀河帝国アクアリウム
-origin_ngm_galactic_empire_aquarium = {
-	is_origin = yes
-	# icon = "gfx/interface/icons/governments/origins/origins_ngm_escape_to_the_past.dds"
-	picture = GFX_origin_ngm_galactic_empire_aquarium
+# # 銀河帝国アクアリウム
+# origin_ngm_galactic_empire_aquarium = {
+# 	is_origin = yes
+# 	# icon = "gfx/interface/icons/governments/origins/origins_ngm_escape_to_the_past.dds"
+# 	picture = GFX_origin_ngm_galactic_empire_aquarium
 
-	starting_colony = pc_ngm_ocean
-	habitability_preference = pc_ngm_ocean
-	# initializers = { ocean_paradise_start }	
+# 	starting_colony = pc_ngm_ocean
+# 	habitability_preference = pc_ngm_ocean
+# 	# initializers = { ocean_paradise_start }	
 
-	playable = {
-		has_aquatics = yes
-	}
+# 	playable = {
+# 		has_aquatics = yes
+# 	}
 
-	possible = {
-		authority = {
-			NOT = { value = auth_machine_intelligence }
-		}
-		ethics = {
-			OR = {
-				value = ethic_pacifist
-				value = ethic_fanatic_pacifist
-			}
-			OR = {
-				value = ethic_xenophile
-				value = ethic_fanatic_xenophile
-			}
-		}
-	}
+# 	possible = {
+# 		authority = {
+# 			NOT = { value = auth_machine_intelligence }
+# 		}
+# 		ethics = {
+# 			OR = {
+# 				value = ethic_pacifist
+# 				value = ethic_fanatic_pacifist
+# 			}
+# 			OR = {
+# 				value = ethic_xenophile
+# 				value = ethic_fanatic_xenophile
+# 			}
+# 		}
+# 	}
 
-	traits = {
-		trait = trait_aquatic
-	}
-	description = "origin_tooltip_ngm_galactic_empire_aquarium"
-	random_weight = {
-		base = 5
-	}
-}
+# 	traits = {
+# 		trait = trait_aquatic
+# 	}
+# 	description = "origin_tooltip_ngm_galactic_empire_aquarium"
+# 	random_weight = {
+# 		base = 5
+# 	}
+# }
