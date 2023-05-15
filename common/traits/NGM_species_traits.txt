@@ -23,7 +23,9 @@ trait_ngm_youth_politics = {
 		always = no
 	}
 	species_possible_merge_add = {
-		always = no
+		from = {
+			has_civic = civic_ngm_youth_politics
+		}
 	}
 	leader_age_min = 10
 	leader_age_max = 20
@@ -54,7 +56,9 @@ trait_ngm_elder_politics = {
 		always = no
 	}
 	species_possible_merge_add = {
-		always = no
+		from = {
+			has_civic = civic_ngm_elder_politics
+		}
 	}
 	leader_age_min = 60
 	leader_age_max = 100

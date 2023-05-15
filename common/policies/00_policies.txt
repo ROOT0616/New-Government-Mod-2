@@ -1502,7 +1502,6 @@ orbital_bombardment = {
 			NOR = {
 				has_ethic = "ethic_pacifist"
 				has_ethic = "ethic_fanatic_pacifist"
-				has_civic = civic_ngm_remorseless_justice
 			}
 		}
 		AI_weight = {
@@ -1528,11 +1527,14 @@ orbital_bombardment = {
 
 		valid = {
 			has_civic = civic_ngm_remorseless_justice
+			has_civic = civic_ngm_remorseless_justice
 		}
 		potential = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_ngm_remorseless_justice
+				has_valid_civic = civic_ngm_remorseless_justice
 			}
 		}
 

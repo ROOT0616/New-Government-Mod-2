@@ -679,14 +679,6 @@ soldier = {
 
 	resources = {
 		category = planet_soldiers
-		# 軍事政権
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_valid_civic = civic_ngm_military_regime }
-			}
-			unity = 2
-		}
 	}
 	triggered_country_modifier = {
 		potential = {
@@ -720,19 +712,6 @@ soldier = {
 
 	pop_modifier = {
 		pop_defense_armies_add = 3
-	}
-
-	# 軍産複合体
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_civic = civic_ngm_military_industrial_complex
-			}
-		}
-		modifier = {
-			trade_value_add = 1
-		}
 	}
 
 	# 〇治安法	憲兵の司法警察権	兵士1人あたりの犯罪度-1

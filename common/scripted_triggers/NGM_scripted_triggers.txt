@@ -61,3 +61,26 @@ is_utilitarianism = {
 		has_ethic = ethic_fanatic_utilitarianism
 	}
 }
+
+is_faction_allowed = {
+	OR = {
+		AND = {
+			years_passed > 10
+			has_encountered_other_species = yes
+		}
+		AND = {
+			days_passed > 30
+			has_valid_civic = civic_parliamentary_system
+		}
+		AND = {
+			days_passed > 30
+			has_valid_civic = civic_substantive_constitutionalism
+		}
+		AND = {
+			days_passed > 350
+			has_origin = origin_broken_shackles
+		}
+	}
+	NOT = { has_ethic = ethic_gestalt_consciousness }
+	NOT = { has_country_flag = suppress_vanilla_factions }
+}

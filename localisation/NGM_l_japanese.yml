@@ -558,12 +558,12 @@
 
  civic_ngm_missionary_group:0 "伝道者団"
  civic_ngm_missionary_group_desc:0 "この国の聖職者は熱心であり、他国に対しても自らの信仰を広めることに注力している。"
- civic_ngm_missionary_group_effect:0 "隣国の精神主義魅力+40%"
+ civic_ngm_missionary_group_effect:0 "隣国の精神主義魅力§Y+40%§!"
 
  civic_ngm_defender_of_the_faith:0 "信仰の擁護者"
  civic_ngm_defender_of_the_faith_desc:0 "この国の指導者は国家として神を守ることを誓約しており、そのためにはあらゆる犠牲を惜しまない。"
 
- civic_ngm_divination:0 "亀卜（きぼく）"
+ civic_ngm_divination:0 "亀ト（きぼく）"
  civic_ngm_divination_desc:0 "この国では占いにより政治が行われており、奇跡的に現在まで生き残ってきた原始的な体制である。"
 
  civic_ngm_cultural_consumption:0 "文化の大量消費"
@@ -4156,19 +4156,21 @@
 
  empire_not_ethic:0 "$TRIGGER_FAIL$帝国は必要な条件を満たしてない。 "
 
- civic_tooltip_ngm_manifest_destiny_effects:0 "外交スタンスが拡張主義者から変更できない"
+ civic_tooltip_ngm_manifest_destiny_effects:0 "外交スタンスが§Y拡張主義者§!から変更できない"
 
- civic_tooltip_ngm_youth_politics_effects:0 "初期リーダー年が10－20歳になる"
+ civic_tooltip_ngm_youth_politics_effects:0 "初期リーダー年が§Y10-20歳§!になる"
 
- civic_tooltip_ngm_elder_politics_effects:0 "初期リーダー年が60－100歳になる"
+ civic_tooltip_ngm_elder_politics_effects:0 "初期リーダー年が§Y60-100歳§!になる"
 
- civic_tooltip_ngm_accept_everyone_effects:0 "難民政策を無制限許容で固定"
+ civic_ngm_disdain_for_others_effects:0 "難民政策を§Y無制限許容§!で固定"
 
- civic_tooltip_ngm_remorseless_justice_effects:0 "終末軌道爆撃以外選択不可"
+ civic_tooltip_ngm_remorseless_justice_effects:0 "§R終末軌道爆撃以外選択不可§!"
 
- civic_tooltip_ngm_dissection_effects:0 "異種族は強制で奴隷化"
+ civic_tooltip_ngm_accept_everyone_effects:0 "「実りある侮辱」の技術を初期から有する"
 
- civic_tooltip_ngm_erasure_effects:0 "無制限爆撃以外選択不可\n他者痕跡の抹消の開戦事由を取得（総力戦）\n異種族を浄化しなくてはならない。"
+ civic_tooltip_ngm_dissection_effects:0 "§R異種族は強制で奴隷化§!"
+
+ civic_tooltip_ngm_erasure_effects:0 "§R終末軌道爆撃以外選択不可§!\n§R他者痕跡の抹消§!の開戦事由を取得（総力戦）\n異種族を浄化しなくてはならない。"
 
  civic_tooltip_ngm_military_industrial_complex_effects:0 "兵士が交易価値を1生み出す"
 
@@ -4184,13 +4186,17 @@
 
  civic_tooltip_ngm_prosperity_advocate_effects:0 "平和の期間が5年続くごとに労働者生産量§G+1%§!§Y（最大50年分）§!\n平和の期間が5年続くごとに交易価値§G+2.5%§!§Y（最大50年分）§!"
 
- civic_tooltip_mechanical_faith_effects:0 "精神主義派閥がロボットに怒らなくなる。\nロボットを非合法化できない。\nロボットの人権を市民権に固定。"
+ civic_tooltip_mechanical_faith_effects:0 "精神主義派閥がロボットに§Y怒らなくなる§!。\nロボットを§Y非合法化§!できない§!。\nロボットの人権を§Y市民権§!に固定。"
 
  civic_tooltip_ngm_money_penalty_effects:0 "惑星の犯罪度§G*1§!の交易価値を惑星に付与(§G+50§!が上限)"
 
  civic_tooltip_ngm_pest_control_effects:0 "開発主義国家に対して、§G$casus_belli_cb_ngm_pest_control$§!の開戦事由を得る。 \n（勝利すると開発主義の志向を保全主義に転向させ、相手を属国化させる。さらに、終戦時に戦争相手へ社会学研究力をあげる）。"
 
  civic_tooltip_ngm_experimental_substance_effects:0 "首都惑星に各戦略資源特性を2つずつ付与"
+
+ civic_tooltip_ngm_policy_description:0 "特殊な政策を選択可能"
+
+ civic_tooltip_ngm_apprenticeship_desc_effects:0 "リーダーの初期特性§G+1§!\nリーダーの初期レベルが§G+1§!"
 
  NAME_Pursuer:0 "追跡者"
 

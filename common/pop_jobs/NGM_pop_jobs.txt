@@ -1,4 +1,4 @@
-# 1.式武官   統合力10 影響力1 → 勲章0.02
+# 1.式武官   統合力10 影響力1 → 勲章0.2
 bureau_of_ceremonies = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
@@ -74,7 +74,7 @@ ngm_pacifist = {
 	}
 }
 
-# 4.紋章官 crest_bearer 				統合力+5、惑星統合力+1%、影響力+0.01、栄望主義魅力+10%
+# 4.紋章官 crest_bearer 				統合力+5、惑星統合力+1%、勲章0.1、栄望主義魅力+10%
 ngm_crest_bearer = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
@@ -94,7 +94,7 @@ ngm_crest_bearer = {
 		category = planet_ngm_crest_bearer
 		produces = {
 			unity = 5
-			influence = 0.01
+			ngm_order_of_merit = 0.1
 		}
 	}
 	weight = {

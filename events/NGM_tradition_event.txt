@@ -1401,16 +1401,16 @@ country_event = {
 				value = 1
 			}
 		}
-		# # if = {
-		# # 	limit = {
-		# # 		has_civic = civic_lax_building_codes
-		# # 	}
-		# # 	force_remove_civic = civic_lax_building_codes
-		# 	change_variable = {
-		# 		which = tr_ngm_avantgarde_finish_variable
-		# 		value = 1
-		# 	}
-		# # }
+		if = {
+			limit = {
+				has_civic = civic_lax_building_codes
+			}
+			force_remove_civic = civic_lax_building_codes
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
 		if = {
 			limit = {
 				has_civic = civic_truth_and_reconciliation_commission
@@ -1421,16 +1421,16 @@ country_event = {
 				value = 1
 			}
 		}
-		# if = {
-		# 	limit = {
-		# 		has_civic = civic_national_sacrifice
-		# 	}
-		# 	force_remove_civic = civic_national_sacrifice
-		# 	change_variable = {
-		# 		which = tr_ngm_avantgarde_finish_variable
-		# 		value = 1
-		# 	}
-		# }
+		if = {
+			limit = {
+				has_civic = civic_national_sacrifice
+			}
+			force_remove_civic = civic_national_sacrifice
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
 		if = {
 			limit = {
 				has_civic = civic_neoliberalism
@@ -1511,16 +1511,16 @@ country_event = {
 				value = 1
 			}
 		}
-		if = {
-			limit = {
-				has_civic = civic_ngm_advanced_glory_system
-			}
-			force_remove_civic = civic_ngm_advanced_glory_system
-			change_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-		}
+		# if = {
+		# 	limit = {
+		# 		has_civic = civic_ngm_advanced_glory_system
+		# 	}
+		# 	force_remove_civic = civic_ngm_advanced_glory_system
+		# 	change_variable = {
+		# 		which = tr_ngm_avantgarde_finish_variable
+		# 		value = 1
+		# 	}
+		# }
 		if = {
 			limit = {
 				has_civic = civic_ngm_culturism
@@ -2091,16 +2091,16 @@ country_event = {
 				value = 1
 			}
 		}
-		if = {
-			limit = {
-				has_civic = civic_ngm_gentlemanly_disgust
-			}
-			force_remove_civic = civic_ngm_gentlemanly_disgust
-			change_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-		}
+		# if = {
+		# 	limit = {
+		# 		has_civic = civic_ngm_gentlemanly_disgust
+		# 	}
+		# 	force_remove_civic = civic_ngm_gentlemanly_disgust
+		# 	change_variable = {
+		# 		which = tr_ngm_avantgarde_finish_variable
+		# 		value = 1
+		# 	}
+		# }
 		if = {
 			limit = {
 				has_civic = civic_ngm_erasure
@@ -2491,16 +2491,16 @@ country_event = {
 				value = 1
 			}
 		}
-		if = {
-			limit = {
-				has_civic = civic_ngm_information_operation
-			}
-			force_remove_civic = civic_ngm_information_operation
-			change_variable = {
-				which = tr_ngm_avantgarde_finish_variable
-				value = 1
-			}
-		}
+		# if = {
+		# 	limit = {
+		# 		has_civic = civic_ngm_information_operation
+		# 	}
+		# 	force_remove_civic = civic_ngm_information_operation
+		# 	change_variable = {
+		# 		which = tr_ngm_avantgarde_finish_variable
+		# 		value = 1
+		# 	}
+		# }
 		if = {
 			limit = {
 				has_civic = civic_ngm_cryptography
@@ -2881,16 +2881,16 @@ country_event = {
 				value = 1
 			}
 		}
-		# if = {
-		# 	limit = {
-		# 		has_civic = civic_ngm_zaibatsu
-		# 	}
-		# 	force_remove_civic = civic_ngm_zaibatsu
-		# 	change_variable = {
-		# 		which = tr_ngm_avantgarde_finish_variable
-		# 		value = 1
-		# 	}
-		# }
+		if = {
+			limit = {
+				has_civic = civic_ngm_zaibatsu
+			}
+			force_remove_civic = civic_ngm_zaibatsu
+			change_variable = {
+				which = tr_ngm_avantgarde_finish_variable
+				value = 1
+			}
+		}
 		if = {
 			limit = {
 				has_civic = civic_ngm_financial_enterprises
