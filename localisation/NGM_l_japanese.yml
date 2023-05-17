@@ -3995,6 +3995,671 @@
  tr_ngm_hereditary_nation:0 "世襲国家"
  tr_ngm_hereditary_nation_delayed:0 "家に属するのは国も例外ではない"
 
+#########################
+### COUNCILOR STRINGS ###
+#########################
+
+ councilor_sham_constitutionalism:0 "帝国宰相"
+ councilor_sham_constitutionalism_female:0 "$councilor_sham_constitutionalism$"
+ councilor_sham_constitutionalism_desc:0 "元首の代わりに内閣を統御し、政策を遂行する閣僚"
+
+ councilor_substantive_constitutionalism:0 "大法官"
+ councilor_substantive_constitutionalism_female:0 "$councilor_substantive_constitutionalism$"
+ councilor_substantive_constitutionalism_desc:0 "法律を司り、君主の代わりに政を行う高官"
+
+ councilor_noblesse_oblige:0 "名誉の守護者"
+ councilor_noblesse_oblige_female:0 "$councilor_noblesse_oblige$"
+ councilor_noblesse_oblige_desc:0 "名誉を守ること。それを国家として行う責任者"
+
+ councilor_non_retention_of_force:0 "憲法の守護者"
+ councilor_non_retention_of_force_female:0 "$councilor_non_retention_of_force$"
+ councilor_non_retention_of_force_desc:0 "法を守護し、行政権の乱用を防ぐ責任者"
+
+ councilor_symbolic_monarchy:0 "第一大蔵卿"
+ councilor_symbolic_monarchy_female:0 "$councilor_symbolic_monarchy$"
+ councilor_symbolic_monarchy_desc:0 "国家の財務を司り、政治全般を統御する閣僚"
+
+ councilor_cramming_for_education:0 "教育大臣"
+ councilor_cramming_for_education_female:0 "$$"
+ councilor_cramming_for_education_desc:0 "国内の教育行政を司る役所の長"
+
+ councilor_lax_building_codes:0 "建築基準監督長官"
+ councilor_lax_building_codes_female:0 "$councilor_lax_building_codes$"
+ councilor_lax_building_codes_desc:0 "建築基準を監督し、最低限住める家を確保させる職人長"
+
+ councilor_truth_and_reconciliation_commission:0 "真実と和解委員長"
+ councilor_truth_and_reconciliation_commission_female:0 "$councilor_truth_and_reconciliation_commission$"
+ councilor_truth_and_reconciliation_commission_desc:0 "過去に行われた非道を追求し、真実を明るみにする会議の長"
+
+ councilor_national_sacrifice:0 "総大主教"
+ councilor_national_sacrifice_female:0 "$councilor_national_sacrifice$"
+ councilor_national_sacrifice_desc:0 "総大主教"
+
+ councilor_neoliberalism:0 "経済団体連合会長"
+ councilor_neoliberalism_female:0 "$councilor_neoliberalism$"
+ councilor_neoliberalism_desc:0 "経済団体連合会長"
+
+ councilor_manifest_destiny:0 "拓殖務長官"
+ councilor_manifest_destiny_female:0 "$councilor_manifest_destiny$"
+ councilor_manifest_destiny_desc:0 "植民と開拓を推進し、国家の繁栄を下支えする責任者"
+
+ councilor_ngm_separation_of_powers:0 "最高裁判長"
+ councilor_ngm_separation_of_powers_female:0 "$councilor_ngm_separation_of_powers$"
+ councilor_ngm_separation_of_powers_desc:0 "最も経験豊富で知識のある国内最高の裁判官"
+
+ councilor_ngm_kakistocracy:0 "大悪人"
+ councilor_ngm_kakistocracy_female:0 "$councilor_ngm_kakistocracy$"
+ councilor_ngm_kakistocracy_desc:0 "非道を行うも、その結果として国政にも参加することになった時代の寵児"
+
+ councilor_ngm_enlightenment:0 "啓蒙弁務官"
+ councilor_ngm_enlightenment_female:0 "$councilor_ngm_enlightenment$"
+ councilor_ngm_enlightenment_desc:0 "人々を啓蒙し、必要な助言を与える高等官"
+
+ councilor_ngm_youth_politics:0 "国家青年団長"
+ councilor_ngm_youth_politics_female:0 "$councilor_ngm_youth_politics$"
+ councilor_ngm_youth_politics_desc:0 "若き指導者を育て、国民を指導鼓舞するリーダー"
+
+ councilor_ngm_elder_politics:0 "長老政治"
+ councilor_ngm_elder_politics_female:0 "$councilor_ngm_elder_politics$"
+ councilor_ngm_elder_politics_desc:0 "国を治めるもののなかで最も知見があり、人々を助ける者に贈られる称号"
+
+ councilor_ngm_advanced_glory_system:0 "高度な栄典制度"
+ councilor_ngm_advanced_glory_system_female:0 "$councilor_ngm_advanced_glory_system$"
+ councilor_ngm_advanced_glory_system_desc:0 ""
+
+ councilor_ngm_culturism:0 "国家教育委員長"
+ councilor_ngm_culturism_female:0 "$councilor_ngm_culturism$"
+ councilor_ngm_culturism_desc:0 "国内の教育問題の解決と利害調整を行う委員会の長"
+
+ councilor_ngm_imaginary_socialism:0 "大教授"
+ councilor_ngm_imaginary_socialism_female:0 "$councilor_ngm_imaginary_socialism$"
+ councilor_ngm_imaginary_socialism_desc:0 "教授の中の教授と称される、研究者の鑑"
+
+ councilor_ngm_fundamental_insanity:0 "ネバーランダー"
+ councilor_ngm_fundamental_insanity_female:0 "$councilor_ngm_fundamental_insanity$"
+ councilor_ngm_fundamental_insanity_desc:0 "I'm Happy!"
+
+ councilor_ngm_individualistic_rationalist:0 "国務長官"
+ councilor_ngm_individualistic_rationalist_female:0 "$councilor_ngm_individualistic_rationalist$"
+ councilor_ngm_individualistic_rationalist_desc:0 "国政を統括し、国家の庶務作業を執り行う閣僚"
+
+ councilor_ngm_formalist_rootkeeper:0 "官房長官"
+ councilor_ngm_formalist_rootkeeper_female:0 "$councilor_ngm_formalist_rootkeeper$"
+ councilor_ngm_formalist_rootkeeper_desc:0 "官僚を統御し、物事を裏で解決する閣僚"
+
+ councilor_ngm_artistically_inclined_careless_person:0 "特級芸術家"
+ councilor_ngm_artistically_inclined_careless_person_female:0 "$councilor_ngm_artistically_inclined_careless_person$"
+ councilor_ngm_artistically_inclined_careless_person_desc:0 "国内最高の芸術家として国政に影響を与える人物"
+
+ councilor_ngm_steady_hand:0 "総務大臣"
+ councilor_ngm_steady_hand_female:0 "$councilor_ngm_steady_hand$"
+ councilor_ngm_steady_hand_desc:0 "総合的に国政を取り扱い、各省庁の潤滑剤となる閣僚"
+
+ councilor_ngm_the_toxic_survivalist:0 "尚書"
+ councilor_ngm_the_toxic_survivalist_female:0 "$councilor_ngm_the_toxic_survivalist$"
+ councilor_ngm_the_toxic_survivalist_desc:0 "文書を統括し、国務書類を管理する閣僚"
+
+ councilor_ngm_hard_worker_with_a_slow_pace:0 "絶対防衛者"
+ councilor_ngm_hard_worker_with_a_slow_pace_female:0 "$councilor_ngm_hard_worker_with_a_slow_pace$"
+ councilor_ngm_hard_worker_with_a_slow_pace_desc:0 "国土防衛の責任者にして、国民の最後の拠り所"
+
+ councilor_ngm_ruthless_realist:0 "国家最高陰謀家"
+ councilor_ngm_ruthless_realist_female:0 "$councilor_ngm_ruthless_realist$"
+ councilor_ngm_ruthless_realist_desc:0 "国家規模の陰謀を取り仕切り、様々な策謀を張り巡らせる闇の人物"
+
+ councilor_ngm_smooth_traffic:0 "銀河交通局長"
+ councilor_ngm_smooth_traffic_female:0 "$councilor_ngm_smooth_traffic$"
+ councilor_ngm_smooth_traffic_desc:0 "銀河の交通を統御する事務担当官"
+
+ councilor_ngm_ship_protection_protocol:0 "宇宙管制長官"
+ councilor_ngm_ship_protection_protocol_female:0 "$councilor_ngm_ship_protection_protocol$"
+ councilor_ngm_ship_protection_protocol_desc:0 "宇宙における完成統御を行う事務長"
+
+ councilor_ngm_space_security_headquarters:0 "宙間警備本部長官"
+ councilor_ngm_space_security_headquarters_female:0 "$councilor_ngm_space_security_headquarters$"
+ councilor_ngm_space_security_headquarters_desc:0 "宇宙の警備を行い、宙間交通の安全を守る責任者"
+
+ councilor_ngm_random_birth_rate:0 "生命の運び手"
+ councilor_ngm_random_birth_rate_female:0 "$councilor_ngm_random_birth_rate$"
+ councilor_ngm_random_birth_rate_desc:0 "命の神秘を届ける専門官"
+
+ councilor_ngm_trading_nations:0 "経済同友会代表幹事"
+ councilor_ngm_trading_nations_female:0 "$councilor_ngm_trading_nations$"
+ councilor_ngm_trading_nations_desc:0 "財界の大物たちを束ねる大物中の大物"
+
+ councilor_ngm_virtual_society:0 "サーバー管理局長"
+ councilor_ngm_virtual_society_female:0 "$councilor_ngm_virtual_society$"
+ councilor_ngm_virtual_society_desc:0 "国家単位のサーバーを管理し、最速のその先へ導く技術者"
+
+ councilor_ngm_healthy_habits:0 "スポーツ長官"
+ councilor_ngm_healthy_habits_female:0 "$councilor_ngm_healthy_habits$"
+ councilor_ngm_healthy_habits_desc:0 "スポーツを新興し、国民の健康を目指す責任者"
+
+ councilor_ngm_cultural_hegemony:0 "地方大臣"
+ councilor_ngm_cultural_hegemony_female:0 "$councilor_ngm_cultural_hegemony$"
+ councilor_ngm_cultural_hegemony_desc:0 "国家の地方行政を補佐し、国家の運営を行う閣僚"
+
+ councilor_ngm_federation_of_the_galaxies:0 "連邦議長"
+ councilor_ngm_federation_of_the_galaxies_female:0 "$councilor_ngm_federation_of_the_galaxies$"
+ councilor_ngm_federation_of_the_galaxies_desc:0 "連邦議会をまとめる老獪な政治家"
+
+ councilor_ngm_environmental_democracy:0 "環境大臣"
+ councilor_ngm_environmental_democracy_female:0 "$councilor_ngm_environmental_democracy$"
+ councilor_ngm_environmental_democracy_desc:0 "環境破壊を防ぎ、惑星を汚染から守る役所の長"
+
+ councilor_ngm_religious_republicanism:0 "宗務長官"
+ councilor_ngm_religious_republicanism_female:0 "$councilor_ngm_religious_republicanism$"
+ councilor_ngm_religious_republicanism_desc:0 "宗教行政を取り扱う閣僚"
+
+ councilor_ngm_peoples_democracy:0 "人民委員長"
+ councilor_ngm_peoples_democracy_female:0 "$councilor_ngm_peoples_democracy$"
+ councilor_ngm_peoples_democracy_desc:0 "人民の問題を取り扱う主任閣僚"
+
+ councilor_ngm_cyberdemocracy:0 "サイバー民主制"
+ councilor_ngm_cyberdemocracy_female:0 "$councilor_ngm_cyberdemocracy$"
+ councilor_ngm_cyberdemocracy_desc:0 "国内外の情報を管理する役所の長"
+
+ councilor_ngm_aristocratic_republicanism:0 "法の守護者"
+ councilor_ngm_aristocratic_republicanism_female:0 "$councilor_ngm_aristocratic_republicanism$"
+ councilor_ngm_aristocratic_republicanism_desc:0 "貴族により国家機関が法を侵害しないよう監視するための役職"
+
+ councilor_ngm_chief_secretary_system:0 "書記長"
+ councilor_ngm_chief_secretary_system_female:0 "$councilor_ngm_chief_secretary_system$"
+ councilor_ngm_chief_secretary_system_desc:0 "閣議の書記にして議長であり、その他さまざまな役職を兼ねた高位政治家"
+
+ councilor_ngm_war_lord:0 "総参謀長"
+ councilor_ngm_war_lord_female:0 "$councilor_ngm_war_lord$"
+ councilor_ngm_war_lord_desc:0 "参謀を統括し、作戦立案に全責任を負う高位軍人"
+
+ councilor_ngm_communist_dictatorship:0 "国務委員長"
+ councilor_ngm_communist_dictatorship_female:0 "$councilor_ngm_communist_dictatorship$"
+ councilor_ngm_communist_dictatorship_desc:0 "国家業務を統括し、必要な業務を統括する政治家"
+
+ councilor_ngm_demagoguery:0 "国家宣伝大臣"
+ councilor_ngm_demagoguery_female:0 "$councilor_ngm_demagoguery$"
+ councilor_ngm_demagoguery_desc:0 "国家としての方針を喧伝し、人々を指導する役所の長"
+
+ councilor_ngm_order_of_chivalry:0 "騎士団総長"
+ councilor_ngm_order_of_chivalry_female:0 "$councilor_ngm_order_of_chivalry$"
+ councilor_ngm_order_of_chivalry_desc:0 "騎士団を統括し、伝統と戦力を維持向上させる名誉ある軍人"
+
+ councilor_ngm_honorary_imperialism:0 "紋章院総裁"
+ councilor_ngm_honorary_imperialism_female:0 "$councilor_ngm_honorary_imperialism$"
+ councilor_ngm_honorary_imperialism_desc:0 "紋章を司り、家閣や称号の格付けに責任を負う宮廷職"
+
+ councilor_ngm_guiding_principle:0 "副総統"
+ councilor_ngm_guiding_principle_female:0 "$councilor_ngm_guiding_principle$"
+ councilor_ngm_guiding_principle_desc:0 "国家元首を支え、国家元首と軍人や政治家を繋ぐ潤滑油となる人物"
+
+ councilor_ngm_party_rule:0 "幹事長"
+ councilor_ngm_party_rule_female:0 "$councilor_ngm_party_rule$"
+ councilor_ngm_party_rule_desc:0 "党内政治を統御し、政治家や党員の利害を調整する役職"
+
+ councilor_ngm_freedom_in_obedience:0 "護民官"
+ councilor_ngm_freedom_in_obedience_female:0 "$councilor_ngm_freedom_in_obedience$"
+ councilor_ngm_freedom_in_obedience_desc:0 "民衆への過度な侵害が行われないように監視する役職"
+
+ councilor_ngm_caste_system:0 "大バラモン"
+ councilor_ngm_caste_system_female:0 "$councilor_ngm_caste_system$"
+ councilor_ngm_caste_system_desc:0 "歴史的な権威主義的聖職者の伝統的指導者"
+
+ councilor_ngm_tribalism:0 "大部族長"
+ councilor_ngm_tribalism_female:0 "$councilor_ngm_tribalism$"
+ councilor_ngm_tribalism_desc:0 "各部族を束ねる伝統的役職"
+
+ councilor_ngm_court_politics:0 "宮中伯"
+ councilor_ngm_court_politics_female:0 "$councilor_ngm_court_politics$"
+ councilor_ngm_court_politics_desc:0 "他貴族を監視し、非道を行わないかを牽制する貴族職"
+
+ councilor_ngm_social_darvinism:0 "国家親衛隊長官"
+ councilor_ngm_social_darvinism_female:0 "$councilor_ngm_social_darvinism$"
+ councilor_ngm_social_darvinism_desc:0 "国家の秩序を統括し、一つの思想へと向かわせる軍人"
+
+ councilor_ngm_apprenticeship:0 "大ギルド長"
+ councilor_ngm_apprenticeship_female:0 "$councilor_ngm_apprenticeship$"
+ councilor_ngm_apprenticeship_desc:0 "国内最大の商業ギルドを統括する財界の大物"
+
+ councilor_ngm_direct_democracy:0 "国家参事官"
+ councilor_ngm_direct_democracy_female:0 "$councilor_ngm_direct_democracy$"
+ councilor_ngm_direct_democracy_desc:0 "国政に参画し、直接市民の意見を政府に伝達する特別な政治家"
+
+ councilor_ngm_liberal_education:0 "教育長官"
+ councilor_ngm_liberal_education_female:0 "$councilor_ngm_liberal_education$"
+ councilor_ngm_liberal_education_desc:0 "自由教育を広め、必要な教育を実施する役所の長"
+
+ councilor_ngm_demonstration_culture:0 "国家請願担当官"
+ councilor_ngm_demonstration_culture_female:0 "$councilor_ngm_demonstration_culture$"
+ councilor_ngm_demonstration_culture_desc:0 "国民の請願を取りまとめ、政策へ反映させる業務を遂行する担当者"
+
+ councilor_ngm_open_forum:0 "討議長"
+ councilor_ngm_open_forum_female:0 "$councilor_ngm_open_forum$"
+ councilor_ngm_open_forum_desc:0 "国家的ディベートを取り仕切り、すべての見解に決着をつける高等官"
+
+ councilor_ngm_consumer_society:0 "消費者長官"
+ councilor_ngm_consumer_society_female:0 "$councilor_ngm_consumer_society$"
+ councilor_ngm_consumer_society_desc:0 "消費を推奨し、安全な商品を市民へ届ける責任者"
+
+ councilor_ngm_social_welfare:0 "厚生大臣"
+ councilor_ngm_social_welfare_female:0 "$councilor_ngm_social_welfare$"
+ councilor_ngm_social_welfare_desc:0 "国民の福祉を整備し、国民に最大限の厚生業務を行う役所の長"
+
+ councilor_ngm_cosmic_scale_liberation:0 "宇宙の解放者"
+ councilor_ngm_cosmic_scale_liberation_female:0 "$councilor_ngm_cosmic_scale_liberation$"
+ councilor_ngm_cosmic_scale_liberation_desc:0 "宇宙を非道から解放し、自由をもたらすことを使命とする人物"
+
+ councilor_ngm_ultimate_freedom_of_thought:0 "学術会議議長"
+ councilor_ngm_ultimate_freedom_of_thought_female:0 "$councilor_ngm_ultimate_freedom_of_thought$"
+ councilor_ngm_ultimate_freedom_of_thought_desc:0 "学者による国家的会議を主催する高名な学者"
+
+ councilor_ngm_right_to_bear_arms:0 "全国ライフル協会会長"
+ councilor_ngm_right_to_bear_arms_female:0 "$councilor_ngm_right_to_bear_arms$"
+ councilor_ngm_right_to_bear_arms_desc:0 "全国民の武装権と自由を保護するワイルドな指導者"
+
+ councilor_ngm_shared_values:0 "総務大臣"
+ councilor_ngm_shared_values_female:0 "$councilor_ngm_shared_values$"
+ councilor_ngm_shared_values_desc:0 "総合的に国政を取り扱い、各省庁の事務を統括する閣僚"
+
+ councilor_ngm_go_along_with:0 "国家進歩管理官"
+ councilor_ngm_go_along_with_female:0 "$councilor_ngm_go_along_with$"
+ councilor_ngm_go_along_with_desc:0 "国家の進歩を進め、新たな道を切り開く高等官"
+
+ councilor_ngm_globalism:0 "交流管理監"
+ councilor_ngm_globalism_female:0 "$councilor_ngm_globalism$"
+ councilor_ngm_globalism_desc:0 "異民族との交流を促進し、問題が発生しないように監視する管理官"
+
+ councilor_ngm_multiculturalism:0 "共生担当補佐官"
+ councilor_ngm_multiculturalism_female:0 "$councilor_ngm_multiculturalism$"
+ councilor_ngm_multiculturalism_desc:0 "異民族の定住を促進し、国家元首に異文化について助言する補佐官"
+
+ councilor_ngm_paternalism:0 "護国卿"
+ councilor_ngm_paternalism_female:0 "$councilor_ngm_paternalism$"
+ councilor_ngm_paternalism_desc:0 "属国を守り、自国を守る総責任者"
+
+ councilor_ngm_accept_everyone:0 "難民担当弁務官"
+ councilor_ngm_accept_everyone_female:0 "$councilor_ngm_accept_everyone$"
+ councilor_ngm_accept_everyone_desc:0 "難民や移民の見解を代弁し、国際社会に訴える専門的外交官"
+
+ councilor_ngm_people_flying_away:0 "移民局長"
+ councilor_ngm_people_flying_away_female:0 "$councilor_ngm_people_flying_away$"
+ councilor_ngm_people_flying_away_desc:0 "移民を制御し、違法な移民を差し止める役所の長"
+
+ councilor_ngm_exclusive_community:0 "純血審問長官"
+ councilor_ngm_exclusive_community_female:0 "$councilor_ngm_exclusive_community$"
+ councilor_ngm_exclusive_community_desc:0 "社会と国民の純血を監督し、秩序を維持する審問官"
+
+ councilor_ngm_remorseless_justice:0 "正義執行官"
+ councilor_ngm_remorseless_justice_female:0 "$councilor_ngm_remorseless_justice$"
+ councilor_ngm_remorseless_justice_desc:0 "正義を執行し、秩序をもたらす国民的英雄"
+
+ councilor_ngm_disdain_for_others:0 "侮辱長官"
+ councilor_ngm_disdain_for_others_female:0 "$councilor_ngm_disdain_for_others$"
+ councilor_ngm_disdain_for_others_desc:0 "相手を侮辱するための専門的役所の長"
+
+ councilor_ngm_gentlemanly_disgust:0 "紳士的距離感"
+ councilor_ngm_gentlemanly_disgust_female:0 "$councilor_ngm_gentlemanly_disgust$"
+ councilor_ngm_gentlemanly_disgust_desc:0 ""
+
+ councilor_ngm_erasure:0 "記録の整理者"
+ councilor_ngm_erasure_female:0 "$councilor_ngm_erasure$"
+ councilor_ngm_erasure_desc:0 "各種記録の削除や、整理を司る担当官"
+
+ councilor_ngm_elitism:0 "大ラビ"
+ councilor_ngm_elitism_female:0 "$councilor_ngm_elitism$"
+ councilor_ngm_elitism_desc:0 "伝統的な排他的宗教の最高指導者"
+
+ councilor_ngm_dissection:0 "異種族研究長官"
+ councilor_ngm_dissection_female:0 "$councilor_ngm_dissection$"
+ councilor_ngm_dissection_desc:0 "異種族を研究し、自民族へと活かすマッドサイエンティスト"
+
+ councilor_ngm_imperialism:0 "植民地大臣"
+ councilor_ngm_imperialism_female:0 "$councilor_ngm_imperialism$"
+ councilor_ngm_imperialism_desc:0 "他国への拡大と統治を専門とする役所の長"
+
+ councilor_ngm_big_ship_policy:0 "艦政本部長"
+ councilor_ngm_big_ship_policy_female:0 "$councilor_ngm_big_ship_policy$"
+ councilor_ngm_big_ship_policy_desc:0 "艦隊整備計画を立案し、実行する軍事責任者"
+
+ councilor_ngm_military_industrial_complex:0 "死の商人"
+ councilor_ngm_military_industrial_complex_female:0 "$councilor_ngm_military_industrial_complex$"
+ councilor_ngm_military_industrial_complex_desc:0 "武器販売を通じて国政へと参画した恨まれる者"
+
+ councilor_ngm_war_prosperity:0 "魂の換金者"
+ councilor_ngm_war_prosperity_female:0 "$councilor_ngm_war_prosperity$"
+ councilor_ngm_war_prosperity_desc:0 "罪と金を等価交換するにはそれなりの技量と経験が必要だ"
+
+ councilor_ngm_military_regime:0 "陸軍総司令官"
+ councilor_ngm_military_regime_female:0 "$councilor_ngm_military_regime$"
+ councilor_ngm_military_regime_desc:0 "全陸軍を統括し、指揮する高位軍人"
+
+ councilor_ngm_The_Struggle_for_Struggle:0 "戦争狂"
+ councilor_ngm_The_Struggle_for_Struggle_female:0 "$councilor_ngm_The_Struggle_for_Struggle$"
+ councilor_ngm_The_Struggle_for_Struggle_desc:0 "戦争を鼓舞し、闘争のための闘争を遂行する狂人"
+
+ councilor_ngm_aegis_shield:0 "国家守護司令長官"
+ councilor_ngm_aegis_shield_female:0 "$councilor_ngm_aegis_shield$"
+ councilor_ngm_aegis_shield_desc:0 "国体を護持し、国民を守ることを使命とする高位軍人"
+
+ councilor_ngm_prosperity_advocate:0 "繁栄尊師"
+ councilor_ngm_prosperity_advocate_female:0 "$councilor_ngm_prosperity_advocate$"
+ councilor_ngm_prosperity_advocate_desc:0 "繁栄を導き人々を教導する指導者"
+
+ councilor_ngm_armed_pacifism:0 "国境警備隊長"
+ councilor_ngm_armed_pacifism_female:0 "$councilor_ngm_armed_pacifism$"
+ councilor_ngm_armed_pacifism_desc:0 "国境を警備し、国を守ることを主任務とした軍人
+
+ councilor_ngm_active_pacifist:0 "平和軍司令官"
+ councilor_ngm_active_pacifist_female:0 "$councilor_ngm_active_pacifist$"
+ councilor_ngm_active_pacifist_desc:0 "平和を維持するという崇高な目標なために武力を行使する責任者"
+
+ councilor_ngm_messenger_of_peace:0 "平和の使者"
+ councilor_ngm_messenger_of_peace_female:0 "$councilor_ngm_messenger_of_peace$"
+ councilor_ngm_messenger_of_peace_desc:0 "平和を愛し、人々に平和を届けることを夢見る高官"
+
+ councilor_ngm_space_security_headquarters:0 "最高交渉官"
+ councilor_ngm_space_security_headquarters_female:0 "$councilor_ngm_space_security_headquarters$"
+ councilor_ngm_space_security_headquarters_desc:0 "国家間の交渉を行う最高位の外交官"
+
+ councilor_ngm_mechanical_faith:0 "機械法王"
+ councilor_ngm_mechanical_faith_female:0 "$councilor_ngm_mechanical_faith$"
+ councilor_ngm_mechanical_faith_desc:0 "機械教を統御し、信者に機械を広める信仰技術者"
+
+ councilor_ngm_missionary_group:0 "伝道団総長"
+ councilor_ngm_missionary_group_female:0 "$councilor_ngm_missionary_group$"
+ councilor_ngm_missionary_group_desc:0 "他国への殿堂を行う善良な一団の長"
+
+ councilor_ngm_defender_of_the_faith:0 "枢機卿"
+ councilor_ngm_defender_of_the_faith_female:0 "$councilor_ngm_defender_of_the_faith$"
+ councilor_ngm_defender_of_the_faith_desc:0 "教会を統率し、国政にも大きな影響を与える高位聖職者"
+
+ councilor_ngm_divination:0 "神官統理"
+ councilor_ngm_divination_female:0 "$councilor_ngm_divination$"
+ councilor_ngm_divination_desc:0 "神官を統率し、最高の占いを行う高位聖職者"
+
+ councilor_ngm_cultural_consumption:0 "文部監"
+ councilor_ngm_cultural_consumption_female:0 "$councilor_ngm_cultural_consumption$"
+ councilor_ngm_cultural_consumption_desc:0 "教育を監督し、必要な学術措置を執り行う教育の権威"
+
+ councilor_ngm_ai_assistance:0 "AI管理官"
+ councilor_ngm_ai_assistance_female:0 "$councilor_ngm_ai_assistance$"
+ councilor_ngm_ai_assistance_desc:0 "AIを管理することと機械と人をつなぐ専門家"
+
+ councilor_ngm_machines_are_our_friends:0 "科学技術長官"
+ councilor_ngm_machines_are_our_friends_female:0 "$councilor_ngm_machines_are_our_friends$"
+ councilor_ngm_machines_are_our_friends_desc:0 "科学技術の発展とその敷衍を行う役所の長"
+
+ councilor_ngm_longing_for_the_future:0 "宇宙長官"
+ councilor_ngm_longing_for_the_future_female:0 "$councilor_ngm_longing_for_the_future$"
+ councilor_ngm_longing_for_the_future_desc:0 "宇宙へと手を伸ばし、進歩の歩みを進める責任者"
+
+ councilor_ngm_experimental_substance:0 "特級研究官"
+ councilor_ngm_experimental_substance_female:0 "$councilor_ngm_experimental_substance$"
+ councilor_ngm_experimental_substance_desc:0 "特別な研究を行うことが許可された特別な研究官"
+
+ councilor_ngm_industrial_capitalism:0 "経済連盟代表"
+ councilor_ngm_industrial_capitalism_female:0 "$councilor_ngm_industrial_capitalism$"
+ councilor_ngm_industrial_capitalism_desc:0 "国内経済団体を束ねた圧力団体の長"
+
+ councilor_ngm_experimental_practice:0 "特許庁長官"
+ councilor_ngm_experimental_practice_female:0 "$councilor_ngm_experimental_practice$"
+ councilor_ngm_experimental_practice_desc:0 "特許の許認可と知的財産訴訟を取り扱う事務責任者"
+
+ councilor_ngm_paranoia:0 "最高技師長"
+ councilor_ngm_paranoia_female:0 "$councilor_ngm_paranoia$"
+ councilor_ngm_paranoia_desc:0 "AIを管理することを任務とした、実質的な最高権力者"
+
+ councilor_ngm_equality_in_society:0 "平等監視委員長"
+ councilor_ngm_equality_in_society_female:0 "$councilor_ngm_equality_in_society$"
+ councilor_ngm_equality_in_society_desc:0 "社会的平等があらゆるところではかられているか監視する委員会の長"
+
+ councilor_ngm_sectionalism:0 "教理長官"
+ councilor_ngm_sectionalism_female:0 "$councilor_ngm_sectionalism$"
+ councilor_ngm_sectionalism_desc:0 "教義に従い、資源の再分配を行う役所の長"
+
+ councilor_ngm_peoples_army:0 "人民武力長官"
+ councilor_ngm_peoples_army_female:0 "$councilor_ngm_peoples_army$"
+ councilor_ngm_peoples_army_desc:0 "人民を守るために人民を兵力として運用する軍事指揮者"
+
+ councilor_ngm_economic_primitivism:0 "原始の豪商"
+ councilor_ngm_economic_primitivism_female:0 "$councilor_ngm_economic_primitivism$"
+ councilor_ngm_economic_primitivism_desc:0 "原始的な経済における、武力による経済を成り立たせる大物"
+
+ councilor_ngm_land_sharing:0 "土地管理局長"
+ councilor_ngm_land_sharing_female:0 "$councilor_ngm_land_sharing$"
+ councilor_ngm_land_sharing_desc:0 "国有地を管理し、様々な建築を統率する事務長"
+
+ councilor_ngm_communism:0 "最高会議幹部会議長"
+ councilor_ngm_communism_female:0 "$councilor_ngm_communism$"
+ councilor_ngm_communism_desc:0 "国家の最高幹部が集まる会議の議長"
+
+ councilor_ngm_development_dictatorship:0 "国家警察長官"
+ councilor_ngm_development_dictatorship_female:0 "$councilor_ngm_development_dictatorship$"
+ councilor_ngm_development_dictatorship_desc:0 "国家警察を束ね、治安を維持する責任者"
+
+ councilor_ngm_commercialism:0 "商務長官"
+ councilor_ngm_commercialism_female:0 "$councilor_ngm_commercialism$"
+ councilor_ngm_commercialism_desc:0 "商業を司り、安定流通を目指す閣僚"
+
+ councilor_ngm_financing:0 "金融長官"
+ councilor_ngm_financing_female:0 "$councilor_ngm_financing$"
+ councilor_ngm_financing_desc:0 "金融を司り、安定した金融経済を維持する閣僚"
+
+ councilor_ngm_information:0 "デジタル長官"
+ councilor_ngm_information_female:0 "$councilor_ngm_information$"
+ councilor_ngm_information_desc:0 "デジタル分野の規制や発展を支援する役所の長"
+
+ councilor_ngm_agriculture:0 "農務長官"
+ councilor_ngm_agriculture_female:0 "$councilor_ngm_agriculture$"
+ councilor_ngm_agriculture_desc:0 "農業生産を司り、安定供給を目指す閣僚"
+
+ councilor_ngm_deregulation:0 "行政改革担当大臣"
+ councilor_ngm_deregulation_female:0 "$councilor_ngm_deregulation$"
+ councilor_ngm_deregulation_desc:0 "行政改革を主任務とした閣僚"
+
+ councilor_ngm_CIA:0 "国家中央情報局長官"
+ councilor_ngm_CIA_female:0 "$councilor_ngm_CIA$"
+ councilor_ngm_CIA_desc:0 "対外的諜報活動を統括し、国の安全を守る責任者"
+
+ councilor_ngm_information_operation:0 "情報操作"
+ councilor_ngm_information_operation_female:0 "$councilor_ngm_information_operation$"
+ councilor_ngm_information_operation_desc:0 ""
+
+ councilor_ngm_cryptography:0 "国家暗号技師長"
+ councilor_ngm_cryptography_female:0 "$councilor_ngm_cryptography$"
+ councilor_ngm_cryptography_desc:0 "国家が作成する暗号を精査し、機密性を維持する責任者"
+
+ councilor_ngm_parabola:0 "銀河監視官"
+ councilor_ngm_parabola_female:0 "$councilor_ngm_parabola$"
+ councilor_ngm_parabola_desc:0 "全銀河を監視し、必要な警告を行う専門官"
+
+ councilor_ngm_smile:0 "国際仲介官"
+ councilor_ngm_smile_female:0 "$councilor_ngm_smile$"
+ councilor_ngm_smile_desc:0 "国家間の問題を仲介し、解決に導く特任の外交官"
+
+ councilor_ngm_mastermind:0 "国際的黒幕"
+ councilor_ngm_mastermind_female:0 "$councilor_ngm_mastermind$"
+ councilor_ngm_mastermind_desc:0 "銀河はこの人物の掌で踊っているにすぎない"
+
+ councilor_ngm_glorious_isolation:0 "外務卿"
+ councilor_ngm_glorious_isolation_female:0 "$councilor_ngm_glorious_isolation$"
+ councilor_ngm_glorious_isolation_desc:0 "外交を統御する役所の長"
+
+ councilor_ngm_FBI:0 "国家捜査局長官"
+ councilor_ngm_FBI_female:0 "$councilor_ngm_FBI$"
+ councilor_ngm_FBI_desc:0 "国家の犯罪を捜査し、国内の秩序を維持する責任者"
+
+ councilor_ngm_internal_affairs:0 "内政査察監"
+ councilor_ngm_internal_affairs_female:0 "$councilor_ngm_internal_affairs$"
+ councilor_ngm_internal_affairs_desc:0 "政治の自立や不正を監査し、独力の政府を目指す特別公務員"
+
+ councilor_ngm_inner_satisfaction:0 "満腹大臣"
+ councilor_ngm_inner_satisfaction_female:0 "$councilor_ngm_inner_satisfaction$"
+ councilor_ngm_inner_satisfaction_desc:0 "人々を満腹にさせるための閣僚"
+
+ councilor_ngm_armed_neutrality:0 "国防事務監"
+ councilor_ngm_armed_neutrality_female:0 "$councilor_ngm_armed_neutrality$"
+ councilor_ngm_armed_neutrality_desc:0 "国防に関する事務を統括し、効率よく軍事行動が行えるようと計らう責任者"
+
+ councilor_ngm_interest_representation:0 "国家渉外理事"
+ councilor_ngm_interest_representation_female:0 "$councilor_ngm_interest_representation$"
+ councilor_ngm_interest_representation_desc:0 "国家利益を確保し、外交発言力を確保するための特任外交官"
+
+ councilor_ngm_environmental_maintenance:0 "主任環境技師"
+ councilor_ngm_environmental_maintenance_female:0 "$councilor_ngm_environmental_maintenance$"
+ councilor_ngm_environmental_maintenance_desc:0 "惑星環境の整備や調査を主任務とする主任技術者"
+
+ councilor_ngm_pest_control:0 "駆除軍令官"
+ councilor_ngm_pest_control_female:0 "$councilor_ngm_pest_control$"
+ councilor_ngm_pest_control_desc:0 "不埒な開発主義者を制圧することを義務付けられた高位軍人"
+
+ councilor_ngm_natural_adaptation:0 "銀河自然監督官"
+ councilor_ngm_natural_adaptation_female:0 "$councilor_ngm_natural_adaptation$"
+ councilor_ngm_natural_adaptation_desc:0 "銀河中の自然を尊重し、保護できるよう支援する高等官"
+
+ councilor_ngm_planetary_garden:0 "国家庭園管理官"
+ councilor_ngm_planetary_garden_female:0 "$councilor_ngm_planetary_garden$"
+ councilor_ngm_planetary_garden_desc:0 "国家規模の庭園を管理し、美しい状態を維持する"
+
+ councilor_ngm_space_security_headquarters:0 "大生命保護官"
+ councilor_ngm_space_security_headquarters_female:0 "$councilor_ngm_space_security_headquarters$"
+ councilor_ngm_space_security_headquarters_desc:0 "この世で最も尊い生命を保護し、安全を確保する高等官"
+
+ councilor_ngm_nature_faith:0 "巫女姫"
+ councilor_ngm_nature_faith_female:0 "$councilor_ngm_nature_faith$"
+ councilor_ngm_nature_faith_desc:0 "神に祈り、自然を尊ぶ神官の中でも伝統的に指導者と崇められる巫女"
+
+ councilor_ngm_grand_monument:0 "国家建築士"
+ councilor_ngm_grand_monument_female:0 "$councilor_ngm_grand_monument$"
+ councilor_ngm_grand_monument_desc:0 "国家規模の建造を行う最高技術者"
+
+ councilor_ngm_destructive_digging:0 "破壊長官"
+ councilor_ngm_destructive_digging_female:0 "$councilor_ngm_destructive_digging$"
+ councilor_ngm_destructive_digging_desc:0 "惑星を破壊し、鉱物生産を行う担当部署の長"
+
+ councilor_ngm_irreversible_industrialization:0 "工業大臣"
+ councilor_ngm_irreversible_industrialization_female:0 "$councilor_ngm_irreversible_industrialization$"
+ councilor_ngm_irreversible_industrialization_desc:0 "工業生産の向上を目指し、必要な措置を講じる役職の閣僚"
+
+ councilor_ngm_infrastructure_construction:0 "国土長官"
+ councilor_ngm_infrastructure_construction_female:0 "$councilor_ngm_infrastructure_construction$"
+ councilor_ngm_infrastructure_construction_desc:0 "国土を管理し、測量や調査を遂行する役所の長"
+
+ councilor_ngm_nationwide_development:0 "開発長官"
+ councilor_ngm_nationwide_development_female:0 "$councilor_ngm_nationwide_development$"
+ councilor_ngm_nationwide_development_desc:0 "国土を開発し、国家の基盤を作る責任者"
+
+ councilor_ngm_planetary_scale_irrigation:0 "農林大臣"
+ councilor_ngm_planetary_scale_irrigation_female:0 "$councilor_ngm_planetary_scale_irrigation$"
+ councilor_ngm_planetary_scale_irrigation_desc:0 "農業を通じて国家の繁栄を導く閣僚"
+
+ councilor_ngm_modification_engineering:0 "開発大臣"
+ councilor_ngm_modification_engineering_female:0 "$councilor_ngm_modification_engineering$"
+ councilor_ngm_modification_engineering_desc:0 "国土開発を通じ、国家を発展させる役職の閣僚"
+
+ councilor_ngm_diplomatic_etiquette:0 "儀典局長"
+ councilor_ngm_diplomatic_etiquette_female:0 "$councilor_ngm_diplomatic_etiquette$"
+ councilor_ngm_diplomatic_etiquette_desc:0 "外交儀礼を司り、外交・儀礼で国家的に発言力のある人物"
+
+ councilor_ngm_exchange_of_honor:0 "外交典礼監"
+ councilor_ngm_exchange_of_honor_female:0 "$councilor_ngm_exchange_of_honor$"
+ councilor_ngm_exchange_of_honor_desc:0 "外交における儀礼問題とマナーを解釈し、指導する高官"
+
+ councilor_ngm_heroic_volunteer_force:0 "大元帥"
+ councilor_ngm_heroic_volunteer_force_female:0 "$councilor_ngm_heroic_volunteer_force$"
+ councilor_ngm_heroic_volunteer_force_desc:0 "国軍の最高司令官にして国家の象徴的存在である最高位軍人"
+
+ councilor_ngm_the_self_righteous_hero:0 "大英雄"
+ councilor_ngm_the_self_righteous_hero_female:0 "$councilor_ngm_the_self_righteous_hero$"
+ councilor_ngm_the_self_righteous_hero_desc:0 "国民最大の英雄であり、国民の憧れの存在"
+
+ councilor_ngm_respect_act:0 "紋章特許審問官"
+ councilor_ngm_respect_act_female:0 "$councilor_ngm_respect_act$"
+ councilor_ngm_respect_act_desc:0 "紋章の許可、不許可を司り、統治者層に影響を有する人物"
+
+ councilor_ngm_personal_interest:0 "トップ・オブ・成金"
+ councilor_ngm_personal_interest_female:0 "$councilor_ngm_personal_interest$"
+ councilor_ngm_personal_interest_desc:0 "成金の中で最も成功した成金中の成金"
+
+ councilor_ngm_hypothecation_of_human_rights:0 "人権監査委員長"
+ councilor_ngm_hypothecation_of_human_rights_female:0 "$councilor_ngm_hypothecation_of_human_rights$"
+ councilor_ngm_hypothecation_of_human_rights_desc:0 "人権が適切に売却されているかを査定する高官"
+
+ councilor_ngm_money_penalty:0 "司法金融長官"
+ councilor_ngm_money_penalty_female:0 "$councilor_ngm_money_penalty$"
+ councilor_ngm_money_penalty_desc:0 "司法を金で代替する専門官僚"
+
+ councilor_ngm_profit_motive:0 "公正取引委員長"
+ councilor_ngm_profit_motive_female:0 "$councilor_ngm_profit_motive$"
+ councilor_ngm_profit_motive_desc:0 "リベートが適切に渡されているかを監査する高官"
+
+ councilor_ngm_securing_real_benefits:0 "ビッグ・ドン"
+ councilor_ngm_securing_real_benefits_female:0 "$councilor_ngm_securing_real_benefits$"
+ councilor_ngm_securing_real_benefits_desc:0 "首領のなかの首領。それだけでいい"
+
+ councilor_ngm_producer_consumer_society:0 "経済産業長官"
+ councilor_ngm_producer_consumer_society_female:0 "$councilor_ngm_producer_consumer_society$"
+ councilor_ngm_producer_consumer_society_desc:0 "経済を管理し、必要な経済政策を取り扱う閣僚"
+
+ councilor_ngm_corporate_empire:0 "社内政治専務"
+ councilor_ngm_corporate_empire_female:0 "$councilor_ngm_corporate_empire$"
+ councilor_ngm_corporate_empire_desc:0 "社内における政治統制と利益折衝を専門とする役員"
+
+ councilor_ngm_high_tech_company:0 "技術部長"
+ councilor_ngm_high_tech_company_female:0 "$councilor_ngm_high_tech_company$"
+ councilor_ngm_high_tech_company_desc:0 "技術開発部門の長として企業を支える専門職の役員"
+
+ councilor_ngm_smokestack_industry:0 "産業部長"
+ councilor_ngm_smokestack_industry_female:0 "$councilor_ngm_smokestack_industry$"
+ councilor_ngm_smokestack_industry_desc:0 "産業開発と効率的なチェーンを組み上げる専門家"
+
+ councilor_ngm_hereditary_officers:0 "特務取締役"
+ councilor_ngm_hereditary_officers_female:0 "$councilor_ngm_hereditary_officers$"
+ councilor_ngm_hereditary_officers_desc:0 "世襲で取締役の地位を維持している者の中で最高位の者"
+
+ councilor_ngm_zaibatsu:0 "総帥補佐"
+ councilor_ngm_zaibatsu_female:0 "$councilor_ngm_zaibatsu$"
+ councilor_ngm_zaibatsu_desc:0 "財閥の総帥を補佐し、不必要な業務を総帥から解放する重要職"
+
+ councilor_ngm_financial_enterprises:0 "金融部長"
+ councilor_ngm_financial_enterprises_female:0 "$councilor_ngm_financial_enterprises$"
+ councilor_ngm_financial_enterprises_desc:0 "社債等を管理し、必要な措置を講じる責任者"
+
+ councilor_ngm_information_company:0 "システム部長"
+ councilor_ngm_information_company_female:0 "$councilor_ngm_information_company$"
+ councilor_ngm_information_company_desc:0 "システムを構築し、維持する大役をこなす部署の長"
+
+ councilor_ngm_social_enterprise:0 "社会共生部長"
+ councilor_ngm_social_enterprise_female:0 "$councilor_ngm_social_enterprise$"
+ councilor_ngm_social_enterprise_desc:0 "社会と企業の共生を発展を図る部門の長"
+
+ councilor_ngm_general_contractor:0 "開発部長"
+ councilor_ngm_general_contractor_female:0 "$councilor_ngm_general_contractor$"
+ councilor_ngm_general_contractor_desc:0 "社有資産を整備し、必要な工事や施設管理を行う部門長"
+
+ councilor_ngm_agricultural_company:0 "農業開発部長"
+ councilor_ngm_agricultural_company_female:0 "$councilor_ngm_agricultural_company$"
+ councilor_ngm_agricultural_company_desc:0 "農業を通じて企業の繁栄を導く閣僚"
+
+ councilor_ngm_shipping_company:0 "運輸部長"
+ councilor_ngm_shipping_company_female:0 "$councilor_ngm_shipping_company$"
+ councilor_ngm_shipping_company_desc:0 "社内外の運送と効果的な物流ロジスティクスを管理する花形部門の長"
+
+ councilor_ngm_operating_company:0 "投資部長"
+ councilor_ngm_operating_company_female:0 "$councilor_ngm_operating_company$"
+ councilor_ngm_operating_company_desc:0 "国内外の投資を管理し、必要な資産運用を行う部門の長"
+
+ councilor_ngm_industrial_espionage:0 "情報部長"
+ councilor_ngm_industrial_espionage_female:0 "$councilor_ngm_industrial_espionage$"
+ councilor_ngm_industrial_espionage_desc:0 "社内外の情報を管理し、適切な対応を行う準備をする担当者"
+
+ councilor_ngm_rating_company:0 "一級格付け師"
+ councilor_ngm_rating_company_female:0 "$councilor_ngm_rating_company$"
+ councilor_ngm_rating_company_desc:0 "格付け会社の中でも特に一級品の格付けを行うプロフェッショナル"
+
+ councilor_ngm_underhanded_trick:0 "接待部長"
+ councilor_ngm_underhanded_trick_female:0 "$councilor_ngm_underhanded_trick$"
+ councilor_ngm_underhanded_trick_desc:0 "他国の要人を歓待し、自らの良きように操る実力者"
+
+
 ##########################
 #####    貿易取引    ######
 ##########################

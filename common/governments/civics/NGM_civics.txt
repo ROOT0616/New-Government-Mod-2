@@ -26,6 +26,36 @@ civic_sham_constitutionalism = {
 		base = 5
 	}
 	modifier = {
+	}
+}
+#1.外見的立憲制度		寡頭制、独裁制、君主制、権威主義	影響力+1 外交発言力+10%
+civic_sham_constitutionalism = {
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_authoritarian
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
+		}
+		authority = {
+			OR = {
+				text = civic_tooltip_fsass
+				value = auth_dictatorial
+				value = auth_oligarchic
+				value = auth_imperial
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_substantive_constitutionalism
+			}
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
 		country_base_influence_produces_add = 1
 		DIPLO_WEIGHT_ECONOMY_MULT = 0.1
 	}

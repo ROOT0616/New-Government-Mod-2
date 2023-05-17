@@ -879,7 +879,7 @@ entertainer = {
 		}
 
 		trade_value_add = @councilor_corporate_hedonism_entertainer_trade_value
-		mult = value:trade_value_councilor_corporate_hedonism_mult
+		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_corporate_hedonism|
 	}
 
 	triggered_planet_modifier = {
@@ -2569,7 +2569,7 @@ pearl_diver = {
 		}
 
 		trade_value_add = @councilor_corporate_anglers_pearl_diver_trade_value_bonus
-		mult = value:trade_value_corporate_angler_councilor_mult
+		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_corporate_anglers|
 	}
 
 	overlord_resources = {
