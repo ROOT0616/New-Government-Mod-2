@@ -1,0 +1,728 @@
+@base_ethic_agenda_cost = 7000
+# 積極的介入	positive_intervention	介入	浸透度+5、解読力+5	適用済みの補正	浸透度+10、解読力+10、外交発言力+20%	国外への関与は帝国の地位をより高める
+agenda_ngm_positive_intervention = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_interventionism"
+			is_interventionism = yes
+		}
+	}
+	modifiers = {
+		{
+			spy_power_cost_add = 5
+			intel_decryption_add = 5
+		}
+	}
+	finish_modifier = agenda_ngm_positive_intervention_finish_modifier
+	effect = {
+	}
+}
+
+# 中立の確認	neutrality_confirmation	中立	幸福度+5%、暗号力+5	適用済みの補正	幸福度+10%、暗号力+10、外交発言力+20%	他国から自立することは帝国にとって必要だ
+agenda_ngm_neutrality_confirmation = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_neutralism"
+			is_neutralism = yes
+		}
+	}
+	modifiers = {
+		{
+			pop_happiness = 0.05
+			intel_encryption_add = 5
+		}
+	}
+	finish_modifier = agenda_ngm_neutrality_confirmation_finish_modifier
+	effect = {
+	}
+}
+
+# 栄誉の称賛	honorary_accolades	栄望	影響力+1	適用済みの補正	影響力+2	名誉を称えることこそ国家の義務だ
+agenda_ngm_honorary_accolades = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_honorism"
+			is_honorism = yes
+		}
+	}
+	modifiers = {
+		{
+			country_base_influence_produces_add = 1
+		}
+	}
+	finish_modifier = agenda_ngm_honorary_accolades_finish_modifier
+	effect = {
+	}
+}
+
+# 実益の確保	securing_real_benefits	実利	職業からの資源産出+5%	適用済みの補正	職業からの資源産出+10%	利益であれば食べていくことができる
+agenda_ngm_securing_real_benefits = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_utilitarianism"
+			is_utilitarianism = yes
+		}
+	}
+	modifiers = {
+		{
+			planet_jobs_produces_mult = 0.05
+		}
+	}
+	finish_modifier = agenda_ngm_securing_real_benefits_finish_modifier
+	effect = {
+	}
+}
+
+# 経済利益の追求	pursuit_of_economic_profit	資本	交易価値+15%、交易保護値+2	適用済みの補正	交易価値+30%、交易保護値+5、エネルギー収入+15%	金、金、金。金は重要なのだ
+agenda_ngm_pursuit_of_economic_profit = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_capitalism"
+			is_capitalism = yes
+		}
+	}
+	modifiers = {
+		{
+			trade_value_mult = 0.15
+			local_trade_protection_add = 2
+		}
+	}
+	finish_modifier = agenda_ngm_pursuit_of_economic_profit_finish_modifier
+	effect = {
+	}
+}
+
+# 経済的格差の是正	reduction_of_economic_disparities	社会	労働者幸福度+10%、労働者資源産出+5%	適用済みの補正	労働者幸福度+20%、労働者資源産出+10%、安定度+5	平等の実現は国の義務だ
+agenda_ngm_reduction_of_economic_disparities = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_socialism"
+			is_socialism = yes
+		}
+	}
+	modifiers = {
+		{
+			pop_cat_worker_happiness = 0.1
+			planet_jobs_worker_produces_mult = 0.05
+		}
+	}
+	finish_modifier = agenda_ngm_reduction_of_economic_disparities_finish_modifier
+	effect = {
+	}
+}
+
+# 開発構想の改革	reform_of_development_concept	開発	鉱物産出+10%、合金産出+10%、消費財産出+10％	適用済みの補正	鉱物産出+20%、合金産出+20%、消費財産出+20％	帝国の開発追求は未来へとつながる
+agenda_ngm_reform_of_development_concept = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_developmentalism"
+			is_developmentalism = yes
+		}
+	}
+	modifiers = {
+		{
+			country_minerals_produces_mult = 0.1
+			country_alloys_produces_mult = 0.1
+			country_consumer_goods_produces_mult = 0.1
+		}
+	}
+	finish_modifier = agenda_ngm_reform_of_development_concept_finish_modifier
+	effect = {
+	}
+}
+
+# 環境主義の喧伝	the_clamor_for_environmentalism	保全	居住性+5、POP成長速度+10%	適用済みの補正	居住性+10、POP成長速度+20%、POP消費財維持費-10％	自然環境は保護していくべき財産だ
+agenda_ngm_the_clamor_for_environmentalism = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_conservationism"
+			is_interventionism = yes
+		}
+	}
+	modifiers = {
+		{
+			pop_environment_tolerance = 5
+			pop_growth_speed = 0.1
+		}
+	}
+	finish_modifier = agenda_ngm_the_clamor_for_environmentalism_finish_modifier
+	effect = {
+	}
+}
+
+# 法秩序の徹底	ensuring_law_and_order	法令	犯罪-5、POPからの帝国規模-10%	適用済みの補正	犯罪-10、POPからの帝国規模-20%	法秩序の実現は必要なのだ
+agenda_ngm_ensuring_law_and_order = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_law_first
+	}
+	modifiers = {
+		{
+			planet_crime_add = -5
+			empire_size_pops_mult = -0.1
+		}
+	}
+	finish_modifier = agenda_ngm_ensuring_law_and_order_finish_modifier
+	effect = {
+	}
+}
+
+# 幹部教育の再実施	re_implementation_of_executive_education	研鑽	リーダー経験値取得+15%、リーダー雇用コスト-20%	適用済みの補正	リーダー経験値取得+30%、リーダー雇用コスト-40%、リーダー維持コスト-25%	幹部こそ初心を忘れてはいけない
+agenda_ngm_re_implementation_of_executive_education = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_study_first
+	}
+	modifiers = {
+		{
+			species_leader_exp_gain = 0.15
+			leaders_cost_mult = -0.2
+		}
+	}
+	finish_modifier = agenda_ngm_re_implementation_of_executive_education_finish_modifier
+	effect = {
+	}
+}
+
+# 耽美なる祝宴	aesthetic_feast	逸楽	統治者幸福度+15%、快適度+15%	適用済みの補正	統治者幸福度+15%、快適度+15%	贅沢は友だ
+agenda_ngm_aesthetic_feast = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_ecstasy_first
+	}
+	modifiers = {
+		{
+			pop_cat_ruler_happiness = 0.15
+			planet_amenities_mult = 0.15
+		}
+	}
+	finish_modifier = agenda_ngm_aesthetic_feast_finish_modifier
+	effect = {
+	}
+}
+
+# 学術研究の推進	promoting_academic_research	学術	研究速度+10%	適用済みの補正	研究速度+20%	技術の推進は発展の両輪だ
+agenda_ngm_promoting_academic_research = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_academic_first
+	}
+	modifiers = {
+		{
+			all_technology_research_speed = 0.1
+		}
+	}
+	finish_modifier = agenda_ngm_promoting_academic_research_finish_modifier
+	effect = {
+	}
+}
+
+# 自由への歩み	steps_toward_freedom	自由	派閥からの統合力収入+15%	適用済みの補正	派閥からの統合力収入+30%	自由に基づく派閥政治を推進する
+agenda_ngm_steps_toward_freedom = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_freedom_first
+	}
+	modifiers = {
+		{
+			pop_factions_unity_produces_mult = 0.15
+		}
+	}
+	finish_modifier = agenda_ngm_steps_toward_freedom_finish_modifier
+	effect = {
+	}
+}
+
+# 秩序の再編	reorganization_of_order	秩序	帝国規模-10%	適用済みの補正	帝国規模-20%	秩序はすべての上に立つ
+agenda_ngm_reorganization_of_order = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_order_first
+	}
+	modifiers = {
+		{
+			empire_size_mult = -0.1
+		}
+	}
+	finish_modifier = agenda_ngm_reorganization_of_order_finish_modifier
+	effect = {
+	}
+}
+
+# 異種族理解の推進	promotion_of_species_understanding	善隣	外交発言力+10%、流入魅力+20%	適用済みの補正	外交発言力+10%、流入魅力+40%、POP成長速度+10％	異種族の理解推進は国家規模で行われる
+agenda_ngm_promotion_of_species_understanding = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_neighbor_first
+	}
+	modifiers = {
+		{
+			diplo_weight_mult = 0.1
+			planet_immigration_pull_mult = 0.2
+		}
+	}
+	finish_modifier = agenda_ngm_promotion_of_species_understanding_finish_modifier
+	effect = {
+	}
+}
+
+# パラノイアの拡大	expanding_paranoia	敵視	統合力5% 解読力+10	適用済みの補正	宿敵の外交発言力-20%、浸透度+10	あいつらは敵なのだ……そうに違いない
+agenda_ngm_expanding_paranoia = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_enemy_first
+	}
+	modifiers = {
+		{
+			country_unity_produces_mult = 0.05
+			intel_decryption_add = 10
+		}
+	}
+	finish_modifier = agenda_ngm_expanding_paranoia_finish_modifier
+	effect = {
+		every_rival_country = {
+			limit = {
+				NOT = {
+					has_ascension_perk = ap_ngm_ministry_of_innocence
+				}
+			}
+			spynetwork = {
+				add_modifier = {
+					modifier = gather_information_infiltration_10
+					days = 3600
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_agenda_ngm_expanding_paranoia_debuff_1
+					has_country_flag = country_flag_agenda_ngm_expanding_paranoia_debuff_1
+				}
+			}
+			set_timed_global_flag = {
+				flag = global_flag_agenda_ngm_expanding_paranoia_debuff_1
+				days = 3600
+			}
+			set_timed_country_flag = {
+				flag = country_flag_agenda_ngm_expanding_paranoia_debuff_1
+				days = 3600
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = agenda_ngm_expanding_paranoia_debuff_1
+					days = 3600
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_agenda_ngm_expanding_paranoia_debuff_2
+					has_country_flag = country_flag_agenda_ngm_expanding_paranoia_debuff_2
+				}
+			}
+			set_timed_global_flag = {
+				flag = global_flag_agenda_ngm_expanding_paranoia_debuff_2
+				days = 3600
+			}
+			set_timed_country_flag = {
+				flag = country_flag_agenda_ngm_expanding_paranoia_debuff_2
+				days = 3600
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = agenda_ngm_expanding_paranoia_debuff_2
+					days = 3600
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_agenda_ngm_expanding_paranoia_debuff_3
+					has_country_flag = country_flag_agenda_ngm_expanding_paranoia_debuff_3
+				}
+			}
+			set_timed_global_flag = {
+				flag = global_flag_agenda_ngm_expanding_paranoia_debuff_3
+				days = 3600
+			}
+			set_timed_country_flag = {
+				flag = country_flag_agenda_ngm_expanding_paranoia_debuff_3
+				days = 3600
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = agenda_ngm_expanding_paranoia_debuff_3
+					days = 3600
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_agenda_ngm_expanding_paranoia_debuff_4
+					has_country_flag = country_flag_agenda_ngm_expanding_paranoia_debuff_4
+				}
+			}
+			set_timed_global_flag = {
+				flag = global_flag_agenda_ngm_expanding_paranoia_debuff_4
+				days = 3600
+			}
+			set_timed_country_flag = {
+				flag = country_flag_agenda_ngm_expanding_paranoia_debuff_4
+				days = 3600
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = agenda_ngm_expanding_paranoia_debuff_4
+					days = 3600
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_agenda_ngm_expanding_paranoia_debuff_5
+					has_country_flag = country_flag_agenda_ngm_expanding_paranoia_debuff_5
+				}
+			}
+			set_timed_global_flag = {
+				flag = global_flag_agenda_ngm_expanding_paranoia_debuff_5
+				days = 3600
+			}
+			set_timed_country_flag = {
+				flag = country_flag_agenda_ngm_expanding_paranoia_debuff_5
+				days = 3600
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = agenda_ngm_expanding_paranoia_debuff_5
+					days = 3600
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_agenda_ngm_expanding_paranoia_debuff_6
+					has_country_flag = country_flag_agenda_ngm_expanding_paranoia_debuff_6
+				}
+			}
+			set_timed_global_flag = {
+				flag = global_flag_agenda_ngm_expanding_paranoia_debuff_6
+				days = 3600
+			}
+			set_timed_country_flag = {
+				flag = country_flag_agenda_ngm_expanding_paranoia_debuff_6
+				days = 3600
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = agenda_ngm_expanding_paranoia_debuff_6
+					days = 3600
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_agenda_ngm_expanding_paranoia_debuff_7
+					has_country_flag = country_flag_agenda_ngm_expanding_paranoia_debuff_7
+				}
+			}
+			set_timed_global_flag = {
+				flag = global_flag_agenda_ngm_expanding_paranoia_debuff_7
+				days = 3600
+			}
+			set_timed_country_flag = {
+				flag = country_flag_agenda_ngm_expanding_paranoia_debuff_7
+				days = 3600
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = agenda_ngm_expanding_paranoia_debuff_7
+					days = 3600
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_agenda_ngm_expanding_paranoia_debuff_8
+					has_country_flag = country_flag_agenda_ngm_expanding_paranoia_debuff_8
+				}
+			}
+			set_timed_global_flag = {
+				flag = global_flag_agenda_ngm_expanding_paranoia_debuff_8
+				days = 3600
+			}
+			set_timed_country_flag = {
+				flag = country_flag_agenda_ngm_expanding_paranoia_debuff_8
+				days = 3600
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = agenda_ngm_expanding_paranoia_debuff_8
+					days = 3600
+				}
+			}
+		}
+	}
+}
+
+# 官僚機構の拡大	expansion_of_bureaucracy	官吏	布告資金+50、リーダー雇用コスト-15%	適用済みの補正	リーダー雇用コスト-30%、布告資金+100、帝国規模-10％	官僚機構の強化は国の強化である
+agenda_ngm_expansion_of_bureaucracy = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_official_first
+	}
+	modifiers = {
+		{
+			country_edict_fund_add = 50
+			leaders_cost_mult = -0.15
+		}
+	}
+	finish_modifier = agenda_ngm_expansion_of_bureaucracy_finish_modifier
+	effect = {
+	}
+}
+
+# 将校団の拡大	expansion_of_officer_corps	将校	艦船維持費-20%、地上軍の士気+20%	適用済みの補正	艦船維持費-40%、地上軍の士気+40%、最大占領守備隊数+10	将校の強化は軍を強化できる
+agenda_ngm_expansion_of_officer_corps = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_officer_first
+	}
+	modifiers = {
+		{
+			ships_upkeep_mult = -0.2
+			army_morale = 0.2
+		}
+	}
+	finish_modifier = agenda_ngm_expansion_of_officer_corps_finish_modifier
+	effect = {
+	}
+}
+
+# 建築計画の実施	implementation_of_building_plans	建築	惑星建造速度+20%、巨大構造物建造速度+15%	適用済みの補正	惑星建造速度+40%、巨大構造物建造速度+30%	手塩にかけた建築計画は常に作成される
+agenda_ngm_implementation_of_building_plans = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_building_adopt
+	}
+	modifiers = {
+		{
+			planet_building_build_speed_mult = 0.2
+			megastructure_build_speed_mult = 0.15
+		}
+	}
+	finish_modifier = agenda_ngm_implementation_of_building_plans_finish_modifier
+	effect = {
+	}
+}
+
+# 希望の宙	space_of_hope	切望	関係改善の効果+25%、国境摩擦-20%	適用済みの補正	関係改善の効果+50%、国境摩擦-40%	未来へと常に進み続ける
+agenda_ngm_space_of_hope = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_longing_adopt
+	}
+	modifiers = {
+		{
+			envoy_improve_relations_mult = 0.25
+			country_border_friction_mult = -0.2
+		}
+	}
+	finish_modifier = agenda_ngm_space_of_hope_finish_modifier
+	effect = {
+	}
+}
+
+# 国際問題の解決	resolving_international_issues	介入	使節+1、外交発言力+15%	適用済みの補正	使節+2、外交発言力+30%	国際的問題は一国では解決しない。そもそも一国では発生しない
+agenda_ngm_resolving_international_issues = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_intervention_adopt
+	}
+	modifiers = {
+		{
+			envoys_add = 1
+			diplo_weight_mult = 0.15
+		}
+	}
+	finish_modifier = agenda_ngm_resolving_international_issues_finish_modifier
+	effect = {
+	}
+}
+
+# 大規模行動の実施	implementation_of_large_scale_actions	巨大	開拓前哨地建造コスト-20%、請求権作成コスト-20%	適用済みの補正	開拓前哨地建造コスト-40%、請求権作成コスト-40%	国家拡張に向けて進め！
+agenda_ngm_implementation_of_large_scale_actions = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_gigantic_adopt
+	}
+	modifiers = {
+		{
+			shipclass_starbase_build_cost_mult = -0.2
+			country_claim_influence_cost_mult = -0.2
+		}
+	}
+	finish_modifier = agenda_ngm_implementation_of_large_scale_actions_finish_modifier
+	effect = {
+	}
+}
+
+# 立法手続きの再編	restructuring_of_legislative_procedures	立法	布告資金+100	適用済みの補正	布告資金+200	法の見直しは常に必要なのだ
+agenda_ngm_restructuring_of_legislative_procedures = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_legislation_adopt
+	}
+	modifiers = {
+		{
+			country_edict_fund_add = 100
+		}
+	}
+	finish_modifier = agenda_ngm_restructuring_of_legislative_procedures_finish_modifier
+	effect = {
+	}
+}
+
+# 階級的秩序の徹底	ensuring_class_order	世襲	安定度+5、統治者Popの資源生産+5%	適用済みの補正	安定度+10、統治者Popの資源生産+10%、統合力+10%	世襲階級への優遇は国家の礎なのだ
+agenda_ngm_ensuring_class_order = {
+	agenda_cost = @base_ethic_agenda_cost
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		has_tradition = tr_ngm_hereditary_adopt
+	}
+	modifiers = {
+		{
+			planet_stability_add = 5
+			planet_jobs_ruler_produces_mult = 0.05
+		}
+	}
+	finish_modifier = agenda_ngm_ensuring_class_order_finish_modifier
+	effect = {
+	}
+}

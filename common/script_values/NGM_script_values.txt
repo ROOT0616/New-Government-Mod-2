@@ -1,0 +1,9 @@
+
+count_owned_pop_script = {
+	base = 0.5
+	complex_trigger_modifier = {
+		trigger_scope = owner
+		trigger = count_owned_pop
+		mode = mult
+	}
+}

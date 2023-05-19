@@ -1553,3 +1553,83 @@ country_event = {
 		}
 	}
 }
+
+# 根本的な狂気		:安定度-10 外交発言力-50% 戦力不均衡ボーナス+40% 研究者が全員狂気的の特性を取得する 提督は全員トリックスターの特性を得る
+country_event = {
+	id = ngm_civic.23
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_fundamental_insanity
+	}
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				NOT = {
+					has_leader_flag = flag_civic_ngm_fundamental_insanity_system
+				}
+				leader_class = scientist
+			}
+			set_leader_flag = flag_civic_ngm_fundamental_insanity_system
+			if = {
+				limit = {
+					NOT = {
+						has_trait = leader_trait_maniacal
+					}
+				}
+				add_trait = leader_trait_maniacal
+			}
+			else_if = {
+				limit = {
+					has_trait = leader_trait_maniacal
+				}
+				add_trait = leader_trait_maniacal_2
+			}
+		}
+		every_owned_leader = {
+			limit = {
+				NOT = {
+					has_leader_flag = flag_civic_ngm_fundamental_insanity_system
+				}
+				leader_class = admiral
+			}
+			set_leader_flag = flag_civic_ngm_fundamental_insanity_system
+			if = {
+				limit = {
+					NOT = {
+						has_trait = leader_trait_trickster
+					}
+				}
+				add_trait = leader_trait_trickster
+			}
+			else_if = {
+				limit = {
+					has_trait = leader_trait_trickster_2
+				}
+				add_trait = leader_trait_trickster_2
+			}
+		}
+	}
+}
+
+# 55.徒弟制度 apprenticeship  		(権威、物質)	専門家出力+10% リーダー雇用上限+1 リーダーの初期特性+1 リーダーの初期レベルが+1
+country_event = {
+	id = ngm_civic.24
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_apprenticeship
+	}
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				NOT = {
+					has_leader_flag = civic_ngm_apprenticeship
+				}
+			}
+			set_leader_flag = civic_ngm_apprenticeship
+			set_skill = 2
+			add_trait = random
+		}
+	}
+}

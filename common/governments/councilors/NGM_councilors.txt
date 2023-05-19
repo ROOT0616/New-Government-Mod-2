@@ -1,0 +1,3693 @@
+#1.外見的立憲制度	帝国宰相	提督	元首の代わりに内閣を統御し、政策を遂行する閣僚	派閥幸福+1%	派閥統合力収入+1%
+councilor_sham_constitutionalism = {
+	leader_class = {
+		# governor
+		# admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		leader_class = general
+	}
+	civic = civic_sham_constitutionalism
+	modifier = {
+		faction_approval = 0.01
+		pop_factions_unity_produces_mult = 0.01
+	}
+}
+
+#2.実質的立憲制度	大法官	総督 法律を司り、君主の代わりに政を行う高官	布告資金+5 外交発言力+2%
+councilor_substantive_constitutionalism = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		leader_class = governor
+	}
+	civic = civic_substantive_constitutionalism
+	modifier = {
+		country_edict_fund_add	= 5
+		diplo_weight_mult = 0.02
+	}
+}
+
+#3.ノブレス＝オブリージュ 名誉の守護者	提督	将軍	科学者	総督 名誉を守ること。それを国家として行う責任者	統合力1% 影響力+0.2
+councilor_noblesse_oblige = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_noblesse_oblige
+	modifier = {
+		country_unity_produces_mult = 0.01
+		country_base_influence_produces_add = 0.2
+	}
+}
+
+#4.戦力の不保持	憲法の守護者	総督 法を守護し、行政権の乱用を防ぐ責任者	安定度+2 平和主義志向魅力+5%
+councilor_non_retention_of_force = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		leader_class = governor
+		# OR = {
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_non_retention_of_force
+	modifier = {
+		planet_stability_add = 2
+		pop_ethic_pacifist_attraction_mult = 0.05
+	}
+}
+
+#5.象徴君主制	第一大蔵卿 総督 国家の財務を司り、政治全般を統御する閣僚 エネルギー収入+2% POPからの帝国規模-1.5%
+councilor_symbolic_monarchy = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		leader_class = governor
+		# OR = {
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_symbolic_monarchy
+	modifier = {
+		planet_stability_add = 2
+		pop_ethic_pacifist_attraction_mult = 0.015
+	}
+}
+
+#6.詰め込み教育	教育大臣	科学者 総督	国内の教育行政を司る役所の長	リーダー雇用上限+1
+councilor_cramming_for_education = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		}
+	}
+	civic = civic_cramming_for_education
+	modifier = {
+		country_leader_cap_add = 1
+	}
+}
+
+#7.緩やかな建築基準法 建築基準監督長官	科学者 総督	建築基準を監督し、最低限住める家を確保させる職人長	惑星建造速度+3% 惑星建造物コスト-2%
+councilor_lax_building_codes = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		}
+	}
+	civic = civic_lax_building_codes
+	modifier = {
+		planet_building_build_speed_mult = 0.03
+		planet_buildings_cost_mult = -0.02
+	}
+}
+
+#8.真実と和解委員会 真実と和解委員長	提督 将軍 科学者 総督	過去に行われた非道を追求し、真実を明るみにする会議の長	統合力+2% 受容主義志向魅力+5%
+councilor_truth_and_reconciliation_commission = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_truth_and_reconciliation_commission
+	modifier = {
+		country_unity_produces_mult = 0.02
+		pop_ethic_xenophile_attraction_mult = 0.05
+	}
+}
+
+#9.国家祭祀 総大主教	総督	高位聖職者を束ね、指導する最高位聖職者	司祭の統合力産出+1
+councilor_national_sacrifice = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_national_sacrifice
+	modifier = {
+		planet_priests_unity_produces_add = 1
+	}
+}
+
+#10.新自由主義 経済団体連合会長	総督	各種経済団体を束ねて国政に影響を与える財界人	交易価値+3%
+councilor_neoliberalism = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_neoliberalism
+	modifier = {
+		trade_value_mult = 0.03
+	}
+}
+
+#11.マニュフェスト・ディスティニー 拓殖務長官	将軍 科学者 総督	植民と開拓を推進し、国家の繁栄を下支えする責任者	植民地建造速度2.5%
+councilor_manifest_destiny = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_manifest_destiny
+	modifier = {
+		planet_colony_development_speed_mult = 0.025
+	}
+}
+
+#12.三権分立 最高裁判長	総督	最も経験豊富で知識のある国内最高の裁判官	犯罪-2 安定度+2
+councilor_ngm_separation_of_powers = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_separation_of_powers
+	modifier = {
+		planet_crime_add = -2
+		planet_stability_add = 2
+	}
+}
+
+#13.カキストクラシー 大悪人	提督 将軍 科学者 総督	非道を行うも、その結果として国政にも参加することになった時代の寵児	エネルギー+15 犯罪+3
+councilor_ngm_kakistocracy = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_kakistocracy
+	modifier = {
+		country_base_energy_produces_add = 15
+		planet_crime_add = 3
+	}
+}
+
+#14.啓蒙主義 啓蒙弁務官	科学者 総督	人々を啓蒙し、必要な助言を与える高等官	POPからの外交発言力+2%
+councilor_ngm_enlightenment = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		}
+	}
+	civic = civic_ngm_enlightenment
+	modifier = {
+		diplo_weight_pops_mult = 0.02
+	}
+}
+
+#15.青年政治 国家青年団長	提督 将軍 総督	若き指導者を育て、国民を指導鼓舞するリーダー	リーダー取得経験値+3%
+councilor_ngm_youth_politics = {
+	leader_class = {
+		governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_youth_politics
+	modifier = {
+		species_leader_exp_gain = 0.03
+	}
+}
+
+#16.長老政治 最長老	提督 将軍 科学者 総督	国を治めるもののなかで最も知見があり、人々を助ける者に贈られる称号	リーダー取得経験値+3%
+councilor_ngm_elder_politics = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_elder_politics
+	modifier = {
+		species_leader_exp_gain = 0.03
+	}
+}
+
+#17.高度な栄典制度 削除	削除	削除	削除
+# councilor_ngm_advanced_glory_system = {
+# 	leader_class = {
+# 		# governor
+# 		# admiral
+# 		# scientist
+# 		# general
+# 	}
+# 	is_leader_possible = {
+# 		# OR = {
+# 		# 	leader_class = governor
+# 		# 	leader_class = admiral
+# 		# 	leader_class = scientist
+# 		# 	leader_class = general
+# 		# }
+# 	}
+# 	civic = civic_ngm_advanced_glory_system
+# 	modifier = {
+# 	}
+# }
+
+#18.教養主義 国家教育委員長	科学者 総督	国内の教育問題の解決と利害調整を行う委員会の長	リーダー取得経験値+3%
+councilor_ngm_culturism = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_culturism
+	modifier = {
+		species_leader_exp_gain = 0.03
+	}
+}
+
+#19.空想的社会主義 大教授	科学者	教授の中の教授と称される、研究者の鑑	リーダー経験値取得+2% 社会主義志向魅力+5%
+councilor_ngm_imaginary_socialism = {
+	leader_class = {
+		# governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_imaginary_socialism
+	modifier = {
+		species_leader_exp_gain = 0.02
+		pop_ethic_socialism_attraction_mult = 0.05
+	}
+}
+
+# 20.根本的な狂気 ネバーランダー	提督 将軍 科学者 総督	I'm Happy!	幸福度+2% 奴隷の幸福度+1%
+councilor_ngm_fundamental_insanity = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_fundamental_insanity
+	modifier = {
+		pop_happiness = 0.02
+		pop_cat_slave_happiness = 0.01
+	}
+}
+
+# 21.個性的な合理主義者 国務長官	総督	国政を統括し、国家の庶務作業を執り行う閣僚	帝国規模による伝統コスト-1% 安定度+1
+councilor_ngm_individualistic_rationalist = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_individualistic_rationalist
+	modifier = {
+		tradition_cost_empire_size_mult = -0.01
+		planet_stability_add = 1
+	}
+}
+
+# 22.形式主義的な根回し屋 官房長官	総督	官僚を統御し、物事を裏で解決する閣僚	官僚からの統合力産出+1
+councilor_ngm_formalist_rootkeeper = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_formalist_rootkeeper
+	modifier = {
+		planet_administrators_unity_produces_add = 1
+	}
+}
+
+# 23.芸術家肌のうっかり屋 特級芸術家	科学者 総督	国内最高の芸術家として国政に影響を与える人物	帝国規模からの伝統コスト-2.5%
+councilor_ngm_artistically_inclined_careless_person = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_artistically_inclined_careless_person
+	modifier = {
+		tradition_cost_empire_size_mult = -0.025
+	}
+}
+
+# 24.堅実な手腕 総務大臣	総督	総合的に国政を取り扱い、各省庁の潤滑剤となる閣僚	帝国規模による伝統コスト-1%
+councilor_ngm_steady_hand = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_steady_hand
+	modifier = {
+		tradition_cost_empire_size_mult = -0.01
+	}
+}
+
+# 25.毒舌な処世術師 尚書	総督	文書を統括し、国務書類を管理する閣僚	帝国規模-1%
+councilor_ngm_the_toxic_survivalist = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_the_toxic_survivalist
+	modifier = {
+		empire_size_mult = -0.01
+	}
+}
+
+# 26.マイペースな苦労人 絶対防衛者	提督 将軍	国土防衛の責任者にして、国民の最後の拠り所	自国領内での連射レート+1.5%
+councilor_ngm_hard_worker_with_a_slow_pace = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			# leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_hard_worker_with_a_slow_pace
+	modifier = {
+		ship_home_territory_fire_rate_mult = 0.015
+	}
+}
+
+# 27.冷酷な現実主義者 国家最高陰謀家	総督	国家規模の陰謀を取り仕切り、様々な策謀を張り巡らせる闇の人物	浸透度+1
+councilor_ngm_ruthless_realist = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_ruthless_realist
+	modifier = {
+		spy_power_cost_add = 1
+	}
+}
+
+# 28.円滑な交通 銀河交通局長	総督	銀河の交通を統御する事務担当官	亜高速移動速度+1% FTL速度+1%
+councilor_ngm_smooth_traffic = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_smooth_traffic
+	modifier = {
+		ship_speed_mult = 0.01
+		ship_interstellar_speed_mult = 0.01
+	}
+}
+
+# 29.船舶保護プロトコル 宇宙管制長官	総督	宇宙における完成統御を行う事務長	宇宙軍許容量+10 交易保護値+1
+councilor_ngm_ship_protection_protocol = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_ship_protection_protocol
+	modifier = {
+		country_naval_cap_add = 10
+		local_trade_protection_add = 1
+	}
+}
+
+# 30.宙間警備本部 宙間警備本部長官	提督	宇宙の警備を行い、宙間交通の安全を守る責任者	交易保護値+1
+councilor_ngm_space_security_headquarters = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+			leader_class = admiral
+		# 	leader_class = scientist
+			# leader_class = general
+		# }
+	}
+	civic = civic_ngm_space_security_headquarters
+	modifier = {
+		local_trade_protection_add = 1
+	}
+}
+
+# 31.乱脈的出生率 生命の運び手	科学者 総督	命の神秘を届ける専門官	居住性+1
+councilor_ngm_random_birth_rate = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_random_birth_rate
+	modifier = {
+		pop_environment_tolerance = 0.01
+	}
+}
+
+# 32.貿易国家 経済同友会代表幹事	総督	財界の大物たちを束ねる大物中の大物	市場手数料-1%
+councilor_ngm_trading_nations = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_trading_nations
+	modifier = {
+		country_trade_fee = -0.01
+	}
+}
+
+# 33.仮想的社会 サーバー管理局長	科学者	国家単位のサーバーを管理し、最速のその先へ導く技術者	快適度+3% 物質主義志向魅力+5%
+councilor_ngm_virtual_society = {
+	leader_class = {
+		# governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_virtual_society
+	modifier = {
+		planet_amenities_mult = 0.03
+		pop_ethic_materialist_attraction_mult =0.05 
+	}
+}
+
+# 34.健康的習慣 スポーツ長官	将軍 科学者 総督	スポーツを新興し、国民の健康を目指す責任者	リーダー寿命+5年
+councilor_ngm_healthy_habits = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_healthy_habits
+	modifier = {
+		leader_age = 5
+	}
+}
+
+# 35.文化高権 地方大臣	総督	国家の地方行政を補佐し、国家の運営を行う閣僚	惑星からの帝国規模-1%
+councilor_ngm_cultural_hegemony = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_cultural_hegemony
+	modifier = {
+		empire_size_colonies_mult = -0.01
+	}
+}
+
+# 36.銀河連邦 連邦議長	総督	連邦議会をまとめる老獪な政治家	派閥幸福度+1% 安定度+1
+councilor_ngm_federation_of_the_galaxies = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_federation_of_the_galaxies
+	modifier = {
+		faction_approval = 0.01
+		planet_stability_add = 1
+		}
+}
+
+# 37.環境民主制 環境大臣	科学者 総督	環境破壊を防ぎ、惑星を汚染から守る役所の長	POP消費財維持費-2%
+councilor_ngm_environmental_democracy = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		}
+	}
+	civic = civic_ngm_environmental_democracy
+	modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.02
+	}
+}
+
+# 38.宗教共和制 宗務長官	総督	宗教行政を取り扱う閣僚	職業による統合力産出+1% 統合力+5
+councilor_ngm_religious_republicanism = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_religious_republicanism
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.01
+		country_base_unity_produces_add = 5
+	}
+}
+
+# 39.人民民主制 人民委員長	総督	人民の問題を取り扱う主任閣僚	POP維持費-1%
+councilor_ngm_peoples_democracy = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_peoples_democracy
+	modifier = {
+		planet_pops_upkeep_mult = -0.01
+	}
+}
+
+# 40.サイバー民主制 情報大臣	科学者 総督	国内外の情報を管理する役所の長	基礎情報値+1
+councilor_ngm_cyberdemocracy = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		}
+	}
+	civic = civic_ngm_cyberdemocracy
+	modifier = {
+		add_base_country_intel = 1
+	}
+}
+
+# 41.貴族共和制 法の守護者	総督	貴族により国家機関が法を侵害しないよう監視するための役職	安定度+2
+councilor_ngm_aristocratic_republicanism = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_aristocratic_republicanism
+	modifier = {
+		planet_stability_add = 2
+	}
+}
+
+# 42.書記長制 書記長	総督	閣議の書記にして議長であり、その他さまざまな役職を兼ねた高位政治家	評議会の方針の進行速度1.5%
+councilor_ngm_chief_secretary_system = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_chief_secretary_system
+	modifier = {
+		council_agenda_progress_speed = 0.015
+	}
+}
+
+# 43.戦争卿 総参謀長	提督 将軍	参謀を統括し、作戦立案に全責任を負う高位軍人	艦隊指揮上限+5
+councilor_ngm_war_lord = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_war_lord
+	modifier = {
+		country_command_limit_add = 5
+	}
+}
+
+# 44.共産独裁制 国務委員長	総督	国家業務を統括し、必要な業務を統括する政治家	帝国規模-1%
+councilor_ngm_communist_dictatorship = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_communist_dictatorship
+	modifier = {
+		empire_size_mult = -0.01
+	}
+}
+
+# 45.衆愚扇動制 国家宣伝大臣	提督 将軍 科学者 総督	国家としての方針を喧伝し、人々を指導する役所の長	統治志向魅力+5%
+councilor_ngm_demagoguery = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_demagoguery
+	modifier = {
+		pop_government_ethic_attraction = 0.05
+	}
+}
+
+# 46.騎士団 騎士団総長	提督 将軍	騎士団を統括し、伝統と戦力を維持向上させる名誉ある軍人	月間統合力+1% 地上軍士気+2%
+councilor_ngm_order_of_chivalry = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+		# 	leader_class = governor
+			leader_class = admiral
+		# 	leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_order_of_chivalry
+	modifier = {
+		country_unity_produces_mult = 0.01
+		army_morale = 0.02
+	}
+}
+
+# 47.名誉帝制 紋章院総裁	総督	紋章を司り、家閣や称号の格付けに責任を負う宮廷職	月間統合力+1% 統治者の幸福度+2%
+councilor_ngm_honorary_imperialism = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_honorary_imperialism
+	modifier = {
+		country_unity_produces_mult = 0.01
+		pop_cat_ruler_happiness = 0.02
+	}
+}
+
+# 48.指導者原理 副総統	提督 将軍 科学者 総督	国家元首を支え、国家元首と軍人や政治家を繋ぐ潤滑油となる人物	帝国規模-1%
+councilor_ngm_guiding_principle = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_guiding_principle
+	modifier = {
+		empire_size_mult = -0.01
+	}
+}
+
+# 49.党支配 幹事長	総督	党内政治を統御し、政治家や党員の利害を調整する役職	影響力+0.1 統治者の幸福度+3%
+councilor_ngm_party_rule = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_party_rule
+	modifier = {
+		country_base_exotic_gases_produces_add = 0.1
+		pop_cat_ruler_happiness = 0.03
+	}
+}
+
+# 50.服従の中の自由 護民官	総督	民衆への過度な侵害が行われないように監視する役職	幸福度+3% 権威主義志向魅力+5%
+councilor_ngm_freedom_in_obedience = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_freedom_in_obedience
+	modifier = {
+		pop_happiness = 0.03
+		pop_ethic_authoritarian_attraction_mult = 0.05
+	}
+}
+
+# 51.カースト制度 大バラモン	総督	歴史的な権威主義的聖職者の伝統的指導者	統治者幸福度+2% 統合力+15
+councilor_ngm_caste_system = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_caste_system
+	modifier = {
+		pop_cat_ruler_happiness = 0.02
+		country_base_unity_produces_add = 15
+	}
+}
+
+# 52.部族制 大部族長	提督 将軍 総督	各部族を束ねる伝統的役職	職業からの資源+1%
+councilor_ngm_tribalism = {
+	leader_class = {
+		governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_tribalism
+	modifier = {
+		planet_jobs_produces_mult = 0.01
+	}
+}
+
+# 53.宮廷政治 宮中伯	提督 将軍 科学者 総督	他貴族を監視し、非道を行わないかを牽制する貴族職	犯罪-1 統治者の資源産出+2%
+councilor_ngm_court_politics = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_court_politics
+	modifier = {
+		planet_crime_add = -1
+		planet_jobs_ruler_produces_mult = 0.02
+	}
+}
+
+# 54.社会ダーヴィニズム 国家親衛隊長官	提督 将軍	国家の秩序を統括し、一つの思想へと向かわせる軍人	安定度+2 統治志向魅力+3%
+councilor_ngm_social_darvinism = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			# leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_social_darvinism
+	modifier = {
+		planet_stability_add = 2
+		pop_government_ethic_attraction = 0.03
+	}
+}
+
+# 55.徒弟制度 大ギルド長	総督	国内最大の商業ギルドを統括する財界の大物	交易価値+2% エネルギー+15
+councilor_ngm_apprenticeship = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_apprenticeship
+	modifier = {
+		trade_value_mult = 0.02
+		country_base_energy_produces_add = 15
+	}
+}
+
+# 56.直接民主制 国家参事官	総督	国政に参画し、直接市民の意見を政府に伝達する特別な政治家	評議会の方針の進行速度1.5%
+councilor_ngm_direct_democracy = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_direct_democracy
+	modifier = {
+		council_agenda_progress_speed = 0.015
+	}
+}
+
+# 57.自由主義教育 教育長官	科学者 総督	自由教育を広め、必要な教育を実施する役所の長	研究速度+1%
+councilor_ngm_liberal_education = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_liberal_education
+	modifier = {
+		all_technology_research_speed = 0.01
+	}
+}
+
+# 58.デモ文化 国家請願担当官	総督	国民の請願を取りまとめ、政策へ反映させる業務を遂行する担当者	幸福度+2%
+councilor_ngm_demonstration_culture = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_demonstration_culture
+	modifier = {
+		pop_happiness = 0.02
+	}
+}
+
+# 59.公開討論会 討議長	科学者 総督	国家的ディベートを取り仕切り、すべての見解に決着をつける高等官	布告資金+5 派閥幸福度+1%
+councilor_ngm_open_forum = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			# leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_open_forum
+	modifier = {
+		country_edict_fund_add = 5
+		faction_approval = 0.01
+	}
+}
+
+# 60.消費社会 消費者長官	総督	消費を推奨し、安全な商品を市民へ届ける責任者	幸福度+2%
+councilor_ngm_consumer_society = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_consumer_society
+	modifier = {
+		pop_happiness = 0.02
+	}
+}
+
+# 61.社会福祉 厚生大臣	総督	国民の福祉を整備し、国民に最大限の厚生業務を行う役所の長	POP成長速度+1.5%
+councilor_ngm_social_welfare = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_social_welfare
+	modifier = {
+		pop_growth_speed = 0.015
+	}
+}
+
+# 62.宇宙規模の解放 宇宙の解放者	提督 将軍 科学者 総督	宇宙を非道から解放し、自由をもたらすことを使命とする人物	請求権作成コスト-2% 武器射程+1%
+councilor_ngm_cosmic_scale_liberation = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_cosmic_scale_liberation
+	modifier = {
+		country_claim_influence_cost_mult = -0.02
+		ship_weapon_range_mult = 0.01
+	}
+}
+
+# 63.究極の思想的自由 学術会議議長	科学者	学者による国家的会議を主催する高名な学者	リーダー経験値取得+1.5%
+councilor_ngm_ultimate_freedom_of_thought = {
+	leader_class = {
+		# governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_ultimate_freedom_of_thought
+	modifier = {
+		species_leader_exp_gain = 0.015 
+	}
+}
+
+# 64.個人武装権 全国ライフル協会会長	将軍 総督	全国民の武装権と自由を保護するワイルドな指導者	10POPあたりの兵士職
+councilor_ngm_right_to_bear_arms = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_right_to_bear_arms
+	modifier = {
+		job_soldier_per_pop = 0.1
+	}
+}
+
+# 65.共通価値観 総務大臣	総督	総合的に国政を取り扱い、各省庁の事務を統括する閣僚	評議会の方針の進行速度1.5%
+councilor_ngm_shared_values = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_shared_values
+	modifier = {
+		council_agenda_progress_speed = 0.015
+	}
+}
+
+# 66.共に征く 国家進歩管理官	科学者 総督	国家の進歩を進め、新たな道を切り開く高等官	評議会の方針の進行速度2%
+councilor_ngm_go_along_with = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_go_along_with
+	modifier = {
+		council_agenda_progress_speed = 0.02
+	}
+}
+
+# 67.グローバル主義 交流管理監	総督	異民族との交流を促進し、問題が発生しないように監視する管理官	流入魅力+2% 受容主義志向魅力+5%
+councilor_ngm_globalism = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_globalism
+	modifier = {
+		planet_immigration_pull_mult = 0.02
+		pop_ethic_xenophile_attraction_mult = 0.05
+	}
+}
+
+# 68.多文化主義 共生担当補佐官	総督	異民族の定住を促進し、国家元首に異文化について助言する補佐官	POP成長速度+1% 流入魅力+2%
+councilor_ngm_multiculturalism = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_multiculturalism
+	modifier = {
+		pop_growth_speed = 0.01
+		planet_immigration_pull_mult = 0.02
+	}
+}
+
+# 69.庇護主義 護国卿	提督 将軍 総督	属国を守り、自国を守る総責任者	戦略投射からの最大影響力+0.1
+councilor_ngm_paternalism = {
+	leader_class = {
+		governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_paternalism
+	modifier = {
+		country_power_projection_influence_produces_add = 0.1
+	}
+}
+
+# 70.来るものは拒まず 難民担当弁務官	総督	難民や移民の見解を代弁し、国際社会に訴える専門的外交官	外交発言力+2%
+councilor_ngm_accept_everyone = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_accept_everyone
+	modifier = {
+		diplo_weight_mult = 0.02
+	}
+}
+
+# 71.飛び立つ民衆 移民局長	総督	移民を制御し、違法な移民を差し止める役所の長	安定度+2 犯罪-2 流入魅力+2%
+councilor_ngm_people_flying_away = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_people_flying_away
+	modifier = {
+		planet_stability_add = 2
+		planet_crime_add = -2
+		planet_immigration_pull_mult = 0.02 
+	}
+}
+
+# 72.排他的コミュニティ 純血審問長官	提督 将軍 総督	社会と国民の純血を監督し、秩序を維持する審問官	安定度+3 排他主義志向魅力+5%
+councilor_ngm_exclusive_community = {
+	leader_class = {
+		governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_exclusive_community
+	modifier = {
+		planet_stability_add = 2
+		pop_ethic_xenophobe_attraction_mult = 0.05
+	}
+}
+
+# 73.呵責なき正義 正義執行官	提督 将軍 総督	正義を執行し、秩序をもたらす国民的英雄	戦争疲弊-2.5%
+councilor_ngm_remorseless_justice = {
+	leader_class = {
+		governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_remorseless_justice
+	modifier = {
+		country_war_exhaustion_mult = -0.025
+	}
+}
+
+# 74.他者蔑視 侮辱長官	科学者 総督	相手を侮辱するための専門的役所の長	侮辱の効率+5%
+councilor_ngm_disdain_for_others = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_disdain_for_others
+	modifier = {
+		country_insult_efficiency = 0.05
+	}
+}
+
+# 75.紳士的距離感 削除	削除	削除	削除
+# councilor_ngm_gentlemanly_disgust = {
+# 	leader_class = {
+# 		# governor
+# 		# admiral
+# 		# scientist
+# 		# general
+# 	}
+# 	is_leader_possible = {
+# 		# OR = {
+# 		# 	leader_class = governor
+# 		# 	leader_class = admiral
+# 		# 	leader_class = scientist
+# 		# 	leader_class = general
+# 		# }
+# 	}
+# 	civic = civic_ngm_gentlemanly_disgust
+# 	modifier = {
+# 	}
+# }
+
+# 76.痕跡の抹消 記録の整理者	科学者 総督	各種記録の削除や、整理を司る担当官	社会学研究速度+1.5%
+councilor_ngm_erasure = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_erasure
+	modifier = {
+		country_society_tech_research_speed = 0.015
+	}
+}
+
+# 77.選民思想 大ラビ	総督	伝統的な排他的宗教の最高指導者	月間統合力+2% 排他主義志向魅力+5%
+councilor_ngm_elitism = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_elitism
+	modifier = {
+		country_unity_produces_mult = 0.02
+		pop_ethic_xenophobe_attraction_mult = 0.05
+	}
+}
+
+# 78.異種族解剖 異種族研究長官	科学者	異種族を研究し、自民族へと活かすマッドサイエンティスト	社会学研究速度+2%
+councilor_ngm_dissection = {
+	leader_class = {
+		# governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_dissection
+	modifier = {
+		country_society_tech_research_speed = 0.02
+	}
+}
+
+# 79.帝国主義 植民地大臣	提督 将軍 総督	他国への拡大と統治を専門とする役所の長	請求権作成コスト-2.5%
+councilor_ngm_imperialism = {
+	leader_class = {
+		governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_imperialism
+	modifier = {
+		country_claim_influence_cost_mult = -0.025 
+	}
+}
+
+# 80.大艦巨砲主義 艦政本部長	提督	艦隊整備計画を立案し、実行する軍事責任者	艦船建造コスト-2.5%
+councilor_ngm_big_ship_policy = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+			leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_big_ship_policy
+	modifier = {
+		starbase_shipyard_build_cost_mult = -0.025
+	}
+}
+
+# 81.軍産複合体 死の商人	総督	武器販売を通じて国政へと参画した恨まれる者	エネルギー+10 合金+7.5
+councilor_ngm_military_industrial_complex = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_military_industrial_complex
+	modifier = {
+		country_base_energy_produces_add = 10
+		country_base_alloys_produces_add = 7.5
+	}
+}
+
+# 82.戦争経済 魂の換金者	総督	罪と金を等価交換するにはそれなりの技量と経験が必要だ	エネルギー+20 犯罪+5
+councilor_ngm_war_prosperity = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_war_prosperity
+	modifier = {
+		country_base_energy_produces_add = 20
+		planet_crime_add = 5
+	}
+}
+
+# 83.軍事政権 陸軍総司令官	将軍	全陸軍を統括し、指揮する高位軍人	地上軍士気+10%
+councilor_ngm_military_regime = {
+	leader_class = {
+		# governor
+		# admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+			leader_class = general
+		# }
+	}
+	civic = civic_ngm_military_regime
+	modifier = {
+		army_morale = 0.1
+	}
+}
+
+# 84.闘争のための闘争 戦争狂	提督 将軍 総督	戦争を鼓舞し、闘争のための闘争を遂行する狂人	連射レート+1% 地上軍士気+3%
+councilor_ngm_The_Struggle_for_Struggle = {
+	leader_class = {
+		governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_The_Struggle_for_Struggle
+	modifier = {
+		ship_fire_rate_mult = 0.01
+		army_morale = 0.03
+	}
+}
+
+# 85.イージスの護り 国家守護司令長官	提督 将軍	国体を護持し、国民を守ることを使命とする高位軍人	戦争疲弊-2% 防衛軍耐久力+5%
+councilor_ngm_aegis_shield = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			# leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_aegis_shield
+	modifier = {
+		country_war_exhaustion_mult = -0.02
+		army_defense_health_mult = 0.05
+	}
+}
+
+# 86.繁栄主義者 繁栄尊師	総督	繁栄を導き人々を教導する指導者	職業からの資源産出+1%
+councilor_ngm_prosperity_advocate = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_prosperity_advocate
+	modifier = {
+		planet_jobs_produces_mult = 0.01
+	}
+}
+
+# 87.武装平和主義 国境警備隊長	提督 将軍	国境を警備し、国を守ることを主任務とした軍人	ステーション船体値+2%
+councilor_ngm_armed_pacifism = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_armed_pacifism
+	modifier = {
+		shipclass_starbase_hull_mult = 0.02
+	}
+}
+
+# 88.積極的平和主義者 平和軍司令官	提督 将軍	平和を維持するという崇高な目標なために武力を行使する責任者	艦隊による外交発言力+2.5%
+councilor_ngm_active_pacifist = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_active_pacifist
+	modifier = {
+		diplo_weight_naval_mult = 0.025
+	}
+}
+
+# 89.平和の使者 平和の使者	総督	平和を愛し、人々に平和を届けることを夢見る高官	危機に対する攻撃力+3%
+councilor_ngm_messenger_of_peace = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_messenger_of_peace
+	modifier = {
+		description = ap_defender_of_the_galaxy_modifier_desc
+		damage_vs_country_type_swarm_mult = 0.5
+		damage_vs_country_type_extradimensional_mult = 0.5
+		damage_vs_country_type_extradimensional_2_mult = 0.5
+		damage_vs_country_type_extradimensional_3_mult = 0.5
+		damage_vs_country_type_ai_empire_mult = 0.5
+		damage_vs_country_type_gray_goo_mult = 0.5
+		damage_vs_player_crisis_mult = 0.5
+	}
+}
+
+# 90.誠実な交渉人 最高交渉官	総督	国家間の交渉を行う最高位の外交官	外交発言力+2% 取引受諾値+5
+councilor_ngm_space_security_headquarters = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_space_security_headquarters
+	modifier = {
+		diplo_weight_mult = 0.02
+		country_trade_attractiveness = 5
+	}
+}
+
+# 91.機械信仰 機械法王	科学者 総督	機械教を統御し、信者に機械を広める信仰技術者	ロボット建造速度+1% 工学研究速度+1%
+councilor_ngm_mechanical_faith = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		}
+	}
+	civic = civic_ngm_mechanical_faith
+	modifier = {
+		pop_robot_build_speed_mult = 0.01
+		country_engineering_tech_research_speed = 0.01
+	}
+}
+
+# 92.伝道者団	伝道団総長	提督 将軍 総督	他国への殿堂を行う善良な一団の長	職業による統合力産出+2% 精神主義志向魅力+5%
+councilor_ngm_missionary_group = {
+	leader_class = {
+		governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_missionary_group
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.02
+		pop_ethic_spiritualist_attraction_mult = 0.05
+	}
+}
+
+# 93.信仰の擁護者 枢機卿	総督	教会を統率し、国政にも大きな影響を与える高位聖職者	影響力+0.2
+councilor_ngm_defender_of_the_faith = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_defender_of_the_faith
+	modifier = {
+		country_base_influence_produces_add = 0.2
+	}
+}
+
+# 94.亀卜（きぼく） 神官統理	総督	神官を統率し、最高の占いを行う高位聖職者	影響力+0.2
+councilor_ngm_divination = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_divination
+	modifier = {
+		country_base_influence_produces_add = 0.2
+	}
+}
+
+# 95.文化の大量消費 文部監	科学者 総督	教育を監督し、必要な学術措置を執り行う教育の権威	リーダー雇用コスト-5%
+councilor_ngm_cultural_consumption = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_cultural_consumption
+	modifier = {
+		leaders_cost_mult = -0.05
+	}
+}
+
+# 96.AIによる補助政治 AI管理官	科学者	AIを管理することと機械と人をつなぐ専門家	POP建造速度+1.5%
+councilor_ngm_ai_assistance = {
+	leader_class = {
+		# governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_ai_assistance
+	modifier = {
+		planet_pop_assembly_add = 2
+	}
+}
+
+# 97.機械は友達 科学技術長官	科学者	科学技術の発展とその敷衍を行う役所の長	研究力+1%
+councilor_ngm_machines_are_our_friends = {
+	leader_class = {
+		# governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_machines_are_our_friends
+	modifier = {
+		country_physics_research_produces_mult = 0.01
+		country_society_research_produces_mult = 0.01
+		country_engineering_research_produces_mult = 0.01
+	}
+}
+
+# 98.未来への渇望 宇宙長官	科学者	宇宙へと手を伸ばし、進歩の歩みを進める責任者	亜高速移動速度+2%
+councilor_ngm_longing_for_the_future = {
+	leader_class = {
+		# governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_longing_for_the_future
+	modifier = {
+		ship_speed_mult = 0.02
+	}
+}
+
+# 99.実験的物質の発見 特級研究官	科学者	特別な研究を行うことが許可された特別な研究官	研究速度+1%
+councilor_ngm_experimental_substance = {
+	leader_class = {
+		# governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_experimental_substance
+	modifier = {
+		all_technology_research_speed = 0.01
+	}
+}
+
+# 100.産業資本主義 経済連盟代表	総督	国内経済団体を束ねた圧力団体の長	職業からの資源産出+1%
+councilor_ngm_industrial_capitalism = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_industrial_capitalism
+	modifier = {
+		planet_jobs_produces_mult = 0.01
+	}
+}
+
+# 101.実験的実践 特許庁長官	科学者	特許の許認可と知的財産訴訟を取り扱う事務責任者	交易価値+3%
+councilor_ngm_experimental_practice = {
+	leader_class = {
+		# governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_experimental_practice
+	modifier = {
+		trade_value_mult = 0.03
+	}
+}
+
+# 102.AI主導政治 最高技師長	科学者	AIを管理することを任務とした、実質的な最高権力者	帝国規模-1%
+councilor_ngm_paranoia = {
+	leader_class = {
+		# governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_paranoia
+	modifier = {
+		empire_size_mult = -0.01
+	}
+}
+
+# 103.社会的平等 平等監視委員長	総督	社会的平等があらゆるところではかられているか監視する委員会の長	幸福度+3%
+councilor_ngm_equality_in_society = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_equality_in_society
+	modifier = {
+		pop_happiness = 0.03
+	}
+}
+
+# 104.分配主義 教理長官	総督	教義に従い、資源の再分配を行う役所の長	労働者幸福度+2%
+councilor_ngm_sectionalism = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_sectionalism
+	modifier = {
+		pop_cat_worker_happiness = 0.02
+	}
+}
+
+# 105.人民軍	人民武力長官	提督 将軍	人民を守るために人民を兵力として運用する軍事指揮者	地上軍建造コスト-3%
+councilor_ngm_peoples_army = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			# leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_peoples_army
+	modifier = {
+		armies_cost_mult = -0.03
+	}
+}
+
+# 106.経済的原始主義 原始の豪商	将軍	原始的な経済における、武力による経済を成り立たせる大物	1POPあたりエネルギー+0.5
+councilor_ngm_economic_primitivism = {
+	leader_class = {
+		# governor
+		# admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+			leader_class = general
+		# }
+	}
+	civic = civic_ngm_economic_primitivism
+	modifier = {
+		mult = value:count_owned_pop_script|MODIFIER|country_base_energy_produces_add|
+	}
+}
+
+# 107.土地の共有 土地管理局長	総督	国有地を管理し、様々な建築を統率する事務長	建造物建造速度+2% 建造物コスト-2%
+councilor_ngm_land_sharing = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_land_sharing
+	modifier = {
+		planet_building_build_speed_mult = 0.02
+		planet_buildings_cost_mult = -0.02
+	}
+}
+
+# 108.共産主義 最高会議幹部会議長	総督	国家の最高幹部が集まる会議の議長	評議会の方針の進行速度1.5%
+councilor_ngm_communism = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_communism
+	modifier = {
+		council_agenda_progress_speed = 0.015
+	}
+}
+
+# 109.開発独裁 国家警察長官	将軍 総督	国家警察を束ね、治安を維持する責任者	犯罪-3 安定度+3
+councilor_ngm_development_dictatorship = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_development_dictatorship
+	modifier = {
+		planet_crime_add = -3
+		planet_stability_add = 3
+	}
+}
+
+# 110.重商主義 商務長官	総督	商業を司り、安定流通を目指す閣僚	交易価値+1% エネルギー収入+4%
+councilor_ngm_commercialism = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_commercialism
+	modifier = {
+		trade_value_mult = 0.01
+		country_energy_produces_mult = 0.04
+	}
+}
+
+# 111.金融資本主義 金融長官	総督	金融を司り、安定した金融経済を維持する閣僚	交易価値+4% エネルギー収入+1%
+councilor_ngm_financing = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_financing
+	modifier = {
+		trade_value_mult = 0.04
+		country_energy_produces_mult = 0.01
+	}
+}
+
+# 112.情報資本主義 デジタル長官	科学者 総督	デジタル分野の規制や発展を支援する役所の長	POPによる帝国規模-1% 物理学研究速度+1%
+councilor_ngm_information = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_information
+	modifier = {
+		empire_size_pops_mult = -0.01
+		country_physics_tech_research_speed = 0.01
+	}
+}
+
+# 113.農業資本主義 農務長官	総督	農業生産を司り、安定供給を目指す閣僚	食料産出+3% 居住性+2%
+councilor_ngm_agriculture = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_agriculture
+	modifier = {
+		country_food_produces_mult = 0.03
+		pop_environment_tolerance = 0.02
+	}
+}
+
+# 114.究極の規制緩和 行政改革担当大臣	総督	行政改革を主任務とした閣僚	評議会の方針の進行速度1.5%
+councilor_ngm_deregulation = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_deregulation
+	modifier = {
+		council_agenda_progress_speed = 0.015
+	}
+}
+
+# 115.攻撃的情報機関 国家中央情報局長官	将軍 総督	対外的諜報活動を統括し、国の安全を守る責任者	解読力+2
+councilor_ngm_CIA = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_CIA
+	modifier = {
+		intel_decryption_add = 2
+	}
+}
+
+# 116.情報操作 削除	削除	削除	削除
+# councilor_ngm_information_operation = {
+# 	leader_class = {
+# 		# governor
+# 		# admiral
+# 		# scientist
+# 		# general
+# 	}
+# 	is_leader_possible = {
+# 		# OR = {
+# 		# 	leader_class = governor
+# 		# 	leader_class = admiral
+# 		# 	leader_class = scientist
+# 		# 	leader_class = general
+# 		# }
+# 	}
+# 	civic = civic_ngm_information_operation
+# 	modifier = {
+# 	}
+# }
+
+# 117.高度な暗号技術 国家暗号技師長	提督 将軍 科学者 総督	国家が作成する暗号を精査し、機密性を維持する責任者	暗号力+2 物理学研究速度+1%
+councilor_ngm_cryptography = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_cryptography
+	modifier = {
+		intel_encryption_add = 2
+		country_physics_tech_research_speed = 0.01
+	}
+}
+
+# 118.外に向けられた眼 銀河監視官	提督 科学者 総督	全銀河を監視し、必要な警告を行う専門官	センサー範囲+1
+councilor_ngm_parabola = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_parabola
+	modifier = {
+		ship_sensor_range_add = 1
+		planet_sensor_range_add = 1
+	}
+}
+
+# 119.笑顔の仲介者 国際仲介官	総督	国家間の問題を仲介し、解決に導く特任の外交官	外交発言力+2%
+councilor_ngm_smile = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_smile
+	modifier = {
+		diplo_weight_mult = 0.02
+	}
+}
+
+# 120.国際的黒幕 国際的黒幕	提督 将軍 科学者 総督	銀河はこの人物の掌で踊っているにすぎない	影響力+0.5
+councilor_ngm_mastermind = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_mastermind
+	modifier = {
+		country_base_influence_produces_add = 0.5
+	}
+}
+
+# 121.栄光ある孤立 外務卿	総督	外交を統御する役所の長	外交発言力+2%
+councilor_ngm_glorious_isolation = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_glorious_isolation
+	modifier = {
+		diplo_weight_mult = 0.02
+	}
+}
+
+# 122.防衛的情報機関 国家捜査局長官	将軍 科学者 総督	国家の犯罪を捜査し、国内の秩序を維持する責任者	犯罪-5
+councilor_ngm_FBI = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_FBI
+	modifier = {
+		planet_crime_add = -5
+	}
+}
+
+# 123.内政不干渉 内政査察監	科学者 総督	政治の自立や不正を監査し、独力の政府を目指す特別公務員	帝国規模による伝統取得コスト-2%
+councilor_ngm_internal_affairs = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			# leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_internal_affairs
+	modifier = {
+		tradition_cost_empire_size_mult = -0.02
+	}
+}
+
+# 124.内なる満足感 満腹大臣	総督	人々を満腹にさせるための閣僚	食料生産+3% 労働者幸福度+2%
+councilor_ngm_inner_satisfaction = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_inner_satisfaction
+	modifier = {
+		country_food_produces_mult = 0.03
+		pop_cat_worker_happiness = 0.02
+	}
+}
+
+# 125.武装中立 国防事務監	提督 将軍	国防に関する事務を統括し、効率よく軍事行動が行えるようと計らう責任者	宇宙軍許容量+20
+councilor_ngm_armed_neutrality = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			# leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_armed_neutrality
+	modifier = {
+		country_naval_cap_add = 20
+	}
+}
+
+# 126.利益代表国 国家渉外理事	総督	国家利益を確保し、外交発言力を確保するための特任外交官	経済からの外交発言力+2%
+councilor_ngm_interest_representation = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_interest_representation
+	modifier = {
+		diplo_weight_economy_mult = 0.02
+	}
+}
+
+# 127.環境維持工学 主任環境技師	科学者	惑星環境の整備や調査を主任務とする主任技術者	居住性+1%
+councilor_ngm_environmental_maintenance = {
+	leader_class = {
+		# governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_environmental_maintenance
+	modifier = {
+		pop_environment_tolerance = 0.01
+	}
+}
+
+# 128.害虫駆除 駆除軍令官	提督 将軍	不埒な開発主義者を制圧することを義務付けられた高位軍人	地上軍ダメージ+3%
+councilor_ngm_pest_control = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			# leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_pest_control
+	modifier = {
+		army_damage_mult = 0.03
+	}
+}
+
+# 129.自然適応 銀河自然監督官	科学者 総督	銀河中の自然を尊重し、保護できるよう支援する高等官	居住性+1% POP維持費-1%
+councilor_ngm_natural_adaptation = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_natural_adaptation
+	modifier = {
+		pop_environment_tolerance = 0.01
+		planet_pops_upkeep_mult = -0.01
+	}
+}
+
+# 130.惑星庭園 国家庭園管理官	科学者 総督	国家規模の庭園を管理し、美しい状態を維持する	居住性+1%
+councilor_ngm_planetary_garden = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_planetary_garden
+	modifier = {
+		pop_environment_tolerance = 0.01
+	}
+}
+
+# 131.絶滅防止法 大生命保護官	科学者 総督	この世で最も尊い生命を保護し、安全を確保する高等官	幸福度+3% 平等主義志向魅力+5%
+councilor_ngm_space_security_headquarters = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_space_security_headquarters
+	modifier = {
+		pop_happiness = 0.03
+		pop_ethic_egalitarian_attraction_mult = 0.05
+	}
+}
+
+# 132.自然信仰 巫女姫	総督	神に祈り、自然を尊ぶ神官の中でも伝統的に指導者と崇められる巫女	影響力+0.2 外交発言力+1%
+councilor_ngm_nature_faith = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_nature_faith
+	modifier = {
+		country_base_influence_produces_add = 0.2
+		diplo_weight_mult = 0.01
+	}
+}
+
+# 133.グランド・モニュメント 国家建築士	科学者	国家規模の建造を行う最高技術者	巨大構造物建造速度1.5%
+councilor_ngm_grand_monument = {
+	leader_class = {
+		# governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_grand_monument
+	modifier = {
+		megastructure_build_speed_mult = 0.015
+	}
+}
+
+# 134.破壊掘削 破壊長官	科学者 総督	惑星を破壊し、鉱物生産を行う担当部署の長	鉱物生産+3%
+councilor_ngm_destructive_digging = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_destructive_digging
+	modifier = {
+		country_minerals_produces_mult = 0.03
+	}
+}
+
+# 135.不可逆的な工業化 工業大臣	科学者 総督	工業生産の向上を目指し、必要な措置を講じる役職の閣僚	合金生産+2% 消費財生産+2%
+councilor_ngm_irreversible_industrialization = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_irreversible_industrialization
+	modifier = {
+		country_alloys_produces_mult = 0.02
+		country_consumer_goods_produces_mult = 0.02
+	}
+}
+
+# 136.インフラ建築 国土長官	科学者 総督	国土を管理し、測量や調査を遂行する役所の長	居住性+1% 植民地建造速度2%
+councilor_ngm_infrastructure_construction = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_infrastructure_construction
+	modifier = {
+		pop_environment_tolerance = 0.01
+		planet_colony_development_speed_mult = 0.02
+	}
+}
+
+# 137.全国総合開発計画 開発長官	科学者 総督	国土を開発し、国家の基盤を作る責任者	巨大構造物建造速度+1.5%
+councilor_ngm_nationwide_development = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_nationwide_development
+	modifier = {
+		megastructure_build_speed_mult = 0.015
+	}
+}
+
+# 138.惑星規模灌漑 農林大臣	科学者 総督	農業を通じて国家の繁栄を導く閣僚	食料生産+5%
+councilor_ngm_planetary_scale_irrigation = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_planetary_scale_irrigation
+	modifier = {
+		country_food_produces_mult = 0.05
+	}
+}
+
+# 139.惑星改造工学 開発大臣	科学者 総督	国土開発を通じ、国家を発展させる役職の閣僚	テラフォーミングコスト-2% テラフォーミング速度+2%
+councilor_ngm_modification_engineering = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+			leader_class = admiral
+		# 	leader_class = scientist
+			leader_class = general
+		# }
+	}
+	civic = civic_ngm_modification_engineering
+	modifier = {
+		terraforming_cost_mult = 0.02
+		terraform_speed_mult = 0.02
+	}
+}
+
+# 140.複雑な外交儀礼 儀典局長	総督	外交儀礼を司り、外交・儀礼で国家的に発言力のある人物	外交発言力+1% 勲章+0.01
+councilor_ngm_diplomatic_etiquette = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_diplomatic_etiquette
+	modifier = {
+		diplo_weight_mult = 0.01
+		country_base_ngm_order_of_merit_produces_add = 0.01
+	}
+}
+
+# 141.栄典交換 外交典礼監	総督	外交における儀礼問題とマナーを解釈し、指導する高官	外交発言力+1% 統合力+10
+councilor_ngm_exchange_of_honor = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_exchange_of_honor
+	modifier = {
+		diplo_weight_mult = 0.01
+		country_base_unity_produces_add = 10
+	}
+}
+
+# 142.英雄志願部隊 大元帥	提督 将軍	国軍の最高司令官にして国家の象徴的存在である最高位軍人	月間統合力+2% 軍国主義志向魅力+3%
+councilor_ngm_heroic_volunteer_force = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			# leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_heroic_volunteer_force
+	modifier = {
+		country_unity_produces_mult = 0.02
+		pop_ethic_militarist_attraction_mult = 0.03
+	}
+}
+
+# 143.独善的な英雄 大英雄	提督 将軍	国民最大の英雄であり、国民の憧れの存在	影響力+0.3
+councilor_ngm_the_self_righteous_hero = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			# leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_the_self_righteous_hero
+	modifier = {
+		country_base_influence_produces_add = 0.03
+	}
+}
+
+# 144.称号と敬称の尊重法 紋章特許審問官	総督	紋章の許可、不許可を司り、統治者層に影響を有する人物	統治者幸福度+2% 統治者生産+1%
+councilor_ngm_respect_act = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_respect_act
+	modifier = {
+		pop_cat_ruler_happiness = 0.02
+		planet_jobs_ruler_produces_mult = 0.01
+	}
+}
+
+# 145.個人利益至上法 トップ・オブ・成金	総督	成金の中で最も成功した成金中の成金	影響力+0.2 エネルギー+5%
+councilor_ngm_personal_interest = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_personal_interest
+	modifier = {
+		country_base_influence_produces_add = 0.2
+		country_energy_produces_mult = 0.05
+	}
+}
+
+# 146.人権への抵当権 人権監査委員長	総督	人権が適切に売却されているかを査定する高官	奴隷POPの資源産出+1% 幸福度-1%
+councilor_ngm_hypothecation_of_human_rights = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_hypothecation_of_human_rights
+	modifier = {
+		planet_jobs_slave_produces_mult = 0.01
+		pop_happiness = -0.01
+	}
+}
+
+# 147.刑罰の金銭代替 司法金融長官	総督	司法を金で代替する専門官僚	惑星の犯罪度*1のエネルギーを惑星に付与 犯罪+5
+councilor_ngm_money_penalty = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_money_penalty
+	modifier = {
+		planet_crime_add = 5
+	}
+}
+
+# 148.適切な利益誘導 公正取引委員長	総督	リベートが適切に渡されているかを監査する高官	市場手数料-1% 犯罪+1
+councilor_ngm_profit_motive = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_profit_motive
+	modifier = {
+		country_trade_fee = -0.01
+		planet_crime_add = 1
+	}
+}
+
+# 149.実益の確保 ビッグ・ドン	提督 将軍 科学者 総督	首領のなかの首領。それだけでいい	影響力+0.2 布告資金+10
+councilor_ngm_securing_real_benefits = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_securing_real_benefits
+	modifier = {
+		country_base_influence_produces_add = 0.2
+		country_edict_fund_add = 10
+	}
+}
+
+# 150.高度生産消費社会 経済産業長官	総督	経済を管理し、必要な経済政策を取り扱う閣僚	エネルギー収入+2% 交易価値+2%
+councilor_ngm_producer_consumer_society = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_producer_consumer_society
+	modifier = {
+		country_energy_produces_mult = 0.02
+		trade_value_mult = 0.02
+	}
+}
+
+# 151.財閥 社内政治専務	総督	社内における政治統制と利益折衝を専門とする役員	帝国規模-2%
+councilor_ngm_corporate_empire = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_corporate_empire
+	modifier = {
+		empire_size_mult = -0.02
+	}
+}
+
+# 152.ハイテク企業 技術部長	科学者 総督	技術開発部門の長として企業を支える専門職の役員	研究速度+1.5%
+councilor_ngm_high_tech_company = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		}
+	}
+	civic = civic_ngm_high_tech_company
+	modifier = {
+		all_technology_research_speed = 0.015
+	}
+}
+
+# 153.重厚長大産業 産業部長	科学者 総督	産業開発と効率的なチェーンを組み上げる専門家	職業からの合金生産+1% 職業からの消費財生産+1%
+councilor_ngm_smokestack_industry = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		}
+	}
+	civic = civic_ngm_smokestack_industry
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.01
+		planet_jobs_consumer_goods_produces_mult = 0.01
+	}
+}
+
+# 154.世襲役員 特務取締役	提督 将軍 科学者 総督	世襲で取締役の地位を維持している者の中で最高位の者	職業からの統合力産出+1.5% 勲章+0.01
+councilor_ngm_hereditary_officers = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_hereditary_officers
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.015
+		country_base_ngm_order_of_merit_produces_add = 0.01
+	}
+}
+
+# 155.財閥 総帥補佐	総督	財閥の総帥を補佐し、不必要な業務を総帥から解放する重要職	評議会の方針の進行速度1.5%
+councilor_ngm_zaibatsu = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_zaibatsu
+	modifier = {
+		council_agenda_progress_speed = 0.015
+	}
+}
+
+# 156.金融企業 金融部長	総督	社債等を管理し、必要な措置を講じる責任者	エネルギー収入+2% エネルギー+10
+councilor_ngm_financial_enterprises = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_financial_enterprises
+	modifier = {
+		country_energy_produces_mult = 0.02
+		country_base_energy_produces_add = 10
+	}
+}
+
+# 157.情報企業 システム部長	科学者 総督	システムを構築し、維持する大役をこなす部署の長	帝国規模による研究コスト-2%
+councilor_ngm_information_company = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		}
+	}
+	civic = civic_ngm_information_company
+	modifier = {
+		tech_cost_empire_size_mult = -0.02
+	}
+}
+
+# 158.社会企業 社会共生部長	総督	社会と企業の共生を発展を図る部門の長	幸福度+2% POP成長速度+2%
+councilor_ngm_social_enterprise = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_social_enterprise
+	modifier = {
+		pop_happiness = 0.02
+		pop_growth_speed = 0.02
+	}
+}
+
+# 159.ゼネコン 開発部長	科学者 総督	社有資産を整備し、必要な工事や施設管理を行う部門長	建築物スロット+1
+councilor_ngm_general_contractor = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		}
+	}
+	civic = civic_ngm_general_contractor
+	modifier = {
+		planet_max_buildings_add = 1
+	}
+}
+
+# 160.農業企業 農業開発部長	科学者 総督	農業を通じて企業の繁栄を導く閣僚	食料生産+5%
+councilor_ngm_agricultural_company = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		}
+	}
+	civic = civic_ngm_agricultural_company
+	modifier = {
+		country_food_produces_mult = 0.05
+	}
+}
+
+# 161.運送企業 運輸部長	科学者 総督	社内外の運送と効果的な物流ロジスティクスを管理する花形部門の長	交易価値+3%
+councilor_ngm_shipping_company = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		}
+	}
+	civic = civic_ngm_shipping_company
+	modifier = {
+		trade_value_mult = 0.03
+	}
+}
+
+# 162.運用会社 投資部長	総督	国内外の投資を管理し、必要な資産運用を行う部門の長	交易価値+3%
+councilor_ngm_operating_company = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_operating_company
+	modifier = {
+		trade_value_mult = 0.03
+	}
+}
+
+# 163.産業スパイ 情報部長	科学者 総督	社内外の情報を管理し、適切な対応を行う準備をする担当者	基礎情報値+1
+councilor_ngm_industrial_espionage = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		}
+	}
+	civic = civic_ngm_industrial_espionage
+	modifier = {
+		add_base_country_intel = 1
+	}
+}
+
+# 164.格付会社 一級格付け師	総督	格付け会社の中でも特に一級品の格付けを行うプロフェッショナル	影響力+0.2
+councilor_ngm_rating_company = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_rating_company
+	modifier = {
+		country_base_influence_produces_add = 0.2
+	}
+}
+
+# 165.寝業師 接待部長	総督	他国の要人を歓待し、自らの良きように操る実力者	外交発言力+1.5%
+councilor_ngm_underhanded_trick = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_underhanded_trick
+	modifier = {
+		diplo_weight_mult = 0.015
+	}
+}

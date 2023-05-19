@@ -1,3 +1,4 @@
+# NGM
 ##########################################################################
 # Empire Policies
 #
@@ -412,6 +413,10 @@ diplomatic_stance = {
 			modifier = {
 				factor = 1.25
 				has_valid_civic = civic_free_traders
+			}
+			modifier = {
+				factor = 10
+				should_ai_focus_on_trade = yes
 			}
 			modifier = {
 				factor = 0.65
@@ -832,6 +837,7 @@ war_philosophy = {
 				has_ethic = "ethic_pacifist"
 				has_ethic = "ethic_fanatic_pacifist"
 				has_valid_civic = "civic_inwards_perfection"
+				has_civic = "civic_crusader_spirit"
 			}
 		}
 
@@ -950,6 +956,7 @@ war_philosophy = {
 				has_valid_civic = "civic_fanatic_purifiers"
 				has_valid_civic = "civic_hive_devouring_swarm"
 				has_valid_civic = "civic_machine_terminator"
+				has_civic = "civic_crusader_spirit"
 			}
 		}
 
@@ -1495,7 +1502,6 @@ orbital_bombardment = {
 			NOR = {
 				has_ethic = "ethic_pacifist"
 				has_ethic = "ethic_fanatic_pacifist"
-				has_civic = civic_ngm_remorseless_justice
 			}
 		}
 		AI_weight = {
@@ -1521,11 +1527,14 @@ orbital_bombardment = {
 
 		valid = {
 			has_civic = civic_ngm_remorseless_justice
+			has_civic = civic_ngm_remorseless_justice
 		}
 		potential = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_ngm_remorseless_justice
+				has_valid_civic = civic_ngm_remorseless_justice
 			}
 		}
 
@@ -1546,6 +1555,38 @@ orbital_bombardment = {
 				factor = 10
 				has_ascension_perk = ap_become_the_crisis
 			}
+		}
+	}
+}
+
+orbital_bombardment_accept_surrender = {
+	
+	potential = {
+		is_homicidal = no
+	}
+
+	option = {
+		name = "orbital_bombardment_surrender_forbidden"
+
+		policy_flags = {
+			orbital_bombardment_surrender_forbidden
+		}
+		modifier = {}
+
+		AI_weight = {
+			base = 0
+		}
+	}
+
+	option = {
+		name = "orbital_bombardment_surrender_allowed"
+
+		potential = {
+			is_homicidal = no #locked to "forbidden"
+		}
+		
+		policy_flags = {
+			orbital_bombardment_surrender_allowed
 		}
 	}
 }
@@ -1968,7 +2009,7 @@ leader_enhancement = {
 			leader_enhancement_selected_lineages
 		}
 		modifier = {
-			leader_skill_levels = 1
+			species_leader_exp_gain = 0.1
 			leader_age = 10
 			leaders_cost_mult = 0.5
 		}
@@ -2016,7 +2057,7 @@ leader_enhancement = {
 			leader_enhancement_capacity_boosters
 		}
 		modifier = {
-			leader_skill_levels = 2
+			species_leader_exp_gain = 0.2
 			leader_age = 20
 			leaders_cost_mult = 1
 		}
@@ -2736,6 +2777,11 @@ robot_pop_policy = {
 					has_ai_personality_behaviour = robot_liberator
 				}
 			}
+
+			modifier = {
+				factor = 10
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
 		}
 	}
 
@@ -2748,6 +2794,10 @@ robot_pop_policy = {
 
 		AI_weight = {
 			factor = 2
+			modifier = {
+				factor = 0
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
 		}
 	}
 }
@@ -2919,10 +2969,6 @@ debris = {
 			is_scavenger = no
 		}
 
-		valid = {
-			has_encountered_other_species = yes
-		}
-
 		policy_flags = {
 			research_debris
 		}
@@ -2932,10 +2978,6 @@ debris = {
 
 		potential = {
 			is_scavenger = no
-		}
-
-		valid = {
-			has_encountered_other_species = yes
 		}
 
 		policy_flags = {
@@ -2948,10 +2990,6 @@ debris = {
 
 		potential = {
 			is_scavenger = yes
-		}
-
-		valid = {
-			has_encountered_other_species = yes
 		}
 
 		policy_flags = {
