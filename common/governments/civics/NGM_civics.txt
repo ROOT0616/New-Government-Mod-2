@@ -26,42 +26,12 @@ civic_sham_constitutionalism = {
 		base = 5
 	}
 	modifier = {
-	}
-}
-#1.外見的立憲制度		寡頭制、独裁制、君主制、権威主義	影響力+1 外交発言力+10%
-civic_sham_constitutionalism = {
-	possible = {
-		ethics = {
-			OR = {
-				text = civic_tooltip_authoritarian
-				value = ethic_authoritarian
-				value = ethic_fanatic_authoritarian
-			}
-		}
-		authority = {
-			OR = {
-				text = civic_tooltip_fsass
-				value = auth_dictatorial
-				value = auth_oligarchic
-				value = auth_imperial
-			}
-		}
-		civics = {
-			NOT = {
-				value = civic_substantive_constitutionalism
-			}
-		}
-	}
-	random_weight = {
-		base = 5
-	}
-	modifier = {
 		country_base_influence_produces_add = 1
 		DIPLO_WEIGHT_ECONOMY_MULT = 0.1
 	}
 }
 
-#2.実質的立憲制度		君主制 狂信的な権威主義ではない 外見的立憲制度を保持していない	安定度+10 派閥統合力収入+20%  まだまだゲーム開始直後に帝国内で派閥が結成される
+#2.実質的立憲制度		君主制 狂信的な権威主義ではない 外見的立憲制度を保持していない	安定度+10 派閥統合力収入+20%  
 civic_substantive_constitutionalism = {
 	possible = {
 		civics = {
@@ -715,7 +685,7 @@ civic_ngm_hard_worker_with_a_slow_pace = {
 	}
 }
 
-# 27.冷酷な現実主義者	:信用値-30、幸福度-10%、外交発言力+20%、艦船連射レート+10%、基礎情報値+10 まだ
+# 27.冷酷な現実主義者	:信用値-30 幸福度-10% 外交発言力+20% 艦船連射レート+10% 統治者生産量+10%
 civic_ngm_ruthless_realist = {
 	possible = {
 		ethics = {
@@ -741,11 +711,10 @@ civic_ngm_ruthless_realist = {
 	}
 	modifier = {
 		country_trust_cap_add = -30
-		envoy_improve_relations_mult = -0.3
 		pop_happiness = -0.1
 		diplo_weight_mult = 0.2
 		ship_fire_rate_mult = 0.1
-
+		planet_jobs_ruler_produces_mult = 0.1
 	}
 }
 
@@ -2416,7 +2385,7 @@ civic_ngm_ai_assistance = {
 	}
 }
 
-# 97.機械は友達 		machines_are_our_friends(物質、ゲーム開始後削除不可)	まだ	ロボット製造速度+10%、ロボット維持費+10%、ロボットの権利を市民権以外に変更不可
+# 97.機械は友達 		machines_are_our_friends(物質、ゲーム開始後削除不可)		ロボット製造速度+10%、ロボット維持費+10%、ロボットの権利を市民権以外に変更不可
 civic_ngm_machines_are_our_friends = {
 	possible = {
 		ethics = {

@@ -1,6 +1,7 @@
 # 法令(法秩序に基づく統治は国家の美徳である
 # 1.取得時：政策「立法手続」をアンロック
 tr_ngm_law_first = {
+	unlocks_agenda = agenda_ngm_ensuring_law_and_order
 	custom_tooltip_with_modifiers = tr_ngm_law_first_tooltip
 	modifier = {
 	}
@@ -123,16 +124,18 @@ tr_ngm_sabotage = {
 # 研鑽(自らを磨き、高みへと目指すことこそが求められる)
 # 15.取得時：リーダー経験値+25%
 tr_ngm_study_first = {
+	unlocks_agenda = agenda_ngm_re_implementation_of_executive_education
 	modifier = {
 		species_leader_exp_gain = 0.25
 	}
 }
 
-# 16.完遂時:リーダーが特殊な特性をアンロック。初期リーダーが複数の特性を有している
+# 16.完遂時:リーダー雇用上限+2、リーダーが特殊な特性をアンロック。
 tr_ngm_study_finish = {
 	custom_tooltip_with_modifiers = tr_ngm_study_finish_tooltip
 	modifier = {
 		ascension_perks_add = 1
+		country_leader_cap_add = 2
 	}
 }
 
@@ -144,11 +147,10 @@ tr_ngm_restudy = {
 	}
 }
 
-# 18.指導者研修の高度化:リーダーレベル上限+1、研究協定から得られる研究力+10%
+# 18.指導者研修の高度化:リーダー雇用上限+1
 tr_ngm_leader_study = {
 	modifier = {
-		federation_research_sharing_mult = 0.1
-		leader_skill_levels = 1
+		country_leader_cap_add = 1
 	}
 }
 
@@ -177,6 +179,7 @@ tr_ngm_high_study = {
 # 逸楽(快楽の園は常に我らを誘惑し、快楽におぼれさせる)
 # 22.取得時：幸福度+5%
 tr_ngm_ecstasy_first = {
+	unlocks_agenda = agenda_ngm_aesthetic_feast
 	modifier = {
 		pop_happiness = 0.05
 	}
@@ -351,6 +354,7 @@ tr_ngm_authority_art = {
 # 学術(教育と研究の推進こそが未来への道筋なのである)
 # 43.取得時：アノマリー発見+25%
 tr_ngm_academic_first = {
+	unlocks_agenda = agenda_ngm_promoting_academic_research
 	modifier = {
 		ship_anomaly_generation_chance_mult = 0.25
 	}
@@ -421,8 +425,9 @@ tr_ngm_memory_finish = {
 
 # 52.緻密な記録:官僚職からの統合力+1
 tr_ngm_record = {
-	custom_tooltip_with_modifiers = tr_ngm_record_tooltip
+	# custom_tooltip_with_modifiers = tr_ngm_record_tooltip
 	modifier = {
+		planet_administrators_unity_produces_add = 1
 	}
 }
 
@@ -458,6 +463,7 @@ tr_ngm_trade_record = {
 # 自由(各個人の判断と責任により社会は維持されている)
 # 57.取得時：政策「自由権」をアンロック
 tr_ngm_freedom_first = {
+	unlocks_agenda = agenda_ngm_steps_toward_freedom
 	custom_tooltip_with_modifiers = tr_ngm_trade_record_tooltip
 	modifier = {
 	}
@@ -494,11 +500,11 @@ tr_ngm_freedom_association = {
 	}
 }
 
-# 61.機会均等:リーダー選択肢+2、リーダー雇用コスト-20%
+# 61.機会均等:リーダー雇用上限+1、リーダー雇用コスト-20%
 tr_ngm_freedom_ega = {
 	modifier = {
+		country_leader_cap_add = 1
 		leaders_cost_mult = -0.2
-		country_leader_pool_size = 2
 	}
 }
 
@@ -520,6 +526,7 @@ tr_ngm_freedom2 = {
 # 秩序(共同体と社会。権威や権力による命令と)
 # 64.取得時：政策「秩序維持」をアンロック
 tr_ngm_order_first = {
+	unlocks_agenda = agenda_ngm_reorganization_of_order
 	custom_tooltip_with_modifiers = tr_ngm_order_first_tooltip
 	modifier = {
 	}
@@ -575,6 +582,7 @@ tr_ngm_orderly = {
 # 善隣(敵ではないものはすべて友人であり、敵であることが証明されなければ友人であるのだ)
 # 71.取得時：ファーストコンタクト速度+25%、ファーストコンタクト時の姿勢を敵対的にできない
 tr_ngm_neighbor_first = {
+	unlocks_agenda = agenda_ngm_promotion_of_species_understanding
 	custom_tooltip_with_modifiers = tr_ngm_neighbor_first_tooltip
 	modifier = {
 		first_contact_speed_mult = 0.25
@@ -639,6 +647,7 @@ tr_ngm_acceptance = {
 # 敵視(あらゆる存在を疑い、自己と数少ない信頼できる仲間のために、強固な対応を維持する)
 # 78.取得時：外交発言力+25%
 tr_ngm_enemy_first = {
+	unlocks_agenda = agenda_ngm_expanding_paranoia
 	modifier = {
 		diplo_weight_mult = 0.25
 	}
@@ -814,6 +823,7 @@ tr_ngm_machine_human = {
 # 官吏(書類により統治される国家は強大でゆるぎない)
 # 99.取得時：政策「公務員法」をアンロック
 tr_ngm_official_first = {
+	unlocks_agenda = agenda_ngm_expansion_of_bureaucracy
 	custom_tooltip_with_modifiers = tr_ngm_official_first_tooltip
 	modifier = {
 	}
@@ -827,11 +837,10 @@ tr_ngm_official_finish = {
 	}
 }
 
-# 101.人事院:リーダー雇用コスト-25%、リーダー維持コスト-50%
+# 101.人事院:リーダー雇用上限+1
 tr_ngm_human_resources = {
 	modifier = {
-		leaders_cost_mult = -0.25
-		leader_upkeep_empire_size_mult = -0.5
+		country_leader_cap_add = 1
 	}
 }
 
@@ -851,8 +860,9 @@ tr_ngm_document = {
 
 # 104.総務省:官僚職からの統合力+1
 tr_ngm_general_affairs = {
-	custom_tooltip_with_modifiers = tr_ngm_general_affairs_tooltip
+	# custom_tooltip_with_modifiers = tr_ngm_general_affairs_tooltip
 	modifier = {
+		planet_administrators_unity_produces_add = 1
 	}
 }
 
@@ -866,6 +876,7 @@ tr_ngm_cabinet = {
 # 将校(命令と服従に伴う組織は強力で迅速な行動が可能だ)
 # 106.取得時：宇宙軍許容量+20%、武器射程+10%
 tr_ngm_officer_first = {
+	unlocks_agenda = agenda_ngm_expansion_of_officer_corps
 	modifier = {
 		country_naval_cap_mult = 0.2
 		ship_weapon_range_mult = 0.1
@@ -1042,10 +1053,10 @@ tr_ngm_brave_and_resolute = {
 }
 
 # ⑲高貴(高貴なるものこそが社会を維持し、率いていく必要がある)
-# 127.取得時：統治者スキル上限+2
+# 127.取得時：リーダー雇用上限+1
 tr_ngm_noble_adopt = {
 	modifier = {
-		ruler_skill_levels = 2
+		country_leader_cap_add = 1
 	}
 }
 
@@ -1167,8 +1178,8 @@ tr_ngm_faithful_mass = {
 # 建築(宇宙空間等における巨大な建築は人々の心を躍らせる)
 # 141.取得時：ステーション建造コスト-25%
 tr_ngm_building_adopt = {
+	unlocks_agenda = agenda_ngm_implementation_of_building_plans
 	modifier = {
-		
 	}
 }
 
@@ -1227,6 +1238,7 @@ tr_ngm_megastructure_bareau = {
 # 148.切望(他者との積極的な関与は社会から求められている)
 # 取得時：ファーストコンタクト速度+50%
 tr_ngm_longing_adopt = {
+	unlocks_agenda = agenda_ngm_space_of_hope
 	modifier = {
 		first_contact_speed_mult = 0.5
 	}
@@ -1393,8 +1405,9 @@ tr_ngm_weapons_arsenal_country = {
 
 # 167.膨張した官僚機構:官僚職からの統合力+1
 tr_ngm_rock_solid_bureaucracy = {
-	custom_tooltip_with_modifiers = tr_ngm_rock_solid_bureaucracy_tooltip
+	# custom_tooltip_with_modifiers = tr_ngm_rock_solid_bureaucracy_tooltip
 	modifier = {
+		planet_administrators_unity_produces_add = 1
 	}
 }
 
@@ -1622,6 +1635,7 @@ tr_ngm_compulsory_friendship = {
 # 介入(侵略することだけが他国を圧倒する手段ではない)
 # 190.取得時：介入主義への魅力+25%、外交発言力+20%
 tr_ngm_intervention_adopt = {
+	unlocks_agenda = agenda_ngm_resolving_international_issues
 	modifier = {
 		pop_ethic_interventionism_attraction_mult = 0.25
 		diplo_weight_mult = 0.2
@@ -1688,6 +1702,7 @@ tr_ngm_shadow_fixer = {
 # ㉟巨大(大きさこそすべてである)
 # 197.取得時：ステーション船体値+25%
 tr_ngm_gigantic_adopt = {
+	unlocks_agenda = agenda_ngm_implementation_of_large_scale_actions
 	modifier = {
 		shipclass_starbase_hull_mult = 0.25
 	}
@@ -1804,6 +1819,7 @@ tr_ngm_control_of_information_crime = {
 # 立法(法や布告の施行と定着は極めて重要である)
 # 211.取得時：布告資金+50
 tr_ngm_legislation_adopt = {
+	unlocks_agenda = agenda_ngm_restructuring_of_legislative_procedures
 	modifier = {
 		country_edict_fund_add = 50
 	}
@@ -1826,12 +1842,12 @@ tr_ngm_constitutional_lawsuit = {
 
 # 214.事前法令審査:官僚職からの統合力+1
 tr_ngm_preliminary_legal_review = {
-	custom_tooltip_with_modifiers = tr_ngm_rock_solid_bureaucracy_tooltip
+	# custom_tooltip_with_modifiers = tr_ngm_rock_solid_bureaucracy_tooltip
 	possible = {
 		has_tradition = tr_ngm_constitutional_lawsuit
 	}
 	modifier = {
-		planet_bureaucrats_time_produces_mult = 0.2
+		planet_administrators_unity_produces_add = 1
 	}
 }
 
@@ -1986,6 +2002,7 @@ tr_ngm_industrial_research = {
 # 世襲(権力や富は自らが生み出すだけではなく、受け継がれていくものである)
 # 232.取得時：統治者Popの幸福度+15%、統治者Popの政治力+100%
 tr_ngm_hereditary_adopt = {
+	unlocks_agenda = agenda_ngm_ensuring_class_order
 	modifier = {
 		pop_cat_ruler_happiness = 0.15
 		pop_cat_ruler_political_power = 100

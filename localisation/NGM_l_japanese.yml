@@ -1948,6 +1948,16 @@
 
  ap_ngm_layer_countries_modifier:0 "重層的国家"
 
+ agenda_ngm_expanding_paranoia_debuff_0:0 "パラノイアの拡大 完了（加） 宿敵の外交発言力§R-20%§!"
+ agenda_ngm_expanding_paranoia_debuff_1:0 "パラノイアの拡大 完了（被）"
+ agenda_ngm_expanding_paranoia_debuff_2:0 "$agenda_ngm_expanding_paranoia_debuff_1$"
+ agenda_ngm_expanding_paranoia_debuff_3:0 "$agenda_ngm_expanding_paranoia_debuff_1$"
+ agenda_ngm_expanding_paranoia_debuff_4:0 "$agenda_ngm_expanding_paranoia_debuff_1$"
+ agenda_ngm_expanding_paranoia_debuff_5:0 "$agenda_ngm_expanding_paranoia_debuff_1$"
+ agenda_ngm_expanding_paranoia_debuff_6:0 "$agenda_ngm_expanding_paranoia_debuff_1$"
+ agenda_ngm_expanding_paranoia_debuff_7:0 "$agenda_ngm_expanding_paranoia_debuff_1$"
+ agenda_ngm_expanding_paranoia_debuff_8:0 "$agenda_ngm_expanding_paranoia_debuff_1$"
+
  ngm_ethics_force_loyalty_1:0 "志向の矯正"
 
  ngm_ethics_force_loyalty_2:0 "志向の強要"
@@ -3478,7 +3488,7 @@
  tradition_ngm_study_desc:0 "自らを磨き、高みへと目指すことこそが求められる"
  tr_ngm_study_first:0 "研鑽の伝統"
  tr_ngm_study_finish:0 "研鑽の伝統の完成"
- tr_ngm_study_finish_tooltip:0 "リーダーが特殊な特性をアンロック\n初期リーダーが複数の特性を有している"
+ tr_ngm_study_finish_tooltip:0 "リーダーが特殊な特性をアンロック"
  tr_ngm_restudy:0 "訓練の見直し"
  tr_ngm_restudy_delayed:0 "軍事訓練は適宜見直され、適切な教育体系へと編成される"
  tr_ngm_leader_study:0 "指導者研修の高度化"
@@ -4659,6 +4669,129 @@
  councilor_ngm_underhanded_trick_female:0 "$councilor_ngm_underhanded_trick$"
  councilor_ngm_underhanded_trick_desc:0 "他国の要人を歓待し、自らの良きように操る実力者"
 
+##############################
+#####    統治院の目標    ######
+##############################
+
+ council_agenda_agenda_ngm_positive_intervention_name:0 "積極的介入"
+ council_agenda_agenda_ngm_positive_intervention_desc:0 "国外への関与は帝国の地位をより高める"
+ agenda_ngm_positive_intervention_finish_modifier:0 "$council_agenda_agenda_ngm_positive_intervention_name$ $agenda_ref$"
+ agenda_ngm_positive_intervention_finish_modifier_desc:0 "$council_agenda_agenda_ngm_positive_intervention_desc$"
+
+ council_agenda_agenda_ngm_neutrality_confirmation_name:0 "中立の確認"
+ council_agenda_agenda_ngm_neutrality_confirmation_desc:0 "他国から自立することは帝国にとって必要だ"
+ agenda_ngm_neutrality_confirmation_finish_modifier:0 "$council_agenda_agenda_ngm_neutrality_confirmation_name$ $agenda_ref$"
+ agenda_ngm_neutrality_confirmation_finish_modifier_desc:0 "$council_agenda_agenda_ngm_neutrality_confirmation_desc$"
+
+ council_agenda_agenda_ngm_honorary_accolades_name:0 "名誉を称えることこそ国家の義務だ"
+ council_agenda_agenda_ngm_honorary_accolades_desc:0 "名誉を称えることこそ国家の義務だ"
+ agenda_ngm_honorary_accolades_finish_modifier:0 "$council_agenda_agenda_ngm_honorary_accolades_name$ $agenda_ref$"
+ agenda_ngm_honorary_accolades_finish_modifier_desc:0 "$council_agenda_agenda_ngm_honorary_accolades_desc$"
+
+ council_agenda_agenda_ngm_securing_real_benefits_name:0 "実益の確保"
+ council_agenda_agenda_ngm_securing_real_benefits_desc:0 "利益であれば食べていくことができる"
+ agenda_ngm_securing_real_benefits_finish_modifier:0 "$council_agenda_agenda_ngm_securing_real_benefits_name$ $agenda_ref$"
+ agenda_ngm_securing_real_benefits_finish_modifier_desc:0 "$council_agenda_agenda_ngm_securing_real_benefits_desc$"
+
+ council_agenda_agenda_ngm_pursuit_of_economic_profit_name:0 "経済利益の追求"
+ council_agenda_agenda_ngm_pursuit_of_economic_profit_desc:0 "金、金、金。金は重要なのだ"
+ agenda_ngm_pursuit_of_economic_profit_finish_modifier:0 "$council_agenda_agenda_ngm_pursuit_of_economic_profit_name$ $agenda_ref$"
+ agenda_ngm_pursuit_of_economic_profit_finish_modifier_desc:0 "$council_agenda_agenda_ngm_pursuit_of_economic_profit_desc$"
+
+ council_agenda_agenda_ngm_reduction_of_economic_disparities_name:0 "経済的格差の是正"
+ council_agenda_agenda_ngm_reduction_of_economic_disparities_desc:0 "平等の実現は国の義務だ"
+ agenda_ngm_reduction_of_economic_disparities_finish_modifier:0 "$council_agenda_agenda_ngm_reduction_of_economic_disparities_name$ $agenda_ref$"
+ agenda_ngm_reduction_of_economic_disparities_finish_modifier_desc:0 "$council_agenda_agenda_ngm_reduction_of_economic_disparities_desc$"
+
+ council_agenda_agenda_ngm_reform_of_development_concept_name:0 "開発構想の改革"
+ council_agenda_agenda_ngm_reform_of_development_concept_desc:0 "帝国の開発追求は未来へとつながる"
+ agenda_ngm_reform_of_development_concept_finish_modifier:0 "$council_agenda_agenda_ngm_reform_of_development_concept_name$ $agenda_ref$"
+ agenda_ngm_reform_of_development_concept_finish_modifier_desc:0 "$council_agenda_agenda_ngm_reform_of_development_concept_desc$"
+
+ council_agenda_agenda_ngm_the_clamor_for_environmentalism_name:0 "環境主義の喧伝"
+ council_agenda_agenda_ngm_the_clamor_for_environmentalism_desc:0 "自然環境は保護していくべき財産だ"
+ agenda_ngm_the_clamor_for_environmentalism_finish_modifier:0 "$council_agenda_agenda_ngm_the_clamor_for_environmentalism_name$ $agenda_ref$"
+ agenda_ngm_the_clamor_for_environmentalism_finish_modifier_desc:0 "$council_agenda_agenda_ngm_the_clamor_for_environmentalism_desc$"
+
+ council_agenda_agenda_ngm_ensuring_law_and_order_name:0 "法秩序の徹底"
+ council_agenda_agenda_ngm_ensuring_law_and_order_desc:0 "法秩序の実現は必要なのだ"
+ agenda_ngm_ensuring_law_and_order_finish_modifier:0 "$council_agenda_agenda_ngm_ensuring_law_and_order_name$ $agenda_ref$"
+ agenda_ngm_ensuring_law_and_order_finish_modifier_desc:0 "$council_agenda_agenda_ngm_ensuring_law_and_order_desc$"
+
+ council_agenda_agenda_ngm_re_implementation_of_executive_education_name:0 "幹部教育の再実施"
+ council_agenda_agenda_ngm_re_implementation_of_executive_education_desc:0 "幹部こそ初心を忘れてはいけない"
+ agenda_ngm_re_implementation_of_executive_education_finish_modifier:0 "$council_agenda_agenda_ngm_re_implementation_of_executive_education_name$ $agenda_ref$"
+ agenda_ngm_re_implementation_of_executive_education_finish_modifier_desc:0 "$council_agenda_agenda_ngm_re_implementation_of_executive_education_desc$"
+
+ council_agenda_agenda_ngm_aesthetic_feast_name:0 "耽美なる祝宴"
+ council_agenda_agenda_ngm_aesthetic_feast_desc:0 "贅沢は友だ"
+ agenda_ngm_aesthetic_feast_finish_modifier:0 "$council_agenda_agenda_ngm_aesthetic_feast_name$ $agenda_ref$"
+ agenda_ngm_aesthetic_feast_finish_modifier_desc:0 "$council_agenda_agenda_ngm_aesthetic_feast_desc$"
+
+ council_agenda_agenda_ngm_promoting_academic_research_name:0 "学術研究の推進"
+ council_agenda_agenda_ngm_promoting_academic_research_desc:0 "技術の推進は発展の両輪だ"
+ agenda_ngm_promoting_academic_research_finish_modifier:0 "$council_agenda_agenda_ngm_promoting_academic_research_name$ $agenda_ref$"
+ agenda_ngm_promoting_academic_research_finish_modifier_desc:0 "$council_agenda_agenda_ngm_promoting_academic_research_desc$"
+
+ council_agenda_agenda_ngm_steps_toward_freedom_name:0 "自由への歩み"
+ council_agenda_agenda_ngm_steps_toward_freedom_desc:0 "自由に基づく派閥政治を推進する"
+ agenda_ngm_steps_toward_freedom_finish_modifier:0 "$council_agenda_agenda_ngm_steps_toward_freedom_name$ $agenda_ref$"
+ agenda_ngm_steps_toward_freedom_finish_modifier_desc:0 "$council_agenda_agenda_ngm_steps_toward_freedom_desc$"
+
+ council_agenda_agenda_ngm_reorganization_of_order_name:0 "秩序の再編"
+ council_agenda_agenda_ngm_reorganization_of_order_desc:0 "秩序はすべての上に立つ"
+ agenda_ngm_reorganization_of_order_finish_modifier:0 "$council_agenda_agenda_ngm_reorganization_of_order_name$ $agenda_ref$"
+ agenda_ngm_reorganization_of_order_finish_modifier_desc:0 "$council_agenda_agenda_ngm_reorganization_of_order_desc$"
+
+ council_agenda_agenda_ngm_promotion_of_species_understanding_name:0 "異種族理解の推進"
+ council_agenda_agenda_ngm_promotion_of_species_understanding_desc:0 "異種族の理解推進は国家規模で行われる"
+ agenda_ngm_promotion_of_species_understanding_finish_modifier:0 "$council_agenda_agenda_ngm_promotion_of_species_understanding_name$ $agenda_ref$"
+ agenda_ngm_promotion_of_species_understanding_finish_modifier_desc:0 "$council_agenda_agenda_ngm_promotion_of_species_understanding_desc$"
+
+ council_agenda_agenda_ngm_expanding_paranoia_name:0 "パラノイアの拡大"
+ council_agenda_agenda_ngm_expanding_paranoia_desc:0 "あいつらは敵なのだ……そうに違いない"
+ agenda_ngm_expanding_paranoia_finish_modifier:0 "$council_agenda_agenda_ngm_expanding_paranoia_name$ $agenda_ref$"
+ agenda_ngm_expanding_paranoia_finish_modifier_desc:0 "$council_agenda_agenda_ngm_expanding_paranoia_desc$"
+
+ council_agenda_agenda_ngm_expansion_of_bureaucracy_name:0 "官僚機構の拡大"
+ council_agenda_agenda_ngm_expansion_of_bureaucracy_desc:0 "官僚機構の強化は国の強化である"
+ agenda_ngm_expansion_of_bureaucracy_finish_modifier:0 "$council_agenda_agenda_ngm_expansion_of_bureaucracy_name$ $agenda_ref$"
+ agenda_ngm_expansion_of_bureaucracy_finish_modifier_desc:0 "$council_agenda_agenda_ngm_expansion_of_bureaucracy_desc$"
+
+ council_agenda_agenda_ngm_expansion_of_officer_corps_name:0 "将校団の拡大"
+ council_agenda_agenda_ngm_expansion_of_officer_corps_desc:0 "将校の強化は軍を強化できる"
+ agenda_ngm_expansion_of_officer_corps_finish_modifier:0 "$council_agenda_agenda_ngm_expansion_of_officer_corps_name$ $agenda_ref$"
+ agenda_ngm_expansion_of_officer_corps_finish_modifier_desc:0 "$council_agenda_agenda_ngm_expansion_of_officer_corps_desc$"
+
+ council_agenda_agenda_ngm_implementation_of_building_plans_name:0 "建築計画の実施"
+ council_agenda_agenda_ngm_implementation_of_building_plans_desc:0 "手塩にかけた建築計画は常に作成される"
+ agenda_ngm_implementation_of_building_plans_finish_modifier:0 "$council_agenda_agenda_ngm_implementation_of_building_plans_name$ $agenda_ref$"
+ agenda_ngm_implementation_of_building_plans_finish_modifier_desc:0 "$council_agenda_agenda_ngm_implementation_of_building_plans_desc$"
+
+ council_agenda_agenda_ngm_space_of_hope_name:0 "希望の宙"
+ council_agenda_agenda_ngm_space_of_hope_desc:0 "未来へと常に進み続ける"
+ agenda_ngm_space_of_hope_finish_modifier:0 "$council_agenda_agenda_ngm_space_of_hope_name$ $agenda_ref$"
+ agenda_ngm_space_of_hope_finish_modifier_desc:0 "$council_agenda_agenda_ngm_space_of_hope_desc$"
+
+ council_agenda_agenda_ngm_resolving_international_issues_name:0 "国際問題の解決"
+ council_agenda_agenda_ngm_resolving_international_issues_desc:0 "国際的問題は一国では解決しない。そもそも一国では発生しない"
+ agenda_ngm_resolving_international_issues_finish_modifier:0 "$council_agenda_agenda_ngm_resolving_international_issues_name$ $agenda_ref$"
+ agenda_ngm_resolving_international_issues_finish_modifier_desc:0 "$council_agenda_agenda_ngm_resolving_international_issues_desc$"
+
+ council_agenda_agenda_ngm_implementation_of_large_scale_actions_name:0 "大規模行動の実施"
+ council_agenda_agenda_ngm_implementation_of_large_scale_actions_desc:0 "国家拡張に向けて進め！"
+ agenda_ngm_implementation_of_large_scale_actions_finish_modifier:0 "$council_agenda_agenda_ngm_implementation_of_large_scale_actions_name$ $agenda_ref$"
+ agenda_ngm_implementation_of_large_scale_actions_finish_modifier_desc:0 "$council_agenda_agenda_ngm_implementation_of_large_scale_actions_desc$"
+
+ council_agenda_agenda_ngm_restructuring_of_legislative_procedures_name:0 "立法手続きの再編"
+ council_agenda_agenda_ngm_restructuring_of_legislative_procedures_desc:0 "法の見直しは常に必要なのだ"
+ agenda_ngm_restructuring_of_legislative_procedures_finish_modifier:0 "$council_agenda_agenda_ngm_restructuring_of_legislative_procedures_name$ $agenda_ref$"
+ agenda_ngm_restructuring_of_legislative_procedures_finish_modifier_desc:0 "$council_agenda_agenda_ngm_restructuring_of_legislative_procedures_desc$"
+
+ council_agenda_agenda_ngm_ensuring_class_order_name:0 "階級的秩序の徹底"
+ council_agenda_agenda_ngm_ensuring_class_order_desc:0 "世襲階級への優遇は国家の礎なのだ"
+ agenda_ngm_ensuring_class_order_finish_modifier:0 "$council_agenda_agenda_ngm_ensuring_class_order_name$ $agenda_ref$"
+ agenda_ngm_ensuring_class_order_finish_modifier_desc:0 "$council_agenda_agenda_ngm_ensuring_class_order_desc$"
 
 ##########################
 #####    貿易取引    ######
@@ -4693,20 +4826,28 @@
 
  civic_tooltip_socialism:0 "§Y社会主義§!系統である"
  civic_tooltip_not_socialism:0 "§Y社会主義§!系統ではない"
+ requires_socialism:0 "$TRIGGER_FAIL$$civic_tooltip_socialism$"
  civic_tooltip_capitalism:0 "§Y資本主義§!系統である"
  civic_tooltip_not_capitalism:0 "§Y資本主義§!系統ではない"
+ requires_capitalism:0 "$TRIGGER_FAIL$$civic_tooltip_capitalism$"
  civic_tooltip_interventionism:0 "§Y介入主義§!系統である"
  civic_tooltip_not_interventionism:0 "§Y介入主義§!系統ではない"
+ requires_interventionism:0 "$TRIGGER_FAIL$$civic_tooltip_interventionism$"
  civic_tooltip_neutralism:0 "§Y中立主義§!系統である"
  civic_tooltip_not_neutralism:0 "§Y中立主義§!系統ではない"
+ requires_neutralism:0 "$TRIGGER_FAIL$$civic_tooltip_neutralism$"
  civic_tooltip_conservationism:0 "§Y保全主義§!系統である"
  civic_tooltip_not_conservationism:0 "§Y保全主義§!系統ではない"
+ requires_conservationism:0 "$TRIGGER_FAIL$$civic_tooltip_conservationism$"
  civic_tooltip_developmentalism:0 "§Y開発主義§!系統である"
  civic_tooltip_not_developmentalism:0 "§Y開発主義§!系統ではない"
+ requires_developmentalism:0 "$TRIGGER_FAIL$$civic_tooltip_developmentalism$"
  civic_tooltip_honorism:0 "§Y栄望主義§!系統である"
  civic_tooltip_not_honorism:0 "§Y栄望主義§!系統ではない"
+ requires_honorism:0 "$TRIGGER_FAIL$$civic_tooltip_honorism$"
  civic_tooltip_utilitarianism:0 "§Y実利主義§!系統である"
  civic_tooltip_not_utilitarianism:0 "§Y実利主義§!系統ではない"
+ requires_utilitarianism:0 "$TRIGGER_FAIL$$civic_tooltip_utilitarianism$"
 
  civic_tooltip_authoritarian_or_xenophile:0 "§Y権威主義§!系統か§Y受容主義§!系統である"
  civic_tooltip_authoritarian_or_militarist:0 "§Y権威主義§!系統か§Y軍国主義§!系統である"

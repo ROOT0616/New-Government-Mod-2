@@ -171,7 +171,7 @@ councilor_truth_and_reconciliation_commission = {
 	}
 }
 
-#9.国家祭祀 総大主教	総督	高位聖職者を束ね、指導する最高位聖職者	司祭の統合力産出+1	まだ
+#9.国家祭祀 総大主教	総督	高位聖職者を束ね、指導する最高位聖職者	司祭の統合力産出+1
 councilor_national_sacrifice = {
 	leader_class = {
 		governor
@@ -189,6 +189,7 @@ councilor_national_sacrifice = {
 	}
 	civic = civic_national_sacrifice
 	modifier = {
+		planet_priests_unity_produces_add = 1
 	}
 }
 
@@ -460,7 +461,7 @@ councilor_ngm_individualistic_rationalist = {
 	}
 }
 
-# 22.形式主義的な根回し屋 官房長官	総督	官僚を統御し、物事を裏で解決する閣僚	官僚からの統合力産出+1	まだ
+# 22.形式主義的な根回し屋 官房長官	総督	官僚を統御し、物事を裏で解決する閣僚	官僚からの統合力産出+1
 councilor_ngm_formalist_rootkeeper = {
 	leader_class = {
 		governor
@@ -478,6 +479,7 @@ councilor_ngm_formalist_rootkeeper = {
 	}
 	civic = civic_ngm_formalist_rootkeeper
 	modifier = {
+		planet_administrators_unity_produces_add = 1
 	}
 }
 
@@ -587,7 +589,7 @@ councilor_ngm_ruthless_realist = {
 	}
 	civic = civic_ngm_ruthless_realist
 	modifier = {
-		add_base_country_intel = 1
+		spy_power_cost_add = 1
 	}
 }
 
@@ -904,7 +906,7 @@ councilor_ngm_aristocratic_republicanism = {
 	}
 }
 
-# 42.書記長制 書記長	総督	閣議の書記にして議長であり、その他さまざまな役職を兼ねた高位政治家	統治院の目標時間-1.5%	まだ
+# 42.書記長制 書記長	総督	閣議の書記にして議長であり、その他さまざまな役職を兼ねた高位政治家	評議会の方針の進行速度1.5%
 councilor_ngm_chief_secretary_system = {
 	leader_class = {
 		governor
@@ -922,6 +924,7 @@ councilor_ngm_chief_secretary_system = {
 	}
 	civic = civic_ngm_chief_secretary_system
 	modifier = {
+		council_agenda_progress_speed = 0.015
 	}
 }
 
@@ -1219,7 +1222,7 @@ councilor_ngm_apprenticeship = {
 	}
 }
 
-# 56.直接民主制 国家参事官	総督	国政に参画し、直接市民の意見を政府に伝達する特別な政治家	統治院の目標時間-1.5%	まだ
+# 56.直接民主制 国家参事官	総督	国政に参画し、直接市民の意見を政府に伝達する特別な政治家	評議会の方針の進行速度1.5%
 councilor_ngm_direct_democracy = {
 	leader_class = {
 		governor
@@ -1237,6 +1240,7 @@ councilor_ngm_direct_democracy = {
 	}
 	civic = civic_ngm_direct_democracy
 	modifier = {
+		council_agenda_progress_speed = 0.015
 	}
 }
 
@@ -1418,7 +1422,7 @@ councilor_ngm_right_to_bear_arms = {
 	}
 }
 
-# 65.共通価値観 総務大臣	総督	総合的に国政を取り扱い、各省庁の事務を統括する閣僚	統治院の目標時間-1.5%	まだ
+# 65.共通価値観 総務大臣	総督	総合的に国政を取り扱い、各省庁の事務を統括する閣僚	評議会の方針の進行速度1.5%
 councilor_ngm_shared_values = {
 	leader_class = {
 		governor
@@ -1436,10 +1440,11 @@ councilor_ngm_shared_values = {
 	}
 	civic = civic_ngm_shared_values
 	modifier = {
+		council_agenda_progress_speed = 0.015
 	}
 }
 
-# 66.共に征く 国家進歩管理官	科学者 総督	国家の進歩を進め、新たな道を切り開く高等官	統治院の目標時間-2%	まだ
+# 66.共に征く 国家進歩管理官	科学者 総督	国家の進歩を進め、新たな道を切り開く高等官	評議会の方針の進行速度2%
 councilor_ngm_go_along_with = {
 	leader_class = {
 		governor
@@ -1457,6 +1462,7 @@ councilor_ngm_go_along_with = {
 	}
 	civic = civic_ngm_go_along_with
 	modifier = {
+		council_agenda_progress_speed = 0.02
 	}
 }
 
@@ -1506,7 +1512,7 @@ councilor_ngm_multiculturalism = {
 	}
 }
 
-# 69.庇護主義 護国卿	提督 将軍 総督	属国を守り、自国を守る総責任者	戦略投射からの最大影響力+0.1 まだ
+# 69.庇護主義 護国卿	提督 将軍 総督	属国を守り、自国を守る総責任者	戦略投射からの最大影響力+0.1
 councilor_ngm_paternalism = {
 	leader_class = {
 		governor
@@ -1524,6 +1530,7 @@ councilor_ngm_paternalism = {
 	}
 	civic = civic_ngm_paternalism
 	modifier = {
+		country_power_projection_influence_produces_add = 0.1
 	}
 }
 
@@ -2338,7 +2345,7 @@ councilor_ngm_peoples_army = {
 	}
 }
 
-# 106.経済的原始主義 原始の豪商	将軍	原始的な経済における、武力による経済を成り立たせる大物	1POPあたりエネルギー+0.5 まだ
+# 106.経済的原始主義 原始の豪商	将軍	原始的な経済における、武力による経済を成り立たせる大物	1POPあたりエネルギー+0.5
 councilor_ngm_economic_primitivism = {
 	leader_class = {
 		# governor
@@ -2356,8 +2363,7 @@ councilor_ngm_economic_primitivism = {
 	}
 	civic = civic_ngm_economic_primitivism
 	modifier = {
-		# country_base_energy_produces_add = 1
-		# mult = value:scripted_modifier_mult|MODIFIER|country_base_energy_produces_add|
+		mult = value:count_owned_pop_script|MODIFIER|country_base_energy_produces_add|
 	}
 }
 
@@ -2384,7 +2390,7 @@ councilor_ngm_land_sharing = {
 	}
 }
 
-# 108.共産主義 最高会議幹部会議長	総督	国家の最高幹部が集まる会議の議長	統治院の目標時間-1.5% まだ	
+# 108.共産主義 最高会議幹部会議長	総督	国家の最高幹部が集まる会議の議長	評議会の方針の進行速度1.5%
 councilor_ngm_communism = {
 	leader_class = {
 		governor
@@ -2402,6 +2408,7 @@ councilor_ngm_communism = {
 	}
 	civic = civic_ngm_communism
 	modifier = {
+		council_agenda_progress_speed = 0.015
 	}
 }
 
@@ -2520,7 +2527,7 @@ councilor_ngm_agriculture = {
 	}
 }
 
-# 114.究極の規制緩和 行政改革担当大臣	総督	行政改革を主任務とした閣僚	統治院の目標時間-1.5%	まだ
+# 114.究極の規制緩和 行政改革担当大臣	総督	行政改革を主任務とした閣僚	評議会の方針の進行速度1.5%
 councilor_ngm_deregulation = {
 	leader_class = {
 		governor
@@ -2538,6 +2545,7 @@ councilor_ngm_deregulation = {
 	}
 	civic = civic_ngm_deregulation
 	modifier = {
+		council_agenda_progress_speed = 0.015
 	}
 }
 
@@ -3440,7 +3448,7 @@ councilor_ngm_hereditary_officers = {
 	}
 }
 
-# 155.財閥 総帥補佐	総督	財閥の総帥を補佐し、不必要な業務を総帥から解放する重要職	統治院の目標時間-1.5%	まだ
+# 155.財閥 総帥補佐	総督	財閥の総帥を補佐し、不必要な業務を総帥から解放する重要職	評議会の方針の進行速度1.5%
 councilor_ngm_zaibatsu = {
 	leader_class = {
 		governor
@@ -3458,6 +3466,7 @@ councilor_ngm_zaibatsu = {
 	}
 	civic = civic_ngm_zaibatsu
 	modifier = {
+		council_agenda_progress_speed = 0.015
 	}
 }
 

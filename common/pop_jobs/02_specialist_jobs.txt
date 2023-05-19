@@ -285,30 +285,6 @@ priest = {
 		upkeep = {
 			consumer_goods = 2
 		}
-		# NGM2	緻密な記録
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_active_tradition = tr_ngm_record }
-			}
-			unity	= 1
-		}
-		# NGM2	総務省
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_active_tradition = tr_ngm_general_affairs }
-			}
-			unity	= 1
-		}
-		# NGM2	膨張した官僚機構
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_active_tradition = tr_ngm_rock_solid_bureaucracy }
-			}
-			unity	= 1
-		}
 	}
 
 	triggered_planet_modifier = {
@@ -1115,22 +1091,6 @@ bureaucrat = {
 			trigger = {
 				exists = owner
 				owner = { has_active_tradition = tr_ngm_record }
-			}
-			unity	= 1
-		}
-		# NGM2	総務省
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_active_tradition = tr_ngm_general_affairs }
-			}
-			unity	= 1
-		}
-		# NGM2	膨張した官僚機構
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_active_tradition = tr_ngm_rock_solid_bureaucracy }
 			}
 			unity	= 1
 		}

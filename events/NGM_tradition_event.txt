@@ -17,189 +17,189 @@ country_event = {
 }
 
 # 研鑽(自らを磨き、高みへと目指すことこそが求められる)
-# リーダーが特殊な特性をアンロック。初期リーダーが複数の特性を有している
-country_event = {
-	id = ngm_tradition.2
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		has_tradition = tr_ngm_study_finish
-	}
-	immediate = {
-		every_owned_leader = {
-			limit = {
-				NOT = {
-					has_leader_flag = flag_civic_ngm_advanced_glory_system
-				}
-				leader_class = governor
-			}
-			set_leader_flag = flag_civic_ngm_advanced_glory_system
-			if = {
-				limit = {
-					NOR = {
-						has_trait = leader_trait_ngm_economist
-						has_trait = leader_trait_ngm_coordinator
-						has_trait = leader_trait_ngm_governor_upstream
-						has_trait = leader_trait_ngm_governor_veteran
-					}
-				}
-				random_list = {
-					10 = {
-						add_trait = leader_trait_ngm_economist
-					}
-					10 = {
-						add_trait = leader_trait_ngm_coordinator
-					}
-					10 = {
-						add_trait = leader_trait_ngm_governor_upstream
-					}
-					10 = {
-						add_trait = leader_trait_ngm_governor_veteran
-					}
-					40 = {
-					}
-				}
-			}
-		}
-		every_owned_leader = {
-			limit = {
-				NOT = {
-					has_leader_flag = flag_civic_ngm_advanced_glory_system
-				}
-				leader_class = scientist
-			}
-			set_leader_flag = flag_civic_ngm_advanced_glory_system
-			if = {
-				limit = {
-					NOR = {
-						has_trait = leader_trait_ngm_scientocrats
-						has_trait = leader_trait_ngm_army_brat
-						has_trait = leader_trait_ngm_intuition
-						has_trait = leader_trait_ngm_flexibility
-						has_trait = leader_trait_ngm_scientist_upstream
-						has_trait = leader_trait_ngm_scientist_veteran
-					}
-				}
-				random_list = {
-					10 = {
-						add_trait = leader_trait_ngm_scientocrats
-					}
-					10 = {
-						add_trait = leader_trait_ngm_army_brat
-					}
-					10 = {
-						add_trait = leader_trait_ngm_intuition
-					}
-					10 = {
-						add_trait = leader_trait_ngm_flexibility
-					}
-					10 = {
-						add_trait = leader_trait_ngm_scientist_upstream
-					}
-					10 = {
-						add_trait = leader_trait_ngm_scientist_veteran
-					}
-					60 = {
-					}
-				}
-			}
-		}
-		every_owned_leader = {
-			limit = {
-				NOT = {
-					has_leader_flag = flag_civic_ngm_advanced_glory_system
-				}
-				leader_class = admiral
-			}
-			set_leader_flag = flag_civic_ngm_advanced_glory_system
-			if = {
-				limit = {
-					NOR = {
-						has_trait = leader_trait_ngm_admiral_military_bureaucracy
-						has_trait = leader_trait_ngm_admiral_from_the_general_staff
-						has_trait = leader_trait_ngm_admiral_flexibility
-						has_trait = leader_trait_ngm_admiral_decisive
-						has_trait = leader_trait_ngm_admiral_staff_team
-						has_trait = leader_trait_ngm_admiral_upstream
-						has_trait = leader_trait_ngm_admiral_veteran
-					}
-				}
-				random_list = {
-					10 = {
-						add_trait = leader_trait_ngm_admiral_military_bureaucracy
-					}
-					10 = {
-						add_trait = leader_trait_ngm_admiral_from_the_general_staff
-					}
-					10 = {
-						add_trait = leader_trait_ngm_admiral_flexibility
-					}
-					10 = {
-						add_trait = leader_trait_ngm_admiral_decisive
-					}
-					10 = {
-						add_trait = leader_trait_ngm_admiral_staff_team
-					}
-					10 = {
-						add_trait = leader_trait_ngm_admiral_upstream
-					}
-					10 = {
-						add_trait = leader_trait_ngm_admiral_veteran
-					}
-					70 = {
-					}
-				}
-			}
-		}
-		every_owned_leader = {
-			limit = {
-				NOT = {
-					has_leader_flag = flag_civic_ngm_advanced_glory_system
-				}
-				leader_class = general
-			}
-			set_leader_flag = flag_civic_ngm_advanced_glory_system
-			if = {
-				limit = {
-					NOR = {
-						has_trait = leader_trait_ngm_general_military_bureaucracy
-						has_trait = leader_trait_ngm_general_from_the_general_staff
-						has_trait = leader_trait_ngm_general_flexibility
-						has_trait = leader_trait_ngm_general_decisive
-						has_trait = leader_trait_ngm_general_staff_team
-						has_trait = leader_trait_ngm_general_upstream
-						has_trait = leader_trait_ngm_general_veteran
-					}
-				}
-				random_list = {
-					10 = {
-						add_trait = leader_trait_ngm_general_military_bureaucracy
-					}
-					10 = {
-						add_trait = leader_trait_ngm_general_from_the_general_staff
-					}
-					10 = {
-						add_trait = leader_trait_ngm_general_flexibility
-					}
-					10 = {
-						add_trait = leader_trait_ngm_general_decisive
-					}
-					10 = {
-						add_trait = leader_trait_ngm_general_staff_team
-					}
-					10 = {
-						add_trait = leader_trait_ngm_general_upstream
-					}
-					10 = {
-						add_trait = leader_trait_ngm_general_veteran
-					}
-					70 = {
-					}
-				}
-			}
-		}
-	}
-}
+# # リーダーが特殊な特性をアンロック。初期リーダーが複数の特性を有している
+# country_event = {
+# 	id = ngm_tradition.2
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		has_tradition = tr_ngm_study_finish
+# 	}
+# 	immediate = {
+# 		every_owned_leader = {
+# 			limit = {
+# 				NOT = {
+# 					has_leader_flag = flag_civic_ngm_advanced_glory_system
+# 				}
+# 				leader_class = governor
+# 			}
+# 			set_leader_flag = flag_civic_ngm_advanced_glory_system
+# 			if = {
+# 				limit = {
+# 					NOR = {
+# 						has_trait = leader_trait_ngm_economist
+# 						has_trait = leader_trait_ngm_coordinator
+# 						has_trait = leader_trait_ngm_governor_upstream
+# 						has_trait = leader_trait_ngm_governor_veteran
+# 					}
+# 				}
+# 				random_list = {
+# 					10 = {
+# 						add_trait = leader_trait_ngm_economist
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_coordinator
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_governor_upstream
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_governor_veteran
+# 					}
+# 					40 = {
+# 					}
+# 				}
+# 			}
+# 		}
+# 		every_owned_leader = {
+# 			limit = {
+# 				NOT = {
+# 					has_leader_flag = flag_civic_ngm_advanced_glory_system
+# 				}
+# 				leader_class = scientist
+# 			}
+# 			set_leader_flag = flag_civic_ngm_advanced_glory_system
+# 			if = {
+# 				limit = {
+# 					NOR = {
+# 						has_trait = leader_trait_ngm_scientocrats
+# 						has_trait = leader_trait_ngm_army_brat
+# 						has_trait = leader_trait_ngm_intuition
+# 						has_trait = leader_trait_ngm_flexibility
+# 						has_trait = leader_trait_ngm_scientist_upstream
+# 						has_trait = leader_trait_ngm_scientist_veteran
+# 					}
+# 				}
+# 				random_list = {
+# 					10 = {
+# 						add_trait = leader_trait_ngm_scientocrats
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_army_brat
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_intuition
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_flexibility
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_scientist_upstream
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_scientist_veteran
+# 					}
+# 					60 = {
+# 					}
+# 				}
+# 			}
+# 		}
+# 		every_owned_leader = {
+# 			limit = {
+# 				NOT = {
+# 					has_leader_flag = flag_civic_ngm_advanced_glory_system
+# 				}
+# 				leader_class = admiral
+# 			}
+# 			set_leader_flag = flag_civic_ngm_advanced_glory_system
+# 			if = {
+# 				limit = {
+# 					NOR = {
+# 						has_trait = leader_trait_ngm_admiral_military_bureaucracy
+# 						has_trait = leader_trait_ngm_admiral_from_the_general_staff
+# 						has_trait = leader_trait_ngm_admiral_flexibility
+# 						has_trait = leader_trait_ngm_admiral_decisive
+# 						has_trait = leader_trait_ngm_admiral_staff_team
+# 						has_trait = leader_trait_ngm_admiral_upstream
+# 						has_trait = leader_trait_ngm_admiral_veteran
+# 					}
+# 				}
+# 				random_list = {
+# 					10 = {
+# 						add_trait = leader_trait_ngm_admiral_military_bureaucracy
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_admiral_from_the_general_staff
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_admiral_flexibility
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_admiral_decisive
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_admiral_staff_team
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_admiral_upstream
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_admiral_veteran
+# 					}
+# 					70 = {
+# 					}
+# 				}
+# 			}
+# 		}
+# 		every_owned_leader = {
+# 			limit = {
+# 				NOT = {
+# 					has_leader_flag = flag_civic_ngm_advanced_glory_system
+# 				}
+# 				leader_class = general
+# 			}
+# 			set_leader_flag = flag_civic_ngm_advanced_glory_system
+# 			if = {
+# 				limit = {
+# 					NOR = {
+# 						has_trait = leader_trait_ngm_general_military_bureaucracy
+# 						has_trait = leader_trait_ngm_general_from_the_general_staff
+# 						has_trait = leader_trait_ngm_general_flexibility
+# 						has_trait = leader_trait_ngm_general_decisive
+# 						has_trait = leader_trait_ngm_general_staff_team
+# 						has_trait = leader_trait_ngm_general_upstream
+# 						has_trait = leader_trait_ngm_general_veteran
+# 					}
+# 				}
+# 				random_list = {
+# 					10 = {
+# 						add_trait = leader_trait_ngm_general_military_bureaucracy
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_general_from_the_general_staff
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_general_flexibility
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_general_decisive
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_general_staff_team
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_general_upstream
+# 					}
+# 					10 = {
+# 						add_trait = leader_trait_ngm_general_veteran
+# 					}
+# 					70 = {
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 # 研鑽(自らを磨き、高みへと目指すことこそが求められる)
 # 3.資格採用の強化:リーダー初期レベル+1
