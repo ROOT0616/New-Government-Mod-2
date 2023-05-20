@@ -98,8 +98,8 @@ councilor_symbolic_monarchy = {
 	}
 	civic = civic_symbolic_monarchy
 	modifier = {
-		planet_stability_add = 2
-		pop_ethic_pacifist_attraction_mult = 0.015
+		country_energy_produces_mult = 0.02
+		empire_size_pops_mult = -0.015
 	}
 }
 
