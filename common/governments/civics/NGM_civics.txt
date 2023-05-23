@@ -51,7 +51,9 @@ civic_substantive_constitutionalism = {
 			value = auth_imperial
 		}
 		ethics = {
-			value = ethic_fanatic_authoritarian
+			NOT = {
+				value = ethic_fanatic_authoritarian
+			}
 		}
 	}
 	random_weight = {
@@ -128,12 +130,6 @@ civic_symbolic_monarchy = {
 		authority = { NOT = { value = auth_corporate } }
 	}
 	possible = {
-		authority = {
-			OR = {
-				value = auth_democratic
-				value = auth_imperial
-			}
-		}
 	}
 	random_weight = {
 		base = 5
@@ -2092,7 +2088,7 @@ civic_ngm_remorseless_justice = {
 	}
 }
 
-# 74.他者蔑視	disdain_for_others		(排他)（実利ではない）		影響力+0.5 使者+1 「実りある侮辱」の技術を初期から有する
+# 74.他者蔑視	disdain_for_others		(排他)（実利ではない）		影響力+0.5 使者+1 「実りある侮辱」の技術を初期から有する まだ
 civic_ngm_disdain_for_others = {
 	modification = no
 	potential = {

@@ -1,8 +1,8 @@
 # Triggers when the game starts
 on_game_start_country = {
 	events = {
-		# ポリシーの設定
-		ngm_policy.1
+		# # ポリシーの設定
+		# ngm_policy.1
 		# 青年政治
 		ngm_civic.1
 		ngm_civic.2
@@ -26,7 +26,7 @@ on_game_start_country = {
 		# 根本的な狂気
 		ngm_civic.23
 		# 徒弟制度
-		ngm_civic.24
+		ngm_civic.26
 		# Origin
 		ngm_origin.1 # 律儀な古代の緩衝国家
 		ngm_origin.3 # 過去への逃走
@@ -42,7 +42,17 @@ on_monthly_pulse = {
 	}
 }
 
-# 帝国のために新しいリーダーを生成し、募集のために利用できるようになります。
+
+# Triggers when pressing begin in the intro window
+# This = country to press begin
+on_press_begin = {
+	events = {
+		# 根本的な狂気
+		ngm_civic.23
+	}
+}
+
+# 新リーダーの誕生
 # scope: country, from: leader
 on_leader_spawned = {
 	events = {
@@ -54,10 +64,36 @@ on_leader_spawned = {
 		ngm_civic.5
 		# 高度な栄典制度
 		ngm_civic.7
+		# # 根本的な狂気
+		# ngm_civic.24
+		# 徒弟制度
+		ngm_civic.26
+		# 特権階級のプライド
+		ngm_federation.1
+		# 研鑽	リーダーが特殊な特性をアンロック。初期リーダーが複数の特性を有している
+		# ngm_tradition.2
+		# 研鑽	資格採用の強化:リーダー初期レベル+1
+		ngm_tradition.3
+	}
+}
+
+# リーダーがリーダープールに追加され、募集が可能になる
+# scope: country, from: leader
+on_added_to_leader_pool = {
+	events = {
+		# 青年政治
+		ngm_civic.1
+		ngm_civic.2
+		# 老年政治
+		ngm_civic.4
+		ngm_civic.5
+		# 高度な栄典制度
+		ngm_civic.7
 		# 根本的な狂気
 		ngm_civic.23
+		# ngm_civic.24
 		# 徒弟制度
-		ngm_civic.24
+		ngm_civic.26
 		# 特権階級のプライド
 		ngm_federation.1
 		# 研鑽	リーダーが特殊な特性をアンロック。初期リーダーが複数の特性を有している

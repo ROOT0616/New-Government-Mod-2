@@ -1,31 +1,134 @@
 planet_bureau_of_ceremonies = {
 	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
 }
 
 planet_ngm_secretary = {
 	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
 }
 
 planet_ngm_pacifist = {
 	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
 }
 
 planet_ngm_crest_bearer = {
 	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
 }
 
 planet_ngm_senior_advisor = {
 	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
 }
 
 planet_ngm_heroes_of_society = {
 	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
 }
 
 planet_ngm_superintendent_of_wilderness = {
 	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
 }
 
 planet_ngm_influencer = {
 	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
+}
+
+country_ruler = {
+	parent = country_container
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = country
+}
+
+
+megastructures = {
+	use_for_ai_budget = yes
+	ai_use_parent_for_resources_upkeep = {
+		energy
+		consumer_goods
+	}
+	generate_mult_modifiers = {
+		cost
+	}
+	parent = country
+	modifier_category = megastructure
 }

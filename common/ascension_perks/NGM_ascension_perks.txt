@@ -250,6 +250,7 @@ ap_ngm_absolutely_class = {
 		}
 	}
 	modifier = {
+		planet_jobs_slave_produces_mult = 0.15
 		planet_jobs_worker_produces_mult = 0.15
 		planet_jobs_slave_produces_mult = 0.15
 		pop_cat_worker_political_power = -1
@@ -752,7 +753,6 @@ ap_ngm_relation_old_empire = {
 }
 
 # 29.工部省	建造物コスト-25%、住居+50%、巨大構造物建造コスト-15%、巨大構造物同時建造数+2
-
 ap_ngm_ministry_constructure = {
 	potential = {
 		NOT = {
@@ -762,7 +762,7 @@ ap_ngm_ministry_constructure = {
 	modifier = {
 		planet_buildings_cost_mult = -0.25
 		planet_housing_mult = 0.5
-		planet
+		megastructures_cost_mult = 0.15
 		country_megastructure_build_cap_add = 2
 
 	}
@@ -777,7 +777,7 @@ ap_ngm_ministry_constructure = {
 	}
 }
 
-# 30.ハニカムハウス コロニー船建造コスト-50% 区域建造コスト-20% 住居使用量-30% 惑星荒廃度-10%
+# 30.ハニカムハウス Popの住居使用量-50%、起動爆撃ダメージ-50%、地上軍耐久力+50%
 ap_ngm_hanicam_house = {
 	potential = {
 		NOT = {
@@ -785,10 +785,9 @@ ap_ngm_hanicam_house = {
 		}
 	}
 	modifier = {
-		ship_colonizerunity_cost_mult = -0.5
-		planet_structures__cost_mult = -0.2
-		pop_housing_usage_mult = -0.3
-		planet_orbital_bombardment_damage = -0.1
+		pop_housing_usage_mult = -0.5
+		planet_orbital_bombardment_damage = -0.5
+		army_health = 0.5
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて

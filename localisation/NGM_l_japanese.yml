@@ -857,9 +857,9 @@
  ngm_flag_Not_Par_name:0 "議会無し"
  NAME_NGM_Not_Par:0 "議会無し"
  NAME_NGM_Not_Par_desc:0 "選挙自体を実施しておらず、任命や裏交渉、くじ引き等で代表を選ぶ制度"
- ngm_flag_Not_Par_name:0 "翼賛議会"
- NAME_NGM_Not_Par:0 "翼賛議会"
- NAME_NGM_Not_Par_desc:0 "直接民意を政治に反映させる、この国独特の文化的な選挙制度"
+ ngm_flag_Agr_Par_name:0 "翼賛議会"
+ NAME_NGM_Agr_Par:0 "翼賛議会"
+ NAME_NGM_Agr_Par_desc:0 "直接民意を政治に反映させる、この国独特の文化的な選挙制度"
 
  policy_ngm_tax_law:0 "国税法"
  policy_ngm_tax_law_desc:0 "国家の収入に関する税に関して、どのような方針で徴収を行うか決定する。"
@@ -953,9 +953,9 @@
  ngm_flag_Pai_dis_name:0 "略奪の公認"
  NAME_NGM_Pai_dis:0 "略奪の公認"
  NAME_NGM_Pai_dis_desc:0 "この国の軍は公然と略奪を許可しており、地上戦における彼らの活躍は目を見張るものがあるが、その下には大きな犠牲が伴っている"
- ngm_flag_Pai_dis_name:0 "非公開横領"
- NAME_NGM_Pai_dis:0 "非公開横領"
- NAME_NGM_Pai_dis_desc:0 "この国では軍事予算の横領と国軍の腐敗が行われており、軍とは公的犯罪集団と化している"
+ ngm_flag_Mis_dis_name:0 "非公開横領"
+ NAME_NGM_Mis_dis:0 "非公開横領"
+ NAME_NGM_Mis_dis_desc:0 "この国では軍事予算の横領と国軍の腐敗が行われており、軍とは公的犯罪集団と化している"
 
  policy_ngm_research_law:0 "研究倫理"
  policy_ngm_research_law_desc:0 "諸研究に関する研究方針や倫理規定に関して決定する。"
@@ -971,9 +971,9 @@
  ngm_flag_zen_eth_name:0 "異種族特例倫理規範"
  NAME_NGM_zen_eth:0 "異種族特例倫理規範"
  NAME_NGM_zen_eth_desc:0 "研究の倫理は維持するが、他種族に対する倫理規範は撤廃される。"
- ngm_flag_zen_eth_name:0 "無制限倫理"
- NAME_NGM_zen_eth:0 "無制限倫理"
- NAME_NGM_zen_eth_desc:0 "研究に関する規制を撤廃することで、研究の力を最大限に引き出すことができる"
+ ngm_flag_zero_eth_name:0 "無制限倫理"
+ NAME_NGM_zero_eth:0 "無制限倫理"
+ NAME_NGM_zero_eth_desc:0 "研究に関する規制を撤廃することで、研究の力を最大限に引き出すことができる"
 
  policy_ngm_language_policy:0 "言語政策"
  policy_ngm_language_policy_desc:0 "文化や教育の基本である言語についての規制に関して決定する。"
@@ -3343,11 +3343,11 @@
 
  ap_ngm_constant_hostile_intelligence_operations:0 "恒常的敵対諜報活動"
  ap_ngm_constant_hostile_intelligence_operations_desc:0 "敵に対しては常に影響を与え続けなければならない"
- ap_ngm_constant_hostile_intelligence_operations_effect:0 "宿敵にした相手国の影響力-1"
+ ap_ngm_constant_hostile_intelligence_operations_effect:0 "宿敵にした相手国の影響力 §R-1§!"
 
  ap_ngm_dipromatic_think_tank:0 "外交シンクタンク"
  ap_ngm_dipromatic_think_tank_desc:0 "常に移り変わる外交に関して専門家団を活用する"
- ap_ngm_dipromatic_think_tank_effect:0 "月間忠誠度+1"
+ ap_ngm_dipromatic_think_tank_effect:0 "月間忠誠度 §G+1§!"
 
  ap_ngm_imperial_academy:0 "帝国学士院"
  ap_ngm_imperial_academy_desc:0 "研究者を政治的に取りまとめ、研究政策の活用を図る"
@@ -3402,7 +3402,7 @@
 
  ap_ngm_ministry_of_innocence:0 "社会秩序維持局"
  ap_ngm_ministry_of_innocence_desc:0 "我が国は他国と一線を画し、純潔性を維持する必要がある"
- ap_ngm_ministry_of_innocence_effect:0 "他国から諜報以外の方法で内政的悪影響を受けない"
+ ap_ngm_ministry_of_innocence_effect:0 "他国から諜報以外の方法で§Y内政的悪影響を受けない§!"
 
  ap_ngm_great_constructure_department:0 "大規模建築計画局"
  ap_ngm_great_constructure_department_desc:0 "大規模建築を行う際の資源や職人を運用し、調整する省庁を設立する"
@@ -3415,13 +3415,13 @@
  ap_ngm_layer_countries_effect:0 "月間忠誠度§G+2§!"
 
  ap_ngm_bishop_need:0 "司教による請求権の捏造"
- ap_ngm_bishop_need_desc:0 ""
+ ap_ngm_bishop_need_desc:0 "知識を有する聖職者により、古文書(?)を捏造させることで正当な請求権を取得する"
 
  ap_ngm_empire_art_association:0 "帝国芸術協会"
  ap_ngm_empire_art_association_desc:0 "帝国全体の芸術活動を推奨し、芸術を保護する機関を設立する"
 
  ap_ngm_Intelligence_need:0 "諜報網に基づく請求権の捏造"
- ap_ngm_Intelligence_need_desc:0 ""
+ ap_ngm_Intelligence_need_desc:0 "言葉巧みな外交官により、古文書(?)を捏造させることで正当な請求権を取得する"
 
  ap_ngm_speed_power:0 "スピードこそ命"
  ap_ngm_speed_power_desc:0 "スピードこそパワー！"
@@ -3548,6 +3548,7 @@
  tr_ngm_ministory_culture_delayed:0 "文化を推奨し、保護する役所は必要だ"
  tr_ngm_diplomatic_art:0 "芸術外交"
  tr_ngm_diplomatic_art_delayed:0 "芸術を通じて平和外交は新たな外交方法として注目される"
+ tr_ngm_diplomatic_art_tooltip:0 "毎月の忠誠心：§G+1§!"
  tr_ngm_authority_art:0 "芸術の権威"
  tr_ngm_authority_art_tooltip:0 "建造物をアンロック：§Y$building_ngm_imperial_art_museum$§!"
  tr_ngm_authority_art_delayed:0 "古くから存在する芸術はほかの模範となり、再生産が行われている"
@@ -4683,7 +4684,7 @@
  agenda_ngm_neutrality_confirmation_finish_modifier:0 "$council_agenda_agenda_ngm_neutrality_confirmation_name$ $agenda_ref$"
  agenda_ngm_neutrality_confirmation_finish_modifier_desc:0 "$council_agenda_agenda_ngm_neutrality_confirmation_desc$"
 
- council_agenda_agenda_ngm_honorary_accolades_name:0 "名誉を称えることこそ国家の義務だ"
+ council_agenda_agenda_ngm_honorary_accolades_name:0 "栄誉の称賛"
  council_agenda_agenda_ngm_honorary_accolades_desc:0 "名誉を称えることこそ国家の義務だ"
  agenda_ngm_honorary_accolades_finish_modifier:0 "$council_agenda_agenda_ngm_honorary_accolades_name$ $agenda_ref$"
  agenda_ngm_honorary_accolades_finish_modifier_desc:0 "$council_agenda_agenda_ngm_honorary_accolades_desc$"
@@ -4968,11 +4969,11 @@
 
  civic_tooltip_ngm_elder_politics_effects:0 "初期リーダー年が§Y60-100歳§!になる"
 
- civic_ngm_disdain_for_others_effects:0 "難民政策を§Y無制限許容§!で固定"
+ civic_tooltip_ngm_accept_everyone_effects:0 "難民政策を§Y無制限許容§!で固定"
 
  civic_tooltip_ngm_remorseless_justice_effects:0 "§R終末軌道爆撃以外選択不可§!"
 
- civic_tooltip_ngm_accept_everyone_effects:0 "「実りある侮辱」の技術を初期から有する"
+ civic_ngm_disdain_for_others_effects:0 "「実りある侮辱」の技術を初期から有する"
 
  civic_tooltip_ngm_dissection_effects:0 "§R異種族は強制で奴隷化§!"
 

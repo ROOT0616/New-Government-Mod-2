@@ -531,7 +531,7 @@ ngm_parliament_law = {
 	}
 	#  ⑧翼賛議会(特殊)Agr_Par	布告基金+30,安定度+5					(国是:外見的立憲主義を有しているとこれのみの選択)	政府に忠実、もしくは権力者の発言が議会の力を超越しており、議会が権力者の追認機関となっている制度
 	option = {
-		name = "NAME_NGM_Not_Par"
+		name = "NAME_NGM_Agr_Par"
 		potential = {
 			is_country_type = default
 		}
@@ -539,7 +539,7 @@ ngm_parliament_law = {
 			has_civic = civic_sham_constitutionalism
 		}
 		policy_flags = {
-			ngm_flag_Not_Par
+			ngm_flag_Agr_Par
 		}
 		modifier = {
 			country_edict_fund_add = 30
@@ -717,8 +717,8 @@ ngm_ritual_raw = {
 		}
 		modifier = {
 			country_base_ngm_order_of_merit_produces_add = 0.1
+			planet_jobs_ruler_consumer_goods_upkeep_add = 2
 			country_unity_produces_mult = 0.1
-			ruler_consumer_goods_upkeep_add = 2
 		}
 		AI_weight = {
 			weight = 10
@@ -740,8 +740,8 @@ ngm_ritual_raw = {
 			ngm_flag_Rim_rit
 		}
 		modifier = {
-			planet_job_bureau_of_ceremonies_ngm_order_of_merit_produces_add = 0.2
-			ruler_consumer_goods_upkeep_add = 1
+			planet_bureau_of_ceremonies_ngm_order_of_merit_produces_add = 0.2
+			planet_jobs_ruler_consumer_goods_upkeep_add = 1
 			country_unity_produces_mult = 0.2
 		}
 		AI_weight = {
@@ -764,7 +764,7 @@ ngm_ritual_raw = {
 			ngm_flag_Ril_rit
 		}
 		modifier = {
-			planet_job_bureau_of_ceremonies_ngm_order_of_merit_produces_add = 0.1
+			planet_bureau_of_ceremonies_ngm_order_of_merit_produces_add = 0.1
 			country_unity_produces_mult = 0.1
 			planet_pops_upkeep_mult = 0.1
 		}
@@ -803,8 +803,8 @@ ngm_ritual_raw = {
 			ngm_flag_Sel_rit
 		}
 		modifier = {
-			planet_job_bureau_of_ceremonies_trade_value_produces_add = +10
-			planet_job_bureau_of_ceremonies_ngm_order_of_merit_produces_add = -0.2
+			# planet_job_bureau_of_ceremonies_trade_value_produces_add = 10
+			planet_bureau_of_ceremonies_ngm_order_of_merit_produces_add = -0.2
 		}
 		AI_weight = {
 			weight = 10
@@ -851,7 +851,7 @@ ngm_ritual_raw = {
 		}
 		modifier = {
 			country_unity_produces_mult = 0.3
-			ruler_consumer_goods_upkeep_add = 1
+			planet_jobs_ruler_consumer_goods_upkeep_add = 1
 		}
 		AI_weight = {
 			weight = 10
@@ -1060,7 +1060,7 @@ ngm_military_law = {
 			pop_ethic_militarist_attraction_mult = 0.3
 			planet_crime_add = -10
 			army_morale = 0.15
-			ship_evasion_add = 0.05
+			ship_evasion_mult = 0.05
 			ship_fire_rate_mult = 0.07
 		}
 		AI_weight = {
@@ -1085,7 +1085,7 @@ ngm_military_law = {
 		modifier = {
 			pop_ethic_militarist_attraction_mult = 0.2
 			army_morale = 0.05
-			ship_evasion_add = 0.05
+			ship_evasion_mult = 0.05
 			ship_fire_rate_mult = 0.05
 		}
 		AI_weight = {
@@ -1148,7 +1148,7 @@ ngm_military_law = {
 		modifier = {
 			country_energy_produces_mult = 0.1
 			pop_cat_ruler_happiness = 0.1
-			ship_evasion_add = -0.05
+			ship_evasion_mult = -0.05
 			army_morale = -0.1
 		}
 		AI_weight = {
@@ -1185,7 +1185,7 @@ ngm_military_law = {
 	}
 	#  ⑦非公開横領			エネルギー収入+20%,暗号力-5,兵士は追加で犯罪+1をもたらす	(実利主義のみ)				この国では軍事予算の横領と国軍の腐敗が行われており、軍とは公的犯罪集団と化している
 	option = {
-		name = "NAME_NGM_Pai_dis"
+		name = "NAME_NGM_Mis_dis"
 		potential = {
 			is_country_type = default
 		}
@@ -1196,7 +1196,7 @@ ngm_military_law = {
 			}
 		}
 		policy_flags = {
-			ngm_flag_Pai_dis
+			ngm_flag_Mis_dis
 		}
 		modifier = {
 			planet_job_soldier_crime_produces_add = 1
@@ -1300,7 +1300,7 @@ ngm_research_law = {
 	}
 	#  ⑤無制限倫理		研究力+15%,安定度-10,物質主義魅力+30%				(物質主義のみ)	研究に関する規制を撤廃することで、研究の力を最大限に引き出すことができる
 	option = {
-		name = "NAME_NGM_zen_eth"
+		name = "NAME_NGM_zero_eth"
 		potential = {
 			is_country_type = default
 		}
@@ -1311,7 +1311,7 @@ ngm_research_law = {
 			}
 		}
 		policy_flags = {
-			ngm_flag_zen_eth
+			ngm_flag_zero_eth
 		}
 		modifier = {
 			country_physics_research_produces_mult = 0.15
