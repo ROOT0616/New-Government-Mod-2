@@ -1795,3 +1795,385 @@ trait_ngm_merchant_from_ancient = {
 # trait_ngm_spore			変性胞子（菌類）            ：-2p	職業による快適度-10%、居住性-5%、統合力+5%			(この種族の胞子は周囲に予測可能性の低い影響を与える。)
 # trait_ngm_photosynthesis	光合成（植物）              ：2p	食料消費量-20%、居住性+5%					(この種族は光合成により栄養を手に入れることができる。)
 # trait_ngm_slowness		遅速性（植物）              ：-2p	地上軍耐久度-30%、住居使用量+10%、リーダー寿命＋15年		(この種族の足は遅く、動作が緩慢である。)
+
+# 機械特性
+# 1 工芸義肢 trait_ngm_m_crafts 3 "合金生産+5% 消費財生産+5％" この機械の腕は極めて精巧な動作にも耐え、工芸品や工業製品の製造に高い適性を示している。
+trait_ngm_m_crafts = {
+	cost = 3
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.05
+		planet_jobs_consumer_goods_produces_mult = 0.05
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
+
+# 2 高機能レンズ trait_ngm_m_lens 3 "研究速度+10％ アノマリー調査速度+5%" この機械のレンズは微細な者から遠くのものまで把握することに高い能力を誇る。
+trait_ngm_m_lens = {
+	cost = 3
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		all_technology_research_speed = 0.1
+		ship_anomaly_research_speed_mult = 0.05
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
+
+# 3 味覚プログラム trait_ngm_m_taste 2 食料生産+30% この機械は味覚を有しており、不味いものは作らない。
+trait_ngm_m_taste = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_jobs_food_produces_mult = 0.3
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
+
+# 4 放電コンデンサ trait_ngm_m_discharge 2 地上軍ダメージ+30% この機械は放電能力を有しており、有機生命体に攻撃を行う際に強い適性を誇る。
+trait_ngm_m_discharge = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		army_damage_mult = 0.3
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
+
+# 5 飛行ジェット trait_ngm_m_jet 2 "回避+5％ 物理学+10%" この機械は空を飛ぶ機構を備えている。
+trait_ngm_m_jet = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		ship_evasion_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.1
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
+
+# 6 有機体分解 trait_ngm_m_disassembly 1 Pop維持費-5% この機械は不要な有機体を体内で分解することができる。
+trait_ngm_m_disassembly = {
+	cost = 1
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.05
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
+
+# 7 量子コンピュータ trait_ngm_m_quantum 4 「霊子コンピュータ」 "研究速度+20% 帝国規模-10% Pop製造コスト+30%" この機械の頭脳は初期型の量子コンピュータにより統御されており、極めて複雑な計算を一瞬で行うことが可能である。
+trait_ngm_m_quantum = {
+	cost = 4
+	opposites = { "trait_ngm_m_reishi" }
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		all_technology_research_speed = 0.2
+		species_empire_size_mult = -0.10
+	}
+	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
+	assembling_modifier = {
+		planet_pop_assemblers_upkeep_mult = 0.3
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
+
+# 8 霊子コンピュータ trait_ngm_m_reishi 4 「量子コンピュータ」 "回避+10% 信用+30 研究速度+20% Pop製造コスト-30%" この機械の頭脳は特殊な霊子コンピュータでできており、感情や意思を頂上的な力で感じ取りつつ高度な演算を行うことができる。
+trait_ngm_m_reishi = {
+	cost = 4
+	opposites = { "trait_ngm_m_quantum" }
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		country_trust_cap_add = 30
+		ship_evasion_mult = 0.1
+		all_technology_research_speed = 0.2
+	}
+	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
+	assembling_modifier = {
+		planet_pop_assemblers_upkeep_mult = -0.3
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
+
+# 9 原始的構造 trait_ngm_m_primitive -3 "Pop維持費+10% リーダーレベル上限-1" この機械の構造は極めて原始的で、どうして動いているのか不明だ。
+trait_ngm_m_primitive = {
+	cost = -3
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_pops_upkeep_mult = 0.1
+		leader_skill_levels = -1
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
+
+# 10 漏電 trait_ngm_m_leakage -2 エネルギー生産-10% この機械はよく漏電している。
+trait_ngm_m_leakage = {
+	cost = -2
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_jobs_energy_produces_mult = -0.1
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
+
+# 11 短絡的判断 trait_ngm_m_nasty -3 "快適度消費+20% 研究速度-5%" この機械の判断は短絡的で、目の前の課題を解決することしかできない。
+trait_ngm_m_nasty = {
+	cost = -3
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		pop_amenities_usage_mult = 0.2
+		all_technology_research_speed = -0.05
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
+
+# 12 非光学的判断 trait_ngm_m_invisible -2 地上軍ダメージ-20% この機械は光学的な把握を行うことができず、それらを確認することはできない。
+trait_ngm_m_invisible = {
+	cost = -2
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		army_damage_mult = -0.2
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
+
+# 13 不適切配線 trait_ngm_m_wiring -2 Pop製造速度-10% この機械の内部配線は不適切であるが、諸事情により変更することができない。
+trait_ngm_m_wiring = {
+	cost = -2
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_pop_assembly_mult = -0.1
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
+
+# 14 詰め合わせ trait_ngm_m_cram -1 Pop製造コスト+5% この機械をデザインした者はこの機械を本来超える能力をこの機体に詰め込もうとした。
+trait_ngm_m_cram = {
+	cost = -1
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+	}
+	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
+	assembling_modifier = {
+		planet_pop_assemblers_upkeep_mult = 0.05
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
+
+# 15 頻発する故障 trait_ngm_m_malfunction -4 「作業不適格」 "Pop製造コスト+10% Pop維持費+10% Pop製造速度+10% リーダー故障確率+20%まだ" この機械の故障率は異常であり、製造途中でも、製造後にも不具合を起こすため維持コストも極めて高い。
+trait_ngm_m_malfunction = {
+	cost = -4
+	opposites = { "trait_ngm_m_inappropriate" }
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_pop_assembly_mult = 0.1
+		planet_pops_upkeep_mult = 0.1
+		
+	}
+	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
+	assembling_modifier = {
+		planet_pop_assemblers_upkeep_mult = 0.1
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
+
+# 16 作業不適格 trait_ngm_m_inappropriate -4 「頻発する故障」 Pop生産-10% この機械は、あらゆる生産を行うための適正がない。
+trait_ngm_m_inappropriate = {
+	cost = -4
+	opposites = { "trait_ngm_m_malfunction" }
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_jobs_produces_mult = -0.1
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_mining_designation = yes }
+		}
+		modifier = {
+			add = 0.5
+			from = { has_rural_designation = yes }
+		}
+	}
+}
