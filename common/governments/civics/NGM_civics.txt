@@ -4730,3 +4730,124 @@ civic_ngm_underhanded_trick = {
 	}
 	description = "civic_tooltip_ngm_underhanded_trick_effects"
 }
+
+# 機械国是			取得条件	効果	説明文
+# 1	垂直統合	civic_ngm_vertical	「自動最適化システム」を取得していない。	"Popによる帝国規模-10％ リーダー経験値取得-33%"	機械中枢により強い統御を受けるこの機械は、効率的な発達を遂げることができる代わりに、末端部分の発達が遅れる傾向にある。
+civic_ngm_vertical = {
+	potential = { authority = { value = auth_machine_intelligence } }
+	random_weight = { base = @civic_default_random_weight }
+	possible = {
+		civics = {
+			NOT = {
+				value = civic_ngm_optimization
+			}
+		}
+	}
+	ai_weight = { 
+		base = @ai_civic_default_base_weight 
+	}
+	modifier = {
+		empire_size_pops_mult = -0.1
+		species_leader_exp_gain = -0.33
+	}
+}
+
+# 2	観察記録	civic_ngm_observation		"社会学+10% 統合力+10%"	様々な事象や生命体を観察し、研究を行うことをプログラミングされた内省的な機械は、宇宙へと歩みを進め始めた。
+civic_ngm_observation = {
+	potential = { authority = { value = auth_machine_intelligence } }
+	random_weight = { base = @civic_default_random_weight }
+	ai_weight = { 
+		base = @ai_civic_default_base_weight 
+	}
+	modifier = {
+		country_society_research_produces_mult = 0.1
+		country_unity_produces_mult = 0.1
+	}
+}
+
+# 3	チェック機能	civic_ngm_check		"Pop維持費-10% リーダーの故障確率-20％"	この機械の中枢は生産体制やメンテナンスの確認に極めて厳格であり、少しのエラーも許さない。
+civic_ngm_check = {
+	description = "civic_tooltip_ngm_check_effects"  # "機械のリーダーは、 突発的な故障を起こす可能性が§Y20%§!低下する。"
+	potential = { authority = { value = auth_machine_intelligence } }
+	random_weight = { base = @civic_default_random_weight }
+	ai_weight = { 
+		base = @ai_civic_default_base_weight 
+	}
+	modifier = {
+		planet_pops_upkeep_mult = -0.1
+	}
+}
+
+# 4	AI自己増殖	civic_ngm_proliferate		"Pop製造速度+15％ Pop製造コスト-10％"	自動複製プログラムは正常。自動複製プログラム自体の複製を開始……
+civic_ngm_proliferate = {
+	potential = { authority = { value = auth_machine_intelligence } }
+	random_weight = { base = @civic_default_random_weight }
+	ai_weight = { 
+		base = @ai_civic_default_base_weight 
+	}
+	modifier = {
+		planet_pop_assemblers_upkeep_mult = -0.1
+		planet_pop_assembly_mult = 0.15
+	}
+}
+
+# 5	暖かな願い	civic_ngm_warm	「断固たる殺戮機械」を取得していない。	"まだ無制限戦争・無差別爆撃が選択不可 使節+1 信用+20 危機候補文明へのダメージ+10%"	この機械を統御する中枢部分は、他者から見ると「慈悲」に基づいて判断や行動を決定しているようだ。他生物を圧倒することではなく、共に生きることを目指し、共に脅威へ戦う意思を見せる。
+civic_ngm_warm = {
+	description = "civic_tooltip_ngm_warm_effects"
+	potential = { authority = { value = auth_machine_intelligence } }
+	random_weight = { base = @civic_default_random_weight }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_machine_terminator
+				value = civic_machine_assimilator
+			}
+		}
+	}
+	ai_weight = { 
+		base = @ai_civic_default_base_weight 
+	}
+	modifier = {
+		envoys_add = 1
+		country_trust_cap_add = 20
+		damage_vs_player_crisis_mult = 0.1
+		damage_vs_country_type_extradimensional_mult = 0.1
+		damage_vs_country_type_extradimensional_2_mult = 0.1
+		damage_vs_country_type_extradimensional_3_mult = 0.1
+		damage_vs_country_type_swarm_mult = 0.1
+		damage_vs_country_type_ai_empire_mult = 0.1
+	}
+}
+
+# 6	自動最適化システム	civic_ngm_optimization	「垂直統合」を取得していない。	"Pop生産+5% 帝国規模+10%"	この種族を統御する中枢部分は、他者から見ると「慈悲」に基づいて判断や行動を決定しているようだ。他生物を圧倒することではなく、共に生きることを目指し、共に脅威へ戦う意思を見せる。
+civic_ngm_optimization = {
+	potential = { authority = { value = auth_machine_intelligence } }
+	random_weight = { base = @civic_default_random_weight }
+	possible = {
+		civics = {
+			NOT = {
+				value = civic_ngm_vertical
+			}
+		}
+	}
+	ai_weight = { 
+		base = @ai_civic_default_base_weight 
+	}
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+		empire_size_mult = 0.1
+	}
+}
+
+# 7	フロンティアスピリッツ・プログラム	civic_ngm_frontier		"植民地建造速度+50％ Pop移住コスト-50%"	この機械の創造主は、中枢部にとあるプログラムを導入し、この機械国家はそのプログラムを粛々と実行している。「より、より遠くへ！」
+civic_ngm_frontier = {
+	potential = { authority = { value = auth_machine_intelligence } }
+	random_weight = { base = @civic_default_random_weight }
+	ai_weight = { 
+		base = @ai_civic_default_base_weight 
+	}
+	modifier = {
+		planet_colony_development_speed_mult = 0.5
+		pop_resettlement_cost_mult = -0.5
+	}
+}
