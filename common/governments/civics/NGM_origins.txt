@@ -115,3 +115,53 @@ origin_ngm_escape_to_the_past = {
 # 		base = 5
 # 	}
 # }
+
+# 1	黄昏の帝国	origin_ngm_phenix	"狂信的な中立主義である 狂信的な排他主義である
+# 狂信的な浄化主義、内向きの成熟を取得していない"	準没落になる。別記	この国はかつての覇権国家であった。数多くの敵を打ち倒し、数々の困難を乗り越えた大帝国であった。そう、「であった」のだ。
+# 全ての技術を取得した状態	
+# 遺物「インペリアル・クロニクル」を取得	
+# 特定の星系群を生成	
+# プロスペクトリウムの属国(企業国家)を持つ	
+# 属国は遺物「偉大なる恩顧」を有する	
+# 伝統を2つ完遂できるだけの統合力を初期から有する	
+# 初期にある程度の艦隊と艦船を有する	
+# 初期から1000Popを有する(300Pop第一種族、500Pop麗隷人、200Pop機械人)	
+# 特有の惑星建造物を有する	
+# 帝国特性を各種有する。伝統やアセンションで削除する	
+# ホットフィックスは終了している扱い	
+# 合金を消費する布告で調査船と建設船を1隻得ることができる。	
+origin_ngm_phenix = {
+	is_origin = yes
+	icon = "gfx/interface/icons/governments/origins/origins_ngm_phenix.dds"
+	picture = GFX_origin_ngm_phenix
+	potential = {
+		always = yes
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+				value = ethic_neutralism
+				value = ethic_fanatic_neutralism
+			}
+			NOR = {
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_inwards_perfection
+				value = civic_fanatic_purifiers
+			}
+			
+		}
+	}
+	modifier = {
+	}
+	description = "origin_tooltip_ngm_phenix"
+	random_weight = {
+		base = 0
+	}
+}

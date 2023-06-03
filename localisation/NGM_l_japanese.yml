@@ -266,7 +266,7 @@
 #######################
 
  origin_ngm_buffer_state:0 "律儀な古代の緩衝国家"
- origin_ngm_buffer_state_desc:0 "この国が位置する星系はその豊かな立地ゆえに古代においても戦略重要地として奪い合いの戦争が繰り広げられていました。\n古代の国家はこの星系に極々小さな独立緩衝国を築き上げ、統治させることで戦争の危機を脱しました。そうして出来上がった国家は貿易的利益と強力な国際発言力の代償に小さな国土と限られた原料生産を強いられている。\n古代の国家群が滅びた後でも、この国はその伝統を数少ない継承要素として維持しているのである。"
+ origin_ngm_buffer_state_desc:0 "この国が位置する星系はその豊かな立地ゆえに古代においても戦略重要地として奪い合いの戦争が繰り広げられていました。\n古代の国家はこの星系に極々小さな独立緩衝国を築き上げ、統治させることで戦争の危機を脱しました。そうして出来上がった国家は貿易的利益と強力な国際発言力の代償に小さな国土と限られた原料生産を強いられている。\n古代の国家群が滅びた後でも、この国はその伝統を数少ない継承要素として維持しているのである。\n\n§Rこの起源をは非常に困難である§!"
  origin_tooltip_ngm_buffer_state_effects:0 "-非常に豊かなチョークポイントに位置する星系に生成される。\n-開始時に遺物§Y『古代の盟約』§!を取得する。\n-拡張に関して極めて大きな制約を課せられる。\n-市場手数料§G-10%§!、Pop成長率§G+100%§!、\n-特殊な種族特性を取得する。\n\n初期建築物§Y「永久の宮殿」§!\n種族特性§Y「古代からの商人」§!\n"
 
  origin_ngm_escape_to_the_past:0 "過去への逃走"
@@ -276,6 +276,10 @@
  origin_ngm_galactic_empire_aquarium:0 "銀河帝国アクアリウム"
  origin_ngm_galactic_empire_aquarium_desc:0 "この国家は古き良き銀河帝国のアミューズメントパークとして存在した。その娯楽性から各国から攻撃の対象とならなかった。しかし、それ故に緩やかな衰退を遂げていっている。\nついにこのままではいけないことに気が付き銀河社会に恐る恐る足を踏み入れたが、かつてあったあらゆる知識は失われており、拡張する勇気は持ちえなかったのである。\nしかし、豊かなアミューズメントパークは健在である。\n§Rこの起源を選ぶ国が2カ国以上あるとバグります。§!"
  origin_tooltip_ngm_galactic_empire_aquarium:0 "銀河の外延部に存在する特殊な星系群と首都惑星から開始。\n\n拡張に関して極めて大きな制約を課せられる。\n\n特殊な建築物を建造可能\n\n"
+
+ origin_ngm_phenix:0 "黄昏の帝国"
+ origin_ngm_phenix_desc:0 "この国はかつての覇権国家であった。数多くの敵を打ち倒し、数々の困難を乗り越えた大帝国であった。そう、「であった」のだ。\n\n§Rこの起源をは非常に困難である§!"
+ origin_tooltip_ngm_phenix:0 "技術、生産力、人口、に§G大幅な強化§!が入った状態で開始。\n企業帝国の属国を所有した状態で開始。\n拡張、外交、戦争、内政に§Y大幅な制限§!がかかった状態で開始。\n §G伝統やアセンションを進めていくと......§!	"
 
 #######################
 #####    国是    ######
@@ -1735,6 +1739,33 @@
  leader_trait_ngm_general_veteran_desc:0 "この将軍は自らの能力によってこの地位に上り詰めた"
 
 ##########################
+#####    国家特性    ######
+##########################
+
+ origin_ngm_phenix_1_modifier:0 "艦隊伝統の堅持"
+ origin_ngm_phenix_1_modifier_desc:0 "艦隊運用には古来よりの方法がある"
+ origin_ngm_phenix_2_modifier:0 "古びたデータバンク"
+ origin_ngm_phenix_2_modifier_desc:0 "研究に使うデータバンクには苔が生えている"
+ origin_ngm_phenix_3_modifier:0 "傲慢なる老臣"
+ origin_ngm_phenix_3_modifier_desc:0 "帝国の老臣は傲慢で他者を見下している"
+ origin_ngm_phenix_4_modifier:0 "怠惰なる民衆"
+ origin_ngm_phenix_4_modifier_desc:0 "民衆は自己利益を常に追求している"
+ origin_ngm_phenix_5_modifier:0 "老いた軍事ドクトリン"
+ origin_ngm_phenix_5_modifier_desc:0 "この帝国のドクトリンはさび付いている"
+ origin_ngm_phenix_6_modifier:0 "古代の研究律"
+ origin_ngm_phenix_6_modifier_desc:0 "この帝国の研究方針は極めて古い"
+ origin_ngm_phenix_7_modifier:0 "無気力な省庁"
+ origin_ngm_phenix_7_modifier_desc:0 "この帝国の省庁は非効率かつ不安定な動きをしている。"
+ origin_ngm_phenix_8_modifier:0 "無作法な廷臣"
+ origin_ngm_phenix_8_modifier_desc:0 "この帝国の高級官僚は無礼だ"
+ origin_ngm_phenix_9_modifier:0 "失われしインフラ技術"
+ origin_ngm_phenix_9_modifier_desc:0 "この帝国の偉大なる大規模建築は再現不可能だ"
+ origin_ngm_phenix_10_modifier:0 "黄昏の帝国"
+ origin_ngm_phenix_10_modifier_desc:0 "帝国は衰退しました"
+ origin_ngm_phenix_11_modifier:0 "不死鳥の帝国"
+ origin_ngm_phenix_11_modifier_desc:0 "我々は蘇る！"
+
+##########################
 #####    惑星特性    ######
 ##########################
 
@@ -2775,6 +2806,9 @@
 
  r_ngm_geid:0 "銀河皇帝勅許第7216号「帝立遊園領邦の認可」"
  r_ngm_geid_desc:0 "全銀河の統治者にして天界を統べる法秩序の体現者。神聖にして不可侵である銀河帝国第27代皇帝である余、ポチャヌルス8世は銀河帝国全体の福祉のために帝立遊園の設立を許す。帝立遊園の長は世襲とし、王と同格の公爵位を授け、余の宮廷において式部官長の地位を授ける。なお、領邦としての帝立遊園はその自律的権利を制約される。制約内容は....."
+
+ r_ngm_imperial_chronicle:0 "インペリアル・クロニクル"
+ r_ngm_imperial_chronicle_desc:0 "この帝国の物語は実話であり、主人公は我々であったのだ"
 
 ##########################
 #####    戦争目標    ######
