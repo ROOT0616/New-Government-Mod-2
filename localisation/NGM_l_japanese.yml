@@ -4,7 +4,7 @@
 #####    ディシジョン    ######
 ##############################
 
- decision_ngm_do:0 "NGM：非表示"
+ decision_ngm_do:0 "NGM:非表示"
  decision_ngm_do_desc:0 ""
  decision_ngm_undo:0 "NGM:表示"
  decision_ngm_undo_desc:0 ""
@@ -857,6 +857,7 @@
 
  policy_ngm_parliament_law:0 "議会法"
  policy_ngm_parliament_law_desc:0 "個別の法律や政策を遂行するために、必要な議決の方法や議論の制度について決定する。"
+
  ngm_flag_Pep_Par_name:0 "国民議会"
  NAME_NGM_Pep_Par:0 "国民議会"
  NAME_NGM_Pep_Par_desc:0 "政党を基調とした選挙を行うことで、より少数派の意見を国政に反映することができる選挙制度"
@@ -1984,16 +1985,16 @@
  ngm_ethics_force_loyalty_2:0 "志向の強要"
 
  ngm_olympic_nominee_desc_intro:0 "この惑星は、 将来の国際大会の基盤として候補になっている。 "
- ngm_olympic_nominee_level_1:0 "国際大会候補地の競争力格付け：§R脆弱§!"
- ngm_olympic_nominee_level_1_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§R脆弱§!。 "
- ngm_olympic_nominee_level_2:0 "国際大会候補地の競争力格付け：§Y平凡§!"
- ngm_olympic_nominee_level_2_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§Y平凡§!。 "
- ngm_olympic_nominee_level_3:0 "国際大会候補地の競争力格付け：§G強力§!"
- ngm_olympic_nominee_level_3_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§G強力§!。 "
- ngm_olympic_nominee_level_4:0 "強化された国際大会候補地の競争力格付け：§G特例§!"
- ngm_olympic_nominee_level_4_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§G特例§!。 "
- ngm_olympic_nominee_level_5:0 "強化された国際大会候補地の競争力格付け：§G完璧§!"
- ngm_olympic_nominee_level_5_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位：§G完璧§!。 "
+ ngm_olympic_nominee_level_1:0 "国際大会候補地の競争力格付け:§R脆弱§!"
+ ngm_olympic_nominee_level_1_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位:§R脆弱§!。 "
+ ngm_olympic_nominee_level_2:0 "国際大会候補地の競争力格付け:§Y平凡§!"
+ ngm_olympic_nominee_level_2_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位:§Y平凡§!。 "
+ ngm_olympic_nominee_level_3:0 "国際大会候補地の競争力格付け:§G強力§!"
+ ngm_olympic_nominee_level_3_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位:§G強力§!。 "
+ ngm_olympic_nominee_level_4:0 "強化された国際大会候補地の競争力格付け:§G特例§!"
+ ngm_olympic_nominee_level_4_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位:§G特例§!。 "
+ ngm_olympic_nominee_level_5:0 "強化された国際大会候補地の競争力格付け:§G完璧§!"
+ ngm_olympic_nominee_level_5_desc:0 "$ngm_olympic_nominee_desc_intro$\n\n相対的地位:§G完璧§!。 "
 
  ngm_olympic_founder_planet_modifier:0 "国際大会開催地"
  ngm_olympic_founder_planet_modifier_desc:0 ""
@@ -2881,13 +2882,13 @@
  ngm_government.101.desc:0 "$ngm_government.100.desc$"
  ngm_government.101.desc.phobe:0 "$ngm_government.100.desc.phobe$"
  ngm_government.101.desc.corp:0 "$ngm_government.100.desc.corp$"
- enable_decision_ngm_olympic:0 "§Hディシジョンをアンロック：§!国際大会の中心地に推薦する"
+ enable_decision_ngm_olympic:0 "§Hディシジョンをアンロック:§!国際大会の中心地に推薦する"
 
- ngm_government.103.name:0 "§H国際大会§!：§Y[ngm_olympic_founder_planet.GetStarName]§!に設立"
+ ngm_government.103.name:0 "§H国際大会§!:§Y[ngm_olympic_founder_planet.GetStarName]§!に設立"
  ngm_government.103.desc:0 "§Y[ngm_olympic_founder_planet.GetName]§!における我々の招致運動が実を結び、 市場の有力者たちはその活動の大部分を§Y[ngm_olympic_founder_planet.GetStarName]§!星系で行うことに決めた！"
  ngm_government.103.desc.phobe:0 "$ngm_government.103.desc$"
 
- ngm_government.105.name:0 "§H国際大会§!：設立"
+ ngm_government.105.name:0 "§H国際大会§!:設立"
  ngm_government.105.desc:0 "銀河文化の中心が§Y[ngm_olympic_founder.GetName]§!領内の§Y[ngm_olympic_founder_planet.GetName]§!に現れた。 §Y[ngm_olympic_founder.GetAdj]§!管理当局は、 中立的な大会運営機構を通じて国際的な文化活動を推進している。"
  ngm_government.105.desc.phobe:0 "§Y[From.GetName]§!のいかがわしい異星人が国際文化を名目に異様な文化の混入を推進しようとしている。 もちろん嫌悪感を催すことだが、 我々にはこの文化事業に参加する選択肢もある。 "
 
@@ -3540,7 +3541,7 @@
  tr_ngm_virture_first_tooltip:0 "政策「§Y$policy_ngm_policies_contempt_law$§!」をアンロック"
  tr_ngm_virture_finish:0 "悪徳の伝統の完成"
  tr_ngm_sniper:0 "狙い撃ち"
- tr_ngm_sniper_tooltip:0 "宿敵の犯罪度§R+30§!"
+ tr_ngm_sniper_tooltip:0 "宿敵の犯罪度:§R+30§!"
  tr_ngm_sniper_delayed:0 "敵対する船であれば、集中攻撃することが確実だ"
  tr_ngm_penetration:0 "浸透"
  tr_ngm_penetration_tooltip:0 "外交関係にあるすべての国家の犯罪度§R+20§!"
@@ -3550,7 +3551,7 @@
  tr_ngm_exclusive:0 "独占"
  tr_ngm_exclusive_delayed:0 "利益や富は最も強き者のものになる"
  tr_ngm_sabotage:0 "破壊工作"
- tr_ngm_sabotage_tooltip:0 "宿敵の貿易保護値§R-15§!\n宿敵の犯罪度§R+20§!"
+ tr_ngm_sabotage_tooltip:0 "宿敵の貿易保護値:§R-15§!\n宿敵の犯罪度:§R+20§!"
  tr_ngm_sabotage_delayed:0 "敵を密かに破壊し、妨害することで我が国に利益が生まれる"
 
  tradition_ngm_study:0 "研鑽"
@@ -3563,7 +3564,7 @@
  tr_ngm_leader_study:0 "指導者研修の高度化"
  tr_ngm_leader_study_delayed:0 "各界指導者には特殊な教育を行うことで効率を強化する"
  tr_ngm_program_study:0 "資格採用の強化"
- tr_ngm_program_study_modifiers:0 "リーダー初期レベル§G+1§!"
+ tr_ngm_program_study_modifiers:0 "リーダー初期レベル:§G+1§!"
  tr_ngm_program_study_delayed:0 "各界の指導者に行われる教育プログラムを現代的に編集するべきだ"
  tr_ngm_reprogram:0 "高等教育の拡大"
  tr_ngm_reprogram_delayed:0 "国民全体に高等教育が受けられるような体制を生み出す"
@@ -3596,12 +3597,12 @@
  tr_ngm_chord:0 "究極の和音"
  tr_ngm_chord_delayed:0 "不安にする音と言われても、これは芸術なのだ"
  tr_ngm_student_art:0 "学生芸術の推奨"
- tr_ngm_student_art_tooltip:0 "建造物をアンロック：§Y$building_ngm_theatergoer$§!"
+ tr_ngm_student_art_tooltip:0 "建造物をアンロック:§Y$building_ngm_theatergoer$§!"
  tr_ngm_student_art_delayed:0 "若さにあふれる芸術は一つの分野を生み出している"
  tr_ngm_freedom_art:0 "芸術の自由"
  tr_ngm_freedom_art_delayed:0 "芸術にあらゆる制約は不要である"
  tr_ngm_asymmetric:0 "非対称芸術"
- tr_ngm_asymmetric_tooltip:0 "建造物をアンロック：§Y$building_ngm_avant_garde_art_square$§!"
+ tr_ngm_asymmetric_tooltip:0 "建造物をアンロック:§Y$building_ngm_avant_garde_art_square$§!"
  tr_ngm_asymmetric_delayed:0 "考えるな。感じろ"
 
  tradition_ngm_classic:0 "古典"
@@ -3611,15 +3612,15 @@
  tr_ngm_realism:0 "写実"
  tr_ngm_realism_delayed:0 "実際に存在するものを映し、表現することで感動を生む"
  tr_ngm_acoustics:0 "音響学の極地"
- tr_ngm_acoustics_tooltip:0 "建造物をアンロック：§Y$building_ngm_Iimperial_concert_hall$§!"
+ tr_ngm_acoustics_tooltip:0 "建造物をアンロック:§Y$building_ngm_Iimperial_concert_hall$§!"
  tr_ngm_acoustics_delayed:0 "音であっても聴覚以外を感激させることは可能である。"
  tr_ngm_ministory_culture:0 "文化大臣の設置"
  tr_ngm_ministory_culture_delayed:0 "文化を推奨し、保護する役所は必要だ"
  tr_ngm_diplomatic_art:0 "芸術外交"
  tr_ngm_diplomatic_art_delayed:0 "芸術を通じて平和外交は新たな外交方法として注目される"
- tr_ngm_diplomatic_art_tooltip:0 "毎月の忠誠心：§G+1§!"
+ tr_ngm_diplomatic_art_tooltip:0 "毎月の忠誠心:§G+1§!"
  tr_ngm_authority_art:0 "芸術の権威"
- tr_ngm_authority_art_tooltip:0 "建造物をアンロック：§Y$building_ngm_imperial_art_museum$§!"
+ tr_ngm_authority_art_tooltip:0 "建造物をアンロック:§Y$building_ngm_imperial_art_museum$§!"
  tr_ngm_authority_art_delayed:0 "古くから存在する芸術はほかの模範となり、再生産が行われている"
 
  tradition_ngm_academic:0 "学術"
@@ -3636,7 +3637,7 @@
  tr_ngm_leader_education:0 "指導者教育"
  tr_ngm_leader_education_delayed:0 "指導者への教育は特殊なものでなくてはならない"
  tr_ngm_high_education:0 "高度研究機関"
- tr_ngm_high_education_tooltip:0 "建造物をアンロック：§Y$building_ngm_advanced_research_institutes$§!"
+ tr_ngm_high_education_tooltip:0 "建造物をアンロック:§Y$building_ngm_advanced_research_institutes$§!"
  tr_ngm_high_education_delayed:0 "一般の研究機関よりもより優遇され、すばらしい施設の整った研究機関を設立する"
 
  tradition_ngm_memory:0 "記憶"
@@ -3663,7 +3664,7 @@
  tr_ngm_trade_record_tooltip:0 "政策「§Y$policy_ngm_policies_civil_liberties$§!」をアンロック"
  tr_ngm_freedom_finish:0 "自由の伝統の完成"
  tr_ngm_freedom_broad:0 "報道の自由"
- tr_ngm_freedom_broad_tooltip:0 "宿敵宣言した国家の奴隷幸福度§R-20%§!"
+ tr_ngm_freedom_broad_tooltip:0 "宿敵宣言した国家の奴隷幸福度:§R-20%§!"
  tr_ngm_freedom_broad_delayed:0 "知る権利は市民に保障される重要な権利だ"
  tr_ngm_freedom_association:0 "結社の自由"
  tr_ngm_freedom_association_delayed:0 "政治や自己利益のための結社は市民に認められた権利である"
@@ -3684,7 +3685,7 @@
  tr_ngm_appropriate:0 "適切な居場所"
  tr_ngm_appropriate_delayed:0 "国家は市民の居場所を規定する。例外はない"
  tr_ngm_ministry_engagement:0 "国家宣伝省"
- tr_ngm_ministry_engagement_tooltip:0 "宿敵1つあたりの影響力収入§G+1§!"
+ tr_ngm_ministry_engagement_tooltip:0 "宿敵1つあたりの影響力収入:§G+1§!"
  tr_ngm_ministry_engagement_delayed:0 "国家の方針や方向は耳障りのいい言葉で説明される"
  tr_ngm_right_place:0 "適材適所"
  tr_ngm_right_place_delayed:0 "国家は市民の適性を理解している"
@@ -3696,7 +3697,7 @@
  tr_ngm_neighbor_first:0 "善隣の伝統"
  tr_ngm_neighbor_first_tooltip:0 "§Yファーストコンタクト時の姿勢を敵対的にできない§!"
  tr_ngm_neighbor_finish:0 "善隣の伝統の完成"
- tr_ngm_neighbor_finish_tooltip:0 "§Y5種類以上§!の種族がいる惑星で\nPop成長速度§G+10%§!\n交易価値§G+10%§!\n統合力§G+10%§!\n流入魅力§G+10%§!"
+ tr_ngm_neighbor_finish_tooltip:0 "§Y5種類以上§!の種族がいる惑星で\nPop成長速度:§G+10%§!\n交易価値:§G+10%§!\n統合力:§G+10%§!\n流入魅力:§G+10%§!"
  tr_ngm_ambassador:0 "国際的大使館"
  tr_ngm_ambassador_delayed:0 "各国の大使館では外交以外の交流活動も頻繁に行われる。これは我が国のイメージを大きく向上させることができる"
  tr_ngm_salad:0 "人種のサラダボウル"
@@ -3747,7 +3748,7 @@
  tr_ngm_machine_first_tooltip:0 "政策「§Y$policy_ngm_policies_robotics$§!」をアンロック"
  tr_ngm_machine_finish:0 "機械の伝統の完成"
  tr_ngm_war_machine:0 "戦争機械"
- tr_ngm_war_machine_tooltip:0 "地上軍をアンロック：§Y$ngm_combat_machine_army$§!"
+ tr_ngm_war_machine_tooltip:0 "地上軍をアンロック:§Y$ngm_combat_machine_army$§!"
  tr_ngm_war_machine_delayed:0 "戦争をこなすためだけに開発された悲しき機械"
  tr_ngm_desighn:0 "グランドデザイン"
  tr_ngm_desighn_delayed:0 "大規模デザインは工業デザインの極致である"
@@ -3973,11 +3974,12 @@
  tr_ngm_cryptanalysis_team:0 "暗号解読班"
  tr_ngm_cryptanalysis_team_delayed:0 "簡易暗号など平文と同等だ"
  tr_ngm_constant_obstruction:0 "恒常的妨害"
+ tr_ngm_constant_obstruction_tooltip:0 "宿敵の貿易保護値:§R-5§!"
  tr_ngm_constant_obstruction_delayed:0 "絶え間ない諜報活動は相手を疲弊させる"
  tr_ngm_intelligence_school:0 "諜報学校"
  tr_ngm_intelligence_school_delayed:0 "諜報員を育てるためには隠れた教育機関が必要だ"
  tr_ngm_shadow_fixer:0 "影のフィクサー"
- tr_ngm_shadow_fixer_tooltip:0 "帝国首都に「暗黒結社」（惑星特性）を追加\n暗黒結社:影のフィクサージョブ+1\n影のフィクサー	影響力+2"
+ tr_ngm_shadow_fixer_tooltip:0 "帝国首都に§G「暗黒結社」（惑星特性）§!を追加\n暗黒結社:影のフィクサージョブ:§G+1§!\n影のフィクサー 影響力:§G+2§!"
  tr_ngm_shadow_fixer_delayed:0 "我々こそが世界を操る"
 
  tradition_ngm_gigantic:0 "巨大"
@@ -3987,7 +3989,7 @@
  tr_ngm_dreadnought:0 "大艦巨砲主義"
  tr_ngm_dreadnought_delayed:0 "大きい！  強い！"
  tr_ngm_giants:0 "巨人軍"
- tr_ngm_giants_tooltip:0 "地上軍をアンロック：§Y$ngm_giants_army$§!"
+ tr_ngm_giants_tooltip:0 "地上軍をアンロック:§Y$ngm_giants_army$§!"
  tr_ngm_giants_delayed:0 "遺伝子改良で生み出された巨人軍は山風すら跳ね返す"
  tr_ngm_megastructure:0 "巨大建築"
  tr_ngm_megastructure_delayed:0 "巨大な建築はロマンがある"
@@ -4003,7 +4005,7 @@
  tr_ngm_expansion_of_information_assets:0 "透明行動"
  tr_ngm_expansion_of_information_assets_delayed:0 "中に誰もいませんよ。"
  tr_ngm_protection_of_information_assets:0 "ひそやかなる監視"
- tr_ngm_protection_of_information_assets_delayed:0 "貴様!　見ているな!"
+ tr_ngm_protection_of_information_assets_delayed:0 "貴様!  見ているな!"
  tr_ngm_establishment_of_intelligence_bureau:0 "諜報局の設置"
  tr_ngm_establishment_of_intelligence_bureau_delayed:0 "他者の情報を知るための役所は常に求められている"
  tr_ngm_establishment_of_counterintelligence_bureau:0 "防諜局の設置"
@@ -4038,11 +4040,10 @@
  tr_ngm_crystal_production_system:0 "結晶生産体制"
  tr_ngm_crystal_production_system_delayed:0 "クリスタル生産の安定化は社会的に必要とされている"
  tr_ngm_latast_industrial:0 "最先端工業"
- tr_ngm_latast_industrial_tooltip:0 "化学技師、透過技師、ガス精製技師の維持費§G-40%§!"
+ tr_ngm_latast_industrial_tooltip:0 "化学技師、透過技師、ガス精製技師の維持費:§G-40%§!"
  tr_ngm_latast_industrial_delayed:0 "最先端の工業は人々を豊かにするのだろうか"
  tr_ngm_advanced_factory:0 "先端工場"
- tr_ngm_expansion_of_the_legal_affairs_bureau_tooltip:0 "「先端工場」を建設可能とする"
- tr_ngm_expansion_of_the_legal_affairs_bureau_tooltip:0 "建造物をアンロック：§Y$building_ngm_premise_workshop$§!"
+ tr_ngm_advanced_factory_tooltip:0 "建造物をアンロック:§Y$building_ngm_premise_workshop$§!"
  tr_ngm_advanced_factory_delayed:0 "最先端の工場では最先端の物品が製造されるのだろうか"
 
  tradition_ngm_production:0 "生産"
@@ -4740,7 +4741,7 @@
  councilor_ngm_underhanded_trick_desc:0 "他国の要人を歓待し、自らの良きように操る実力者"
 
 ##############################
-#####    統治院の目標    ######
+#####    評議会の方針    ######
 ##############################
 
  council_agenda_agenda_ngm_positive_intervention_name:0 "積極的介入"
@@ -4875,9 +4876,9 @@
 #####    Required technologies    ######
 ########################################
 
- requires_tech_starbase_5:0 "§R必要：£engineering£  §Y$tech_starbase_5$§! 技術§!"
- requires_tech_battleships:0 "§R必要：£engineering£  §Y$tech_battleships$§! 技術§!"
- requires_tech_zero_point_power:0 "§R必要：£engineering£  §Y$tech_zero_point_power$§! 技術§!"
+ requires_tech_starbase_5:0 "§R必要:£engineering£  §Y$tech_starbase_5$§! 技術§!"
+ requires_tech_battleships:0 "§R必要:£engineering£  §Y$tech_battleships$§! 技術§!"
+ requires_tech_zero_point_power:0 "§R必要:£engineering£  §Y$tech_zero_point_power$§! 技術§!"
 
 ##########################
 #####    意見修飾    ######
@@ -5028,7 +5029,7 @@
 
  federation_acceptance_empire:0 "従属国"
 
- enable_mega_engineering_project:0 "§H技術選択肢：§!メガエンジニアリング\n\n"
+ enable_mega_engineering_project:0 "§H技術選択肢:§!メガエンジニアリング\n\n"
 
  empire_not_ethic:0 "$TRIGGER_FAIL$帝国は必要な条件を満たしてない。 "
 
@@ -5037,6 +5038,8 @@
  civic_tooltip_ngm_youth_politics_effects:0 "初期リーダー年が§Y10-20歳§!になる"
 
  civic_tooltip_ngm_elder_politics_effects:0 "初期リーダー年が§Y60-100歳§!になる"
+
+ civic_tooltip_ngm_fundamental_insanity_effects:0 "研究者が全員 §Y狂気的§! の特性を取得する \n提督は全員 §Yトリックスター§! の特性を得る"
 
  civic_tooltip_ngm_accept_everyone_effects:0 "難民政策を§Y無制限許容§!で固定"
 
@@ -5079,6 +5082,10 @@
  civic_tooltip_ngm_warm_effects:0 "§E政策に§H無制限戦争§!を選択できない§!\n§E軌道爆撃の§H無差別爆撃§!が選択できない§!"
 
  NAME_Pursuer:0 "追跡者"
+
+ planet_buildings_exotic_gases_upkeep_mult:0 "建造物£rare_crystals£ エキゾチックガス維持費"
+ planet_buildings_rare_crystals_upkeep_mult:0 "建造物£rare_crystals£ レアクリスタル維持費"
+ planet_buildings_volatile_motes_upkeep_mult:0 "建造物£volatile_motes£ 揮発性粉末維持費"
 
 # :0 ""
 # _desc:0 ""

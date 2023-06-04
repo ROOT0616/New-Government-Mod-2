@@ -3457,9 +3457,8 @@ country_event = {
 			set_country_flag = country_flag_tr_ngm_penetration_debuff_1
 			every_playable_country = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_ascension_perk = ap_ngm_ministry_of_innocence
-						is_same_value = root
 					}
 					has_established_contact = root
 				}

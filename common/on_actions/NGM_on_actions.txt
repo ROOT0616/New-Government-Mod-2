@@ -27,6 +27,8 @@ on_game_start_country = {
 		ngm_civic.23
 		# 徒弟制度
 		ngm_civic.26
+		# 他者蔑視
+		ngm_civic.27
 		# Origin
 		ngm_origin.1 # 律儀な古代の緩衝国家
 		ngm_origin.3 # 過去への逃走
@@ -63,7 +65,7 @@ on_leader_spawned = {
 		# 高度な栄典制度
 		ngm_civic.7
 		# # 根本的な狂気
-		# ngm_civic.24
+		ngm_civic.24
 		# 徒弟制度
 		ngm_civic.26
 		# 特権階級のプライド
@@ -88,8 +90,8 @@ on_added_to_leader_pool = {
 		# 高度な栄典制度
 		ngm_civic.7
 		# 根本的な狂気
-		ngm_civic.23
-		# ngm_civic.24
+		# ngm_civic.23
+		ngm_civic.24
 		# 徒弟制度
 		ngm_civic.26
 		# 特権階級のプライド

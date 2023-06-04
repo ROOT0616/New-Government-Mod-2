@@ -1709,3 +1709,18 @@ country_event = {
 		}
 	}
 }
+
+# 74.他者蔑視	disdain_for_others		(排他)（実利ではない）		影響力+0.5 使者+1 「実りある侮辱」の技術を初期から有する
+country_event = {
+	id = ngm_civic.27
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_disdain_for_others
+	}
+	immediate = {
+		give_technology = {
+			tech = tech_satisfying_insults
+		}
+	}
+}
