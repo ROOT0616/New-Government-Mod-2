@@ -500,3 +500,199 @@ wg_ngm_holy_wars = {
 		weight = 100
 	}
 }
+
+# 開戦自由「不死鳥の帰還」属国化
+@protectorate_tech_threshold = 0.4
+wg_ngm_return_of_the_phoenix = {
+	casus_belli = cb_ngm_return_of_the_phoenix
+
+	hide_if_no_cb = no
+	release_occupied_systems_on_status_quo = yes
+	show_agreement_terms = no
+
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	surrender_acceptance = -75
+
+
+	potential = {
+		has_origin = origin_ngm_phenix
+	}
+	
+	possible = {
+		has_modifier = origin_ngm_phenix_11_modifier
+	}
+
+	on_accept = {
+		hidden_effect = {
+			from = {
+				add_threat = {
+					who = root
+					amount = 0.5
+				}
+			}
+		}
+		if = {
+			limit = { from = { has_been_declared_crisis = no } }
+			from = {
+				if = {
+					limit = {
+						tech_unlocked_ratio = {
+							who = ROOT
+							ratio < @protectorate_tech_threshold
+						}
+					}
+					set_subject_of = {
+						who = ROOT
+						preset = preset_protectorate
+					}
+				}
+				else = {
+					ROOT = {
+						switch = {
+							trigger = has_policy_flag
+							oppressive_terms = {
+								if = {
+									limit = {
+										ROOT = { is_ai = yes }
+									}
+									FROM = {
+										set_subject_of = {
+											who = ROOT
+											preset = preset_vassal_oppressive_ai
+										}
+									}
+								}
+								else = {
+									FROM = {
+										set_subject_of = {
+											who = ROOT
+											preset = preset_vassal_oppressive
+										}
+									}
+								}
+							}
+							balanced_terms = {
+								FROM = {
+									set_subject_of = {
+										who = ROOT
+										preset = preset_vassal_balanced
+									}
+								}
+							}
+							benevolent_terms = {
+								FROM = {
+									set_subject_of = {
+										who = ROOT
+										preset = preset_vassal_benevolent
+									}
+								}
+							}
+						}
+					}
+				}
+				add_modifier = {
+					modifier = newly_subjugated_loyalty
+					years = 5
+				}
+			}
+		}
+	}
+
+	on_status_quo = {
+		if = {
+			limit = {
+				exists = last_created_country
+				last_created_country = {
+					has_country_flag = released_empire
+				}
+			}
+
+			last_created_country = {
+				set_origin_effect = yes
+				if = {
+					limit = {
+						tech_unlocked_ratio = {
+							who = ROOT
+							ratio < @protectorate_tech_threshold
+						}
+					}
+					set_subject_of = {
+						who = ROOT
+						preset = preset_protectorate
+					}
+				}
+				else = {
+					ROOT = {
+						switch = {
+							trigger = has_policy_flag
+							oppressive_terms = {
+								if = {
+									limit = {
+										ROOT = { is_ai = yes }
+									}
+									PREV = {
+										set_subject_of = {
+											who = ROOT
+											preset = preset_vassal_oppressive_ai
+										}
+									}
+								}
+								else = {
+									PREV = {
+										set_subject_of = {
+											who = ROOT
+											preset = preset_vassal_oppressive
+										}
+									}
+								}
+							}
+							balanced_terms = {
+								PREV = {
+									set_subject_of = {
+										who = ROOT
+										preset = preset_vassal_balanced
+									}
+								}
+							}
+							benevolent_terms = {
+								PREV = {
+									set_subject_of = {
+										who = ROOT
+										preset = preset_vassal_benevolent
+									}
+								}
+							}
+						}
+					}
+				}
+				add_modifier = {
+					modifier = newly_subjugated_loyalty
+					years = 5
+				}
+			}
+
+			if = {
+				limit = {
+					root = { has_authority = auth_corporate }
+					last_created_country = { has_authority = auth_corporate }
+				}
+				last_created_country = {
+					set_merchant_government_effect = yes
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_ai_personality_behaviour = wants_tribute
+		}
+	}
+}

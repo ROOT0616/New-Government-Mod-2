@@ -139,3 +139,28 @@ cb_ngm_holy_wars = {
 		}
 	}
 }
+
+# 開戦自由「不死鳥の帰還」属国化
+cb_ngm_return_of_the_phoenix = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = awakened_fallen_empire
+		}
+		NOT = { is_in_federation_with = from }
+		has_origin = origin_ngm_phenix
+		is_subject = no
+	}
+	is_valid = {
+		NOT = {
+			is_overlord_to = FROM
+		}
+		from = { is_subject = no }
+		has_modifier = origin_ngm_phenix_11_modifier
+		OR = {
+			is_country_type = awakened_fallen_empire
+		}
+	}
+}

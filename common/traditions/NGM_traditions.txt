@@ -2073,6 +2073,9 @@ tr_ngm_hereditary_nation = {
 tr_ngm_brawny_adopt = {
 	possible = {
 	}
+	on_enabled = {
+		remove_modifier = origin_ngm_phenix_1_modifier
+	}
 	modifier = {
 	}
 }
@@ -2082,6 +2085,8 @@ tr_ngm_brawny_finish = {
 	possible = {
 	}
 	modifier = {
+		country_naval_cap_add = 200
+		starbase_building_capacity_add = 20
 	}
 }
 
@@ -2090,6 +2095,7 @@ tr_ngm_brawny_UTC = {
 	possible = {
 	}
 	modifier = {
+		ship_weapon_range_mult = 0.3
 	}
 }
 
@@ -2098,6 +2104,7 @@ tr_ngm_brawny_SPBT = {
 	possible = {
 	}
 	modifier = {
+		ship_fire_rate_mult = 0.3
 	}
 }
 
@@ -2106,6 +2113,7 @@ tr_ngm_brawny_predictive_aversion = {
 	possible = {
 	}
 	modifier = {
+		ship_evasion_mult = 0.3
 	}
 }
 
@@ -2114,6 +2122,7 @@ tr_ngm_brawny_Shinkos_reproduction = {
 	possible = {
 	}
 	modifier = {
+		starbase_shipyard_build_cost_mult = -0.25
 	}
 }
 
@@ -2122,12 +2131,16 @@ tr_ngm_brawny_reopening_of_the_imperial_shipyard = {
 	possible = {
 	}
 	modifier = {
+		starbase_shipyard_build_speed_mult = -0.5
 	}
 }
 
 # 取得時	"黄昏の帝国である。 3つ以上の伝統を取得している。（4つめ）"	賢雅	帝国補正:古びたデータバンクを削除	古き記憶を呼び起こし、沈滞した社会を再度活性化させるのだ
 tr_ngm_elegance_adopt = {
 	possible = {
+	}
+	on_enabled = {
+		remove_modifier = origin_ngm_phenix_2_modifier
 	}
 	modifier = {
 	}
@@ -2138,6 +2151,7 @@ tr_ngm_elegance_finish = {
 	possible = {
 	}
 	modifier = {
+		tech_cost_empire_size_mult = -1
 	}
 }
 
@@ -2146,6 +2160,8 @@ tr_ngm_elegance_BPT = {
 	possible = {
 	}
 	modifier = {
+		country_physics_research_produces_mult = 0.5
+		pop_ethic_materialist_attraction_mult = 0.15
 	}
 }
 
@@ -2154,6 +2170,7 @@ tr_ngm_elegance_ICHI = {
 	possible = {
 	}
 	modifier = {
+		country_society_research_produces_mult = 0.5
 	}
 }
 
@@ -2162,6 +2179,7 @@ tr_ngm_elegance_magitek_engineering = {
 	possible = {
 	}
 	modifier = {
+		country_engineering_research_produces_mult = 0.5
 	}
 }
 
@@ -2170,6 +2188,7 @@ tr_ngm_elegance_the_way_of_the_new_light = {
 	possible = {
 	}
 	modifier = {
+		country_unity_produces_mult = 0.2
 	}
 }
 
@@ -2178,12 +2197,16 @@ tr_ngm_elegance_overture_to_tomorrow = {
 	possible = {
 	}
 	modifier = {
+		all_technology_research_speed = 0.25
 	}
 }
 
 # 取得時	"黄昏の帝国である。 3つ以上の伝統を取得している。（4つめ）"	蓋世	帝国補正:傲慢なる老臣を削除	自分の足で歩き、新たなる未来を勝ち取る準備は徐々に進められている
 tr_ngm_Gaishi_adopt = {
 	possible = {
+	}
+	on_enabled = {
+		remove_modifier = origin_ngm_phenix_4_modifier
 	}
 	modifier = {
 	}
@@ -2194,6 +2217,8 @@ tr_ngm_Gaishi_finish = {
 	possible = {
 	}
 	modifier = {
+		veto_cooldown_mult = -0.5
+		emergency_measures_cooldown_mult = -0.5
 	}
 }
 
@@ -2202,6 +2227,8 @@ tr_ngm_Gaishi_true_power_projection = {
 	possible = {
 	}
 	modifier = {
+		diplo_weight_naval_mult = 0.5
+		pop_ethic_interventionism_attraction_mult = 0.15
 	}
 }
 
@@ -2210,6 +2237,7 @@ tr_ngm_Gaishi_the_true_value_of_economic_power = {
 	possible = {
 	}
 	modifier = {
+		diplo_weight_economy_mult = 0.5
 	}
 }
 
@@ -2218,6 +2246,7 @@ tr_ngm_Gaishi_guidance_for_the_wise = {
 	possible = {
 	}
 	modifier = {
+		diplo_weight_technology_mult = 0.5
 	}
 }
 
@@ -2226,6 +2255,7 @@ tr_ngm_Gaishi_galactic_power = {
 	possible = {
 	}
 	modifier = {
+		diplo_weight_pops_mult = 0.5
 	}
 }
 
@@ -2234,12 +2264,16 @@ tr_ngm_Gaishi_insist_on_ones_own_ideas = {
 	possible = {
 	}
 	modifier = {
+		diplo_weight_mult = 0.5
 	}
 }
 
 # 取得時	"黄昏の帝国である。 3つ以上の伝統を取得している。（4つめ）"	赫焉	帝国補正:怠惰なる民衆を削除	民衆の活力を呼び起こし、永遠の繁栄へと歩を進めるのだ
 tr_ngm_misdirection_adopt = {
 	possible = {
+	}
+	on_enabled = {
+		remove_modifier = origin_ngm_phenix_4_modifier
 	}
 	modifier = {
 	}
@@ -2250,6 +2284,8 @@ tr_ngm_misdirection_finish = {
 	possible = {
 	}
 	modifier = {
+		pop_growth_speed = 0.25
+		planet_pop_assembly_mult = 0.25
 	}
 }
 
@@ -2258,6 +2294,7 @@ tr_ngm_misdirection_idea_commonly_accepted = {
 	possible = {
 	}
 	modifier = {
+		pop_amenities_usage_mult = -0.25
 	}
 }
 
@@ -2266,6 +2303,7 @@ tr_ngm_misdirection_dignity_and_moderation = {
 	possible = {
 	}
 	modifier = {
+		planet_pops_upkeep_mult = -0.25
 	}
 }
 
@@ -2274,6 +2312,7 @@ tr_ngm_misdirection_blessing_of_the_stars = {
 	possible = {
 	}
 	modifier = {
+		pop_environment_tolerance = 0.5
 	}
 }
 
@@ -2282,6 +2321,7 @@ tr_ngm_misdirection_blessing_of_life = {
 	possible = {
 	}
 	modifier = {
+		pop_growth_speed = 0.25
 	}
 }
 
@@ -2290,12 +2330,16 @@ tr_ngm_misdirection_blessings_of_creation = {
 	possible = {
 	}
 	modifier = {
+		planet_pop_assembly_mult = 0.25
 	}
 }
 
 # 取得時	"黄昏の帝国である 魁偉、賢雅、蓋世、赫焉を取得している"	神威	帝国補正:黄昏の帝国を削除	我こそは帝国である。
 tr_ngm_gods_majesty_adopt = {
 	possible = {
+	}
+	on_enabled = {
+		remove_modifier = origin_ngm_phenix_10_modifier
 	}
 	modifier = {
 	}
@@ -2304,6 +2348,11 @@ tr_ngm_gods_majesty_adopt = {
 # 完遂時		神威	帝国補正:不死鳥の帝国を付与	
 tr_ngm_gods_majesty_finish = {
 	possible = {
+	}
+	on_enabled = {
+		add_modifier = {
+			modifier = origin_ngm_phenix_11_modifier
+		}
 	}
 	modifier = {
 	}
@@ -2314,6 +2363,7 @@ tr_ngm_gods_majesty_preface = {
 	possible = {
 	}
 	modifier = {
+		empire_size_mult = -0.3
 	}
 }
 
@@ -2322,6 +2372,7 @@ tr_ngm_gods_majesty_beginning = {
 	possible = {
 	}
 	modifier = {
+		empire_size_mult = -0.3
 	}
 }
 
@@ -2330,6 +2381,7 @@ tr_ngm_gods_majesty_second = {
 	possible = {
 	}
 	modifier = {
+		empire_size_mult = -0.3
 	}
 }
 
@@ -2338,6 +2390,7 @@ tr_ngm_gods_majesty_abruptly = {
 	possible = {
 	}
 	modifier = {
+		empire_size_mult = -0.3
 	}
 }
 
@@ -2346,5 +2399,6 @@ tr_ngm_gods_majesty_a_new_chapter = {
 	possible = {
 	}
 	modifier = {
+		empire_size_mult = -0.3
 	}
 }
