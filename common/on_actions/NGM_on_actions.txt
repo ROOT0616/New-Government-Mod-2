@@ -23,7 +23,7 @@ on_game_start_country = {
 		ngm_civic.17
 		# 異種族解剖
 		ngm_civic.20
-		# 根本的な狂気
+		# # 根本的な狂気
 		ngm_civic.23
 		# 徒弟制度
 		ngm_civic.26
@@ -47,8 +47,6 @@ on_monthly_pulse = {
 # This = country to press begin
 on_press_begin = {
 	events = {
-		# 根本的な狂気
-		ngm_civic.23
 	}
 }
 

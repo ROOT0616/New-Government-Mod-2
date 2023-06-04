@@ -2067,14 +2067,3 @@ tr_ngm_hereditary_nation = {
 		planet_stability_add = 10
 	}
 }
-
-# 238.世襲国家:安定度+10
-tr_ngm_hereditary_nation = {
-	possible = {
-		has_tradition = tr_ngm_inheritance_of_technology
-		has_tradition = tr_ngm_territory_inheritance
-	}
-	modifier = {
-		planet_stability_add = 10
-	}
-}
