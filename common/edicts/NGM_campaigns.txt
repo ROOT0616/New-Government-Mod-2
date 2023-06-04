@@ -1294,48 +1294,6 @@ ngm_legal_department_audits_campaign = {
 	}
 }
 
-# 根本的な狂気		:安定度-10 外交発言力-50% 戦力不均衡ボーナス+40% 研究者が全員狂気的の特性を取得する 提督は全員トリックスターの特性を得る
-ngm_civic_ngm_fundamental_insanity_23_campaign = {
-	length = -0
-	icon = "GFX_edict_type_policy"
-	potential = {
-		has_civic = civic_ngm_fundamental_insanity
-		NOT = {
-			has_country_flag = civic_ngm_fundamental_insanity_flag
-		}
-	}
-	allow = {
-		always = yes
-	}
-	effect = {
-		# custom_tooltip = ryika_abdw_options_menu_tt
-		hidden_effect = {
-			country_event = {
-				id = ngm_civic.23
-			}
-		}
-	}
-}
-
-ngm_civic_ngm_fundamental_insanity_24_campaign = {
-	length = 0
-	icon = "GFX_edict_type_policy"
-	potential = {
-		has_civic = civic_ngm_fundamental_insanity
-		has_country_flag = civic_ngm_fundamental_insanity_flag
-	}
-	allow = {
-		always = yes
-	}
-	effect = {
-		# custom_tooltip = ryika_abdw_options_menu_tt
-		hidden_effect = {
-			country_event = {
-				id = ngm_civic.23
-			}
-		}
-	}
-}
 
 ngm_test_campaign = {
 	length = -1
