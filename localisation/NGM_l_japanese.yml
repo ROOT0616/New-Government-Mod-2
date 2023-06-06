@@ -1459,6 +1459,45 @@
  building_ngm_advanced_research_institutes:0 "高度研究機関"
  building_ngm_advanced_research_institutes_desc:0 "通常では考えられないほどの最先端研究を行う国立研究所"
 
+ building_ngm_Phe_Palace:0 "帝国宮殿"
+ building_ngm_Phe_Palace_desc:0 "かつての銀河帝国の首都を象徴する、美しく美麗な宮殿"
+
+ building_ngm_Phe_Court:0 "帝国大審院"
+ building_ngm_Phe_Court_desc:0 "銀河規模の帝国を統括し、法執行を行う行政機構"
+
+ building_ngm_Phe_Crest:0 "帝国紋章院"
+ building_ngm_Phe_Crest_desc:0 "かつての帝国から永遠に続く栄光の殿堂"
+
+ building_ngm_Phe_Central_school:0 "帝国中央学院"
+ building_ngm_Phe_Central_school_desc:0 "かつて銀河中の知識を集約して発展させた学術研究機関"
+
+ building_ngm_Phe_Spaceport:0 "帝立宇宙港"
+ building_ngm_Phe_Spaceport_desc:0 "かつて銀河中の交易を集約した栄光ある宇宙港"
+
+ building_ngm_Phe_HQ:0 "帝国軍総司令部"
+ building_ngm_Phe_HQ_desc:0 "銀河中を轟かした帝国軍を統括する最高軍事機関"
+
+ building_ngm_Phe_S_Palace:0 "帝国離宮"
+ building_ngm_Phe_S_Palace_desc:0 "帝国の地方都市に存在する美しく機能的な宮殿"
+
+ building_ngm_Phe_Factory:0 "帝国工場"
+ building_ngm_Phe_Factory_desc:0 "失われた技術で稼働を続ける驚異的な工場"
+
+ building_ngm_Phe_Purification:0 "帝国精製所"
+ building_ngm_Phe_Purification_desc:0 "失われた技術で稼働を続ける驚異的な精製所"
+
+ building_ngm_Phe_Park:0 "帝国庭園"
+ building_ngm_Phe_Park_desc:0 "全銀河の生態系を集約した美しくも儚い庭園"
+
+ building_ngm_Phe_orbit_elv:0 "帝国軌道エレベータ"
+ building_ngm_Phe_orbit_elv_desc:0 "惑星の交易を集約した機能的なエレベータ"
+
+ building_ngm_Phe_University:0 "帝国大学"
+ building_ngm_Phe_University_desc:0 "銀河でも有数の研究力を有していた教育機関"
+
+ building_ngm_Phe_Fort:0 "帝国要塞"
+ building_ngm_Phe_Fort_desc:0 "かつての危機をも退けた大規模な要塞"
+
 #######################
 #####    区域    ######
 #######################
@@ -4123,6 +4162,82 @@
  tr_ngm_territory_inheritance_delayed:0 "土地は売買されず、家に属する"
  tr_ngm_hereditary_nation:0 "世襲国家"
  tr_ngm_hereditary_nation_delayed:0 "家に属するのは国も例外ではない"
+
+ tradition_ngm_brawny:0 "魁偉"
+ tradition_ngm_brawny_desc:0 "世界へと歩む一歩は軍靴によるものだ"
+ tr_ngm_brawny_adopt:0 "魁偉の伝統"
+ tr_ngm_brawny_finish:0 "魁偉の伝統の完成"
+ tr_ngm_brawny_UTC:0 "超時空電探"
+ tr_ngm_brawny_UTC_delayed:0 "かつて我が国で使われた時空を超越した探知は的確かつ超越的な射程を実現させる"
+ tr_ngm_brawny_SPBT:0 "一点突破戦術"
+ tr_ngm_brawny_SPBT_delayed:0 "かつて我が国が得意とした一点突破戦術は、現在でも各国の脅威になりうる"
+ tr_ngm_brawny_predictive_aversion:0 "予知的回避"
+ tr_ngm_brawny_predictive_aversion_delayed:0 "艦長や航宙士の直感的判断とAIの判断を利用して予知的な回避を生み出す"
+ tr_ngm_brawny_Shinkos_reproduction:0 "神鋼の再生産"
+ tr_ngm_brawny_Shinkos_reproduction_delayed:0 "効率的かつ低コストの鋼材生産を再開することで艦隊の価格を低減させることができる"
+ tr_ngm_brawny_reopening_of_the_imperial_shipyard:0 "帝国造船所の再稼働"
+ tr_ngm_brawny_reopening_of_the_imperial_shipyard_delayed:0 "銀河有数の高効率造船所を再稼働させることで迅速な艦隊建造が可能となる"
+
+ tradition_ngm_elegance:0 "賢雅"
+ tradition_ngm_elegance_desc:0 "古き記憶を呼び起こし、沈滞した社会を再度活性化させるのだ"
+ tr_ngm_elegance_adopt:0 "賢雅の伝統"
+ tr_ngm_elegance_finish:0 "賢雅の伝統の完成"
+ tr_ngm_elegance_BPT:0 "超越物理理論"
+ tr_ngm_elegance_BPT_delayed:0 "卓越した物理理論を活用することで、停滞していた技術研究は再活性化する"
+ tr_ngm_elegance_ICHI:0 "予知心理学"
+ tr_ngm_elegance_ICHI_delayed:0 "集合知としての大衆は心理学的に未来予知の対象となりうる"
+ tr_ngm_elegance_magitek_engineering:0 "マギテック工学"
+ tr_ngm_elegance_magitek_engineering_delayed:0 "優れた工学技術は魔法と見分けがつかない"
+ tr_ngm_elegance_the_way_of_the_new_light:0 "新光の道"
+ tr_ngm_elegance_the_way_of_the_new_light_delayed:0 "新たな道は光により舗装されている"
+ tr_ngm_elegance_overture_to_tomorrow:0 "明日への序曲"
+ tr_ngm_elegance_overture_to_tomorrow_delayed:0 "明日へと歩む意思は未来への足掛かりだ"
+
+ tradition_ngm_Gaishi:0 "蓋世"
+ tradition_ngm_Gaishi_desc:0 "自分の足で歩き、新たなる未来を勝ち取る準備は徐々に進められている"
+ tr_ngm_Gaishi_adopt:0 "蓋世の伝統"
+ tr_ngm_Gaishi_finish:0 "蓋世の伝統の完成"
+ tr_ngm_Gaishi_true_power_projection:0 "真の戦力投射"
+ tr_ngm_Gaishi_true_power_projection_delayed:0 "軍事力とは戦うためにあるのではなく、戦わないためにあるのだ"
+ tr_ngm_Gaishi_the_true_value_of_economic_power:0 "経済力の真価"
+ tr_ngm_Gaishi_the_true_value_of_economic_power_delayed:0 "経済力は人々の繁栄や幸福のためだけではなく、発言力をも増強させることもできる"
+ tr_ngm_Gaishi_guidance_for_the_wise:0 "知恵者の指導"
+ tr_ngm_Gaishi_guidance_for_the_wise_delayed:0 "真の知恵ある者こそが人々を教導するのだ"
+ tr_ngm_Gaishi_galactic_power:0 "銀河の力"
+ tr_ngm_Gaishi_galactic_power_delayed:0 "銀河に敷衍する帝国の力こそは卓越へと導かれる"
+ tr_ngm_Gaishi_insist_on_ones_own_ideas:0 "声高なる主張"
+ tr_ngm_Gaishi_insist_on_ones_own_ideas_delayed:0 "我の演説を聞け！"
+
+ tradition_ngm_misdirection:0 "赫焉"
+ tradition_ngm_misdirection_desc:0 "民衆の活力を呼び起こし、永遠の繁栄へと歩を進めるのだ"
+ tr_ngm_misdirection_adopt:0 "赫焉の伝統"
+ tr_ngm_misdirection_finish:0 "赫焉の伝統の完成"
+ tr_ngm_misdirection_idea_commonly_accepted:0 "大衆の了簡"
+ tr_ngm_misdirection_idea_commonly_accepted_delayed:0 "大衆の覚醒は社会を再活性化させる"
+ tr_ngm_misdirection_dignity_and_moderation:0 "品格と節制"
+ tr_ngm_misdirection_dignity_and_moderation_delayed:0 "物質的な豊かさによる幸福だけではなく、精神的な豊かさも重要視される"
+ tr_ngm_misdirection_blessing_of_the_stars:0 "星々の祝福"
+ tr_ngm_misdirection_blessing_of_the_stars_delayed:0 "悠久なる繁栄を！　銀河に永遠の祝福を！"
+ tr_ngm_misdirection_blessing_of_life:0 "生命の祝福"
+ tr_ngm_misdirection_blessing_of_life_delayed:0 "生命に祝福を！　輝きを民へ！"
+ tr_ngm_misdirection_blessings_of_creation:0 "創造の祝福"
+ tr_ngm_misdirection_blessings_of_creation_delayed:0 "創造と活力を！　未来への足掛かりを！"
+
+
+ tradition_ngm_gods_majesty:0 "神威"
+ tradition_ngm_gods_majesty_desc:0 "我こそは帝国である"
+ tr_ngm_gods_majesty_adopt:0 "神威の伝統"
+ tr_ngm_gods_majesty_finish:0 "神威の伝統の完成"
+ tr_ngm_gods_majesty_preface:0 "序章"
+ tr_ngm_gods_majesty_preface_delayed:0 "我が国もかつては地を這いつくばる赤ん坊であった"
+ tr_ngm_gods_majesty_beginning:0 "起"
+ tr_ngm_gods_majesty_preface_delayed:0 "一歩一歩の歩みは、革新を生んだ"
+ tr_ngm_gods_majesty_second:0 "承"
+ tr_ngm_gods_majesty_preface_delayed:0 "やがて革新は停滞へと代わり、我々は長い眠りについた"
+ tr_ngm_gods_majesty_abruptly:0 "転"
+ tr_ngm_gods_majesty_preface_delayed:0 "そして、ようやく目を覚ましたのだ"
+ tr_ngm_gods_majesty_a_new_chapter:0 "新たなる序章"
+ tr_ngm_gods_majesty_preface_delayed:0 "さあ、始めようではないか"
 
 #########################
 ### COUNCILOR STRINGS ###
