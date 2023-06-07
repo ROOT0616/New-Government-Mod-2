@@ -249,3 +249,40 @@ ngm_naval_fleet = {
 		}
 	}
 }
+
+# ※1	耐久ダメージ	士気ダメージ	耐久度	士気	説明
+# 帝国近衛軍	imperial_guard 20	75	1500	1200	帝国を守ることを誓ったエリート軍団
+ngm_imperial_guard = {
+	defensive = yes
+	is_pop_spawned = yes
+	damage = 50
+	health = 7.5
+	morale = 1.5
+	morale_damage = 25.5
+	collateral_damage = 0.0
+	war_exhaustion = 0.0 
+	#icon = GFX_army_type_defensive
+	potential = {
+		planet ={
+			has_building = building_ngm_Phe_HQ
+		}
+	}
+}
+
+# 帝国地方軍 imperiallocal_army	10	50	1000	800	帝国を守ることを誓った軍人
+ngm_imperiallocal_army = {
+	defensive = yes
+	is_pop_spawned = yes
+	damage = 25
+	health = 5
+	morale = 1.5
+	morale_damage = 17
+	collateral_damage = 0.0
+	war_exhaustion = 0.0 
+	#icon = GFX_army_type_defensive
+	potential = {
+		planet ={
+			has_building = building_ngm_Phe_Fort
+		}
+	}
+}

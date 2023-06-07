@@ -11,7 +11,6 @@ building_ngm_bureau_of_ceremonies = {
 			is_gestalt = no
 		}
 	}
-	
 	empire_limit = 1
 	prerequisites = {
 		"tech_ceremony_theory"
@@ -57,10 +56,13 @@ building_ngm_bureau_of_ceremonies = {
 # 2.初期建築物「永久の宮殿」 Perpetual Palace 
 # 維持費：エネルギー10、消費財5。住居+5、快適度+5、貴族Job+1、政治家+1、紋章官+1、高級参謀+1、事務員+10、建築物Slot+16、
 building_ngm_perpetual_palace = {
-	base_buildtime = @b2_time
+	capital = yes
 	can_build = no
-	can_demolish = yes
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
 	position_priority = 0
+	category = government
 	icon = building_palace
 	country_modifier = {
 		pop_growth_speed = 1
@@ -1879,18 +1881,377 @@ building_ngm_ocean_business_orbit_elev = {
 
 # 起源  黄昏の帝国  建造物
 # 首都	名称	個数	職業	帝国効果	惑星効果	説明
-# 1	帝国宮殿	1	貴族+2、大祭司+1、騎士団長+1、騎士+3、司祭+3、従者+5	影響力+2、毎月の忠誠心+5、外交発言力+20%	建造物スロット+30、安定度+10、住居+50	かつての銀河帝国の首都を象徴する、美しく美麗な宮殿
+# 1	帝国宮殿	1	貴族+2、大祭司+1、騎士団長+1、騎士+3、司祭+3、従者+5	影響力+2、外交発言力+20%	建造物スロット+30、安定度+10、住居+50	かつての銀河帝国の首都を象徴する、美しく美麗な宮殿
+building_ngm_Phe_Palace = {
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+	category = government
+	icon = building_palace
+	potential = {
+		owner = {
+			has_origin = origin_ngm_phenix
+		}
+	}
+	resources = {
+		category = planet_buildings
+		produces = {
+			influence = 2
+		}
+	}
+	country_modifier = {
+		diplo_weight_mult = 0.2
+	}
+	planet_modifier = {
+		planet_max_buildings_add = 30
+		planet_housing_add = 50
+		planet_stability_add = 10
+		job_noble_add = 2
+		job_high_priest_add = 1
+		job_knight_commander_add = 1
+		job_knight_add = 3
+		job_priest_add = 3
+		job_squire_add = 5
+	}
+}
+
 # 2	帝国大審院	1	政治家+2、法執行官+5、テレパス+3、官僚+5	犯罪-30、安定度+30		銀河規模の帝国を統括し、法執行を行う行政機構
+building_ngm_Phe_Court = {
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 1
+	category = government
+	potential = {
+		owner = {
+			has_origin = origin_ngm_phenix
+		}
+	}
+	resources = {
+		category = planet_buildings
+	}
+	country_modifier = {
+		planet_stability_add = 30
+		planet_crime_add = -30
+	}
+	planet_modifier = {
+		job_politician_add = 2
+		job_enforcer_add = 5
+		job_telepath_add = 3
+		job_bureaucrat_add = 5
+	}
+}
+
 # 3	帝国紋章院	1	紋章官+2、式部官+2	職業による統合力産出+20%	統治者出力+10%	かつての帝国から永遠に続く栄光の殿堂
+building_ngm_Phe_Crest = {
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 2
+	category = government
+	potential = {
+		owner = {
+			has_origin = origin_ngm_phenix
+		}
+	}
+	resources = {
+		category = planet_buildings
+	}
+	country_modifier = {
+		planet_jobs_unity_produces_mult = 0.2
+	}
+	planet_modifier = {
+		planet_jobs_ruler_produces_mult = 0.1
+		job_ngm_crest_bearer_add = 2
+		job_bureau_of_ceremonies_add = 2
+	}
+}
+
 # 4	帝国中央学院	1	科学総裁+2、研究者+5、医療従事者+3、文化人+3、死の記録者+3	研究速度+10%	研究力+20%、専門家出力+10%	かつて銀河中の知識を集約して発展させた研究機関
+building_ngm_Phe_Central_school = {
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 3
+	category = research
+	potential = {
+		owner = {
+			has_origin = origin_ngm_phenix
+		}
+	}
+	resources = {
+		category = planet_buildings
+	}
+	country_modifier = {
+		all_technology_research_speed = 0.1
+	}
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.2
+		planet_jobs_society_research_produces_mult = 0.2
+		planet_jobs_engineering_research_produces_mult = 0.2
+		planet_jobs_specialist_produces_mult = 0.1
+		job_head_researcher_add = 2
+		job_researcher_add = 5
+		job_healthcare_add = 3
+		job_culture_worker_add = 3
+		job_death_chronicler_add = 3
+	}
+}
+
 # 5	帝立宇宙港	1	豪商+2、役員+2、管理職+5、事務員+20	交易価値+25%	交易価値+100	かつて銀河中の交易を集約した栄光ある宇宙港
+building_ngm_Phe_Spaceport = {
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 4
+	category = trade
+	potential = {
+		owner = {
+			has_origin = origin_ngm_phenix
+		}
+	}
+	resources = {
+		category = planet_buildings
+	}
+	country_modifier = {
+		trade_value_mult = 0.25
+	}
+	planet_modifier = {
+		trade_value_add = 100
+		job_merchant_add = 2
+		job_executive_add = 2
+		job_manager_add = 5
+		job_clerk_add = 20
+	}
+}
+
 # 6	帝国軍総司令部	1	高級参謀+3、兵士+20	地上軍耐久力+30%、軌道爆撃-50%	帝国近衛軍+20、起動爆撃-40%	銀河中を轟かした帝国軍を統括する最高軍事機関
+building_ngm_Phe_HQ = {
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 5
+	category = army
+	potential = {
+		owner = {
+			has_origin = origin_ngm_phenix
+		}
+	}
+	resources = {
+		category = planet_buildings
+	}
+	country_modifier = {
+		planet_orbital_bombardment_damage = -0.5
+		army_health = 0.3
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.4
+		job_ngm_senior_advisor_add = 3
+		job_soldier_add = 20
+	}
+}
 
 # 首都以外の惑星	名称	個数	職業	惑星効果	説明	備考
 # 1	帝国離宮	1	政治家+1、貴族+2、騎士+3、司祭+3、官僚+3	住居+30、建造物スロット+15	帝国の地方都市に存在する美しく機能的な宮殿	
+building_ngm_Phe_S_Palace = {
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+	category = government
+	potential = {
+		owner = {
+			has_origin = origin_ngm_phenix
+		}
+	}
+	resources = {
+		category = planet_buildings
+	}
+	planet_modifier = {
+		planet_housing_add = 30
+		planet_max_buildings_add = 15
+		job_politician_add = 1
+		job_noble_add = 22
+		job_knight_add = 3
+		job_priest_add = 3
+		job_bureaucrat_add = 3
+	}
+}
+
 # 2	帝国工場	2	職人+10、冶金技師+10、ロボット製造者+5	消費財+100、合金+50（維持費:鉱物100）	失われた技術で稼働を続ける驚異的な工場	
+building_ngm_Phe_Factory = {
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 1
+	category = manufacturing
+	potential = {
+		owner = {
+			has_origin = origin_ngm_phenix
+		}
+	}
+	resources = {
+		category = planet_buildings
+		produces = {
+			consumer_goods = 100
+			alloys = 50
+		}
+		upkeep = {
+			minerals = 100
+		}
+	}
+	planet_modifier = {
+		job_artisan_add = 10
+		job_foundry_add = 10
+		job_roboticist_add = 5
+	}
+}
+
 # 3	帝国精製所	2	技師+15	鉱物+100、エネルギー+100、各戦略資源+10	失われた技術で稼働を続ける驚異的な精製所	
+building_ngm_Phe_Purification = {
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 2
+	category = resource
+	potential = {
+		owner = {
+			has_origin = origin_ngm_phenix
+		}
+	}
+	resources = {
+		category = planet_buildings
+		produces = {
+			minerals = 100
+			energy = 100
+			exotic_gases = 10
+			rare_crystals = 10
+			volatile_motes = 10
+			sr_dark_matter = 10
+			sr_zro = 10
+			sr_living_metal = 10
+		}
+	}
+	planet_modifier = {
+		job_technician_add = 15
+	}
+}
+
 # 4	帝国庭園	1	文化人+2、エンターテイナー+3、動物園職員+1	統合力+20	全銀河の生態系を集約した美しくも儚い庭園	首都にも一つ
+building_ngm_Phe_Park = {
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 3
+	category = unity
+	potential = {
+		owner = {
+			has_origin = origin_ngm_phenix
+		}
+	}
+	resources = {
+		category = planet_buildings
+		produces = {
+			unity = 20
+		}
+	}
+	planet_modifier = {
+		job_culture_worker_add = 2
+		job_entertainer_add = 3
+		job_xeno_zoo_keeper_add = 1
+	}
+}
+
 # 5	帝国軌道エレベータ	1	豪商+1、管理職+2、事務員+10	交易価値+10%、交易価値+30	惑星の交易を集約した機能的なエレベータ	
+building_ngm_Phe_orbit_elv = {
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 4
+	category = trade
+	potential = {
+		owner = {
+			has_origin = origin_ngm_phenix
+		}
+	}
+	resources = {
+		category = planet_buildings
+	}
+	planet_modifier = {
+		trade_value_mult = 0.1
+		trade_value_add = 30
+		job_merchant_add = 1
+		job_executive_add = 22
+		job_clerk_add = 10
+	}
+}
+
 # 6	帝国大学	1	科学総裁+1、研究者+2、医療従事者+2	研究力+10	銀河でも有数の研究力を有していた教育機関	
+building_ngm_Phe_University = {
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 5
+	category = research
+	potential = {
+		owner = {
+			has_origin = origin_ngm_phenix
+		}
+	}
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 10
+			society_research = 10
+			engineering_research = 10
+		}
+	}
+	planet_modifier = {
+		job_head_researcher_add = 1
+		job_researcher_add = 2
+		job_healthcare_add = 2
+	}
+}
+
 # 7	帝国要塞	1	高級参謀+1、兵士+10	帝国地方軍+10、地上軍耐久力+20%、軌道爆撃-35%、	かつての危機をも退けた大規模な要塞	首都にも一つ
+building_ngm_Phe_Fort = {
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 6
+	category = army
+	potential = {
+		owner = {
+			has_origin = origin_ngm_phenix
+		}
+	}
+	resources = {
+		category = planet_buildings
+	}
+	planet_modifier = {
+		army_health = 0.2
+		planet_orbital_bombardment_damage = -0.35
+		job_ngm_senior_advisor_add = 1
+		job_soldier_add = 10
+	}
+}

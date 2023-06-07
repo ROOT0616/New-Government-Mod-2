@@ -29,7 +29,7 @@ origin_ngm_buffer_state = {
 	habitability_preference = pc_relic
 	preferred_planet_class_neighbor = no
 	potential = {
-		always = yes
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
 	possible = {
 		ethics = {
@@ -63,7 +63,7 @@ origin_ngm_escape_to_the_past = {
 	icon = "gfx/interface/icons/governments/origins/origins_ngm_escape_to_the_past.dds"
 	picture = GFX_origin_ngm_escape_to_the_past
 	potential = {
-		always = yes
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
 	modifier = {
 		ship_fire_rate_mult = 0.05
@@ -87,6 +87,9 @@ origin_ngm_escape_to_the_past = {
 # 	habitability_preference = pc_ngm_ocean
 # 	# initializers = { ocean_paradise_start }	
 
+# 	potential = {
+# 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+# 	}
 # 	playable = {
 # 		has_aquatics = yes
 # 	}
@@ -135,7 +138,7 @@ origin_ngm_phenix = {
 	icon = "gfx/interface/icons/governments/origins/origins_ngm_phenix.dds"
 	picture = GFX_origin_ngm_phenix
 	potential = {
-		always = yes
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
 	possible = {
 		ethics = {
