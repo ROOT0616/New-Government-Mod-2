@@ -2374,3 +2374,1731 @@ country_event = {
 		}
 	}
 }
+
+# 黄昏の帝国	生成イベント
+country_event = {
+	id = ngm_origin.2000
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_phenix
+	}
+	immediate = {
+		add_relic = r_ngm_imperial_chronicle
+		set_global_flag = ngm_phenix_global_flag
+		set_country_flag = ngm_phenix_country_flag
+		# Tag our old home planet
+		capital_scope = {
+			save_event_target_as = previous_home_planet
+			solar_system = {
+				save_event_target_as = previous_home_system
+			}
+			if = {
+				limit = {
+					exists = sector
+				}
+				sector = {
+					leader = {
+						unassign_leader = this
+						save_event_target_as = ngm_phenix_gov
+					}
+				}
+			}
+			else = {
+				root = {
+					random_owned_leader = {
+						limit = {
+							leader_class = governor
+						}
+						save_event_target_as = ngm_phenix_gov
+					}
+				}
+			}
+		}
+		set_spawn_system_batch = begin
+		no_scope = {
+			spawn_system = {
+				min_distance >= 450
+				max_distance <= 450
+				min_orientation_angle = 135
+				max_orientation_angle = 135
+				initializer = "ngm_phenix_01_init"
+				hyperlane = no
+				effect = {
+					save_global_event_target_as = ngm_phenix
+				}
+			}
+			last_created_system = {
+				set_name = "Felix"
+			}
+			event_target:ngm_galactic_empire_aquarium1 = {
+				spawn_system = {
+					min_distance >= 5
+					max_distance <= 5
+					min_orientation_angle = 0
+					max_orientation_angle = 0
+					initializer = "ngm_galactic_empire_aquarium_starting_pulsar"
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = ngm_galactic_empire_aquarium2
+					}
+				}
+				last_created_system = {
+					set_name = "Park Clock"
+				}
+				spawn_system = {
+					min_distance >= 5
+					max_distance <= 5
+					min_orientation_angle = 180
+					max_orientation_angle = 180
+					initializer = "ngm_galactic_empire_aquarium_starting_black_hole"
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = ngm_galactic_empire_aquarium3
+					}
+				}
+				last_created_system = {
+					set_name = "Park Out"
+				}
+				spawn_system = {
+					min_distance >= 5
+					max_distance <= 5
+					min_orientation_angle = 90
+					max_orientation_angle = 90
+					initializer = "ngm_galactic_empire_aquarium_starting_upper_gate"
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = ngm_galactic_empire_aquarium4
+					}
+				}
+				last_created_system = {
+					set_name = "Upper Gate"
+				}
+				spawn_system = {
+					min_distance >= 5
+					max_distance <= 5
+					min_orientation_angle = -90
+					max_orientation_angle = -90
+					initializer = "ngm_galactic_empire_aquarium_starting_under_gate"
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = ngm_galactic_empire_aquarium5
+					}
+				}
+				last_created_system = {
+					set_name = "Under Gate"
+				}
+			}
+		}
+		# add hyperlanes
+		event_target:ngm_galactic_empire_aquarium1 = {
+			add_hyperlane = {
+				from = event_target:ngm_galactic_empire_aquarium1
+				to = event_target:ngm_galactic_empire_aquarium2
+			}
+			add_hyperlane = {
+				from = event_target:ngm_galactic_empire_aquarium1
+				to = event_target:ngm_galactic_empire_aquarium3
+			}
+		}
+		set_spawn_system_batch = end
+		# Add a wormhole
+		random_system = {
+			limit = {
+				NOR = {
+					has_natural_wormhole = yes
+					starting_system = yes
+					has_star_flag = empire_cluster
+				}
+				distance = {
+					source = prev
+					min_distance >= 500
+				}
+			}
+			event_target:ngm_galactic_empire_aquarium4 = {
+				# done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
+				spawn_natural_wormhole = {
+					bypass_type = wormhole
+					random_pos = yes
+					orbit_angle = 360
+				}
+			}
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 360
+			}
+			link_wormholes = event_target:ngm_galactic_empire_aquarium4
+		}
+		random_system = {
+			limit = {
+				NOR = {
+					has_natural_wormhole = yes
+					starting_system = yes
+					has_star_flag = empire_cluster
+				}
+				distance = {
+					source = prev
+					min_distance >= 500
+				}
+			}
+			event_target:ngm_galactic_empire_aquarium5 = {
+				# done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
+				spawn_natural_wormhole = {
+					bypass_type = wormhole
+					random_pos = yes
+					orbit_angle = 360
+				}
+			}
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 360
+			}
+			link_wormholes = event_target:ngm_galactic_empire_aquarium5
+		}
+		# Add a starbase
+		event_target:ngm_galactic_empire_aquarium_starting_system = {
+			create_starbase = {
+				size = "starbase_starport"
+				module = "shipyard"
+				building = "crew_quarters"
+				owner = root
+				effect = {
+					save_event_target_as = ngm_galactic_empire_aquarium_starbase
+				}
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium_pulsar_system = {
+			create_starbase = {
+				size = starbase_outpost
+				owner = root
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium_black_hole_system = {
+			create_starbase = {
+				size = starbase_outpost
+				owner = root
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium_upper_gate_system = {
+			create_starbase = {
+				size = starbase_outpost
+				owner = root
+			}
+		}
+		event_target:ngm_galactic_empire_aquarium_under_gate_system = {
+			create_starbase = {
+				size = starbase_outpost
+				owner = root
+			}
+		}
+		# Move player ships
+		every_owned_fleet = {
+			limit = {
+				any_owned_ship = {
+					OR = {
+						is_ship_size = constructor
+						is_ship_size = corvette
+						is_ship_size = science
+					}
+				}
+			}
+			set_location = event_target:ngm_galactic_empire_aquarium
+			if = {
+				limit = {
+					any_owned_ship = {
+						is_ship_size = corvette
+					}
+				}
+				set_home_base = event_target:ngm_galactic_empire_aquarium
+			}
+		}
+		# Remove the old home planet
+		event_target:previous_home_planet = {
+			every_owned_pop = {
+				if = {
+					limit = {
+						is_robot_pop = no
+						is_sapient = yes
+					}
+					modify_species = {
+						ideal_planet_class = pc_ocean
+					}
+				}
+				unemploy_pop = yes
+				resettle_pop = {
+					pop = this
+					planet = event_target:ngm_galactic_empire_aquarium
+				}
+			}
+			change_pc = pc_nuked
+			destroy_colony = yes
+			reroll_planet = yes
+		}
+		event_target:ngm_galactic_empire_aquarium = {
+			every_owned_pop = {
+				unemploy_pop = yes
+				clear_pop_category = yes
+			}
+			check_planet_employment = yes
+		}
+		# unclaim the old home system
+		event_target:previous_home_system = {
+			every_fleet_in_system = {
+				delete_fleet = this
+			}
+			remove_star_flag = empire_home_system
+			remove_star_flag = empire_cluster
+			every_neighbor_system = {
+				remove_star_flag = empire_cluster
+				every_neighbor_system = {
+					remove_star_flag = empire_cluster
+				}
+			}
+		}
+		# Set species homeworld
+		owner_species = {
+			set_species_homeworld = event_target:ngm_galactic_empire_aquarium
+		}
+		every_owned_pop_species = {
+			set_species_homeworld = event_target:ngm_galactic_empire_aquarium
+		}
+		country_event = {
+			id = ngm_origin.2001
+		}
+		country_event = {
+			id = ngm_origin.2002
+		}
+		country_event = {
+			id = game_start.9
+		}
+		country_event = {
+			id = distar.3043
+		}
+	}
+}
+
+# 黄昏の帝国	建築物生成イベント
+country_event = {
+	id = ngm_origin.2001
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_phenix
+	}
+	immediate = {
+		# Buildings
+		event_target:ngm_galactic_empire_aquarium = {
+			set_owner = root
+			set_controller = root
+			set_capital = yes
+			set_sector_capital = yes
+			sector = {
+				assign_leader = event_target:ngm_galactic_empire_aquarium_gov
+			}
+			if = {
+				limit = {
+					owner = {
+						is_ai = yes
+					}
+				}
+				while = {
+					count = 15
+					create_pop = {
+						species = owner_main_species
+					}
+				}
+			}
+			add_deposit = d_fungal_forest
+			add_building = building_capital
+			add_building = building_ngm_garden_palace
+			add_building = building_ngm_aquarium_central_gate
+			add_building = building_ngm_great_ocean_temple
+			add_building = building_bureaucratic_1
+			add_building = building_factory_1
+			add_building = building_research_lab_1
+			add_district = ngm_district_arcology_marine_fisheries_research
+			add_district = ngm_district_arcology_marine_housing
+			add_district = ngm_district_arcology_marine_administrative_Organization
+			add_district = ngm_district_arcology_marine_health_care
+			add_district = ngm_district_arcology_marine_water_park
+		}
+	}
+}
+
+# 黄昏の帝国	前技術取得イベント
+country_event = {
+	id = ngm_origin.2001
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_phenix
+	}
+	immediate = {
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_afterburners_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_alloys_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_assembly_pattern
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_corvette_build_speed
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_corvette_hull_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_engineering_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_luxuries_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mass_drivers_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mineral_purification_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mining_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_missiles_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_orbital_trash_dispersal
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_powered_exoskeletons
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_robomodding
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_robomodding_m
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_robotic_workers
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_ship_armor_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_space_mining_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_space_mining_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_strike_craft_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_torpedoes_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_advanced_metallurgy_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_armor_hardeners_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_autocannons_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_corvette_hull_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_crystal_armor_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_defense_platform_hull_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_destroyer_build_speed
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_destroyer_hull_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_destroyers
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_droid_workers
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_engineering_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_exotic_gases
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_housing_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_integrated_cybernetics
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_lost_building_methods
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mass_drivers_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_micro_replicators
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mine_betharian
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mine_exotic_gases
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mine_rare_crystals
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mineral_purification_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mining_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_missiles_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_nanite_transmutation
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_ordered_retreat
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_rare_crystals
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_repeatable_lcluster_clue
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_robomodding_points_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_ship_armor_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_space_mining_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_space_mining_4
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_strike_craft_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_supreme_alloy
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_swarmer_missiles_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_temple_of_transportation
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_thrusters_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_afterburners_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_alloys_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_autocannons_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_binary_motivators
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_construction_templates
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_cruiser_build_speed
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_cruiser_hull_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_cruisers
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_destroyer_hull_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_flak_batteries_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_housing_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_kinetic_artillery_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_luxuries_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mass_drivers_4
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mining_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_missiles_4
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_self_assembling_components
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_ship_armor_4
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_space_defense_station_improvement
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_space_mining_5
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_strike_craft_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_thrusters_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_torpedoes_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_advanced_metallurgy_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_autocannons_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_battleship_build_speed
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_battleship_hull_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_battleships
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_cruiser_hull_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_crystal_armor_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_engineering_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_flak_batteries_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_kinetic_artillery_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mass_accelerator_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mass_accelerator_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mass_drivers_5
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mega_assembly
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_missiles_5
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_nanite_assemblers
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_robomodding_points_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_robot_assembly_complex
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_ship_armor_5
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_strike_craft_skrand
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_swarmer_missiles_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_synthetic_leaders
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_synthetic_workers
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_thrusters_4
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_torpedoes_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_armor_hardeners_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_battleship_hull_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_btc_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_colossus
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mega_engineering
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_nanite_autocannon
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_nanite_flak_batteries
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_nanite_repair_system
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_pk_cracker
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_pk_nanobots
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_ring_world
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_titan_hull_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_titan_hull_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_titans
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_administrative_ai
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_automated_exploration
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_auxiliary_fire_control
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_combat_computers_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_cryostasis_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_decryption_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_encryption_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_fusion_power
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_lasers_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_physics_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_power_hub_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_power_plant_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_reactor_boosters_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_reactor_boosters_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_shields_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_space_science_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_space_science_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_assisted_detection
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_atmospheric_orbital_mechanics
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_cold_fusion_power
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_consumer_good_refinement_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_decryption_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_detection_array
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_disruptors_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_encryption_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_ftl_inhibitor
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_hyper_drive_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_hyper_relays
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_lasers_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mine_volatile_motes
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mining_drone_weapon_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_new_numbers
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_pd_tracking_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_physics_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_plasma_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_power_hub_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_power_plant_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_self_aware_logic
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_sensors_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_shield_hardeners_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_shield_rechargers_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_shields_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_space_cloud_weapon_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_space_science_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_space_science_4
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_trinary_computing
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_unusual_senses
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_volatile_motes
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_antimatter_power
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_cloaking_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_combat_computers_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_cryostasis_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_disruptors_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_energy_torpedoes_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_global_research_initiative
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_hyper_drive_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_lasers_4
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_lgate_activation
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mine_dark_matter
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_neuro_quantum_links
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_planetary_shield_generator
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_plasma_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_power_plant_4
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_sensors_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_shields_4
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_space_science_5
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_wormhole_stabilization
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_arc_emitter_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_arc_emitter_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_cloaking_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_combat_computers_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_combat_computers_autonomous
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_consumer_good_refinement_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_decryption_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_disruptors_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_encryption_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_energy_lance_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_energy_lance_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_energy_torpedoes_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_gateway_activation
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_lasers_5
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_pd_tracking_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_physics_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_plasma_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_positronic_implants
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_sapient_ai
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_sensors_4
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_shields_5
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_synchronized_defences
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_zero_point_power
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_dark_matter_detection
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_dyson_sphere
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_extradimensional_weapon_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_gateway_construction
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_jump_drive_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_matter_decompressor
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_pk_neutron
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_pk_shielder
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_quantum_catapult
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_science_nexus
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_sentry_array
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_shield_hardeners_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_adaptive_bureaucracy
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_alien_life_studies
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_deep_sinkhole
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_dense_jungle
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_eco_simulation
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_food_processing_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_frontier_health
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_genome_mapping
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_ground_defense_planning
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_hydroponics
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_massive_glacier
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_neural_implants
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_noxious_swamp
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_planetary_unification
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_quicksand_basin
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_society_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_space_trading
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_space_whale_weapon_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_toxic_kelp
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_xeno_linguistics
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_adaptive_combat_algorithms
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_alien_topography
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_artificial_moral_codes
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_autonomous_agents
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_capital_productivity_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_centralized_command
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_cloning
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_colonial_bureaucracy
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_colonial_centralization
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_colonization_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_colonization_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_compact_living
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_dangerous_wildlife
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_doctrine_fleet_size_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_doctrine_fleet_size_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_doctrine_navy_size_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_effective_bureaucracy
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_epigenetic_triggers
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_frontier_hospital
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_gene_banks
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_gene_crops
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_global_defense_grid
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_interstellar_fleet_traditions
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_living_state
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mountain_range
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_planetary_infrastructure_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_predatory_tactics
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_satisfying_insults
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_slave_colonies
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_society_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_subdermal_stimulation
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_terrestrial_sculpting
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_unity_of_purpose
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_vitality_boosters
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_volcano
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_xeno_aesthetics
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_xeno_diplomacy
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_capital_productivity_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_collective_production_methods
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_collective_self
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_colonization_4
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_combat_training
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_command_matrix
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_doctrine_fleet_size_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_doctrine_navy_size_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_ecological_adaptation
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_embodied_dynamism
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_executive_retreat
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_food_processing_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_galactic_administration
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_galactic_bureaucracy
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_gene_tailoring_POINTS
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_glandular_acclimation
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_global_production_strategy
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_housing_agrarian_idyll
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_interstellar_economics
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mine_zro
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_nano_vitality_crops
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_penal_colonies
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_psionic_barrier
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_psionic_theory
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_refit_standards
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_regenerative_hull_tissue
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_resort_colonies
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_resource_processing_algorithms
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_synthetic_thought_patterns
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_telepathy
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_tomb_world_adaption
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_xeno_relations
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_xeno_tourism_agency
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_capital_productivity_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_climate_restoration
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_colonization_5
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_doctrine_fleet_size_4
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_doctrine_fleet_size_5
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_doctrine_navy_size_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_doctrine_navy_size_4
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_galactic_markets
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_neuroregeneration
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_nutrient_replication
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_planetary_infrastructure_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_precognition_interface
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_society_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_thought_enforcement
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_tracking_implants
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_archaeo_pk_devolving_beam
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_ascension_theory
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_cloaking_psi
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_interstellar_assembly
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_leviathan_transgenesis
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_lithoid_transgenesis
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mega_art
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_mega_shipyard
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_pk_godray
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_plantoid_transgenesis
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_psi_jump_drive_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_psionic_shield
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_scourge_missile_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_strategic_coordination
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_swarm_strike_craft_1
+		}
+	}
+}
