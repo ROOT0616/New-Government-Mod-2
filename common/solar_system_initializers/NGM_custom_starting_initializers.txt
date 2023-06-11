@@ -956,54 +956,77 @@ ngm_phenix_01_init = {
 			max = 30
 		}
 		change_orbit = 30
-		has_ring = yes
 		planet = {
 			count = 1
-			class = pc_asteroid
-			orbit_distance = 30
-			orbit_angle = 0
-		}
-		planet = {
-			count = 5
-			class = pc_asteroid
-			orbit_distance = 0
-			orbit_angle = 60
-		}
-		planet = {
-			count = {
-				min = 1
-				max = 3
-			}
-			class = pc_asteroid
-			orbit_distance = 0
-			orbit_angle = {
-				min = 40
-				max = 100
-			}
-		}
-		planet = {
-			count = 1
-			orbit_distance = 20
-			name = "Memoria"
-			class = "pc_shielded"
-			orbit_angle = {
-				min = 90
-				max = 270
-			}
-		}
-		planet = {
-			count = 1
+			class = "pc_barren"
 			orbit_distance = 15
-			name = "Thronus"
-			class = "pc_toxic"
-			has_ring = yes
 			orbit_angle = {
 				min = 90
 				max = 270
 			}
-			size = {
-				min = 25
-				max = 30
+		}
+		planet = {
+			count = 1
+			class = "pc_molten"
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+		}
+		planet = {
+			count = 1
+			class = "pc_gas_giant"
+			orbit_distance = 45
+			size = 35
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			planet = {
+				count = 1
+				class = "pc_city"
+				orbit_distance = 15
+				size = 10
+				orbit_angle = {
+					min = 90
+					max = 270
+				}
+				deposit_blockers = none
+				modifiers = none
+				init_effect = {
+					prevent_anomaly = yes
+				}
+				init_effect = {
+					save_event_target_as = ngm_phenix
+					set_planet_flag = cant_build_here
+					set_planet_flag = cant_target_this_planet
+				}
+				init_effect = {
+					generate_empire_home_planet = yes
+				}
+				init_effect = {
+					add_deposit = d_industrial_sector
+					add_deposit = d_central_spire
+				}
+			}
+			planet = {
+				count = 1
+				class = "pc_frozen"
+				orbit_distance = 15
+				orbit_angle = {
+					min = 90
+					max = 270
+				}
+			}
+		}
+		planet = {
+			count = 1
+			class = "pc_barren"
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
 			}
 		}
 	}
@@ -1016,60 +1039,71 @@ ngm_phenix_01_init = {
 			min = 25
 			max = 30
 		}
-		has_ring = yes
 		satellite_naming_policy = upper_case_roman_numerals
 		change_orbit = 30
 		planet = {
-			count = {
-				min = 1
-				max = 3
-			}
+			count = 1
+			class = "pc_molten"
+			orbit_distance = 15
 			orbit_angle = {
 				min = 90
 				max = 270
-			}
-			class = random_non_colonizable
-			orbit_distance = 25
-			satellite_naming_policy = lower_case_latin_letters
-			change_orbit = @base_moon_distance
-			moon = {
-				count = {
-					min = 0
-					max = 1
-				}
-				class = random_non_colonizable
-				orbit_angle = {
-					min = 90
-					max = 270
-				}
-				orbit_distance = 5
 			}
 		}
 		planet = {
 			count = 1
-			orbit_distance = 20
-			name = "Vestigia"
-			class = "pc_barren"
-			has_ring = yes
+			class = "pc_molten"
+			orbit_distance = 30
 			orbit_angle = {
 				min = 90
 				max = 270
 			}
-			size = {
-				min = 25
-				max = 30
+		}
+		planet = {
+			count = 1
+			class = "pc_toxic"
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			planet = {
+				count = 1
+				class = "pc_frozen"
+				orbit_distance = 15
+				orbit_angle = {
+					min = 90
+					max = 270
+				}
 			}
 		}
 		planet = {
-			count = {
-				min = 1
-				max = 3
-			}
-			class = pc_asteroid
-			orbit_distance = 0
+			count = 1
+			class = "pc_gas_giant"
+			orbit_distance = 45
+			size = 35
 			orbit_angle = {
-				min = 40
-				max = 100
+				min = 90
+				max = 270
+			}
+			planet = {
+				count = 1
+				class = "pc_barren"
+				orbit_distance = 15
+				size = 10
+				orbit_angle = {
+					min = 90
+					max = 270
+				}
+			}
+			planet = {
+				count = 1
+				class = "pc_frozen"
+				orbit_distance = 15
+				orbit_angle = {
+					min = 90
+					max = 270
+				}
 			}
 		}
 	}
@@ -1082,45 +1116,42 @@ ngm_phenix_01_init = {
 			min = 20
 			max = 30
 		}
-		has_ring = no
 		satellite_naming_policy = upper_case_roman_numerals
 		change_orbit = 30
 		planet = {
-			count = {
-				min = 1
-				max = 3
-			}
+			count = 1
+			class = "pc_barren"
+			orbit_distance = 30
 			orbit_angle = {
 				min = 90
 				max = 270
-			}
-			class = random_non_colonizable
-			orbit_distance = 25
-			satellite_naming_policy = lower_case_latin_letters
-			change_orbit = @base_moon_distance
-			moon = {
-				count = 1
-				class = random_non_colonizable
-				orbit_angle = {
-					min = 90
-					max = 270
-				}
-				orbit_distance = 5
 			}
 		}
 		planet = {
 			count = 1
-			orbit_distance = 20
-			name = "Cineres"
-			class = "pc_gas_giant"
-			has_ring = yes
+			class = "pc_gray_goo"
+			orbit_distance = 30
 			orbit_angle = {
 				min = 90
 				max = 270
 			}
-			size = {
-				min = 25
-				max = 30
+		}
+		planet = {
+			count = 1
+			class = "pc_molten"
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+		}
+		planet = {
+			count = 1
+			class = "pc_shrouded"
+			orbit_distance = 30
+			orbit_angle = {
+				min = 90
+				max = 270
 			}
 		}
 	}

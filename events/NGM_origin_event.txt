@@ -2420,8 +2420,8 @@ country_event = {
 			spawn_system = {
 				min_distance >= 450
 				max_distance <= 450
-				min_orientation_angle = 135
-				max_orientation_angle = 135
+				min_orientation_angle = 90
+				max_orientation_angle = 90
 				initializer = "ngm_phenix_01_init"
 				hyperlane = no
 				effect = {
@@ -2431,166 +2431,153 @@ country_event = {
 			last_created_system = {
 				set_name = "Felix"
 			}
-			event_target:ngm_galactic_empire_aquarium1 = {
-				spawn_system = {
-					min_distance >= 5
-					max_distance <= 5
-					min_orientation_angle = 0
-					max_orientation_angle = 0
-					initializer = "ngm_galactic_empire_aquarium_starting_pulsar"
-					hyperlane = no
-					effect = {
-						save_global_event_target_as = ngm_galactic_empire_aquarium2
-					}
-				}
-				last_created_system = {
-					set_name = "Park Clock"
-				}
-				spawn_system = {
-					min_distance >= 5
-					max_distance <= 5
-					min_orientation_angle = 180
-					max_orientation_angle = 180
-					initializer = "ngm_galactic_empire_aquarium_starting_black_hole"
-					hyperlane = no
-					effect = {
-						save_global_event_target_as = ngm_galactic_empire_aquarium3
-					}
-				}
-				last_created_system = {
-					set_name = "Park Out"
-				}
-				spawn_system = {
-					min_distance >= 5
-					max_distance <= 5
-					min_orientation_angle = 90
-					max_orientation_angle = 90
-					initializer = "ngm_galactic_empire_aquarium_starting_upper_gate"
-					hyperlane = no
-					effect = {
-						save_global_event_target_as = ngm_galactic_empire_aquarium4
-					}
-				}
-				last_created_system = {
-					set_name = "Upper Gate"
-				}
-				spawn_system = {
-					min_distance >= 5
-					max_distance <= 5
-					min_orientation_angle = -90
-					max_orientation_angle = -90
-					initializer = "ngm_galactic_empire_aquarium_starting_under_gate"
-					hyperlane = no
-					effect = {
-						save_global_event_target_as = ngm_galactic_empire_aquarium5
-					}
-				}
-				last_created_system = {
-					set_name = "Under Gate"
-				}
-			}
+			# event_target:ngm_phenix = {
+			# }
 		}
 		# add hyperlanes
-		event_target:ngm_galactic_empire_aquarium1 = {
-			add_hyperlane = {
-				from = event_target:ngm_galactic_empire_aquarium1
-				to = event_target:ngm_galactic_empire_aquarium2
-			}
-			add_hyperlane = {
-				from = event_target:ngm_galactic_empire_aquarium1
-				to = event_target:ngm_galactic_empire_aquarium3
-			}
-		}
+		# event_target:ngm_phenix = {
+		# 	add_hyperlane = {
+		# 		from = event_target:ngm_phenix1
+		# 		to = event_target:ngm_phenix2
+		# 	}
+		# }
 		set_spawn_system_batch = end
 		# Add a wormhole
-		random_system = {
-			limit = {
-				NOR = {
-					has_natural_wormhole = yes
-					starting_system = yes
-					has_star_flag = empire_cluster
-				}
-				distance = {
-					source = prev
-					min_distance >= 500
-				}
-			}
-			event_target:ngm_galactic_empire_aquarium4 = {
-				# done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
-				spawn_natural_wormhole = {
-					bypass_type = wormhole
-					random_pos = yes
-					orbit_angle = 360
-				}
-			}
-			spawn_natural_wormhole = {
-				bypass_type = wormhole
-				random_pos = yes
-				orbit_angle = 360
-			}
-			link_wormholes = event_target:ngm_galactic_empire_aquarium4
-		}
-		random_system = {
-			limit = {
-				NOR = {
-					has_natural_wormhole = yes
-					starting_system = yes
-					has_star_flag = empire_cluster
-				}
-				distance = {
-					source = prev
-					min_distance >= 500
-				}
-			}
-			event_target:ngm_galactic_empire_aquarium5 = {
-				# done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
-				spawn_natural_wormhole = {
-					bypass_type = wormhole
-					random_pos = yes
-					orbit_angle = 360
-				}
-			}
-			spawn_natural_wormhole = {
-				bypass_type = wormhole
-				random_pos = yes
-				orbit_angle = 360
-			}
-			link_wormholes = event_target:ngm_galactic_empire_aquarium5
-		}
+		# random_system = {
+		# 	limit = {
+		# 		NOR = {
+		# 			has_natural_wormhole = yes
+		# 			starting_system = yes
+		# 			has_star_flag = empire_cluster
+		# 		}
+		# 		distance = {
+		# 			source = prev
+		# 			min_distance >= 500
+		# 		}
+		# 	}
+		# 	event_target:ngm_phenix4 = {
+		# 		# done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
+		# 		spawn_natural_wormhole = {
+		# 			bypass_type = wormhole
+		# 			random_pos = yes
+		# 			orbit_angle = 360
+		# 		}
+		# 	}
+		# 	spawn_natural_wormhole = {
+		# 		bypass_type = wormhole
+		# 		random_pos = yes
+		# 		orbit_angle = 360
+		# 	}
+		# 	link_wormholes = event_target:ngm_phenix4
+		# }
+		# random_system = {
+		# 	limit = {
+		# 		NOR = {
+		# 			has_natural_wormhole = yes
+		# 			starting_system = yes
+		# 			has_star_flag = empire_cluster
+		# 		}
+		# 		distance = {
+		# 			source = prev
+		# 			min_distance >= 500
+		# 		}
+		# 	}
+		# 	event_target:ngm_phenix5 = {
+		# 		# done this way to ensure we don't spawn "orphan" wormholes (wormholes that aren't linked to anything)
+		# 		spawn_natural_wormhole = {
+		# 			bypass_type = wormhole
+		# 			random_pos = yes
+		# 			orbit_angle = 360
+		# 		}
+		# 	}
+		# 	spawn_natural_wormhole = {
+		# 		bypass_type = wormhole
+		# 		random_pos = yes
+		# 		orbit_angle = 360
+		# 	}
+		# 	link_wormholes = event_target:ngm_phenix5
+		# }
 		# Add a starbase
-		event_target:ngm_galactic_empire_aquarium_starting_system = {
+		event_target:ngm_phenix_01_init_system = {
 			create_starbase = {
-				size = "starbase_starport"
+				size = "starbase_citadel"
 				module = "shipyard"
-				building = "crew_quarters"
+				module = "shipyard"
+				module = "shipyard"
+				module = "hangar_bay"
+				module = "gun_battery"
+				module = "gun_battery"
+				building = "target_uplink_computer"
+				building = "defense_grid"
+				building = "colossus_yards"
+				building = "titan_yards"
 				owner = root
 				effect = {
-					save_event_target_as = ngm_galactic_empire_aquarium_starbase
+					save_event_target_as = ngm_phenix_starbase
 				}
 			}
 		}
-		event_target:ngm_galactic_empire_aquarium_pulsar_system = {
-			create_starbase = {
-				size = starbase_outpost
-				owner = root
+		# 種族作成
+		create_species = {
+			name = "NAME_NGM_origin_ngm_phenix_machine"
+			plural = "NAME_NGM_origin_ngm_phenix_machine"
+			class = MACHINE
+			namelist = MACHINE1
+			portrait = tox_machine
+			traits = {
+				# 機械
+				trait = trait_machine_unit
+				# 霊子コンピュータ
+				trait = trait_ngm_m_reishi
+				# 効率的なプロセッサ
+				trait = trait_robot_efficient_processors
+				# 洗練されたプロトコル
+				trait = trait_robot_streamlined_protocols
+				# 感情模倣装置
+				trait = trait_robot_emotion_emulators
+				# 短絡的判断
+				trait = trait_ngm_m_nasty
+				# 高級品
+				trait = trait_robot_luxurious
+				# 不適切配線
+				trait = trait_ngm_m_wiring
+			}
+			effect = {
+				save_global_event_target_as = ngm_phenix_global_machine_species
 			}
 		}
-		event_target:ngm_galactic_empire_aquarium_black_hole_system = {
-			create_starbase = {
-				size = starbase_outpost
-				owner = root
+		create_species = {
+			name = "NAME_NGM_origin_ngm_phenix_avi"
+			plural = "NAME_NGM_origin_ngm_phenix_avi"
+			class = AVI
+			namelist = AVI2
+			portrait = avi2
+			traits = {
+				# 異常発達
+				trait = trait_ngm_abn_growth
+				# 極度の順応性
+				trait = trait_extremely_adaptive
+				# 飛行器官
+				trait = trait_ngm_flying
+				# 倹約家
+				trait = trait_thrifty
+				# 従順
+				trait = trait_docile
+				# 遵奉者
+				trait = trait_conformists
+				# 小型
+				trait = trait_ngm_small
+				# 縄張り意識
+				trait = trait_ngm_turf
+				# 愚鈍
+				trait = trait_ngm_stupidity
+				# 混乱
+				trait = trait_ngm_confusion
+				# 無文字社会
+				trait = trait_ngm_elder_non_character
 			}
-		}
-		event_target:ngm_galactic_empire_aquarium_upper_gate_system = {
-			create_starbase = {
-				size = starbase_outpost
-				owner = root
-			}
-		}
-		event_target:ngm_galactic_empire_aquarium_under_gate_system = {
-			create_starbase = {
-				size = starbase_outpost
-				owner = root
+			effect = {
+				save_global_event_target_as = ngm_phenix_global_avi_species
 			}
 		}
 		# Move player ships
@@ -2604,14 +2591,14 @@ country_event = {
 					}
 				}
 			}
-			set_location = event_target:ngm_galactic_empire_aquarium
+			set_location = event_target:ngm_phenix
 			if = {
 				limit = {
 					any_owned_ship = {
 						is_ship_size = corvette
 					}
 				}
-				set_home_base = event_target:ngm_galactic_empire_aquarium
+				set_home_base = event_target:ngm_phenix
 			}
 		}
 		# Remove the old home planet
@@ -2629,14 +2616,14 @@ country_event = {
 				unemploy_pop = yes
 				resettle_pop = {
 					pop = this
-					planet = event_target:ngm_galactic_empire_aquarium
+					planet = event_target:ngm_phenix
 				}
 			}
 			change_pc = pc_nuked
 			destroy_colony = yes
 			reroll_planet = yes
 		}
-		event_target:ngm_galactic_empire_aquarium = {
+		event_target:ngm_phenix = {
 			every_owned_pop = {
 				unemploy_pop = yes
 				clear_pop_category = yes
@@ -2659,11 +2646,40 @@ country_event = {
 		}
 		# Set species homeworld
 		owner_species = {
-			set_species_homeworld = event_target:ngm_galactic_empire_aquarium
+			set_species_homeworld = event_target:ngm_phenix
 		}
 		every_owned_pop_species = {
-			set_species_homeworld = event_target:ngm_galactic_empire_aquarium
+			set_species_homeworld = event_target:ngm_phenix
 		}
+		# 首都の移動
+		event_target:ngm_phenix = {
+			set_owner = root
+			set_controller = root
+			set_capital = yes
+			set_sector_capital = yes
+			sector = {
+				assign_leader = event_target:ngm_phenix_gov
+			}
+			while = {
+				count = 100
+				create_pop = {
+					species = owner_main_species
+				}
+			}
+			while = {
+				count = 200
+				create_pop = {
+					species = event_target:ngm_phenix_global_avi_species
+				}
+			}
+			while = {
+				count = 80
+				create_pop = {
+					species = event_target:ngm_phenix_global_machine_species
+				}
+			}
+		}
+		# 初期イベント
 		country_event = {
 			id = ngm_origin.2001
 		}
@@ -2674,8 +2690,10 @@ country_event = {
 			id = game_start.9
 		}
 		country_event = {
-			id = distar.3043
+			id = game_start.9
 		}
+		set_country_flag = encountered_first_wormhole
+		add_seen_bypass_type = wormhole
 	}
 }
 
@@ -2689,47 +2707,37 @@ country_event = {
 	}
 	immediate = {
 		# Buildings
-		event_target:ngm_galactic_empire_aquarium = {
-			set_owner = root
-			set_controller = root
-			set_capital = yes
-			set_sector_capital = yes
-			sector = {
-				assign_leader = event_target:ngm_galactic_empire_aquarium_gov
+		event_target:ngm_phenix = {
+			# 首都
+			# 1.帝国宮殿
+			add_building = building_ngm_Phe_Palace
+			# 2.帝国大審院
+			add_building = building_ngm_Phe_Court
+			# 3.帝国紋章院
+			add_building = building_ngm_Phe_Crest
+			# 4.帝国中央学院
+			add_building = building_ngm_Phe_Central_school
+			# 5.帝国庭園
+			add_building = building_ngm_Phe_Spaceport
+			# 6.帝立宇宙港
+			add_building = building_ngm_Phe_HQ
+			# 7.帝国軍総司令部
+			add_building = building_ngm_Phe_S_Palace
+			# 8.帝国要塞
+			add_building = building_ngm_Phe_Factory
+			while = {
+				count = 5
+				add_district = district_arcology_housing
+				add_district = district_arcology_arms_industry
+				add_district = district_arcology_civilian_industry
 			}
-			if = {
-				limit = {
-					owner = {
-						is_ai = yes
-					}
-				}
-				while = {
-					count = 15
-					create_pop = {
-						species = owner_main_species
-					}
-				}
-			}
-			add_deposit = d_fungal_forest
-			add_building = building_capital
-			add_building = building_ngm_garden_palace
-			add_building = building_ngm_aquarium_central_gate
-			add_building = building_ngm_great_ocean_temple
-			add_building = building_bureaucratic_1
-			add_building = building_factory_1
-			add_building = building_research_lab_1
-			add_district = ngm_district_arcology_marine_fisheries_research
-			add_district = ngm_district_arcology_marine_housing
-			add_district = ngm_district_arcology_marine_administrative_Organization
-			add_district = ngm_district_arcology_marine_health_care
-			add_district = ngm_district_arcology_marine_water_park
 		}
 	}
 }
 
 # 黄昏の帝国	前技術取得イベント
 country_event = {
-	id = ngm_origin.2001
+	id = ngm_origin.2002
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
