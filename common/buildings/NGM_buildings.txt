@@ -1883,7 +1883,6 @@ building_ngm_ocean_business_orbit_elev = {
 # 首都	名称	個数	職業	帝国効果	惑星効果	説明
 # 1	帝国宮殿	1	貴族+2、大祭司+1、騎士団長+1、騎士+3、司祭+3、従者+5	影響力+2、外交発言力+20%	建造物スロット+30、安定度+10、住居+50	かつての銀河帝国の首都を象徴する、美しく美麗な宮殿
 building_ngm_Phe_Palace = {
-	capital = yes
 	can_build = no
 	can_demolish = no
 	can_be_ruined = no
@@ -1920,7 +1919,6 @@ building_ngm_Phe_Palace = {
 
 # 2	帝国大審院	1	政治家+2、法執行官+5、テレパス+3、官僚+5	犯罪-30、安定度+30		銀河規模の帝国を統括し、法執行を行う行政機構
 building_ngm_Phe_Court = {
-	capital = yes
 	can_build = no
 	can_demolish = no
 	can_be_ruined = no
@@ -1949,7 +1947,6 @@ building_ngm_Phe_Court = {
 
 # 3	帝国紋章院	1	紋章官+2、式部官+2	職業による統合力産出+20%	統治者出力+10%	かつての帝国から永遠に続く栄光の殿堂
 building_ngm_Phe_Crest = {
-	capital = yes
 	can_build = no
 	can_demolish = no
 	can_be_ruined = no
@@ -1976,7 +1973,6 @@ building_ngm_Phe_Crest = {
 
 # 4	帝国中央学院	1	科学総裁+2、研究者+5、医療従事者+3、文化人+3、死の記録者+3	研究速度+10%	研究力+20%、専門家出力+10%	かつて銀河中の知識を集約して発展させた研究機関
 building_ngm_Phe_Central_school = {
-	capital = yes
 	can_build = no
 	can_demolish = no
 	can_be_ruined = no
@@ -2009,7 +2005,6 @@ building_ngm_Phe_Central_school = {
 
 # 5	帝立宇宙港	1	豪商+2、役員+2、管理職+5、事務員+20	交易価値+25%	交易価値+100	かつて銀河中の交易を集約した栄光ある宇宙港
 building_ngm_Phe_Spaceport = {
-	capital = yes
 	can_build = no
 	can_demolish = no
 	can_be_ruined = no
@@ -2038,7 +2033,6 @@ building_ngm_Phe_Spaceport = {
 
 # 6	帝国軍総司令部	1	高級参謀+3、兵士+20	地上軍耐久力+30%、軌道爆撃-50%	帝国近衛軍+20、起動爆撃-40%	銀河中を轟かした帝国軍を統括する最高軍事機関
 building_ngm_Phe_HQ = {
-	capital = yes
 	can_build = no
 	can_demolish = no
 	can_be_ruined = no
