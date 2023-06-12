@@ -137,6 +137,8 @@ origin_ngm_phenix = {
 	is_origin = yes
 	icon = "gfx/interface/icons/governments/origins/origins_ngm_phenix.dds"
 	picture = GFX_origin_ngm_phenix
+	starting_colony = pc_city
+	habitability_preference = pc_city
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}

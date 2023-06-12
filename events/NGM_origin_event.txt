@@ -2418,15 +2418,12 @@ country_event = {
 		set_spawn_system_batch = begin
 		no_scope = {
 			spawn_system = {
-				min_distance >= 450
-				max_distance <= 450
-				min_orientation_angle = 90
-				max_orientation_angle = 90
+				min_distance >= 500
+				max_distance <= 600
+				min_orientation_angle = 340
+				max_orientation_angle = 20
 				initializer = "ngm_phenix_01_init"
 				hyperlane = no
-				effect = {
-					save_global_event_target_as = ngm_phenix
-				}
 			}
 			last_created_system = {
 				set_name = "Felix"
@@ -2521,27 +2518,27 @@ country_event = {
 		create_species = {
 			name = "NAME_NGM_origin_ngm_phenix_machine"
 			plural = "NAME_NGM_origin_ngm_phenix_machine"
-			class = MACHINE
+			class = ROBOT
 			namelist = MACHINE1
 			portrait = tox_machine
 			traits = {
-				# 機械
-				trait = trait_machine_unit
+				trait = "trait_mechanical"
 				# 霊子コンピュータ
-				trait = trait_ngm_m_reishi
+				trait = "trait_ngm_m_reishi"
 				# 効率的なプロセッサ
-				trait = trait_robot_efficient_processors
+				trait = "trait_robot_efficient_processors"
 				# 洗練されたプロトコル
-				trait = trait_robot_streamlined_protocols
+				trait = "trait_robot_streamlined_protocols"
 				# 感情模倣装置
-				trait = trait_robot_emotion_emulators
+				trait = "trait_robot_emotion_emulators"
 				# 短絡的判断
-				trait = trait_ngm_m_nasty
+				trait = "trait_ngm_m_nasty"
 				# 高級品
-				trait = trait_robot_luxurious
+				trait = "trait_robot_luxurious"
 				# 不適切配線
-				trait = trait_ngm_m_wiring
+				trait = "trait_ngm_m_wiring"
 			}
+			homeworld = event_target:ngm_phenix
 			effect = {
 				save_global_event_target_as = ngm_phenix_global_machine_species
 			}
@@ -2552,33 +2549,51 @@ country_event = {
 			class = AVI
 			namelist = AVI2
 			portrait = avi2
+			extra_trait_points = 10
+			homeworld = event_target:ngm_phenix
 			traits = {
+				trait = "trait_pc_city_preference"
 				# 異常発達
-				trait = trait_ngm_abn_growth
+				trait = "trait_ngm_abn_growth"
 				# 極度の順応性
-				trait = trait_extremely_adaptive
+				trait = "trait_extremely_adaptive"
 				# 飛行器官
-				trait = trait_ngm_flying
+				trait = "trait_ngm_flying"
 				# 倹約家
-				trait = trait_thrifty
+				trait = "trait_thrifty"
 				# 従順
-				trait = trait_docile
+				trait = "trait_docile"
 				# 遵奉者
-				trait = trait_conformists
+				trait = "trait_conformists"
 				# 小型
-				trait = trait_ngm_small
+				trait = "trait_ngm_small"
 				# 縄張り意識
-				trait = trait_ngm_turf
+				trait = "trait_ngm_turf"
 				# 愚鈍
-				trait = trait_ngm_stupidity
+				trait = "trait_ngm_stupidity"
 				# 混乱
-				trait = trait_ngm_confusion
+				trait = "trait_ngm_confusion"
 				# 無文字社会
-				trait = trait_ngm_elder_non_character
+				trait = "trait_ngm_elder_non_character"
 			}
 			effect = {
 				save_global_event_target_as = ngm_phenix_global_avi_species
 			}
+		}
+		last_created_species = {
+			set_citizenship_type = {
+				country = root.owner
+				type = citizenship_slavery
+			}
+			set_slavery_type = {
+				type = slavery_indentured
+				country = root.owner
+			}
+		}
+		set_policy = {
+			policy = artificial_intelligence_policy
+			option = ai_servitude
+			cooldown = yes
 		}
 		# Move player ships
 		every_owned_fleet = {
@@ -2687,10 +2702,44 @@ country_event = {
 			id = ngm_origin.2002
 		}
 		country_event = {
+			days = 75
+			id = ngm_origin.2003
+		}
+		country_event = {
 			id = game_start.9
 		}
 		country_event = {
 			id = game_start.9
+		}
+		add_modifier = {
+			modifier = origin_ngm_phenix_1_modifier
+		}
+		add_modifier = {
+			modifier = origin_ngm_phenix_2_modifier
+		}
+		add_modifier = {
+			modifier = origin_ngm_phenix_3_modifier
+		}
+		add_modifier = {
+			modifier = origin_ngm_phenix_4_modifier
+		}
+		add_modifier = {
+			modifier = origin_ngm_phenix_5_modifier
+		}
+		add_modifier = {
+			modifier = origin_ngm_phenix_6_modifier
+		}
+		add_modifier = {
+			modifier = origin_ngm_phenix_7_modifier
+		}
+		add_modifier = {
+			modifier = origin_ngm_phenix_8_modifier
+		}
+		add_modifier = {
+			modifier = origin_ngm_phenix_9_modifier
+		}
+		add_modifier = {
+			modifier = origin_ngm_phenix_10_modifier
 		}
 		set_country_flag = encountered_first_wormhole
 		add_seen_bypass_type = wormhole
@@ -2730,6 +2779,17 @@ country_event = {
 				add_district = district_arcology_housing
 				add_district = district_arcology_arms_industry
 				add_district = district_arcology_civilian_industry
+			}
+			every_owned_army = {
+				limit = {
+					exists = species
+					exists = planet
+					army_type = defense_army
+				}
+				modify_army = {
+					name = random
+					type = "ngm_imperial_guard"
+				}
 			}
 		}
 	}
@@ -4107,6 +4167,25 @@ country_event = {
 		give_tech_no_error_effect = {
 			MESSAGE = no
 			TECH = tech_swarm_strike_craft_1
+		}
+	}
+}
+
+# 黄昏の帝国	建築物生成イベント
+country_event = {
+	id = ngm_origin.2001
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_phenix
+	}
+	immediate = {
+		# army
+		event_target:ngm_phenix = {
+			modify_army = {
+				name = random
+				type = "ngm_imperial_guard"
+			}
 		}
 	}
 }
