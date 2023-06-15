@@ -121,7 +121,8 @@ ap_ngm_tunami = {
 		ship_corvette_cost_mult = -0.1
 		starbase_shipyard_build_speed_mult = -0.5
 		country_naval_cap_add = 50
-		country_command_limit_add = 20
+		# country_command_limit_add = 20
+		command_limit_add = 20
 	}
 	ai_weight = {
 		factor = 5
@@ -463,7 +464,8 @@ ap_ngm_empire_joint_chiefs_of_staff = {
 		country_starbase_capacity_add = 10
 		starbase_defense_platform_capacity_add = 50
 		country_naval_cap_add = 30
-		country_command_limit_add = 10
+		# country_command_limit_add = 10
+		command_limit_add = 10
 		army_morale = 0.2
 	}
 	ai_weight = {
@@ -740,7 +742,9 @@ ap_ngm_relation_old_empire = {
 	possible = {
 		num_ascension_perks >= 5
 	}
-	custom_tooltip = ap_ngm_relation_old_empire_effect
+	modifier = {
+		custom_tooltip = ap_ngm_relation_old_empire_effect
+	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
 	# 変えておいて
 	ai_weight = {
@@ -846,5 +850,145 @@ ap_ngm_farm_farm = {
 			factor = 10
 			num_ascension_perks >= 2
 		}
+	}
+}
+
+# 起源アセンション名		条件	効果	説明
+# 1	銀河のレコンギスタ galactic_reconguista	不死鳥の帝国である	"帝国補正:老いた軍事ドクトリンを削除 艦隊建造速度+50%"	軍事的な再建により銀河は再統一される
+ap_ngm_galactic_reconguista = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_galactic_reconguista
+		}
+		has_origin = origin_ngm_phenix
+	}
+	possible = {
+		num_ascension_perks >= 4
+	}
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.5
+	}
+	on_enabled = {
+		remove_modifier = origin_ngm_phenix_5_modifier
+		custom_tooltip = ap_ngm_galactic_reconguista_effect
+		
+	}
+	# アセンションパークの獲得数が3個以上なら取得しやすくしている
+	# 変えておいて
+	ai_weight = {
+		factor = 100
+	}
+}
+
+# 2	灰の中からの再誕 rebirth_from_the_ashes	不死鳥の帝国である	"帝国補正:古代の研究律を削除 テラフォーミングコスト-50%"	技術的な再建は偉大なる国家として歩みを進めることを主張する
+ap_ngm_rebirth_from_the_ashes = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_rebirth_from_the_ashes
+		}
+		has_origin = origin_ngm_phenix
+	}
+	possible = {
+		has_ascension_perk = ap_ngm_galactic_reconguista
+		num_ascension_perks >= 4
+	}
+	modifier = {
+		terraforming_cost_mult = -0.5
+	}
+	on_enabled = {
+		remove_modifier = origin_ngm_phenix_6_modifier
+		custom_tooltip = ap_ngm_rebirth_from_the_ashes_effect
+	}
+	# アセンションパークの獲得数が3個以上なら取得しやすくしている
+	ai_weight = {
+		factor = 100
+	}
+}
+
+# 3	外への歩み	outward_steps 不死鳥の帝国である	"帝国補正:無気力な省庁を削除 外交発言力+50%"	拡張の再開は我々にとって必要なのだ
+ap_ngm_outward_steps = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_outward_steps
+		}
+		has_origin = origin_ngm_phenix
+	}
+	possible = {
+		has_ascension_perk = ap_ngm_galactic_reconguista
+		has_ascension_perk = ap_ngm_rebirth_from_the_ashes
+		num_ascension_perks >= 4
+	}
+	modifier = {
+		diplo_weight_mult = 0.5
+	}
+	on_enabled = {
+		remove_modifier = origin_ngm_phenix_7_modifier
+		custom_tooltip = ap_ngm_outward_steps_effect
+		
+	}
+	# アセンションパークの獲得数が3個以上なら取得しやすくしている
+	ai_weight = {
+		factor = 100
+	}
+}
+
+# 4	帝国の威風	imperial_majesty 不死鳥の帝国である	"帝国補正:無作法な廷臣を削除 クローク探知強度+5"	外交的再建により、我が国は一層の飛躍を始める
+ap_ngm_imperial_majesty = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_imperial_majesty
+		}
+		has_origin = origin_ngm_phenix
+	}
+	possible = {
+		has_ascension_perk = ap_ngm_galactic_reconguista
+		has_ascension_perk = ap_ngm_rebirth_from_the_ashes
+		has_ascension_perk = ap_ngm_outward_steps
+		num_ascension_perks >= 4
+	}
+	modifier = {
+		ship_cloaking_detection_add = 5
+	}
+	on_enabled = {
+		remove_modifier = origin_ngm_phenix_8_modifier
+		custom_tooltip = ap_ngm_imperial_majesty_effect
+		
+	}
+	# アセンションパークの獲得数が3個以上なら取得しやすくしている
+	ai_weight = {
+		factor = 100
+	}
+}
+
+# 5	聖天の存在 existence_of_a_saint	不死鳥の帝国である、銀河のレコンギスタ、灰の中からの再誕、外への歩み、帝国の威風を取得済み	"帝国補正:失われしインフラ技術を削除 巨大構造物同時建造数+5"	我々は至天の存在たる
+ap_ngm_existence_of_a_saint = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_existence_of_a_saint
+		}
+		has_ascension_perk = ap_ngm_galactic_reconguista
+		has_ascension_perk = ap_ngm_rebirth_from_the_ashes
+		has_ascension_perk = ap_ngm_outward_steps
+		has_ascension_perk = ap_ngm_imperial_majesty
+		has_origin = origin_ngm_phenix
+	}
+	possible = {
+		has_ascension_perk = ap_ngm_galactic_reconguista
+		has_ascension_perk = ap_ngm_rebirth_from_the_ashes
+		has_ascension_perk = ap_ngm_outward_steps
+		has_ascension_perk = ap_ngm_imperial_majesty
+		num_ascension_perks >= 4
+	}
+	modifier = {
+		country_megastructure_build_cap_add = 5
+	}
+	on_enabled = {
+		remove_modifier = origin_ngm_phenix_9_modifier
+		custom_tooltip = ap_ngm_existence_of_a_saint_effect
+		
+	}
+	# アセンションパークの獲得数が3個以上なら取得しやすくしている
+	ai_weight = {
+		factor = 100
 	}
 }

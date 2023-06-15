@@ -676,6 +676,11 @@ guiTypes = {
 				size = { width = 310 height = 520 }
 				verticalScrollbar = "right_vertical_slider"
 			
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+					position = { x = 0 y = 0 }
+				}
 				gridboxType = {
 					name = "unlock_council_list_box" # parent of unlock_council_list_entry
 					size = { width = 275 height = 1600 }

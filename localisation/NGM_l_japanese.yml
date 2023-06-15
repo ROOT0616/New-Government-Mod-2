@@ -201,6 +201,12 @@
  ngm_naval_fleet:0 "海軍艦隊"
  ngm_naval_fleet_desc:0 "惑星を防衛する艦船や艦艇"
 
+ ngm_imperial_guard:0 "帝国近衛軍"
+ ngm_imperial_guard_desc:0 "帝国を守ることを誓ったエリート軍団"
+
+ ngm_imperiallocal_army:0 "帝国地方軍"
+ ngm_imperiallocal_army_desc:0 "帝国を守ることを誓った軍人"
+
 #######################
 #####    志向    ######
 #######################
@@ -266,7 +272,7 @@
 #######################
 
  origin_ngm_buffer_state:0 "律儀な古代の緩衝国家"
- origin_ngm_buffer_state_desc:0 "この国が位置する星系はその豊かな立地ゆえに古代においても戦略重要地として奪い合いの戦争が繰り広げられていました。\n古代の国家はこの星系に極々小さな独立緩衝国を築き上げ、統治させることで戦争の危機を脱しました。そうして出来上がった国家は貿易的利益と強力な国際発言力の代償に小さな国土と限られた原料生産を強いられている。\n古代の国家群が滅びた後でも、この国はその伝統を数少ない継承要素として維持しているのである。"
+ origin_ngm_buffer_state_desc:0 "この国が位置する星系はその豊かな立地ゆえに古代においても戦略重要地として奪い合いの戦争が繰り広げられていました。\n古代の国家はこの星系に極々小さな独立緩衝国を築き上げ、統治させることで戦争の危機を脱しました。そうして出来上がった国家は貿易的利益と強力な国際発言力の代償に小さな国土と限られた原料生産を強いられている。\n古代の国家群が滅びた後でも、この国はその伝統を数少ない継承要素として維持しているのである。\n\n§Rこの起源をは非常に困難である§!"
  origin_tooltip_ngm_buffer_state_effects:0 "-非常に豊かなチョークポイントに位置する星系に生成される。\n-開始時に遺物§Y『古代の盟約』§!を取得する。\n-拡張に関して極めて大きな制約を課せられる。\n-市場手数料§G-10%§!、Pop成長率§G+100%§!、\n-特殊な種族特性を取得する。\n\n初期建築物§Y「永久の宮殿」§!\n種族特性§Y「古代からの商人」§!\n"
 
  origin_ngm_escape_to_the_past:0 "過去への逃走"
@@ -276,6 +282,10 @@
  origin_ngm_galactic_empire_aquarium:0 "銀河帝国アクアリウム"
  origin_ngm_galactic_empire_aquarium_desc:0 "この国家は古き良き銀河帝国のアミューズメントパークとして存在した。その娯楽性から各国から攻撃の対象とならなかった。しかし、それ故に緩やかな衰退を遂げていっている。\nついにこのままではいけないことに気が付き銀河社会に恐る恐る足を踏み入れたが、かつてあったあらゆる知識は失われており、拡張する勇気は持ちえなかったのである。\nしかし、豊かなアミューズメントパークは健在である。\n§Rこの起源を選ぶ国が2カ国以上あるとバグります。§!"
  origin_tooltip_ngm_galactic_empire_aquarium:0 "銀河の外延部に存在する特殊な星系群と首都惑星から開始。\n\n拡張に関して極めて大きな制約を課せられる。\n\n特殊な建築物を建造可能\n\n"
+
+ origin_ngm_phenix:0 "黄昏の帝国"
+ origin_ngm_phenix_desc:0 "この国はかつての覇権国家であった。数多くの敵を打ち倒し、数々の困難を乗り越えた大帝国であった。そう、「であった」のだ。\n\n§Rこの起源をは非常に困難である§!"
+ origin_tooltip_ngm_phenix:0 "技術、生産力、人口、に§G大幅な強化§!が入った状態で開始。\n企業帝国の属国を所有した状態で開始。\n拡張、外交、戦争、内政に§Y大幅な制限§!がかかった状態で開始。\n §G伝統やアセンションを進めていくと......§!"
 
 #######################
 #####    国是    ######
@@ -1455,6 +1465,45 @@
  building_ngm_advanced_research_institutes:0 "高度研究機関"
  building_ngm_advanced_research_institutes_desc:0 "通常では考えられないほどの最先端研究を行う国立研究所"
 
+ building_ngm_Phe_Palace:0 "帝国宮殿"
+ building_ngm_Phe_Palace_desc:0 "かつての銀河帝国の首都を象徴する、美しく美麗な宮殿"
+
+ building_ngm_Phe_Court:0 "帝国大審院"
+ building_ngm_Phe_Court_desc:0 "銀河規模の帝国を統括し、法執行を行う行政機構"
+
+ building_ngm_Phe_Crest:0 "帝国紋章院"
+ building_ngm_Phe_Crest_desc:0 "かつての帝国から永遠に続く栄光の殿堂"
+
+ building_ngm_Phe_Central_school:0 "帝国中央学院"
+ building_ngm_Phe_Central_school_desc:0 "かつて銀河中の知識を集約して発展させた学術研究機関"
+
+ building_ngm_Phe_Spaceport:0 "帝立宇宙港"
+ building_ngm_Phe_Spaceport_desc:0 "かつて銀河中の交易を集約した栄光ある宇宙港"
+
+ building_ngm_Phe_HQ:0 "帝国軍総司令部"
+ building_ngm_Phe_HQ_desc:0 "銀河中を轟かした帝国軍を統括する最高軍事機関"
+
+ building_ngm_Phe_S_Palace:0 "帝国離宮"
+ building_ngm_Phe_S_Palace_desc:0 "帝国の地方都市に存在する美しく機能的な宮殿"
+
+ building_ngm_Phe_Factory:0 "帝国工場"
+ building_ngm_Phe_Factory_desc:0 "失われた技術で稼働を続ける驚異的な工場"
+
+ building_ngm_Phe_Purification:0 "帝国精製所"
+ building_ngm_Phe_Purification_desc:0 "失われた技術で稼働を続ける驚異的な精製所"
+
+ building_ngm_Phe_Park:0 "帝国庭園"
+ building_ngm_Phe_Park_desc:0 "全銀河の生態系を集約した美しくも儚い庭園"
+
+ building_ngm_Phe_orbit_elv:0 "帝国軌道エレベータ"
+ building_ngm_Phe_orbit_elv_desc:0 "惑星の交易を集約した機能的なエレベータ"
+
+ building_ngm_Phe_University:0 "帝国大学"
+ building_ngm_Phe_University_desc:0 "銀河でも有数の研究力を有していた教育機関"
+
+ building_ngm_Phe_Fort:0 "帝国要塞"
+ building_ngm_Phe_Fort_desc:0 "かつての危機をも退けた大規模な要塞"
+
 #######################
 #####    区域    ######
 #######################
@@ -1733,6 +1782,33 @@
 
  leader_trait_ngm_general_veteran:0 "叩き上げ"
  leader_trait_ngm_general_veteran_desc:0 "この将軍は自らの能力によってこの地位に上り詰めた"
+
+##########################
+#####    国家特性    ######
+##########################
+
+ origin_ngm_phenix_1_modifier:0 "艦隊伝統の堅持"
+ origin_ngm_phenix_1_modifier_desc:0 "艦隊運用には古来よりの方法がある"
+ origin_ngm_phenix_2_modifier:0 "古びたデータバンク"
+ origin_ngm_phenix_2_modifier_desc:0 "研究に使うデータバンクには苔が生えている"
+ origin_ngm_phenix_3_modifier:0 "傲慢なる老臣"
+ origin_ngm_phenix_3_modifier_desc:0 "帝国の老臣は傲慢で他者を見下している"
+ origin_ngm_phenix_4_modifier:0 "怠惰なる民衆"
+ origin_ngm_phenix_4_modifier_desc:0 "民衆は自己利益を常に追求している"
+ origin_ngm_phenix_5_modifier:0 "老いた軍事ドクトリン"
+ origin_ngm_phenix_5_modifier_desc:0 "この帝国のドクトリンはさび付いている"
+ origin_ngm_phenix_6_modifier:0 "古代の研究律"
+ origin_ngm_phenix_6_modifier_desc:0 "この帝国の研究方針は極めて古い"
+ origin_ngm_phenix_7_modifier:0 "無気力な省庁"
+ origin_ngm_phenix_7_modifier_desc:0 "この帝国の省庁は非効率かつ不安定な動きをしている。"
+ origin_ngm_phenix_8_modifier:0 "無作法な廷臣"
+ origin_ngm_phenix_8_modifier_desc:0 "この帝国の高級官僚は無礼だ"
+ origin_ngm_phenix_9_modifier:0 "失われしインフラ技術"
+ origin_ngm_phenix_9_modifier_desc:0 "この帝国の偉大なる大規模建築は再現不可能だ"
+ origin_ngm_phenix_10_modifier:0 "黄昏の帝国"
+ origin_ngm_phenix_10_modifier_desc:0 "帝国は衰退しました"
+ origin_ngm_phenix_11_modifier:0 "不死鳥の帝国"
+ origin_ngm_phenix_11_modifier_desc:0 "我々は蘇る！"
 
 ##########################
 #####    惑星特性    ######
@@ -2776,6 +2852,9 @@
  r_ngm_geid:0 "銀河皇帝勅許第7216号「帝立遊園領邦の認可」"
  r_ngm_geid_desc:0 "全銀河の統治者にして天界を統べる法秩序の体現者。神聖にして不可侵である銀河帝国第27代皇帝である余、ポチャヌルス8世は銀河帝国全体の福祉のために帝立遊園の設立を許す。帝立遊園の長は世襲とし、王と同格の公爵位を授け、余の宮廷において式部官長の地位を授ける。なお、領邦としての帝立遊園はその自律的権利を制約される。制約内容は....."
 
+ r_ngm_imperial_chronicle:0 "インペリアル・クロニクル"
+ r_ngm_imperial_chronicle_desc:0 "この帝国の物語は実話であり、主人公は我々であったのだ"
+
 ##########################
 #####    戦争目標    ######
 ##########################
@@ -3511,6 +3590,21 @@
  ap_ngm_farm_farm:0 "マンデルブロー集合における平面展開定理を利用した大規模農業"
  ap_ngm_farm_farm_desc:0 "とある博士が提唱した理論により農業は飛躍的な向上を見た"
 
+ ap_ngm_galactic_reconguista:0 "銀河のレコンギスタ"
+ ap_ngm_galactic_reconguista_desc:0 "軍事的な再建により銀河は再統一される"
+
+ ap_ngm_rebirth_from_the_ashes:0 "灰の中からの再誕"
+ ap_ngm_rebirth_from_the_ashes_desc:0 "技術的な再建は偉大なる国家として歩みを進めることを主張する"
+
+ ap_ngm_outward_steps:0 "外への歩み"
+ ap_ngm_outward_steps_desc:0 "拡張の再開は我々にとって必要なのだ"
+
+ ap_ngm_imperial_majesty:0 "帝国の威風"
+ ap_ngm_imperial_majesty_desc:0 "外交的再建により、我が国は一層の飛躍を始める"
+
+ ap_ngm_existence_of_a_saint:0 "聖天の存在"
+ ap_ngm_existence_of_a_saint_desc:0 "我々は至天の存在たる"
+
 #######################
 #####    伝統    ######
 #######################
@@ -4075,6 +4169,82 @@
  tr_ngm_hereditary_nation:0 "世襲国家"
  tr_ngm_hereditary_nation_delayed:0 "家に属するのは国も例外ではない"
 
+ tradition_ngm_brawny:0 "魁偉"
+ tradition_ngm_brawny_desc:0 "世界へと歩む一歩は軍靴によるものだ"
+ tr_ngm_brawny_adopt:0 "魁偉の伝統"
+ tr_ngm_brawny_finish:0 "魁偉の伝統の完成"
+ tr_ngm_brawny_UTC:0 "超時空電探"
+ tr_ngm_brawny_UTC_delayed:0 "かつて我が国で使われた時空を超越した探知は的確かつ超越的な射程を実現させる"
+ tr_ngm_brawny_SPBT:0 "一点突破戦術"
+ tr_ngm_brawny_SPBT_delayed:0 "かつて我が国が得意とした一点突破戦術は、現在でも各国の脅威になりうる"
+ tr_ngm_brawny_predictive_aversion:0 "予知的回避"
+ tr_ngm_brawny_predictive_aversion_delayed:0 "艦長や航宙士の直感的判断とAIの判断を利用して予知的な回避を生み出す"
+ tr_ngm_brawny_Shinkos_reproduction:0 "神鋼の再生産"
+ tr_ngm_brawny_Shinkos_reproduction_delayed:0 "効率的かつ低コストの鋼材生産を再開することで艦隊の価格を低減させることができる"
+ tr_ngm_brawny_reopening_of_the_imperial_shipyard:0 "帝国造船所の再稼働"
+ tr_ngm_brawny_reopening_of_the_imperial_shipyard_delayed:0 "銀河有数の高効率造船所を再稼働させることで迅速な艦隊建造が可能となる"
+
+ tradition_ngm_elegance:0 "賢雅"
+ tradition_ngm_elegance_desc:0 "古き記憶を呼び起こし、沈滞した社会を再度活性化させるのだ"
+ tr_ngm_elegance_adopt:0 "賢雅の伝統"
+ tr_ngm_elegance_finish:0 "賢雅の伝統の完成"
+ tr_ngm_elegance_BPT:0 "超越物理理論"
+ tr_ngm_elegance_BPT_delayed:0 "卓越した物理理論を活用することで、停滞していた技術研究は再活性化する"
+ tr_ngm_elegance_ICHI:0 "予知心理学"
+ tr_ngm_elegance_ICHI_delayed:0 "集合知としての大衆は心理学的に未来予知の対象となりうる"
+ tr_ngm_elegance_magitek_engineering:0 "マギテック工学"
+ tr_ngm_elegance_magitek_engineering_delayed:0 "優れた工学技術は魔法と見分けがつかない"
+ tr_ngm_elegance_the_way_of_the_new_light:0 "新光の道"
+ tr_ngm_elegance_the_way_of_the_new_light_delayed:0 "新たな道は光により舗装されている"
+ tr_ngm_elegance_overture_to_tomorrow:0 "明日への序曲"
+ tr_ngm_elegance_overture_to_tomorrow_delayed:0 "明日へと歩む意思は未来への足掛かりだ"
+
+ tradition_ngm_Gaishi:0 "蓋世"
+ tradition_ngm_Gaishi_desc:0 "自分の足で歩き、新たなる未来を勝ち取る準備は徐々に進められている"
+ tr_ngm_Gaishi_adopt:0 "蓋世の伝統"
+ tr_ngm_Gaishi_finish:0 "蓋世の伝統の完成"
+ tr_ngm_Gaishi_true_power_projection:0 "真の戦力投射"
+ tr_ngm_Gaishi_true_power_projection_delayed:0 "軍事力とは戦うためにあるのではなく、戦わないためにあるのだ"
+ tr_ngm_Gaishi_the_true_value_of_economic_power:0 "経済力の真価"
+ tr_ngm_Gaishi_the_true_value_of_economic_power_delayed:0 "経済力は人々の繁栄や幸福のためだけではなく、発言力をも増強させることもできる"
+ tr_ngm_Gaishi_guidance_for_the_wise:0 "知恵者の指導"
+ tr_ngm_Gaishi_guidance_for_the_wise_delayed:0 "真の知恵ある者こそが人々を教導するのだ"
+ tr_ngm_Gaishi_galactic_power:0 "銀河の力"
+ tr_ngm_Gaishi_galactic_power_delayed:0 "銀河に敷衍する帝国の力こそは卓越へと導かれる"
+ tr_ngm_Gaishi_insist_on_ones_own_ideas:0 "声高なる主張"
+ tr_ngm_Gaishi_insist_on_ones_own_ideas_delayed:0 "我の演説を聞け！"
+
+ tradition_ngm_misdirection:0 "赫焉"
+ tradition_ngm_misdirection_desc:0 "民衆の活力を呼び起こし、永遠の繁栄へと歩を進めるのだ"
+ tr_ngm_misdirection_adopt:0 "赫焉の伝統"
+ tr_ngm_misdirection_finish:0 "赫焉の伝統の完成"
+ tr_ngm_misdirection_idea_commonly_accepted:0 "大衆の了簡"
+ tr_ngm_misdirection_idea_commonly_accepted_delayed:0 "大衆の覚醒は社会を再活性化させる"
+ tr_ngm_misdirection_dignity_and_moderation:0 "品格と節制"
+ tr_ngm_misdirection_dignity_and_moderation_delayed:0 "物質的な豊かさによる幸福だけではなく、精神的な豊かさも重要視される"
+ tr_ngm_misdirection_blessing_of_the_stars:0 "星々の祝福"
+ tr_ngm_misdirection_blessing_of_the_stars_delayed:0 "悠久なる繁栄を！　銀河に永遠の祝福を！"
+ tr_ngm_misdirection_blessing_of_life:0 "生命の祝福"
+ tr_ngm_misdirection_blessing_of_life_delayed:0 "生命に祝福を！　輝きを民へ！"
+ tr_ngm_misdirection_blessings_of_creation:0 "創造の祝福"
+ tr_ngm_misdirection_blessings_of_creation_delayed:0 "創造と活力を！　未来への足掛かりを！"
+
+
+ tradition_ngm_gods_majesty:0 "神威"
+ tradition_ngm_gods_majesty_desc:0 "我こそは帝国である"
+ tr_ngm_gods_majesty_adopt:0 "神威の伝統"
+ tr_ngm_gods_majesty_finish:0 "神威の伝統の完成"
+ tr_ngm_gods_majesty_preface:0 "序章"
+ tr_ngm_gods_majesty_preface_delayed:0 "我が国もかつては地を這いつくばる赤ん坊であった"
+ tr_ngm_gods_majesty_beginning:0 "起"
+ tr_ngm_gods_majesty_preface_delayed:0 "一歩一歩の歩みは、革新を生んだ"
+ tr_ngm_gods_majesty_second:0 "承"
+ tr_ngm_gods_majesty_preface_delayed:0 "やがて革新は停滞へと代わり、我々は長い眠りについた"
+ tr_ngm_gods_majesty_abruptly:0 "転"
+ tr_ngm_gods_majesty_preface_delayed:0 "そして、ようやく目を覚ましたのだ"
+ tr_ngm_gods_majesty_a_new_chapter:0 "新たなる序章"
+ tr_ngm_gods_majesty_preface_delayed:0 "さあ、始めようではないか"
+
 #########################
 ### COUNCILOR STRINGS ###
 #########################
@@ -4425,7 +4595,7 @@
 
  councilor_ngm_armed_pacifism:0 "国境警備隊長"
  councilor_ngm_armed_pacifism_female:0 "$councilor_ngm_armed_pacifism$"
- councilor_ngm_armed_pacifism_desc:0 "国境を警備し、国を守ることを主任務とした軍人
+ councilor_ngm_armed_pacifism_desc:0 "国境を警備し、国を守ることを主任務とした軍人"
 
  councilor_ngm_active_pacifist:0 "平和軍司令官"
  councilor_ngm_active_pacifist_female:0 "$councilor_ngm_active_pacifist$"

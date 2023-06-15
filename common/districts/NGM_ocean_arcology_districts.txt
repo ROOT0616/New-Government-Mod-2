@@ -1,673 +1,673 @@
-#アクア＝ヴィラアーコロジー          (建造費:鉱物300)(維持費:エネルギー5)    (住居+10、快適度+10、事務員+2、エグゼクティブキャスト+2) 
-ngm_district_arcology_marine_villa = {
-	base_buildtime = 600
-	is_capped_by_modifier = no
-	exempt_from_ai_planet_specialization = yes
-	show_on_uncolonized = {
-		uses_district_set = ngm_ocean_district
-	}
-	potential = {
-		owner = {
-			has_origin = origin_ngm_galactic_empire_aquarium
-		}
-		uses_district_set = ngm_ocean_district
-	}
-	conversion_ratio = 1
-	convert_to = {
-		district_city
-		district_nexus
-		district_hive
-	}
-	resources = {
-		category = planet_districts
-		cost = {
-			minerals = 300
-		}
-		upkeep = {
-			energy = 5
-		}
-	}
-	planet_modifier = {
-		planet_housing_add = 10
-		planet_amenities_add = 10
-		job_clerk_add = 2
-		job_ngm_executive_cast_add = 2
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_public_works
-			}
-		}
-		modifier = {
-			planet_housing_add = 10
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_1
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_2
-				NOT = {
-					has_valid_civic = civic_agrarian_idyll
-				}
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_interstellar_franchising
-			}
-		}
-		modifier = {
-			job_clerk_add = 5
-		}
-	}
-}
+# #アクア＝ヴィラアーコロジー          (建造費:鉱物300)(維持費:エネルギー5)    (住居+10、快適度+10、事務員+2、エグゼクティブキャスト+2) 
+# ngm_district_arcology_marine_villa = {
+# 	base_buildtime = 600
+# 	is_capped_by_modifier = no
+# 	exempt_from_ai_planet_specialization = yes
+# 	show_on_uncolonized = {
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	potential = {
+# 		owner = {
+# 			has_origin = origin_ngm_galactic_empire_aquarium
+# 		}
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	conversion_ratio = 1
+# 	convert_to = {
+# 		district_city
+# 		district_nexus
+# 		district_hive
+# 	}
+# 	resources = {
+# 		category = planet_districts
+# 		cost = {
+# 			minerals = 300
+# 		}
+# 		upkeep = {
+# 			energy = 5
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		planet_housing_add = 10
+# 		planet_amenities_add = 10
+# 		job_clerk_add = 2
+# 		job_ngm_executive_cast_add = 2
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_public_works
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 10
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_1
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_2
+# 				NOT = {
+# 					has_valid_civic = civic_agrarian_idyll
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_interstellar_franchising
+# 			}
+# 		}
+# 		modifier = {
+# 			job_clerk_add = 5
+# 		}
+# 	}
+# }
 
-#ウォーター＝マンションアーコロジー  (建造費:鉱物300)(維持費:エネルギー5)    (住居+20、快適度+5、事務員+5、キャスト+2) 
-ngm_district_arcology_marine_housing = {
-	base_buildtime = 600
-	is_capped_by_modifier = no
-	exempt_from_ai_planet_specialization = yes
-	show_on_uncolonized = {
-		uses_district_set = ngm_ocean_district
-	}
-	potential = {
-		owner = {
-			has_origin = origin_ngm_galactic_empire_aquarium
-		}
-		uses_district_set = ngm_ocean_district
-	}
-	conversion_ratio = 1
-	convert_to = {
-		district_city
-		district_nexus
-		district_hive
-	}
-	resources = {
-		category = planet_districts
-		cost = {
-			minerals = 300
-		}
-		upkeep = {
-			energy = 5
-		}
-	}
-	planet_modifier = {
-		planet_housing_add = 20
-		job_ngm_cast_add = 2
-		job_clerk_add = 5
-		planet_amenities_add = 5
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_public_works
-			}
-		}
-		modifier = {
-			planet_housing_add = 10
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_1
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_2
-				NOT = {
-					has_valid_civic = civic_agrarian_idyll
-				}
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_interstellar_franchising
-			}
-		}
-		modifier = {
-			job_clerk_add = 5
-		}
-	}
-}
+# #ウォーター＝マンションアーコロジー  (建造費:鉱物300)(維持費:エネルギー5)    (住居+20、快適度+5、事務員+5、キャスト+2) 
+# ngm_district_arcology_marine_housing = {
+# 	base_buildtime = 600
+# 	is_capped_by_modifier = no
+# 	exempt_from_ai_planet_specialization = yes
+# 	show_on_uncolonized = {
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	potential = {
+# 		owner = {
+# 			has_origin = origin_ngm_galactic_empire_aquarium
+# 		}
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	conversion_ratio = 1
+# 	convert_to = {
+# 		district_city
+# 		district_nexus
+# 		district_hive
+# 	}
+# 	resources = {
+# 		category = planet_districts
+# 		cost = {
+# 			minerals = 300
+# 		}
+# 		upkeep = {
+# 			energy = 5
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		planet_housing_add = 20
+# 		job_ngm_cast_add = 2
+# 		job_clerk_add = 5
+# 		planet_amenities_add = 5
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_public_works
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 10
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_1
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_2
+# 				NOT = {
+# 					has_valid_civic = civic_agrarian_idyll
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_interstellar_franchising
+# 			}
+# 		}
+# 		modifier = {
+# 			job_clerk_add = 5
+# 		}
+# 	}
+# }
 
-#管理機構アーコロジー            	(建造費:鉱物300)(維持費:エネルギー5)    (住居+5、官僚+2、海軍将校+1、エグゼクティブキャスト+1、キャスト+3)        (この娯楽空間を管理し、外敵から防衛するための真面目な職員が働く数少ない広いオフィス群)
-ngm_district_arcology_marine_administrative_Organization = {
-	base_buildtime = 600
-	is_capped_by_modifier = no
-	exempt_from_ai_planet_specialization = yes
-	show_on_uncolonized = {
-		uses_district_set = ngm_ocean_district
-	}
-	potential = {
-		owner = {
-			has_origin = origin_ngm_galactic_empire_aquarium
-		}
-		uses_district_set = ngm_ocean_district
-	}
-	conversion_ratio = 1
-	convert_to = {
-		district_city
-		district_nexus
-		district_hive
-	}
-	resources = {
-		category = planet_districts
-		cost = {
-			minerals = 300
-		}
-		upkeep = {
-			energy = 5
-		}
-	}
-	planet_modifier = {
-		planet_housing_add = 5
-		job_executive_add = 2
-		job_ngm_admiral_add = 1
-		job_ngm_executive_cast_add = 1
-		job_ngm_cast_add = 3
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_public_works
-			}
-		}
-		modifier = {
-			planet_housing_add = 10
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_1
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_2
-				NOT = {
-					has_valid_civic = civic_agrarian_idyll
-				}
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_interstellar_franchising
-			}
-		}
-		modifier = {
-			job_clerk_add = 5
-		}
-	}
-}
+# #管理機構アーコロジー            	(建造費:鉱物300)(維持費:エネルギー5)    (住居+5、官僚+2、海軍将校+1、エグゼクティブキャスト+1、キャスト+3)        (この娯楽空間を管理し、外敵から防衛するための真面目な職員が働く数少ない広いオフィス群)
+# ngm_district_arcology_marine_administrative_Organization = {
+# 	base_buildtime = 600
+# 	is_capped_by_modifier = no
+# 	exempt_from_ai_planet_specialization = yes
+# 	show_on_uncolonized = {
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	potential = {
+# 		owner = {
+# 			has_origin = origin_ngm_galactic_empire_aquarium
+# 		}
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	conversion_ratio = 1
+# 	convert_to = {
+# 		district_city
+# 		district_nexus
+# 		district_hive
+# 	}
+# 	resources = {
+# 		category = planet_districts
+# 		cost = {
+# 			minerals = 300
+# 		}
+# 		upkeep = {
+# 			energy = 5
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		planet_housing_add = 5
+# 		job_executive_add = 2
+# 		job_ngm_admiral_add = 1
+# 		job_ngm_executive_cast_add = 1
+# 		job_ngm_cast_add = 3
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_public_works
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 10
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_1
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_2
+# 				NOT = {
+# 					has_valid_civic = civic_agrarian_idyll
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_interstellar_franchising
+# 			}
+# 		}
+# 		modifier = {
+# 			job_clerk_add = 5
+# 		}
+# 	}
+# }
 
-#健康医療アーコロジー            	(建造費:鉱物400)(維持費:エネルギー5)    (住居+10、医療従事者+2、研究者+1、エグゼクティブキャスト+1、キャスト+2) 
-ngm_district_arcology_marine_health_care = {
-	base_buildtime = 600
-	is_capped_by_modifier = no
-	exempt_from_ai_planet_specialization = yes
-	show_on_uncolonized = {
-		uses_district_set = ngm_ocean_district
-	}
-	potential = {
-		owner = {
-			has_origin = origin_ngm_galactic_empire_aquarium
-		}
-		uses_district_set = ngm_ocean_district
-	}
-	conversion_ratio = 1
-	convert_to = {
-		district_city
-		district_nexus
-		district_hive
-	}
-	resources = {
-		category = planet_districts
-		cost = {
-			minerals = 400
-		}
-		upkeep = {
-			energy = 5
-		}
-	}
-	planet_modifier = {
-		planet_housing_add = 10
-		job_healthcare_add = 2
-		job_researcher_add = 1
-		job_ngm_executive_cast_add = 1
-		job_ngm_cast_add = 2
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_public_works
-			}
-		}
-		modifier = {
-			planet_housing_add = 10
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_1
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_2
-				NOT = {
-					has_valid_civic = civic_agrarian_idyll
-				}
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_interstellar_franchising
-			}
-		}
-		modifier = {
-			job_clerk_add = 5
-		}
-	}
-}
+# #健康医療アーコロジー            	(建造費:鉱物400)(維持費:エネルギー5)    (住居+10、医療従事者+2、研究者+1、エグゼクティブキャスト+1、キャスト+2) 
+# ngm_district_arcology_marine_health_care = {
+# 	base_buildtime = 600
+# 	is_capped_by_modifier = no
+# 	exempt_from_ai_planet_specialization = yes
+# 	show_on_uncolonized = {
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	potential = {
+# 		owner = {
+# 			has_origin = origin_ngm_galactic_empire_aquarium
+# 		}
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	conversion_ratio = 1
+# 	convert_to = {
+# 		district_city
+# 		district_nexus
+# 		district_hive
+# 	}
+# 	resources = {
+# 		category = planet_districts
+# 		cost = {
+# 			minerals = 400
+# 		}
+# 		upkeep = {
+# 			energy = 5
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		planet_housing_add = 10
+# 		job_healthcare_add = 2
+# 		job_researcher_add = 1
+# 		job_ngm_executive_cast_add = 1
+# 		job_ngm_cast_add = 2
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_public_works
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 10
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_1
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_2
+# 				NOT = {
+# 					has_valid_civic = civic_agrarian_idyll
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_interstellar_franchising
+# 			}
+# 		}
+# 		modifier = {
+# 			job_clerk_add = 5
+# 		}
+# 	}
+# }
 
-#水遊庭園アーコロジー            	(建造費:鉱物300)(維持費:エネルギー5)    (住居+10、庭園管理者+3、エグゼクティブキャスト+1、キャスト+3)            (アクアリウムを維持管理し、解説と研究を行う機関と観光客へ広大な空間の展示観覧に費やされる空間)
-ngm_district_arcology_marine_water_park = {
-	base_buildtime = 600
-	is_capped_by_modifier = no
-	exempt_from_ai_planet_specialization = yes
-	show_on_uncolonized = {
-		uses_district_set = ngm_ocean_district
-	}
-	potential = {
-		owner = {
-			has_origin = origin_ngm_galactic_empire_aquarium
-		}
-		uses_district_set = ngm_ocean_district
-	}
-	conversion_ratio = 1
-	convert_to = {
-		district_city
-		district_nexus
-		district_hive
-	}
-	resources = {
-		category = planet_districts
-		cost = {
-			minerals = 300
-		}
-		upkeep = {
-			energy = 5
-		}
-	}
-	planet_modifier = {
-		planet_housing_add = 10
-		job_ngm_gardener_add = 3
-		job_ngm_executive_cast_add = 1
-		job_ngm_cast_add = 3
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_public_works
-			}
-		}
-		modifier = {
-			planet_housing_add = 10
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_1
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_2
-				NOT = {
-					has_valid_civic = civic_agrarian_idyll
-				}
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_interstellar_franchising
-			}
-		}
-		modifier = {
-			job_clerk_add = 5
-		}
-	}
-}
+# #水遊庭園アーコロジー            	(建造費:鉱物300)(維持費:エネルギー5)    (住居+10、庭園管理者+3、エグゼクティブキャスト+1、キャスト+3)            (アクアリウムを維持管理し、解説と研究を行う機関と観光客へ広大な空間の展示観覧に費やされる空間)
+# ngm_district_arcology_marine_water_park = {
+# 	base_buildtime = 600
+# 	is_capped_by_modifier = no
+# 	exempt_from_ai_planet_specialization = yes
+# 	show_on_uncolonized = {
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	potential = {
+# 		owner = {
+# 			has_origin = origin_ngm_galactic_empire_aquarium
+# 		}
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	conversion_ratio = 1
+# 	convert_to = {
+# 		district_city
+# 		district_nexus
+# 		district_hive
+# 	}
+# 	resources = {
+# 		category = planet_districts
+# 		cost = {
+# 			minerals = 300
+# 		}
+# 		upkeep = {
+# 			energy = 5
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		planet_housing_add = 10
+# 		job_ngm_gardener_add = 3
+# 		job_ngm_executive_cast_add = 1
+# 		job_ngm_cast_add = 3
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_public_works
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 10
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_1
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_2
+# 				NOT = {
+# 					has_valid_civic = civic_agrarian_idyll
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_interstellar_franchising
+# 			}
+# 		}
+# 		modifier = {
+# 			job_clerk_add = 5
+# 		}
+# 	}
+# }
 
-#交易歓楽アーコロジー            	(建造費:鉱物300)(維持費:エネルギー5)    (住居+20、エンターテイナー+1、エグゼクティブキャスト+1、事務員+3、キャスト+1)    (惑星における商取引の中心地で、観光客や住民への物流や物品供給を行うための商業地帯)
-ngm_district_arcology_marine_drunkness_street = {
-	base_buildtime = 600
-	is_capped_by_modifier = no
-	exempt_from_ai_planet_specialization = yes
-	show_on_uncolonized = {
-		uses_district_set = ngm_ocean_district
-	}
-	potential = {
-		owner = {
-			has_origin = origin_ngm_galactic_empire_aquarium
-		}
-		uses_district_set = ngm_ocean_district
-	}
-	conversion_ratio = 1
-	convert_to = {
-		district_city
-		district_nexus
-		district_hive
-	}
-	resources = {
-		category = planet_districts
-		cost = {
-			minerals = 300
-		}
-		upkeep = {
-			energy = 5
-		}
-	}
-	planet_modifier = {
-		planet_housing_add = 20
-		job_entertainer_add = 1
-		job_ngm_executive_cast_add = 1
-		job_clerk_add = 3
-		job_ngm_cast_add = 1
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_public_works
-			}
-		}
-		modifier = {
-			planet_housing_add = 10
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_1
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_2
-				NOT = {
-					has_valid_civic = civic_agrarian_idyll
-				}
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_interstellar_franchising
-			}
-		}
-		modifier = {
-			job_clerk_add = 5
-		}
-	}
-}
+# #交易歓楽アーコロジー            	(建造費:鉱物300)(維持費:エネルギー5)    (住居+20、エンターテイナー+1、エグゼクティブキャスト+1、事務員+3、キャスト+1)    (惑星における商取引の中心地で、観光客や住民への物流や物品供給を行うための商業地帯)
+# ngm_district_arcology_marine_drunkness_street = {
+# 	base_buildtime = 600
+# 	is_capped_by_modifier = no
+# 	exempt_from_ai_planet_specialization = yes
+# 	show_on_uncolonized = {
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	potential = {
+# 		owner = {
+# 			has_origin = origin_ngm_galactic_empire_aquarium
+# 		}
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	conversion_ratio = 1
+# 	convert_to = {
+# 		district_city
+# 		district_nexus
+# 		district_hive
+# 	}
+# 	resources = {
+# 		category = planet_districts
+# 		cost = {
+# 			minerals = 300
+# 		}
+# 		upkeep = {
+# 			energy = 5
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		planet_housing_add = 20
+# 		job_entertainer_add = 1
+# 		job_ngm_executive_cast_add = 1
+# 		job_clerk_add = 3
+# 		job_ngm_cast_add = 1
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_public_works
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 10
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_1
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_2
+# 				NOT = {
+# 					has_valid_civic = civic_agrarian_idyll
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_interstellar_franchising
+# 			}
+# 		}
+# 		modifier = {
+# 			job_clerk_add = 5
+# 		}
+# 	}
+# }
 
-#潮流工学アーコロジー            	(建造費:鉱物300)(維持費:鉱物5)        (住居+5、潮流技師+4、技術者+2)  
-ngm_district_arcology_marine_tidal_laboratory = {
-	base_buildtime = 600
-	is_capped_by_modifier = no
-	exempt_from_ai_planet_specialization = yes
-	show_on_uncolonized = {
-		uses_district_set = ngm_ocean_district
-	}
-	potential = {
-		owner = {
-			has_origin = origin_ngm_galactic_empire_aquarium
-		}
-		uses_district_set = ngm_ocean_district
-	}
-	conversion_ratio = 1
-	convert_to = {
-		district_city
-		district_nexus
-		district_hive
-	}
-	resources = {
-		category = planet_districts
-		cost = {
-			minerals = 300
-		}
-		upkeep = {
-			minerals = 5
-		}
-	}
-	planet_modifier = {
-		planet_housing_add = 5
-		job_ngm_tide_engineer_add = 4
-		job_technician_add = 2
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_public_works
-			}
-		}
-		modifier = {
-			planet_housing_add = 10
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_1
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_2
-				NOT = {
-					has_valid_civic = civic_agrarian_idyll
-				}
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_interstellar_franchising
-			}
-		}
-		modifier = {
-			job_clerk_add = 5
-		}
-	}
-}
+# #潮流工学アーコロジー            	(建造費:鉱物300)(維持費:鉱物5)        (住居+5、潮流技師+4、技術者+2)  
+# ngm_district_arcology_marine_tidal_laboratory = {
+# 	base_buildtime = 600
+# 	is_capped_by_modifier = no
+# 	exempt_from_ai_planet_specialization = yes
+# 	show_on_uncolonized = {
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	potential = {
+# 		owner = {
+# 			has_origin = origin_ngm_galactic_empire_aquarium
+# 		}
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	conversion_ratio = 1
+# 	convert_to = {
+# 		district_city
+# 		district_nexus
+# 		district_hive
+# 	}
+# 	resources = {
+# 		category = planet_districts
+# 		cost = {
+# 			minerals = 300
+# 		}
+# 		upkeep = {
+# 			minerals = 5
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		planet_housing_add = 5
+# 		job_ngm_tide_engineer_add = 4
+# 		job_technician_add = 2
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_public_works
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 10
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_1
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_2
+# 				NOT = {
+# 					has_valid_civic = civic_agrarian_idyll
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_interstellar_franchising
+# 			}
+# 		}
+# 		modifier = {
+# 			job_clerk_add = 5
+# 		}
+# 	}
+# }
 
-#水産研究アーコロジー            	(建造費:鉱物300)(維持費:エネルギー5)    (住居+10、養殖技術者+2、釣り人+1、真珠取り+1) 
-ngm_district_arcology_marine_fisheries_research = {
-	base_buildtime = 600
-	is_capped_by_modifier = no
-	exempt_from_ai_planet_specialization = yes
-	show_on_uncolonized = {
-		uses_district_set = ngm_ocean_district
-	}
-	potential = {
-		owner = {
-			has_origin = origin_ngm_galactic_empire_aquarium
-		}
-		uses_district_set = ngm_ocean_district
-	}
-	conversion_ratio = 1
-	convert_to = {
-		district_city
-		district_nexus
-		district_hive
-	}
-	resources = {
-		category = planet_districts
-		cost = {
-			minerals = 300
-		}
-		upkeep = {
-			energy = 5
-		}
-	}
-	planet_modifier = {
-		planet_housing_add = 5
-		job_pearl_diver_add = 1
-		job_ngm_aquaculture_technician_add = 2
-		job_angler_add = 1
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_public_works
-			}
-		}
-		modifier = {
-			planet_housing_add = 10
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_1
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_technology = tech_housing_2
-				NOT = {
-					has_valid_civic = civic_agrarian_idyll
-				}
-			}
-		}
-		modifier = {
-			planet_housing_add = 4
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_prosperity_interstellar_franchising
-			}
-		}
-		modifier = {
-			job_clerk_add = 5
-		}
-	}
-}
+# #水産研究アーコロジー            	(建造費:鉱物300)(維持費:エネルギー5)    (住居+10、養殖技術者+2、釣り人+1、真珠取り+1) 
+# ngm_district_arcology_marine_fisheries_research = {
+# 	base_buildtime = 600
+# 	is_capped_by_modifier = no
+# 	exempt_from_ai_planet_specialization = yes
+# 	show_on_uncolonized = {
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	potential = {
+# 		owner = {
+# 			has_origin = origin_ngm_galactic_empire_aquarium
+# 		}
+# 		uses_district_set = ngm_ocean_district
+# 	}
+# 	conversion_ratio = 1
+# 	convert_to = {
+# 		district_city
+# 		district_nexus
+# 		district_hive
+# 	}
+# 	resources = {
+# 		category = planet_districts
+# 		cost = {
+# 			minerals = 300
+# 		}
+# 		upkeep = {
+# 			energy = 5
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		planet_housing_add = 5
+# 		job_pearl_diver_add = 1
+# 		job_ngm_aquaculture_technician_add = 2
+# 		job_angler_add = 1
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_public_works
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 10
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_1
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_technology = tech_housing_2
+# 				NOT = {
+# 					has_valid_civic = civic_agrarian_idyll
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			planet_housing_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				has_active_tradition = tr_prosperity_interstellar_franchising
+# 			}
+# 		}
+# 		modifier = {
+# 			job_clerk_add = 5
+# 		}
+# 	}
+# }

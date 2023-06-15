@@ -4,8 +4,9 @@ gft_technology_trade_options_menu = {
 	icon = "GFX_edict_type_policy"
 	potential = {
 		is_ai = no
-		not = {
+		NOR = {
 			has_global_flag = gft_technology_trade_now_global_flag
+			has_modifier = origin_ngm_phenix_6_modifier
 		}
 	}
 	effect = {

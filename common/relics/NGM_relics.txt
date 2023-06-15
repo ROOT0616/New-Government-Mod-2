@@ -23,7 +23,7 @@ r_ngm_ancient_pact = {
 			always = yes
 		}
 		starbase_outpost_alloys_cost_mult = 9999.99
-		country_claim_influence_cost_mult = 10
+		country_claim_influence_cost_mult = 20
 		country_unity_produces_mult = 0.3
 		trade_value_mult = 1
 	}
@@ -66,7 +66,7 @@ r_ngm_ancient_pact = {
 }
 
 # 銀河皇帝勅許第7216号「帝立遊園領邦の認可」
-# パッシブ効果	Pop成長速度+100%、統合力+50%、交易価値+100%、星系基地建設のコスト+999999999%、請求権作成の影響力+1000%
+# パッシブ効果	：Pop成長速度+100%、統合力+50%、交易価値+100%、星系基地建設のコスト+999999999%、請求権作成の影響力+1000%
 # アクティブ効果	：建造物建造コスト-30%、区域建造コスト-30%、巨大構造物建造コスト-10%、市場手数料-5%
 # ★（全銀河の統治者にして天界を統べる法秩序の体現者。神聖にして不可侵である銀河帝国第27代皇帝である余、ポチャヌルス8世は銀河帝国全体の福祉のために帝立遊園の設立を許す。帝立遊園の長には王と同格の公爵位を授け、余の宮廷において式部官長の地位を授ける。なお、領邦としての帝立遊園はその自律的権利を制約される。制約内容は......）
 r_ngm_geid = {
@@ -106,6 +106,62 @@ r_ngm_geid = {
 			add_modifier = {
 				modifier = "relic_activation_cooldown"
 				days = @triumph_duration
+			}
+		}
+	}
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = {
+				has_modifier = relic_activation_cooldown
+			}
+		}
+	}
+}
+
+# インペリアル・クロニクル この帝国の物語は実話であり、主人公は我々であったのだ
+# パッシブ効果	：毎月の忠誠心+10 派閥幸福度+20% 布告:民間船徴発を可能にする
+# アクティブ効果	：統合力+500K 派閥からの統合力収入+50%
+# (アクティブコスト:影響力300)
+# (クールダウン期間:7200)
+r_ngm_imperial_chronicle = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_omnicodex"
+	sound = "relic_activation_the_omnicodex"
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			influence = 300
+		}
+	}
+	ai_weight = {
+		weight = 100
+	}
+	# パッシブ効果	毎月の忠誠心+10 派閥幸福度+20%
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		starbase_outpost_alloys_cost_mult = 9999.99
+		country_claim_influence_cost_mult = 10
+		country_unity_produces_mult = 0.5
+		trade_value_mult = 1
+		pop_growth_speed = 1
+	}
+	score = 10
+	# アクティブ効果	：帝国補正：統合力+500K 派閥からの統合力収入+50%
+	active_effect = {
+		add_modifier = {
+			modifier = "ngm_r_galactic_empire_aquarium"
+			days = 3600
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 7200
 			}
 		}
 	}
