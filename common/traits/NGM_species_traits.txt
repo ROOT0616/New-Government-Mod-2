@@ -2,7 +2,7 @@
 trait_ngm_youth_politics = {
 	cost = 0
 	custom_tooltip = Youth_Politics
-	potential_crossbreeding_chance = 0.1
+	potential_crossbreeding_chance = 0
 	opposites = {
 		"trait_ngm_elder_politics"
 	}
@@ -19,6 +19,11 @@ trait_ngm_youth_politics = {
 	}
 	initial = no
 	randomized = no
+	species_potential_add = {
+		owner = {
+			has_civic = civic_ngm_youth_politics
+		}
+	}
 	species_possible_remove = {
 		always = no
 	}
@@ -33,7 +38,7 @@ trait_ngm_youth_politics = {
 trait_ngm_elder_politics = {
 	cost = 0
 	custom_tooltip = Elder_Politics
-	potential_crossbreeding_chance = 0.1
+	potential_crossbreeding_chance = 0
 	opposites = {
 		"trait_ngm_youth_politics"
 	}
@@ -50,6 +55,11 @@ trait_ngm_elder_politics = {
 	}
 	initial = no
 	randomized = no
+	species_potential_add = {
+		owner = {
+			has_civic = civic_ngm_elder_politics
+		}
+	}
 	species_possible_remove = {
 		always = no
 	}
@@ -1754,14 +1764,18 @@ trait_ngm_spendthrift = {
 trait_ngm_merchant_from_ancient = {
 	cost = 0
 	initial = no
+	randomized = no
 	sorting_priority = 20
+	potential_crossbreeding_chance = 0
+	species_potential_add = {
+		always = no
+	}
 	species_possible_remove = {
 		always = no
 	}
 	species_possible_merge_add = {
 		always = no
 	}
-	potential_crossbreeding_chance = 1
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
