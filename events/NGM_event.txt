@@ -7,7 +7,8 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		federation = {
+		exists = owner.federation
+		owner.federation = {
 			has_federation_perk = NGM_PU_TPP
 		}
 	}
@@ -28,32 +29,34 @@ country_event = {
 #######  バニライベント上書き用イベント ########
 #############################################
 namespace = syndaw
-
 @recent_event_pause = 75
-
 country_event = {
 	id = syndaw.11
 	hide_window = yes
 	is_triggered_only = yes
-
 	immediate = {
 		random_list = {
-			88 = { # 88% chance nothing happens
+			88 = {
+				# 88% chance nothing happens
 			}
 			2 = {
-				modifier = { # 50% chance if self preservation in effect
+				modifier = {
+					# 50% chance if self preservation in effect
 					has_active_tradition = tr_synchronicity_self_preservation
 					factor = 0.5
 				}
-				modifier = { # 20% chance if civic_ngm_check in effect
+				modifier = {
+					# 20% chance if civic_ngm_check in effect
 					has_valid_civic = civic_ngm_check
 					factor = 0.2
 				}
-				modifier = { # 50% chance if zro crystal edict is in effect
+				modifier = {
+					# 50% chance if zro crystal edict is in effect
 					has_edict = zro_crystal_machine
 					factor = 0.5
 				}
-				if = { # surveying scientist
+				if = {
+					# surveying scientist
 					limit = {
 						any_owned_leader = {
 							leader_class = scientist
@@ -79,7 +82,7 @@ country_event = {
 						}
 						# 20% chance if civic_ngm_check in effect
 						if = {
-							limit = { 
+							limit = {
 								species = {
 									has_trait = trait_ngm_m_malfunction
 								}
@@ -87,16 +90,22 @@ country_event = {
 							random_list = {
 								80 = {
 									save_event_target_as = malfunctioning_leader
-									fleet = { save_event_target_as = malfunctioning_leader_fleet }
+									fleet = {
+										save_event_target_as = malfunctioning_leader_fleet
+									}
 									root = {
 										if = {
 											limit = {
 												has_authority = auth_machine_intelligence
 											}
-											country_event = { id = syndaw.21 }
+											country_event = {
+												id = syndaw.21
+											}
 										}
 										else = {
-											country_event = { id = action.71 }
+											country_event = {
+												id = action.71
+											}
 										}
 									}
 								}
@@ -106,16 +115,22 @@ country_event = {
 						}
 						else = {
 							save_event_target_as = malfunctioning_leader
-							fleet = { save_event_target_as = malfunctioning_leader_fleet }
+							fleet = {
+								save_event_target_as = malfunctioning_leader_fleet
+							}
 							root = {
 								if = {
 									limit = {
 										has_authority = auth_machine_intelligence
 									}
-									country_event = { id = syndaw.21 }
+									country_event = {
+										id = syndaw.21
+									}
 								}
 								else = {
-									country_event = { id = action.71 }
+									country_event = {
+										id = action.71
+									}
 								}
 							}
 						}
@@ -123,19 +138,23 @@ country_event = {
 				}
 			}
 			2 = {
-				modifier = { # 50% chance if self preservation in effect
+				modifier = {
+					# 50% chance if self preservation in effect
 					has_active_tradition = tr_synchronicity_self_preservation
 					factor = 0.5
 				}
-				modifier = { # 2% chance if civic_ngm_check in effect
+				modifier = {
+					# 2% chance if civic_ngm_check in effect
 					has_valid_civic = civic_ngm_check
 					factor = 0.2
 				}
-				modifier = { # 50% chance if zro crystal edict is in effect
+				modifier = {
+					# 50% chance if zro crystal edict is in effect
 					has_edict = zro_crystal_machine
 					factor = 0.5
 				}
-				if = { # engineering scientist
+				if = {
+					# engineering scientist
 					limit = {
 						any_owned_leader = {
 							leader_class = scientist
@@ -161,7 +180,7 @@ country_event = {
 						}
 						# 20% chance if civic_ngm_check in effect
 						if = {
-							limit = { 
+							limit = {
 								species = {
 									has_trait = trait_ngm_m_malfunction
 								}
@@ -174,10 +193,14 @@ country_event = {
 											limit = {
 												has_authority = auth_machine_intelligence
 											}
-											country_event = { id = syndaw.22 }
+											country_event = {
+												id = syndaw.22
+											}
 										}
 										else = {
-											country_event = { id = action.72 }
+											country_event = {
+												id = action.72
+											}
 										}
 									}
 								}
@@ -192,10 +215,14 @@ country_event = {
 									limit = {
 										has_authority = auth_machine_intelligence
 									}
-									country_event = { id = syndaw.22 }
+									country_event = {
+										id = syndaw.22
+									}
 								}
 								else = {
-									country_event = { id = action.72 }
+									country_event = {
+										id = action.72
+									}
 								}
 							}
 						}
@@ -203,19 +230,23 @@ country_event = {
 				}
 			}
 			2 = {
-				modifier = { # 50% chance if self preservation in effect
+				modifier = {
+					# 50% chance if self preservation in effect
 					has_active_tradition = tr_synchronicity_self_preservation
 					factor = 0.5
 				}
-				modifier = { # 2% chance if civic_ngm_check in effect
+				modifier = {
+					# 2% chance if civic_ngm_check in effect
 					has_valid_civic = civic_ngm_check
 					factor = 0.2
 				}
-				modifier = { # 50% chance if zro crystal edict is in effect
+				modifier = {
+					# 50% chance if zro crystal edict is in effect
 					has_edict = zro_crystal_machine
 					factor = 0.5
 				}
-				if = { # society scientist
+				if = {
+					# society scientist
 					limit = {
 						any_owned_leader = {
 							leader_class = scientist
@@ -241,7 +272,7 @@ country_event = {
 						}
 						# 20% chance if civic_ngm_check in effect
 						if = {
-							limit = { 
+							limit = {
 								species = {
 									has_trait = trait_ngm_m_malfunction
 								}
@@ -254,10 +285,14 @@ country_event = {
 											limit = {
 												has_authority = auth_machine_intelligence
 											}
-											country_event = { id = syndaw.23 }
+											country_event = {
+												id = syndaw.23
+											}
 										}
 										else = {
-											country_event = { id = action.73 }
+											country_event = {
+												id = action.73
+											}
 										}
 									}
 								}
@@ -272,10 +307,14 @@ country_event = {
 									limit = {
 										has_authority = auth_machine_intelligence
 									}
-									country_event = { id = syndaw.23 }
+									country_event = {
+										id = syndaw.23
+									}
 								}
 								else = {
-									country_event = { id = action.73 }
+									country_event = {
+										id = action.73
+									}
 								}
 							}
 						}
@@ -283,15 +322,18 @@ country_event = {
 				}
 			}
 			2 = {
-				modifier = { # 50% chance if self preservation in effect
+				modifier = {
+					# 50% chance if self preservation in effect
 					has_active_tradition = tr_synchronicity_self_preservation
 					factor = 0.5
 				}
-				modifier = { # 2% chance if civic_ngm_check in effect
+				modifier = {
+					# 2% chance if civic_ngm_check in effect
 					has_valid_civic = civic_ngm_check
 					factor = 0.2
 				}
-				if = { # society scientist
+				if = {
+					# society scientist
 					limit = {
 						any_owned_leader = {
 							leader_class = scientist
@@ -317,7 +359,7 @@ country_event = {
 						}
 						# 20% chance if civic_ngm_check in effect
 						if = {
-							limit = { 
+							limit = {
 								species = {
 									has_trait = trait_ngm_m_malfunction
 								}
@@ -330,10 +372,14 @@ country_event = {
 											limit = {
 												has_authority = auth_machine_intelligence
 											}
-											country_event = { id = syndaw.24 }
+											country_event = {
+												id = syndaw.24
+											}
 										}
 										else = {
-											country_event = { id = action.74 }
+											country_event = {
+												id = action.74
+											}
 										}
 									}
 								}
@@ -348,10 +394,14 @@ country_event = {
 									limit = {
 										has_authority = auth_machine_intelligence
 									}
-									country_event = { id = syndaw.24 }
+									country_event = {
+										id = syndaw.24
+									}
 								}
 								else = {
-									country_event = { id = action.74 }
+									country_event = {
+										id = action.74
+									}
 								}
 							}
 						}
@@ -359,15 +409,18 @@ country_event = {
 				}
 			}
 			2 = {
-				modifier = { # 50% chance if self preservation in effect
+				modifier = {
+					# 50% chance if self preservation in effect
 					has_active_tradition = tr_synchronicity_self_preservation
 					factor = 0.5
 				}
-				modifier = { # 2% chance if civic_ngm_check in effect
+				modifier = {
+					# 2% chance if civic_ngm_check in effect
 					has_valid_civic = civic_ngm_check
 					factor = 0.2
 				}
-				if = { # commanding admiral
+				if = {
+					# commanding admiral
 					limit = {
 						any_owned_leader = {
 							leader_class = admiral
@@ -393,7 +446,7 @@ country_event = {
 						}
 						# 20% chance if civic_ngm_check in effect
 						if = {
-							limit = { 
+							limit = {
 								species = {
 									has_trait = trait_ngm_m_malfunction
 								}
@@ -401,16 +454,22 @@ country_event = {
 							random_list = {
 								80 = {
 									save_event_target_as = malfunctioning_leader
-									fleet = { save_event_target_as = malfunctioning_leader_fleet }
+									fleet = {
+										save_event_target_as = malfunctioning_leader_fleet
+									}
 									root = {
 										if = {
 											limit = {
 												has_authority = auth_machine_intelligence
 											}
-											country_event = { id = syndaw.25 }
+											country_event = {
+												id = syndaw.25
+											}
 										}
 										else = {
-											country_event = { id = action.75 }
+											country_event = {
+												id = action.75
+											}
 										}
 									}
 								}
@@ -420,16 +479,22 @@ country_event = {
 						}
 						else = {
 							save_event_target_as = malfunctioning_leader
-							fleet = { save_event_target_as = malfunctioning_leader_fleet }
+							fleet = {
+								save_event_target_as = malfunctioning_leader_fleet
+							}
 							root = {
 								if = {
 									limit = {
 										has_authority = auth_machine_intelligence
 									}
-									country_event = { id = syndaw.25 }
+									country_event = {
+										id = syndaw.25
+									}
 								}
 								else = {
-									country_event = { id = action.75 }
+									country_event = {
+										id = action.75
+									}
 								}
 							}
 						}
@@ -437,19 +502,23 @@ country_event = {
 				}
 			}
 			2 = {
-				modifier = { # 50% chance if self preservation in effect
+				modifier = {
+					# 50% chance if self preservation in effect
 					has_active_tradition = tr_synchronicity_self_preservation
 					factor = 0.5
 				}
-				modifier = { # 2% chance if civic_ngm_check in effect
+				modifier = {
+					# 2% chance if civic_ngm_check in effect
 					has_valid_civic = civic_ngm_check
 					factor = 0.2
 				}
-				modifier = { # 50% chance if zro crystal edict is in effect
+				modifier = {
+					# 50% chance if zro crystal edict is in effect
 					has_edict = zro_crystal_machine
 					factor = 0.5
 				}
-				if = { # planet governor
+				if = {
+					# planet governor
 					limit = {
 						any_owned_leader = {
 							leader_class = governor
@@ -475,7 +544,7 @@ country_event = {
 						}
 						# 20% chance if civic_ngm_check in effect
 						if = {
-							limit = { 
+							limit = {
 								species = {
 									has_trait = trait_ngm_m_malfunction
 								}
@@ -488,10 +557,14 @@ country_event = {
 											limit = {
 												has_authority = auth_machine_intelligence
 											}
-											country_event = { id = syndaw.26 }
+											country_event = {
+												id = syndaw.26
+											}
 										}
 										else = {
-											country_event = { id = action.76 }
+											country_event = {
+												id = action.76
+											}
 										}
 									}
 								}
@@ -506,10 +579,14 @@ country_event = {
 									limit = {
 										has_authority = auth_machine_intelligence
 									}
-									country_event = { id = syndaw.26 }
+									country_event = {
+										id = syndaw.26
+									}
 								}
 								else = {
-									country_event = { id = action.76 }
+									country_event = {
+										id = action.76
+									}
 								}
 							}
 						}

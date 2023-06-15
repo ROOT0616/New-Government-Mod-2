@@ -1628,4 +1628,244 @@ spriteTypes = {
 		name = "GFX_tr_ngm_hereditary_nation"
 		textureFile = "gfx/interface/icons/traditions/tr_ngm_hereditary_nation.dds"
 	}
+
+	# 魁偉
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_brawny"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_phenix.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_brawny"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_brawny.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_brawny"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_brawny.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_brawny"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_brawny_UTC"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_brawny_UTC.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_brawny_SPBT"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_brawny_SPBT.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_brawny_predictive_aversion"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_brawny_predictive_aversion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_brawny_Shinkos_reproduction"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_brawny_Shinkos_reproduction.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_brawny_reopening_of_the_imperial_shipyard"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_brawny_reopening_of_the_imperial_shipyard.dds"
+	}
+
+	# 賢雅
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_elegance"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_phenix.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_elegance"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_elegance.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_elegance"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_elegance.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_elegance"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_elegance_BPT"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_elegance_BPT.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_elegance_ICHI"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_elegance_ICHI.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_elegance_magitek_engineering"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_elegance_magitek_engineering.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_elegance_the_way_of_the_new_light"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_elegance_the_way_of_the_new_light.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_elegance_overture_to_tomorrow"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_elegance_overture_to_tomorrow.dds"
+	}
+
+	# 蓋世
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_Gaishi"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_phenix.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_Gaishi"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_Gaishi.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_Gaishi"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_Gaishi.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_Gaishi"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_Gaishi_true_power_projection"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_Gaishi_true_power_projection.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_Gaishi_the_true_value_of_economic_power"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_Gaishi_the_true_value_of_economic_power.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_Gaishi_guidance_for_the_wise"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_Gaishi_guidance_for_the_wise.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_Gaishi_galactic_power"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_Gaishi_galactic_power.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_Gaishi_insist_on_ones_own_ideas"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_Gaishi_insist_on_ones_own_ideas.dds"
+	}
+
+	# 赫焉
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_misdirection"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_phenix.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_misdirection"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_misdirection.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_misdirection"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_misdirection.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_misdirection"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_misdirection_idea_commonly_accepted"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_misdirection_idea_commonly_accepted.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_misdirection_dignity_and_moderation"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_misdirection_dignity_and_moderation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_misdirection_blessing_of_the_stars"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_misdirection_blessing_of_the_stars.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_misdirection_blessing_of_life"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_misdirection_blessing_of_life.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_misdirection_blessings_of_creation"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_misdirection_blessings_of_creation.dds"
+	}
+
+	# 神威
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_gods_majesty"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_phenix.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_gods_majesty"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_gods_majesty.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_gods_majesty"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_gods_majesty.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_gods_majesty"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_gods_majesty_preface"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_gods_majesty_preface.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_gods_majesty_beginning"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_gods_majesty_beginning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_gods_majesty_second"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_gods_majesty_second.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_gods_majesty_abruptly"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_gods_majesty_abruptly.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_ngm_gods_majesty_a_new_chapter"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_gods_majesty_a_new_chapter.dds"
+	}
 }

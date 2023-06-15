@@ -342,11 +342,17 @@ agenda_ngm_expanding_paranoia = {
 					has_ascension_perk = ap_ngm_ministry_of_innocence
 				}
 			}
-			spynetwork = {
-				add_modifier = {
-					modifier = gather_information_infiltration_10
-					days = 3600
+			save_event_target_as = ngm_rival_country
+			random_spynetwork = {
+				limit = {
+					owner = {
+						is_same_value = root
+					}
+					target = {
+						is_same_value = PREVPREV
+					}
 				}
+				add_spy_network_level = 10
 			}
 		}
 		if = {

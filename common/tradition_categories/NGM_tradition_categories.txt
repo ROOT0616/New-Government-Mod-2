@@ -930,9 +930,6 @@ tradition_ngm_brawny = {
 	adoption_bonus = "tr_ngm_brawny_adopt"
 	finish_bonus = "tr_ngm_brawny_finish"
 	potential = {
-		NOT = {
-			has_tradition = tradition_ngm_brawny
-		}
 		num_tradition_categories >= 3
 		has_origin = origin_ngm_phenix
 	}
@@ -961,9 +958,7 @@ tradition_ngm_elegance = {
 	adoption_bonus = "tr_ngm_elegance_adopt"
 	finish_bonus = "tr_ngm_elegance_finish"
 	potential = {
-		NOT = {
-			has_tradition = tradition_ngm_elegance
-		}
+		has_tradition = tradition_ngm_brawny
 		num_tradition_categories >= 3
 		has_origin = origin_ngm_phenix
 	}
@@ -992,9 +987,8 @@ tradition_ngm_Gaishi = {
 	adoption_bonus = "tr_ngm_Gaishi_adopt"
 	finish_bonus = "tr_ngm_Gaishi_finish"
 	potential = {
-		NOT = {
-			has_tradition = tradition_ngm_Gaishi
-		}
+		has_tradition = tradition_ngm_brawny
+		has_tradition = tradition_ngm_elegance
 		num_tradition_categories >= 3
 		has_origin = origin_ngm_phenix
 	}
@@ -1023,9 +1017,9 @@ tradition_ngm_misdirection = {
 	adoption_bonus = "tr_ngm_misdirection_adopt"
 	finish_bonus = "tr_ngm_misdirection_finish"
 	potential = {
-		NOT = {
-			has_tradition = tradition_ngm_Gaishi
-		}
+		has_tradition = tradition_ngm_brawny
+		has_tradition = tradition_ngm_elegance
+		has_tradition = tradition_ngm_Gaishi
 		num_tradition_categories >= 3
 		has_origin = origin_ngm_phenix
 	}
@@ -1054,9 +1048,6 @@ tradition_ngm_gods_majesty = {
 	adoption_bonus = "tr_ngm_gods_majesty_adopt"
 	finish_bonus = "tr_ngm_gods_majesty_finish"
 	potential = {
-		NOT = {
-			has_tradition = tradition_ngm_gods_majesty
-		}
 		has_tradition = tradition_ngm_brawny
 		has_tradition = tradition_ngm_elegance
 		has_tradition = tradition_ngm_Gaishi

@@ -656,7 +656,7 @@ ngm_space_time_continuum = {
 
 # 過去への逃走のAIようにバフ
 ngm_space_time_continuum_ai = {
-	country_base_alloys_produces_add = 20
+	country_base_alloys_produces_add = 100
 }
 
 # 艦隊伝統の堅持	艦船を建造することができない	艦隊運用には古来よりの方法がある
@@ -690,10 +690,10 @@ origin_ngm_phenix_5_modifier = {
 # 古代の研究律	研究生産-200%研究速度-50%、技術取引ができない、テラフォーミング不可	この帝国の研究方針は極めて古い
 origin_ngm_phenix_6_modifier = {
 	all_technology_research_speed = -0.5
-	country_physics_research_cost_mult = -2
 	country_physics_research_produces_mult = -2
 	country_society_research_produces_mult = -2
 	country_engineering_research_produces_mult = -2
+	terraform_speed_mult = -999999.99
 }
 
 # 無気力な省庁	"開拓前哨地作成不可 請求権作成コスト+9999999999%"	この帝国の省庁は非効率かつ不安定な動きをしている。
@@ -710,6 +710,7 @@ origin_ngm_phenix_8_modifier = {
 # 失われしインフラ技術	巨大構造物建造不可、防衛ステーション許容量-500	この帝国の偉大なる大規模建築は再現不可能だ
 origin_ngm_phenix_9_modifier = {
 	starbase_defense_platform_capacity_add = -500
+	megastructure_build_speed_mult = -999999.99
 }
 
 # 黄昏の帝国	帝国規模+300%	帝国は衰退しました

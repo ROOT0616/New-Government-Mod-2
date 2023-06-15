@@ -1171,6 +1171,9 @@ building_ngm_Iimperial_concert_hall = {
 	}
 	resources = {
 		category = planet_buildings
+		produces = {
+			unity = 10
+		}
 		cost = {
 			minerals = 500
 		}
@@ -1195,7 +1198,6 @@ building_ngm_Iimperial_concert_hall = {
 	}
 	planet_modifier = {
 		planet_jobs_unity_produces_mult = 0.05
-		country_unity_produces_add = 10
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -1246,6 +1248,9 @@ building_ngm_imperial_art_museum = {
 	}
 	resources = {
 		category = planet_buildings
+		produces = {
+			unity = 10
+		}
 		cost = {
 			minerals = 500
 		}
@@ -1270,7 +1275,6 @@ building_ngm_imperial_art_museum = {
 	}
 	planet_modifier = {
 		planet_jobs_unity_produces_mult = 0.15
-		country_unity_produces_add = 10
 	}
 	ai_resource_production = {
 		unity = 20
@@ -1446,438 +1450,438 @@ building_ngm_advanced_research_institutes = {
 # 24.遊園宮        (帝国補正:市場手数料-10%、外交発言力+10%)garden palace
 #(惑星補正:住居+5、快適度+10、交易価値+10%)
 #(貴族+1、政治家+1、紋章官+1、高級参謀+1、事務員+5、エグゼクティブキャスト+2、キャスト+3)
-building_ngm_garden_palace = {
-	base_buildtime = 360
-	base_cap_amount = 1
-	position_priority = 0
-	can_build = no
-	category = government
-	potential = {
-		owner = {
-			has_relic = "r_ngm_geid"
-		}
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 400
-		}
-		upkeep = {
-			energy = 2
-		}
-	}
-	country_modifier = {
-		country_trade_fee = -0.1
-		diplo_weight_mult = 0.1
-	}
-	planet_modifier = {
-		planet_max_buildings_add = 3
-		job_noble_add = 1
-		job_ngm_crest_bearer_add = 1
-		job_ngm_executive_cast_add = 2
-		job_ngm_cast_add = 3
-		job_bureaucrat_add = 1
-		job_ngm_senior_advisor_add = 1
-		job_clerk_add = 5
-		trade_value_mult = 0.1
-		planet_housing_add = 5
-		planet_amenities_add = 10
-	}
-}
+# building_ngm_garden_palace = {
+# 	base_buildtime = 360
+# 	base_cap_amount = 1
+# 	position_priority = 0
+# 	can_build = no
+# 	category = government
+# 	potential = {
+# 		owner = {
+# 			has_relic = "r_ngm_geid"
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 400
+# 		}
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
+# 	country_modifier = {
+# 		country_trade_fee = -0.1
+# 		diplo_weight_mult = 0.1
+# 	}
+# 	planet_modifier = {
+# 		planet_max_buildings_add = 3
+# 		job_noble_add = 1
+# 		job_ngm_crest_bearer_add = 1
+# 		job_ngm_executive_cast_add = 2
+# 		job_ngm_cast_add = 3
+# 		job_bureaucrat_add = 1
+# 		job_ngm_senior_advisor_add = 1
+# 		job_clerk_add = 5
+# 		trade_value_mult = 0.1
+# 		planet_housing_add = 5
+# 		planet_amenities_add = 10
+# 	}
+# }
 
-# 25.アクアリウム中央ゲート(帝国補正:移民流入魅力+30%、)    (惑星補正:交易価値+30%、移民流入+20%)
-building_ngm_aquarium_central_gate = {
-	base_buildtime = 360
-	base_cap_amount = 1
-	position_priority = 1
-	can_build = no
-	category = government
-	potential = {
-		owner = {
-			has_relic = "r_ngm_geid"
-		}
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 400
-		}
-		upkeep = {
-			energy = 2
-		}
-	}
-	country_modifier = {
-		planet_immigration_pull_mult = 0.3
-	}
-	planet_modifier = {
-		trade_value_mult = 0.3
-		planet_immigration_pull_mult = 0.2
-	}
-}
+# # 25.アクアリウム中央ゲート(帝国補正:移民流入魅力+30%、)    (惑星補正:交易価値+30%、移民流入+20%)
+# building_ngm_aquarium_central_gate = {
+# 	base_buildtime = 360
+# 	base_cap_amount = 1
+# 	position_priority = 1
+# 	can_build = no
+# 	category = government
+# 	potential = {
+# 		owner = {
+# 			has_relic = "r_ngm_geid"
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 400
+# 		}
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
+# 	country_modifier = {
+# 		planet_immigration_pull_mult = 0.3
+# 	}
+# 	planet_modifier = {
+# 		trade_value_mult = 0.3
+# 		planet_immigration_pull_mult = 0.2
+# 	}
+# }
 
-# 26.海洋大神殿        (帝国補正:統合力+20%、影響力+1)    (惑星補正:統合力+25%、安定度+10)    (大祭司+1、司祭+4) 
-building_ngm_great_ocean_temple = {
-	base_buildtime = 360
-	base_cap_amount = 1
-	position_priority = 2
-	can_build = no
-	category = government
-	potential = {
-		owner = {
-			has_relic = "r_ngm_geid"
-		}
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 1000
-		}
-		upkeep = {
-			energy = 2
-		}
-	}
-	country_modifier = {
-		country_unity_produces_mult = 0.2
-		country_base_influence_produces_add = 1
-	}
-	planet_modifier = {
-		planet_stability_add = 10
-		planet_jobs_unity_produces_mult = 0.25
-		job_high_priest_add = 1
-		job_priest_add = 4
-	}
-}
+# # 26.海洋大神殿        (帝国補正:統合力+20%、影響力+1)    (惑星補正:統合力+25%、安定度+10)    (大祭司+1、司祭+4) 
+# building_ngm_great_ocean_temple = {
+# 	base_buildtime = 360
+# 	base_cap_amount = 1
+# 	position_priority = 2
+# 	can_build = no
+# 	category = government
+# 	potential = {
+# 		owner = {
+# 			has_relic = "r_ngm_geid"
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 1000
+# 		}
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
+# 	country_modifier = {
+# 		country_unity_produces_mult = 0.2
+# 		country_base_influence_produces_add = 1
+# 	}
+# 	planet_modifier = {
+# 		planet_stability_add = 10
+# 		planet_jobs_unity_produces_mult = 0.25
+# 		job_high_priest_add = 1
+# 		job_priest_add = 4
+# 	}
+# }
 
-# 27.惑星児童遊園			(child_park)	(Pop成長速度+5%、快適度+10%)		(エンターテイナー+1、スタッフ+2)
-building_ngm_ocean_child_park = {
-	base_buildtime = 360
-	base_cap_amount = 1
-	category = amenity
-	potential = {
-		owner = {
-			has_relic = "r_ngm_geid"
-		}
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 800
-		}
-		upkeep = {
-			energy = 3
-		}
-	}
-	planet_modifier = {
-		pop_growth_speed = 0.05
-		planet_amenities_mult = 0.1
-		job_entertainer_add = 1
-		job_ngm_cast_add = 2
-	}
-}
+# # 27.惑星児童遊園			(child_park)	(Pop成長速度+5%、快適度+10%)		(エンターテイナー+1、スタッフ+2)
+# building_ngm_ocean_child_park = {
+# 	base_buildtime = 360
+# 	base_cap_amount = 1
+# 	category = amenity
+# 	potential = {
+# 		owner = {
+# 			has_relic = "r_ngm_geid"
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 800
+# 		}
+# 		upkeep = {
+# 			energy = 3
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		pop_growth_speed = 0.05
+# 		planet_amenities_mult = 0.1
+# 		job_entertainer_add = 1
+# 		job_ngm_cast_add = 2
+# 	}
+# }
 
-# 28.アクアリウムテーマパーク	(aqua_park)	(交易価値+20%、移民流入+10%)		(エンターテイナー+1、エグゼクティブスタッフ+1、スタッフ+2)
-building_ngm_ocean_aqua_park = {
-	base_buildtime = 360
-	base_cap_amount = 1
-	category = amenity
-	potential = {
-		owner = {
-			has_relic = "r_ngm_geid"
-		}
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 800
-		}
-		upkeep = {
-			energy = 3
-		}
-	}
-	planet_modifier = {
-		trade_value_mult = 0.2
-		planet_immigration_pull_mult = 0.1
-		job_entertainer_add = 1
-		job_ngm_executive_cast_add = 1
-		job_ngm_cast_add = 2
-	}
-}
+# # 28.アクアリウムテーマパーク	(aqua_park)	(交易価値+20%、移民流入+10%)		(エンターテイナー+1、エグゼクティブスタッフ+1、スタッフ+2)
+# building_ngm_ocean_aqua_park = {
+# 	base_buildtime = 360
+# 	base_cap_amount = 1
+# 	category = amenity
+# 	potential = {
+# 		owner = {
+# 			has_relic = "r_ngm_geid"
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 800
+# 		}
+# 		upkeep = {
+# 			energy = 3
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		trade_value_mult = 0.2
+# 		planet_immigration_pull_mult = 0.1
+# 		job_entertainer_add = 1
+# 		job_ngm_executive_cast_add = 1
+# 		job_ngm_cast_add = 2
+# 	}
+# }
 
-# 29.タワーカジノ			(tower_casino)	(交易価値+30%、犯罪度+40%、移民流入+20%)(エグゼクティブスタッフ+3、スタッフ+2)				(上流階級から中下流階級までもを網羅した大規模な賭博場)
-building_ngm_ocean_tower_casino = {
-	base_buildtime = 360
-	base_cap_amount = 1
-	category = trade
-	potential = {
-		owner = {
-			has_relic = "r_ngm_geid"
-		}
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 1200
-		}
-		upkeep = {
-			energy = 4
-		}
-	}
-	planet_modifier = {
-		trade_value_mult = 0.3
-		planet_crime_mult = 0.4
-		planet_immigration_pull_mult = 0.2
-		job_ngm_executive_cast_add = 3
-		job_ngm_cast_add = 2
-	}
-}
+# # 29.タワーカジノ			(tower_casino)	(交易価値+30%、犯罪度+40%、移民流入+20%)(エグゼクティブスタッフ+3、スタッフ+2)				(上流階級から中下流階級までもを網羅した大規模な賭博場)
+# building_ngm_ocean_tower_casino = {
+# 	base_buildtime = 360
+# 	base_cap_amount = 1
+# 	category = trade
+# 	potential = {
+# 		owner = {
+# 			has_relic = "r_ngm_geid"
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 1200
+# 		}
+# 		upkeep = {
+# 			energy = 4
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		trade_value_mult = 0.3
+# 		planet_crime_mult = 0.4
+# 		planet_immigration_pull_mult = 0.2
+# 		job_ngm_executive_cast_add = 3
+# 		job_ngm_cast_add = 2
+# 	}
+# }
 
-# 30.帝立競技場			(imp_stad)	(交易価値+20%、統合力+10%)		(エンターテイナー+2、スタッフ+2)				(銀河皇帝の愛した帝冠様式で作られた壮麗で様々な式典や競技を行うことができるスタジアム)
-building_ngm_ocean_imp_stad = {
-	base_buildtime = 360
-	base_cap_amount = 1
-	category = trade
-	potential = {
-		owner = {
-			has_relic = "r_ngm_geid"
-		}
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 1000
-		}
-		upkeep = {
-			energy = 2
-		}
-	}
-	planet_modifier = {
-		trade_value_mult = 0.2
-		planet_jobs_unity_produces_mult = 0.1
-	}
-}
+# # 30.帝立競技場			(imp_stad)	(交易価値+20%、統合力+10%)		(エンターテイナー+2、スタッフ+2)				(銀河皇帝の愛した帝冠様式で作られた壮麗で様々な式典や競技を行うことができるスタジアム)
+# building_ngm_ocean_imp_stad = {
+# 	base_buildtime = 360
+# 	base_cap_amount = 1
+# 	category = trade
+# 	potential = {
+# 		owner = {
+# 			has_relic = "r_ngm_geid"
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 1000
+# 		}
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		trade_value_mult = 0.2
+# 		planet_jobs_unity_produces_mult = 0.1
+# 	}
+# }
 
-# 31.泡園				(bubble_land)	(交易価値+10%、犯罪度+10%、移民流入+10%)(エンターテイナー+2、エグゼクティブキャスト+2)			(大人向けの娯楽を提供する夜間を中心とした娯楽施設)
-building_ngm_ocean_galactic_yoshiwara = {
-	base_buildtime = 360
-	base_cap_amount = 1
-	category = trade
-	potential = {
-		owner = {
-			has_relic = "r_ngm_geid"
-		}
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 800
-		}
-		upkeep = {
-			energy = 2
-		}
-	}
-	planet_modifier = {
-		trade_value_mult = 0.2
-		planet_crime_mult = 0.1
-		planet_immigration_pull_mult = 0.1
-		job_entertainer_add = 2
-		job_ngm_executive_cast_add = 2
-	}
-}
+# # 31.泡園				(bubble_land)	(交易価値+10%、犯罪度+10%、移民流入+10%)(エンターテイナー+2、エグゼクティブキャスト+2)			(大人向けの娯楽を提供する夜間を中心とした娯楽施設)
+# building_ngm_ocean_galactic_yoshiwara = {
+# 	base_buildtime = 360
+# 	base_cap_amount = 1
+# 	category = trade
+# 	potential = {
+# 		owner = {
+# 			has_relic = "r_ngm_geid"
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 800
+# 		}
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		trade_value_mult = 0.2
+# 		planet_crime_mult = 0.1
+# 		planet_immigration_pull_mult = 0.1
+# 		job_entertainer_add = 2
+# 		job_ngm_executive_cast_add = 2
+# 	}
+# }
 
-# 32.観光管理局			(sight_office)	(移民流入+50%、交易価値+10%)		(政治家+1、官僚+2、事務員+3)					(観光客に関する行政事務処理や手続き、書類整理を行う官庁)
-building_ngm_ocean_sight_office = {
-	base_buildtime = 360
-	base_cap_amount = 1
-	category = trade
-	potential = {
-		owner = {
-			has_relic = "r_ngm_geid"
-		}
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 800
-		}
-		upkeep = {
-			energy = 2
-		}
-	}
-	planet_modifier = {
-		planet_immigration_pull_mult = 0.5
-		trade_value_mult = 0.1
-		job_politician_add = 1
-		job_bureaucrat_add = 2
-		job_clerk_add = 3
-	}
-}
+# # 32.観光管理局			(sight_office)	(移民流入+50%、交易価値+10%)		(政治家+1、官僚+2、事務員+3)					(観光客に関する行政事務処理や手続き、書類整理を行う官庁)
+# building_ngm_ocean_sight_office = {
+# 	base_buildtime = 360
+# 	base_cap_amount = 1
+# 	category = trade
+# 	potential = {
+# 		owner = {
+# 			has_relic = "r_ngm_geid"
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 800
+# 		}
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		planet_immigration_pull_mult = 0.5
+# 		trade_value_mult = 0.1
+# 		job_politician_add = 1
+# 		job_bureaucrat_add = 2
+# 		job_clerk_add = 3
+# 	}
+# }
 
-# 33.惑星健康ランド		(medical_land)	(Pop成長速度+15%、幸福度+10%)		(医療従事者+3、スタッフ+3)					(心身の疾患を治癒し、静養を目的とした観光客が集う観光用医療施設)
-building_ngm_ocean_medical_land = {
-	base_buildtime = 360
-	base_cap_amount = 1
-	category = trade
-	potential = {
-		owner = {
-			has_relic = "r_ngm_geid"
-		}
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 800
-		}
-		upkeep = {
-			energy = 2
-		}
-	}
-	planet_modifier = {
-		pop_growth_speed = 0.15
-		pop_happiness = 0.1
-		job_ngm_cast_add = 3
-		job_healthcare_add = 3
-	}
-}
+# # 33.惑星健康ランド		(medical_land)	(Pop成長速度+15%、幸福度+10%)		(医療従事者+3、スタッフ+3)					(心身の疾患を治癒し、静養を目的とした観光客が集う観光用医療施設)
+# building_ngm_ocean_medical_land = {
+# 	base_buildtime = 360
+# 	base_cap_amount = 1
+# 	category = trade
+# 	potential = {
+# 		owner = {
+# 			has_relic = "r_ngm_geid"
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 800
+# 		}
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		pop_growth_speed = 0.15
+# 		pop_happiness = 0.1
+# 		job_ngm_cast_add = 3
+# 		job_healthcare_add = 3
+# 	}
+# }
 
-# 34.銀河教養センター		(research_cente)(統合力+10%、研究+5%)			(科学総裁+1、文化人+2、研究者+1)				(教養市民層や上流階級が集うハイセンスでハイカルチャーな観光施設)
-building_ngm_ocean_research_cente = {
-	base_buildtime = 360
-	base_cap_amount = 1
-	category = trade
-	potential = {
-		owner = {
-			has_relic = "r_ngm_geid"
-		}
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 800
-		}
-		upkeep = {
-			energy = 2
-		}
-	}
-	planet_modifier = {
-		planet_jobs_unity_produces_mult = 0.1
-		planet_jobs_society_research_produces_mult = 0.05
-		planet_jobs_physics_research_produces_mult = 0.05
-		planet_jobs_engineering_research_produces_mult = 0.05
-		job_head_researcher_add = 1
-		job_culture_worker_add = 2
-		job_researcher_add = 1
-	}
-}
+# # 34.銀河教養センター		(research_cente)(統合力+10%、研究+5%)			(科学総裁+1、文化人+2、研究者+1)				(教養市民層や上流階級が集うハイセンスでハイカルチャーな観光施設)
+# building_ngm_ocean_research_cente = {
+# 	base_buildtime = 360
+# 	base_cap_amount = 1
+# 	category = trade
+# 	potential = {
+# 		owner = {
+# 			has_relic = "r_ngm_geid"
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 800
+# 		}
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		planet_jobs_unity_produces_mult = 0.1
+# 		planet_jobs_society_research_produces_mult = 0.05
+# 		planet_jobs_physics_research_produces_mult = 0.05
+# 		planet_jobs_engineering_research_produces_mult = 0.05
+# 		job_head_researcher_add = 1
+# 		job_culture_worker_add = 2
+# 		job_researcher_add = 1
+# 	}
+# }
 
-# 35.ホテル群			(hotel_ippai)	(住居+20、快適度+10、移民流入+20%)	(エグゼクティブスタッフ+1、スタッフ+3)				()
-building_ngm_ocean_hotel_street = {
-	base_buildtime = 360
-	base_cap_amount = 1
-	category = trade
-	potential = {
-		owner = {
-			has_relic = "r_ngm_geid"
-		}
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 800
-		}
-		upkeep = {
-			energy = 2
-		}
-	}
-	planet_modifier = {
-		planet_housing_add = 20
-		planet_amenities_add = 10
-		planet_immigration_pull_mult = 0.2
-		job_ngm_executive_cast_add = 1
-		job_ngm_cast_add = 3
-	}
-}
+# # 35.ホテル群			(hotel_ippai)	(住居+20、快適度+10、移民流入+20%)	(エグゼクティブスタッフ+1、スタッフ+3)				()
+# building_ngm_ocean_hotel_street = {
+# 	base_buildtime = 360
+# 	base_cap_amount = 1
+# 	category = trade
+# 	potential = {
+# 		owner = {
+# 			has_relic = "r_ngm_geid"
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 800
+# 		}
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		planet_housing_add = 20
+# 		planet_amenities_add = 10
+# 		planet_immigration_pull_mult = 0.2
+# 		job_ngm_executive_cast_add = 1
+# 		job_ngm_cast_add = 3
+# 	}
+# }
 
-# 36.高級リゾート			(high_resort)	(住居+10、快適度+20、移民流入+10%)	(エグゼクティブスタッフ+3、スタッフ+2)				()
-building_ngm_ocean_high_resort = {
-	base_buildtime = 360
-	base_cap_amount = 1
-	category = trade
-	potential = {
-		owner = {
-			has_relic = "r_ngm_geid"
-		}
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 800
-		}
-		upkeep = {
-			energy = 2
-		}
-	}
-	planet_modifier = {
-		planet_housing_add = 10
-		planet_amenities_add = 20
-		planet_immigration_pull_mult = 0.1
-		job_ngm_executive_cast_add = 3
-		job_ngm_cast_add = 2
-	}
-}
+# # 36.高級リゾート			(high_resort)	(住居+10、快適度+20、移民流入+10%)	(エグゼクティブスタッフ+3、スタッフ+2)				()
+# building_ngm_ocean_high_resort = {
+# 	base_buildtime = 360
+# 	base_cap_amount = 1
+# 	category = trade
+# 	potential = {
+# 		owner = {
+# 			has_relic = "r_ngm_geid"
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 800
+# 		}
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		planet_housing_add = 10
+# 		planet_amenities_add = 20
+# 		planet_immigration_pull_mult = 0.1
+# 		job_ngm_executive_cast_add = 3
+# 		job_ngm_cast_add = 2
+# 	}
+# }
 
-# 37.レジャーランド		(resure_land)	(快適度+20%、Pop成長速度+5%)		(エグゼクティブスタッフ+1、スタッフ+2)				()
-building_ngm_ocean_resure_land = {
-	base_buildtime = 360
-	base_cap_amount = 1
-	category = trade
-	potential = {
-		owner = {
-			has_relic = "r_ngm_geid"
-		}
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 800
-		}
-		upkeep = {
-			energy = 2
-		}
-	}
-	planet_modifier = {
-		planet_amenities_mult = 0.2
-		pop_growth_speed = 0.05
-		job_ngm_executive_cast_add = 1
-		job_ngm_cast_add = 2
-	}
-}
+# # 37.レジャーランド		(resure_land)	(快適度+20%、Pop成長速度+5%)		(エグゼクティブスタッフ+1、スタッフ+2)				()
+# building_ngm_ocean_resure_land = {
+# 	base_buildtime = 360
+# 	base_cap_amount = 1
+# 	category = trade
+# 	potential = {
+# 		owner = {
+# 			has_relic = "r_ngm_geid"
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 800
+# 		}
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		planet_amenities_mult = 0.2
+# 		pop_growth_speed = 0.05
+# 		job_ngm_executive_cast_add = 1
+# 		job_ngm_cast_add = 2
+# 	}
+# }
 
-# 38.商用軌道エレベーター		(orbit_elev)	(交易価値+20%)				(豪商+1、事務員+5) 						()
-building_ngm_ocean_business_orbit_elev = {
-	base_buildtime = 360
-	base_cap_amount = 1
-	category = trade
-	potential = {
-		owner = {
-			has_relic = "r_ngm_geid"
-		}
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 400
-			alloys = 100
-		}
-		upkeep = {
-			energy = 2
-		}
-	}
-	planet_modifier = {
-		trade_value_mult = 0.2
-		job_merchant_add = 1
-		job_clerk_add = 5
-	}
-}
+# # 38.商用軌道エレベーター		(orbit_elev)	(交易価値+20%)				(豪商+1、事務員+5) 						()
+# building_ngm_ocean_business_orbit_elev = {
+# 	base_buildtime = 360
+# 	base_cap_amount = 1
+# 	category = trade
+# 	potential = {
+# 		owner = {
+# 			has_relic = "r_ngm_geid"
+# 		}
+# 	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 400
+# 			alloys = 100
+# 		}
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
+# 	planet_modifier = {
+# 		trade_value_mult = 0.2
+# 		job_merchant_add = 1
+# 		job_clerk_add = 5
+# 	}
+# }
 
 # 起源  黄昏の帝国  建造物
 # 首都	名称	個数	職業	帝国効果	惑星効果	説明
@@ -1906,7 +1910,7 @@ building_ngm_Phe_Palace = {
 	}
 	planet_modifier = {
 		planet_max_buildings_add = 30
-		planet_housing_add = 50
+		planet_housing_add = 100
 		planet_stability_add = 10
 		job_noble_add = 2
 		job_high_priest_add = 1
@@ -1925,6 +1929,7 @@ building_ngm_Phe_Court = {
 	can_be_disabled = no
 	position_priority = 1
 	category = government
+	icon = building_public_relations_office
 	potential = {
 		owner = {
 			has_origin = origin_ngm_phenix
@@ -1953,6 +1958,7 @@ building_ngm_Phe_Crest = {
 	can_be_disabled = no
 	position_priority = 2
 	category = government
+	icon = building_chamber_of_elevation_2
 	potential = {
 		owner = {
 			has_origin = origin_ngm_phenix
@@ -1979,6 +1985,7 @@ building_ngm_Phe_Central_school = {
 	can_be_disabled = no
 	position_priority = 3
 	category = research
+	icon = building_vultaum_reality_computer
 	potential = {
 		owner = {
 			has_origin = origin_ngm_phenix
@@ -2027,7 +2034,9 @@ building_ngm_Phe_Spaceport = {
 		job_merchant_add = 2
 		job_executive_add = 2
 		job_manager_add = 5
-		job_clerk_add = 20
+		job_preacher_add = 20
+		job_technician_add = 30
+		job_clerk_add = 120
 	}
 }
 
@@ -2039,6 +2048,7 @@ building_ngm_Phe_HQ = {
 	can_be_disabled = no
 	position_priority = 5
 	category = army
+	icon = building_fortress
 	potential = {
 		owner = {
 			has_origin = origin_ngm_phenix
@@ -2067,6 +2077,7 @@ building_ngm_Phe_S_Palace = {
 	can_be_disabled = no
 	position_priority = 0
 	category = government
+	icon = building_palace
 	potential = {
 		owner = {
 			has_origin = origin_ngm_phenix
@@ -2076,7 +2087,7 @@ building_ngm_Phe_S_Palace = {
 		category = planet_buildings
 	}
 	planet_modifier = {
-		planet_housing_add = 30
+		planet_housing_add = 50
 		planet_max_buildings_add = 15
 		job_politician_add = 1
 		job_noble_add = 22
@@ -2094,6 +2105,7 @@ building_ngm_Phe_Factory = {
 	can_be_disabled = no
 	position_priority = 1
 	category = manufacturing
+	icon = building_nanite_transmuter
 	potential = {
 		owner = {
 			has_origin = origin_ngm_phenix
@@ -2124,6 +2136,7 @@ building_ngm_Phe_Purification = {
 	can_be_disabled = no
 	position_priority = 2
 	category = resource
+	icon = building_nano_forge
 	potential = {
 		owner = {
 			has_origin = origin_ngm_phenix
@@ -2155,6 +2168,7 @@ building_ngm_Phe_Park = {
 	can_be_disabled = no
 	position_priority = 3
 	category = unity
+	icon = building_paradise_dome
 	potential = {
 		owner = {
 			has_origin = origin_ngm_phenix
@@ -2170,6 +2184,8 @@ building_ngm_Phe_Park = {
 		job_culture_worker_add = 2
 		job_entertainer_add = 3
 		job_xeno_zoo_keeper_add = 1
+		job_farmer_add = 50
+		job_ranger_add = 20
 	}
 }
 
@@ -2206,6 +2222,7 @@ building_ngm_Phe_University = {
 	can_be_disabled = no
 	position_priority = 5
 	category = research
+	icon = building_master_archive
 	potential = {
 		owner = {
 			has_origin = origin_ngm_phenix
@@ -2234,6 +2251,7 @@ building_ngm_Phe_Fort = {
 	can_be_disabled = no
 	position_priority = 6
 	category = army
+	icon = building_fortress
 	potential = {
 		owner = {
 			has_origin = origin_ngm_phenix

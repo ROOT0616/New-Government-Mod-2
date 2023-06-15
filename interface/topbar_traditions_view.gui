@@ -299,7 +299,8 @@ guiTypes = {
 			gridBoxType = {
 				name = "tradition_category_gridbox"
 				position = { x = @entries_column1 y = @entries_row1_y }
-				size = { width = 1250 height = 2650 }
+				size = { width = 1250 height = 3650 }
+				# size = { width = 1250 height = 2650 }
 				slotSize = { width = 314 height = 266 }
 				max_slots_horizontal = 4
 				format = "UPPER_LEFT"

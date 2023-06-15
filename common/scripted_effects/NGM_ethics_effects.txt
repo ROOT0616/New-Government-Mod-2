@@ -1,1 +1,60 @@
-# 
+# 黄昏の帝国 属国
+create_ngm_phenix_npc_effect = {
+	create_species = {
+		name = random
+		class = MSI_SLAVER
+		namelist = HUMAN3
+		portrait = random
+		traits = {
+			trait = "trait_pc_nuked_preference"
+			trait = "trait_charismatic"
+			trait = "trait_intelligent"
+			trait = "trait_decadent"
+			trait = "trait_wasteful"
+		}
+		allow_negative_traits = yes
+	}
+
+	create_country = {
+		name = "NAME_origin_ngm_phenix_npc"
+		adjective = "ADJ_MSI_country"
+		species = event_target:ngm_phenix_global_avi_species
+		name_list = AVI2
+		type = default
+		authority = auth_corporate
+		civics = {
+			civic = civic_ngm_hereditary_officers
+			civic = civic_ngm_corporate_empire
+			civic = civic_ngm_social_enterprise
+			civic = civic_private_healthcare_corporate
+			civic = civic_ngm_general_contractor
+		}
+		ethos = {
+			ethic = "ethic_fanatic_honorism"
+			ethic = "ethic_fanatic_developmentalism"
+			ethic = "ethic_fanatic_neutralism"
+		}
+		origin = "origin_ngm_phenix_npc"
+		flag = random
+		effect = {
+			save_global_event_target_as = ngm_phenix_npc_country
+			establish_communications_no_message = event_target:ngm_phenix_country
+			set_subject_of = {
+				who = event_target:ngm_phenix_country
+				preset = preset_prospectorium
+			}
+		}
+	}
+	create_colony = {
+		owner = event_target:ngm_phenix_npc_country
+	}
+	generate_start_deposits_and_blockers = yes
+	generate_start_buildings_and_districts = yes
+	generate_start_pops = yes
+	event_target:ngm_phenix_npc_country = {
+		create_starting_leaders = yes
+		country_event = { id = game_start.9 }
+		owner_species = { set_species_homeworld = prevprev }
+		log = "ngm_phenix_npc CREATED"
+	}
+}

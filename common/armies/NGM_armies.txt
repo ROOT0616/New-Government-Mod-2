@@ -232,22 +232,22 @@ ngm_giants_army = {
 }
 
 #海軍艦隊、耐久度ダメージ6、士気ダメージ5、耐久度350、士気300
-ngm_naval_fleet = {
-	defensive = yes
-	is_pop_spawned = yes
-	damage = 2.4
-	health = 1.75
-	morale = 1.5
-	morale_damage = 1.7
-	collateral_damage = 0.0
-	war_exhaustion = 0.0 
-	#icon = GFX_army_type_defensive
-	potential = {
-		planet ={
-			has_district = ngm_district_arcology_marine_villa
-		}
-	}
-}
+# ngm_naval_fleet = {
+# 	defensive = yes
+# 	is_pop_spawned = yes
+# 	damage = 2.4
+# 	health = 1.75
+# 	morale = 1.5
+# 	morale_damage = 1.7
+# 	collateral_damage = 0.0
+# 	war_exhaustion = 0.0 
+# 	#icon = GFX_army_type_defensive
+# 	potential = {
+# 		planet ={
+# 			has_district = ngm_district_arcology_marine_villa
+# 		}
+# 	}
+# }
 
 # ※1	耐久ダメージ	士気ダメージ	耐久度	士気	説明
 # 帝国近衛軍	imperial_guard 20	75	1500	1200	帝国を守ることを誓ったエリート軍団

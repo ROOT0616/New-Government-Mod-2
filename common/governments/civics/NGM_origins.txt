@@ -139,6 +139,7 @@ origin_ngm_phenix = {
 	picture = GFX_origin_ngm_phenix
 	starting_colony = pc_city
 	habitability_preference = pc_city
+	preferred_planet_class_neighbor = no
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
@@ -166,6 +167,26 @@ origin_ngm_phenix = {
 	modifier = {
 	}
 	description = "origin_tooltip_ngm_phenix"
+	random_weight = {
+		base = 0
+	}
+}
+
+# 永遠の恩義 黄昏の帝国の属国
+origin_ngm_phenix_npc = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_ngm_phenix.dds"
+	picture = GFX_origin_ngm_phenix
+
+	playable = {
+		always = no # Non-player origin
+	}
+
+	possible = {
+	}
+
+	description = origin_tooltip_ngm_phenix_npc
+
 	random_weight = {
 		base = 0
 	}

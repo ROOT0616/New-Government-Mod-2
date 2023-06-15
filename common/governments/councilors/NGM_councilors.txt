@@ -946,7 +946,8 @@ councilor_ngm_war_lord = {
 	}
 	civic = civic_ngm_war_lord
 	modifier = {
-		country_command_limit_add = 5
+		# country_command_limit_add = 5
+		command_limit_add = 5
 	}
 }
 
@@ -1976,8 +1977,9 @@ councilor_ngm_messenger_of_peace = {
 		# }
 	}
 	civic = civic_ngm_messenger_of_peace
+	custom_tooltip = ap_defender_of_the_galaxy_modifier_desc
 	modifier = {
-		description = ap_defender_of_the_galaxy_modifier_desc
+		# description = ap_defender_of_the_galaxy_modifier_desc
 		damage_vs_country_type_swarm_mult = 0.5
 		damage_vs_country_type_extradimensional_mult = 0.5
 		damage_vs_country_type_extradimensional_2_mult = 0.5
