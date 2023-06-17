@@ -1294,6 +1294,51 @@ ngm_legal_department_audits_campaign = {
 	}
 }
 
+# モスボールされた民間船の再整備 気だるいことではあるが、モスボールされている民間船を再整備することは可能である
+ngm_mossball_edict = {
+	length = 0
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_origin = origin_ngm_phenix
+	}
+	resources = {
+		category = edicts
+		cost = {
+			alloys =  10000
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		event_target:ngm_phenix_country = {
+			random_owned_planet = {
+				create_fleet = {
+					effect = {
+						set_owner = event_target:ngm_phenix_country
+						create_ship = {
+							name = random
+							random_existing_design = science
+						}
+						set_fleet_stance = evasive
+						set_location = prev
+					}
+				}
+				create_fleet = {
+					effect = {
+						set_owner = event_target:ngm_phenix_country
+						create_ship = {
+							name = random
+							random_existing_design = constructor
+						}
+						set_fleet_stance = evasive
+						set_location = prev
+					}
+				}
+			}
+		}
+	}
+}
 
 ngm_test_campaign = {
 	length = -1

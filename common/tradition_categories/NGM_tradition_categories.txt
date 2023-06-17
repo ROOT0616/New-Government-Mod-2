@@ -18,7 +18,6 @@ tradition_ngm_law = {
 	}
 	ai_weight = {
 		factor = 10
-		
 		modifier = {
 			factor = 0.5
 			has_ethic = ethic_authoritarian
@@ -134,7 +133,7 @@ tradition_ngm_study = {
 			has_ethic = ethic_honorism
 		}
 		modifier = {
-			factor = 2.0
+			factor = 2
 			has_ethic = ethic_fanatic_honorism
 		}
 		modifier = {
@@ -916,7 +915,6 @@ tradition_ngm_hereditary = {
 }
 
 # 起源用伝統
-
 # 魁偉
 # 取得時	"黄昏の帝国である。 3つ以上の伝統を取得している。"	魁偉	帝国補正:艦隊伝統の堅持を削除	世界へと歩む一歩は軍靴によるものだ
 # 完遂時		魁偉	宇宙軍許容量+200、星系基地許容量+20	
@@ -934,14 +932,14 @@ tradition_ngm_brawny = {
 		has_origin = origin_ngm_phenix
 	}
 	traditions = {
-		"tr_ngm_brawny_UTC"
-		"tr_ngm_brawny_SPBT"
+		"tr_ngm_brawny_utc"
+		"tr_ngm_brawny_spbt"
 		"tr_ngm_brawny_predictive_aversion"
-		"tr_ngm_brawny_Shinkos_reproduction"
+		"tr_ngm_brawny_shinkos_reproduction"
 		"tr_ngm_brawny_reopening_of_the_imperial_shipyard"
 	}
 	ai_weight = {
-		factor = 10
+		factor = 1000
 	}
 }
 
@@ -958,13 +956,14 @@ tradition_ngm_elegance = {
 	adoption_bonus = "tr_ngm_elegance_adopt"
 	finish_bonus = "tr_ngm_elegance_finish"
 	potential = {
-		has_tradition = tradition_ngm_brawny
+		has_tradition = tr_ngm_brawny_finish
+		# num_tradition_categories >= 1
 		num_tradition_categories >= 3
 		has_origin = origin_ngm_phenix
 	}
 	traditions = {
-		"tr_ngm_elegance_BPT"
-		"tr_ngm_elegance_ICHI"
+		"tr_ngm_elegance_bpt"
+		"tr_ngm_elegance_ichi"
 		"tr_ngm_elegance_magitek_engineering"
 		"tr_ngm_elegance_the_way_of_the_new_light"
 		"tr_ngm_elegance_overture_to_tomorrow"
@@ -982,22 +981,23 @@ tradition_ngm_elegance = {
 # 知恵者の指導		蓋世	技術水準から発生する外交発言力+50%	真の知恵ある者こそが人々を教導するのだ
 # 銀河の力	galactic_power	蓋世	POPから発生する外交発言力+50%	銀河に敷衍する帝国の力こそは卓越へと導かれる
 # 声高なる主張	insist_on_ones_own_ideas	蓋世	外交発言力+50%	我の演説を聞け！
-tradition_ngm_Gaishi = {
+tradition_ngm_gaishi = {
 	tree_template = "tree_11_12"
-	adoption_bonus = "tr_ngm_Gaishi_adopt"
-	finish_bonus = "tr_ngm_Gaishi_finish"
+	adoption_bonus = "tr_ngm_gaishi_adopt"
+	finish_bonus = "tr_ngm_gaishi_finish"
 	potential = {
-		has_tradition = tradition_ngm_brawny
-		has_tradition = tradition_ngm_elegance
+		has_tradition = tr_ngm_brawny_finish
+		has_tradition = tr_ngm_elegance_finish
+		# num_tradition_categories >= 2
 		num_tradition_categories >= 3
 		has_origin = origin_ngm_phenix
 	}
 	traditions = {
-		"tr_ngm_Gaishi_true_power_projection"
-		"tr_ngm_Gaishi_the_true_value_of_economic_power"
-		"tr_ngm_Gaishi_guidance_for_the_wise"
-		"tr_ngm_Gaishi_galactic_power"
-		"tr_ngm_Gaishi_insist_on_ones_own_ideas"
+		"tr_ngm_gaishi_true_power_projection"
+		"tr_ngm_gaishi_the_true_value_of_economic_power"
+		"tr_ngm_gaishi_guidance_for_the_wise"
+		"tr_ngm_gaishi_galactic_power"
+		"tr_ngm_gaishi_insist_on_ones_own_ideas"
 	}
 	ai_weight = {
 		factor = 10
@@ -1017,9 +1017,9 @@ tradition_ngm_misdirection = {
 	adoption_bonus = "tr_ngm_misdirection_adopt"
 	finish_bonus = "tr_ngm_misdirection_finish"
 	potential = {
-		has_tradition = tradition_ngm_brawny
-		has_tradition = tradition_ngm_elegance
-		has_tradition = tradition_ngm_Gaishi
+		has_tradition = tr_ngm_brawny_finish
+		has_tradition = tr_ngm_elegance_finish
+		has_tradition = tr_ngm_gaishi_finish
 		num_tradition_categories >= 3
 		has_origin = origin_ngm_phenix
 	}
@@ -1048,10 +1048,16 @@ tradition_ngm_gods_majesty = {
 	adoption_bonus = "tr_ngm_gods_majesty_adopt"
 	finish_bonus = "tr_ngm_gods_majesty_finish"
 	potential = {
-		has_tradition = tradition_ngm_brawny
-		has_tradition = tradition_ngm_elegance
-		has_tradition = tradition_ngm_Gaishi
-		has_tradition = tradition_ngm_misdirection
+		has_tradition = tr_ngm_brawny_finish
+		has_tradition = tr_ngm_elegance_finish
+		has_tradition = tr_ngm_gaishi_finish
+		has_tradition = tr_ngm_misdirection_finish
+		has_ascension_perk = ap_ngm_galactic_reconguista
+		has_ascension_perk = ap_ngm_rebirth_from_the_ashes
+		has_ascension_perk = ap_ngm_outward_steps
+		has_ascension_perk = ap_ngm_imperial_majesty
+		has_ascension_perk = ap_ngm_existence_of_a_saint
+		# num_tradition_categories >= 4
 		num_tradition_categories >= 3
 		has_origin = origin_ngm_phenix
 	}

@@ -277,6 +277,13 @@
  origin_ngm_galactic_empire_aquarium_desc:0 "This nation existed as an amusement park in the old Galactic Empire. Because of its entertaining nature, it was secure from the attacks of other countries. But because of this, it has been in a slow decline. n\ Finally, it realized that its position was unsustainable and entered the galactic community with trepidation, but all the knowledge it once had was lost and it did not dare to expand.\n However, the rich amusement park is alive and well.\n§RIt bugs me when there are more than two countries that choose this origin.§!"
  origin_tooltip_ngm_galactic_empire_aquarium:0 "Start with a special group of star systems and capital planets in the outer reaches of the galaxy.\n\nExtremely restrictive regarding expansion. \n\nSpecial buildings can be built.\n\n"
 
+ origin_ngm_phenix:0 "Empire of Dusk"
+ origin_ngm_phenix_desc:0 "This nation was once a hegemonic superpower. It was a great empire that toppled many enemies and overcame numerous difficulties. Yes, it 'was'. \n\n§RThis origin is extremely challenging§!"
+ origin_tooltip_ngm_phenix:0 "Start with significant enhancements to technology, production power, and population. \nBegin owning vassal states of the corporate empire. \nStart with major restrictions on expansion, diplomacy, war, and domestic politics. \n§GAs traditions and ascension progress...§!"
+
+ origin_ngm_phenix_npc:0 "Eternal Obligation"
+ origin_ngm_phenix_desc:0 "This nation was allowed to survive by subjugating to the once hegemonic superpower, and was even able to survive to this day. To repay that debt, they have pledged eternal subjugation to their suzerain."
+
 #######################
 #####    国是    ######
 #######################
@@ -1314,6 +1321,9 @@
  edict_ngm_fleet_trade_options_menu:0 "Fleet Gift"
  edict_ngm_fleet_trade_options_menu_desc:0 ""
 
+ edict_ngm_mossball_edict:0 "Refurbishment of Mothballed Civilian Ships"
+ edict_ngm_mossball_edict_desc:0 "Although it's a tedious task, it is possible to refurbish mothballed civilian ships."
+
 #######################
 #####    技術    ######
 #######################
@@ -2207,7 +2217,9 @@
 
  ngm_ancient_pact:0 "Relic:The Ancient Pact"
 
- ngm_r_galactic_empire_aquarium:0 "Galactic Emperor's Imperial Decree No. 7216, "Authorization of the Imperial Garden Territory.""
+ ngm_r_galactic_empire_aquarium:0 "Galactic Emperor's Imperial Decree No. 7216, 'Authorization of the Imperial Garden Territory.'"
+
+ ngm_r_imperial_chronicle_modifier:0 "Great Patronage"
 
 ##########################
 #####    種族特性    ######
@@ -2770,6 +2782,12 @@
 
  r_ngm_geid:0 "Galactic Emperor's Imperial Decree No. 7216, "Authorization of the Imperial Garden Territory.""
  r_ngm_geid_desc:0 "He is the ruler of the entire galaxy and the embodiment of law and order that governs the heavens. The 27th Emperor of the Galactic Empire, Pochanus VIII, the Sacred and Inviolable, has authorized the establishment of the Imperial Amusement Park for the welfare of the entire Galactic Empire. The head of the Imperial Garden shall be hereditary, and shall be conferred with a dukedom of the same rank as the King, and shall hold the position of Chief Ceremonial Officer at the Court of Yeoh. The autonomous rights of the imperial park as a fiefdom shall be restricted. The restrictions are....."
+
+ r_ngm_imperial_chronicle:0 "Imperial Chronicle"
+ r_ngm_imperial_chronicle_desc:0 "The story of this empire is true, and we were the protagonists."
+
+ r_ngm_great_patronage:0 "Great Patronage"
+ r_ngm_great_patronage_desc:0 "Being a subject of a great empire is a great joy."
 
 ##########################
 #####    戦争目標    ######
@@ -4428,10 +4446,25 @@
 
  civic_tooltip_mechanical_faith_effects:0 "The spiritualist faction will no longer be angry with robots.\nWe can't outlaw robots.\nFix robot human rights to citizenship."
 
- NAME_Pursuer:0 "Pursuer"
-
  planet_buildings_exotic_gases_upkeep_mult:0 "Building £exotic_gases£ $exotic_gases$ Upkeep"
  planet_buildings_volatile_motes_upkeep_mult:0 "Building £volatile_motes£ $volatile_motes$ Upkeep"
+
+##########################
+#####    名称関係    ######
+##########################
+
+ NAME_Pursuer:0 "Pursuer"
+
+ NAME_NGM_origin_ngm_phenix_machine:0 "Clock Man"
+ NAME_NGM_origin_ngm_phenix_machine_plural:0 "Clock Men"
+
+ NAME_NGM_origin_ngm_phenix_avi:0 "Beaut Slave"
+ NAME_NGM_origin_ngm_phenix_avi_plural:0 "Beaut Slaves"
+
+ NAME_origin_ngm_phenix_npc:0 "Beaut Slave.inc"
+ NAME_origin_ngm_phenix_npc_initials:0 "Beaut Slave.inc"
+ ADJ_origin_ngm_phenix_npc:0 "Beaut Slaves"
+
 
 # :0 ""
 # _desc:0 ""

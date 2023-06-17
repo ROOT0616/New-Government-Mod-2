@@ -1906,12 +1906,15 @@ building_ngm_Phe_Palace = {
 		}
 	}
 	country_modifier = {
+		country_unity_produces_mult = -0.25
 		diplo_weight_mult = 0.2
+		planet_crime_add = -60
 	}
 	planet_modifier = {
 		planet_max_buildings_add = 30
 		planet_housing_add = 100
 		planet_stability_add = 10
+		planet_crime_add = -30
 		job_noble_add = 2
 		job_high_priest_add = 1
 		job_knight_commander_add = 1

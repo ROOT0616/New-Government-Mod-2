@@ -22,13 +22,18 @@ country_event = {
 			}
 			if = {
 				limit = {
-					exists = sector
-				}
-				sector = {
-					leader = {
-						unassign_leader = this
-						save_event_target_as = ngm_buffer_gov
+					any_owned_leader = {
+						leader_class = governor
+						exists = sector
 					}
+				}
+				random_owned_leader = {
+					limit = {
+						leader_class = governor
+						
+					}
+					unassign_leader = this
+					save_event_target_as = ngm_buffer_gov
 				}
 			}
 			else = {
@@ -2621,18 +2626,19 @@ country_event = {
 		set_spawn_system_batch = end
 		# Add a starbase
 		event_target:ngm_phenix_01_init_system = {
+			set_star_flag = empire_cluster
+			set_star_flag = empire_home_system
 			create_starbase = {
 				size = "starbase_citadel"
 				module = "shipyard"
 				module = "shipyard"
 				module = "shipyard"
-				module = "hangar_bay"
-				module = "gun_battery"
-				module = "gun_battery"
+				module = "shipyard"
+				module = "shipyard"
+				module = "trading_hub"
+				building = "crew_quarters"
 				building = "target_uplink_computer"
 				building = "defense_grid"
-				building = "colossus_yards"
-				building = "titan_yards"
 				owner = root
 				effect = {
 					save_event_target_as = ngm_phenix_starbase
@@ -2645,13 +2651,11 @@ country_event = {
 				module = "shipyard"
 				module = "shipyard"
 				module = "shipyard"
-				module = "hangar_bay"
-				module = "gun_battery"
-				module = "gun_battery"
+				module = "shipyard"
+				module = "shipyard"
+				building = "crew_quarters"
 				building = "target_uplink_computer"
 				building = "defense_grid"
-				building = "colossus_yards"
-				building = "titan_yards"
 				owner = root
 			}
 		}
@@ -2661,13 +2665,11 @@ country_event = {
 				module = "shipyard"
 				module = "shipyard"
 				module = "shipyard"
-				module = "hangar_bay"
-				module = "gun_battery"
-				module = "gun_battery"
+				module = "shipyard"
+				module = "shipyard"
+				building = "crew_quarters"
 				building = "target_uplink_computer"
 				building = "defense_grid"
-				building = "colossus_yards"
-				building = "titan_yards"
 				owner = root
 			}
 		}
@@ -2677,13 +2679,11 @@ country_event = {
 				module = "shipyard"
 				module = "shipyard"
 				module = "shipyard"
-				module = "hangar_bay"
-				module = "gun_battery"
-				module = "gun_battery"
+				module = "shipyard"
+				module = "shipyard"
+				building = "crew_quarters"
 				building = "target_uplink_computer"
 				building = "defense_grid"
-				building = "colossus_yards"
-				building = "titan_yards"
 				owner = root
 			}
 		}
@@ -2693,13 +2693,11 @@ country_event = {
 				module = "shipyard"
 				module = "shipyard"
 				module = "shipyard"
-				module = "hangar_bay"
-				module = "gun_battery"
-				module = "gun_battery"
+				module = "shipyard"
+				module = "shipyard"
+				building = "crew_quarters"
 				building = "target_uplink_computer"
 				building = "defense_grid"
-				building = "colossus_yards"
-				building = "titan_yards"
 				owner = root
 			}
 		}
@@ -2709,13 +2707,11 @@ country_event = {
 				module = "shipyard"
 				module = "shipyard"
 				module = "shipyard"
-				module = "hangar_bay"
-				module = "gun_battery"
-				module = "gun_battery"
+				module = "shipyard"
+				module = "shipyard"
+				building = "crew_quarters"
 				building = "target_uplink_computer"
 				building = "defense_grid"
-				building = "colossus_yards"
-				building = "titan_yards"
 				owner = root
 			}
 		}
@@ -2725,13 +2721,11 @@ country_event = {
 				module = "shipyard"
 				module = "shipyard"
 				module = "shipyard"
-				module = "hangar_bay"
-				module = "gun_battery"
-				module = "gun_battery"
+				module = "shipyard"
+				module = "shipyard"
+				building = "crew_quarters"
 				building = "target_uplink_computer"
 				building = "defense_grid"
-				building = "colossus_yards"
-				building = "titan_yards"
 				owner = root
 			}
 		}
@@ -2741,13 +2735,11 @@ country_event = {
 				module = "shipyard"
 				module = "shipyard"
 				module = "shipyard"
-				module = "hangar_bay"
-				module = "gun_battery"
-				module = "gun_battery"
+				module = "shipyard"
+				module = "shipyard"
+				building = "crew_quarters"
 				building = "target_uplink_computer"
 				building = "defense_grid"
-				building = "colossus_yards"
-				building = "titan_yards"
 				owner = root
 			}
 		}
@@ -2757,13 +2749,11 @@ country_event = {
 				module = "shipyard"
 				module = "shipyard"
 				module = "shipyard"
-				module = "hangar_bay"
-				module = "gun_battery"
-				module = "gun_battery"
+				module = "shipyard"
+				module = "shipyard"
+				building = "crew_quarters"
 				building = "target_uplink_computer"
 				building = "defense_grid"
-				building = "colossus_yards"
-				building = "titan_yards"
 				owner = root
 			}
 		}
@@ -2773,20 +2763,18 @@ country_event = {
 				module = "shipyard"
 				module = "shipyard"
 				module = "shipyard"
-				module = "hangar_bay"
-				module = "gun_battery"
-				module = "gun_battery"
+				module = "shipyard"
+				module = "shipyard"
+				building = "crew_quarters"
 				building = "target_uplink_computer"
 				building = "defense_grid"
-				building = "colossus_yards"
-				building = "titan_yards"
 				owner = root
 			}
 		}
 		# 種族作成
 		create_species = {
 			name = "NAME_NGM_origin_ngm_phenix_machine"
-			plural = "NAME_NGM_origin_ngm_phenix_machine"
+			plural = "NAME_NGM_origin_ngm_phenix_machine_plural"
 			class = ROBOT
 			namelist = MACHINE1
 			portrait = tox_machine
@@ -2814,7 +2802,7 @@ country_event = {
 		}
 		create_species = {
 			name = "NAME_NGM_origin_ngm_phenix_avi"
-			plural = "NAME_NGM_origin_ngm_phenix_avi"
+			plural = "NAME_NGM_origin_ngm_phenix_avi_plural"
 			class = AVI
 			namelist = AVI2
 			portrait = avi2
@@ -4777,6 +4765,174 @@ country_event = {
 			MESSAGE = no
 			TECH = tech_repeatable_improved_starbase_capacity
 		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_starbase_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_starbase_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_starbase_4
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_starbase_5
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_basic_science_lab_2
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_basic_science_lab_3
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_experimental_subspace_navigation
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_heritage_site
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_cloaking_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_autocurating_vault
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH = tech_habitat_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_orbital_ring_tier_1
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_juggernaut
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_paradise_dome
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_interstellar_campaigns
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_galactic_campaigns
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_gene_expressions
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_selected_lineages
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_capacity_boosters
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_modular_engineering
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_archaeostudies
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_archaeo_point_defence
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_archaeo_lasers
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_archaeo_mass_drivers
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_archaeo_refinery
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_archaeo_overcharger
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_archaeo_titan_beam
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_archaeo_rampart
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_archaeo_detection_scrambler
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_archaeoarmor
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_archaeoshield
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_archaeo_strike_crafts
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_archaeo_mass_accelerator
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_archaeo_missiles
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_ceremony_theory
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_ceremony_theory_second
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_ad_high_degree_of_local_autonomy
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_hypercomms_forum
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_hyper_entertainment_forum
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_arcane_deciphering
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_arcane_deciphering
+		}
+		give_tech_no_error_effect = {
+			MESSAGE = no
+			TECH =  tech_morphogenetic_field_mastery
+		}
 	}
 }
 
@@ -4909,6 +5065,18 @@ country_event = {
 				orbit_angle = 360
 			}
 			link_wormholes = event_target:ngm_phenix_10_init_system
+		}
+		add_trust = {
+			who = event_target:ngm_phenix_npc_country
+			amount = 12000
+		}
+		add_intel = {
+			who = event_target:ngm_phenix_npc_country
+			amount = 100
+		}
+		event_target:ngm_phenix = {
+			set_capital = yes
+			set_sector_capital = yes
 		}
 	}
 }

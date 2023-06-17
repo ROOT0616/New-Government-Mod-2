@@ -863,13 +863,14 @@ ap_ngm_galactic_reconguista = {
 		has_origin = origin_ngm_phenix
 	}
 	possible = {
-		num_ascension_perks >= 4
+		num_ascension_perks >= 3
 	}
 	modifier = {
 		starbase_shipyard_build_speed_mult = 0.5
 	}
 	on_enabled = {
 		remove_modifier = origin_ngm_phenix_5_modifier
+		# remove_modifier = origin_ngm_phenix_1_modifier # 一次的
 		custom_tooltip = ap_ngm_galactic_reconguista_effect
 		
 	}
@@ -890,13 +891,14 @@ ap_ngm_rebirth_from_the_ashes = {
 	}
 	possible = {
 		has_ascension_perk = ap_ngm_galactic_reconguista
-		num_ascension_perks >= 4
+		num_ascension_perks >= 3
 	}
 	modifier = {
 		terraforming_cost_mult = -0.5
 	}
 	on_enabled = {
 		remove_modifier = origin_ngm_phenix_6_modifier
+		# remove_modifier = origin_ngm_phenix_2_modifier # 一次的
 		custom_tooltip = ap_ngm_rebirth_from_the_ashes_effect
 	}
 	# アセンションパークの獲得数が3個以上なら取得しやすくしている
@@ -916,13 +918,14 @@ ap_ngm_outward_steps = {
 	possible = {
 		has_ascension_perk = ap_ngm_galactic_reconguista
 		has_ascension_perk = ap_ngm_rebirth_from_the_ashes
-		num_ascension_perks >= 4
+		num_ascension_perks >= 3
 	}
 	modifier = {
 		diplo_weight_mult = 0.5
 	}
 	on_enabled = {
 		remove_modifier = origin_ngm_phenix_7_modifier
+		# remove_modifier = origin_ngm_phenix_3_modifier # 一次的
 		custom_tooltip = ap_ngm_outward_steps_effect
 		
 	}
@@ -944,13 +947,14 @@ ap_ngm_imperial_majesty = {
 		has_ascension_perk = ap_ngm_galactic_reconguista
 		has_ascension_perk = ap_ngm_rebirth_from_the_ashes
 		has_ascension_perk = ap_ngm_outward_steps
-		num_ascension_perks >= 4
+		num_ascension_perks >= 3
 	}
 	modifier = {
 		ship_cloaking_detection_add = 5
 	}
 	on_enabled = {
 		remove_modifier = origin_ngm_phenix_8_modifier
+		# remove_modifier = origin_ngm_phenix_4_modifier # 一次的
 		custom_tooltip = ap_ngm_imperial_majesty_effect
 		
 	}
@@ -977,13 +981,17 @@ ap_ngm_existence_of_a_saint = {
 		has_ascension_perk = ap_ngm_rebirth_from_the_ashes
 		has_ascension_perk = ap_ngm_outward_steps
 		has_ascension_perk = ap_ngm_imperial_majesty
-		num_ascension_perks >= 4
+		num_ascension_perks >= 3
 	}
 	modifier = {
 		country_megastructure_build_cap_add = 5
 	}
 	on_enabled = {
 		remove_modifier = origin_ngm_phenix_9_modifier
+		# remove_modifier = origin_ngm_phenix_10_modifier # 一次的
+		# add_modifier = {
+		# 	modifier = origin_ngm_phenix_11_modifier
+		# } # 一次的
 		custom_tooltip = ap_ngm_existence_of_a_saint_effect
 		
 	}

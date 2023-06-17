@@ -19,7 +19,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_law"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_law.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -66,7 +66,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_virture"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_virture.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -113,7 +113,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_study"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_study.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -161,7 +161,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_ecstasy"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_ecstasy.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -209,7 +209,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_avantgarde"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_avantgarde.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -257,7 +257,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_classic"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_classic.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -305,7 +305,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_academic"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_academic.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_academic.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -353,7 +354,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_memory"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_memory.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_memory.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -401,7 +403,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_freedom"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_freedom.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_freedom.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -446,10 +449,11 @@ spriteTypes = {
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
-
+	
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_order"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_order.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_order.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -497,7 +501,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_neighbor"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_neighbor.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_neighbor.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -545,7 +550,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_enemy"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_enemy.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_enemy.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -593,7 +599,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_nature"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_nature.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_nature.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -641,7 +648,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_machine"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_machine.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_machine.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -689,7 +697,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_official"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_official.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_official.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -737,7 +746,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_officer"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_officer.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_officer.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -785,7 +795,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_navy"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_navy.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_navy.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -833,7 +844,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_planet_army"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_planet_army.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_planet_army.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -881,7 +893,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_noble"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_noble.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_noble.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -929,7 +942,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_mass"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_mass.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_mass.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -977,7 +991,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_building"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_building.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_building.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -1025,7 +1040,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_longing"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_longing.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_longing.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -1073,7 +1089,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_adversity"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_adversity.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_adversity.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -1121,7 +1138,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_margin"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_margin.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_margin.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -1169,7 +1187,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_friendship"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_friendship.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_friendship.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -1217,7 +1236,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_suzerain"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_suzerain.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_suzerain.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -1265,7 +1285,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_strong_pressure"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_strong_pressure.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_strong_pressure.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -1313,7 +1334,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_intervention"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_intervention.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_intervention.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -1361,7 +1383,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_gigantic"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_gigantic.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_gigantic.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -1409,7 +1432,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_information"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_information.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_information.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -1457,7 +1481,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_legislation"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_legislation.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_legislation.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -1505,7 +1530,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_purification"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_purification.dds"
+		# textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_purification.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -1553,7 +1579,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_production"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_production.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -1601,7 +1627,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_tradition_category_icon_tradition_ngm_hereditary"
-		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_ngm_hereditary.dds"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
@@ -1632,17 +1658,20 @@ spriteTypes = {
 	# 魁偉
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_brawny"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_phenix.dds"
+		# textureFile = "gfx/interface/traditions/tradition_hex_bg_gray.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_gray.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_brawny"
 		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_brawny.dds"
+		# textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_brawny"
 		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_brawny.dds"
+		# textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1653,44 +1682,51 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_tr_ngm_brawny_UTC"
-		textureFile = "gfx/interface/icons/traditions/tr_ngm_brawny_UTC.dds"
+		name = "GFX_tr_ngm_brawny_utc"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_brawny_utc.dds"
+		# textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tr_ngm_brawny_SPBT"
-		textureFile = "gfx/interface/icons/traditions/tr_ngm_brawny_SPBT.dds"
+		name = "GFX_tr_ngm_brawny_spbt"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_brawny_spbt.dds"
+		# textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tr_ngm_brawny_predictive_aversion"
 		textureFile = "gfx/interface/icons/traditions/tr_ngm_brawny_predictive_aversion.dds"
+		# textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tr_ngm_brawny_Shinkos_reproduction"
-		textureFile = "gfx/interface/icons/traditions/tr_ngm_brawny_Shinkos_reproduction.dds"
+		name = "GFX_tr_ngm_brawny_shinkos_reproduction"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_brawny_shinkos_reproduction.dds"
+		# textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tr_ngm_brawny_reopening_of_the_imperial_shipyard"
 		textureFile = "gfx/interface/icons/traditions/tr_ngm_brawny_reopening_of_the_imperial_shipyard.dds"
+		# textureFile = "gfx/interface/icons/traditions/tradition_void.dds"
 	}
 
 	# 賢雅
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_elegance"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_phenix.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_gray.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_elegance"
 		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_elegance.dds"
+		# textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_elegance"
 		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_elegance.dds"
+		# textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1701,13 +1737,13 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_tr_ngm_elegance_BPT"
-		textureFile = "gfx/interface/icons/traditions/tr_ngm_elegance_BPT.dds"
+		name = "GFX_tr_ngm_elegance_bpt"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_elegance_bpt.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tr_ngm_elegance_ICHI"
-		textureFile = "gfx/interface/icons/traditions/tr_ngm_elegance_ICHI.dds"
+		name = "GFX_tr_ngm_elegance_ichi"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_elegance_ichi.dds"
 	}
 
 	spriteType = {
@@ -1727,66 +1763,70 @@ spriteTypes = {
 
 	# 蓋世
 	spriteType = {
-		name = "GFX_tradition_hex_bg_tradition_ngm_Gaishi"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_phenix.dds"
+		name = "GFX_tradition_hex_bg_tradition_ngm_gaishi"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_gray.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tradition_category_bg_tradition_ngm_Gaishi"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_Gaishi.dds"
+		name = "GFX_tradition_category_bg_tradition_ngm_gaishi"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_gaishi.dds"
+		# textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
 	}
 
 	corneredTileSpriteType = {
-		name = "GFX_tradition_category_tile_tradition_ngm_Gaishi"
-		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_Gaishi.dds"
+		name = "GFX_tradition_category_tile_tradition_ngm_gaishi"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_gaishi.dds"
+		# textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
 
 	spriteType = {
-		name = "GFX_tradition_category_icon_tradition_ngm_Gaishi"
+		name = "GFX_tradition_category_icon_tradition_ngm_gaishi"
 		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tr_ngm_Gaishi_true_power_projection"
-		textureFile = "gfx/interface/icons/traditions/tr_ngm_Gaishi_true_power_projection.dds"
+		name = "GFX_tr_ngm_gaishi_true_power_projection"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_gaishi_true_power_projection.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tr_ngm_Gaishi_the_true_value_of_economic_power"
-		textureFile = "gfx/interface/icons/traditions/tr_ngm_Gaishi_the_true_value_of_economic_power.dds"
+		name = "GFX_tr_ngm_gaishi_the_true_value_of_economic_power"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_gaishi_the_true_value_of_economic_power.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tr_ngm_Gaishi_guidance_for_the_wise"
-		textureFile = "gfx/interface/icons/traditions/tr_ngm_Gaishi_guidance_for_the_wise.dds"
+		name = "GFX_tr_ngm_gaishi_guidance_for_the_wise"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_gaishi_guidance_for_the_wise.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tr_ngm_Gaishi_galactic_power"
-		textureFile = "gfx/interface/icons/traditions/tr_ngm_Gaishi_galactic_power.dds"
+		name = "GFX_tr_ngm_gaishi_galactic_power"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_gaishi_galactic_power.dds"
 	}
 
 	spriteType = {
-		name = "GFX_tr_ngm_Gaishi_insist_on_ones_own_ideas"
-		textureFile = "gfx/interface/icons/traditions/tr_ngm_Gaishi_insist_on_ones_own_ideas.dds"
+		name = "GFX_tr_ngm_gaishi_insist_on_ones_own_ideas"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_gaishi_insist_on_ones_own_ideas.dds"
 	}
 
 	# 赫焉
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_misdirection"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_phenix.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_gray.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_misdirection"
 		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_misdirection.dds"
+		# textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_misdirection"
 		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_misdirection.dds"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
@@ -1824,17 +1864,19 @@ spriteTypes = {
 	# 神威
 	spriteType = {
 		name = "GFX_tradition_hex_bg_tradition_ngm_gods_majesty"
-		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_phenix.dds"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_gray.dds"
 	}
 
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_ngm_gods_majesty"
 		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_gods_majesty.dds"
+		# textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
 	}
 
 	corneredTileSpriteType = {
 		name = "GFX_tradition_category_tile_tradition_ngm_gods_majesty"
 		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_gods_majesty.dds"
+		# textureFile = "gfx/interface/tiles/tradition_category_tile_locked.dds"
 		borderSize = { x=140 y=140 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}

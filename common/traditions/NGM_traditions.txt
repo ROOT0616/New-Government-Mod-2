@@ -2073,8 +2073,6 @@ tr_ngm_hereditary_nation = {
 # 黄昏の帝国の伝統	名称	条件	種類	効果概要	説明
 # 取得時	"黄昏の帝国である。 3つ以上の伝統を取得している。"	魁偉	帝国補正:艦隊伝統の堅持を削除	世界へと歩む一歩は軍靴によるものだ
 tr_ngm_brawny_adopt = {
-	possible = {
-	}
 	on_enabled = {
 		remove_modifier = origin_ngm_phenix_1_modifier
 	}
@@ -2084,27 +2082,22 @@ tr_ngm_brawny_adopt = {
 
 # 完遂時		魁偉	宇宙軍許容量+200、星系基地許容量+20	
 tr_ngm_brawny_finish = {
-	possible = {
-	}
 	modifier = {
+		ascension_perks_add = 1
 		country_naval_cap_add = 200
 		starbase_building_capacity_add = 20
 	}
 }
 
 # 超時空電探		魁偉	武器射程+30%、追尾+10	かつて我が国で使われた時空を超越した探知は的確かつ超越的な射程を実現させる
-tr_ngm_brawny_UTC = {
-	possible = {
-	}
+tr_ngm_brawny_utc = {
 	modifier = {
 		ship_weapon_range_mult = 0.3
 	}
 }
 
 # 一点突破戦術		魁偉	連射レート+30%	かつて我が国が得意とした一点突破戦術は、現在でも各国の脅威になりうる
-tr_ngm_brawny_SPBT = {
-	possible = {
-	}
+tr_ngm_brawny_spbt = {
 	modifier = {
 		ship_fire_rate_mult = 0.3
 	}
@@ -2112,17 +2105,13 @@ tr_ngm_brawny_SPBT = {
 
 # 予知的回避		魁偉	回避+30%	艦長や航宙士の直感的判断とAIの判断を利用して予知的な回避を生み出す
 tr_ngm_brawny_predictive_aversion = {
-	possible = {
-	}
 	modifier = {
 		ship_evasion_mult = 0.3
 	}
 }
 
 # 神鋼の再生産		魁偉	艦隊建造コスト-25%	効率的かつ低コストの鋼材生産を再開することで艦隊の価格を低減させることができる
-tr_ngm_brawny_Shinkos_reproduction = {
-	possible = {
-	}
+tr_ngm_brawny_shinkos_reproduction = {
 	modifier = {
 		starbase_shipyard_build_cost_mult = -0.25
 	}
@@ -2130,8 +2119,6 @@ tr_ngm_brawny_Shinkos_reproduction = {
 
 # 帝国造船所の再稼働 reopening_of_the_imperial_shipyard		魁偉	艦隊建造速度-50%	銀河有数の高効率造船所を再稼働させることで迅速な艦隊建造が可能となる
 tr_ngm_brawny_reopening_of_the_imperial_shipyard = {
-	possible = {
-	}
 	modifier = {
 		starbase_shipyard_build_speed_mult = -0.5
 	}
@@ -2139,10 +2126,8 @@ tr_ngm_brawny_reopening_of_the_imperial_shipyard = {
 
 # 取得時	"黄昏の帝国である。 3つ以上の伝統を取得している。（4つめ）"	賢雅	帝国補正:古びたデータバンクを削除	古き記憶を呼び起こし、沈滞した社会を再度活性化させるのだ
 tr_ngm_elegance_adopt = {
-	possible = {
-	}
 	on_enabled = {
-		remove_modifier = origin_ngm_phenix_2_modifier
+		remove_modifier = "origin_ngm_phenix_2_modifier"
 	}
 	modifier = {
 	}
@@ -2153,12 +2138,13 @@ tr_ngm_elegance_finish = {
 	possible = {
 	}
 	modifier = {
+		ascension_perks_add = 1
 		tech_cost_empire_size_mult = -1
 	}
 }
 
 # 超越物理理論		賢雅	物理学生産+50%、物質主義志向魅力+15%	卓越した物理理論を活用することで、停滞していた技術研究は再活性化する
-tr_ngm_elegance_BPT = {
+tr_ngm_elegance_bpt = {
 	possible = {
 	}
 	modifier = {
@@ -2168,7 +2154,7 @@ tr_ngm_elegance_BPT = {
 }
 
 # 予知心理学		賢雅	社会学生産+50%	集合知としての大衆は心理学的に未来予知の対象となりうる
-tr_ngm_elegance_ICHI = {
+tr_ngm_elegance_ichi = {
 	possible = {
 	}
 	modifier = {
@@ -2204,7 +2190,7 @@ tr_ngm_elegance_overture_to_tomorrow = {
 }
 
 # 取得時	"黄昏の帝国である。 3つ以上の伝統を取得している。（4つめ）"	蓋世	帝国補正:傲慢なる老臣を削除	自分の足で歩き、新たなる未来を勝ち取る準備は徐々に進められている
-tr_ngm_Gaishi_adopt = {
+tr_ngm_gaishi_adopt = {
 	possible = {
 	}
 	on_enabled = {
@@ -2215,7 +2201,7 @@ tr_ngm_Gaishi_adopt = {
 }
 
 # 完遂時		蓋世	"拒否権のクールダウン-50% 緊急決議のクールダウン-50%"	
-tr_ngm_Gaishi_finish = {
+tr_ngm_gaishi_finish = {
 	possible = {
 	}
 	modifier = {
@@ -2225,7 +2211,7 @@ tr_ngm_Gaishi_finish = {
 }
 
 # 真の戦力投射	true_power_projection	蓋世	艦隊による外交発言力+50%、介入主義志向魅力+15%	軍事力とは戦うためにあるのではなく、戦わないためにあるのだ
-tr_ngm_Gaishi_true_power_projection = {
+tr_ngm_gaishi_true_power_projection = {
 	possible = {
 	}
 	modifier = {
@@ -2235,7 +2221,7 @@ tr_ngm_Gaishi_true_power_projection = {
 }
 
 # 経済力の真価	the_true_value_of_economic_power	蓋世	経済力から発生する外交発言力+50%	経済力は人々の繁栄や幸福のためだけではなく、発言力をも増強させることもできる
-tr_ngm_Gaishi_the_true_value_of_economic_power = {
+tr_ngm_gaishi_the_true_value_of_economic_power = {
 	possible = {
 	}
 	modifier = {
@@ -2244,7 +2230,7 @@ tr_ngm_Gaishi_the_true_value_of_economic_power = {
 }
 
 # 知恵者の指導		蓋世	技術水準から発生する外交発言力+50%	真の知恵ある者こそが人々を教導するのだ
-tr_ngm_Gaishi_guidance_for_the_wise = {
+tr_ngm_gaishi_guidance_for_the_wise = {
 	possible = {
 	}
 	modifier = {
@@ -2253,7 +2239,7 @@ tr_ngm_Gaishi_guidance_for_the_wise = {
 }
 
 # 銀河の力	galactic_power	蓋世	POPから発生する外交発言力+50%	銀河に敷衍する帝国の力こそは卓越へと導かれる
-tr_ngm_Gaishi_galactic_power = {
+tr_ngm_gaishi_galactic_power = {
 	possible = {
 	}
 	modifier = {
@@ -2262,7 +2248,7 @@ tr_ngm_Gaishi_galactic_power = {
 }
 
 # 声高なる主張	insist_on_ones_own_ideas	蓋世	外交発言力+50%	我の演説を聞け！
-tr_ngm_Gaishi_insist_on_ones_own_ideas = {
+tr_ngm_gaishi_insist_on_ones_own_ideas = {
 	possible = {
 	}
 	modifier = {
@@ -2286,6 +2272,7 @@ tr_ngm_misdirection_finish = {
 	possible = {
 	}
 	modifier = {
+		ascension_perks_add = 1
 		pop_growth_speed = 0.25
 		planet_pop_assembly_mult = 0.25
 	}
@@ -2338,8 +2325,6 @@ tr_ngm_misdirection_blessings_of_creation = {
 
 # 取得時	"黄昏の帝国である 魁偉、賢雅、蓋世、赫焉を取得している"	神威	帝国補正:黄昏の帝国を削除	我こそは帝国である。
 tr_ngm_gods_majesty_adopt = {
-	possible = {
-	}
 	on_enabled = {
 		remove_modifier = origin_ngm_phenix_10_modifier
 	}
@@ -2357,6 +2342,7 @@ tr_ngm_gods_majesty_finish = {
 		}
 	}
 	modifier = {
+		ascension_perks_add = 1
 	}
 }
 

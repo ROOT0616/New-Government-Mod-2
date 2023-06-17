@@ -935,7 +935,7 @@ ngm_phenix_01_init = {
 			min = 20
 			max = 30
 		}
-		change_orbit = 15
+		change_orbit = 30
 		planet = {
 			count = 1
 			class = "pc_barren"
@@ -1018,11 +1018,8 @@ ngm_phenix_01_init = {
 	planet = {
 		count = 1
 		class = star
-		orbit_distance = 120
-		orbit_angle = {
-			min = 20
-			max = 120
-		}
+		orbit_distance = 290
+		orbit_angle = 120
 		size = {
 			min = 25
 			max = 30
@@ -1105,10 +1102,7 @@ ngm_phenix_01_init = {
 		count = 1
 		class = star
 		orbit_distance = 0
-		orbit_angle = {
-			min = 20
-			max = 120
-		}
+		orbit_angle = 120
 		size = {
 			min = 20
 			max = 30
@@ -1606,7 +1600,7 @@ ngm_phenix_08_init = {
 			planet = {
 				count = 1
 				class = "pc_frozen"
-				orbit_distance = 30
+				orbit_distance = 15
 				orbit_angle = {
 					min = 90
 					max = 270
@@ -1615,7 +1609,7 @@ ngm_phenix_08_init = {
 			planet = {
 				count = 1
 				class = "pc_barren"
-				orbit_distance = 30
+				orbit_distance = 15
 				orbit_angle = {
 					min = 90
 					max = 270
@@ -1682,7 +1676,6 @@ ngm_phenix_10_init = {
 	}
 }
 
-# 黄昏の帝国 属国
 ngm_phenix_npc_init = {
 	class = "rl_binary_starting_stars"
 	flags = {

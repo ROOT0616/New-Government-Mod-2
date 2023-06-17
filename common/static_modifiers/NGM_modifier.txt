@@ -145,40 +145,40 @@ forced_labor = {
 }
 
 # 養殖種類変更（水産研究アーコロジー）(研究で選択肢追加)
-# 16.ストーンフィッシュ        (鉱物+10)
-ngm_stonefish = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
-	icon_frame = 1
-	planets_minerals_produces_add = 10
-}
+# # 16.ストーンフィッシュ        (鉱物+10)
+# ngm_stonefish = {
+# 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+# 	icon_frame = 1
+# 	planets_minerals_produces_add = 10
+# }
 
-# 17.ラグジュアリー・ジェリー    (交易価値+7)
-ngm_luxury_jewelry = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
-	icon_frame = 1
-	trade_value_add = 7
-}
+# # 17.ラグジュアリー・ジェリー    (交易価値+7)
+# ngm_luxury_jewelry = {
+# 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+# 	icon_frame = 1
+# 	trade_value_add = 7
+# }
 
-# 18.エナジー・オイスター        (エネルギー+10)
-ngm_energy_oyster = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
-	icon_frame = 1
-	planets_energy_produces_add = 10
-}
+# # 18.エナジー・オイスター        (エネルギー+10)
+# ngm_energy_oyster = {
+# 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+# 	icon_frame = 1
+# 	planets_energy_produces_add = 10
+# }
 
-# 19.白金魚            (合金+5)
-ngm_white_goldfish = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
-	icon_frame = 1
-	planets_alloys_produces_add = 5
-}
+# # 19.白金魚            (合金+5)
+# ngm_white_goldfish = {
+# 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+# 	icon_frame = 1
+# 	planets_alloys_produces_add = 5
+# }
 
-# 20.海綿藻            (消費財+5)    (デフォルト)
-ngm_seaweed = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
-	icon_frame = 1
-	planets_consumer_goods_produces_add = 5
-}
+# # 20.海綿藻            (消費財+5)    (デフォルト)
+# ngm_seaweed = {
+# 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+# 	icon_frame = 1
+# 	planets_consumer_goods_produces_add = 5
+# }
 
 #######################
 #####    国是    ######
@@ -636,12 +636,18 @@ ngm_r_galactic_empire_aquarium = {
 	country_trade_fee = -0.05
 }
 
+# 偉大なる恩顧 偉大なる帝国の臣下であることは大いなる喜びなのだ
+# アクティブ効果	：帝国補正：統合力+500K 派閥からの統合力収入+50%
+ngm_r_imperial_chronicle_modifier = {
+	pop_factions_unity_produces_mult = 0.5
+}
+
 # 開始時、20年の間Pop成長速度+200%、Pop製造速度+200%、流入魅力+100%の惑星特性（国家再興の決意 Determination to Rebuild ）を付与
 ngm_determination_to_rebuild = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
 	pop_growth_speed = 2
-	pop_assembly_speed = 2
+	planet_pop_assembly_mult = 2
 	planet_immigration_pull_mult = 1
 }
 
@@ -800,7 +806,8 @@ ngm_with_honor_2_modifier = {
 # Pop成長率+1000%、Pop製造速度+1000%。Pop消費財+50%
 resolution_ngm_galactic_scale_1 = {
 	pop_growth_speed = 10
-	pop_assembly_speed = 10
+	# pop_assembly_speed = 10
+	planet_pop_assembly_mult = 10
 	planet_pops_consumer_goods_upkeep_mult = 0.5
 }
 

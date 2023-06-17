@@ -29,7 +29,8 @@ origin_ngm_buffer_state = {
 	habitability_preference = pc_relic
 	preferred_planet_class_neighbor = no
 	potential = {
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		always = yes
+		# ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
 	possible = {
 		ethics = {

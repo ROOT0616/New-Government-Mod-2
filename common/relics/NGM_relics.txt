@@ -121,7 +121,7 @@ r_ngm_geid = {
 }
 
 # インペリアル・クロニクル この帝国の物語は実話であり、主人公は我々であったのだ
-# パッシブ効果	：毎月の忠誠心+10 派閥幸福度+20% 布告:民間船徴発を可能にする
+# パッシブ効果	： 派閥幸福度+20% 布告:民間船徴発を可能にする
 # アクティブ効果	：統合力+500K 派閥からの統合力収入+50%
 # (アクティブコスト:影響力300)
 # (クールダウン期間:7200)
@@ -153,9 +153,70 @@ r_ngm_imperial_chronicle = {
 	score = 10
 	# アクティブ効果	：帝国補正：統合力+500K 派閥からの統合力収入+50%
 	active_effect = {
+		add_resource = {
+			unity = 500000
+		}
 		add_modifier = {
-			modifier = "ngm_r_galactic_empire_aquarium"
+			modifier = "ngm_r_imperial_chronicle_modifier"
 			days = 3600
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 7200
+			}
+		}
+	}
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = {
+				has_modifier = relic_activation_cooldown
+			}
+		}
+	}
+}
+
+# 偉大なる恩顧 偉大なる帝国の臣下であることは大いなる喜びなのだ
+# パッシブ効果	：鉱物、食料、エネルギー生産+25% 粉末、クリスタル、ガス生産+25% 外交発言力-50% 毎月の忠誠心+10
+# アクティブ効果	：勲章+10 統合力+5K
+# (アクティブコスト:影響力300)
+# (クールダウン期間:7200)
+r_ngm_great_patronage = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_omnicodex"
+	sound = "relic_activation_the_omnicodex"
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			influence = 300
+		}
+	}
+	ai_weight = {
+		weight = 100
+	}
+	# パッシブ効果	：鉱物、食料、エネルギー生産+25% 粉末、クリスタル、ガス生産+25% 外交発言力-50% 毎月の忠誠心+10
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		country_minerals_produces_mult = 0.25
+		country_food_produces_mult = 0.25
+		country_energy_produces_mult = 0.225
+		country_volatile_motes_produces_mult = 0.25
+		country_rare_crystals_produces_mult = 0.25
+		country_exotic_gases_produces_mult = 0.25
+		diplo_weight_mult = -0.5
+		monthly_loyalty = 10
+	}
+	score = 10
+	# アクティブ効果	：勲章+10 統合力+5K
+	active_effect = {
+		add_resource = {
+			unity = 5000
 		}
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {

@@ -14,10 +14,9 @@ create_ngm_phenix_npc_effect = {
 		}
 		allow_negative_traits = yes
 	}
-
 	create_country = {
 		name = "NAME_origin_ngm_phenix_npc"
-		adjective = "ADJ_MSI_country"
+		adjective = "ADJ_origin_ngm_phenix_npc"
 		species = event_target:ngm_phenix_global_avi_species
 		name_list = AVI2
 		type = default
@@ -43,6 +42,20 @@ create_ngm_phenix_npc_effect = {
 				who = event_target:ngm_phenix_country
 				preset = preset_prospectorium
 			}
+			add_trust = {
+				who = event_target:ngm_phenix_country
+				amount = 6000
+			}
+			random_agreement = {
+				limit = {
+					owner = { is_same_value = event_target:ngm_phenix_country }
+					target = { is_same_value = event_target:ngm_phenix_npc_country }
+					# owner = { is_same_value = event_target:ngm_phenix_npc_country }
+					# target = { is_same_value = event_target:ngm_phenix_country }
+				}
+				add_loyalty = 140
+			}
+			add_relic = r_ngm_great_patronage
 		}
 	}
 	create_colony = {

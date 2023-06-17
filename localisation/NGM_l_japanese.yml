@@ -277,7 +277,7 @@
 
  origin_ngm_escape_to_the_past:0 "過去への逃走"
  origin_ngm_escape_to_the_past_desc:0 " この国の種族は苛烈な運命をたどる時代から逃げ去り、未来を変えるために再度過去へと戻った。\n しかし、その運命から抗う手法は追跡者を生み、定期的な襲撃を受けることとなる。"
- origin_tooltip_ngm_escape_to_the_past:0 "120か月に1度未来からの艦隊が襲撃する。打ち勝つことによって技術のデブリを取得することが可能となる。\n\n首都惑星に特殊な特性「時空超越機」\n物理学研究§G+20%§!、Pop成長速度§G+10%§!"
+ origin_tooltip_ngm_escape_to_the_past:0 "120か月に1度未来からの艦隊が襲撃する。打ち勝つことによって技術のデブリを取得することが可能となる。\n\n-首都惑星に特殊な特性「時空超越機」\n-物理学研究§G+20%§!\n-Pop成長速度§G+10%§!"
 
  origin_ngm_galactic_empire_aquarium:0 "銀河帝国アクアリウム"
  origin_ngm_galactic_empire_aquarium_desc:0 "この国家は古き良き銀河帝国のアミューズメントパークとして存在した。その娯楽性から各国から攻撃の対象とならなかった。しかし、それ故に緩やかな衰退を遂げていっている。\nついにこのままではいけないことに気が付き銀河社会に恐る恐る足を踏み入れたが、かつてあったあらゆる知識は失われており、拡張する勇気は持ちえなかったのである。\nしかし、豊かなアミューズメントパークは健在である。\n§Rこの起源を選ぶ国が2カ国以上あるとバグります。§!"
@@ -286,6 +286,9 @@
  origin_ngm_phenix:0 "黄昏の帝国"
  origin_ngm_phenix_desc:0 "この国はかつての覇権国家であった。数多くの敵を打ち倒し、数々の困難を乗り越えた大帝国であった。そう、「であった」のだ。\n\n§Rこの起源をは非常に困難である§!"
  origin_tooltip_ngm_phenix:0 "技術、生産力、人口、に§G大幅な強化§!が入った状態で開始。\n企業帝国の属国を所有した状態で開始。\n拡張、外交、戦争、内政に§Y大幅な制限§!がかかった状態で開始。\n §G伝統やアセンションを進めていくと......§!"
+
+ origin_ngm_phenix_npc:0 "永遠の恩義"
+ origin_ngm_phenix_desc:0 "この国はかつての覇権国家に隷属することで生存を認められ、さらに現在まで生き残ることができた。その恩義を果たすため、宗主国に永遠の隷属を誓っている。"
 
 #######################
 #####    国是    ######
@@ -1324,6 +1327,9 @@
  edict_ngm_fleet_trade_options_menu:0 "艦隊 贈与"
  edict_ngm_fleet_trade_options_menu_desc:0 ""
 
+ edict_ngm_mossball_edict:0 "モスボールされた民間船の再整備"
+ edict_ngm_mossball_edict_desc:0 "気だるいことではあるが、モスボールされている民間船を再整備することは可能である"
+
 #######################
 #####    技術    ######
 #######################
@@ -2285,6 +2291,8 @@
 
  ngm_r_galactic_empire_aquarium:0 "銀河皇帝勅許第7216号「帝立遊園領邦の認可」"
 
+ ngm_r_imperial_chronicle_modifier:0 "偉大なる恩顧"
+
 ##########################
 #####    種族特性    ######
 ##########################
@@ -2854,6 +2862,9 @@
 
  r_ngm_imperial_chronicle:0 "インペリアル・クロニクル"
  r_ngm_imperial_chronicle_desc:0 "この帝国の物語は実話であり、主人公は我々であったのだ"
+
+ r_ngm_great_patronage:0 "偉大なる恩顧"
+ r_ngm_great_patronage_desc:0 "偉大なる帝国の臣下であることは大いなる喜びなのだ"
 
 ##########################
 #####    戦争目標    ######
@@ -4173,14 +4184,14 @@
  tradition_ngm_brawny_desc:0 "世界へと歩む一歩は軍靴によるものだ"
  tr_ngm_brawny_adopt:0 "魁偉の伝統"
  tr_ngm_brawny_finish:0 "魁偉の伝統の完成"
- tr_ngm_brawny_UTC:0 "超時空電探"
- tr_ngm_brawny_UTC_delayed:0 "かつて我が国で使われた時空を超越した探知は的確かつ超越的な射程を実現させる"
- tr_ngm_brawny_SPBT:0 "一点突破戦術"
- tr_ngm_brawny_SPBT_delayed:0 "かつて我が国が得意とした一点突破戦術は、現在でも各国の脅威になりうる"
+ tr_ngm_brawny_utc:0 "超時空電探"
+ tr_ngm_brawny_utc_delayed:0 "かつて我が国で使われた時空を超越した探知は的確かつ超越的な射程を実現させる"
+ tr_ngm_brawny_spbt:0 "一点突破戦術"
+ tr_ngm_brawny_spbt_delayed:0 "かつて我が国が得意とした一点突破戦術は、現在でも各国の脅威になりうる"
  tr_ngm_brawny_predictive_aversion:0 "予知的回避"
  tr_ngm_brawny_predictive_aversion_delayed:0 "艦長や航宙士の直感的判断とAIの判断を利用して予知的な回避を生み出す"
- tr_ngm_brawny_Shinkos_reproduction:0 "神鋼の再生産"
- tr_ngm_brawny_Shinkos_reproduction_delayed:0 "効率的かつ低コストの鋼材生産を再開することで艦隊の価格を低減させることができる"
+ tr_ngm_brawny_shinkos_reproduction:0 "神鋼の再生産"
+ tr_ngm_brawny_shinkos_reproduction_delayed:0 "効率的かつ低コストの鋼材生産を再開することで艦隊の価格を低減させることができる"
  tr_ngm_brawny_reopening_of_the_imperial_shipyard:0 "帝国造船所の再稼働"
  tr_ngm_brawny_reopening_of_the_imperial_shipyard_delayed:0 "銀河有数の高効率造船所を再稼働させることで迅速な艦隊建造が可能となる"
 
@@ -4188,10 +4199,10 @@
  tradition_ngm_elegance_desc:0 "古き記憶を呼び起こし、沈滞した社会を再度活性化させるのだ"
  tr_ngm_elegance_adopt:0 "賢雅の伝統"
  tr_ngm_elegance_finish:0 "賢雅の伝統の完成"
- tr_ngm_elegance_BPT:0 "超越物理理論"
- tr_ngm_elegance_BPT_delayed:0 "卓越した物理理論を活用することで、停滞していた技術研究は再活性化する"
- tr_ngm_elegance_ICHI:0 "予知心理学"
- tr_ngm_elegance_ICHI_delayed:0 "集合知としての大衆は心理学的に未来予知の対象となりうる"
+ tr_ngm_elegance_bpt:0 "超越物理理論"
+ tr_ngm_elegance_bpt_delayed:0 "卓越した物理理論を活用することで、停滞していた技術研究は再活性化する"
+ tr_ngm_elegance_ichi:0 "予知心理学"
+ tr_ngm_elegance_ichi_delayed:0 "集合知としての大衆は心理学的に未来予知の対象となりうる"
  tr_ngm_elegance_magitek_engineering:0 "マギテック工学"
  tr_ngm_elegance_magitek_engineering_delayed:0 "優れた工学技術は魔法と見分けがつかない"
  tr_ngm_elegance_the_way_of_the_new_light:0 "新光の道"
@@ -4199,20 +4210,20 @@
  tr_ngm_elegance_overture_to_tomorrow:0 "明日への序曲"
  tr_ngm_elegance_overture_to_tomorrow_delayed:0 "明日へと歩む意思は未来への足掛かりだ"
 
- tradition_ngm_Gaishi:0 "蓋世"
- tradition_ngm_Gaishi_desc:0 "自分の足で歩き、新たなる未来を勝ち取る準備は徐々に進められている"
- tr_ngm_Gaishi_adopt:0 "蓋世の伝統"
- tr_ngm_Gaishi_finish:0 "蓋世の伝統の完成"
- tr_ngm_Gaishi_true_power_projection:0 "真の戦力投射"
- tr_ngm_Gaishi_true_power_projection_delayed:0 "軍事力とは戦うためにあるのではなく、戦わないためにあるのだ"
- tr_ngm_Gaishi_the_true_value_of_economic_power:0 "経済力の真価"
- tr_ngm_Gaishi_the_true_value_of_economic_power_delayed:0 "経済力は人々の繁栄や幸福のためだけではなく、発言力をも増強させることもできる"
- tr_ngm_Gaishi_guidance_for_the_wise:0 "知恵者の指導"
- tr_ngm_Gaishi_guidance_for_the_wise_delayed:0 "真の知恵ある者こそが人々を教導するのだ"
- tr_ngm_Gaishi_galactic_power:0 "銀河の力"
- tr_ngm_Gaishi_galactic_power_delayed:0 "銀河に敷衍する帝国の力こそは卓越へと導かれる"
- tr_ngm_Gaishi_insist_on_ones_own_ideas:0 "声高なる主張"
- tr_ngm_Gaishi_insist_on_ones_own_ideas_delayed:0 "我の演説を聞け！"
+ tradition_ngm_gaishi:0 "蓋世"
+ tradition_ngm_gaishi_desc:0 "自分の足で歩き、新たなる未来を勝ち取る準備は徐々に進められている"
+ tr_ngm_gaishi_adopt:0 "蓋世の伝統"
+ tr_ngm_gaishi_finish:0 "蓋世の伝統の完成"
+ tr_ngm_gaishi_true_power_projection:0 "真の戦力投射"
+ tr_ngm_gaishi_true_power_projection_delayed:0 "軍事力とは戦うためにあるのではなく、戦わないためにあるのだ"
+ tr_ngm_gaishi_the_true_value_of_economic_power:0 "経済力の真価"
+ tr_ngm_gaishi_the_true_value_of_economic_power_delayed:0 "経済力は人々の繁栄や幸福のためだけではなく、発言力をも増強させることもできる"
+ tr_ngm_gaishi_guidance_for_the_wise:0 "知恵者の指導"
+ tr_ngm_gaishi_guidance_for_the_wise_delayed:0 "真の知恵ある者こそが人々を教導するのだ"
+ tr_ngm_gaishi_galactic_power:0 "銀河の力"
+ tr_ngm_gaishi_galactic_power_delayed:0 "銀河に敷衍する帝国の力こそは卓越へと導かれる"
+ tr_ngm_gaishi_insist_on_ones_own_ideas:0 "声高なる主張"
+ tr_ngm_gaishi_insist_on_ones_own_ideas_delayed:0 "我の演説を聞け！"
 
  tradition_ngm_misdirection:0 "赫焉"
  tradition_ngm_misdirection_desc:0 "民衆の活力を呼び起こし、永遠の繁栄へと歩を進めるのだ"
@@ -5250,11 +5261,25 @@
 
  civic_tooltip_ngm_warm_effects:0 "§E政策に§H無制限戦争§!を選択できない§!\n§E軌道爆撃の§H無差別爆撃§!が選択できない§!"
 
- NAME_Pursuer:0 "追跡者"
-
  planet_buildings_exotic_gases_upkeep_mult:0 "建造物£rare_crystals£ エキゾチックガス維持費"
  planet_buildings_rare_crystals_upkeep_mult:0 "建造物£rare_crystals£ レアクリスタル維持費"
  planet_buildings_volatile_motes_upkeep_mult:0 "建造物£volatile_motes£ 揮発性粉末維持費"
+
+##########################
+#####    名称関係    ######
+##########################
+
+ NAME_Pursuer:0 "追跡者"
+
+ NAME_NGM_origin_ngm_phenix_machine:0 "機械人"
+ NAME_NGM_origin_ngm_phenix_machine_plural:0 "機械人"
+
+ NAME_NGM_origin_ngm_phenix_avi:0 "麗隷人"
+ NAME_NGM_origin_ngm_phenix_avi_plural:0 "麗隷人"
+
+ NAME_origin_ngm_phenix_npc:0 "麗隷組合"
+ NAME_origin_ngm_phenix_npc_initials:0 "組合"
+ ADJ_origin_ngm_phenix_npc:0 "麗隷人"
 
 # :0 ""
 # _desc:0 ""

@@ -20,7 +20,7 @@ tech_ceremony_theory = {
 		modifier = {
 			factor = 1.25
 			research_leader = {
-				area = society
+				# area = society
 				has_trait = "leader_trait_expertise_statecraft"
 			}
 		}
@@ -38,7 +38,7 @@ tech_ceremony_theory = {
 		modifier = {
 			factor = 1.25
 			research_leader = {
-				area = society
+				# area = society
 				has_trait = "leader_trait_expertise_statecraft"
 			}
 		}
@@ -68,7 +68,7 @@ tech_ceremony_theory_second = {
 		modifier = {
 			factor = 1.25
 			research_leader = {
-				area = society
+				# area = society
 				has_trait = "leader_trait_expertise_statecraft"
 			}
 		}
@@ -86,7 +86,7 @@ tech_ceremony_theory_second = {
 		modifier = {
 			factor = 1.25
 			research_leader = {
-				area = society
+				# area = society
 				has_trait = "leader_trait_expertise_statecraft"
 			}
 		}
@@ -112,7 +112,7 @@ tech_ad_high_degree_of_local_autonomy = {
 		modifier = {
 			factor = 1.25
 			research_leader = {
-				area = society
+				# area = society
 				has_trait = "leader_trait_expertise_statecraft"
 			}
 		}
@@ -130,7 +130,7 @@ tech_ad_high_degree_of_local_autonomy = {
 		modifier = {
 			factor = 1.25
 			research_leader = {
-				area = society
+				# area = society
 				has_trait = "leader_trait_expertise_statecraft"
 			}
 		}
@@ -138,32 +138,32 @@ tech_ad_high_degree_of_local_autonomy = {
 }
 
 # 社会学研究「発展型魚類養殖」 developmental_fish_farming (コスト：2000)
-tech_ngm_developmental_fish_farming = {
-	cost = 2000
-	area = society
-	tier = 3
-	category = { statecraft }
-	weight = @tier3weight1
-	potential = {
-		has_origin = origin_ngm_galactic_empire_aquarium
-	}
-	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_statecraft"
-			}
-		}
-	}
+# tech_ngm_developmental_fish_farming = {
+# 	cost = 2000
+# 	area = society
+# 	tier = 3
+# 	category = { statecraft }
+# 	weight = @tier3weight1
+# 	potential = {
+# 		has_origin = origin_ngm_galactic_empire_aquarium
+# 	}
+# 	weight_modifier = {
+# 		modifier = {
+# 			factor = 1.25
+# 			research_leader = {
+# 				# area = society
+# 				has_trait = "leader_trait_expertise_statecraft"
+# 			}
+# 		}
+# 	}
 
-	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_statecraft"
-			}
-		}
-	}
-}
+# 	ai_weight = {
+# 		modifier = {
+# 			factor = 1.25
+# 			research_leader = {
+# 				# area = society
+# 				has_trait = "leader_trait_expertise_statecraft"
+# 			}
+# 		}
+# 	}
+# }
