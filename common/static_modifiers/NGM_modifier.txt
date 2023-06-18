@@ -716,12 +716,19 @@ origin_ngm_phenix_8_modifier = {
 # 失われしインフラ技術	巨大構造物建造不可、防衛ステーション許容量-500	この帝国の偉大なる大規模建築は再現不可能だ
 origin_ngm_phenix_9_modifier = {
 	starbase_defense_platform_capacity_add = -500
+	country_megastructure_build_cap_add = -50
 	megastructure_build_speed_mult = -999999.99
 }
 
-# 黄昏の帝国	帝国規模+300%	帝国は衰退しました
+# 黄昏の帝国	帝国規模+500%	帝国は衰退しました
 origin_ngm_phenix_10_modifier = {
-	empire_size_mult = 3
+	ship_hull_mult = -0.5
+	ship_armor_mult = -0.5
+	ship_shield_mult = -0.5
+	ship_accuracy_mult = -0.5
+	empire_size_mult = 5
+	country_subject_acceptance_add = -500
+	country_government_civic_points_add = -1
 }
 
 # 不死鳥の帝国	開戦事由「不死鳥の帰還」を使用可能	我々は蘇る！
@@ -785,7 +792,9 @@ ngm_government3e = {
 
 # 死は無であるが、敗北と不名誉に生きることは、まさに日常の死なのだ。
 ngm_with_honor_1_modifier = {
+	country_base_influence_produces_add = 1
 	pop_happiness = 0.25
+	planet_amenities_mult = 0.25
 	trade_value_mult = 0.25
 	pop_growth_speed = 0.25
 	country_produces_mult = 0.25
@@ -795,9 +804,10 @@ ngm_with_honor_1_modifier = {
 # 屈辱を与えられた
 ngm_with_honor_2_modifier = {
 	country_base_influence_produces_add = -2
-	pop_happiness = -0.1
+	pop_happiness = -0.25
+	planet_amenities_mult = -0.25
 	planet_stability_add = -10
-	trade_value_mult = -0.1
+	trade_value_mult = -0.25
 	pop_growth_speed = -0.1
 	diplo_weight_mult = -0.1
 }

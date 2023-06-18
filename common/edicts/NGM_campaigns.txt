@@ -1340,6 +1340,27 @@ ngm_mossball_edict = {
 	}
 }
 
+# 
+ngm_origin_ngm_phenix_fix_edict = {
+	length = 0
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_origin = origin_ngm_phenix
+		has_tradition = tr_ngm_gaishi_adopt
+		has_modifier = origin_ngm_phenix_4_modifier
+	}
+	resources = {
+		category = edicts
+	}
+	allow = {
+		has_tradition = tr_ngm_gaishi_adopt
+		has_modifier = origin_ngm_phenix_4_modifier
+	}
+	effect = {
+		remove_modifier = origin_ngm_phenix_4_modifier
+	}
+}
+
 ngm_test_campaign = {
 	length = -1
 	icon = "GFX_edict_type_policy"
@@ -1350,7 +1371,7 @@ ngm_test_campaign = {
 		has_ethic = ethic_fanatic_honorism
 		has_civic = civic_ngm_random_birth_rate
 		has_civic = civic_byzantine_bureaucracy
-		has_civic = civic_ngm_individualistic_rationalist
+		has_civic = civic_ngm_fundamental_insanity
 		has_civic = civic_efficient_bureaucracy
 		has_civic = civic_mining_guilds
 	}
