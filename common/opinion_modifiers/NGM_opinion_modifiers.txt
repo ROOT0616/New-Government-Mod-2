@@ -55,3 +55,21 @@ triggered_opinion_tr_ngm_longing_finish = {
 # 		base = 10
 # 	}
 # }
+
+
+# 切望:他国との友好度+50
+triggered_opinion_origin_ngm_phenix_10_modifier = {
+	trigger = {
+		NOT = {
+			has_origin = origin_ngm_phenix_npc
+		}
+		is_country_type = default
+		FROM = {
+			has_modifier = origin_ngm_phenix_10_modifier
+		}
+	}
+	
+	opinion = {
+		base = -200
+	}
+}

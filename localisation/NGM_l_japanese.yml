@@ -1813,8 +1813,10 @@
  origin_ngm_phenix_9_modifier_desc:0 "この帝国の偉大なる大規模建築は再現不可能だ"
  origin_ngm_phenix_10_modifier:0 "黄昏の帝国"
  origin_ngm_phenix_10_modifier_desc:0 "帝国は衰退しました"
- origin_ngm_phenix_11_modifier:0 "不死鳥の帝国"
- origin_ngm_phenix_11_modifier_desc:0 "我々は蘇る！"
+ origin_ngm_phenix_11_modifier:0 "古代帝国"
+ origin_ngm_phenix_11_modifier_desc:0 "この帝国は古代から続く伝統を強く守っており、そのコストを支払い続けている"
+ origin_ngm_phenix_12_modifier:0 "不死鳥の帝国"
+ origin_ngm_phenix_12_modifier_desc:0 "我々は蘇る！"
 
 ##########################
 #####    惑星特性    ######
@@ -4251,13 +4253,13 @@
  tr_ngm_gods_majesty_preface:0 "序章"
  tr_ngm_gods_majesty_preface_delayed:0 "我が国もかつては地を這いつくばる赤ん坊であった"
  tr_ngm_gods_majesty_beginning:0 "起"
- tr_ngm_gods_majesty_preface_delayed:0 "一歩一歩の歩みは、革新を生んだ"
+ tr_ngm_gods_majesty_beginning_delayed:0 "一歩一歩の歩みは、革新を生んだ"
  tr_ngm_gods_majesty_second:0 "承"
- tr_ngm_gods_majesty_preface_delayed:0 "やがて革新は停滞へと代わり、我々は長い眠りについた"
+ tr_ngm_gods_majesty_second_delayed:0 "やがて革新は停滞へと代わり、我々は長い眠りについた"
  tr_ngm_gods_majesty_abruptly:0 "転"
- tr_ngm_gods_majesty_preface_delayed:0 "そして、ようやく目を覚ましたのだ"
+ tr_ngm_gods_majesty_abruptly_delayed:0 "そして、ようやく目を覚ましたのだ"
  tr_ngm_gods_majesty_a_new_chapter:0 "新たなる序章"
- tr_ngm_gods_majesty_preface_delayed:0 "さあ、始めようではないか"
+ tr_ngm_gods_majesty_a_new_chapter_delayed:0 "さあ、始めようではないか"
 
 #########################
 ### COUNCILOR STRINGS ###
@@ -5071,6 +5073,7 @@
  triggered_opinion_tr_ngm_ambassador:0 "$tr_ngm_ambassador$"
  triggered_opinion_tr_ngm_longing_finish:0 "$tr_ngm_longing_finish$"
  triggered_opinion_tr_ngm_suzerain_adopt:0 "$tr_ngm_suzerain_adopt$"
+ triggered_opinion_origin_ngm_phenix_10_modifier:0 "$origin_ngm_phenix_10_modifier$"
 
 ##########################
 #####    そのほか    ######

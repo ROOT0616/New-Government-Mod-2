@@ -2031,7 +2031,7 @@ councilor_ngm_mechanical_faith = {
 	}
 	civic = civic_ngm_mechanical_faith
 	modifier = {
-		pop_robot_build_speed_mult = 0.01
+		planet_pop_assembly_mult = 0.01
 		country_engineering_tech_research_speed = 0.01
 	}
 }

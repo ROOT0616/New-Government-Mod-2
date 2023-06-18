@@ -722,17 +722,25 @@ origin_ngm_phenix_9_modifier = {
 
 # 黄昏の帝国	帝国規模+500%	帝国は衰退しました
 origin_ngm_phenix_10_modifier = {
-	ship_hull_mult = -0.5
+	# ship_hull_mult = -0.5
 	ship_armor_mult = -0.5
 	ship_shield_mult = -0.5
 	ship_accuracy_mult = -0.5
 	empire_size_mult = 5
 	country_subject_acceptance_add = -500
 	country_government_civic_points_add = -1
+	country_trust_cap_add = -50
+}
+
+# 古代帝国	統合力産出-20%、帝国規模+250%、帝国規模による伝統コスト+200% この帝国は古代から続く伝統を強く守っており、そのコストを支払い続けている
+origin_ngm_phenix_11_modifier = {
+	country_unity_produces_mult = -0.2
+	empire_size_mult = 2.5
+	tradition_cost_empire_size_mult = 2
 }
 
 # 不死鳥の帝国	開戦事由「不死鳥の帰還」を使用可能	我々は蘇る！
-origin_ngm_phenix_11_modifier = {
+origin_ngm_phenix_12_modifier = {
 }
 
 ##########################

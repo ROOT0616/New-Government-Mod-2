@@ -3002,12 +3002,6 @@ country_event = {
 			set_controller = root
 			solar_system = {
 				spawn_megastructure = {
-					type = orbital_ring_ruined
-					planet = prev
-					# planet = event_target:ngm_phenix_2
-					# coords_from = event_target:ngm_phenix_2
-				}
-				spawn_megastructure = {
 					type = "hyper_relay"
 					random_pos = yes
 					orbit_angle = 360					# range of the randomization
@@ -3036,13 +3030,6 @@ country_event = {
 		event_target:ngm_phenix_3 = {
 			set_owner = root
 			set_controller = root
-			solar_system = {
-				spawn_megastructure = {
-					type = orbital_ring_ruined
-					planet = prev
-					# planet = event_target:ngm_phenix_3
-				}
-			}
 			while = {
 				count = 50
 				create_pop = {
@@ -3062,10 +3049,10 @@ country_event = {
 				}
 			}
 			solar_system = {
-				spawn_megastructure = {
-					type = orbital_ring_ruined
-					planet = event_target:ngm_phenix_3
-				}
+				# spawn_megastructure = {
+				# 	type = orbital_ring_ruined
+				# 	planet = event_target:ngm_phenix_3
+				# }
 				spawn_megastructure = {
 					type = "hyper_relay"
 					random_pos = yes
@@ -3077,12 +3064,6 @@ country_event = {
 		event_target:ngm_phenix_4 = {
 			set_owner = root
 			set_controller = root
-			solar_system = {
-				spawn_megastructure = {
-					type = orbital_ring_ruined
-					planet = event_target:ngm_phenix_4
-				}
-			}
 			while = {
 				count = 50
 				create_pop = {
@@ -3102,11 +3083,11 @@ country_event = {
 				}
 			}
 			solar_system = {
-				spawn_megastructure = {
-					type = orbital_ring_ruined
-					# planet = event_target:ngm_phenix_4
-					planet = prev
-				}
+				# spawn_megastructure = {
+				# 	type = orbital_ring_ruined
+				# 	# planet = event_target:ngm_phenix_4
+				# 	planet = prev
+				# }
 				spawn_megastructure = {
 					type = mega_shipyard_ruined
 					planet = event_target:ngm_phenix_4_mega_shipyard_ruined
@@ -3133,7 +3114,7 @@ country_event = {
 					orbit_angle = 360					# range of the randomization
 				}
 				country_event = {
-					days = 1
+					# days = 1
 					id = ngm_origin.2004
 				}
 			}
@@ -3203,11 +3184,11 @@ country_event = {
 					type = "quantum_catapult_3"
 					graphical_culture = mammalian_01
 				}
-				spawn_megastructure = {
-					type = "gateway_ruined"
-					random_pos = yes
-					orbit_angle = 360					# range of the randomization
-				}
+				# spawn_megastructure = {
+				# 	type = "gateway_ruined"
+				# 	random_pos = yes
+				# 	orbit_angle = 360					# range of the randomization
+				# }
 				spawn_megastructure = {
 					type = "hyper_relay"
 					random_pos = yes
@@ -3217,7 +3198,7 @@ country_event = {
 		}
 		# 初期イベント
 		add_resource = {
-			unity = 325000
+			unity = 380000
 		}
 		country_event = {
 			id = ngm_origin.2001
@@ -3263,6 +3244,9 @@ country_event = {
 		}
 		add_modifier = {
 			modifier = origin_ngm_phenix_10_modifier
+		}
+		add_modifier = {
+			modifier = origin_ngm_phenix_11_modifier
 		}
 		set_country_flag = encountered_first_wormhole
 		add_seen_bypass_type = wormhole

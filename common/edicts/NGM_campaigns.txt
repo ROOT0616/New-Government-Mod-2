@@ -1378,6 +1378,26 @@ ngm_test_campaign = {
 	allow = {
 		always = yes
 	}
+	effect = {
+		random_owned_planet = {
+			limit = {
+				is_planet_class = pc_gas_giant
+			}
+			change_pc = pc_ocean
+		}
+		random_owned_planet = {
+			limit = {
+				OR = {
+					is_planet_class = pc_ice_asteroid
+					is_planet_class = pc_crystal_asteroid
+					is_planet_class = pc_rare_crystal_asteroid
+					is_planet_class = pc_asteroid
+				}
+			}
+			set_planet_size = 30
+			change_pc = pc_ocean
+		}
+	}
 	modifier = {
 		planet_pop_assembly_mult = 100
 		species_leader_exp_gain = 10

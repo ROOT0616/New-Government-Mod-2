@@ -1974,7 +1974,6 @@ decision_revoke_ngm_olympic_nomination = {
 # 	}
 # }
 
-
 decision_ngm_test = {
 	owned_planets_only = yes
 	enactment_time = 0
@@ -1995,6 +1994,7 @@ decision_ngm_test = {
 		}
 	}
 	effect = {
+		change_pc = pc_gaia
 		while = {
 			count = 5
 			create_pop = {
