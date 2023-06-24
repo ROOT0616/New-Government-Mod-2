@@ -3,7 +3,9 @@ tech_ceremony_theory = {
 	cost = @tier1cost2
 	area = society
 	tier = 1
-	category = { statecraft }
+	category = {
+		statecraft
+	}
 	weight = @tier1weight2
 	modifier = {
 		planet_jobs_unity_produces_mult = 0.1
@@ -19,13 +21,15 @@ tech_ceremony_theory = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				# area = society
-				has_trait = "leader_trait_expertise_statecraft"
+			# research_leader = {
+			# 	# area = society
+			# }
+			has_trait = "leader_trait_expertise_statecraft"
+			has_trait_in_council = {
+				TRAIT = leader_trait_expertise_statecraft
 			}
 		}
 	}
-
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -37,9 +41,12 @@ tech_ceremony_theory = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				# area = society
-				has_trait = "leader_trait_expertise_statecraft"
+			# research_leader = {
+			# 	# area = society
+			# }
+			# has_trait = "leader_trait_expertise_statecraft"
+			has_trait_in_council = {
+				TRAIT = leader_trait_expertise_statecraft
 			}
 		}
 	}
@@ -50,8 +57,12 @@ tech_ceremony_theory_second = {
 	cost = @tier3cost1
 	area = society
 	tier = 3
-	prerequisites = { "tech_ceremony_theory" }
-	category = { statecraft }
+	prerequisites = {
+		"tech_ceremony_theory"
+	}
+	category = {
+		statecraft
+	}
 	weight = @tier3weight1
 	modifier = {
 		planet_jobs_unity_produces_mult = 0.1
@@ -67,13 +78,15 @@ tech_ceremony_theory_second = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				# area = society
-				has_trait = "leader_trait_expertise_statecraft"
+			# research_leader = {
+			# 	# area = society
+			# 	has_trait = "leader_trait_expertise_statecraft"
+			# }
+			has_trait_in_council = {
+				TRAIT = leader_trait_expertise_statecraft
 			}
 		}
 	}
-
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -85,9 +98,12 @@ tech_ceremony_theory_second = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				# area = society
-				has_trait = "leader_trait_expertise_statecraft"
+			# research_leader = {
+			# 	# area = society
+			# 	has_trait = "leader_trait_expertise_statecraft"
+			# }
+			has_trait_in_council = {
+				TRAIT = leader_trait_expertise_statecraft
 			}
 		}
 	}
@@ -98,7 +114,9 @@ tech_ad_high_degree_of_local_autonomy = {
 	cost = @tier3cost1
 	area = society
 	tier = 3
-	category = { statecraft }
+	category = {
+		statecraft
+	}
 	weight = @tier3weight1
 	weight_modifier = {
 		modifier = {
@@ -111,13 +129,15 @@ tech_ad_high_degree_of_local_autonomy = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				# area = society
-				has_trait = "leader_trait_expertise_statecraft"
+			# research_leader = {
+			# 	# area = society
+			# 	has_trait = "leader_trait_expertise_statecraft"
+			# }
+			has_trait_in_council = {
+				TRAIT = leader_trait_expertise_statecraft
 			}
 		}
 	}
-
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -129,9 +149,12 @@ tech_ad_high_degree_of_local_autonomy = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				# area = society
-				has_trait = "leader_trait_expertise_statecraft"
+			# research_leader = {
+			# 	# area = society
+			# 	has_trait = "leader_trait_expertise_statecraft"
+			# }
+			has_trait_in_council = {
+				TRAIT = leader_trait_expertise_statecraft
 			}
 		}
 	}
@@ -156,7 +179,6 @@ tech_ad_high_degree_of_local_autonomy = {
 # 			}
 # 		}
 # 	}
-
 # 	ai_weight = {
 # 		modifier = {
 # 			factor = 1.25

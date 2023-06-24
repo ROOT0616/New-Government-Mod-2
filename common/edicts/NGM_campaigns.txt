@@ -1340,24 +1340,52 @@ ngm_mossball_edict = {
 	}
 }
 
-# 
-ngm_origin_ngm_phenix_fix_edict = {
+# 影の敵国を設定
+ngm_virture_rival_options_menu = {
 	length = 0
 	icon = "GFX_edict_type_policy"
 	potential = {
-		has_origin = origin_ngm_phenix
-		has_tradition = tr_ngm_gaishi_adopt
-		has_modifier = origin_ngm_phenix_4_modifier
-	}
-	resources = {
-		category = edicts
+		has_tradition = tr_ngm_virture_first
+		is_ai = no
 	}
 	allow = {
-		has_tradition = tr_ngm_gaishi_adopt
-		has_modifier = origin_ngm_phenix_4_modifier
+		custom_tooltip = {
+			fail_text = "requires_actor_not_ngm_virture_rival_country"
+			NAND = {
+				has_country_flag = country_flag_ngm_virture_rival_country_1
+				has_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+		}
 	}
 	effect = {
-		remove_modifier = origin_ngm_phenix_4_modifier
+		# custom_tooltip = ryika_abdw_options_menu_tt
+		hidden_effect = {
+			country_event = {
+				id = ngm_diplomatic.1
+			}
+		}
+	}
+}
+
+ngm_virture_rival_end_options_menu = {
+	length = 0
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_tradition = tr_ngm_virture_first
+		hidden_trigger = {
+			OR = {
+				has_country_flag = country_flag_ngm_virture_rival_country_1
+				has_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+		}
+	}
+	effect = {
+		# custom_tooltip = ryika_abdw_options_menu_tt
+		hidden_effect = {
+			country_event = {
+				id = ngm_diplomatic.2
+			}
+		}
 	}
 }
 

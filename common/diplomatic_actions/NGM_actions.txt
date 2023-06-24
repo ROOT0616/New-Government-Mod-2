@@ -1,0 +1,180 @@
+# 変数：
+# is_listed, boolean, この外交行動タイプが外交ビューに表示されているかどうかを決定する。
+# 前提条件(prerequisites), リスト, プレイヤーがこの外交行動を送るために必要な技術。
+# requires_actor_peace, boolean, デフォルトではfalse, このアクションが可能なチェックを通過するために、アクターが平和であることを要求する。
+# requires_alliance_vote, boolean, デフォルトではfalse, このアクションを受信者に渡す前に、そのアクターの同盟が このアクションに投票することを要求します。
+# requires_actor_independence, boolean, デフォルトではtrue、アクターが独立していることを要求します。
+# requires_recipient_independence、 boolean、デフォルトではtrue、受け手に独立性を要求する。
+# requires_actor_federation_leader, boolean, デフォルトではfalse、アクターがフェデレーションに所属している場合、そのリーダーでなければならない。
+# requires_recipient_federation_leader, boolean, デフォルトではtrue、受け手がフェデレーションに所属している場合、そのリーダーでなければならない。
+# show_decline_to_alliance_members, boolean, デフォルトはfalse, このタイプの提案を辞退するときに同盟のメンバーを表示する。
+# should_show_accept_message, アクターに受諾のレスポンスを表示するかどうかを決定します。
+# should_remove_response_message_when_not_possible, boolean, '可能'チェックが失敗したときに外交応答メッセージを削除するかどうかを決める。
+# should_show_auto_accept_message_recipient, boolean, 外交的アクションを示すメッセージを受信者が受け取るかどうかを決定する。
+# should_open_auto_accept_message_recipient, boolean, 受信者がこのメッセージを自動的に開くかどうかを決定する。
+# should_notify_auto_recipient_on_vote_fail, boolean, アクションが自動受理された場合に、受理者に投票失敗を通知するかどうかを決定する。
+# should_show_auto_accept_message_actor, boolean, アクタが外交行動を示す返信を受け取るかどうかを決定します。
+# should_notify_all_communications, boolean, アクタまたは受信者と通信している全ての国にメッセージ通知を送るかどうかを決定します。
+# sound, 文字列, OnAcceptのカスタムサウンドを選択するために使用される。
+# AI_acceptance_base_value, デフォルト = 0
+# potential, trigger, root is actor, from is recipient, アクションが表示されるかどうかを決定する。
+# possible, trigger, root is actor, from is recipient, prev is requester (if action is done in response to an ask_xxx counterpart) or same as root, そのアクションがまだ可能かどうかを決定する。
+# アクションが可能かどうかを決定する。
+# root は受信者、from はアクター。ハードコードされた理由は上書きされず、乗算はai_acceptanceフィールド外の理由には影響しないため、加算と減算のみを使用することが推奨される。
+# どの帝国をライバルに設定しても、影響力は得られるが、関係は悪化する。通常の帝国、没落した帝国、目覚めた帝国が使用可能。
+action_make_ngm_virture_rival = {
+	icon = "GFX_diplomacy_status_rivalry"
+	auto_accepted = yes
+	requires_actor_independence = no
+	requires_recipient_independence = no
+	should_show_auto_accept_message_recipient = no
+	should_notify_all_communications = no
+	action_type = aggressive
+	potential = {
+		# has_tradition = tr_ngm_virture_first
+		# 属国にライバル意識を持てない
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					is_subject = yes
+					has_overlord = ROOT
+				}
+			}
+		}
+		# custom_tooltip = grants_humiliation_cb_originator
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_actor_not_fanatic_purifiers"
+			OR = {
+				is_same_species = from
+				NOT = {
+					has_valid_civic = civic_fanatic_purifiers
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_devouring_swarm"
+			NOT = {
+				has_valid_civic = civic_hive_devouring_swarm
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_terminator"
+			OR = {
+				is_same_species = from
+				NOT = {
+					has_civic = civic_machine_terminator
+				}
+				AND = {
+					has_civic = civic_machine_terminator
+					from = {
+						OR = {
+							has_country_flag = synthetic_empire
+							has_authority = auth_machine_intelligence
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_machine_assimilator"
+			NOT = {
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_inward_perfection"
+			NOT = {
+				has_valid_civic = civic_inwards_perfection
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_ngm_virture_rival_country"
+			AND = {
+				has_country_flag = country_flag_ngm_virture_rival_country_1
+				has_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						exists = event_target:ngm_virture_rival_country_1
+						exists = event_target:ngm_virture_rival_country_2
+					}
+				}
+				FROM = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					exists = event_target:ngm_virture_rival_country_1
+					NOT = {
+						exists = event_target:ngm_virture_rival_country_2
+					}
+				}
+				FROM = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = event_target:ngm_virture_rival_country_1
+					}
+					exists = event_target:ngm_virture_rival_country_2
+				}
+				FROM = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+}
+
+# End a rivalry, 10 year cooldown on new rivalries
+action_end_ngm_virture_rival = {
+	icon = "GFX_diplomacy_status_rivalry"
+	auto_accepted = yes
+	requires_actor_independence = no
+	requires_recipient_independence = no
+	should_show_auto_accept_message_recipient = no
+	should_notify_all_communications = no
+	action_type = positive
+	potential = {
+		hidden_trigger = {
+			OR = {
+				has_country_flag = country_flag_ngm_virture_rival_country_1
+				has_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+		}
+		# custom_tooltip = removes_humiliation_cb_originator
+	}
+	on_accept = {
+		hidden_effect = {
+			if = {
+				limit = {
+					from = {
+						is_same_value = event_target:ngm_virture_rival_country_1
+					}
+				}
+				remove_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			if = {
+				limit = {
+					from = {
+						is_same_value = event_target:ngm_virture_rival_country_2
+					}
+				}
+				remove_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+		}
+	}
+}

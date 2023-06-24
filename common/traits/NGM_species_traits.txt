@@ -1825,11 +1825,15 @@ trait_ngm_m_crafts = {
 	assembly_score = {
 		modifier = {
 			add = 1.5
-			from = { has_mining_designation = yes }
+			from = { has_factory_designation = yes }
 		}
 		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
+			add = 1.5
+			from = { has_foundry_designation = yes }
+		}
+		modifier = {
+			add = 1.5
+			from = { has_industrial_designation = yes }
 		}
 	}
 }
@@ -1870,11 +1874,7 @@ trait_ngm_m_taste = {
 	assembly_score = {
 		modifier = {
 			add = 1.5
-			from = { has_mining_designation = yes }
-		}
-		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
+			from = { has_farming_designation = yes }
 		}
 	}
 }
@@ -1890,14 +1890,6 @@ trait_ngm_m_discharge = {
 		energy = 750
 	}
 	assembly_score = {
-		modifier = {
-			add = 1.5
-			from = { has_mining_designation = yes }
-		}
-		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
-		}
 	}
 }
 
@@ -1913,14 +1905,6 @@ trait_ngm_m_jet = {
 		energy = 750
 	}
 	assembly_score = {
-		modifier = {
-			add = 1.5
-			from = { has_mining_designation = yes }
-		}
-		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
-		}
 	}
 }
 
@@ -1935,14 +1919,6 @@ trait_ngm_m_disassembly = {
 		energy = 750
 	}
 	assembly_score = {
-		modifier = {
-			add = 1.5
-			from = { has_mining_designation = yes }
-		}
-		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
-		}
 	}
 }
 
@@ -1963,14 +1939,6 @@ trait_ngm_m_quantum = {
 		energy = 750
 	}
 	assembly_score = {
-		modifier = {
-			add = 1.5
-			from = { has_mining_designation = yes }
-		}
-		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
-		}
 	}
 }
 
@@ -1992,14 +1960,6 @@ trait_ngm_m_reishi = {
 		energy = 750
 	}
 	assembly_score = {
-		modifier = {
-			add = 1.5
-			from = { has_mining_designation = yes }
-		}
-		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
-		}
 	}
 }
 
@@ -2015,14 +1975,6 @@ trait_ngm_m_primitive = {
 		energy = 750
 	}
 	assembly_score = {
-		modifier = {
-			add = 1.5
-			from = { has_mining_designation = yes }
-		}
-		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
-		}
 	}
 }
 
@@ -2037,14 +1989,6 @@ trait_ngm_m_leakage = {
 		energy = 750
 	}
 	assembly_score = {
-		modifier = {
-			add = 1.5
-			from = { has_mining_designation = yes }
-		}
-		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
-		}
 	}
 }
 
@@ -2060,14 +2004,6 @@ trait_ngm_m_nasty = {
 		energy = 750
 	}
 	assembly_score = {
-		modifier = {
-			add = 1.5
-			from = { has_mining_designation = yes }
-		}
-		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
-		}
 	}
 }
 
@@ -2082,14 +2018,6 @@ trait_ngm_m_invisible = {
 		energy = 750
 	}
 	assembly_score = {
-		modifier = {
-			add = 1.5
-			from = { has_mining_designation = yes }
-		}
-		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
-		}
 	}
 }
 
@@ -2104,14 +2032,6 @@ trait_ngm_m_wiring = {
 		energy = 750
 	}
 	assembly_score = {
-		modifier = {
-			add = 1.5
-			from = { has_mining_designation = yes }
-		}
-		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
-		}
 	}
 }
 
@@ -2129,14 +2049,6 @@ trait_ngm_m_cram = {
 		energy = 750
 	}
 	assembly_score = {
-		modifier = {
-			add = 1.5
-			from = { has_mining_designation = yes }
-		}
-		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
-		}
 	}
 }
 
@@ -2148,8 +2060,8 @@ trait_ngm_m_malfunction = {
 	modifier = {
 		planet_pop_assembly_mult = 0.1
 		planet_pops_upkeep_mult = 0.1
-		
 	}
+	custom_tooltip = trait_ngm_m_malfunction_custom_tooltip
 	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
 	assembling_modifier = {
 		planet_pop_assemblers_upkeep_mult = 0.1
@@ -2158,14 +2070,6 @@ trait_ngm_m_malfunction = {
 		energy = 750
 	}
 	assembly_score = {
-		modifier = {
-			add = 1.5
-			from = { has_mining_designation = yes }
-		}
-		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
-		}
 	}
 }
 
@@ -2181,13 +2085,720 @@ trait_ngm_m_inappropriate = {
 		energy = 750
 	}
 	assembly_score = {
+	}
+}
+
+# 17	シリコン製	trait_ngm_m_shi	2		Pop維持費-10%	この種族の身体にはシリコンが利用されている
+trait_ngm_m_shi = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_pops_upkeep_mult = -0.1
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+	}
+}
+
+# 18	人工皮膚	trait_ngm_m_skin	2		"有機生命体からの信用最大値+20 関係改善効率+10%"	この種族には人工皮膚が利用されており、有機的な外観になることが可能だ
+trait_ngm_m_skin = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		country_organic_trust_cap_add = 20
+		envoy_improve_relations_mult = 0.1
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 19	複合CPU	trait_ngm_m_mcpu	1		"リーダー取得経験値+35% リーダー故障確率+5%"	複数のCPUを搭載し、熟慮を行うことができる
+trait_ngm_m_mcpu = {
+	cost = 1
+	allowed_archetypes = { ROBOT MACHINE }
+	custom_tooltip = trait_ngm_m_mcpu_custom_tooltip
+	modifier = {
+		species_leader_exp_gain = 0.35
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 20	火炎放射	trait_ngm_m_fire	2		"職業からの合金+5% 地上軍ダメージ+15%"	ヒャッハー！ 汚物は消毒だー！
+trait_ngm_m_fire = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.05
+		army_damage_mult = 0.15
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_foundry_designation = yes }
+		}
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 21	緊急バックアップ	trait_ngm_m_back	4		リーダー故障確率-20%	万が一に備え、必要なデータを保存することを義務としている
+trait_ngm_m_back = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+	}
+	custom_tooltip = trait_ngm_m_back_custom_tooltip
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 22	戦闘コンピュータ	trait_ngm_m_bcpu	4		"回避+5% 武器射程+15%"	この種族は、戦闘目的でデザインされている
+trait_ngm_m_bcpu = {
+	cost = 4
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		ship_evasion_mult = 0.05
+		ship_weapon_range_mult = 0.15
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 23	サブシステム	trait_ngm_m_sub	2		職業からの資源産出+1%	システムの補助機能を使うことで全般的な機能向上が可能である
+trait_ngm_m_sub = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_jobs_produces_mult = 0.01
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 24	自己複製	trait_ngm_m_made	3		"Pop成長速度+10％ リーダー故障確率-5%"	この種族は、自分たち自身を複製することができる
+trait_ngm_m_made = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE }
+	custom_tooltip = trait_ngm_m_made_custom_tooltip
+	modifier = {
+		pop_growth_speed = 0.1
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 25	事務プロトコル	trait_ngm_m_office	3		帝国規模-5%	この種族は、事務作業を得意とする
+trait_ngm_m_office = {
+	cost = 3
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		empire_size_pops_mult = -0.05
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 26	製造システム	trait_ngm_m_product	4	典礼システム	合金産出+20%	この種族は、合金製造を得意とする
+trait_ngm_m_product = {
+	cost = 4
+	allowed_archetypes = { ROBOT MACHINE }
+	opposites = { "trait_ngm_m_proto" }
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.2
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_foundry_designation = yes }
+		}
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 27	典礼システム	trait_ngm_m_proto	4	製造システム	統合力産出+25%	この種族は、儀礼と伝統を重んじる
+trait_ngm_m_proto = {
+	cost = 4
+	allowed_archetypes = { ROBOT MACHINE }
+	opposites = { "trait_ngm_m_product" }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.25
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_unity_designation = yes }
+		}
+	}
+}
+
+# 28	異常複製	trait_ngm_m_incr	2	古代の機械	"POP製造速度+25% POP維持費-10% リーダー故障確率+15%"	この種族は通常では考えられない速度で自己増殖する
+trait_ngm_m_incr = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE }
+	opposites = { "trait_ngm_m_antient" }
+	custom_tooltip = trait_ngm_m_incr_custom_tooltip
+	modifier = {
+		planet_pops_upkeep_mult = -0.1
+	}
+	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
+	assembling_modifier = {
+		planet_pop_assemblers_upkeep_mult = 0.25
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 29	古代の機械	trait_ngm_m_antient	4	異常複製	"POP製造速度-25% 研究力+20% 統合力+20%"	この種族は古代の技術を用いた発達をしている
+trait_ngm_m_antient = {
+	cost = 4
+	allowed_archetypes = { ROBOT MACHINE }
+	opposites = { "trait_ngm_m_incr" }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.2
+		planet_jobs_physics_research_produces_mult = 0.20
+		planet_jobs_society_research_produces_mult = 0.20
+		planet_jobs_engineering_research_produces_mult = 0.20
+	}
+	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
+	assembling_modifier = {
+		planet_pop_assemblers_upkeep_mult = -0.25
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_research_designation = yes }
+		}
+		modifier = {
+			add = 1.5
+			from = { has_unity_designation = yes }
+		}
+	}
+}
+
+# 30	巨大	trait_ngm_m_huge	3	小型、極小、大型	"POPの維持費+15% 地上軍ダメージ+20% 地上軍耐久度+20% 職業からの鉱物産出+10%"	この種族は銀河の標準を考えても巨大だ
+trait_ngm_m_huge = {
+	cost = 3
+	allowed_archetypes = { ROBOT MACHINE }
+	opposites = {
+		"trait_ngm_m_big"
+		"trait_ngm_m_small"
+		"trait_ngm_m_tiny"
+	}
+	modifier = {
+		planet_pops_upkeep_mult = 0.15
+		army_damage_mult = 0.2
+		army_health = 0.2
+		planet_jobs_minerals_produces_mult = 0.1
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
 		modifier = {
 			add = 1.5
 			from = { has_mining_designation = yes }
 		}
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 31	大型	trait_ngm_m_big	2	小型、極小、巨大	"POPの維持費+5% 地上軍ダメージ+10% 地上軍耐久度+10% 職業からの鉱物産出+5%"	この種族は銀河の標準を考えても大型だ
+trait_ngm_m_big = {
+	cost = 2
+	allowed_archetypes = { ROBOT MACHINE }
+	opposites = {
+		"trait_ngm_m_huge"
+		# "trait_ngm_m_big"
+		"trait_ngm_m_small"
+		"trait_ngm_m_tiny"
+	}
+	modifier = {
+		planet_pops_upkeep_mult = 0.5
+		army_damage_mult = 0.1
+		army_health = 0.1
+		planet_jobs_minerals_produces_mult = 0.05
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
 		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
+			add = 1.5
+			from = { has_mining_designation = yes }
 		}
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 31	コアユニット露出	trait_ngm_m_core	-1		地上軍耐久力-25%	この種族は重要部品が露出している
+trait_ngm_m_core = {
+	cost = -1
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		army_health = -0.25
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 32	中枢統御機構	trait_ngm_m_main	-2		"職業からの資源産出-1% リーダー故障確率-5%"	この種族は応用の効かない古典的な統御をしている
+trait_ngm_m_main = {
+	cost = -2
+	allowed_archetypes = { ROBOT MACHINE }
+	custom_tooltip = trait_ngm_m_main_custom_tooltip
+	modifier = {
+		planet_jobs_produces_mult = -0.01
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 33	蒸気機関	trait_ngm_m_steam	-3		エネルギー算出-25%	この種族は蒸気機関をいまだに利用している
+trait_ngm_m_steam = {
+	cost = -3
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_jobs_energy_produces_mult = -0.25
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 34	非光学探知	trait_ngm_m_light	-4		"回避-10% 連射レート-15%"	この種族は、光学的探査に頼らない
+trait_ngm_m_light = {
+	cost = -4
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		ship_evasion_mult = -0.1
+		ship_fire_rate_mult = -0.15
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 35	制御困難	trait_ngm_m_uncont	-2		帝国規模+10%	この種族は、制御することが困難だ
+trait_ngm_m_uncont = {
+	cost = -2
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		empire_size_pops_mult = 0.1
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 36	フラッシュメモリ	trait_ngm_m_flash	-3		"リーダー維持費+15% リーダー故障確率+10%"	この種族のデータは外部に保存され、よくなくなる
+trait_ngm_m_flash = {
+	cost = -3
+	allowed_archetypes = { ROBOT MACHINE }
+	custom_tooltip = trait_ngm_m_flash_custom_tooltip
+	modifier = {
+		leaders_upkeep_mult = 0.15
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 37	小型	trait_ngm_m_small	-2	極小、大型、巨大	"POPの維持費-5% 地上軍ダメージ-10% 地上軍耐久度-10% 職業からの鉱物産出-5%"	この種族は、銀河でみても小型だ
+trait_ngm_m_small = {
+	cost = -2
+	allowed_archetypes = { ROBOT MACHINE }
+	opposites = {
+		"trait_ngm_m_huge"
+		"trait_ngm_m_big"
+		# "trait_ngm_m_small"
+		"trait_ngm_m_tiny"
+	}
+	modifier = {
+		planet_pops_upkeep_mult = -0.05
+		army_damage_mult = -0.1
+		army_health = -0.1
+		planet_jobs_minerals_produces_mult = -0.05
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 38	極小	trait_ngm_m_tiny	-3	小型、大型、巨大	"POPの維持費-10% 地上軍ダメージ-20% 地上軍耐久度-20% 職業からの鉱物産出-10%"	この種族は、銀河で見てもかなり小さい
+trait_ngm_m_tiny = {
+	cost = -3
+	allowed_archetypes = { ROBOT MACHINE }
+	opposites = {
+		"trait_ngm_m_huge"
+		"trait_ngm_m_big"
+		"trait_ngm_m_small"
+		# "trait_ngm_m_tiny"
+	}
+	modifier = {
+		planet_pops_upkeep_mult = -0.1
+		army_damage_mult = -0.22
+		army_health = -0.2
+		planet_jobs_minerals_produces_mult = -0.1
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 39	エラー音	trait_ngm_m_error	-1		逸脱度+5%	深刻なエラーが発生しました
+trait_ngm_m_error = {
+	cost = -1
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_crime_mult = 0.05
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 40	ブルースクリーン	trait_ngm_m_blue	-4		リーダー故障確率+10%	この種族は、よく青くなる
+trait_ngm_m_blue = {
+	cost = -4
+	allowed_archetypes = { ROBOT MACHINE }
+	custom_tooltip = trait_ngm_m_blue_custom_tooltip
+	modifier = {
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 41	自爆装置	trait_ngm_m_bomb	-4		"POP成長速度-5％ リーダー故障確率+5%"	この種族は、危機に陥ると爆発する
+trait_ngm_m_bomb = {
+	cost = -4
+	allowed_archetypes = { ROBOT MACHINE }
+	custom_tooltip = trait_ngm_m_bomb_custom_tooltip
+	modifier = {
+	}
+	assembling_modifier = {
+		planet_pop_assemblers_upkeep_mult = -0.05
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 42	木製	trait_ngm_m_wo	-2		Pop維持費+15%	この種族は、木でできた部品がある
+trait_ngm_m_wo = {
+	cost = -2
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_pops_upkeep_mult = 0.15
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 43	機能制限	trait_ngm_m_ban	-2		POPからの帝国規模+10%	この種族の機能は潜在的に制限されており、逐一行為が見張られる
+trait_ngm_m_ban = {
+	cost = -2
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		empire_size_pops_mult = 0.1
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 44	抽象的	trait_ngm_m_abs	-4		"研究力-10% 統合力-10%"	この種族の出力されるデータは抽象的であり、うまく説明できない
+trait_ngm_m_abs = {
+	cost = -4
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_jobs_unity_produces_mult = -0.1
+		planet_jobs_physics_research_produces_mult = -0.110
+		planet_jobs_society_research_produces_mult = -0.10
+		planet_jobs_engineering_research_produces_mult = -0.10
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
+	}
+}
+
+# 45	自己破壊	trait_ngm_m_break	-3		POP成長速度-10%	この種族は自己保存の原則を有しておらず、よく自己破壊する
+trait_ngm_m_break = {
+	cost = -3
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+	}
+	assembling_modifier = {
+		planet_pop_assemblers_upkeep_mult = -0.1
+	}
+	slave_cost = {
+		energy = 750
+	}
+	assembly_score = {
+		# modifier = {
+		# 	add = 1.5
+		# 	from = { has_mining_designation = yes }
+		# }
+		# modifier = {
+		# 	add = 0.5
+		# 	from = { has_rural_designation = yes }
+		# }
 	}
 }

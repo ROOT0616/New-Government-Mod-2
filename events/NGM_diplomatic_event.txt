@@ -1,0 +1,1148 @@
+################################
+######  影の敵国用イベント #######
+################################
+namespace = ngm_diplomatic
+country_event = {
+	id = ngm_diplomatic.1
+	title = ngm_diplomatic.1.name
+	desc = ngm_diplomatic.1.desc
+	picture = GFX_evt_fleet_evil
+	# show_sound = event_finding_loot
+	is_triggered_only = yes
+	immediate = {
+		save_event_target_as = ngm_diplomatic_0
+		random_country = {
+			limit = {
+				has_communications = root
+				is_country_type = default
+				has_overlord = ROOT
+			}
+			save_event_target_as = ngm_diplomatic_1
+			random_country = {
+				limit = {
+					has_communications = root
+					is_country_type = default
+					has_overlord = ROOT
+					NOT = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
+				}
+				save_event_target_as = ngm_diplomatic_2
+				random_country = {
+					limit = {
+						has_communications = root
+						is_country_type = default
+						has_overlord = ROOT
+						NOT = {
+							is_same_value = event_target:ngm_diplomatic_1
+						}
+						NOT = {
+							is_same_value = event_target:ngm_diplomatic_2
+						}
+					}
+					save_event_target_as = ngm_diplomatic_3
+					random_country = {
+						limit = {
+							has_communications = root
+							is_country_type = default
+							has_overlord = ROOT
+							NOT = {
+								is_same_value = event_target:ngm_diplomatic_1
+							}
+							NOT = {
+								is_same_value = event_target:ngm_diplomatic_2
+							}
+							NOT = {
+								is_same_value = event_target:ngm_diplomatic_3
+							}
+						}
+						save_event_target_as = ngm_diplomatic_4
+						random_country = {
+							limit = {
+								has_communications = root
+								is_country_type = default
+								has_overlord = ROOT
+								NOT = {
+									is_same_value = event_target:ngm_diplomatic_1
+								}
+								NOT = {
+									is_same_value = event_target:ngm_diplomatic_2
+								}
+								NOT = {
+									is_same_value = event_target:ngm_diplomatic_3
+								}
+								NOT = {
+									is_same_value = event_target:ngm_diplomatic_4
+								}
+							}
+							save_event_target_as = ngm_diplomatic_5
+							random_country = {
+								limit = {
+									has_communications = root
+									is_country_type = default
+									has_overlord = ROOT
+									NOT = {
+										is_same_value = event_target:ngm_diplomatic_1
+									}
+									NOT = {
+										is_same_value = event_target:ngm_diplomatic_2
+									}
+									NOT = {
+										is_same_value = event_target:ngm_diplomatic_3
+									}
+									NOT = {
+										is_same_value = event_target:ngm_diplomatic_4
+									}
+									NOT = {
+										is_same_value = event_target:ngm_diplomatic_5
+									}
+								}
+								save_event_target_as = ngm_diplomatic_6
+								random_country = {
+									limit = {
+										has_communications = root
+										is_country_type = default
+										has_overlord = ROOT
+										NOT = {
+											is_same_value = event_target:ngm_diplomatic_1
+										}
+										NOT = {
+											is_same_value = event_target:ngm_diplomatic_2
+										}
+										NOT = {
+											is_same_value = event_target:ngm_diplomatic_3
+										}
+										NOT = {
+											is_same_value = event_target:ngm_diplomatic_4
+										}
+										NOT = {
+											is_same_value = event_target:ngm_diplomatic_5
+										}
+										NOT = {
+											is_same_value = event_target:ngm_diplomatic_6
+										}
+									}
+									save_event_target_as = ngm_diplomatic_7
+									random_country = {
+										limit = {
+											has_communications = root
+											is_country_type = default
+											has_overlord = ROOT
+											NOT = {
+												is_same_value = event_target:ngm_diplomatic_1
+											}
+											NOT = {
+												is_same_value = event_target:ngm_diplomatic_2
+											}
+											NOT = {
+												is_same_value = event_target:ngm_diplomatic_3
+											}
+											NOT = {
+												is_same_value = event_target:ngm_diplomatic_4
+											}
+											NOT = {
+												is_same_value = event_target:ngm_diplomatic_5
+											}
+											NOT = {
+												is_same_value = event_target:ngm_diplomatic_6
+											}
+											NOT = {
+												is_same_value = event_target:ngm_diplomatic_7
+											}
+										}
+										save_event_target_as = ngm_diplomatic_8
+										random_country = {
+											limit = {
+												has_communications = root
+												is_country_type = default
+												has_overlord = ROOT
+												NOT = {
+													is_same_value = event_target:ngm_diplomatic_1
+												}
+												NOT = {
+													is_same_value = event_target:ngm_diplomatic_2
+												}
+												NOT = {
+													is_same_value = event_target:ngm_diplomatic_3
+												}
+												NOT = {
+													is_same_value = event_target:ngm_diplomatic_4
+												}
+												NOT = {
+													is_same_value = event_target:ngm_diplomatic_5
+												}
+												NOT = {
+													is_same_value = event_target:ngm_diplomatic_6
+												}
+												NOT = {
+													is_same_value = event_target:ngm_diplomatic_7
+												}
+												NOT = {
+													is_same_value = event_target:ngm_diplomatic_8
+												}
+											}
+											save_event_target_as = ngm_diplomatic_9
+											random_country = {
+												limit = {
+													has_communications = root
+													is_country_type = default
+													has_overlord = ROOT
+													NOT = {
+														is_same_value = event_target:ngm_diplomatic_1
+													}
+													NOT = {
+														is_same_value = event_target:ngm_diplomatic_2
+													}
+													NOT = {
+														is_same_value = event_target:ngm_diplomatic_3
+													}
+													NOT = {
+														is_same_value = event_target:ngm_diplomatic_4
+													}
+													NOT = {
+														is_same_value = event_target:ngm_diplomatic_5
+													}
+													NOT = {
+														is_same_value = event_target:ngm_diplomatic_6
+													}
+													NOT = {
+														is_same_value = event_target:ngm_diplomatic_7
+													}
+													NOT = {
+														is_same_value = event_target:ngm_diplomatic_8
+													}
+													NOT = {
+														is_same_value = event_target:ngm_diplomatic_9
+													}
+												}
+												save_event_target_as = ngm_diplomatic_10
+												random_country = {
+													limit = {
+														has_communications = root
+														is_country_type = default
+														has_overlord = ROOT
+														NOT = {
+															is_same_value = event_target:ngm_diplomatic_1
+														}
+														NOT = {
+															is_same_value = event_target:ngm_diplomatic_2
+														}
+														NOT = {
+															is_same_value = event_target:ngm_diplomatic_3
+														}
+														NOT = {
+															is_same_value = event_target:ngm_diplomatic_4
+														}
+														NOT = {
+															is_same_value = event_target:ngm_diplomatic_5
+														}
+														NOT = {
+															is_same_value = event_target:ngm_diplomatic_6
+														}
+														NOT = {
+															is_same_value = event_target:ngm_diplomatic_7
+														}
+														NOT = {
+															is_same_value = event_target:ngm_diplomatic_8
+														}
+														NOT = {
+															is_same_value = event_target:ngm_diplomatic_9
+														}
+														NOT = {
+															is_same_value = event_target:ngm_diplomatic_10
+														}
+													}
+													save_event_target_as = ngm_diplomatic_11
+													random_country = {
+														limit = {
+															has_communications = root
+															is_country_type = default
+															has_overlord = ROOT
+															NOT = {
+																is_same_value = event_target:ngm_diplomatic_1
+															}
+															NOT = {
+																is_same_value = event_target:ngm_diplomatic_2
+															}
+															NOT = {
+																is_same_value = event_target:ngm_diplomatic_3
+															}
+															NOT = {
+																is_same_value = event_target:ngm_diplomatic_4
+															}
+															NOT = {
+																is_same_value = event_target:ngm_diplomatic_5
+															}
+															NOT = {
+																is_same_value = event_target:ngm_diplomatic_6
+															}
+															NOT = {
+																is_same_value = event_target:ngm_diplomatic_7
+															}
+															NOT = {
+																is_same_value = event_target:ngm_diplomatic_8
+															}
+															NOT = {
+																is_same_value = event_target:ngm_diplomatic_9
+															}
+															NOT = {
+																is_same_value = event_target:ngm_diplomatic_10
+															}
+															NOT = {
+																is_same_value = event_target:ngm_diplomatic_11
+															}
+														}
+														save_event_target_as = ngm_diplomatic_12
+														random_country = {
+															limit = {
+																has_communications = root
+																is_country_type = default
+																has_overlord = ROOT
+																NOT = {
+																	is_same_value = event_target:ngm_diplomatic_1
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_diplomatic_2
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_diplomatic_3
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_diplomatic_4
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_diplomatic_5
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_diplomatic_6
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_diplomatic_7
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_diplomatic_8
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_diplomatic_9
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_diplomatic_10
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_diplomatic_11
+																}
+																NOT = {
+																	is_same_value = event_target:ngm_diplomatic_12
+																}
+															}
+															save_event_target_as = ngm_diplomatic_13
+															random_country = {
+																limit = {
+																	has_communications = root
+																	is_country_type = default
+																	has_overlord = ROOT
+																	NOT = {
+																		is_same_value = event_target:ngm_diplomatic_1
+																	}
+																	NOT = {
+																		is_same_value = event_target:ngm_diplomatic_2
+																	}
+																	NOT = {
+																		is_same_value = event_target:ngm_diplomatic_3
+																	}
+																	NOT = {
+																		is_same_value = event_target:ngm_diplomatic_4
+																	}
+																	NOT = {
+																		is_same_value = event_target:ngm_diplomatic_5
+																	}
+																	NOT = {
+																		is_same_value = event_target:ngm_diplomatic_6
+																	}
+																	NOT = {
+																		is_same_value = event_target:ngm_diplomatic_7
+																	}
+																	NOT = {
+																		is_same_value = event_target:ngm_diplomatic_8
+																	}
+																	NOT = {
+																		is_same_value = event_target:ngm_diplomatic_9
+																	}
+																	NOT = {
+																		is_same_value = event_target:ngm_diplomatic_10
+																	}
+																	NOT = {
+																		is_same_value = event_target:ngm_diplomatic_11
+																	}
+																	NOT = {
+																		is_same_value = event_target:ngm_diplomatic_12
+																	}
+																	NOT = {
+																		is_same_value = event_target:ngm_diplomatic_13
+																	}
+																}
+																save_event_target_as = ngm_diplomatic_14
+																random_country = {
+																	limit = {
+																		has_communications = root
+																		is_country_type = default
+																		has_overlord = ROOT
+																		NOT = {
+																			is_same_value = event_target:ngm_diplomatic_1
+																		}
+																		NOT = {
+																			is_same_value = event_target:ngm_diplomatic_2
+																		}
+																		NOT = {
+																			is_same_value = event_target:ngm_diplomatic_3
+																		}
+																		NOT = {
+																			is_same_value = event_target:ngm_diplomatic_4
+																		}
+																		NOT = {
+																			is_same_value = event_target:ngm_diplomatic_5
+																		}
+																		NOT = {
+																			is_same_value = event_target:ngm_diplomatic_6
+																		}
+																		NOT = {
+																			is_same_value = event_target:ngm_diplomatic_7
+																		}
+																		NOT = {
+																			is_same_value = event_target:ngm_diplomatic_8
+																		}
+																		NOT = {
+																			is_same_value = event_target:ngm_diplomatic_9
+																		}
+																		NOT = {
+																			is_same_value = event_target:ngm_diplomatic_10
+																		}
+																		NOT = {
+																			is_same_value = event_target:ngm_diplomatic_11
+																		}
+																		NOT = {
+																			is_same_value = event_target:ngm_diplomatic_12
+																		}
+																		NOT = {
+																			is_same_value = event_target:ngm_diplomatic_13
+																		}
+																		NOT = {
+																			is_same_value = event_target:ngm_diplomatic_14
+																		}
+																	}
+																	save_event_target_as = ngm_diplomatic_15
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.1.a
+		trigger = {
+			exists = event_target:ngm_diplomatic_1
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_1 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_1 = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+					}
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_diplomatic_1 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.1.b
+		trigger = {
+			exists = event_target:ngm_diplomatic_2
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_2 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_2 = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+					}
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_diplomatic_2 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.1.c
+		trigger = {
+			exists = event_target:ngm_diplomatic_3
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_3 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_3 = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+					}
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_diplomatic_3 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.1.d
+		trigger = {
+			exists = event_target:ngm_diplomatic_4
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_4 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_4 = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+					}
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_diplomatic_4 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.1.e
+		trigger = {
+			exists = event_target:ngm_diplomatic_5
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_5 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_5 = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+					}
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_diplomatic_5 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.1.f
+		trigger = {
+			exists = event_target:ngm_diplomatic_6
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_6 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_6 = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+					}
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_diplomatic_6 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.1.g
+		trigger = {
+			exists = event_target:ngm_diplomatic_7
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_7 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_7 = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+					}
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_diplomatic_7 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.1.h
+		trigger = {
+			exists = event_target:ngm_diplomatic_8
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_8 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_8 = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+					}
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_diplomatic_8 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.1.i
+		trigger = {
+			exists = event_target:ngm_diplomatic_9
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_9 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_9 = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+					}
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_diplomatic_9 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.1.j
+		trigger = {
+			exists = event_target:ngm_diplomatic_10
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_10 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_10 = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+					}
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_diplomatic_10 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.1.k
+		trigger = {
+			exists = event_target:ngm_diplomatic_11
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_11 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_11 = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+					}
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_diplomatic_11 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.1.l
+		trigger = {
+			exists = event_target:ngm_diplomatic_12
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_12 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_12 = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+					}
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_diplomatic_12 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.1.m
+		trigger = {
+			exists = event_target:ngm_diplomatic_13
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_13 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_13 = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+					}
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_diplomatic_13 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.1.n
+		trigger = {
+			exists = event_target:ngm_diplomatic_14
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_14 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_14 = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+					}
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_diplomatic_14 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.1.o
+		trigger = {
+			exists = event_target:ngm_diplomatic_15
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_15 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_2
+					}
+				}
+				event_target:ngm_diplomatic_15 = {
+					save_event_target_as = ngm_virture_rival_country_2
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_2
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = country_flag_ngm_virture_rival_country_1
+					}
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_diplomatic_15 = {
+					save_event_target_as = ngm_virture_rival_country_1
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_1
+			}
+		}
+	}
+	# 国選択リセット
+	option = {
+		name = ngm_diplomatic.1.p
+		country_event = {
+			id = ngm_diplomatic.1
+		}
+	}
+	# 閉じる
+	option = {
+		name = ngm_diplomatic.1.q
+	}
+}
+
+country_event = {
+	id = ngm_diplomatic.2
+	title = ngm_diplomatic.2.name
+	desc = ngm_diplomatic.2.desc
+	picture = GFX_evt_fleet_evil
+	# show_sound = event_finding_loot
+	is_triggered_only = yes
+	option = {
+		name = ngm_diplomatic.2.a
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_1
+		}
+		remove_country_flag = country_flag_ngm_virture_rival_country_1
+	}
+	option = {
+		name = ngm_diplomatic.2.b
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_2
+		}
+		remove_country_flag = country_flag_ngm_virture_rival_country_2
+	}
+	# 閉じる
+	option = {
+		name = ngm_diplomatic.1.q
+	}
+}

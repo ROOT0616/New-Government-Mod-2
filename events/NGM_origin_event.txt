@@ -2405,12 +2405,12 @@ country_event = {
 				limit = {
 					exists = sector
 				}
-				sector = {
-					leader = {
-						unassign_leader = this
-						save_event_target_as = ngm_phenix_gov
-					}
-				}
+				# sector = {
+				# 	leader = {
+				# 		unassign_leader = this
+				# 		save_event_target_as = ngm_phenix_gov
+				# 	}
+				# }
 			}
 			else = {
 				root = {
@@ -2953,9 +2953,9 @@ country_event = {
 					orbit_angle = 360					# range of the randomization
 				}
 			}
-			sector = {
-				assign_leader = event_target:ngm_phenix_gov
-			}
+			# sector = {
+			# 	assign_leader = event_target:ngm_phenix_gov
+			# }
 			while = {
 				count = 72
 				create_pop = {
@@ -3198,7 +3198,7 @@ country_event = {
 		}
 		# 初期イベント
 		add_resource = {
-			unity = 380000
+			unity = 720000
 		}
 		country_event = {
 			id = ngm_origin.2001

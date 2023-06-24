@@ -200,7 +200,6 @@ country_event = {
 # 		}
 # 	}
 # }
-
 # 研鑽(自らを磨き、高みへと目指すことこそが求められる)
 # 3.資格採用の強化:リーダー初期レベル+1
 country_event = {
@@ -3026,6 +3025,42 @@ country_event = {
 					days = 30
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_1
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_1
+							days = 30
+						}
+					}
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -3045,6 +3080,42 @@ country_event = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_2
 					days = 30
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_2
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_2
+							days = 30
+						}
+					}
 				}
 			}
 		}
@@ -3068,6 +3139,42 @@ country_event = {
 					days = 30
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_3
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_3
+							days = 30
+						}
+					}
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -3087,6 +3194,42 @@ country_event = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_4
 					days = 30
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_4
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_4
+							days = 30
+						}
+					}
 				}
 			}
 		}
@@ -3110,6 +3253,42 @@ country_event = {
 					days = 30
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_5
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_5
+							days = 30
+						}
+					}
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -3129,6 +3308,42 @@ country_event = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_6
 					days = 30
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_6
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_6
+							days = 30
+						}
+					}
 				}
 			}
 		}
@@ -3152,6 +3367,42 @@ country_event = {
 					days = 30
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_7
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_7
+							days = 30
+						}
+					}
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -3171,6 +3422,42 @@ country_event = {
 				add_modifier = {
 					modifier = tr_ngm_sniper_debuff_8
 					days = 30
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_8
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_8
+							days = 30
+						}
+					}
 				}
 			}
 		}
@@ -3199,6 +3486,42 @@ country_event = {
 				add_modifier = {
 					days = 30
 					modifier = tr_ngm_sniper_debuff_1
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_1
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_1
+							days = 30
+						}
+					}
 				}
 			}
 			# every_rival_country = {
@@ -3232,6 +3555,42 @@ country_event = {
 					modifier = tr_ngm_sniper_debuff_2
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_2
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_2
+							days = 30
+						}
+					}
+				}
+			}
 			# every_rival_country = {
 			# 	limit = {
 			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
@@ -3261,6 +3620,42 @@ country_event = {
 				add_modifier = {
 					days = 30
 					modifier = tr_ngm_sniper_debuff_3
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_3
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_3
+							days = 30
+						}
+					}
 				}
 			}
 			# every_rival_country = {
@@ -3294,6 +3689,42 @@ country_event = {
 					modifier = tr_ngm_sniper_debuff_4
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_4
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_4
+							days = 30
+						}
+					}
+				}
+			}
 			# every_rival_country = {
 			# 	limit = {
 			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
@@ -3323,6 +3754,42 @@ country_event = {
 				add_modifier = {
 					days = 30
 					modifier = tr_ngm_sniper_debuff_5
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_5
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_5
+							days = 30
+						}
+					}
 				}
 			}
 			# every_rival_country = {
@@ -3356,6 +3823,42 @@ country_event = {
 					modifier = tr_ngm_sniper_debuff_6
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_6
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_6
+							days = 30
+						}
+					}
+				}
+			}
 			# every_rival_country = {
 			# 	limit = {
 			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
@@ -3387,6 +3890,42 @@ country_event = {
 					modifier = tr_ngm_sniper_debuff_7
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_7
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_7
+							days = 30
+						}
+					}
+				}
+			}
 			# every_rival_country = {
 			# 	limit = {
 			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
@@ -3416,6 +3955,42 @@ country_event = {
 				add_modifier = {
 					days = 30
 					modifier = tr_ngm_sniper_debuff_8
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_8
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sniper_debuff_8
+							days = 30
+						}
+					}
 				}
 			}
 			# every_rival_country = {
@@ -4613,6 +5188,42 @@ country_event = {
 					days = 30
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_1
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_1
+							days = 30
+						}
+					}
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -4632,6 +5243,42 @@ country_event = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_2
 					days = 30
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_2
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_2
+							days = 30
+						}
+					}
 				}
 			}
 		}
@@ -4655,6 +5302,42 @@ country_event = {
 					days = 30
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_3
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_3
+							days = 30
+						}
+					}
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -4674,6 +5357,42 @@ country_event = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_4
 					days = 30
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_4
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_4
+							days = 30
+						}
+					}
 				}
 			}
 		}
@@ -4697,6 +5416,42 @@ country_event = {
 					days = 30
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_5
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_5
+							days = 30
+						}
+					}
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -4716,6 +5471,42 @@ country_event = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_6
 					days = 30
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_6
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_6
+							days = 30
+						}
+					}
 				}
 			}
 		}
@@ -4739,6 +5530,42 @@ country_event = {
 					days = 30
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_7
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_7
+							days = 30
+						}
+					}
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -4758,6 +5585,42 @@ country_event = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_8
 					days = 30
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_8
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_8
+							days = 30
+						}
+					}
 				}
 			}
 		}
@@ -4786,6 +5649,42 @@ country_event = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_1
 					days = 30
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_1
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_1
+							days = 30
+						}
+					}
 				}
 			}
 			# every_rival_country = {
@@ -4819,6 +5718,42 @@ country_event = {
 					days = 30
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_2
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_2
+							days = 30
+						}
+					}
+				}
+			}
 			# every_rival_country = {
 			# 	limit = {
 			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
@@ -4848,6 +5783,42 @@ country_event = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_3
 					days = 30
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_3
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_3
+							days = 30
+						}
+					}
 				}
 			}
 			# every_rival_country = {
@@ -4881,6 +5852,42 @@ country_event = {
 					days = 30
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_4
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_4
+							days = 30
+						}
+					}
+				}
+			}
 			# every_rival_country = {
 			# 	limit = {
 			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
@@ -4910,6 +5917,42 @@ country_event = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_5
 					days = 30
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_5
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_5
+							days = 30
+						}
+					}
 				}
 			}
 			# every_rival_country = {
@@ -4943,6 +5986,42 @@ country_event = {
 					days = 30
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_6
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_6
+							days = 30
+						}
+					}
+				}
+			}
 			# every_rival_country = {
 			# 	limit = {
 			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
@@ -4974,6 +6053,42 @@ country_event = {
 					days = 30
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_7
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_7
+							days = 30
+						}
+					}
+				}
+			}
 			# every_rival_country = {
 			# 	limit = {
 			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
@@ -5003,6 +6118,42 @@ country_event = {
 				add_modifier = {
 					modifier = tr_ngm_sabotage_debuff_8
 					days = 30
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_1
+				}
+				event_target:ngm_virture_rival_country_1 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_8
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = country_flag_ngm_virture_rival_country_2
+				}
+				event_target:ngm_virture_rival_country_2 = {
+					if = {
+						limit = {
+							NOT = {
+								has_ascension_perk = ap_ngm_ministry_of_innocence
+							}
+						}
+						add_modifier = {
+							modifier = tr_ngm_sabotage_debuff_8
+							days = 30
+						}
+					}
 				}
 			}
 			# every_rival_country = {
@@ -6432,7 +7583,6 @@ country_event = {
 # 		}
 # 	}
 # }
-
 # # 宗主国の圧力:忠誠度月間+1		月ごとチェック
 # country_event = {
 # 	id = ngm_tradition.31
@@ -6454,7 +7604,6 @@ country_event = {
 # 		}
 # 	}
 # }
-
 # 40.芸術外交:月間忠誠度+1	伝統取得時 	237.領地相続:毎月の忠誠心+1
 country_event = {
 	id = ngm_tradition.32
@@ -8917,7 +10066,9 @@ country_event = {
 	option = {
 		name = ngm_tradition.49.c
 		allow = {
-			NOT = { host_has_dlc = "Megacorp" }
+			NOT = {
+				host_has_dlc = "Megacorp"
+			}
 			NOT = {
 				has_ethic = ethic_gestalt_consciousness
 			}

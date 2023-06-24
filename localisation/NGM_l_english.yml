@@ -201,6 +201,12 @@
  ngm_naval_fleet:0 "Naval Fleet"
  ngm_naval_fleet_desc:0 "Ships and naval vessels defending the planet."
 
+ ngm_imperial_guard:0 "Imperial Guard"
+ ngm_imperial_guard_desc:0 "An elite legion sworn to protect the Empire"
+
+ ngm_imperiallocal_army:0 "Imperial Local Army"
+ ngm_imperiallocal_army_desc:0 "Military personnel sworn to protect the Empire"
+
 #######################
 #####    志向    ######
 #######################
@@ -1344,8 +1350,8 @@
 #####    資源    ######
 #######################
 
- order_of_merit:0 "Orders"
- order_of_merit_desc:0 "Honors given by the state or its head of state to individuals in recognition of their achievements and accomplishments, with the awarding of decorations."
+ ngm_order_of_merit:0 "Orders"
+ ngm_order_of_merit_desc:0 "Honors given by the state or its head of state to individuals in recognition of their achievements and accomplishments, with the awarding of decorations."
 
 #######################
 #####    建物    ######
@@ -1464,6 +1470,45 @@
 
  building_ngm_advanced_research_institutes:0 "Advanced Research Institutes"
  building_ngm_advanced_research_institutes_desc:0 "A national research institute that conducts cutting-edge research that would not normally be considered"
+
+ building_ngm_Phe_Palace:0 "Imperial Palace"
+ building_ngm_Phe_Palace_desc:0 "A beautiful and splendid palace symbolizing the former capital of the Galactic Empire"
+
+ building_ngm_Phe_Court:0 "Imperial Grand Court"
+ building_ngm_Phe_Court_desc:0 "An administrative body enforcing law across the galactic scale empire"
+
+ building_ngm_Phe_Crest:0 "Imperial Crest Institute"
+ building_ngm_Phe_Crest_desc:0 "A hall of eternal glory continuing from the former empire"
+
+ building_ngm_Phe_Central_school:0 "Imperial Central Academy"
+ building_ngm_Phe_Central_school_desc:0 "An academic research institution that once aggregated and developed knowledge from across the galaxy"
+
+ building_ngm_Phe_Spaceport:0 "Imperial Spaceport"
+ building_ngm_Phe_Spaceport_desc:0 "A glorious spaceport that once aggregated trade throughout the galaxy"
+
+ building_ngm_Phe_HQ:0 "Imperial Army General Command"
+ building_ngm_Phe_HQ_desc:0 "The highest military organization commanding the Imperial Army that once resonated across the galaxy"
+
+ building_ngm_Phe_S_Palace:0 "Imperial Subsidiary Palace"
+ building_ngm_Phe_S_Palace_desc:0 "A beautiful and functional palace existing in the provincial cities of the Empire"
+
+ building_ngm_Phe_Factory:0 "Imperial Factory"
+ building_ngm_Phe_Factory_desc:0 "A phenomenal factory operating with lost technology"
+
+ building_ngm_Phe_Purification:0 "Imperial Purification Plant"
+ building_ngm_Phe_Purification_desc:0 "A phenomenal purification plant operating with lost technology"
+
+ building_ngm_Phe_Park:0 "Imperial Garden"
+ building_ngm_Phe_Park_desc:0 "A beautiful yet ephemeral garden that aggregated ecosystems from across the galaxy"
+
+ building_ngm_Phe_orbit_elv:0 "Imperial Orbital Elevator"
+ building_ngm_Phe_orbit_elv_desc:0 "A functional elevator that aggregated planetary trade"
+
+ building_ngm_Phe_University:0 "Imperial University"
+ building_ngm_Phe_University_desc:0 "An educational institution that had one of the best research capabilities in the galaxy"
+
+ building_ngm_Phe_Fort:0 "Imperial Fortress"
+ building_ngm_Phe_Fort_desc:0 "A large-scale fortress that repelled former crises"
 
 #######################
 #####    区域    ######
@@ -1745,10 +1790,38 @@
  leader_trait_ngm_general_veteran_desc:0 "This leader rose to this position by his own ability."
 
 ##########################
+#####    国家特性    ######
+##########################
+
+ origin_ngm_phenix_1_modifier:0 "Adherence to Fleet Traditions"
+ origin_ngm_phenix_1_modifier_desc:0 "There are ancient methods for fleet operations."
+ origin_ngm_phenix_2_modifier:0 "Decrepit Databanks"
+ origin_ngm_phenix_2_modifier_desc:0 "The databanks used for research are covered in moss."
+ origin_ngm_phenix_3_modifier:0 "Arrogant Elder Statesmen"
+ origin_ngm_phenix_3_modifier_desc:0 "The empire's elder statesmen are arrogant and look down on others."
+ origin_ngm_phenix_4_modifier:0 "Lethargic Masses"
+ origin_ngm_phenix_4_modifier_desc:0 "The masses are constantly pursuing their own self-interest."
+ origin_ngm_phenix_5_modifier:0 "Aged Military Doctrine"
+ origin_ngm_phenix_5_modifier_desc:0 "The doctrine of this empire has become rusty."
+ origin_ngm_phenix_6_modifier:0 "Ancient Research Principles"
+ origin_ngm_phenix_6_modifier_desc:0 "The research policies of this empire are extremely outdated."
+ origin_ngm_phenix_7_modifier:0 "Lethargic Bureaucracy"
+ origin_ngm_phenix_7_modifier_desc:0 "The bureaucracy of this empire operates inefficiently and with instability."
+ origin_ngm_phenix_8_modifier:0 "Rude Courtiers"
+ origin_ngm_phenix_8_modifier_desc:0 "The high-ranking bureaucrats of this empire are impolite."
+ origin_ngm_phenix_9_modifier:0 "Lost Infrastructure Technology"
+ origin_ngm_phenix_9_modifier_desc:0 "The grand-scale constructions of this empire cannot be reproduced."
+ origin_ngm_phenix_10_modifier:0 "Twilight Empire"
+ origin_ngm_phenix_10_modifier_desc:0 "The empire has entered a period of decline."
+ origin_ngm_phenix_11_modifier:0 "Ancient Empire"
+ origin_ngm_phenix_11_modifier_desc:0 "This empire strongly adheres to traditions that date back to ancient times, at the cost of its own progress."
+ origin_ngm_phenix_12_modifier:0 "Phoenix Empire"
+ origin_ngm_phenix_12_modifier_desc:0 "We shall rise again!"
+
+##########################
 #####    惑星特性    ######
 ##########################
 
- civic_tooltip_ngm_prosperity_advocate_effects:0 "Labor output for each 5-year period of peace §G+1%§! §Y (for up to 50 years) §!\n Trade value §G+2.5% for each 5-year period of peace  §Y (for up to 50 years) §!"
  civic_ngm_prosperity_1_advocate_modifier:0 "The duration of peace is five years."
  civic_ngm_prosperity_1_advocate_modifier_desc:0 "This country is at peace, and peace brings wealth."
  civic_ngm_prosperity_2_advocate_modifier:0 "The duration of peace is 10 years."
@@ -2130,8 +2203,6 @@
  third_covid_c_planet_modifier:0 "3-c"
  third_covid_c_planet_modifier_desc:0 ""
 
- civic_tooltip_ngm_experimental_substance_effects:0 "§RCannot be added or removed after the game has started.§!\n§Y(If you add or remove them after the game starts, they will be restored.)\n\n§!Give one of each strategic resource characteristic to the capital planet."
-
  civic_tooltip_ngm_war_prosperity_effects:0 "Wartime production of minerals, alloys, and consumer goods §G+10%§!\nTrade value production during wartime §G+10%§!\nWartime ship building speed §G+10%§!\nNon-wartime production of minerals, alloys, and consumer goods §R-10%§!\nNon-wartime trade value production §R-10%§!\nShip building speed during non-war time §R-20%§!"
  civic_ngm_war_prosperity_not_war_modifier:0 "Non Wartime Economy"
  civic_ngm_war_prosperity_not_war_modifier_desc:0 "Due to the lazy peace, the organic combination of resources and industries has been lost."
@@ -2505,6 +2576,104 @@
 
  trait_ngm_m_inappropriate:0 "Work is inadequate."
  trait_ngm_m_inappropriate_desc:0 "This machine is not suitable for any production."
+
+ trait_ngm_m_shi:0 "Silicon-made"
+ trait_ngm_m_shi_desc:0 "§LThis species' body utilizes silicon§!\n"
+
+ trait_ngm_m_skin:0 "Artificial skin"
+ trait_ngm_m_skin_desc:0 "§LThis species utilizes artificial skin, which allows for an organic appearance§!\n"
+
+ trait_ngm_m_mcpu:0 "Composite CPU"
+ trait_ngm_m_mcpu_desc:0 "§LHaving multiple CPUs installed, this species is capable of thoughtful consideration§!\n"
+ trait_ngm_m_mcpu_custom_tooltip:0 "Leader malfunction chance §R+5%§!"
+
+ trait_ngm_m_fire:0 "Flamethrower"
+ trait_ngm_m_fire_desc:0 "§LHyahha! Burn all the filth away!§!\n"
+
+ trait_ngm_m_back:0 "Emergency Backup"
+ trait_ngm_m_back_desc:0 "§LAs a precaution, this species is obligated to backup necessary data§!\n"
+ trait_ngm_m_back_custom_tooltip:0 "Leader malfunction chance §G-20%§!"
+
+ trait_ngm_m_bcpu:0 "Combat Computer"
+ trait_ngm_m_bcpu_desc:0 "§LThis species is designed for combat§!\n"
+
+ trait_ngm_m_sub:0 "Subsystem"
+ trait_ngm_m_sub_desc:0 "§LUtilizing system auxiliary functions allows for overall performance improvement§!\n"
+
+ trait_ngm_m_made:0 "Self-Replication"
+ trait_ngm_m_made_desc:0 "§LThis species can replicate themselves§!\n"
+ trait_ngm_m_made_custom_tooltip:0 "Leader malfunction chance §G-5%§!"
+
+ trait_ngm_m_office:0 "Office Protocol"
+ trait_ngm_m_office_desc:0 "§LThis species excels in administrative tasks§!\n"
+
+ trait_ngm_m_product:0 "Manufacturing System"
+ trait_ngm_m_product_desc:0 "§LThis species excels in alloy manufacturing§!\n"
+
+ trait_ngm_m_proto:0 "Ceremonial System"
+ trait_ngm_m_proto_desc:0 "§LThis species values rituals and traditions§!\n"
+
+ trait_ngm_m_incr:0 "Abnormal Replication"
+ trait_ngm_m_incr_desc:0 "§LThis species multiplies at an unimaginable speed§!\n"
+ trait_ngm_m_incr_custom_tooltip:0 "Leader malfunction chance §R+15%§!"
+
+ trait_ngm_m_antient:0 "Ancient Machine"
+ trait_ngm_m_antient_desc:0 "§LThis species developed using ancient technology§!\n"
+
+ trait_ngm_m_huge:0 "Huge"
+ trait_ngm_m_huge_desc:0 "§LThis species is gigantic even by galactic standards§!\n"
+
+ trait_ngm_m_big:0 "Large"
+ trait_ngm_m_big_desc:0 "§LThis species is large even by galactic standards§!\n"
+
+ trait_ngm_m_core:0 "Exposed Core Unit"
+ trait_ngm_m_core_desc:0 "§LThis species has its crucial components exposed§!\n"
+
+ trait_ngm_m_main:0 "Central Control Mechanism"
+ trait_ngm_m_main_desc:0 "§LThis species practices inapplicable classical control§!\n"
+ trait_ngm_m_main_custom_tooltip:0 "Leader malfunction chance §G-5%§!"
+
+ trait_ngm_m_steam:0 "Steam Engine"
+ trait_ngm_m_steam_desc:0 "§LThis species still utilizes steam engines§!\n"
+
+ trait_ngm_m_light:0 "Non-optical Detection"
+ trait_ngm_m_light_desc:0 "§LThis species does not rely on optical scanning§!\n"
+
+ trait_ngm_m_uncont:0 "Difficult to Control"
+ trait_ngm_m_uncont_desc:0 "§LThis species is difficult to control§!\n"
+
+ trait_ngm_m_flash:0 "Flash Memory"
+ trait_ngm_m_flash_desc:0 "§LThis species' data is stored externally and often gets lost§!\n"
+ trait_ngm_m_flash_custom_tooltip:0 "Leader malfunction chance §R+10%§!"
+
+ trait_ngm_m_small:0 "Small-sized"
+ trait_ngm_m_small_desc:0 "§LThis species is small even by galactic standards§!\n"
+
+ trait_ngm_m_tiny:0 "Tiny-sized"
+ trait_ngm_m_tiny_desc:0 "§LThis species is incredibly small even by galactic standards§!\n"
+
+ trait_ngm_m_error:0 "Error Noise"
+ trait_ngm_m_error_desc:0 "§LA serious error has occurred§!\n"
+
+ trait_ngm_m_blue:0 "Blue Screen"
+ trait_ngm_m_blue_desc:0 "§LThis species often turns blue§!\n"
+ trait_ngm_m_blue_custom_tooltip:0 "Leader malfunction chance §R+10%§!"
+
+ trait_ngm_m_bomb:0 "Self-Destruct Mechanism"
+ trait_ngm_m_bomb_desc:0 "§LThis species explodes when in crisis§!\n"
+ trait_ngm_m_bomb_custom_tooltip:0 "Leader malfunction chance §R+5%§!"
+
+ trait_ngm_m_wo:0 "Wooden"
+ trait_ngm_m_wo_desc:0 "§LThis species has parts made of wood§!\n"
+
+ trait_ngm_m_ban:0 "Function Limitation"
+ trait_ngm_m_ban_desc:0 "§LThis species' functions are potentially limited, and their actions are closely watched§!\n"
+
+ trait_ngm_m_abs:0 "Abstract"
+ trait_ngm_m_abs_desc:0 "§LThe data output from this species is abstract and difficult to explain§!\n"
+
+ trait_ngm_m_break:0 "Self-Destruction"
+ trait_ngm_m_break_desc:0 "§LThis species does not possess the principle of self-preservation and often self-destructs§!\n"
 
 #######################
 #####    派閥    ######
@@ -4288,12 +4457,805 @@
  tr_ngm_hereditary_nation_desc:0 "The §Y stability of the entire planet §Y! of all planets §G5§! increase."
  tr_ngm_hereditary_nation_delayed:0 "It belongs to the house, and the country is no exception."
 
+#########################
+### COUNCILOR STRINGS ###
+#########################
+
+ councilor_sham_constitutionalism:0 "Imperial Chancellor"
+ councilor_sham_constitutionalism_female:0 "$councilor_sham_constitutionalism$"
+ councilor_sham_constitutionalism_desc:0 "The minister who governs the cabinet and executes policies on behalf of the head of state."
+
+ councilor_substantive_constitutionalism:0 "Chief Justice"
+ councilor_substantive_constitutionalism_female:0 "$councilor_substantive_constitutionalism$"
+ councilor_substantive_constitutionalism_desc:0 "The senior official who administers the law and governs in place of the monarch."
+
+ councilor_noblesse_oblige:0 "Guardian of Honor"
+ councilor_noblesse_oblige_female:0 "$councilor_noblesse_oblige$"
+ councilor_noblesse_oblige_desc:0 "The one who is responsible for preserving honor at the national level."
+
+ councilor_non_retention_of_force:0 "Guardian of the Constitution"
+ councilor_non_retention_of_force_female:0 "$councilor_non_retention_of_force$"
+ councilor_non_retention_of_force_desc:0 "The one who is responsible for safeguarding the law and preventing the misuse of executive power."
+
+ councilor_symbolic_monarchy:0 "First Chancellor of the Treasury"
+ councilor_symbolic_monarchy_female:0 "$councilor_symbolic_monarchy$"
+ councilor_symbolic_monarchy_desc:0 "The minister who oversees the nation's finances and governs politics in general."
+
+ councilor_cramming_for_education:0 "Minister of Education"
+ councilor_cramming_for_education_female:0 "$councilor_cramming_for_education$"
+ councilor_cramming_for_education_desc:0 "The head of the department that governs domestic education."
+
+ councilor_lax_building_codes:0 "Chief Building Standards Supervisor"
+ councilor_lax_building_codes_female:0 "$councilor_lax_building_codes$"
+ councilor_lax_building_codes_desc:0 "The master builder who oversees building standards and ensures basic housing."
+
+ councilor_truth_and_reconciliation_commission:0 "Chairman of the Truth and Reconciliation Commission"
+ councilor_truth_and_reconciliation_commission_female:0 "$councilor_truth_and_reconciliation_commission$"
+ councilor_truth_and_reconciliation_commission_desc:0 "The head of the conference that investigates past injustices and reveals the truth."
+
+ councilor_national_sacrifice:0 "Archbishop"
+ councilor_national_sacrifice_female:0 "$councilor_national_sacrifice$"
+ councilor_national_sacrifice_desc:0 "Archbishop"
+
+ councilor_neoliberalism:0 "Chairman of the Economic Associations Federation"
+ councilor_neoliberalism_female:0 "$councilor_neoliberalism$"
+ councilor_neoliberalism_desc:0 "Chairman of the Economic Associations Federation"
+
+ councilor_manifest_destiny:0 "Commissioner of Colonization"
+ councilor_manifest_destiny_female:0 "$councilor_manifest_destiny$"
+ councilor_manifest_destiny_desc:0 "The one who promotes colonization and pioneering and supports the prosperity of the nation."
+
+ councilor_ngm_separation_of_powers:0 "Chief Supreme Court Justice"
+ councilor_ngm_separation_of_powers_female:0 "$councilor_ngm_separation_of_powers$"
+ councilor_ngm_separation_of_powers_desc:0 "The most experienced and knowledgeable highest judge in the country."
+
+ councilor_ngm_kakistocracy:0 "Great Villain"
+ councilor_ngm_kakistocracy_female:0 "$councilor_ngm_kakistocracy$"
+ councilor_ngm_kakistocracy_desc:0 "The darling of an era who commits iniquity yet ended up participating in the national politics as a result"
+
+ councilor_ngm_enlightenment:0 "Enlightenment Diplomat"
+ councilor_ngm_enlightenment_female:0 "$councilor_ngm_enlightenment$"
+ councilor_ngm_enlightenment_desc:0 "A senior officer who enlightens people and provides necessary advice"
+
+ councilor_ngm_youth_politics:0 "National Youth Leader"
+ councilor_ngm_youth_politics_female:0 "$councilor_ngm_youth_politics$"
+ councilor_ngm_youth_politics_desc:0 "A leader who nurtures young leaders and motivates the nation"
+
+ councilor_ngm_elder_politics:0 "Elder Politics"
+ councilor_ngm_elder_politics_female:0 "$councilor_ngm_elder_politics$"
+ councilor_ngm_elder_politics_desc:0 "A title given to the most knowledgeable among those who rule the nation, and who assist people"
+
+ councilor_ngm_advanced_glory_system:0 "Advanced Glory System"
+ councilor_ngm_advanced_glory_system_female:0 "$councilor_ngm_advanced_glory_system$"
+ councilor_ngm_advanced_glory_system_desc:0 ""
+
+ councilor_ngm_culturism:0 "National Education Commissioner"
+ councilor_ngm_culturism_female:0 "$councilor_ngm_culturism$"
+ councilor_ngm_culturism_desc:0 "The head of a committee that resolves domestic educational issues and mediates interests"
+
+ councilor_ngm_imaginary_socialism:0 "Grand Professor"
+ councilor_ngm_imaginary_socialism_female:0 "$councilor_ngm_imaginary_socialism$"
+ councilor_ngm_imaginary_socialism_desc:0 "Considered the professor among professors, a paragon among researchers"
+
+ councilor_ngm_fundamental_insanity:0 "Neverlander"
+ councilor_ngm_fundamental_insanity_female:0 "$councilor_ngm_fundamental_insanity$"
+ councilor_ngm_fundamental_insanity_desc:0 "I'm Happy!"
+
+ councilor_ngm_individualistic_rationalist:0 "Secretary of State"
+ councilor_ngm_individualistic_rationalist_female:0 "$councilor_ngm_individualistic_rationalist$"
+ councilor_ngm_individualistic_rationalist_desc:0 "A minister who oversees the nation's affairs and executes the administrative work of the state"
+
+ councilor_ngm_formalist_rootkeeper:0 "Chief Cabinet Secretary"
+ councilor_ngm_formalist_rootkeeper_female:0 "$councilor_ngm_formalist_rootkeeper$"
+ councilor_ngm_formalist_rootkeeper_desc:0 "A minister who governs the bureaucrats and solves matters behind the scenes"
+
+ councilor_ngm_artistically_inclined_careless_person:0 "Premier Artist"
+ councilor_ngm_artistically_inclined_careless_person_female:0 "$councilor_ngm_artistically_inclined_careless_person$"
+ councilor_ngm_artistically_inclined_careless_person_desc:0 "A person who influences national politics as the nation's top artist"
+
+ councilor_ngm_steady_hand:0 "Minister of General Affairs"
+ councilor_ngm_steady_hand_female:0 "$councilor_ngm_steady_hand$"
+ councilor_ngm_steady_hand_desc:0 "A minister who handles national politics comprehensively and acts as a lubricant for various ministries"
+
+ councilor_ngm_the_toxic_survivalist:0 "Prime Secretary"
+ councilor_ngm_the_toxic_survivalist_female:0 "$councilor_ngm_the_toxic_survivalist$"
+ councilor_ngm_the_toxic_survivalist_desc:0 "A minister who oversees the documents and manages state affairs."
+
+ councilor_ngm_hard_worker_with_a_slow_pace:0 "Absolute Defender"
+ councilor_ngm_hard_worker_with_a_slow_pace_female:0 "$councilor_ngm_hard_worker_with_a_slow_pace$"
+ councilor_ngm_hard_worker_with_a_slow_pace_desc:0 "The person responsible for national defense and the last refuge for the people."
+
+ councilor_ngm_ruthless_realist:0 "Chief National Conspirator"
+ councilor_ngm_ruthless_realist_female:0 "$councilor_ngm_ruthless_realist$"
+ councilor_ngm_ruthless_realist_desc:0 "A dark figure who orchestrates national conspiracies and various intrigues."
+
+ councilor_ngm_smooth_traffic:0 "Director of Galactic Traffic"
+ councilor_ngm_smooth_traffic_female:0 "$councilor_ngm_smooth_traffic$"
+ councilor_ngm_smooth_traffic_desc:0 "An administrative officer who controls the traffic of the galaxy."
+
+ councilor_ngm_ship_protection_protocol:0 "Director of Space Control"
+ councilor_ngm_ship_protection_protocol_female:0 "$councilor_ngm_ship_protection_protocol$"
+ councilor_ngm_ship_protection_protocol_desc:0 "A director who carries out complete control in space."
+
+ councilor_ngm_space_security_headquarters:0 "Director of Interstellar Security"
+ councilor_ngm_space_security_headquarters_female:0 "$councilor_ngm_space_security_headquarters$"
+ councilor_ngm_space_security_headquarters_desc:0 "The person responsible for space security and the safety of interstellar traffic."
+
+ councilor_ngm_random_birth_rate:0 "Carrier of Life"
+ councilor_ngm_random_birth_rate_female:0 "$councilor_ngm_random_birth_rate$"
+ councilor_ngm_random_birth_rate_desc:0 "A specialist who delivers the mysteries of life."
+
+ councilor_ngm_trading_nations:0 "Executive Representative of the Economic Fraternity"
+ councilor_ngm_trading_nations_female:0 "$councilor_ngm_trading_nations$"
+ councilor_ngm_trading_nations_desc:0 "A bigwig who controls the magnates of the financial world."
+
+ councilor_ngm_virtual_society:0 "Head of Server Management"
+ councilor_ngm_virtual_society_female:0 "$councilor_ngm_virtual_society$"
+ councilor_ngm_virtual_society_desc:0 "A technician who manages national servers and leads to the forefront of speed."
+
+ councilor_ngm_healthy_habits:0 "Sports Director"
+ councilor_ngm_healthy_habits_female:0 "$councilor_ngm_healthy_habits$"
+ councilor_ngm_healthy_habits_desc:0 "A person responsible for promoting sports and aiming for the health of the people."
+
+ councilor_ngm_cultural_hegemony:0 "Provincial Minister"
+ councilor_ngm_cultural_hegemony_female:0 "$councilor_ngm_cultural_hegemony$"
+ councilor_ngm_cultural_hegemony_desc:0 "A minister who assists local government of the nation and manages the operation of the country."
+
+ councilor_ngm_federation_of_the_galaxies:0 "Federation Speaker"
+ councilor_ngm_federation_of_the_galaxies_female:0 "$councilor_ngm_federation_of_the_galaxies$"
+ councilor_ngm_federation_of_the_galaxies_desc:0 "A wily politician who coordinates the federal parliament."
+
+ councilor_ngm_environmental_democracy:0 "Minister of Environment"
+ councilor_ngm_environmental_democracy_female:0 "$councilor_ngm_environmental_democracy$"
+ councilor_ngm_environmental_democracy_desc:0 "The head of the office tasked with preventing environmental destruction and protecting the planet from pollution."
+
+ councilor_ngm_religious_republicanism:0 "Minister of Religious Affairs"
+ councilor_ngm_religious_republicanism_female:0 "$councilor_ngm_religious_republicanism$"
+ councilor_ngm_religious_republicanism_desc:0 "The cabinet member who handles religious administration."
+
+ councilor_ngm_peoples_democracy:0 "Chairperson of the People"
+ councilor_ngm_peoples_democracy_female:0 "$councilor_ngm_peoples_democracy$"
+ councilor_ngm_peoples_democracy_desc:0 "The chief minister who handles the issues of the people."
+
+ councilor_ngm_cyberdemocracy:0 "Cyber Democracy"
+ councilor_ngm_cyberdemocracy_female:0 "$councilor_ngm_cyberdemocracy$"
+ councilor_ngm_cyberdemocracy_desc:0 "The head of the office that manages information both domestically and abroad."
+
+ councilor_ngm_aristocratic_republicanism:0 "Guardian of the Law"
+ councilor_ngm_aristocratic_republicanism_female:0 "$councilor_ngm_aristocratic_republicanism$"
+ councilor_ngm_aristocratic_republicanism_desc:0 "The position responsible for ensuring that state institutions do not infringe upon the law, overseen by the aristocracy."
+
+ councilor_ngm_chief_secretary_system:0 "Chief Secretary"
+ councilor_ngm_chief_secretary_system_female:0 "$councilor_ngm_chief_secretary_system$"
+ councilor_ngm_chief_secretary_system_desc:0 "A high-ranking politician who is secretary and chair of the cabinet meetings, and holds various other positions."
+
+ councilor_ngm_war_lord:0 "Chief of Staff"
+ councilor_ngm_war_lord_female:0 "$councilor_ngm_war_lord$"
+ councilor_ngm_war_lord_desc:0 "A high-ranking military official who oversees the staff and takes full responsibility for strategizing."
+
+ councilor_ngm_communist_dictatorship:0 "Chairman of State Affairs"
+ councilor_ngm_communist_dictatorship_female:0 "$councilor_ngm_communist_dictatorship$"
+ councilor_ngm_communist_dictatorship_desc:0 "A politician who oversees state affairs and supervises necessary tasks."
+
+ councilor_ngm_demagoguery:0 "Minister of National Propaganda"
+ councilor_ngm_demagoguery_female:0 "$councilor_ngm_demagoguery$"
+ councilor_ngm_demagoguery_desc:0 "The head of the office that propagates national policy and guides the people."
+
+ councilor_ngm_order_of_chivalry:0 "Grand Master of the Knights"
+ councilor_ngm_order_of_chivalry_female:0 "$councilor_ngm_order_of_chivalry$"
+ councilor_ngm_order_of_chivalry_desc:0 "An honorable military officer who oversees the knight orders, maintaining and enhancing traditions and military power."
+
+ councilor_ngm_honorary_imperialism:0 "Presiding Judge of Heraldry"
+ councilor_ngm_honorary_imperialism_female:0 "$councilor_ngm_honorary_imperialism$"
+ councilor_ngm_honorary_imperialism_desc:0 "A court official responsible for heraldry, ranking of households and titles."
+
+ councilor_ngm_guiding_principle:0 "Vice President"
+ councilor_ngm_guiding_principle_female:0 "$councilor_ngm_guiding_principle$"
+ councilor_ngm_guiding_principle_desc:0 "An individual who supports the head of state and serves as a liaison between the head of state and military and political figures."
+
+ councilor_ngm_party_rule:0 "Secretary General"
+ councilor_ngm_party_rule_female:0 "$councilor_ngm_party_rule$"
+ councilor_ngm_party_rule_desc:0 "A role that governs internal politics of the party, adjusting the interests of politicians and party members."
+
+ councilor_ngm_freedom_in_obedience:0 "Tribune"
+ councilor_ngm_freedom_in_obedience_female:0 "$councilor_ngm_freedom_in_obedience$"
+ councilor_ngm_freedom_in_obedience_desc:0 "An office responsible for ensuring that no excessive harm is done to the populace."
+
+ councilor_ngm_caste_system:0 "Great Brahmin"
+ councilor_ngm_caste_system_female:0 "$councilor_ngm_caste_system$"
+ councilor_ngm_caste_system_desc:0 "Traditional leader of the historical, authoritative clerics."
+
+ councilor_ngm_tribalism:0 "Great Tribal Chief"
+ councilor_ngm_tribalism_female:0 "$councilor_ngm_tribalism$"
+ councilor_ngm_tribalism_desc:0 "Traditional role that unites various tribes."
+
+ councilor_ngm_court_politics:0 "Lord of the Court"
+ councilor_ngm_court_politics_female:0 "$councilor_ngm_court_politics$"
+ councilor_ngm_court_politics_desc:0 "A noble position that oversees other nobles and ensures they do not act unjustly."
+
+ councilor_ngm_social_darvinism:0 "Head of the National Guard"
+ councilor_ngm_social_darvinism_female:0 "$councilor_ngm_social_darvinism$"
+ councilor_ngm_social_darvinism_desc:0 "The military person in charge of national order and guiding towards a single ideology."
+
+ councilor_ngm_apprenticeship:0 "Great Guild Master"
+ councilor_ngm_apprenticeship_female:0 "$councilor_ngm_apprenticeship$"
+ councilor_ngm_apprenticeship_desc:0 "A major figure in the financial world who controls the largest commercial guild in the country."
+
+ councilor_ngm_direct_democracy:0 "National Councillor"
+ councilor_ngm_direct_democracy_female:0 "$councilor_ngm_direct_democracy$"
+ councilor_ngm_direct_democracy_desc:0 "A special politician who participates in national affairs and directly conveys the opinions of the citizens to the government."
+
+ councilor_ngm_liberal_education:0 "Secretary of Education"
+ councilor_ngm_liberal_education_female:0 "$councilor_ngm_liberal_education$"
+ councilor_ngm_liberal_education_desc:0 "The head of the office that spreads liberal education and implements necessary education."
+
+ councilor_ngm_demonstration_culture:0 "National Petition Officer"
+ councilor_ngm_demonstration_culture_female:0 "$councilor_ngm_demonstration_culture$"
+ councilor_ngm_demonstration_culture_desc:0 "The person in charge of consolidating the citizens' petitions and reflecting them in policies."
+
+ councilor_ngm_open_forum:0 "Presiding Officer"
+ councilor_ngm_open_forum_female:0 "$councilor_ngm_open_forum$"
+ councilor_ngm_open_forum_desc:0 "A high-ranking official who manages national debates and brings resolution to all views."
+
+ councilor_ngm_consumer_society:0 "Consumer Affairs Commissioner"
+ councilor_ngm_consumer_society_female:0 "$councilor_ngm_consumer_society$"
+ councilor_ngm_consumer_society_desc:0 "The person responsible for promoting consumption and delivering safe goods to citizens."
+
+ councilor_ngm_social_welfare:0 "Minister of Welfare"
+ councilor_ngm_social_welfare_female:0 "$councilor_ngm_social_welfare$"
+ councilor_ngm_social_welfare_desc:0 "The head of the department that provides for the welfare of the people and delivers maximum welfare services to the citizens."
+
+ councilor_ngm_cosmic_scale_liberation:0 "Liberator of the Cosmos"
+ councilor_ngm_cosmic_scale_liberation_female:0 "$councilor_ngm_cosmic_scale_liberation$"
+ councilor_ngm_cosmic_scale_liberation_desc:0 "A person whose mission is to liberate the universe from injustice and bring freedom."
+
+ councilor_ngm_ultimate_freedom_of_thought:0 "President of the Academic Conference"
+ councilor_ngm_ultimate_freedom_of_thought_female:0 "$councilor_ngm_ultimate_freedom_of_thought$"
+ councilor_ngm_ultimate_freedom_of_thought_desc:0 "A renowned scholar who hosts a national conference of scholars."
+ councilor_ngm_right_to_bear_arms:0 "President of the National Rifle Association"
+ councilor_ngm_right_to_bear_arms_female:0 "$councilor_ngm_right_to_bear_arms$"
+ councilor_ngm_right_to_bear_arms_desc:0 "A fierce leader protecting the right to bear arms and freedom of all citizens"
+
+ councilor_ngm_shared_values:0 "Minister of General Affairs"
+ councilor_ngm_shared_values_female:0 "$councilor_ngm_shared_values$"
+ councilor_ngm_shared_values_desc:0 "Minister overseeing national policies comprehensively and supervising tasks of all ministries"
+
+ councilor_ngm_go_along_with:0 "National Progress Officer"
+ councilor_ngm_go_along_with_female:0 "$councilor_ngm_go_along_with$"
+ councilor_ngm_go_along_with_desc:0 "High-ranking officer pushing for national progress and paving new paths"
+
+ councilor_ngm_globalism:0 "Exchange Control Officer"
+ councilor_ngm_globalism_female:0 "$councilor_ngm_globalism$"
+ councilor_ngm_globalism_desc:0 "Officer promoting and overseeing interaction with foreign nations to prevent any issues"
+
+ councilor_ngm_multiculturalism:0 "Assistant Officer for Coexistence"
+ councilor_ngm_multiculturalism_female:0 "$councilor_ngm_multiculturalism$"
+ councilor_ngm_multiculturalism_desc:0 "Assistant Officer promoting the settlement of foreign nations and advising the head of state on multiculturalism"
+
+ councilor_ngm_paternalism:0 "Secretary of Defense"
+ councilor_ngm_paternalism_female:0 "$councilor_ngm_paternalism$"
+ councilor_ngm_paternalism_desc:0 "The chief officer in charge of protecting vassal states and their own country"
+
+ councilor_ngm_accept_everyone:0 "Refugee Advocacy Officer"
+ councilor_ngm_accept_everyone_female:0 "$councilor_ngm_accept_everyone$"
+ councilor_ngm_accept_everyone_desc:0 "A professional diplomat voicing the opinions of refugees and immigrants, appealing to the international community"
+
+ councilor_ngm_people_flying_away:0 "Director of Immigration"
+ councilor_ngm_people_flying_away_female:0 "$councilor_ngm_people_flying_away$"
+ councilor_ngm_people_flying_away_desc:0 "Head of the agency controlling immigration and halting illegal immigrants"
+
+ councilor_ngm_exclusive_community:0 "Commissioner of Pureblood Inquiry"
+ councilor_ngm_exclusive_community_female:0 "$councilor_ngm_exclusive_community$"
+ councilor_ngm_exclusive_community_desc:0 "An examiner maintaining order and overseeing the purity of society and its people"
+
+ councilor_ngm_remorseless_justice:0 "Justice Execution Officer"
+ councilor_ngm_remorseless_justice_female:0 "$councilor_ngm_remorseless_justice$"
+ councilor_ngm_remorseless_justice_desc:0 "A national hero who executes justice and brings order"
+
+ councilor_ngm_disdain_for_others:0 "Commissioner of Insults"
+ councilor_ngm_disdain_for_others_female:0 "$councilor_ngm_disdain_for_others$"
+ councilor_ngm_disdain_for_others_desc:0 "Head of the specialized office for insulting others"
+
+ councilor_ngm_gentlemanly_disgust:0 "紳士的距離感"
+ councilor_ngm_gentlemanly_disgust_female:0 "$councilor_ngm_gentlemanly_disgust$"
+ councilor_ngm_gentlemanly_disgust_desc:0 "ないよ"
+
+ councilor_ngm_erasure:0 "Archivist"
+ councilor_ngm_erasure_female:0 "$councilor_ngm_erasure$"
+ councilor_ngm_erasure_desc:0 "The $TITLE$ is responsible for the deletion and organization of various records."
+
+ councilor_ngm_elitism:0 "Grand Rabbi"
+ councilor_ngm_elitism_female:0 "$councilor_ngm_elitism$"
+ councilor_ngm_elitism_desc:0 "The supreme leader of a traditional, exclusive religion."
+
+ councilor_ngm_dissection:0 "Chief Alien Researcher"
+ councilor_ngm_dissection_female:0 "$councilor_ngm_dissection$"
+ councilor_ngm_dissection_desc:0 "A mad scientist studying alien species and utilizing their knowledge for the betterment of our own."
+
+ councilor_ngm_imperialism:0 "Minister of Colonies"
+ councilor_ngm_imperialism_female:0 "$councilor_ngm_imperialism$"
+ councilor_ngm_imperialism_desc:0 "The head of a government office specializing in expansion and governance of foreign territories."
+
+ councilor_ngm_big_ship_policy:0 "Fleet Strategy Director"
+ councilor_ngm_big_ship_policy_female:0 "$councilor_ngm_big_ship_policy$"
+ councilor_ngm_big_ship_policy_desc:0 "The military official who drafts and executes fleet maintenance plans."
+
+ councilor_ngm_military_industrial_complex:0 "Merchant of Death"
+ councilor_ngm_military_industrial_complex_female:0 "$councilor_ngm_military_industrial_complex$"
+ councilor_ngm_military_industrial_complex_desc:0 "A maligned figure who has penetrated national politics through arms sales."
+
+ councilor_ngm_war_prosperity:0 "Soul Cashier"
+ councilor_ngm_war_prosperity_female:0 "$councilor_ngm_war_prosperity$"
+ councilor_ngm_war_prosperity_desc:0 "It takes a certain skill and experience to exchange sins and money equivalently."
+
+ councilor_ngm_military_regime:0 "Army Commander-in-Chief"
+ councilor_ngm_military_regime_female:0 "$councilor_ngm_military_regime$"
+ councilor_ngm_military_regime_desc:0 "A high-ranking military officer who oversees and commands the entire army."
+
+ councilor_ngm_The_Struggle_for_Struggle:0 "War Maniac"
+ councilor_ngm_The_Struggle_for_Struggle_female:0 "$councilor_ngm_The_Struggle_for_Struggle$"
+ councilor_ngm_The_Struggle_for_Struggle_desc:0 "A madman who instigates war and executes the struggle for the sake of struggle."
+
+ councilor_ngm_aegis_shield:0 "National Defense Command Chief"
+ councilor_ngm_aegis_shield_female:0 "$councilor_ngm_aegis_shield$"
+ councilor_ngm_aegis_shield_desc:0 "A high-ranking military officer whose mission is to protect the national body and the people."
+
+ councilor_ngm_prosperity_advocate:0 "Prosperity Guru"
+ councilor_ngm_prosperity_advocate_female:0 "$councilor_ngm_prosperity_advocate$"
+ councilor_ngm_prosperity_advocate_desc:0 "A leader who guides prosperity and educates the people."
+
+ councilor_ngm_armed_pacifism:0 "Border Guard Chief"
+ councilor_ngm_armed_pacifism_female:0 "$councilor_ngm_armed_pacifism$"
+ councilor_ngm_armed_pacifism_desc:0 "A military official whose primary duty is to guard the borders and protect the country."
+
+ councilor_ngm_active_pacifist:0 "Commander of the Peace Army"
+ councilor_ngm_active_pacifist_female:0 "$councilor_ngm_active_pacifist$"
+ councilor_ngm_active_pacifist_desc:0 "The person responsible for using force to achieve the noble goal of maintaining peace."
+
+ councilor_ngm_messenger_of_peace:0 "Messenger of Peace"
+ councilor_ngm_messenger_of_peace_female:0 "$councilor_ngm_messenger_of_peace$"
+ councilor_ngm_messenger_of_peace_desc:0 "A high-ranking official who cherishes peace and dreams of bringing it to the people."
+
+ councilor_ngm_space_security_headquarters:0 "Chief Negotiator"
+ councilor_ngm_space_security_headquarters_female:0 "$councilor_ngm_space_security_headquarters$"
+ councilor_ngm_space_security_headquarters_desc:0 "The highest-ranking diplomat who conducts negotiations between states."
+
+ councilor_ngm_mechanical_faith:0 "Mechanical Pope"
+ councilor_ngm_mechanical_faith_female:0 "$councilor_ngm_mechanical_faith$"
+ councilor_ngm_mechanical_faith_desc:0 "A faith technician who governs the machine religion and propagates machines among believers."
+
+ councilor_ngm_missionary_group:0 "Head of the Missionary Group"
+ councilor_ngm_missionary_group_female:0 "$councilor_ngm_missionary_group$"
+ councilor_ngm_missionary_group_desc:0 "The leader of a benevolent group that carries out missions to other countries."
+
+ councilor_ngm_defender_of_the_faith:0 "Cardinal"
+ councilor_ngm_defender_of_the_faith_female:0 "$councilor_ngm_defender_of_the_faith$"
+ councilor_ngm_defender_of_the_faith_desc:0 "A high-ranking cleric who governs the church and has a significant impact on national politics."
+
+ councilor_ngm_divination:0 "Supreme Priest"
+ councilor_ngm_divination_female:0 "$councilor_ngm_divination$"
+ councilor_ngm_divination_desc:0 "A high-ranking cleric who governs the priests and performs the highest divination."
+
+ councilor_ngm_cultural_consumption:0 "Minister of Education"
+ councilor_ngm_cultural_consumption_female:0 "$councilor_ngm_cultural_consumption$"
+ councilor_ngm_cultural_consumption_desc:0 "An authority on education who supervises education and carries out necessary academic measures."
+
+ councilor_ngm_ai_assistance:0 "AI Manager"
+ councilor_ngm_ai_assistance_female:0 "$councilor_ngm_ai_assistance$"
+ councilor_ngm_ai_assistance_desc:0 "A specialist who manages AI and connects machines and people."
+
+ councilor_ngm_machines_are_our_friends:0 "Chief of Science and Technology"
+ councilor_ngm_machines_are_our_friends_female:0 "$councilor_ngm_machines_are_our_friends$"
+ councilor_ngm_machines_are_our_friends_desc:0 "The head of an office that promotes the development of science and technology and its diffusion."
+
+ councilor_ngm_longing_for_the_future:0 "Space Secretary"
+ councilor_ngm_longing_for_the_future_female:0 "$councilor_ngm_longing_for_the_future$"
+ councilor_ngm_longing_for_the_future_desc:0 "The person responsible for extending our reach into space and advancing the progress of exploration."
+
+ councilor_ngm_experimental_substance:0 "Senior Research Officer"
+ councilor_ngm_experimental_substance_female:0 "$councilor_ngm_experimental_substance$"
+ councilor_ngm_experimental_substance_desc:0 "A special research officer who is permitted to conduct special research."
+
+ councilor_ngm_industrial_capitalism:0 "Representative of the Economic Federation"
+ councilor_ngm_industrial_capitalism_female:0 "$councilor_ngm_industrial_capitalism$"
+ councilor_ngm_industrial_capitalism_desc:0 "The head of a pressure group that binds domestic economic organizations."
+
+ councilor_ngm_experimental_practice:0 "Director of the Patent Office"
+ councilor_ngm_experimental_practice_female:0 "$councilor_ngm_experimental_practice$"
+ councilor_ngm_experimental_practice_desc:0 "An official responsible for patent approvals and intellectual property lawsuits."
+
+ councilor_ngm_paranoia:0 "Chief Engineer"
+ councilor_ngm_paranoia_female:0 "$councilor_ngm_paranoia$"
+ councilor_ngm_paranoia_desc:0 "The de facto highest authority tasked with managing AI."
+ councilor_ngm_equality_in_society:0 "Chair of Equality Oversight"
+ councilor_ngm_equality_in_society_female:0 "$councilor_ngm_equality_in_society$"
+ councilor_ngm_equality_in_society_desc:0 "The head of the committee overseeing whether social equality is upheld everywhere."
+
+ councilor_ngm_sectionalism:0 "Chief Doctrinal Officer"
+ councilor_ngm_sectionalism_female:0 "$councilor_ngm_sectionalism$"
+ councilor_ngm_sectionalism_desc:0 "The head of the office redistributing resources according to doctrine."
+
+ councilor_ngm_peoples_army:0 "Secretary of People's Forces"
+ councilor_ngm_peoples_army_female:0 "$councilor_ngm_peoples_army$"
+ councilor_ngm_peoples_army_desc:0 "The military leader utilizing the people as a force to protect the people."
+
+ councilor_ngm_economic_primitivism:0 "Magnate of Primal Economy"
+ councilor_ngm_economic_primitivism_female:0 "$councilor_ngm_economic_primitivism$"
+ councilor_ngm_economic_primitivism_desc:0 "A major force in a primitive economy, establishing the economy through force."
+
+ councilor_ngm_land_sharing:0 "Land Management Bureau Chief"
+ councilor_ngm_land_sharing_female:0 "$councilor_ngm_land_sharing$"
+ councilor_ngm_land_sharing_desc:0 "The executive managing state-owned lands and coordinating various buildings."
+
+ councilor_ngm_communism:0 "Chair of Supreme Council"
+ councilor_ngm_communism_female:0 "$councilor_ngm_communism$"
+ councilor_ngm_communism_desc:0 "The chair of the council where the top executives of the state gather."
+
+ councilor_ngm_development_dictatorship:0 "Chief of State Police"
+ councilor_ngm_development_dictatorship_female:0 "$councilor_ngm_development_dictatorship$"
+ councilor_ngm_development_dictatorship_desc:0 "The person responsible for maintaining order by controlling the state police."
+
+ councilor_ngm_commercialism:0 "Secretary of Commerce"
+ councilor_ngm_commercialism_female:0 "$councilor_ngm_commercialism$"
+ councilor_ngm_commercialism_desc:0 "The minister responsible for commerce and aiming for stable distribution."
+
+ councilor_ngm_financing:0 "Secretary of Finance"
+ councilor_ngm_financing_female:0 "$councilor_ngm_financing$"
+ councilor_ngm_financing_desc:0 "The minister in charge of finance, maintaining a stable financial economy."
+
+ councilor_ngm_information:0 "Digital Secretary"
+ councilor_ngm_information_female:0 "$councilor_ngm_information$"
+ councilor_ngm_information_desc:0 "The head of the agency supporting the regulation and development of the digital field."
+
+ councilor_ngm_agriculture:0 "Secretary of Agriculture"
+ councilor_ngm_agriculture_female:0 "$councilor_ngm_agriculture$"
+ councilor_ngm_agriculture_desc:0 "The minister in charge of agricultural production, aiming for stable supply."
+
+ councilor_ngm_deregulation:0 "Minister for Administrative Reform"
+ councilor_ngm_deregulation_female:0 "$councilor_ngm_deregulation$"
+ councilor_ngm_deregulation_desc:0 "The minister whose primary mission is administrative reform."
+
+ councilor_ngm_CIA:0 "Director of the Central Intelligence Agency"
+ councilor_ngm_CIA_female:0 "$councilor_ngm_CIA$"
+ councilor_ngm_CIA_desc:0 "The person in charge of coordinating foreign intelligence activities and protecting the safety of the country."
+
+ councilor_ngm_information_operation:0 "Information Manipulation"
+ councilor_ngm_information_operation_female:0 "$councilor_ngm_information_operation$"
+ councilor_ngm_information_operation_desc:0 ""
+
+ councilor_ngm_cryptography:0 "National Chief Cryptographer"
+ councilor_ngm_cryptography_female:0 "$councilor_ngm_cryptography$"
+ councilor_ngm_cryptography_desc:0 "The person in charge of examining the codes created by the state, maintaining confidentiality."
+
+ councilor_ngm_parabola:0 "Galactic Supervisor"
+ councilor_ngm_parabola_female:0 "$councilor_ngm_parabola$"
+ councilor_ngm_parabola_desc:0 "The specialist who monitors the entire galaxy and issues necessary warnings."
+
+ councilor_ngm_smile:0 "International Mediator"
+ councilor_ngm_smile_female:0 "$councilor_ngm_smile$"
+ councilor_ngm_smile_desc:0 "The $TITLE$ is a special diplomat appointed to mediate and resolve issues between nations."
+
+ councilor_ngm_mastermind:0 "International Puppetmaster"
+ councilor_ngm_mastermind_female:0 "$councilor_ngm_mastermind$"
+ councilor_ngm_mastermind_desc:0 "The galaxy is but a plaything in this person's hands."
+
+ councilor_ngm_glorious_isolation:0 "Secretary of Foreign Affairs"
+ councilor_ngm_glorious_isolation_female:0 "$councilor_ngm_glorious_isolation$"
+ councilor_ngm_glorious_isolation_desc:0 "The head of the agency that governs diplomacy."
+
+ councilor_ngm_FBI:0 "National Investigation Director"
+ councilor_ngm_FBI_female:0 "$councilor_ngm_FBI$"
+ councilor_ngm_FBI_desc:0 "The leader responsible for investigating national crimes and maintaining domestic order."
+
+ councilor_ngm_internal_affairs:0 "Inspector General of Internal Affairs"
+ councilor_ngm_internal_affairs_female:0 "$councilor_ngm_internal_affairs$"
+ councilor_ngm_internal_affairs_desc:0 "A special public servant aiming for an autonomous government by auditing political independence and corruption."
+
+ councilor_ngm_inner_satisfaction:0 "Minister of Fullness"
+ councilor_ngm_inner_satisfaction_female:0 "$councilor_ngm_inner_satisfaction$"
+ councilor_ngm_inner_satisfaction_desc:0 "The cabinet minister in charge of keeping the people satiated."
+
+ councilor_ngm_armed_neutrality:0 "Defence Secretary"
+ councilor_ngm_armed_neutrality_female:0 "$councilor_ngm_armed_neutrality$"
+ councilor_ngm_armed_neutrality_desc:0 "The leader who oversees defence matters and arranges for efficient military action."
+
+ councilor_ngm_interest_representation:0 "National Diplomatic Director"
+ councilor_ngm_interest_representation_female:0 "$councilor_ngm_interest_representation$"
+ councilor_ngm_interest_representation_desc:0 "A special diplomat in charge of securing national interests and ensuring diplomatic influence."
+
+ councilor_ngm_environmental_maintenance:0 "Principal Environmental Engineer"
+ councilor_ngm_environmental_maintenance_female:0 "$councilor_ngm_environmental_maintenance$"
+ councilor_ngm_environmental_maintenance_desc:0 "The principal engineer with the primary duty of maintaining and investigating planetary environments."
+
+ councilor_ngm_pest_control:0 "Extermination Commanding Officer"
+ councilor_ngm_pest_control_female:0 "$councilor_ngm_pest_control$"
+ councilor_ngm_pest_control_desc:0 "A high-ranking military officer obliged to suppress unscrupulous developers."
+
+ councilor_ngm_natural_adaptation:0 "Galactic Nature Supervisor"
+ councilor_ngm_natural_adaptation_female:0 "$councilor_ngm_natural_adaptation$"
+ councilor_ngm_natural_adaptation_desc:0 "A senior official supporting the respect and preservation of nature throughout the galaxy."
+
+ councilor_ngm_planetary_garden:0 "National Garden Manager"
+ councilor_ngm_planetary_garden_female:0 "$councilor_ngm_planetary_garden$"
+ councilor_ngm_planetary_garden_desc:0 "The manager of a national scale garden, maintaining its beauty."
+
+ councilor_ngm_space_security_headquarters:0 "Chief Life Protector"
+ councilor_ngm_space_security_headquarters_female:0 "$councilor_ngm_space_security_headquarters$"
+ councilor_ngm_space_security_headquarters_desc:0 "A senior official tasked with the protection and security of the most precious life in the world."
+
+ councilor_ngm_nature_faith:0 "Priestess Princess"
+ councilor_ngm_nature_faith_female:0 "$councilor_ngm_nature_faith$"
+ councilor_ngm_nature_faith_desc:0 "A high-ranking priestess who is traditionally revered as a leader, praying to the gods and venerating nature."
+
+ councilor_ngm_grand_monument:0 "National Architect"
+ councilor_ngm_grand_monument_female:0 "$councilor_ngm_grand_monument$"
+ councilor_ngm_grand_monument_desc:0 "The top engineer responsible for national scale construction."
+ councilor_ngm_destructive_digging:0 "Director of Destruction"
+ councilor_ngm_destructive_digging_female:0 "$councilor_ngm_destructive_digging$"
+ councilor_ngm_destructive_digging_desc:0 "The $TITLE$ is the head of the department responsible for planet destruction and mineral production."
+
+ councilor_ngm_irreversible_industrialization:0 "Minister of Industry"
+ councilor_ngm_irreversible_industrialization_female:0 "$councilor_ngm_irreversible_industrialization$"
+ councilor_ngm_irreversible_industrialization_desc:0 "The $TITLE$ takes necessary measures to improve industrial production."
+
+ councilor_ngm_infrastructure_construction:0 "Secretary of Infrastructure"
+ councilor_ngm_infrastructure_construction_female:0 "$councilor_ngm_infrastructure_construction$"
+ councilor_ngm_infrastructure_construction_desc:0 "The $TITLE$ manages the nation's lands and executes surveying and investigations."
+
+ councilor_ngm_nationwide_development:0 "Development Commissioner"
+ councilor_ngm_nationwide_development_female:0 "$councilor_ngm_nationwide_development$"
+ councilor_ngm_nationwide_development_desc:0 "The $TITLE$ is in charge of national development and creating the nation's infrastructure."
+
+ councilor_ngm_planetary_scale_irrigation:0 "Minister of Agriculture and Forestry"
+ councilor_ngm_planetary_scale_irrigation_female:0 "$councilor_ngm_planetary_scale_irrigation$"
+ councilor_ngm_planetary_scale_irrigation_desc:0 "The $TITLE$ leads the nation's prosperity through agriculture."
+
+ councilor_ngm_modification_engineering:0 "Minister of Development"
+ councilor_ngm_modification_engineering_female:0 "$councilor_ngm_modification_engineering$"
+ councilor_ngm_modification_engineering_desc:0 "The $TITLE$ develops the nation through land development."
+
+ councilor_ngm_diplomatic_etiquette:0 "Head of Protocol"
+ councilor_ngm_diplomatic_etiquette_female:0 "$councilor_ngm_diplomatic_etiquette$"
+ councilor_ngm_diplomatic_etiquette_desc:0 "The $TITLE$ oversees diplomatic etiquette, a person of influence on a national level in diplomacy and protocol."
+
+ councilor_ngm_exchange_of_honor:0 "Ceremonial Exchange Supervisor"
+ councilor_ngm_exchange_of_honor_female:0 "$councilor_ngm_exchange_of_honor$"
+ councilor_ngm_exchange_of_honor_desc:0 "The $TITLE$ interprets and guides issues and manners in diplomatic ceremonies."
+
+ councilor_ngm_heroic_volunteer_force:0 "Grand Marshal"
+ councilor_ngm_heroic_volunteer_force_female:0 "$councilor_ngm_heroic_volunteer_force$"
+ councilor_ngm_heroic_volunteer_force_desc:0 "The $TITLE$ is the highest commander of the national army and a symbolic figure of the nation."
+
+ councilor_ngm_the_self_righteous_hero:0 "Great Hero"
+ councilor_ngm_the_self_righteous_hero_female:0 "$councilor_ngm_the_self_righteous_hero$"
+ councilor_ngm_the_self_righteous_hero_desc:0 "The $TITLE$ is the nation's greatest hero and a figure of admiration."
+
+ councilor_ngm_respect_act:0 "Emblem Grant Examiner"
+ councilor_ngm_respect_act_female:0 "$councilor_ngm_respect_act$"
+ councilor_ngm_respect_act_desc:0 "The $TITLE$ has influence over the rulers through the granting or denying of emblems."
+
+ councilor_ngm_personal_interest:0 "Top of the Nouveau Riche"
+ councilor_ngm_personal_interest_female:0 "$councilor_ngm_personal_interest$"
+ councilor_ngm_personal_interest_desc:0 "The $TITLE$ is the most successful person among the nouveau riche."
+
+ councilor_ngm_hypothecation_of_human_rights:0 "Chairman of the Human Rights Audit Committee"
+ councilor_ngm_hypothecation_of_human_rights_female:0 "$councilor_ngm_hypothecation_of_human_rights$"
+ councilor_ngm_hypothecation_of_human_rights_desc:0 "The $TITLE$ evaluates whether human rights are being properly sold off."
+
+ councilor_ngm_money_penalty:0 "Financial Justice Secretary"
+ councilor_ngm_money_penalty_female:0 "$councilor_ngm_money_penalty$"
+ councilor_ngm_money_penalty_desc:0 "A specialized bureaucrat who substitutes justice with money."
+
+ councilor_ngm_profit_motive:0 "Chairperson of the Fair Trade Commission"
+ councilor_ngm_profit_motive_female:0 "$councilor_ngm_profit_motive$"
+ councilor_ngm_profit_motive_desc:0 "A high official who audits whether rebates are being properly distributed."
+
+ councilor_ngm_securing_real_benefits:0 "The Big Don"
+ councilor_ngm_securing_real_benefits_female:0 "$councilor_ngm_securing_real_benefits$"
+ councilor_ngm_securing_real_benefits_desc:0 "The boss among bosses. That's all you need to know."
+
+ councilor_ngm_producer_consumer_society:0 "Economic Industry Secretary"
+ councilor_ngm_producer_consumer_society_female:0 "$councilor_ngm_producer_consumer_society$"
+ councilor_ngm_producer_consumer_society_desc:0 "A cabinet member who manages the economy and handles necessary economic policies."
+
+ councilor_ngm_corporate_empire:0 "Executive Director of Internal Politics"
+ councilor_ngm_corporate_empire_female:0 "$councilor_ngm_corporate_empire$"
+ councilor_ngm_corporate_empire_desc:0 "An executive specialized in internal political control and benefit negotiation."
+
+ councilor_ngm_high_tech_company:0 "Chief Technology Officer"
+ councilor_ngm_high_tech_company_female:0 "$councilor_ngm_high_tech_company$"
+ councilor_ngm_high_tech_company_desc:0 "An executive professional supporting the company as head of the technology development department."
+
+ councilor_ngm_smokestack_industry:0 "Industrial Secretary"
+ councilor_ngm_smokestack_industry_female:0 "$councilor_ngm_smokestack_industry$"
+ councilor_ngm_smokestack_industry_desc:0 "A specialist in industrial development and building efficient chains."
+
+ councilor_ngm_hereditary_officers:0 "Special Executive Director"
+ councilor_ngm_hereditary_officers_female:0 "$councilor_ngm_hereditary_officers$"
+ councilor_ngm_hereditary_officers_desc:0 "The highest-ranking individual maintaining the director's position by heredity."
+
+ councilor_ngm_zaibatsu:0 "Chief Executive Assistant"
+ councilor_ngm_zaibatsu_female:0 "$councilor_ngm_zaibatsu$"
+ councilor_ngm_zaibatsu_desc:0 "An essential position assisting the Zaibatsu's chief executive, freeing them from unnecessary tasks."
+
+ councilor_ngm_financial_enterprises:0 "Financial Director"
+ councilor_ngm_financial_enterprises_female:0 "$councilor_ngm_financial_enterprises$"
+ councilor_ngm_financial_enterprises_desc:0 "The person responsible for managing bonds and taking necessary measures."
+
+ councilor_ngm_information_company:0 "Chief of Systems"
+ councilor_ngm_information_company_female:0 "$councilor_ngm_information_company$"
+ councilor_ngm_information_company_desc:0 "The head of a department with the major responsibility to build and maintain systems."
+
+ councilor_ngm_social_enterprise:0 "Head of Social Cohesion"
+ councilor_ngm_social_enterprise_female:0 "$councilor_ngm_social_enterprise$"
+ councilor_ngm_social_enterprise_desc:0 "The head of a department striving to develop symbiosis between society and the corporation."
+
+ councilor_ngm_general_contractor:0 "Director of Development"
+ councilor_ngm_general_contractor_female:0 "$councilor_ngm_general_contractor$"
+ councilor_ngm_general_contractor_desc:0 "The department head responsible for maintaining company assets and managing necessary construction and facility management."
+
+ councilor_ngm_agricultural_company:0 "Director of Agricultural Development"
+ councilor_ngm_agricultural_company_female:0 "$councilor_ngm_agricultural_company$"
+ councilor_ngm_agricultural_company_desc:0 "The minister who leads the corporation's prosperity through agriculture."
+
+ councilor_ngm_shipping_company:0 "Director of Transportation"
+ councilor_ngm_shipping_company_female:0 "$councilor_ngm_shipping_company$"
+ councilor_ngm_shipping_company_desc:0 "The head of a star department managing internal and external transport and effective logistics."
+
+ councilor_ngm_operating_company:0 "Investment Director"
+ councilor_ngm_operating_company_female:0 "$councilor_ngm_operating_company$"
+ councilor_ngm_operating_company_desc:0 "The head of a department managing domestic and foreign investments and handling necessary asset management."
+
+ councilor_ngm_industrial_espionage:0 "Director of Information"
+ councilor_ngm_industrial_espionage_female:0 "$councilor_ngm_industrial_espionage$"
+ councilor_ngm_industrial_espionage_desc:0 "The person in charge of managing internal and external information and preparing for appropriate responses."
+
+ councilor_ngm_rating_company:0 "First-class Rater"
+ councilor_ngm_rating_company_female:0 "$councilor_ngm_rating_company$"
+ councilor_ngm_rating_company_desc:0 "A professional who provides top-notch ratings among rating companies."
+
+ councilor_ngm_underhanded_trick:0 "Director of Hospitality"
+ councilor_ngm_underhanded_trick_female:0 "$councilor_ngm_underhanded_trick$"
+ councilor_ngm_underhanded_trick_desc:0 "A power player who entertains foreign dignitaries and manipulates them to their own advantage."
+
+##############################
+#####    評議会の方針    ######
+##############################
+
+ council_agenda_agenda_ngm_positive_intervention_name:0 "Positive Intervention"
+ council_agenda_agenda_ngm_positive_intervention_desc:0 "Involvement beyond our borders elevates the status of the Empire."
+ agenda_ngm_positive_intervention_finish_modifier:0 "$council_agenda_agenda_ngm_positive_intervention_name$ $agenda_ref$"
+ agenda_ngm_positive_intervention_finish_modifier_desc:0 "$council_agenda_agenda_ngm_positive_intervention_desc$"
+
+ council_agenda_agenda_ngm_neutrality_confirmation_name:0 "Confirmation of Neutrality"
+ council_agenda_agenda_ngm_neutrality_confirmation_desc:0 "Independence from other nations is necessary for the Empire."
+ agenda_ngm_neutrality_confirmation_finish_modifier:0 "$council_agenda_agenda_ngm_neutrality_confirmation_name$ $agenda_ref$"
+ agenda_ngm_neutrality_confirmation_finish_modifier_desc:0 "$council_agenda_agenda_ngm_neutrality_confirmation_desc$"
+
+ council_agenda_agenda_ngm_honorary_accolades_name:0 "Honorary Accolades"
+ council_agenda_agenda_ngm_honorary_accolades_desc:0 "It is the duty of the nation to honor and recognize merit."
+ agenda_ngm_honorary_accolades_finish_modifier:0 "$council_agenda_agenda_ngm_honorary_accolades_name$ $agenda_ref$"
+ agenda_ngm_honorary_accolades_finish_modifier_desc:0 "$council_agenda_agenda_ngm_honorary_accolades_desc$"
+
+ council_agenda_agenda_ngm_securing_real_benefits_name:0 "Securing Real Benefits"
+ council_agenda_agenda_ngm_securing_real_benefits_desc:0 "We can get by as long as we have benefits."
+ agenda_ngm_securing_real_benefits_finish_modifier:0 "$council_agenda_agenda_ngm_securing_real_benefits_name$ $agenda_ref$"
+ agenda_ngm_securing_real_benefits_finish_modifier_desc:0 "$council_agenda_agenda_ngm_securing_real_benefits_desc$"
+
+ council_agenda_agenda_ngm_pursuit_of_economic_profit_name:0 "Pursuit of Economic Profit"
+ council_agenda_agenda_ngm_pursuit_of_economic_profit_desc:0 "Money, money, money. Money is important."
+ agenda_ngm_pursuit_of_economic_profit_finish_modifier:0 "$council_agenda_agenda_ngm_pursuit_of_economic_profit_name$ $agenda_ref$"
+ agenda_ngm_pursuit_of_economic_profit_finish_modifier_desc:0 "$council_agenda_agenda_ngm_pursuit_of_economic_profit_desc$"
+
+ council_agenda_agenda_ngm_reduction_of_economic_disparities_name:0 "Reduction of Economic Disparities"
+ council_agenda_agenda_ngm_reduction_of_economic_disparities_desc:0 "Achieving equality is the duty of the nation."
+ agenda_ngm_reduction_of_economic_disparities_finish_modifier:0 "$council_agenda_agenda_ngm_reduction_of_economic_disparities_name$ $agenda_ref$"
+ agenda_ngm_reduction_of_economic_disparities_finish_modifier_desc:0 "$council_agenda_agenda_ngm_reduction_of_economic_disparities_desc$"
+
+ council_agenda_agenda_ngm_reform_of_development_concept_name:0 "Reform of Development Concept"
+ council_agenda_agenda_ngm_reform_of_development_concept_desc:0 "The Empire's pursuit of development leads to the future."
+ agenda_ngm_reform_of_development_concept_finish_modifier:0 "$council_agenda_agenda_ngm_reform_of_development_concept_name$ $agenda_ref$"
+ agenda_ngm_reform_of_development_concept_finish_modifier_desc:0 "$council_agenda_agenda_ngm_reform_of_development_concept_desc$"
+
+ council_agenda_agenda_ngm_the_clamor_for_environmentalism_name:0 "The Clamor for Environmentalism"
+ council_agenda_agenda_ngm_the_clamor_for_environmentalism_desc:0 "The natural environment is a treasure we must protect."
+ agenda_ngm_the_clamor_for_environmentalism_finish_modifier:0 "$council_agenda_agenda_ngm_the_clamor_for_environmentalism_name$ $agenda_ref$"
+ agenda_ngm_the_clamor_for_environmentalism_finish_modifier_desc:0 "$council_agenda_agenda_ngm_the_clamor_for_environmentalism_desc$"
+
+ council_agenda_agenda_ngm_ensuring_law_and_order_name:0 "Ensuring Law and Order"
+ council_agenda_agenda_ngm_ensuring_law_and_order_desc:0 "The enforcement of law and order is essential."
+ agenda_ngm_ensuring_law_and_order_finish_modifier:0 "$council_agenda_agenda_ngm_ensuring_law_and_order_name$ $agenda_ref$"
+ agenda_ngm_ensuring_law_and_order_finish_modifier_desc:0 "$council_agenda_agenda_ngm_ensuring_law_and_order_desc$"
+
+ council_agenda_agenda_ngm_re_implementation_of_executive_education_name:0 "Re-Implementation of Executive Education"
+ council_agenda_agenda_ngm_re_implementation_of_executive_education_desc:0 "It is crucial that our executives never forget their initial intentions."
+ agenda_ngm_re_implementation_of_executive_education_finish_modifier:0 "$council_agenda_agenda_ngm_re_implementation_of_executive_education_name$ $agenda_ref$"
+ agenda_ngm_re_implementation_of_executive_education_finish_modifier_desc:0 "$council_agenda_agenda_ngm_re_implementation_of_executive_education_desc$"
+
+ council_agenda_agenda_ngm_aesthetic_feast_name:0 "Aesthetic Feast"
+ council_agenda_agenda_ngm_aesthetic_feast_desc:0 "Luxury is a friend."
+ agenda_ngm_aesthetic_feast_finish_modifier:0 "$council_agenda_agenda_ngm_aesthetic_feast_name$ $agenda_ref$"
+ agenda_ngm_aesthetic_feast_finish_modifier_desc:0 "$council_agenda_agenda_ngm_aesthetic_feast_desc$"
+
+ council_agenda_agenda_ngm_promoting_academic_research_name:0 "Promoting Academic Research"
+ council_agenda_agenda_ngm_promoting_academic_research_desc:0 "The advancement of technology is a driving force for development."
+ agenda_ngm_promoting_academic_research_finish_modifier:0 "$council_agenda_agenda_ngm_promoting_academic_research_name$ $agenda_ref$"
+ agenda_ngm_promoting_academic_research_finish_modifier_desc:0 "$council_agenda_agenda_ngm_promoting_academic_research_desc$"
+
+ council_agenda_agenda_ngm_steps_toward_freedom_name:0 "Steps Toward Freedom"
+ council_agenda_agenda_ngm_steps_toward_freedom_desc:0 "Promote factional politics based on freedom."
+ agenda_ngm_steps_toward_freedom_finish_modifier:0 "$council_agenda_agenda_ngm_steps_toward_freedom_name$ $agenda_ref$"
+ agenda_ngm_steps_toward_freedom_finish_modifier_desc:0 "$council_agenda_agenda_ngm_steps_toward_freedom_desc$"
+
+ council_agenda_agenda_ngm_reorganization_of_order_name:0 "Reorganization of Order"
+ council_agenda_agenda_ngm_reorganization_of_order_desc:0 "Order stands above all."
+ agenda_ngm_reorganization_of_order_finish_modifier:0 "$council_agenda_agenda_ngm_reorganization_of_order_name$ $agenda_ref$"
+ agenda_ngm_reorganization_of_order_finish_modifier_desc:0 "$council_agenda_agenda_ngm_reorganization_of_order_desc$"
+
+ council_agenda_agenda_ngm_promotion_of_species_understanding_name:0 "Promotion of Species Understanding"
+ council_agenda_agenda_ngm_promotion_of_species_understanding_desc:0 "Promotion of understanding different species should be done on a national scale."
+ agenda_ngm_promotion_of_species_understanding_finish_modifier:0 "$council_agenda_agenda_ngm_promotion_of_species_understanding_name$ $agenda_ref$"
+ agenda_ngm_promotion_of_species_understanding_finish_modifier_desc:0 "$council_agenda_agenda_ngm_promotion_of_species_understanding_desc$"
+
+ council_agenda_agenda_ngm_expanding_paranoia_name:0 "Expanding Paranoia"
+ council_agenda_agenda_ngm_expanding_paranoia_desc:0 "They are the enemy... there's no doubt about it."
+ agenda_ngm_expanding_paranoia_finish_modifier:0 "$council_agenda_agenda_ngm_expanding_paranoia_name$ $agenda_ref$"
+ agenda_ngm_expanding_paranoia_finish_modifier_desc:0 "$council_agenda_agenda_ngm_expanding_paranoia_desc$"
+
+ council_agenda_agenda_ngm_expansion_of_bureaucracy_name:0 "Expansion of Bureaucracy"
+ council_agenda_agenda_ngm_expansion_of_bureaucracy_desc:0 "Strengthening the bureaucracy is strengthening the country."
+ agenda_ngm_expansion_of_bureaucracy_finish_modifier:0 "$council_agenda_agenda_ngm_expansion_of_bureaucracy_name$ $agenda_ref$"
+ agenda_ngm_expansion_of_bureaucracy_finish_modifier_desc:0 "$council_agenda_agenda_ngm_expansion_of_bureaucracy_desc$"
+
+ council_agenda_agenda_ngm_expansion_of_officer_corps_name:0 "Expansion of Officer Corps"
+ council_agenda_agenda_ngm_expansion_of_officer_corps_desc:0 "Strengthening the officers can strengthen the military."
+ agenda_ngm_expansion_of_officer_corps_finish_modifier:0 "$council_agenda_agenda_ngm_expansion_of_officer_corps_name$ $agenda_ref$"
+ agenda_ngm_expansion_of_officer_corps_finish_modifier_desc:0 "$council_agenda_agenda_ngm_expansion_of_officer_corps_desc$"
+
+ council_agenda_agenda_ngm_implementation_of_building_plans_name:0 "Implementation of Building Plans"
+ council_agenda_agenda_ngm_implementation_of_building_plans_desc:0 "Our carefully crafted building plans are always being created."
+ agenda_ngm_implementation_of_building_plans_finish_modifier:0 "$council_agenda_agenda_ngm_implementation_of_building_plans_name$ $agenda_ref$"
+ agenda_ngm_implementation_of_building_plans_finish_modifier_desc:0 "$council_agenda_agenda_ngm_implementation_of_building_plans_desc$"
+
+ council_agenda_agenda_ngm_space_of_hope_name:0 "Space of Hope"
+ council_agenda_agenda_ngm_space_of_hope_desc:0 "Always continue to move towards the future."
+ agenda_ngm_space_of_hope_finish_modifier:0 "$council_agenda_agenda_ngm_space_of_hope_name$ $agenda_ref$"
+ agenda_ngm_space_of_hope_finish_modifier_desc:0 "$council_agenda_agenda_ngm_space_of_hope_desc$"
+
+ council_agenda_agenda_ngm_resolving_international_issues_name:0 "Resolving International Issues"
+ council_agenda_agenda_ngm_resolving_international_issues_desc:0 "International issues cannot be solved by one country alone, nor do they occur in just one country."
+ agenda_ngm_resolving_international_issues_finish_modifier:0 "$council_agenda_agenda_ngm_resolving_international_issues_name$ $agenda_ref$"
+ agenda_ngm_resolving_international_issues_finish_modifier_desc:0 "$council_agenda_agenda_ngm_resolving_international_issues_desc$"
+
+ council_agenda_agenda_ngm_implementation_of_large_scale_actions_name:0 "Implementation of Large-Scale Actions"
+ council_agenda_agenda_ngm_implementation_of_large_scale_actions_desc:0 "Proceed towards national expansion!"
+ agenda_ngm_implementation_of_large_scale_actions_finish_modifier:0 "$council_agenda_agenda_ngm_implementation_of_large_scale_actions_name$ $agenda_ref$"
+ agenda_ngm_implementation_of_large_scale_actions_finish_modifier_desc:0 "$council_agenda_agenda_ngm_implementation_of_large_scale_actions_desc$"
+
+ council_agenda_agenda_ngm_restructuring_of_legislative_procedures_name:0 "Restructuring of Legislative Procedures"
+ council_agenda_agenda_ngm_restructuring_of_legislative_procedures_desc:0 "A review of the law is always necessary."
+ agenda_ngm_restructuring_of_legislative_procedures_finish_modifier:0 "$council_agenda_agenda_ngm_restructuring_of_legislative_procedures_name$ $agenda_ref$"
+ agenda_ngm_restructuring_of_legislative_procedures_finish_modifier_desc:0 "$council_agenda_agenda_ngm_restructuring_of_legislative_procedures_desc$"
+
+ council_agenda_agenda_ngm_ensuring_class_order_name:0 "Ensuring Class Order"
+ council_agenda_agenda_ngm_ensuring_class_order_desc:0 "Favoritism towards hereditary classes is the foundation of the nation."
+ agenda_ngm_ensuring_class_order_finish_modifier:0 "$council_agenda_agenda_ngm_ensuring_class_order_name$ $agenda_ref$"
+ agenda_ngm_ensuring_class_order_finish_modifier_desc:0 "$council_agenda_agenda_ngm_ensuring_class_order_desc$"
+
+##########################
+#####    貿易取引    ######
+##########################
+
+ trade_action_ngm_ethics_force:0 "Ethics Correction"
+ trade_action_ngm_ethics_force_desc:0 "§LIt is only natural that our humble vassal should align its aspirations with those of its noble suzerain. It's a response to benevolence and enlightenment!§!"
+ trade_action_ngm_ethics_force_effect:0 "Increase the appeal of the suzerain's governing ethics in the vassal state"
+
 ########################################
 #####    Required technologies    ######
 ########################################
 
  requires_tech_starbase_5:0 "§R required: £engineering£ §Y$tech_starbase_5$§! Technology§!"
- requires_tech_battleships:0 §R required：£engineering£  §Y$tech_battleships$§! Technology§!"
+ requires_tech_battleships:0 "§R required：£engineering£  §Y$tech_battleships$§! Technology§!"
  requires_tech_zero_point_power:0 "§Rrequired：£engineering£  §Y$tech_zero_point_power$§! Technology§!"
 
 ##########################
@@ -4304,6 +5266,7 @@
  triggered_opinion_tr_ngm_ambassador:0 "$tr_ngm_ambassador$"
  triggered_opinion_tr_ngm_longing_finish:0 "$tr_ngm_longing_finish$"
  triggered_opinion_tr_ngm_suzerain_adopt:0 "$tr_ngm_suzerain_adopt$"
+ triggered_opinion_origin_ngm_phenix_10_modifier:0 "$origin_ngm_phenix_10_modifier$"
 
 ##########################
 #####    そのほか    ######
@@ -4413,6 +5376,7 @@
  civic_tooltip_utilitarianism_or_militarist:0 "Is some degree of §YUtilitarianism§! or §YMilitarist§!"
  civic_tooltip_utilitarianism_or_militarist_or_xenophobe:0 "Is some degree of §YUtilitarianism§! or §YMilitarist§! or §YXenophobe§!"
 
+ civic_tooltip_ngm_prosperity_advocate_effects:0 "Labor output for each 5-year period of peace §G+1%§! §Y (for up to 50 years) §!\n Trade value §G+2.5% for each 5-year period of peace  §Y (for up to 50 years) §!"
  civic_tooltip_ngm_corporate_empire_effects:0 "\n$BRANCH_OFFICE_BUILDING$ to £building£ §Y$building_ngm_ginga_department_store$§! can be built!\n"
  civic_tooltip_ngm_high_tech_company_effects:0 "\ߋn$BRANCH_OFFICE_BUILDING$ to £building£ §Y$building_ngm_business_school$§! can be built!\n"
  civic_tooltip_ngm_smokestack_industry_effects:0 "\n$BRANCH_OFFICE_BUILDING$ to £building£ §Y$building_ngm_star_workshop$§! can be built!\n"
@@ -4441,6 +5405,8 @@
 
  empire_not_ethic:0 "The $TRIGGER_FAIL$ empire does not meet the necessary conditions. "
 
+ civic_tooltip_ngm_experimental_substance_effects:0 "§RCannot be added or removed after the game has started.§!\n§Y(If you add or remove them after the game starts, they will be restored.)\n\n§!Give one of each strategic resource characteristic to the capital planet."
+
  civic_tooltip_ngm_dissection_effects:0 "Different species are forced into slavery."
 
  civic_tooltip_ngm_pest_control_effects:0 "Unlocks the §G$casus_belli_cb_ngm_pest_control$§! Casus Belli on developmentalist country\n(When they win, they turn their developmentalist ethic to conservationism and make the other side into a vassal state. In addition, at the end of the war, we will give our sociological research capabilities to the warring parties."
@@ -4449,8 +5415,10 @@
 
  civic_tooltip_mechanical_faith_effects:0 "The spiritualist faction will no longer be angry with robots.\nWe can't outlaw robots.\nFix robot human rights to citizenship."
 
- planet_buildings_exotic_gases_upkeep_mult:0 "Building £exotic_gases£ $exotic_gases$ Upkeep"
- planet_buildings_volatile_motes_upkeep_mult:0 "Building £volatile_motes£ $volatile_motes$ Upkeep"
+ mod_planet_buildings_exotic_gases_upkeep_mult:0 "Building £exotic_gases£ $exotic_gases$ Upkeep"
+ mod_planet_buildings_rare_crystals_upkeep_mult:0 "Building £rare_crystals£ $rare_crystals$ Upkeep"
+ mod_planet_buildings_volatile_motes_upkeep_mult:0 "Building £volatile_motes£ $volatile_motes$ Upkeep"
+ mod_planet_bureau_of_ceremonies_ngm_order_of_merit_produces_add:0 "£ngm_order_of_merit£ §Y$ngm_order_of_merit$§! from £job_bureau_of_ceremonies£ $job_bureau_of_ceremonies_plural$"
 
 ##########################
 #####    名称関係    ######

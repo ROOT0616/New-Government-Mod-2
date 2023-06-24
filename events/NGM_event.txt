@@ -55,6 +55,66 @@ country_event = {
 					has_edict = zro_crystal_machine
 					factor = 0.5
 				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						exists = fleet
+						species = {
+							has_trait = trait_ngm_m_malfunction
+						}
+					}
+					factor = 0.2
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						exists = fleet
+						species = {
+							has_trait = trait_ngm_m_incr
+						}
+					}
+					factor = 0.15
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						exists = fleet
+						species = {
+							has_trait = trait_ngm_m_flash
+						}
+					}
+					factor = 0.1
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						exists = fleet
+						species = {
+							has_trait = trait_ngm_m_blue
+						}
+					}
+					factor = 0.1
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						exists = fleet
+						species = {
+							has_trait = trait_ngm_m_bomb
+						}
+					}
+					factor = 0.05
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						exists = fleet
+						species = {
+							has_trait = trait_ngm_m_mcpu
+						}
+					}
+					factor = 0.05
+				}
 				if = {
 					# surveying scientist
 					limit = {
@@ -84,11 +144,15 @@ country_event = {
 						if = {
 							limit = {
 								species = {
-									has_trait = trait_ngm_m_malfunction
+									OR = {
+										has_trait = trait_ngm_m_malfunction
+										has_trait = trait_ngm_m_main
+										has_trait = trait_ngm_m_back
+									}
 								}
 							}
 							random_list = {
-								80 = {
+								99 = {
 									save_event_target_as = malfunctioning_leader
 									fleet = {
 										save_event_target_as = malfunctioning_leader_fleet
@@ -108,8 +172,38 @@ country_event = {
 											}
 										}
 									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = scientist
+											exists = fleet
+											species = {
+												has_trait = trait_ngm_m_main
+											}
+										}
+										factor = 0.95
+									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = scientist
+											exists = fleet
+											species = {
+												has_trait = trait_ngm_m_made
+											}
+										}
+										factor = 0.95
+									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = scientist
+											exists = fleet
+											species = {
+												has_trait = trait_ngm_m_back
+											}
+										}
+										factor = 0.8
+									}
 								}
-								20 = {
+								1 = {
 								}
 							}
 						}
@@ -153,6 +247,66 @@ country_event = {
 					has_edict = zro_crystal_machine
 					factor = 0.5
 				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = engineering
+						species = {
+							has_trait = trait_ngm_m_malfunction
+						}
+					}
+					factor = 0.2
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = engineering
+						species = {
+							has_trait = trait_ngm_m_incr
+						}
+					}
+					factor = 0.15
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = engineering
+						species = {
+							has_trait = trait_ngm_m_flash
+						}
+					}
+					factor = 0.1
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = engineering
+						species = {
+							has_trait = trait_ngm_m_blue
+						}
+					}
+					factor = 0.1
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = engineering
+						species = {
+							has_trait = trait_ngm_m_bomb
+						}
+					}
+					factor = 0.05
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = engineering
+						species = {
+							has_trait = trait_ngm_m_mcpu
+						}
+					}
+					factor = 0.05
+				}
 				if = {
 					# engineering scientist
 					limit = {
@@ -182,11 +336,15 @@ country_event = {
 						if = {
 							limit = {
 								species = {
-									has_trait = trait_ngm_m_malfunction
+									OR = {
+										has_trait = trait_ngm_m_malfunction
+										has_trait = trait_ngm_m_main
+										has_trait = trait_ngm_m_back
+									}
 								}
 							}
 							random_list = {
-								80 = {
+								99 = {
 									save_event_target_as = malfunctioning_leader
 									root = {
 										if = {
@@ -203,8 +361,38 @@ country_event = {
 											}
 										}
 									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = scientist
+											is_researching_area = engineering
+											species = {
+												has_trait = trait_ngm_m_main
+											}
+										}
+										factor = 0.95
+									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = scientist
+											is_researching_area = engineering
+											species = {
+												has_trait = trait_ngm_m_made
+											}
+										}
+										factor = 0.95
+									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = scientist
+											is_researching_area = engineering
+											species = {
+												has_trait = trait_ngm_m_back
+											}
+										}
+										factor = 0.8
+									}
 								}
-								20 = {
+								1 = {
 								}
 							}
 						}
@@ -245,6 +433,66 @@ country_event = {
 					has_edict = zro_crystal_machine
 					factor = 0.5
 				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = society
+						species = {
+							has_trait = trait_ngm_m_malfunction
+						}
+					}
+					factor = 0.2
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = society
+						species = {
+							has_trait = trait_ngm_m_incr
+						}
+					}
+					factor = 0.15
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = society
+						species = {
+							has_trait = trait_ngm_m_flash
+						}
+					}
+					factor = 0.1
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = society
+						species = {
+							has_trait = trait_ngm_m_blue
+						}
+					}
+					factor = 0.1
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = society
+						species = {
+							has_trait = trait_ngm_m_bomb
+						}
+					}
+					factor = 0.05
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = society
+						species = {
+							has_trait = trait_ngm_m_mcpu
+						}
+					}
+					factor = 0.05
+				}
 				if = {
 					# society scientist
 					limit = {
@@ -274,11 +522,15 @@ country_event = {
 						if = {
 							limit = {
 								species = {
-									has_trait = trait_ngm_m_malfunction
+									OR = {
+										has_trait = trait_ngm_m_malfunction
+										has_trait = trait_ngm_m_main
+										has_trait = trait_ngm_m_back
+									}
 								}
 							}
 							random_list = {
-								80 = {
+								99 = {
 									save_event_target_as = malfunctioning_leader
 									root = {
 										if = {
@@ -295,8 +547,38 @@ country_event = {
 											}
 										}
 									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = scientist
+											is_researching_area = society
+											species = {
+												has_trait = trait_ngm_m_main
+											}
+										}
+										factor = 0.95
+									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = scientist
+											is_researching_area = society
+											species = {
+												has_trait = trait_ngm_m_made
+											}
+										}
+										factor = 0.95
+									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = scientist
+											is_researching_area = society
+											species = {
+												has_trait = trait_ngm_m_back
+											}
+										}
+										factor = 0.8
+									}
 								}
-								20 = {
+								1 = {
 								}
 							}
 						}
@@ -332,6 +614,66 @@ country_event = {
 					has_valid_civic = civic_ngm_check
 					factor = 0.2
 				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = physics
+						species = {
+							has_trait = trait_ngm_m_malfunction
+						}
+					}
+					factor = 0.2
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = physics
+						species = {
+							has_trait = trait_ngm_m_incr
+						}
+					}
+					factor = 0.15
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = physics
+						species = {
+							has_trait = trait_ngm_m_flash
+						}
+					}
+					factor = 0.1
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = physics
+						species = {
+							has_trait = trait_ngm_m_blue
+						}
+					}
+					factor = 0.1
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = physics
+						species = {
+							has_trait = trait_ngm_m_bomb
+						}
+					}
+					factor = 0.05
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = scientist
+						is_researching_area = physics
+						species = {
+							has_trait = trait_ngm_m_mcpu
+						}
+					}
+					factor = 0.05
+				}
 				if = {
 					# society scientist
 					limit = {
@@ -361,11 +703,15 @@ country_event = {
 						if = {
 							limit = {
 								species = {
-									has_trait = trait_ngm_m_malfunction
+									OR = {
+										has_trait = trait_ngm_m_malfunction
+										has_trait = trait_ngm_m_main
+										has_trait = trait_ngm_m_back
+									}
 								}
 							}
 							random_list = {
-								80 = {
+								99 = {
 									save_event_target_as = malfunctioning_leader
 									root = {
 										if = {
@@ -382,8 +728,38 @@ country_event = {
 											}
 										}
 									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = scientist
+											is_researching_area = physics
+											species = {
+												has_trait = trait_ngm_m_main
+											}
+										}
+										factor = 0.95
+									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = scientist
+											is_researching_area = physics
+											species = {
+												has_trait = trait_ngm_m_made
+											}
+										}
+										factor = 0.95
+									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = scientist
+											is_researching_area = physics
+											species = {
+												has_trait = trait_ngm_m_back
+											}
+										}
+										factor = 0.8
+									}
 								}
-								20 = {
+								1 = {
 								}
 							}
 						}
@@ -419,6 +795,66 @@ country_event = {
 					has_valid_civic = civic_ngm_check
 					factor = 0.2
 				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = admiral
+						exists = fleet
+						species = {
+							has_trait = trait_ngm_m_malfunction
+						}
+					}
+					factor = 0.2
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = admiral
+						exists = fleet
+						species = {
+							has_trait = trait_ngm_m_incr
+						}
+					}
+					factor = 0.15
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = admiral
+						exists = fleet
+						species = {
+							has_trait = trait_ngm_m_flash
+						}
+					}
+					factor = 0.1
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = admiral
+						exists = fleet
+						species = {
+							has_trait = trait_ngm_m_blue
+						}
+					}
+					factor = 0.1
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = admiral
+						exists = fleet
+						species = {
+							has_trait = trait_ngm_m_bomb
+						}
+					}
+					factor = 0.05
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = admiral
+						exists = fleet
+						species = {
+							has_trait = trait_ngm_m_mcpu
+						}
+					}
+					factor = 0.05
+				}
 				if = {
 					# commanding admiral
 					limit = {
@@ -448,11 +884,15 @@ country_event = {
 						if = {
 							limit = {
 								species = {
-									has_trait = trait_ngm_m_malfunction
+									OR = {
+										has_trait = trait_ngm_m_malfunction
+										has_trait = trait_ngm_m_main
+										has_trait = trait_ngm_m_back
+									}
 								}
 							}
 							random_list = {
-								80 = {
+								99 = {
 									save_event_target_as = malfunctioning_leader
 									fleet = {
 										save_event_target_as = malfunctioning_leader_fleet
@@ -472,8 +912,38 @@ country_event = {
 											}
 										}
 									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = admiral
+											exists = fleet
+											species = {
+												has_trait = trait_ngm_m_main
+											}
+										}
+										factor = 0.95
+									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = admiral
+											exists = fleet
+											species = {
+												has_trait = trait_ngm_m_made
+											}
+										}
+										factor = 0.95
+									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = admiral
+											exists = fleet
+											species = {
+												has_trait = trait_ngm_m_back
+											}
+										}
+										factor = 0.8
+									}
 								}
-								20 = {
+								1 = {
 								}
 							}
 						}
@@ -517,6 +987,66 @@ country_event = {
 					has_edict = zro_crystal_machine
 					factor = 0.5
 				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = governor
+						exists = sector
+						species = {
+							has_trait = trait_ngm_m_malfunction
+						}
+					}
+					factor = 0.2
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = governor
+						exists = sector
+						species = {
+							has_trait = trait_ngm_m_incr
+						}
+					}
+					factor = 0.15
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = governor
+						exists = sector
+						species = {
+							has_trait = trait_ngm_m_flash
+						}
+					}
+					factor = 0.1
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = governor
+						exists = sector
+						species = {
+							has_trait = trait_ngm_m_blue
+						}
+					}
+					factor = 0.1
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = governor
+						exists = sector
+						species = {
+							has_trait = trait_ngm_m_bomb
+						}
+					}
+					factor = 0.05
+				}
+				modifier = {
+					any_owned_leader = {
+						leader_class = governor
+						exists = sector
+						species = {
+							has_trait = trait_ngm_m_mcpu
+						}
+					}
+					factor = 0.05
+				}
 				if = {
 					# planet governor
 					limit = {
@@ -546,11 +1076,15 @@ country_event = {
 						if = {
 							limit = {
 								species = {
-									has_trait = trait_ngm_m_malfunction
+									OR = {
+										has_trait = trait_ngm_m_malfunction
+										has_trait = trait_ngm_m_main
+										has_trait = trait_ngm_m_back
+									}
 								}
 							}
 							random_list = {
-								80 = {
+								99 = {
 									save_event_target_as = malfunctioning_leader
 									root = {
 										if = {
@@ -567,8 +1101,38 @@ country_event = {
 											}
 										}
 									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = governor
+											exists = sector
+											species = {
+												has_trait = trait_ngm_m_main
+											}
+										}
+										factor = 0.95
+									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = governor
+											exists = sector
+											species = {
+												has_trait = trait_ngm_m_made
+											}
+										}
+										factor = 0.95
+									}
+									modifier = {
+										any_owned_leader = {
+											leader_class = governor
+											exists = sector
+											species = {
+												has_trait = trait_ngm_m_back
+											}
+										}
+										factor = 0.8
+									}
 								}
-								20 = {
+								1 = {
 								}
 							}
 						}

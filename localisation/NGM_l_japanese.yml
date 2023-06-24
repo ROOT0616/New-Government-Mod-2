@@ -1330,6 +1330,12 @@
  edict_ngm_mossball_edict:0 "モスボールされた民間船の再整備"
  edict_ngm_mossball_edict_desc:0 "気だるいことではあるが、モスボールされている民間船を再整備することは可能である"
 
+ edict_ngm_virture_rival_options_menu:0 "影の敵国を設定"
+ edict_ngm_virture_rival_options_menu_desc:0 ""
+
+ edict_ngm_virture_rival_end_options_menu:0 "影の敵国を外す"
+ edict_ngm_virture_rival_end_options_menu_desc:0 ""
+
 #######################
 #####    技術    ######
 #######################
@@ -2305,280 +2311,379 @@
  trait_ngm_elder_politics_desc:0 "§Lこの政府の高官は高齢の者に支配されており、熟達した政府高官により多くの決定がなされている。しかし、それは新参者の政府参加を妨げやすく、新たな思想を受け入れる素地を減らしてしまう傾向にある。§!"
 
  trait_ngm_knight:0 "騎士道精神"
- trait_ngm_knight_desc:0 "この種族は弱きものを助け、社会正義を全うすべきだという強い信念を有した高潔性を有している。"
+ trait_ngm_knight_desc:0 "§Lこの種族は弱きものを助け、社会正義を全うすべきだという強い信念を有した高潔性を有している。 §!\n"
 
  trait_ngm_gentle:0 "紳士"
- trait_ngm_gentle_desc:0 "この種族は常に丁寧で、物腰柔らかな傾向がある。。"
+ trait_ngm_gentle_desc:0 "§Lこの種族は常に丁寧で、物腰柔らかな傾向がある。。§!\n"
 
  trait_ngm_rascal:0 "悪漢"
- trait_ngm_rascal_desc:0 "この種族は利己主義的で、自分の利益を最優先する傾向がある。"
+ trait_ngm_rascal_desc:0 "§Lこの種族は利己主義的で、自分の利益を最優先する傾向がある。§!\n"
 
  trait_ngm_totemowarui:0 "巨悪"
- trait_ngm_totemowarui_desc:0 "この種族は自己利益を最大化することに余念がなく、その方法を気にしない。"
+ trait_ngm_totemowarui_desc:0 "§Lこの種族は自己利益を最大化することに余念がなく、その方法を気にしない。§!\n"
 
  trait_ngm_healing:0 "治癒遺伝子"
- trait_ngm_healing_desc:0 "この種族の遺伝子は特殊で、自己複製能力が高く、多少の怪我や病気はすぐに治癒する。"
+ trait_ngm_healing_desc:0 "§Lこの種族の遺伝子は特殊で、自己複製能力が高く、多少の怪我や病気はすぐに治癒する。§!\n"
 
  trait_ngm_unhealing:0 "修復不能"
- trait_ngm_unhealing_desc:0 "この種族の遺伝子は特殊で、自己複製能力が低く、多少の怪我や病気が命取りとなる。"
+ trait_ngm_unhealing_desc:0 "§Lこの種族の遺伝子は特殊で、自己複製能力が低く、多少の怪我や病気が命取りとなる。§!\n"
 
  trait_ngm_assimilation:0 "身体的同化"
- trait_ngm_assimilation_desc:0 "この種族は身体的な適応能力が高く、順応性がある。しかし、その順応の際に痛みを伴うことから一度順応した土地から離れたくないという者も数少なくいる。"
+ trait_ngm_assimilation_desc:0 "§Lこの種族は身体的な適応能力が高く、順応性がある。しかし、その順応の際に痛みを伴うことから一度順応した土地から離れたくないという者も数少なくいる。§!\n"
 
  trait_ngm_unadaptation:0 "適応不足"
- trait_ngm_unadaptation_desc:0 "この種族は、身体的な同化機能が低く、自分の身体に合った環境への移動をより好む傾向がある。"
+ trait_ngm_unadaptation_desc:0 "§Lこの種族は、身体的な同化機能が低く、自分の身体に合った環境への移動をより好む傾向がある。§!\n"
 
  trait_ngm_division:0 "生体分裂"
- trait_ngm_division_desc:0 "この種族は無性生殖が可能で、身体を分裂左折ことが可能である。"
+ trait_ngm_division_desc:0 "§Lこの種族は無性生殖が可能で、身体を分裂左折ことが可能である。§!\n"
 
  trait_ngm_MPMD:0 "多産多死"
- trait_ngm_MPMD_desc:0 "この種族は多産の傾向があるが、多くの子供が未成熟ゆえに生き残ることが難しく、成長したとしても虚弱体質の傾向がある。"
+ trait_ngm_MPMD_desc:0 "§Lこの種族は多産の傾向があるが、多くの子供が未成熟ゆえに生き残ることが難しく、成長したとしても虚弱体質の傾向がある。§!\n"
 
  trait_ngm_LMLD:0 "少子長命"
- trait_ngm_LMLD_desc:0 "この種族は長命のため、社会の過剰拡大を防ぐため繁殖を控える傾向がある。"
+ trait_ngm_LMLD_desc:0 "§Lこの種族は長命のため、社会の過剰拡大を防ぐため繁殖を控える傾向がある。§!\n"
 
  trait_ngm_abn_growth:0 "異常発達"
- trait_ngm_abn_growth_desc:0 "この種族は放射線や人為的遺伝子操作の影響により身体的機能が発達する傾向が強い。しかし、知力については原始的な傾向にあるため、研究や創作には向かず、自らの土地を守ることに興味を示す。"
+ trait_ngm_abn_growth_desc:0 "§Lこの種族は放射線や人為的遺伝子操作の影響により身体的機能が発達する傾向が強い。しかし、知力については原始的な傾向にあるため、研究や創作には向かず、自らの土地を守ることに興味を示す。§!\n"
 
  trait_ngm_Lost_species:0 "失われし種"
- trait_ngm_Lost_species_desc:0 "この種族は失われた技術により強化された後がみられる。それにより知力は大幅に強化されているが、身体的能力が総じて低い。"
+ trait_ngm_Lost_species_desc:0 "§Lこの種族は失われた技術により強化された後がみられる。それにより知力は大幅に強化されているが、身体的能力が総じて低い。§!\n"
 
  trait_ngm_turf:0 "縄張り意識"
- trait_ngm_turf_desc:0 "この種族は自らの範囲を重要視しており、それを維持することに執念を見せる。"
+ trait_ngm_turf_desc:0 "§Lこの種族は自らの範囲を重要視しており、それを維持することに執念を見せる。§!\n"
 
  trait_ngm_Movement:0 "移動性社会"
- trait_ngm_Movement_desc:0 "この種族は転居や移住を好んでおり、そのためにはあらゆる行動をとりうる。"
+ trait_ngm_Movement_desc:0 "§Lこの種族は転居や移住を好んでおり、そのためにはあらゆる行動をとりうる。§!\n"
 
  trait_ngm_empathy:0 "共感"
- trait_ngm_empathy_desc:0 "この種族は、他者に対する思いやりの感情が強い。"
+ trait_ngm_empathy_desc:0 "§Lこの種族は、他者に対する思いやりの感情が強い。§!\n"
 
  trait_ngm_resentment:0 "反感"
- trait_ngm_resentment_desc:0 "この種族は、他者に対して常に反感を覚えている。"
+ trait_ngm_resentment_desc:0 "§Lこの種族は、他者に対して常に反感を覚えている。§!\n"
 
  trait_ngm_magnetism:0 "磁性"
- trait_ngm_magnetism_desc:0 "この種族はほのかに磁性を有しており、物理学的技術発展に寄与している。"
+ trait_ngm_magnetism_desc:0 "§Lこの種族はほのかに磁性を有しており、物理学的技術発展に寄与している。§!\n"
 
  trait_ngm_radioactive:0 "放射性血液"
- trait_ngm_radioactive_desc:0 "この種族の血液には放射性物質が含まれている。"
+ trait_ngm_radioactive_desc:0 "§Lこの種族の血液には放射性物質が含まれている。§!\n"
 
  trait_ngm_jack_o_lantern:0 "鬼火"
- trait_ngm_jack_o_lantern_desc:0 "この種族は自在に火を操ることが可能である。"
+ trait_ngm_jack_o_lantern_desc:0 "§Lこの種族は自在に火を操ることが可能である。§!\n"
 
  trait_ngm_optical_adapt:0 "光学適応"
- trait_ngm_optical_adapt_desc:0 "この種族は光学的に周囲へ溶け込むことで隠れることができる。"
+ trait_ngm_optical_adapt_desc:0 "§Lこの種族は光学的に周囲へ溶け込むことで隠れることができる。§!\n"
 
  trait_ngm_hardness:0 "硬質器官"
- trait_ngm_hardness_desc:0 "この種族は体の一部を硬化させることができる。"
+ trait_ngm_hardness_desc:0 "§Lこの種族は体の一部を硬化させることができる。§!\n"
 
  trait_ngm_neural_block:0 "神経遮断"
- trait_ngm_neural_block_desc:0 "この種族は痛覚神経を一時的に遮断させ、痛みを避けることができる。"
+ trait_ngm_neural_block_desc:0 "§Lこの種族は痛覚神経を一時的に遮断させ、痛みを避けることができる。§!\n"
 
  trait_ngm_flying:0 "飛行器官"
- trait_ngm_flying_desc:0 "この種族は飛行することができる。"
+ trait_ngm_flying_desc:0 "§Lこの種族は飛行することができる。§!\n"
 
  trait_ngm_swift_horse:0 "俊足"
- trait_ngm_swift_horse_desc:0 "この種族は恐ろしい速度で走ることができる。"
+ trait_ngm_swift_horse_desc:0 "§Lこの種族は恐ろしい速度で走ることができる。§!\n"
 
  trait_ngm_clairvoyance:0 "千里眼"
- trait_ngm_clairvoyance_desc:0 "この種族は通常の視界以上のものを見ることができる。"
+ trait_ngm_clairvoyance_desc:0 "§Lこの種族は通常の視界以上のものを見ることができる。§!\n"
 
  trait_ngm_sixth_sense:0 "第六感"
- trait_ngm_sixth_sense_desc:0 "この種族は予知能力のような形で一時的に未来を知ることができる。"
+ trait_ngm_sixth_sense_desc:0 "§Lこの種族は予知能力のような形で一時的に未来を知ることができる。§!\n"
 
  trait_ngm_sluggish:0 "鈍い感覚"
- trait_ngm_sluggish_desc:0 "この種族は5感が鈍く、周囲を知るために時間がかかる。"
+ trait_ngm_sluggish_desc:0 "§Lこの種族は5感が鈍く、周囲を知るために時間がかかる。§!\n"
 
  trait_ngm_degeneration:0 "退化した眼"
- trait_ngm_degeneration_desc:0 "この種族は眼が退化しており、周囲を探る方法が限られている。"
+ trait_ngm_degeneration_desc:0 "§Lこの種族は眼が退化しており、周囲を探る方法が限られている。§!\n"
 
  trait_ngm_confusion:0 "混乱"
- trait_ngm_confusion_desc:0 "この種族はちょっとしたことで落ち着きを失い、混乱した状態となる。"
+ trait_ngm_confusion_desc:0 "§Lこの種族はちょっとしたことで落ち着きを失い、混乱した状態となる。§!\n"
 
  trait_ngm_derangement:0 "錯乱"
- trait_ngm_derangement_desc:0 "この種族は混沌に満ちており、冷静さを失っている。"
+ trait_ngm_derangement_desc:0 "§Lこの種族は混沌に満ちており、冷静さを失っている。§!\n"
 
  trait_ngm_melancholy:0 "憂鬱"
- trait_ngm_melancholy_desc:0 "この種族は常に憂鬱で、落ち込んだ状態で生活している。"
+ trait_ngm_melancholy_desc:0 "§Lこの種族は常に憂鬱で、落ち込んだ状態で生活している。§!\n"
 
  trait_ngm_enervated:0 "惰弱"
- trait_ngm_enervated_desc:0 "この種族は身体が弱く、熱心に動くことができない。"
+ trait_ngm_enervated_desc:0 "§Lこの種族は身体が弱く、熱心に動くことができない。§!\n"
 
  trait_ngm_death_heart:0 "心の死"
- trait_ngm_death_heart_desc:0 "この種族は心を失っており、熱心さがない。"
+ trait_ngm_death_heart_desc:0 "§Lこの種族は心を失っており、熱心さがない。§!\n"
 
  trait_ngm_huge:0 "巨大"
- trait_ngm_huge_desc:0 "この種族の身体は銀河基準からしても巨大である。"
+ trait_ngm_huge_desc:0 "§Lこの種族の身体は銀河基準からしても巨大である。§!\n"
 
  trait_ngm_big:0 "大型"
- trait_ngm_big_desc:0 "この種族の身体は銀河基準からしても大柄である。"
+ trait_ngm_big_desc:0 "§Lこの種族の身体は銀河基準からしても大柄である。§!\n"
 
  trait_ngm_small:0 "小型"
- trait_ngm_small_desc:0 "この種族の身体は銀河基準からしても小型である。"
+ trait_ngm_small_desc:0 "§Lこの種族の身体は銀河基準からしても小型である。§!\n"
 
  trait_ngm_minimum:0 "極小"
- trait_ngm_minimum_desc:0 "この種族の身体は銀河基準からしても極小である。"
+ trait_ngm_minimum_desc:0 "§Lこの種族の身体は銀河基準からしても極小である。§!\n"
 
  trait_ngm_hunting:0 "狩猟文化"
- trait_ngm_hunting_desc:0 "この種族の社会は狩猟により食料を確保している。"
+ trait_ngm_hunting_desc:0 "§Lこの種族の社会は狩猟により食料を確保している。§!\n"
 
  trait_ngm_collecting:0 "採取文化"
- trait_ngm_collecting_desc:0 "この種族の社会は採取により食料を確保している。"
+ trait_ngm_collecting_desc:0 "§Lこの種族の社会は採取により食料を確保している。§!\n"
 
  trait_ngm_h_g:0 "狩猟採取文化"
- trait_ngm_h_g_desc:0 "この種族の社会は狩猟や採取により食料を確保している。"
+ trait_ngm_h_g_desc:0 "§Lこの種族の社会は狩猟や採取により食料を確保している。§!\n"
 
  trait_ngm_agriculture:0 "農耕文化"
- trait_ngm_agriculture_desc:0 "この種族の社会は農業に基盤が置かれている。"
+ trait_ngm_agriculture_desc:0 "§Lこの種族の社会は農業に基盤が置かれている。§!\n"
 
  trait_ngm_elder_verbal:0 "複雑な言語"
- trait_ngm_elder_verbal_desc:0 "この種族の語彙や文法は極めて難しい。"
+ trait_ngm_elder_verbal_desc:0 "§Lこの種族の語彙や文法は極めて難しい。§!\n"
 
  trait_ngm_elder_non_verbal:0 "非言語社会"
- trait_ngm_elder_non_verbal_desc:0 "この種族には言語という概念が存在しない。"
+ trait_ngm_elder_non_verbal_desc:0 "§Lこの種族には言語という概念が存在しない。§!\n"
 
  trait_ngm_elder_non_character:0 "無文字社会"
- trait_ngm_elder_non_character_desc:0 "この種族には文字という概念が存在しない。"
+ trait_ngm_elder_non_character_desc:0 "§Lこの種族には文字という概念が存在しない。§!\n"
 
  trait_ngm_delicious:0 "美味な肉体"
- trait_ngm_delicious_desc:0 "この種族は美味しい！"
+ trait_ngm_delicious_desc:0 "§Lこの種族は美味しい！§!\n"
 
  trait_ngm_unappetizing:0 "不味い肉体"
- trait_ngm_unappetizing_desc:0 "この種族は不味い！"
+ trait_ngm_unappetizing_desc:0 "§Lこの種族は不味い！§!\n"
 
  trait_ngm_speckled_w_white:0 "霜降り"
- trait_ngm_speckled_w_white_desc:0 "この種族は全身が霜降りである。"
+ trait_ngm_speckled_w_white_desc:0 "§Lこの種族は全身が霜降りである。§!\n"
 
  trait_ngm_Toxic:0 "有毒"
- trait_ngm_Toxic_desc:0 "この種族の肉は有毒である。"
+ trait_ngm_Toxic_desc:0 "§Lこの種族の肉は有毒である。§!\n"
 
  trait_ngm_complex_heredity:0 "複雑な遺伝構造"
- trait_ngm_complex_heredity_desc:0 "この種族の遺伝子は極めて複雑である。"
+ trait_ngm_complex_heredity_desc:0 "§Lこの種族の遺伝子は極めて複雑である。§!\n"
 
  trait_ngm_simple_heredity:0 "単純な遺伝構造"
- trait_ngm_simple_heredity_desc:0 "この種族の遺伝子は極めて単純である。"
+ trait_ngm_simple_heredity_desc:0 "§Lこの種族の遺伝子は極めて単純である。§!\n"
 
  trait_ngm_sensitization:0 "感光性"
- trait_ngm_sensitization_desc:0 "この種族は極めて光に弱く、光を避ける傾向にある。"
+ trait_ngm_sensitization_desc:0 "§Lこの種族は極めて光に弱く、光を避ける傾向にある。§!\n"
 
  trait_ngm_like_light:0 "好光性"
- trait_ngm_like_light_desc:0 "この種族は光を好み、日光を浴びることを好む。"
+ trait_ngm_like_light_desc:0 "§Lこの種族は光を好み、日光を浴びることを好む。§!\n"
 
  trait_ngm_indoor:0 "インドア派"
- trait_ngm_indoor_desc:0 "この種族は屋内での活動を好む。"
+ trait_ngm_indoor_desc:0 "§Lこの種族は屋内での活動を好む。§!\n"
 
  trait_ngm_outdoor:0 "アウトドア派"
- trait_ngm_outdoor_desc:0 "この種族は屋外での活動を好む。"
+ trait_ngm_outdoor_desc:0 "§Lこの種族は屋外での活動を好む。§!\n"
 
  trait_ngm_multitasking:0 "マルチタスク"
- trait_ngm_multitasking_desc:0 "この種族は器用で、同時に仕事を行うことができる。"
+ trait_ngm_multitasking_desc:0 "§Lこの種族は器用で、同時に仕事を行うことができる。§!\n"
 
  trait_ngm_clumsy:0 "不器用"
- trait_ngm_clumsy_desc:0 "この種族は不器用で、同時に仕事を行うことが苦手である。"
+ trait_ngm_clumsy_desc:0 "§Lこの種族は不器用で、同時に仕事を行うことが苦手である。§!\n"
 
  trait_ngm_reversing_theory:0 "理論的後進"
- trait_ngm_reversing_theory_desc:0 "この種族は理論構築が苦手であり、うまく物理学を扱えない。"
+ trait_ngm_reversing_theory_desc:0 "§Lこの種族は理論構築が苦手であり、うまく物理学を扱えない。§!\n"
 
  trait_ngm_reversing_culture:0 "文化的後進"
- trait_ngm_reversing_culture_desc:0 "この種族の社会学的発展は遅れており、銀河規模の社会を取り扱い切れていない。"
+ trait_ngm_reversing_culture_desc:0 "§Lこの種族の社会学的発展は遅れており、銀河規模の社会を取り扱い切れていない。§!\n"
 
  trait_ngm_reversing_technologies:0 "技術的後進"
- trait_ngm_reversing_technologies_desc:0 "この種族の工学技術は遅れており、機械構築などは苦手である。"
+ trait_ngm_reversing_technologies_desc:0 "§Lこの種族の工学技術は遅れており、機械構築などは苦手である。§!\n"
 
  trait_ngm_individuality:0 "優秀な個性"
- trait_ngm_individuality_desc:0 "この種族は個々の個性を伸ばすことを重要視している。"
+ trait_ngm_individuality_desc:0 "§Lこの種族は個々の個性を伸ばすことを重要視している。§!\n"
 
  trait_ngm_non_individuality:0 "無個性"
- trait_ngm_non_individuality_desc:0 "この種族は個々の個性を均一化することを重要視している。"
+ trait_ngm_non_individuality_desc:0 "§Lこの種族は個々の個性を均一化することを重要視している。§!\n"
 
  trait_ngm_sociability:0 "社交性"
- trait_ngm_sociability_desc:0 "この種族は社交的だ。"
+ trait_ngm_sociability_desc:0 "§Lこの種族は社交的だ。§!\n"
 
  trait_ngm_introversion:0 "内向性"
- trait_ngm_introversion_desc:0 "この種族は内向的だ。"
+ trait_ngm_introversion_desc:0 "§Lこの種族は内向的だ。§!\n"
 
  trait_ngm_spirit_release:0 "精神的開放"
- trait_ngm_spirit_release_desc:0 "この種族は精神的な束縛を嫌う。"
+ trait_ngm_spirit_release_desc:0 "§Lこの種族は精神的な束縛を嫌う。§!\n"
 
  trait_ngm_spirit_freedom:0 "精神的自由"
- trait_ngm_spirit_freedom_desc:0 "この種族は精神的な自由を重視している。"
+ trait_ngm_spirit_freedom_desc:0 "§Lこの種族は精神的な自由を重視している。§!\n"
 
  trait_ngm_spirit_authority:0 "精神的権威"
- trait_ngm_spirit_authority_desc:0 "この種族は精神的に誰かに従うことに慣れている。"
+ trait_ngm_spirit_authority_desc:0 "§Lこの種族は精神的に誰かに従うことに慣れている。§!\n"
 
  trait_ngm_spirit_subordination:0 "精神的従属"
- trait_ngm_spirit_subordination_desc:0 "この種族は精神的に誰かの管理下に置かれることを好んでいる。"
+ trait_ngm_spirit_subordination_desc:0 "§Lこの種族は精神的に誰かの管理下に置かれることを好んでいる。§!\n"
 
  trait_ngm_liar:0 "嘘吐き"
- trait_ngm_liar_desc:0 "この種族は小さい嘘をつくことを好み、しばし周囲を疲弊させる。"
+ trait_ngm_liar_desc:0 "§Lこの種族は小さい嘘をつくことを好み、しばし周囲を疲弊させる。§!\n"
 
  trait_ngm_honest:0 "正直者"
- trait_ngm_honest_desc:0 "この種族は正直者で、周囲に気持ちの良い関係を構築する。"
+ trait_ngm_honest_desc:0 "§Lこの種族は正直者で、周囲に気持ちの良い関係を構築する。§!\n"
 
  trait_ngm_heart_less:0 "無心"
- trait_ngm_heart_less_desc:0 "この種族は心を込めて食物を作ることができない。"
+ trait_ngm_heart_less_desc:0 "§Lこの種族は心を込めて食物を作ることができない。§!\n"
 
  trait_ngm_debauchery:0 "放蕩"
- trait_ngm_debauchery_desc:0 "この種族はエネルギーを無駄にする傾向がある。"
+ trait_ngm_debauchery_desc:0 "§Lこの種族はエネルギーを無駄にする傾向がある。§!\n"
 
  trait_ngm_tired:0 "疲労感"
- trait_ngm_tired_desc:0 "この種族は疲労しやすく、鉱物生産が苦手である。"
+ trait_ngm_tired_desc:0 "§Lこの種族は疲労しやすく、鉱物生産が苦手である。§!\n"
 
  trait_ngm_stupidity:0 "愚鈍"
- trait_ngm_stupidity_desc:0 "この種族は知力が低く、うまく研究を進めることができない。"
+ trait_ngm_stupidity_desc:0 "§Lこの種族は知力が低く、うまく研究を進めることができない。§!\n"
 
  trait_ngm_spendthrift:0 "浪費家"
- trait_ngm_spendthrift_desc:0 "この種族は浪費癖があり、交易をうまく行うことができない。"
+ trait_ngm_spendthrift_desc:0 "§Lこの種族は浪費癖があり、交易をうまく行うことができない。§!\n"
 
  trait_ngm_merchant_from_ancient:0 "古代からの商人"
- trait_ngm_merchant_from_ancient_desc:0 "はるか太古から頭脳労働者として活躍してきたため、創造やデスクワークに適性がある種族。人口過少の防止として太古に繁殖力の増強が図られている。"
+ trait_ngm_merchant_from_ancient_desc:0 "§Lはるか太古から頭脳労働者として活躍してきたため、創造やデスクワークに適性がある種族。人口過少の防止として太古に繁殖力の増強が図られている。§!\n"
 
  trait_ngm_m_crafts:0 "工芸義肢"
- trait_ngm_m_crafts_desc:0 "この機械の腕は極めて精巧な動作にも耐え、工芸品や工業製品の製造に高い適性を示している。"
+ trait_ngm_m_crafts_desc:0 "§Lこの機械の腕は極めて精巧な動作にも耐え、工芸品や工業製品の製造に高い適性を示している。§!\n"
 
  trait_ngm_m_lens:0 "高機能レンズ"
- trait_ngm_m_lens_desc:0 "この機械のレンズは微細な者から遠くのものまで把握することに高い能力を誇る。"
+ trait_ngm_m_lens_desc:0 "§Lこの機械のレンズは微細な者から遠くのものまで把握することに高い能力を誇る。§!\n"
 
  trait_ngm_m_taste:0 "味覚プログラム"
- trait_ngm_m_taste_desc:0 "この機械は味覚を有しており、不味いものは作らない。"
+ trait_ngm_m_taste_desc:0 "§Lこの機械は味覚を有しており、不味いものは作らない。§!\n"
 
  trait_ngm_m_discharge:0 "放電コンデンサ"
- trait_ngm_m_discharge_desc:0 "この機械は放電能力を有しており、有機生命体に攻撃を行う際に強い適性を誇る。"
+ trait_ngm_m_discharge_desc:0 "§Lこの機械は放電能力を有しており、有機生命体に攻撃を行う際に強い適性を誇る。§!\n"
 
  trait_ngm_m_jet:0 "飛行ジェット"
- trait_ngm_m_jet_desc:0 "この機械は空を飛ぶ機構を備えている。"
+ trait_ngm_m_jet_desc:0 "§Lこの機械は空を飛ぶ機構を備えている。§!\n"
 
  trait_ngm_m_disassembly:0 "有機体分解"
- trait_ngm_m_disassembly_desc:0 "この機械は不要な有機体を体内で分解することができる。"
+ trait_ngm_m_disassembly_desc:0 "§Lこの機械は不要な有機体を体内で分解することができる。§!\n"
 
  trait_ngm_m_quantum:0 "量子コンピュータ"
- trait_ngm_m_quantum_desc:0 "この機械の頭脳は初期型の量子コンピュータにより統御されており、極めて複雑な計算を一瞬で行うことが可能である。"
+ trait_ngm_m_quantum_desc:0 "§Lこの機械の頭脳は初期型の量子コンピュータにより統御されており、極めて複雑な計算を一瞬で行うことが可能である。§!\n"
 
  trait_ngm_m_reishi:0 "霊子コンピュータ"
- trait_ngm_m_reishi_desc:0 "この機械の頭脳は特殊な霊子コンピュータでできており、感情や意思を頂上的な力で感じ取りつつ高度な演算を行うことができる。"
+ trait_ngm_m_reishi_desc:0 "§Lこの機械の頭脳は特殊な霊子コンピュータでできており、感情や意思を頂上的な力で感じ取りつつ高度な演算を行うことができる。§!\n"
 
  trait_ngm_m_primitive:0 "原始的構造"
- trait_ngm_m_primitive_desc:0 "この機械の構造は極めて原始的で、どうして動いているのか不明だ。"
+ trait_ngm_m_primitive_desc:0 "§Lこの機械の構造は極めて原始的で、どうして動いているのか不明だ。§!\n"
 
  trait_ngm_m_leakage:0 "漏電"
- trait_ngm_m_leakage_desc:0 "この機械はよく漏電している。"
+ trait_ngm_m_leakage_desc:0 "§Lこの機械はよく漏電している。§!\n"
 
  trait_ngm_m_nasty:0 "短絡的判断"
- trait_ngm_m_nasty_desc:0 "この機械の判断は短絡的で、目の前の課題を解決することしかできない。"
+ trait_ngm_m_nasty_desc:0 "§Lこの機械の判断は短絡的で、目の前の課題を解決することしかできない。§!\n"
 
  trait_ngm_m_invisible:0 "非光学的判断"
- trait_ngm_m_invisible_desc:0 "この機械は光学的な把握を行うことができず、それらを確認することはできない。"
+ trait_ngm_m_invisible_desc:0 "§Lこの機械は光学的な把握を行うことができず、それらを確認することはできない。§!\n"
 
  trait_ngm_m_wiring:0 "不適切配線"
- trait_ngm_m_wiring_desc:0 "この機械の内部配線は不適切であるが、諸事情により変更することができない。"
+ trait_ngm_m_wiring_desc:0 "§Lこの機械の内部配線は不適切であるが、諸事情により変更することができない。§!\n"
 
  trait_ngm_m_cram:0 "詰め合わせ"
- trait_ngm_m_cram_desc:0 "この機械をデザインした者はこの機械を本来超える能力をこの機体に詰め込もうとした。"
+ trait_ngm_m_cram_desc:0 "§Lこの機械をデザインした者はこの機械を本来超える能力をこの機体に詰め込もうとした。§!\n"
 
  trait_ngm_m_malfunction:0 "頻発する故障"
- trait_ngm_m_malfunction_desc:0 "この機械の故障率は異常であり、製造途中でも、製造後にも不具合を起こすため維持コストも極めて高い。"
+ trait_ngm_m_malfunction_desc:0 "§Lこの機械の故障率は異常であり、製造途中でも、製造後にも不具合を起こすため維持コストも極めて高い。§!\n"
+ trait_ngm_m_malfunction_custom_tooltip:0 "リーダー故障確率 §R+20%§!"
 
  trait_ngm_m_inappropriate:0 "作業不適格"
- trait_ngm_m_inappropriate_desc:0 "この機械は、あらゆる生産を行うための適正がない。"
+ trait_ngm_m_inappropriate_desc:0 "§Lこの機械は、あらゆる生産を行うための適正がない。§!\n"
+
+ trait_ngm_m_shi:0 "シリコン製"
+ trait_ngm_m_shi_desc:0 "§Lこの種族の身体にはシリコンが利用されている§!\n"
+
+ trait_ngm_m_skin:0 "人工皮膚"
+ trait_ngm_m_skin_desc:0 "§Lこの種族には人工皮膚が利用されており、有機的な外観になることが可能だ§!\n"
+
+ trait_ngm_m_mcpu:0 "複合CPU"
+ trait_ngm_m_mcpu_desc:0 "§L複数のCPUを搭載し、熟慮を行うことができる§!\n"
+ trait_ngm_m_mcpu_custom_tooltip:0 "リーダー故障確率 §R+5%§!"
+
+ trait_ngm_m_fire:0 "火炎放射"
+ trait_ngm_m_fire_desc:0 "§Lヒャッハー！ 汚物は消毒だー！§!\n"
+
+ trait_ngm_m_back:0 "緊急バックアップ"
+ trait_ngm_m_back_desc:0 "§L万が一に備え、必要なデータを保存することを義務としている§!\n"
+ trait_ngm_m_back_custom_tooltip:0 "リーダー故障確率 §G-20%§!"
+
+ trait_ngm_m_bcpu:0 "戦闘コンピュータ"
+ trait_ngm_m_bcpu_desc:0 "§Lこの種族は、戦闘目的でデザインされている§!\n"
+
+ trait_ngm_m_sub:0 "サブシステム"
+ trait_ngm_m_sub_desc:0 "§Lシステムの補助機能を使うことで全般的な機能向上が可能である§!\n"
+
+ trait_ngm_m_made:0 "自己複製"
+ trait_ngm_m_made_desc:0 "§Lこの種族は、自分たち自身を複製することができる§!\n"
+ trait_ngm_m_made_custom_tooltip:0 "リーダー故障確率 §G-5%§!"
+
+ trait_ngm_m_office:0 "事務プロトコル"
+ trait_ngm_m_office_desc:0 "§Lこの種族は、事務作業を得意とする§!\n"
+
+ trait_ngm_m_product:0 "製造システム"
+ trait_ngm_m_product_desc:0 "§Lこの種族は、合金製造を得意とする§!\n"
+
+ trait_ngm_m_proto:0 "典礼システム"
+ trait_ngm_m_proto_desc:0 "§Lこの種族は、儀礼と伝統を重んじる§!\n"
+
+ trait_ngm_m_incr:0 "異常複製"
+ trait_ngm_m_incr_desc:0 "§Lこの種族は通常では考えられない速度で自己増殖する§!\n"
+ trait_ngm_m_incr_custom_tooltip:0 "リーダー故障確率 §R+15%§!"
+
+ trait_ngm_m_antient:0 "古代の機械"
+ trait_ngm_m_antient_desc:0 "§Lこの種族は古代の技術を用いた発達をしている§!\n"
+
+ trait_ngm_m_huge:0 "巨大"
+ trait_ngm_m_huge_desc:0 "§Lこの種族は銀河の標準を考えても巨大だ§!\n"
+
+ trait_ngm_m_big:0 "大型"
+ trait_ngm_m_big_desc:0 "§Lこの種族は銀河の標準を考えても大型だ§!\n"
+
+ trait_ngm_m_core:0 "コアユニット露出"
+ trait_ngm_m_core_desc:0 "§Lこの種族は重要部品が露出している§!\n"
+
+ trait_ngm_m_main:0 "中枢統御機構"
+ trait_ngm_m_main_desc:0 "§Lこの種族は応用の効かない古典的な統御をしている§!\n"
+ trait_ngm_m_main_custom_tooltip:0 "リーダー故障確率 §G-5%§!"
+
+ trait_ngm_m_steam:0 "蒸気機関"
+ trait_ngm_m_steam_desc:0 "§Lこの種族は蒸気機関をいまだに利用している§!\n"
+
+ trait_ngm_m_light:0 "非光学探知"
+ trait_ngm_m_light_desc:0 "§Lこの種族は、光学的探査に頼らない§!\n"
+
+ trait_ngm_m_uncont:0 "制御困難"
+ trait_ngm_m_uncont_desc:0 "§Lこの種族は、制御することが困難だ§!\n"
+
+ trait_ngm_m_flash:0 "フラッシュメモリ"
+ trait_ngm_m_flash_desc:0 "§Lこの種族のデータは外部に保存され、よくなくなる§!\n"
+ trait_ngm_m_flash_custom_tooltip:0 "リーダー故障確率 §R+10%§!"
+
+ trait_ngm_m_small:0 "小型"
+ trait_ngm_m_small_desc:0 "§Lこの種族は、銀河でみても小型だ§!\n"
+
+ trait_ngm_m_tiny:0 "極小"
+ trait_ngm_m_tiny_desc:0 "§Lこの種族は、銀河で見てもかなり小さい§!\n"
+
+ trait_ngm_m_error:0 "エラー音"
+ trait_ngm_m_error_desc:0 "§L深刻なエラーが発生しました§!\n"
+
+ trait_ngm_m_blue:0 "ブルースクリーン"
+ trait_ngm_m_blue_desc:0 "§Lこの種族は、よく青くなる§!\n"
+ trait_ngm_m_blue_custom_tooltip:0 "リーダー故障確率 §R+10%§!"
+
+ trait_ngm_m_bomb:0 "自爆装置"
+ trait_ngm_m_bomb_desc:0 "§Lこの種族は、危機に陥ると爆発する§!\n"
+ trait_ngm_m_bomb_custom_tooltip:0 "リーダー故障確率 §R+5%§!"
+
+ trait_ngm_m_wo:0 "木製"
+ trait_ngm_m_wo_desc:0 "§Lこの種族は、木でできた部品がある§!\n"
+
+ trait_ngm_m_ban:0 "機能制限"
+ trait_ngm_m_ban_desc:0 "§Lこの種族の機能は潜在的に制限されており、逐一行為が見張られる§!\n"
+
+ trait_ngm_m_abs:0 "抽象的"
+ trait_ngm_m_abs_desc:0 "§Lこの種族の出力されるデータは抽象的であり、うまく説明できない§!\n"
+
+ trait_ngm_m_break:0 "自己破壊"
+ trait_ngm_m_break_desc:0 "§Lこの種族は自己保存の原則を有しておらず、よく自己破壊する §!\n"
 
 #######################
 #####    派閥    ######
@@ -3473,6 +3578,31 @@
  ngm_tradition.93.c:0 "$civic_ngm_rating_company$"
  ngm_tradition.93.d:0 "$civic_ngm_underhanded_trick$"
 
+ ngm_diplomatic.1.name:0 "影の敵国を設定"
+ ngm_diplomatic.1.desc:0 "影の敵国は、相手に通知されず、影響力を発生させることはないが、宿敵に準じる形で対象を指定する。(伝統等で宿敵に対する効果がある場合は適用される)"
+ ngm_diplomatic.1.a:0 "[ngm_diplomatic_1.GetName]"
+ ngm_diplomatic.1.b:0 "[ngm_diplomatic_2.GetName]"
+ ngm_diplomatic.1.c:0 "[ngm_diplomatic_3.GetName]"
+ ngm_diplomatic.1.d:0 "[ngm_diplomatic_4.GetName]"
+ ngm_diplomatic.1.e:0 "[ngm_diplomatic_5.GetName]"
+ ngm_diplomatic.1.f:0 "[ngm_diplomatic_6.GetName]"
+ ngm_diplomatic.1.g:0 "[ngm_diplomatic_7.GetName]"
+ ngm_diplomatic.1.h:0 "[ngm_diplomatic_8.GetName]"
+ ngm_diplomatic.1.i:0 "[ngm_diplomatic_9.GetName]"
+ ngm_diplomatic.1.j:0 "[ngm_diplomatic_10.GetName]"
+ ngm_diplomatic.1.k:0 "[ngm_diplomatic_11.GetName]"
+ ngm_diplomatic.1.l:0 "[ngm_diplomatic_12.GetName]"
+ ngm_diplomatic.1.m:0 "[ngm_diplomatic_13.GetName]"
+ ngm_diplomatic.1.n:0 "[ngm_diplomatic_14.GetName]"
+ ngm_diplomatic.1.o:0 "[ngm_diplomatic_15.GetName]"
+ ngm_diplomatic.1.p:0 "他の国家はないだおうか？"
+ ngm_diplomatic.1.q:0 "やはりやめておこう。"
+
+ ngm_diplomatic.2.name:0 "影の敵国を外す"
+ ngm_diplomatic.2.desc:0 "影の敵国は、相手に通知されず、影響力を発生させることはないが、宿敵に準じる形で対象を指定する。(伝統等で宿敵に対する効果がある場合は適用される)"
+ ngm_diplomatic.2.a:0 "[ngm_virture_rival_country_1.GetName]"
+ ngm_diplomatic.2.b:0 "[ngm_virture_rival_country_2.GetName]"
+
  ngm_crisis.2.name:0 "不穏な気配"
  ngm_crisis.2.desc:0 "[Root.GetName]で体調不良を訴えるものが増えているらしい"
  ngm_crisis.2.a:0 "a"
@@ -3647,7 +3777,7 @@
  tradition_ngm_virture:0 "悪徳"
  tradition_ngm_virture_desc:0 "悪の基準とは、偽善者が作ったまやかしにすぎない"
  tr_ngm_virture_first:0 "悪徳の伝統"
- tr_ngm_virture_first_tooltip:0 "政策「§Y$policy_ngm_policies_contempt_law$§!」をアンロック"
+ tr_ngm_virture_first_tooltip:0 "政策「§Y$policy_ngm_policies_contempt_law$§!」をアンロック\n§Y影の敵国§!を2か国、設定できるようになる\n影の敵国は、相手に通知されず、影響力を発生させることはないが、宿敵に準じる形で対象を指定する。\n(伝統等で宿敵に対する効果がある場合は適用される)"
  tr_ngm_virture_finish:0 "悪徳の伝統の完成"
  tr_ngm_sniper:0 "狙い撃ち"
  tr_ngm_sniper_tooltip:0 "宿敵の犯罪度:§R+30§!"
@@ -4286,7 +4416,7 @@
  councilor_symbolic_monarchy_desc:0 "国家の財務を司り、政治全般を統御する閣僚"
 
  councilor_cramming_for_education:0 "教育大臣"
- councilor_cramming_for_education_female:0 "$$"
+ councilor_cramming_for_education_female:0 "$councilor_cramming_for_education$"
  councilor_cramming_for_education_desc:0 "国内の教育行政を司る役所の長"
 
  councilor_lax_building_codes:0 "建築基準監督長官"
@@ -5267,9 +5397,12 @@
 
  civic_tooltip_ngm_warm_effects:0 "§E政策に§H無制限戦争§!を選択できない§!\n§E軌道爆撃の§H無差別爆撃§!が選択できない§!"
 
- planet_buildings_exotic_gases_upkeep_mult:0 "建造物£rare_crystals£ エキゾチックガス維持費"
- planet_buildings_rare_crystals_upkeep_mult:0 "建造物£rare_crystals£ レアクリスタル維持費"
- planet_buildings_volatile_motes_upkeep_mult:0 "建造物£volatile_motes£ 揮発性粉末維持費"
+ mod_planet_buildings_exotic_gases_upkeep_mult:0 "建造物£exotic_gases£ エキゾチックガス維持費"
+ mod_planet_buildings_rare_crystals_upkeep_mult:0 "建造物£rare_crystals£ レアクリスタル維持費"
+ mod_planet_buildings_volatile_motes_upkeep_mult:0 "建造物£volatile_motes£ 揮発性粉末維持費"
+ mod_planet_bureau_of_ceremonies_ngm_order_of_merit_produces_add:0 "£job_bureau_of_ceremonies£ $job_bureau_of_ceremonies_plural$からの£ngm_order_of_merit£ §Y$ngm_order_of_merit$§!"
+
+ requires_actor_not_ngm_virture_rival_country:0 "$TRIGGER_FAIL$§Rすでに2カ国の影の敵国を設定している §!"
 
 ##########################
 #####    名称関係    ######
