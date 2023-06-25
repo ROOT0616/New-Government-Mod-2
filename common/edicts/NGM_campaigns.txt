@@ -1078,30 +1078,29 @@ ngm_five_year_plan5_campaign = {
 
 # 〇栄望主義：開戦自由「名誉にかけて」勝利時影響力＋100
 # 戦時中の艦隊製造速度+10%（思想）
-	# ngm_honorism_wartime_fleet = {
-	# 	length = -1
-	# 	icon = "GFX_edict_type_policy"
-	# 	edict_cap_usage = 0
-	# 	resources = {
-	# 		category = edicts
-	# 		cost = {
-	# 			influence = 50
-	# 		}
-	# 	}
-	# 	potential = {
-	# 		has_ethic = ethic_fanatic_honorism
-	# 	}
-	# 	allow = {
-	# 		is_at_war = yes
-	# 	}
-	# 	modifier = {
-	# 		starbase_shipyard_build_speed_mult = 0.1
-	# 	}
-	# 	ai_weight = {
-	# 		weight = @EdictMedPrio
-	# 	}
+# ngm_honorism_wartime_fleet = {
+# 	length = -1
+# 	icon = "GFX_edict_type_policy"
+# 	edict_cap_usage = 0
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+# 			influence = 50
+# 		}
+# 	}
+# 	potential = {
+# 		has_ethic = ethic_fanatic_honorism
+# 	}
+# 	allow = {
+# 		is_at_war = yes
+# 	}
+# 	modifier = {
+# 		starbase_shipyard_build_speed_mult = 0.1
+# 	}
+# 	ai_weight = {
+# 		weight = @EdictMedPrio
+# 	}
 # }
-
 # 伝統等でアンロックされる布告
 # 1.記憶の布告
 #   ①覇権の記憶	memories_of_hegemony	(影響力100)(キャンセルするまで有効)(我が国の覇権を記録し、後世へ伝える)(統合力+10%、艦船連射レート+10%、地上軍士気+20%)
@@ -1243,7 +1242,6 @@ ngm_class_B_national_defense_plan = {
 ngm_supernatural_adversary_campaign = {
 	length = -1
 	icon = "GFX_edict_type_policy"
-
 	resources = {
 		category = edicts
 		upkeep = {
@@ -1251,9 +1249,7 @@ ngm_supernatural_adversary_campaign = {
 			multiplier = value:edict_size_effect
 		}
 	}
-
 	modifier = {
-		
 	}
 	potential = {
 		has_active_tradition = tr_ngm_transcendental
@@ -1261,7 +1257,6 @@ ngm_supernatural_adversary_campaign = {
 	allow = {
 		always = yes
 	}
-
 	ai_weight = {
 		weight = 500
 	}
@@ -1271,7 +1266,6 @@ ngm_supernatural_adversary_campaign = {
 ngm_legal_department_audits_campaign = {
 	length = -1
 	icon = "GFX_edict_type_policy"
-
 	resources = {
 		category = edicts
 		upkeep = {
@@ -1279,7 +1273,6 @@ ngm_legal_department_audits_campaign = {
 			multiplier = value:edict_size_effect
 		}
 	}
-
 	modifier = {
 	}
 	potential = {
@@ -1288,7 +1281,6 @@ ngm_legal_department_audits_campaign = {
 	allow = {
 		always = yes
 	}
-
 	ai_weight = {
 		weight = 500
 	}
@@ -1304,7 +1296,7 @@ ngm_mossball_edict = {
 	resources = {
 		category = edicts
 		cost = {
-			alloys =  10000
+			alloys = 10000
 		}
 	}
 	allow = {
@@ -1407,13 +1399,19 @@ ngm_test_campaign = {
 		always = yes
 	}
 	effect = {
-		random_owned_planet = {
+		if = {
 			limit = {
-				is_planet_class = pc_gas_giant
+				NOR = {
+					has_technology = tech_synthetic_workers
+					has_technology = tech_starbase_5
+				}
 			}
-			change_pc = pc_ocean
+			give_technology = {
+				tech = tech_synthetic_workers
+				tech = tech_starbase_5
+			}
 		}
-		random_owned_planet = {
+		random_planet_within_border = {
 			limit = {
 				OR = {
 					is_planet_class = pc_ice_asteroid
@@ -1427,10 +1425,11 @@ ngm_test_campaign = {
 		}
 	}
 	modifier = {
-		planet_pop_assembly_mult = 100
 		species_leader_exp_gain = 10
 		planet_building_build_speed_mult = 10
 		megastructure_build_speed_mult = 100
 		starbase_shipyard_build_speed_mult = 100
+		starbase_building_build_speed_mult = 100
+		starbase_module_build_speed_mult = 100
 	}
 }

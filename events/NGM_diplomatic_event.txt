@@ -15,14 +15,18 @@ country_event = {
 			limit = {
 				has_communications = root
 				is_country_type = default
-				has_overlord = ROOT
+				NOT = {
+					has_overlord = ROOT
+				}
 			}
 			save_event_target_as = ngm_diplomatic_1
 			random_country = {
 				limit = {
 					has_communications = root
 					is_country_type = default
-					has_overlord = ROOT
+					NOT = {
+						has_overlord = ROOT
+					}
 					NOT = {
 						is_same_value = event_target:ngm_diplomatic_1
 					}
@@ -32,7 +36,9 @@ country_event = {
 					limit = {
 						has_communications = root
 						is_country_type = default
-						has_overlord = ROOT
+						NOT = {
+							has_overlord = ROOT
+						}
 						NOT = {
 							is_same_value = event_target:ngm_diplomatic_1
 						}
@@ -45,7 +51,9 @@ country_event = {
 						limit = {
 							has_communications = root
 							is_country_type = default
-							has_overlord = ROOT
+							NOT = {
+								has_overlord = ROOT
+							}
 							NOT = {
 								is_same_value = event_target:ngm_diplomatic_1
 							}
@@ -61,7 +69,9 @@ country_event = {
 							limit = {
 								has_communications = root
 								is_country_type = default
-								has_overlord = ROOT
+								NOT = {
+									has_overlord = ROOT
+								}
 								NOT = {
 									is_same_value = event_target:ngm_diplomatic_1
 								}
@@ -80,7 +90,9 @@ country_event = {
 								limit = {
 									has_communications = root
 									is_country_type = default
-									has_overlord = ROOT
+									NOT = {
+										has_overlord = ROOT
+									}
 									NOT = {
 										is_same_value = event_target:ngm_diplomatic_1
 									}
@@ -102,7 +114,9 @@ country_event = {
 									limit = {
 										has_communications = root
 										is_country_type = default
-										has_overlord = ROOT
+										NOT = {
+											has_overlord = ROOT
+										}
 										NOT = {
 											is_same_value = event_target:ngm_diplomatic_1
 										}
@@ -127,7 +141,9 @@ country_event = {
 										limit = {
 											has_communications = root
 											is_country_type = default
-											has_overlord = ROOT
+											NOT = {
+												has_overlord = ROOT
+											}
 											NOT = {
 												is_same_value = event_target:ngm_diplomatic_1
 											}
@@ -155,7 +171,9 @@ country_event = {
 											limit = {
 												has_communications = root
 												is_country_type = default
-												has_overlord = ROOT
+												NOT = {
+													has_overlord = ROOT
+												}
 												NOT = {
 													is_same_value = event_target:ngm_diplomatic_1
 												}
@@ -186,7 +204,9 @@ country_event = {
 												limit = {
 													has_communications = root
 													is_country_type = default
-													has_overlord = ROOT
+													NOT = {
+														has_overlord = ROOT
+													}
 													NOT = {
 														is_same_value = event_target:ngm_diplomatic_1
 													}
@@ -220,7 +240,9 @@ country_event = {
 													limit = {
 														has_communications = root
 														is_country_type = default
-														has_overlord = ROOT
+														NOT = {
+															has_overlord = ROOT
+														}
 														NOT = {
 															is_same_value = event_target:ngm_diplomatic_1
 														}
@@ -257,7 +279,9 @@ country_event = {
 														limit = {
 															has_communications = root
 															is_country_type = default
-															has_overlord = ROOT
+															NOT = {
+																has_overlord = ROOT
+															}
 															NOT = {
 																is_same_value = event_target:ngm_diplomatic_1
 															}
@@ -297,7 +321,9 @@ country_event = {
 															limit = {
 																has_communications = root
 																is_country_type = default
-																has_overlord = ROOT
+																NOT = {
+																	has_overlord = ROOT
+																}
 																NOT = {
 																	is_same_value = event_target:ngm_diplomatic_1
 																}
@@ -340,7 +366,9 @@ country_event = {
 																limit = {
 																	has_communications = root
 																	is_country_type = default
-																	has_overlord = ROOT
+																	NOT = {
+																		has_overlord = ROOT
+																	}
 																	NOT = {
 																		is_same_value = event_target:ngm_diplomatic_1
 																	}
@@ -386,7 +414,9 @@ country_event = {
 																	limit = {
 																		has_communications = root
 																		is_country_type = default
-																		has_overlord = ROOT
+																		NOT = {
+																			has_overlord = ROOT
+																		}
 																		NOT = {
 																			is_same_value = event_target:ngm_diplomatic_1
 																		}
@@ -460,7 +490,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_1 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -472,7 +505,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_1 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
 					save_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
@@ -484,7 +520,10 @@ country_event = {
 					}
 					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
-				event_target:ngm_diplomatic_1 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -504,7 +543,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_2 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -516,7 +558,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_2 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
 					save_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
@@ -528,7 +573,10 @@ country_event = {
 					}
 					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
-				event_target:ngm_diplomatic_2 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -548,7 +596,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_3 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -560,7 +611,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_3 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
 					save_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
@@ -572,7 +626,10 @@ country_event = {
 					}
 					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
-				event_target:ngm_diplomatic_3 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -592,7 +649,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_4 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -604,7 +664,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_4 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
 					save_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
@@ -616,7 +679,10 @@ country_event = {
 					}
 					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
-				event_target:ngm_diplomatic_4 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -636,7 +702,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_5 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -648,7 +717,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_5 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
 					save_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
@@ -660,7 +732,10 @@ country_event = {
 					}
 					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
-				event_target:ngm_diplomatic_5 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -680,7 +755,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_6 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -692,7 +770,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_6 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
 					save_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
@@ -704,7 +785,10 @@ country_event = {
 					}
 					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
-				event_target:ngm_diplomatic_6 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -724,7 +808,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_7 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -736,7 +823,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_7 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
 					save_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
@@ -748,7 +838,10 @@ country_event = {
 					}
 					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
-				event_target:ngm_diplomatic_7 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -768,7 +861,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_8 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -780,7 +876,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_8 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
 					save_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
@@ -792,7 +891,10 @@ country_event = {
 					}
 					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
-				event_target:ngm_diplomatic_8 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -812,7 +914,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_9 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -824,7 +929,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_9 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
 					save_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
@@ -836,7 +944,10 @@ country_event = {
 					}
 					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
-				event_target:ngm_diplomatic_9 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -856,7 +967,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_10 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -868,7 +982,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_10 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
 					save_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
@@ -880,7 +997,10 @@ country_event = {
 					}
 					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
-				event_target:ngm_diplomatic_10 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -900,7 +1020,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_11 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -912,7 +1035,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_11 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
 					save_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
@@ -924,7 +1050,10 @@ country_event = {
 					}
 					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
-				event_target:ngm_diplomatic_11 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -944,7 +1073,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_12 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -956,7 +1088,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_12 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
 					save_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
@@ -968,7 +1103,10 @@ country_event = {
 					}
 					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
-				event_target:ngm_diplomatic_12 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -988,7 +1126,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_13 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -1000,7 +1141,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_13 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
 					save_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
@@ -1012,7 +1156,10 @@ country_event = {
 					}
 					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
-				event_target:ngm_diplomatic_13 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -1032,7 +1179,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_14 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -1044,7 +1194,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_14 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
 					save_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
@@ -1056,7 +1209,10 @@ country_event = {
 					}
 					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
-				event_target:ngm_diplomatic_14 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -1076,7 +1232,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_15 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
@@ -1088,7 +1247,10 @@ country_event = {
 						has_country_flag = country_flag_ngm_virture_rival_country_2
 					}
 				}
-				event_target:ngm_diplomatic_15 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
 					save_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
@@ -1100,7 +1262,10 @@ country_event = {
 					}
 					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
-				event_target:ngm_diplomatic_15 = {
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
 					save_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1

@@ -1994,7 +1994,7 @@ decision_ngm_test = {
 		}
 	}
 	effect = {
-		change_pc = pc_gaia
+		# change_pc = pc_gaia
 		while = {
 			count = 5
 			create_pop = {
@@ -2002,12 +2002,12 @@ decision_ngm_test = {
 			}
 		}
 		set_planet_size = 30
-		add_modifier = {
-			modifier = ultra_rich
-		}
-		add_modifier = {
-			modifier = mineral_rich
-		}
+		# add_modifier = {
+		# 	modifier = ultra_rich
+		# }
+		# add_modifier = {
+		# 	modifier = mineral_rich
+		# }
 	}
 	ai_weight = {
 		weight = 0
