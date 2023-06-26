@@ -934,7 +934,7 @@ tr_ngm_weapons_depart = {
 tr_ngm_navy_first = {
 	modifier = {
 		starbase_shipyard_build_speed_mult = 0.15
-		country_command_limit_add = 10
+		command_limit_add = 10
 	}
 }
 
@@ -1392,7 +1392,7 @@ tr_ngm_large_fleet_command = {
 		has_tradition = tr_ngm_giant_fleet
 	}
 	modifier = {
-		country_command_limit_add = 30
+		command_limit_add = 30
 	}
 }
 

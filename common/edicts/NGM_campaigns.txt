@@ -1205,7 +1205,7 @@ ngm_class_A_national_defense_plan = {
 	modifier = {
 		starbase_shipyard_build_speed_mult = 0.2
 		country_naval_cap_add = 50
-		country_command_limit_add = 10
+		command_limit_add = 10
 	}
 	ai_weight = {
 		weight = @EdictMedPrio
@@ -1343,9 +1343,9 @@ ngm_virture_rival_options_menu = {
 	allow = {
 		custom_tooltip = {
 			fail_text = "requires_actor_not_ngm_virture_rival_country"
-			NAND = {
-				has_country_flag = country_flag_ngm_virture_rival_country_1
-				has_country_flag = country_flag_ngm_virture_rival_country_2
+			check_variable = {
+				which = ngm_virture_rival_country_num
+				value < 2
 			}
 		}
 	}
@@ -1365,9 +1365,9 @@ ngm_virture_rival_end_options_menu = {
 	potential = {
 		has_tradition = tr_ngm_virture_first
 		hidden_trigger = {
-			OR = {
-				has_country_flag = country_flag_ngm_virture_rival_country_1
-				has_country_flag = country_flag_ngm_virture_rival_country_2
+			check_variable = {
+				which = ngm_virture_rival_country_num
+				value > 1
 			}
 		}
 	}
@@ -1398,38 +1398,11 @@ ngm_test_campaign = {
 	allow = {
 		always = yes
 	}
-	effect = {
-		if = {
-			limit = {
-				NOR = {
-					has_technology = tech_synthetic_workers
-					has_technology = tech_starbase_5
-				}
-			}
-			give_technology = {
-				tech = tech_synthetic_workers
-				tech = tech_starbase_5
-			}
-		}
-		random_planet_within_border = {
-			limit = {
-				OR = {
-					is_planet_class = pc_ice_asteroid
-					is_planet_class = pc_crystal_asteroid
-					is_planet_class = pc_rare_crystal_asteroid
-					is_planet_class = pc_asteroid
-				}
-			}
-			set_planet_size = 30
-			change_pc = pc_ocean
-		}
-	}
 	modifier = {
-		species_leader_exp_gain = 10
-		planet_building_build_speed_mult = 10
+		planet_building_build_speed_mult = 100
 		megastructure_build_speed_mult = 100
-		starbase_shipyard_build_speed_mult = 100
-		starbase_building_build_speed_mult = 100
-		starbase_module_build_speed_mult = 100
+		starbase_shipyard_build_speed_mult = 1000
+		starbase_building_build_speed_mult = 1000
+		starbase_module_build_speed_mult = 1000
 	}
 }

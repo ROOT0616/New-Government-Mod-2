@@ -144,11 +144,7 @@ r_ngm_imperial_chronicle = {
 		potential = {
 			always = yes
 		}
-		starbase_outpost_alloys_cost_mult = 9999.99
-		country_claim_influence_cost_mult = 10
-		country_unity_produces_mult = 0.5
-		trade_value_mult = 1
-		pop_growth_speed = 1
+		faction_approval = 0.2
 	}
 	score = 10
 	# アクティブ効果	：帝国補正：統合力+500K 派閥からの統合力収入+50%

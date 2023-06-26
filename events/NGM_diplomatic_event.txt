@@ -485,48 +485,261 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_1
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_1
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_global_flag = global_flag_ngm_virture_rival_country_1
 			}
 			else_if = {
 				limit = {
-					has_country_flag = country_flag_ngm_virture_rival_country_1
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+						has_global_flag = global_flag_ngm_virture_rival_country_2
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_1
 					}
-					save_event_target_as = ngm_virture_rival_country_2
+					save_global_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
+				set_global_flag = global_flag_ngm_virture_rival_country_2
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_global_flag = global_flag_ngm_virture_rival_country_3
 					}
-					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_1
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_3
 				}
-				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_country_flag = country_flag_ngm_virture_rival_country_3
+				set_global_flag = global_flag_ngm_virture_rival_country_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_4
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
+					save_global_event_target_as = ngm_virture_rival_country_4
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_4
+				set_global_flag = global_flag_ngm_virture_rival_country_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_5
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
+					save_global_event_target_as = ngm_virture_rival_country_5
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_5
+				set_global_flag = global_flag_ngm_virture_rival_country_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_6
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
+					save_global_event_target_as = ngm_virture_rival_country_6
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_6
+				set_global_flag = global_flag_ngm_virture_rival_country_6
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_7
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
+					save_global_event_target_as = ngm_virture_rival_country_7
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_7
+				set_global_flag = global_flag_ngm_virture_rival_country_7
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_8
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
+					save_global_event_target_as = ngm_virture_rival_country_8
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_8
+				set_global_flag = global_flag_ngm_virture_rival_country_8
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_9
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
+					save_global_event_target_as = ngm_virture_rival_country_9
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_9
+				set_global_flag = global_flag_ngm_virture_rival_country_9
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_10
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
+					save_global_event_target_as = ngm_virture_rival_country_10
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_10
+				set_global_flag = global_flag_ngm_virture_rival_country_10
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_11
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
+					save_global_event_target_as = ngm_virture_rival_country_11
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_11
+				set_global_flag = global_flag_ngm_virture_rival_country_11
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_12
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
+					save_global_event_target_as = ngm_virture_rival_country_12
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_12
+				set_global_flag = global_flag_ngm_virture_rival_country_12
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_13
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
+					save_global_event_target_as = ngm_virture_rival_country_13
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_13
+				set_global_flag = global_flag_ngm_virture_rival_country_13
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_14
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
+					save_global_event_target_as = ngm_virture_rival_country_14
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_14
+				set_global_flag = global_flag_ngm_virture_rival_country_14
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_15
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
+					save_global_event_target_as = ngm_virture_rival_country_15
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_15
+				set_global_flag = global_flag_ngm_virture_rival_country_15
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_16
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_1
+					}
+					save_global_event_target_as = ngm_virture_rival_country_16
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_16
+				set_global_flag = global_flag_ngm_virture_rival_country_16
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = ngm_virture_rival_country_num
+						value < 1
+					}
+				}
+				set_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
 			}
 		}
 	}
@@ -538,48 +751,261 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_1
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_2
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_global_flag = global_flag_ngm_virture_rival_country_1
 			}
 			else_if = {
 				limit = {
-					has_country_flag = country_flag_ngm_virture_rival_country_1
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+						has_global_flag = global_flag_ngm_virture_rival_country_2
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_2
 					}
-					save_event_target_as = ngm_virture_rival_country_2
+					save_global_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
+				set_global_flag = global_flag_ngm_virture_rival_country_2
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_global_flag = global_flag_ngm_virture_rival_country_3
 					}
-					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_2
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_3
 				}
-				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_country_flag = country_flag_ngm_virture_rival_country_3
+				set_global_flag = global_flag_ngm_virture_rival_country_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_4
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
+					save_global_event_target_as = ngm_virture_rival_country_4
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_4
+				set_global_flag = global_flag_ngm_virture_rival_country_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_5
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
+					save_global_event_target_as = ngm_virture_rival_country_5
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_5
+				set_global_flag = global_flag_ngm_virture_rival_country_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_6
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
+					save_global_event_target_as = ngm_virture_rival_country_6
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_6
+				set_global_flag = global_flag_ngm_virture_rival_country_6
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_7
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
+					save_global_event_target_as = ngm_virture_rival_country_7
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_7
+				set_global_flag = global_flag_ngm_virture_rival_country_7
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_8
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
+					save_global_event_target_as = ngm_virture_rival_country_8
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_8
+				set_global_flag = global_flag_ngm_virture_rival_country_8
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_9
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
+					save_global_event_target_as = ngm_virture_rival_country_9
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_9
+				set_global_flag = global_flag_ngm_virture_rival_country_9
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_10
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
+					save_global_event_target_as = ngm_virture_rival_country_10
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_10
+				set_global_flag = global_flag_ngm_virture_rival_country_10
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_11
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
+					save_global_event_target_as = ngm_virture_rival_country_11
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_11
+				set_global_flag = global_flag_ngm_virture_rival_country_11
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_12
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
+					save_global_event_target_as = ngm_virture_rival_country_12
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_12
+				set_global_flag = global_flag_ngm_virture_rival_country_12
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_13
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
+					save_global_event_target_as = ngm_virture_rival_country_13
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_13
+				set_global_flag = global_flag_ngm_virture_rival_country_13
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_14
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
+					save_global_event_target_as = ngm_virture_rival_country_14
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_14
+				set_global_flag = global_flag_ngm_virture_rival_country_14
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_15
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
+					save_global_event_target_as = ngm_virture_rival_country_15
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_15
+				set_global_flag = global_flag_ngm_virture_rival_country_15
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_16
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_2
+					}
+					save_global_event_target_as = ngm_virture_rival_country_16
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_16
+				set_global_flag = global_flag_ngm_virture_rival_country_16
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = ngm_virture_rival_country_num
+						value < 1
+					}
+				}
+				set_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
 			}
 		}
 	}
@@ -591,48 +1017,261 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_1
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_3
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_global_flag = global_flag_ngm_virture_rival_country_1
 			}
 			else_if = {
 				limit = {
-					has_country_flag = country_flag_ngm_virture_rival_country_1
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+						has_global_flag = global_flag_ngm_virture_rival_country_2
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_3
 					}
-					save_event_target_as = ngm_virture_rival_country_2
+					save_global_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
+				set_global_flag = global_flag_ngm_virture_rival_country_2
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_global_flag = global_flag_ngm_virture_rival_country_3
 					}
-					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_3
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_3
 				}
-				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_country_flag = country_flag_ngm_virture_rival_country_3
+				set_global_flag = global_flag_ngm_virture_rival_country_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_4
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
+					save_global_event_target_as = ngm_virture_rival_country_4
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_4
+				set_global_flag = global_flag_ngm_virture_rival_country_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_5
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
+					save_global_event_target_as = ngm_virture_rival_country_5
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_5
+				set_global_flag = global_flag_ngm_virture_rival_country_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_6
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
+					save_global_event_target_as = ngm_virture_rival_country_6
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_6
+				set_global_flag = global_flag_ngm_virture_rival_country_6
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_7
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
+					save_global_event_target_as = ngm_virture_rival_country_7
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_7
+				set_global_flag = global_flag_ngm_virture_rival_country_7
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_8
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
+					save_global_event_target_as = ngm_virture_rival_country_8
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_8
+				set_global_flag = global_flag_ngm_virture_rival_country_8
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_9
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
+					save_global_event_target_as = ngm_virture_rival_country_9
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_9
+				set_global_flag = global_flag_ngm_virture_rival_country_9
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_10
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
+					save_global_event_target_as = ngm_virture_rival_country_10
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_10
+				set_global_flag = global_flag_ngm_virture_rival_country_10
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_11
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
+					save_global_event_target_as = ngm_virture_rival_country_11
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_11
+				set_global_flag = global_flag_ngm_virture_rival_country_11
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_12
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
+					save_global_event_target_as = ngm_virture_rival_country_12
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_12
+				set_global_flag = global_flag_ngm_virture_rival_country_12
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_13
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
+					save_global_event_target_as = ngm_virture_rival_country_13
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_13
+				set_global_flag = global_flag_ngm_virture_rival_country_13
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_14
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
+					save_global_event_target_as = ngm_virture_rival_country_14
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_14
+				set_global_flag = global_flag_ngm_virture_rival_country_14
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_15
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
+					save_global_event_target_as = ngm_virture_rival_country_15
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_15
+				set_global_flag = global_flag_ngm_virture_rival_country_15
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_16
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_3
+					}
+					save_global_event_target_as = ngm_virture_rival_country_16
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_16
+				set_global_flag = global_flag_ngm_virture_rival_country_16
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = ngm_virture_rival_country_num
+						value < 1
+					}
+				}
+				set_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
 			}
 		}
 	}
@@ -644,48 +1283,261 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_1
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_4
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_global_flag = global_flag_ngm_virture_rival_country_1
 			}
 			else_if = {
 				limit = {
-					has_country_flag = country_flag_ngm_virture_rival_country_1
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+						has_global_flag = global_flag_ngm_virture_rival_country_2
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_4
 					}
-					save_event_target_as = ngm_virture_rival_country_2
+					save_global_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
+				set_global_flag = global_flag_ngm_virture_rival_country_2
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_global_flag = global_flag_ngm_virture_rival_country_3
 					}
-					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_4
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_3
 				}
-				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_country_flag = country_flag_ngm_virture_rival_country_3
+				set_global_flag = global_flag_ngm_virture_rival_country_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_4
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
+					save_global_event_target_as = ngm_virture_rival_country_4
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_4
+				set_global_flag = global_flag_ngm_virture_rival_country_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_5
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
+					save_global_event_target_as = ngm_virture_rival_country_5
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_5
+				set_global_flag = global_flag_ngm_virture_rival_country_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_6
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
+					save_global_event_target_as = ngm_virture_rival_country_6
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_6
+				set_global_flag = global_flag_ngm_virture_rival_country_6
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_7
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
+					save_global_event_target_as = ngm_virture_rival_country_7
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_7
+				set_global_flag = global_flag_ngm_virture_rival_country_7
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_8
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
+					save_global_event_target_as = ngm_virture_rival_country_8
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_8
+				set_global_flag = global_flag_ngm_virture_rival_country_8
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_9
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
+					save_global_event_target_as = ngm_virture_rival_country_9
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_9
+				set_global_flag = global_flag_ngm_virture_rival_country_9
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_10
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
+					save_global_event_target_as = ngm_virture_rival_country_10
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_10
+				set_global_flag = global_flag_ngm_virture_rival_country_10
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_11
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
+					save_global_event_target_as = ngm_virture_rival_country_11
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_11
+				set_global_flag = global_flag_ngm_virture_rival_country_11
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_12
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
+					save_global_event_target_as = ngm_virture_rival_country_12
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_12
+				set_global_flag = global_flag_ngm_virture_rival_country_12
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_13
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
+					save_global_event_target_as = ngm_virture_rival_country_13
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_13
+				set_global_flag = global_flag_ngm_virture_rival_country_13
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_14
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
+					save_global_event_target_as = ngm_virture_rival_country_14
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_14
+				set_global_flag = global_flag_ngm_virture_rival_country_14
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_15
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
+					save_global_event_target_as = ngm_virture_rival_country_15
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_15
+				set_global_flag = global_flag_ngm_virture_rival_country_15
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_16
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_4
+					}
+					save_global_event_target_as = ngm_virture_rival_country_16
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_16
+				set_global_flag = global_flag_ngm_virture_rival_country_16
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = ngm_virture_rival_country_num
+					value < 1
+				}
+			}
+			set_variable = {
+				which = ngm_virture_rival_country_num
+				value = 1
+			}
+		}
+		else = {
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = 1
 			}
 		}
 	}
@@ -697,48 +1549,261 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_1
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_5
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_global_flag = global_flag_ngm_virture_rival_country_1
 			}
 			else_if = {
 				limit = {
-					has_country_flag = country_flag_ngm_virture_rival_country_1
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+						has_global_flag = global_flag_ngm_virture_rival_country_2
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_5
 					}
-					save_event_target_as = ngm_virture_rival_country_2
+					save_global_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
+				set_global_flag = global_flag_ngm_virture_rival_country_2
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_global_flag = global_flag_ngm_virture_rival_country_3
 					}
-					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_5
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_3
 				}
-				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_country_flag = country_flag_ngm_virture_rival_country_3
+				set_global_flag = global_flag_ngm_virture_rival_country_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_4
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
+					save_global_event_target_as = ngm_virture_rival_country_4
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_4
+				set_global_flag = global_flag_ngm_virture_rival_country_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_5
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
+					save_global_event_target_as = ngm_virture_rival_country_5
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_5
+				set_global_flag = global_flag_ngm_virture_rival_country_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_6
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
+					save_global_event_target_as = ngm_virture_rival_country_6
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_6
+				set_global_flag = global_flag_ngm_virture_rival_country_6
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_7
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
+					save_global_event_target_as = ngm_virture_rival_country_7
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_7
+				set_global_flag = global_flag_ngm_virture_rival_country_7
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_8
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
+					save_global_event_target_as = ngm_virture_rival_country_8
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_8
+				set_global_flag = global_flag_ngm_virture_rival_country_8
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_9
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
+					save_global_event_target_as = ngm_virture_rival_country_9
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_9
+				set_global_flag = global_flag_ngm_virture_rival_country_9
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_10
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
+					save_global_event_target_as = ngm_virture_rival_country_10
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_10
+				set_global_flag = global_flag_ngm_virture_rival_country_10
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_11
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
+					save_global_event_target_as = ngm_virture_rival_country_11
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_11
+				set_global_flag = global_flag_ngm_virture_rival_country_11
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_12
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
+					save_global_event_target_as = ngm_virture_rival_country_12
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_12
+				set_global_flag = global_flag_ngm_virture_rival_country_12
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_13
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
+					save_global_event_target_as = ngm_virture_rival_country_13
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_13
+				set_global_flag = global_flag_ngm_virture_rival_country_13
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_14
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
+					save_global_event_target_as = ngm_virture_rival_country_14
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_14
+				set_global_flag = global_flag_ngm_virture_rival_country_14
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_15
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
+					save_global_event_target_as = ngm_virture_rival_country_15
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_15
+				set_global_flag = global_flag_ngm_virture_rival_country_15
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_16
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_5
+					}
+					save_global_event_target_as = ngm_virture_rival_country_16
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_16
+				set_global_flag = global_flag_ngm_virture_rival_country_16
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = ngm_virture_rival_country_num
+						value < 1
+					}
+				}
+				set_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
 			}
 		}
 	}
@@ -750,48 +1815,261 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_1
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_6
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_global_flag = global_flag_ngm_virture_rival_country_1
 			}
 			else_if = {
 				limit = {
-					has_country_flag = country_flag_ngm_virture_rival_country_1
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+						has_global_flag = global_flag_ngm_virture_rival_country_2
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_6
 					}
-					save_event_target_as = ngm_virture_rival_country_2
+					save_global_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
+				set_global_flag = global_flag_ngm_virture_rival_country_2
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_global_flag = global_flag_ngm_virture_rival_country_3
 					}
-					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_6
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_3
 				}
-				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_country_flag = country_flag_ngm_virture_rival_country_3
+				set_global_flag = global_flag_ngm_virture_rival_country_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_4
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
+					save_global_event_target_as = ngm_virture_rival_country_4
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_4
+				set_global_flag = global_flag_ngm_virture_rival_country_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_5
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
+					save_global_event_target_as = ngm_virture_rival_country_5
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_5
+				set_global_flag = global_flag_ngm_virture_rival_country_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_6
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
+					save_global_event_target_as = ngm_virture_rival_country_6
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_6
+				set_global_flag = global_flag_ngm_virture_rival_country_6
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_7
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
+					save_global_event_target_as = ngm_virture_rival_country_7
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_7
+				set_global_flag = global_flag_ngm_virture_rival_country_7
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_8
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
+					save_global_event_target_as = ngm_virture_rival_country_8
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_8
+				set_global_flag = global_flag_ngm_virture_rival_country_8
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_9
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
+					save_global_event_target_as = ngm_virture_rival_country_9
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_9
+				set_global_flag = global_flag_ngm_virture_rival_country_9
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_10
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
+					save_global_event_target_as = ngm_virture_rival_country_10
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_10
+				set_global_flag = global_flag_ngm_virture_rival_country_10
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_11
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
+					save_global_event_target_as = ngm_virture_rival_country_11
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_11
+				set_global_flag = global_flag_ngm_virture_rival_country_11
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_12
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
+					save_global_event_target_as = ngm_virture_rival_country_12
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_12
+				set_global_flag = global_flag_ngm_virture_rival_country_12
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_13
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
+					save_global_event_target_as = ngm_virture_rival_country_13
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_13
+				set_global_flag = global_flag_ngm_virture_rival_country_13
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_14
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
+					save_global_event_target_as = ngm_virture_rival_country_14
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_14
+				set_global_flag = global_flag_ngm_virture_rival_country_14
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_15
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
+					save_global_event_target_as = ngm_virture_rival_country_15
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_15
+				set_global_flag = global_flag_ngm_virture_rival_country_15
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_16
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_6
+					}
+					save_global_event_target_as = ngm_virture_rival_country_16
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_16
+				set_global_flag = global_flag_ngm_virture_rival_country_16
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = ngm_virture_rival_country_num
+						value < 1
+					}
+				}
+				set_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
 			}
 		}
 	}
@@ -803,48 +2081,261 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_1
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_7
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_global_flag = global_flag_ngm_virture_rival_country_1
 			}
 			else_if = {
 				limit = {
-					has_country_flag = country_flag_ngm_virture_rival_country_1
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+						has_global_flag = global_flag_ngm_virture_rival_country_2
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_7
 					}
-					save_event_target_as = ngm_virture_rival_country_2
+					save_global_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
+				set_global_flag = global_flag_ngm_virture_rival_country_2
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_global_flag = global_flag_ngm_virture_rival_country_3
 					}
-					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_7
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_3
 				}
-				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_country_flag = country_flag_ngm_virture_rival_country_3
+				set_global_flag = global_flag_ngm_virture_rival_country_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_4
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
+					save_global_event_target_as = ngm_virture_rival_country_4
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_4
+				set_global_flag = global_flag_ngm_virture_rival_country_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_5
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
+					save_global_event_target_as = ngm_virture_rival_country_5
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_5
+				set_global_flag = global_flag_ngm_virture_rival_country_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_6
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
+					save_global_event_target_as = ngm_virture_rival_country_6
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_6
+				set_global_flag = global_flag_ngm_virture_rival_country_6
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_7
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
+					save_global_event_target_as = ngm_virture_rival_country_7
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_7
+				set_global_flag = global_flag_ngm_virture_rival_country_7
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_8
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
+					save_global_event_target_as = ngm_virture_rival_country_8
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_8
+				set_global_flag = global_flag_ngm_virture_rival_country_8
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_9
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
+					save_global_event_target_as = ngm_virture_rival_country_9
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_9
+				set_global_flag = global_flag_ngm_virture_rival_country_9
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_10
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
+					save_global_event_target_as = ngm_virture_rival_country_10
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_10
+				set_global_flag = global_flag_ngm_virture_rival_country_10
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_11
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
+					save_global_event_target_as = ngm_virture_rival_country_11
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_11
+				set_global_flag = global_flag_ngm_virture_rival_country_11
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_12
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
+					save_global_event_target_as = ngm_virture_rival_country_12
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_12
+				set_global_flag = global_flag_ngm_virture_rival_country_12
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_13
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
+					save_global_event_target_as = ngm_virture_rival_country_13
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_13
+				set_global_flag = global_flag_ngm_virture_rival_country_13
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_14
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
+					save_global_event_target_as = ngm_virture_rival_country_14
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_14
+				set_global_flag = global_flag_ngm_virture_rival_country_14
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_15
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
+					save_global_event_target_as = ngm_virture_rival_country_15
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_15
+				set_global_flag = global_flag_ngm_virture_rival_country_15
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_16
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_7
+					}
+					save_global_event_target_as = ngm_virture_rival_country_16
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_16
+				set_global_flag = global_flag_ngm_virture_rival_country_16
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = ngm_virture_rival_country_num
+						value < 1
+					}
+				}
+				set_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
 			}
 		}
 	}
@@ -856,48 +2347,261 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_1
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_8
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_global_flag = global_flag_ngm_virture_rival_country_1
 			}
 			else_if = {
 				limit = {
-					has_country_flag = country_flag_ngm_virture_rival_country_1
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+						has_global_flag = global_flag_ngm_virture_rival_country_2
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_8
 					}
-					save_event_target_as = ngm_virture_rival_country_2
+					save_global_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
+				set_global_flag = global_flag_ngm_virture_rival_country_2
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_global_flag = global_flag_ngm_virture_rival_country_3
 					}
-					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_8
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_3
 				}
-				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_country_flag = country_flag_ngm_virture_rival_country_3
+				set_global_flag = global_flag_ngm_virture_rival_country_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_4
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
+					save_global_event_target_as = ngm_virture_rival_country_4
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_4
+				set_global_flag = global_flag_ngm_virture_rival_country_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_5
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
+					save_global_event_target_as = ngm_virture_rival_country_5
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_5
+				set_global_flag = global_flag_ngm_virture_rival_country_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_6
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
+					save_global_event_target_as = ngm_virture_rival_country_6
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_6
+				set_global_flag = global_flag_ngm_virture_rival_country_6
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_7
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
+					save_global_event_target_as = ngm_virture_rival_country_7
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_7
+				set_global_flag = global_flag_ngm_virture_rival_country_7
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_8
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
+					save_global_event_target_as = ngm_virture_rival_country_8
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_8
+				set_global_flag = global_flag_ngm_virture_rival_country_8
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_9
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
+					save_global_event_target_as = ngm_virture_rival_country_9
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_9
+				set_global_flag = global_flag_ngm_virture_rival_country_9
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_10
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
+					save_global_event_target_as = ngm_virture_rival_country_10
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_10
+				set_global_flag = global_flag_ngm_virture_rival_country_10
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_11
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
+					save_global_event_target_as = ngm_virture_rival_country_11
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_11
+				set_global_flag = global_flag_ngm_virture_rival_country_11
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_12
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
+					save_global_event_target_as = ngm_virture_rival_country_12
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_12
+				set_global_flag = global_flag_ngm_virture_rival_country_12
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_13
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
+					save_global_event_target_as = ngm_virture_rival_country_13
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_13
+				set_global_flag = global_flag_ngm_virture_rival_country_13
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_14
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
+					save_global_event_target_as = ngm_virture_rival_country_14
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_14
+				set_global_flag = global_flag_ngm_virture_rival_country_14
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_15
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
+					save_global_event_target_as = ngm_virture_rival_country_15
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_15
+				set_global_flag = global_flag_ngm_virture_rival_country_15
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_16
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_8
+					}
+					save_global_event_target_as = ngm_virture_rival_country_16
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_16
+				set_global_flag = global_flag_ngm_virture_rival_country_16
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = ngm_virture_rival_country_num
+						value < 1
+					}
+				}
+				set_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
 			}
 		}
 	}
@@ -909,48 +2613,261 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_1
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_9
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_global_flag = global_flag_ngm_virture_rival_country_1
 			}
 			else_if = {
 				limit = {
-					has_country_flag = country_flag_ngm_virture_rival_country_1
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+						has_global_flag = global_flag_ngm_virture_rival_country_2
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_9
 					}
-					save_event_target_as = ngm_virture_rival_country_2
+					save_global_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
+				set_global_flag = global_flag_ngm_virture_rival_country_2
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_global_flag = global_flag_ngm_virture_rival_country_3
 					}
-					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_9
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_3
 				}
-				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_country_flag = country_flag_ngm_virture_rival_country_3
+				set_global_flag = global_flag_ngm_virture_rival_country_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_4
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
+					save_global_event_target_as = ngm_virture_rival_country_4
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_4
+				set_global_flag = global_flag_ngm_virture_rival_country_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_5
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
+					save_global_event_target_as = ngm_virture_rival_country_5
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_5
+				set_global_flag = global_flag_ngm_virture_rival_country_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_6
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
+					save_global_event_target_as = ngm_virture_rival_country_6
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_6
+				set_global_flag = global_flag_ngm_virture_rival_country_6
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_7
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
+					save_global_event_target_as = ngm_virture_rival_country_7
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_7
+				set_global_flag = global_flag_ngm_virture_rival_country_7
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_8
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
+					save_global_event_target_as = ngm_virture_rival_country_8
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_8
+				set_global_flag = global_flag_ngm_virture_rival_country_8
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_9
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
+					save_global_event_target_as = ngm_virture_rival_country_9
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_9
+				set_global_flag = global_flag_ngm_virture_rival_country_9
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_10
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
+					save_global_event_target_as = ngm_virture_rival_country_10
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_10
+				set_global_flag = global_flag_ngm_virture_rival_country_10
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_11
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
+					save_global_event_target_as = ngm_virture_rival_country_11
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_11
+				set_global_flag = global_flag_ngm_virture_rival_country_11
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_12
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
+					save_global_event_target_as = ngm_virture_rival_country_12
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_12
+				set_global_flag = global_flag_ngm_virture_rival_country_12
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_13
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
+					save_global_event_target_as = ngm_virture_rival_country_13
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_13
+				set_global_flag = global_flag_ngm_virture_rival_country_13
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_14
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
+					save_global_event_target_as = ngm_virture_rival_country_14
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_14
+				set_global_flag = global_flag_ngm_virture_rival_country_14
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_15
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
+					save_global_event_target_as = ngm_virture_rival_country_15
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_15
+				set_global_flag = global_flag_ngm_virture_rival_country_15
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_16
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_9
+					}
+					save_global_event_target_as = ngm_virture_rival_country_16
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_16
+				set_global_flag = global_flag_ngm_virture_rival_country_16
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = ngm_virture_rival_country_num
+						value < 1
+					}
+				}
+				set_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
 			}
 		}
 	}
@@ -962,48 +2879,261 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_1
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_10
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_global_flag = global_flag_ngm_virture_rival_country_1
 			}
 			else_if = {
 				limit = {
-					has_country_flag = country_flag_ngm_virture_rival_country_1
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+						has_global_flag = global_flag_ngm_virture_rival_country_2
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_10
 					}
-					save_event_target_as = ngm_virture_rival_country_2
+					save_global_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
+				set_global_flag = global_flag_ngm_virture_rival_country_2
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_global_flag = global_flag_ngm_virture_rival_country_3
 					}
-					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_10
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_3
 				}
-				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_country_flag = country_flag_ngm_virture_rival_country_3
+				set_global_flag = global_flag_ngm_virture_rival_country_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_4
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
+					save_global_event_target_as = ngm_virture_rival_country_4
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_4
+				set_global_flag = global_flag_ngm_virture_rival_country_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_5
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
+					save_global_event_target_as = ngm_virture_rival_country_5
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_5
+				set_global_flag = global_flag_ngm_virture_rival_country_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_6
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
+					save_global_event_target_as = ngm_virture_rival_country_6
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_6
+				set_global_flag = global_flag_ngm_virture_rival_country_6
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_7
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
+					save_global_event_target_as = ngm_virture_rival_country_7
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_7
+				set_global_flag = global_flag_ngm_virture_rival_country_7
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_8
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
+					save_global_event_target_as = ngm_virture_rival_country_8
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_8
+				set_global_flag = global_flag_ngm_virture_rival_country_8
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_9
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
+					save_global_event_target_as = ngm_virture_rival_country_9
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_9
+				set_global_flag = global_flag_ngm_virture_rival_country_9
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_10
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
+					save_global_event_target_as = ngm_virture_rival_country_10
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_10
+				set_global_flag = global_flag_ngm_virture_rival_country_10
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_11
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
+					save_global_event_target_as = ngm_virture_rival_country_11
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_11
+				set_global_flag = global_flag_ngm_virture_rival_country_11
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_12
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
+					save_global_event_target_as = ngm_virture_rival_country_12
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_12
+				set_global_flag = global_flag_ngm_virture_rival_country_12
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_13
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
+					save_global_event_target_as = ngm_virture_rival_country_13
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_13
+				set_global_flag = global_flag_ngm_virture_rival_country_13
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_14
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
+					save_global_event_target_as = ngm_virture_rival_country_14
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_14
+				set_global_flag = global_flag_ngm_virture_rival_country_14
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_15
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
+					save_global_event_target_as = ngm_virture_rival_country_15
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_15
+				set_global_flag = global_flag_ngm_virture_rival_country_15
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_16
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_10
+					}
+					save_global_event_target_as = ngm_virture_rival_country_16
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_16
+				set_global_flag = global_flag_ngm_virture_rival_country_16
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = ngm_virture_rival_country_num
+						value < 1
+					}
+				}
+				set_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
 			}
 		}
 	}
@@ -1015,48 +3145,261 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_1
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_11
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_global_flag = global_flag_ngm_virture_rival_country_1
 			}
 			else_if = {
 				limit = {
-					has_country_flag = country_flag_ngm_virture_rival_country_1
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+						has_global_flag = global_flag_ngm_virture_rival_country_2
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_11
 					}
-					save_event_target_as = ngm_virture_rival_country_2
+					save_global_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
+				set_global_flag = global_flag_ngm_virture_rival_country_2
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_global_flag = global_flag_ngm_virture_rival_country_3
 					}
-					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_11
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_3
 				}
-				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_country_flag = country_flag_ngm_virture_rival_country_3
+				set_global_flag = global_flag_ngm_virture_rival_country_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_4
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
+					save_global_event_target_as = ngm_virture_rival_country_4
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_4
+				set_global_flag = global_flag_ngm_virture_rival_country_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_5
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
+					save_global_event_target_as = ngm_virture_rival_country_5
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_5
+				set_global_flag = global_flag_ngm_virture_rival_country_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_6
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
+					save_global_event_target_as = ngm_virture_rival_country_6
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_6
+				set_global_flag = global_flag_ngm_virture_rival_country_6
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_7
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
+					save_global_event_target_as = ngm_virture_rival_country_7
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_7
+				set_global_flag = global_flag_ngm_virture_rival_country_7
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_8
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
+					save_global_event_target_as = ngm_virture_rival_country_8
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_8
+				set_global_flag = global_flag_ngm_virture_rival_country_8
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_9
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
+					save_global_event_target_as = ngm_virture_rival_country_9
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_9
+				set_global_flag = global_flag_ngm_virture_rival_country_9
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_10
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
+					save_global_event_target_as = ngm_virture_rival_country_10
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_10
+				set_global_flag = global_flag_ngm_virture_rival_country_10
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_11
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
+					save_global_event_target_as = ngm_virture_rival_country_11
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_11
+				set_global_flag = global_flag_ngm_virture_rival_country_11
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_12
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
+					save_global_event_target_as = ngm_virture_rival_country_12
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_12
+				set_global_flag = global_flag_ngm_virture_rival_country_12
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_13
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
+					save_global_event_target_as = ngm_virture_rival_country_13
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_13
+				set_global_flag = global_flag_ngm_virture_rival_country_13
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_14
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
+					save_global_event_target_as = ngm_virture_rival_country_14
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_14
+				set_global_flag = global_flag_ngm_virture_rival_country_14
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_15
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
+					save_global_event_target_as = ngm_virture_rival_country_15
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_15
+				set_global_flag = global_flag_ngm_virture_rival_country_15
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_16
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_11
+					}
+					save_global_event_target_as = ngm_virture_rival_country_16
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_16
+				set_global_flag = global_flag_ngm_virture_rival_country_16
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = ngm_virture_rival_country_num
+						value < 1
+					}
+				}
+				set_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
 			}
 		}
 	}
@@ -1068,48 +3411,261 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_1
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_12
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_global_flag = global_flag_ngm_virture_rival_country_1
 			}
 			else_if = {
 				limit = {
-					has_country_flag = country_flag_ngm_virture_rival_country_1
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+						has_global_flag = global_flag_ngm_virture_rival_country_2
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_12
 					}
-					save_event_target_as = ngm_virture_rival_country_2
+					save_global_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
+				set_global_flag = global_flag_ngm_virture_rival_country_2
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_global_flag = global_flag_ngm_virture_rival_country_3
 					}
-					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_12
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_3
 				}
-				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_country_flag = country_flag_ngm_virture_rival_country_3
+				set_global_flag = global_flag_ngm_virture_rival_country_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_4
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
+					save_global_event_target_as = ngm_virture_rival_country_4
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_4
+				set_global_flag = global_flag_ngm_virture_rival_country_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_5
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
+					save_global_event_target_as = ngm_virture_rival_country_5
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_5
+				set_global_flag = global_flag_ngm_virture_rival_country_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_6
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
+					save_global_event_target_as = ngm_virture_rival_country_6
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_6
+				set_global_flag = global_flag_ngm_virture_rival_country_6
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_7
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
+					save_global_event_target_as = ngm_virture_rival_country_7
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_7
+				set_global_flag = global_flag_ngm_virture_rival_country_7
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_8
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
+					save_global_event_target_as = ngm_virture_rival_country_8
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_8
+				set_global_flag = global_flag_ngm_virture_rival_country_8
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_9
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
+					save_global_event_target_as = ngm_virture_rival_country_9
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_9
+				set_global_flag = global_flag_ngm_virture_rival_country_9
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_10
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
+					save_global_event_target_as = ngm_virture_rival_country_10
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_10
+				set_global_flag = global_flag_ngm_virture_rival_country_10
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_11
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
+					save_global_event_target_as = ngm_virture_rival_country_11
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_11
+				set_global_flag = global_flag_ngm_virture_rival_country_11
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_12
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
+					save_global_event_target_as = ngm_virture_rival_country_12
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_12
+				set_global_flag = global_flag_ngm_virture_rival_country_12
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_13
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
+					save_global_event_target_as = ngm_virture_rival_country_13
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_13
+				set_global_flag = global_flag_ngm_virture_rival_country_13
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_14
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
+					save_global_event_target_as = ngm_virture_rival_country_14
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_14
+				set_global_flag = global_flag_ngm_virture_rival_country_14
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_15
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
+					save_global_event_target_as = ngm_virture_rival_country_15
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_15
+				set_global_flag = global_flag_ngm_virture_rival_country_15
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_16
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_12
+					}
+					save_global_event_target_as = ngm_virture_rival_country_16
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_16
+				set_global_flag = global_flag_ngm_virture_rival_country_16
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = ngm_virture_rival_country_num
+						value < 1
+					}
+				}
+				set_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
 			}
 		}
 	}
@@ -1121,48 +3677,261 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_1
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_13
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_global_flag = global_flag_ngm_virture_rival_country_1
 			}
 			else_if = {
 				limit = {
-					has_country_flag = country_flag_ngm_virture_rival_country_1
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+						has_global_flag = global_flag_ngm_virture_rival_country_2
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_13
 					}
-					save_event_target_as = ngm_virture_rival_country_2
+					save_global_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
+				set_global_flag = global_flag_ngm_virture_rival_country_2
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_global_flag = global_flag_ngm_virture_rival_country_3
 					}
-					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_13
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_3
 				}
-				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_country_flag = country_flag_ngm_virture_rival_country_3
+				set_global_flag = global_flag_ngm_virture_rival_country_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_4
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
+					save_global_event_target_as = ngm_virture_rival_country_4
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_4
+				set_global_flag = global_flag_ngm_virture_rival_country_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_5
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
+					save_global_event_target_as = ngm_virture_rival_country_5
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_5
+				set_global_flag = global_flag_ngm_virture_rival_country_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_6
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
+					save_global_event_target_as = ngm_virture_rival_country_6
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_6
+				set_global_flag = global_flag_ngm_virture_rival_country_6
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_7
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
+					save_global_event_target_as = ngm_virture_rival_country_7
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_7
+				set_global_flag = global_flag_ngm_virture_rival_country_7
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_8
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
+					save_global_event_target_as = ngm_virture_rival_country_8
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_8
+				set_global_flag = global_flag_ngm_virture_rival_country_8
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_9
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
+					save_global_event_target_as = ngm_virture_rival_country_9
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_9
+				set_global_flag = global_flag_ngm_virture_rival_country_9
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_10
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
+					save_global_event_target_as = ngm_virture_rival_country_10
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_10
+				set_global_flag = global_flag_ngm_virture_rival_country_10
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_11
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
+					save_global_event_target_as = ngm_virture_rival_country_11
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_11
+				set_global_flag = global_flag_ngm_virture_rival_country_11
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_12
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
+					save_global_event_target_as = ngm_virture_rival_country_12
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_12
+				set_global_flag = global_flag_ngm_virture_rival_country_12
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_13
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
+					save_global_event_target_as = ngm_virture_rival_country_13
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_13
+				set_global_flag = global_flag_ngm_virture_rival_country_13
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_14
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
+					save_global_event_target_as = ngm_virture_rival_country_14
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_14
+				set_global_flag = global_flag_ngm_virture_rival_country_14
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_15
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
+					save_global_event_target_as = ngm_virture_rival_country_15
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_15
+				set_global_flag = global_flag_ngm_virture_rival_country_15
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_16
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_13
+					}
+					save_global_event_target_as = ngm_virture_rival_country_16
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_16
+				set_global_flag = global_flag_ngm_virture_rival_country_16
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = ngm_virture_rival_country_num
+						value < 1
+					}
+				}
+				set_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
 			}
 		}
 	}
@@ -1174,48 +3943,261 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_1
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_14
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_global_flag = global_flag_ngm_virture_rival_country_1
 			}
 			else_if = {
 				limit = {
-					has_country_flag = country_flag_ngm_virture_rival_country_1
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+						has_global_flag = global_flag_ngm_virture_rival_country_2
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_14
 					}
-					save_event_target_as = ngm_virture_rival_country_2
+					save_global_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
+				set_global_flag = global_flag_ngm_virture_rival_country_2
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_global_flag = global_flag_ngm_virture_rival_country_3
 					}
-					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_14
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_3
 				}
-				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_country_flag = country_flag_ngm_virture_rival_country_3
+				set_global_flag = global_flag_ngm_virture_rival_country_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_4
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
+					save_global_event_target_as = ngm_virture_rival_country_4
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_4
+				set_global_flag = global_flag_ngm_virture_rival_country_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_5
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
+					save_global_event_target_as = ngm_virture_rival_country_5
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_5
+				set_global_flag = global_flag_ngm_virture_rival_country_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_6
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
+					save_global_event_target_as = ngm_virture_rival_country_6
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_6
+				set_global_flag = global_flag_ngm_virture_rival_country_6
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_7
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
+					save_global_event_target_as = ngm_virture_rival_country_7
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_7
+				set_global_flag = global_flag_ngm_virture_rival_country_7
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_8
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
+					save_global_event_target_as = ngm_virture_rival_country_8
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_8
+				set_global_flag = global_flag_ngm_virture_rival_country_8
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_9
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
+					save_global_event_target_as = ngm_virture_rival_country_9
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_9
+				set_global_flag = global_flag_ngm_virture_rival_country_9
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_10
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
+					save_global_event_target_as = ngm_virture_rival_country_10
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_10
+				set_global_flag = global_flag_ngm_virture_rival_country_10
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_11
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
+					save_global_event_target_as = ngm_virture_rival_country_11
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_11
+				set_global_flag = global_flag_ngm_virture_rival_country_11
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_12
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
+					save_global_event_target_as = ngm_virture_rival_country_12
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_12
+				set_global_flag = global_flag_ngm_virture_rival_country_12
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_13
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
+					save_global_event_target_as = ngm_virture_rival_country_13
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_13
+				set_global_flag = global_flag_ngm_virture_rival_country_13
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_14
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
+					save_global_event_target_as = ngm_virture_rival_country_14
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_14
+				set_global_flag = global_flag_ngm_virture_rival_country_14
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_15
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
+					save_global_event_target_as = ngm_virture_rival_country_15
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_15
+				set_global_flag = global_flag_ngm_virture_rival_country_15
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_16
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_14
+					}
+					save_global_event_target_as = ngm_virture_rival_country_16
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_16
+				set_global_flag = global_flag_ngm_virture_rival_country_16
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = ngm_virture_rival_country_num
+						value < 1
+					}
+				}
+				set_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
 			}
 		}
 	}
@@ -1227,48 +4209,261 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					NOR = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_1
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_15
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_1
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_global_flag = global_flag_ngm_virture_rival_country_1
 			}
 			else_if = {
 				limit = {
-					has_country_flag = country_flag_ngm_virture_rival_country_1
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_2
+						has_global_flag = global_flag_ngm_virture_rival_country_2
 					}
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_15
 					}
-					save_event_target_as = ngm_virture_rival_country_2
+					save_global_event_target_as = ngm_virture_rival_country_2
 				}
 				set_country_flag = country_flag_ngm_virture_rival_country_2
+				set_global_flag = global_flag_ngm_virture_rival_country_2
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_country_flag = country_flag_ngm_virture_rival_country_1
+						has_global_flag = global_flag_ngm_virture_rival_country_3
 					}
-					has_country_flag = country_flag_ngm_virture_rival_country_2
 				}
 				random_country = {
 					limit = {
 						is_same_value = event_target:ngm_diplomatic_15
 					}
-					save_event_target_as = ngm_virture_rival_country_1
+					save_global_event_target_as = ngm_virture_rival_country_3
 				}
-				set_country_flag = country_flag_ngm_virture_rival_country_1
+				set_country_flag = country_flag_ngm_virture_rival_country_3
+				set_global_flag = global_flag_ngm_virture_rival_country_3
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_4
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
+					save_global_event_target_as = ngm_virture_rival_country_4
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_4
+				set_global_flag = global_flag_ngm_virture_rival_country_4
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_5
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
+					save_global_event_target_as = ngm_virture_rival_country_5
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_5
+				set_global_flag = global_flag_ngm_virture_rival_country_5
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_6
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
+					save_global_event_target_as = ngm_virture_rival_country_6
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_6
+				set_global_flag = global_flag_ngm_virture_rival_country_6
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_7
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
+					save_global_event_target_as = ngm_virture_rival_country_7
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_7
+				set_global_flag = global_flag_ngm_virture_rival_country_7
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_8
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
+					save_global_event_target_as = ngm_virture_rival_country_8
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_8
+				set_global_flag = global_flag_ngm_virture_rival_country_8
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_9
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
+					save_global_event_target_as = ngm_virture_rival_country_9
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_9
+				set_global_flag = global_flag_ngm_virture_rival_country_9
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_10
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
+					save_global_event_target_as = ngm_virture_rival_country_10
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_10
+				set_global_flag = global_flag_ngm_virture_rival_country_10
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_11
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
+					save_global_event_target_as = ngm_virture_rival_country_11
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_11
+				set_global_flag = global_flag_ngm_virture_rival_country_11
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_12
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
+					save_global_event_target_as = ngm_virture_rival_country_12
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_12
+				set_global_flag = global_flag_ngm_virture_rival_country_12
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_13
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
+					save_global_event_target_as = ngm_virture_rival_country_13
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_13
+				set_global_flag = global_flag_ngm_virture_rival_country_13
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_14
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
+					save_global_event_target_as = ngm_virture_rival_country_14
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_14
+				set_global_flag = global_flag_ngm_virture_rival_country_14
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_15
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
+					save_global_event_target_as = ngm_virture_rival_country_15
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_15
+				set_global_flag = global_flag_ngm_virture_rival_country_15
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_global_flag = global_flag_ngm_virture_rival_country_16
+					}
+				}
+				random_country = {
+					limit = {
+						is_same_value = event_target:ngm_diplomatic_15
+					}
+					save_global_event_target_as = ngm_virture_rival_country_16
+				}
+				set_country_flag = country_flag_ngm_virture_rival_country_16
+				set_global_flag = global_flag_ngm_virture_rival_country_16
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = ngm_virture_rival_country_num
+						value < 1
+					}
+				}
+				set_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = ngm_virture_rival_country_num
+					value = 1
+				}
 			}
 		}
 	}
@@ -1297,14 +4492,224 @@ country_event = {
 		trigger = {
 			has_country_flag = country_flag_ngm_virture_rival_country_1
 		}
-		remove_country_flag = country_flag_ngm_virture_rival_country_1
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_1
+			clear_global_event_target = ngm_virture_rival_country_1
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
 	}
 	option = {
 		name = ngm_diplomatic.2.b
 		trigger = {
 			has_country_flag = country_flag_ngm_virture_rival_country_2
 		}
-		remove_country_flag = country_flag_ngm_virture_rival_country_2
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_2
+			clear_global_event_target = ngm_virture_rival_country_2
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.2.c
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_3
+		}
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_3
+			clear_global_event_target = ngm_virture_rival_country_3
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.2.d
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_4
+		}
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_4
+			clear_global_event_target = ngm_virture_rival_country_4
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.2.e
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_5
+		}
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_5
+			clear_global_event_target = ngm_virture_rival_country_5
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.2.f
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_6
+		}
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_6
+			clear_global_event_target = ngm_virture_rival_country_6
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.2.g
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_7
+		}
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_7
+			clear_global_event_target = ngm_virture_rival_country_7
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.2.h
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_8
+		}
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_8
+			clear_global_event_target = ngm_virture_rival_country_8
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.2.i
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_9
+		}
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_9
+			clear_global_event_target = ngm_virture_rival_country_9
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.2.j
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_10
+		}
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_10
+			clear_global_event_target = ngm_virture_rival_country_10
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.2.k
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_11
+		}
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_111
+			clear_global_event_target = ngm_virture_rival_country_11
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.2.l
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_12
+		}
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_12
+			clear_global_event_target = ngm_virture_rival_country_12
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.2.m
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_13
+		}
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_13
+			clear_global_event_target = ngm_virture_rival_country_13
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.2.n
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_14
+		}
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_14
+			clear_global_event_target = ngm_virture_rival_country_14
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.2.o
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_15
+		}
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_15
+			clear_global_event_target = ngm_virture_rival_country_15
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = ngm_diplomatic.2.p
+		trigger = {
+			has_country_flag = country_flag_ngm_virture_rival_country_16
+		}
+		hidden_effect = {
+			remove_country_flag = country_flag_ngm_virture_rival_country_16
+			clear_global_event_target = ngm_virture_rival_country_16
+			change_variable = {
+				which = ngm_virture_rival_country_num
+				value = -1
+			}
+		}
 	}
 	# 閉じる
 	option = {
