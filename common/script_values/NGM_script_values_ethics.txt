@@ -1,0 +1,144 @@
+
+socialism_ethics_from_relations = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = count_relation
+		parameters = {
+			limit = {
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+				}
+				is_socialism = yes
+			}
+		}
+		mode = add
+		mult = 0.3
+	}
+}
+
+capitalism_ethics_from_relations = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = count_relation
+		parameters = {
+			limit = {
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+				}
+				is_capitalism = yes
+			}
+		}
+		mode = add
+		mult = 0.3
+	}
+}
+
+interventionism_ethics_from_relations = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = count_relation
+		parameters = {
+			limit = {
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+				}
+				is_interventionism = yes
+			}
+		}
+		mode = add
+		mult = 0.3
+	}
+}
+
+neutralism_ethics_from_relations = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = count_relation
+		parameters = {
+			limit = {
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+				}
+				is_neutralism = yes
+			}
+		}
+		mode = add
+		mult = 0.3
+	}
+}
+
+conservationism_ethics_from_relations = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = count_relation
+		parameters = {
+			limit = {
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+				}
+				is_conservationism = yes
+			}
+		}
+		mode = add
+		mult = 0.3
+	}
+}
+
+developmentalism_ethics_from_relations = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = count_relation
+		parameters = {
+			limit = {
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+				}
+				is_developmentalism = yes
+			}
+		}
+		mode = add
+		mult = 0.3
+	}
+}
+
+honorism_ethics_from_relations = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = count_relation
+		parameters = {
+			limit = {
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+				}
+				is_honorism = yes
+			}
+		}
+		mode = add
+		mult = 0.3
+	}
+}
+
+utilitarianism_ethics_from_relations = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = count_relation
+		parameters = {
+			limit = {
+				OR = {
+					is_in_federation_with = root
+					has_defensive_pact = root
+				}
+				is_utilitarianism = yes
+			}
+		}
+		mode = add
+		mult = 0.3
+	}
+}
