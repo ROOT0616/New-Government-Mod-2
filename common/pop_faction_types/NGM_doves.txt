@@ -5,6 +5,7 @@
 NGM_doves = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_neutralism
+	visual_ethic = "NGM_doves_visual_ethic"
 
 	unique = yes
 	support_multiplier = 1
@@ -69,7 +70,7 @@ NGM_doves = {
 			exists = from
 			from = {
 				exists = leader
-				leader = { leader_class = ruler }
+				leader = { is_ruler = yes }
 			}
 		}
 
@@ -351,17 +352,6 @@ NGM_doves = {
 					factor = 0
 					owner = {
 						has_valid_civic = civic_fanatic_purifiers
-					}
-				}
-				modifier = {
-					factor = 0
-					NOT = {
-						owner = {
-							exists = ruler
-							ruler = {
-								leader_of_faction = NGM_doves
-							}
-						}
 					}
 				}
 				modifier = {

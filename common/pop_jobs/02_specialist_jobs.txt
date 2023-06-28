@@ -1,3 +1,4 @@
+# NGM
 ###################
 # Specialist Jobs
 ###################
@@ -17,8 +18,8 @@ colonist = {
 
 	possible_precalc = can_fill_specialist_job
 
-	pop_modifier = {
-		pop_defense_armies_add = 1
+	planet_modifier = {
+		planet_building_build_speed_mult = 0.10
 	}
 
 	triggered_planet_modifier = {
@@ -213,6 +214,20 @@ xeno_zoo_keeper = {
 		}
 		upkeep = {
 			consumer_goods = 1
+		}
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			planet = {
+				exists = army_leader
+				army_leader = {
+					has_trait = leader_trait_academia_recruiter
+				}
+			}
+		}
+		modifier = {
+			pop_defense_armies_add = 1
 		}
 	}
 
@@ -652,31 +667,6 @@ telepath = {
 			}
 			energy = 2
 		}
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = { has_civic = civic_dystopian_society }
-			}
-			consumer_goods = 1
-		}
-	}
-
-	triggered_pop_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_dystopian_society }
-		}
-		pop_happiness = 0.3
-		pop_political_power = 0.6
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_dystopian_society }
-		}
-		planet_amenities_add = 1
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	planet_modifier = {
@@ -949,7 +939,7 @@ duelist = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_councilor = { COUNCILOR = "councilor_warrior_culture" } 
+			has_councilor = { COUNCILOR = "councilor_warrior_culture" }
 		}
 
 		planet_amenities_add = 1
@@ -964,7 +954,7 @@ duelist = {
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
-	triggered_country_modifier = { 
+	triggered_country_modifier = {
 		potential = {
 			has_councilor = { COUNCILOR = "councilor_warrior_culture" }
 		}
@@ -1600,6 +1590,19 @@ healthcare = {
 			has_job = healthcare
 		}
 		modifier = {
+			factor = 2
+			owner = { has_valid_civic = civic_private_healthcare_corporate }
+		}
+		modifier = {
+			factor = 1.5
+			planet = {
+				has_branch_office = yes
+				branch_office_owner = {
+					has_valid_civic = civic_private_healthcare_corporate
+				}
+			}
+		}
+		modifier = {
 			factor = 0.5
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
@@ -1741,7 +1744,7 @@ necromancer = {
 			trigger = {
 				exists = planet
 				planet = {
-					has_councilor = { COUNCILOR = "councilor_reanimated_armies" } 
+					has_councilor = { COUNCILOR = "councilor_reanimated_armies" }
 				}
 			}
 			unity = @councilor_reanimated_armies_necromancer_unity
@@ -1749,6 +1752,20 @@ necromancer = {
 		}
 		upkeep = {
 			consumer_goods = 2
+		}
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			planet = {
+				exists = army_leader
+				army_leader = {
+					has_trait = leader_trait_academia_recruiter
+				}
+			}
+		}
+		modifier = {
+			pop_defense_armies_add = 1
 		}
 	}
 
@@ -2490,7 +2507,7 @@ pearl_diver = {
 		}
 		produces = {
 			trigger = {
-				has_councilor = { COUNCILOR = "councilor_anglers" } 
+				has_councilor = { COUNCILOR = "councilor_anglers" }
 			}
 
 			consumer_goods = @councilor_anglers_pearl_diver_consumer_goods_bonus
@@ -2525,7 +2542,7 @@ pearl_diver = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_councilor = { COUNCILOR = "councilor_corporate_anglers" } 
+			has_councilor = { COUNCILOR = "councilor_corporate_anglers" }
 		}
 
 		trade_value_add = @councilor_corporate_anglers_pearl_diver_trade_value_bonus
@@ -2852,6 +2869,20 @@ archaeoengineers = {
 			physics_research = 1
 			engineering_research = 1
 			society_research = 1
+		}
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			planet = {
+				exists = army_leader
+				army_leader = {
+					has_trait = leader_trait_academia_recruiter
+				}
+			}
+		}
+		modifier = {
+			pop_defense_armies_add = 1
 		}
 	}
 

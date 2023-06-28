@@ -4,6 +4,8 @@
 NGM_environmentalism = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_conservationism
+	visual_ethic = "NGM_environmentalism_visual_ethic"
+
 	unique = yes
 	support_multiplier = 1
 
@@ -16,24 +18,6 @@ NGM_environmentalism = {
 
 	is_potential = {
 		is_faction_allowed = yes
-
-		if = {
-			limit = {
-				has_faction = NGM_environmentalism
-				any_pop_faction = {
-					is_pop_faction_type = NGM_environmentalism
-					num_pops >= 5
-				}
-			}
-		}
-		else = {
-			count_owned_pop = {
-				count >= 5
-				limit = {
-					has_ethic = ethic_conservationism
-				}
-			}
-		}
 	}
 
 	parameters = {
@@ -53,10 +37,8 @@ NGM_environmentalism = {
 
 	can_join_faction = {
 		can_think = yes
-		OR = {
-			has_ethic = ethic_conservationism
-			has_ethic = ethic_fanatic_conservationism
-		}
+		is_shackled_robot = no
+		has_ethic = ethic_conservationism
 	}
 
 	attraction = {
@@ -67,7 +49,7 @@ NGM_environmentalism = {
 			exists = from
 			from = {
 				exists = leader
-				leader = { leader_class = ruler }
+				leader = { is_ruler = yes }
 			}
 		}
 
@@ -373,17 +355,6 @@ NGM_environmentalism = {
 					factor = 0
 					owner = {
 						has_valid_civic = civic_fanatic_purifiers
-					}
-				}
-				modifier = {
-					factor = 0
-					NOT = {
-						owner = {
-							exists = ruler
-							ruler = {
-								leader_of_faction = NGM_environmentalism
-							}
-						}
 					}
 				}
 				modifier = {

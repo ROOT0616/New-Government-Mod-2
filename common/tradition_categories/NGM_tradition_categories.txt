@@ -70,31 +70,31 @@ tradition_ngm_virture = {
 	ai_weight = {
 		factor = 5
 		modifier = {
-			factor = 4
+			factor = 10
 			has_civic = civic_criminal_heritage
 		}
 		modifier = {
-			factor = 4
+			factor = 10
 			has_civic = civic_ngm_underhanded_trick
 		}
 		modifier = {
-			factor = 3
+			factor = 4
 			has_civic = civic_ngm_mastermind
 		}
 		modifier = {
-			factor = 3
+			factor = 44
 			has_civic = civic_ngm_kakistocracy
 		}
 		modifier = {
-			factor = 3
+			factor = 4
 			has_civic = civic_fanatic_purifiers
 		}
 		modifier = {
-			factor = 3
+			factor = 4
 			has_civic = civic_barbaric_despoilers
 		}
 		modifier = {
-			factor = 3
+			factor = 4
 			has_civic = civic_machine_terminator
 		}
 	}
@@ -214,7 +214,7 @@ tradition_ngm_avantgarde = {
 		"tr_ngm_asymmetric"
 	}
 	ai_weight = {
-		factor = 10
+		factor = 0
 	}
 }
 

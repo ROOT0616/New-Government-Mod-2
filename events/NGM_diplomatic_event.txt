@@ -18,6 +18,25 @@ country_event = {
 				NOT = {
 					has_overlord = ROOT
 				}
+				NOR = {
+					is_same_value = event_target:ngm_virture_rival_country_1
+					is_same_value = event_target:ngm_virture_rival_country_2
+					is_same_value = event_target:ngm_virture_rival_country_3
+					is_same_value = event_target:ngm_virture_rival_country_4
+					is_same_value = event_target:ngm_virture_rival_country_5
+					is_same_value = event_target:ngm_virture_rival_country_6
+					is_same_value = event_target:ngm_virture_rival_country_7
+					is_same_value = event_target:ngm_virture_rival_country_8
+					is_same_value = event_target:ngm_virture_rival_country_9
+					is_same_value = event_target:ngm_virture_rival_country_10
+					is_same_value = event_target:ngm_virture_rival_country_11
+					is_same_value = event_target:ngm_virture_rival_country_12
+					is_same_value = event_target:ngm_virture_rival_country_13
+					is_same_value = event_target:ngm_virture_rival_country_14
+					is_same_value = event_target:ngm_virture_rival_country_15
+					is_same_value = event_target:ngm_virture_rival_country_16
+				}
+				is_rival = root
 			}
 			save_event_target_as = ngm_diplomatic_1
 			random_country = {
@@ -30,6 +49,25 @@ country_event = {
 					NOT = {
 						is_same_value = event_target:ngm_diplomatic_1
 					}
+					NOR = {
+						is_same_value = event_target:ngm_virture_rival_country_1
+						is_same_value = event_target:ngm_virture_rival_country_2
+						is_same_value = event_target:ngm_virture_rival_country_3
+						is_same_value = event_target:ngm_virture_rival_country_4
+						is_same_value = event_target:ngm_virture_rival_country_5
+						is_same_value = event_target:ngm_virture_rival_country_6
+						is_same_value = event_target:ngm_virture_rival_country_7
+						is_same_value = event_target:ngm_virture_rival_country_8
+						is_same_value = event_target:ngm_virture_rival_country_9
+						is_same_value = event_target:ngm_virture_rival_country_10
+						is_same_value = event_target:ngm_virture_rival_country_11
+						is_same_value = event_target:ngm_virture_rival_country_12
+						is_same_value = event_target:ngm_virture_rival_country_13
+						is_same_value = event_target:ngm_virture_rival_country_14
+						is_same_value = event_target:ngm_virture_rival_country_15
+						is_same_value = event_target:ngm_virture_rival_country_16
+					}
+					is_rival = root
 				}
 				save_event_target_as = ngm_diplomatic_2
 				random_country = {
@@ -45,6 +83,25 @@ country_event = {
 						NOT = {
 							is_same_value = event_target:ngm_diplomatic_2
 						}
+						NOR = {
+							is_same_value = event_target:ngm_virture_rival_country_1
+							is_same_value = event_target:ngm_virture_rival_country_2
+							is_same_value = event_target:ngm_virture_rival_country_3
+							is_same_value = event_target:ngm_virture_rival_country_4
+							is_same_value = event_target:ngm_virture_rival_country_5
+							is_same_value = event_target:ngm_virture_rival_country_6
+							is_same_value = event_target:ngm_virture_rival_country_7
+							is_same_value = event_target:ngm_virture_rival_country_8
+							is_same_value = event_target:ngm_virture_rival_country_9
+							is_same_value = event_target:ngm_virture_rival_country_10
+							is_same_value = event_target:ngm_virture_rival_country_11
+							is_same_value = event_target:ngm_virture_rival_country_12
+							is_same_value = event_target:ngm_virture_rival_country_13
+							is_same_value = event_target:ngm_virture_rival_country_14
+							is_same_value = event_target:ngm_virture_rival_country_15
+							is_same_value = event_target:ngm_virture_rival_country_16
+						}
+						is_rival = root
 					}
 					save_event_target_as = ngm_diplomatic_3
 					random_country = {
@@ -63,6 +120,25 @@ country_event = {
 							NOT = {
 								is_same_value = event_target:ngm_diplomatic_3
 							}
+							NOR = {
+								is_same_value = event_target:ngm_virture_rival_country_1
+								is_same_value = event_target:ngm_virture_rival_country_2
+								is_same_value = event_target:ngm_virture_rival_country_3
+								is_same_value = event_target:ngm_virture_rival_country_4
+								is_same_value = event_target:ngm_virture_rival_country_5
+								is_same_value = event_target:ngm_virture_rival_country_6
+								is_same_value = event_target:ngm_virture_rival_country_7
+								is_same_value = event_target:ngm_virture_rival_country_8
+								is_same_value = event_target:ngm_virture_rival_country_9
+								is_same_value = event_target:ngm_virture_rival_country_10
+								is_same_value = event_target:ngm_virture_rival_country_11
+								is_same_value = event_target:ngm_virture_rival_country_12
+								is_same_value = event_target:ngm_virture_rival_country_13
+								is_same_value = event_target:ngm_virture_rival_country_14
+								is_same_value = event_target:ngm_virture_rival_country_15
+								is_same_value = event_target:ngm_virture_rival_country_16
+							}
+							is_rival = root
 						}
 						save_event_target_as = ngm_diplomatic_4
 						random_country = {
@@ -84,6 +160,25 @@ country_event = {
 								NOT = {
 									is_same_value = event_target:ngm_diplomatic_4
 								}
+								NOR = {
+									is_same_value = event_target:ngm_virture_rival_country_1
+									is_same_value = event_target:ngm_virture_rival_country_2
+									is_same_value = event_target:ngm_virture_rival_country_3
+									is_same_value = event_target:ngm_virture_rival_country_4
+									is_same_value = event_target:ngm_virture_rival_country_5
+									is_same_value = event_target:ngm_virture_rival_country_6
+									is_same_value = event_target:ngm_virture_rival_country_7
+									is_same_value = event_target:ngm_virture_rival_country_8
+									is_same_value = event_target:ngm_virture_rival_country_9
+									is_same_value = event_target:ngm_virture_rival_country_10
+									is_same_value = event_target:ngm_virture_rival_country_11
+									is_same_value = event_target:ngm_virture_rival_country_12
+									is_same_value = event_target:ngm_virture_rival_country_13
+									is_same_value = event_target:ngm_virture_rival_country_14
+									is_same_value = event_target:ngm_virture_rival_country_15
+									is_same_value = event_target:ngm_virture_rival_country_16
+								}
+								is_rival = root
 							}
 							save_event_target_as = ngm_diplomatic_5
 							random_country = {
@@ -108,6 +203,25 @@ country_event = {
 									NOT = {
 										is_same_value = event_target:ngm_diplomatic_5
 									}
+									NOR = {
+										is_same_value = event_target:ngm_virture_rival_country_1
+										is_same_value = event_target:ngm_virture_rival_country_2
+										is_same_value = event_target:ngm_virture_rival_country_3
+										is_same_value = event_target:ngm_virture_rival_country_4
+										is_same_value = event_target:ngm_virture_rival_country_5
+										is_same_value = event_target:ngm_virture_rival_country_6
+										is_same_value = event_target:ngm_virture_rival_country_7
+										is_same_value = event_target:ngm_virture_rival_country_8
+										is_same_value = event_target:ngm_virture_rival_country_9
+										is_same_value = event_target:ngm_virture_rival_country_10
+										is_same_value = event_target:ngm_virture_rival_country_11
+										is_same_value = event_target:ngm_virture_rival_country_12
+										is_same_value = event_target:ngm_virture_rival_country_13
+										is_same_value = event_target:ngm_virture_rival_country_14
+										is_same_value = event_target:ngm_virture_rival_country_15
+										is_same_value = event_target:ngm_virture_rival_country_16
+									}
+									is_rival = root
 								}
 								save_event_target_as = ngm_diplomatic_6
 								random_country = {
@@ -135,6 +249,25 @@ country_event = {
 										NOT = {
 											is_same_value = event_target:ngm_diplomatic_6
 										}
+										NOR = {
+											is_same_value = event_target:ngm_virture_rival_country_1
+											is_same_value = event_target:ngm_virture_rival_country_2
+											is_same_value = event_target:ngm_virture_rival_country_3
+											is_same_value = event_target:ngm_virture_rival_country_4
+											is_same_value = event_target:ngm_virture_rival_country_5
+											is_same_value = event_target:ngm_virture_rival_country_6
+											is_same_value = event_target:ngm_virture_rival_country_7
+											is_same_value = event_target:ngm_virture_rival_country_8
+											is_same_value = event_target:ngm_virture_rival_country_9
+											is_same_value = event_target:ngm_virture_rival_country_10
+											is_same_value = event_target:ngm_virture_rival_country_11
+											is_same_value = event_target:ngm_virture_rival_country_12
+											is_same_value = event_target:ngm_virture_rival_country_13
+											is_same_value = event_target:ngm_virture_rival_country_14
+											is_same_value = event_target:ngm_virture_rival_country_15
+											is_same_value = event_target:ngm_virture_rival_country_16
+										}
+										is_rival = root
 									}
 									save_event_target_as = ngm_diplomatic_7
 									random_country = {
@@ -165,6 +298,25 @@ country_event = {
 											NOT = {
 												is_same_value = event_target:ngm_diplomatic_7
 											}
+											NOR = {
+												is_same_value = event_target:ngm_virture_rival_country_1
+												is_same_value = event_target:ngm_virture_rival_country_2
+												is_same_value = event_target:ngm_virture_rival_country_3
+												is_same_value = event_target:ngm_virture_rival_country_4
+												is_same_value = event_target:ngm_virture_rival_country_5
+												is_same_value = event_target:ngm_virture_rival_country_6
+												is_same_value = event_target:ngm_virture_rival_country_7
+												is_same_value = event_target:ngm_virture_rival_country_8
+												is_same_value = event_target:ngm_virture_rival_country_9
+												is_same_value = event_target:ngm_virture_rival_country_10
+												is_same_value = event_target:ngm_virture_rival_country_11
+												is_same_value = event_target:ngm_virture_rival_country_12
+												is_same_value = event_target:ngm_virture_rival_country_13
+												is_same_value = event_target:ngm_virture_rival_country_14
+												is_same_value = event_target:ngm_virture_rival_country_15
+												is_same_value = event_target:ngm_virture_rival_country_16
+											}
+											is_rival = root
 										}
 										save_event_target_as = ngm_diplomatic_8
 										random_country = {
@@ -198,6 +350,25 @@ country_event = {
 												NOT = {
 													is_same_value = event_target:ngm_diplomatic_8
 												}
+												NOR = {
+													is_same_value = event_target:ngm_virture_rival_country_1
+													is_same_value = event_target:ngm_virture_rival_country_2
+													is_same_value = event_target:ngm_virture_rival_country_3
+													is_same_value = event_target:ngm_virture_rival_country_4
+													is_same_value = event_target:ngm_virture_rival_country_5
+													is_same_value = event_target:ngm_virture_rival_country_6
+													is_same_value = event_target:ngm_virture_rival_country_7
+													is_same_value = event_target:ngm_virture_rival_country_8
+													is_same_value = event_target:ngm_virture_rival_country_9
+													is_same_value = event_target:ngm_virture_rival_country_10
+													is_same_value = event_target:ngm_virture_rival_country_11
+													is_same_value = event_target:ngm_virture_rival_country_12
+													is_same_value = event_target:ngm_virture_rival_country_13
+													is_same_value = event_target:ngm_virture_rival_country_14
+													is_same_value = event_target:ngm_virture_rival_country_15
+													is_same_value = event_target:ngm_virture_rival_country_16
+												}
+												is_rival = root
 											}
 											save_event_target_as = ngm_diplomatic_9
 											random_country = {
@@ -234,6 +405,25 @@ country_event = {
 													NOT = {
 														is_same_value = event_target:ngm_diplomatic_9
 													}
+													NOR = {
+														is_same_value = event_target:ngm_virture_rival_country_1
+														is_same_value = event_target:ngm_virture_rival_country_2
+														is_same_value = event_target:ngm_virture_rival_country_3
+														is_same_value = event_target:ngm_virture_rival_country_4
+														is_same_value = event_target:ngm_virture_rival_country_5
+														is_same_value = event_target:ngm_virture_rival_country_6
+														is_same_value = event_target:ngm_virture_rival_country_7
+														is_same_value = event_target:ngm_virture_rival_country_8
+														is_same_value = event_target:ngm_virture_rival_country_9
+														is_same_value = event_target:ngm_virture_rival_country_10
+														is_same_value = event_target:ngm_virture_rival_country_11
+														is_same_value = event_target:ngm_virture_rival_country_12
+														is_same_value = event_target:ngm_virture_rival_country_13
+														is_same_value = event_target:ngm_virture_rival_country_14
+														is_same_value = event_target:ngm_virture_rival_country_15
+														is_same_value = event_target:ngm_virture_rival_country_16
+													}
+													is_rival = root
 												}
 												save_event_target_as = ngm_diplomatic_10
 												random_country = {
@@ -273,6 +463,25 @@ country_event = {
 														NOT = {
 															is_same_value = event_target:ngm_diplomatic_10
 														}
+														NOR = {
+															is_same_value = event_target:ngm_virture_rival_country_1
+															is_same_value = event_target:ngm_virture_rival_country_2
+															is_same_value = event_target:ngm_virture_rival_country_3
+															is_same_value = event_target:ngm_virture_rival_country_4
+															is_same_value = event_target:ngm_virture_rival_country_5
+															is_same_value = event_target:ngm_virture_rival_country_6
+															is_same_value = event_target:ngm_virture_rival_country_7
+															is_same_value = event_target:ngm_virture_rival_country_8
+															is_same_value = event_target:ngm_virture_rival_country_9
+															is_same_value = event_target:ngm_virture_rival_country_10
+															is_same_value = event_target:ngm_virture_rival_country_11
+															is_same_value = event_target:ngm_virture_rival_country_12
+															is_same_value = event_target:ngm_virture_rival_country_13
+															is_same_value = event_target:ngm_virture_rival_country_14
+															is_same_value = event_target:ngm_virture_rival_country_15
+															is_same_value = event_target:ngm_virture_rival_country_16
+														}
+														is_rival = root
 													}
 													save_event_target_as = ngm_diplomatic_11
 													random_country = {
@@ -315,6 +524,25 @@ country_event = {
 															NOT = {
 																is_same_value = event_target:ngm_diplomatic_11
 															}
+															NOR = {
+																is_same_value = event_target:ngm_virture_rival_country_1
+																is_same_value = event_target:ngm_virture_rival_country_2
+																is_same_value = event_target:ngm_virture_rival_country_3
+																is_same_value = event_target:ngm_virture_rival_country_4
+																is_same_value = event_target:ngm_virture_rival_country_5
+																is_same_value = event_target:ngm_virture_rival_country_6
+																is_same_value = event_target:ngm_virture_rival_country_7
+																is_same_value = event_target:ngm_virture_rival_country_8
+																is_same_value = event_target:ngm_virture_rival_country_9
+																is_same_value = event_target:ngm_virture_rival_country_10
+																is_same_value = event_target:ngm_virture_rival_country_11
+																is_same_value = event_target:ngm_virture_rival_country_12
+																is_same_value = event_target:ngm_virture_rival_country_13
+																is_same_value = event_target:ngm_virture_rival_country_14
+																is_same_value = event_target:ngm_virture_rival_country_15
+																is_same_value = event_target:ngm_virture_rival_country_16
+															}
+															is_rival = root
 														}
 														save_event_target_as = ngm_diplomatic_12
 														random_country = {
@@ -360,6 +588,25 @@ country_event = {
 																NOT = {
 																	is_same_value = event_target:ngm_diplomatic_12
 																}
+																NOR = {
+																	is_same_value = event_target:ngm_virture_rival_country_1
+																	is_same_value = event_target:ngm_virture_rival_country_2
+																	is_same_value = event_target:ngm_virture_rival_country_3
+																	is_same_value = event_target:ngm_virture_rival_country_4
+																	is_same_value = event_target:ngm_virture_rival_country_5
+																	is_same_value = event_target:ngm_virture_rival_country_6
+																	is_same_value = event_target:ngm_virture_rival_country_7
+																	is_same_value = event_target:ngm_virture_rival_country_8
+																	is_same_value = event_target:ngm_virture_rival_country_9
+																	is_same_value = event_target:ngm_virture_rival_country_10
+																	is_same_value = event_target:ngm_virture_rival_country_11
+																	is_same_value = event_target:ngm_virture_rival_country_12
+																	is_same_value = event_target:ngm_virture_rival_country_13
+																	is_same_value = event_target:ngm_virture_rival_country_14
+																	is_same_value = event_target:ngm_virture_rival_country_15
+																	is_same_value = event_target:ngm_virture_rival_country_16
+																}
+																is_rival = root
 															}
 															save_event_target_as = ngm_diplomatic_13
 															random_country = {
@@ -408,6 +655,25 @@ country_event = {
 																	NOT = {
 																		is_same_value = event_target:ngm_diplomatic_13
 																	}
+																	NOR = {
+																		is_same_value = event_target:ngm_virture_rival_country_1
+																		is_same_value = event_target:ngm_virture_rival_country_2
+																		is_same_value = event_target:ngm_virture_rival_country_3
+																		is_same_value = event_target:ngm_virture_rival_country_4
+																		is_same_value = event_target:ngm_virture_rival_country_5
+																		is_same_value = event_target:ngm_virture_rival_country_6
+																		is_same_value = event_target:ngm_virture_rival_country_7
+																		is_same_value = event_target:ngm_virture_rival_country_8
+																		is_same_value = event_target:ngm_virture_rival_country_9
+																		is_same_value = event_target:ngm_virture_rival_country_10
+																		is_same_value = event_target:ngm_virture_rival_country_11
+																		is_same_value = event_target:ngm_virture_rival_country_12
+																		is_same_value = event_target:ngm_virture_rival_country_13
+																		is_same_value = event_target:ngm_virture_rival_country_14
+																		is_same_value = event_target:ngm_virture_rival_country_15
+																		is_same_value = event_target:ngm_virture_rival_country_16
+																	}
+																	is_rival = root
 																}
 																save_event_target_as = ngm_diplomatic_14
 																random_country = {
@@ -459,6 +725,25 @@ country_event = {
 																		NOT = {
 																			is_same_value = event_target:ngm_diplomatic_14
 																		}
+																		NOR = {
+																			is_same_value = event_target:ngm_virture_rival_country_1
+																			is_same_value = event_target:ngm_virture_rival_country_2
+																			is_same_value = event_target:ngm_virture_rival_country_3
+																			is_same_value = event_target:ngm_virture_rival_country_4
+																			is_same_value = event_target:ngm_virture_rival_country_5
+																			is_same_value = event_target:ngm_virture_rival_country_6
+																			is_same_value = event_target:ngm_virture_rival_country_7
+																			is_same_value = event_target:ngm_virture_rival_country_8
+																			is_same_value = event_target:ngm_virture_rival_country_9
+																			is_same_value = event_target:ngm_virture_rival_country_10
+																			is_same_value = event_target:ngm_virture_rival_country_11
+																			is_same_value = event_target:ngm_virture_rival_country_12
+																			is_same_value = event_target:ngm_virture_rival_country_13
+																			is_same_value = event_target:ngm_virture_rival_country_14
+																			is_same_value = event_target:ngm_virture_rival_country_15
+																			is_same_value = event_target:ngm_virture_rival_country_16
+																		}
+																		is_rival = root
 																	}
 																	save_event_target_as = ngm_diplomatic_15
 																}

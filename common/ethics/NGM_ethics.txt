@@ -3,29 +3,23 @@
 # 〇介入主義：〇中立主義
 # 〇保全主義：〇開発主義
 # 〇栄望主義：〇実利主義
-
-# 〇社会主義：社会主義	Pop消費財維持費-10%,労働者幸福度+10%,労働者政治力+10%　狂	Pop消費財維持費-20%,労働者幸福度+20%,労働者政治力+20%
+# 〇社会主義：社会主義	Pop消費財維持費-10%,労働者幸福度+10%,労働者政治力+10% 狂	Pop消費財維持費-20%,労働者幸福度+20%,労働者政治力+20%
 ethic_fanatic_socialism = {
 	cost = 2
 	category = "ngm_soc_or_cap"
 	category_value = 0
-
 	use_for_pops = no
-
 	regular_variant = ethic_socialism
 	country_modifier = {
 		planet_pops_upkeep_mult = -0.2
 		pop_cat_worker_happiness = 0.2
 		pop_cat_worker_political_power = 0.2
-
 	}
-
 	tags = {
 		ETHIC_ALLOWS_UTOPIA
 		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
 		ETHIC_DISALLOWS_SLAVERY
 	}
-
 	random_weight = {
 		base = 150
 	}
@@ -36,6 +30,23 @@ ethic_socialism = {
 	category = "ngm_soc_or_cap"
 	category_value = 1
 	fanatic_variant = ethic_fanatic_socialism
+	leader_background_job_weight = {
+		colonist = 25
+		culture_worker = 25
+		pearl_diver = 25
+		clerk = 25
+		technician = 25
+		miner = 25
+		crystal_miner = 25
+		gas_extractor = 25
+		mote_harvester = 25
+		farmer = 25
+		scrap_miner = 25
+		angler = 25
+		ranger = 25
+		squire = 25
+		puddle_technician = 25
+	}
 	country_modifier = {
 		planet_pops_upkeep_mult = -0.1
 		pop_cat_worker_happiness = 0.1
@@ -72,7 +83,9 @@ ethic_socialism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = NGM_collectivism }
+			ruler = {
+				leader_of_faction = NGM_collectivism
+			}
 		}
 	}
 	pop_attraction_tag = {
@@ -81,9 +94,15 @@ ethic_socialism = {
 			any_owned_planet = {
 				any_owned_pop = {
 					OR = {
-						has_living_standard = { type = living_standard_utopian }
-						has_living_standard = { type = living_standard_good }
-						has_living_standard = { type = living_standard_shared_burden }
+						has_living_standard = {
+							type = living_standard_utopian
+						}
+						has_living_standard = {
+							type = living_standard_good
+						}
+						has_living_standard = {
+							type = living_standard_shared_burden
+						}
 					}
 				}
 			}
@@ -131,7 +150,9 @@ ethic_socialism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_socialism }
+				observation_outpost_owner = {
+					has_ethic = ethic_fanatic_socialism
+				}
 			}
 		}
 		modifier = {
@@ -142,7 +163,9 @@ ethic_socialism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_socialism }
+				observation_outpost_owner = {
+					has_ethic = ethic_socialism
+				}
 			}
 		}
 		# 志向の矯正
@@ -177,8 +200,8 @@ ethic_socialism = {
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			NOR = {
-					has_ethic = ethic_fanatic_socialism
-					has_ethic = ethic_socialism
+				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_socialism
 			}
 			overlord = {
 				has_ethic = ethic_socialism
@@ -195,7 +218,9 @@ ethic_socialism = {
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = NGM_collectivism }
+			ruler = {
+				leader_of_faction = NGM_collectivism
+			}
 		}
 		modifier = {
 			factor = 2
@@ -221,7 +246,7 @@ ethic_socialism = {
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 2
 			any_relation = {
 				is_subject = no
 				has_migration_access = root
@@ -236,6 +261,31 @@ ethic_socialism = {
 			factor = 0.25
 			has_authority = auth_corporate
 		}
+		modifier = {
+			exists = overlord
+			has_loyalty > 0
+			mult = value:ethics_from_overlord|ETHIC|socialism|
+		}
+		mult = value:socialism_ethics_from_relations
+		# Check for any leader on the Council with Faction's Ethic.
+		modifier = {
+			factor = value:count_councilors_with_ethic|ETHIC|socialism|
+		}
+	}
+	# Check for any leader on the Council with Faction's Ethic.
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_REPRESENTED_ON_COUNCIL
+		trigger = {
+			owner = {
+				any_owned_leader = {
+					OR = {
+						is_ruler = yes
+						is_councilor = yes
+					}
+					has_ethic = ethic_socialism
+				}
+			}
+		}
 	}
 	# from = planet
 	pop_attraction = {
@@ -246,51 +296,50 @@ ethic_socialism = {
 		}
 		# 高い生活水準
 		modifier = {
-			factor = 1.50
+			factor = 1.5
 			OR = {
-				has_living_standard = { type = living_standard_utopian }
-				has_living_standard = { type = living_standard_good }
-				has_living_standard = { type = living_standard_shared_burden }
+				has_living_standard = {
+					type = living_standard_utopian
+				}
+				has_living_standard = {
+					type = living_standard_good
+				}
+				has_living_standard = {
+					type = living_standard_shared_burden
+				}
 			}
 		}
 		# 奴隷化されたPOP
 		modifier = {
-			factor = 2.50
+			factor = 2.5
 			is_enslaved = yes
 			is_robot_pop = no
 		}
 	}
 }
 
-# 〇資本主義：資本主義	市場手数料-5%,統治者幸福度+10%,事務員が生み出す交易価値+1	狂資本主義	市場手数料-10%,統治者幸福度+20%,事務員が生み出す交易価値+2
-
+# 〇資本主義：資本主義	市場手数料-5%,統治者幸福度+10%,事務員が生み出す交易価値+1	狂資本主義	市場手数料-10%,統治者幸福度+20%,事務員が生み出す交易価値+2 
 # 階級制経済、学術特権を使用可能、社会福祉は選択できない
 ethic_fanatic_capitalism = {
 	cost = 2
 	category = "ngm_soc_or_cap"
 	category_value = 4
-
 	playable = {
 		NOT = {
 			has_authority = auth_imperial
 		}
 	}
-
 	use_for_pops = no
-
 	regular_variant = ethic_capitalism
-
 	country_modifier = {
 		pop_cat_ruler_happiness = 0.2
 		trade_value_mult = 0.2
 		country_trade_fee = -0.1
 	}
-
 	tags = {
 		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
 	}
-
 	random_weight = {
 		base = 150
 	}
@@ -301,6 +350,23 @@ ethic_capitalism = {
 	category = "ngm_soc_or_cap"
 	category_value = 3
 	fanatic_variant = ethic_fanatic_capitalism
+	leader_background_job_weight = {
+		colonist = 25
+		culture_worker = 25
+		pearl_diver = 25
+		clerk = 25
+		technician = 25
+		miner = 25
+		crystal_miner = 25
+		gas_extractor = 25
+		mote_harvester = 25
+		farmer = 25
+		scrap_miner = 25
+		angler = 25
+		ranger = 25
+		squire = 25
+		puddle_technician = 25
+	}
 	country_modifier = {
 		pop_cat_ruler_happiness = 0.05
 		trade_value_mult = 0.1
@@ -336,7 +402,9 @@ ethic_capitalism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = NGM_mammonism }
+			ruler = {
+				leader_of_faction = NGM_mammonism
+			}
 		}
 	}
 	country_attraction = {
@@ -373,7 +441,9 @@ ethic_capitalism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_capitalism }
+				observation_outpost_owner = {
+					has_ethic = ethic_fanatic_capitalism
+				}
 			}
 		}
 		modifier = {
@@ -384,7 +454,9 @@ ethic_capitalism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_capitalism }
+				observation_outpost_owner = {
+					has_ethic = ethic_capitalism
+				}
 			}
 		}
 		# 志向の矯正
@@ -419,8 +491,8 @@ ethic_capitalism = {
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			NOR = {
-					has_ethic = ethic_fanatic_capitalism
-					has_ethic = ethic_capitalism
+				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_capitalism
 			}
 			overlord = {
 				has_ethic = ethic_capitalism
@@ -437,7 +509,9 @@ ethic_capitalism = {
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = NGM_mammonism }
+			ruler = {
+				leader_of_faction = NGM_mammonism
+			}
 		}
 		modifier = {
 			factor = 2
@@ -451,7 +525,9 @@ ethic_capitalism = {
 		modifier = {
 			factor = 1.5
 			any_relation = {
-				NOT = { is_same_species = root }
+				NOT = {
+					is_same_species = root
+				}
 				is_subject = no
 				has_commercial_pact = root
 			}
@@ -472,7 +548,7 @@ ethic_capitalism = {
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 2
 			any_relation = {
 				is_subject = no
 				has_migration_access = root
@@ -484,8 +560,33 @@ ethic_capitalism = {
 		}
 		# 企業国家
 		modifier = {
-			factor = 3.00
+			factor = 3
 			has_authority = auth_corporate
+		}
+		modifier = {
+			exists = overlord
+			has_loyalty > 0
+			mult = value:ethics_from_overlord|ETHIC|capitalism|
+		}
+		# Check for any leader on the Council with Faction's Ethic.
+		modifier = {
+			factor = value:count_councilors_with_ethic|ETHIC|capitalism|
+		}
+		mult = value:capitalism_ethics_from_relations
+	}
+	# Check for any leader on the Council with Faction's Ethic.
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_REPRESENTED_ON_COUNCIL
+		trigger = {
+			owner = {
+				any_owned_leader = {
+					OR = {
+						is_ruler = yes
+						is_councilor = yes
+					}
+					has_ethic = ethic_capitalism
+				}
+			}
 		}
 	}
 	# from = planet
@@ -501,7 +602,9 @@ ethic_capitalism = {
 			is_enslaved = no
 			from = {
 				any_enslaved_species = {
-					NOT = { is_same_species = root }
+					NOT = {
+						is_same_species = root
+					}
 					is_robotic = no
 				}
 				NOT = {
@@ -516,42 +619,60 @@ ethic_capitalism = {
 		modifier = {
 			factor = 0.75
 			OR = {
-				has_living_standard = { type = living_standard_utopian }
-				has_living_standard = { type = living_standard_good }
-				has_living_standard = { type = living_standard_shared_burden }
+				has_living_standard = {
+					type = living_standard_utopian
+				}
+				has_living_standard = {
+					type = living_standard_good
+				}
+				has_living_standard = {
+					type = living_standard_shared_burden
+				}
 			}
 		}
 	}
 }
 
 # 〇介入主義：介入主義	解読力+5,クローク強度+1		狂介入主義	解読力+10,クローク強度+2
-
 ethic_fanatic_interventionism = {
 	cost = 2
 	category = "ngm_int_or_neu"
 	category_value = 0
-
 	use_for_pops = no
-
 	regular_variant = ethic_interventionism
-
 	country_modifier = {
 		intel_decryption_add = 10
 		ship_cloaking_strength_add = 2
 	}
-
 	tags = {
 	}
-
 	random_weight = {
 		base = 150
 	}
 }
+
 ethic_interventionism = {
 	cost = 1
 	category = "ngm_int_or_neu"
 	category_value = 1
 	fanatic_variant = ethic_fanatic_interventionism
+	leader_background_job_weight = {
+		colonist = 25
+		culture_worker = 25
+		pearl_diver = 25
+		clerk = 25
+		technician = 25
+		miner = 25
+		crystal_miner = 25
+		gas_extractor = 25
+		mote_harvester = 25
+		farmer = 25
+		scrap_miner = 25
+		angler = 25
+		ranger = 25
+		squire = 25
+		puddle_technician = 25
+	}
 	country_modifier = {
 		intel_decryption_add = 5
 		ship_cloaking_strength_add = 1
@@ -584,7 +705,9 @@ ethic_interventionism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = NGM_hawks }
+			ruler = {
+				leader_of_faction = NGM_hawks
+			}
 		}
 	}
 	# 内向きの成熟の国是
@@ -606,7 +729,9 @@ ethic_interventionism = {
 		desc = POP_ATTRACTION_XENO_DIPLOMACY_POS
 		trigger = {
 			any_relation = {
-				NOT = { is_same_species = root }
+				NOT = {
+					is_same_species = root
+				}
 				OR = {
 					is_in_federation_with = root
 					has_defensive_pact = root
@@ -620,7 +745,9 @@ ethic_interventionism = {
 		desc = POP_ATTRACTION_ENSLAVEMENT_OF_SPECIES_NEG
 		trigger = {
 			any_relation = {
-				NOT = { is_same_species = root }
+				NOT = {
+					is_same_species = root
+				}
 				any_enslaved_species = {
 					is_robotic = no
 					is_same_species = root
@@ -687,7 +814,9 @@ ethic_interventionism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_interventionism }
+				observation_outpost_owner = {
+					has_ethic = ethic_fanatic_interventionism
+				}
 			}
 		}
 		modifier = {
@@ -698,7 +827,9 @@ ethic_interventionism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_interventionism }
+				observation_outpost_owner = {
+					has_ethic = ethic_interventionism
+				}
 			}
 		}
 		# 志向の矯正
@@ -733,8 +864,8 @@ ethic_interventionism = {
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			NOR = {
-					has_ethic = ethic_fanatic_interventionism
-					has_ethic = ethic_interventionism
+				has_ethic = ethic_fanatic_interventionism
+				has_ethic = ethic_interventionism
 			}
 			overlord = {
 				has_ethic = ethic_interventionism
@@ -751,7 +882,9 @@ ethic_interventionism = {
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = NGM_hawks }
+			ruler = {
+				leader_of_faction = NGM_hawks
+			}
 		}
 		modifier = {
 			factor = 2
@@ -775,7 +908,9 @@ ethic_interventionism = {
 		modifier = {
 			factor = 1.33
 			any_relation = {
-				NOT = { is_same_species = root }
+				NOT = {
+					is_same_species = root
+				}
 				OR = {
 					is_in_federation_with = root
 					has_defensive_pact = root
@@ -799,10 +934,37 @@ ethic_interventionism = {
 			factor = 0.5
 			is_same_species = root
 			any_relation = {
-				NOT = { is_same_species = root }
+				NOT = {
+					is_same_species = root
+				}
 				any_enslaved_species = {
 					is_robotic = no
 					is_same_species = root
+				}
+			}
+		}
+		modifier = {
+			exists = overlord
+			has_loyalty > 0
+			mult = value:ethics_from_overlord|ETHIC|interventionism|
+		}
+		# Check for any leader on the Council with Faction's Ethic.
+		modifier = {
+			factor = value:count_councilors_with_ethic|ETHIC|interventionism|
+		}
+		mult = value:interventionism_ethics_from_relations
+	}
+	# Check for any leader on the Council with Faction's Ethic.
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_REPRESENTED_ON_COUNCIL
+		trigger = {
+			owner = {
+				any_owned_leader = {
+					OR = {
+						is_ruler = yes
+						is_councilor = yes
+					}
+					has_ethic = ethic_interventionism
 				}
 			}
 		}
@@ -824,7 +986,9 @@ ethic_interventionism = {
 			from = {
 				owner = {
 					any_neighbor_country = {
-						from = { is_neighbor_of = prev }
+						from = {
+							is_neighbor_of = prev
+						}
 						OR = {
 							is_hostile_to = from.owner
 							is_domineering_to = from.owner
@@ -838,25 +1002,18 @@ ethic_interventionism = {
 }
 
 # 〇中立主義：暗号力+5,クローク探知強度+1		狂中立主義	暗号力+10,クローク探知強度+2
-
 ethic_fanatic_neutralism = {
 	cost = 2
 	category = "ngm_int_or_neu"
 	category_value = 4
-
 	use_for_pops = no
-
 	regular_variant = ethic_neutralism
-
 	country_modifier = {
 		intel_encryption_add = 10
 		ship_cloaking_detection_add = 2
 	}
-	
-
 	tags = {
 	}
-
 	random_weight = {
 		base = 150
 	}
@@ -867,6 +1024,23 @@ ethic_neutralism = {
 	category = "ngm_int_or_neu"
 	category_value = 3
 	fanatic_variant = ethic_fanatic_neutralism
+	leader_background_job_weight = {
+		colonist = 25
+		culture_worker = 25
+		pearl_diver = 25
+		clerk = 25
+		technician = 25
+		miner = 25
+		crystal_miner = 25
+		gas_extractor = 25
+		mote_harvester = 25
+		farmer = 25
+		scrap_miner = 25
+		angler = 25
+		ranger = 25
+		squire = 25
+		puddle_technician = 25
+	}
 	country_modifier = {
 		intel_encryption_add = 5
 		ship_cloaking_detection_add = 1
@@ -899,7 +1073,9 @@ ethic_neutralism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = NGM_doves }
+			ruler = {
+				leader_of_faction = NGM_doves
+			}
 		}
 	}
 	# 内向きの成熟の国是
@@ -966,7 +1142,9 @@ ethic_neutralism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_neutralism }
+				observation_outpost_owner = {
+					has_ethic = ethic_fanatic_neutralism
+				}
 			}
 		}
 		modifier = {
@@ -977,7 +1155,9 @@ ethic_neutralism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_neutralism }
+				observation_outpost_owner = {
+					has_ethic = ethic_neutralism
+				}
 			}
 		}
 		# 志向の矯正
@@ -1012,8 +1192,8 @@ ethic_neutralism = {
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			NOR = {
-					has_ethic = ethic_fanatic_neutralism
-					has_ethic = ethic_neutralism
+				has_ethic = ethic_fanatic_neutralism
+				has_ethic = ethic_neutralism
 			}
 			overlord = {
 				has_ethic = ethic_neutralism
@@ -1030,7 +1210,9 @@ ethic_neutralism = {
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = NGM_doves }
+			ruler = {
+				leader_of_faction = NGM_doves
+			}
 		}
 		modifier = {
 			factor = 2
@@ -1086,6 +1268,31 @@ ethic_neutralism = {
 				delay = 50
 			}
 		}
+		modifier = {
+			exists = overlord
+			has_loyalty > 0
+			mult = value:ethics_from_overlord|ETHIC|neutralism|
+		}
+		# Check for any leader on the Council with Faction's Ethic.
+		modifier = {
+			factor = value:count_councilors_with_ethic|ETHIC|neutralism|
+		}
+		mult = value:neutralism_ethics_from_relations
+	}
+	# Check for any leader on the Council with Faction's Ethic.
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_REPRESENTED_ON_COUNCIL
+		trigger = {
+			owner = {
+				any_owned_leader = {
+					OR = {
+						is_ruler = yes
+						is_councilor = yes
+					}
+					has_ethic = ethic_neutralism
+				}
+			}
+		}
 	}
 	# from = planet
 	pop_attraction = {
@@ -1104,7 +1311,9 @@ ethic_neutralism = {
 			from = {
 				owner = {
 					any_neighbor_country = {
-						from = { is_neighbor_of = prev }
+						from = {
+							is_neighbor_of = prev
+						}
 						OR = {
 							is_hostile_to = from.owner
 							is_domineering_to = from.owner
@@ -1122,19 +1331,14 @@ ethic_fanatic_conservationism = {
 	cost = 2
 	category = "ngm_con_or_dev"
 	category_value = 0
-
 	use_for_pops = no
-
 	regular_variant = ethic_conservationism
-
 	country_modifier = {
 		pop_environment_tolerance = 0.15
 		planet_jobs_food_produces_mult = 0.15
 	}
-
 	tags = {
 	}
-
 	random_weight = {
 		base = 150
 	}
@@ -1145,9 +1349,26 @@ ethic_conservationism = {
 	category = "ngm_con_or_dev"
 	category_value = 1
 	fanatic_variant = ethic_fanatic_conservationism
+	leader_background_job_weight = {
+		colonist = 25
+		culture_worker = 25
+		pearl_diver = 25
+		clerk = 25
+		technician = 25
+		miner = 25
+		crystal_miner = 25
+		gas_extractor = 25
+		mote_harvester = 25
+		farmer = 25
+		scrap_miner = 25
+		angler = 25
+		ranger = 25
+		squire = 25
+		puddle_technician = 25
+	}
 	country_modifier = {
-		pop_environment_tolerance = 0.10
-		planet_jobs_food_produces_mult = 0.10
+		pop_environment_tolerance = 0.1
+		planet_jobs_food_produces_mult = 0.1
 	}
 	tags = {
 	}
@@ -1177,7 +1398,9 @@ ethic_conservationism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = NGM_environmentalism }
+			ruler = {
+				leader_of_faction = NGM_environmentalism
+			}
 		}
 	}
 	# ロボティクスPOP
@@ -1223,7 +1446,9 @@ ethic_conservationism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_conservationism }
+				observation_outpost_owner = {
+					has_ethic = ethic_fanatic_conservationism
+				}
 			}
 		}
 		modifier = {
@@ -1234,7 +1459,9 @@ ethic_conservationism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_conservationism }
+				observation_outpost_owner = {
+					has_ethic = ethic_conservationism
+				}
 			}
 		}
 		# 志向の矯正
@@ -1269,8 +1496,8 @@ ethic_conservationism = {
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			NOR = {
-					has_ethic = ethic_fanatic_conservationism
-					has_ethic = ethic_conservationism
+				has_ethic = ethic_fanatic_conservationism
+				has_ethic = ethic_conservationism
 			}
 			overlord = {
 				has_ethic = ethic_conservationism
@@ -1287,7 +1514,9 @@ ethic_conservationism = {
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = NGM_environmentalism }
+			ruler = {
+				leader_of_faction = NGM_environmentalism
+			}
 		}
 		modifier = {
 			factor = 2
@@ -1318,7 +1547,7 @@ ethic_conservationism = {
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 2
 			any_relation = {
 				is_subject = no
 				has_migration_access = root
@@ -1354,6 +1583,31 @@ ethic_conservationism = {
 			is_country_type = default
 			has_ascension_perk = ap_transcendence
 		}
+		modifier = {
+			exists = overlord
+			has_loyalty > 0
+			mult = value:ethics_from_overlord|ETHIC|conservationism|
+		}
+		# Check for any leader on the Council with Faction's Ethic.
+		modifier = {
+			factor = value:count_councilors_with_ethic|ETHIC|conservationism|
+		}
+		mult = value:conservationism_ethics_from_relations
+	}
+	# Check for any leader on the Council with Faction's Ethic.
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_REPRESENTED_ON_COUNCIL
+		trigger = {
+			owner = {
+				any_owned_leader = {
+					OR = {
+						is_ruler = yes
+						is_councilor = yes
+					}
+					has_ethic = ethic_conservationism
+				}
+			}
+		}
 	}
 	# from = planet
 	pop_attraction = {
@@ -1382,20 +1636,14 @@ ethic_fanatic_developmentalism = {
 	cost = 2
 	category = "ngm_con_or_dev"
 	category_value = 4
-
 	use_for_pops = no
-
 	regular_variant = ethic_developmentalism
-
 	country_modifier = {
 		planet_jobs_minerals_produces_mult = 0.15
 		planet_max_buildings_add = 2
-
 	}
-
 	tags = {
 	}
-
 	random_weight = {
 		base = 150
 	}
@@ -1406,8 +1654,25 @@ ethic_developmentalism = {
 	category = "ngm_con_or_dev"
 	category_value = 3
 	fanatic_variant = ethic_fanatic_developmentalism
+	leader_background_job_weight = {
+		colonist = 25
+		culture_worker = 25
+		pearl_diver = 25
+		clerk = 25
+		technician = 25
+		miner = 25
+		crystal_miner = 25
+		gas_extractor = 25
+		mote_harvester = 25
+		farmer = 25
+		scrap_miner = 25
+		angler = 25
+		ranger = 25
+		squire = 25
+		puddle_technician = 25
+	}
 	country_modifier = {
-		planet_jobs_minerals_produces_mult = 0.10
+		planet_jobs_minerals_produces_mult = 0.1
 		planet_max_buildings_add = 1
 	}
 	tags = {
@@ -1438,7 +1703,9 @@ ethic_developmentalism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = NGM_industrialism }
+			ruler = {
+				leader_of_faction = NGM_industrialism
+			}
 		}
 	}
 	pop_attraction_tag = {
@@ -1453,7 +1720,7 @@ ethic_developmentalism = {
 		desc = POP_ATTRACTION_ROBOTS_POS
 		trigger = {
 			any_owned_species = {
-					is_robotic = yes
+				is_robotic = yes
 			}
 		}
 	}
@@ -1502,7 +1769,9 @@ ethic_developmentalism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_developmentalism }
+				observation_outpost_owner = {
+					has_ethic = ethic_fanatic_developmentalism
+				}
 			}
 		}
 		modifier = {
@@ -1513,7 +1782,9 @@ ethic_developmentalism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_developmentalism }
+				observation_outpost_owner = {
+					has_ethic = ethic_developmentalism
+				}
 			}
 		}
 		# 志向の矯正
@@ -1548,8 +1819,8 @@ ethic_developmentalism = {
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			NOR = {
-					has_ethic = ethic_fanatic_developmentalism
-					has_ethic = ethic_developmentalism
+				has_ethic = ethic_fanatic_developmentalism
+				has_ethic = ethic_developmentalism
 			}
 			overlord = {
 				has_ethic = ethic_developmentalism
@@ -1566,7 +1837,9 @@ ethic_developmentalism = {
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = NGM_industrialism }
+			ruler = {
+				leader_of_faction = NGM_industrialism
+			}
 		}
 		modifier = {
 			factor = 2
@@ -1592,7 +1865,7 @@ ethic_developmentalism = {
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 2
 			any_relation = {
 				is_subject = no
 				has_migration_access = root
@@ -1604,13 +1877,38 @@ ethic_developmentalism = {
 		}
 		# 巨大構造物
 		modifier = {
-			factor = 2.00
+			factor = 2
 			has_any_megastructure = yes
 		}
 		# 機械主義の国是
 		modifier = {
 			factor = 1.25
 			has_origin = origin_mechanists
+		}
+		modifier = {
+			exists = overlord
+			has_loyalty > 0
+			mult = value:ethics_from_overlord|ETHIC|developmentalism|
+		}
+		# Check for any leader on the Council with Faction's Ethic.
+		modifier = {
+			factor = value:count_councilors_with_ethic|ETHIC|developmentalism|
+		}
+		mult = value:developmentalism_ethics_from_relations
+	}
+	# Check for any leader on the Council with Faction's Ethic.
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_REPRESENTED_ON_COUNCIL
+		trigger = {
+			owner = {
+				any_owned_leader = {
+					OR = {
+						is_ruler = yes
+						is_councilor = yes
+					}
+					has_ethic = ethic_developmentalism
+				}
+			}
 		}
 	}
 	# from = planet
@@ -1621,7 +1919,7 @@ ethic_developmentalism = {
 			has_trait = trait_hive_mind
 		}
 		modifier = {
-			factor = 2.0
+			factor = 2
 			is_robot_pop = yes
 		}
 		modifier = {
@@ -1646,29 +1944,23 @@ ethic_fanatic_honorism = {
 	cost = 2
 	category = "ngm_hon_or_uti"
 	category_value = 0
-
 	playable = {
 		NOT = {
 			has_authority = auth_democratic
 		}
 	}
-
 	use_for_pops = no
-
 	regular_variant = ethic_honorism
-
 	country_modifier = {
 		pop_cat_ruler_political_power = 0.2
 		job_noble_per_pop = 0.05
 		country_war_exhaustion_mult = -0.2
 	}
-
 	tags = {
 		ETHIC_ALLOWS_UTOPIA
 		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
 	}
-
 	random_weight = {
 		base = 150
 	}
@@ -1679,6 +1971,23 @@ ethic_honorism = {
 	category = "ngm_hon_or_uti"
 	category_value = 1
 	fanatic_variant = ethic_fanatic_honorism
+	leader_background_job_weight = {
+		colonist = 25
+		culture_worker = 25
+		pearl_diver = 25
+		clerk = 25
+		technician = 25
+		miner = 25
+		crystal_miner = 25
+		gas_extractor = 25
+		mote_harvester = 25
+		farmer = 25
+		scrap_miner = 25
+		angler = 25
+		ranger = 25
+		squire = 25
+		puddle_technician = 25
+	}
 	country_modifier = {
 		pop_cat_ruler_political_power = 0.1
 		job_noble_per_pop = 0.03
@@ -1715,7 +2024,9 @@ ethic_honorism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = NGM_reputation }
+			ruler = {
+				leader_of_faction = NGM_reputation
+			}
 		}
 	}
 	country_attraction = {
@@ -1752,7 +2063,9 @@ ethic_honorism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_honorism }
+				observation_outpost_owner = {
+					has_ethic = ethic_fanatic_honorism
+				}
 			}
 		}
 		modifier = {
@@ -1763,7 +2076,9 @@ ethic_honorism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_honorism }
+				observation_outpost_owner = {
+					has_ethic = ethic_honorism
+				}
 			}
 		}
 		# 志向の矯正
@@ -1798,8 +2113,8 @@ ethic_honorism = {
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			NOR = {
-					has_ethic = ethic_fanatic_honorism
-					has_ethic = ethic_honorism
+				has_ethic = ethic_fanatic_honorism
+				has_ethic = ethic_honorism
 			}
 			overlord = {
 				has_ethic = ethic_honorism
@@ -1816,7 +2131,9 @@ ethic_honorism = {
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = NGM_reputation }
+			ruler = {
+				leader_of_faction = NGM_reputation
+			}
 		}
 		modifier = {
 			factor = 2
@@ -1833,12 +2150,12 @@ ethic_honorism = {
 		}
 		# ノブレス・オブリージュ
 		modifier = {
-			factor = 1.50
+			factor = 1.5
 			has_valid_civic = civic_noblesse_oblige
 		}
 		# 象徴君主制
 		modifier = {
-			factor = 1.50
+			factor = 1.5
 			has_valid_civic = civic_symbolic_monarchy
 		}
 		# 栄望主義の帝国と外交
@@ -1857,13 +2174,38 @@ ethic_honorism = {
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 2
 			any_relation = {
 				is_subject = no
 				has_migration_access = root
 				OR = {
 					has_ethic = ethic_honorism
 					has_ethic = ethic_fanatic_honorism
+				}
+			}
+		}
+		modifier = {
+			exists = overlord
+			has_loyalty > 0
+			mult = value:ethics_from_overlord|ETHIC|honorism|
+		}
+		# Check for any leader on the Council with Faction's Ethic.
+		modifier = {
+			factor = value:count_councilors_with_ethic|ETHIC|honorism|
+		}
+		mult = value:honorism_ethics_from_relations
+	}
+	# Check for any leader on the Council with Faction's Ethic.
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_REPRESENTED_ON_COUNCIL
+		trigger = {
+			owner = {
+				any_owned_leader = {
+					OR = {
+						is_ruler = yes
+						is_councilor = yes
+					}
+					has_ethic = ethic_honorism
 				}
 			}
 		}
@@ -1890,7 +2232,9 @@ ethic_honorism = {
 			is_enslaved = no
 			from = {
 				any_enslaved_species = {
-					NOT = { is_same_species = root }
+					NOT = {
+						is_same_species = root
+					}
 					is_robotic = no
 				}
 				NOT = {
@@ -1905,33 +2249,27 @@ ethic_honorism = {
 }
 
 # 〇実利主義  奴隷の使用許可、奴隷市場コスト-25%,25POPごとにインフルエンサーの職業枠+1,労働者、奴隷の政治力-10%		狂実利主義	奴隷市場コスト-50%,20POPごとにインフルエンサーの職業枠+1,労働者、奴隷の政治力-20%
-
 # 階級制経済、学術特権を使用可能、社会福祉は選択できない
 ethic_fanatic_utilitarianism = {
 	cost = 2
 	category = "ngm_hon_or_uti"
 	category_value = 4
-
 	playable = {
 		NOT = {
 			has_authority = auth_imperial
 		}
 	}
 	use_for_pops = no
-
 	regular_variant = ethic_utilitarianism
-
 	country_modifier = {
 		job_ngm_influencer_per_pop = 0.05
 		slave_market_cost_mult = -0.5
 		pop_cat_slave_political_power = -0.2
 	}
-
 	tags = {
 		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
 	}
-
 	random_weight = {
 		base = 150
 	}
@@ -1947,6 +2285,23 @@ ethic_utilitarianism = {
 		}
 	}
 	fanatic_variant = ethic_fanatic_utilitarianism
+	leader_background_job_weight = {
+		colonist = 25
+		culture_worker = 25
+		pearl_diver = 25
+		clerk = 25
+		technician = 25
+		miner = 25
+		crystal_miner = 25
+		gas_extractor = 25
+		mote_harvester = 25
+		farmer = 25
+		scrap_miner = 25
+		angler = 25
+		ranger = 25
+		squire = 25
+		puddle_technician = 25
+	}
 	country_modifier = {
 		job_ngm_influencer_per_pop = 0.03
 		slave_market_cost_mult = -0.25
@@ -1982,7 +2337,9 @@ ethic_utilitarianism = {
 		desc = POP_ATTRACTION_RULER_FACTION_POS
 		trigger = {
 			exists = ruler
-			ruler = { leader_of_faction = NGM_supremacy }
+			ruler = {
+				leader_of_faction = NGM_supremacy
+			}
 		}
 	}
 	country_attraction = {
@@ -2019,7 +2376,9 @@ ethic_utilitarianism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_fanatic_utilitarianism }
+				observation_outpost_owner = {
+					has_ethic = ethic_fanatic_utilitarianism
+				}
 			}
 		}
 		modifier = {
@@ -2030,7 +2389,9 @@ ethic_utilitarianism = {
 				observation_outpost = {
 					has_mission = native_indoctrination
 				}
-				observation_outpost_owner = { has_ethic = ethic_utilitarianism }
+				observation_outpost_owner = {
+					has_ethic = ethic_utilitarianism
+				}
 			}
 		}
 		# 志向の矯正
@@ -2065,8 +2426,8 @@ ethic_utilitarianism = {
 			is_subject = yes
 			has_modifier = ngm_ethics_force_loyalty_1
 			NOR = {
-					has_ethic = ethic_fanatic_utilitarianism
-					has_ethic = ethic_utilitarianism
+				has_ethic = ethic_fanatic_utilitarianism
+				has_ethic = ethic_utilitarianism
 			}
 			overlord = {
 				has_ethic = ethic_utilitarianism
@@ -2083,7 +2444,9 @@ ethic_utilitarianism = {
 		modifier = {
 			factor = 1.5
 			exists = ruler
-			ruler = { leader_of_faction = NGM_supremacy }
+			ruler = {
+				leader_of_faction = NGM_supremacy
+			}
 		}
 		modifier = {
 			factor = 2
@@ -2109,7 +2472,7 @@ ethic_utilitarianism = {
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 2
 			any_relation = {
 				is_subject = no
 				has_migration_access = root
@@ -2121,13 +2484,38 @@ ethic_utilitarianism = {
 		}
 		# カキストクラシー
 		modifier = {
-			factor = 3.00
+			factor = 3
 			has_valid_civic = civic_noblesse_oblige
 		}
 		modifier = {
 			factor = 1.25
 			is_country_type = default
 			has_policy_flag = ai_full_rights
+		}
+		modifier = {
+			exists = overlord
+			has_loyalty > 0
+			mult = value:ethics_from_overlord|ETHIC|utilitarianism|
+		}
+		# Check for any leader on the Council with Faction's Ethic.
+		modifier = {
+			factor = value:count_councilors_with_ethic|ETHIC|utilitarianism|
+		}
+		mult = value:utilitarianism_ethics_from_relations
+	}
+	# Check for any leader on the Council with Faction's Ethic.
+	pop_attraction_tag = {
+		desc = POP_ATTRACTION_REPRESENTED_ON_COUNCIL
+		trigger = {
+			owner = {
+				any_owned_leader = {
+					OR = {
+						is_ruler = yes
+						is_councilor = yes
+					}
+					has_ethic = ethic_utilitarianism
+				}
+			}
 		}
 	}
 	# from = planet
@@ -2141,9 +2529,15 @@ ethic_utilitarianism = {
 		modifier = {
 			factor = 0.5
 			OR = {
-				has_living_standard = { type = living_standard_utopian }
-				has_living_standard = { type = living_standard_good }
-				has_living_standard = { type = living_standard_shared_burden }
+				has_living_standard = {
+					type = living_standard_utopian
+				}
+				has_living_standard = {
+					type = living_standard_good
+				}
+				has_living_standard = {
+					type = living_standard_shared_burden
+				}
 			}
 		}
 		# 奴隷化されたPOP
@@ -2152,7 +2546,9 @@ ethic_utilitarianism = {
 			is_enslaved = no
 			from = {
 				any_enslaved_species = {
-					NOT = { is_same_species = root }
+					NOT = {
+						is_same_species = root
+					}
 					is_robotic = no
 				}
 				NOT = {
@@ -2167,7 +2563,9 @@ ethic_utilitarianism = {
 			factor = 1.5
 			from = {
 				any_owned_species = {
-					NOT = { is_same_species = root }
+					NOT = {
+						is_same_species = root
+					}
 					has_trait = "trait_charismatic"
 				}
 			}

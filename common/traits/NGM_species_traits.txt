@@ -2693,7 +2693,7 @@ trait_ngm_m_bomb = {
 	modifier = {
 	}
 	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = -0.05
+		planet_pop_assembly_mult = -0.05
 	}
 	slave_cost = {
 		energy = 750
@@ -2786,7 +2786,7 @@ trait_ngm_m_break = {
 	modifier = {
 	}
 	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = -0.1
+		planet_pop_assembly_mult = -0.1
 	}
 	slave_cost = {
 		energy = 750

@@ -1926,7 +1926,6 @@ tr_ngm_latast_industrial = {
 		has_tradition = tr_ngm_crystal_production_system
 	}
 	modifier = {
-		
 	}
 }
 
@@ -2209,49 +2208,49 @@ tr_ngm_gaishi_finish = {
 	}
 }
 
-# 真の戦力投射	true_power_projection	蓋世	艦隊による外交発言力+50%、介入主義志向魅力+15%	軍事力とは戦うためにあるのではなく、戦わないためにあるのだ
+# 真の戦力投射	true_power_projection	蓋世	艦隊による外交発言力+20%、介入主義志向魅力+15%	軍事力とは戦うためにあるのではなく、戦わないためにあるのだ
 tr_ngm_gaishi_true_power_projection = {
 	possible = {
 	}
 	modifier = {
-		diplo_weight_naval_mult = 0.5
+		diplo_weight_naval_mult = 0.2
 		pop_ethic_interventionism_attraction_mult = 0.15
 	}
 }
 
-# 経済力の真価	the_true_value_of_economic_power	蓋世	経済力から発生する外交発言力+50%	経済力は人々の繁栄や幸福のためだけではなく、発言力をも増強させることもできる
+# 経済力の真価	the_true_value_of_economic_power	蓋世	経済力から発生する外交発言力+20%	経済力は人々の繁栄や幸福のためだけではなく、発言力をも増強させることもできる
 tr_ngm_gaishi_the_true_value_of_economic_power = {
 	possible = {
 	}
 	modifier = {
-		diplo_weight_economy_mult = 0.5
+		diplo_weight_economy_mult = 0.2
 	}
 }
 
-# 知恵者の指導		蓋世	技術水準から発生する外交発言力+50%	真の知恵ある者こそが人々を教導するのだ
+# 知恵者の指導		蓋世	技術水準から発生する外交発言力+20%	真の知恵ある者こそが人々を教導するのだ
 tr_ngm_gaishi_guidance_for_the_wise = {
 	possible = {
 	}
 	modifier = {
-		diplo_weight_technology_mult = 0.5
+		diplo_weight_technology_mult = 0.2
 	}
 }
 
-# 銀河の力	galactic_power	蓋世	POPから発生する外交発言力+50%	銀河に敷衍する帝国の力こそは卓越へと導かれる
+# 銀河の力	galactic_power	蓋世	POPから発生する外交発言力+20%	銀河に敷衍する帝国の力こそは卓越へと導かれる
 tr_ngm_gaishi_galactic_power = {
 	possible = {
 	}
 	modifier = {
-		diplo_weight_pops_mult = 0.5
+		diplo_weight_pops_mult = 0.2
 	}
 }
 
-# 声高なる主張	insist_on_ones_own_ideas	蓋世	外交発言力+50%	我の演説を聞け！
+# 声高なる主張	insist_on_ones_own_ideas	蓋世	影響力+3	我の演説を聞け！
 tr_ngm_gaishi_insist_on_ones_own_ideas = {
 	possible = {
 	}
 	modifier = {
-		diplo_weight_mult = 0.5
+		country_base_influence_produces_add = 3
 	}
 }
 

@@ -568,6 +568,9 @@ living_standard_shared_burden = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_shared_burden
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_shared_burden
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_shared_burden
+		pop_cat_ruler_political_power = 3
+		pop_cat_specialist_political_power = 3
+		pop_cat_worker_political_power = 3
 	}
 
 	triggered_pop_modifier = {
@@ -656,7 +659,7 @@ living_standard_dystopian_society = {
 				has_job = telepath
 			}
 		}
-		pop_amenities_usage_mult = -0.3
+		pop_amenities_usage_mult = -0.35
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_very_high_decadent
 	}
 
@@ -664,7 +667,7 @@ living_standard_dystopian_society = {
 		potential = {
 			is_pop_category = ruler
 		}
-		pop_amenities_usage_mult = 0.5
+		pop_amenities_usage_mult = 0.45
 	}
 
 	triggered_pop_modifier = {
@@ -678,6 +681,7 @@ living_standard_dystopian_society = {
 		pop_cat_specialist_happiness = -2
 		pop_cat_worker_happiness = -2
 		pop_cat_slave_happiness = -2
+		pop_cat_criminal_happiness = -2
 	}
 
 	triggered_pop_modifier = {
@@ -755,27 +759,22 @@ living_standard_dystopian_society = {
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_low_decadent
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_low
 		pop_category_slave_consumer_goods_upkeep_add = @living_standard_luxuries_none
-		pop_cat_ruler_political_power = 9
+		pop_cat_ruler_political_power = 10
 		pop_cat_specialist_political_power = -0.25
-		pop_cat_worker_political_power = -0.25
+		pop_cat_worker_political_power = -0.75
 	}
 
 	allow = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
-			fail_text = is_slaves_tooltip
-			NOT = { has_citizenship_type = { country = from type = citizenship_slavery } }
+			fail_text = empire_is_dystopian_society
+			from = { has_valid_civic = civic_dystopian_society }
 		}
 		custom_tooltip = {
-			fail_text = is_purged_not_neutered
-			if = {
-				limit = {
-					OR = {
-						has_citizenship_type = { country = from type = citizenship_purge_machine }
-						has_citizenship_type = { country = from type = citizenship_purge }
-					}
-				}
-				has_purge_type = { country = from type = purge_neutering }
+			fail_text = is_undesirables_tooltip
+			NOR = {
+				has_citizenship_type = { country = from type = citizenship_purge_machine }
+				has_citizenship_type = { country = from type = citizenship_purge }
 			}
 		}
 		custom_tooltip = {
@@ -837,6 +836,9 @@ living_standard_utopian = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
+		pop_cat_ruler_political_power = 4
+		pop_cat_specialist_political_power = 4
+		pop_cat_worker_political_power = 4		
 	}
 
 	potential = {
@@ -966,8 +968,9 @@ living_standard_academic_privilege = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_normal
-		pop_cat_ruler_political_power = 9
-		pop_cat_specialist_political_power = 4
+		pop_cat_ruler_political_power = 6
+		pop_cat_specialist_political_power = 2.5
+		pop_cat_worker_political_power = 0.5
 	}
 
 	potential = {
@@ -1109,8 +1112,8 @@ living_standard_good = {
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_slave_consumer_goods_upkeep_add = @living_standard_luxuries_low
 		pop_cat_ruler_political_power = 4
-		pop_cat_specialist_political_power = 1
-		pop_cat_worker_political_power = 0.5
+		pop_cat_specialist_political_power = 3
+		pop_cat_worker_political_power = 2
 	}
 
 	potential = {
@@ -1250,8 +1253,9 @@ living_standard_normal = {
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_normal
 		pop_category_slave_consumer_goods_upkeep_add = @living_standard_luxuries_very_low
-		pop_cat_ruler_political_power = 7
-		pop_cat_specialist_political_power = 1
+		pop_cat_ruler_political_power = 5.0
+		pop_cat_specialist_political_power = 2.5
+		pop_cat_worker_political_power = 1.5
 	}
 
 	potential = {
@@ -1357,8 +1361,8 @@ living_standard_stratified = {
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_low
 		pop_category_slave_consumer_goods_upkeep_add = @living_standard_luxuries_none
-		pop_cat_ruler_political_power = 9
-		pop_cat_specialist_political_power = 1
+		pop_cat_ruler_political_power = 8
+		pop_cat_specialist_political_power = 1.25
 		pop_cat_worker_political_power = -0.25
 	}
 
@@ -1447,8 +1451,7 @@ living_standard_subsistence = {
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_normal
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_very_low
 
-		pop_cat_ruler_political_power = 4
-		pop_cat_specialist_political_power = -0.25
+		pop_cat_ruler_political_power = 9.5
 		pop_cat_worker_political_power = -0.5
 	}
 
@@ -1680,7 +1683,7 @@ living_standard_decadent = {
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_high_decadent
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_normal_decadent
 		pop_cat_ruler_political_power = 7
-		pop_cat_specialist_political_power = 1
+		pop_cat_specialist_political_power = 2
 	}
 
 	ai_will_do = {
@@ -1698,7 +1701,7 @@ living_standard_none = {
 				has_citizenship_type = { country = from type = citizenship_purge_machine }
 				has_citizenship_type = { country = from type = citizenship_purge }
 			}
-			NOR = {
+			OR = {
 				has_purge_type = { country = from type = purge_neutering }
 				AND = {
 					has_purge_type = { country = from type = purge_displacement }

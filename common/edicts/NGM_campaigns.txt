@@ -1399,10 +1399,9 @@ ngm_test_campaign = {
 		always = yes
 	}
 	modifier = {
-		planet_building_build_speed_mult = 100
 		megastructure_build_speed_mult = 100
-		starbase_shipyard_build_speed_mult = 1000
-		starbase_building_build_speed_mult = 1000
-		starbase_module_build_speed_mult = 1000
+		starbase_shipyard_build_speed_mult = 10000
+		starbase_building_build_speed_mult = 10000
+		starbase_module_build_speed_mult = 10000
 	}
 }

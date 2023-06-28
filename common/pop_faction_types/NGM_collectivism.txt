@@ -4,36 +4,20 @@
 NGM_collectivism = {
 	election_header = "GFX_faction_header_yellow"
 	guiding_ethic = ethic_socialism
+	visual_ethic = "NGM_collectivism_visual_ethic"
+
 	unique = yes
 	support_multiplier = 1
 
 	resources = {
 		category = pop_factions
 		produces = {
-			unity = 0.5
+			unity = @faction_base_unity
 		}
 	}
 
 	is_potential = {
 		is_faction_allowed = yes
-
-		if = {
-			limit = {
-				has_faction = NGM_collectivism
-				any_pop_faction = {
-					is_pop_faction_type = NGM_collectivism
-					num_pops >= 5
-				}
-			}
-		}
-		else = {
-			count_owned_pop = {
-				count >= 5
-				limit = {
-					has_ethic = ethic_socialism
-				}
-			}
-		}
 	}
 
 	parameters = {
@@ -52,10 +36,8 @@ NGM_collectivism = {
 
 	can_join_faction = {
 		can_think = yes
-		OR = {
-			has_ethic = ethic_socialism
-			has_ethic = ethic_fanatic_socialism
-		}
+		is_shackled_robot = no
+		has_ethic = ethic_socialism
 	}
 
 	attraction = {
@@ -66,7 +48,7 @@ NGM_collectivism = {
 			exists = from
 			from = {
 				exists = leader
-				leader = { leader_class = ruler }
+				leader = { is_ruler = yes }
 			}
 		}
 
@@ -85,6 +67,18 @@ NGM_collectivism = {
 			factor = 0
 			is_event_leader = yes
 		}
+	}
+
+	# DEMAND: Faction Outraged (by a GalCom Resolution)
+	inline_script = {
+		script = pop_faction_types/demand_faction_outraged
+		FLAG = galcom_resolution_passed_anti_NGM_collectivism
+	}
+
+	# DEMAND: Faction Pleased (by a GalCom Resolution)
+	inline_script = {
+		script = pop_faction_types/demand_faction_pleased
+		FLAG = galcom_resolution_passed_pro_NGM_collectivism
 	}
 
 	demand = {
@@ -222,6 +216,14 @@ NGM_collectivism = {
 		}
 	}
 
+	# Faction Demands for Ruler and Council positions.
+	inline_script = {
+		script = "paragon/global_faction_demands"
+		ETHIC = ethic_socialism
+		ETHIC_FANATIC = ethic_fanatic_socialism
+		ETHIC_OPPOSED = ethic_capitalism
+	} 
+
 	on_create = {
 		pop_faction_event = { id = factions.1 }
 	}
@@ -320,17 +322,6 @@ NGM_collectivism = {
 					factor = 0
 					owner = {
 						has_valid_civic = civic_fanatic_purifiers
-					}
-				}
-				modifier = {
-					factor = 0
-					NOT = {
-						owner = {
-							exists = ruler
-							ruler = {
-								leader_of_faction = NGM_collectivism
-							}
-						}
 					}
 				}
 				modifier = {
