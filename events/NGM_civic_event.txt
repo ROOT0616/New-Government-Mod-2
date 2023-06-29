@@ -1724,3 +1724,33 @@ country_event = {
 		}
 	}
 }
+
+# 歴史ある勲章	civic_ngm_p_medal	なし	この国の勲章制度は歴史と伝統があり、その格式は銀河中で一目置かれている	"勲章+0.1 統合力+15% 初期から式典理論Iを研究済"
+country_event = {
+	id = ngm_civic.28
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_p_medal
+	}
+	immediate = {
+		give_technology = {
+			tech = tech_ceremony_theory
+		}
+	}
+}
+
+# 3	統合テレパシー	civic_ngm_h_tele			"超能力理論を初期から有する 物理学-10% 群集ノード獲得経験値+10%"	この国では超能力接続により統合管理が行われるが、物理的事象には関心が低い
+country_event = {
+	id = ngm_civic.29
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_civic = civic_ngm_h_tele
+	}
+	immediate = {
+		give_technology = {
+			tech = tech_psionic_theory
+		}
+	}
+}

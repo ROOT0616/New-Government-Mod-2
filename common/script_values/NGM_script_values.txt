@@ -142,3 +142,13 @@ utilitarianism_ethics_from_relations = {
 		mult = 0.3
 	}
 }
+
+count_owned_pop_script = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_pop
+		mode = add
+		mult = 0.5
+	}
+	add = modifier:$MODIFIER$
+}

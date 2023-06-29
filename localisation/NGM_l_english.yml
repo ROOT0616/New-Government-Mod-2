@@ -290,9 +290,9 @@
  origin_ngm_phenix_npc:0 "Eternal Obligation"
  origin_ngm_phenix_desc:0 "This nation was allowed to survive by subjugating to the once hegemonic superpower, and was even able to survive to this day. To repay that debt, they have pledged eternal subjugation to their suzerain."
 
-#######################
-#####    国是    ######
-#######################
+#############################
+#####    通常帝国国是    #####
+#############################
 
  civic_sham_constitutionalism:0 "Sham Constitutionalism"
  civic_sham_constitutionalism_desc:0 "Codified law constrains executive power, but the constraints seldom make sense and have nominal implications. Citizens are under the illusion that they have a democratic system, and the experts are babbling on while oppressing the workers."
@@ -747,6 +747,61 @@
  civic_ngm_producer_consumer_society:0 "Highly Productive Consumer Society"
  civic_ngm_producer_consumer_society_desc:0 "Make a lot, use a lot, throw away a lot."
 
+ civic_ngm_p_constitution:0 "Constitutional Court"
+ civic_ngm_p_constitution_desc:0 "Legal experts review important bills here, and complaints from citizens about legal inconsistencies are handled here."
+
+ civic_ngm_p_medal:0 "Historic Medals"
+ civic_ngm_p_medal_desc:0 "The medal system in this country has a history and tradition, and its prestige is respected throughout the galaxy."
+
+ civic_ngm_p_agriculture:0 "Agricultural Cooperative"
+ civic_ngm_p_agriculture_desc:0 "In this country, cooperatives that manage the quality of agricultural products and handle distribution have a strong influence."
+
+ civic_ngm_p_joint:0 "Joint Forces"
+ civic_ngm_p_joint_desc:0 "The military of this country consists of the ground and space forces, allowing for thorough and coordinated training and operations."
+
+ civic_ngm_p_patriotism:0 "Patriotic Education"
+ civic_ngm_p_patriotism_desc:0 "Loving the nation and receiving education are essentially the same."
+
+ civic_ngm_p_fund:0 "Charity Fund"
+ civic_ngm_p_fund_desc:0 "High-income earners and senior officials are encouraged to voluntarily help workers and lower-class citizens."
+
+ civic_ngm_p_evacuation:0 "Evacuation Drills"
+ civic_ngm_p_evacuation_desc:0 "Training and reviewing safety measures for emergencies is a compulsive tradition in this country."
+
+ civic_ngm_p_military:0 "Veterans Association"
+ civic_ngm_p_military_desc:0 "Retired military personnel are located throughout the country, and everyone is prepared to stand up in case of emergencies."
+
+ civic_ngm_p_vassal:0 "Vassal System"
+ civic_ngm_p_vassal_desc:0 "Those who have served the nation in this country are heavily involved in running the state and have secured positions as advisors to the powerful."
+
+ civic_ngm_p_supply:0 "Advanced Supply Officers"
+ civic_ngm_p_supply_desc:0 "The supply officers in this country are given strong authority and make sure the military is supplied to the fullest."
+
+ civic_ngm_p_crime:0 "Ignoring Minor Crimes"
+ civic_ngm_p_crime_desc:0 "It's inefficient to crack down on minor crimes."
+
+ civic_ngm_p_management:0 "Self-Management System"
+ civic_ngm_p_management_desc:0 "Workers can manage and coordinate their own production."
+
+ civic_ngm_p_research:0 "International Peace Research Institute"
+ civic_ngm_p_research_desc:0 "There is a think tank in this country that conducts research on international peace and accumulates various knowledge."
+
+ civic_ngm_p_assistance:0 "International Development Assistance"
+ civic_ngm_p_assistance_desc:0 "This country recognizes itself as a player that assists the development of other countries and fulfills its responsibilities as a member of the international community."
+
+ civic_ngm_p_bombing:0 "Carpet Bombing Strategy"
+ civic_ngm_p_bombing_desc:0 "If you burn it all, there's no problem. Yes, there's no problem."
+
+ civic_ngm_p_block:0 "Block Economy"
+ civic_ngm_p_block_desc:0 "Buy our own products rather than those from other countries."
+
+ civic_ngm_p_councilor:0 "Federal Council"
+ civic_ngm_p_councilor_desc:0 "In this country, all political parties participate in the cabinet and the cabinet meeting under the consensus system functions as the de facto head of state."
+
+#############################
+#####    企業帝国国是    #####
+#############################
+
  civic_ngm_corporate_empire:0 "Corporate Empire"
  civic_ngm_corporate_empire_desc:0 "The company has expanded into every industry, expanding to the point where there is no content it does not handle, and a small elite reigns at the top of the heap."
 
@@ -792,6 +847,13 @@
  civic_ngm_underhanded_trick:0 "Underhanded Person"
  civic_ngm_underhanded_trick_desc:0 "Backroom deals and pre-negotiations have an extremely important position in this country, and various deals are done behind the scenes. 'It is only a negotiation.'"
 
+ civic_ngm_pc_directer:0 "General Affairs Bureau"
+ civic_ngm_pc_directer_desc:0 "The administrative division of this corporation is extremely competent, processing documents at a tremendous speed."
+
+#############################
+#####    機械帝国国是    #####
+#############################
+
  civic_ngm_vertical:0 "Vertical Integration"
  civic_ngm_vertical_desc:0 "This machine, subject to strong control by the mechanical center, can achieve efficient development, but tends to lag in the development of peripheral parts."
 
@@ -812,6 +874,79 @@
 
  civic_ngm_frontier:0 "Frontier Spirit Program"
  civic_ngm_frontier_desc:0 "The creators of this machine have introduced a certain program into the central part, and this machine nation is diligently executing that program. 'Further, further away!'"
+
+#############################
+#####    集合意識国是    #####
+#############################
+
+ civic_ngm_h_ethi:0 "Ethics of Life"
+ civic_ngm_h_ethi_desc:0 "In this nation, ethical responses determined by the central nervous system are given importance."
+
+ civic_ngm_h_noethi:0 "Absence of Ethics"
+ civic_ngm_h_noethi_desc:0 "In this nation, ethics are deemed unnecessary if they stand in the way of objectives."
+
+ civic_ngm_h_tele:0 "Integrated Telepathy"
+ civic_ngm_h_tele_desc:0 "In this nation, integrated management is done through psychic connections, but there is low interest in physical phenomena."
+
+ civic_ngm_h_live:0 "Source of Life"
+ civic_ngm_h_live_desc:0 "In this nation, the source of life, the central nervous system, controls food production and species expansion."
+
+ civic_ngm_h_exe:0 "Efficient Management"
+ civic_ngm_h_exe_desc:0 "The management and control of this nation's central nervous system is extremely efficient."
+
+ civic_ngm_h_research:0 "Advanced Research Institution"
+ civic_ngm_h_research_desc:0 "The cognitive nodes in charge of this nation's research are allocated substantial resources."
+
+ civic_ngm_h_guard:0 "Defensive Instinct"
+ civic_ngm_h_guard_desc:0 "The central nervous system of this nation places importance on instinctively protecting itself."
+
+ civic_ngm_h_look:0 "Multilevel Surveillance"
+ civic_ngm_h_look_desc:0 "In this nation, the work of each node is appropriately supervised."
+
+ civic_ngm_h_pira:0 "Multi-Layered Control"
+ civic_ngm_h_pira_desc:0 "In this nation, the capabilities of the central nervous system and certain important nodes are given importance."
+
+ civic_ngm_h_nexus:0 "Peripheral Autonomic Nerve"
+ civic_ngm_h_nexus_desc:0 "In this nation, a relatively large decision-making capability is assigned to the peripheral nerves."
+
+ civic_ngm_h_think:0 "Branching Judgment"
+ civic_ngm_h_think_desc:0 "In this nation, the judgment and control of branching nerves are given importance."
+
+ civic_ngm_h_brain:0 "Composite Brain"
+ civic_ngm_h_brain_desc:0 "In this nation, while resources for exploration are abundant, it comes at the expense of other functionalities."
+
+ civic_ngm_h_pp:0 "Hard Response"
+ civic_ngm_h_pp_desc:0 "The central nervous system of this nation excels in the ability to detect minerals."
+
+ civic_ngm_h_art:0 "Artistic Order"
+ civic_ngm_h_art_desc:0 "The governance technology of this nation can be described as artistic."
+
+ civic_ngm_h_para:0 "Paranoia"
+ civic_ngm_h_para_desc:0 "This nation never trusts others."
+
+ civic_ngm_h_mercy:0 "Merciful Core"
+ civic_ngm_h_mercy_desc:0 "The central part that governs this species seems to decide actions and judgments based on 'mercy' from the perspective of others. Rather than overwhelming other beings, it aims to live together and shows a willingness to fight against threats together."
+
+ civic_ngm_h_spread:0 "Expanding Swarm"
+ civic_ngm_h_spread_desc:0 "The central part that governs this species appears, to others, to be unusually focused on increasing its numbers. The expansion beyond the species' capabilities affects the governance of the species."
+
+ civic_ngm_h_directed:0 "Inclusive Supervision"
+ civic_ngm_h_directed_desc:0 "This species, which is strongly governed by the species' core, can achieve efficient development, but the development of the peripheral parts tends to lag behind."
+
+ civic_ngm_h_destiny:0 "Predestined Fate"
+ civic_ngm_h_destiny_desc:0 "This species shows a strong will to expand as if it had promised to do so a long time ago."
+
+ civic_ngm_h_memory:0 "Ancient Memories"
+ civic_ngm_h_memory_desc:0 "This species has signs of once being guided by a great will. That will no longer exists, but the materials they left behind are still useful."
+
+ civic_ngm_h_revenge:0 "Revenge Warfare"
+ civic_ngm_h_revenge_desc:0 "This species has established its current position by eliminating the pioneer species that once bred them. This experience has provided a significant advantage in ground combat."
+
+ civic_ngm_h_depth:0 "From the Depths"
+ civic_ngm_h_depth_desc:0 "This species was born from the deep sea and began to venture into the spreading universe, which resembles the deep sea."
+
+ civic_ngm_h_unconscious:0 "Unconscious Operation"
+ civic_ngm_h_unconscious_desc:0 "This species has strong decision-making abilities at its extremities, and each individual carries a lot of work and responsibility."
 
 #######################
 #####    政策    ######
@@ -5067,6 +5202,74 @@
  councilor_ngm_producer_consumer_society_female:0 "$councilor_ngm_producer_consumer_society$"
  councilor_ngm_producer_consumer_society_desc:0 "A cabinet member who manages the economy and handles necessary economic policies."
 
+ councilor_ngm_p_constitution:0 "Chief Justice of the Constitutional Court"
+ councilor_ngm_p_constitution_female:0 "$councilor_ngm_p_constitution$"
+ councilor_ngm_p_constitution_desc:0 "An expert familiar with and devoted to the Constitution."
+
+ councilor_ngm_p_medal:0 "Chief of Ceremonies"
+ councilor_ngm_p_medal_female:0 "$councilor_ngm_p_medal$"
+ councilor_ngm_p_medal_desc:0 "A senior official in charge of ceremonies."
+
+ councilor_ngm_p_agriculture:0 "Head of the National Agricultural Cooperative"
+ councilor_ngm_p_agriculture_female:0 "$councilor_ngm_p_agriculture$"
+ councilor_ngm_p_agriculture_desc:0 "The head of a union with influence on national agricultural policies."
+
+ councilor_ngm_p_joint:0 "Commander in Chief of the Joint Forces"
+ councilor_ngm_p_joint_female:0 "$councilor_ngm_p_joint$"
+ councilor_ngm_p_joint_desc:0 "A high-ranking military officer who manages the national army comprehensively."
+
+ councilor_ngm_p_patriotism:0 "Chairman of the Patriotism Education Committee"
+ councilor_ngm_p_patriotism_female:0 "$councilor_ngm_p_patriotism$"
+ councilor_ngm_p_patriotism_desc:0 "An education administrator who inspires patriotic spirit in the citizens."
+
+ councilor_ngm_p_fund:0 "President of the Fraternity Society"
+ councilor_ngm_p_fund_female:0 "$councilor_ngm_p_fund$"
+ councilor_ngm_p_fund_desc:0 "The leader of a charity who never forgets the spirit of love for people."
+
+ councilor_ngm_p_evacuation:0 "Commander in Chief of National Defense"
+ councilor_ngm_p_evacuation_female:0 "$councilor_ngm_p_evacuation$"
+ councilor_ngm_p_evacuation_desc:0 "A high-ranking military officer whose primary mission is to protect the people."
+
+ councilor_ngm_p_military:0 "President of the Imperial Veterans Association"
+ councilor_ngm_p_military_female:0 "$councilor_ngm_p_military$"
+ councilor_ngm_p_military_desc:0 "A person who influences national politics as a representative of retired soldiers."
+
+ councilor_ngm_p_vassal:0 "Interior Minister"
+ councilor_ngm_p_vassal_female:0 "$councilor_ngm_p_vassal$"
+ councilor_ngm_p_vassal_desc:0 "A high official who exerts significant influence as a testament to the Empire's long-standing achievements."
+
+ councilor_ngm_p_supply:0 "Commander of the Logistics Headquarters"
+ councilor_ngm_p_supply_female:0 "$councilor_ngm_p_supply$"
+ councilor_ngm_p_supply_desc:0 "A high-ranking military officer responsible for the supply of the army."
+
+ councilor_ngm_p_crime:0 "Chief Prosecutor of Public Safety"
+ councilor_ngm_p_crime_female:0 "$councilor_ngm_p_crime$"
+ councilor_ngm_p_crime_desc:0 "A struggling bureaucrat whose job is to protect public order."
+
+ councilor_ngm_p_management:0 "Empire Union Leader"
+ councilor_ngm_p_management_female:0 "$councilor_ngm_p_management$"
+ councilor_ngm_p_management_desc:0 "The head of a pressure group that binds unions across the empire and makes demands to the government."
+
+ councilor_ngm_p_research:0 "Senior Fellow of the Research Institute"
+ councilor_ngm_p_research_female:0 "$councilor_ngm_p_research$"
+ councilor_ngm_p_research_desc:0 "A political expert whose sharp mind is valued at the International Peace Research Institute and who advises the government."
+
+ councilor_ngm_p_assistance:0 "Ambassador for International Cooperation"
+ councilor_ngm_p_assistance_female:0 "$councilor_ngm_p_assistance$"
+ councilor_ngm_p_assistance_desc:0 "A high-ranking diplomat whose main task is international cooperation."
+
+ councilor_ngm_p_bombing:0 "Bombing Command Chief"
+ councilor_ngm_p_bombing_female:0 "$councilor_ngm_p_bombing$"
+ councilor_ngm_p_bombing_desc:0 "Nothing beats a nuclear attack in the morning!"
+
+ councilor_ngm_p_block:0 "Secretary of Economic Security"
+ councilor_ngm_p_block_female:0 "$councilor_ngm_p_block$"
+ councilor_ngm_p_block_desc:0 "The head of an office protecting the domestic economy and safeguarding the distribution infrastructure."
+
+ councilor_ngm_p_councilor:0 "Federal Minister"
+ councilor_ngm_p_councilor_female:0 "$councilor_ngm_p_councilor$"
+ councilor_ngm_p_councilor_desc:0 "A minister who protects the foundations of the federation and ensures maximum freedom."
+
  councilor_ngm_corporate_empire:0 "Executive Director of Internal Politics"
  councilor_ngm_corporate_empire_female:0 "$councilor_ngm_corporate_empire$"
  councilor_ngm_corporate_empire_desc:0 "An executive specialized in internal political control and benefit negotiation."
@@ -5126,6 +5329,10 @@
  councilor_ngm_underhanded_trick:0 "Director of Hospitality"
  councilor_ngm_underhanded_trick_female:0 "$councilor_ngm_underhanded_trick$"
  councilor_ngm_underhanded_trick_desc:0 "A power player who entertains foreign dignitaries and manipulates them to their own advantage."
+
+ councilor_ngm_pc_directer:0 "General Affairs Director"
+ councilor_ngm_pc_directer_female:0 "$councilor_ngm_pc_directer$"
+ councilor_ngm_pc_directer_desc:0 "A department head who oversees office operations within a company and aims for efficient operation."
 
 ##############################
 #####    評議会の方針    ######
@@ -5424,10 +5631,26 @@
 
  civic_tooltip_mechanical_faith_effects:0 "The spiritualist faction will no longer be angry with robots.\nWe can't outlaw robots.\nFix robot human rights to citizenship."
 
+ civic_tooltip_ngm_policy_description:0 "Able to Select Unique Policies"
+
+ civic_tooltip_ngm_apprenticeship_desc_effects:0 "Initial Leader Traits §G+1§!\nInitial Leader Level §G+1§!"
+
+ civic_tooltip_ngm_check_effects:0 "The possibility of sudden failures in machine leaders is reduced by §Y20%§!."
+
+ civic_tooltip_ngm_warm_effects:0 "Cannot select §HUnrestricted Warfare§! in §EPolicies§!\nCannot select §HIndiscriminate Orbital Bombardment§! in §EOrbital Bombardment§!"
+
+ civic_tooltip_civic_ngm_h_tele_effects:0 "Possesses §Y$tech_psionic_theory$§! from the beginning"
+
+ civic_tooltip_civic_ngm_h_depth_effects:0 ""On §HOcean Worlds§!, §HAgriculture Districts§! are uncapped.\nAdds the §H$trait_aquatic$§! trait."
+
+ civic_tooltip_ngm_p_medal_effects:0 "Possesses §Y$tech_ceremony_theory$§! from the beginning"
+
  mod_planet_buildings_exotic_gases_upkeep_mult:0 "Building £exotic_gases£ $exotic_gases$ Upkeep"
  mod_planet_buildings_rare_crystals_upkeep_mult:0 "Building £rare_crystals£ $rare_crystals$ Upkeep"
  mod_planet_buildings_volatile_motes_upkeep_mult:0 "Building £volatile_motes£ $volatile_motes$ Upkeep"
  mod_planet_bureau_of_ceremonies_ngm_order_of_merit_produces_add:0 "£ngm_order_of_merit£ §Y$ngm_order_of_merit$§! from £job_bureau_of_ceremonies£ $job_bureau_of_ceremonies_plural$"
+
+ requires_actor_not_ngm_virture_rival_country:0 "$TRIGGER_FAIL$§RYou have already set two shadow rival countries §!"
 
 ##########################
 #####    名称関係    ######

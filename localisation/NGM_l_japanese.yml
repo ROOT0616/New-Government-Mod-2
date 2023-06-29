@@ -290,9 +290,9 @@
  origin_ngm_phenix_npc:0 "永遠の恩義"
  origin_ngm_phenix_desc:0 "この国はかつての覇権国家に隷属することで生存を認められ、さらに現在まで生き残ることができた。その恩義を果たすため、宗主国に永遠の隷属を誓っている。"
 
-#######################
-#####    国是    ######
-#######################
+#############################
+#####    通常帝国国是    #####
+#############################
 
  civic_sham_constitutionalism:0 "外見的立憲制度"
  civic_sham_constitutionalism_desc:0 "この国では成文の法により行政権が制約されているが、制約は意味を成しておらず名目上の意味合いでしかない。しかし、愚かな市民は民主制度を手に入れたと錯覚しており、専門家は労働者を虐げつつせせら笑っている。"
@@ -747,6 +747,61 @@
  civic_ngm_producer_consumer_society:0 "高度生産消費社会"
  civic_ngm_producer_consumer_society_desc:0 "たくさん作り、たくさん使い、たくさん捨てる。"
 
+ civic_ngm_p_constitution:0 "憲法院"
+ civic_ngm_p_constitution_desc:0 "法律の専門家が重要法案を審査し、市民からの法律の不整合に関する訴えはここで処理される"
+
+ civic_ngm_p_medal:0 "歴史ある勲章"
+ civic_ngm_p_medal_desc:0 "この国の勲章制度は歴史と伝統があり、その格式は銀河中で一目置かれている"
+
+ civic_ngm_p_agriculture:0 "農業協同組合"
+ civic_ngm_p_agriculture_desc:0 "この国では農作物の品質を管理し、流通を担う協同組合が強い力を有している"
+
+ civic_ngm_p_joint:0 "統合軍"
+ civic_ngm_p_joint_desc:0 "この国の軍は地上軍と宇宙軍が統合されており、綿密で連携の取れた訓練と作戦遂行が可能だ"
+
+ civic_ngm_p_patriotism:0 "愛国教育"
+ civic_ngm_p_patriotism_desc:0 "国を愛することと教育を受けることは本質的な意味で同一である"
+
+ civic_ngm_p_fund:0 "慈善基金"
+ civic_ngm_p_fund_desc:0 "高所得者や高位役職者は自発的に労働者や下層市民を助けることが推奨されている"
+
+ civic_ngm_p_evacuation:0 "避難訓練"
+ civic_ngm_p_evacuation_desc:0 "万が一の事態に備えた訓練や安全対策の見直しはこの国の強迫的な伝統となっている"
+
+ civic_ngm_p_military:0 "在郷軍人会"
+ civic_ngm_p_military_desc:0 "退役した軍人はこの国の各所におり、万が一の事態には皆が立ち上がる準備ができている"
+
+ civic_ngm_p_vassal:0 "重臣制度"
+ civic_ngm_p_vassal_desc:0 "この国の国家功労者は国家運営に強く携わっており、権力者の顧問としての地位を確保している"
+
+ civic_ngm_p_supply:0 "高度な補給将校"
+ civic_ngm_p_supply_desc:0 "この国の補給将校は強い権限を与えられており、最大限の力をふるって軍の補給が行われる"
+
+ civic_ngm_p_crime:0 "軽犯罪無視"
+ civic_ngm_p_crime_desc:0 "軽犯罪を取り締まることは非効率だ"
+
+ civic_ngm_p_management:0 "自主管理制度"
+ civic_ngm_p_management_desc:0 "労働者たちは自ら生産を管理し、調整を行うことが可能なのだ"
+
+ civic_ngm_p_research:0 "国際平和研究所"
+ civic_ngm_p_research_desc:0 "国際平和について研究を行い、様々な知識を蓄えるシンクタンクがこの国にはある"
+
+ civic_ngm_p_assistance:0 "国際開発援助"
+ civic_ngm_p_assistance_desc:0 "この国は他国の開発を援助し、国際社会の一員としての責務を果たすプレイヤーであると自認している"
+
+ civic_ngm_p_bombing:0 "絨毯爆撃戦略"
+ civic_ngm_p_bombing_desc:0 "焼き払えば何も問題はない。そう、問題はない"
+
+ civic_ngm_p_block:0 "ブロック経済"
+ civic_ngm_p_block_desc:0 "他国の製品より自国の製品を買おう"
+
+ civic_ngm_p_councilor:0 "連邦参事会"
+ civic_ngm_p_councilor_desc:0 "この国はすべての政党が内閣に参加し、合議体制の閣議が実質的な国家元首として機能している"
+
+#############################
+#####    企業帝国国是    #####
+#############################
+
  civic_ngm_corporate_empire:0 "企業帝国"
  civic_ngm_corporate_empire_desc:0 "この企業はあらゆる産業に拡大しており、取り扱わない内容はないほど拡大しており、その頂点に一部のエリートが君臨している。"
 
@@ -792,6 +847,13 @@
  civic_ngm_underhanded_trick:0 "寝業師"
  civic_ngm_underhanded_trick_desc:0 "この国では裏取引や事前交渉が極めて重要な立ち位置を占めており、裏で様々な取引をこなしている。あくまで、交渉として "
 
+ civic_ngm_pc_directer:0 "総務部局"
+ civic_ngm_pc_directer_desc:0 "この企業の事務部門の能力は極めて高く、すさまじい速度で書類が処理される。"
+
+#############################
+#####    機械帝国国是    #####
+#############################
+
  civic_ngm_vertical:0 "垂直統合"
  civic_ngm_vertical_desc:0 "機械中枢により強い統御を受けるこの機械は、効率的な発達を遂げることができる代わりに、末端部分の発達が遅れる傾向にある。"
 
@@ -812,6 +874,79 @@
 
  civic_ngm_frontier:0 "フロンティアスピリッツ・プログラム"
  civic_ngm_frontier_desc:0 "この機械の創造主は、中枢部にとあるプログラムを導入し、この機械国家はそのプログラムを粛々と実行している。「より、より遠くへ！」"
+
+#############################
+#####    集合意識国是    #####
+#############################
+
+ civic_ngm_h_ethi:0 "生命倫理"
+ civic_ngm_h_ethi_desc:0 "この国では中枢神経の判断で倫理的な対応が重要視されている"
+
+ civic_ngm_h_noethi:0 "倫理不在"
+ civic_ngm_h_noethi_desc:0 "この国では目標のためであれば倫理など不要と判断される"
+
+ civic_ngm_h_tele:0 "統合テレパシー"
+ civic_ngm_h_tele_desc:0 "この国では超能力接続により統合管理が行われるが、物理的事象には関心が低い"
+
+ civic_ngm_h_live:0 "生命の源流"
+ civic_ngm_h_live_desc:0 "この国では命の源である中枢が食料産出と種の拡張を司っている"
+
+ civic_ngm_h_exe:0 "効率的管理"
+ civic_ngm_h_exe_desc:0 "この国の中枢神経の管理統御は極めて効率的だ"
+
+ civic_ngm_h_research:0 "高度研究機構"
+ civic_ngm_h_research_desc:0 "この国の研究を担当する認知ノードには多大なリソースが割り当てられている"
+
+ civic_ngm_h_guard:0 "防衛本能"
+ civic_ngm_h_guard_desc:0 "この国の中枢神経は本能的に身を守ることを重要視している"
+
+ civic_ngm_h_look:0 "多重監視"
+ civic_ngm_h_look_desc:0 "この国では各ノードの働きを適宜監督が行われている"
+
+ civic_ngm_h_pira:0 "重層統御"
+ civic_ngm_h_pira_desc:0 "この国では中枢神経と一部の重要ノードの能力が重要視されている"
+
+ civic_ngm_h_nexus:0 "末端自律神経"
+ civic_ngm_h_nexus_desc:0 "この国では末端神経にも比較的大きな判断能力が割り当てられている"
+
+ civic_ngm_h_think:0 "分岐的判断"
+ civic_ngm_h_think_desc:0 "この国では分岐的神経の判断と統御が重要視されている"
+
+ civic_ngm_h_brain:0 "複合的頭脳"
+ civic_ngm_h_brain_desc:0 "この国では探求に関するリソースが多い代償として他の機能が低下している"
+
+ civic_ngm_h_pp:0 "硬質的感応"
+ civic_ngm_h_pp_desc:0 "この国の中枢神経は鉱物を探知する能力に秀でている"
+
+ civic_ngm_h_art:0 "芸術的秩序"
+ civic_ngm_h_art_desc:0 "この国の統御技術は芸術的と言える"
+
+ civic_ngm_h_para:0 "パラノイア"
+ civic_ngm_h_para_desc:0 "この国は決して他者を信用しない"
+
+ civic_ngm_h_mercy:0 "慈悲深き中枢"
+ civic_ngm_h_mercy_desc:0 "この種族を統御する中枢部分は、他者から見ると「慈悲」に基づいて判断や行動を決定しているようだ。他生物を圧倒することではなく、共に生きることを目指し、共に脅威へ戦う意思を見せる。"
+
+ civic_ngm_h_spread:0 "広がる群れ"
+ civic_ngm_h_spread_desc:0 "この種族を統御する中枢部分は、他者から見ると異常なまでに数を増やすことに注力している。種族能力を超える拡張は種族の統御に影響を与えている。"
+
+ civic_ngm_h_directed:0 "包括的監督"
+ civic_ngm_h_directed_desc:0 "種族の中枢により強い統御を受けるこの種族は、効率的な発達を遂げることができる代わりに、末端部分の発達が遅れる傾向にある。"
+
+ civic_ngm_h_destiny:0 "定められし運命"
+ civic_ngm_h_destiny_desc:0 "この種族はまるで古くに約束したかのように拡張へ強い意志を見せている。"
+
+ civic_ngm_h_memory:0 "古き記憶"
+ civic_ngm_h_memory_desc:0 "この種族はかつて、大いなる意思に導かれた形跡を有している。その意思はもう存在しないが、彼らが残した資料は今でも有益なものである。"
+
+ civic_ngm_h_revenge:0 "復讐戦"
+ civic_ngm_h_revenge_desc:0 "この種族はかつて、自分たちを養殖していた先駆種族を滅ぼして現在の地位を確立している。この経験は地上戦闘において大きな経験となった。"
+
+ civic_ngm_h_depth:0 "深海より"
+ civic_ngm_h_depth_desc:0 "この種族は深海より生まれ、さらに深海のごとき色が広がる宇宙へとヒレを進め始めた。"
+
+ civic_ngm_h_unconscious:0 "無意識作業"
+ civic_ngm_h_unconscious_desc:0 "この種族は末端の判断能力や意思決定能力が強く、各々の個体が多くの作業と責任を担っている。"
 
 #######################
 #####    政策    ######
@@ -5018,6 +5153,74 @@
  councilor_ngm_producer_consumer_society_female:0 "$councilor_ngm_producer_consumer_society$"
  councilor_ngm_producer_consumer_society_desc:0 "経済を管理し、必要な経済政策を取り扱う閣僚"
 
+ councilor_ngm_p_constitution:0 "憲法院総裁"
+ councilor_ngm_p_constitution_female:0 "$councilor_ngm_p_constitution$"
+ councilor_ngm_p_constitution_desc:0 "憲法に通じ、憲法を愛した専門家"
+
+ councilor_ngm_p_medal:0 "式部官長"
+ councilor_ngm_p_medal_female:0 "$councilor_ngm_p_medal$"
+ councilor_ngm_p_medal_desc:0 "式典を司る上級官僚"
+
+ councilor_ngm_p_agriculture:0 "国家農業協同組合長"
+ councilor_ngm_p_agriculture_female:0 "$councilor_ngm_p_agriculture$"
+ councilor_ngm_p_agriculture_desc:0 "国家の農業政策に発言力を有する組合長"
+
+ councilor_ngm_p_joint:0 "統合軍司令長官"
+ councilor_ngm_p_joint_female:0 "$councilor_ngm_p_joint$"
+ councilor_ngm_p_joint_desc:0 "国軍を総合的に管理する高位軍人"
+
+ councilor_ngm_p_patriotism:0 "愛国教育委員長"
+ councilor_ngm_p_patriotism_female:0 "$councilor_ngm_p_patriotism$"
+ councilor_ngm_p_patriotism_desc:0 "国民の愛国的精神を鼓舞する教育行政官"
+
+ councilor_ngm_p_fund:0 "友愛社総裁"
+ councilor_ngm_p_fund_female:0 "$councilor_ngm_p_fund$"
+ councilor_ngm_p_fund_desc:0 "人々を慈しむ精神を忘れない慈善団体の長"
+
+ councilor_ngm_p_evacuation:0 "国民防衛総司令官"
+ councilor_ngm_p_evacuation_female:0 "$councilor_ngm_p_evacuation$"
+ councilor_ngm_p_evacuation_desc:0 "国民を守ることを主任務とした高位軍人"
+
+ councilor_ngm_p_military:0 "帝国在郷軍人会長"
+ councilor_ngm_p_military_female:0 "$councilor_ngm_p_military$"
+ councilor_ngm_p_military_desc:0 "退役軍人の代表者として国政に影響を及ぼす人物"
+
+ councilor_ngm_p_vassal:0 "内大臣"
+ councilor_ngm_p_vassal_female:0 "$councilor_ngm_p_vassal$"
+ councilor_ngm_p_vassal_desc:0 "帝国の長年にわたる功績として暗然たる影響力を発揮する高官"
+
+ councilor_ngm_p_supply:0 "軍需本部司令官"
+ councilor_ngm_p_supply_female:0 "$councilor_ngm_p_supply$"
+ councilor_ngm_p_supply_desc:0 "軍隊の補給に関して責任を負う高位軍人"
+
+ councilor_ngm_p_crime:0 "治安検事総長"
+ councilor_ngm_p_crime_female:0 "$councilor_ngm_p_crime$"
+ councilor_ngm_p_crime_desc:0 "治安を守ることを仕事とするうだつが上がらない官僚"
+
+ councilor_ngm_p_management:0 "帝国組合長"
+ councilor_ngm_p_management_female:0 "$councilor_ngm_p_management$"
+ councilor_ngm_p_management_desc:0 "帝国中の組合を束ねて政府に要求を行う圧力団体の長"
+
+ councilor_ngm_p_research:0 "研究所シニアフェロー"
+ councilor_ngm_p_research_female:0 "$councilor_ngm_p_research$"
+ councilor_ngm_p_research_desc:0 "国際平和研究所で鋭敏な頭脳が評価されて政府に助言を行う政治専門家"
+
+ councilor_ngm_p_assistance:0 "国際協力大使"
+ councilor_ngm_p_assistance_female:0 "$councilor_ngm_p_assistance$"
+ councilor_ngm_p_assistance_desc:0 "国際協力を行うことを主任務とした高位の外交官"
+
+ councilor_ngm_p_bombing:0 "爆撃司令長官"
+ councilor_ngm_p_bombing_female:0 "$councilor_ngm_p_bombing$"
+ councilor_ngm_p_bombing_desc:0 "朝からの核攻撃は最高だ!"
+
+ councilor_ngm_p_block:0 "経済安全保障長官"
+ councilor_ngm_p_block_female:0 "$councilor_ngm_p_block$"
+ councilor_ngm_p_block_desc:0 "国内経済を保護し、流通基盤を保護する役所の長"
+
+ councilor_ngm_p_councilor:0 "連邦大臣"
+ councilor_ngm_p_councilor_female:0 "$councilor_ngm_p_councilor$"
+ councilor_ngm_p_councilor_desc:0 "連邦の基盤を保護し、最大限の自由を確保させる閣僚"
+
  councilor_ngm_corporate_empire:0 "社内政治専務"
  councilor_ngm_corporate_empire_female:0 "$councilor_ngm_corporate_empire$"
  councilor_ngm_corporate_empire_desc:0 "社内における政治統制と利益折衝を専門とする役員"
@@ -5077,6 +5280,10 @@
  councilor_ngm_underhanded_trick:0 "接待部長"
  councilor_ngm_underhanded_trick_female:0 "$councilor_ngm_underhanded_trick$"
  councilor_ngm_underhanded_trick_desc:0 "他国の要人を歓待し、自らの良きように操る実力者"
+
+ councilor_ngm_pc_directer:0 "総務局長"
+ councilor_ngm_pc_directer_female:0 "$councilor_ngm_pc_directer$"
+ councilor_ngm_pc_directer_desc:0 "企業内の事務を総括し、効率的な運用を目指す部局長"
 
 ##############################
 #####    評議会の方針    ######
@@ -5419,6 +5626,12 @@
  civic_tooltip_ngm_check_effects:0 "機械のリーダーは、 突発的な故障を起こす可能性が§Y20%§!低下する。"
 
  civic_tooltip_ngm_warm_effects:0 "§E政策に§H無制限戦争§!を選択できない§!\n§E軌道爆撃の§H無差別爆撃§!が選択できない§!"
+
+ civic_tooltip_civic_ngm_h_tele_effects:0 "§Y$tech_psionic_theory$§!を初期から有する"
+
+ civic_tooltip_civic_ngm_h_depth_effects:0 "§H海洋型惑星§!では§H農業区域§!に制限はない。\n§H$trait_aquatic$§!特性が追加される。"
+
+ civic_tooltip_ngm_p_medal_effects:0 "§Y$tech_ceremony_theory$§!を初期から有する"
 
  mod_planet_buildings_exotic_gases_upkeep_mult:0 "建造物£exotic_gases£ エキゾチックガス維持費"
  mod_planet_buildings_rare_crystals_upkeep_mult:0 "建造物£rare_crystals£ レアクリスタル維持費"

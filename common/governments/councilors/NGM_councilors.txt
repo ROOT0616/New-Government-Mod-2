@@ -2364,6 +2364,7 @@ councilor_ngm_economic_primitivism = {
 	}
 	civic = civic_ngm_economic_primitivism
 	modifier = {
+		country_base_energy_produces_add = 0.5
 		mult = value:count_owned_pop_script|MODIFIER|country_base_energy_produces_add|
 	}
 }
@@ -3359,7 +3360,390 @@ councilor_ngm_producer_consumer_society = {
 	}
 }
 
-# 151.財閥 社内政治専務	総督	社内における政治統制と利益折衝を専門とする役員	帝国規模-2%
+# 憲法院	憲法院総裁	総督	憲法に通じ、憲法を愛した専門家	派閥幸福度+1.5%
+councilor_ngm_p_constitution = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_p_constitution
+	modifier = {
+		faction_approval = 0.015
+	}
+}
+
+# 歴史ある勲章	式部官長	"提督 将軍 科学者 総督"	式典を司る上級官僚	影響力+0.1
+councilor_ngm_p_medal = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_p_medal
+	modifier = {
+		country_base_influence_produces_add = 0.1
+	}
+}
+
+# 農業協同組合	国家農業協同組合長	"科学者 総督"	国家の農業政策に発言力を有する組合長	食料+5% 
+councilor_ngm_p_agriculture = {
+	leader_class = {
+		governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			# leader_class = admiral
+			leader_class = scientist
+			# leader_class = general
+		}
+	}
+	civic = civic_ngm_p_agriculture
+	modifier = {
+		country_food_produces_mult = 0.05
+	}
+}
+
+# 統合軍	統合軍司令長官	"提督 将軍"	国軍を総合的に管理する高位軍人	"艦隊指揮上限+5 地上軍建造コスト-5%"
+councilor_ngm_p_joint = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			# leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_p_joint
+	modifier = {
+		command_limit_add = 5
+		armies_cost_mult = -0.05
+	}
+}
+
+# 愛国教育	愛国教育委員長	"提督 将軍 科学者 総督"	国民の愛国的精神を鼓舞する教育行政官	戦争疲弊-2%
+councilor_ngm_p_patriotism = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_p_patriotism
+	modifier = {
+		country_war_exhaustion_mult = -0.02
+	}
+}
+
+# 慈善基金	友愛社総裁	総督	人々を慈しむ精神を忘れない慈善団体の長	安定度+2
+councilor_ngm_p_fund = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_p_fund
+	modifier = {
+		planet_stability_add = 2
+	}
+}
+
+# 避難訓練	国民防衛総司令官	将軍	国民を守ることを主任務とした高位軍人	"戦争疲弊-1% 起動爆撃ダメージ-2%"
+councilor_ngm_p_evacuation = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+			leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_p_evacuation
+	modifier = {
+		country_war_exhaustion_mult = -0.01
+		planet_orbital_bombardment_damage = -0.02
+	}
+}
+
+# 在郷軍人会	帝国在郷軍人会長	総督	退役軍人の代表者として国政に影響を及ぼす人物	"戦争疲弊-1% 地上軍建造コスト-3%"
+councilor_ngm_p_military = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_p_military
+	modifier = {
+		country_war_exhaustion_mult = -0.01
+		armies_cost_mult = -0.03
+	}
+}
+
+# 重臣制度	内大臣	"提督 将軍 科学者 総督"	帝国の長年にわたる功績として暗然たる影響力を発揮する高官	"安定度+1 評議会の目標時間+1%"
+councilor_ngm_p_vassal = {
+	leader_class = {
+		governor
+		admiral
+		scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			leader_class = governor
+			leader_class = admiral
+			leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_p_vassal
+	modifier = {
+		planet_stability_add = 1
+		council_agenda_progress_speed = 0.01
+	}
+}
+
+# 高度な補給将校	軍需本部司令官	"提督 将軍"	軍隊の補給に関して責任を負う高位軍人	"地上軍建造コスト-2% 合金産出+1%"
+councilor_ngm_p_supply = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			# leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_p_supply
+	modifier = {
+		armies_cost_mult = -0.02
+		country_alloys_produces_mult = 0.01
+	}
+}
+
+# 軽犯罪無視	治安検事総長	総督	治安を守ることを仕事とするうだつが上がらない官僚	影響力+0.1
+councilor_ngm_p_crime = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_p_crime
+	modifier = {
+		country_base_influence_produces_add = 0.1
+	}
+}
+
+# 自主管理制度	帝国組合長	総督	帝国中の組合を束ねて政府に要求を行う圧力団体の長	区域からの帝国規模-1%
+councilor_ngm_p_management = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_p_management
+	modifier = {
+		empire_size_districts_mult = -0.01
+	}
+}
+
+# 国際平和研究所	研究所シニアフェロー	科学者	国際平和研究所で鋭敏な頭脳が評価されて政府に助言を行う政治専門家	"団結度+1 介入主義志向魅力+5%"
+councilor_ngm_p_research = {
+	leader_class = {
+		# governor
+		# admiral
+		scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+		# 	leader_class = governor
+		# 	leader_class = admiral
+			leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_p_research
+	modifier = {
+		cohesion_add = 1
+		pop_ethic_interventionism_attraction_mult = 0.05
+	}
+}
+
+# 国際開発援助	国際協力大使	総督	国際協力を行うことを主任務とした高位の外交官	使節+1
+councilor_ngm_p_assistance = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_p_assistance
+	modifier = {
+		envoys_add = 1
+	}
+}
+
+# 絨毯爆撃戦略	爆撃司令長官	"提督 将軍"	朝からの核攻撃は最高だ!	起動爆撃ダメージ+2%
+councilor_ngm_p_bombing = {
+	leader_class = {
+		# governor
+		admiral
+		# scientist
+		general
+	}
+	is_leader_possible = {
+		OR = {
+			# leader_class = governor
+			leader_class = admiral
+			# leader_class = scientist
+			leader_class = general
+		}
+	}
+	civic = civic_ngm_p_bombing
+	modifier = {
+		planet_orbital_bombardment_damage = 0.02
+	}
+}
+
+# ブロック経済	経済安全保障長官	総督	国内経済を保護し、流通基盤を保護する役所の長	交易保護値+1
+councilor_ngm_p_block = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_p_block
+	modifier = {
+		local_trade_protection_add = 1
+	}
+}
+
+# 連邦参事会	連邦大臣	総督	連邦の基盤を保護し、最大限の自由を確保させる閣僚	植民地からの帝国規模-2%
+councilor_ngm_p_councilor = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_p_councilor
+	modifier = {
+		empire_size_colonies_mult = -0.02
+	}
+}
+
+##################
+# Corporate Empire
+##################
+# 1.財閥 社内政治専務	総督	社内における政治統制と利益折衝を専門とする役員	帝国規模-2%
 councilor_ngm_corporate_empire = {
 	leader_class = {
 		governor
@@ -3381,7 +3765,7 @@ councilor_ngm_corporate_empire = {
 	}
 }
 
-# 152.ハイテク企業 技術部長	科学者 総督	技術開発部門の長として企業を支える専門職の役員	研究速度+1.5%
+# 2.ハイテク企業 技術部長	科学者 総督	技術開発部門の長として企業を支える専門職の役員	研究速度+1.5%
 councilor_ngm_high_tech_company = {
 	leader_class = {
 		governor
@@ -3403,7 +3787,7 @@ councilor_ngm_high_tech_company = {
 	}
 }
 
-# 153.重厚長大産業 産業部長	科学者 総督	産業開発と効率的なチェーンを組み上げる専門家	職業からの合金生産+1% 職業からの消費財生産+1%
+# 3.重厚長大産業 産業部長	科学者 総督	産業開発と効率的なチェーンを組み上げる専門家	職業からの合金生産+1% 職業からの消費財生産+1%
 councilor_ngm_smokestack_industry = {
 	leader_class = {
 		governor
@@ -3426,7 +3810,7 @@ councilor_ngm_smokestack_industry = {
 	}
 }
 
-# 154.世襲役員 特務取締役	提督 将軍 科学者 総督	世襲で取締役の地位を維持している者の中で最高位の者	職業からの統合力産出+1.5% 勲章+0.01
+# 4.世襲役員 特務取締役	提督 将軍 科学者 総督	世襲で取締役の地位を維持している者の中で最高位の者	職業からの統合力産出+1.5% 勲章+0.01
 councilor_ngm_hereditary_officers = {
 	leader_class = {
 		governor
@@ -3449,7 +3833,7 @@ councilor_ngm_hereditary_officers = {
 	}
 }
 
-# 155.財閥 総帥補佐	総督	財閥の総帥を補佐し、不必要な業務を総帥から解放する重要職	評議会の方針の進行速度1.5%
+# 5.財閥 総帥補佐	総督	財閥の総帥を補佐し、不必要な業務を総帥から解放する重要職	評議会の方針の進行速度1.5%
 councilor_ngm_zaibatsu = {
 	leader_class = {
 		governor
@@ -3471,7 +3855,7 @@ councilor_ngm_zaibatsu = {
 	}
 }
 
-# 156.金融企業 金融部長	総督	社債等を管理し、必要な措置を講じる責任者	エネルギー収入+2% エネルギー+10
+# 6.金融企業 金融部長	総督	社債等を管理し、必要な措置を講じる責任者	エネルギー収入+2% エネルギー+10
 councilor_ngm_financial_enterprises = {
 	leader_class = {
 		governor
@@ -3494,7 +3878,7 @@ councilor_ngm_financial_enterprises = {
 	}
 }
 
-# 157.情報企業 システム部長	科学者 総督	システムを構築し、維持する大役をこなす部署の長	帝国規模による研究コスト-2%
+# 7.情報企業 システム部長	科学者 総督	システムを構築し、維持する大役をこなす部署の長	帝国規模による研究コスト-2%
 councilor_ngm_information_company = {
 	leader_class = {
 		governor
@@ -3516,7 +3900,7 @@ councilor_ngm_information_company = {
 	}
 }
 
-# 158.社会企業 社会共生部長	総督	社会と企業の共生を発展を図る部門の長	幸福度+2% POP成長速度+2%
+# 8.社会企業 社会共生部長	総督	社会と企業の共生を発展を図る部門の長	幸福度+2% POP成長速度+2%
 councilor_ngm_social_enterprise = {
 	leader_class = {
 		governor
@@ -3539,7 +3923,7 @@ councilor_ngm_social_enterprise = {
 	}
 }
 
-# 159.ゼネコン 開発部長	科学者 総督	社有資産を整備し、必要な工事や施設管理を行う部門長	建築物スロット+1
+# 9.ゼネコン 開発部長	科学者 総督	社有資産を整備し、必要な工事や施設管理を行う部門長	建築物スロット+1
 councilor_ngm_general_contractor = {
 	leader_class = {
 		governor
@@ -3561,7 +3945,7 @@ councilor_ngm_general_contractor = {
 	}
 }
 
-# 160.農業企業 農業開発部長	科学者 総督	農業を通じて企業の繁栄を導く閣僚	食料生産+5%
+# 10.農業企業 農業開発部長	科学者 総督	農業を通じて企業の繁栄を導く閣僚	食料生産+5%
 councilor_ngm_agricultural_company = {
 	leader_class = {
 		governor
@@ -3583,7 +3967,7 @@ councilor_ngm_agricultural_company = {
 	}
 }
 
-# 161.運送企業 運輸部長	科学者 総督	社内外の運送と効果的な物流ロジスティクスを管理する花形部門の長	交易価値+3%
+# 11.運送企業 運輸部長	科学者 総督	社内外の運送と効果的な物流ロジスティクスを管理する花形部門の長	交易価値+3%
 councilor_ngm_shipping_company = {
 	leader_class = {
 		governor
@@ -3605,7 +3989,7 @@ councilor_ngm_shipping_company = {
 	}
 }
 
-# 162.運用会社 投資部長	総督	国内外の投資を管理し、必要な資産運用を行う部門の長	交易価値+3%
+# 12.運用会社 投資部長	総督	国内外の投資を管理し、必要な資産運用を行う部門の長	交易価値+3%
 councilor_ngm_operating_company = {
 	leader_class = {
 		governor
@@ -3627,7 +4011,7 @@ councilor_ngm_operating_company = {
 	}
 }
 
-# 163.産業スパイ 情報部長	科学者 総督	社内外の情報を管理し、適切な対応を行う準備をする担当者	基礎情報値+1
+# 13.産業スパイ 情報部長	科学者 総督	社内外の情報を管理し、適切な対応を行う準備をする担当者	基礎情報値+1
 councilor_ngm_industrial_espionage = {
 	leader_class = {
 		governor
@@ -3649,7 +4033,7 @@ councilor_ngm_industrial_espionage = {
 	}
 }
 
-# 164.格付会社 一級格付け師	総督	格付け会社の中でも特に一級品の格付けを行うプロフェッショナル	影響力+0.2
+# 14.格付会社 一級格付け師	総督	格付け会社の中でも特に一級品の格付けを行うプロフェッショナル	影響力+0.2
 councilor_ngm_rating_company = {
 	leader_class = {
 		governor
@@ -3671,7 +4055,7 @@ councilor_ngm_rating_company = {
 	}
 }
 
-# 165.寝業師 接待部長	総督	他国の要人を歓待し、自らの良きように操る実力者	外交発言力+1.5%
+# 15.寝業師 接待部長	総督	他国の要人を歓待し、自らの良きように操る実力者	外交発言力+1.5%
 councilor_ngm_underhanded_trick = {
 	leader_class = {
 		governor
@@ -3690,5 +4074,28 @@ councilor_ngm_underhanded_trick = {
 	civic = civic_ngm_underhanded_trick
 	modifier = {
 		diplo_weight_mult = 0.015
+	}
+}
+
+# 16.総務部局 総務局長	総督	企業内の事務を総括し、効率的な運用を目指す部局長	"リーダー維持費-2% リーダー雇用コスト-2%"
+councilor_ngm_pc_directer = {
+	leader_class = {
+		governor
+		# admiral
+		# scientist
+		# general
+	}
+	is_leader_possible = {
+		# OR = {
+			leader_class = governor
+		# 	leader_class = admiral
+		# 	leader_class = scientist
+		# 	leader_class = general
+		# }
+	}
+	civic = civic_ngm_pc_directer
+	modifier = {
+		leaders_upkeep_mult = -0.02
+		leaders_cost_mult = -0.02
 	}
 }

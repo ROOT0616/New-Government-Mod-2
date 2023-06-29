@@ -80,15 +80,6 @@ ethic_socialism = {
 		}
 	}
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_RULER_FACTION_POS
-		trigger = {
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_collectivism
-			}
-		}
-	}
-	pop_attraction_tag = {
 		desc = POP_ATTRACTION_CONSUMER_GOODS_POS
 		trigger = {
 			any_owned_planet = {
@@ -214,13 +205,6 @@ ethic_socialism = {
 				has_ethic = ethic_fanatic_socialism
 			}
 			has_faction = NGM_collectivism
-		}
-		modifier = {
-			factor = 1.5
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_collectivism
-			}
 		}
 		modifier = {
 			factor = 2
@@ -398,15 +382,6 @@ ethic_capitalism = {
 			has_faction = NGM_mammonism
 		}
 	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_RULER_FACTION_POS
-		trigger = {
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_mammonism
-			}
-		}
-	}
 	country_attraction = {
 		base = 1
 		modifier = {
@@ -505,13 +480,6 @@ ethic_capitalism = {
 				has_ethic = ethic_fanatic_capitalism
 			}
 			has_faction = NGM_mammonism
-		}
-		modifier = {
-			factor = 1.5
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_mammonism
-			}
 		}
 		modifier = {
 			factor = 2
@@ -701,15 +669,6 @@ ethic_interventionism = {
 			has_faction = NGM_hawks
 		}
 	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_RULER_FACTION_POS
-		trigger = {
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_hawks
-			}
-		}
-	}
 	# 内向きの成熟の国是
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_INWARDS_PERFECTION_NEG
@@ -878,13 +837,6 @@ ethic_interventionism = {
 				has_ethic = ethic_fanatic_interventionism
 			}
 			has_faction = NGM_hawks
-		}
-		modifier = {
-			factor = 1.5
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_hawks
-			}
 		}
 		modifier = {
 			factor = 2
@@ -1069,15 +1021,6 @@ ethic_neutralism = {
 			has_faction = NGM_doves
 		}
 	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_RULER_FACTION_POS
-		trigger = {
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_doves
-			}
-		}
-	}
 	# 内向きの成熟の国是
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_INWARDS_PERFECTION_POS
@@ -1206,13 +1149,6 @@ ethic_neutralism = {
 				has_ethic = ethic_fanatic_neutralism
 			}
 			has_faction = NGM_doves
-		}
-		modifier = {
-			factor = 1.5
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_doves
-			}
 		}
 		modifier = {
 			factor = 2
@@ -1394,15 +1330,6 @@ ethic_conservationism = {
 			has_faction = NGM_environmentalism
 		}
 	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_RULER_FACTION_POS
-		trigger = {
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_environmentalism
-			}
-		}
-	}
 	# ロボティクスPOP
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_ROBOTS_NEG
@@ -1510,13 +1437,6 @@ ethic_conservationism = {
 				has_ethic = ethic_fanatic_conservationism
 			}
 			has_faction = NGM_environmentalism
-		}
-		modifier = {
-			factor = 1.5
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_environmentalism
-			}
 		}
 		modifier = {
 			factor = 2
@@ -1700,15 +1620,6 @@ ethic_developmentalism = {
 		}
 	}
 	pop_attraction_tag = {
-		desc = POP_ATTRACTION_RULER_FACTION_POS
-		trigger = {
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_industrialism
-			}
-		}
-	}
-	pop_attraction_tag = {
 		desc = POP_ATTRACTION_CYBORGS_POS
 		trigger = {
 			any_owned_species = {
@@ -1833,13 +1744,6 @@ ethic_developmentalism = {
 				has_ethic = ethic_fanatic_developmentalism
 			}
 			has_faction = NGM_industrialism
-		}
-		modifier = {
-			factor = 1.5
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_industrialism
-			}
 		}
 		modifier = {
 			factor = 2
@@ -2020,15 +1924,6 @@ ethic_honorism = {
 			has_faction = NGM_reputation
 		}
 	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_RULER_FACTION_POS
-		trigger = {
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_reputation
-			}
-		}
-	}
 	country_attraction = {
 		base = 1
 		modifier = {
@@ -2127,13 +2022,6 @@ ethic_honorism = {
 				has_ethic = ethic_fanatic_honorism
 			}
 			has_faction = NGM_reputation
-		}
-		modifier = {
-			factor = 1.5
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_reputation
-			}
 		}
 		modifier = {
 			factor = 2
@@ -2333,15 +2221,6 @@ ethic_utilitarianism = {
 			has_faction = NGM_supremacy
 		}
 	}
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_RULER_FACTION_POS
-		trigger = {
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_supremacy
-			}
-		}
-	}
 	country_attraction = {
 		base = 1
 		modifier = {
@@ -2440,13 +2319,6 @@ ethic_utilitarianism = {
 				has_ethic = ethic_fanatic_utilitarianism
 			}
 			has_faction = NGM_supremacy
-		}
-		modifier = {
-			factor = 1.5
-			exists = ruler
-			ruler = {
-				leader_of_faction = NGM_supremacy
-			}
 		}
 		modifier = {
 			factor = 2
