@@ -296,7 +296,10 @@ district_farming = {
 			NOT = { owner = { is_anglers_empire = yes } }
 			NOT = { owner = { has_valid_civic = civic_ngm_h_depth	 } }
 			AND = {
-				owner = { is_anglers_empire = yes }
+				OR = {
+					owner = { is_anglers_empire = yes }
+					owner = { has_valid_civic = civic_ngm_h_depth	 }
+				}
 				NOT = { is_planet_class = pc_ocean }
 			}
 		}

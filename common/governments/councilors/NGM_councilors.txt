@@ -772,7 +772,7 @@ councilor_ngm_cultural_hegemony = {
 	}
 }
 
-# 36.銀河連邦 連邦議長	総督	連邦議会をまとめる老獪な政治家	派閥幸福度+1% 安定度+1
+# 36.銀河連邦 連邦議長	総督	連邦議会をまとめる老獪な政治家	派閥満足度+1% 安定度+1
 councilor_ngm_federation_of_the_galaxies = {
 	leader_class = {
 		governor
@@ -1288,7 +1288,7 @@ councilor_ngm_demonstration_culture = {
 	}
 }
 
-# 59.公開討論会 討議長	科学者 総督	国家的ディベートを取り仕切り、すべての見解に決着をつける高等官	布告資金+5 派閥幸福度+1%
+# 59.公開討論会 討議長	科学者 総督	国家的ディベートを取り仕切り、すべての見解に決着をつける高等官	布告資金+5 派閥満足度+1%
 councilor_ngm_open_forum = {
 	leader_class = {
 		governor
@@ -1355,7 +1355,7 @@ councilor_ngm_social_welfare = {
 	}
 }
 
-# 62.宇宙規模の解放 宇宙の解放者	提督 将軍 科学者 総督	宇宙を非道から解放し、自由をもたらすことを使命とする人物	請求権作成コスト-2% 武器射程+1%
+# 62.宇宙規模の解放 宇宙の解放者	提督 将軍 科学者 総督	宇宙を非道から解放し、自由をもたらすことを使命とする人物	請求権作成の影響力コスト-2% 武器射程+1%
 councilor_ngm_cosmic_scale_liberation = {
 	leader_class = {
 		governor
@@ -1735,7 +1735,7 @@ councilor_ngm_dissection = {
 	}
 }
 
-# 79.帝国主義 植民地大臣	提督 将軍 総督	他国への拡大と統治を専門とする役所の長	請求権作成コスト-2.5%
+# 79.帝国主義 植民地大臣	提督 将軍 総督	他国への拡大と統治を専門とする役所の長	請求権作成の影響力コスト-2.5%
 councilor_ngm_imperialism = {
 	leader_class = {
 		governor
@@ -3360,7 +3360,7 @@ councilor_ngm_producer_consumer_society = {
 	}
 }
 
-# 憲法院	憲法院総裁	総督	憲法に通じ、憲法を愛した専門家	派閥幸福度+1.5%
+# 憲法院	憲法院総裁	総督	憲法に通じ、憲法を愛した専門家	派閥満足度+1.5%
 councilor_ngm_p_constitution = {
 	leader_class = {
 		governor
@@ -3539,7 +3539,7 @@ councilor_ngm_p_military = {
 	}
 }
 
-# 重臣制度	内大臣	"提督 将軍 科学者 総督"	帝国の長年にわたる功績として暗然たる影響力を発揮する高官	"安定度+1 評議会の目標時間+1%"
+# 重臣制度	内大臣	"提督 将軍 科学者 総督"	帝国の長年にわたる功績として暗然たる影響力を発揮する高官	"安定度+1 評議会の方針の進行速度+1%"
 councilor_ngm_p_vassal = {
 	leader_class = {
 		governor

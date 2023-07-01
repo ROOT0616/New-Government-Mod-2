@@ -516,7 +516,7 @@ tr_ngm_freedom_immigrant = {
 	}
 }
 
-# 63.自由権の保証:派閥幸福度+10%
+# 63.自由権の保証:派閥満足度+10%
 tr_ngm_freedom2 = {
 	modifier = {
 		faction_approval = 0.1
@@ -1156,7 +1156,7 @@ tr_ngm_mass_economy = {
 	}
 }
 
-# 139.民衆政治:派閥幸福度+10%、労働者政治力+100%
+# 139.民衆政治:派閥満足度+10%、労働者政治力+100%
 tr_ngm_peoples_politics = {
 	modifier = {
 		faction_approval = 0.1
@@ -1720,7 +1720,7 @@ tr_ngm_gigantic_finish = {
 # 199.大艦巨砲主義:戦艦建造速度+15%、艦船連射レート+5%
 tr_ngm_dreadnought = {
 	modifier = {
-		shipsize_battleship_build_speed_mult = -0.15
+		shipsize_battleship_build_speed_mult = 0.15
 		ship_fire_rate_mult = 0.05
 	}
 }
@@ -1835,7 +1835,7 @@ tr_ngm_legislation_finish = {
 	}
 }
 
-# 213.憲法訴訟:派閥幸福度+10%
+# 213.憲法訴訟:派閥満足度+10%
 tr_ngm_constitutional_lawsuit = {
 	modifier = {
 		faction_approval = 0.1

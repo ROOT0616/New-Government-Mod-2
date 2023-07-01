@@ -1782,7 +1782,7 @@ civic_ngm_party_rule = {
 	}
 }
 
-# 50.服従の中の自由 freedom_in_obedience		(権威、受容)	派閥幸福度+5%,移民流入＋20%
+# 50.服従の中の自由 freedom_in_obedience		(権威、受容)	派閥満足度+5%,移民流入＋20%
 civic_ngm_freedom_in_obedience = {
 	potential = {
 		ethics = {
@@ -2122,7 +2122,7 @@ civic_ngm_demonstration_culture = {
 	}
 }
 
-# 59.公開討論会 open_forum 			 	(平等)(実利ではない)			統合力+10%統治志向魅力-5%、派閥幸福度+5%
+# 59.公開討論会 open_forum 			 	(平等)(実利ではない)			統合力+10%統治志向魅力-5%、派閥満足度+5%
 civic_ngm_open_forum = {
 	potential = {
 		ethics = {
@@ -2841,7 +2841,7 @@ civic_ngm_dissection = {
 }
 
 # 〇軍国主義
-# 79.帝国主義	imperialism				(軍国、受容、中立ではない)	請求権作成コスト-25%,前哨地建造コスト-25%
+# 79.帝国主義	imperialism				(軍国、受容、中立ではない)	請求権作成の影響力コスト-25%,前哨地建造コスト-25%
 civic_ngm_imperialism = {
 	potential = {
 		ethics = {

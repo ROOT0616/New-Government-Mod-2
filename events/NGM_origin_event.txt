@@ -2391,6 +2391,7 @@ country_event = {
 		has_origin = origin_ngm_phenix
 	}
 	immediate = {
+		unlock_council_slots = 3
 		add_relic = r_ngm_imperial_chronicle
 		set_global_flag = ngm_phenix_global_flag
 		set_country_flag = ngm_phenix_country_flag

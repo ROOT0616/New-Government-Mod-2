@@ -43,7 +43,7 @@ ngm_ai_supplementary_governance = {
 	planet_researchers_produces_mult = 0.1
 }
 
-# 6.首長優位制(最大多数の派閥幸福度)
+# 6.首長優位制(最大多数の派閥満足度)
 ngm_chieftaincy_system = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
 	icon_frame = 1
@@ -617,7 +617,7 @@ promoted_utilitarianism = {
 #######################
 
 # 遺物「古代の盟約」（古代の列強間の協定で、緊急時に強力な自衛力を求められたうえで、平時には他国の脅威にならない経済国家であることを求められる条文。所有国は永久にこれを守らなくてはならない。）
-# パッシブ効果	：請求権作成コスト+9999%、開拓前哨地建造コスト+9999%、外交発言力+100%。統合力+30%、交易価値+50%、
+# パッシブ効果	：請求権作成の影響力コスト+9999%、開拓前哨地建造コスト+9999%、外交発言力+100%。統合力+30%、交易価値+50%、
 # アクティブ効果	：船体値+100%、宇宙軍許容量+500%、造船速度+500%(10年間。起動コスト影響力200)
 ngm_ancient_pact = {
 	ship_hull_mult = 1
@@ -702,7 +702,7 @@ origin_ngm_phenix_6_modifier = {
 	terraform_speed_mult = -999999.99
 }
 
-# 無気力な省庁	"開拓前哨地作成不可 請求権作成コスト+9999999999%"	この帝国の省庁は非効率かつ不安定な動きをしている。
+# 無気力な省庁	"開拓前哨地作成不可 請求権作成の影響力コスト+9999999999%"	この帝国の省庁は非効率かつ不安定な動きをしている。
 origin_ngm_phenix_7_modifier = {
 	starbase_outpost_alloys_cost_mult = 9999.99
 	country_claim_influence_cost_mult = 20
@@ -732,15 +732,21 @@ origin_ngm_phenix_10_modifier = {
 	country_trust_cap_add = -50
 }
 
-# 古代帝国	統合力産出-20%、帝国規模+250%、帝国規模による伝統コスト+200% この帝国は古代から続く伝統を強く守っており、そのコストを支払い続けている
+# 古代帝国	統合力産出-20%、帝国規模+250%、帝国規模による伝統コスト+200% 市場手数料+10%、使節-2、布告資金-50、評議会の方針の進行速度-25% リーダー雇用上限+4 この帝国は古代から続く伝統を強く守っており、そのコストを支払い続けている
 origin_ngm_phenix_11_modifier = {
 	country_unity_produces_mult = -0.2
 	empire_size_mult = 2.5
 	tradition_cost_empire_size_mult = 2
+	country_trade_fee = 0.1
+	envoys_add = -2
+	country_edict_fund_add = -50
+	council_agenda_progress_speed = -0.25
+	country_leader_cap_add = 4
 }
 
-# 不死鳥の帝国	開戦事由「不死鳥の帰還」を使用可能	我々は蘇る！
+# 不死鳥の帝国	リーダー雇用上限+4 開戦事由「不死鳥の帰還」を使用可能	我々は蘇る！
 origin_ngm_phenix_12_modifier = {
+	country_leader_cap_add = 4
 }
 
 ##########################
@@ -1518,7 +1524,7 @@ agenda_ngm_resolving_international_issues_finish_modifier = {
 	diplo_weight_mult = 0.3
 }
 
-# 大規模行動の実施	implementation_of_large_scale_actions	巨大	開拓前哨地建造コスト-20%、請求権作成コスト-20%	適用済みの補正	開拓前哨地建造コスト-40%、請求権作成コスト-40%	国家拡張に向けて進め！
+# 大規模行動の実施	implementation_of_large_scale_actions	巨大	開拓前哨地建造コスト-20%、請求権作成の影響力コスト-20%	適用済みの補正	開拓前哨地建造コスト-40%、請求権作成の影響力コスト-40%	国家拡張に向けて進め！
 agenda_ngm_implementation_of_large_scale_actions_finish_modifier = {
 	shipclass_starbase_build_cost_mult = -0.4
 	country_claim_influence_cost_mult = -0.4

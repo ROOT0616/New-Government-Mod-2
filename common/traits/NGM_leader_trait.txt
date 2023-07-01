@@ -702,3 +702,762 @@ leader_trait_ngm_general_veteran = {
 	}
 	selectable_weight = @class_trait_weight
 }
+
+# 共通特性
+# 諜報員I,II	leader_trait_ngm_intel	介入	共通	本人	解読力+5/10	このリーダーは諜報員として秀でている
+leader_trait_ngm_intel = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_intel"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_interventionism
+			has_ethic = ethic_fanatic_interventionism
+		}
+	}
+	modifier = {
+		intel_decryption_add = 5
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+leader_trait_ngm_intel_2 = {
+	replace_traits = { "leader_trait_ngm_intel" }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_intel"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	modifier = {
+		intel_decryption_add = 10
+	}
+	leader_class = { admiral scientist general governor }
+}
+
+leader_trait_ngm_intel_3 = {
+	replace_traits = { "leader_trait_ngm_intel_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_intel"
+		RARITY = common
+		COUNCIL = no
+		TIER = 3
+	}
+	modifier = {
+		intel_decryption_add = 15
+	}
+	leader_class = { admiral scientist general governor }
+}
+
+# 外交畑	leader_trait_ngm_foreign	介入	共通	本人	外交発言力+10%	このリーダーは外交官として秀でている
+leader_trait_ngm_foreign = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_foreign"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_interventionism
+			has_ethic = ethic_fanatic_interventionism
+		}
+	}
+	modifier = {
+		diplo_weight_mult = 0.1
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 帝国主義者	leader_trait_ngm_imperial	介入	共通	評議会	請求権作成の影響力コスト-10%	このリーダーは拡張志向を有している
+leader_trait_ngm_imperial = {
+	veteran_class_locked_trait = yes
+	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_imperial"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	modifier = {
+		all_technology_research_speed = 0.06
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_interventionism
+			has_ethic = ethic_fanatic_interventionism
+		}
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = {
+		inline_script = paragon/subclass_free_trait_weight
+	}
+	ai_weight = 110
+}
+
+# 数学者I,II	leader_trait_ngm_math	中立	共通	本人	暗号力+5/10	このリーダーは防諜技術者として秀でている
+leader_trait_ngm_math = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_math"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_neutralism
+			has_ethic = ethic_fanatic_neutralism
+		}
+	}
+	modifier = {
+		intel_encryption_add = 5
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+leader_trait_ngm_math_2 = {
+	replace_traits = { "leader_trait_ngm_math" }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_math"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	modifier = {
+		intel_encryption_add = 10
+	}
+	leader_class = { admiral scientist general governor }
+}
+
+leader_trait_ngm_math_3 = {
+	replace_traits = { "leader_trait_ngm_math_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_math"
+		RARITY = common
+		COUNCIL = no
+		TIER = 3
+	}
+	modifier = {
+		intel_encryption_add = 15
+	}
+	leader_class = { admiral scientist general governor }
+}
+
+# 老獪	leader_trait_ngm_wise	中立	共通	評議会	評議会の方針の進行速度2%	このリーダーは交渉技術に秀でている
+leader_trait_ngm_wise = {
+	veteran_class_locked_trait = yes
+	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_wise"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	modifier = {
+		all_technology_research_speed = 0.06
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_neutralism
+			has_ethic = ethic_fanatic_neutralism
+		}
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = {
+		inline_script = paragon/subclass_free_trait_weight
+	}
+	ai_weight = 110
+}
+
+# バランサー	leader_trait_ngm_balance	中立	共通	評議会	派閥満足度+5%	このリーダーはバランス感覚に秀でている
+leader_trait_ngm_balance = {
+	veteran_class_locked_trait = yes
+	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_balance"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	modifier = {
+		faction_approval = 0.05
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_neutralism
+			has_ethic = ethic_fanatic_neutralism
+		}
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = {
+		inline_script = paragon/subclass_free_trait_weight
+	}
+	ai_weight = 110
+}
+
+# 植物学者	leader_trait_ngm_bota	保全	総督	本人	居住性+5%	このリーダーは環境科学者として秀でている
+leader_trait_ngm_park = {
+	inline_script = {
+		script = trait/icon
+		CLASS = general
+		ICON = "GFX_leader_trait_ngm_park"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_conservationism
+			has_ethic = ethic_fanatic_conservationism
+		}
+	}
+	modifier = {
+		pop_environment_tolerance = 0.05
+	}
+	leader_class = { governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 庭園所有者	leader_trait_ngm_park	保全	共通	本人	月間統合力+4	このリーダーは偉大な庭園を所有している
+leader_trait_ngm_park = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_park"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_conservationism
+			has_ethic = ethic_fanatic_conservationism
+		}
+	}
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 自然主義者	leader_trait_ngm_nature	保全	総督	本人	POP成長速度+2%	このリーダーは自然主義者として有名だ
+leader_trait_ngm_nature = {
+	inline_script = {
+		script = trait/icon
+		CLASS = governor
+		ICON = "GFX_leader_trait_ngm_mafia"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_conservationism
+			has_ethic = ethic_fanatic_conservationism
+		}
+	}
+	modifier = {
+	}
+	leader_class = { governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 地質学者	leader_trait_ngm_field	開発	総督	本人	鉱物産出+2%	このリーダーは地質研究者として秀でている
+leader_trait_ngm_park = {
+	inline_script = {
+		script = trait/icon
+		CLASS = governor
+		ICON = "GFX_leader_trait_ngm_park"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_developmentalism
+			has_ethic = ethic_fanatic_developmentalism
+		}
+	}
+	modifier = {
+	}
+	leader_class = { governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 鉱石マニア	leader_trait_ngm_pp	開発	総督	本人	月間クリスタル+3	このリーダーは鉱石オタクとして有名だ
+leader_trait_ngm_park = {
+	inline_script = {
+		script = trait/icon
+		CLASS = governor
+		ICON = "GFX_leader_trait_ngm_park"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_developmentalism
+			has_ethic = ethic_fanatic_developmentalism
+		}
+	}
+	modifier = {
+	}
+	leader_class = { governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 開発中毒	leader_trait_ngm_cons	開発	総督	本人	建設コスト-5％	このリーダーは隅々まで開発することに固執している
+leader_trait_ngm_park = {
+	inline_script = {
+		script = trait/icon
+		CLASS = governor
+		ICON = "GFX_leader_trait_ngm_park"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_developmentalism
+			has_ethic = ethic_fanatic_developmentalism
+		}
+	}
+	modifier = {
+	}
+	leader_class = { governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# マフィア	leader_trait_ngm_mafia	実利	共通	本人	影響力+1、犯罪+10	このリーダーはマフィアのボスという噂がある
+leader_trait_ngm_mafia = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_mafia"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_utilitarianism
+			has_ethic = ethic_fanatic_utilitarianism
+		}
+	}
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 利益追求者	leader_trait_ngm_profit	実利	共通	本人	リーダー経験値取得+20％、エネルギー-20	このリーダーは利益の追求に余念がない
+leader_trait_ngm_profit = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_profit"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_utilitarianism
+			has_ethic = ethic_fanatic_utilitarianism
+		}
+	}
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 腕自慢	leader_trait_ngm_strong	実利	共通	評議会	評議会の方針の進行速度-5%、リーダー経験値取得-10%	このリーダーは誰にでも暴力をふるう
+leader_trait_ngm_strong = {
+	veteran_class_locked_trait = yes
+	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_strong"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	modifier = {
+		all_technology_research_speed = 0.06
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_utilitarianism
+			has_ethic = ethic_fanatic_utilitarianism
+		}
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = {
+		inline_script = paragon/subclass_free_trait_weight
+	}
+	ai_weight = 110
+}
+
+# 叙爵	leader_trait_ngm_lord	栄望	共通	本人	リーダー経験値取得+20％	このリーダーは爵位を有した貴族だ
+leader_trait_ngm_lord = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_lord"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_honorism
+			has_ethic = ethic_fanatic_honorism
+		}
+	}
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 騎士道精神	leader_trait_ngm_knight	栄望	共通	本人	幸福度+2.5%	このリーダーは騎士道精神にあふれている
+leader_trait_ngm_knight = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_knight"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_honorism
+			has_ethic = ethic_fanatic_honorism
+		}
+	}
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 領主	leader_trait_ngm_king	栄望	共通	本人	リーダー維持費-25%	このリーダーは大規模な領地を所有している
+leader_trait_ngm_king = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_king"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_honorism
+			has_ethic = ethic_fanatic_honorism
+		}
+	}
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 取締役	leader_trait_ngm_ceo	資本	共通	本人	交易価値+5%	このリーダーは大企業の取締役を兼任している
+leader_trait_ngm_ceo = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_ceo"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_capitalism
+			has_ethic = ethic_fanatic_capitalism
+		}
+	}
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 大富豪	leader_trait_ngm_rich	資本	共通	本人	リーダー維持費-25%	このリーダーは稀代まれなる金満家だ
+leader_trait_ngm_rich = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_rich"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_capitalism
+			has_ethic = ethic_fanatic_capitalism
+		}
+	}
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# ご大尽	leader_trait_ngm_milli	資本	共通	本人	エネルギー+10	このリーダーは余裕のある金遣いをする
+leader_trait_ngm_milli = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_milli"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_capitalism
+			has_ethic = ethic_fanatic_capitalism
+		}
+	}
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 革命家	leader_trait_ngm_revo	社会	共通	本人	統治志向魅力-10%	このリーダーは革命戦士として有名だ
+leader_trait_ngm_revo = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_revo"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_neutralism
+			has_ethic = ethic_fanatic_neutralism
+		}
+	}
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 党幹部	leader_trait_ngm_party	社会	共通	本人	影響力+1、帝国規模+3％	このリーダーは与党幹部として権力を有している
+leader_trait_ngm_party = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_party"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_socialism
+			has_ethic = ethic_fanatic_socialism
+		}
+	}
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 活動家	leader_trait_ngm_player	社会	共通	評議会	評議会の方針の進行速度-5%、安定度-10	このリーダーは活動家として有名だ
+leader_trait_ngm_player = {
+	veteran_class_locked_trait = yes
+	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_player"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	modifier = {
+		all_technology_research_speed = 0.06
+	}
+	leader_potential_add = {
+		OR = {
+			has_ethic = ethic_socialism
+			has_ethic = ethic_fanatic_socialism
+		}
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = {
+		inline_script = paragon/subclass_free_trait_weight
+	}
+	ai_weight = 110
+}
+
+# 派閥の長	leader_trait_ngm_commu	共通	共通	本人	リーダーが支持する派閥の幸福度+5%	このリーダーは派閥の長として知られている
+leader_trait_ngm_commu = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_commu"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	# leader_potential_add = {
+	# 	OR = {
+	# 		has_ethic = ethic_neutralism
+	# 		has_ethic = ethic_fanatic_neutralism
+	# 	}
+	# }
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# スポーツ選手	leader_trait_ngm_sport	共通	共通	本人	寿命+10年、リーダー経験値取得+5%	このリーダーはスポーツ選手としても知られている
+leader_trait_ngm_sport = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_sport"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	# leader_potential_add = {
+	# 	OR = {
+	# 		has_ethic = ethic_neutralism
+	# 		has_ethic = ethic_fanatic_neutralism
+	# 	}
+	# }
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 財務畑	leader_trait_ngm_fina	共通	共通	本人	エネルギー+10%	このリーダーは財務官として秀でている
+leader_trait_ngm_fina = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_fina"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	# leader_potential_add = {
+	# 	OR = {
+	# 		has_ethic = ethic_neutralism
+	# 		has_ethic = ethic_fanatic_neutralism
+	# 	}
+	# }
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 総務畑	leader_trait_ngm_desk	共通	共通	本人	帝国規模-2%	このリーダーは事務官として秀でている
+leader_trait_ngm_desk = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_desk"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	# leader_potential_add = {
+	# 	OR = {
+	# 		has_ethic = ethic_neutralism
+	# 		has_ethic = ethic_fanatic_neutralism
+	# 	}
+	# }
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 法務畑	leader_trait_ngm_low	共通	共通	本人	布告資金+20	このリーダーは法務官として秀でている
+leader_trait_ngm_low = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_low"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	# leader_potential_add = {
+	# 	OR = {
+	# 		has_ethic = ethic_neutralism
+	# 		has_ethic = ethic_fanatic_neutralism
+	# 	}
+	# }
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}
+
+# 宗教畑	leader_trait_ngm_religion	共通	共通	本人	精神主義志向魅力+10%	このリーダーは宗教家として秀でている
+leader_trait_ngm_religion = {
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_ngm_religion"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	# leader_potential_add = {
+	# 	OR = {
+	# 		has_ethic = ethic_neutralism
+	# 		has_ethic = ethic_fanatic_neutralism
+	# 	}
+	# }
+	modifier = {
+	}
+	leader_class = { admiral scientist general governor }
+	selectable_weight = @shared_trait_weight
+}

@@ -1940,9 +1940,9 @@ ngm_policies_robotics = {
 # 6.立法手続	legislative_procedure	立法手段と議会システムの詳細を規定する。
 #		1	単独会制	single_member_system	一度の読み合わせと議決で全てが決まる	統治志向魅力+20%、影響力+0.5
 # 	2	三独会制	triple_entry	議決を何度か繰り返すことでより考慮の余地を生み出す	幸福度+10%、布告資金-20
-# 	3	混合制	mixed_system	長所を少しずつ取り入れた様々なシステム	派閥幸福度+10%
+# 	3	混合制	mixed_system	長所を少しずつ取り入れた様々なシステム	派閥満足度+10%
 # 	4	委員会制	commission_system	議会付属の委員会で大まかな修正を終了させる	布告資金+30
-# 	5	ラバースタンプ	rubber_stamp	議論が一定期間経過すると、自動的に可決される	布告資金+50、派閥幸福度-10%
+# 	5	ラバースタンプ	rubber_stamp	議論が一定期間経過すると、自動的に可決される	布告資金+50、派閥満足度-10%
 ngm_policies_legislative_procedure = {
 	potential = {
 		has_tradition = tr_ngm_law_first
@@ -2104,7 +2104,7 @@ ngm_policies_trade_law = {
 # 8.憲法	constitution	国家最高法典を規定する
 # 	1	最高法典	supreme_code	憲法とは、国家最高の法典であり、絶対的である。	国是スロット+1
 # 	2	伝統的憲法	traditional_constitution	伝統的で、保守的な安定のある憲法	統治志向魅力+20%、安定度+10
-# 	3	自由主義憲法	liberal_constitution	自由と平等を愛する革新的な憲法	派閥幸福度+20%
+# 	3	自由主義憲法	liberal_constitution	自由と平等を愛する革新的な憲法	派閥満足度+20%
 # 	4	憲法的法律	constitutional_law	法律と同格で改正もしやすい、変動的な憲法	布告資金+30
 # 	5	不文法典	unwritten_law	固有の憲法ではなく、慣習により憲法的文化が存在する	統合力+20%
 ngm_policies_constitution = {
@@ -2343,7 +2343,7 @@ ngm_policies_recording_method = {
 # 	2	自由の楽園	paradise_of_freedom	できる限りの自由こそ、理想社会だ	幸福度+20%、犯罪+10
 # 	3	自己責任	self_responsibility	自己責任の下、各種制約は解かれていく	幸福度+10%
 # 	4	自由保護法	civil_liberties_law	自由を守り、社会を安定化させていくのだ	統合力+10%、安定度+10
-# 	5	自由と秩序	freedom_and_order	自由と秩序のバランスは社会にとって不可欠だ	派閥幸福度+10%、派閥統合力収入+10%
+# 	5	自由と秩序	freedom_and_order	自由と秩序のバランスは社会にとって不可欠だ	派閥満足度+10%、派閥統合力収入+10%
 ngm_policies_civil_liberties = {
 	potential = {
 		has_tradition = tr_ngm_freedom_first
@@ -2522,7 +2522,7 @@ ngm_policies_maintaining_order = {
 # 13.公務員法	civil_service_law	公僕のシステムを規定する
 # 	1	世襲官僚	pedigree_bureaucrat	官僚は世襲の地位であるのだ	官僚と司祭の算出する統合力+30%、統合力+10%
 # 	2	資格官僚	licensed_bureaucrat	官僚たるもの、試験を突破せねばならない	帝国規模-10%
-# 	3	選挙官僚	electoral_bureaucracy	官僚は、選挙で選出されるものだ	派閥幸福度+10%、派閥統合力収入+10%
+# 	3	選挙官僚	electoral_bureaucracy	官僚は、選挙で選出されるものだ	派閥満足度+10%、派閥統合力収入+10%
 # 	4	任命官僚	appointed_bureaucrat	官僚は縁故や能力により上司から任命される	リーダー雇用コスト-50%、影響力+1
 ngm_policies_civil_service_law = {
 	potential = {
