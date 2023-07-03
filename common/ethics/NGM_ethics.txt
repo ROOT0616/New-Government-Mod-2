@@ -302,7 +302,7 @@ ethic_socialism = {
 	}
 }
 
-# 〇資本主義：資本主義	市場手数料-5%,統治者幸福度+10%,事務員が生み出す交易価値+1	狂資本主義	市場手数料-10%,統治者幸福度+20%,事務員が生み出す交易価値+2 
+# 〇資本主義：統治者幸福度+5%、交易価値+10% 市場手数料-5%	狂：統治者幸福度+20%、交易価値+20%、市場手数料-10%（君主制選択不可）  
 # 階級制経済、学術特権を使用可能、社会福祉は選択できない
 ethic_fanatic_capitalism = {
 	cost = 2
@@ -323,6 +323,8 @@ ethic_fanatic_capitalism = {
 	tags = {
 		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
+		ETHIC_ALLOWS_SLAVERY
+		ETHIC_DISALLOWS_GOOD
 	}
 	random_weight = {
 		base = 150
@@ -359,6 +361,8 @@ ethic_capitalism = {
 	tags = {
 		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
+		ETHIC_ALLOWS_SLAVERY
+		ETHIC_DISALLOWS_GOOD
 	}
 	random_weight = {
 		base = 100
@@ -1262,7 +1266,7 @@ ethic_neutralism = {
 	}
 }
 
-# 〇保全主義：食料算出+10%,居住性+10%	狂保全主義	食料算出+15%,居住性+15%
+# 〇保全主義：職業からの食料算出+10%,居住性+10%	狂保全主義	職業からの食料算出+15%,居住性+15%
 ethic_fanatic_conservationism = {
 	cost = 2
 	category = "ngm_con_or_dev"
@@ -1551,7 +1555,7 @@ ethic_conservationism = {
 	}
 }
 
-# 〇開発主義：鉱物産出+10%,建造物スロット+1		狂開発主義	鉱物産出+15%,建造物スロット+2
+# 〇開発主義：職業からの鉱物産出+10%,建造物スロット+1		狂開発主義	職業からの鉱物産出+15%,建造物スロット+2
 ethic_fanatic_developmentalism = {
 	cost = 2
 	category = "ngm_con_or_dev"
@@ -2136,7 +2140,7 @@ ethic_honorism = {
 	}
 }
 
-# 〇実利主義  奴隷の使用許可、奴隷市場コスト-25%,25POPごとにインフルエンサーの職業枠+1,労働者、奴隷の政治力-10%		狂実利主義	奴隷市場コスト-50%,20POPごとにインフルエンサーの職業枠+1,労働者、奴隷の政治力-20%
+# 〇実利主義  奴隷の使用許可、奴隷市場コスト-25%,25POPごとにインフルエンサーの職業枠+1,奴隷の政治力-10%		狂実利主義	奴隷市場コスト-50%,20POPごとにインフルエンサーの職業枠+1,奴隷の政治力-20%
 # 階級制経済、学術特権を使用可能、社会福祉は選択できない
 ethic_fanatic_utilitarianism = {
 	cost = 2
@@ -2157,6 +2161,8 @@ ethic_fanatic_utilitarianism = {
 	tags = {
 		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
+		ETHIC_ALLOWS_SLAVERY
+		ETHIC_DISALLOWS_GOOD
 	}
 	random_weight = {
 		base = 150
@@ -2198,6 +2204,8 @@ ethic_utilitarianism = {
 	tags = {
 		ETHIC_ALLOWS_STRATIFIED_SOCIETY
 		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
+		ETHIC_ALLOWS_SLAVERY
+		ETHIC_DISALLOWS_GOOD
 	}
 	random_weight = {
 		base = 100

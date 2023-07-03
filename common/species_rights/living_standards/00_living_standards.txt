@@ -1147,6 +1147,18 @@ living_standard_good = {
 			}
 		}
 		custom_tooltip = {
+			fail_text = empire_is_capitalism
+			from = {
+				is_capitalism = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = empire_is_utilitarianism
+			from = {
+				is_utilitarianism = no
+			}
+		}
+		custom_tooltip = {
 			fail_text = is_purged_not_neutered
 			if = {
 				limit = {
