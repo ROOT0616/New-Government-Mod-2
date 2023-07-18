@@ -1,4 +1,34 @@
 @campaignDuration = 3600
+
+# (1)叙勲式の実施(反栄典法を制定していない)→下の中から選択。クールダウン24ヶ月
+# ① 文化人への叙勲
+#   文化人の統合力算出+20%(12ヶ月)
+#   研究者の研究力算出+10%(12ヶ月)
+# ② 財界人への叙勲
+#   交易価値+20%(24ヶ月)
+# ③ 外交官への叙勲
+#   外交発言力+20%(24ヶ月)
+# ④派閥幹部への叙勲
+#   派閥幸福度+15%(24ヶ月)
+# ⑤軍人への叙勲
+#   回避+5% (12ヶ月)
+#   連射レート+10% (12ヶ月)
+#   地上軍士気+20% (24ヶ月)
+# ⑥リーダーへの叙勲(特性:政治的叙勲付与)
+#     総督(スキル上限+1、統合力算出+10%)
+#     科学者(スキル上限+1、研究力算出+5%)
+#     提督(スキル上限+1、リーダー取得経験値+20%)
+#     将軍(スキル上限+1、リーダー取得経験値+20%)
+# ⑥皇族への叙勲(君主制のみ)
+#   君主もしくは後継者に特性付与
+#   (特性:政治的叙勲)スキル上限+1、統合力+10%、安定度+5
+# ⑦ 統治者への叙勲
+#   (特性:政治的叙勲)スキル上限+1、統合力+10%、安定度+5
+# ⑧貴族への叙勲(貴族エリート、栄望のみ)
+#   統治者幸福度+50%(48ヶ月)
+# ⑨勤労者への叙勲(栄望or社会主義)
+#   労働者幸福度+30% (48ヶ月)
+#   専門家幸福度+10% (48ヶ月)
 #派閥指導者への勲章授与（派閥満足度+）
 awarding_medalsto_faction_leaders_campaign = {
 	length = @campaignDuration
@@ -659,9 +689,11 @@ awarding_medals_to_the_ruling_class_campaign = {
 	}
 }
 
-#文化人への勲章授与（研究+10%）
+# ① 文化人への叙勲
+#   文化人の統合力算出+20%(12ヶ月)
+#   研究者の研究力算出+10%(12ヶ月)
 awarding_of_medals_to_cultural_figures_campaign = {
-	length = @campaignDuration
+	length = 360
 	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
@@ -959,7 +991,7 @@ ngm_five_year_plan2_campaign = {
 	}
 }
 
-# five_year_plan3 .農業5か年計画  ：農業生産量+20%、Pop成長速度+5%	研究力-5%
+# five_year_plan3 .農業5か年計画  ：農業生産量+20%、POPの成長速度+5%	職業からの研究力-5%
 ngm_five_year_plan3_campaign = {
 	length = 1825
 	icon = "GFX_edict_type_time"
@@ -999,7 +1031,7 @@ ngm_five_year_plan3_campaign = {
 	}
 }
 
-# five_year_plan4 .研究5か年計画  ：工学+10%、巨大構造物建造速度+5%	物理学-5%、社会学-5%
+# five_year_plan4 .研究5か年計画  ：職業からの工学+10%、巨大構造物建造速度+5%	職業からの物理学-5%、職業からの社会学-5%
 ngm_five_year_plan4_campaign = {
 	length = 1825
 	icon = "GFX_edict_type_time"
@@ -1038,7 +1070,7 @@ ngm_five_year_plan4_campaign = {
 	}
 }
 
-# five_year_plan5 .思想5か年計画  ：社会主義魅力+20%、統合力+10%		安定度-5
+# five_year_plan5 .思想5か年計画  ：社会主義志向への魅力+20%、統合力+10%		安定度-5
 ngm_five_year_plan5_campaign = {
 	length = 1825
 	icon = "GFX_edict_type_time"
@@ -1076,31 +1108,6 @@ ngm_five_year_plan5_campaign = {
 	}
 }
 
-# 〇栄望主義：開戦自由「名誉にかけて」勝利時影響力＋100
-# 戦時中の艦隊製造速度+10%（思想）
-# ngm_honorism_wartime_fleet = {
-# 	length = -1
-# 	icon = "GFX_edict_type_policy"
-# 	edict_cap_usage = 0
-# 	resources = {
-# 		category = edicts
-# 		cost = {
-# 			influence = 50
-# 		}
-# 	}
-# 	potential = {
-# 		has_ethic = ethic_fanatic_honorism
-# 	}
-# 	allow = {
-# 		is_at_war = yes
-# 	}
-# 	modifier = {
-# 		starbase_shipyard_build_speed_mult = 0.1
-# 	}
-# 	ai_weight = {
-# 		weight = @EdictMedPrio
-# 	}
-# }
 # 伝統等でアンロックされる布告
 # 1.記憶の布告
 #   ①覇権の記憶	memories_of_hegemony	(影響力100)(キャンセルするまで有効)(我が国の覇権を記録し、後世へ伝える)(統合力+10%、艦船連射レート+10%、地上軍士気+20%)
@@ -1130,7 +1137,7 @@ ngm_memories_of_hegemony = {
 	}
 }
 
-#   ②栄華の記憶	memories_of_glory	(影響力100)(キャンセルするまで有効)(我が国の栄華を記録し、後世へ伝える)(統合力+10%、交易価値+20%、経済からの外交発言力+20%)
+#   ②栄華の記憶	memories_of_glory	(影響力100)(キャンセルするまで有効)(我が国の栄華を記録し、後世へ伝える)(統合力+10%、交易価値+20%、経済力から発生する外交発言力+20%)
 ngm_memories_of_glory = {
 	length = -1
 	icon = "GFX_edict_type_policy"
@@ -1157,7 +1164,7 @@ ngm_memories_of_glory = {
 	}
 }
 
-#   ③堅忍の記憶	memoirs_of_perseverance	(影響力100)(キャンセルするまで有効)(我が国の堅忍を記録し、後世へ伝える)(統合力+10%、Pop消費財消費量-20%、合金生産量+10%)
+#   ③堅忍の記憶	memoirs_of_perseverance	(影響力100)(キャンセルするまで有効)(我が国の堅忍を記録し、後世へ伝える)(統合力+10%、POP消費財維持費-20%、合金生産量+10%)
 ngm_memoirs_of_perseverance = {
 	length = -1
 	icon = "GFX_edict_type_policy"
@@ -1274,6 +1281,8 @@ ngm_legal_department_audits_campaign = {
 		}
 	}
 	modifier = {
+		empire_size_mult = -0.15
+		country_edict_fund_add = 20
 	}
 	potential = {
 		has_active_tradition = tr_ngm_expansion_of_the_legal_affairs_bureau

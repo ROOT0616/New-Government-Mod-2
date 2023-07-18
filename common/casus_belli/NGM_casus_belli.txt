@@ -34,7 +34,7 @@
 # 	}
 # }
 
-# 〇栄望主義：開戦自由「名誉にかけて」勝利時影響力＋100
+# 〇栄望主義：開戦自由「名誉にかけて」勝利時影響力+100
 cb_ngm_with_honor = {
 	show_in_diplomacy = yes
 	show_notification = no
@@ -64,18 +64,10 @@ cb_ngm_pest_control = {
 	potential = {
 		is_country_type = default
 		exists = from
-		OR = {
-			has_ethic = ethic_conservationism
-			has_ethic = ethic_fanatic_conservationism
-		}
-		OR = {
-			has_ethic = ethic_militarist
-			has_ethic = ethic_fanatic_militarist
-		}
+		has_civic = civic_ngm_pest_control
 	}
 	is_valid = {
 		from = { is_country_type = default }
-		from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
 		from = {
 			OR = {
 				has_ethic = ethic_developmentalism

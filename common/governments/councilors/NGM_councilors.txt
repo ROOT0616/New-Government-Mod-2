@@ -1,4 +1,4 @@
-#1.外見的立憲制度	帝国宰相	提督	元首の代わりに内閣を統御し、政策を遂行する閣僚	派閥幸福+1%	派閥統合力収入+1%
+#1.外見的立憲制度	帝国宰相	提督	元首の代わりに内閣を統御し、政策を遂行する閣僚	派閥幸福+1%	派閥統合力ボーナス+1%
 councilor_sham_constitutionalism = {
 	leader_class = {
 		# governor
@@ -57,7 +57,7 @@ councilor_noblesse_oblige = {
 	}
 }
 
-#4.戦力の不保持	憲法の守護者	総督 法を守護し、行政権の乱用を防ぐ責任者	安定度+2 平和主義志向魅力+5%
+#4.戦力の不保持	憲法の守護者	総督 法を守護し、行政権の乱用を防ぐ責任者	安定度+2 平和主義志向への魅力+5%
 councilor_non_retention_of_force = {
 	leader_class = {
 		governor
@@ -148,7 +148,7 @@ councilor_lax_building_codes = {
 	}
 }
 
-#8.真実と和解委員会 真実と和解委員長	提督 将軍 科学者 総督	過去に行われた非道を追求し、真実を明るみにする会議の長	統合力+2% 受容主義志向魅力+5%
+#8.真実と和解委員会 真実と和解委員長	提督 将軍 科学者 総督	過去に行われた非道を追求し、真実を明るみにする会議の長	統合力+2% 受容主義志向への魅力+5%
 councilor_truth_and_reconciliation_commission = {
 	leader_class = {
 		governor
@@ -392,7 +392,7 @@ councilor_ngm_culturism = {
 	}
 }
 
-#19.空想的社会主義 大教授	科学者	教授の中の教授と称される、研究者の鑑	リーダー経験値取得+2% 社会主義志向魅力+5%
+#19.空想的社会主義 大教授	科学者	教授の中の教授と称される、研究者の鑑	リーダーの獲得経験値+2% 社会主義志向への魅力+5%
 councilor_ngm_imaginary_socialism = {
 	leader_class = {
 		# governor
@@ -705,7 +705,7 @@ councilor_ngm_trading_nations = {
 	}
 }
 
-# 33.仮想的社会 サーバー管理局長	科学者	国家単位のサーバーを管理し、最速のその先へ導く技術者	快適度+3% 物質主義志向魅力+5%
+# 33.仮想的社会 サーバー管理局長	科学者	国家単位のサーバーを管理し、最速のその先へ導く技術者	快適度+3% 物質主義志向への魅力+5%
 councilor_ngm_virtual_society = {
 	leader_class = {
 		# governor
@@ -728,7 +728,7 @@ councilor_ngm_virtual_society = {
 	}
 }
 
-# 34.健康的習慣 スポーツ長官	将軍 科学者 総督	スポーツを新興し、国民の健康を目指す責任者	リーダー寿命+5年
+# 34.健康的習慣 スポーツ長官	将軍 科学者 総督	スポーツを新興し、国民の健康を目指す責任者	リーダーの寿命+5年
 councilor_ngm_healthy_habits = {
 	leader_class = {
 		governor
@@ -862,7 +862,7 @@ councilor_ngm_peoples_democracy = {
 	}
 }
 
-# 40.サイバー民主制 情報大臣	科学者 総督	国内外の情報を管理する役所の長	基礎情報値+1
+# 40.サイバー民主制 情報大臣	科学者 総督	国内外の情報を管理する役所の長	基礎情報レベル+1
 councilor_ngm_cyberdemocracy = {
 	leader_class = {
 		governor
@@ -972,7 +972,7 @@ councilor_ngm_communist_dictatorship = {
 	}
 }
 
-# 45.衆愚扇動制 国家宣伝大臣	提督 将軍 科学者 総督	国家としての方針を喧伝し、人々を指導する役所の長	統治志向魅力+5%
+# 45.衆愚扇動制 国家宣伝大臣	提督 将軍 科学者 総督	国家としての方針を喧伝し、人々を指導する役所の長	統治志向の魅力+5%
 councilor_ngm_demagoguery = {
 	leader_class = {
 		governor
@@ -1085,7 +1085,7 @@ councilor_ngm_party_rule = {
 	}
 }
 
-# 50.服従の中の自由 護民官	総督	民衆への過度な侵害が行われないように監視する役職	幸福度+3% 権威主義志向魅力+5%
+# 50.服従の中の自由 護民官	総督	民衆への過度な侵害が行われないように監視する役職	幸福度+3% 権威主義志向への魅力+5%
 councilor_ngm_freedom_in_obedience = {
 	leader_class = {
 		governor
@@ -1176,7 +1176,7 @@ councilor_ngm_court_politics = {
 	}
 }
 
-# 54.社会ダーヴィニズム 国家親衛隊長官	提督 将軍	国家の秩序を統括し、一つの思想へと向かわせる軍人	安定度+2 統治志向魅力+3%
+# 54.社会ダーヴィニズム 国家親衛隊長官	提督 将軍	国家の秩序を統括し、一つの思想へと向かわせる軍人	安定度+2 統治志向の魅力+3%
 councilor_ngm_social_darvinism = {
 	leader_class = {
 		# governor
@@ -1333,7 +1333,7 @@ councilor_ngm_consumer_society = {
 	}
 }
 
-# 61.社会福祉 厚生大臣	総督	国民の福祉を整備し、国民に最大限の厚生業務を行う役所の長	POP成長速度+1.5%
+# 61.社会福祉 厚生大臣	総督	国民の福祉を整備し、国民に最大限の厚生業務を行う役所の長	POPの成長速度+1.5%
 councilor_ngm_social_welfare = {
 	leader_class = {
 		governor
@@ -1378,7 +1378,7 @@ councilor_ngm_cosmic_scale_liberation = {
 	}
 }
 
-# 63.究極の思想的自由 学術会議議長	科学者	学者による国家的会議を主催する高名な学者	リーダー経験値取得+1.5%
+# 63.究極の思想的自由 学術会議議長	科学者	学者による国家的会議を主催する高名な学者	リーダーの獲得経験値+1.5%
 councilor_ngm_ultimate_freedom_of_thought = {
 	leader_class = {
 		# governor
@@ -1466,7 +1466,7 @@ councilor_ngm_go_along_with = {
 	}
 }
 
-# 67.グローバル主義 交流管理監	総督	異民族との交流を促進し、問題が発生しないように監視する管理官	流入魅力+2% 受容主義志向魅力+5%
+# 67.グローバル主義 交流管理監	総督	異民族との交流を促進し、問題が発生しないように監視する管理官	流入魅力+2% 受容主義志向への魅力+5%
 councilor_ngm_globalism = {
 	leader_class = {
 		governor
@@ -1489,7 +1489,7 @@ councilor_ngm_globalism = {
 	}
 }
 
-# 68.多文化主義 共生担当補佐官	総督	異民族の定住を促進し、国家元首に異文化について助言する補佐官	POP成長速度+1% 流入魅力+2%
+# 68.多文化主義 共生担当補佐官	総督	異民族の定住を促進し、国家元首に異文化について助言する補佐官	POPの成長速度+1% 流入魅力+2%
 councilor_ngm_multiculturalism = {
 	leader_class = {
 		governor
@@ -1580,7 +1580,7 @@ councilor_ngm_people_flying_away = {
 	}
 }
 
-# 72.排他的コミュニティ 純血審問長官	提督 将軍 総督	社会と国民の純血を監督し、秩序を維持する審問官	安定度+3 排他主義志向魅力+5%
+# 72.排他的コミュニティ 純血審問長官	提督 将軍 総督	社会と国民の純血を監督し、秩序を維持する審問官	安定度+3 排他主義志向への魅力+5%
 councilor_ngm_exclusive_community = {
 	leader_class = {
 		governor
@@ -1690,7 +1690,7 @@ councilor_ngm_erasure = {
 	}
 }
 
-# 77.選民思想 大ラビ	総督	伝統的な排他的宗教の最高指導者	月間統合力+2% 排他主義志向魅力+5%
+# 77.選民思想 大ラビ	総督	伝統的な排他的宗教の最高指導者	月間統合力+2% 排他主義志向への魅力+5%
 councilor_ngm_elitism = {
 	leader_class = {
 		governor
@@ -2035,7 +2035,7 @@ councilor_ngm_mechanical_faith = {
 	}
 }
 
-# 92.伝道者団	伝道団総長	提督 将軍 総督	他国への殿堂を行う善良な一団の長	職業による統合力産出+2% 精神主義志向魅力+5%
+# 92.伝道者団	伝道団総長	提督 将軍 総督	他国への殿堂を行う善良な一団の長	職業による統合力産出+2% 精神主義志向への魅力+5%
 councilor_ngm_missionary_group = {
 	leader_class = {
 		governor
@@ -2302,7 +2302,7 @@ councilor_ngm_equality_in_society = {
 	}
 }
 
-# 104.分配主義 教理長官	総督	教義に従い、資源の再分配を行う役所の長	労働者幸福度+2%
+# 104.分配主義 教理長官	総督	教義に従い、資源の再分配を行う役所の長	労働者の幸福度+2%
 councilor_ngm_sectionalism = {
 	leader_class = {
 		governor
@@ -2750,7 +2750,7 @@ councilor_ngm_internal_affairs = {
 	}
 }
 
-# 124.内なる満足感 満腹大臣	総督	人々を満腹にさせるための閣僚	食料生産+3% 労働者幸福度+2%
+# 124.内なる満足感 満腹大臣	総督	人々を満腹にさせるための閣僚	食料生産+3% 労働者の幸福度+2%
 councilor_ngm_inner_satisfaction = {
 	leader_class = {
 		governor
@@ -2795,7 +2795,7 @@ councilor_ngm_armed_neutrality = {
 	}
 }
 
-# 126.利益代表国 国家渉外理事	総督	国家利益を確保し、外交発言力を確保するための特任外交官	経済からの外交発言力+2%
+# 126.利益代表国 国家渉外理事	総督	国家利益を確保し、外交発言力を確保するための特任外交官	経済力から発生する外交発言力+2%
 councilor_ngm_interest_representation = {
 	leader_class = {
 		governor
@@ -2906,7 +2906,7 @@ councilor_ngm_planetary_garden = {
 	}
 }
 
-# 131.絶滅防止法 大生命保護官	科学者 総督	この世で最も尊い生命を保護し、安全を確保する高等官	幸福度+3% 平等主義志向魅力+5%
+# 131.絶滅防止法 大生命保護官	科学者 総督	この世で最も尊い生命を保護し、安全を確保する高等官	幸福度+3% 平等主義志向への魅力+5%
 councilor_ngm_space_security_headquarters = {
 	leader_class = {
 		governor
@@ -3155,7 +3155,7 @@ councilor_ngm_exchange_of_honor = {
 	}
 }
 
-# 142.英雄志願部隊 大元帥	提督 将軍	国軍の最高司令官にして国家の象徴的存在である最高位軍人	月間統合力+2% 軍国主義志向魅力+3%
+# 142.英雄志願部隊 大元帥	提督 将軍	国軍の最高司令官にして国家の象徴的存在である最高位軍人	月間統合力+2% 軍国主義志向への魅力+3%
 councilor_ngm_heroic_volunteer_force = {
 	leader_class = {
 		# governor
@@ -3269,7 +3269,7 @@ councilor_ngm_hypothecation_of_human_rights = {
 	}
 }
 
-# 147.刑罰の金銭代替 司法金融長官	総督	司法を金で代替する専門官僚	惑星の犯罪度*1のエネルギーを惑星に付与 犯罪+5
+# 147.刑罰の金銭代替 司法金融長官	総督	司法を金で代替する専門官僚	惑星の犯罪*1のエネルギーを惑星に付与 犯罪+5
 councilor_ngm_money_penalty = {
 	leader_class = {
 		governor
@@ -3629,7 +3629,7 @@ councilor_ngm_p_management = {
 	}
 }
 
-# 国際平和研究所	研究所シニアフェロー	科学者	国際平和研究所で鋭敏な頭脳が評価されて政府に助言を行う政治専門家	"団結度+1 介入主義志向魅力+5%"
+# 国際平和研究所	研究所シニアフェロー	科学者	国際平和研究所で鋭敏な頭脳が評価されて政府に助言を行う政治専門家	"団結度+1 介入主義志向への魅力+5%"
 councilor_ngm_p_research = {
 	leader_class = {
 		# governor
@@ -3652,7 +3652,7 @@ councilor_ngm_p_research = {
 	}
 }
 
-# 国際開発援助	国際協力大使	総督	国際協力を行うことを主任務とした高位の外交官	使節+1
+# 国際開発援助	国際協力大使	総督	国際協力を行うことを主任務とした高位の外交官	利用可能な使節の数+1
 councilor_ngm_p_assistance = {
 	leader_class = {
 		governor
@@ -3743,7 +3743,7 @@ councilor_ngm_p_councilor = {
 ##################
 # Corporate Empire
 ##################
-# 1.財閥 社内政治専務	総督	社内における政治統制と利益折衝を専門とする役員	帝国規模-2%
+# 1.企業帝国 社内政治専務	総督	社内における政治統制と利益折衝を専門とする役員	帝国規模-2%
 councilor_ngm_corporate_empire = {
 	leader_class = {
 		governor
@@ -3900,7 +3900,7 @@ councilor_ngm_information_company = {
 	}
 }
 
-# 8.社会企業 社会共生部長	総督	社会と企業の共生を発展を図る部門の長	幸福度+2% POP成長速度+2%
+# 8.社会企業 社会共生部長	総督	社会と企業の共生を発展を図る部門の長	幸福度+2% POPの成長速度+2%
 councilor_ngm_social_enterprise = {
 	leader_class = {
 		governor
@@ -4011,7 +4011,7 @@ councilor_ngm_operating_company = {
 	}
 }
 
-# 13.産業スパイ 情報部長	科学者 総督	社内外の情報を管理し、適切な対応を行う準備をする担当者	基礎情報値+1
+# 13.産業スパイ 情報部長	科学者 総督	社内外の情報を管理し、適切な対応を行う準備をする担当者	基礎情報レベル+1
 councilor_ngm_industrial_espionage = {
 	leader_class = {
 		governor

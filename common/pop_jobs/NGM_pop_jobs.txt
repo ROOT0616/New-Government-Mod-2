@@ -25,7 +25,7 @@ bureau_of_ceremonies = {
 	}
 }
 
-# 2.書記 secretary 				安定度+5、工学+3、社会主義魅力+10%
+# 2.書記 secretary 				安定度+5、工学+3、社会主義志向への魅力+10%
 ngm_secretary = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
@@ -52,7 +52,7 @@ ngm_secretary = {
 	}
 }
 
-# 3.宣撫官 pacifist 				労働者幸福度+5%、労働者生産力+1%、実利主義魅力+10%
+# 3.宣撫官 pacifist 				労働者の幸福度+5%、労働者生産力+1%、実利主義志向への魅力+10%
 ngm_pacifist = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
@@ -74,7 +74,7 @@ ngm_pacifist = {
 	}
 }
 
-# 4.紋章官 crest_bearer 				統合力+5、惑星統合力+1%、勲章0.1、栄望主義魅力+10%
+# 4.紋章官 crest_bearer 				統合力+5、惑星統合力+1%、勲章0.1、栄望主義志向への魅力+10%
 ngm_crest_bearer = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
@@ -102,7 +102,7 @@ ngm_crest_bearer = {
 	}
 }
 
-# 5.高級参謀 senior_advisor			防衛軍+5、宇宙軍許容量+5、安定度+5、軍国主義魅力+10%
+# 5.高級参謀 senior_advisor			防衛軍+5、宇宙軍許容量+5、安定度+5、軍国主義志向への魅力+10%
 ngm_senior_advisor = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
@@ -148,7 +148,7 @@ ngm_heroes_of_society = {
 	}
 }
 
-# 7.大自然監督官 superintendent_of_wilderness	統合力+3、社会学+3、居住性+5%、保全主義魅力+10%
+# 7.大自然監督官 superintendent_of_wilderness	統合力+3、社会学+3、居住性+5%、保全主義志向への魅力+10%
 ngm_superintendent_of_wilderness = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
@@ -176,7 +176,7 @@ ngm_superintendent_of_wilderness = {
 	}
 }
 
-# 8.インフルエンサー influencer  影響力+0.3,統合力＋2,統治志向魅力＋5%
+# 8.インフルエンサー influencer  影響力+0.3,統合力+2,統治志向の魅力+5%
 ngm_influencer = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER

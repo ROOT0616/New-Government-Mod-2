@@ -160,6 +160,7 @@ decision_ngm_symbolic_monarchy = {
 		owner = {
 			is_regular_empire = yes
 			NOR = {
+				has_ethic = ethic_authoritarian
 				has_ethic = ethic_fanatic_authoritarian
 			}
 		}
@@ -698,7 +699,7 @@ decision_ngm_end_religious_domination = {
 	}
 }
 
-#犯罪抑止力-10％ 安定度5％	エネルギー-5
+# ドローン警備隊 犯罪抑止力-10% 安定度5%	エネルギー-5
 decision_planet_patrolling = {
 	owned_planets_only = yes
 	enactment_time = 0
@@ -783,7 +784,7 @@ decision_end_patrolling = {
 	}
 }
 
-#犯罪抑止力-30％ 安定度15％	エネルギー-20% 合金-15%
+# 衛星による監視 犯罪抑止力-30% 安定度15%	エネルギー-20% 合金-15%
 decision_planet_fanatic_patrolling = {
 	owned_planets_only = yes
 	enactment_time = 0
@@ -865,16 +866,16 @@ decision_end_fanatic_patrolling = {
 	}
 }
 
-#犯罪抑止力-50％ 安定度30％	エネルギー-30% 合金-20% 消費財-20%
+# 完全なる人民の監視 犯罪抑止力-50% 安定度30%	エネルギー-30% 合金-20% 消費財-20%
 decision_planet_hyper_fanatic_patrolling = {
 	owned_planets_only = yes
 	enactment_time = 0
 	resources = {
 		category = decisions
 		cost = {
-			minerals = 100
-			energy = 200
-			alloys = 20
+			minerals = 200
+			energy = 400
+			alloys = 40
 		}
 	}
 	potential = {
@@ -967,7 +968,7 @@ decision_end_hyper_fanatic_patrolling = {
 	}
 }
 
-#志向魅力-25％				研究力10％ 統合力10％
+# 自由言論を推奨する 志向魅力-25%				研究力10% 統合力10%
 decision_planet_free_speech = {
 	owned_planets_only = yes
 	enactment_time = 0
@@ -1034,7 +1035,7 @@ decision_end_free_speech = {
 	}
 }
 
-#志向魅力-50％	安定度-5％		研究力20％ 統合力20％
+# 大自由討論会を定期時に行う 志向魅力-50%	安定度-5%		研究力20% 統合力20%
 decision_planet_fanatic_free_speech = {
 	owned_planets_only = yes
 	enactment_time = 0
@@ -1123,7 +1124,7 @@ decision_end_fanatic_free_speech = {
 	}
 }
 
-#惑星規模の徴用政策	戦争中 消費財維持費-30% 犯罪度-10% 合金+10%	安定度-20 幸福度-20
+# 惑星規模の徴用政策	戦争中 消費財維持費-30% 犯罪度-10% 合金+10%	安定度-20 幸福度-20
 decision_planet_requisition_policy = {
 	owned_planets_only = yes
 	enactment_time = 0
@@ -1209,7 +1210,7 @@ decision_end_requisition_policy = {
 	}
 }
 
-#強制労働 食糧、鉱物、エネルギー+10% 幸福度-10％ 研究、統合力-30%
+# 強制労働 食糧、鉱物、エネルギー+10% 幸福度-10% 研究、統合力-30%
 decision_planet_forced_labor = {
 	owned_planets_only = yes
 	enactment_time = 0

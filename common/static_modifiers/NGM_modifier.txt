@@ -43,71 +43,68 @@ ngm_ai_supplementary_governance = {
 	planet_researchers_produces_mult = 0.1
 }
 
-# 6.首長優位制(最大多数の派閥満足度)
+# 6.首長優位制(統治者の幸福度)
 ngm_chieftaincy_system = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
 	icon_frame = 1
 	pop_cat_ruler_happiness = 10
 }
 
-# 7.議会優位制(全派閥の幸福度)
+# 7.議会優位制(市民POP幸福度)
 ngm_parliamentary_dominance = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
 	icon_frame = 1
 	pop_citizen_happiness = 5
 }
 
-# 8.宗教支配制(統合力+)
+# 8.宗教支配制(職業からの統合力+10%))
 ngm_religious_domination = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
 	icon_frame = 1
 	planet_jobs_unity_produces_mult = 0.1
 }
 
-# 9.ドローン警備隊 犯罪抑止力-10％	安定度5％	エネルギー-5
+# 9.ドローン警備隊 犯罪抑止力-10%	安定度5%	エネルギー-5
 patrolling_society = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_colony_settlement.dds"
 	icon_frame = 1
 	planet_stability_add = 5
-	planet_crime_add = -10
+	planet_crime_mult = -10
 }
 
-# 10.衛星による監視 犯罪抑止力-30％	安定度15％	エネルギー10 合金3
+# 10.衛星による監視 犯罪抑止力-30%	安定度15%	エネルギー10 合金3
 fanatic_patrolling_society = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_colony_settlement.dds"
 	icon_frame = 1
 	planet_stability_add = 15
-	planet_crime_add = -30
-	pop_happiness = -0.15
-	planet_jobs_alloys_produces_mult = -0.1
-	planet_jobs_alloys_produces_mult = -0.1
+	planet_crime_mult = -30
+	planet_jobs_energy_produces_mult = -0.2
+	planet_jobs_alloys_produces_mult = -0.15
 }
 
-# 11.完全なる人民の監視 犯罪抑止力-50％	安定度30％	エネルギー20 合金5
+# 11.完全なる人民の監視 犯罪抑止力-50%	安定度30%	エネルギー20 合金5
 hyper_fanatic_patrolling_society = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_colony_settlement.dds"
 	icon_frame = 1
 	planet_stability_add = 30
-	planet_jobs_unity_produces_mult = 0.1
-	planet_crime_add = -50
-	pop_happiness = -0.2
-	planet_jobs_energy_produces_mult = -0.2
+	planet_crime_mult = -50
+	planet_jobs_energy_produces_mult = -0.3
 	planet_jobs_consumer_goods_produces_mult = -0.2
 	planet_jobs_alloys_produces_mult = -0.2
 }
 
-# 12.自由言論を推奨する 志向魅力-20％					研究力10％	統合力10％
+# 12.自由言論を推奨する 志向魅力-20%					研究力10%	統合力10%
 free_speech = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
 	icon_frame = 1
-	pop_government_ethic_attraction = -0.25
+	pop_government_ethic_attraction = -0.2
 	planet_jobs_unity_produces_mult = 0.1
 	planet_jobs_physics_research_produces_mult = 0.1
 	planet_jobs_society_research_produces_mult = 0.1
 	planet_jobs_engineering_research_produces_mult = 0.1
 }
 
-# 13.大自由討論会を定期時に行う 志向魅力-50％	安定度-10％			研究力15％	統合力15％
+# 13.大自由討論会を定期時に行う 志向魅力-50%	安定度-10%			研究力15%	統合力15%
 fanatic_free_speech = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
 	icon_frame = 1
@@ -123,21 +120,21 @@ fanatic_free_speech = {
 requisition_policy = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_expel_population.dds"
 	icon_frame = 1
-	pop_happiness = -0.2
-	planet_stability_add = -20
-	planet_crime_add = -10
+	planet_crime_mult = -10
 	planet_jobs_alloys_produces_mult = 0.1
 	planet_pops_consumer_goods_upkeep_mult = -0.3
+	planet_stability_add = -20
+	pop_happiness = -0.2
 }
 
-# 15.強制労働 食糧、鉱物、エネルギー+10%		幸福度-10％ 研究、統合力-30%
+# 15.強制労働 食糧、鉱物、エネルギー+10%		幸福度-10% 研究、統合力-30%
 forced_labor = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_archaeology.dds"
 	icon_frame = 1
-	pop_happiness = -0.1
 	planet_jobs_energy_produces_mult = 0.1
 	planet_jobs_food_produces_mult = 0.1
 	planet_jobs_minerals_produces_mult = 0.1
+	pop_happiness = -0.1
 	planet_jobs_unity_produces_mult = -0.3
 	planet_jobs_physics_research_produces_mult = -0.3
 	planet_jobs_society_research_produces_mult = -0.3
@@ -184,7 +181,7 @@ forced_labor = {
 #####    国是    ######
 #######################
 
-# 21.繁栄主義者		平和の期間が5年続くごとに労働者生産量+1%、交易価値+2.5%（最大50年分）
+# 21.繁栄主義者		平和の期間が5年続くごとに労働者POPの資源産出+1%、交易価値+2.5%（最大50年分）
 civic_ngm_prosperity_1_advocate_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
@@ -246,7 +243,7 @@ civic_ngm_prosperity_10_advocate_modifier = {
 	trade_value_mult = 0.25
 }
 
-# 22.刑罰の金銭代替		惑星の犯罪度*1の交易価値を惑星に付与、交易価値+10%、犯罪度+10、犯罪度+10%
+# 22.刑罰の金銭代替		惑星の犯罪*1の交易価値を惑星に付与、交易価値+10%、犯罪度+10、犯罪度+10%
 civic_ngm_money_penalty_1_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 1
@@ -498,8 +495,8 @@ civic_ngm_money_penalty_50_modifier = {
 	trade_value_add = 50
 }
 
-# 23.戦争経済	戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+20%、建艦速度+20%。
-# 非戦争時の鉱物、合金、交易価値、消費財生産量-20%、建艦速度+20%
+# 23.戦争経済	戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+20%、造船速度+20%。
+# 非戦争時の鉱物、合金、交易価値、消費財生産量-20%、造船速度-20%
 civic_ngm_war_prosperity_not_war_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 1
@@ -626,7 +623,7 @@ ngm_ancient_pact = {
 }
 
 # 銀河皇帝勅許第7216号「帝立遊園領邦の認可」
-# パッシブ効果	Pop成長速度+100%、統合力+50%、交易価値+100%、星系基地建設のコスト+999999999%、請求権作成の影響力+1000%
+# パッシブ効果	POPの成長速度+100%、統合力+50%、交易価値+100%、星系基地建設のコスト+999999999%、請求権作成の影響力+1000%
 # アクティブ効果	：建造物建造コスト-30%、区域建造コスト-30%、巨大構造物建造コスト-10%、市場手数料-5%
 ngm_r_galactic_empire_aquarium = {
 	planet_buildings_cost_mult = -0.3
@@ -637,12 +634,12 @@ ngm_r_galactic_empire_aquarium = {
 }
 
 # 偉大なる恩顧 偉大なる帝国の臣下であることは大いなる喜びなのだ
-# アクティブ効果	：帝国補正：統合力+500K 派閥からの統合力収入+50%
+# アクティブ効果	：帝国補正：統合力+500K 派閥統合力ボーナス+50%
 ngm_r_imperial_chronicle_modifier = {
 	pop_factions_unity_produces_mult = 0.5
 }
 
-# 開始時、20年の間Pop成長速度+200%、Pop製造速度+200%、流入魅力+100%の惑星特性（国家再興の決意 Determination to Rebuild ）を付与
+# 開始時、20年の間POPの成長速度+200%、Pop製造速度+200%、流入魅力+100%の惑星特性（国家再興の決意 Determination to Rebuild ）を付与
 ngm_determination_to_rebuild = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
@@ -652,7 +649,7 @@ ngm_determination_to_rebuild = {
 }
 
 # 首都惑星に特殊な特性「時空超越機」 space_time_continuum （時間を超えることができる機械で、惑星と一体化している。原理は失われているため再現は不可能であるが、時折亡命者がこの時代に流れ込んでいる。）
-# 物理学研究+20%、Pop成長速度+10%
+# 物理学研究+20%、POPの成長速度+10%
 ngm_space_time_continuum = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
@@ -713,7 +710,7 @@ origin_ngm_phenix_8_modifier = {
 	diplo_weight_mult = -5
 }
 
-# 失われしインフラ技術	巨大構造物建造不可、防衛ステーション許容量-500	この帝国の偉大なる大規模建築は再現不可能だ
+# 失われしインフラ技術	巨大構造物建造不可、防衛星系基地許容量-500	この帝国の偉大なる大規模建築は再現不可能だ
 origin_ngm_phenix_9_modifier = {
 	starbase_defense_platform_capacity_add = -500
 	country_megastructure_build_cap_add = -50
@@ -804,7 +801,7 @@ ngm_government3e = {
 	job_ad_forcrd_larbor_add = 3
 }
 
-# 死は無であるが、敗北と不名誉に生きることは、まさに日常の死なのだ。
+# 死は無であるが、敗北と不名誉に生きることは、まさに日常の死なのだ。 月間 影響力+1 幸福度+25% 快適度+25% 交易価値+25% POPの成長速度+25% 月間資源+25% POP消費財維持費+25%
 ngm_with_honor_1_modifier = {
 	country_base_influence_produces_add = 1
 	pop_happiness = 0.25
@@ -815,7 +812,7 @@ ngm_with_honor_1_modifier = {
 	planet_pops_consumer_goods_upkeep_mult = 0.25
 }
 
-# 屈辱を与えられた
+# 屈辱を与えられた 月間 影響力-2 幸福度-25% 快適度-25% 安定度-10 交易価値-25% POPの成長速度-10% 外交発言力-10%
 ngm_with_honor_2_modifier = {
 	country_base_influence_produces_add = -2
 	pop_happiness = -0.25
@@ -827,7 +824,7 @@ ngm_with_honor_2_modifier = {
 }
 
 # 名前は、銀河規模の拡大という名称で、
-# Pop成長率+1000%、Pop製造速度+1000%。Pop消費財+50%
+# POPの成長速度+1000%、Pop製造速度+1000%。Pop消費財+50%
 resolution_ngm_galactic_scale_1 = {
 	pop_growth_speed = 10
 	# pop_assembly_speed = 10
@@ -908,7 +905,7 @@ ngm_olympic_7_event_modifier = {
 	trade_value_mult = 0.1
 }
 
-# 1年間当該惑星Pop成長速度+10%
+# 1年間当該惑星POPの成長速度+10%
 ngm_olympic_8_event_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
@@ -965,7 +962,7 @@ ngm_olympic_16_event_modifier = {
 	pop_happiness = -0.1
 }
 
-# 1年間当該惑星Pop成長速度-10%
+# 1年間当該惑星POPの成長速度-10%
 ngm_olympic_17_event_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
@@ -1060,7 +1057,7 @@ ngm_olympic_buff_modifier = {
 	country_unity_produces_mult = 0.
 }
 
-# 狙い撃ち:宿敵の犯罪度+30
+# 狙い撃ち:宿敵の犯罪+30
 tr_ngm_sniper_debuff_1 = {
 	planet_crime_add = 30
 }
@@ -1086,7 +1083,7 @@ tr_ngm_sniper_debuff_8 = {
 	planet_crime_add = 30
 }
 
-# 浸透:外交関係にあるすべての国家の犯罪度+20		伝統取得時
+# 浸透:外交関係にあるすべての国家の犯罪+20		伝統取得時
 tr_ngm_penetration_debuff_1 = {
 	planet_crime_add = 20
 }
@@ -1133,7 +1130,7 @@ tr_ngm_penetration_debuff_15 = {
 	planet_crime_add = 20
 }
 
-# 自由:報道の自由:宿敵宣言した国家の奴隷幸福度-20%
+# 自由:報道の自由:宿敵宣言した国家の奴隷の幸福度-20%
 tr_ngm_freedom_finish_debuff_1 = {
 	pop_cat_slave_happiness = -0.2
 }
@@ -1159,7 +1156,7 @@ tr_ngm_freedom_finish_debuff_8 = {
 	pop_cat_slave_happiness = -0.2
 }
 
-# 破壊工作:宿敵の貿易保護値-15、宿敵の犯罪度+20
+# 破壊工作:宿敵の交易保護値-15、宿敵の犯罪+20
 tr_ngm_sabotage_debuff_1 = {
 	local_trade_protection_add = -15
 	planet_crime_add = 20
@@ -1193,7 +1190,7 @@ tr_ngm_sabotage_debuff_8 = {
 	planet_crime_add = 20
 }
 
-# 恒常的妨害:宿敵の貿易保護値-5
+# 恒常的妨害:宿敵の交易保護値-5
 tr_ngm_constant_obstruction_debuff_1 = {
 	local_trade_protection_add = -5
 }
@@ -1236,7 +1233,7 @@ tr_ngm_ministry_engagement_buff_5 = {
 	country_base_influence_produces_add = 5
 }
 
-# 善隣完遂時:5種類以上の種族がいる惑星でPop成長速度+10%、交易価値+10%、統合力+10%、流入魅力+10%
+# 善隣完遂時:5種類以上の種族がいる惑星でPOPの成長速度+10%、交易価値+10%、統合力+10%、流入魅力+10%
 tr_ngm_neighbor_finish_buff = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	pop_growth_speed = 0.1
@@ -1399,21 +1396,21 @@ agenda_ngm_pursuit_of_economic_profit_finish_modifier = {
 	country_energy_produces_mult = 0.15
 }
 
-# 経済的格差の是正	reduction_of_economic_disparities	社会	労働者幸福度+10%、労働者資源産出+5%	適用済みの補正	労働者幸福度+20%、労働者資源産出+10%、安定度+5	平等の実現は国の義務だ
+# 経済的格差の是正	reduction_of_economic_disparities	社会	労働者の幸福度+10%、労働者資源産出+5%	適用済みの補正	労働者の幸福度+20%、労働者資源産出+10%、安定度+5	平等の実現は国の義務だ
 agenda_ngm_reduction_of_economic_disparities_finish_modifier = {
 	pop_cat_worker_happiness = 0.2
 	planet_jobs_worker_produces_mult = 0.1
 	planet_stability_add = 5
 }
 
-# 開発構想の改革	reform_of_development_concept	開発	鉱物産出+10%、合金産出+10%、消費財産出+10％	適用済みの補正	鉱物産出+20%、合金産出+20%、消費財産出+20％	帝国の開発追求は未来へとつながる
+# 開発構想の改革	reform_of_development_concept	開発	鉱物産出+10%、合金産出+10%、消費財産出+10%	適用済みの補正	鉱物産出+20%、合金産出+20%、消費財産出+20%	帝国の開発追求は未来へとつながる
 agenda_ngm_reform_of_development_concept_finish_modifier = {
 	country_minerals_produces_mult = 0.2
 	country_alloys_produces_mult = 0.2
 	country_consumer_goods_produces_mult = 0.2
 }
 
-# 環境主義の喧伝	the_clamor_for_environmentalism	保全	居住性+5、POP成長速度+10%	適用済みの補正	居住性+10、POP成長速度+20%、POP消費財維持費-10％	自然環境は保護していくべき財産だ
+# 環境主義の喧伝	the_clamor_for_environmentalism	保全	居住性+5、POPの成長速度+10%	適用済みの補正	居住性+10、POPの成長速度+20%、POP消費財維持費-10%	自然環境は保護していくべき財産だ
 agenda_ngm_the_clamor_for_environmentalism_finish_modifier = {
 	pop_environment_tolerance = 10
 	pop_growth_speed = 0.2
@@ -1426,7 +1423,7 @@ agenda_ngm_ensuring_law_and_order_finish_modifier = {
 	empire_size_pops_mult = -0.2
 }
 
-# 幹部教育の再実施	re_implementation_of_executive_education	研鑽	リーダー経験値取得+15%、リーダー雇用コスト-20%	適用済みの補正	リーダー経験値取得+30%、リーダー雇用コスト-40%、リーダー維持コスト-25%	幹部こそ初心を忘れてはいけない
+# 幹部教育の再実施	re_implementation_of_executive_education	研鑽	リーダーの獲得経験値+15%、リーダー雇用コスト-20%	適用済みの補正	リーダーの獲得経験値+30%、リーダー雇用コスト-40%、リーダー維持コスト-25%	幹部こそ初心を忘れてはいけない
 agenda_ngm_re_implementation_of_executive_education_finish_modifier = {
 	species_leader_exp_gain = 0.3
 	leaders_cost_mult = -0.4
@@ -1444,7 +1441,7 @@ agenda_ngm_promoting_academic_research_finish_modifier = {
 	all_technology_research_speed = 0.2
 }
 
-# 自由への歩み	steps_toward_freedom	自由	派閥からの統合力収入+15%	適用済みの補正	派閥からの統合力収入+30%	自由に基づく派閥政治を推進する
+# 自由への歩み	steps_toward_freedom	自由	派閥統合力ボーナス+15%	適用済みの補正	派閥統合力ボーナス+30%	自由に基づく派閥政治を推進する
 agenda_ngm_steps_toward_freedom_finish_modifier = {
 	pop_factions_unity_produces_mult = 0.3
 }
@@ -1454,7 +1451,7 @@ agenda_ngm_reorganization_of_order_finish_modifier = {
 	empire_size_mult = -0.2
 }
 
-# 異種族理解の推進	promotion_of_species_understanding	善隣	外交発言力+10%、流入魅力+20%	適用済みの補正	外交発言力+10%、流入魅力+40%、POP成長速度+10％	異種族の理解推進は国家規模で行われる
+# 異種族理解の推進	promotion_of_species_understanding	善隣	外交発言力+10%、流入魅力+20%	適用済みの補正	外交発言力+10%、流入魅力+40%、POPの成長速度+10%	異種族の理解推進は国家規模で行われる
 agenda_ngm_promotion_of_species_understanding_finish_modifier = {
 	diplo_weight_mult = 0.1
 	planet_immigration_pull_mult = 0.4
@@ -1493,7 +1490,7 @@ agenda_ngm_expanding_paranoia_debuff_8 = {
 	diplo_weight_mult = -0.2
 }
 
-# 官僚機構の拡大	expansion_of_bureaucracy	官吏	布告資金+50、リーダー雇用コスト-15%	適用済みの補正	リーダー雇用コスト-30%、布告資金+100、帝国規模-10％	官僚機構の強化は国の強化である
+# 官僚機構の拡大	expansion_of_bureaucracy	官吏	布告資金+50、リーダー雇用コスト-15%	適用済みの補正	リーダー雇用コスト-30%、布告資金+100、帝国規模-10%	官僚機構の強化は国の強化である
 agenda_ngm_expansion_of_bureaucracy_finish_modifier = {
 	leaders_cost_mult = -0.3
 	country_edict_fund_add = 100
@@ -1518,7 +1515,7 @@ agenda_ngm_space_of_hope_finish_modifier = {
 	country_border_friction_mult = -0.4
 }
 
-# 国際問題の解決	resolving_international_issues	介入	使節+1、外交発言力+15%	適用済みの補正	使節+2、外交発言力+30%	国際的問題は一国では解決しない。そもそも一国では発生しない
+# 国際問題の解決	resolving_international_issues	介入	利用可能な使節の数+1、外交発言力+15%	適用済みの補正	利用可能な使節の数+2、外交発言力+30%	国際的問題は一国では解決しない。そもそも一国では発生しない
 agenda_ngm_resolving_international_issues_finish_modifier = {
 	envoys_add = 2
 	diplo_weight_mult = 0.3

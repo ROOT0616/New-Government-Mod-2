@@ -1,4 +1,4 @@
-#1.青年政治 オール	リーダー寿命-20年、初期リーダー年-10年、研究速度+10%
+#1.青年政治 オール	リーダーの寿命-20年、初期リーダーの年齢が10-20歳になる、研究速度+10%
 trait_ngm_youth_politics = {
 	cost = 0
 	custom_tooltip = Youth_Politics
@@ -34,7 +34,7 @@ trait_ngm_youth_politics = {
 	leader_age_max = 20
 }
 
-#2.長老政治 オール	リーダー寿命+20年	初期リーダー年+10年	統合力+10%
+#2.長老政治 オール	リーダーの寿命+20年	初期リーダーの年齢が65-100歳になる	統合力+10%
 trait_ngm_elder_politics = {
 	cost = 0
 	custom_tooltip = Elder_Politics
@@ -66,7 +66,7 @@ trait_ngm_elder_politics = {
 	species_possible_merge_add = {
 		always = no
 	}
-	leader_age_min = 60
+	leader_age_min = 65
 	leader_age_max = 100
 }
 
@@ -159,7 +159,7 @@ trait_ngm_totemowarui = {
 	}
 }
 
-# trait_ngm_healing	治癒遺伝子	：2p	Pop成長速度+5%、リーダー寿命+10年、地上軍耐久度+30%	(この種族の遺伝子は特殊で、自己複製能力が高く、多少の怪我や病気はすぐに治癒する。)
+# trait_ngm_healing	治癒遺伝子	：2p	POPの成長速度+5%、リーダーの寿命+10年、地上軍耐久度+30%	(この種族の遺伝子は特殊で、自己複製能力が高く、多少の怪我や病気はすぐに治癒する。)
 trait_ngm_healing = {
 	cost = 2
 	potential_crossbreeding_chance = 1
@@ -180,7 +180,7 @@ trait_ngm_healing = {
 	}
 }
 
-# trait_ngm_unhealing	修復不能  	：-2p	Pop成長速度-5%、リーダー寿命-10年、地上軍耐久度-30%	(この種族の遺伝子は特殊で、自己複製能力が低く、多少の怪我や病気が命取りとなる。)
+# trait_ngm_unhealing	修復不能  	：-2p	POPの成長速度-5%、リーダーの寿命-10年、地上軍耐久度-30%	(この種族の遺伝子は特殊で、自己複製能力が低く、多少の怪我や病気が命取りとなる。)
 trait_ngm_unhealing = {
 	cost = -2
 	potential_crossbreeding_chance = 1
@@ -241,7 +241,7 @@ trait_ngm_unadaptation = {
 	}
 }
 
-# trait_ngm_division	生体分裂  	：2p	Pop成長速度+10%				(この種族は無性生殖が可能で、身体を分裂左折ことが可能である。)
+# trait_ngm_division	生体分裂  	：2p	POPの成長速度+10%				(この種族は無性生殖が可能で、身体を分裂左折ことが可能である。)
 trait_ngm_division = {
 	cost = 2
 	potential_crossbreeding_chance = 1
@@ -261,7 +261,7 @@ trait_ngm_division = {
 	}
 }
 
-# trait_ngm_MPMD		多産多死  	：2p	Pop成長速度+15%、リーダー寿命-10年
+# trait_ngm_MPMD		多産多死  	：2p	POPの成長速度+15%、リーダーの寿命-10年
 trait_ngm_MPMD = {
 	cost = 2
 	potential_crossbreeding_chance = 1
@@ -282,7 +282,7 @@ trait_ngm_MPMD = {
 	}
 }
 
-# trait_ngm_LMLD		少子長命  	：2p	Pop成長速度-5%、リーダー寿命+30年
+# trait_ngm_LMLD		少子長命  	：2p	POPの成長速度-5%、リーダーの寿命+30年
 trait_ngm_LMLD = {
 	cost = 2
 	potential_crossbreeding_chance = 1
@@ -303,7 +303,7 @@ trait_ngm_LMLD = {
 	}
 }
 
-# trait_ngm_abn_growth	異常発達  	：4p	Pop成長速度+30%、防衛軍強度+40%、統合力-20%、研究力-10%
+# trait_ngm_abn_growth	異常発達  	：4p	POPの成長速度+30%、防衛軍強度+40%、統合力-20%、研究力-10%
 trait_ngm_abn_growth = {
 	cost = 4
 	potential_crossbreeding_chance = 1
@@ -327,7 +327,7 @@ trait_ngm_abn_growth = {
 	}
 }
 
-# trait_ngm_Lost_species	失われし種	：4p 	Pop成長速度-25%、統合力+20%、研究力+20%
+# trait_ngm_Lost_species	失われし種	：4p 	POPの成長速度-25%、統合力+20%、研究力+20%
 trait_ngm_Lost_species = {
 	cost = 1
 	potential_crossbreeding_chance = 1
@@ -350,7 +350,7 @@ trait_ngm_Lost_species = {
 	}
 }
 
-# trait_ngm_turf		縄張り意識	：-2p	強制移住コスト+25%、Popの流入-10%、防衛軍士気+10%、住居使用量+5%	(この種族は自らの範囲を重要視しており、それを維持することに執念を見せる。)
+# trait_ngm_turf		縄張り意識	：-2p	強制移住コスト+25%、Popの流入-10%、防衛軍士気+10%、POPの住居使用量+5%	(この種族は自らの範囲を重要視しており、それを維持することに執念を見せる。)
 trait_ngm_turf = {
 	cost = -2
 	potential_crossbreeding_chance = 1
@@ -372,7 +372,7 @@ trait_ngm_turf = {
 	}
 }
 
-# trait_ngm_Movement	移動性社会	：2p	強制移住コスト-25%、Popの流入+10%、住居使用量-5%、侵攻軍士気＋10%	(この種族は転居や移住を好んでおり、そのためにはあらゆる行動をとりうる。)
+# trait_ngm_Movement	移動性社会	：2p	強制移住コスト-25%、Popの流入+10%、POPの住居使用量-5%、侵攻軍士気+10%	(この種族は転居や移住を好んでおり、そのためにはあらゆる行動をとりうる。)
 trait_ngm_Movement = {
 	cost = 2
 	potential_crossbreeding_chance = 1
@@ -514,7 +514,7 @@ trait_ngm_jack_o_lantern = {
 	}
 }
 
-# trait_ngm_optical_adapt		光学適応  	：2p	地上軍耐久度+30%、住居使用量-5%、快適度消費-5%、犯罪発生+5%	(この種族は光学的に周囲へ溶け込むことで隠れることができる。)
+# trait_ngm_optical_adapt		光学適応  	：2p	地上軍耐久度+30%、POPの住居使用量-5%、快適度消費-5%、犯罪発生+5%	(この種族は光学的に周囲へ溶け込むことで隠れることができる。)
 trait_ngm_optical_adapt = {
 	cost = 2
 	potential_crossbreeding_chance = 1
@@ -569,7 +569,7 @@ trait_ngm_hardness = {
 	}
 }
 
-# trait_ngm_neural_block		神経遮断  	：2p	地上軍士気+40%、リーダー寿命+5年				(この種族は痛覚神経を一時的に遮断させ、痛みを避けることができる。)
+# trait_ngm_neural_block		神経遮断  	：2p	地上軍士気+40%、リーダーの寿命+5年				(この種族は痛覚神経を一時的に遮断させ、痛みを避けることができる。)
 trait_ngm_neural_block = {
 	cost = 2
 	potential_crossbreeding_chance = 1
@@ -871,7 +871,7 @@ trait_ngm_death_heart = {
 	}
 }
 
-# trait_ngm_huge		巨大      	：3p	Popの食料消費量+10%、住居使用量+15%、地上軍ダメージ+20%、地上軍耐久度+20%、家畜からの食料+3、Popの鉱物・エネルギー・食料生産+10％	(この種族の身体は銀河基準からしても巨大である。)
+# trait_ngm_huge		巨大      	：3p	Popの食料消費量+10%、POPの住居使用量+15%、地上軍ダメージ+20%、地上軍耐久度+20%、家畜からの食料+3、Popの鉱物・エネルギー・食料生産+10%	(この種族の身体は銀河基準からしても巨大である。)
 trait_ngm_huge = {
 	cost = 3
 	potential_crossbreeding_chance = 1
@@ -899,7 +899,7 @@ trait_ngm_huge = {
 	}
 }
 
-# trait_ngm_big		大型      	：2p	Popの食料消費量+5%、住居使用量+10%、地上軍ダメージ+10%、地上軍耐久度+10%、家畜からの食料+1、Popの鉱物・エネルギー・食料生産+5％		(この種族の身体は銀河基準からしても大柄である。)
+# trait_ngm_big		大型      	：2p	Popの食料消費量+5%、POPの住居使用量+10%、地上軍ダメージ+10%、地上軍耐久度+10%、家畜からの食料+1、Popの鉱物・エネルギー・食料生産+5%		(この種族の身体は銀河基準からしても大柄である。)
 trait_ngm_big = {
 	cost = 2
 	potential_crossbreeding_chance = 1
@@ -927,7 +927,7 @@ trait_ngm_big = {
 	}
 }
 
-# trait_ngm_small		小型      	：-2p	Popの食料消費量-5%、住居使用量-10%、地上軍ダメージ-10%、地上軍耐久度-10%、家畜からの食料-1、Popの鉱物・エネルギー・食料生産-5％		(この種族の身体は銀河基準からしても小型である。)
+# trait_ngm_small		小型      	：-2p	Popの食料消費量-5%、POPの住居使用量-10%、地上軍ダメージ-10%、地上軍耐久度-10%、家畜からの食料-1、Popの鉱物・エネルギー・食料生産-5%		(この種族の身体は銀河基準からしても小型である。)
 trait_ngm_small = {
 	cost = -2
 	potential_crossbreeding_chance = 1
@@ -955,7 +955,7 @@ trait_ngm_small = {
 	}
 }
 
-# trait_ngm_minimum	極小      	：-3p	Popの食料消費量-10%、住居使用量-15%、地上軍ダメージ-20%、地上軍耐久度-20%、家畜からの食料-3、Popの鉱物・エネルギー・食料生産-10％	(この種族の身体は銀河基準からしても極小である。)
+# trait_ngm_minimum	極小      	：-3p	Popの食料消費量-10%、POPの住居使用量-15%、地上軍ダメージ-20%、地上軍耐久度-20%、家畜からの食料-3、Popの鉱物・エネルギー・食料生産-10%	(この種族の身体は銀河基準からしても極小である。)
 trait_ngm_minimum = {
 	cost = -3
 	potential_crossbreeding_chance = 1
@@ -1092,7 +1092,7 @@ trait_ngm_elder_verbal = {
 	}
 }
 
-# trait_ngm_elder_non_verbal	非言語社会      ：-2p	研究力-10%、統合力-5%、Pop成長速度+3%	(この種族には言語という概念が存在しない。)
+# trait_ngm_elder_non_verbal	非言語社会      ：-2p	研究力-10%、統合力-5%、POPの成長速度+3%	(この種族には言語という概念が存在しない。)
 trait_ngm_elder_non_verbal = {
 	cost = -2
 	potential_crossbreeding_chance = 1
@@ -1181,7 +1181,7 @@ trait_ngm_unappetizing = {
 	}
 }
 
-# trait_ngm_speckled_w_white	霜降り          ：-1p	家畜からの食料+1、Popの食料消費量+10%、リーダー寿命-5年	(この種族は全身が霜降りである。)
+# trait_ngm_speckled_w_white	霜降り          ：-1p	家畜からの食料+1、Popの食料消費量+10%、リーダーの寿命-5年	(この種族は全身が霜降りである。)
 trait_ngm_speckled_w_white = {
 	cost = -1
 	potential_crossbreeding_chance = 1
@@ -1266,7 +1266,7 @@ trait_ngm_simple_heredity = {
 	}
 }
 
-# trait_ngm_sensitization		感光性          ：-1p	快適度使用量+10%	(この種族は極めて光に弱く、光を避ける傾向にある。)
+# trait_ngm_sensitization		感光性          ：-1p	POPの快適度使用量+10%	(この種族は極めて光に弱く、光を避ける傾向にある。)
 trait_ngm_sensitization = {
 	cost = -1
 	potential_crossbreeding_chance = 1
@@ -1285,7 +1285,7 @@ trait_ngm_sensitization = {
 	}
 }
 
-# trait_ngm_like_light		好光性          ：-1p	住居使用量+10%		(この種族は光を好み、日光を浴びることを好む。)
+# trait_ngm_like_light		好光性          ：-1p	POPの住居使用量+10%		(この種族は光を好み、日光を浴びることを好む。)
 trait_ngm_like_light = {
 	cost = -1
 	potential_crossbreeding_chance = 1
@@ -1304,7 +1304,7 @@ trait_ngm_like_light = {
 	}
 }
 
-# trait_ngm_indoor	インドア派      ：-1p	住居使用量+10%	(この種族は屋内での活動を好む。)
+# trait_ngm_indoor	インドア派      ：-1p	POPの住居使用量+10%	(この種族は屋内での活動を好む。)
 trait_ngm_indoor = {
 	cost = -1
 	potential_crossbreeding_chance = 1
@@ -1323,7 +1323,7 @@ trait_ngm_indoor = {
 	}
 }
 
-# trait_ngm_outdoor	アウトドア派    ：+1p	住居使用量-10%	(この種族は屋外での活動を好む。)
+# trait_ngm_outdoor	アウトドア派    ：+1p	POPの住居使用量-10%	(この種族は屋外での活動を好む。)
 trait_ngm_outdoor = {
 	cost = 1
 	potential_crossbreeding_chance = 1
@@ -1524,7 +1524,7 @@ trait_ngm_introversion = {
 	}
 }
 
-# trait_ngm_spirit_release	精神的開放  	：-2p	統治志向魅力-30%	(この種族は精神的な束縛を嫌う。)
+# trait_ngm_spirit_release	精神的開放  	：-2p	統治志向の魅力-30%	(この種族は精神的な束縛を嫌う。)
 trait_ngm_spirit_release = {
 	cost = -2
 	potential_crossbreeding_chance = 1
@@ -1545,7 +1545,7 @@ trait_ngm_spirit_release = {
 	}
 }
 
-# trait_ngm_spirit_freedom	精神的自由  	：-1p	統治志向魅力-15%	(この種族は精神的な自由を重視している。)
+# trait_ngm_spirit_freedom	精神的自由  	：-1p	統治志向の魅力-15%	(この種族は精神的な自由を重視している。)
 trait_ngm_spirit_freedom = {
 	cost = -1
 	potential_crossbreeding_chance = 1
@@ -1566,7 +1566,7 @@ trait_ngm_spirit_freedom = {
 	}
 }
 
-# trait_ngm_spirit_authority	精神的権威  	：1p	統治志向魅力+15%	(この種族は精神的に誰かに従うことに慣れている。)
+# trait_ngm_spirit_authority	精神的権威  	：1p	統治志向の魅力+15%	(この種族は精神的に誰かに従うことに慣れている。)
 trait_ngm_spirit_authority = {
 	cost = 1
 	potential_crossbreeding_chance = 1
@@ -1587,7 +1587,7 @@ trait_ngm_spirit_authority = {
 	}
 }
 
-# trait_ngm_spirit_subordination	精神的従属	：2p	統治志向魅力+30%	(この種族は精神的に誰かの管理下に置かれることを好んでいる。)
+# trait_ngm_spirit_subordination	精神的従属	：2p	統治志向の魅力+30%	(この種族は精神的に誰かの管理下に置かれることを好んでいる。)
 trait_ngm_spirit_subordination = {
 	cost = 2
 	potential_crossbreeding_chance = 1
@@ -1760,7 +1760,7 @@ trait_ngm_spendthrift = {
 
 # 起源用
 # 種族特性「古代からの商人」（はるか太古から頭脳労働者として活躍してきたため、創造やデスクワークに適性がある種族。人口過少の防止として太古に繁殖力の増強が図られている。）
-# 交易価値+30%、住居使用量-30%、Pop成長率+20%。鉱山労働者の生産量-50%、消費財消費量+10%。途中削除、追加不可。強制取得。
+# 交易価値+30%、POPの住居使用量-30%、POPの成長速度+20%。鉱山労働者の生産量-50%、POP消費財維持費+10%。途中削除、追加不可。強制取得。
 trait_ngm_merchant_from_ancient = {
 	cost = 0
 	initial = no
@@ -1794,24 +1794,24 @@ trait_ngm_merchant_from_ancient = {
 
 # 以下、対応するポートレートのみ選択可能。
 # trait_ngm_Advanced_finger	高度な手指（ヒューマノイド）：2p	合金生産+10%							(この種族の手指は器用で、うまく加工を行うことができる。)
-# trait_ngm_homicide		同族殺し（ヒューマノイド）  ：-2p	統合力-10%、安定度-5%、軍国主義魅力＋10%、平和主義魅力-10%	(この種族は互いに殺し合いを行う悪習がある。)
+# trait_ngm_homicide		同族殺し（ヒューマノイド）  ：-2p	統合力-10%、安定度-5%、軍国主義志向への魅力+10%、平和主義志向への魅力-10%	(この種族は互いに殺し合いを行う悪習がある。)
 # trait_ngm_beautiful_fur 	美しい毛並み（哺乳類）      ：2p	職業による快適度+10%、居住性+5%					(この種族の毛並みは長く、美しい。)
-# trait_ngm_violence_instinct	暴力的本能（哺乳類）        ：-2p	地上軍士気-10%、統合力-5%、地上軍士気＋5%			(この種族は本能的に粗暴である。)
-# trait_ngm_scantily_clad		身軽な身体（鳥）            ：2p	回避+5%、住居使用量-10%						(この種族は体重が少ない割に筋肉量が多く、身軽に動くことができる。)
-# trait_ngm_chicken head		鳥頭（鳥）                  ：-2p	研究力-10%、統合力-5%、幸福度＋5%、統治志向魅力＋10%		(この種族の脳は小さく、すぐ忘れてしまう。)
+# trait_ngm_violence_instinct	暴力的本能（哺乳類）        ：-2p	地上軍士気-10%、統合力-5%、地上軍士気+5%			(この種族は本能的に粗暴である。)
+# trait_ngm_scantily_clad		身軽な身体（鳥）            ：2p	回避+5%、POPの住居使用量-10%						(この種族は体重が少ない割に筋肉量が多く、身軽に動くことができる。)
+# trait_ngm_chicken head		鳥頭（鳥）                  ：-2p	研究力-10%、統合力-5%、幸福度+5%、統治志向の魅力+10%		(この種族の脳は小さく、すぐ忘れてしまう。)
 # trait_ngm_efficient_metabolism	効率的代謝（爬虫類）        ：2p	食料消費量-15%							(この種族の代謝効率は極めて高く、少ない食料で生きていける。)
-# trait_ngm_external_temperature	外温性（爬虫類）            ：-2p	居住性-5%、リーダーの寿命＋5年					(この種族は外部の温度に体温を左右されるため、居住について課題が多い。)
+# trait_ngm_external_temperature	外温性（爬虫類）            ：-2p	居住性-5%、リーダーの寿命+5年					(この種族は外部の温度に体温を左右されるため、居住について課題が多い。)
 # trait_ngm_elder_rational_body	合理的身体機能（虫）        ：2p	居住性+10%							(この種族の身体は極めて合理的で、あらゆる環境に適応できる。)
-# trait_ngm_metamorphosis		変態（虫）                  ：-2p	Pop成長速度-10%、住居使用量-5%					(この種族は幼体から成体になる間に大きな形態変化を必要とするほか、変態時に突然死することも多い。)
+# trait_ngm_metamorphosis		変態（虫）                  ：-2p	POPの成長速度-10%、POPの住居使用量-5%					(この種族は幼体から成体になる間に大きな形態変化を必要とするほか、変態時に突然死することも多い。)
 # trait_ngm_flexible_muscle	柔軟な筋肉（軟体人）        ：2p	鉱物生産量+5%、地上軍ダメージ+10%				(この種族の筋肉は柔軟で、強度も高い。)
-# trait_ngm_corrosiveness_mucus	腐食性粘液（軟体人）        ：-2p	Pop消費財消費量+10%、地上軍攻撃力+5%				(この種族が分泌する粘液は腐食性で、様々なものを壊すことが多い。)
-# trait_ngm_disassembly		高分子分解（菌類）          ：2p	Pop成長速度+10%							(この種族は様々なものを分解し、栄養とすることができる。)
+# trait_ngm_corrosiveness_mucus	腐食性粘液（軟体人）        ：-2p	POP消費財維持費+10%、地上軍攻撃力+5%				(この種族が分泌する粘液は腐食性で、様々なものを壊すことが多い。)
+# trait_ngm_disassembly		高分子分解（菌類）          ：2p	POPの成長速度+10%							(この種族は様々なものを分解し、栄養とすることができる。)
 # trait_ngm_spore			変性胞子（菌類）            ：-2p	職業による快適度-10%、居住性-5%、統合力+5%			(この種族の胞子は周囲に予測可能性の低い影響を与える。)
 # trait_ngm_photosynthesis	光合成（植物）              ：2p	食料消費量-20%、居住性+5%					(この種族は光合成により栄養を手に入れることができる。)
-# trait_ngm_slowness		遅速性（植物）              ：-2p	地上軍耐久度-30%、住居使用量+10%、リーダー寿命＋15年		(この種族の足は遅く、動作が緩慢である。)
+# trait_ngm_slowness		遅速性（植物）              ：-2p	地上軍耐久度-30%、POPの住居使用量+10%、リーダーの寿命+15年		(この種族の足は遅く、動作が緩慢である。)
 
 # 機械特性
-# 1 工芸義肢 trait_ngm_m_crafts 3 "合金生産+5% 消費財生産+5％" この機械の腕は極めて精巧な動作にも耐え、工芸品や工業製品の製造に高い適性を示している。
+# 1 工芸義肢 trait_ngm_m_crafts 3 "合金生産+5% 消費財生産+5%" この機械の腕は極めて精巧な動作にも耐え、工芸品や工業製品の製造に高い適性を示している。
 trait_ngm_m_crafts = {
 	cost = 3
 	allowed_archetypes = { ROBOT MACHINE }
@@ -1838,7 +1838,7 @@ trait_ngm_m_crafts = {
 	}
 }
 
-# 2 高機能レンズ trait_ngm_m_lens 3 "研究速度+10％ アノマリー調査速度+5%" この機械のレンズは微細な者から遠くのものまで把握することに高い能力を誇る。
+# 2 高機能レンズ trait_ngm_m_lens 3 "研究速度+10% アノマリー調査速度+5%" この機械のレンズは微細な者から遠くのものまで把握することに高い能力を誇る。
 trait_ngm_m_lens = {
 	cost = 3
 	allowed_archetypes = { ROBOT MACHINE }
@@ -1893,7 +1893,7 @@ trait_ngm_m_discharge = {
 	}
 }
 
-# 5 飛行ジェット trait_ngm_m_jet 2 "回避+5％ 物理学+10%" この機械は空を飛ぶ機構を備えている。
+# 5 飛行ジェット trait_ngm_m_jet 2 "回避+5% 物理学+10%" この機械は空を飛ぶ機構を備えている。
 trait_ngm_m_jet = {
 	cost = 2
 	allowed_archetypes = { ROBOT MACHINE }
@@ -2238,7 +2238,7 @@ trait_ngm_m_sub = {
 	}
 }
 
-# 24	自己複製	trait_ngm_m_made	3		"Pop成長速度+10％ リーダー故障確率-5%"	この種族は、自分たち自身を複製することができる
+# 24	自己複製	trait_ngm_m_made	3		"POPの成長速度+10% リーダー故障確率-5%"	この種族は、自分たち自身を複製することができる
 trait_ngm_m_made = {
 	cost = 2
 	allowed_archetypes = { ROBOT MACHINE }
@@ -2685,7 +2685,7 @@ trait_ngm_m_blue = {
 	}
 }
 
-# 41	自爆装置	trait_ngm_m_bomb	-4		"POP成長速度-5％ リーダー故障確率+5%"	この種族は、危機に陥ると爆発する
+# 41	自爆装置	trait_ngm_m_bomb	-4		"POPの成長速度-5% リーダー故障確率+5%"	この種族は、危機に陥ると爆発する
 trait_ngm_m_bomb = {
 	cost = -4
 	allowed_archetypes = { ROBOT MACHINE }
@@ -2779,7 +2779,7 @@ trait_ngm_m_abs = {
 	}
 }
 
-# 45	自己破壊	trait_ngm_m_break	-3		POP成長速度-10%	この種族は自己保存の原則を有しておらず、よく自己破壊する
+# 45	自己破壊	trait_ngm_m_break	-3		POPの成長速度-10%	この種族は自己保存の原則を有しておらず、よく自己破壊する
 trait_ngm_m_break = {
 	cost = -3
 	allowed_archetypes = { ROBOT MACHINE }

@@ -681,7 +681,7 @@ building_ngm_IAA = {
 	}
 }
 
-# 10.コーポレートメディカルセンター	corporate_hospital	(惑星につき一つ:企業国家の社会学+10、惑星のPop成長速度+5%、医療従事者+1)	:この企業は利益だけではなく社員や顧客の幸福や利益を追求することを目指している。
+# 10.コーポレートメディカルセンター	corporate_hospital	(惑星につき一つ:企業国家の社会学+10、惑星のPOPの成長速度+5%、医療従事者+1)	:この企業は利益だけではなく社員や顧客の幸福や利益を追求することを目指している。
 building_ngm_corporate_hospital = {
 	base_buildtime = @b1_time
 	owner_type = corporate
@@ -864,7 +864,7 @@ building_ngm_planet_trust_bank = {
 	}
 }
 
-# 15.企業諜報機関	corporate_espionage	(自社以外のあらゆる情報を収集し、他者に売却する企業)				(惑星につき一つ:財閥の解読力+5、惑星の犯罪度+5、事務員+2)			:この企業は国家や企業の情報を奪い、それを利用してあらゆる利益を獲得している。
+# 15.企業諜報機関	corporate_espionage	(自社以外のあらゆる情報を収集し、他者に売却する企業)				(惑星につき一つ:財閥の解読力+5、惑星の犯罪+5、事務員+2)			:この企業は国家や企業の情報を奪い、それを利用してあらゆる利益を獲得している。
 building_ngm_corporate_espionage = {
 	base_buildtime = @b1_time
 	owner_type = corporate
@@ -1398,7 +1398,7 @@ building_ngm_premise_workshop = {
 # 23.建築物「高度研究機関」をアンロック コスト鉱物700クリスタル100粉末100ガス100 維持コストエネルギー4ガス2 惑星1
 # 惑星の研究生産5%
 # 科学総裁1
-# 専門家出力*0.05
+# 専門家POPの資源産出*0.05
 # 統合力+3、研究力+2
 # 研究者1
 building_ngm_advanced_research_institutes = {
@@ -1552,7 +1552,7 @@ building_ngm_advanced_research_institutes = {
 # 	}
 # }
 
-# # 27.惑星児童遊園			(child_park)	(Pop成長速度+5%、快適度+10%)		(エンターテイナー+1、スタッフ+2)
+# # 27.惑星児童遊園			(child_park)	(POPの成長速度+5%、快適度+10%)		(エンターテイナー+1、スタッフ+2)
 # building_ngm_ocean_child_park = {
 # 	base_buildtime = 360
 # 	base_cap_amount = 1
@@ -1716,7 +1716,7 @@ building_ngm_advanced_research_institutes = {
 # 	}
 # }
 
-# # 33.惑星健康ランド		(medical_land)	(Pop成長速度+15%、幸福度+10%)		(医療従事者+3、スタッフ+3)					(心身の疾患を治癒し、静養を目的とした観光客が集う観光用医療施設)
+# # 33.惑星健康ランド		(medical_land)	(POPの成長速度+15%、幸福度+10%)		(医療従事者+3、スタッフ+3)					(心身の疾患を治癒し、静養を目的とした観光客が集う観光用医療施設)
 # building_ngm_ocean_medical_land = {
 # 	base_buildtime = 360
 # 	base_cap_amount = 1
@@ -1829,7 +1829,7 @@ building_ngm_advanced_research_institutes = {
 # 	}
 # }
 
-# # 37.レジャーランド		(resure_land)	(快適度+20%、Pop成長速度+5%)		(エグゼクティブスタッフ+1、スタッフ+2)				()
+# # 37.レジャーランド		(resure_land)	(快適度+20%、POPの成長速度+5%)		(エグゼクティブスタッフ+1、スタッフ+2)				()
 # building_ngm_ocean_resure_land = {
 # 	base_buildtime = 360
 # 	base_cap_amount = 1
@@ -1980,7 +1980,7 @@ building_ngm_Phe_Crest = {
 	}
 }
 
-# 4	帝国中央学院	1	科学総裁+2、研究者+5、医療従事者+3、文化人+3、死の記録者+3	研究速度+10%	研究力+20%、専門家出力+10%	かつて銀河中の知識を集約して発展させた研究機関
+# 4	帝国中央学院	1	科学総裁+2、研究者+5、医療従事者+3、文化人+3、死の記録者+3	研究速度+10%	研究力+20%、専門家POPの資源産出+10%	かつて銀河中の知識を集約して発展させた研究機関
 building_ngm_Phe_Central_school = {
 	can_build = no
 	can_demolish = no

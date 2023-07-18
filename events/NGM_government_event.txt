@@ -2055,7 +2055,7 @@ country_event = {
 
 # 8.移民の流入
 # 当該惑星に全銀河のPopのうちランダムに2Pop発生
-# 1年間当該惑星Pop成長速度+10%
+# 1年間当該惑星POPの成長速度+10%
 country_event = {
 	id = ngm_government.117
 	title = ngm_government.117.name
@@ -2412,7 +2412,7 @@ country_event = {
 # 17.テロ発生
 # 惑星上のPopをランダムに1Pop殺害
 # 2年間帝国Pop幸福度-10%
-# 1年間当該惑星Pop成長速度-10%
+# 1年間当該惑星POPの成長速度-10%
 country_event = {
 	id = ngm_government.126
 	title = ngm_government.126.name

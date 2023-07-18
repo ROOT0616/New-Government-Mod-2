@@ -51,8 +51,7 @@
 #	}
 #
 #}
-
-# 〇栄望主義：開戦自由「名誉にかけて」勝利時影響力＋100
+# 〇栄望主義：開戦自由「名誉にかけて」勝利時影響力+100
 wg_ngm_with_honor = {
 	casus_belli = cb_ngm_with_honor
 	hide_if_no_cb = no
@@ -68,6 +67,7 @@ wg_ngm_with_honor = {
 		surrender
 		demand_surrender
 	}
+	surrender_acceptance = -75
 	threat_multiplier = 0.75
 	cede_claims = no
 	potential = {
@@ -80,7 +80,9 @@ wg_ngm_with_honor = {
 		custom_tooltip = {
 			fail_text = cannot_use_against_emperor
 			OR = {
-				from = { is_galactic_emperor = no }
+				from = {
+					is_galactic_emperor = no
+				}
 				is_galactic_community_member = no
 			}
 		}
@@ -89,7 +91,9 @@ wg_ngm_with_honor = {
 			NAND = {
 				is_active_resolution = resolution_emperor_pax_galactica
 				is_galactic_community_member = yes
-				from = { is_galactic_community_member = yes }
+				from = {
+					is_galactic_community_member = yes
+				}
 			}
 		}
 	}
@@ -98,6 +102,15 @@ wg_ngm_with_honor = {
 		add_modifier = {
 			modifier = ngm_with_honor_2_modifier
 			years = 1
+		}
+		from = {
+			add_resource = {
+				influence = 100
+			}
+			add_modifier = {
+				modifier = ngm_with_honor_1_modifier
+				years = 3
+			}
 		}
 	}
 	# Run when target surrenders after claims are ceded
@@ -136,11 +149,25 @@ wg_ngm_pest_control = {
 	surrender_acceptance = -100
 	war_exhaustion = 0.75
 	potential = {
-		always = yes
+		has_total_war_cb = no
+		has_valid_civic = civic_ngm_pest_control
+		NOT = {
+			is_in_federation_with = from
+		}
+		NAND = {
+			is_galactic_emperor = yes
+			from = {
+				is_galactic_community_member = yes
+			}
+		}
 	}
-	
 	possible = {
-		always = yes
+		from = {
+			OR = {
+				has_ethic = ethic_developmentalism
+				has_ethic = ethic_fanatic_developmentalism
+			}
+		}
 	}
 	on_status_quo = {
 		if = {
@@ -217,7 +244,11 @@ wg_ngm_pest_control = {
 			}
 		}
 		if = {
-			limit = { from = { has_been_declared_crisis = no } }
+			limit = {
+				from = {
+					has_been_declared_crisis = no
+				}
+			}
 			from = {
 				set_subject_of = {
 					who = root
@@ -228,14 +259,14 @@ wg_ngm_pest_control = {
 			from = {
 				# copy_ethos_and_authority = root
 				if = {
-					limit = { 
+					limit = {
 						has_ethic = ethic_developmentalism
 					}
 					country_remove_ethic = ethic_developmentalism
 					country_add_ethic = ethic_conservationism
 				}
 				if = {
-					limit = { 
+					limit = {
 						has_ethic = ethic_fanatic_developmentalism
 					}
 					country_remove_ethic = ethic_fanatic_developmentalism
@@ -343,29 +374,21 @@ wg_ngm_pest_control = {
 # ※聖戦（非精神主義国家に対して精神主義を強要する宣戦布告事由を得る）
 wg_ngm_holy_wars = {
 	casus_belli = cb_ngm_holy_wars
-
 	hide_if_no_cb = yes
-	
 	cede_claims = no
-
 	surrender_acceptance = -100
-
 	war_exhaustion = 0.75
-	
 	potential = {
 		always = yes
 	}
-	
 	possible = {
 		always = yes
 	}
-	
 	allowed_peace_offers = {
 		status_quo
 		surrender
 		demand_surrender
 	}
-	
 	on_accept = {
 		custom_tooltip = wg_force_ideology_accept
 		custom_tooltip = wg_force_ideology_accept_2
@@ -378,7 +401,11 @@ wg_ngm_holy_wars = {
 			custom_tooltip = wg_force_ideology_accept_3
 		}
 		if = {
-			limit = { from = { has_been_declared_crisis = no } }
+			limit = {
+				from = {
+					has_been_declared_crisis = no
+				}
+			}
 			from = {
 				set_subject_of = {
 					who = root
@@ -389,14 +416,14 @@ wg_ngm_holy_wars = {
 			from = {
 				# copy_ethos_and_authority = root
 				if = {
-					limit = { 
+					limit = {
 						has_ethic = ethic_materialist
 					}
 					country_remove_ethic = ethic_materialist
 					country_add_ethic = ethic_spiritualist
 				}
 				if = {
-					limit = { 
+					limit = {
 						has_ethic = ethic_fanatic_materialist
 					}
 					country_remove_ethic = ethic_fanatic_materialist
@@ -505,28 +532,21 @@ wg_ngm_holy_wars = {
 @protectorate_tech_threshold = 0.4
 wg_ngm_return_of_the_phoenix = {
 	casus_belli = cb_ngm_return_of_the_phoenix
-
 	hide_if_no_cb = no
 	release_occupied_systems_on_status_quo = yes
 	show_agreement_terms = no
-
 	allowed_peace_offers = {
 		status_quo
 		surrender
 		demand_surrender
 	}
-
 	surrender_acceptance = -75
-
-
 	potential = {
 		has_origin = origin_ngm_phenix
 	}
-	
 	possible = {
 		has_modifier = origin_ngm_phenix_12_modifier
 	}
-
 	on_accept = {
 		hidden_effect = {
 			from = {
@@ -537,7 +557,11 @@ wg_ngm_return_of_the_phoenix = {
 			}
 		}
 		if = {
-			limit = { from = { has_been_declared_crisis = no } }
+			limit = {
+				from = {
+					has_been_declared_crisis = no
+				}
+			}
 			from = {
 				if = {
 					limit = {
@@ -558,7 +582,9 @@ wg_ngm_return_of_the_phoenix = {
 							oppressive_terms = {
 								if = {
 									limit = {
-										ROOT = { is_ai = yes }
+										ROOT = {
+											is_ai = yes
+										}
 									}
 									FROM = {
 										set_subject_of = {
@@ -602,7 +628,6 @@ wg_ngm_return_of_the_phoenix = {
 			}
 		}
 	}
-
 	on_status_quo = {
 		if = {
 			limit = {
@@ -611,7 +636,6 @@ wg_ngm_return_of_the_phoenix = {
 					has_country_flag = released_empire
 				}
 			}
-
 			last_created_country = {
 				set_origin_effect = yes
 				if = {
@@ -633,7 +657,9 @@ wg_ngm_return_of_the_phoenix = {
 							oppressive_terms = {
 								if = {
 									limit = {
-										ROOT = { is_ai = yes }
+										ROOT = {
+											is_ai = yes
+										}
 									}
 									PREV = {
 										set_subject_of = {
@@ -675,11 +701,14 @@ wg_ngm_return_of_the_phoenix = {
 					years = 5
 				}
 			}
-
 			if = {
 				limit = {
-					root = { has_authority = auth_corporate }
-					last_created_country = { has_authority = auth_corporate }
+					root = {
+						has_authority = auth_corporate
+					}
+					last_created_country = {
+						has_authority = auth_corporate
+					}
 				}
 				last_created_country = {
 					set_merchant_government_effect = yes
@@ -687,7 +716,6 @@ wg_ngm_return_of_the_phoenix = {
 			}
 		}
 	}
-
 	ai_weight = {
 		weight = 10
 		modifier = {

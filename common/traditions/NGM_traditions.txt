@@ -15,7 +15,7 @@ tr_ngm_law_finish = {
 	}
 }
 
-# 3.人権法:受容主義魅力+20%	労働者・奴隷幸福度+10%
+# 3.人権法:受容主義志向への魅力+20%	労働者・奴隷の幸福度+10%
 tr_ngm_human_rights = {
 	modifier = {
 		pop_ethic_xenophile_attraction_mult = 0.2
@@ -68,7 +68,7 @@ tr_ngm_virture_finish = {
 	}
 }
 
-# 10.狙い撃ち:宿敵の犯罪度+30
+# 10.狙い撃ち:宿敵の犯罪+30
 tr_ngm_sniper = {
 	custom_tooltip_with_modifiers = tr_ngm_sniper_tooltip
 	on_enabled = {
@@ -80,7 +80,7 @@ tr_ngm_sniper = {
 	}
 }
 
-# 11.透浸:外交関係にあるすべての国家の犯罪度+20
+# 11.透浸:外交関係にあるすべての国家の犯罪+20
 tr_ngm_penetration = {
 	custom_tooltip_with_modifiers = tr_ngm_penetration_tooltip
 	on_enabled = {
@@ -106,7 +106,7 @@ tr_ngm_exclusive = {
 	}
 }
 
-# 14.破壊工作:宿敵の貿易保護値-15、宿敵の犯罪度+20
+# 14.破壊工作:宿敵の交易保護値-15、宿敵の犯罪+20
 tr_ngm_sabotage = {
 	custom_tooltip_with_modifiers = tr_ngm_sabotage_tooltip
 	on_enabled = {
@@ -117,7 +117,7 @@ tr_ngm_sabotage = {
 		}
 	}
 	modifier = {
-		#宿敵の貿易保護値-15、宿敵の犯罪度+20
+		#宿敵の交易保護値-15、宿敵の犯罪+20
 	}
 }
 
@@ -208,7 +208,7 @@ tr_ngm_art_industry = {
 	}
 }
 
-# 26.繁栄を支える者:奴隷の生産量+10%、奴隷幸福度+10%
+# 26.繁栄を支える者:奴隷の生産量+10%、奴隷の幸福度+10%
 tr_ngm_groly_supporter = {
 	modifier = {
 		planet_jobs_slave_produces_mult = 0.1
@@ -216,14 +216,14 @@ tr_ngm_groly_supporter = {
 	}
 }
 
-# 27.奔放な家族:Pop成長速度度+10%
+# 27.奔放な家族:POPの成長速度度+10%
 tr_ngm_ecstasy_family = {
 	modifier = {
 		pop_growth_speed = 0.1
 	}
 }
 
-# 28.長寿化:リーダー寿命+15年
+# 28.長寿化:リーダーの寿命+15年
 tr_ngm_long_live = {
 	modifier = {
 		leader_age = 15
@@ -275,7 +275,7 @@ tr_ngm_student_art = {
 	}
 }
 
-# 34.芸術の自由:統治志向魅力-20%、統合力+20%
+# 34.芸術の自由:統治志向の魅力-20%、統合力+20%
 tr_ngm_freedom_art = {
 	modifier = {
 		pop_government_ethic_attraction = -0.2
@@ -433,8 +433,10 @@ tr_ngm_record = {
 
 # 53.過去の参照:研究者の産出する研究力+1
 tr_ngm_past = {
-	custom_tooltip_with_modifiers = tr_ngm_past_tooltip
 	modifier = {
+		planet_jobs_physics_research_produces_add = 1
+		planet_jobs_society_research_produces_add = 1
+		planet_jobs_engineering_research_produces_add = 1
 	}
 }
 
@@ -464,12 +466,12 @@ tr_ngm_trade_record = {
 # 57.取得時：政策「自由権」をアンロック
 tr_ngm_freedom_first = {
 	unlocks_agenda = agenda_ngm_steps_toward_freedom
-	custom_tooltip_with_modifiers = tr_ngm_trade_record_tooltip
+	custom_tooltip_with_modifiers = tr_ngm_freedom_first_tooltip
 	modifier = {
 	}
 }
 
-# 58.完遂時:派閥統合力収入+20%
+# 58.完遂時:派閥統合力ボーナス+20%
 tr_ngm_freedom_finish = {
 	modifier = {
 		ascension_perks_add = 1
@@ -477,7 +479,7 @@ tr_ngm_freedom_finish = {
 	}
 }
 
-# 59.報道の自由:宿敵宣言した国家の奴隷幸福度-20% 統治志向魅力-15%
+# 59.報道の自由:宿敵宣言した国家の奴隷の幸福度-20% 統治志向の魅力-15%
 tr_ngm_freedom_broad = {
 	custom_tooltip_with_modifiers = tr_ngm_freedom_broad_tooltip
 	on_enabled = {
@@ -492,7 +494,7 @@ tr_ngm_freedom_broad = {
 	}
 }
 
-# 60.結社の自由:派閥統合力収入+30% 安定度+10
+# 60.結社の自由:派閥統合力ボーナス+30% 安定度+10
 tr_ngm_freedom_association = {
 	modifier = {
 		pop_factions_produces_mult = 0.3
@@ -532,7 +534,7 @@ tr_ngm_order_first = {
 	}
 }
 
-# 65.完遂時:安定度+5、Popからの帝国規模-5％
+# 65.完遂時:安定度+5、POPからの帝国規模-5%
 tr_ngm_order_finish = {
 	modifier = {
 		ascension_perks_add = 1
@@ -541,7 +543,7 @@ tr_ngm_order_finish = {
 	}
 }
 
-# 66.無言の同調:統治志向魅力+40%
+# 66.無言の同調:統治志向の魅力+40%
 tr_ngm_no_voice = {
 	modifier = {
 		pop_government_ethic_attraction = 0.4
@@ -549,7 +551,7 @@ tr_ngm_no_voice = {
 	}
 }
 
-# 67.適切な居場所:強制移住コスト-30%、住居使用量-15%
+# 67.適切な居場所:強制移住コスト-30%、POPの住居使用量-15%
 tr_ngm_appropriate = {
 	modifier = {
 		pop_housing_usage_mult = -0.15
@@ -571,7 +573,7 @@ tr_ngm_right_place = {
 	}
 }
 
-# 70.整然とした居住区:住宅+20%、建造物スロット+1
+# 70.整然とした居住区:住居+20%、建造物スロット+1
 tr_ngm_orderly = {
 	modifier = {
 		planet_housing_mult = 0.2
@@ -589,7 +591,7 @@ tr_ngm_neighbor_first = {
 	}
 }
 
-# 72.完遂時:5種類以上の種族がいる惑星でPop成長速度+10%、交易価値+10%、統合力+10%、流入魅力+10%
+# 72.完遂時:5種類以上の種族がいる惑星でPOPの成長速度+10%、交易価値+10%、統合力+10%、流入魅力+10%
 tr_ngm_neighbor_finish = {
 	custom_tooltip_with_modifiers = tr_ngm_neighbor_finish_tooltip
 	on_enabled = {
@@ -601,11 +603,11 @@ tr_ngm_neighbor_finish = {
 	}
 	modifier = {
 		ascension_perks_add = 1
-		#5種類以上の種族がいる惑星でPop成長速度+10%、交易価値+10%、統合力+10%、流入魅力+10%
+		#5種類以上の種族がいる惑星でPOPの成長速度+10%、交易価値+10%、統合力+10%、流入魅力+10%
 	}
 }
 
-# 73.国際的大使館:他国の意見の受け入れが§G+20§!増加する	使節+1
+# 73.国際的大使館:他国の意見の受け入れが§G+20§!増加する	利用可能な使節の数+1
 tr_ngm_ambassador = {
 	modifier = {
 		envoys_add = 1
@@ -678,7 +680,7 @@ tr_ngm_battle_ambass = {
 	}
 }
 
-# 82.臥薪嘗胆:食料消費量-25%、消費財消費量-25%
+# 82.臥薪嘗胆:食料消費量-25%、POP消費財維持費-25%
 tr_ngm_coarse_food = {
 	modifier = {
 		planet_pops_food_upkeep_mult = -0.25
@@ -693,7 +695,7 @@ tr_ngm_transcendental = {
 	}
 }
 
-# 84.敵対的演説:排他主義志向魅力+25%、宿敵の外交発言力-10%
+# 84.敵対的演説:排他主義志向への魅力+25%、宿敵の外交発言力-10%
 tr_ngm_battle_speach = {
 	custom_tooltip_with_modifiers = tr_ngm_battle_speach_tooltip
 	on_enabled = {
@@ -717,7 +719,7 @@ tr_ngm_nature_first = {
 	}
 }
 
-# 86.完遂時:Pop成長速度+15%
+# 86.完遂時:POPの成長速度+15%
 tr_ngm_nature_finish = {
 	modifier = {
 		ascension_perks_add = 1
@@ -732,7 +734,7 @@ tr_ngm_nature2 = {
 	}
 }
 
-# 88.自然出生:Pop成長速度度+5%、幸福度+10%
+# 88.自然出生:POPの成長速度度+5%、幸福度+10%
 tr_ngm_nature_growth = {
 	modifier = {
 		pop_growth_speed = 0.05
@@ -851,7 +853,7 @@ tr_ngm_note = {
 	}
 }
 
-# 103.公文書館:布告基金+50
+# 103.公文書館:布告資金+50
 tr_ngm_document = {
 	modifier = {
 		country_edict_fund_add = 50
@@ -898,7 +900,7 @@ tr_ngm_navy_depart = {
 	}
 }
 
-# 109.参謀第1課:亜高速移動速度+10%、地上軍編成速度+25%
+# 109.参謀第1課亜光速移動速度速度+10%、地上軍編成速度+25%
 tr_ngm_officer_1 = {
 	modifier = {
 		ship_speed_mult = 0.1
@@ -1079,7 +1081,7 @@ tr_ngm_upper_class = {
 	}
 }
 
-# 130.密室政治:派閥統合力収入+15%
+# 130.密室政治:派閥統合力ボーナス+15%
 tr_ngm_backroom_politics = {
 	possible = {
 		has_tradition = tr_ngm_upper_class
@@ -1104,7 +1106,7 @@ tr_ngm_honor = {
 	}
 }
 
-# 133.階級社会:権威主義志向魅力+20%、安定度+10
+# 133.階級社会:権威主義志向への魅力+20%、安定度+10
 tr_ngm_class_politics = {
 	possible = {
 		has_tradition = tr_ngm_patron
@@ -1164,7 +1166,7 @@ tr_ngm_peoples_politics = {
 	}
 }
 
-# 140.忠実な大衆:労働者幸福度+10%
+# 140.忠実な大衆:労働者の幸福度+10%
 tr_ngm_faithful_mass = {
 	possible = {
 		has_tradition = tr_ngm_mass_economy
@@ -1252,7 +1254,7 @@ tr_ngm_longing_finish = {
 	}
 }
 
-# 150.外交官団の拡大:使節+2
+# 150.外交官団の拡大:利用可能な使節の数+2
 tr_ngm_expansion_diplomatic_corps = {
 	modifier = {
 		envoys_add = 2
@@ -1423,7 +1425,7 @@ tr_ngm_steady_national_guidelines = {
 }
 
 # 友誼(友好関係を結び、安心した関係を作ることこそが必要である)
-# 169.取得時：使節+1
+# 169.取得時：利用可能な使節の数+1
 tr_ngm_friendship_adopt = {
 	modifier = {
 		envoys_add = 1
@@ -1519,7 +1521,7 @@ tr_ngm_diplomatic_expansion = {
 	}
 }
 
-# 179.使節団:使節+1
+# 179.使節団:利用可能な使節の数+1
 tr_ngm_delegation = {
 	possible = {
 		has_tradition = tr_ngm_diplomatic_expansion
@@ -1605,7 +1607,7 @@ tr_ngm_fleet_pressure = {
 	}
 }
 
-# 187.外交圧力:使節+1、外交発言力+10%
+# 187.外交圧力:利用可能な使節の数+1、外交発言力+10%
 tr_ngm_diplomatic_pressure = {
 	modifier = {
 		envoys_add = 1
@@ -1620,7 +1622,7 @@ tr_ngm_administration_to_support_pressure = {
 	}
 }
 
-# 189.強制的友好:使節+1、関係改善の効果+25%
+# 189.強制的友好:利用可能な使節の数+1、関係改善の効果+25%
 tr_ngm_compulsory_friendship = {
 	possible = {
 		has_tradition = tr_ngm_diplomatic_pressure
@@ -1650,7 +1652,7 @@ tr_ngm_intervention_finish = {
 	}
 }
 
-# 192.常駐諜報員:使節+1、浸透度+15%
+# 192.常駐諜報員:利用可能な使節の数+1、浸透度+15%
 tr_ngm_resident_intelligence_officer = {
 	modifier = {
 		envoys_add = 1
@@ -1669,7 +1671,7 @@ tr_ngm_cryptanalysis_team = {
 	}
 }
 
-# 194.恒常的妨害:宿敵の貿易保護値-5
+# 194.恒常的妨害:宿敵の交易保護値-5
 tr_ngm_constant_obstruction = {
 	custom_tooltip_with_modifiers = tr_ngm_constant_obstruction_tooltip
 	on_enabled = {
@@ -1739,7 +1741,7 @@ tr_ngm_megastructure = {
 	}
 }
 
-# 202.巨大な発言力:使節+1、外交発言力+20%
+# 202.巨大な発言力:利用可能な使節の数+1、外交発言力+20%
 tr_ngm_gians_voice = {
 	modifier = {
 		envoys_add = 1
@@ -1860,7 +1862,7 @@ tr_ngm_expansion_of_the_legal_affairs_bureau = {
 	}
 }
 
-# 216.議員権限の強化:派閥統合力収入+25%
+# 216.議員権限の強化:派閥統合力ボーナス+25%
 tr_ngm_strengthening_parliamentary_authority = {
 	modifier = {
 		pop_government_ethic_attraction = 0.33
@@ -2018,14 +2020,14 @@ tr_ngm_hereditary_finish = {
 	}
 }
 
-# 234.貴族外交:使節+1、外交発言力+10%
+# 234.貴族外交:利用可能な使節の数+1、外交発言力+10%
 tr_ngm_inheritance_tax_relief = {
 	modifier = {
 		pop_cat_ruler_happiness = 0.1
 	}
 }
 
-# 235.世襲称号:栄望主義魅力+25%、勲章+0.1
+# 235.世襲称号:栄望主義志向への魅力+25%、勲章+0.1
 tr_ngm_hereditary_title = {
 	possible = {
 		has_tradition = tr_ngm_inheritance_tax_relief
@@ -2142,7 +2144,7 @@ tr_ngm_elegance_finish = {
 	}
 }
 
-# 超越物理理論		賢雅	物理学生産+50%、物質主義志向魅力+15%	卓越した物理理論を活用することで、停滞していた技術研究は再活性化する
+# 超越物理理論		賢雅	物理学生産+50%、物質主義志向への魅力+15%	卓越した物理理論を活用することで、停滞していた技術研究は再活性化する
 tr_ngm_elegance_bpt = {
 	possible = {
 	}
@@ -2208,7 +2210,7 @@ tr_ngm_gaishi_finish = {
 	}
 }
 
-# 真の戦力投射	true_power_projection	蓋世	艦隊による外交発言力+20%、介入主義志向魅力+15%	軍事力とは戦うためにあるのではなく、戦わないためにあるのだ
+# 真の戦力投射	true_power_projection	蓋世	艦隊による外交発言力+20%、介入主義志向への魅力+15%	軍事力とは戦うためにあるのではなく、戦わないためにあるのだ
 tr_ngm_gaishi_true_power_projection = {
 	possible = {
 	}
@@ -2265,7 +2267,7 @@ tr_ngm_misdirection_adopt = {
 	}
 }
 
-# 完遂時		赫焉	POP成長速度+25%、Pop建造速度+25%	
+# 完遂時		赫焉	POPの成長速度+25%、Pop建造速度+25%	
 tr_ngm_misdirection_finish = {
 	possible = {
 	}
@@ -2285,7 +2287,7 @@ tr_ngm_misdirection_idea_commonly_accepted = {
 	}
 }
 
-# 品格と節制	dignity_and_moderation	赫焉	POP維持費-25%、精神主義志向魅力+15%	物質的な豊かさによる幸福だけではなく、精神的な豊かさも重要視される
+# 品格と節制	dignity_and_moderation	赫焉	POP維持費-25%、精神主義志向への魅力+15%	物質的な豊かさによる幸福だけではなく、精神的な豊かさも重要視される
 tr_ngm_misdirection_dignity_and_moderation = {
 	possible = {
 	}
@@ -2303,7 +2305,7 @@ tr_ngm_misdirection_blessing_of_the_stars = {
 	}
 }
 
-# 生命の祝福		赫焉	POP成長速度+25%	生命に祝福を！ 輝きを民へ！
+# 生命の祝福		赫焉	POPの成長速度+25%	生命に祝福を！ 輝きを民へ！
 tr_ngm_misdirection_blessing_of_life = {
 	possible = {
 	}
@@ -2344,7 +2346,7 @@ tr_ngm_gods_majesty_finish = {
 	}
 }
 
-# 序章		神威	帝国規模-30%	我が国もかつては地を這いつくばる赤ん坊であった。
+# 序章		神威	帝国規模-10%	我が国もかつては地を這いつくばる赤ん坊であった。
 tr_ngm_gods_majesty_preface = {
 	possible = {
 	}
@@ -2353,7 +2355,7 @@ tr_ngm_gods_majesty_preface = {
 	}
 }
 
-# 起		神威	帝国規模-30%	一歩一歩の歩みは、革新を生んだ。
+# 起		神威	帝国規模-10%	一歩一歩の歩みは、革新を生んだ。
 tr_ngm_gods_majesty_beginning = {
 	possible = {
 	}
@@ -2362,7 +2364,7 @@ tr_ngm_gods_majesty_beginning = {
 	}
 }
 
-# 承		神威	帝国規模-30%	革新は停滞へと代わり、我々は長い眠りについた。
+# 承		神威	帝国規模-10%	革新は停滞へと代わり、我々は長い眠りについた。
 tr_ngm_gods_majesty_second = {
 	possible = {
 	}
@@ -2371,7 +2373,7 @@ tr_ngm_gods_majesty_second = {
 	}
 }
 
-# 転		神威	帝国規模-30%	そして、ようやく目を覚ましたのだ。
+# 転		神威	帝国規模-10%	そして、ようやく目を覚ましたのだ。
 tr_ngm_gods_majesty_abruptly = {
 	possible = {
 	}
@@ -2380,7 +2382,7 @@ tr_ngm_gods_majesty_abruptly = {
 	}
 }
 
-# 新たなる序章	A_New_Chapter	神威	帝国規模-30%(取得時、没落帝国が覚醒する可能性がある)	さあ、始めようではないか。
+# 新たなる序章	A_New_Chapter	神威	帝国規模-10%(取得時、没落帝国が覚醒する可能性がある)	さあ、始めようではないか。
 tr_ngm_gods_majesty_a_new_chapter = {
 	possible = {
 	}

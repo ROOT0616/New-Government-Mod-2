@@ -116,16 +116,6 @@ researcher = {
 			engineering_research = 4
 			society_research = 4
 		}
-		# NGM2	過去の参照
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_active_tradition = tr_ngm_past }
-			}
-			physics_research = 1
-			engineering_research = 1
-			society_research = 1
-		}
 		upkeep = {
 			consumer_goods = 2
 		}

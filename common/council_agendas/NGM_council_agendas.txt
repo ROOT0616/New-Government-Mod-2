@@ -112,7 +112,7 @@ agenda_ngm_pursuit_of_economic_profit = {
 	}
 }
 
-# 経済的格差の是正	reduction_of_economic_disparities	社会	労働者幸福度+10%、労働者資源産出+5%	適用済みの補正	労働者幸福度+20%、労働者資源産出+10%、安定度+5	平等の実現は国の義務だ
+# 経済的格差の是正	reduction_of_economic_disparities	社会	労働者の幸福度+10%、労働者資源産出+5%	適用済みの補正	労働者の幸福度+20%、労働者資源産出+10%、安定度+5	平等の実現は国の義務だ
 agenda_ngm_reduction_of_economic_disparities = {
 	agenda_cost = @base_ethic_agenda_cost
 	potential = {
@@ -135,7 +135,7 @@ agenda_ngm_reduction_of_economic_disparities = {
 	}
 }
 
-# 開発構想の改革	reform_of_development_concept	開発	鉱物産出+10%、合金産出+10%、消費財産出+10％	適用済みの補正	鉱物産出+20%、合金産出+20%、消費財産出+20％	帝国の開発追求は未来へとつながる
+# 開発構想の改革	reform_of_development_concept	開発	鉱物産出+10%、合金産出+10%、消費財産出+10%	適用済みの補正	鉱物産出+20%、合金産出+20%、消費財産出+20%	帝国の開発追求は未来へとつながる
 agenda_ngm_reform_of_development_concept = {
 	agenda_cost = @base_ethic_agenda_cost
 	potential = {
@@ -159,7 +159,7 @@ agenda_ngm_reform_of_development_concept = {
 	}
 }
 
-# 環境主義の喧伝	the_clamor_for_environmentalism	保全	居住性+5、POP成長速度+10%	適用済みの補正	居住性+10、POP成長速度+20%、POP消費財維持費-10％	自然環境は保護していくべき財産だ
+# 環境主義の喧伝	the_clamor_for_environmentalism	保全	居住性+5、POPの成長速度+10%	適用済みの補正	居住性+10、POPの成長速度+20%、POP消費財維持費-10%	自然環境は保護していくべき財産だ
 agenda_ngm_the_clamor_for_environmentalism = {
 	agenda_cost = @base_ethic_agenda_cost
 	potential = {
@@ -202,7 +202,7 @@ agenda_ngm_ensuring_law_and_order = {
 	}
 }
 
-# 幹部教育の再実施	re_implementation_of_executive_education	研鑽	リーダー経験値取得+15%、リーダー雇用コスト-20%	適用済みの補正	リーダー経験値取得+30%、リーダー雇用コスト-40%、リーダー維持コスト-25%	幹部こそ初心を忘れてはいけない
+# 幹部教育の再実施	re_implementation_of_executive_education	研鑽	リーダーの獲得経験値+15%、リーダー雇用コスト-20%	適用済みの補正	リーダーの獲得経験値+30%、リーダー雇用コスト-40%、リーダー維持コスト-25%	幹部こそ初心を忘れてはいけない
 agenda_ngm_re_implementation_of_executive_education = {
 	agenda_cost = @base_ethic_agenda_cost
 	potential = {
@@ -261,7 +261,7 @@ agenda_ngm_promoting_academic_research = {
 	}
 }
 
-# 自由への歩み	steps_toward_freedom	自由	派閥からの統合力収入+15%	適用済みの補正	派閥からの統合力収入+30%	自由に基づく派閥政治を推進する
+# 自由への歩み	steps_toward_freedom	自由	派閥統合力ボーナス+15%	適用済みの補正	派閥統合力ボーナス+30%	自由に基づく派閥政治を推進する
 agenda_ngm_steps_toward_freedom = {
 	agenda_cost = @base_ethic_agenda_cost
 	potential = {
@@ -299,7 +299,7 @@ agenda_ngm_reorganization_of_order = {
 	}
 }
 
-# 異種族理解の推進	promotion_of_species_understanding	善隣	外交発言力+10%、流入魅力+20%	適用済みの補正	外交発言力+10%、流入魅力+40%、POP成長速度+10％	異種族の理解推進は国家規模で行われる
+# 異種族理解の推進	promotion_of_species_understanding	善隣	外交発言力+10%、流入魅力+20%	適用済みの補正	外交発言力+10%、流入魅力+40%、POPの成長速度+10%	異種族の理解推進は国家規模で行われる
 agenda_ngm_promotion_of_species_understanding = {
 	agenda_cost = @base_ethic_agenda_cost
 	potential = {
@@ -574,7 +574,7 @@ agenda_ngm_expanding_paranoia = {
 	}
 }
 
-# 官僚機構の拡大	expansion_of_bureaucracy	官吏	布告資金+50、リーダー雇用コスト-15%	適用済みの補正	リーダー雇用コスト-30%、布告資金+100、帝国規模-10％	官僚機構の強化は国の強化である
+# 官僚機構の拡大	expansion_of_bureaucracy	官吏	布告資金+50、リーダー雇用コスト-15%	適用済みの補正	リーダー雇用コスト-30%、布告資金+100、帝国規模-10%	官僚機構の強化は国の強化である
 agenda_ngm_expansion_of_bureaucracy = {
 	agenda_cost = @base_ethic_agenda_cost
 	potential = {
@@ -654,7 +654,7 @@ agenda_ngm_space_of_hope = {
 	}
 }
 
-# 国際問題の解決	resolving_international_issues	介入	使節+1、外交発言力+15%	適用済みの補正	使節+2、外交発言力+30%	国際的問題は一国では解決しない。そもそも一国では発生しない
+# 国際問題の解決	resolving_international_issues	介入	利用可能な使節の数+1、外交発言力+15%	適用済みの補正	利用可能な使節の数+2、外交発言力+30%	国際的問題は一国では解決しない。そもそも一国では発生しない
 agenda_ngm_resolving_international_issues = {
 	agenda_cost = @base_ethic_agenda_cost
 	potential = {

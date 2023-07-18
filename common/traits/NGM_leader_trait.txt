@@ -1,5 +1,5 @@
 
-# # 政府後見 総督:リーダー経験値取得+20%。職からの統合力+10%、職からの管理許容量+10%
+# # 政府後見 総督:リーダーの獲得経験値+20%。職からの統合力+10%、職からの管理許容量+10%
 # leader_trait_ngm_governor_government_guardianship = {
 # 	inline_script = {
 # 		script = trait/icon
@@ -23,7 +23,7 @@
 # 	}
 # }
 
-# # 政府後見 研究者: リーダー経験値取得+20%。調査速度+10%、研究速度+5%
+# # 政府後見 研究者: リーダーの獲得経験値+20%。調査速度+10%、研究速度+5%
 # leader_trait_ngm_scientist_government_guardianship = {
 # 	inline_script = {
 # 		script = trait/icon
@@ -43,7 +43,7 @@
 # 	}
 # }
 
-# # 政府後見 提督: リーダー経験値取得+20%。艦隊維持費-10%、亜空間移動速度+10%
+# # 政府後見 提督: リーダーの獲得経験値+20%。艦隊維持費-10%、亜空間移動速度+10%
 # leader_trait_ngm_admiral_government_guardianship = {
 # 	inline_script = {
 # 		script = trait/icon
@@ -63,7 +63,7 @@
 # 	}
 # }
 
-# # 政府後見 将軍: リーダー経験値取得+20%。地上軍維持費-10%、地上軍士気+20%
+# # 政府後見 将軍: リーダーの獲得経験値+20%。地上軍維持費-10%、地上軍士気+20%
 # leader_trait_ngm_general_government_guardianship = {
 # 	inline_script = {
 # 		script = trait/icon
@@ -160,7 +160,7 @@ leader_trait_ngm_governor_upstream = {
 	selectable_weight = @class_trait_weight
 }
 
-# 4.叩き上げ 総督	governor_veteran	(職業による資源算出+3%、リーダー経験値取得+10%)(この総督は自らの能力によってこの地位に上り詰めた)
+# 4.叩き上げ 総督	governor_veteran	(職業による資源算出+3%、リーダーの獲得経験値+10%)(この総督は自らの能力によってこの地位に上り詰めた)
 leader_trait_ngm_governor_veteran = {
 	inline_script = {
 		script = trait/icon
@@ -318,7 +318,7 @@ leader_trait_ngm_scientist_upstream = {
 	selectable_weight = @class_trait_weight
 }
 
-# 6.叩き上げ 科学者	scientist_veteran	(研究速度+10%、リーダー経験値取得+10%)(この科学者は自らの能力によってこの地位に上り詰めた)
+# 6.叩き上げ 科学者	scientist_veteran	(研究速度+10%、リーダーの獲得経験値+10%)(この科学者は自らの能力によってこの地位に上り詰めた)
 leader_trait_ngm_scientist_veteran = {
 	inline_script = {
 		script = trait/icon
@@ -498,7 +498,7 @@ leader_trait_ngm_admiral_upstream = {
 	selectable_weight = @class_trait_weight
 }
 
-# 7.叩き上げ 提督	admiral_veteran	(回避+5%、艦船連射レート+10%、リーダー経験値取得+10%)(この提督は自らの能力によってこの地位に上り詰めた)
+# 7.叩き上げ 提督	admiral_veteran	(回避+5%、艦船連射レート+10%、リーダーの獲得経験値+10%)(この提督は自らの能力によってこの地位に上り詰めた)
 leader_trait_ngm_admiral_veteran = {
 	inline_script = {
 		script = trait/icon
@@ -676,7 +676,7 @@ leader_trait_ngm_general_upstream = {
 	selectable_weight = @class_trait_weight
 }
 
-# 7.叩き上げ	general_veteran	(地上軍ダメージ+5%、地上軍の士気+5%、地上軍戦闘離脱の可能性+10%、リーダー経験値取得+10%)(この将軍は自らの能力によってこの地位に上り詰めた)
+# 7.叩き上げ	general_veteran	(地上軍ダメージ+5%、地上軍の士気+5%、地上軍戦闘離脱の可能性+10%、リーダーの獲得経験値+10%)(この将軍は自らの能力によってこの地位に上り詰めた)
 leader_trait_ngm_general_veteran = {
 	inline_script = {
 		script = trait/icon
@@ -966,7 +966,7 @@ leader_trait_ngm_park = {
 	selectable_weight = @shared_trait_weight
 }
 
-# 自然主義者	leader_trait_ngm_nature	保全	総督	本人	POP成長速度+2%	このリーダーは自然主義者として有名だ
+# 自然主義者	leader_trait_ngm_nature	保全	総督	本人	POPの成長速度+2%	このリーダーは自然主義者として有名だ
 leader_trait_ngm_nature = {
 	inline_script = {
 		script = trait/icon
@@ -1032,7 +1032,7 @@ leader_trait_ngm_park = {
 	selectable_weight = @shared_trait_weight
 }
 
-# 開発中毒	leader_trait_ngm_cons	開発	総督	本人	建設コスト-5％	このリーダーは隅々まで開発することに固執している
+# 開発中毒	leader_trait_ngm_cons	開発	総督	本人	建設コスト-5%	このリーダーは隅々まで開発することに固執している
 leader_trait_ngm_park = {
 	inline_script = {
 		script = trait/icon
@@ -1076,7 +1076,7 @@ leader_trait_ngm_mafia = {
 	selectable_weight = @shared_trait_weight
 }
 
-# 利益追求者	leader_trait_ngm_profit	実利	共通	本人	リーダー経験値取得+20％、エネルギー-20	このリーダーは利益の追求に余念がない
+# 利益追求者	leader_trait_ngm_profit	実利	共通	本人	リーダーの獲得経験値+20%、エネルギー-20	このリーダーは利益の追求に余念がない
 leader_trait_ngm_profit = {
 	inline_script = {
 		script = trait/icon
@@ -1098,7 +1098,7 @@ leader_trait_ngm_profit = {
 	selectable_weight = @shared_trait_weight
 }
 
-# 腕自慢	leader_trait_ngm_strong	実利	共通	評議会	評議会の方針の進行速度-5%、リーダー経験値取得-10%	このリーダーは誰にでも暴力をふるう
+# 腕自慢	leader_trait_ngm_strong	実利	共通	評議会	評議会の方針の進行速度-5%、リーダーの獲得経験値-10%	このリーダーは誰にでも暴力をふるう
 leader_trait_ngm_strong = {
 	veteran_class_locked_trait = yes
 	councilor_trait = yes
@@ -1126,7 +1126,7 @@ leader_trait_ngm_strong = {
 	ai_weight = 110
 }
 
-# 叙爵	leader_trait_ngm_lord	栄望	共通	本人	リーダー経験値取得+20％	このリーダーは爵位を有した貴族だ
+# 叙爵	leader_trait_ngm_lord	栄望	共通	本人	リーダーの獲得経験値+20%	このリーダーは爵位を有した貴族だ
 leader_trait_ngm_lord = {
 	inline_script = {
 		script = trait/icon
@@ -1258,7 +1258,7 @@ leader_trait_ngm_milli = {
 	selectable_weight = @shared_trait_weight
 }
 
-# 革命家	leader_trait_ngm_revo	社会	共通	本人	統治志向魅力-10%	このリーダーは革命戦士として有名だ
+# 革命家	leader_trait_ngm_revo	社会	共通	本人	統治志向の魅力-10%	このリーダーは革命戦士として有名だ
 leader_trait_ngm_revo = {
 	inline_script = {
 		script = trait/icon
@@ -1280,7 +1280,7 @@ leader_trait_ngm_revo = {
 	selectable_weight = @shared_trait_weight
 }
 
-# 党幹部	leader_trait_ngm_party	社会	共通	本人	影響力+1、帝国規模+3％	このリーダーは与党幹部として権力を有している
+# 党幹部	leader_trait_ngm_party	社会	共通	本人	影響力+1、帝国規模+3%	このリーダーは与党幹部として権力を有している
 leader_trait_ngm_party = {
 	inline_script = {
 		script = trait/icon
@@ -1352,7 +1352,7 @@ leader_trait_ngm_commu = {
 	selectable_weight = @shared_trait_weight
 }
 
-# スポーツ選手	leader_trait_ngm_sport	共通	共通	本人	寿命+10年、リーダー経験値取得+5%	このリーダーはスポーツ選手としても知られている
+# スポーツ選手	leader_trait_ngm_sport	共通	共通	本人	寿命+10年、リーダーの獲得経験値+5%	このリーダーはスポーツ選手としても知られている
 leader_trait_ngm_sport = {
 	inline_script = {
 		script = trait/icon
@@ -1440,7 +1440,7 @@ leader_trait_ngm_low = {
 	selectable_weight = @shared_trait_weight
 }
 
-# 宗教畑	leader_trait_ngm_religion	共通	共通	本人	精神主義志向魅力+10%	このリーダーは宗教家として秀でている
+# 宗教畑	leader_trait_ngm_religion	共通	共通	本人	精神主義志向への魅力+10%	このリーダーは宗教家として秀でている
 leader_trait_ngm_religion = {
 	inline_script = {
 		script = trait/icon

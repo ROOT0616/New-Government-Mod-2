@@ -7,7 +7,7 @@
 # ②非常に豊かなチョークポイントに位置する星系に生成される。
 # ③開始時に遺物『古代の盟約』を取得する。
 # ④拡張に関して極めて大きな制約を課せられる。
-# ''⑤市場手数料-10%、Pop成長率+100%、
+# ''⑤市場手数料-10%、POPの成長速度+100%、
 # ⑥特殊な種族特性を取得する。
 # 
 # 初期建築物「永久の宮殿」（古代から続くこの地を治める者のための宮殿で、列強の君主や元首が集い交渉を行うことも多かったためか、壮麗な建築でいまだに陰りを見せていない。現在も支配者の宮殿や国際会議場としてだけではなく、政府機関や上流階級の住居として使用されている。）
@@ -18,9 +18,9 @@
 # アクティブ効果	：船体値+100%、宇宙軍許容量+500%、造船速度+500%(10年間。起動コスト影響力200)
 # 
 # 種族特性「古代からの商人」（はるか太古から頭脳労働者として活躍してきたため、創造やデスクワークに適性がある種族。人口過少の防止として太古に繁殖力の増強が図られている。）
-# 交易価値+30%、住居使用量-30%、Pop成長率+20%。鉱山労働者の生産量-50%、消費財消費量+10%。途中削除、追加不可。強制取得。
+# 交易価値+30%、POPの住居使用量-30%、POPの成長速度+20%。鉱山労働者の生産量-50%、POP消費財維持費+10%。途中削除、追加不可。強制取得。
 # 
-# ''開始時、20年の間Pop成長速度+200%、Pop製造速度+200%、流入魅力+100%の惑星特性（国家再興の決意）を付与
+# ''開始時、20年の間POPの成長速度+200%、Pop製造速度+200%、流入魅力+100%の惑星特性（国家再興の決意）を付与
 origin_ngm_buffer_state = {
 	is_origin = yes
 	icon = "gfx/interface/icons/governments/origins/origins_ngm_buffer_state.dds"
@@ -40,6 +40,10 @@ origin_ngm_buffer_state = {
 			}
 		}
 	}
+	modifier = {
+		country_trade_fee = -10
+		pop_growth_speed = 1
+	}
 	traits = {
 		trait = trait_ngm_merchant_from_ancient
 	}
@@ -58,7 +62,7 @@ origin_ngm_buffer_state = {
 # 120か月に1度未来からの艦隊が襲撃する。打ち勝つことによって技術のデブリを取得することが可能となる。
 # 
 # 首都惑星に特殊な特性「時空超越機」（時間を超えることができる機械で、惑星と一体化している。原理は失われているため再現は不可能であるが、時折亡命者がこの時代に流れ込んでいる。）
-# 物理学研究+20%、Pop成長速度+10%
+# 物理学研究+20%、POPの成長速度+10%
 origin_ngm_escape_to_the_past = {
 	is_origin = yes
 	icon = "gfx/interface/icons/governments/origins/origins_ngm_escape_to_the_past.dds"
@@ -146,20 +150,17 @@ origin_ngm_phenix = {
 	}
 	possible = {
 		ethics = {
-			OR = {
-				value = ethic_xenophobe
-				value = ethic_fanatic_xenophobe
-				value = ethic_neutralism
-				value = ethic_fanatic_neutralism
-			}
+			value = ethic_fanatic_xenophobe
+			value = ethic_fanatic_neutralism
 			NOR = {
+				text = civic_tooltip_not_militarist
 				value = ethic_militarist
 				value = ethic_fanatic_militarist
 			}
 		}
 		civics = {
-			# value = civic_pleasure_seekers
-			# value = civic_pompous_purists
+			value = civic_pleasure_seekers
+			value = civic_pompous_purists
 			NOR = {
 				value = civic_inwards_perfection
 				value = civic_fanatic_purifiers
