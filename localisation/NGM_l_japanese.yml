@@ -5631,5 +5631,27 @@
  NAME_origin_ngm_phenix_npc_initials:0 "組合"
  ADJ_origin_ngm_phenix_npc:0 "麗隷人"
 
+##########################
+#####    派閥名称    ######
+##########################
+
+ format.pop_faction.NGM_mammonism:0 "[This.Owner.GetSpeciesName] <NGM_mammonism_names_1> <NGM_mammonism_names_2>"
+ format.pop_faction.NGM_collectivism:0 "[This.Owner.GetSpeciesName] <NGM_collectivism_names_1> <NGM_collectivism_names_2>"
+ format.pop_faction.NGM_environmentalism:0 "[This.Owner.GetSpeciesName] <NGM_environmentalism_names_1> <NGM_environmentalism_names_2>"
+ format.pop_faction.NGM_industrialism:0 "[This.Owner.GetSpeciesName] <NGM_industrialism_names_1> <NGM_industrialism_names_2>"
+ format.pop_faction.NGM_hawks:0 "[This.Owner.GetSpeciesName] <NGM_hawks_names_1>"
+ format.pop_faction.NGM_doves:0 "[This.Owner.GetSpeciesName] <NGM_doves_names_1>"
+ format.pop_faction.NGM_reputation:0 "[This.Owner.GetSpeciesName] <NGM_reputation_names_1>"
+ format.pop_faction.NGM_supremacy:0 "[This.Owner.GetSpeciesName] <NGM_supremacy_names_1>"
+
+##########################
+#####    連邦名称    ######
+##########################
+
+ NAME_NGM_CEPA_federation:0 "Comprehensive Economic Partnership Agreement"
+ NAME_NGM_CEPA_federation:0 "Common European Partnership Agreement"
+ NAME_NGM_CEPA_federation:0 "Permanent summit meeting"
+ NAME_NGM_CEPA_federation:0 "Unification Order"
+
 # :0 ""
 # _desc:0 ""

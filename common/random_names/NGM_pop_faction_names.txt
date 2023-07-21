@@ -26,9 +26,9 @@ pop_faction_name_format = {
 			is_pop_faction_type = "NGM_mammonism"
 		}
 	}
-	lookups = "[This.Owner.GetSpeciesName]<NGM_mammonism_names_1><NGM_mammonism_names_2>"
-	# format = "[This.Owner.GetSpeciesName]<NGM_mammonism_names_1><NGM_mammonism_names_2>"
-	format = format.pop_faction.NGM_mammonism
+	# lookups = "[This.Owner.GetSpeciesName]<NGM_mammonism_names_1><NGM_mammonism_names_2>"
+	format = "{[This.Owner.GetSpeciesName] {<NGM_mammonism_names_1> {<NGM_mammonism_names_2>}}}"
+	# format = format.pop_faction.NGM_mammonism
 }
 
 # NGM_collectivism
@@ -57,9 +57,9 @@ pop_faction_name_format = {
 			is_pop_faction_type = "NGM_collectivism"
 		}
 	}
-	lookups = "[This.Owner.GetSpeciesName]<NGM_collectivism_names_1><NGM_collectivism_names_2>"
-	# format = "[This.Owner.GetSpeciesName]<NGM_collectivism_names_1><NGM_collectivism_names_2>"
-	format = format.pop_faction.NGM_collectivism
+	# lookups = "[This.Owner.GetSpeciesName]<NGM_collectivism_names_1><NGM_collectivism_names_2>"
+	format = "{[This.Owner.GetSpeciesName] {<NGM_collectivism_names_1> {<NGM_collectivism_names_2>}}}"
+	# format = format.pop_faction.NGM_collectivism
 
 }
 
@@ -91,9 +91,9 @@ pop_faction_name_format = {
 			is_pop_faction_type = "NGM_environmentalism"
 		}
 	}
-	lookups = "[This.Owner.GetSpeciesName]<NGM_environmentalism_names_1><NGM_environmentalism_names_2>"
-	# format = "[This.Owner.GetSpeciesName]<NGM_environmentalism_names_1><NGM_environmentalism_names_2>"
-	format = format.pop_faction.NGM_environmentalism
+	# lookups = "[This.Owner.GetSpeciesName]<NGM_environmentalism_names_1><NGM_environmentalism_names_2>"
+	format = "{[This.Owner.GetSpeciesName] {<NGM_environmentalism_names_1> {<NGM_environmentalism_names_2>}}}"
+	# format = format.pop_faction.NGM_environmentalism
 }
 
 # NGM_industrialism
@@ -121,9 +121,9 @@ pop_faction_name_format = {
 			is_pop_faction_type = "NGM_industrialism"
 		}
 	}
-	lookups = "[This.Owner.GetSpeciesName]<NGM_industrialism_names_1><NGM_industrialism_names_2>"
-	# format = "[This.Owner.GetSpeciesName]<NGM_industrialism_names_1><NGM_industrialism_names_2>"
-	format = format.pop_faction.NGM_industrialism
+	# lookups = "[This.Owner.GetSpeciesName]<NGM_industrialism_names_1><NGM_industrialism_names_2>"
+	format = "{[This.Owner.GetSpeciesName] {<NGM_industrialism_names_1> {<NGM_industrialism_names_2>}}}"
+	# format = format.pop_faction.NGM_industrialism
 }
 
 # NGM_hawks
@@ -144,9 +144,9 @@ pop_faction_name_format = {
 			is_pop_faction_type = "NGM_hawks"
 		}
 	}
-	lookups = "[This.Owner.GetSpeciesName]<NGM_hawks_names_1>"
-	# format = "[This.Owner.GetSpeciesName]<NGM_hawks_names_1>"
-	format = format.pop_faction.NGM_hawks
+	# lookups = "[This.Owner.GetSpeciesName]<NGM_hawks_names_1>"
+	format = "{[This.Owner.GetSpeciesName] {<NGM_hawks_names_1>}}"
+	# format = format.pop_faction.NGM_hawks
 }
 
 # NGM_doves
@@ -167,9 +167,9 @@ pop_faction_name_format = {
 			is_pop_faction_type = "NGM_doves"
 		}
 	}
-	lookups = "[This.Owner.GetSpeciesName]<NGM_doves_names_1>"
-	# format = "[This.Owner.GetSpeciesName]<NGM_doves_names_1>"
-	format = format.pop_faction.NGM_doves
+	# lookups = "[This.Owner.GetSpeciesName]<NGM_doves_names_1>"
+	format = "{[This.Owner.GetSpeciesName] {<NGM_doves_names_1>}}"
+	# format = format.pop_faction.NGM_doves
 }
 
 # NGM_reputation
@@ -191,9 +191,9 @@ pop_faction_name_format = {
 			is_pop_faction_type = "NGM_reputation"
 		}
 	}
-	lookups = "[This.Owner.GetSpeciesName]<NGM_reputation_names_1>"
-	# format = "[This.Owner.GetSpeciesName]<NGM_reputation_names_1>"
-	format = format.pop_faction.NGM_reputation
+	# lookups = "[This.Owner.GetSpeciesName]<NGM_reputation_names_1>"
+	format = "{[This.Owner.GetSpeciesName] {<NGM_reputation_names_1>}}"
+	# format = format.pop_faction.NGM_reputation
 }
 
 # NGM_supremacy
@@ -213,8 +213,8 @@ pop_faction_name_format = {
 			is_pop_faction_type = "NGM_supremacy"
 		}
 	}
-	lookups = "[This.Owner.GetSpeciesName]<NGM_supremacy_names_1>"
-	# format = "[This.Owner.GetSpeciesName]<NGM_supremacy_names_1>"
-	format = format.pop_faction.NGM_supremacy
+	# lookups = "[This.Owner.GetSpeciesName]<NGM_supremacy_names_1>"
+	format = "{[This.Owner.GetSpeciesName] {<NGM_supremacy_names_1>}}"
+	# format = format.pop_faction.NGM_supremacy
 }
 

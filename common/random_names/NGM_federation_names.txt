@@ -7,7 +7,7 @@ federation_name_format = {
 			has_federation_type = NGM_CEPA_federation
 		}
 	}
-	format = "包括的経済連携協定"
+	format = "NAME_NGM_CEPA_federation"
 }
 
 # 2.同君連合
@@ -19,7 +19,7 @@ federation_name_format = {
 			has_federation_type = NGM_personal_union_federation
 		}
 	}
-	format = "同君連合"
+	format = "NAME_NGM_personal_union_federation"
 }
 
 # 3.常設首脳会議
@@ -31,7 +31,7 @@ federation_name_format = {
 			has_federation_type = NGM_permanent_summit_federation
 		}
 	}
-	format = "常設首脳会議"
+	format = "NAME_NGM_permanent_summit_federation"
 }
 
 # 4.統一教団
@@ -43,5 +43,5 @@ federation_name_format = {
 			has_federation_type = NGM_unification_church_federation
 		}
 	}
-	format = "統一教団"
+	format = "NAME_NGM_unification_church_federation"
 }
