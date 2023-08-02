@@ -393,7 +393,7 @@ tr_ngm_specialist_education = {
 	}
 }
 
-# 48.指導者教育:リーダースキル上限+1
+# 48.指導者教育:リーダーのスキル上限+1
 tr_ngm_leader_education = {
 	modifier = {
 		leader_skill_levels = 1
@@ -434,9 +434,9 @@ tr_ngm_record = {
 # 53.過去の参照:研究者の産出する研究力+1
 tr_ngm_past = {
 	modifier = {
-		planet_jobs_physics_research_produces_add = 1
-		planet_jobs_society_research_produces_add = 1
-		planet_jobs_engineering_research_produces_add = 1
+		planet_researchers_physics_research_produces_add = 1
+		planet_researchers_society_research_produces_add = 1
+		planet_researchers_engineering_research_produces_add = 1
 	}
 }
 

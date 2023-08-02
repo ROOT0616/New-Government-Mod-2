@@ -1,3 +1,63 @@
+# ①戦闘(儀典法：儀典法、典礼省、紋章院のみ発生しうる)
+#   艦隊戦や地上戦で勝利して、リーダーのレベルが上がった際に30%の確率で発生。勲章を渡して厭戦を下げる。与えると、特殊な特性を得る。
+# 「名将への称賛」
+#   先の戦闘では多くの軍人が活躍した。しかし、(リーダー名)の功績は特筆すべきものであり国内各所や軍部からも特段その功績を称えるよう希望が届いている。
+# 授与しよう→勲章10消費、特性を付与
+# 今回は見送ろう→影響力+20
+
+#   提督:栄光ある叙勲(船体値+10%、指揮上限+20)
+#   将軍:栄光ある叙勲(地上軍士気+20%、地上軍耐久力+50%)
+
+# ②レベル7になったリーダーに勲章を与えるイベント。与えると、特殊な特性を得る。(儀典法：儀典法、典礼省、紋章院のみ発生しうる)
+# 「名指導者への叙勲」
+# (リーダー名)の能力は全銀河に誇るべきものである。できる限りその能力を称えることで国際社会にも通用するような箔を与えることができないだろうか。
+# 授与しよう→勲章10消費
+# 今回は見送ろう→影響力+20
+
+#   能力への叙勲
+#   統治者(影響力+1、幸福度+5%)
+#   総督(官僚・司祭の産出する統合力+2)
+#   科学者(研究速度+10%、調査速度+5%)
+#   提督(武器射程+10%、回避+10%)
+#   将軍(地上軍士気+25%、地上軍ダメージ+25%)
+
+# ③「統治者名」章の創設(儀典法：儀典法、典礼省、紋章院のみ発生しうる)
+# 発生条件:レベル7以上の統治者死亡時に発生
+# 偉大なる統治者の死は人々を涙の海へと駆り立てた。親愛なるリーダーの喪失には余人をもって代え難いが、その威光を後世に残すために記念章を作成してはどうか。
+# 良いだろう。すぐ準備せよ→勲章+15
+# いや、そんな暇はない→影響力+50
+
+# ④オリンピックの功績に応じて授与すると幸福度等を得る(儀典法：儀典法、典礼省、紋章院のみ発生しうる)
+# 「選手への称賛」
+# 最近話題となった国際大会に出場した選手たちを称えるべきだという声が文化人から始まり、国民にも広がりつつある。ついには政府内でも勲章を授与すべきだという声が高まっている。
+# 国内でオリンピックが開催されたor準優勝以上の場合、終了1年後に発生
+# 授与する→勲章を10消費。10年間幸福度+10%、統合力+4000
+# いや、今回は見送ろう→影響力+100
+
+# ⑤国内有力者が勲章をせびるイベント(儀典法：儀典法、典礼省、紋章院のみ発生しうる)
+# MMTH30年で発生。一度発生すると10年間発生しない。
+# 「上流階級の鬱屈」
+# 国内の統治者層では鬱屈とした不満が高まっている。政府は目に見える形で、それも金銭以外の方法で自分たちを称えるべきだというのだ。つまり......勲章だ。
+# 授与する→勲章を10消費。10年間統治者幸福度+15%
+# 何故渡さねばならぬのだ→影響力+50、10年間統治者幸福度-5%
+
+# ⑥人民に対する称揚(儀典法：儀典法、典礼省、紋章院のみ発生しうる)
+# MMTH30年で発生。一度発生すると10年間発生しない。
+# 帝国の辺境部の鉱山で大規模な落盤事故が発生した。しかし、技師団は貨物搬送用エレベーターを意図的に起動させなかったことにより逃げることができたことから、作業従事者や残った資材に被害が発生しなかった。
+# 技師は自らの権限の範囲内で一切の違反を行わずに冷静な判断を下した。彼らの功績を称えるよう現地政府から要請が来ている。
+
+# 功績を称えようではないか→勲章を10消費。10年間労働者幸福度+10%、統合力5000
+# 勲章以外のもので代用するべきだ→エネルギー500消費。10年間労働者幸福度+5%
+# 社会の義務を果たしただけだ→影響力+50、10年間労働者幸福度-5%
+
+# ⑦官吏への叙勲(儀典法：儀典法、典礼省、紋章院のみ発生しうる)
+# MMTH30年で発生。一度発生すると10年間発生しない。
+# 我が国の官僚は極めて優秀だ。特に数名の高級官僚の功績は目を見張るものがある。彼らに勲章を授与し、特別功績を称えることで官僚たちの士気を高めることができないだろうか。
+
+# すばらしい提案だ→勲章を10消費。10年間Popからの帝国規模-10%、統合力5000
+# 勲章以外のもので代用するべきだ→エネルギー1000消費。10年間Popからの帝国規模-10%
+# 社会の義務を果たしただけだ→影響力+100、統合力-1000
+
 ###############################
 #######  連邦用イベント ########
 ###############################
@@ -21,6 +81,201 @@ country_event = {
 			}
 			set_leader_flag = flag_NGM_PU_TPP_bonus
 			set_skill = 2
+		}
+	}
+}
+
+###############################
+#######  布告用イベント ########
+###############################
+namespace = ngm_campaign
+# ① 文化人への叙勲
+#   文化人の統合力算出+20%(12ヶ月)
+#   研究者の研究力算出+10%(12ヶ月)
+# ② 財界人への叙勲
+#   交易価値+20%(24ヶ月)
+# ③ 外交官への叙勲
+#   外交発言力+20%(24ヶ月)
+# ④派閥幹部への叙勲
+#   派閥幸福度+15%(24ヶ月)
+# ⑤軍人への叙勲
+#   回避+5% (12ヶ月)
+#   連射レート+10% (12ヶ月)
+#   地上軍士気+20% (24ヶ月)
+# ⑥リーダーへの叙勲(特性:政治的叙勲付与)
+#     総督(スキル上限+1、統合力算出+10%)
+#     科学者(スキル上限+1、研究力算出+5%)
+#     提督(スキル上限+1、リーダー取得経験値+20%)
+#     将軍(スキル上限+1、リーダー取得経験値+20%)
+# ⑥皇族への叙勲(君主制のみ)
+#   君主もしくは後継者に特性付与
+#   (特性:政治的叙勲)スキル上限+1、統合力+10%、安定度+5
+# ⑦ 統治者への叙勲
+#   (特性:政治的叙勲)スキル上限+1、統合力+10%、安定度+5
+# ⑧貴族への叙勲(貴族エリート、栄望のみ)
+#   統治者幸福度+50%(48ヶ月)
+# ⑨勤労者への叙勲(栄望or社会主義)
+#   労働者幸福度+30% (48ヶ月)
+#   専門家幸福度+10% (48ヶ月)
+country_event = {
+	id = ngm_campaign.1
+	title = ngm_campaign.1.name
+	desc = ngm_campaign.1.desc
+	picture = GFX_evt_announcement
+	is_triggered_only = yes
+	trigger = {
+		exists = owner
+	}
+	# 1 文化人への叙勲
+	option = {
+		name = ngm_campaign.1.a
+		# 文化人の統合力算出+20%(12ヶ月)
+		add_modifier = {
+			modifier = ngm_campaign_1_a_1_modifier
+			days = 360
+		}
+	}
+	# 2 財界人への叙勲
+	option = {
+		name = ngm_campaign.1.b
+		# 交易価値+20%(24ヶ月)
+		add_modifier = {
+			modifier = ngm_campaign_1_b_1_modifier
+			days = 720
+		}
+	}
+	# 3 外交官への叙勲
+	option = {
+		name = ngm_campaign.1.c
+		# 外交発言力+20%(24ヶ月)
+		add_modifier = {
+			modifier = ngm_campaign_1_c_1_modifier
+			days = 720
+		}
+	}
+	# 4 派閥幹部への叙勲
+	option = {
+		name = ngm_campaign.1.d
+		# 派閥幸福度+15%(24ヶ月)
+		add_modifier = {
+			modifier = ngm_campaign_1_d_1_modifier
+			days = 720
+		}
+	}
+	# 5 軍人への叙勲
+	option = {
+		name = ngm_campaign.1.e
+		#   回避+5% (12ヶ月)
+		#   連射レート+10% (12ヶ月)
+		#   地上軍士気+20% (24ヶ月)
+		add_modifier = {
+			modifier = ngm_campaign_1_e_1_modifier
+			days = 360
+		}
+		add_modifier = {
+			modifier = ngm_campaign_1_e_2_modifier
+			days = 720
+		}
+	}
+	# 6 リーダーへの叙勲(特性:政治的叙勲付与)
+	option = {
+		name = ngm_campaign.1.f
+		random_owned_leader  = {
+			limit = {
+				leader_class = admiral
+				NOT = {
+					has_trait = leader_trait_ngm_political_decorations_admiral
+				}
+			}
+			add_trait_no_notify = leader_trait_ngm_political_decorations_admiral
+		}
+		random_owned_leader  = {
+			limit = {
+				leader_class = scientist
+				NOT = {
+					has_trait = leader_trait_ngm_political_decorations_scientist
+				}
+			}
+			add_trait_no_notify = leader_trait_ngm_political_decorations_scientist
+		}
+		random_owned_leader  = {
+			limit = {
+				leader_class = general
+				NOT = {
+					has_trait = leader_trait_ngm_political_decorations_general
+				}
+			}
+			add_trait_no_notify = leader_trait_ngm_political_decorations_general
+		}
+		random_owned_leader  = {
+			limit = {
+				leader_class = governor
+				NOT = {
+					has_trait = leader_trait_ngm_political_decorations_governor
+				}
+			}
+			add_trait_no_notify = leader_trait_ngm_political_decorations_governor
+		}
+	}
+	# 7 皇族への叙勲(君主制のみ)
+	option = {
+		name = ngm_campaign.1.g
+		allow = {
+			has_authority = auth_imperial
+		}
+		random_owned_leader  = {
+			limit = {
+				OR = {
+					is_heir = yes
+					is_ruler = yes
+				}
+				NOT = {
+					has_trait = leader_trait_ngm_political_decorations
+				}
+			}
+			add_trait_no_notify = leader_trait_ngm_political_decorations
+		}
+	}
+	# 8 統治者への叙勲
+	option = {
+		name = ngm_campaign.1.h
+		random_owned_leader  = {
+			limit = {
+				is_ruler = yes
+				NOT = {
+					has_trait = leader_trait_ngm_political_decorations
+				}
+			}
+			add_trait_no_notify = leader_trait_ngm_political_decorations
+		}
+	}
+	# 9 貴族への叙勲(貴族エリート、栄望のみ)
+	option = {
+		name = ngm_campaign.1.i
+		allow = {
+			has_civic = civic_aristocratic_elite
+			is_honorism = yes
+		}
+		# 統治者幸福度+50%(48ヶ月)
+		add_modifier = {
+			modifier = ngm_campaign_1_i_1_modifier
+			days = 1440
+		}
+	}
+	# ⑨勤労者への叙勲(栄望or社会主義)
+	option = {
+		name = ngm_campaign.1.j
+		allow = {
+			OR = {
+				is_honorism = yes
+				is_socialism = yes
+			}
+		}
+		# 労働者幸福度+30% (48ヶ月)
+		# 専門家幸福度+10% (48ヶ月)
+		add_modifier = {
+			modifier = ngm_campaign_1_i_1_modifier
+			days = 1440
 		}
 	}
 }

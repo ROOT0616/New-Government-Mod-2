@@ -1,0 +1,67 @@
+# 2.コンポーネント
+# ①叙勲艦(この船はその存在だけで叙勲の対象となる栄誉ある船である) コスト：勲章100 維持費：勲章0.5,合金10
+#   外交発言力+500,影響力0.5,統合力+100
+utility_component_template = {
+	key = "NGM_HIGHESTRANKING_WARSHIP"
+	size = aux
+	icon = "GFX_ship_part_ngm_highestranking_warship"
+	icon_frame = 1
+	power = -10
+	resources = {
+		category = ship_components
+		produces = {
+			influence = 0.5
+			unity = 100
+		}
+		cost = {
+			ngm_order_of_merit = 100
+		}
+		upkeep = {
+			ngm_order_of_merit = 0.5
+			alloys = 10
+		}
+	}
+	class_restriction = { shipclass_military }
+	prerequisites = { "tech_ceremony_theory_second" }
+	component_set = "NGM_HIGHESTRANKING_WARSHIP"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+# ②栄誉ある船員(この船の船員は極めて優秀であり、国家最高の人員が集められている) コスト：勲章100 維持費：勲章0.5,消費財15
+#   回避+10%,亜高速移動速度+25%,武器射程+20%
+utility_component_template = {
+	key = "NGM_HONORED_SAILOR"
+	size = aux
+	icon = "GFX_ship_part_ngm_honored_sailor"
+	icon_frame = 1
+	power = -10
+	resources = {
+		category = ship_components
+		produces = {
+			influence = 0.5
+			unity = 100
+		}
+		cost = {
+			ngm_order_of_merit = 100
+		}
+		upkeep = {
+			ngm_order_of_merit = 0.5
+			consumer_goods = 15
+		}
+	}
+	modifier = {
+		ship_evasion_mult = 0.1
+		ship_speed_mult = 0.25
+		ship_weapon_range_mult = 0.2
+	}
+	class_restriction = { shipclass_military }
+	prerequisites = { "tech_ceremony_theory_second" }
+	component_set = "NGM_HONORED_SAILOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}

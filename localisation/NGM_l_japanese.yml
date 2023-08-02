@@ -1400,17 +1400,8 @@
 #####    布告    ######
 #######################
 
- edict_awarding_medalsto_faction_leaders_campaign:0 "派閥指導者への勲章授与"
- edict_awarding_medalsto_faction_leaders_campaign_desc:0 "派閥の指導者に栄誉を与えることで自尊心をくすぐることで政府に好意的な態度を取らせる。"
-
- edict_awarding_medals_to_military_personnel_campaign:0 "軍人への勲章授与"
- edict_awarding_medals_to_military_personnel_campaign_desc:0 "軍人に栄誉を与えることで自尊心をくすぐり、職務により精励させる。"
-
- edict_awarding_medals_to_the_ruling_class_campaign:0 "統治層への勲章授与"
- edict_awarding_medals_to_the_ruling_class_campaign_desc:0 "各惑星の名士や有力者に栄誉を与えることにより、各惑星の安定度を高めることができる。"
-
- edict_awarding_of_medals_to_cultural_figures_campaign:0 "文化人への勲章授与"
- edict_awarding_of_medals_to_cultural_figures_campaign_desc:0 "文化人に栄誉を与えることで科学研究や文化を振興することができる。"
+ ngm_conducting_decoration_ceremonies_campaign:0 "叙勲式の実施"
+ ngm_conducting_decoration_ceremonies_campaign:0 "功労者や上流階級の市民などに勲章を授与する式典を実施する。"
 
  edict_ngm_five_year_plan1_campaign:0 "建築5か年計画"
  edict_ngm_five_year_plan1_campaign_desc:0 "建築を重視し、国家の屋台骨を整備するのだ。"
@@ -2126,6 +2117,15 @@
  ngm_r_galactic_empire_aquarium:0 "銀河皇帝勅許第7216号「帝立遊園領邦の認可」"
 
  ngm_r_imperial_chronicle_modifier:0 "偉大なる恩顧"
+
+ ngm_campaign_1_a_1_modifier:0 "文化人への叙勲"
+ ngm_campaign_1_b_1_modifier:0 "財界人への叙勲"
+ ngm_campaign_1_c_1_modifier:0 "外交官への叙勲"
+ ngm_campaign_1_d_1_modifier:0 "派閥幹部への叙勲"
+ ngm_campaign_1_e_1_modifier:0 "軍人への叙勲"
+ ngm_campaign_1_e_2_modifier:0 "軍人への叙勲"
+ ngm_campaign_1_i_1_modifier:0 "貴族への叙勲"
+ ngm_campaign_1_j_1_modifier:0 "勤労者への叙勲"
 
 ##########################
 #####    惑星特性    ######
@@ -3137,6 +3137,19 @@
 #####    イベント    ######
 ##########################
 
+ ngm_campaign.1.name:0 "叙勲式の実施"
+ ngm_campaign.1.desc:0 "功労者や上流階級の市民などに勲章を授与する式典を実施する。"
+ ngm_campaign.1.a:0 "文化人への叙勲"
+ ngm_campaign.1.b:0 "財界人への叙勲"
+ ngm_campaign.1.c:0 "外交官への叙勲"
+ ngm_campaign.1.d:0 "派閥幹部への叙勲"
+ ngm_campaign.1.e:0 "軍人への叙勲"
+ ngm_campaign.1.f:0 "リーダーへの叙勲"
+ ngm_campaign.1.g:0 "皇族への叙勲"
+ ngm_campaign.1.h:0 "統治者への叙勲"
+ ngm_campaign.1.i:0 "貴族への叙勲"
+ ngm_campaign.1.j:0 "勤労者への叙勲"
+
  ngm_origin.100.name:0 "追跡者"
  ngm_origin.100.desc:0 "やつらが未来から追いかけて来た\nなんとかするんだ"
 
@@ -3144,47 +3157,6 @@
  ngm_origin.101.desc:0 "我々を追って無茶な追跡を行っていた艦隊は撃滅された。おそらく、新たな部隊が過去へ"戻って"くるだろうが、しばらくは何とかなるだろう。\nまた、彼らは我々が再発見できていない技術を多数持ち込んでくれたようだ。"
  ngm_origin.101.a:0 "早速活用しよう"
  ngm_origin.101.b:0 "いつまで追いかけてくるんだ"
-
- ngm_government.1.name:0 "作戦会議"
- ngm_government.1.desc:0 "我が国の戦争に対して、各所から所見が届いている。統合参謀本部からは必要な補給物資を将兵に与えることで士気を高めることができると指摘している。しかし、前線指揮官達は補給物資を別の用途で使用することで戦力を向上させることができると主張している。\nこれらとは別に陸軍将校からは臨時の補強計画が提案されている。\n本日の会議は限られた資源をどのように投入するかという内容である。"
- ngm_government.1.a:0 "統合参謀本部に任せる。"
- ngm_government.1.b:0 "前線指揮官の見解を聞こう。"
- ngm_government.1.c:0 "陸軍のやり方に一理あるようだ。"
- ngm_government.1.d:0 "ふむ。私の意見ではな......"
- ngm_government.1.e:0 "会議は躍る。"
-
- ngm_government.2.name:0 "軍事パレード"
- ngm_government.2.desc:0 "長引く戦争の影響で国民の中には厭戦感情を訴えるものも存在する。その者たちの不安を解消し、我が国の威力を誇示するために戦時の軍事パレードを行うよう国防省から提案があった。"
- ngm_government.2.a:0 "よろしい。直ちに軍事パレードだ。"
- ngm_government.2.b:0 "そのような余裕はない。"
- ngm_government.2.c:0 "軍事パレードではなく、追悼集会をしよう。"
- ngm_government.2.d:0 "盛大にやろうじゃないか。"
- ngm_government.2.e:0 "英雄を讃え、勲章を配ろう。"
-
- ngm_government.3.name:0 "厭戦活動"
- ngm_government.3.desc:0 "長きにわたる戦争のためか遂に [Root.GetName] の市民の一部が反戦デモを開始した。これは我が国の方針に反しており、徐々に規模が拡張している。"
- ngm_government.3.a:0 "すぐに鎮圧しろ！"
- ngm_government.3.b:0 "代表者と交渉しろ。"
- ngm_government.3.c:0 "いつも通り行えば良い。"
- ngm_government.3.d:0 "群衆に呼びかけ、軍の支持集会を開け。"
- ngm_government.3.e:0 "とある施設なら中で叫んでくれて構わない。"
-
- ngm_government.5.name:0 "政治論争"
- ngm_government.5.desc:0 ""
- ngm_government.5.a:0 ""
- ngm_government.5.b:0 ""
-
- ngm_government.6.name:0 "学術論争"
- ngm_government.6.desc:0 "帝国内の科学者はみなそれぞれの考えを持っている。その中で〇〇と●●が今後の研究方針を巡って大激論を交わしている。政府としてはどちらを支援するべきであろうか。"
- ngm_government.6.a:0 "誰かを支持しよう！"
- ngm_government.6.b:0 "誰かを支持しよう！"
- ngm_government.6.c:0 "政府は臨機応変に対応する。"
-
- ngm_government.7.name:0 "厭戦活動"
- ngm_government.7.desc:0 "政府の戦争政策をめぐって陸軍と宇宙軍は常に争いを続けている。近年は●●と〇〇による論争が行われており、どちらを支持するべきであろうか"
- ngm_government.7.a:0 "誰かを支持しよう！"
- ngm_government.7.b:0 "政府は提督を支持する。"
- ngm_government.7.c:0 "政府は将軍を支持する。"
 
  ngm_government.91.name:0 "§H国際競技機構の案内§!"
  ngm_government.91.desc:0 "銀河コミュニティ事務総局の機関である国際競技機構より、近年中に行われる国際競技大会の開会に関する案内文が送付されてきた。賛成多数であった場合は、銀河コミュニティ構成国の参加は強制であり、もし他に注力すべきことがあれば大会は大きな負担になる可能性がある。反対が多数であれば、今期の大会は中止となるが、多くのアスリートや受容的な市民は残念がるだろう。"

@@ -178,6 +178,64 @@ forced_labor = {
 # }
 
 #######################
+#####    布告    ######
+#######################
+
+# ① 文化人への叙勲
+#   文化人の統合力算出+20%(12ヶ月)
+#   研究者の研究力算出+10%(12ヶ月)
+ngm_campaign_1_a_1_modifier = {
+	planet_culture_workers_produces_mult = 0.2
+	planet_researchers_produces_mult = 0.1
+}
+
+# ② 財界人への叙勲
+#   交易価値+20%(24ヶ月)
+ngm_campaign_1_b_1_modifier = {
+	trade_value_mult = 0.2
+}
+
+# ③ 外交官への叙勲
+#   外交発言力+20%(24ヶ月)
+ngm_campaign_1_c_1_modifier = {
+	diplo_weight_mult = 0.2
+}
+
+# ④派閥幹部への叙勲
+#   派閥幸福度+15%(24ヶ月)
+ngm_campaign_1_d_1_modifier = {
+	faction_approval = 0.15
+}
+
+# ⑤軍人への叙勲
+#   回避+5% (12ヶ月)
+#   連射レート+10% (12ヶ月)
+#   地上軍士気+20% (24ヶ月)
+ngm_campaign_1_e_1_modifier = {
+	ship_evasion_mult = 0.05
+	ship_fire_rate_mult = 0.1
+}
+
+#   地上軍士気+20% (24ヶ月)
+ngm_campaign_1_e_2_modifier = {
+	army_morale = 0.2
+}
+
+# ⑧貴族への叙勲(貴族エリート、栄望のみ)
+#   統治者幸福度+50%(48ヶ月)
+ngm_campaign_1_i_1_modifier = {
+	pop_cat_ruler_happiness = 0.5
+}
+
+# ⑨勤労者への叙勲(栄望or社会主義)
+#   労働者幸福度+30% (48ヶ月)
+#   専門家幸福度+10% (48ヶ月)
+ngm_campaign_1_j_1_modifier = {
+	pop_cat_worker_happiness = 0.3
+	pop_cat_specialist_happiness = 0.1
+}
+
+#######################
 #####    国是    ######
 #######################
 

@@ -1444,7 +1444,7 @@ trait_ngm_reversing_technologies = {
 	}
 }
 
-# trait_ngm_individuality		優秀な個性      ：3p	リーダー取得経験値+10%、リーダースキル上限+2	(この種族は個々の個性を伸ばすことを重要視している。)
+# trait_ngm_individuality		優秀な個性      ：3p	リーダー取得経験値+10%、リーダーのスキル上限+2	(この種族は個々の個性を伸ばすことを重要視している。)
 trait_ngm_individuality = {
 	cost = 3
 	potential_crossbreeding_chance = 1
@@ -1464,7 +1464,7 @@ trait_ngm_individuality = {
 	}
 }
 
-# trait_ngm_non_individuality	無個性          ：-3p	リーダー取得経験値-10%、リーダースキル上限-2	(この種族は個々の個性を均一化することを重要視している。)
+# trait_ngm_non_individuality	無個性          ：-3p	リーダー取得経験値-10%、リーダーのスキル上限-2	(この種族は個々の個性を均一化することを重要視している。)
 trait_ngm_non_individuality = {
 	cost = -3
 	potential_crossbreeding_chance = 1
