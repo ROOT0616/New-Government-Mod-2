@@ -43,7 +43,7 @@ ngm_conducting_decoration_ceremonies_campaign = {
 	}
 	effect = {
 		country_event = {
-			id = achievement.1
+			id = ngm_campaign.1
 		}
 	}
 	potential = {
@@ -60,18 +60,16 @@ ngm_conducting_decoration_ceremonies_campaign = {
 }
 
 # (2)対外的叙勲の決定
-# ①国外要人への叙勲
+# 1 国外要人への叙勲
 #   国選択→叙勲対象選択→送られる側でイベント。受け入れた場合は授与イベント。受け入れられなければ、拒否イベント
 #   送った側は外交発言力+20%,拒否した場合は影響力+100
-
 #   対象は指導者、後継者、提督、将軍、総督、科学者から選択(特性:国外の叙勲)
 #   指導者	(リーダー経験値取得+20%、影響力+1)
 #   提督		(リーダー経験値取得+20%、連射レート+5%)
 #   将軍		(リーダー経験値取得+20%、地上軍士気+30%)
 #   総督		(リーダー経験値取得+20%、統合力+15%)
 #   科学者	(リーダー経験値取得+20%、研究力+10%)
-
-# ②国外功績の称揚(クールダウン36か月)
+# 2 国外功績の称揚(クールダウン36か月)
 # 国選択→叙勲対象選択→送られる側でイベント。受け入れた場合は授与イベント。受け入れられなければ、拒否イベント
 # 送った側は外交発言力+20%,拒否した場合は影響力+100
 #   対象は、文化、科学、統治、外交、軍事
@@ -80,12 +78,67 @@ ngm_conducting_decoration_ceremonies_campaign = {
 #   統治		(安定度+10)	(24ヶ月)
 #   外交		(外交発言力+20%)(24ヶ月)
 #   軍事		(船体値+10%)	(24ヶ月)
+ngm_conducting_decoration_ceremonies_2_campaign = {
+	length = 0
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		# cost = {
+		# 	ngm_order_of_merit = 100
+		# }
+		# upkeep = {
+		# 	ngm_order_of_merit = 0.5
+		# }
+	}
+	effect = {
+		country_event = {
+			id = ngm_campaign.2
+		}
+	}
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		always = yes
+	}
+	ai_weight = {
+		weight = 1
+	}
+}
 
 # (3)叙勲の依頼
 #   相手国へ恩義を代償に叙勲を打診する。
 #   送られた側は送った側に恩義を1渡す
 # 国選択→叙勲対象選択→対象国でイベント。受け入れた場合は授与イベント。受け入れられなければ、拒否イベント
 #   選ぶ対象は、統治者、文化、軍事の3つ
+ngm_conducting_decoration_ceremonies_3_campaign = {
+	length = 0
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		# cost = {
+		# 	ngm_order_of_merit = 100
+		# }
+		# upkeep = {
+		# 	ngm_order_of_merit = 0.5
+		# }
+	}
+	effect = {
+		country_event = {
+			id = ngm_campaign.3
+		}
+	}
+	potential = {
+		is_gestalt = no
+	}
+	allow = {
+		always = yes
+	}
+	ai_weight = {
+		weight = 1
+	}
+}
+
 
 # 布告「5か年計画」  布告できるのはいずれか1つ。布告コスト  影響力：20、エネルギー500  影響力布告期間は5年。クールタイムは10年
 # five_year_plan1 .建築5か年計画  ：建造物コスト-5%、建造物建築速度+10%、区域建造速度+5%	  Pop消費財使用量+5%
