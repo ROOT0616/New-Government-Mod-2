@@ -5073,3 +5073,370 @@ country_event = {
 		}
 	}
 }
+
+# 革命の寵児
+country_event = {
+	id = ngm_origin.3001
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_revolution
+	}
+	immediate = {
+		hidden_effect = {
+			add_relic = r_ngm_legacy_of_revolution
+		}
+	}
+}
+
+# 犯罪の楽園
+country_event = {
+	id = ngm_origin.3002
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_crime
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_origin_ngm_crime_1
+					has_country_flag = country_flag_origin_ngm_crime_1
+				}
+			}
+			set_global_flag = global_flag_origin_ngm_crime_1
+			set_country_flag = country_flag_origin_ngm_crime_1
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_origin_ngm_crime_2
+					has_country_flag = country_flag_origin_ngm_crime_2
+				}
+			}
+			set_global_flag = global_flag_origin_ngm_crime_2
+			set_country_flag = country_flag_origin_ngm_crime_2
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_origin_ngm_crime_3
+					has_country_flag = country_flag_origin_ngm_crime_3
+				}
+			}
+			set_global_flag = global_flag_origin_ngm_crime_3
+			set_country_flag = country_flag_origin_ngm_crime_3
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_origin_ngm_crime_4
+					has_country_flag = country_flag_origin_ngm_crime_4
+				}
+			}
+			set_global_flag = global_flag_origin_ngm_crime_4
+			set_country_flag = country_flag_origin_ngm_crime_4
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_origin_ngm_crime_5
+					has_country_flag = country_flag_origin_ngm_crime_5
+				}
+			}
+			set_global_flag = global_flag_origin_ngm_crime_5
+			set_country_flag = country_flag_origin_ngm_crime_5
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_origin_ngm_crime_6
+					has_country_flag = country_flag_origin_ngm_crime_6
+				}
+			}
+			set_global_flag = global_flag_origin_ngm_crime_6
+			set_country_flag = country_flag_origin_ngm_crime_6
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_origin_ngm_crime_7
+					has_country_flag = country_flag_origin_ngm_crime_7
+				}
+			}
+			set_global_flag = global_flag_origin_ngm_crime_7
+			set_country_flag = country_flag_origin_ngm_crime_7
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					has_global_flag = global_flag_origin_ngm_crime_8
+					has_country_flag = country_flag_origin_ngm_crime_8
+				}
+			}
+			set_global_flag = global_flag_origin_ngm_crime_8
+			set_country_flag = country_flag_origin_ngm_crime_8
+		}
+	}
+}
+
+# 犯罪の楽園
+country_event = {
+	id = ngm_origin.3003
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_ngm_crime
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = country_flag_origin_ngm_crime_1
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = origin_ngm_crime_modifier_1
+					days = 30
+				}
+			}
+			# every_rival_country = {
+			# 	limit = {
+			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_1
+			# }
+			# every_playable_country = {
+			# 	limit = {
+			# 		NOT = {
+			# 			is_rival = root
+			# 		}
+			# 		has_modifier = origin_ngm_crime_modifier_1
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_1
+			# }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_origin_ngm_crime_2
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = origin_ngm_crime_modifier_2
+					days = 30
+				}
+			}
+			# every_rival_country = {
+			# 	limit = {
+			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_2
+			# }
+			# every_playable_country = {
+			# 	limit = {
+			# 		NOT = {
+			# 			is_rival = root
+			# 		}
+			# 		has_modifier = origin_ngm_crime_modifier_2
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_2
+			# }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_origin_ngm_crime_3
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = origin_ngm_crime_modifier_3
+					days = 30
+				}
+			}
+			# every_rival_country = {
+			# 	limit = {
+			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_3
+			# }
+			# every_playable_country = {
+			# 	limit = {
+			# 		NOT = {
+			# 			is_rival = root
+			# 		}
+			# 		has_modifier = origin_ngm_crime_modifier_3
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_3
+			# }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_origin_ngm_crime_4
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = origin_ngm_crime_modifier_4
+					days = 30
+				}
+			}
+			# every_rival_country = {
+			# 	limit = {
+			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_4
+			# }
+			# every_playable_country = {
+			# 	limit = {
+			# 		NOT = {
+			# 			is_rival = root
+			# 		}
+			# 		has_modifier = origin_ngm_crime_modifier_4
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_4
+			# }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_origin_ngm_crime_5
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = origin_ngm_crime_modifier_5
+					days = 30
+				}
+			}
+			# every_rival_country = {
+			# 	limit = {
+			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_5
+			# }
+			# every_playable_country = {
+			# 	limit = {
+			# 		NOT = {
+			# 			is_rival = root
+			# 		}
+			# 		has_modifier = origin_ngm_crime_modifier_5
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_5
+			# }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_origin_ngm_crime_6
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = origin_ngm_crime_modifier_6
+					days = 30
+				}
+			}
+			# every_rival_country = {
+			# 	limit = {
+			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_6
+			# }
+			# every_playable_country = {
+			# 	limit = {
+			# 		NOT = {
+			# 			is_rival = root
+			# 		}
+			# 		has_modifier = origin_ngm_crime_modifier_6
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_6
+			# }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_origin_ngm_crime_7
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = origin_ngm_crime_modifier_7
+					days = 30
+				}
+			}
+			# every_rival_country = {
+			# 	limit = {
+			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_7
+			# }
+			# every_playable_country = {
+			# 	limit = {
+			# 		NOT = {
+			# 			is_rival = root
+			# 		}
+			# 		has_modifier = origin_ngm_crime_modifier_7
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_7
+			# }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = country_flag_origin_ngm_crime_8
+			}
+			every_rival_country = {
+				limit = {
+					NOT = {
+						has_ascension_perk = ap_ngm_ministry_of_innocence
+					}
+				}
+				add_modifier = {
+					modifier = origin_ngm_crime_modifier_8
+					days = 30
+				}
+			}
+			# every_rival_country = {
+			# 	limit = {
+			# 		has_ascension_perk = ap_ngm_ministry_of_innocence
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_8
+			# }
+			# every_playable_country = {
+			# 	limit = {
+			# 		NOT = {
+			# 			is_rival = root
+			# 		}
+			# 		has_modifier = origin_ngm_crime_modifier_8
+			# 	}
+			# 	remove_modifier = origin_ngm_crime_modifier_8
+			# }
+		}
+	}
+}

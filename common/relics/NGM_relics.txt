@@ -232,3 +232,63 @@ r_ngm_great_patronage = {
 		}
 	}
 }
+
+# 革命の遺産 この革命の遺産は、常に革新主義へと社会を導き続けるのだ
+# パッシブ効果	：社会主義派閥志向魅力+50% 平等主義派閥志向魅力+50% 開発主義派閥志向魅力+50% 保全主義派閥志向魅力+50% 派閥からの収入+25%
+# アクティブ効果	：派閥幸福度+20% 影響力+1
+# (アクティブコスト:影響力300)
+# (クールダウン期間:7200)
+r_ngm_legacy_of_revolution = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_omnicodex"
+	sound = "relic_activation_the_omnicodex"
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			influence = 300
+		}
+	}
+	ai_weight = {
+		weight = 100
+	}
+	# パッシブ効果	：社会主義派閥志向魅力+50% 平等主義派閥志向魅力+50% 開発主義派閥志向魅力+50% 保全主義派閥志向魅力+50% 派閥からの収入+25%
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		pop_ethic_socialism_attraction_mult = 0.5
+		pop_ethic_egalitarian_attraction_mult = 0.5
+		pop_ethic_developmentalism_attraction_mult = 0.5
+		pop_ethic_conservationism_attraction_mult = 0.5
+		pop_factions_unity_produces_mult = 0.25
+	}
+	score = 10
+	# アクティブ効果	：派閥幸福度+20% 影響力+1
+	active_effect = {
+		add_resource = {
+			influence = 1
+		}
+		add_modifier = {
+			modifier = "r_ngm_legacy_of_revolution_modifier"
+			days = 3600
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 7200
+			}
+		}
+	}
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = {
+				has_modifier = relic_activation_cooldown
+			}
+		}
+	}
+}
+

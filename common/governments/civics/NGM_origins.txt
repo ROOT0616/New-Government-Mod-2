@@ -137,7 +137,7 @@ origin_ngm_escape_to_the_past = {
 # 特有の惑星建造物を有する	
 # 帝国特性を各種有する。伝統やアセンションで削除する	
 # ホットフィックスは終了している扱い	
-# 合金を消費する布告で調査船と建設船を1隻得ることができる。	
+# 合金を消費する布告で調査船と建設船を1隻得ることができる。
 origin_ngm_phenix = {
 	is_origin = yes
 	icon = "gfx/interface/icons/governments/origins/origins_ngm_phenix.dds"
@@ -168,8 +168,6 @@ origin_ngm_phenix = {
 			
 		}
 	}
-	modifier = {
-	}
 	description = "origin_tooltip_ngm_phenix"
 	random_weight = {
 		base = 0
@@ -186,11 +184,235 @@ origin_ngm_phenix_npc = {
 		always = no # Non-player origin
 	}
 
-	possible = {
-	}
+
 
 	description = origin_tooltip_ngm_phenix_npc
 
+	random_weight = {
+		base = 0
+	}
+}
+
+# 玉座の上のバランサー	origin_ngm_crown	象徴君主制を採用している	"派閥幸福度+10% 幸福度+10% 外交発言力+20% 使節+1"	実質的な権力を有さない玉座の上のバランサーである君主は、人民の幸福と安全を常に考え、社会を安定させてきたのだ。	
+origin_ngm_crown = {
+	is_origin = yes
+	icon = "gfx/interface/icons/governments/origins/origins_ngm_crown.dds"
+	picture = GFX_origin_ngm_crown
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		civics = {
+			value = civic_symbolic_monarchy
+		}
+	}
+	modifier = {
+		faction_approval = 0.1
+		pop_happiness = 0.1
+		diplo_weight_mult = 0.2
+		envoys_add = 1
+	}
+	description = "origin_tooltip_ngm_crown"
+	random_weight = {
+		base = 0
+	}
+}
+
+# 植民熱	origin_ngm_colony	マニュフェスト・ディスティニーを採用している	"植民地建造速度+30％ POPからの帝国規模-15% 新植民地設立時の追加POP+1"	植民地を作成することは我々の宿命であり、誰も邪魔することはできない
+origin_ngm_colony = {
+	is_origin = yes
+	icon = "gfx/interface/icons/governments/origins/origins_ngm_colony.dds"
+	picture = GFX_origin_ngm_colony
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		civics = {
+			value = civic_ngm_manifest_destiny
+		}
+	}
+	modifier = {
+		planet_colony_development_speed_mult = 0.3
+		empire_size_pops_mult = -0.15
+		colony_start_num_pops_add = 1
+	}
+	description = "origin_tooltip_ngm_colony"
+	random_weight = {
+		base = 0
+	}
+}
+
+# 革命の寵児	origin_ngm_revolution	"社会主義である 狂信的な社会主義である"	遺物:革命の遺産を取得する。	革命により成立したこの国は、常に革命の成果を求められている
+origin_ngm_revolution = {
+	is_origin = yes
+	icon = "gfx/interface/icons/governments/origins/origins_ngm_revolution.dds"
+	picture = GFX_origin_ngm_revolution
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		text = civic_tooltip_socialism
+		ethics = {
+			value = ethic_socialism
+			value = ethic_fanatic_socialism
+		}
+	}
+	description = "origin_tooltip_ngm_revolution"
+	random_weight = {
+		base = 0
+	}
+}
+
+# 自由都市圏	origin_ngm_freecity	"平等主義である マニュフェスト・ディスティニーを採用していない"	"POPからの帝国規模-20% POP成長速度+15% 星系からの帝国規模+50% 前哨地建造コスト+30%"	この国は小さな都市政府を国家規模に拡張した政府は大規模な統治を不得意とする代わりに、小さくまとまった国家を作りやすい
+origin_ngm_freecity = {
+	is_origin = yes
+	icon = "gfx/interface/icons/governments/origins/origins_ngm_freecity.dds"
+	picture = GFX_origin_ngm_freecity
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		text = civic_tooltip_egalitarian
+		ethics = {
+			value = ethic_egalitarian
+			value = ethic_fanatic_egalitarian
+		}
+		civics = {
+			NOT = {
+				value = civic_ngm_manifest_destiny
+			}
+		}
+	}
+	modifier = {
+		empire_size_pops_mult = -0.2
+		pop_growth_speed = 0.15
+		empire_size_systems_mult = 0.5
+		starbase_outpost_cost_mult = 0.3
+	}
+	description = "origin_tooltip_ngm_freecity"
+	random_weight = {
+		base = 0
+	}
+}
+
+# 軍事的拡張の夢	origin_ngm_military	軍国主義	"宇宙軍許容量+20 星系基地許容量+5 連射レート+5%"	軍事的拡張は人々の夢なのだ
+origin_ngm_military = {
+	is_origin = yes
+	icon = "gfx/interface/icons/governments/origins/origins_ngm_military.dds"
+	picture = GFX_origin_ngm_military
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		text = civic_tooltip_socialism
+		ethics = {
+			value = ethic_militarist
+			value = ethic_fanatic_militarist
+		}
+	}
+	modifier = {
+		country_naval_cap_add = 20
+		starbase_building_capacity_add = 5
+		ship_fire_rate_mult = 0.05
+	}
+	description = "origin_tooltip_ngm_military"
+	random_weight = {
+		base = 0
+	}
+}
+
+# 犯罪の楽園	origin_ngm_crime	"犯罪の系譜である カキストクラシーである"	"安定度+20 宿敵の犯罪度+20 支社による帝国規模-25% 支社の交易価値+25% 支社建造コスト-25%"	犯罪とは交易の一手段なのだ
+origin_ngm_crime = {
+	is_origin = yes
+	icon = "gfx/interface/icons/governments/origins/origins_ngm_crime.dds"
+	picture = GFX_origin_ngm_crime
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		civics = {
+			value = civic_criminal_heritage
+			value = civic_ngm_kakistocracy
+		}
+	}
+	modifier = {
+		planet_stability_add = 20
+		empire_size_branch_office_mult = -0.25
+		branch_office_value_mult = 0.25
+		planet_branch_offices_cost_mult = -0.25
+	}
+	description = "origin_tooltip_ngm_crime"
+	random_weight = {
+		base = 0
+	}
+}
+
+# 名門	origin_ngm_noble	栄望主義である	"勲章+0.1 職業からの統合力+20% 帝国規模による伝統コスト-20%"	銀河に誇れる名門一族がこの国には存在する
+origin_ngm_noble = {
+	is_origin = yes
+	icon = "gfx/interface/icons/governments/origins/origins_ngm_noble.dds"
+	picture = GFX_origin_ngm_noble
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		text = civic_tooltip_honorism
+		ethics = {
+			value = ethic_honorism
+			value = ethic_fanatic_honorism
+		}
+	}
+	modifier = {
+		country_base_ngm_order_of_merit_produces_add = 0.1
+		planet_jobs_unity_produces_mult = 0.2
+		tradition_cost_empire_size_mult = -0.2
+	}
+	description = "origin_tooltip_ngm_noble"
+	random_weight = {
+		base = 0
+	}
+}
+
+# 保守主義の権化	origin_ngm_maintaining		"安定度+10 POP快適度使用量-25% 統治志向魅力+20%"	国家の安定と安寧は重要事項であるのだ
+origin_ngm_maintaining = {
+	is_origin = yes
+	icon = "gfx/interface/icons/governments/origins/origins_ngm_maintaining.dds"
+	picture = GFX_origin_ngm_maintaining
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	modifier = {
+		planet_stability_add = 10
+		pop_amenities_usage_mult = 0.25
+		pop_government_ethic_attraction = 0.2
+	}
+	description = "origin_tooltip_ngm_maintaining"
+	random_weight = {
+		base = 0
+	}
+}
+
+# 肥大化した行政権力	origin_ngm_administration		帝国規模-20%	強大な行政権力は国家運営の円滑化を常に探っている
+origin_ngm_administration = {
+	is_origin = yes
+	icon = "gfx/interface/icons/governments/origins/origins_ngm_administration.dds"
+	picture = GFX_origin_ngm_administration
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	modifier = {
+		empire_size_mult = -0.2
+	}
+	description = "origin_tooltip_ngm_administration"
 	random_weight = {
 		base = 0
 	}

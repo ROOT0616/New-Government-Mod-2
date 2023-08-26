@@ -290,6 +290,33 @@
  origin_ngm_phenix_npc:0 "永遠の恩義"
  origin_ngm_phenix_desc:0 "この国はかつての覇権国家に隷属することで生存を認められ、さらに現在まで生き残ることができた。その恩義を果たすため、宗主国に永遠の隷属を誓っている。"
 
+ origin_ngm_crown:0 "Balancer on the Throne"
+ origin_ngm_crown_desc:0 "The monarch, who holds no real power, has always considered the happiness and safety of the people and has stabilized society."
+
+ origin_ngm_colony:0 "Colonial Fever"
+ origin_ngm_colony_desc:0 "Creating colonies is our destiny, and no one can interfere."
+
+ origin_ngm_revolution:0 "Child of the Revolution"
+ origin_ngm_revolution_desc:0 "This country, established through revolution, is always demanded for the fruits of the revolution."
+
+ origin_ngm_freecity:0 "Free City Zone"
+ origin_ngm_freecity_desc:0 "This country expanded a small city government to a national scale and prefers forming smaller, cohesive states over large-scale governance."
+
+ origin_ngm_military:0 "Dream of Military Expansion"
+ origin_ngm_military_desc:0 "Military expansion is the dream of the people."
+
+ origin_ngm_crime:0 "Paradise of Crime"
+ origin_ngm_crime_desc:0 "Crime is just another means of trade."
+
+ origin_ngm_noble:0 "Nobility"
+ origin_ngm_noble_desc:0 "A prestigious family that can be proud of the galaxy exists in this country."
+
+ origin_ngm_maintaining:0 "Embodiment of Conservatism"
+ origin_ngm_maintaining_desc:0 "The stability and peace of the nation are important matters."
+
+ origin_ngm_administration:0 "Bloated Administrative Power"
+ origin_ngm_administration_desc:0 "Strong administrative power is always seeking to smooth the operation of the country."
+
 #############################
 #####    通常帝国国是    #####
 #############################
@@ -2076,6 +2103,18 @@
  origin_ngm_phenix_12_modifier:0 "不死鳥の帝国"
  origin_ngm_phenix_12_modifier_desc:0 "我々は蘇る！"
 
+ ngm_r_imperial_chronicle_modifier:0 "Legacy of the Revolution"
+ ngm_r_imperial_chronicle_modifier_desc:0 "The legacy of this revolution will always continue to lead society towards innovativism."
+
+ origin_ngm_crime_modifier_1:0 "Paradise of Crime (Affected)"
+ origin_ngm_crime_modifier_2:0 "Paradise of Crime (Affected)"
+ origin_ngm_crime_modifier_3:0 "Paradise of Crime (Affected)"
+ origin_ngm_crime_modifier_4:0 "Paradise of Crime (Affected)"
+ origin_ngm_crime_modifier_5:0 "Paradise of Crime (Affected)"
+ origin_ngm_crime_modifier_6:0 "Paradise of Crime (Affected)"
+ origin_ngm_crime_modifier_7:0 "Paradise of Crime (Affected)"
+ origin_ngm_crime_modifier_8:0 "Paradise of Crime (Affected)"
+
  promoted_capitalism:0 "資本主義を推奨"
  promoted_capitalism_desc:0 "§H資本主義§!志向は政府によって推奨されている"
  suppressed_capitalism:0 "資本主義を抑圧"
@@ -3106,6 +3145,9 @@
 
  r_ngm_great_patronage:0 "偉大なる恩顧"
  r_ngm_great_patronage_desc:0 "偉大なる帝国の臣下であることは大いなる喜びなのだ"
+
+ r_ngm_legacy_of_revolution:0 "Legacy of Revolution"
+ r_ngm_legacy_of_revolution_desc:0 "The legacy of this revolution will always continue to lead society toward innovativism!"
 
 ##########################
 #####    戦争目標    ######

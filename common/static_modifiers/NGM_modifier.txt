@@ -804,6 +804,37 @@ origin_ngm_phenix_12_modifier = {
 	country_leader_cap_add = 4
 }
 
+# 革命の遺産 アクティブ効果	：派閥幸福度+20% 影響力+1
+ngm_r_imperial_chronicle_modifier = {
+	faction_approval = 0.2
+}
+
+# 犯罪の楽園 宿敵の犯罪度+20
+origin_ngm_crime_modifier_1 = {
+	planet_crime_add = 20
+}
+origin_ngm_crime_modifier_2 = {
+	planet_crime_add = 20
+}
+origin_ngm_crime_modifier_3 = {
+	planet_crime_add = 20
+}
+origin_ngm_crime_modifier_4 = {
+	planet_crime_add = 20
+}
+origin_ngm_crime_modifier_5 = {
+	planet_crime_add = 20
+}
+origin_ngm_crime_modifier_6 = {
+	planet_crime_add = 20
+}
+origin_ngm_crime_modifier_7 = {
+	planet_crime_add = 20
+}
+origin_ngm_crime_modifier_8 = {
+	planet_crime_add = 20
+}
+
 ##########################
 #####    イベント    ######
 ##########################

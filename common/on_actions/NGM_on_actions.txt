@@ -44,6 +44,8 @@ on_game_start_country = {
 		ngm_origin.3 # 過去への逃走
 		# ngm_origin.1000 # 銀河帝国アクアリウム
 		ngm_origin.2000 # 律儀な古代の緩衝国家
+		ngm_origin.3001 # 革命の寵児
+		ngm_origin.3002 # 犯罪の楽園
 	}
 }
 
@@ -149,6 +151,7 @@ on_monthly_pulse_country = {
 		ngm_tradition.33
 		# 84.敵対的演説:宿敵の外交発言力-10%		月ごとチェック
 		ngm_tradition.35
+		ngm_origin.3003 # 犯罪の楽園
 	}
 }
 

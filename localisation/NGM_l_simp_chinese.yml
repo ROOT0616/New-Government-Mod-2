@@ -290,6 +290,33 @@
  origin_ngm_phenix_npc:0 "永遠の恩義"
  origin_ngm_phenix_desc:0 "この国はかつての覇権国家に隷属することで生存を認められ、さらに現在まで生き残ることができた。その恩義を果たすため、宗主国に永遠の隷属を誓っている。"
 
+ origin_ngm_crown:0 "王座上的平衡者"
+ origin_ngm_crown_desc:0 "这位君主没有实权，但总是考虑人民的幸福和安全，并稳定了社会。"
+
+ origin_ngm_colony:0 "殖民热"
+ origin_ngm_colony_desc:0 "创建殖民地是我们的命运，没有人可以干涉。"
+
+ origin_ngm_revolution:0 "革命之子"
+ origin_ngm_revolution_desc:0 "这个国家是通过革命建立的，总是要求革命的成果。"
+
+ origin_ngm_freecity:0 "自由城市区"
+ origin_ngm_freecity_desc:0 "这个国家将一个小城市政府扩展到国家规模，更喜欢形成小而有凝聚力的国家，而不是大规模的治理。"
+
+ origin_ngm_military:0 "军事扩张之梦"
+ origin_ngm_military_desc:0 "军事扩张是人们的梦想。"
+
+ origin_ngm_crime:0 "犯罪的天堂"
+ origin_ngm_crime_desc:0 "犯罪只是交易的另一种手段。"
+
+ origin_ngm_noble:0 "名门"
+ origin_ngm_noble_desc:0 "这个国家有一个可以为银河系感到自豪的名门家族。"
+
+ origin_ngm_maintaining:0 "保守主义的化身"
+ origin_ngm_maintaining_desc:0 "国家的稳定和和平是重要的事项。"
+
+ origin_ngm_administration:0 "庞大的行政权力"
+ origin_ngm_administration_desc:0 "强大的行政权力总是在寻找使国家运营更顺畅的方式。"
+
 #############################
 #####    通常帝国国是    #####
 #############################
@@ -2076,6 +2103,18 @@
  origin_ngm_phenix_12_modifier:0 "不死鳥の帝国"
  origin_ngm_phenix_12_modifier_desc:0 "我々は蘇る！"
 
+ ngm_r_imperial_chronicle_modifier:0 "革命的遗产"
+ ngm_r_imperial_chronicle_modifier_desc:0 "这场革命的遗产将继续引领社会走向创新。"
+
+ origin_ngm_crime_modifier_1:0 "犯罪的天堂(被)"
+ origin_ngm_crime_modifier_2:0 "犯罪的天堂(被)"
+ origin_ngm_crime_modifier_3:0 "犯罪的天堂(被)"
+ origin_ngm_crime_modifier_4:0 "犯罪的天堂(被)"
+ origin_ngm_crime_modifier_5:0 "犯罪的天堂(被)"
+ origin_ngm_crime_modifier_6:0 "犯罪的天堂(被)"
+ origin_ngm_crime_modifier_7:0 "犯罪的天堂(被)"
+ origin_ngm_crime_modifier_8:0 "犯罪的天堂(被)"
+
  promoted_capitalism:0 "資本主義を推奨"
  promoted_capitalism_desc:0 "§H資本主義§!志向は政府によって推奨されている"
  suppressed_capitalism:0 "資本主義を抑圧"
@@ -3095,17 +3134,20 @@
 #####    遺物    ######
 #######################
 
- r_ngm_ancient_pact:0 "古代の盟約"
- r_ngm_ancient_pact_desc:0 "古代の列強間の協定で、緊急時に強力な自衛力を求められたうえで、平時には他国の脅威にならない経済国家であることを求められる条文。所有国は永久にこれを守らなくてはならない。"
+ r_ngm_ancient_pact:0 "古代盟约"。
+ r_ngm_cancient_pact_desc:0 "列强之间的古老盟约，该条款要求在紧急情况下进行强有力的自卫，以及在和平时期不对其他国家构成威胁的经济状态。 拥有国必须永久遵守。"
 
- r_ngm_geid:0 "銀河皇帝勅許第7216号「帝立遊園領邦の認可」"
- r_ngm_geid_desc:0 "全銀河の統治者にして天界を統べる法秩序の体現者。神聖にして不可侵である銀河帝国第27代皇帝である余、ポチャヌルス8世は銀河帝国全体の福祉のために帝立遊園の設立を許す。帝立遊園の長は世襲とし、王と同格の公爵位を授け、余の宮廷において式部官長の地位を授ける。なお、領邦としての帝立遊園はその自律的権利を制約される。制約内容は....."
+ r_ngm_geid:0 "银河帝国皇帝第 7216 号敕令，'帝国袁氏领地授权书'"。
+ r_ngm_geid_desc:0 "整个银河系的统治者，天界法律与秩序的化身。 银河帝国第 27 任皇帝，神圣不可侵犯的禹，波查努鲁斯八世，为了整个银河帝国的福祉，授权建立帝国游乐园。 帝国公园的负责人将世袭，并被授予与国王同级的公爵爵位，以及杨氏宫廷首席礼仪官的职位。 御苑作为封地的自治权将受到限制。 限制内容请见 ....."
 
- r_ngm_imperial_chronicle:0 "インペリアル・クロニクル"
- r_ngm_imperial_chronicle_desc:0 "この帝国の物語は実話であり、主人公は我々であったのだ"
+ r_ngm_imperial_chronicle:0 "帝国纪事"
+ r_ngm_imperial_chronicle_desc:0 "这个帝国故事是一个真实的故事，我们是主角。"
 
- r_ngm_great_patronage:0 "偉大なる恩顧"
- r_ngm_great_patronage_desc:0 "偉大なる帝国の臣下であることは大いなる喜びなのだ"
+ r_ngm_great_patronage:0 "伟大的赞助人"
+ r_ngm_great_patronage_desc:0 "成为伟大帝国的臣民是一件非常高兴的事。"
+
+ r_ngm_legacy_of_revolution:0 "革命遗产"
+ r_ngm_legacy_of_revolution_desc:0 "这场革命的遗产将永远引领社会走向创新！"
 
 ##########################
 #####    戦争目標    ######
@@ -3868,7 +3910,7 @@
  tr_ngm_law_first:0 "法令传统"
  tr_ngm_law_first_tooltip:0 "解锁政策「§Y$policy_ngm_policies_legislative_procedure$§!」"
  tr_ngm_law_finish:0 "法令传统完成"
- tr_ngm_law_finish_tooltip:0 "解锁政策「§Y$policy_ngm_policies_labor_law$§!」 \n解锁飞升路径：§G+1§!"
+ tr_ngm_law_finish_tooltip:0 "解锁政策「§Y$policy_ngm_policies_labor_law$§!」"
  tr_ngm_human_rights:0 "人权法"
  tr_ngm_human_rights_delayed:0 "建立人权保障法律通常是一个复杂的过程"
  tr_ngm_law_trade:0 "贸易法"
@@ -3905,7 +3947,7 @@
  tradition_ngm_study_desc:0 "自我提升、追求更高境界是必需的"
  tr_ngm_study_first:0 "研修传统"
  tr_ngm_study_finish:0 "研修传统完成"
- tr_ngm_study_finish_tooltip:0 "领袖解锁特殊特性 \n解锁飞升路径：§G+1§!"
+ tr_ngm_study_finish_tooltip:0 "领袖解锁特殊特性"
  tr_ngm_restudy:0 "重新审视培训"
  tr_ngm_restudy_delayed:0 "军事训练应适时审查并组织成适当的教育体系"
  tr_ngm_leader_study:0 "提高领导培训水平"
@@ -3922,7 +3964,7 @@
  tradition_ngm_ecstasy_desc:0 "享乐园总是诱惑着我们，让我们沉溺于享乐"
  tr_ngm_ecstasy_first:0 "享乐传统"
  tr_ngm_ecstasy_finish:0 "享乐传统完成"
- tr_ngm_ecstasy_finish_tooltip:0 "解锁生活水平§Y$living_standard_utopian$§! \n解锁飞升路径：§G+1§!"
+ tr_ngm_ecstasy_finish_tooltip:0 "解锁生活水平§Y$living_standard_utopian$§!"
  tr_ngm_art_good:0 "推广艺术"
  tr_ngm_art_good_delayed:0 "丰富人们心灵的是艺术"
  tr_ngm_art_industry:0 "娱乐产业"
@@ -3938,7 +3980,7 @@
  tradition_ngm_avantgarde_desc:0 "新的尝试和反序才能表达自我"
  tr_ngm_avantgarde_first:0 "先锋传统"
  tr_ngm_avantgarde_finish:0 "先锋传统的完成"
- tr_ngm_avantgarde_finish_tooltip:0 "§Y删除所有现有的国是并重新选择事件发生§! \n解锁飞升路径：§G+1§!"
+ tr_ngm_avantgarde_finish_tooltip:0 "§Y删除所有现有的国是并重新选择事件发生§!"
  tr_ngm_avantgarde_2:0 "先锋派"
  tr_ngm_avantgarde_2_delayed:0 "实验性的艺术风格富有先见之明"
  tr_ngm_chord:0 "终极和弦"
@@ -3974,7 +4016,7 @@
  tradition_ngm_academic_desc:0 "推动教育和研究才是通向未来的道路"
  tr_ngm_academic_first:0 "学术传统"
  tr_ngm_academic_finish:0 "学术传统的完成"
- tr_ngm_academic_finish_tooltip:0 "解锁政策「§Y$policy_ngm_policies_academic_policy$§!」 \n解锁飞升路径：§G+1§!"
+ tr_ngm_academic_finish_tooltip:0 "解锁政策「§Y$policy_ngm_policies_academic_policy$§!」"
  tr_ngm_national_academy:0 "国立大学"
  tr_ngm_national_academy_delayed:0 "遍布各地的国立大学确保了社会的廉价、多层次的高等教育"
  tr_ngm_culture_study:0 "推荐文化教育"
@@ -4418,6 +4460,81 @@
  tr_ngm_territory_inheritance_delayed:0 "土地不可买卖，属于家庭"
  tr_ngm_hereditary_nation:0 "世袭国家"
  tr_ngm_hereditary_nation_delayed:0 "属于家庭的也包括国家"
+
+ tradition_ngm_financing:0 "金融"
+ tradition_ngm_financing_desc:0 "金钱掌控着这个世界"
+ tr_ngm_financing_adopt:0 "金融传统"
+ tr_ngm_financing_finish:0 "金融传统完成"
+ tr_ngm_loan_restriction_relaxation:0 "放宽贷款限制"
+ tr_ngm_loan_restriction_relaxation_delayed:0 "对贷款施加限制是愚蠢之举"
+ tr_ngm_financial_interest:0 "金融利息"
+ tr_ngm_financial_interest_delayed:0 "多余的金钱应该投入运营"
+ tr_ngm_benefit_protection:0 "利益保护"
+ tr_ngm_benefit_protection_delayed:0 "国家要尽量保护每个人的利益"
+ tr_ngm_galactic_bank:0 "银河银行"
+ tr_ngm_galactic_bank_delayed:0 "我们国家的经济对各国的金融产生了重大影响"
+ tr_ngm_financial_empire:0 "金融帝国主义"
+ tr_ngm_financial_empire_delayed:0 "金钱的力量即是外交"
+
+ tradition_ngm_planet:0 "行星"
+ tradition_ngm_planet_desc:0 "开发行星是人们的梦想"
+ tr_ngm_planet_adopt:0 "行星的传统"
+ tr_ngm_planet_finish:0 "行星的传统完成"
+ tr_ngm_planetary_scale_mining:0 "行星规模矿业"
+ tr_ngm_planetary_scale_mining_delayed:0 "通过行星规模的矿产开采来提高产量"
+ tr_ngm_agrarianism:0 "农本主义"
+ tr_ngm_agrarianism_delayed:0 "国家的基础是农业"
+ tr_ngm_support_for_mining:0 "支持采矿业"
+ tr_ngm_support_for_mining_delayed:0 "支持采矿商是提高矿产生产的关键"
+ tr_ngm_investment_in_agricultural_corporations:0 "投资农业企业"
+ tr_ngm_investment_in_agricultural_corporations_delayed:0 "大规模集中的农业生产具有高效率"
+ tr_ngm_local_regeneration:0 "地方复兴"
+ tr_ngm_local_regeneration_delayed:0 "不要忽视地方"
+
+ tradition_ngm_development:0 "开发"
+ tradition_ngm_development_desc:0 "不能舍弃太空的浪漫"
+ tr_ngm_development_adopt:0 "开发传统"
+ tr_ngm_development_finish:0 "开发传统完成"
+ tr_ngm_station_management_office:0 "空间站管理局"
+ tr_ngm_station_management_office_delayed:0 "轨道基地的高效管理将提高产量"
+ tr_ngm_zero_gravity_mining:0 "零重力采矿"
+ tr_ngm_zero_gravity_mining_delayed:0 "零重力空间里充满了宝藏"
+ tr_ngm_station_power_generation:0 "空间站发电"
+ tr_ngm_station_power_generation_delayed:0 "各空间站自主发电可以降低维护成本"
+ tr_ngm_station_hub:0 "空间站中枢"
+ tr_ngm_station_hub_delayed:0 "建立空间站基础是当务之急"
+ tr_ngm_space_department:0 "宇航局"
+ tr_ngm_space_department_delayed:0 "管理星系基地，成为太空开发的基础"
+
+ tradition_ngm_craftsmanship:0 "工艺"
+ tradition_ngm_craftsmanship_desc:0 "我们国家的工业技术达到了值得骄傲的银河水平"
+ tr_ngm_craftsmanship_adopt:0 "工艺传统"
+ tr_ngm_craftsmanship_finish:0 "工艺传统完成"
+ tr_ngm_craft_production:0 "工艺品生产"
+ tr_ngm_craft_production_delayed:0 "工匠的技艺能创造出高品质的消费品"
+ tr_ngm_metal_processing_institute:0 "金属加工学院"
+ tr_ngm_metal_processing_institute_delayed:0 "坚固美丽的金属加工技术需要传承和发展"
+ tr_ngm_recycling_processing:0 "回收加工"
+ tr_ngm_recycling_processing_delayed:0 "工匠使用的原材料是可以重新利用的"
+ tr_ngm_improvement_of_metal_processing:0 "提高金属加工"
+ tr_ngm_improvement_of_metal_processing_delayed:0 "提高金属加工技术可以减少浪费的原料"
+ tr_ngm_technicians_retention:0 "保留技术人员"
+ tr_ngm_technicians_retention_delayed:0 ""
+
+ tradition_ngm_vitality:0 "活力"
+ tradition_ngm_vitality_desc:0 "明天会比今天更好！"
+ tr_ngm_vitality_adopt:0 "活力传统"
+ tr_ngm_vitality_finish:0 "活力传统完成"
+ tr_ngm_manifest_destiny:0 "显赫命运"
+ tr_ngm_manifest_destiny_delayed:0 "向前！向前！"
+ tr_ngm_future_orientation:0 "未来导向"
+ tr_ngm_future_orientation_delayed:0 "自己去抓住明天！"
+ tr_ngm_patience_of_today:0 "今日的忍耐"
+ tr_ngm_patience_of_today_delayed:0 "为了明天的富饶！"
+ tr_ngm_comrades:0 "同志们"
+ tr_ngm_comrades_delayed:0 "即使一个人做不到，大家一起就可以！"
+ tr_ngm_win_it:0 "赢得！"
+ tr_ngm_win_it_delayed:0 "我不能失败啊啊啊啊啊！"
 
  tradition_ngm_brawny:0 "骁勇"
  tradition_ngm_brawny_desc:0 "走向世界的第一步是军事的"
