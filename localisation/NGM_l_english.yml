@@ -44,18 +44,18 @@
  decision_ngm_end_ai_supplementary_governance:0 "Abolish AI Supplementary Governance"
  decision_ngm_end_ai_supplementary_governance_desc:0 "Abolish local autonomy and restore a centralized system."
 
- decision_ngm_chieftaincy_system:0 "Chieftaincy System"
+ decision_ngm_chieftaincy_system:0 "Presidency System"
  decision_ngm_chieftaincy_system_desc:0 "Confer governance of this sector's capital to a robust chief executive buffered by a weak legislative assembly, while enabling limited local self-determination."
- ngm_chieftaincy_system:0 "Chieftaincy Dominance System"
+ ngm_chieftaincy_system:0 "Presidency System"
  ngm_chieftaincy_system_desc:0 "A chief executive wields strong powers, counterbalanced by a democratically elected but relatively powerless parliament. This dynamic allows the rapid enactment of often drastic reforms, driven largely by the force of popular sentiment."
- decision_ngm_end_chieftaincy_system:0 "Abolish Chieftaincy System"
+ decision_ngm_end_chieftaincy_system:0 "Abolish Presidency System"
  decision_ngm_end_chieftaincy_system_desc:0 "Abolish local autonomy and restore a centralized system."
 
- decision_ngm_parliamentary_dominance:0 "Parliamentary Dominance System"
+ decision_ngm_parliamentary_dominance:0 "Parliamentary System"
  decision_ngm_parliamentary_dominance_desc:0 "Entrust the control of this sector's capital to a potent legislative assembly and a subordinate chief executive, thus permitting a measure of local self-rule."
- ngm_parliamentary_dominance:0 "Parliamentary Dominance System"
+ ngm_parliamentary_dominance:0 "Parliamentary System"
  ngm_parliamentary_dominance_desc:0 "Governance here is directed by a formidable, elected parliament, whereas the chief executive operates under considerably limited powers. This power imbalance often leads the chief executive to make significant concessions to the legislative body, which itself is swayed by the currents of popular opinion."
- decision_ngm_end_parliamentary_dominance:0 "Abolish Parliamentary Dominance System"
+ decision_ngm_end_parliamentary_dominance:0 "Abolish Parliamentary System"
  decision_ngm_end_parliamentary_dominance_desc:0 "Abolish local autonomy and restore a centralized system."
 
  decision_ngm_religious_domination:0 "Religious Domination System"
@@ -280,7 +280,7 @@
  origin_tooltip_ngm_escape_to_the_past:0 "Once every 120 months, a fleet from the future attacks. By defeating them, it is possible to acquire technological debris.\n\nCapital planet has special characteristics「space-time continuum」\nPhysics Research speed§G+20%§!、Pop grows§G+10%§!"
 
  origin_ngm_galactic_empire_aquarium:0 "Galactic Empire Aquarium"
- origin_ngm_galactic_empire_aquarium_desc:0 "Once a dazzling amusement hub of a bygone Galactic Empire, this nation thrived on spectacle and diversion, earning immunity from external conflicts. As the empire crumbled, this civilization ventured cautiously into the galactic stage, its former grandeur a fading memory, yet the allure of its entertainment persists.\\n§RThere can only be one civilization with this origin.§!"
+ origin_ngm_galactic_empire_aquarium_desc:0 "Once a dazzling amusement hub of a bygone Galactic Empire, this nation thrived on spectacle and diversion, earning immunity from external conflicts. As the empire crumbled, this civilization ventured cautiously into the galactic stage, its former grandeur a fading memory, yet the allure of its entertainment persists.\n\n§RThere can only be one civilization with this origin.§!"
  origin_tooltip_ngm_galactic_empire_aquarium:0 "Start with a special group of star systems and capital planets in the outer reaches of the galaxy.\n\nExtremely restrictive regarding expansion. \n\nSpecial buildings can be built.\n\n"
 
  origin_ngm_phenix:0 "Empire of Dusk"
@@ -1427,37 +1427,37 @@
 #####    布告    ######
 #######################
 
- ngm_conducting_decoration_ceremonies_campaign:0 "Conducting a Decoration Ceremony"
- ngm_conducting_decoration_ceremonies_campaign:0 "Holding a ceremony to award medals to meritorious individuals and upper-class citizens."
+ ngm_conducting_decoration_ceremonies_campaign:0 "Conduct a Decoration Ceremony"
+ ngm_conducting_decoration_ceremonies_campaign:0 "Host an illustrious ceremony to honor and award medals to individuals whose contributions have elevated the status of our empire."
 
  edict_ngm_five_year_plan1_campaign:0 "Five-Year Plan: Construction"
- edict_ngm_five_year_plan1_campaign_desc:0 "We must emphasize architecture and develop the backbone of the nation."
+ edict_ngm_five_year_plan1_campaign_desc:0 "Lay the foundations for a prosperous future by investing in architectural marvels and infrastructural projects that will serve as the backbone of our nation."
 
  edict_ngm_five_year_plan2_campaign:0 "Five-Year Plan: Heavy Industry"
- edict_ngm_five_year_plan2_campaign_desc:0 "The emphasis is on heavy industry and continuing to move toward military expansion."
+ edict_ngm_five_year_plan2_campaign_desc:0 "Strengthen our industrial capabilities to fuel both economic growth and military expansion, securing our empire's place on the galactic stage."
 
  edict_ngm_five_year_plan3_campaign:0 "Five-Year Plan: Agriculture"
- edict_ngm_five_year_plan3_campaign_desc:0 "Focus on agriculture, and focus on prolific production and solving the food problem."
+ edict_ngm_five_year_plan3_campaign_desc:0 "Channel resources into agricultural innovations and technologies, aiming to not just solve the food crisis but to create a surplus for future endeavors."
 
  edict_ngm_five_year_plan4_campaign:0 "Five-Year Plan: Research"
- edict_ngm_five_year_plan4_campaign_desc:0 "We must emphasize research and surpass other countries in the advancement of industrial technology."
+ edict_ngm_five_year_plan4_campaign_desc:0 "Prioritize advancements in research and technology, aiming to outpace rival empires in the race towards a technologically superior future."
 
  edict_ngm_five_year_plan5_campaign:0 "Five-Year Plan: Policy"
- edict_ngm_five_year_plan5_campaign_desc:0 "Emphasize the idea and let people know how wonderful our country's policy is."
+ edict_ngm_five_year_plan5_campaign_desc:0 "Promote our nation's policies far and wide, instilling pride in our citizenry and projecting our values as a beacon for others to follow."
 
  ngm_five_year_plan_campaign:0 "Five-Year Plan"
 
  edict_ngm_honorism_wartime_fleet:0 "On My Honor"
- edict_ngm_honorism_wartime_fleet_desc:0 "We cannot allow ourselves to be choked by other countries. This is a matter of honor."
+ edict_ngm_honorism_wartime_fleet_desc:0 "In the face of adversity, we stand unyielding. It's not just a strategic necessity but a matter of national honor to resist subjugation by foreign powers."
 
  edict_ngm_memories_of_hegemony:0 "Memories of Hegemony"
- edict_ngm_memories_of_hegemony_desc:0 "Documenting our nation's hegemony and passing it on to future generations."
+ edict_ngm_memories_of_hegemony_desc:0 "Preserve the tales of our empire's grandeur and dominion, so that future generations may draw inspiration and lessons from our past triumphs."
 
  edict_ngm_memories_of_glory:0 "Memories of Prosperity"
- edict_ngm_memories_of_glory_desc:0 "Recording the prosperity of our country and passing it on to future generations."
+ edict_ngm_memories_of_glory_desc:0 "Document and celebrate the periods of our empire's greatest prosperity, ensuring that the collective memory of our success is passed down for generations to come."
 
  edict_ngm_memoirs_of_perseverance:0 "Memories of Defense"
- edict_ngm_memoirs_of_perseverance_desc:0 "Recording the withstand of our country and passing it on to future generations."
+ edict_ngm_memoirs_of_perseverance_desc:0 "Record the instances where our nation has stood firm against external threats, serving as a testament to our resilience and a guide for future defenses."
 
  edict_ngm_class_A_national_defense_plan:0 "Class-A National Defense Plan"
  edict_ngm_class_A_national_defense_plan_desc:0 "Implement the national defense plan developed by the Joint Chiefs of Staff."
@@ -1469,19 +1469,19 @@
  edict_ngm_class_C_national_defense_plan_desc:0 "Implement the national defense plan developed by the Joint Chiefs of Staff."
 
  edict_ngm_supernatural_adversary_campaign:0 "Supernatural Adversary"
- edict_ngm_supernatural_adversary_campaign_desc:0 "In this world, there is an enemy that must be destroyed"
+ edict_ngm_supernatural_adversary_campaign_desc:0 "Confronting the unexplained and the unnatural, our empire stands united against a supernatural enemy that poses a unique threat to our existence."
 
  edict_ngm_legal_department_audits_campaign:0 "Legal Department Audits"
- edict_ngm_legal_department_audits_campaign_desc:0 "Through audits by legal experts, we can monitor delays in law enforcement and inappropriate legal operations, and improve administrative corruption and inefficiency"
+ edict_ngm_legal_department_audits_campaign_desc:0 "Institutionalize audits led by legal experts to scrutinize law enforcement procedures and administrative operations, aiming to root out corruption and inefficiency."
 
- edict_ngm_technology_trade_options_menu:0 "Research Trade Gift"
- edict_ngm_technology_trade_options_menu_desc:0 ""
+ edict_ngm_technology_trade_options_menu:0 "Gift: Research"
+ edict_ngm_technology_trade_options_menu_desc:0 "Offer cutting-edge research and technological advancements as a diplomatic gift, strengthening alliances and opening doors for future collaborations."
 
- edict_ngm_fleet_trade_options_menu:0 "Fleet Gift"
- edict_ngm_fleet_trade_options_menu_desc:0 ""
+ edict_ngm_fleet_trade_options_menu:0 "Gift: Fleet"
+ edict_ngm_fleet_trade_options_menu_desc:0 "Gift a portion of our naval fleet to an ally or a non-hostile entity, as a gesture of goodwill or to tip the balance in a mutually beneficial conflict."
 
- edict_ngm_mossball_edict:0 "Refurbishment of Mothballed Civilian Ships"
- edict_ngm_mossball_edict_desc:0 "Although it's a tedious task, it is possible to refurbish mothballed civilian ships."
+ edict_ngm_mossball_edict:0 "Refurbish Mothballed Civilian Ships"
+ edict_ngm_mossball_edict_desc:0 "Initiate the painstaking but rewarding process of refurbishing our mothballed civilian ships, breathing new life into these dormant vessels for future use."
 
  edict_ngm_virture_rival_options_menu:0 "Set shadow enemy countries"
  edict_ngm_virture_rival_options_menu_desc:0 ""
@@ -1494,180 +1494,180 @@
 #######################
 
  tech_ceremony_theory:0 "Ceremony Theory1"
- tech_ceremony_theory_desc:0 "Research into the efficient operation of the bureaucracy in charge of ceremonies and how to conduct ceremonies that symbolize authority more cheaply and easily."
+ tech_ceremony_theory_desc:0 "Investigate methods for streamlining the bureaucratic processes that govern ceremonial functions. The objective is to make the embodiment of state authority in ceremonies both cost-effective and impactful."
 
  tech_ceremony_theory_second:0 "Ceremony Theory2"
- tech_ceremony_theory_second_desc:0 "Research into the efficient operation of the bureaucracy in charge of ceremonies and how to conduct ceremonies that symbolize authority more cheaply and easily."
+ tech_ceremony_theory_second_desc:0 "Further research focused on optimizing the bureaucratic machinery behind ceremonies, aiming to achieve grandeur and authority at a fraction of the usual cost and effort."
 
  tech_ad_high_degree_of_local_autonomy:0 "High Degree of Local Autonomy"
- tech_ad_high_degree_of_local_autonomy_desc:0 "Research into allowing an unprecendeted degree of autonomy to local authorities."
+ tech_ad_high_degree_of_local_autonomy_desc:0 "Undertake scholarly research to assess the feasibility and impact of granting unprecedented local autonomy, balancing the needs for centralized control and regional self-governance."
 
  tech_ngm_developmental_fish_farming:0 "Developmental Fish Farming"
- tech_ngm_developmental_fish_farming_desc:0 "Developments in fish farming allow us to procure fish with ease."
+ tech_ngm_developmental_fish_farming_desc:0 "Pioneering advancements in aquaculture technologies that enable efficient and sustainable fish farming, bolstering food security and economic growth."
 
 #######################
 #####    資源    ######
 #######################
 
  ngm_order_of_merit:0 "Orders"
- ngm_order_of_merit_desc:0 "Honors given by the state or its head of state to individuals in recognition of their achievements and accomplishments, with the awarding of decorations."
+ ngm_order_of_merit_desc:0 "State-sanctioned honors awarded to distinguished individuals in recognition of their extraordinary achievements. These honors serve to elevate the recipients while also reinforcing the authority and values of the state."
 
 #######################
 #####    建物    ######
 #######################
 
  building_ngm_bureau_of_ceremonies:0 "Bureau of Ceremonies"
- building_ngm_bureau_of_ceremonies_desc:0 "A government office that administers ceremonies and honors and protects and lays out the authority of the state and those in power."
+ building_ngm_bureau_of_ceremonies_desc:0 "A specialized governmental department tasked with the meticulous planning and execution of state ceremonies. This bureau is not just an organizer but also a guardian of the state's symbolic authority."
 
  building_ngm_perpetual_palace:0 "The Palace of Eternity"
- building_ngm_perpetual_palace_desc:0 "It was the palace of the rulers of the land since ancient times, and the magnificent architecture still shows no signs of deterioration, probably because the monarchs and heads of state often gathered here to negotiate. Today, it is still used not only as a ruler's palace and international conference hall, but also as a governmental institution and residence for the upper class."
+ building_ngm_perpetual_palace_desc:0 "An architectural marvel that has stood the test of time, serving as the seat of power for generations of rulers. Today, it functions not only as a regal residence and international meeting venue but also as an institution symbolizing the enduring legacy of the state."
 
- building_ngm_garden_palace:0 "遊園宮"
- building_ngm_garden_palace_desc:0 "膨大な遊園地を管理し、VIPを接待するために作られた壮麗かつ機能的な宮殿"
+ building_ngm_garden_palace:0 "Garden Palace"
+ building_ngm_garden_palace_desc:0 "A grand and functional palace designed for the management of extensive recreational grounds and the hosting of VIP guests."
 
- building_ngm_aquarium_central_gate:0 "アクアリウム中央ゲート"
- building_ngm_aquarium_central_gate_desc:0 "かつて存在した銀河帝国の戴冠式をはじめとした重要式典が行われた、銀河と海洋に関する神々を祭る大神殿"
+ building_ngm_aquarium_central_gate:0 "Central Gate Aquarium"
+ building_ngm_aquarium_central_gate_desc:0 "A grand temple dedicated to gods of the galaxy and the ocean, where historically significant ceremonies like the coronations of former Galactic Emperors were held."
 
- building_ngm_great_ocean_temple:0 "海洋大神殿"
- building_ngm_great_ocean_temple_desc:0 "かつて存在した銀河帝国の戴冠式をはじめとした重要式典が行われた、銀河と海洋に関する神々を祭る大神殿"
+ building_ngm_great_ocean_temple:0 "Great Ocean Temple"
+ building_ngm_great_ocean_temple_desc:0 "A majestic temple venerating the gods of the galaxy and the ocean, serving as the venue for significant ceremonies like the coronations of former Galactic Emperors."
 
- building_ngm_ocean_child_park:0 "惑星児童遊園"
- building_ngm_ocean_child_park_desc:0 "子供向けアトラクションやお子様向けレストランが広がる遊園地やショッピングモール"
+ building_ngm_ocean_child_park:0 "Children's Ocean Park"
+ building_ngm_ocean_child_park_desc:0 "A recreational facility featuring a variety of attractions and children-friendly restaurants, catering to younger visitors."
 
- building_ngm_ocean_aqua_park:0 "アクアリウムテーマパーク"
- building_ngm_ocean_aqua_park_desc:0 "青年期世代向けのアクアリウムをイメージしたアトラクションや庭園が広がる娯楽施設"
+ building_ngm_ocean_aqua_park:0 "Aqua Theme Park"
+ building_ngm_ocean_aqua_park_desc:0 "An entertainment complex designed around an aquarium theme, aimed at a younger audience, featuring a range of attractions and gardens."
 
- building_ngm_ocean_tower_casino:0 "タワーカジノ"
- building_ngm_ocean_tower_casino_desc:0 "上流階級から中下流階級までもを網羅した大規模な賭博場"
+ building_ngm_ocean_tower_casino:0 "Tower Casino"
+ building_ngm_ocean_tower_casino_desc:0 "A large-scale gambling facility that caters to a diverse clientele, ranging from the upper to the lower-middle classes."
 
- building_ngm_ocean_imp_stad:0 "帝立競技場"
- building_ngm_ocean_imp_stad_desc:0 "銀河皇帝の愛した帝冠様式で作られた壮麗で様々な式典や競技を行うことができるスタジアム"
+ building_ngm_ocean_imp_stad:0 "Imperial Stadium"
+ building_ngm_ocean_imp_stad_desc:0 "A grand stadium constructed in the favored architectural style of the Galactic Emperor, suitable for hosting a variety of ceremonies and competitions."
 
- building_ngm_ocean_galactic_yoshiwara:0 "泡園"
- building_ngm_ocean_galactic_yoshiwara_desc:0 "大人向けの娯楽を提供する夜間を中心とした娯楽施設"
+ building_ngm_ocean_galactic_yoshiwara:0 "Galactic Yoshiwara"
+ building_ngm_ocean_galactic_yoshiwara_desc:0 "An entertainment complex focused on adult-oriented activities, primarily operational during nighttime."
 
- building_ngm_ocean_sight_office:0 "観光管理局"
- building_ngm_ocean_sight_office_desc:0 "観光客に関する行政事務処理や手続き、書類整理を行う官庁"
+ building_ngm_ocean_sight_office:0 "Tourism Management Office"
+ building_ngm_ocean_sight_office_desc:0 "A governmental agency responsible for administrative tasks related to tourism, including document processing and visitor accommodations."
 
- building_ngm_ocean_medical_land:0 "惑星健康ランド"
- building_ngm_ocean_medical_land_desc:0 "心身の疾患を治癒し、静養を目的とした観光客が集う観光用医療施設"
+ building_ngm_ocean_medical_land:0 "Health Land"
+ building_ngm_ocean_medical_land_desc:0 "A medical-tourism facility aimed at visitors seeking treatments and wellness programs for various physical and mental ailments."
 
- building_ngm_ocean_research_cente:0 "銀河教養センター"
- building_ngm_ocean_research_cente_desc:0 "教養市民層や上流階級が集うハイセンスでハイカルチャーな観光施設"
+ building_ngm_ocean_research_cente:0 "Cultural Research Center"
+ building_ngm_ocean_research_cente_desc:0 "A high-culture tourism facility frequented by the educated and upper classes, offering a blend of sophistication and cultural enrichment."
 
- building_ngm_ocean_hotel_street:0 "ホテル群"
- building_ngm_ocean_hotel_street_desc:0 "低所得層から高所得層、各国要人にも対応できる素晴らしいサービスを提供する宿泊施設群"
+ building_ngm_ocean_hotel_street:0 "Hotel Cluster"
+ building_ngm_ocean_hotel_street_desc:0 "A conglomerate of hotels offering a range of services, capable of accommodating guests from low-income to high-income brackets, as well as international dignitaries."
 
- building_ngm_ocean_high_resort:0 "高級リゾート"
- building_ngm_ocean_high_resort_desc:0 "高所得層向けの瀟洒な自然やスポーツを楽しむことができる会員制の観光地域"
+ building_ngm_ocean_high_resort:0 "High-end Resort"
+ building_ngm_ocean_high_resort_desc:0 "An exclusive resort area catering to the high-income class, offering pristine natural settings and a variety of sports and leisure activities."
 
- building_ngm_ocean_resure_land:0 "レジャーランド"
- building_ngm_ocean_resure_land_desc:0 "スポーツや自然を多くの人が楽しむことができる大衆的な観光施設"
+ building_ngm_ocean_resure_land:0 "Leisure Land"
+ building_ngm_ocean_resure_land_desc:0 "A popular tourism facility where a large number of people can enjoy various sports and natural attractions."
 
  building_ngm_ocean_business_orbit_elev:0 "Commercial Orbital Elevator"
- building_ngm_ocean_business_orbit_elev_desc:0 "Orbital elevator for civilian use that allows ships to land outside the atmosphere for atmospheric impact and efficiency."
+ building_ngm_ocean_business_orbit_elev_desc:0 "A civilian-use orbital elevator designed for efficiency, allowing ships to bypass atmospheric entry and exit, thereby improving fuel economy and cargo handling."
 
  building_ngm_ginga_department_store:0 "Galaxy Department Store"
- building_ngm_ginga_department_store_desc:0 "Collective commercial center for all galactic tastes."
+ building_ngm_ginga_department_store_desc:0 "A vast commercial hub that caters to a variety of galactic tastes, offering an array of goods and services from across the universe."
 
  building_ngm_business_school:0 "Corporate University"
- building_ngm_business_school_desc:0 "Specialized university for those studying economics and management"
+ building_ngm_business_school_desc:0 "A specialized educational institution that focuses on imparting knowledge and skills in economics and business management."
 
  building_ngm_star_workshop:0 "Star Industrial Complex"
- building_ngm_star_workshop_desc:0 "Planetary-scale industrial complexes"
+ building_ngm_star_workshop_desc:0 "A large-scale industrial complex that covers a planetary surface, dedicated to various types of manufacturing and production."
 
  building_ngm_galaxy_salon:0 "Galaxy Salon"
- building_ngm_galaxy_salon_desc:0 "Corporate-sponsored social gatherings for the upper class"
+ building_ngm_galaxy_salon_desc:0 "An upscale social gathering space sponsored by corporations, intended for the elite and business magnates to network and forge partnerships."
 
- building_ngm_m_a_center:0 "M&A Center"
- building_ngm_m_a_center_desc:0 "Companies that intend to evaluate or acquire other companies."
+ building_ngm_m_a_center:0 "Mergers and Acquisitions Center"
+ building_ngm_m_a_center_desc:0 "A specialized facility where companies can evaluate and negotiate the acquisition or merger with other corporate entities."
 
  building_ngm_galactic_bank:0 "Galactic Bank"
- building_ngm_galactic_bank_desc:0 "Banks that invest, save, and manage assets on a galactic scale."
+ building_ngm_galactic_bank_desc:0 "A financial institution with a galactic reach, specializing in investment, asset management, and various other banking services."
 
  building_ngm_IAA:0 "Interstellar Advertising Agency."
- building_ngm_IAA_desc:0 "Companies that process information and brainwash the masses with words that are easy to lay down."
+ building_ngm_IAA_desc:0 "A corporate entity specialized in the dissemination of information and advertising campaigns that sway public opinion and behavior on a galactic scale."
 
  building_ngm_corporate_hospital:0 "Corporate Medical Center"
- building_ngm_corporate_hospital_desc:0 "Company-owned medical institutions that aim to provide high-quality medical care and welfare at the lowest possible cost."
+ building_ngm_corporate_hospital_desc:0 "A healthcare institution owned by a corporation, focused on delivering high-quality medical care and welfare services in a cost-effective manner."
 
  building_ngm_planetary_scale_building_center:0 "Planetary Scale Building Center"
- building_ngm_planetary_scale_building_center_desc:0 "Companies that provide heavy equipment, supplies, and manpower when construction of any kind takes place on a planet."
+ building_ngm_planetary_scale_building_center_desc:0 "A company that provides heavy machinery, materials, and manpower for construction projects on a planetary scale."
 
  building_ngm_corporate_plantation:0 "Corporate Farm"
- building_ngm_corporate_plantation_desc:0 "Large company-owned farm, dealing in planet-specific crops."
+ building_ngm_corporate_plantation_desc:0 "A large-scale farm owned by a corporate entity, specializing in the cultivation of planet-specific crops."
 
  building_ngm_society_cosmic_port:0 "Corporate Port"
- building_ngm_society_cosmic_port_desc:0 "Spaceport dedicated to the company for efficient and fast handling of goods and passengers"
+ building_ngm_society_cosmic_port_desc:0 "A spaceport operated by a corporation, designed for the efficient loading and unloading of goods and passengers."
 
  building_ngm_planet_trust_bank:0 "Planet Trust Bank"
- building_ngm_planet_trust_bank_desc:0 "Companies that pursue profits by managing assets and securities on a planetary basis."
+ building_ngm_planet_trust_bank_desc:0 "A financial institution focused on asset management and investments on a planetary scale, aiming for maximum profit."
 
  building_ngm_corporate_espionage:0 "Corporate Intelligence Agency"
- building_ngm_corporate_espionage_desc:0 "Companies that collect all kinds of information outside of their own company and sell it to others."
+ building_ngm_corporate_espionage_desc:0 "A company specialized in gathering various types of information beyond their own operations, offering intelligence services to other entities."
 
  building_ngm_planet_rating_agency:0 "Planet Rating Agency"
- building_ngm_planet_rating_agency_desc:0 "A company that rates everything and creates criteria for judgment."
+ building_ngm_planet_rating_agency_desc:0 "A corporate entity that assesses and rates various aspects of planets, creating standardized criteria for evaluation."
 
  building_ngm_sa_ko_ryo:0 "Serviced Dignitary Restaurant"
- building_ngm_sa_ko_ryo_desc:0 "Entertainment venues used as venues for bribery and backroom negotiations with government officials and wealthy individuals. It also houses backroom casinos and black market banks, expanding the influence of criminal enterprises and the local government, as well as promoting corruption......"
+ building_ngm_sa_ko_ryo_desc:0 "A luxurious venue frequented by government officials and wealthy individuals for clandestine negotiations and bribery. Also houses backroom casinos and black-market banks, fostering local corruption."
 
  building_ngm_theatergoer:0 "Theatergoer"
- building_ngm_theatergoer_desc:0 "Area where students and poor artists gather to express themselves."
+ building_ngm_theatergoer_desc:0 "A cultural hub where artists and students gather to express their creativity and artistry."
 
  building_ngm_avant_garde_art_square:0 "Avant-garde Art Square"
- building_ngm_avant_garde_art_square_desc:0 "What is this?"
+ building_ngm_avant_garde_art_square_desc:0 "A public space dedicated to the exhibition and celebration of avant-garde art forms."
 
  building_ngm_Iimperial_concert_hall:0 "Imperial Music Hall"
- building_ngm_Iimperial_concert_hall_desc:0 "An art facility that overwhelms and inspires people with its majestic music."
+ building_ngm_Iimperial_concert_hall_desc:0 "An awe-inspiring venue that overwhelms audiences with the grandeur of its performances, serving as a beacon of cultural majesty."
 
  building_ngm_imperial_art_museum:0 "Imperial Arts Museum"
- building_ngm_imperial_art_museum_desc:0 "A museum that enthralls people with its intimidation and artistry."
+ building_ngm_imperial_art_museum_desc:0 "A museum that captivates visitors with its imposing art collections and exhibitions, reflecting the Empire's rich artistic legacy."
 
- building_ngm_premise_workshop:0 "Premise Workshop"
- building_ngm_premise_workshop_desc:0 "Will state-of-the-art factories produce state-of-the-art goods?"
+ building_ngm_premise_workshop:0 "Premier Workshop"
+ building_ngm_premise_workshop_desc:0 "A cutting-edge industrial facility committed to the production of next-generation goods and technologies."
 
  building_ngm_advanced_research_institutes:0 "Advanced Research Institutes"
- building_ngm_advanced_research_institutes_desc:0 "A national research institute that conducts cutting-edge research that would not normally be considered"
+ building_ngm_advanced_research_institutes_desc:0 "A national institute that embarks on avant-garde research initiatives, pushing the boundaries of conventional wisdom and scientific understanding."
 
  building_ngm_Phe_Palace:0 "Imperial Palace"
- building_ngm_Phe_Palace_desc:0 "A beautiful and splendid palace symbolizing the former capital of the Galactic Empire"
+ building_ngm_Phe_Palace_desc:0 "A magnificent palace that stands as a symbol of the Galactic Empire's former capital, embodying the splendor and grandeur of a bygone era."
 
  building_ngm_Phe_Court:0 "Imperial Grand Court"
- building_ngm_Phe_Court_desc:0 "An administrative body enforcing law across the galactic scale empire"
+ building_ngm_Phe_Court_desc:0 "The supreme judicial authority within the Galactic Empire, responsible for upholding the law across its vast territories."
 
  building_ngm_Phe_Crest:0 "Imperial Crest Institute"
- building_ngm_Phe_Crest_desc:0 "A hall of eternal glory continuing from the former empire"
+ building_ngm_Phe_Crest_desc:0 "An establishment preserving the everlasting glory of the Empire, serving as a testament to its enduring legacy."
 
  building_ngm_Phe_Central_school:0 "Imperial Central Academy"
- building_ngm_Phe_Central_school_desc:0 "An academic research institution that once aggregated and developed knowledge from across the galaxy"
+ building_ngm_Phe_Central_school_desc:0 "A renowned academic institution that was once a nexus for the aggregation and development of knowledge from across the galaxy."
 
  building_ngm_Phe_Spaceport:0 "Imperial Spaceport"
- building_ngm_Phe_Spaceport_desc:0 "A glorious spaceport that once aggregated trade throughout the galaxy"
+ building_ngm_Phe_Spaceport_desc:0 "A historically significant spaceport that was once the focal point for interstellar trade and commerce within the Galactic Empire."
 
  building_ngm_Phe_HQ:0 "Imperial Army General Command"
- building_ngm_Phe_HQ_desc:0 "The highest military organization commanding the Imperial Army that once resonated across the galaxy"
+ building_ngm_Phe_HQ_desc:0 "The highest echelon of the Imperial Army, commanding military operations that reverberated across the galaxy."
 
  building_ngm_Phe_S_Palace:0 "Imperial Subsidiary Palace"
- building_ngm_Phe_S_Palace_desc:0 "A beautiful and functional palace existing in the provincial cities of the Empire"
+ building_ngm_Phe_S_Palace_desc:0 "A graceful and functional palace located in the Empire's provincial cities, serving various administrative and residential purposes."
 
  building_ngm_Phe_Factory:0 "Imperial Factory"
- building_ngm_Phe_Factory_desc:0 "A phenomenal factory operating with lost technology"
+ building_ngm_Phe_Factory_desc:0 "An extraordinary factory employing lost technologies, a marvel of the Empire's industrial prowess."
 
  building_ngm_Phe_Purification:0 "Imperial Purification Plant"
- building_ngm_Phe_Purification_desc:0 "A phenomenal purification plant operating with lost technology"
+ building_ngm_Phe_Purification_desc:0 "A state-of-the-art purification facility, utilizing lost technologies to achieve unparalleled efficiency in waste treatment."
 
  building_ngm_Phe_Park:0 "Imperial Garden"
- building_ngm_Phe_Park_desc:0 "A beautiful yet ephemeral garden that aggregated ecosystems from across the galaxy"
+ building_ngm_Phe_Park_desc:0 "A meticulously curated garden showcasing diverse ecosystems from across the galaxy, a fleeting reminder of the Empire's former glory."
 
  building_ngm_Phe_orbit_elv:0 "Imperial Orbital Elevator"
- building_ngm_Phe_orbit_elv_desc:0 "A functional elevator that aggregated planetary trade"
+ building_ngm_Phe_orbit_elv_desc:0 "An advanced orbital elevator that once served as a hub for planetary trade, a feat of the Empire's engineering ingenuity."
 
  building_ngm_Phe_University:0 "Imperial University"
- building_ngm_Phe_University_desc:0 "An educational institution that had one of the best research capabilities in the galaxy"
+ building_ngm_Phe_University_desc:0 "An esteemed educational establishment known for its world-class research capabilities, standing as a beacon of knowledge in the galaxy."
 
  building_ngm_Phe_Fort:0 "Imperial Fortress"
- building_ngm_Phe_Fort_desc:0 "A large-scale fortress that repelled former crises"
+ building_ngm_Phe_Fort_desc:0 "A formidable fortress equipped to repel any threats, a stalwart guardian of the Empire's sovereignty."
 
 #######################
 #####    区域    ######
@@ -2953,7 +2953,7 @@
 
  resolution_category_ngm_olympic_form:0 "International Convention"
  resolution_ngm_olympic_form:0 "International Convention Formation"
- resolution_ngm_olympic_form_desc:0 "Virtually galactic trade, unbound by international politics, has existed since the first meeting of different races. \It is time for us, as leaders of the galaxy, to authorize this commercial forum for the benefit of all. The time has come. "
+ resolution_ngm_olympic_form_desc:0 "Virtually galactic trade, unbound by international politics, has existed since the first meeting of different races. It is time for us, as leaders of the galaxy, to authorize this commercial forum for the benefit of all. The time has come. "
  resolution_ngm_olympic_form_effect_success:0 "$ngm_government.100.name$」Start an event chain."
 
  resolution_category_ngm_olympic_end:0 "国際競技大会の中止"
