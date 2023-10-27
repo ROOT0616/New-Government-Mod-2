@@ -2365,6 +2365,7 @@ councilor_ngm_economic_primitivism = {
 	civic = civic_ngm_economic_primitivism
 	modifier = {
 		country_base_energy_produces_add = 0.5
+		# multiplier
 		mult = value:count_owned_pop_script|MODIFIER|country_base_energy_produces_add|
 	}
 }
