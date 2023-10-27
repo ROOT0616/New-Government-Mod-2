@@ -44,18 +44,18 @@
  decision_ngm_end_ai_supplementary_governance:0 "Abolish AI Supplementary Governance"
  decision_ngm_end_ai_supplementary_governance_desc:0 "Abolish local autonomy and restore a centralized system."
 
- decision_ngm_chieftaincy_system:0 "Chieftaincy System"
+ decision_ngm_chieftaincy_system:0 "Presidency System"
  decision_ngm_chieftaincy_system_desc:0 "Confer governance of this sector's capital to a robust chief executive buffered by a weak legislative assembly, while enabling limited local self-determination."
- ngm_chieftaincy_system:0 "Chieftaincy Dominance System"
+ ngm_chieftaincy_system:0 "Presidency System"
  ngm_chieftaincy_system_desc:0 "A chief executive wields strong powers, counterbalanced by a democratically elected but relatively powerless parliament. This dynamic allows the rapid enactment of often drastic reforms, driven largely by the force of popular sentiment."
- decision_ngm_end_chieftaincy_system:0 "Abolish Chieftaincy System"
+ decision_ngm_end_chieftaincy_system:0 "Abolish Presidency System"
  decision_ngm_end_chieftaincy_system_desc:0 "Abolish local autonomy and restore a centralized system."
 
- decision_ngm_parliamentary_dominance:0 "Parliamentary Dominance System"
+ decision_ngm_parliamentary_dominance:0 "Parliamentary System"
  decision_ngm_parliamentary_dominance_desc:0 "Entrust the control of this sector's capital to a potent legislative assembly and a subordinate chief executive, thus permitting a measure of local self-rule."
- ngm_parliamentary_dominance:0 "Parliamentary Dominance System"
+ ngm_parliamentary_dominance:0 "Parliamentary System"
  ngm_parliamentary_dominance_desc:0 "Governance here is directed by a formidable, elected parliament, whereas the chief executive operates under considerably limited powers. This power imbalance often leads the chief executive to make significant concessions to the legislative body, which itself is swayed by the currents of popular opinion."
- decision_ngm_end_parliamentary_dominance:0 "Abolish Parliamentary Dominance System"
+ decision_ngm_end_parliamentary_dominance:0 "Abolish Parliamentary System"
  decision_ngm_end_parliamentary_dominance_desc:0 "Abolish local autonomy and restore a centralized system."
 
  decision_ngm_religious_domination:0 "Religious Domination System"
@@ -280,7 +280,7 @@
  origin_tooltip_ngm_escape_to_the_past:0 "Once every 120 months, a fleet from the future attacks. By defeating them, it is possible to acquire technological debris.\n\nCapital planet has special characteristics「space-time continuum」\nPhysics Research speed§G+20%§!、Pop grows§G+10%§!"
 
  origin_ngm_galactic_empire_aquarium:0 "Galactic Empire Aquarium"
- origin_ngm_galactic_empire_aquarium_desc:0 "Once a dazzling amusement hub of a bygone Galactic Empire, this nation thrived on spectacle and diversion, earning immunity from external conflicts. As the empire crumbled, this civilization ventured cautiously into the galactic stage, its former grandeur a fading memory, yet the allure of its entertainment persists.\\n§RThere can only be one civilization with this origin.§!"
+ origin_ngm_galactic_empire_aquarium_desc:0 "Once a dazzling amusement hub of a bygone Galactic Empire, this nation thrived on spectacle and diversion, earning immunity from external conflicts. As the empire crumbled, this civilization ventured cautiously into the galactic stage, its former grandeur a fading memory, yet the allure of its entertainment persists.\n\n§RThere can only be one civilization with this origin.§!"
  origin_tooltip_ngm_galactic_empire_aquarium:0 "Start with a special group of star systems and capital planets in the outer reaches of the galaxy.\n\nExtremely restrictive regarding expansion. \n\nSpecial buildings can be built.\n\n"
 
  origin_ngm_phenix:0 "Empire of Dusk"
@@ -1427,37 +1427,37 @@
 #####    布告    ######
 #######################
 
- ngm_conducting_decoration_ceremonies_campaign:0 "Conducting a Decoration Ceremony"
- ngm_conducting_decoration_ceremonies_campaign:0 "Holding a ceremony to award medals to meritorious individuals and upper-class citizens."
+ ngm_conducting_decoration_ceremonies_campaign:0 "Conduct a Decoration Ceremony"
+ ngm_conducting_decoration_ceremonies_campaign:0 "Host an illustrious ceremony to honor and award medals to individuals whose contributions have elevated the status of our empire."
 
  edict_ngm_five_year_plan1_campaign:0 "Five-Year Plan: Construction"
- edict_ngm_five_year_plan1_campaign_desc:0 "We must emphasize architecture and develop the backbone of the nation."
+ edict_ngm_five_year_plan1_campaign_desc:0 "Lay the foundations for a prosperous future by investing in architectural marvels and infrastructural projects that will serve as the backbone of our nation."
 
  edict_ngm_five_year_plan2_campaign:0 "Five-Year Plan: Heavy Industry"
- edict_ngm_five_year_plan2_campaign_desc:0 "The emphasis is on heavy industry and continuing to move toward military expansion."
+ edict_ngm_five_year_plan2_campaign_desc:0 "Strengthen our industrial capabilities to fuel both economic growth and military expansion, securing our empire's place on the galactic stage."
 
  edict_ngm_five_year_plan3_campaign:0 "Five-Year Plan: Agriculture"
- edict_ngm_five_year_plan3_campaign_desc:0 "Focus on agriculture, and focus on prolific production and solving the food problem."
+ edict_ngm_five_year_plan3_campaign_desc:0 "Channel resources into agricultural innovations and technologies, aiming to not just solve the food crisis but to create a surplus for future endeavors."
 
  edict_ngm_five_year_plan4_campaign:0 "Five-Year Plan: Research"
- edict_ngm_five_year_plan4_campaign_desc:0 "We must emphasize research and surpass other countries in the advancement of industrial technology."
+ edict_ngm_five_year_plan4_campaign_desc:0 "Prioritize advancements in research and technology, aiming to outpace rival empires in the race towards a technologically superior future."
 
  edict_ngm_five_year_plan5_campaign:0 "Five-Year Plan: Policy"
- edict_ngm_five_year_plan5_campaign_desc:0 "Emphasize the idea and let people know how wonderful our country's policy is."
+ edict_ngm_five_year_plan5_campaign_desc:0 "Promote our nation's policies far and wide, instilling pride in our citizenry and projecting our values as a beacon for others to follow."
 
  ngm_five_year_plan_campaign:0 "Five-Year Plan"
 
  edict_ngm_honorism_wartime_fleet:0 "On My Honor"
- edict_ngm_honorism_wartime_fleet_desc:0 "We cannot allow ourselves to be choked by other countries. This is a matter of honor."
+ edict_ngm_honorism_wartime_fleet_desc:0 "In the face of adversity, we stand unyielding. It's not just a strategic necessity but a matter of national honor to resist subjugation by foreign powers."
 
  edict_ngm_memories_of_hegemony:0 "Memories of Hegemony"
- edict_ngm_memories_of_hegemony_desc:0 "Documenting our nation's hegemony and passing it on to future generations."
+ edict_ngm_memories_of_hegemony_desc:0 "Preserve the tales of our empire's grandeur and dominion, so that future generations may draw inspiration and lessons from our past triumphs."
 
  edict_ngm_memories_of_glory:0 "Memories of Prosperity"
- edict_ngm_memories_of_glory_desc:0 "Recording the prosperity of our country and passing it on to future generations."
+ edict_ngm_memories_of_glory_desc:0 "Document and celebrate the periods of our empire's greatest prosperity, ensuring that the collective memory of our success is passed down for generations to come."
 
  edict_ngm_memoirs_of_perseverance:0 "Memories of Defense"
- edict_ngm_memoirs_of_perseverance_desc:0 "Recording the withstand of our country and passing it on to future generations."
+ edict_ngm_memoirs_of_perseverance_desc:0 "Record the instances where our nation has stood firm against external threats, serving as a testament to our resilience and a guide for future defenses."
 
  edict_ngm_class_A_national_defense_plan:0 "Class-A National Defense Plan"
  edict_ngm_class_A_national_defense_plan_desc:0 "Implement the national defense plan developed by the Joint Chiefs of Staff."
@@ -1469,19 +1469,19 @@
  edict_ngm_class_C_national_defense_plan_desc:0 "Implement the national defense plan developed by the Joint Chiefs of Staff."
 
  edict_ngm_supernatural_adversary_campaign:0 "Supernatural Adversary"
- edict_ngm_supernatural_adversary_campaign_desc:0 "In this world, there is an enemy that must be destroyed"
+ edict_ngm_supernatural_adversary_campaign_desc:0 "Confronting the unexplained and the unnatural, our empire stands united against a supernatural enemy that poses a unique threat to our existence."
 
  edict_ngm_legal_department_audits_campaign:0 "Legal Department Audits"
- edict_ngm_legal_department_audits_campaign_desc:0 "Through audits by legal experts, we can monitor delays in law enforcement and inappropriate legal operations, and improve administrative corruption and inefficiency"
+ edict_ngm_legal_department_audits_campaign_desc:0 "Institutionalize audits led by legal experts to scrutinize law enforcement procedures and administrative operations, aiming to root out corruption and inefficiency."
 
- edict_ngm_technology_trade_options_menu:0 "Research Trade Gift"
- edict_ngm_technology_trade_options_menu_desc:0 ""
+ edict_ngm_technology_trade_options_menu:0 "Gift: Research"
+ edict_ngm_technology_trade_options_menu_desc:0 "Offer cutting-edge research and technological advancements as a diplomatic gift, strengthening alliances and opening doors for future collaborations."
 
- edict_ngm_fleet_trade_options_menu:0 "Fleet Gift"
- edict_ngm_fleet_trade_options_menu_desc:0 ""
+ edict_ngm_fleet_trade_options_menu:0 "Gift: Fleet"
+ edict_ngm_fleet_trade_options_menu_desc:0 "Gift a portion of our naval fleet to an ally or a non-hostile entity, as a gesture of goodwill or to tip the balance in a mutually beneficial conflict."
 
- edict_ngm_mossball_edict:0 "Refurbishment of Mothballed Civilian Ships"
- edict_ngm_mossball_edict_desc:0 "Although it's a tedious task, it is possible to refurbish mothballed civilian ships."
+ edict_ngm_mossball_edict:0 "Refurbish Mothballed Civilian Ships"
+ edict_ngm_mossball_edict_desc:0 "Initiate the painstaking but rewarding process of refurbishing our mothballed civilian ships, breathing new life into these dormant vessels for future use."
 
  edict_ngm_virture_rival_options_menu:0 "Set shadow enemy countries"
  edict_ngm_virture_rival_options_menu_desc:0 ""
@@ -1494,180 +1494,180 @@
 #######################
 
  tech_ceremony_theory:0 "Ceremony Theory1"
- tech_ceremony_theory_desc:0 "Research into the efficient operation of the bureaucracy in charge of ceremonies and how to conduct ceremonies that symbolize authority more cheaply and easily."
+ tech_ceremony_theory_desc:0 "Investigate methods for streamlining the bureaucratic processes that govern ceremonial functions. The objective is to make the embodiment of state authority in ceremonies both cost-effective and impactful."
 
  tech_ceremony_theory_second:0 "Ceremony Theory2"
- tech_ceremony_theory_second_desc:0 "Research into the efficient operation of the bureaucracy in charge of ceremonies and how to conduct ceremonies that symbolize authority more cheaply and easily."
+ tech_ceremony_theory_second_desc:0 "Further research focused on optimizing the bureaucratic machinery behind ceremonies, aiming to achieve grandeur and authority at a fraction of the usual cost and effort."
 
  tech_ad_high_degree_of_local_autonomy:0 "High Degree of Local Autonomy"
- tech_ad_high_degree_of_local_autonomy_desc:0 "Research into allowing an unprecendeted degree of autonomy to local authorities."
+ tech_ad_high_degree_of_local_autonomy_desc:0 "Undertake scholarly research to assess the feasibility and impact of granting unprecedented local autonomy, balancing the needs for centralized control and regional self-governance."
 
  tech_ngm_developmental_fish_farming:0 "Developmental Fish Farming"
- tech_ngm_developmental_fish_farming_desc:0 "Developments in fish farming allow us to procure fish with ease."
+ tech_ngm_developmental_fish_farming_desc:0 "Pioneering advancements in aquaculture technologies that enable efficient and sustainable fish farming, bolstering food security and economic growth."
 
 #######################
 #####    資源    ######
 #######################
 
  ngm_order_of_merit:0 "Orders"
- ngm_order_of_merit_desc:0 "Honors given by the state or its head of state to individuals in recognition of their achievements and accomplishments, with the awarding of decorations."
+ ngm_order_of_merit_desc:0 "State-sanctioned honors awarded to distinguished individuals in recognition of their extraordinary achievements. These honors serve to elevate the recipients while also reinforcing the authority and values of the state."
 
 #######################
 #####    建物    ######
 #######################
 
  building_ngm_bureau_of_ceremonies:0 "Bureau of Ceremonies"
- building_ngm_bureau_of_ceremonies_desc:0 "A government office that administers ceremonies and honors and protects and lays out the authority of the state and those in power."
+ building_ngm_bureau_of_ceremonies_desc:0 "A specialized governmental department tasked with the meticulous planning and execution of state ceremonies. This bureau is not just an organizer but also a guardian of the state's symbolic authority."
 
  building_ngm_perpetual_palace:0 "The Palace of Eternity"
- building_ngm_perpetual_palace_desc:0 "It was the palace of the rulers of the land since ancient times, and the magnificent architecture still shows no signs of deterioration, probably because the monarchs and heads of state often gathered here to negotiate. Today, it is still used not only as a ruler's palace and international conference hall, but also as a governmental institution and residence for the upper class."
+ building_ngm_perpetual_palace_desc:0 "An architectural marvel that has stood the test of time, serving as the seat of power for generations of rulers. Today, it functions not only as a regal residence and international meeting venue but also as an institution symbolizing the enduring legacy of the state."
 
- building_ngm_garden_palace:0 "遊園宮"
- building_ngm_garden_palace_desc:0 "膨大な遊園地を管理し、VIPを接待するために作られた壮麗かつ機能的な宮殿"
+ building_ngm_garden_palace:0 "Garden Palace"
+ building_ngm_garden_palace_desc:0 "A grand and functional palace designed for the management of extensive recreational grounds and the hosting of VIP guests."
 
- building_ngm_aquarium_central_gate:0 "アクアリウム中央ゲート"
- building_ngm_aquarium_central_gate_desc:0 "かつて存在した銀河帝国の戴冠式をはじめとした重要式典が行われた、銀河と海洋に関する神々を祭る大神殿"
+ building_ngm_aquarium_central_gate:0 "Central Gate Aquarium"
+ building_ngm_aquarium_central_gate_desc:0 "A grand temple dedicated to gods of the galaxy and the ocean, where historically significant ceremonies like the coronations of former Galactic Emperors were held."
 
- building_ngm_great_ocean_temple:0 "海洋大神殿"
- building_ngm_great_ocean_temple_desc:0 "かつて存在した銀河帝国の戴冠式をはじめとした重要式典が行われた、銀河と海洋に関する神々を祭る大神殿"
+ building_ngm_great_ocean_temple:0 "Great Ocean Temple"
+ building_ngm_great_ocean_temple_desc:0 "A majestic temple venerating the gods of the galaxy and the ocean, serving as the venue for significant ceremonies like the coronations of former Galactic Emperors."
 
- building_ngm_ocean_child_park:0 "惑星児童遊園"
- building_ngm_ocean_child_park_desc:0 "子供向けアトラクションやお子様向けレストランが広がる遊園地やショッピングモール"
+ building_ngm_ocean_child_park:0 "Children's Ocean Park"
+ building_ngm_ocean_child_park_desc:0 "A recreational facility featuring a variety of attractions and children-friendly restaurants, catering to younger visitors."
 
- building_ngm_ocean_aqua_park:0 "アクアリウムテーマパーク"
- building_ngm_ocean_aqua_park_desc:0 "青年期世代向けのアクアリウムをイメージしたアトラクションや庭園が広がる娯楽施設"
+ building_ngm_ocean_aqua_park:0 "Aqua Theme Park"
+ building_ngm_ocean_aqua_park_desc:0 "An entertainment complex designed around an aquarium theme, aimed at a younger audience, featuring a range of attractions and gardens."
 
- building_ngm_ocean_tower_casino:0 "タワーカジノ"
- building_ngm_ocean_tower_casino_desc:0 "上流階級から中下流階級までもを網羅した大規模な賭博場"
+ building_ngm_ocean_tower_casino:0 "Tower Casino"
+ building_ngm_ocean_tower_casino_desc:0 "A large-scale gambling facility that caters to a diverse clientele, ranging from the upper to the lower-middle classes."
 
- building_ngm_ocean_imp_stad:0 "帝立競技場"
- building_ngm_ocean_imp_stad_desc:0 "銀河皇帝の愛した帝冠様式で作られた壮麗で様々な式典や競技を行うことができるスタジアム"
+ building_ngm_ocean_imp_stad:0 "Imperial Stadium"
+ building_ngm_ocean_imp_stad_desc:0 "A grand stadium constructed in the favored architectural style of the Galactic Emperor, suitable for hosting a variety of ceremonies and competitions."
 
- building_ngm_ocean_galactic_yoshiwara:0 "泡園"
- building_ngm_ocean_galactic_yoshiwara_desc:0 "大人向けの娯楽を提供する夜間を中心とした娯楽施設"
+ building_ngm_ocean_galactic_yoshiwara:0 "Galactic Yoshiwara"
+ building_ngm_ocean_galactic_yoshiwara_desc:0 "An entertainment complex focused on adult-oriented activities, primarily operational during nighttime."
 
- building_ngm_ocean_sight_office:0 "観光管理局"
- building_ngm_ocean_sight_office_desc:0 "観光客に関する行政事務処理や手続き、書類整理を行う官庁"
+ building_ngm_ocean_sight_office:0 "Tourism Management Office"
+ building_ngm_ocean_sight_office_desc:0 "A governmental agency responsible for administrative tasks related to tourism, including document processing and visitor accommodations."
 
- building_ngm_ocean_medical_land:0 "惑星健康ランド"
- building_ngm_ocean_medical_land_desc:0 "心身の疾患を治癒し、静養を目的とした観光客が集う観光用医療施設"
+ building_ngm_ocean_medical_land:0 "Health Land"
+ building_ngm_ocean_medical_land_desc:0 "A medical-tourism facility aimed at visitors seeking treatments and wellness programs for various physical and mental ailments."
 
- building_ngm_ocean_research_cente:0 "銀河教養センター"
- building_ngm_ocean_research_cente_desc:0 "教養市民層や上流階級が集うハイセンスでハイカルチャーな観光施設"
+ building_ngm_ocean_research_cente:0 "Cultural Research Center"
+ building_ngm_ocean_research_cente_desc:0 "A high-culture tourism facility frequented by the educated and upper classes, offering a blend of sophistication and cultural enrichment."
 
- building_ngm_ocean_hotel_street:0 "ホテル群"
- building_ngm_ocean_hotel_street_desc:0 "低所得層から高所得層、各国要人にも対応できる素晴らしいサービスを提供する宿泊施設群"
+ building_ngm_ocean_hotel_street:0 "Hotel Cluster"
+ building_ngm_ocean_hotel_street_desc:0 "A conglomerate of hotels offering a range of services, capable of accommodating guests from low-income to high-income brackets, as well as international dignitaries."
 
- building_ngm_ocean_high_resort:0 "高級リゾート"
- building_ngm_ocean_high_resort_desc:0 "高所得層向けの瀟洒な自然やスポーツを楽しむことができる会員制の観光地域"
+ building_ngm_ocean_high_resort:0 "High-end Resort"
+ building_ngm_ocean_high_resort_desc:0 "An exclusive resort area catering to the high-income class, offering pristine natural settings and a variety of sports and leisure activities."
 
- building_ngm_ocean_resure_land:0 "レジャーランド"
- building_ngm_ocean_resure_land_desc:0 "スポーツや自然を多くの人が楽しむことができる大衆的な観光施設"
+ building_ngm_ocean_resure_land:0 "Leisure Land"
+ building_ngm_ocean_resure_land_desc:0 "A popular tourism facility where a large number of people can enjoy various sports and natural attractions."
 
  building_ngm_ocean_business_orbit_elev:0 "Commercial Orbital Elevator"
- building_ngm_ocean_business_orbit_elev_desc:0 "Orbital elevator for civilian use that allows ships to land outside the atmosphere for atmospheric impact and efficiency."
+ building_ngm_ocean_business_orbit_elev_desc:0 "A civilian-use orbital elevator designed for efficiency, allowing ships to bypass atmospheric entry and exit, thereby improving fuel economy and cargo handling."
 
  building_ngm_ginga_department_store:0 "Galaxy Department Store"
- building_ngm_ginga_department_store_desc:0 "Collective commercial center for all galactic tastes."
+ building_ngm_ginga_department_store_desc:0 "A vast commercial hub that caters to a variety of galactic tastes, offering an array of goods and services from across the universe."
 
  building_ngm_business_school:0 "Corporate University"
- building_ngm_business_school_desc:0 "Specialized university for those studying economics and management"
+ building_ngm_business_school_desc:0 "A specialized educational institution that focuses on imparting knowledge and skills in economics and business management."
 
  building_ngm_star_workshop:0 "Star Industrial Complex"
- building_ngm_star_workshop_desc:0 "Planetary-scale industrial complexes"
+ building_ngm_star_workshop_desc:0 "A large-scale industrial complex that covers a planetary surface, dedicated to various types of manufacturing and production."
 
  building_ngm_galaxy_salon:0 "Galaxy Salon"
- building_ngm_galaxy_salon_desc:0 "Corporate-sponsored social gatherings for the upper class"
+ building_ngm_galaxy_salon_desc:0 "An upscale social gathering space sponsored by corporations, intended for the elite and business magnates to network and forge partnerships."
 
- building_ngm_m_a_center:0 "M&A Center"
- building_ngm_m_a_center_desc:0 "Companies that intend to evaluate or acquire other companies."
+ building_ngm_m_a_center:0 "Mergers and Acquisitions Center"
+ building_ngm_m_a_center_desc:0 "A specialized facility where companies can evaluate and negotiate the acquisition or merger with other corporate entities."
 
  building_ngm_galactic_bank:0 "Galactic Bank"
- building_ngm_galactic_bank_desc:0 "Banks that invest, save, and manage assets on a galactic scale."
+ building_ngm_galactic_bank_desc:0 "A financial institution with a galactic reach, specializing in investment, asset management, and various other banking services."
 
  building_ngm_IAA:0 "Interstellar Advertising Agency."
- building_ngm_IAA_desc:0 "Companies that process information and brainwash the masses with words that are easy to lay down."
+ building_ngm_IAA_desc:0 "A corporate entity specialized in the dissemination of information and advertising campaigns that sway public opinion and behavior on a galactic scale."
 
  building_ngm_corporate_hospital:0 "Corporate Medical Center"
- building_ngm_corporate_hospital_desc:0 "Company-owned medical institutions that aim to provide high-quality medical care and welfare at the lowest possible cost."
+ building_ngm_corporate_hospital_desc:0 "A healthcare institution owned by a corporation, focused on delivering high-quality medical care and welfare services in a cost-effective manner."
 
  building_ngm_planetary_scale_building_center:0 "Planetary Scale Building Center"
- building_ngm_planetary_scale_building_center_desc:0 "Companies that provide heavy equipment, supplies, and manpower when construction of any kind takes place on a planet."
+ building_ngm_planetary_scale_building_center_desc:0 "A company that provides heavy machinery, materials, and manpower for construction projects on a planetary scale."
 
  building_ngm_corporate_plantation:0 "Corporate Farm"
- building_ngm_corporate_plantation_desc:0 "Large company-owned farm, dealing in planet-specific crops."
+ building_ngm_corporate_plantation_desc:0 "A large-scale farm owned by a corporate entity, specializing in the cultivation of planet-specific crops."
 
  building_ngm_society_cosmic_port:0 "Corporate Port"
- building_ngm_society_cosmic_port_desc:0 "Spaceport dedicated to the company for efficient and fast handling of goods and passengers"
+ building_ngm_society_cosmic_port_desc:0 "A spaceport operated by a corporation, designed for the efficient loading and unloading of goods and passengers."
 
  building_ngm_planet_trust_bank:0 "Planet Trust Bank"
- building_ngm_planet_trust_bank_desc:0 "Companies that pursue profits by managing assets and securities on a planetary basis."
+ building_ngm_planet_trust_bank_desc:0 "A financial institution focused on asset management and investments on a planetary scale, aiming for maximum profit."
 
  building_ngm_corporate_espionage:0 "Corporate Intelligence Agency"
- building_ngm_corporate_espionage_desc:0 "Companies that collect all kinds of information outside of their own company and sell it to others."
+ building_ngm_corporate_espionage_desc:0 "A company specialized in gathering various types of information beyond their own operations, offering intelligence services to other entities."
 
  building_ngm_planet_rating_agency:0 "Planet Rating Agency"
- building_ngm_planet_rating_agency_desc:0 "A company that rates everything and creates criteria for judgment."
+ building_ngm_planet_rating_agency_desc:0 "A corporate entity that assesses and rates various aspects of planets, creating standardized criteria for evaluation."
 
  building_ngm_sa_ko_ryo:0 "Serviced Dignitary Restaurant"
- building_ngm_sa_ko_ryo_desc:0 "Entertainment venues used as venues for bribery and backroom negotiations with government officials and wealthy individuals. It also houses backroom casinos and black market banks, expanding the influence of criminal enterprises and the local government, as well as promoting corruption......"
+ building_ngm_sa_ko_ryo_desc:0 "A luxurious venue frequented by government officials and wealthy individuals for clandestine negotiations and bribery. Also houses backroom casinos and black-market banks, fostering local corruption."
 
  building_ngm_theatergoer:0 "Theatergoer"
- building_ngm_theatergoer_desc:0 "Area where students and poor artists gather to express themselves."
+ building_ngm_theatergoer_desc:0 "A cultural hub where artists and students gather to express their creativity and artistry."
 
  building_ngm_avant_garde_art_square:0 "Avant-garde Art Square"
- building_ngm_avant_garde_art_square_desc:0 "What is this?"
+ building_ngm_avant_garde_art_square_desc:0 "A public space dedicated to the exhibition and celebration of avant-garde art forms."
 
  building_ngm_Iimperial_concert_hall:0 "Imperial Music Hall"
- building_ngm_Iimperial_concert_hall_desc:0 "An art facility that overwhelms and inspires people with its majestic music."
+ building_ngm_Iimperial_concert_hall_desc:0 "An awe-inspiring venue that overwhelms audiences with the grandeur of its performances, serving as a beacon of cultural majesty."
 
  building_ngm_imperial_art_museum:0 "Imperial Arts Museum"
- building_ngm_imperial_art_museum_desc:0 "A museum that enthralls people with its intimidation and artistry."
+ building_ngm_imperial_art_museum_desc:0 "A museum that captivates visitors with its imposing art collections and exhibitions, reflecting the Empire's rich artistic legacy."
 
- building_ngm_premise_workshop:0 "Premise Workshop"
- building_ngm_premise_workshop_desc:0 "Will state-of-the-art factories produce state-of-the-art goods?"
+ building_ngm_premise_workshop:0 "Premier Workshop"
+ building_ngm_premise_workshop_desc:0 "A cutting-edge industrial facility committed to the production of next-generation goods and technologies."
 
  building_ngm_advanced_research_institutes:0 "Advanced Research Institutes"
- building_ngm_advanced_research_institutes_desc:0 "A national research institute that conducts cutting-edge research that would not normally be considered"
+ building_ngm_advanced_research_institutes_desc:0 "A national institute that embarks on avant-garde research initiatives, pushing the boundaries of conventional wisdom and scientific understanding."
 
  building_ngm_Phe_Palace:0 "Imperial Palace"
- building_ngm_Phe_Palace_desc:0 "A beautiful and splendid palace symbolizing the former capital of the Galactic Empire"
+ building_ngm_Phe_Palace_desc:0 "A magnificent palace that stands as a symbol of the Galactic Empire's former capital, embodying the splendor and grandeur of a bygone era."
 
  building_ngm_Phe_Court:0 "Imperial Grand Court"
- building_ngm_Phe_Court_desc:0 "An administrative body enforcing law across the galactic scale empire"
+ building_ngm_Phe_Court_desc:0 "The supreme judicial authority within the Galactic Empire, responsible for upholding the law across its vast territories."
 
  building_ngm_Phe_Crest:0 "Imperial Crest Institute"
- building_ngm_Phe_Crest_desc:0 "A hall of eternal glory continuing from the former empire"
+ building_ngm_Phe_Crest_desc:0 "An establishment preserving the everlasting glory of the Empire, serving as a testament to its enduring legacy."
 
  building_ngm_Phe_Central_school:0 "Imperial Central Academy"
- building_ngm_Phe_Central_school_desc:0 "An academic research institution that once aggregated and developed knowledge from across the galaxy"
+ building_ngm_Phe_Central_school_desc:0 "A renowned academic institution that was once a nexus for the aggregation and development of knowledge from across the galaxy."
 
  building_ngm_Phe_Spaceport:0 "Imperial Spaceport"
- building_ngm_Phe_Spaceport_desc:0 "A glorious spaceport that once aggregated trade throughout the galaxy"
+ building_ngm_Phe_Spaceport_desc:0 "A historically significant spaceport that was once the focal point for interstellar trade and commerce within the Galactic Empire."
 
  building_ngm_Phe_HQ:0 "Imperial Army General Command"
- building_ngm_Phe_HQ_desc:0 "The highest military organization commanding the Imperial Army that once resonated across the galaxy"
+ building_ngm_Phe_HQ_desc:0 "The highest echelon of the Imperial Army, commanding military operations that reverberated across the galaxy."
 
  building_ngm_Phe_S_Palace:0 "Imperial Subsidiary Palace"
- building_ngm_Phe_S_Palace_desc:0 "A beautiful and functional palace existing in the provincial cities of the Empire"
+ building_ngm_Phe_S_Palace_desc:0 "A graceful and functional palace located in the Empire's provincial cities, serving various administrative and residential purposes."
 
  building_ngm_Phe_Factory:0 "Imperial Factory"
- building_ngm_Phe_Factory_desc:0 "A phenomenal factory operating with lost technology"
+ building_ngm_Phe_Factory_desc:0 "An extraordinary factory employing lost technologies, a marvel of the Empire's industrial prowess."
 
  building_ngm_Phe_Purification:0 "Imperial Purification Plant"
- building_ngm_Phe_Purification_desc:0 "A phenomenal purification plant operating with lost technology"
+ building_ngm_Phe_Purification_desc:0 "A state-of-the-art purification facility, utilizing lost technologies to achieve unparalleled efficiency in waste treatment."
 
  building_ngm_Phe_Park:0 "Imperial Garden"
- building_ngm_Phe_Park_desc:0 "A beautiful yet ephemeral garden that aggregated ecosystems from across the galaxy"
+ building_ngm_Phe_Park_desc:0 "A meticulously curated garden showcasing diverse ecosystems from across the galaxy, a fleeting reminder of the Empire's former glory."
 
  building_ngm_Phe_orbit_elv:0 "Imperial Orbital Elevator"
- building_ngm_Phe_orbit_elv_desc:0 "A functional elevator that aggregated planetary trade"
+ building_ngm_Phe_orbit_elv_desc:0 "An advanced orbital elevator that once served as a hub for planetary trade, a feat of the Empire's engineering ingenuity."
 
  building_ngm_Phe_University:0 "Imperial University"
- building_ngm_Phe_University_desc:0 "An educational institution that had one of the best research capabilities in the galaxy"
+ building_ngm_Phe_University_desc:0 "An esteemed educational establishment known for its world-class research capabilities, standing as a beacon of knowledge in the galaxy."
 
  building_ngm_Phe_Fort:0 "Imperial Fortress"
- building_ngm_Phe_Fort_desc:0 "A large-scale fortress that repelled former crises"
+ building_ngm_Phe_Fort_desc:0 "A formidable fortress equipped to repel any threats, a stalwart guardian of the Empire's sovereignty."
 
 #######################
 #####    区域    ######
@@ -1709,21 +1709,21 @@
 #####    仕事    ######
 #######################
 
- planet_bureau_of_ceremonies:0 "Board of the Ceremonies"
- bureau_of_ceremonies:0 "Board of the Ceremonies"
- bureau_of_ceremonies_desc:0 "Administer and create ceremonies and honors and give greater authority to their conferral."
- job_bureau_of_ceremonies:0 "Board of the Ceremonies"
- job_bureau_of_ceremonies_desc:0 "Administer and create ceremonies and honors and give greater authority to their conferral."
- job_bureau_of_ceremonies_plural:0 "Board of the Ceremonies"
+ planet_bureau_of_ceremonies:0 "Board of Ceremonies"
+ bureau_of_ceremonies:0 "Board of Ceremonies"
+ bureau_of_ceremonies_desc:0 "Orchestrates grand rituals and ceremonies that not only celebrate the shared identity of the empire but also bolster the legitimacy of its rulers."
+ job_bureau_of_ceremonies:0 "Board of Ceremonies"
+ job_bureau_of_ceremonies_desc:0 "Orchestrates grand rituals and ceremonies that not only celebrate the shared identity of the empire but also bolster the legitimacy of its rulers."
+ job_bureau_of_ceremonies_plural:0 "Board of Ceremonies"
  mod_job_bureau_of_ceremonies_add:0 "$job_bureau_of_ceremonies$ Jobs"
  job_bureau_of_ceremonies_effect_desc:0 "£ngm_order_of_merit£ $job_bureau_of_ceremonies_plural$は、 £unity£ §Y$unity$§!and £influence£ §Y$influence$§!by consuming £ngm_order_of_merit£ §YOrders§!produce"
 
- planet_ngm_secretary:0 "Secretary"
- ngm_secretary:0 "Secretary"
- ngm_secretary_desc:0 "A political elite who are the leaders of a political party and provide guidance to all bureaucrats and military personnel."
- job_ngm_secretary:0 "Secretary"
- job_ngm_secretary_plural:0 "Secretary"
- job_ngm_secretary_desc:0 "A political elite who are the leaders of a political party and provide guidance to all bureaucrats and military personnel."
+ planet_ngm_secretary:0 "Political Secretary"
+ ngm_secretary:0 "Political Secretary"
+ ngm_secretary_desc:0 "An unparalleled tactician in the political arena, guiding the empire's bureaucrats and military echelons."
+ job_ngm_secretary:0 "Political Secretary"
+ job_ngm_secretary_plural:0 "Political Secretary"
+ job_ngm_secretary_desc:0 "An unparalleled tactician in the political arena, guiding the empire's bureaucrats and military echelons."
  mod_job_ngm_secretary_add:0 "$job_ngm_secretary$ Jobs"
  mod_job_ngm_secretary_per_pop:0 "§G+1§! $job_ngm_secretary$ Job per $VALUE$ Pops"
  mod_job_ngm_secretary_per_pop_short:0 "\n§G+1§! £mod_job_ngm_secretary_add£ per $VALUE$ £pop£"
@@ -1732,10 +1732,10 @@
 
  planet_ngm_pacifist:0 "Pacifier"
  ngm_pacifist:0 "Pacifier"
- ngm_pacifist_desc:0 "A wizard of words to inspire and incite the people"
+ ngm_pacifist_desc:0 "A skilled orator capable of calming tensions and inspiring loyalty among the masses."
  job_ngm_pacifist:0 "Pacifier"
  job_ngm_pacifist_plural:0 "Pacifier"
- job_ngm_pacifist_desc:0 "A wizard of words to inspire and incite the people"
+ job_ngm_pacifist_desc:0 "A skilled orator capable of calming tensions and inspiring loyalty among the masses."
  mod_job_ngm_pacifist_add:0 "$job_ngm_pacifist$ Jobs"
  mod_job_ngm_pacifist_per_pop:0 "§G+1§! $job_ngm_pacifist$ Job per $VALUE$ Pops"
  mod_job_ngm_pacifist_per_pop_short:0 "\n§G+1§! £mod_job_ngm_pacifist_add£ per $VALUE$ £pop£"
@@ -1744,10 +1744,10 @@
 
  planet_ngm_crest_bearer:0 "Crest Bearer"
  ngm_crest_bearer:0 "Crest Bearer"
- ngm_crest_bearer_desc:0 "The court bureaucracy that administers and operates the titles and emblems of the nobility."
+ ngm_crest_bearer_desc:0 "The administrative core that preserves and elevates the symbolic traditions of the empire's nobility."
  job_ngm_crest_bearer:0 "Crest Bearer"
  job_ngm_crest_bearer_plural:0 "Crest Bearer"
- job_ngm_crest_bearer_desc:0 "The court bureaucracy that administers and operates the titles and emblems of the nobility."
+ job_ngm_crest_bearer_desc:0 "The administrative core that preserves and elevates the symbolic traditions of the empire's nobility."
  mod_job_ngm_crest_bearer_add:0 "$job_ngm_crest_bearer$ Jobs"
  mod_job_ngm_crest_bearer_per_pop:0 "§G+1§! $job_ngm_crest_bearer$ Job per $VALUE$ Pops"
  mod_job_ngm_crest_bearer_per_pop_short:0 "\n§G+1§! £mod_job_ngm_crest_bearer_add£ per $VALUE$ £pop£"
@@ -1756,34 +1756,34 @@
 
  planet_ngm_senior_advisor:0 "Senior Staff"
  ngm_senior_advisor:0 "Senior Staff"
- ngm_senior_advisor_desc:0 "A high-ranking general staff member who provides special assistance to national leaders and generals."
+ ngm_senior_advisor_desc:0 "A seasoned military counselor offering invaluable insights to national leaders and generals."
  job_ngm_senior_advisor:0 "Senior Staff"
- job_ngm_senior_advisor_plural:0 "Occupational quota for Crest Bearer"
- job_ngm_senior_advisor_desc:0 "A high-ranking general staff member who provides special assistance to national leaders and generals."
+ job_ngm_senior_advisor_plural:0 "Senior Staff"
+ job_ngm_senior_advisor_desc:0 "A seasoned military counselor offering invaluable insights to national leaders and generals."
  mod_job_ngm_senior_advisor_add:0 "$job_ngm_senior_advisor$ Jobs"
  mod_job_ngm_senior_advisor_per_pop:0 "§G+1§! $job_ngm_senior_advisor$ Job per $VALUE$ Pops"
  mod_job_ngm_senior_advisor_per_pop_short:0 "\n§G+1§! £mod_job_ngm_senior_advisor_add£ per $VALUE$ £pop£"
  job_ngm_senior_advisor_effect_desc:0 "£job_ngm_senior_advisor£ $job_ngm_senior_advisor_plural$ increase £mod_country_naval_cap_add£ §Y$MOD_COUNTRY_NAVAL_CAP_ADD$§! and improve §YHonorism Ethics Attraction§! and spawn £defense_army£ §YDefense Armies§!"
  civic_tooltip_ngm_senior_advisor_effects:0 "£building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_ngm_senior_advisor£ §Y$job_ngm_senior_advisor_plural$§!"
 
- planet_ngm_heroes_of_society:0 "Heroes of Society"
- ngm_heroes_of_society:0 "Heroes of Society"
- ngm_heroes_of_society_desc:0 "A great man who rose from a lowly citizen to serve his country."
- job_ngm_heroes_of_society:0 "Heroes of Society"
- job_ngm_heroes_of_society_plural:0 "Heroes of Society"
- job_ngm_heroes_of_society_desc:0 "A great man who rose from a lowly citizen to serve his country."
+ planet_ngm_heroes_of_society:0 "Commonwealth Hero"
+ ngm_heroes_of_society:0 "Commonwealth Hero"
+ ngm_heroes_of_society_desc:0 " Individuals who rise from humble beginnings to perform great deeds for the betterment of the empire."
+ job_ngm_heroes_of_society:0 "Commonwealth Hero"
+ job_ngm_heroes_of_society_plural:0 "Commonwealth Hero"
+ job_ngm_heroes_of_society_desc:0 " Individuals who rise from humble beginnings to perform great deeds for the betterment of the empire."
  mod_job_ngm_heroes_of_society_add:0 "$job_ngm_heroes_of_society$ Jobs"
  mod_job_ngm_heroes_of_society_pop:0 "§G+1§! $job_ngm_heroes_of_society$ Job per $VALUE$ Pops"
  mod_job_ngm_heroes_of_society_pop_short:0 "\n§G+1§! £mod_job_ngm_heroes_of_society_add£ per $VALUE$ £pop£"
  job_ngm_heroes_of_society_effect_desc:0 "£job_ngm_heroes_of_society£ $job_ngm_heroes_of_society_plural$ produce £mod_planet_stability_add£ §Y$PLANET_STABILITY_TITLE$§! and £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!"
  civic_tooltip_ngm_heroes_of_society_effects:0 "£building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_ngm_heroes_of_society£ §Y$job_ngm_heroes_of_society_plural$§!"
 
- planet_ngm_superintendent_of_wilderness:0 "Nature Supervisor"
- ngm_superintendent_of_wilderness:0 "Nature Supervisor"
- ngm_superintendent_of_wilderness_desc:0 "High-ranking bureaucrats who manage and preserve the nation's nature."
- job_ngm_superintendent_of_wilderness:0 "Nature Supervisor"
- job_ngm_superintendent_of_wilderness_plural:0 "Nature Supervisor"
- job_ngm_superintendent_of_wilderness_desc:0 "High-ranking bureaucrats who manage and preserve the nation's nature."
+ planet_ngm_superintendent_of_wilderness:0 "Eco-Overseer"
+ ngm_superintendent_of_wilderness:0 "Eco-Overseer"
+ ngm_superintendent_of_wilderness_desc:0 "Bureaucrats tasked with the preservation and management of the empire's invaluable natural landscapes."
+ job_ngm_superintendent_of_wilderness:0 "Eco-Overseer"
+ job_ngm_superintendent_of_wilderness_plural:0 "Eco-Overseer"
+ job_ngm_superintendent_of_wilderness_desc:0 "Bureaucrats tasked with the preservation and management of the empire's invaluable natural landscapes."
  mod_job_ngm_superintendent_of_wilderness_add:0 "$job_ngm_superintendent_of_wilderness$ Jobs"
  mod_job_ngm_superintendent_of_wilderness_per_pop:0 "§G+1§! $job_ngm_superintendent_of_wilderness$ Job per $VALUE$ Pops"
  mod_job_ngm_superintendent_of_wilderness_per_pop_short:0 "\n§G+1§! £mod_job_ngm_superintendent_of_wilderness_add£ per $VALUE$ £pop£"
@@ -1792,10 +1792,10 @@
 
  planet_ngm_influencer:0 "Influencer"
  ngm_influencer:0 "Influencer"
- ngm_influencer_desc:0 "An influential person who uses a variety of content in modern society to influence the thoughts and actions of others."
+ ngm_influencer_desc:0 "A charismatic figure adept at shaping public opinion and guiding societal trends."
  job_ngm_influencer:0 "Influencer"
  job_ngm_influencer_plural:0 "Influencer"
- job_ngm_influencer_desc:0 "An influential person who uses a variety of content in modern society to influence the thoughts and actions of others."
+ job_ngm_influencer_desc:0 "A charismatic figure adept at shaping public opinion and guiding societal trends."
  mod_job_ngm_influencer_add:0 "$job_ngm_influencer$ Jobs"
  mod_job_ngm_influencer_per_pop:0 "§G+1§! $job_ngm_influencer$ Job per $VALUE$ Pops"
  mod_job_ngm_influencer_per_pop_short:0 "\n§G+1§! £mod_job_ngm_influencer_add£ per $VALUE$ £pop£"
@@ -1803,62 +1803,62 @@
 
  civic_tooltip_ngm_high_priest_effects:0 "£building£ §YCapital Buildings§! replace some £job_politician£ §Y$job_politician$§! Jobs with £job_high_priest£ §Y$job_high_priest_plural$§!"
 
- planet_ngm_tide_engineer:0 "Trendsetter"
- ngm_tide_engineer:0 "Trendsetter"
- ngm_tide_engineer_desc:0 "Engineers who understand fluid engineering and can use it to generate economic benefits."
- job_ngm_tide_engineer:0 "Trendsetter"
- job_ngm_tide_engineer_plural:0 "Trendsetter"
- job_ngm_tide_engineer_desc:0 "Engineers who understand fluid engineering and can use it to generate economic benefits."
+ planet_ngm_tide_engineer:0 "Tidal Dynamics Engineer"
+ ngm_tide_engineer:0 "Tidal Dynamics Engineer"
+ ngm_tide_engineer_desc:0 " Experts in fluid mechanics, converting the raw power of ocean tides into economic prosperity."
+ job_ngm_tide_engineer:0 "Tidal Dynamics Engineer"
+ job_ngm_tide_engineer_plural:0 "Tidal Dynamics Engineer"
+ job_ngm_tide_engineer_desc:0 " Experts in fluid mechanics, converting the raw power of ocean tides into economic prosperity."
  mod_job_ngm_tide_engineer_add:0 "Occupational Quota for Tidal Current Engineers"
  mod_job_ngm_tide_engineer_per_pop:0 "Occupational quota for $job_ngm_tide_engineer$ per $VALUE$ POP §G+1§!"
  mod_job_ngm_tide_engineer_per_pop_short:0 "\n$VALUE$ £pop£ per £mod_job_ngm_tide_engineer_add£ §G+1§!"
 
  planet_ngm_gardener:0 "Garden Manager"
  ngm_gardener:0 "Garden Manager"
- ngm_gardener_desc:0 "Professionals with cultural duties to manage aquariums and study ecosystems."
+ ngm_gardener_desc:0 "Cultural stewards responsible for the conservation of botanical life and ecosystems."
  job_ngm_gardener:0 "Garden Manager"
  job_ngm_gardener_plural:0 "Garden Manager"
- job_ngm_gardener_desc:0 "Professionals with cultural duties to manage aquariums and study ecosystems."
+ job_ngm_gardener_desc:0 "Cultural stewards responsible for the conservation of botanical life and ecosystems."
  mod_job_ngm_gardener_add:0 "Occupational quota for garden managers"
  mod_job_ngm_gardener_per_pop:0 "Occupational quota of $job_ngm_gardener$ per $VALUE$ POP §G+1§!"
  mod_job_ngm_gardener_per_pop_short:0 "\n$VALUE$ £pop£ per £mod_job_ngm_gardener_add£ §G+1§!"
 
- planet_ngm_aquaculture_technician:0 "Breeding Technician"
- ngm_aquaculture_technician:0 "Breeding Technician"
- ngm_aquaculture_technician_desc:0 "Technicians who artificially increase food and other goods to generate profit) (consumer goods can be changed in a decision)"
- job_ngm_aquaculture_technician:0 "Breeding Technician"
- job_ngm_aquaculture_technician_plural:0 "Breeding Technician"
- job_ngm_aquaculture_technician_desc:0 "Technicians who artificially increase food and other goods to generate profit) (consumer goods can be changed in a decision)"
+ planet_ngm_aquaculture_technician:0 "Bioproduction Engineer"
+ ngm_aquaculture_technician:0 "Bioproduction Engineer"
+ ngm_aquaculture_technician_desc:0 "Specialists in artificial breeding techniques aimed at maximizing food and other consumable goods. (Consumer goods can be changed in a decision)"
+ job_ngm_aquaculture_technician:0 "Bioproduction Engineer"
+ job_ngm_aquaculture_technician_plural:0 "Bioproduction Engineer"
+ job_ngm_aquaculture_technician_desc:0 "Specialists in artificial breeding techniques aimed at maximizing food and other consumable goods. (Consumer goods can be changed in a decision)"
  mod_job_ngm_aquaculture_technician_add:0 "Occupational quota for Breeding Technician"
  mod_job_ngm_aquaculture_technician_per_pop:0 "Occupational quota for $job_ngm_aquaculture_technician$ per $VALUE$ POP §G+1§!"
  mod_job_ngm_aquaculture_technician_per_pop_short:0 "\n$VALUE$ £pop£ per £mod_job_ngm_aquaculture_technician_add£ §G+1§!"
 
  planet_ngm_executive_cast:0 "Executive Cast"
- ngm_executive_cast:0 "Executive Caste"
- ngm_executive_cast_desc:0 "Professional staff to satisfy and secure a variety of customers, mainly upper class."
+ ngm_executive_cast:0 "Executive Cast"
+ ngm_executive_cast_desc:0 "Highly trained professionals focused on satisfying and securing a range of clientele, primarily among the upper echelons."
  job_ngm_executive_cast:0 "Executive Cast"
  job_ngm_executive_cast_plural:0 "Executive Cast"
- job_ngm_executive_cast_desc:0 "Professional staff to satisfy and secure a variety of customers, mainly upper class."
+ job_ngm_executive_cast_desc:0 "Highly trained professionals focused on satisfying and securing a range of clientele, primarily among the upper echelons."
  mod_job_ngm_executive_cast_add:0 "Occupational quota for Executive Cast"
  mod_job_ngm_executive_cast_per_pop:0 "Occupational quota for $job_ngm_executive_cast$ per $VALUE$ POP §G+1§!"
  mod_job_ngm_executive_cast_per_pop_short:0 "\n$VALUE$ £pop£ per £mod_job_ngm_executive_cast_add£ §G+1§!"
 
  planet_ngm_cast:0 "Cast"
  ngm_cast:0 "Cast"
- ngm_cast_desc:0 "Employees who maintain the theme parks and ensure the safety of guests and prevent outbursts."
+ ngm_cast_desc:0 "Staff responsible for the day-to-day operations of theme parks, ensuring both safety and enjoyment for all guests."
  job_ngm_cast:0 "Cast"
  job_ngm_cast_plural:0 "Cast"
- job_ngm_cast_desc:0 "Employees who maintain the theme parks and ensure the safety of guests and prevent outbursts."
+ job_ngm_cast_desc:0 "Staff responsible for the day-to-day operations of theme parks, ensuring both safety and enjoyment for all guests."
  mod_job_ngm_cast_add:0 "Occupational quota for Cast"
  mod_job_ngm_cast_per_pop:0 "Occupational quota of $job_ngm_cast$ per $VALUE$ POP §G+1§!"
  mod_job_ngm_cast_per_pop_short:0 "\n$VALUE$ £pop£ per £mod_job_ngm_cast_add£ §G+1§!"
 
  planet_ngm_admiral:0 "Captain"
  ngm_admiral:0 "Captain"
- ngm_admiral_desc:0 "Military technology specialists who command and operate naval fleets on the planet."
+ ngm_admiral_desc:0 "Commanders skilled in naval warfare technology, overseeing planetary fleets and defenses."
  job_ngm_admiral:0 "Captain"
  job_ngm_admiral_plural:0 "Captain"
- job_ngm_admiral_desc:0 "Military technology specialists who command and operate naval fleets on the planet."
+ job_ngm_admiral_desc:0 "Commanders skilled in naval warfare technology, overseeing planetary fleets and defenses."
  mod_job_ngm_admiral_add:0 "Occupational quota for Captain"
  mod_job_ngm_admiral_per_pop:0 "Occupational quota for $job_ngm_admiral_plural$ per $VALUE$ POP §G+1§!"
  mod_job_ngm_admiral_per_pop_short:0 "\n$VALUE$ £pop£ per £mod_job_ngm_admiral_add£ §G+1§!"
@@ -1867,8 +1867,8 @@
 #####    リーダー特性    ######
 ##############################
 
- leader_trait_ngm_governor_government_guardianship:0 "Government Guardianship"
- leader_trait_ngm_governor_government_guardianship_desc:0 "This leader has been given strong support by the government."
+ leader_trait_ngm_governor_government_guardianship:0 "Imperial Stewardship"
+ leader_trait_ngm_governor_government_guardianship_desc:0 "Endowed with the full confidence and backing of the central authority, this leader wields significant influence in executing their duties."
  leader_trait_ngm_scientist_government_guardianship:0 "$leader_trait_ngm_governor_government_guardianship$"
  leader_trait_ngm_scientist_government_guardianship_desc:0 "$leader_trait_ngm_governor_government_guardianship_desc$"
  leader_trait_ngm_admiral_government_guardianship:0 "$leader_trait_ngm_governor_government_guardianship$"
@@ -1877,92 +1877,92 @@
  leader_trait_ngm_general_government_guardianship_desc:0 "$leader_trait_ngm_governor_government_guardianship_desc$"
 
  leader_trait_ngm_economist:0 "Economist"
- leader_trait_ngm_economist_desc:0 "This Governor is an expert in economic theory."
+ leader_trait_ngm_economist_desc:0 "A master of fiscal strategy and economic paradigms, this Governor is adept at maximizing resource efficiency and prosperity."
 
- leader_trait_ngm_coordinator:0 "Adjuster"
- leader_trait_ngm_coordinator_desc:0 "This Governor got where he is today by aligning political interests."
+ leader_trait_ngm_coordinator:0 "Political Harmonizer"
+ leader_trait_ngm_coordinator_desc:0 "A shrewd negotiator who has risen through the ranks by adeptly aligning various political interests in the empire."
 
- leader_trait_ngm_governor_upstream:0 "Upper Class"
- leader_trait_ngm_governor_upstream_desc:0 "This viceroy is born into the upper echelons of society."
+ leader_trait_ngm_governor_upstream:0 "Aristocratic Lineage"
+ leader_trait_ngm_governor_upstream_desc:0 "Born into the cradle of high society, this Governor carries the weight of generations of privilege and expectation."
 
  leader_trait_ngm_governor_veteran:0 "Veteran"
- leader_trait_ngm_governor_veteran_desc:0 "This leader rose to this position by his own ability."
+ leader_trait_ngm_governor_veteran_desc:0 "A leader whose mettle has been tested, rising to their position through sheer capability and willpower."
 
  leader_trait_ngm_scientocrats:0 "Scientocrats"
- leader_trait_ngm_scientocrats_desc:0 "This scientist is from the bureaucracy."
+ leader_trait_ngm_scientocrats_desc:0 "A scientist whose skills were honed in the demanding environment of imperial bureaucracy."
 
  leader_trait_ngm_army_brat:0 "Military Background"
- leader_trait_ngm_army_brat_desc:0 "This scientist has a military background."
+ leader_trait_ngm_army_brat_desc:0 "A scientist with a keen military mind, informed by a background in strategic warfare."
 
- leader_trait_ngm_intuition:0 "Intuition"
- leader_trait_ngm_intuition_desc:0 "This scientist has risen to this level through his own senses and skill."
+ leader_trait_ngm_intuition:0 "Intuitive Genius"
+ leader_trait_ngm_intuition_desc:0 "A scientist whose uncanny instincts and innovative thinking have propelled them to the forefront of their field."
 
  leader_trait_ngm_flexibility:0 "Flexibility"
- leader_trait_ngm_flexibility_desc:0 "This scientist understands the current situation and produces results according to the actual situation."
+ leader_trait_ngm_flexibility_desc:0 "A leader well-versed in the art of adapting to the ever-changing conditions of reality to produce optimal results."
 
- leader_trait_ngm_scientist_upstream:0 "Upper Class"
- leader_trait_ngm_scientist_upstream_desc:0 "This Scientist is born into the upper echelons of society."
+ leader_trait_ngm_scientist_upstream:0 "Aristocratic Lineage"
+ leader_trait_ngm_scientist_upstream_desc:0 "Born into the cradle of high society, this Scientist carries the weight of generations of privilege and expectation."
 
  leader_trait_ngm_scientist_veteran:0 "Veteran"
- leader_trait_ngm_scientist_veteran_desc:0 "This leader rose to this position by his own ability."
+ leader_trait_ngm_scientist_veteran_desc:0 "A leader whose mettle has been tested, rising to their position through sheer capability and willpower."
 
  leader_trait_ngm_admiral_military_bureaucracy:0 "Bureaucrats"
- leader_trait_ngm_admiral_military_bureaucracy_desc:0 "This admiral comes from a bureaucratic background."
+ leader_trait_ngm_admiral_military_bureaucracy_desc:0 "An Admiral whose skills were honed in the demanding environment of imperial bureaucracy."
 
- leader_trait_ngm_admiral_from_the_general_staff:0 "General Staff"
- leader_trait_ngm_admiral_from_the_general_staff_desc:0 "This admiral emerged as a capable chief of staff."
+ leader_trait_ngm_admiral_from_the_general_staff:0 "Strategic Command Prodigy"
+ leader_trait_ngm_admiral_from_the_general_staff_desc:0 "Rising from the ranks of the general staff, this Admiral demonstrates an unparalleled aptitude for high-level strategy."
 
  leader_trait_ngm_admiral_flexibility:0 "Flexibility"
- leader_trait_ngm_admiral_flexibility_desc:0 "This Admiral will assess the current situation and give orders according to the actual situation."
+ leader_trait_ngm_admiral_flexibility_desc:0 "A leader well-versed in the art of adapting to the ever-changing conditions of reality to produce optimal results."
 
  leader_trait_ngm_admiral_decisive:0 "Decisive"
- leader_trait_ngm_admiral_decisive_desc:0 "This Admiral is all about carrying out the decisions he makes."
+ leader_trait_ngm_admiral_decisive_desc:0 "An Admiral known for swift decision-making and unwavering commitment to seeing those decisions through."
 
- leader_trait_ngm_admiral_staff_team:0 "Staff Team"
- leader_trait_ngm_admiral_staff_team_desc:0 "The Admiral is assisted by an extremely competent team of staff officers, including his chief of staff and adjutant general."
+ leader_trait_ngm_admiral_staff_team:0 "Elite Command Staff"
+ leader_trait_ngm_admiral_staff_team_desc:0 "Supported by a cadre of highly competent officers, this Admiral's decision-making is nothing short of exemplary."
 
- leader_trait_ngm_admiral_upstream:0 "Upper Class"
- leader_trait_ngm_admiral_upstream_desc:0 "This Admiral is born into the upper echelons of society."
+ leader_trait_ngm_admiral_upstream:0 "Aristocratic Lineage"
+ leader_trait_ngm_admiral_upstream_desc:0 "Born into the cradle of high society, this Admiral carries the weight of generations of privilege and expectation."
 
  leader_trait_ngm_admiral_veteran:0 "Veteran"
- leader_trait_ngm_admiral_veteran_desc:0 "This leader rose to this position by his own ability."
+ leader_trait_ngm_admiral_veteran_desc:0 "A leader whose mettle has been tested, rising to their position through sheer capability and willpower."
 
  leader_trait_ngm_general_military_bureaucracy:0 "Bureaucrats"
- leader_trait_ngm_general_military_bureaucracy_desc:0 "This general is from the bureaucracy."
+ leader_trait_ngm_general_military_bureaucracy_desc:0 "A General whose skills were honed in the demanding environment of imperial bureaucracy."
 
- leader_trait_ngm_general_from_the_general_staff:0 "General Staff"
- leader_trait_ngm_general_from_the_general_staff_desc:0 "This general emerged as a capable general staff."
+ leader_trait_ngm_general_from_the_general_staff:0 "Strategic Command Prodigy"
+ leader_trait_ngm_general_from_the_general_staff_desc:0 "Rising from the ranks of the general staff, this General demonstrates an unparalleled aptitude for high-level strategy."
 
  leader_trait_ngm_general_flexibility:0 "Flexibility"
- leader_trait_ngm_general_flexibility_desc:0 "This general assesses the current situation and gives orders according to the actual situation."
+ leader_trait_ngm_general_flexibility_desc:0 "A leader well-versed in the art of adapting to the ever-changing conditions of reality to produce optimal results."
 
  leader_trait_ngm_general_decisive:0 "Decisive"
- leader_trait_ngm_general_decisive_desc:0 "This general is concerned with carrying out the decisions he has made."
+ leader_trait_ngm_general_decisive_desc:0 "A General known for swift decision-making and unwavering commitment to seeing those decisions through."
 
- leader_trait_ngm_general_staff_team:0 "Staff Team"
- leader_trait_ngm_general_staff_team_desc:0 "The staff team that assists this general, including his general staff and deputy, is extremely capable."
+ leader_trait_ngm_general_staff_team:0 "Elite Command Staff"
+ leader_trait_ngm_general_staff_team_desc:0 "Supported by a cadre of highly competent officers, this General's decision-making is nothing short of exemplary."
 
- leader_trait_ngm_general_upstream:0 "Upper Class"
- leader_trait_ngm_general_upstream_desc:0 "This General is born into the upper echelons of society."
+ leader_trait_ngm_general_upstream:0 "Aristocratic Lineage"
+ leader_trait_ngm_general_upstream_desc:0 "Born into the cradle of high society, this General carries the weight of generations of privilege and expectation."
 
  leader_trait_ngm_general_veteran:0 "Veteran"
- leader_trait_ngm_general_veteran_desc:0 "This leader rose to this position by his own ability."
+ leader_trait_ngm_general_veteran_desc:0 "A leader whose mettle has been tested, rising to their position through sheer capability and willpower."
 
 ##########################
 #####    国家特性    ######
 ##########################
 
- civic_ngm_war_prosperity_not_war_modifier:0 "Non Wartime Economy"
- civic_ngm_war_prosperity_not_war_modifier_desc:0 "Due to the lazy peace, the organic combination of resources and industries has been lost."
- civic_ngm_war_prosperity_not_war_country_modifier:0 "Non Wartime Economy"
- civic_ngm_war_prosperity_not_war_country_modifier_desc:0 "Due to the lazy peace, the organic combination of resources and industries has been lost."
+ civic_ngm_war_prosperity_not_war_modifier:0 "Era of Stagnant Peace"
+ civic_ngm_war_prosperity_not_war_modifier_desc:0 "Extended periods of peace have led to a lack of innovation and synergy between various sectors of the economy."
+ civic_ngm_war_prosperity_not_war_country_modifier:0 "Era of Stagnant Peace"
+ civic_ngm_war_prosperity_not_war_country_modifier_desc:0 "Extended periods of peace have led to a lack of innovation and synergy between various sectors of the economy."
  civic_ngm_war_prosperity_is_war_modifier:0 "Wartime Economy"
- civic_ngm_war_prosperity_is_war_modifier_desc:0 "The economy is booming organically due to the fight to bring tension to the nation."
+ civic_ngm_war_prosperity_is_war_modifier_desc:0 "A state of perpetual conflict fuels economic growth, as industries and resources are organically aligned to sustain the war effort."
  civic_ngm_war_prosperity_is_war_country_modifier:0 "Wartime Economy"
- civic_ngm_war_prosperity_is_war_country_modifier_desc:0 "The economy is booming organically due to the fight to bring tension to the nation."
+ civic_ngm_war_prosperity_is_war_country_modifier_desc:0 "A state of perpetual conflict fuels economic growth, as industries and resources are organically aligned to sustain the war effort."
 
- ngm_with_honor_1_modifier:0 "Death is nothing, but to live defeated and inglorious is to die daily."
- ngm_with_honor_2_modifier:0 "I was humiliated."
+ ngm_with_honor_1_modifier:0 "Living a life of defeat is a constant death. We shall uphold our honor, or perish trying."
+ ngm_with_honor_2_modifier:0 "We have faced public humiliation; our honor tarnished. The road to redemption will be long and fraught."
 
  tr_ngm_sniper_debuff_1:0 "Sniping"
  tr_ngm_sniper_debuff_2:0 "$tr_ngm_sniper_debuff_1$"
@@ -2104,7 +2104,7 @@
  origin_ngm_phenix_12_modifier_desc:0 "We shall rise again!"
 
  ngm_r_imperial_chronicle_modifier:0 "Legacy of the Revolution"
- ngm_r_imperial_chronicle_modifier_desc:0 "The legacy of this revolution will always continue to lead society towards innovativism."
+ ngm_r_imperial_chronicle_modifier_desc:0 "The ideals that fueled our revolution continue to inspire and drive forward societal innovation."
 
  origin_ngm_crime_modifier_1:0 "Paradise of Crime (Affected)"
  origin_ngm_crime_modifier_2:0 "Paradise of Crime (Affected)"
@@ -2170,26 +2170,26 @@
 #####    惑星特性    ######
 ##########################
 
- civic_ngm_prosperity_1_advocate_modifier:0 "The duration of peace is five years."
- civic_ngm_prosperity_1_advocate_modifier_desc:0 "This country is at peace, and peace brings wealth."
- civic_ngm_prosperity_2_advocate_modifier:0 "The duration of peace is 10 years."
- civic_ngm_prosperity_2_advocate_modifier_desc:0 "This country is at peace, and the benefits of peace will grow."
- civic_ngm_prosperity_3_advocate_modifier:0 "The duration of peace is 15 years."
- civic_ngm_prosperity_3_advocate_modifier_desc:0 "This country is at peace, and the prosperous peace will continue."
- civic_ngm_prosperity_4_advocate_modifier:0 "The period of peace is 20 years."
- civic_ngm_prosperity_4_advocate_modifier_desc:0 "This country is at peace, consistent with its efforts for peace and for gain."
- civic_ngm_prosperity_5_advocate_modifier:0 "The period of peace is 25 years."
- civic_ngm_prosperity_5_advocate_modifier_desc:0 "This country is at peace, and its tranquility is equal to ten thousand gold."
- civic_ngm_prosperity_6_advocate_modifier:0 "The duration of the peace is 30 years."
- civic_ngm_prosperity_6_advocate_modifier_desc:0 "This country is at peace, and it has been able to find what it needs more than a blade."
- civic_ngm_prosperity_7_advocate_modifier:0 "The period of peace is 35 years."
- civic_ngm_prosperity_7_advocate_modifier_desc:0 "This country is at peace, and that peace is backed by wealth."
- civic_ngm_prosperity_8_advocate_modifier:0 "The period of peace is 40 years."
- civic_ngm_prosperity_8_advocate_modifier_desc:0 "This country is at peace, and the time spent in war is spent gaining wealth."
- civic_ngm_prosperity_9_advocate_modifier:0 "The period of peace is 45 years."
- civic_ngm_prosperity_9_advocate_modifier_desc:0 "This country is at peace, and golden peace brings golden wealth."
- civic_ngm_prosperity_10_advocate_modifier:0 "The duration of peace is 50 years."
- civic_ngm_prosperity_10_advocate_modifier_desc:0 "This country is at peace, and everlasting peace brings everlasting prosperity."
+ civic_ngm_prosperity_1_advocate_modifier:0 "Dawn of Tranquility"
+ civic_ngm_prosperity_1_advocate_modifier_desc:0 "With five years of uninterrupted peace, our nation has started to reap the economic rewards of stability."
+ civic_ngm_prosperity_2_advocate_modifier:0 "A Decade of Calm"
+ civic_ngm_prosperity_2_advocate_modifier_desc:0 "A decade without conflict has allowed our society to focus on internal growth, further amplifying the benefits of peace."
+ civic_ngm_prosperity_3_advocate_modifier:0 "Era of Flourishing"
+ civic_ngm_prosperity_3_advocate_modifier_desc:0 "Fifteen years of peace have set the stage for continued prosperity, as our society builds upon the tranquil foundation."
+ civic_ngm_prosperity_4_advocate_modifier:0 "Generational Harmony"
+ civic_ngm_prosperity_4_advocate_modifier_desc:0 "Two decades of peace have been consistent with our diplomatic efforts, yielding significant gains for our nation."
+ civic_ngm_prosperity_5_advocate_modifier:0 "Silver Age of Tranquility"
+ civic_ngm_prosperity_5_advocate_modifier_desc:0 "A quarter-century of peace has brought immeasurable wealth, making our tranquility as valuable as ten thousand gold."
+ civic_ngm_prosperity_6_advocate_modifier:0 "Three Decades of Contentment"
+ civic_ngm_prosperity_6_advocate_modifier_desc:0 "The peace of 30 years has proven that our nation can find more happiness and utility in stability than in the blade of conquest."
+ civic_ngm_prosperity_7_advocate_modifier:0 "Long-Term Stability"
+ civic_ngm_prosperity_7_advocate_modifier_desc:0 "After 35 years, our enduring peace is fortified by a robust economy and a satisfied populace."
+ civic_ngm_prosperity_8_advocate_modifier:0 "Era of Golden Peace"
+ civic_ngm_prosperity_8_advocate_modifier_desc:0 "Forty years of peace have allowed us to invest the resources usually spent on warfare into further enriching our society."
+ civic_ngm_prosperity_9_advocate_modifier:0 "The Onset of Eternal Calm"
+ civic_ngm_prosperity_9_advocate_modifier_desc:0 "Nearing half a century of peace, our society basks in a golden era where wealth and tranquility are mutually reinforcing."
+ civic_ngm_prosperity_10_advocate_modifier:0 "Golden Jubilee of Peace"
+ civic_ngm_prosperity_10_advocate_modifier_desc:0 "Fifty years of uninterrupted peace have ushered in an era of unprecedented prosperity, laying the foundation for everlasting harmony."
 
  civic_ngm_money_penalty_1_modifier:0 "Monetary substitution of punishment"
  civic_ngm_money_penalty_1_modifier_desc:0 ""
@@ -2293,10 +2293,10 @@
  civic_ngm_money_penalty_50_modifier_desc:0 ""
 
  ngm_determination_to_rebuild:0 "Determination to Rebuild the Nation"
- ngm_determination_to_rebuild_desc:0 "Once in decline, our country, which has been around since time immemorial, has some of the greatest capabilities in the world, and those capabilities should be spent on rebuilding our nation."
+ ngm_determination_to_rebuild_desc:0 "Though steeped in ancient heritage and once in decline, our nation possesses tremendous capabilities. These resources are now being channeled into a monumental effort to rebuild and revitalize our homeland."
 
  ngm_space_time_continuum:0 "Time Transcendence Machine"
- ngm_space_time_continuum_desc:0 "It is a machine that can transcend time and is one with the planet. The principles are lost and cannot be recreated, but from time to time, exiles flow into this era."
+ ngm_space_time_continuum_desc:0 "A relic from an era long past, this machine has the power to transcend time and space. Although its foundational principles are lost, it occasionally allows exiles from other times to manifest in our present."
 
  ngm_space_time_continuum_ai:0 "Time Transcendence Machine AI"
  ngm_space_time_continuum_ai:0 "Buffs for AI in Escape to the Past"
@@ -2475,362 +2475,362 @@
  trait_ngm_elder_politics_desc:0 "§LThe government is dominated by older officials, and many decisions are made by seasoned government officials. However, this tends to discourage newcomers from joining the government and reduces the receptivity to new ideas.§!"
 
  trait_ngm_knight:0 "Chivalry"
- trait_ngm_knight_desc:0 "This race has a high integrity with a strong belief that they should help the weak and fulfill social justice."
+ trait_ngm_knight_desc:0 "Upholding a noble tradition of integrity, this race is dedicated to aiding the vulnerable and upholding social justice."
 
- trait_ngm_gentle:0 "Gentleman"
- trait_ngm_gentle_desc:0 "This race always tends to be polite and soft-spoken."
+ trait_ngm_gentle:0 "Culture of Courtesy"
+ trait_ngm_gentle_desc:0 "Members of this race exude politeness and are consistently measured in their speech and actions."
 
- trait_ngm_rascal:0 "Rascal"
- trait_ngm_rascal_desc:0 "This species is selfish and tends to put their own interests first."
+ trait_ngm_rascal:0 "Self-Centric Behavior"
+ trait_ngm_rascal_desc:0 "This species prioritizes their own needs and interests, often at the expense of collective well-being."
 
- trait_ngm_totemowarui:0 "Consummate Villain"
- trait_ngm_totemowarui_desc:0 "This species has a penchant for maximizing self-interest and does not care how it is done."
+ trait_ngm_totemowarui:0 "Unscrupulous Opportunists"
+ trait_ngm_totemowarui_desc:0 "This race possesses an uncanny ability to maximize self-gain, paying little regard to ethical considerations."
 
  trait_ngm_healing:0 "Healing Gene"
- trait_ngm_healing_desc:0 "The genes of this race are special, with a high capacity for self-replication, and some injuries and illnesses heal quickly."
+ trait_ngm_healing_desc:0 "Endowed with a unique genetic makeup, this race possesses remarkable healing abilities, allowing for quick recovery from injuries and illnesses."
 
- trait_ngm_unhealing:0 "Irreparable"
- trait_ngm_unhealing_desc:0 "The genes of this race are unique, with a low capacity for self-replication, and a slight injury or illness can be fatal."
+ trait_ngm_unhealing:0 "Fragile Constitution"
+ trait_ngm_unhealing_desc:0 "This race's genetic structure hinders self-repair, making even minor injuries or ailments potentially fatal."
 
- trait_ngm_assimilation:0 "Physical Assimilation"
- trait_ngm_assimilation_desc:0 "This race has a high level of physical assimilation and is somewhat adaptable to any environment. However, acclimatization takes time, and they are often hesitant to move to new environments."
+ trait_ngm_assimilation:0 "Adaptive Physiology"
+ trait_ngm_assimilation_desc:0 "This species is highly adaptable to diverse environments, although acclimatization takes time and often makes them hesitant to migrate."
 
- trait_ngm_unadaptation:0 "Maladjustment"
- trait_ngm_unadaptation_desc:0 "This race has a low physical assimilation function and tends to prefer to move to environments that are more suitable for them."
+ trait_ngm_unadaptation:0 "Environmental Incompatibility"
+ trait_ngm_unadaptation_desc:0 "Due to limited adaptability, members of this race prefer relocating to environments that best suit their physiological needs."
 
- trait_ngm_division:0 "Vivisection"
- trait_ngm_division_desc:0 "This race is capable of asexual reproduction and can divide their bodies."
+ trait_ngm_division:0 "Asexual Reproduction"
+ trait_ngm_division_desc:0 "Capable of dividing their bodies, this race can reproduce asexually."
 
- trait_ngm_MPMD:0 "Excessive Birth "
- trait_ngm_MPMD_desc:0 "This race tends to be prolific, but many of their children are immature and have difficulty surviving, and when they do grow up, they tend to be frail."
+ trait_ngm_MPMD:0 "Prolific but Fragile"
+ trait_ngm_MPMD_desc:0 "This species reproduces in large numbers, but many offspring are frail and struggle to survive."
 
- trait_ngm_LMLD:0 "Preventative Breeding"
- trait_ngm_LMLD_desc:0 "Because of the longevity of this species, they tend to refrain from breeding to prevent over-expansion of their society."
+ trait_ngm_LMLD:0 "Controlled Procreation"
+ trait_ngm_LMLD_desc:0 "Due to their long lifespans, members of this race intentionally limit reproduction to prevent societal overpopulation."
 
- trait_ngm_abn_growth:0 "Abnormal Development"
- trait_ngm_abn_growth_desc:0 "This race has a strong tendency to develop physical functions due to the effects of radiation and artificial genetic manipulation. However, their intellect tends to be primitive, so they are not suited for research or creativity, and are more interested in protecting their land."
+ trait_ngm_abn_growth:0 "Mutative Physiology"
+ trait_ngm_abn_growth_desc:0 "Influenced by radiation and genetic manipulation, this race excels in physical development but lacks intellectual capabilities. They prioritize territorial protection over scientific advancement."
 
  trait_ngm_Lost_species:0 "Lost Seed"
- trait_ngm_Lost_species_desc:0 "This race has been enhanced by lost technology. As a result, their intellect has been greatly enhanced, but their physical abilities are generally low."
+ trait_ngm_Lost_species_desc:0 "Augmented by ancient technology, this race possesses extraordinary intellectual faculties but lags in physical prowess."
 
- trait_ngm_turf:0 "Sense of Territoriality"
- trait_ngm_turf_desc:0 "This species values its own range and shows an obsession with maintaining it."
+ trait_ngm_turf:0 "Territorial Instinct"
+ trait_ngm_turf_desc:0 "This species holds a profound attachment to their territory, zealously guarding it from intruders."
 
- trait_ngm_Movement:0 "Mobile Society"
- trait_ngm_Movement_desc:0 "This race likes to relocate and migrate, and can take any action to do so."
+ trait_ngm_Movement:0 "Nomadic Inclinations"
+ trait_ngm_Movement_desc:0 "This race is inherently migratory, willing to undertake extreme measures to relocate."
 
  trait_ngm_empathy:0 "Empathy"
- trait_ngm_empathy_desc:0 "This species has a strong sense of compassion for others."
+ trait_ngm_empathy_desc:0 "This species possesses innate empathy, making them sensitive to the emotional states of others."
 
- trait_ngm_resentment:0 "Antipathy"
- trait_ngm_resentment_desc:0 "This race has always been antagonistic towards others."
+ trait_ngm_resentment:0 "Inherent Hostility"
+ trait_ngm_resentment_desc:0 "This race harbors a natural antagonism towards others, making diplomatic relations challenging."
 
  trait_ngm_magnetism:0 "Magnetism"
- trait_ngm_magnetism_desc:0 "This race is faintly magnetic, contributing to the development of physical technology."
+ trait_ngm_magnetism_desc:0 "This species exhibits subtle magnetic properties, contributing to their technological advancements."
 
  trait_ngm_radioactive:0 "Radioactive Blood"
- trait_ngm_radioactive_desc:0 "The blood of this species contains radioactive materials."
+ trait_ngm_radioactive_desc:0 "The blood of this species contains radioactive elements, making them hazardous to certain forms of life."
 
  trait_ngm_jack_o_lantern:0 "Jack-o'-Lantern"
- trait_ngm_jack_o_lantern_desc:0 "This race is capable of manipulating fire at will."
+ trait_ngm_jack_o_lantern_desc:0 "Members of this race can manipulate fire at will, granting them a unique form of self-defense and utility."
 
  trait_ngm_optical_adapt:0 "Optical Adaptation"
- trait_ngm_optical_adapt_desc:0 "This race can hide by optically blending into their surroundings."
+ trait_ngm_optical_adapt_desc:0 "This species can blend into their surroundings through optical adaptation, providing them with stealth advantages."
 
- trait_ngm_hardness:0 "Hard Organ"
- trait_ngm_hardness_desc:0 "This race is capable of hardening parts of their bodies."
+ trait_ngm_hardness:0 "Organic Armor"
+ trait_ngm_hardness_desc:0 "Capable of hardening specific body parts, this species has a natural form of physical defense."
 
- trait_ngm_neural_block:0 "Neural Blockade"
- trait_ngm_neural_block_desc:0 "This race can cause a temporary blockage of pain nerves and avoid pain."
+ trait_ngm_neural_block:0 "Pain Suppression"
+ trait_ngm_neural_block_desc:0 "This race can temporarily block neural pathways responsible for pain, allowing them to endure extreme conditions."
 
- trait_ngm_flying:0 "Flight Organ"
- trait_ngm_flying_desc:0 "This race is capable of flight."
+ trait_ngm_flying:0 "Aerial Adaptation"
+ trait_ngm_flying_desc:0 "Equipped with organs for flight, this species can navigate through three-dimensional spaces with ease."
 
- trait_ngm_swift_horse:0 "Swift Horse"
- trait_ngm_swift_horse_desc:0 "This race is capable of running at terrifying speeds."
+ trait_ngm_swift_horse:0 "Accelerated Locomotion"
+ trait_ngm_swift_horse_desc:0 "This species can achieve terrifying speeds, making them effective hunters and difficult prey."
 
  trait_ngm_clairvoyance:0 "Clairvoyance"
- trait_ngm_clairvoyance_desc:0 "This race is able to see more than normal vision."
+ trait_ngm_clairvoyance_desc:0 "This race has sensory capabilities beyond normal limits, granting them exceptional environmental awareness."
 
  trait_ngm_sixth_sense:0 "Sixth Sense"
- trait_ngm_sixth_sense_desc:0 "This race is able to temporarily know the future in a form of precognition."
+ trait_ngm_sixth_sense_desc:0 "This species can experience brief flashes of future events, providing them with a unique form of foresight."
 
- trait_ngm_sluggish:0 "Dull Sensation"
- trait_ngm_sluggish_desc:0 "This race has five senses that are dull, and it takes time for them to get to know their surroundings."
+ trait_ngm_sluggish:0 "Sensory Impairment"
+ trait_ngm_sluggish_desc:0 "This race experiences dulled senses, making it difficult for them to quickly adapt to new environments."
 
- trait_ngm_degeneration:0 "Degenerate Eye"
- trait_ngm_degeneration_desc:0 "This species has degenerated eyes and has limited ways to explore its surroundings."
+ trait_ngm_degeneration:0 "Limited Vision"
+ trait_ngm_degeneration_desc:0 "This species has degenerated eyes, severely restricting their ability to explore and interact with their surroundings."
 
- trait_ngm_confusion:0 "Confusion"
- trait_ngm_confusion_desc:0 "This race becomes restless and confused at the slightest hint of trouble."
+ trait_ngm_confusion:0 "Anxiety-Induced Disarray"
+ trait_ngm_confusion_desc:0 "Easily unsettled, this race can become disoriented and ineffective when confronted with unexpected challenges."
 
- trait_ngm_derangement:0 "Derangement"
- trait_ngm_derangement_desc:0 "This race is full of chaos and has lost its composure."
+ trait_ngm_derangement:0 "Chaotic Disposition"
+ trait_ngm_derangement_desc:0 "This race is prone to erratic behavior and lacks emotional stability, making them unpredictable allies or foes."
 
  trait_ngm_melancholy:0 "Melancholy"
- trait_ngm_melancholy_desc:0 "This race lives in a constant state of melancholy and depression."
+ trait_ngm_melancholy_desc:0 "This species lives in a perpetual state of melancholy, affecting their social interactions and productivity."
 
- trait_ngm_enervated:0 "Enervated"
- trait_ngm_enervated_desc:0 "This race is physically weak and unable to move with enthusiasm."
+ trait_ngm_enervated:0 "Chronic Fatigue"
+ trait_ngm_enervated_desc:0 "Physically weak and lacking in energy, this race struggles with tasks that require prolonged physical exertion."
 
- trait_ngm_death_heart:0 "Death of the Heart"
- trait_ngm_death_heart_desc:0 "This race has lost its mind and has no enthusiasm."
+ trait_ngm_death_heart:0 "Emotional Numbness"
+ trait_ngm_death_heart_desc:0 "This species has lost its emotional core, making them apathetic and difficult to motivate."
 
  trait_ngm_huge:0 "Huge"
- trait_ngm_huge_desc:0 "The body of this species is huge even by galactic standards."
+ trait_ngm_huge_desc:0 "This species is extraordinarily large, even by galactic standards, giving them unique advantages and challenges."
 
  trait_ngm_big:0 "Large"
- trait_ngm_big_desc:0 "The body of this species is large even by galactic standards."
+ trait_ngm_big_desc:0 "This species is notably large, which impacts their interactions with environments and other races."
 
  trait_ngm_small:0 "Small"
- trait_ngm_small_desc:0 "The body of this species is small even by galactic standards."
+ trait_ngm_small_desc:0 "This species is smaller than most, allowing them to navigate spaces that are inaccessible to others but also presenting unique challenges."
 
- trait_ngm_minimum:0 "Minimum"
- trait_ngm_minimum_desc:0 "The body of this species is miniscule even by galactic standards."
+ trait_ngm_minimum:0 "Microscopic"
+ trait_ngm_minimum_desc:0 "This species is so small that they are often overlooked, yet their size allows for extraordinary adaptability."
 
- trait_ngm_hunting:0 "Hunting Culture"
- trait_ngm_hunting_desc:0 "The society of this species secures its food by hunting."
+ trait_ngm_hunting:0 "Hunter Culture"
+ trait_ngm_hunting_desc:0 "This society relies on hunting for sustenance, shaping their technologies and social structures around this need."
 
- trait_ngm_collecting:0 "Extracting Culture"
- trait_ngm_collecting_desc:0 "The society of this species secures its food through extraction."
+ trait_ngm_collecting:0 "Gatherer Culture"
+ trait_ngm_collecting_desc:0 "This species primarily gathers resources through extraction methods, such as mining or harvesting."
 
  trait_ngm_h_g:0 "Hunting and Gathering Culture"
- trait_ngm_h_g_desc:0 "The society of this species secures its food by hunting and gathering."
+ trait_ngm_h_g_desc:0 "This society sustains itself through a combination of hunting and gathering, making them highly adaptable but less specialized."
 
- trait_ngm_agriculture:0 "Agricultural Culture"
- trait_ngm_agriculture_desc:0 "The society of this tribe is based on agriculture."
+ trait_ngm_agriculture:0 "Agrarian Society"
+ trait_ngm_agriculture_desc:0 "This society is rooted in agriculture, shaping their technological advancements and social hierarchy accordingly."
 
  trait_ngm_elder_verbal:0 "Complex Languages"
- trait_ngm_elder_verbal_desc:0 "The vocabulary and grammar of this race is extremely difficult."
+ trait_ngm_elder_verbal_desc:0 "The language of this species is incredibly intricate, making it difficult for outsiders to learn but rich in expressive potential."
 
- trait_ngm_elder_non_verbal:0 "Non-verbal Society"
- trait_ngm_elder_non_verbal_desc:0 "The concept of language does not exist in this species."
+ trait_ngm_elder_non_verbal:0 "Silent Communication"
+ trait_ngm_elder_non_verbal_desc:0 "This species lacks a concept of spoken language, relying on other forms of communication such as gestures or telepathy."
 
- trait_ngm_elder_non_character:0 "Non-literate Society"
- trait_ngm_elder_non_character_desc:0 "The concept of writing does not exist in this race."
+ trait_ngm_elder_non_character:0 "Pre-Literacy"
+ trait_ngm_elder_non_character_desc:0 "This race has not developed a writing system, which impacts their ability to store and transmit knowledge."
 
- trait_ngm_delicious:0 "Delicious Body"
- trait_ngm_delicious_desc:0 "This species is delicious!"
+ trait_ngm_delicious:0 "Culinary Delight"
+ trait_ngm_delicious_desc:0 "The flesh of this species is considered a delicacy, making them highly sought after for consumption."
 
- trait_ngm_unappetizing:0 "Unpleasant Body"
- trait_ngm_unappetizing_desc:0 "This species is not good!"
+ trait_ngm_unappetizing:0 "Unpalatable"
+ trait_ngm_unappetizing_desc:0 "The meat of this species is unappetizing and generally avoided."
 
- trait_ngm_speckled_w_white:0 "Speckled With White"
- trait_ngm_speckled_w_white_desc:0 "This species is marbled all over."
+ trait_ngm_speckled_w_white:0 "Marbled Physique"
+ trait_ngm_speckled_w_white_desc:0 "The skin or scales of this species feature a white, marbled pattern, which might have aesthetic or camouflage purposes."
 
- trait_ngm_Toxic:0 "Toxic"
- trait_ngm_Toxic_desc:0 "The meat of this species is toxic."
+ trait_ngm_Toxic:0 "Toxic Flesh"
+ trait_ngm_Toxic_desc:0 "Consuming the meat of this species can lead to poisoning."
 
- trait_ngm_complex_heredity:0 "Complex Genetic Structure"
- trait_ngm_complex_heredity_desc:0 "The genes of this species are extremely complex."
+ trait_ngm_complex_heredity:0 "Genetic Complexity"
+ trait_ngm_complex_heredity_desc:0 "This species has a highly complex genetic makeup, which could result in unique abilities or vulnerabilities."
 
- trait_ngm_simple_heredity:0 "Simple Genetic Structure"
- trait_ngm_simple_heredity_desc:0 "The genes of this species are extremely simple."
+ trait_ngm_simple_heredity:0 "Genetic Simplicity"
+ trait_ngm_simple_heredity_desc:0 "This species has a straightforward genetic structure, which might make them easier to study or manipulate."
 
  trait_ngm_sensitization:0 "Photosensitivity"
- trait_ngm_sensitization_desc:0 "This species is extremely light-sensitive and tends to avoid light."
+ trait_ngm_sensitization_desc:0 "This species is highly sensitive to light and generally avoids bright environments."
 
  trait_ngm_like_light:0 "Photophilic"
- trait_ngm_like_light_desc:0 "This species prefers light and exposure to sunlight."
+ trait_ngm_like_light_desc:0 "This species thrives in brightly lit environments and may even require exposure to light for biological processes."
 
- trait_ngm_indoor:0 "Indoor Person"
- trait_ngm_indoor_desc:0 "This species prefers to stay indoors."
+ trait_ngm_indoor:0 "Homebodies"
+ trait_ngm_indoor_desc:0 "Preferring enclosed spaces, this species is rarely found in the open."
 
  trait_ngm_outdoor:0 "Outdoor Enthusiast"
- trait_ngm_outdoor_desc:0 "This species prefers to be outdoors."
+ trait_ngm_outdoor_desc:0 "This species prefers open spaces and is most commonly found in natural settings."
 
  trait_ngm_multitasking:0 "Multitasking"
- trait_ngm_multitasking_desc:0 "This race is dexterous and can perform tasks simultaneously."
+ trait_ngm_multitasking_desc:0 "This species is adept at handling multiple tasks at once, making them highly efficient in various activities."
 
  trait_ngm_clumsy:0 "Clumsy"
- trait_ngm_clumsy_desc:0 "This race is clumsy and not very good at working at the same time."
+ trait_ngm_clumsy_desc:0 "This species struggles with coordination and is generally not adept at multitasking."
 
- trait_ngm_reversing_theory:0 "Theoretical Backwardness"
- trait_ngm_reversing_theory_desc:0 "This race is not good at theory building and cannot handle physics well."
+ trait_ngm_reversing_theory:0 "Practical Minds"
+ trait_ngm_reversing_theory_desc:0 "This species has difficulty with abstract thinking and theoretical concepts, particularly in the realm of physics."
 
- trait_ngm_reversing_culture:0 "Cultural Backwardness"
- trait_ngm_reversing_culture_desc:0 "The sociological development of this race has been slow, and they have not been able to handle a galactic scale society."
+ trait_ngm_reversing_culture:0 "Cultural Stagnation"
+ trait_ngm_reversing_culture_desc:0 "Sociological development has been slow for this species, hindering their ability to thrive in complex societies."
 
- trait_ngm_reversing_technologies:0 "Technology Backwardness"
- trait_ngm_reversing_technologies_desc:0 "The engineering technology of this race is lagging behind, and they are not good at building machines."
+ trait_ngm_reversing_technologies:0 "Technological Lag"
+ trait_ngm_reversing_technologies_desc:0 "This species struggles with technological advancements and machinery."
 
- trait_ngm_individuality:0 "Excellent Personality"
- trait_ngm_individuality_desc:0 "This race places a high value on developing individual personalities."
+ trait_ngm_individuality:0 "Individualists"
+ trait_ngm_individuality_desc:0 "This species values individual personality development, leading to a diverse range of characters and talents."
 
- trait_ngm_non_individuality:0 "Impersonality"
- trait_ngm_non_individuality_desc:0 "This race places a high value on uniformity of individual abilities."
+ trait_ngm_non_individuality:0 "Conformists"
+ trait_ngm_non_individuality_desc:0 "This species values uniformity over individuality, leading to a highly homogenous society."
 
  trait_ngm_sociability:0 "Sociability"
- trait_ngm_sociability_desc:0 "This species is sociable."
+ trait_ngm_sociability_desc:0 "Members of this species are generally outgoing and sociable, often forming complex social networks."
 
  trait_ngm_introversion:0 "Introversion"
- trait_ngm_introversion_desc:0 "This species is introverted."
+ trait_ngm_introversion_desc:0 "This species values solitude and is generally introverted, preferring smaller social circles."
 
- trait_ngm_spirit_release:0 "Openness of Spirit"
- trait_ngm_spirit_release_desc:0 "This species hates mental bondage."
+ trait_ngm_spirit_release:0 "Liberated Minds"
+ trait_ngm_spirit_release_desc:0 "This species despises any form of mental control or bondage, valuing intellectual and spiritual freedom."
 
- trait_ngm_spirit_freedom:0 "Freedom of Spirit"
- trait_ngm_spirit_freedom_desc:0 "This race values spiritual freedom."
+ trait_ngm_spirit_freedom:0 "Free Spirits"
+ trait_ngm_spirit_freedom_desc:0 "Spiritual freedom is of utmost importance to this species, affecting their culture, religion, and individual pursuits."
 
- trait_ngm_spirit_authority:0 "Mental Authority"
- trait_ngm_spirit_authority_desc:0 "This species is accustomed to obeying someone mentally."
+ trait_ngm_spirit_authority:0 "Obedient Minds"
+ trait_ngm_spirit_authority_desc:0 "Accustomed to hierarchical structures, this species tends to mentally obey authority figures."
 
- trait_ngm_spirit_subordination:0 "Mental Dependence"
- trait_ngm_spirit_subordination_desc:0 "This race prefers to be mentally under someone else's control."
+ trait_ngm_spirit_subordination:0 "Submissive Minds"
+ trait_ngm_spirit_subordination_desc:0 "This species prefers to be under someone else's mental or spiritual control, often seeking leaders or guides."
 
  trait_ngm_liar:0 "Liar"
- trait_ngm_liar_desc:0 "This species likes to tell small lies, which often exhausts the people around them."
+ trait_ngm_liar_desc:0 "This species tends to tell small lies, which can strain relationships with other species."
 
  trait_ngm_honest:0 "Honest"
- trait_ngm_honest_desc:0 "This species is honest and builds pleasant relationships with those around them."
+ trait_ngm_honest_desc:0 "Known for their honesty, this species tends to form trustworthy and pleasant relationships."
 
  trait_ngm_heart_less:0 "Heartless"
- trait_ngm_heart_less_desc:0 "This species is incapable of caring about anyone."
+ trait_ngm_heart_less_desc:0 "This species lacks the ability to care for others, making them seem cold or heartless."
 
- trait_ngm_debauchery:0 "Debauchery"
- trait_ngm_debauchery_desc:0 "This species has a tendency to waste energy."
+ trait_ngm_debauchery:0 "Wasteful Tendencies"
+ trait_ngm_debauchery_desc:0 "This species has a proclivity for wasteful behaviors, often depleting resources without consideration."
 
- trait_ngm_tired:0 "Fatigued"
- trait_ngm_tired_desc:0 "This race is prone to fatigue and is not good at mineral production."
+ trait_ngm_tired:0 "Low Stamina"
+ trait_ngm_tired_desc:0 "This species is prone to quick exhaustion, affecting their productivity, especially in tasks requiring physical effort."
 
- trait_ngm_stupidity:0 "Stupidity"
- trait_ngm_stupidity_desc:0 "This race has low intelligence and is unable to conduct research successfully."
+ trait_ngm_stupidity:0 "Limited Intellect"
+ trait_ngm_stupidity_desc:0 "Characterized by low intelligence, this species struggles with research and advanced learning."
 
- trait_ngm_spendthrift:0 "Spendthrift"
- trait_ngm_spendthrift_desc:0 "This race is wasteful and does not trade well."
+ trait_ngm_spendthrift:0 "Poor Traders"
+ trait_ngm_spendthrift_desc:0 "This species is not good at managing resources and tends to be wasteful, making them poor traders."
 
- trait_ngm_merchant_from_ancient:0 "Merchants from Ancient Times"
- trait_ngm_merchant_from_ancient_desc:0 "A species that has been active as brain workers since prehistoric times, and thus has an aptitude for creativity and desk work. Their fertility was increased in prehistoric times to prevent overpopulation."
+ trait_ngm_merchant_from_ancient:0 "Ancient Entrepreneurs"
+ trait_ngm_merchant_from_ancient_desc:0 "This species has a long history of intellectual work and creativity, making them suitable for complex tasks. They have adapted to have higher fertility rates to balance their population."
 
- trait_ngm_m_crafts:0 "craft prosthesis"
- trait_ngm_m_crafts_desc:0 "The arms of this machine can withstand extremely elaborate movements and show high suitability for the manufacture of craft and industrial products."
+ trait_ngm_m_crafts:0 "Artisanal Appendages"
+ trait_ngm_m_crafts_desc:0 "Equipped with highly dexterous arms, this machine excels in crafting and manufacturing tasks."
 
- trait_ngm_m_lens:0 "Highly functional lenses"
- trait_ngm_m_lens_desc:0 "The lenses of this machine boast a high capacity for grasping objects from the minute to the distant."
+ trait_ngm_m_lens:0 "Advanced Optical Systems"
+ trait_ngm_m_lens_desc:0 "Featuring high-capacity lenses, this machine can perceive objects at a wide range of distances and sizes."
 
- trait_ngm_m_taste:0 "Taste program"
- trait_ngm_m_taste_desc:0 "This machine has a sense of taste and does not produce bad food."
+ trait_ngm_m_taste:0 "Culinary Sensors"
+ trait_ngm_m_taste_desc:0 "This machine possesses taste sensors, ensuring it produces food that meets certain quality standards."
 
- trait_ngm_m_discharge:0 "Discharge capacitor"
- trait_ngm_m_discharge_desc:0 "This machine has discharge capabilities and boasts a strong aptitude for attacking organic life forms."
+ trait_ngm_m_discharge:0 "Discharge Capacitor"
+ trait_ngm_m_discharge_desc:0 "Capable of energy discharge, this machine is well-suited for combat against organic life forms."
 
- trait_ngm_m_jet:0 "flying jet"
- trait_ngm_m_jet_desc:0 "This machine has a flying mechanism."
+ trait_ngm_m_jet:0 "Aerial Capabilities"
+ trait_ngm_m_jet_desc:0 "This machine is equipped with a flight mechanism, enabling three-dimensional maneuverability."
 
- trait_ngm_m_disassembly:0 "Organic body disassembly"
- trait_ngm_m_disassembly_desc:0 "This machine is capable of disassembling unwanted organisms in its body."
+ trait_ngm_m_disassembly:0 "Organic Processor"
+ trait_ngm_m_disassembly_desc:0 "This machine can disassemble organic matter, making it a potential threat or a recycling unit."
 
- trait_ngm_m_quantum:0 "quantum computer"
- trait_ngm_m_quantum_desc:0 "The brain of this machine is controlled by an early-type quantum computer, which can perform extremely complex calculations in an instant."
+ trait_ngm_m_quantum:0 "Quantum Computer"
+ trait_ngm_m_quantum_desc:0 "Controlled by an early-type quantum computer, this machine can perform extremely complex calculations instantly."
 
- trait_ngm_m_reishi:0 "spirit computer"
- trait_ngm_m_reishi_desc:0 "The brain of this machine is made of a spirit computer, which is capable of performing advanced calculations while sensing emotions and intentions through its summit power."
+ trait_ngm_m_reishi:0 "Emotional Processor"
+ trait_ngm_m_reishi_desc:0 "This machine's brain is capable of advanced calculations and can sense emotions and intentions."
 
- trait_ngm_m_primitive:0 "primitive structure"
- trait_ngm_m_primitive_desc:0 "The structure of this machine is extremely primitive and it is unclear how it works."
+ trait_ngm_m_primitive:0 "Archaic Design"
+ trait_ngm_m_primitive_desc:0 "This machine's structure is so rudimentary that its operational principles are unclear."
 
- trait_ngm_m_leakage:0 "Leakage"
- trait_ngm_m_leakage_desc:0 "This machine often leaks."
+ trait_ngm_m_leakage:0 "Energy Leak"
+ trait_ngm_m_leakage_desc:0 "This machine frequently experiences energy leaks, affecting its overall efficiency."
 
- trait_ngm_m_nasty:0 "short circuit decision"
- trait_ngm_m_nasty_desc:0 "This machine's judgment is short-sighted and can only solve the problem at hand."
+ trait_ngm_m_nasty:0 "Limited Foresight"
+ trait_ngm_m_nasty_desc:0 "This machine often makes short-sighted judgments, solving immediate issues but neglecting long-term consequences."
 
- trait_ngm_m_invisible:0 "Non-optical decisions"
- trait_ngm_m_invisible_desc:0 "This machine cannot perform optical grasping and cannot confirm them."
+ trait_ngm_m_invisible:0 "Non-Visual Perception"
+ trait_ngm_m_invisible_desc:0 "Lacking optical sensors, this machine relies on alternative methods to perceive its environment."
 
- trait_ngm_m_wiring:0 "Improper wiring"
- trait_ngm_m_wiring_desc:0 "The internal wiring of this machine is improper, but cannot be changed for various reasons."
+ trait_ngm_m_wiring:0 "Flawed Circuitry"
+ trait_ngm_m_wiring_desc:0 "The internal wiring of this machine is suboptimal, but cannot be easily reconfigured."
 
- trait_ngm_m_cram:0 "Assorted"
- trait_ngm_m_cram_desc:0 "The designer of this machine has attempted to pack this machine with capabilities that are inherently beyond this machine."
+ trait_ngm_m_cram:0 "Overloaded Functions"
+ trait_ngm_m_cram_desc:0 "This machine is packed with a variety of functions that exceed its inherent capabilities, leading to performance issues."
 
- trait_ngm_m_malfunction:0 "Frequent malfunctions"
- trait_ngm_m_malfunction_desc:0 "The failure rate of this machine is extraordinary and the cost of maintaining it is extremely high due to failures both during and after production."
+ trait_ngm_m_malfunction:0 "Unreliable Operations"
+ trait_ngm_m_malfunction_desc:0 "This machine experiences frequent malfunctions, making it costly to maintain and unreliable in tasks."
  trait_ngm_m_malfunction_custom_tooltip:0 "Leader failure probability §R+20%§!"
 
- trait_ngm_m_inappropriate:0 "Work is inadequate."
- trait_ngm_m_inappropriate_desc:0 "This machine is not suitable for any production."
+ trait_ngm_m_inappropriate:0 "Inefficient Engineering"
+ trait_ngm_m_inappropriate_desc:0 "This machine species is unsuitable for any kind of productive work."
 
- trait_ngm_m_shi:0 "Silicon-made"
- trait_ngm_m_shi_desc:0 "§LThis species' body utilizes silicon§!\n"
+ trait_ngm_m_shi:0 "Silicon Anatomy"
+ trait_ngm_m_shi_desc:0 "§LThis species is composed of silicon, making it distinct from carbon-based life forms.§!\n"
 
- trait_ngm_m_skin:0 "Artificial skin"
- trait_ngm_m_skin_desc:0 "§LThis species utilizes artificial skin, which allows for an organic appearance§!\n"
+ trait_ngm_m_skin:0 "Artificial Skin"
+ trait_ngm_m_skin_desc:0 "§LThe skin of this species is artificial, mimicking the appearance of organic life.§!\n"
 
- trait_ngm_m_mcpu:0 "Composite CPU"
- trait_ngm_m_mcpu_desc:0 "§LHaving multiple CPUs installed, this species is capable of thoughtful consideration§!\n"
+ trait_ngm_m_mcpu:0 "Multi-Core Processing"
+ trait_ngm_m_mcpu_desc:0 "§LEquipped with multiple CPUs, this species is capable of intricate thought processes.§!\n"
  trait_ngm_m_mcpu_custom_tooltip:0 "Leader malfunction chance §R+5%§!"
 
  trait_ngm_m_fire:0 "Flamethrower"
  trait_ngm_m_fire_desc:0 "§LHyahha! Burn all the filth away!§!\n"
 
  trait_ngm_m_back:0 "Emergency Backup"
- trait_ngm_m_back_desc:0 "§LAs a precaution, this species is obligated to backup necessary data§!\n"
+ trait_ngm_m_back_desc:0 "§LThis species always keeps backup data as a safety measure.§!\n"
  trait_ngm_m_back_custom_tooltip:0 "Leader malfunction chance §G-20%§!"
 
  trait_ngm_m_bcpu:0 "Combat Computer"
- trait_ngm_m_bcpu_desc:0 "§LThis species is designed for combat§!\n"
+ trait_ngm_m_bcpu_desc:0 "§LDesigned for combat situations, this species has enhanced tactical algorithms.§!\n"
 
- trait_ngm_m_sub:0 "Subsystem"
- trait_ngm_m_sub_desc:0 "§LUtilizing system auxiliary functions allows for overall performance improvement§!\n"
+ trait_ngm_m_sub:0 "Auxiliary Functions"
+ trait_ngm_m_sub_desc:0 "§LThe species uses auxiliary functions for performance optimization.§!\n"
 
  trait_ngm_m_made:0 "Self-Replication"
- trait_ngm_m_made_desc:0 "§LThis species can replicate themselves§!\n"
+ trait_ngm_m_made_desc:0 "§LThis species has the ability to replicate itself.§!\n"
  trait_ngm_m_made_custom_tooltip:0 "Leader malfunction chance §G-5%§!"
 
  trait_ngm_m_office:0 "Office Protocol"
- trait_ngm_m_office_desc:0 "§LThis species excels in administrative tasks§!\n"
+ trait_ngm_m_office_desc:0 "§LThis species excels in tasks that require organizational skills.§!\n"
 
  trait_ngm_m_product:0 "Manufacturing System"
- trait_ngm_m_product_desc:0 "§LThis species excels in alloy manufacturing§!\n"
+ trait_ngm_m_product_desc:0 "§LThis species excels in alloy manufacturing.§!\n"
 
  trait_ngm_m_proto:0 "Ceremonial System"
- trait_ngm_m_proto_desc:0 "§LThis species values rituals and traditions§!\n"
+ trait_ngm_m_proto_desc:0 "§LDespite being mechanical, this species holds rituals and traditions in high regard.§!\n"
 
- trait_ngm_m_incr:0 "Abnormal Replication"
- trait_ngm_m_incr_desc:0 "§LThis species multiplies at an unimaginable speed§!\n"
+ trait_ngm_m_incr:0 "Rapid Multiplication"
+ trait_ngm_m_incr_desc:0 "§LThis species can replicate at an alarming rate.§!\n"
  trait_ngm_m_incr_custom_tooltip:0 "Leader malfunction chance §R+15%§!"
 
  trait_ngm_m_antient:0 "Ancient Machine"
- trait_ngm_m_antient_desc:0 "§LThis species developed using ancient technology§!\n"
+ trait_ngm_m_antient_desc:0 "§LThis species is built upon ancient technology, making it mysterious yet advanced.§!\n"
 
  trait_ngm_m_huge:0 "Huge"
- trait_ngm_m_huge_desc:0 "§LThis species is gigantic even by galactic standards§!\n"
+ trait_ngm_m_huge_desc:0 "§LThis species is extraordinarily large, even by galactic standards, giving them unique advantages and challenges.§!\n"
 
  trait_ngm_m_big:0 "Large"
- trait_ngm_m_big_desc:0 "§LThis species is large even by galactic standards§!\n"
+ trait_ngm_m_big_desc:0 "§LThis species exhibits a notable magnitude that exceeds conventional galactic metrics, affording them unique advantages and challenges§!\n"
 
- trait_ngm_m_core:0 "Exposed Core Unit"
- trait_ngm_m_core_desc:0 "§LThis species has its crucial components exposed§!\n"
+ trait_ngm_m_core:0 "Vulnerable Core"
+ trait_ngm_m_core_desc:0 "§LThis species possesses exposed vital components, making them susceptible to targeted attacks but also easier to maintain§!\n"
 
- trait_ngm_m_main:0 "Central Control Mechanism"
- trait_ngm_m_main_desc:0 "§LThis species practices inapplicable classical control§!\n"
+ trait_ngm_m_main:0 "Unified Control Matrix"
+ trait_ngm_m_main_desc:0 "§LGuided by a centralized control mechanism, this species excels at coordinated actions but at the risk of systemic failures§!"
  trait_ngm_m_main_custom_tooltip:0 "Leader malfunction chance §G-5%§!"
 
  trait_ngm_m_steam:0 "Steam Engine"
- trait_ngm_m_steam_desc:0 "§LThis species still utilizes steam engines§!\n"
+ trait_ngm_m_steam_desc:0 "§LIn a quaint defiance of modernity, this species relies on steam engines, trading efficiency for a simpler, more robust design§!"
 
- trait_ngm_m_light:0 "Non-optical Detection"
- trait_ngm_m_light_desc:0 "§LThis species does not rely on optical scanning§!\n"
+ trait_ngm_m_light:0 "Subspace Sensory"
+ trait_ngm_m_light_desc:0 "§LRelying on non-optical methods for perception, this species navigates their environment using a unique set of sensory mechanisms§!\n"
 
- trait_ngm_m_uncont:0 "Difficult to Control"
- trait_ngm_m_uncont_desc:0 "§LThis species is difficult to control§!\n"
+ trait_ngm_m_uncont:0 "Unpredictable"
+ trait_ngm_m_uncont_desc:0 "§LThis species exhibits an erratic pattern of behavior, making them difficult to govern but also harder to anticipate§!\n"
 
  trait_ngm_m_flash:0 "Flash Memory"
- trait_ngm_m_flash_desc:0 "§LThis species' data is stored externally and often gets lost§!\n"
+ trait_ngm_m_flash_desc:0 "§LData storage for this species is external and prone to loss, creating both vulnerabilities and opportunities for rapid adaptation§!\n"
  trait_ngm_m_flash_custom_tooltip:0 "Leader malfunction chance §R+10%§!"
 
- trait_ngm_m_small:0 "Small-sized"
- trait_ngm_m_small_desc:0 "§LThis species is small even by galactic standards§!\n"
+ trait_ngm_m_small:0 "Compact Form"
+ trait_ngm_m_small_desc:0 "§LThis species is diminutive in stature according to galactic norms, granting them agility at the cost of physical strength§!\n"
 
- trait_ngm_m_tiny:0 "Tiny-sized"
- trait_ngm_m_tiny_desc:0 "§LThis species is incredibly small even by galactic standards§!\n"
+ trait_ngm_m_tiny:0 "Microscopic Marvel"
+ trait_ngm_m_tiny_desc:0 "§Lo minuscule as to defy conventional wisdom, this species operates on a scale that baffles most galactic entities§!\n"
 
  trait_ngm_m_error:0 "Error Noise"
  trait_ngm_m_error_desc:0 "§LA serious error has occurred§!\n"
 
  trait_ngm_m_blue:0 "Blue Screen"
- trait_ngm_m_blue_desc:0 "§LThis species often turns blue§!\n"
+ trait_ngm_m_blue_desc:0 "§LFrequently entering a state akin to a 'blue screen,' this species is susceptible to sudden system failures§!\n"
  trait_ngm_m_blue_custom_tooltip:0 "Leader malfunction chance §R+10%§!"
 
  trait_ngm_m_bomb:0 "Self-Destruct Mechanism"
@@ -2838,16 +2838,16 @@
  trait_ngm_m_bomb_custom_tooltip:0 "Leader malfunction chance §R+5%§!"
 
  trait_ngm_m_wo:0 "Wooden"
- trait_ngm_m_wo_desc:0 "§LThis species has parts made of wood§!\n"
+ trait_ngm_m_wo_desc:0 "§LConstructed partially from organic materials like wood, this species merges the natural and the mechanical in a unique blend§!\n"
 
- trait_ngm_m_ban:0 "Function Limitation"
- trait_ngm_m_ban_desc:0 "§LThis species' functions are potentially limited, and their actions are closely watched§!\n"
+ trait_ngm_m_ban:0 "Regulated Functionality"
+ trait_ngm_m_ban_desc:0 "§LThis species operates under strict limitations, either self-imposed or externally enforced, that govern their actions and capabilities§!\n"
 
  trait_ngm_m_abs:0 "Abstract"
- trait_ngm_m_abs_desc:0 "§LThe data output from this species is abstract and difficult to explain§!\n"
+ trait_ngm_m_abs_desc:0 "§LThis species generates data and behaviors that are abstract and difficult to interpret, confounding allies and adversaries alike§!\n"
 
  trait_ngm_m_break:0 "Self-Destruction"
- trait_ngm_m_break_desc:0 "§LThis species does not possess the principle of self-preservation and often self-destructs§!\n"
+ trait_ngm_m_break_desc:0 "§LLacking a self-preservation instinct, this species is prone to acts of self-destruction, making them both volatile and unpredictable§!\n"
 
 #######################
 #####    派閥    ######
@@ -2953,7 +2953,7 @@
 
  resolution_category_ngm_olympic_form:0 "International Convention"
  resolution_ngm_olympic_form:0 "International Convention Formation"
- resolution_ngm_olympic_form_desc:0 "Virtually galactic trade, unbound by international politics, has existed since the first meeting of different races. \It is time for us, as leaders of the galaxy, to authorize this commercial forum for the benefit of all. The time has come. "
+ resolution_ngm_olympic_form_desc:0 "Virtually galactic trade, unbound by international politics, has existed since the first meeting of different races. It is time for us, as leaders of the galaxy, to authorize this commercial forum for the benefit of all. The time has come. "
  resolution_ngm_olympic_form_effect_success:0 "$ngm_government.100.name$」Start an event chain."
 
  resolution_category_ngm_olympic_end:0 "国際競技大会の中止"
