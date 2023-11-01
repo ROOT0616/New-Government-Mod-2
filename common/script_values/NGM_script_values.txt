@@ -1,4 +1,59 @@
 
+# これらのうちの1つを使用するには、スクリプトの他の場所で「value：<value>」と参照してください。例：value：example_value
+# 注意：これらを頻繁にチェックするトリガーで使用する場合は、パフォーマンスに注意してください！
+
+# example_value = {
+# base = 10 #デフォルト：0
+
+# #有効な数学演算のリスト：
+# # 数値（数値で変更する）：
+# # - set / weight（両方とも同じで、現在の結果をこの値で置き換えます）
+# # - add
+# # - subtract
+# # - factor / mult / multiply（「multiply」は残りの名前スキームに合っていますが、他の2つは歴史的な理由から保持されています）
+# # - divide
+# # - modulo
+# # - round_to（最も近い値に丸めます。例：10.7 round_to 5は10を返します）
+# # - max（現在の値が指定された値よりも高い場合、指定された値に設定します）
+# # - min（現在の値が指定された値よりも低い場合、指定された値に設定します）
+# # - pow（値はx乗して自分自身に乗算されます。注意してください。オーバーフローが発生する可能性があります）
+# # シンプル（数値は必要ありませんが、「yes」だけです。例：「round = yes」）
+# # - round（最も近い整数に設定します）
+# # - ceiling（切り上げ）
+# # - floor（切り捨て）
+# # - abs（負数の場合は-1を乗算します）
+# # - square（自分自身を乗算します） 
+# # - square_root
+
+# 以下のコードは、数値の加算、乗算、丸めなどの数学的演算子をインラインで使用できます。例えば、add = 100 とすると、add に 100 を加算します。
+# また、multiply = value:some_other_script_value のように、他のスクリプトから値を取得して乗算することもできます。ただし、重みや因子を使用する場合は、代わりに set、mult、または multiply を使用する必要があります。
+
+# これらの演算子は、modifier = {} フィールドでも使用できます。これにより、トリガーが true の場合にのみ適用されるようにすることができます。例えば、以下のように記述します。
+
+# modifier = {
+#     max = owner.max_example_variable 					# set_variable で設定された変数
+#     owner = { is_variable_set = max_example_variable }	# このトリガーが true の場合にのみ適用される
+# }
+
+# 数学的演算子の右辺値には何が使えるか？詳細は events/00_how_to_use_variables を参照してください。
+
+# また、complex_trigger_modifier を使用することで、波括弧 {} を使用しているためインラインで使用できないトリガーの値を取得することができます。以下はその例です。
+
+# complex_trigger_modifier = {
+#     trigger = count_owned_planet
+#     trigger_scope = owner 		# 別のスコープでトリガーの結果を取得することができます。デフォルトは "this" です。
+#     parameters = { 				# 必要な情報を波括弧内に記述します。
+#         limit = { num_pops > 10 }
+#     }
+#     mode = add 					# 全ての数値演算子が使えます。
+#     mult = 5 					# 結果にこの値を乗算します。この例では、10人以上の人口を持つ惑星ごとに5を加算します。
+# }
+
+# 最後に、script_values は scripted_triggers と scripted_effects と同じメタスクリプトシステムを使用しています。
+# これは、scripted_effects/99_advanced_documentation.txt で説明されているように、パラメータを入力できることを意味します。
+# フォーマットは value:my_value|PARAM1|value1|PARAM2|value2| です。
+# そして、スクリプト値で PARAM1 を使用することができ、value1 で置き換えることができます。
+
 socialism_ethics_from_relations = {
 	base = 1
 	complex_trigger_modifier = {
