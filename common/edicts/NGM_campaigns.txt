@@ -317,8 +317,6 @@ ngm_supernatural_adversary_campaign = {
 			multiplier = value:edict_size_effect
 		}
 	}
-	modifier = {
-	}
 	potential = {
 		has_active_tradition = tr_ngm_transcendental
 	}
@@ -327,6 +325,9 @@ ngm_supernatural_adversary_campaign = {
 	}
 	ai_weight = {
 		weight = 500
+	}
+	modifier = {
+		max_rivalries = 1
 	}
 }
 ngm_legal_department_audits_campaign = {
@@ -404,19 +405,14 @@ ngm_virture_rival_options_menu = {
 		has_tradition = tr_ngm_virture_first
 		is_ai = no
 	}
-	allow = {
-		custom_tooltip = {
-			fail_text = requires_actor_not_ngm_virture_rival_country
-			check_variable = {
-				which = ngm_virture_rival_country_num
-				value < 2
-			}
-		}
-	}
 	effect = {
 		hidden_effect = {
+			set_variable = {
+				which = ngm_pressure_v2_page_offset
+				value = 0
+			}
 			country_event = {
-				id = ngm_diplomatic.1
+				id = ngm_pressure.10
 			}
 		}
 	}
@@ -426,17 +422,16 @@ ngm_virture_rival_end_options_menu = {
 	icon = GFX_edict_type_policy
 	potential = {
 		has_tradition = tr_ngm_virture_first
-		hidden_trigger = {
-			check_variable = {
-				which = ngm_virture_rival_country_num
-				value > 1
-			}
-		}
+		is_ai = no
 	}
 	effect = {
 		hidden_effect = {
+			set_variable = {
+				which = ngm_pressure_v2_page_offset
+				value = 0
+			}
 			country_event = {
-				id = ngm_diplomatic.2
+				id = ngm_pressure.20
 			}
 		}
 	}

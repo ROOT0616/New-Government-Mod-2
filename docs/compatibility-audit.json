@@ -1,5 +1,5 @@
 {
-  "version": "1.39.0-dev.17",
+  "version": "1.39.0-dev.18",
   "engine_version": "Cygnus v4.5.2",
   "documentation_timestamp": "2026-10-22 20:29:16",
   "unknown_modifier_usages": [
@@ -110,108 +110,6 @@
       "path": "ngm_olympic_12_event_modifier",
       "modifier": "planet_immigration_pull_mult",
       "value": "0.2"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_sabotage_debuff_1",
-      "modifier": "local_trade_protection_add",
-      "value": "-15"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_sabotage_debuff_2",
-      "modifier": "local_trade_protection_add",
-      "value": "-15"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_sabotage_debuff_3",
-      "modifier": "local_trade_protection_add",
-      "value": "-15"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_sabotage_debuff_4",
-      "modifier": "local_trade_protection_add",
-      "value": "-15"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_sabotage_debuff_5",
-      "modifier": "local_trade_protection_add",
-      "value": "-15"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_sabotage_debuff_6",
-      "modifier": "local_trade_protection_add",
-      "value": "-15"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_sabotage_debuff_7",
-      "modifier": "local_trade_protection_add",
-      "value": "-15"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_sabotage_debuff_8",
-      "modifier": "local_trade_protection_add",
-      "value": "-15"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_constant_obstruction_debuff_1",
-      "modifier": "local_trade_protection_add",
-      "value": "-5"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_constant_obstruction_debuff_2",
-      "modifier": "local_trade_protection_add",
-      "value": "-5"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_constant_obstruction_debuff_3",
-      "modifier": "local_trade_protection_add",
-      "value": "-5"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_constant_obstruction_debuff_4",
-      "modifier": "local_trade_protection_add",
-      "value": "-5"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_constant_obstruction_debuff_5",
-      "modifier": "local_trade_protection_add",
-      "value": "-5"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_constant_obstruction_debuff_6",
-      "modifier": "local_trade_protection_add",
-      "value": "-5"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_constant_obstruction_debuff_7",
-      "modifier": "local_trade_protection_add",
-      "value": "-5"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_constant_obstruction_debuff_8",
-      "modifier": "local_trade_protection_add",
-      "value": "-5"
-    },
-    {
-      "file": "common/static_modifiers/NGM_modifier.txt",
-      "path": "tr_ngm_neighbor_finish_buff",
-      "modifier": "planet_immigration_pull_mult",
-      "value": "0.1"
     },
     {
       "file": "common/static_modifiers/NGM_modifier.txt",
@@ -525,15 +423,6 @@
       "label": "帝国地方軍",
       "status": "不在（復旧対象）",
       "original_file": "common/armies/NGM_armies.txt",
-      "friend_file": "",
-      "vanilla_same_name": "False"
-    },
-    {
-      "category": "common/ascension_perks",
-      "name": "ap_ngm_ministry_of_innocence",
-      "label": "社会秩序維持局",
-      "status": "不在（復旧対象）",
-      "original_file": "common/ascension_perks/NGM_ascension_perks.txt",
       "friend_file": "",
       "vanilla_same_name": "False"
     },
@@ -1493,69 +1382,6 @@
     },
     {
       "category": "common/traditions",
-      "name": "tr_ngm_virture_first",
-      "label": "悪徳の伝統",
-      "status": "不在（復旧対象）",
-      "original_file": "common/traditions/NGM_traditions.txt",
-      "friend_file": "",
-      "vanilla_same_name": "False"
-    },
-    {
-      "category": "common/traditions",
-      "name": "tr_ngm_virture_finish",
-      "label": "悪徳の伝統の完成",
-      "status": "不在（復旧対象）",
-      "original_file": "common/traditions/NGM_traditions.txt",
-      "friend_file": "",
-      "vanilla_same_name": "False"
-    },
-    {
-      "category": "common/traditions",
-      "name": "tr_ngm_sniper",
-      "label": "狙い撃ち",
-      "status": "不在（復旧対象）",
-      "original_file": "common/traditions/NGM_traditions.txt",
-      "friend_file": "",
-      "vanilla_same_name": "False"
-    },
-    {
-      "category": "common/traditions",
-      "name": "tr_ngm_penetration",
-      "label": "浸透",
-      "status": "不在（復旧対象）",
-      "original_file": "common/traditions/NGM_traditions.txt",
-      "friend_file": "",
-      "vanilla_same_name": "False"
-    },
-    {
-      "category": "common/traditions",
-      "name": "tr_ngm_chain_harted",
-      "label": "憎しみの連鎖",
-      "status": "不在（復旧対象）",
-      "original_file": "common/traditions/NGM_traditions.txt",
-      "friend_file": "",
-      "vanilla_same_name": "False"
-    },
-    {
-      "category": "common/traditions",
-      "name": "tr_ngm_exclusive",
-      "label": "独占",
-      "status": "不在（復旧対象）",
-      "original_file": "common/traditions/NGM_traditions.txt",
-      "friend_file": "",
-      "vanilla_same_name": "False"
-    },
-    {
-      "category": "common/traditions",
-      "name": "tr_ngm_sabotage",
-      "label": "破壊工作",
-      "status": "不在（復旧対象）",
-      "original_file": "common/traditions/NGM_traditions.txt",
-      "friend_file": "",
-      "vanilla_same_name": "False"
-    },
-    {
-      "category": "common/traditions",
       "name": "tr_ngm_avantgarde_first",
       "label": "前衛の伝統",
       "status": "不在（復旧対象）",
@@ -1675,69 +1501,6 @@
       "category": "common/traditions",
       "name": "tr_ngm_trade_record",
       "label": "記録法",
-      "status": "不在（復旧対象）",
-      "original_file": "common/traditions/NGM_traditions.txt",
-      "friend_file": "",
-      "vanilla_same_name": "False"
-    },
-    {
-      "category": "common/traditions",
-      "name": "tr_ngm_enemy_first",
-      "label": "敵視の伝統",
-      "status": "不在（復旧対象）",
-      "original_file": "common/traditions/NGM_traditions.txt",
-      "friend_file": "",
-      "vanilla_same_name": "False"
-    },
-    {
-      "category": "common/traditions",
-      "name": "tr_ngm_enemy_finish",
-      "label": "敵視の伝統の完成",
-      "status": "不在（復旧対象）",
-      "original_file": "common/traditions/NGM_traditions.txt",
-      "friend_file": "",
-      "vanilla_same_name": "False"
-    },
-    {
-      "category": "common/traditions",
-      "name": "tr_ngm_paranoia",
-      "label": "パラノイア",
-      "status": "不在（復旧対象）",
-      "original_file": "common/traditions/NGM_traditions.txt",
-      "friend_file": "",
-      "vanilla_same_name": "False"
-    },
-    {
-      "category": "common/traditions",
-      "name": "tr_ngm_battle_ambass",
-      "label": "敵対的使節",
-      "status": "不在（復旧対象）",
-      "original_file": "common/traditions/NGM_traditions.txt",
-      "friend_file": "",
-      "vanilla_same_name": "False"
-    },
-    {
-      "category": "common/traditions",
-      "name": "tr_ngm_coarse_food",
-      "label": "臥薪嘗胆",
-      "status": "不在（復旧対象）",
-      "original_file": "common/traditions/NGM_traditions.txt",
-      "friend_file": "",
-      "vanilla_same_name": "False"
-    },
-    {
-      "category": "common/traditions",
-      "name": "tr_ngm_transcendental",
-      "label": "超然的敵対存在",
-      "status": "不在（復旧対象）",
-      "original_file": "common/traditions/NGM_traditions.txt",
-      "friend_file": "",
-      "vanilla_same_name": "False"
-    },
-    {
-      "category": "common/traditions",
-      "name": "tr_ngm_battle_speach",
-      "label": "敵対的演説",
       "status": "不在（復旧対象）",
       "original_file": "common/traditions/NGM_traditions.txt",
       "friend_file": "",

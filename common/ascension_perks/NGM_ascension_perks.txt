@@ -4,14 +4,6 @@ ap_ngm_constant_hostile_intelligence_operations = {
 			has_ascension_perk = ap_ngm_constant_hostile_intelligence_operations
 		}
 	}
-	on_enabled = {
-		custom_tooltip = ap_ngm_constant_hostile_intelligence_operations_effect
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.25
-			}
-		}
-	}
 	modifier = {
 		envoys_add = 2
 		intel_decryption_add = 10
@@ -33,9 +25,7 @@ ap_ngm_dipromatic_think_tank = {
 	on_enabled = {
 		custom_tooltip = ap_ngm_dipromatic_think_tank_effect
 		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.36
-			}
+			
 		}
 	}
 	modifier = {
@@ -526,9 +516,7 @@ ap_ngm_layer_countries = {
 	on_enabled = {
 		custom_tooltip = ap_ngm_layer_countries_effect
 		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.38
-			}
+			
 		}
 	}
 	modifier = {
@@ -712,5 +700,26 @@ ap_ngm_farm_farm = {
 			factor = 10
 			num_ascension_perks >= 2
 		}
+	}
+}
+
+ap_ngm_ministry_of_innocence = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_ngm_ministry_of_innocence
+		}
+	}
+	modifier = {
+		pop_government_ethic_attraction = 0.2
+	}
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			num_ascension_perks >= 2
+		}
+	}
+	on_enabled = {
+		custom_tooltip = ap_ngm_ministry_of_innocence_effect
 	}
 }
