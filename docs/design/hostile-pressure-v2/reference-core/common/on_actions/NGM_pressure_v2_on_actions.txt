@@ -1,0 +1,5 @@
+# REFERENCE ONLY: integrate after removing the legacy dispatchers and restoring dependencies.
+on_game_start = { events = { ngm_pressure.1 } }
+on_monthly_pulse = { events = { ngm_pressure.1 } }
+on_tradition_picked = { events = { ngm_pressure.2 } }
+on_ascension_perk_picked = { events = { ngm_pressure.2 } }

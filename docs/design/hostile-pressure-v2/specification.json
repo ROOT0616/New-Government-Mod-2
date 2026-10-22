@@ -1,0 +1,81 @@
+{
+  "status": "design_prototype_not_loaded",
+  "engine": "4.5.2",
+  "stacking": "one contribution per distinct eligible source, per family; additive; no MOD cap",
+  "immunity": "ap_ngm_ministry_of_innocence",
+  "families": [
+    {
+      "id": "sniper",
+      "source": "tr_ngm_sniper",
+      "kind": "tradition",
+      "relation": "rival_or_virtual",
+      "effects": {
+        "planet_crime_add": 30
+      },
+      "label": "狙い撃ち"
+    },
+    {
+      "id": "penetration",
+      "source": "tr_ngm_penetration",
+      "kind": "tradition",
+      "relation": "contact",
+      "effects": {
+        "planet_crime_add": 20
+      },
+      "label": "浸透"
+    },
+    {
+      "id": "sabotage",
+      "source": "tr_ngm_sabotage",
+      "kind": "tradition",
+      "relation": "rival_or_virtual",
+      "effects": {
+        "planet_crime_add": 20,
+        "planet_jobs_trade_produces_mult": -0.15
+      },
+      "label": "破壊工作"
+    },
+    {
+      "id": "free_press",
+      "source": "tr_ngm_freedom_broad",
+      "kind": "tradition",
+      "relation": "rival",
+      "effects": {
+        "pop_slave_happiness": -0.2
+      },
+      "label": "報道の自由"
+    },
+    {
+      "id": "obstruction",
+      "source": "tr_ngm_constant_obstruction",
+      "kind": "tradition",
+      "relation": "rival",
+      "effects": {
+        "planet_jobs_trade_produces_mult": -0.05
+      },
+      "label": "恒常的妨害"
+    },
+    {
+      "id": "hostile_speech",
+      "source": "tr_ngm_battle_speach",
+      "kind": "tradition",
+      "relation": "rival",
+      "effects": {
+        "diplo_weight_mult": -0.1
+      },
+      "label": "敵対的演説"
+    },
+    {
+      "id": "hostile_intelligence",
+      "source": "ap_ngm_constant_hostile_intelligence_operations",
+      "kind": "ascension_perk",
+      "relation": "rival",
+      "effects": {
+        "country_base_influence_produces_add": -1
+      },
+      "label": "恒常的敵対諜報活動"
+    }
+  ],
+  "trade_replacement_is_redesign": true,
+  "virtual_rivals_in_v2": true
+}

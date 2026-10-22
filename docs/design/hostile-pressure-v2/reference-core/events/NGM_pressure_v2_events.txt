@@ -1,0 +1,11 @@
+namespace = ngm_pressure
+# No-scope hub; used by global monthly pulse and game start.
+event = {
+ id = ngm_pressure.1 hide_window = yes is_triggered_only = yes
+ immediate = { every_playable_country = { ngm_pressure_v2_refresh_effect = yes } }
+}
+# Country-scoped pick hooks; infrequent complete resync after acquisition.
+country_event = {
+ id = ngm_pressure.2 hide_window = yes is_triggered_only = yes
+ immediate = { every_playable_country = { ngm_pressure_v2_refresh_effect = yes } }
+}
