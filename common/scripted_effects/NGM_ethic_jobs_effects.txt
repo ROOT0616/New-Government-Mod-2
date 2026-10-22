@@ -1,0 +1,20 @@
+# Planet/carrier/colony scope; idempotent and owner-sensitive.
+ngm_sync_ethic_job_deposit_effect = {
+    if = {
+        limit = {
+            is_colony = yes
+            exists = owner
+            owner = {
+                OR = { is_honorism = yes is_utilitarianism = yes }
+            }
+        }
+        if = {
+            limit = { NOT = { has_deposit = d_ngm_ethic_ruler_jobs } }
+            add_deposit = d_ngm_ethic_ruler_jobs
+        }
+    }
+    else_if = {
+        limit = { has_deposit = d_ngm_ethic_ruler_jobs }
+        remove_deposit = d_ngm_ethic_ruler_jobs
+    }
+}

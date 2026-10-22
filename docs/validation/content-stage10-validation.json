@@ -1,0 +1,12 @@
+{
+  "version": "1.39.0-dev.16",
+  "passed": true,
+  "checks": [
+    "All 79 modifier replacements reproduce the recorded full-file semantic diffs, without changing conditions or AI weight modifiers.",
+    "16 civic definitions preserve original conditions/values with documented modifier substitutions; four armies preserve original combat/cost values and use current recruitment gates.",
+    "Age distributions contain exactly the original ranges and once-only guards; every new trait reference exists. Species transfer covers own pop groups/leaders/pool/envoys/armies/colony ships and exact species matching.",
+    "Fine-revenue effects pass 40 crime/civic/owner boundary cases, remove stale modifiers/deposits and never stack after repeated updates.",
+    "New on-action names exist in 4.5.2 and every referenced event is defined exactly once."
+  ],
+  "runtime_tested": false
+}

@@ -1,0 +1,23 @@
+{
+  "version": "1.39.0-dev.16",
+  "passed": true,
+  "checks": [
+    "All 19 current living standards are retained. Reversing only four NGM allow gates yields exact current Vanilla definitions, including current population effects, protections and all AI weights.",
+    "Permission gates pass/fail for every restored normal/fanatic ethic, native eligibility and the original Ecstasy finisher; Social Welfare exclusions match the intended NGM ethic tags.",
+    "All eight custom factions retain all 51 original demands. Embrace targets the guiding ethic, and current promote/suppress helpers differ only by the verified custom faction-type predicate; all 16 restored static modifiers match the original including influence upkeep.",
+    "Faction resource branches produce exactly one output for all four Media Conglomerate/Crowdsourcing combinations: current media trade conversion is honored, with unity fallback for custom Crowdsourcing factions.",
+    "Leader bonus models cover 12 enabled/disabled and skill cases. Repeated spawn/pool/monthly invocation cannot duplicate XP/traits, inactive civics grant nothing and elder politics never downgrades a higher-level leader.",
+    "Five original civic event IDs and two new leader handlers are connected to current hooks. Technology grants are guarded against repeats; historical-medals civic matches the original and its council seat exists."
+  ],
+  "living_standards": 19,
+  "factions": 8,
+  "demands_retained": 51,
+  "restored_original_civic_events": [
+    "ngm_civic.1",
+    "ngm_civic.4",
+    "ngm_civic.27",
+    "ngm_civic.28",
+    "ngm_civic.29"
+  ],
+  "runtime_tested": false
+}

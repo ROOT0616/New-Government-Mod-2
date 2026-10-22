@@ -1,0 +1,12 @@
+# Colony scope. Current population/job capacity uses 100 units per legacy pop/job.
+# Preserve legacy integer job thresholds, including the actual 0.03 ratio.
+ngm_ethics_job_capacity = {
+    complex_trigger_modifier = {
+        trigger = pop_amount
+        mode = add
+    }
+    mult = modifier:$MODIFIER$
+    divide = 100
+    floor = yes
+    mult = 100
+}

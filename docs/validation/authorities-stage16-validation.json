@@ -1,0 +1,10 @@
+{
+  "version": "1.39.0-dev.16",
+  "passed": true,
+  "checks": [
+    "Only imperial/corporate authority overrides remain. Removing seven recorded NGM ethic exclusions reproduces current Vanilla exactly, preserving all current advanced-authority swaps and restrictions.",
+    "All 19 node-XP bonuses retain their values and map to four current engine-registered node keys; all other civic data is unchanged.",
+    "Colonial origin grants 100 people from a real resident group once per colonization; destruction clears the guard, while capture/homeworld/load have no population-grant hook."
+  ],
+  "runtime_tested": false
+}

@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": [
+    "actual parsed effects: initialization, all ten timer expirations, no premature or repeated advance, cap, war reset and peace restart",
+    "planet cleanup on war, invalid civic and ownerless transfer",
+    "original modifier numbers preserved; only ten trade keys replaced",
+    "current hooks and unique event IDs"
+  ],
+  "runtime_tested": false
+}

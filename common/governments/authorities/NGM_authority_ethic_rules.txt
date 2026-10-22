@@ -1,0 +1,512 @@
+auth_imperial = {
+	has_heir = yes
+	has_agendas = yes
+	color = {
+		141
+		38
+		38
+		255
+	}
+	ruler_council_position = councilor_ruler_imperial
+	possible = {
+		origin = {
+			NOT = {
+				text = "origin_legendary_leader_no_gov_change"
+				value = origin_legendary_leader_dictatorial
+			}
+		}
+		ethics = {
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+				value = ethic_utilitarianism
+				value = ethic_fanatic_utilitarianism
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
+				value = ethic_fanatic_capitalism
+			}
+		}
+	}
+	country_modifier = {
+		country_leader_pool_size = -1
+	}
+	advanced_authority_swap = {
+		name = "auth_cyber_creed_imperial"
+		description = auth_cyber_creed_imperial_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_creed_advanced_government
+		}
+		modifier = {
+			pop_ethic_spiritualist_attraction_mult = 0.2
+			pop_cyborg_happiness = 0.20
+			pop_non_cyborg_happiness = -0.20
+			ruler_skill_add = 3
+			all_technology_research_speed = 0.05
+			planet_jobs_worker_produces_mult = 0.10
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_cyber_imperial_individualist"
+		description = auth_cyber_imperial_individualist_desc
+		inherit_icon = no
+		inherit_effects = no
+		ruler_council_position = councilor_ruler_imperial_cyber
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_individualist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_imperial_individualist_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_cyber_imperial_collectivist"
+		description = auth_cyber_imperial_collectivist_desc
+		inherit_icon = no
+		inherit_effects = no
+		ruler_council_position = councilor_ruler_imperial_cyber
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_collectivist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_imperial_collectivist_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_synth_imperial_physical"
+		description = auth_synth_imperial_physical_desc
+		inherit_icon = no
+		inherit_effects = no
+		ruler_council_position = councilor_ruler_imperial_synth
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_physical
+		}
+		modifier = {
+			leader_initial_skill = 2
+			species_leader_exp_gain = 0.10
+			planet_jobs_worker_produces_mult = 0.10
+			custom_tooltip = auth_synth_imperial_physical_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_synth_imperial_virtual"
+		description = auth_synth_imperial_virtual_desc
+		inherit_icon = no
+		inherit_effects = no
+		ruler_council_position = councilor_ruler_imperial_synth
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_virtual
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.10
+			ship_hull_regen_add_perc = 0.05
+			ship_armor_regen_add_perc = 0.05
+			custom_tooltip = auth_synth_imperial_virtual_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_bio_imperial_purity"
+		description = auth_bio_imperial_purity_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_purity
+		}
+		modifier = {
+			custom_tooltip = auth_bio_imperial_purity_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_bio_imperial_cloning"
+		description = auth_bio_imperial_cloning_desc
+		inherit_icon = no
+		inherit_effects = no
+		has_heir = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_cloning
+		}
+		modifier = {
+			custom_tooltip = auth_bio_imperial_cloning_tt
+			show_only_custom_tooltip = no
+			ruler_skill_add = 5
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_CLONE
+		}
+	}
+	random_weight = {
+		base = 2
+	}
+	advanced_authority_swap = {
+		name = "auth_bio_imperial_mutation"
+		description = auth_bio_imperial_mutation_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			NOT = {
+				has_origin = origin_evolutionary_predators
+			}
+		}
+		modifier = {
+			custom_tooltip = auth_mutation_habitability_tt
+			show_only_custom_tooltip = no
+			country_leader_pool_size = -1
+			species_leader_exp_gain = 0.10
+			all_technology_research_speed = 0.05
+			pop_cat_worker_bonus_workforce_mult = 0.15
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+	random_weight = {
+		base = 2
+	}
+	advanced_authority_swap = {
+		name = "auth_bio_imperial_evopred"
+		description = auth_bio_imperial_evopred_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			has_origin = origin_evolutionary_predators
+		}
+		modifier = {
+			custom_tooltip = auth_bio_imperial_evopred_tt
+			show_only_custom_tooltip = no
+			logistic_growth_mult = -0.1
+			country_produces_mult = 0.1
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_shroud_imperial_transcendent"
+		description = auth_shroud_imperial_transcendent_desc
+		inherit_icon = no
+		inherit_effects = no
+		ruler_council_position = councilor_ruler_imperial_transcendent
+		trigger = {
+			is_scope_valid = yes
+			is_transcendent_authority = yes
+		}
+		modifier = {
+			custom_tooltip = auth_shroud_imperial_transcendent_tt
+			psionic_aura_hyperlane_range_add = 2
+			envoy_improve_relations_mult = 0.50
+			envoy_harm_relations_mult = 0.50
+			envoy_attunement_mult = 0.50
+			planet_crime_add = 20
+			show_only_custom_tooltip = no
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_shroud_imperial_corporeal"
+		description = auth_shroud_imperial_corporeal_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			is_corporeal_authority = yes
+		}
+		modifier = {
+			custom_tooltip = auth_shroud_imperial_corporeal_tt
+			psionic_pop_bonus_workforce_mult = -0.2
+			psionic_aura_effectiveness_mult = 0.25
+			envoy_improve_relations_mult = 0.50
+			envoy_harm_relations_mult = 0.50
+			envoy_attunement_mult = 0.50
+			ruler_skill_add = 2
+			councilor_skill_add = 1
+			leader_lifespan_add = 10
+			logistic_growth_mult = -0.05
+			planet_pop_assembly_mult = -0.05
+			show_only_custom_tooltip = no
+		}
+	}
+	tags = {
+		AUTHORITY_SUCCESSION_TYPE
+		AUTHORITY_HAS_HEIR
+		AUTH_IMPERIAL_CAPITAL_SYSTEM_BONUS
+	}
+}
+auth_corporate = {
+	election_term_years = 20
+	election_type = oligarchic
+	can_have_emergency_elections = yes
+	max_election_candidates = 4
+	localization_postfix = corporate
+	has_agendas = yes
+	color = {
+		132
+		143
+		38
+		255
+	}
+	ruler_council_position = councilor_ruler_corporate
+	potential = {
+		country_type = {
+			NOT = {
+				value = primitive
+			}
+		}
+	}
+	playable = {
+		has_megacorp = yes
+	}
+	possible = {
+		origin = {
+			NOR = {
+				text = "origin_legendary_leader_no_gov_change"
+				value = origin_legendary_leader_dictatorial
+				value = origin_legendary_leader_imperial
+			}
+		}
+		ethics = {
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_fanatic_egalitarian
+				value = ethic_fanatic_authoritarian
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
+			}
+		}
+	}
+	country_modifier = {
+		planet_jobs_trade_produces_mult = 0.10
+		nomadic_contract_value_mult = 0.10
+		empire_size_colonies_mult = 0.50
+		envoys_add = 1
+	}
+	advanced_authority_swap = {
+		name = "auth_cyber_creed_corporate"
+		description = auth_cyber_creed_corporate_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_creed_advanced_government
+		}
+		modifier = {
+			pop_ethic_spiritualist_attraction_mult = 0.2
+			pop_cyborg_happiness = 0.15
+			pop_non_cyborg_happiness = -0.15
+			pop_factions_produces_mult = 0.1
+			all_technology_research_speed = 0.05
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_cyber_corporate_individualist"
+		description = auth_cyber_corporate_individualist_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_individualist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_corporate_individualist_tt
+			country_trade_produces_mult = 0.1
+			planet_crime_add = 20
+			pop_lifestyle_trade_value_add = 1
+			pop_cyborg_happiness = 0.1
+			show_only_custom_tooltip = no
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_cyber_corporate_collectivist"
+		description = auth_cyber_corporate_collectivist_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_collectivist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_corporate_collectivist_tt
+			country_trade_produces_mult = 0.1
+			planet_crime_add = 20
+			council_agenda_progress_speed = 0.25
+			show_only_custom_tooltip = no
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_synth_corporate_physical"
+		description = auth_synth_corporate_physical_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_physical
+		}
+		modifier = {
+			custom_tooltip = auth_synth_corporate_physical_tt
+			country_trade_produces_mult = 0.1
+			show_only_custom_tooltip = no
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_synth_corporate_virtual"
+		description = auth_synth_corporate_virtual_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_virtual
+		}
+		modifier = {
+			custom_tooltip = auth_synth_corporate_virtual_tt
+			intel_decryption_add = 1
+			show_only_custom_tooltip = no
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_bio_corporate_purity"
+		description = auth_bio_corporate_purity_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_purity
+		}
+		modifier = {
+			custom_tooltip = auth_bio_corporate_purity_tt
+			slave_market_cost_mult = -0.33
+			show_only_custom_tooltip = no
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_bio_corporate_cloning"
+		description = auth_bio_corporate_cloning_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_cloning
+		}
+		modifier = {
+			custom_tooltip = auth_bio_corporate_cloning_tt
+			show_only_custom_tooltip = no
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_bio_corporate_mutation"
+		description = auth_bio_corporate_mutation_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			NOT = {
+				has_origin = origin_evolutionary_predators
+			}
+		}
+		modifier = {
+			custom_tooltip = auth_bio_corporate_mutation_tt
+			show_only_custom_tooltip = no
+			country_unity_produces_mult = 0.10
+			planet_crime_add = 20
+			pop_happiness = 0.1
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_bio_corporate_evopred"
+		description = auth_bio_corporate_evopred_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			has_origin = origin_evolutionary_predators
+		}
+		modifier = {
+			planet_jobs_trade_produces_mult = 0.10
+			empire_size_colonies_mult = 0.50
+			custom_tooltip = auth_bio_corporate_evopred_tt
+			show_only_custom_tooltip = no
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_shroud_corporate_transcendent"
+		description = auth_shroud_corporate_transcendent_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			is_transcendent_authority = yes
+		}
+		modifier = {
+			custom_tooltip = auth_shroud_corporate_transcendent_tt
+			psionic_aura_hyperlane_range_add = 2
+			intel_decryption_add = 1
+			operations_influence_cost_mult = -0.2
+			branch_office_value_mult = 0.2
+			envoys_add = 1
+			show_only_custom_tooltip = no
+		}
+	}
+	advanced_authority_swap = {
+		name = "auth_shroud_corporate_corporeal"
+		description = auth_shroud_corporate_corporeal_desc
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			is_corporeal_authority = yes
+		}
+		modifier = {
+			custom_tooltip = auth_shroud_corporate_corporeal_tt
+			psionic_aura_effectiveness_mult = 0.25
+			country_branch_office_influence_cost_mult = -0.4
+			council_agenda_early_activation_cost_mult = -0.25
+			council_agenda_cooldown_mult = -0.25
+			species_leader_exp_gain = 0.25
+			show_only_custom_tooltip = no
+		}
+	}
+	tags = {
+		AUTHORITY_SUCCESSION_TYPE
+		AUTHORITY_CORPORATE_SUCCESSION
+	}
+}

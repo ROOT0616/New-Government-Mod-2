@@ -1,0 +1,14 @@
+# Ratios of legacy job-equivalents to legacy population-equivalents.
+# These modifiers are consumed explicitly by the deposit capacity script value.
+ngm_noble_job_ratio = {
+    icon = mod_job_noble_add
+    percentage = yes
+    good = yes
+    category = colony
+}
+ngm_influencer_job_ratio = {
+    icon = mod_job_politician_add
+    percentage = yes
+    good = yes
+    category = colony
+}

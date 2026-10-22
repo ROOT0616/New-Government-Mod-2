@@ -1,0 +1,8 @@
+d_ngm_armed_citizens = {
+    category = deposit_cat_rare icon = d_monument_in_space
+    potential = { always = no } drop_weight = { weight = 0 }
+    triggered_planet_modifier = {
+        potential = { exists = owner }
+        planet_defense_armies_add = 1 mult = value:ngm_militia_army_count
+    }
+}

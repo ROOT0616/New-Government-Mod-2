@@ -1,0 +1,7 @@
+ngm_sync_militia_effect = {
+    if = { limit = { is_colony = yes exists = owner owner = {
+        OR = { has_valid_civic = civic_ngm_right_to_bear_arms has_valid_civic = civic_ngm_p_military }
+    } }
+        if = { limit = { NOT = { has_deposit = d_ngm_armed_citizens } } add_deposit = d_ngm_armed_citizens }
+    } else = { remove_deposit = d_ngm_armed_citizens }
+}

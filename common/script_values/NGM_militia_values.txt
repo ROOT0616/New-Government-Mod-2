@@ -1,0 +1,6 @@
+ngm_militia_army_count = {
+    complex_trigger_modifier = { trigger = pop_amount mode = add }
+    divide = 100
+    mult = modifier:ngm_armed_citizens_army_ratio
+    floor = yes
+}

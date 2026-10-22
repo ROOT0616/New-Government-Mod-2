@@ -1,0 +1,149 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_planet"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_law.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_planet"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_law.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_planet"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_law.dds"
+		borderSize = {
+			x = 140
+			y = 140
+		}
+		effectFile = gfx/FX/buttonstate_onlydisable.lua
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_planet"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_development"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_law.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_development"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_law.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_development"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_law.dds"
+		borderSize = {
+			x = 140
+			y = 140
+		}
+		effectFile = gfx/FX/buttonstate_onlydisable.lua
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_development"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_ngm_craftsmanship"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_ngm_law.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_ngm_craftsmanship"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_law.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_ngm_craftsmanship"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_tradition_ngm_law.dds"
+		borderSize = {
+			x = 140
+			y = 140
+		}
+		effectFile = gfx/FX/buttonstate_onlydisable.lua
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_ngm_craftsmanship"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_locked.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_planet_adopt"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_planet_finish"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_planetary_scale_mining"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_agrarianism"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_support_for_mining"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_investment_in_agricultural_corporations"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_local_regeneration"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_development_adopt"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_development_finish"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_station_management_office"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_zero_gravity_mining"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_station_power_generation"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_station_hub"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_space_department"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_craftsmanship_adopt"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_craftsmanship_finish"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_craft_production"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_metal_processing_institute"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_recycling_processing"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_improvement_of_metal_processing"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_ngm_technicians_retention"
+		textureFile = "gfx/interface/icons/traditions/tr_ngm_human_rights.dds"
+	}
+}

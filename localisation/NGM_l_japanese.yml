@@ -410,8 +410,8 @@
  civic_ngm_ship_protection_protocol:0 "船舶保護プロトコル"
  civic_ngm_ship_protection_protocol_desc:0 "船舶の緊急回避システムの搭載がこの国では義務付けられている。"
 
- civic_ngm_space_security_headquarters:0 "宙間警備本部"
- civic_ngm_space_security_headquarters_desc:0 "海賊対処のための専門警察機関がこの国では設立されている。"
+ civic_ngm_space_security_headquarters2:0 "宙間警備本部"
+ civic_ngm_space_security_headquarters2_desc:0 "海賊対処のための専門警察機関がこの国では設立されている。"
 
  civic_ngm_random_birth_rate:0 "乱脈的出生率"
  civic_ngm_random_birth_rate_desc:0 "この国では出生率がコントロールできていない。"
@@ -603,7 +603,7 @@
  civic_ngm_defender_of_the_faith:0 "信仰の擁護者"
  civic_ngm_defender_of_the_faith_desc:0 "この国の指導者は国家として神を守ることを誓約しており、そのためにはあらゆる犠牲を惜しまない。"
 
- civic_ngm_divination:0 "亀ト（きぼく）"
+ civic_ngm_divination:0 "亀ト"
  civic_ngm_divination_desc:0 "この国では占いにより政治が行われており、奇跡的に現在まで生き残ってきた原始的な体制である。"
 
  civic_ngm_cultural_consumption:0 "文化の大量消費"
@@ -824,6 +824,51 @@
 
  civic_ngm_p_councilor:0 "連邦参事会"
  civic_ngm_p_councilor_desc:0 "この国はすべての政党が内閣に参加し、合議体制の閣議が実質的な国家元首として機能している"
+
+ civic_ngm_c_god_rule:0 "建神論"
+ civic_ngm_c_god_rule_desc:0 "神は自然に存在するものではない。我々で創造するものだ。"
+
+ civic_ngm_n_face_rule:0 "生命の顔をした国家"
+ civic_ngm_n_face_rule_desc:0 "この国は抑圧のためではなく、融和のために存在している。"
+
+ civic_ngm_b_faction:0 "派閥主義"
+ civic_ngm_b_faction_desc:0 "この国では各勢力や派閥がしのぎを削っている。"
+
+ civic_ngm_a_noble_rule:0 "啓蒙貴族制"
+ civic_ngm_a_noble_rule_desc:0 "この国では富は徳を生み、その富を広げることでこそ社会は安定すると考えられる徳治貴族が支配している。"
+
+ civic_ngm_m_marrige_rule:0 "多婚制"
+ civic_ngm_m_marrige_rule_desc:0 "この国では多様な婚姻形態が認められている。"
+
+ civic_ngm_t_election_rule:0 "二元代表制"
+ civic_ngm_t_election_rule_desc:0 "この国は一方法による代表選出ではなく、複数方法により代表選出を行う。"
+
+ civic_ngm_e_geli_rule:0 "腐敗選挙区"
+ civic_ngm_e_geli_rule_desc:0 "この国の選挙区割りは現職や与党に有利になるよう仕組まれている。"
+
+ civic_ngm_g_bureaucrat_rule:0 "官僚統治制"
+ civic_ngm_g_bureaucrat_rule_desc:0 "この国の政治は政治家や貴族が統御しておらず、官僚が操っている。"
+
+ civic_ngm_nk_commun_rule:0 "主体思想"
+ civic_ngm_nk_commun_rule_desc:0 "自国の主体性と指導者指導の正統性を知らしめることは同志主席の本懐である。"
+
+ civic_ngm_blm_affirma_rule:0 "積極的是正"
+ civic_ngm_blm_affirma_rule_desc:0 "この国は差別や不公平に対して社会的補足を行うことで社会を改良しようとしている。"
+
+ civic_ngm_c_taxes_rule:0 "複雑な税制度"
+ civic_ngm_c_taxes_rule_desc:0 "この国の税制度を理解することは極めて困難であるが、官僚は必要な税を徴収し続けている。"
+
+ civic_ngm_u_stamp_rule:0 "押印主義"
+ civic_ngm_u_stamp_rule_desc:0 "書類に印を押す。手紙に印を押す。成果表に......"
+
+ civic_ngm_p_blood_rule:0 "血液信仰"
+ civic_ngm_p_blood_rule_desc:0 "血液とは人々の意思と魂を媒介する神聖なる液体であり、この研究は生命への必要な畏敬をもたらす。"
+
+ civic_ngm_c_noble_rule:0 "形式的貴族制"
+ civic_ngm_c_noble_rule_desc:0 "この国では国家功労者等に貴族称号を贈ることで、その功績や地位に報いている。"
+
+ civic_ngm_m_money_rule:0 "金権屋"
+ civic_ngm_m_money_rule_desc:0 "この国では大金を有する個人が政治を指揮し、その利益を最大化するようにふるまっている。"
 
 #############################
 #####    企業帝国国是    #####
@@ -4655,7 +4700,7 @@
  councilor_neoliberalism_female:0 "$councilor_neoliberalism$"
  councilor_neoliberalism_desc:0 "経済団体連合会長"
 
- councilor_manifest_destiny:0 "拓殖務長官"
+ councilor_manifest_destiny:0 "拓植務長官"
  councilor_manifest_destiny_female:0 "$councilor_manifest_destiny$"
  councilor_manifest_destiny_desc:0 "植民と開拓を推進し、国家の繁栄を下支えする責任者"
 
@@ -4731,9 +4776,9 @@
  councilor_ngm_ship_protection_protocol_female:0 "$councilor_ngm_ship_protection_protocol$"
  councilor_ngm_ship_protection_protocol_desc:0 "宇宙における完成統御を行う事務長"
 
- councilor_ngm_space_security_headquarters:0 "宙間警備本部長官"
- councilor_ngm_space_security_headquarters_female:0 "$councilor_ngm_space_security_headquarters$"
- councilor_ngm_space_security_headquarters_desc:0 "宇宙の警備を行い、宙間交通の安全を守る責任者"
+ councilor_ngm_space_security_headquarters2:0 "宙間警備本部長官"
+ councilor_ngm_space_security_headquarters2_female:0 "$councilor_ngm_space_security_headquarters$"
+ councilor_ngm_space_security_headquarters2_desc:0 "宇宙の警備を行い、宙間交通の安全を守る責任者"
 
  councilor_ngm_random_birth_rate:0 "生命の運び手"
  councilor_ngm_random_birth_rate_female:0 "$councilor_ngm_random_birth_rate$"
@@ -4771,9 +4816,9 @@
  councilor_ngm_peoples_democracy_female:0 "$councilor_ngm_peoples_democracy$"
  councilor_ngm_peoples_democracy_desc:0 "人民の問題を取り扱う主任閣僚"
 
- councilor_ngm_cyberdemocracy:0 "サイバー民主制"
+ councilor_ngm_cyberdemocracy:0 "選挙管理技術主任"
  councilor_ngm_cyberdemocracy_female:0 "$councilor_ngm_cyberdemocracy$"
- councilor_ngm_cyberdemocracy_desc:0 "国内外の情報を管理する役所の長"
+ councilor_ngm_cyberdemocracy_desc:0 "選挙情報を管理する役所の長"
 
  councilor_ngm_aristocratic_republicanism:0 "法の守護者"
  councilor_ngm_aristocratic_republicanism_female:0 "$councilor_ngm_aristocratic_republicanism$"
@@ -4971,9 +5016,9 @@
  councilor_ngm_messenger_of_peace_female:0 "$councilor_ngm_messenger_of_peace$"
  councilor_ngm_messenger_of_peace_desc:0 "平和を愛し、人々に平和を届けることを夢見る高官"
 
- councilor_ngm_space_security_headquarters:0 "最高交渉官"
- councilor_ngm_space_security_headquarters_female:0 "$councilor_ngm_space_security_headquarters$"
- councilor_ngm_space_security_headquarters_desc:0 "国家間の交渉を行う最高位の外交官"
+ councilor_ngm_good_faith_negotiator:0 "最高交渉官"
+ councilor_ngm_good_faith_negotiator_female:0 "$councilor_ngm_space_security_headquarters$"
+ councilor_ngm_good_faith_negotiator_desc:0 "国家間の交渉を行う最高位の外交官"
 
  councilor_ngm_mechanical_faith:0 "機械法王"
  councilor_ngm_mechanical_faith_female:0 "$councilor_ngm_mechanical_faith$"
@@ -5135,9 +5180,9 @@
  councilor_ngm_planetary_garden_female:0 "$councilor_ngm_planetary_garden$"
  councilor_ngm_planetary_garden_desc:0 "国家規模の庭園を管理し、美しい状態を維持する"
 
- councilor_ngm_space_security_headquarters:0 "大生命保護官"
- councilor_ngm_space_security_headquarters_female:0 "$councilor_ngm_space_security_headquarters$"
- councilor_ngm_space_security_headquarters_desc:0 "この世で最も尊い生命を保護し、安全を確保する高等官"
+ councilor_ngm_breakdown_prevention_method:0 "大生命保護官"
+ councilor_ngm_breakdown_prevention_method_female:0 "$councilor_ngm_space_security_headquarters$"
+ councilor_ngm_breakdown_prevention_method_desc:0 "この世で最も尊い生命を保護し、安全を確保する高等官"
 
  councilor_ngm_nature_faith:0 "巫女姫"
  councilor_ngm_nature_faith_female:0 "$councilor_ngm_nature_faith$"
@@ -5223,7 +5268,7 @@
  councilor_ngm_p_medal_female:0 "$councilor_ngm_p_medal$"
  councilor_ngm_p_medal_desc:0 "式典を司る上級官僚"
 
- councilor_ngm_p_agriculture:0 "国家農業協同組合長"
+ councilor_ngm_p_agriculture:0 "全国農業協同組合中央会代表理事会長"
  councilor_ngm_p_agriculture_female:0 "$councilor_ngm_p_agriculture$"
  councilor_ngm_p_agriculture_desc:0 "国家の農業政策に発言力を有する組合長"
 
@@ -5346,6 +5391,66 @@
  councilor_ngm_pc_directer:0 "総務局長"
  councilor_ngm_pc_directer_female:0 "$councilor_ngm_pc_directer$"
  councilor_ngm_pc_directer_desc:0 "企業内の事務を総括し、効率的な運用を目指す部局長"
+
+ councilor_civic_ngm_c_god_rule:0 "教育人民委員"
+ councilor_civic_ngm_c_god_rule_female:0 "$councilor_civic_ngm_c_god_rule$"
+ councilor_civic_ngm_c_god_rule_desc:0 "労働者教育と倫理観の敷衍を担う教育政務官"
+
+ councilor_civic_ngm_n_face_rule:0 "融和長官"
+ councilor_civic_ngm_n_face_rule_female:0 "$councilor_civic_ngm_n_face_rule$"
+ councilor_civic_ngm_n_face_rule_desc:0 "社会の融和と政治への不満を解決するための窓口となる政府高官"
+
+ councilor_civic_ngm_b_faction:0 "渉内担当官"
+ councilor_civic_ngm_b_faction_female:0 "councilor_civic_ngm_b_faction$"
+ councilor_civic_ngm_b_faction_desc:0 "国内の各勢力や派閥の利害を調整する事務官"
+
+ councilor_civic_ngm_a_noble_rule:0 "典礼長官"
+ councilor_civic_ngm_a_noble_rule_female:0 "$councilor_civic_ngm_a_noble_rule$"
+ councilor_civic_ngm_a_noble_rule_desc:0 "貴族と高官に関する諸問題の調整を行う高位行政官"
+
+ councilor_civic_ngm_m_marrige_rule:0 "婚姻調整主任判事"
+ councilor_civic_ngm_m_marrige_rule_female:0 "$councilor_civic_ngm_m_marrige_rule$"
+ councilor_civic_ngm_m_marrige_rule_desc:0 "婚姻に係る諸問題の仲裁を図る最高裁判官"
+
+ councilor_civic_ngm_t_election_rule:0 "首相"
+ councilor_civic_ngm_t_election_rule_female:0 "$councilor_civic_ngm_t_election_rule$"
+ councilor_civic_ngm_t_election_rule_desc:0 "国民の声を政治に反映させ、必要な措置を行うための職"
+
+ councilor_civic_ngm_e_geli_rule:0 "内務大臣"
+ councilor_civic_ngm_e_geli_rule_female:0 "$councilor_civic_ngm_e_geli_rule$"
+ councilor_civic_ngm_e_geli_rule_desc:0 "国内の統制に関わる業務を司る閣僚"
+
+ councilor_civic_ngm_g_bureaucrat_rule:0 "政策統括監"
+ councilor_civic_ngm_g_bureaucrat_rule_female:0 "$councilor_civic_ngm_g_bureaucrat_rule$"
+ councilor_civic_ngm_g_bureaucrat_rule_desc:0 "官僚の立場で政策を操作し、全てを操る高官"
+
+ councilor_civic_ngm_nk_commun_rule:0 "国務委員長"
+ councilor_civic_ngm_nk_commun_rule_female:0 "$councilor_civic_ngm_nk_commun_rule$"
+ councilor_civic_ngm_nk_commun_rule_desc:0 "国家の重要政務を統括する委員会の長"
+
+ councilor_civic_ngm_blm_affirma_rule:0 "是正措置担当官"
+ councilor_civic_ngm_blm_affirma_rule_female:0 "$councilor_civic_ngm_blm_affirma_rule$"
+ councilor_civic_ngm_blm_affirma_rule_desc:0 "差別を許さず、格差を是正する責任者"
+
+ councilor_civic_ngm_c_taxes_rule:0 "国税庁長官"
+ councilor_civic_ngm_c_taxes_rule_female:0 "$councilor_civic_ngm_c_taxes_rule$"
+ councilor_civic_ngm_c_taxes_rule_desc:0 "税制度の統括と徴収の総責任者"
+
+ councilor_civic_ngm_u_stamp_rule:0 "国璽尚書"
+ councilor_civic_ngm_u_stamp_rule_female:0 "$councilor_civic_ngm_u_stamp_rule$"
+ councilor_civic_ngm_u_stamp_rule_desc:0 "国家の重要文書に押印する国璽を管理する役所の長官"
+
+ councilor_civic_ngm_p_blood_rule:0 "輸血研究所長"
+ councilor_civic_ngm_p_blood_rule_female:0 "$councilor_civic_ngm_p_blood_rule$"
+ councilor_civic_ngm_p_blood_rule_desc:0 "血液を他人に移すことにより新たな知見を得ようとする探求者"
+
+ councilor_civic_ngm_c_noble_rule:0 "貴族院議長"
+ councilor_civic_ngm_c_noble_rule_female:0 "$councilor_civic_ngm_c_noble_rule$"
+ councilor_civic_ngm_c_noble_rule_desc:0 "儀礼貴族が政治に意見する議会の議長"
+
+ councilor_civic_ngm_m_money_rule:0 "金権屋"
+ councilor_civic_ngm_m_money_rule_female:0 "$councilor_civic_ngm_m_money_rule$"
+ councilor_civic_ngm_m_money_rule_desc:0 "金で政治を動かす国家の大物"
 
 ##############################
 #####    評議会の方針    ######

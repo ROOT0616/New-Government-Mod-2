@@ -1,0 +1,5 @@
+ngm_sync_civic_ruler_jobs_effect = {
+    if = { limit = { exists = owner is_colony = yes owner = { OR = { has_valid_civic = civic_ngm_aristocratic_republicanism has_valid_civic = civic_ngm_chief_secretary_system has_valid_civic = civic_ngm_communist_dictatorship has_valid_civic = civic_ngm_demagoguery has_valid_civic = civic_ngm_environmental_democracy has_valid_civic = civic_ngm_federation_of_the_galaxies has_valid_civic = civic_ngm_honorary_imperialism has_valid_civic = civic_ngm_order_of_chivalry has_valid_civic = civic_ngm_peoples_democracy has_valid_civic = civic_ngm_war_lord } } }
+        if = { limit = { NOT = { has_deposit = d_ngm_civic_ruler_jobs } } add_deposit = d_ngm_civic_ruler_jobs }
+    } else = { remove_deposit = d_ngm_civic_ruler_jobs }
+}

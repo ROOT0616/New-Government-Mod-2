@@ -1,0 +1,4 @@
+on_game_start_country = { events = { ngm_civic.2 ngm_civic.5 ngm_civic.23 } }
+on_monthly_pulse_country = { events = { ngm_civic.2 ngm_civic.5 ngm_civic.23 } }
+on_leader_spawned = { events = { ngm_civic.24 } }
+on_added_to_leader_pool = { events = { ngm_civic.24 } }

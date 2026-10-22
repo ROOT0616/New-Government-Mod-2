@@ -14694,7 +14694,6 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = tr_ngm_ministry_engagement_buff_1
-				days = 30
 			}
 		}
 		else_if = {
@@ -14702,9 +14701,7 @@ country_event = {
 				num_rivals = 2
 			}
 			add_modifier = {
-				modifier = tr_ngm_ministry_engagement_buff_1
-				days = 30
-				multiplier = 2
+				modifier = tr_ngm_ministry_engagement_buff_2
 			}
 		}
 		else_if = {
@@ -14712,9 +14709,7 @@ country_event = {
 				num_rivals = 3
 			}
 			add_modifier = {
-				modifier = tr_ngm_ministry_engagement_buff_1
-				days = 30
-				multiplier = 3
+				modifier = tr_ngm_ministry_engagement_buff_3
 			}
 		}
 		else_if = {
@@ -14722,9 +14717,7 @@ country_event = {
 				num_rivals = 4
 			}
 			add_modifier = {
-				modifier = tr_ngm_ministry_engagement_buff_1
-				days = 30
-				multiplier = 4
+				modifier = tr_ngm_ministry_engagement_buff_4
 			}
 		}
 		else_if = {
@@ -14732,19 +14725,7 @@ country_event = {
 				num_rivals = 5
 			}
 			add_modifier = {
-				modifier = tr_ngm_ministry_engagement_buff_1
-				days = 30
-				multiplier = 5
-			}
-		}
-		else_if = {
-			limit = {
-				num_rivals = 6
-			}
-			add_modifier = {
-				modifier = tr_ngm_ministry_engagement_buff_1
-				days = 30
-				multiplier = 6
+				modifier = tr_ngm_ministry_engagement_buff_5
 			}
 		}
 	}
@@ -14761,17 +14742,34 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				has_modifier = tr_ngm_ministry_engagement_buff_1
-			}
-			remove_modifier = tr_ngm_ministry_engagement_buff_1
-		}
-		if = {
-			limit = {
 				num_rivals = 1
 			}
 			add_modifier = {
 				modifier = tr_ngm_ministry_engagement_buff_1
-				days = 30
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_2
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_2
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_3
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_3
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_4
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_4
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_5
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_5
 			}
 		}
 		else_if = {
@@ -14779,9 +14777,31 @@ country_event = {
 				num_rivals = 2
 			}
 			add_modifier = {
-				modifier = tr_ngm_ministry_engagement_buff_1
-				days = 30
-				multiplier = 2
+				modifier = tr_ngm_ministry_engagement_buff_2
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_1
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_1
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_3
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_3
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_4
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_4
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_5
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_5
 			}
 		}
 		else_if = {
@@ -14789,9 +14809,31 @@ country_event = {
 				num_rivals = 3
 			}
 			add_modifier = {
-				modifier = tr_ngm_ministry_engagement_buff_1
-				days = 30
-				multiplier = 3
+				modifier = tr_ngm_ministry_engagement_buff_3
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_1
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_1
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_2
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_2
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_4
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_4
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_5
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_5
 			}
 		}
 		else_if = {
@@ -14799,9 +14841,31 @@ country_event = {
 				num_rivals = 4
 			}
 			add_modifier = {
-				modifier = tr_ngm_ministry_engagement_buff_1
-				days = 30
-				multiplier = 4
+				modifier = tr_ngm_ministry_engagement_buff_4
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_1
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_1
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_2
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_2
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_3
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_3
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_5
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_5
 			}
 		}
 		else_if = {
@@ -14809,19 +14873,31 @@ country_event = {
 				num_rivals = 5
 			}
 			add_modifier = {
-				modifier = tr_ngm_ministry_engagement_buff_1
-				days = 30
-				multiplier = 5
+				modifier = tr_ngm_ministry_engagement_buff_5
 			}
-		}
-		else_if = {
-			limit = {
-				num_rivals = 6
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_1
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_1
 			}
-			add_modifier = {
-				modifier = tr_ngm_ministry_engagement_buff_1
-				days = 30
-				multiplier = 6
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_2
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_2
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_3
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_3
+			}
+			if = {
+				limit = {
+					has_modifier = tr_ngm_ministry_engagement_buff_4
+				}
+				remove_modifier = tr_ngm_ministry_engagement_buff_4
 			}
 		}
 	}
@@ -16241,23 +16317,23 @@ country_event = {
 		}
 	}
 	# # 追加通常帝国用国是
-	option = {
-		name = ngm_tradition.40.e
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.61
-			}
-		}
-	}
-	# 追加企業帝国用国是
-	option = {
-		name = ngm_tradition.40.f
-		hidden_effect = {
-			country_event = {
-				id = ngm_tradition.91
-			}
-		}
-	}
+	# option = {
+	# 	name = ngm_tradition.40.e
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = ngm_tradition.61
+	# 		}
+	# 	}
+	# }
+	# # 追加企業帝国用国是
+	# option = {
+	# 	name = ngm_tradition.40.f
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = ngm_tradition.91
+	# 		}
+	# 	}
+	# }
 	# 閉じる
 	option = {
 		name = ngm_tradition.40.g

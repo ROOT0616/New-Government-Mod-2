@@ -1,78 +1,58 @@
-##############################
-# Environmentalism Faction
-##############################
 NGM_environmentalism = {
-	election_header = "GFX_faction_header_yellow"
+	election_header = GFX_faction_header_yellow
 	guiding_ethic = ethic_conservationism
-	visual_ethic = "NGM_environmentalism_visual_ethic"
-
+	visual_ethic = NGM_environmentalism_visual_ethic
 	unique = yes
 	support_multiplier = 1
-
 	resources = {
 		category = pop_factions
+		inline_script = pop_faction_types/shared_unity_production
 		produces = {
-			unity = 0.5
+			trigger = {
+				owner = {
+					OR = {
+						has_valid_civic = civic_crowdsourcing
+						has_valid_civic = civic_corporate_crowdsourcing
+					}
+				}
+			}
+			unity = @faction_base_output
 		}
 	}
-
 	is_potential = {
 		is_faction_allowed = yes
 	}
-
-	parameters = {
-		empire = {
-			type = country
-			valid_objects = {
-				is_same_value = root
-			}
-		}
-	}
-
 	can_join_pre_triggers = {
 		is_enslaved = no
 		is_being_purged = no
-		is_robot_pop = no
 	}
-
 	can_join_faction = {
-		can_think = yes
-		is_shackled_robot = no
+		inline_script = pop_faction_types/can_join_faction/base
 		has_ethic = ethic_conservationism
 	}
-
 	attraction = {
 		base = 150
-
-		modifier = {
-			factor = 1.25
-			exists = from
-			from = {
-				exists = leader
-				leader = { is_ruler = yes }
-			}
-		}
-
-		modifier = {
-			factor = 0.75
-			exists = from
-			from = {
-				NOT = { exists = leader }
-			}
-		}
+		inline_script = pop_faction_types/attraction/promote_suppress_attraction
+		inline_script = pop_faction_types/attraction/leader_attraction
 	}
-
 	leader = {
 		base = 100
+		modifier = {
+			factor = 0
+			is_ruler = yes
+			owner = {
+				is_imperial_authority = yes
+			}
+		}
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
 		}
 	}
 	demand = {
-		title = "FACTION_OUTRAGED_GC"
-		unfulfilled_title = "FACTION_OUTRAGED_GC"
-		desc = "FACTION_OUTRAGED_GC_DESC"
+		title = FACTION_OUTRAGED_GC
+		unfulfilled_title = FACTION_OUTRAGED_GC
+		desc = FACTION_OUTRAGED_GC_DESC
 		fulfilled_effect = -20
 		unfulfilled_effect = -0.001
 		potential = {
@@ -88,10 +68,9 @@ NGM_environmentalism = {
 		}
 	}
 	demand = {
-		# "不浄な土地"
-		title = "TRADITIONALIST_NO_TOMB_WORLDS"
-		unfulfilled_title = "TRADITIONALIST_TOMB_WORLDS"
-		desc = "TRADITIONALIST_NO_TOMB_WORLDS_DESC"
+		title = TRADITIONALIST_NO_TOMB_WORLDS
+		unfulfilled_title = TRADITIONALIST_TOMB_WORLDS
+		desc = TRADITIONALIST_NO_TOMB_WORLDS_DESC
 		unfulfilled_effect = -5
 		fulfilled_effect = 0.001
 		potential = {
@@ -120,10 +99,9 @@ NGM_environmentalism = {
 		}
 	}
 	demand = {
-		# "惑星保存 Planet Preservation"
-		title = "ENVIRONMENTALISM_PLANET_PRESERVATION"
-		unfulfilled_title = "ENVIRONMENTALISM_PLANET_PRESERVATION"
-		desc = "ENVIRONMENTALISM_PLANET_PRESERVATION_DESC"
+		title = ENVIRONMENTALISM_PLANET_PRESERVATION
+		unfulfilled_title = ENVIRONMENTALISM_PLANET_PRESERVATION
+		desc = ENVIRONMENTALISM_PLANET_PRESERVATION_DESC
 		fulfilled_effect = 0
 		unfulfilled_effect = -20
 		potential = {
@@ -133,7 +111,6 @@ NGM_environmentalism = {
 			owner = {
 				any_owned_planet = {
 					NOT = {
-						# is_terraformed = yes
 						is_terraforming = yes
 					}
 				}
@@ -141,10 +118,9 @@ NGM_environmentalism = {
 		}
 	}
 	demand = {
-		# "農業維持 Agricultural Maintenance"
-		title = "ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE"
-		unfulfilled_title = "ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE"
-		desc = "ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE_DESC"
+		title = ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE
+		unfulfilled_title = ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE
+		desc = ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE_DESC
 		fulfilled_effect = 10
 		unfulfilled_effect = -5
 		potential = {
@@ -166,10 +142,9 @@ NGM_environmentalism = {
 		}
 	}
 	demand = {
-		# "農業維持 Agricultural Maintenance"
-		title = "ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE"
-		unfulfilled_title = "ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE"
-		desc = "ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE_DESC"
+		title = ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE
+		unfulfilled_title = ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE
+		desc = ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE_DESC
 		fulfilled_effect = 20
 		unfulfilled_effect = 0
 		potential = {
@@ -197,10 +172,9 @@ NGM_environmentalism = {
 		}
 	}
 	demand = {
-		# "農業維持 Agricultural Maintenance"
-		title = "ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE"
-		unfulfilled_title = "ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE"
-		desc = "ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE_DESC"
+		title = ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE
+		unfulfilled_title = ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE
+		desc = ENVIRONMENTALISM_AGRICULTURAL_MAINTENANCE_DESC
 		fulfilled_effect = 30
 		unfulfilled_effect = 0
 		potential = {
@@ -222,18 +196,14 @@ NGM_environmentalism = {
 		}
 	}
 	demand = {
-		# "浄化反対"
-		title = "XENOIST_NO_PURGE"
-		unfulfilled_title = "XENOIST_PURGE"
-		desc = "XENOIST_NO_PURGE_DESC"
-
+		title = XENOIST_NO_PURGE
+		unfulfilled_title = XENOIST_PURGE
+		desc = XENOIST_NO_PURGE_DESC
 		unfulfilled_effect = -25
 		fulfilled_effect = 0.001
-
 		potential = {
 			exists = owner
 		}
-
 		trigger = {
 			owner = {
 				NOR = {
@@ -245,54 +215,54 @@ NGM_environmentalism = {
 	}
 	on_create = {
 		pop_faction_event = {
-			id = factions.1
+			id = factions.0
 		}
 	}
 	on_destroy = {
-		if = {
-			limit = {
-				has_modifier = promoted_conservationism
-			}
-			remove_modifier = promoted_conservationism
+		inline_script = {
+			script = NGM/factions/promote_on_destroy
+			ETHIC = conservationism
+			FACTION = NGM_environmentalism
 		}
-		if = {
-			limit = {
-				has_modifier = suppressed_conservationism
-			}
-			remove_modifier = suppressed_conservationism
+		inline_script = {
+			script = NGM/factions/suppress_on_destroy
+			ETHIC = conservationism
+			FACTION = NGM_environmentalism
 		}
 	}
-
 	actions = {
 		embrace_faction = {
-			title = "EMBRACE_FACTION"
-			description = "EMBRACE_FACTION_DESC"
-
+			title = EMBRACE_FACTION
+			description = EMBRACE_FACTION_DESC
 			cost = {
 				unity = 5000
 			}
-
 			potential = {
 				exists = owner
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = { any_agreement = { agreement_preset = preset_dominion } }
+						NOT = {
+							any_agreement = {
+								agreement_preset = preset_dominion
+							}
+						}
 					}
 				}
 			}
-
 			valid = {
 				custom_tooltip = {
 					fail_text = EMBRACE_FACTION_COOLDOWN
-					parameter:empire = {
-						NOT = { has_modifier = embraced_faction_timer }
+					owner = {
+						NOT = {
+							has_modifier = embraced_faction_timer
+						}
 					}
 				}
 				support > 0.20
-				parameter:empire = {
+				owner = {
 					NOT = {
-						has_ethic = "ethic_fanatic_conservationism"
+						has_ethic = ethic_fanatic_conservationism
 					}
 				}
 			}
@@ -301,7 +271,8 @@ NGM_environmentalism = {
 					modifier = embraced_faction
 					days = 3600
 				}
-				parameter:empire = {
+				owner = {
+					set_country_flag = has_embraced_faction
 					shift_ethic = ethic_conservationism
 					hidden_effect = {
 						add_modifier = {
@@ -323,7 +294,7 @@ NGM_environmentalism = {
 				}
 				hidden_effect = {
 					save_event_target_as = TargetFaction
-					parameter:empire = {
+					owner = {
 						every_relation = {
 							limit = {
 								is_ai = no
@@ -346,7 +317,7 @@ NGM_environmentalism = {
 				base = 1
 				modifier = {
 					factor = 0
-					support < 0.5
+					support < 0.50
 					owner = {
 						has_ethic = ethic_conservationism
 					}
@@ -367,94 +338,16 @@ NGM_environmentalism = {
 				}
 			}
 		}
-		promote_faction = {
-			title = "PROMOTE_FACTION"
-			description = "PROMOTE_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					NOR = {
-						has_modifier = suppressed_conservationism
-						has_modifier = promoted_conservationism
-					}
-				}
-			}
-			effect = {
-				parameter:empire = {
-					add_modifier = {
-						modifier = promoted_conservationism
-						days = -1
-					}
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
-		cancel_promote_faction = {
-			title = "CANCEL_PROMOTE_FACTION"
-			description = "CANCEL_PROMOTE_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					has_modifier = promoted_conservationism
-				}
-			}
-			effect = {
-				parameter:empire = {
-					remove_modifier = promoted_conservationism
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
-		suppress_faction = {
-			title = "SUPPRESS_FACTION"
-			description = "SUPPRESS_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					NOR = {
-						has_modifier = suppressed_conservationism
-						has_modifier = promoted_conservationism
-					}
-				}
-			}
-			effect = {
-				add_modifier = {
-					modifier = suppressed_faction
-					days = -1
-				}
-				parameter:empire = {
-					add_modifier = {
-						modifier = suppressed_conservationism
-						days = -1
-					}
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
-		cancel_suppress_faction = {
-			title = "CANCEL_SUPPRESS_FACTION"
-			description = "CANCEL_SUPPRESS_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					has_modifier = suppressed_conservationism
-				}
-			}
-			effect = {
-				remove_modifier = suppressed_faction
-				parameter:empire = {
-					remove_modifier = suppressed_conservationism
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
+	}
+	inline_script = pop_faction_types/attraction/promote_suppress_tags
+	inline_script = {
+		script = NGM/factions/promote_faction
+		ETHIC = conservationism
+		FACTION = NGM_environmentalism
+	}
+	inline_script = {
+		script = NGM/factions/suppress_faction
+		ETHIC = conservationism
+		FACTION = NGM_environmentalism
 	}
 }

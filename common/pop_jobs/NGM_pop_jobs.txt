@@ -1,15 +1,5 @@
-# 1.式武官   統合力10 影響力1 → 勲章0.2
 bureau_of_ceremonies = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_ngm_bureau_of_ceremonies
-	clothes_texture_index = 3
-	possible_pre_triggers = {
-		has_owner = yes
-		is_being_purged = no
-		is_being_assimilated = no
-	}
-	possible_precalc = can_fill_specialist_job
 	resources = {
 		category = planet_bureau_of_ceremonies
 		produces = {
@@ -20,76 +10,154 @@ bureau_of_ceremonies = {
 			influence = 1
 		}
 	}
-	weight = {
-		weight = @specialist_job_weight
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_ngm_bureau_of_ceremonies
+			icon = researcher
+		}
 	}
-}
-
-# 2.書記 secretary 				安定度+5、工学+3、社会主義志向への魅力+10%
-ngm_secretary = {
-	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	# building_icon = building_ngm_bureau_of_ceremonies
-	clothes_texture_index = 3
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
 		is_being_assimilated = no
+		is_sapient = yes
 	}
-	possible_precalc = can_fill_ruler_job
-	planet_modifier = {
-		planet_stability_add = 5
-		pop_ethic_socialism_attraction_mult = 0.1
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
 	}
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = {
+				has_trait = trait_mechanical
+			}
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = {
+				type = living_standard_academic_privilege
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = {
+				type = slavery_indentured
+			}
+		}
+		modifier = {
+			factor = 5
+			has_trait = trait_cyborg_creed_of_research
+		}
+	}
+}
+ngm_secretary = {
+	category = ruler
 	resources = {
 		category = planet_ngm_secretary
 		produces = {
 			engineering_research = 3
 		}
 	}
-	weight = {
-		weight = @ruler_job_weight
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_capital
+			icon = politician
+		}
 	}
-}
-
-# 3.宣撫官 pacifist 				労働者の幸福度+5%、労働者生産力+1%、実利主義志向への魅力+10%
-ngm_pacifist = {
-	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	# building_icon = building_ngm_bureau_of_ceremonies
-	clothes_texture_index = 3
 	possible_pre_triggers = {
 		has_owner = yes
+		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
+		is_sapient = yes
 	}
 	possible_precalc = can_fill_ruler_job
-	planet_modifier = {
+	weight = {
+		weight = @ruler_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.1
+			has_citizenship_rights = no
+			NOT = {
+				has_trait = trait_mechanical
+			}
+		}
+		modifier = {
+			factor = 0.01
+			colony.controller? = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_stability_add = 5
+		pop_ethic_socialism_attraction_mult = 0.1
+	}
+}
+ngm_pacifist = {
+	category = ruler
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_capital
+			icon = politician
+		}
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_ruler_job
+	weight = {
+		weight = @ruler_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.1
+			has_citizenship_rights = no
+			NOT = {
+				has_trait = trait_mechanical
+			}
+		}
+		modifier = {
+			factor = 0.01
+			colony.controller? = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
 		pop_cat_worker_happiness = 0.05
 		planet_jobs_worker_produces_mult = 0.01
 		pop_ethic_utilitarianism_attraction_mult = 0.1
 	}
-	weight = {
-		weight = @ruler_job_weight
-	}
 }
-
-# 4.紋章官 crest_bearer 				統合力+5、惑星統合力+1%、勲章0.1、栄望主義志向への魅力+10%
 ngm_crest_bearer = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	# building_icon = building_ngm_bureau_of_ceremonies
-	clothes_texture_index = 3
-	possible_pre_triggers = {
-		has_owner = yes
-		is_being_purged = no
-		is_being_assimilated = no
-	}
-	possible_precalc = can_fill_ruler_job
-	planet_modifier = {
-		planet_jobs_unity_produces_mult = 0.01
-		pop_ethic_honorism_attraction_mult = 0.1
-	}
 	resources = {
 		category = planet_ngm_crest_bearer
 		produces = {
@@ -97,73 +165,149 @@ ngm_crest_bearer = {
 			ngm_order_of_merit = 0.1
 		}
 	}
-	weight = {
-		weight = @ruler_job_weight
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_capital
+			icon = politician
+		}
 	}
-}
-
-# 5.高級参謀 senior_advisor			防衛軍+5、宇宙軍許容量+5、安定度+5、軍国主義志向への魅力+10%
-ngm_senior_advisor = {
-	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	# building_icon = building_ngm_bureau_of_ceremonies
-	clothes_texture_index = 3
 	possible_pre_triggers = {
 		has_owner = yes
+		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
+		is_sapient = yes
 	}
 	possible_precalc = can_fill_ruler_job
-	country_modifier = {
-		country_naval_cap_add = 10
+	weight = {
+		weight = @ruler_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.1
+			has_citizenship_rights = no
+			NOT = {
+				has_trait = trait_mechanical
+			}
+		}
+		modifier = {
+			factor = 0.01
+			colony.controller? = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
 	}
-	planet_modifier = {
-		pop_defense_armies_add = 5
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_jobs_unity_produces_mult = 0.01
+		pop_ethic_honorism_attraction_mult = 0.1
+	}
+}
+ngm_senior_advisor = {
+	category = ruler
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_capital
+			icon = politician
+		}
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_ruler_job
+	weight = {
+		weight = @ruler_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.1
+			has_citizenship_rights = no
+			NOT = {
+				has_trait = trait_mechanical
+			}
+		}
+		modifier = {
+			factor = 0.01
+			colony.controller? = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_defense_armies_add = 5
 		planet_stability_add = 5
 		pop_ethic_militarist_attraction_mult = 0.1
 	}
-	weight = {
-		weight = @ruler_job_weight
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		country_naval_cap_add = 10
 	}
 }
-
-# 6.社会的英雄 heroes_of_society 			幸福度+5%、快適度+3、安定度+5
 ngm_heroes_of_society = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	clothes_texture_index = 3
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_capital
+			icon = politician
+		}
+	}
 	possible_pre_triggers = {
 		has_owner = yes
+		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
+		is_sapient = yes
 	}
 	possible_precalc = can_fill_ruler_job
-	planet_modifier = {
-		pop_happiness = 0.05
-		planet_amenities_add = 3
-		planet_stability_add = 5
-	}
 	weight = {
 		weight = @ruler_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.1
+			has_citizenship_rights = no
+			NOT = {
+				has_trait = trait_mechanical
+			}
+		}
+		modifier = {
+			factor = 0.01
+			colony.controller? = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		pop_happiness = 0.05
+		planet_amenities_add = 300
+		planet_stability_add = 5
 	}
 }
-
-# 7.大自然監督官 superintendent_of_wilderness	統合力+3、社会学+3、居住性+5%、保全主義志向への魅力+10%
 ngm_superintendent_of_wilderness = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	# building_icon = building_ngm_bureau_of_ceremonies
-	clothes_texture_index = 3
-	possible_pre_triggers = {
-		has_owner = yes
-		is_being_purged = no
-		is_being_assimilated = no
-	}
-	possible_precalc = can_fill_ruler_job
-	planet_modifier = {
-		pop_environment_tolerance = 0.05
-		pop_ethic_conservationism_attraction_mult = 0.1
-	}
 	resources = {
 		category = planet_ngm_superintendent_of_wilderness
 		produces = {
@@ -171,26 +315,69 @@ ngm_superintendent_of_wilderness = {
 			society_research = 3
 		}
 	}
-	weight = {
-		weight = @ruler_job_weight
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_capital
+			icon = politician
+		}
 	}
-}
-
-# 8.インフルエンサー influencer  影響力+0.3,統合力+2,統治志向の魅力+5%
-ngm_influencer = {
-	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	# building_icon = building_ngm_bureau_of_ceremonies
-	clothes_texture_index = 3
 	possible_pre_triggers = {
 		has_owner = yes
+		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
+		is_sapient = yes
 	}
 	possible_precalc = can_fill_ruler_job
-	planet_modifier = {
-		pop_government_ethic_attraction = 0.05
+	weight = {
+		weight = @ruler_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.1
+			has_citizenship_rights = no
+			NOT = {
+				has_trait = trait_mechanical
+			}
+		}
+		modifier = {
+			factor = 0.01
+			colony.controller? = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
 	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		pop_environment_tolerance = 0.05
+		pop_ethic_conservationism_attraction_mult = 0.1
+	}
+}
+ngm_influencer = {
+	category = ruler
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_capital
+			icon = politician
+		}
+	}
+	tags = {
+		unity
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_ruler_job
 	resources = {
 		category = planet_ngm_influencer
 		produces = {
@@ -198,26 +385,18 @@ ngm_influencer = {
 			unity = 2
 		}
 	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		pop_government_ethic_attraction = 0.05
+	}
 	weight = {
 		weight = @ruler_job_weight
 	}
 }
-
-# 9.潮流技師
 ngm_tide_engineer = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_institute
-	clothes_texture_index = 1
-	icon = researcher
-	possible_pre_triggers = {
-		has_owner = yes
-		is_enslaved = no
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
-	possible_precalc = can_fill_specialist_job
 	resources = {
 		category = planet_researchers
 		produces = {
@@ -225,131 +404,57 @@ ngm_tide_engineer = {
 			engineering_research = 8
 		}
 	}
-	weight = {
-		weight = @ruler_job_weight
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 2
-			has_living_standard = { type = living_standard_academic_privilege }
-		}
-		modifier = {
-			factor = 3
-			has_trait = trait_erudite
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_robot_logic_engines
-				has_trait = trait_intelligent
-			}
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_natural_engineers
-				has_trait = trait_natural_physicists
-				has_trait = trait_natural_sociologists
-			}
-		}
-		modifier = {
-			factor = 5
-			has_job = head_researcher
-		}
-		modifier = {
-			factor = 0.65
-			has_trait = trait_presapient_proles
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_latent_psionic
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_psionic
-		}
-		modifier = {
-			factor = 0.1
-			has_trait = trait_enigmatic_intelligence_failed
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_enigmatic_intelligence
-				has_trait = trait_enigmatic_intelligence_poor
-			}
-		}
-		modifier = {
-			factor = 2
-				has_trait = trait_presapient_natural_intellectuals
-		}
-		modifier = {
-			factor = 2
-				has_trait = trait_brainslug
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_robust
-		}
-		modifier = {
-			factor = 1.25
-			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
-			}
-		}
-		modifier = {
-			factor = 0.75
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_necrophage
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_void_dweller_1
-			exists = planet
-			planet = { uses_habitat_capitals = yes }
-		}
-		modifier = {
-			factor = 0.85
-			has_trait = trait_void_dweller_1
-			exists = planet
-			planet = { is_artificial = no }
-		}
-		modifier = {
-			factor = 0.01
-			exists = planet
-			exists = planet.controller
-			planet.controller = {
-				OR = {
-					is_country_type = swarm
-					is_country_type = ai_empire
-				}
-			}
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_institute
+			icon = researcher
 		}
 	}
-}
-
-# 10.庭園管理者
-ngm_gardener = {
-	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_institute
-	clothes_texture_index = 1
-	icon = researcher
 	possible_pre_triggers = {
 		has_owner = yes
-		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
 		is_sapient = yes
 	}
 	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = {
+				has_trait = trait_mechanical
+			}
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = {
+				type = living_standard_academic_privilege
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = {
+				type = slavery_indentured
+			}
+		}
+		modifier = {
+			factor = 5
+			has_trait = trait_cyborg_creed_of_research
+		}
+	}
+}
+ngm_gardener = {
+	category = specialist
 	resources = {
 		category = planet_researchers
 		produces = {
@@ -357,640 +462,304 @@ ngm_gardener = {
 			society_research = 8
 		}
 	}
-	weight = {
-		weight = @ruler_job_weight
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 2
-			has_living_standard = { type = living_standard_academic_privilege }
-		}
-		modifier = {
-			factor = 3
-			has_trait = trait_erudite
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_robot_logic_engines
-				has_trait = trait_intelligent
-			}
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_natural_engineers
-				has_trait = trait_natural_physicists
-				has_trait = trait_natural_sociologists
-			}
-		}
-		modifier = {
-			factor = 5
-			has_job = head_researcher
-		}
-		modifier = {
-			factor = 0.65
-			has_trait = trait_presapient_proles
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_latent_psionic
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_psionic
-		}
-		modifier = {
-			factor = 0.1
-			has_trait = trait_enigmatic_intelligence_failed
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_enigmatic_intelligence
-				has_trait = trait_enigmatic_intelligence_poor
-			}
-		}
-		modifier = {
-			factor = 2
-				has_trait = trait_presapient_natural_intellectuals
-		}
-		modifier = {
-			factor = 2
-				has_trait = trait_brainslug
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_robust
-		}
-		modifier = {
-			factor = 1.25
-			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
-			}
-		}
-		modifier = {
-			factor = 0.75
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_necrophage
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_void_dweller_1
-			exists = planet
-			planet = { uses_habitat_capitals = yes }
-		}
-		modifier = {
-			factor = 0.85
-			has_trait = trait_void_dweller_1
-			exists = planet
-			planet = { is_artificial = no }
-		}
-		modifier = {
-			factor = 0.01
-			exists = planet
-			exists = planet.controller
-			planet.controller = {
-				OR = {
-					is_country_type = swarm
-					is_country_type = ai_empire
-				}
-			}
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_institute
+			icon = researcher
 		}
 	}
-}
-
-# 11.	養殖技術者
-ngm_aquaculture_technician = {
-	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_institute
-	clothes_texture_index = 1
-	icon = researcher
 	possible_pre_triggers = {
 		has_owner = yes
-		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
 		is_sapient = yes
 	}
 	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = {
+				has_trait = trait_mechanical
+			}
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = {
+				type = living_standard_academic_privilege
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = {
+				type = slavery_indentured
+			}
+		}
+		modifier = {
+			factor = 5
+			has_trait = trait_cyborg_creed_of_research
+		}
+	}
+}
+ngm_aquaculture_technician = {
+	category = specialist
 	resources = {
 		category = planet_researchers
 		produces = {
-			food = 15 
+			food = 15
 			society_research = 3
 			consumer_goods = 5
 		}
 	}
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_institute
+			icon = researcher
+		}
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
 	weight = {
-		weight = @ruler_job_weight
+		weight = @specialist_job_weight
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 2
-			has_living_standard = { type = living_standard_academic_privilege }
-		}
-		modifier = {
-			factor = 3
-			has_trait = trait_erudite
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_robot_logic_engines
-				has_trait = trait_intelligent
+			NOT = {
+				has_trait = trait_mechanical
 			}
 		}
 		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_natural_engineers
-				has_trait = trait_natural_physicists
-				has_trait = trait_natural_sociologists
+			factor = 2
+			has_living_standard = {
+				type = living_standard_academic_privilege
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = {
+				type = slavery_indentured
 			}
 		}
 		modifier = {
 			factor = 5
-			has_job = head_researcher
-		}
-		modifier = {
-			factor = 0.65
-			has_trait = trait_presapient_proles
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_latent_psionic
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_psionic
-		}
-		modifier = {
-			factor = 0.1
-			has_trait = trait_enigmatic_intelligence_failed
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_enigmatic_intelligence
-				has_trait = trait_enigmatic_intelligence_poor
-			}
-		}
-		modifier = {
-			factor = 2
-				has_trait = trait_presapient_natural_intellectuals
-		}
-		modifier = {
-			factor = 2
-				has_trait = trait_brainslug
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_robust
-		}
-		modifier = {
-			factor = 1.25
-			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
-			}
-		}
-		modifier = {
-			factor = 0.75
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_necrophage
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_void_dweller_1
-			exists = planet
-			planet = { uses_habitat_capitals = yes }
-		}
-		modifier = {
-			factor = 0.85
-			has_trait = trait_void_dweller_1
-			exists = planet
-			planet = { is_artificial = no }
-		}
-		modifier = {
-			factor = 0.01
-			exists = planet
-			exists = planet.controller
-			planet.controller = {
-				OR = {
-					is_country_type = swarm
-					is_country_type = ai_empire
-				}
-			}
+			has_trait = trait_cyborg_creed_of_research
 		}
 	}
 }
-
-# 12.エグゼティブキャスト
 ngm_executive_cast = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_institute
-	clothes_texture_index = 1
-	icon = researcher
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_institute
+			icon = researcher
+		}
+	}
 	possible_pre_triggers = {
 		has_owner = yes
-		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
 		is_sapient = yes
 	}
 	possible_precalc = can_fill_specialist_job
-	planet_modifier = {
-		trade_value_add = 10
-		planet_crime_add = -10
-		planet_amenities_add = 5
-		pop_defense_armies_add = 2
+	possible = {
+		complex_specialist_job_check_trigger = yes
 	}
 	weight = {
-		weight = @ruler_job_weight
+		weight = @specialist_job_weight
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 2
-			has_living_standard = { type = living_standard_academic_privilege }
-		}
-		modifier = {
-			factor = 3
-			has_trait = trait_erudite
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_robot_logic_engines
-				has_trait = trait_intelligent
+			NOT = {
+				has_trait = trait_mechanical
 			}
 		}
 		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_natural_engineers
-				has_trait = trait_natural_physicists
-				has_trait = trait_natural_sociologists
+			factor = 2
+			has_living_standard = {
+				type = living_standard_academic_privilege
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = {
+				type = slavery_indentured
 			}
 		}
 		modifier = {
 			factor = 5
-			has_job = head_researcher
-		}
-		modifier = {
-			factor = 0.65
-			has_trait = trait_presapient_proles
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_latent_psionic
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_psionic
-		}
-		modifier = {
-			factor = 0.1
-			has_trait = trait_enigmatic_intelligence_failed
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_enigmatic_intelligence
-				has_trait = trait_enigmatic_intelligence_poor
-			}
-		}
-		modifier = {
-			factor = 2
-				has_trait = trait_presapient_natural_intellectuals
-		}
-		modifier = {
-			factor = 2
-				has_trait = trait_brainslug
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_robust
-		}
-		modifier = {
-			factor = 1.25
-			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
-			}
-		}
-		modifier = {
-			factor = 0.75
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_necrophage
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_void_dweller_1
-			exists = planet
-			planet = { uses_habitat_capitals = yes }
-		}
-		modifier = {
-			factor = 0.85
-			has_trait = trait_void_dweller_1
-			exists = planet
-			planet = { is_artificial = no }
-		}
-		modifier = {
-			factor = 0.01
-			exists = planet
-			exists = planet.controller
-			planet.controller = {
-				OR = {
-					is_country_type = swarm
-					is_country_type = ai_empire
-				}
-			}
+			has_trait = trait_cyborg_creed_of_research
 		}
 	}
-	
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_crime_add = -10
+		planet_amenities_add = 500
+		planet_defense_armies_add = 2
+	}
+	resources = {
+		category = planet_jobs
+		produces = {
+			trade = 10
+		}
+	}
 }
-
-# 13.キャスト
 ngm_cast = {
 	category = specialist
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_institute
-	clothes_texture_index = 1
-	icon = researcher
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_institute
+			icon = researcher
+		}
+	}
 	possible_pre_triggers = {
 		has_owner = yes
-		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
 		is_sapient = yes
 	}
 	possible_precalc = can_fill_specialist_job
-	planet_modifier = {
-		trade_value_add = 5
-		planet_crime_add = -5
-		planet_amenities_add = 2
+	possible = {
+		complex_specialist_job_check_trigger = yes
 	}
 	weight = {
-		weight = @ruler_job_weight
+		weight = @specialist_job_weight
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 2
-			has_living_standard = { type = living_standard_academic_privilege }
-		}
-		modifier = {
-			factor = 3
-			has_trait = trait_erudite
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_robot_logic_engines
-				has_trait = trait_intelligent
+			NOT = {
+				has_trait = trait_mechanical
 			}
 		}
 		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_natural_engineers
-				has_trait = trait_natural_physicists
-				has_trait = trait_natural_sociologists
+			factor = 2
+			has_living_standard = {
+				type = living_standard_academic_privilege
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = {
+				type = slavery_indentured
 			}
 		}
 		modifier = {
 			factor = 5
-			has_job = head_researcher
+			has_trait = trait_cyborg_creed_of_research
 		}
-		modifier = {
-			factor = 0.65
-			has_trait = trait_presapient_proles
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
 		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_latent_psionic
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_psionic
-		}
-		modifier = {
-			factor = 0.1
-			has_trait = trait_enigmatic_intelligence_failed
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_enigmatic_intelligence
-				has_trait = trait_enigmatic_intelligence_poor
-			}
-		}
-		modifier = {
-			factor = 2
-				has_trait = trait_presapient_natural_intellectuals
-		}
-		modifier = {
-			factor = 2
-				has_trait = trait_brainslug
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_robust
-		}
-		modifier = {
-			factor = 1.25
-			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
-			}
-		}
-		modifier = {
-			factor = 0.75
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_necrophage
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_void_dweller_1
-			exists = planet
-			planet = { uses_habitat_capitals = yes }
-		}
-		modifier = {
-			factor = 0.85
-			has_trait = trait_void_dweller_1
-			exists = planet
-			planet = { is_artificial = no }
-		}
-		modifier = {
-			factor = 0.01
-			exists = planet
-			exists = planet.controller
-			planet.controller = {
-				OR = {
-					is_country_type = swarm
-					is_country_type = ai_empire
-				}
-			}
+		planet_crime_add = -5
+		planet_amenities_add = 200
+	}
+	resources = {
+		category = planet_jobs
+		produces = {
+			trade = 5
 		}
 	}
 }
-
-# 14.海軍将校
 ngm_admiral = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_institute
-	clothes_texture_index = 1
-	icon = researcher
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_institute
+			icon = researcher
+		}
+	}
 	possible_pre_triggers = {
 		has_owner = yes
-		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
 		is_sapient = yes
 	}
 	possible_precalc = can_fill_specialist_job
-	country_modifier = {
-		country_naval_cap_add = 5
-	}
-	planet_modifier = {
-		pop_defense_armies_add = 4
-		planet_crime_add = -15
-
+	possible = {
+		complex_specialist_job_check_trigger = yes
 	}
 	weight = {
-		weight = @ruler_job_weight
+		weight = @specialist_job_weight
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 2
-			has_living_standard = { type = living_standard_academic_privilege }
-		}
-		modifier = {
-			factor = 3
-			has_trait = trait_erudite
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_robot_logic_engines
-				has_trait = trait_intelligent
+			NOT = {
+				has_trait = trait_mechanical
 			}
 		}
 		modifier = {
-			factor = 1.5
-			OR = {
-				has_trait = trait_natural_engineers
-				has_trait = trait_natural_physicists
-				has_trait = trait_natural_sociologists
+			factor = 2
+			has_living_standard = {
+				type = living_standard_academic_privilege
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = {
+				type = slavery_indentured
 			}
 		}
 		modifier = {
 			factor = 5
-			has_job = head_researcher
+			has_trait = trait_cyborg_creed_of_research
 		}
-		modifier = {
-			factor = 0.65
-			has_trait = trait_presapient_proles
+	}
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
 		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_latent_psionic
+		planet_defense_armies_add = 4
+		planet_crime_add = -15
+	}
+	triggered_country_modifier = {
+		potential = {
+			always = yes
 		}
-		modifier = {
-			factor = 2
-			has_trait = trait_psionic
-		}
-		modifier = {
-			factor = 0.1
-			has_trait = trait_enigmatic_intelligence_failed
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_enigmatic_intelligence
-				has_trait = trait_enigmatic_intelligence_poor
-			}
-		}
-		modifier = {
-			factor = 2
-				has_trait = trait_presapient_natural_intellectuals
-		}
-		modifier = {
-			factor = 2
-				has_trait = trait_brainslug
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_robust
-		}
-		modifier = {
-			factor = 1.25
-			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
-			}
-		}
-		modifier = {
-			factor = 0.75
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_necrophage
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_void_dweller_1
-			exists = planet
-			planet = { uses_habitat_capitals = yes }
-		}
-		modifier = {
-			factor = 0.85
-			has_trait = trait_void_dweller_1
-			exists = planet
-			planet = { is_artificial = no }
-		}
-		modifier = {
-			factor = 0.01
-			exists = planet
-			exists = planet.controller
-			planet.controller = {
-				OR = {
-					is_country_type = swarm
-					is_country_type = ai_empire
-				}
-			}
-		}
+		country_naval_cap_add = 5
 	}
 }

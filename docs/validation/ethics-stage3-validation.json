@@ -1,0 +1,58 @@
+{
+  "version": "1.39.0-dev.16",
+  "passed": true,
+  "checks": [
+    "All 16 original additional ethic IDs are present; the first 12 are unchanged from stage two and the four restored definitions differ only by documented modifier substitutions.",
+    "Both NGM ratio keys are explicitly declared in colony scope and consumed below; current Vanilla also applies pop_slave_political_power as a country tradition bonus.",
+    "Capacity arithmetic preserves the original integer-job thresholds across 30 legacy-population cases and tests both sides of current-unit thresholds; regular 0.03 is not silently changed to 0.04.",
+    "Noble/influencer retain current ruler eligibility and original core yields/costs. Historical stage-three isolation is checked against the preserved stage-eleven input; subsequent job migrations have their own regression check. Vanilla noble/politician are not overridden.",
+    "The feature cannot randomly spawn; both capacity keys map to explicitly authored job IDs and both script-value parameters resolve. Engine registration of generated job modifiers is pending runtime verification.",
+    "The authored sync logic is idempotent across 24 owner/colony/deposit cases and transfers: it neither duplicates the feature nor retains it for an ineligible owner.",
+    "All new hook names exist in current Vanilla, event types/scopes match current examples, all event IDs are unique and the terraforming hook remains intact.",
+    "All 33 ethic buttons and nine selection markers resolve. Conservative 35px selected-overlay bounds do not overlap each other, the points label or the current panel; current GUI bytes outside this container are unchanged."
+  ],
+  "capacity_examples": [
+    {
+      "pop_amount": 1999,
+      "normal": 0,
+      "fanatic": 0
+    },
+    {
+      "pop_amount": 2000,
+      "normal": 0,
+      "fanatic": 100
+    },
+    {
+      "pop_amount": 2001,
+      "normal": 0,
+      "fanatic": 100
+    },
+    {
+      "pop_amount": 3333,
+      "normal": 0,
+      "fanatic": 100
+    },
+    {
+      "pop_amount": 3334,
+      "normal": 100,
+      "fanatic": 100
+    },
+    {
+      "pop_amount": 4000,
+      "normal": 100,
+      "fanatic": 200
+    },
+    {
+      "pop_amount": 10000,
+      "normal": 300,
+      "fanatic": 500
+    }
+  ],
+  "generated_capacity_keys": [
+    "job_ngm_ethic_noble_add",
+    "job_ngm_influencer_add"
+  ],
+  "ethics": 16,
+  "gui_buttons": 33,
+  "runtime_tested": false
+}

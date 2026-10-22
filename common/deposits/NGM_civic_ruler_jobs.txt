@@ -1,0 +1,58 @@
+d_ngm_civic_ruler_jobs = {
+    category = deposit_cat_rare icon = d_monument_in_space
+    potential = { always = no } drop_weight = { weight = 0 }
+triggered_planet_modifier = { potential = { has_building = building_capital exists = owner owner = { has_valid_civic = civic_ngm_federation_of_the_galaxies } } job_ngm_heroes_of_society_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_capital exists = owner owner = { has_valid_civic = civic_ngm_environmental_democracy } } job_ngm_superintendent_of_wilderness_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_capital exists = owner owner = { has_valid_civic = civic_ngm_peoples_democracy } } job_ngm_secretary_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_capital exists = owner owner = { has_valid_civic = civic_ngm_aristocratic_republicanism } } job_ngm_crest_bearer_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_capital exists = owner owner = { has_valid_civic = civic_ngm_chief_secretary_system } } job_ngm_secretary_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_capital exists = owner owner = { has_valid_civic = civic_ngm_war_lord } } job_ngm_senior_advisor_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_capital exists = owner owner = { has_valid_civic = civic_ngm_communist_dictatorship } } job_ngm_secretary_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_capital exists = owner owner = { has_valid_civic = civic_ngm_demagoguery } } job_ngm_pacifist_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_capital exists = owner owner = { has_valid_civic = civic_ngm_order_of_chivalry } } job_ngm_senior_advisor_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_capital exists = owner owner = { has_valid_civic = civic_ngm_honorary_imperialism } } job_ngm_crest_bearer_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_major_capital exists = owner owner = { has_valid_civic = civic_ngm_federation_of_the_galaxies } } job_ngm_heroes_of_society_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_major_capital exists = owner owner = { has_valid_civic = civic_ngm_environmental_democracy } } job_ngm_superintendent_of_wilderness_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_major_capital exists = owner owner = { has_valid_civic = civic_ngm_peoples_democracy } } job_ngm_secretary_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_major_capital exists = owner owner = { has_valid_civic = civic_ngm_aristocratic_republicanism } } job_ngm_crest_bearer_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_major_capital exists = owner owner = { has_valid_civic = civic_ngm_chief_secretary_system } } job_ngm_secretary_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_major_capital exists = owner owner = { has_valid_civic = civic_ngm_war_lord } } job_ngm_senior_advisor_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_major_capital exists = owner owner = { has_valid_civic = civic_ngm_communist_dictatorship } } job_ngm_secretary_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_major_capital exists = owner owner = { has_valid_civic = civic_ngm_demagoguery } } job_ngm_pacifist_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_major_capital exists = owner owner = { has_valid_civic = civic_ngm_order_of_chivalry } } job_ngm_senior_advisor_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_major_capital exists = owner owner = { has_valid_civic = civic_ngm_honorary_imperialism } } job_ngm_crest_bearer_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_system_capital exists = owner owner = { has_valid_civic = civic_ngm_federation_of_the_galaxies } } job_ngm_heroes_of_society_add = 200 }
+triggered_planet_modifier = { potential = { has_building = building_system_capital exists = owner owner = { has_valid_civic = civic_ngm_environmental_democracy } } job_ngm_superintendent_of_wilderness_add = 200 }
+triggered_planet_modifier = { potential = { has_building = building_system_capital exists = owner owner = { has_valid_civic = civic_ngm_peoples_democracy } } job_ngm_secretary_add = 200 }
+triggered_planet_modifier = { potential = { has_building = building_system_capital exists = owner owner = { has_valid_civic = civic_ngm_aristocratic_republicanism } } job_ngm_crest_bearer_add = 200 }
+triggered_planet_modifier = { potential = { has_building = building_system_capital exists = owner owner = { has_valid_civic = civic_ngm_chief_secretary_system } } job_ngm_secretary_add = 200 }
+triggered_planet_modifier = { potential = { has_building = building_system_capital exists = owner owner = { has_valid_civic = civic_ngm_war_lord } } job_ngm_senior_advisor_add = 200 }
+triggered_planet_modifier = { potential = { has_building = building_system_capital exists = owner owner = { has_valid_civic = civic_ngm_communist_dictatorship } } job_ngm_secretary_add = 200 }
+triggered_planet_modifier = { potential = { has_building = building_system_capital exists = owner owner = { has_valid_civic = civic_ngm_demagoguery } } job_ngm_pacifist_add = 200 }
+triggered_planet_modifier = { potential = { has_building = building_system_capital exists = owner owner = { has_valid_civic = civic_ngm_order_of_chivalry } } job_ngm_senior_advisor_add = 200 }
+triggered_planet_modifier = { potential = { has_building = building_system_capital exists = owner owner = { has_valid_civic = civic_ngm_honorary_imperialism } } job_ngm_crest_bearer_add = 200 }
+triggered_planet_modifier = { potential = { has_building = building_hab_major_capital exists = owner owner = { has_valid_civic = civic_ngm_federation_of_the_galaxies } } job_ngm_heroes_of_society_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_hab_major_capital exists = owner owner = { has_valid_civic = civic_ngm_environmental_democracy } } job_ngm_superintendent_of_wilderness_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_hab_major_capital exists = owner owner = { has_valid_civic = civic_ngm_peoples_democracy } } job_ngm_secretary_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_hab_major_capital exists = owner owner = { has_valid_civic = civic_ngm_aristocratic_republicanism } } job_ngm_crest_bearer_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_hab_major_capital exists = owner owner = { has_valid_civic = civic_ngm_chief_secretary_system } } job_ngm_secretary_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_hab_major_capital exists = owner owner = { has_valid_civic = civic_ngm_war_lord } } job_ngm_senior_advisor_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_hab_major_capital exists = owner owner = { has_valid_civic = civic_ngm_communist_dictatorship } } job_ngm_secretary_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_hab_major_capital exists = owner owner = { has_valid_civic = civic_ngm_demagoguery } } job_ngm_pacifist_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_hab_major_capital exists = owner owner = { has_valid_civic = civic_ngm_order_of_chivalry } } job_ngm_senior_advisor_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_hab_major_capital exists = owner owner = { has_valid_civic = civic_ngm_honorary_imperialism } } job_ngm_crest_bearer_add = 100 }
+triggered_planet_modifier = { potential = { has_building = building_imperial_capital exists = owner owner = { has_valid_civic = civic_ngm_federation_of_the_galaxies } } job_ngm_heroes_of_society_add = 300 }
+triggered_planet_modifier = { potential = { has_building = building_imperial_capital exists = owner owner = { has_valid_civic = civic_ngm_environmental_democracy } } job_ngm_superintendent_of_wilderness_add = 300 }
+triggered_planet_modifier = { potential = { has_building = building_imperial_capital exists = owner owner = { has_valid_civic = civic_ngm_peoples_democracy } } job_ngm_secretary_add = 300 }
+triggered_planet_modifier = { potential = { has_building = building_imperial_capital exists = owner owner = { has_valid_civic = civic_ngm_aristocratic_republicanism } } job_ngm_crest_bearer_add = 300 }
+triggered_planet_modifier = { potential = { has_building = building_imperial_capital exists = owner owner = { has_valid_civic = civic_ngm_chief_secretary_system } } job_ngm_secretary_add = 300 }
+triggered_planet_modifier = { potential = { has_building = building_imperial_capital exists = owner owner = { has_valid_civic = civic_ngm_war_lord } } job_ngm_senior_advisor_add = 300 }
+triggered_planet_modifier = { potential = { has_building = building_imperial_capital exists = owner owner = { has_valid_civic = civic_ngm_communist_dictatorship } } job_ngm_secretary_add = 300 }
+triggered_planet_modifier = { potential = { has_building = building_imperial_capital exists = owner owner = { has_valid_civic = civic_ngm_demagoguery } } job_ngm_pacifist_add = 300 }
+triggered_planet_modifier = { potential = { has_building = building_imperial_capital exists = owner owner = { has_valid_civic = civic_ngm_order_of_chivalry } } job_ngm_senior_advisor_add = 300 }
+triggered_planet_modifier = { potential = { has_building = building_imperial_capital exists = owner owner = { has_valid_civic = civic_ngm_honorary_imperialism } } job_ngm_crest_bearer_add = 300 }
+triggered_planet_modifier = {
+    potential = { exists = owner owner = { is_gestalt = no is_worker_coop_empire = no } }
+    job_politician_add = -1 mult = value:ngm_civic_ruler_replacement_count
+}
+}

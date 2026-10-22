@@ -1,0 +1,28 @@
+namespace = ngm_ethics
+
+carrier_event = {
+    id = ngm_ethics.1
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        set_planet_flag = ngm_ethics_terraforming_completed
+    }
+}
+
+# Country scope: initial setup and a monthly repair pass for ethic reforms.
+country_event = {
+    id = ngm_ethics.10
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        every_owned_planet = { ngm_sync_ethic_job_deposit_effect = yes }
+    }
+}
+
+# Current on_colonized and on_colony_transfer call carrier_events.
+carrier_event = {
+    id = ngm_ethics.11
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = { ngm_sync_ethic_job_deposit_effect = yes }
+}

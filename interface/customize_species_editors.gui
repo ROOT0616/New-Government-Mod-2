@@ -1,11 +1,13 @@
 @movable_editors = no
+@sub_window_pos_x = -405
 @sub_window_pos_y = -50
-@sub_window_height = 420
+@sub_window_height = 405
+@sub_window_width = 1040
 
 guiTypes = {
 	positionType = {
 		name = "ship_browser_3d_view_size"
-		position = { x = 1254 y = 620 }
+		position = { x = 1254 y = 770 }
 	}
 
 	containerWindowType = {
@@ -53,8 +55,8 @@ guiTypes = {
 	containerWindowType = {
 		name = "species_portrait_editor"
 		moveable = @movable_editors
-		position = { x = -400 y = @sub_window_pos_y }
-		size = { width = 1030 height = @sub_window_height }
+		position = { x = @sub_window_pos_x y = @sub_window_pos_y }
+		size = { width = @sub_window_width height = @sub_window_height }
 		orientation = center
 
 		background = {
@@ -86,19 +88,19 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "setting_bg_box"
-			size = { width = 150 height = 310 }
-			position = { x = 12 y = 50 }
+			size = { width = 162 height = 320 }
+			position = { x = 10 y = 44 }
 
-				background = {
-					name = "choose_race_cat_bg"
-					spriteType = "GFX_tiles_frame"
-				}
+			background = {
+				name = "choose_race_cat_bg"
+				spriteType = "GFX_tiles_frame"
+			}
 		}
 
 		smoothListboxType = {
 			name = "categories"
 			position = { x = 12 y = 52 }
-			size = { x = 138 y = 307 }
+			size = { x = 144 y = 307 }
 			backGround = ""
 			scrollbarType = "standardlistbox_slider"
 			borderSize = { x = 0 y = 0 }
@@ -109,8 +111,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "portraits_container"
-			position = { x = 170 y = 50 }
-			size = { width = 850 height = 310 }
+			position = { x = 176 y = 44 }
+			size = { width = 855 height = 320 }
 			margin = { top = 1 bottom = 1 }
 			verticalScrollBar = "right_vertical_slider"
 
@@ -130,22 +132,12 @@ guiTypes = {
 			}
 		}
 
-		buttonType = {
-			name = "cancel"
-			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 8 }
-			Orientation = "UPPER_RIGHT"
-			shortCut = "ESCAPE"
-			pdx_tooltip = "CLOSE_TITLE"
-			clicksound = "back_click"
-		}
-
 		buttonType={
 			name = "back"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "BACK"
-			position = { x = 0 y = -40 }
+			position = { x = -2 y = -39 }
 			orientation = LOWER_LEFT
 			shortcut = "BACKSPACE"
 			clicksound = back_click
@@ -155,7 +147,7 @@ guiTypes = {
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "NEXT"
-			position = { x = -290 y = -40 }
+			position = { x = -289 y = -39 }
 			orientation = LOWER_RIGHT
 			#shortcut = "RETURN"
 			clicksound = confirm_click
@@ -199,8 +191,8 @@ guiTypes = {
 	containerWindowType = {
 		name = "species_name_editor"
 		moveable = @movable_editors
-		position = { x = -400 y = @sub_window_pos_y }
-		size = { width = 1030 height = @sub_window_height }
+		position = { x = @sub_window_pos_x y = @sub_window_pos_y }
+		size = { width = @sub_window_width height = @sub_window_height }
 		orientation = center
 
 		background = {
@@ -226,209 +218,326 @@ guiTypes = {
 			font = "malgun_goth_24"
 			position = { x = 16 y = 7 }
 			maxWidth = 330
-			text =	 "SPECIES_NAME"
 			format = left
 			alwaysTransparent = yes
 		}
 
-		@bg_x = 30
-		@eb_x = 40
-		@label_x = 32
+		@bg_x = 13
+		@eb_x = 23
+		@eb_y = 60
+		@label_x = 15
+		@label_y = 25
 
-		###
-		instantTextBoxType = {
-			name = "lbl1"
-			font = "malgun_goth_24"
-			position = { x = @label_x y = 65 }
-			maxWidth = 400
-			text =	 "NAME"
-			alwaysTransparent = yes
-		}
-		buttonType = {
-			name = "bg1"
-			position = { x = @bg_x y = 95 }
-			size = { x = 310 y = 28 }
-			spriteType = "GFX_tiles_dark_area_cut_8"
-			alwaysTransparent = yes
-		}
-		editBoxType = {
-			name = "name"
-			position = { x = @eb_x y = 95 }
-			size = { x = 300 y = 24 }
-			font = "malgun_goth_24"
-			max_characters = 100
-		}
+		@bg_width = 225
+		@eb_width = 215
+		@empire_bg_width = 305
+		@empire_eb_width = 295
 
-		buttonType = {
-			name = "randomize_name"
-			position = { x = 350 y = 90 }
-			spriteType = "GFX_button_randomize"
-			pdx_tooltip = "EDIT_SPECIES_NAME_RANDOMIZE_TOOLTIP"
-			clicksound = randomizer_click
-		}
-
-		###
-		instantTextBoxType = {
-			name = "lbl2"
-			font = "malgun_goth_24"
-			position = { x = @label_x y = 140 }
-			maxWidth = 400
-			text =	 "PLURAL"
-			alwaysTransparent = yes
-		}
-		buttonType = {
-			name = "bg2"
-			position = { x = @bg_x y = 170 }
-			size = { x = 310 y = 28 }
-			spriteType = "GFX_tiles_dark_area_cut_8"
-			alwaysTransparent = yes
-		}
-		editBoxType = {
-			name = "plural"
-			position = { x = @eb_x y = 170 }
-			size = { x = 300 y = 24 }
-			font = "malgun_goth_24"
-			max_characters = 100
-		}
-
-		###
-		instantTextBoxType = {
-			name = "lbl3"
-			font = "malgun_goth_24"
-			position = { x = @label_x y = 215 }
-			maxWidth = 400
-			text =	 "ADJECTIVE"
-			alwaysTransparent = yes
-		}
-		buttonType = {
-			name = "bg3"
-			position = { x = @bg_x y = 245 }
-			size = { x = 310 y = 28 }
-			spriteType = "GFX_tiles_dark_area_cut_8"
-			alwaysTransparent = yes
-		}
-		editBoxType = {
-			name = "adjective"
-			position = { x = @eb_x y = 245 }
-			size = { x = 300 y = 24 }
-			font = "malgun_goth_24"
-			max_characters = 100
-		}
-		buttonType = {
-			name = "generate_adjective"
-			position = { x = 350 y = 240 }
-			spriteType = "GFX_button_update"
-			pdx_tooltip = "EDIT_SPECIES_NAME_GENERATE_ADJECTIVE"
-		}
-
-		###
-		instantTextBoxType = {
-			name = "lblbio"
-			font = "malgun_goth_24"
-			position = { x = 407 y = 65 }
-			maxWidth = 400
-			text =	 "BIOGRAPHY"
-			alwaysTransparent = yes
-		}
+		### SPECIES NAME
 		containerWindowType = {
-			name = "black_background_box_01"
-			size = { width = 395 height = 210 }
-			position = { x = 405 y = 95 }
+			name = "species_name_editor_new"
+			position = { x = 10 y = 41 }
+			size = { width = 650 height = 326 }
 
 			background = {
-				name = "black"
-				spriteType = "GFX_tiles_dark_area_cut_8"
-				alwaysTransparent = yes
+				name = "background"
+				spriteType = "GFX_subwindow_tile_plain_solid"
+			}
+
+
+			containerWindowType = {
+				name = "species_name_container"
+				position = { x = 0 y = -12 }
+
+				instantTextBoxType = {
+					name = "species_name_label"
+					font = "malgun_goth_24"
+					position = { x = @label_x y = @label_y }
+					maxWidth = 360
+					text = "SPECIES_NAME"
+					#alwaysTransparent = yes
+				}
+				buttonType = {
+					name = "species_name_editbox_bg"
+					position = { x = @bg_x y = @eb_y }
+					size = { x = @bg_width y = 28 }
+					spriteType = "GFX_tiles_dark_area_cut_8"
+					#alwaysTransparent = yes
+				}
+				editBoxType = {
+					name = "species_name"
+					position = { x = @eb_x y = @eb_y }
+					size = { x = @eb_width y = 24 }
+					font = "malgun_goth_24"
+					max_characters = 100
+				}
+			}
+
+			buttonType = {
+				name = "randomize_species_name"
+				position = { x = 242 y = 43 }
+				spriteType = "GFX_button_randomize"
+				pdx_tooltip = "EDIT_SPECIES_NAME_RANDOMIZE_TOOLTIP"
+				clicksound = randomizer_click
+			}
+
+			### SPECIES NAME PLURAL
+			containerWindowType = {
+				name = "species_name_plural_container"
+				position = { x = 0 y = 80 }
+				#size = { width = 940 height = 320 }
+
+				instantTextBoxType = {
+					name = "species_name_plural_label"
+					font = "malgun_goth_24"
+					position = { x = @label_x y = @label_y }
+					maxWidth = 360
+					text = "SPECIES_PLURAL"
+					alwaysTransparent = yes
+				}
+				buttonType = {
+					name = "species_name_plural_editbox_bg"
+					position = { x = @bg_x y = @eb_y }
+					size = { x = @bg_width y = 28 }
+					spriteType = "GFX_tiles_dark_area_cut_8"
+					alwaysTransparent = yes
+				}
+				editBoxType = {
+					name = "species_plural"
+					position = { x = @eb_x y = @eb_y }
+					size = { x = @eb_width y = 24 }
+					font = "malgun_goth_24"
+					max_characters = 100
+				}
+			}
+
+			### SPECIES NAME ADJECTIVE
+			containerWindowType = {
+				name = "species_name_adjective_container"
+				position = { x = 0 y = 174 }
+
+				instantTextBoxType = {
+					name = "species_name_adjective_label"
+					font = "malgun_goth_24"
+					position = { x = @label_x y = @label_y }
+					maxWidth = 360
+					text = "SPECIES_ADJECTIVE"
+					alwaysTransparent = yes
+				}
+				buttonType = {
+					name = "species_name_adjective_editbox_bg"
+					position = { x = @bg_x y = @eb_y }
+					size = { x = @bg_width y = 28 }
+					spriteType = "GFX_tiles_dark_area_cut_8"
+					alwaysTransparent = yes
+				}
+				editBoxType = {
+					name = "species_adjective"
+					position = { x = @eb_x y = @eb_y }
+					size = { x = @eb_width y = 24 }
+					font = "malgun_goth_24"
+					max_characters = 100
+				}
+			}
+
+			buttonType = {
+				name = "generate_adjective"
+				position = { x = 242 y = 229 }
+				spriteType = "GFX_button_update"
+				pdx_tooltip = "EDIT_SPECIES_NAME_GENERATE_ADJECTIVE"
+			}
+
+			### SPECIES BIOGRAPHY
+			containerWindowType = {
+				name = "species_biography_container"
+				position = { x = 305 y = 80 }
+				size = { width = 400 height = 250 }
+
+				instantTextBoxType = {
+					name = "species_biography_label"
+					font = "malgun_goth_24"
+					position = { x = 0 y = @label_y }
+					maxWidth = 360
+					text = "BIOGRAPHY"
+					alwaysTransparent = yes
+				}
+				containerWindowType = {
+					name = "black_background_box_01"
+					size = { width = 330 height = 165 }
+					position = { x = 0 y = @eb_y }
+
+					background = {
+						name = "black"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+						alwaysTransparent = yes
+					}
+				}
+				editBoxType = {
+					name = "bio"
+					position = { x = 10 y = 65 }
+					size = { x = 313 y = 165 }
+					font = "cg_16b"
+					allow_multi_line = yes
+					max_characters = 1000 #it is important to set this limit by number of chars to diminish amount of calculations for limited height
+					limited_height = yes
+				}
+			}
+
+			### Species Gender
+			containerWindowType = {
+				name = "gender"
+				size = { width = 140 height = 120 }
+				position = { x = 305 y = -13 }
+
+				instantTextBoxType = {
+					name = "gender_label"
+					font = "malgun_goth_24"
+					position = { x = 0 y = @label_y }
+					maxWidth = 200
+					text = "GENDER"
+					format = left
+					alwaysTransparent = yes
+					#text_color_code = "R"
+				}
+
+				# Default setting with randomized gender
+				buttonType = {
+					name = "DEFAULT_GENDER"
+					quadTextureSprite = "GFX_button_gender_all"
+					position = { x = -4 y = 56 }
+					clicksound = select_click
+				}
+
+				buttonType = {
+					name = "male"
+					quadTextureSprite = "GFX_button_male"
+					position = { x = 31 y = 56 }
+					clicksound = select_click
+				}
+
+				buttonType = {
+					name = "female"
+					quadTextureSprite = "GFX_button_female"
+					position = { x = 66 y = 56 }
+					clicksound = select_click
+				}
+
+				buttonType = {
+					name = "indeterminable"
+					quadTextureSprite = "GFX_button_no_gender"
+					position = { x = 101 y = 56 }
+					clicksound = select_click
+				}
+
+				instantTextBoxType = {
+					name = "gender_selected"
+					font = "cg_16b"
+					position = { x = 0 y = 100 }
+					maxWidth = 200
+					text = ""
+					format = left
+					alwaysTransparent = yes
+				}
 			}
 		}
-		editBoxType = {
-			name = "bio"
-			position = { x = 410 y = 98 }
-			size = { x = 380 y = 210 }
-			font = "cg_16b"
-			allow_multi_line = yes
-			max_characters = 1000 #it is important to set this limit by number of chars to diminish amount of calculations for limited height
-			limited_height = yes
+
+		containerWindowType = {
+			name = "empire_name_editor_new"
+			position = { x = 662 y = 41 }
+			size = { width = 369 height = 326 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_subwindow_tile_plain_solid"
+			}
+
+			### EMPIRE NAME
+			containerWindowType = {
+				name = "empire_name_container"
+				position = { x = 0 y = -12 }
+
+				instantTextBoxType = {
+					name = "empire_name_label"
+					font = "malgun_goth_24"
+					position = { x = @label_x y = @label_y }
+					maxWidth = 360
+					text = "EMPIRE_NAME"
+					alwaysTransparent = yes
+				}
+				buttonType = {
+					name = "empire_name_editbox_bg"
+					position = { x = @bg_x y = @eb_y }
+					size = { x = @empire_bg_width y = 28 }
+					spriteType = "GFX_tiles_dark_area_cut_8"
+					alwaysTransparent = yes
+				}
+				editBoxType = {
+					name = "empire_name"
+					position = { x = @eb_x y = @eb_y }
+					size = { x = @empire_eb_width y = 24 }
+					font = "malgun_goth_24"
+					max_characters = 100
+				}
+			}
+
+			buttonType = {
+				name = "randomize_empire_name"
+				position = { x = 323 y = 43 }
+				spriteType = "GFX_button_randomize"
+				pdx_tooltip = "EDIT_SPECIES_NAME_RANDOMIZE_TOOLTIP"
+				clicksound = randomizer_click
+			}
+
+			### EMPIRE NAME ADJECTIVE
+			containerWindowType = {
+				name = "empire_name_adjective_container"
+				position = { x = 0 y = 80 }
+				#size = { width = 940 height = 320 }
+
+				instantTextBoxType = {
+					name = "empire_name_adjective_label"
+					font = "malgun_goth_24"
+					position = { x = @label_x y = @label_y }
+					maxWidth = 360
+					text = "EMPIRE_ADJECTIVE"
+					alwaysTransparent = yes
+				}
+				buttonType = {
+					name = "empire_name_plural_editbox_bg"
+					position = { x = @bg_x y = @eb_y }
+					size = { x = @empire_bg_width y = 28 }
+					spriteType = "GFX_tiles_dark_area_cut_8"
+					alwaysTransparent = yes
+				}
+				editBoxType = {
+					name = "empire_adjective"
+					position = { x = @eb_x y = @eb_y }
+					size = { x = @empire_eb_width y = 24 }
+					font = "malgun_goth_24"
+					max_characters = 100
+				}
+			}
 		}
 
 		buttonType = {
-			name = "cancel"
-			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 8 }
-			Orientation = "UPPER_RIGHT"
-			shortCut = "ESCAPE"
-			pdx_tooltip = "CLOSE_TITLE"
-			clicksound = "back_click"
-		}
-		buttonType={
 			name = "back"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "BACK"
-			position = { x = 0 y = -40 }
+			position = { x = -2 y = -39 }
 			orientation = LOWER_LEFT
 			shortcut = "BACKSPACE"
 			clicksound = back_click
 		}
-		buttonType={
+		buttonType = {
 			name = "apply_and_close"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "NEXT"
-			position = { x = -290 y = -40 }
+			position = { x = -289 y = -39 }
 			orientation = LOWER_RIGHT
 			#shortcut = "RETURN"
 			clicksound = confirm_click
-		}
-
-		### Species Gender
-		containerWindowType = {
-			name = "gender"
-			size = { width = 100 height = 100 }
-			position = { x = 820 y = 67 }
-
-
-			instantTextBoxType = {
-				name = "gender_label"
-				font = "malgun_goth_24"
-				position = { x = 0 y = 0 }
-				maxWidth = 200
-				text = "GENDER"
-				format = left
-				alwaysTransparent = yes
-				#text_color_code = "R"
-			}
-
-			buttonType = {
-				name = "male"
-				quadTextureSprite = "GFX_button_male"
-				position = { x = -4 y = 30 }
-				clicksound = select_click
-			}
-
-			buttonType = {
-				name = "female"
-				quadTextureSprite = "GFX_button_female"
-				position = { x = 31 y = 30 }
-				clicksound = select_click
-			}
-
-			buttonType = {
-				name = "indeterminable"
-				quadTextureSprite = "GFX_button_no_gender" #TODO
-				position = { x = 66 y = 30 }
-				clicksound = select_click
-			}
-
-			instantTextBoxType = {
-				name = "gender_selected"
-				font = "cg_16b"
-				position = { x = 0 y = 75 }
-				maxWidth = 200
-				text = ""
-				format = left
-				alwaysTransparent = yes
-			}
 		}
 	}
 
@@ -438,8 +547,8 @@ guiTypes = {
 	containerWindowType = {
 		name = "empire_advisor_editor"
 		moveable = @movable_editors
-		position = { x = -400 y = @sub_window_pos_y }
-		size = { width = 1030 height = @sub_window_height }
+		position = { x = @sub_window_pos_x y = @sub_window_pos_y }
+		size = { width = @sub_window_width height = @sub_window_height }
 		orientation = center
 
 		background = {
@@ -469,7 +578,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "voice_modes"
-			position = { x = 38 y = 83 }
+			position = { x = 18 y = 50 }
 			size = { width = 258 height = 168 }
 
 			background = {
@@ -574,8 +683,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "voice_types"
-			position = { x = 385 y = 15 }
-			size = { width = 504 height = 350 }
+			position = { x = 296 y = 48 }
+			size = { width = 736 height = 320 }
 			verticalScrollBar = "right_vertical_slider"
 			margin = { top = 2 bottom = 2 }
 
@@ -589,37 +698,29 @@ guiTypes = {
 				name = "gridbox"
 				position = { x = 2 y = 2 }
 				size = { width = 504 height = 350 }
-				slotSize = { width = 250 height = 38 }
-				max_slots_horizontal = 2
+				slotSize = { width = 240 height = 38 }
+				max_slots_horizontal = 3
 				format = "UPPER_LEFT"
 			}
 		}
 
 		buttonType = {
-			name = "cancel"
-			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 8 }
-			Orientation = "UPPER_RIGHT"
-			shortCut = "ESCAPE"
-			pdx_tooltip = "CLOSE_TITLE"
-			clicksound = "back_click"
-		}
-		buttonType = {
 			name = "back"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "BACK"
-			position = { x = 0 y = -40 }
+			position = { x = -2 y = -39 }
 			orientation = LOWER_LEFT
 			shortcut = "BACKSPACE"
 			clicksound = back_click
 		}
+
 		buttonType = {
 			name = "apply_and_close"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "NEXT"
-			position = { x = -290 y = -40 }
+			position = { x = -289 y = -39 }
 			orientation = LOWER_RIGHT
 			clicksound = confirm_click
 		}
@@ -627,7 +728,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "empire_advisor_voice_type_entry"
-		size = { width = 252 height = 36 }
+		size = { width = 240 height = 36 }
 
 		background = {
 			name = "background"
@@ -638,7 +739,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "black_box"
 			position = { x = 3 y = 1 }
-			size = { width = 246 height = 34 }
+			size = { width = 234 height = 34 }
 			background = {
 				name = "background"
 				spriteType = "GFX_tiles_dark_area_cut_8"
@@ -650,7 +751,7 @@ guiTypes = {
 			name = "selected"
 			spriteType = "GFX_glow_tile_orange"
 			position = { x = -2 y = -4 }
-			size = { x = 257 y = 43 }
+			size = { x = 244 y = 43 }
 			alwaysTransparent = yes
 		}
 
@@ -665,131 +766,10 @@ guiTypes = {
 			name = "label"
 			font = "malgun_goth_24"
 			position = { x = 42 y = 6 }
-			maxWidth = 208
+			maxWidth = 200
 			format = left
 			fixedsize = yes
 			alwaysTransparent = yes
-		}
-	}
-
-	###################
-	# Empire name
-	###################
-	containerWindowType = {
-		name = "empire_name_editor"
-		moveable = @movable_editors
-		position = { x = -400 y = @sub_window_pos_y }
-		size = { width = 1030 height = @sub_window_height }
-		orientation = center
-
-		background = {
-			name = "background"
-			spriteType = "GFX_subwindow_tile_plain_solid"
-		}
-
-		iconType = {
-			name = "hex_bg"
-			spriteType = "GFX_hex_bg"
-			position = { x = -10 y = -8 }
-			alwaysTransparent = yes
-		}
-
-		iconType = {
-			name = "header_line"
-			spriteType = "GFX_line"
-			position = { x = 6 y = 26 }
-		}
-
-		instantTextBoxType = {
-			name = "label"
-			font = "malgun_goth_24"
-			position = { x = 16 y = 7 }
-			maxWidth = 230
-			text =	 "EMPIRE_NAME"
-			format = left
-			alwaysTransparent = yes
-		}
-		buttonType = {
-			name = "bg1"
-			position = { x = 30 y = 90 }
-			size = { x = 510 y = 28 }
-			spriteType = "GFX_tiles_dark_area_cut_8"
-			alwaysTransparent = yes
-		}
-		buttonType = {
-			name = "bg2"
-			position = { x = 30 y = 160 }
-			size = { x = 510 y = 28 }
-			spriteType = "GFX_tiles_dark_area_cut_8"
-			alwaysTransparent = yes
-		}
-		instantTextBoxType = {
-			name = "lbl1"
-			font = "malgun_goth_24"
-			position = { x = 30 y = 60 }
-			maxWidth = 400
-			text =	 "NAME"
-			alwaysTransparent = yes
-		}
-		instantTextBoxType = {
-			name = "lbl2"
-			font = "malgun_goth_24"
-			position = { x = 30 y = 130 }
-			maxWidth = 400
-			text =	 "ADJECTIVE"
-			alwaysTransparent = yes
-		}
-		editBoxType = {
-			name = "name"
-			position = { x = 40 y = 90 }
-			size = { x = 500 y = 24 }
-			font = "malgun_goth_24"
-			max_characters = 100
-		}
-		editBoxType = {
-			name = "adjective"
-			position = { x = 40 y = 160 }
-			size = { x = 500 y = 24 }
-			font = "malgun_goth_24"
-			max_characters = 100
-		}
-
-		buttonType = {
-			name = "randomize_name"
-			position = { x = 545 y = 85 }
-			spriteType = "GFX_button_randomize"
-			pdx_tooltip = "EDIT_SPECIES_NAME_RANDOMIZE_TOOLTIP"
-			clicksound = randomizer_click
-		}
-
-		buttonType = {
-			name = "cancel"
-			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 8 }
-			Orientation = "UPPER_RIGHT"
-			shortCut = "ESCAPE"
-			pdx_tooltip = "CLOSE_TITLE"
-			clicksound = "back_click"
-		}
-		buttonType={
-			name = "back"
-			font = "cg_16b"
-			spriteType = "GFX_galactic_object_button"
-			buttonText = "BACK"
-			position = { x = 0 y = -40 }
-			orientation = LOWER_LEFT
-			shortcut = "BACKSPACE"
-			clicksound = back_click
-		}
-		buttonType={
-			name = "apply_and_close"
-			font = "cg_16b"
-			spriteType = "GFX_galactic_object_button"
-			buttonText = "NEXT"
-			position = { x = -290 y = -40 }
-			orientation = LOWER_RIGHT
-			#shortcut = "RETURN"
-			clicksound = confirm_click
 		}
 	}
 
@@ -799,13 +779,46 @@ guiTypes = {
 	containerWindowType = {
 		name = "species_traits_editor"
 		moveable = @movable_editors
-		position = { x = -400 y = @sub_window_pos_y }
-		size = { width = 1030 height = @sub_window_height }
+		position = { x = @sub_window_pos_x y = @sub_window_pos_y }
+		size = { width = @sub_window_width height = @sub_window_height }
 		orientation = center
 
 		background = {
 			name = "background"
 			spriteType = "GFX_subwindow_tile_plain_solid"
+		}
+
+		containerWindowType = {
+			name = "trait_picking_window"
+			position = { x = 10 y = 43 }
+			size = { width = 700 height = 320 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_subwindow_tile_plain_solid"
+			}
+		}
+
+		containerWindowType = {
+			name = "ethics_window"
+			position = { x = 715 y = 43 }
+			size = { width = 315 height = 320 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_subwindow_tile_plain_solid"
+			}
+		}
+
+		instantTextBoxType = {
+			name = "species_selected_traits"
+			font = "malgun_goth_24"
+			position = { x = 770 y = 54 }
+			maxWidth = 200
+			maxHeight = 20
+			text =	 "RULER_SELECTED_TRAITS"
+			format = center
+			fixedSize = yes
 		}
 
 		iconType = {
@@ -831,23 +844,11 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 
-
-		instantTextBoxType = {
-				name = "instructions"
-				font = "cg_16b"
-				position = { x = 20 y = 50 }
-				maxWidth = 400
-				text = "SELECT_TRAITS_FOR_SPECIES"
-				format = left
-				fixedsize = yes
-				alwaysTransparent = yes
-		}
-
 		instantTextBoxType = {
 				name = "trait_points_lables"
-				font = "malgun_goth_24"
-				position = { x = 20 y = 70 }
-				maxWidth = 318
+				font = "cg_16b"
+				position = { x = 28 y = 58 }
+				maxWidth = 130
 				text =	 "POINTS_LEFT"
 				format = left
 				fixedsize = yes
@@ -857,7 +858,7 @@ guiTypes = {
 		instantTextBoxType = {
 				name = "trait_points"
 				font = "malgun_goth_24"
-				position = { x = 340 y = 70 }
+				position = { x = 163 y = 59 }
 				maxWidth = 30
 				text =	 "12"
 				format = left
@@ -867,9 +868,9 @@ guiTypes = {
 
 		instantTextBoxType = {
 				name = "trait_picks_lables"
-				font = "malgun_goth_24"
-				position = { x = 20 y = 95 }
-				maxWidth = 318
+				font = "cg_16b"
+				position = { x = 228 y = 58 }
+				maxWidth = 125
 				text =	 "PICKS_LEFT"
 				format = left
 				fixedsize = yes
@@ -878,7 +879,7 @@ guiTypes = {
 		instantTextBoxType = {
 				name = "trait_picks"
 				font = "malgun_goth_24"
-				position = { x = 340 y = 95 }
+				position = { x = 358 y = 59 }
 				maxWidth = 30
 				text =	 "12"
 				format = left
@@ -889,8 +890,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "details"
-			size = { width = 410 height = 220 }
-			position = { x = 12 y = 130 }
+			size = { width = 390 height = 256 }
+			position = { x = 18 y = 100 }
 
 				background = {
 					name = "leader_frame"
@@ -911,9 +912,9 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "trait_description"
 				font = "cg_16b"
-				position = { x = 10 y = 30 }
-				maxWidth = 383
-				maxHeight = 185
+				position = { x = 10 y = 34 }
+				maxWidth = 360
+				maxHeight = 220
 				text = ""
 				format = left
 				scrollbartype = "standardtext_slider_small"
@@ -922,8 +923,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "available"
-			size = { width = 290 height = 330 }
-			position = { x = 428 y = 21 }
+			size = { width = 290 height = 306 }
+			position = { x = 414 y = 50 }
 			verticalScrollbar = "right_vertical_slider"
 
 			background = {
@@ -933,7 +934,7 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "entries"
-				position = { x = 10 y = 12 }
+				position = { x = 5 y = 8 }
 				size = { width = 251 height = 267 }
 				format = UPPER_LEFT
 				slotSize = { width = 260 height = 45 }
@@ -943,8 +944,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "current"
-			size = { width = 290 height = 285 }
-			position = { x = 722 y = 66 }
+			size = { width = 302 height = 268 }
+			position = { x = 722 y = 88 }
 			verticalScrollbar = "right_vertical_slider"
 
 			background = {
@@ -955,39 +956,30 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "entries"
-				position = { x = 10 y = 12 }
-				size = { width = 251 height = 267 }
-				format = UPPER_LEFT
+				position = { x = 0 y = 10 }
+				size = { width = 286 height = 267 }
 				slotSize = { width = 260 height = 45 }
 				max_slots_horizontal = 1
 			}
 		}
 
 		buttonType = {
-			name = "cancel"
-			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 8 }
-			Orientation = "UPPER_RIGHT"
-			shortCut = "ESCAPE"
-			pdx_tooltip = "CLOSE_TITLE"
-			clicksound = "back_click"
-		}
-		buttonType={
 			name = "back"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "BACK"
-			position = { x = 0 y = -40 }
+			position = { x = -2 y = -39 }
 			orientation = LOWER_LEFT
 			shortcut = "BACKSPACE"
 			clicksound = back_click
 		}
-		buttonType={
+
+		buttonType = {
 			name = "apply_and_close"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "NEXT"
-			position = { x = -290 y = -40 }
+			position = { x = -289 y = -39 }
 			orientation = LOWER_RIGHT
 			#shortcut = "RETURN"
 			clicksound = confirm_click
@@ -1119,13 +1111,35 @@ guiTypes = {
 	containerWindowType = {
 		name = "ruler_traits_editor"
 		moveable = @movable_editors
-		position = { x = -400 y = @sub_window_pos_y }
-		size = { width = 1030 height = @sub_window_height }
+		position = { x = @sub_window_pos_x y = @sub_window_pos_y }
+		size = { width = @sub_window_width height = @sub_window_height }
 		orientation = center
 
 		background = {
 			name = "background"
 			spriteType = "GFX_subwindow_tile_plain_solid"
+		}
+
+		containerWindowType = {
+			name = "trait_picking_window"
+			position = { x = 10 y = 44 }
+			size = { width = 700 height = 320 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_subwindow_tile_plain_solid"
+			}
+		}
+
+		containerWindowType = {
+			name = "ethics_window"
+			position = { x = 716 y = 44 }
+			size = { width = 315 height = 320 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_subwindow_tile_plain_solid"
+			}
 		}
 
 		iconType = {
@@ -1152,20 +1166,20 @@ guiTypes = {
 		}
 
 		instantTextBoxType = {
-				name = "selected"
-				font = "malgun_goth_24"
-				position = { x = 720 y = 170 }
-				maxWidth = 200
-				maxHeight = 20
-				text =	 "RULER_SELECTED_TRAITS"
-				format = left
-				fixedSize = yes
+			name = "selected"
+			font = "malgun_goth_24"
+			position = { x = 772 y = 53 }
+			maxWidth = 200
+			maxHeight = 20
+			text =	 "RULER_SELECTED_TRAITS"
+			format = center
+			fixedSize = yes
 		}
 
 		instantTextBoxType = {
 				name = "trait_points_lables"
-				font = "cg_16b"
-				position = { x = 410 y = 88 }
+				font = "malgun_goth_24"
+				position = { x = 252 y = 94 }
 				maxWidth = 265
 				maxHeight = 36
 				text =	 "POINTS_LEFT"
@@ -1177,7 +1191,7 @@ guiTypes = {
 		instantTextBoxType = {
 				name = "trait_points"
 				font = "malgun_goth_24"
-				position = { x = 685 y = 82 }
+				position = { x = 520 y = 94 }
 				maxWidth = 30
 				maxHeight = 36
 				text =	 "12"
@@ -1188,8 +1202,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "details"
-			size = { width = 310 height = 270 }
-			position = { x = 400 y = 110 }
+			size = { width = 320 height = 228 }
+			position = { x = 378 y = 126 }
 
 			background = {
 				name = "leader_frame"
@@ -1199,7 +1213,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "trait_name"
 				font = "malgun_goth_24"
-				position = { x = 20 y = 22 }
+				position = { x = 16 y = 14 }
 				maxWidth = 390
 				text =	 ""
 				format = left
@@ -1209,8 +1223,8 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "trait_description"
 				font = "cg_16b"
-				position = { x = 20 y = 48 }
-				maxWidth = 280
+				position = { x = 16 y = 48 }
+				maxWidth = 296
 				maxHeight = 200
 				text = ""
 				format = left
@@ -1221,7 +1235,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "ruler_class_spinner_container"
 			size = { width = 280 height = 40 }
-			position = { x = 20 y = 44 }
+			position = { x = 20 y = 49 }
 			clipping = no
 
 			background = {
@@ -1233,7 +1247,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "ruler_class_spinner_label"
-				position = { x = 0 y = 7 }
+				position = { x = 8 y = 6 }
 				font = "malgun_goth_24"
 				maxWidth = 123
 				maxHeight = 42
@@ -1285,8 +1299,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "available"
-			size = { width = 350 height = 289 }
-			position = { x = 20 y = 90 }
+			size = { width = 350 height = 255 }
+			position = { x = 18 y = 98 }
 			verticalScrollBar = "right_vertical_slider"
 
 			background = {
@@ -1307,8 +1321,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "current"
-			size = { width = 290 height = 180 }
-			position = { x = 715 y = 200 }
+			size = { width = 300 height = 268 }
+			position = { x = 723 y = 86 }
 			verticalScrollBar = "right_vertical_slider"
 
 			background = {
@@ -1319,7 +1333,7 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "entries"
-				position = { x = 0 y = 12 }
+				position = { x = 6 y = 14 }
 				size = { width = 300 height = 150 }
 				orientation = "UPPER_LEFT"
 				max_slots_horizontal = 1
@@ -1328,32 +1342,23 @@ guiTypes = {
 		}
 
 		buttonType = {
-			name = "cancel"
-			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 8 }
-			Orientation = "UPPER_RIGHT"
-			shortCut = "ESCAPE"
-			pdx_tooltip = "CLOSE_TITLE"
-			clicksound = "back_click"
-		}
-		buttonType={
 			name = "back"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "BACK"
-			position = { x = 0 y = -40 }
+			position = { x = -2 y = -39 }
 			orientation = LOWER_LEFT
 			shortcut = "BACKSPACE"
 			clicksound = back_click
 		}
-		buttonType={
+
+		buttonType = {
 			name = "apply_and_close"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "NEXT"
-			position = { x = -290 y = -40 }
+			position = { x = -289 y = -39 }
 			orientation = LOWER_RIGHT
-			#shortcut = "RETURN"
 			clicksound = confirm_click
 		}
 	}
@@ -1404,13 +1409,24 @@ guiTypes = {
 	containerWindowType = {
 		name = "species_ruler_editor"
 		moveable = @movable_editors
-		position = { x = -400 y = @sub_window_pos_y }
-		size = { width = 1030 height = @sub_window_height }
+		position = { x = @sub_window_pos_x y = @sub_window_pos_y }
+		size = { width = @sub_window_width height = @sub_window_height }
 		orientation = center
 
 		background = {
 			name = "background"
 			spriteType = "GFX_subwindow_tile_plain_solid"
+		}
+
+		containerWindowType = {
+			name = "homeworld_names_window"
+			position = { x = 10 y = 44 }
+			size = { width = 1021 height = 320 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_subwindow_tile_plain_solid"
+			}
 		}
 
 		iconType = {
@@ -1440,13 +1456,13 @@ guiTypes = {
 		containerWindowType = {
 			name = "gender"
 			size = { width = 200 height = 100 }
-			position = { x = 18 y = 120 }
+			position = { x = 14 y = 122 }
 
 
 			instantTextBoxType = {
 				name = "gender_label"
 				font = "malgun_goth_24"
-				position = { x = 15 y = 6 }
+				position = { x = 15 y = 8 }
 				maxWidth = 200
 				text = "CHOOSE_SEX"
 				format = left
@@ -1457,28 +1473,28 @@ guiTypes = {
 			buttonType = {
 				name = "male"
 				quadTextureSprite = "GFX_button_male"
-				position = { x = 115 y = 0 }
+				position = { x = 115 y = 9 }
 				clicksound = select_click
 			}
 
 			buttonType = {
 				name = "female"
 				quadTextureSprite = "GFX_button_female"
-				position = { x = 150 y = 0 }
+				position = { x = 150 y = 9 }
 				clicksound = select_click
 			}
 
 			buttonType = {
 				name = "indeterminable"
-				quadTextureSprite = "GFX_button_no_gender" #TODO
-				position = { x = 185 y = 0 }
+				quadTextureSprite = "GFX_button_no_gender"
+				position = { x = 185 y = 9 }
 				clicksound = select_click
 			}
 
 			instantTextBoxType = {
 				name = "gender_selected"
 				font = "cg_16b"
-				position = { x = 16 y = 35 }
+				position = { x = 16 y = 32 }
 				maxWidth = 200
 				text = ""
 				format = left
@@ -1494,19 +1510,18 @@ guiTypes = {
 
 		@margin_col1 = 390
 		@margin_col2 = 290
-		@margin_col3 = 680
+		@margin_col3 = 720
 
 		### name
 		containerWindowType = {
 			name = "name_box"
-			size = { width = 1030 height = 420 }
-			position = { x = -1 y = 50 }
-
+			size = { width = 1030 height = 300 }
+			position = { x = 2 y = 60 }
 
 			instantTextBoxType = {
 				name = "lbl1"
 				font = "malgun_goth_24"
-				position = { x = @label_x y = -5 }
+				position = { x = 30 y = -5 }
 				maxWidth = 400
 				text =	 "NAME"
 				alwaysTransparent = yes
@@ -1514,23 +1529,23 @@ guiTypes = {
 			}
 			buttonType = {
 				name = "bg1"
-				position = { x = @bg_x y = 24 }
-				size = { x = 210 y = 32 }
+				position = { x = 24 y = 24 }
+				size = { x = 240 y = 32 }
 				spriteType = "GFX_tiles_dark_area_cut_8"
 				alwaysTransparent = yes
 			}
 			editBoxType = {
 				name = "name"
-				position = { x = @eb_x y = 27 }
-				size = { x = 200 y = 24 }
+				position = { x = 32 y = 27 }
+				size = { x = 230 y = 24 }
 				font = "malgun_goth_24"
 				max_characters = 100
 			}
-			
+
 			instantTextBoxType = {
 				name = "ruler_titles_heading"
 				font = "malgun_goth_24"
-				position = { x = @margin_col1 y = 160 }
+				position = { x = 350 y = -5 }
 				maxWidth = 400
 				text =	 "RULER_TITLE"
 				alwaysTransparent = yes
@@ -1540,7 +1555,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "lbl2"
 				font = "cg_16b"
-				position = { x = @margin_col1 y = 190 }
+				position = { x = 350 y = 25 }
 				maxWidth = 400
 				text =	 "RULER_TITLE_MALE"
 				alwaysTransparent = yes
@@ -1548,25 +1563,25 @@ guiTypes = {
 
 			buttonType = {
 				name = "bg2"
-				position = { x = @margin_col1 y = 210 }
-				size = { x = 210 y = 32 }
+				position = { x = 350 y = 45 }
+				size = { x = 200 y = 32 }
 				spriteType = "GFX_tiles_dark_area_cut_8"
 				alwaysTransparent = yes
 			}
 
 			editBoxType = {
 				name = "ruler_title"
-				position = { x = 400 y = 212 }
-				size = { x = 200 y = 24 }
+				position = { x = 360 y = 47 }
+				size = { x = 190 y = 24 }
 				font = "malgun_goth_24"
 				max_characters = 100
 			}
 
 			instantTextBoxType = {
 				name = "ruler_title_na"
-				position = { x = 400 y = 212 }
+				position = { x = 360 y = 47 }
 				maxHeight = 24
-				maxWidth = 200
+				maxWidth = 190
 				text = "LABEL_NA"
 				font = "malgun_goth_24"
 				text_color_code = "g"
@@ -1575,7 +1590,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "heir_title_heading"
 				font = "malgun_goth_24"
-				position = { x = @margin_col3 y = 160 }
+				position = { x = 570 y = -5 }
 				maxWidth = 400
 				text =	 "HEIR_TITLE"
 				alwaysTransparent = yes
@@ -1585,7 +1600,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "lbl3"
 				font = "cg_16b"
-				position = { x = @margin_col3 y = 190 }
+				position = { x = 570 y = 25 }
 				maxWidth = 400
 				text =	 "HEIR_TITLE_MALE"
 				alwaysTransparent = yes
@@ -1593,38 +1608,37 @@ guiTypes = {
 
 			buttonType = {
 				name = "bg3"
-				position = { x = @margin_col3 y = 210 }
-				size = { x = 210 y = 32 }
+				position = { x = 570 y = 45 }
+				size = { x = 200 y = 32 }
 				spriteType = "GFX_tiles_dark_area_cut_8"
 				alwaysTransparent = yes
 			}
 
 			editBoxType = {
 				name = "heir_title"
-				position = { x = 690 y = 212 }
-				size = { x = 200 y = 24 }
+				position = { x = 580 y = 47 }
+				size = { x = 190 y = 24 }
 				font = "malgun_goth_24"
 				max_characters = 100
 			}
 
 			instantTextBoxType = {
 				name = "heir_title_na"
-				position = { x = 690 y = 212 }
+				position = { x = 580 y = 47 }
 				maxHeight = 24
-				maxWidth = 200
+				maxWidth = 190
 				text = "LABEL_NA"
 				font = "malgun_goth_24"
 				text_color_code = "g"
-
 			}
 
 			containerWindowType = {
 				name = "female_container"
-				position = { x = @margin_col1 y = @margin_row4 }
+				position = { x = 750 y = -80 }
 
 				containerWindowType = {
 					name = "female_ruler_title_container"
-					position = { x = 0 y = 0 }
+					position = { x = -400 y = 164 }
 
 					instantTextBoxType = {
 						name = "ruler_title_female"
@@ -1638,15 +1652,15 @@ guiTypes = {
 					buttonType = {
 						name = "ruler_title_female_bg"
 						position = { x = 0 y = 20 }
-						size = { x = 210 y = 32 }
+						size = { x = 200 y = 32 }
 						spriteType = "GFX_tiles_dark_area_cut_8"
 						alwaysTransparent = yes
 					}
-					
+
 					editBoxType = {
 						name = "ruler_title_female_editbox"
 						position = { x = 10 y = 22 }
-						size = { x = 200 y = 24 }
+						size = { x = 190 y = 24 }
 						font = "malgun_goth_24"
 						max_characters = 100
 					}
@@ -1655,7 +1669,7 @@ guiTypes = {
 						name = "ruler_title_female_na"
 						position = { x = 10 y = 22 }
 						maxHeight = 24
-						maxWidth = 200
+						maxWidth = 190
 						text = "LABEL_NA"
 						font = "malgun_goth_24"
 						text_color_code = "g"
@@ -1664,7 +1678,7 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "female_heir_title_container"
-					position = { x = @margin_col2 y = margin_row4 }
+					position = { x = -180 y = 165 }
 					instantTextBoxType = {
 						name = "heir_title_female_title"
 						font = "cg_16b"
@@ -1677,7 +1691,7 @@ guiTypes = {
 					buttonType = {
 						name = "heir_title_female_bg"
 						position = { x = 0 y = 20 }
-						size = { x = 210 y = 32 }
+						size = { x = 200 y = 32 }
 						spriteType = "GFX_tiles_dark_area_cut_8"
 						alwaysTransparent = yes
 					}
@@ -1685,7 +1699,7 @@ guiTypes = {
 					editBoxType = {
 						name = "heir_title_female_editbox"
 						position = { x = 10 y = 22 }
-						size = { x = 200 y = 24 }
+						size = { x = 190 y = 24 }
 						font = "malgun_goth_24"
 						max_characters = 100
 					}
@@ -1694,7 +1708,7 @@ guiTypes = {
 						name = "heir_title_female_na"
 						position = { x = 10 y = 22 }
 						maxHeight = 24
-						maxWidth = 200
+						maxWidth = 190
 						text = "LABEL_NA"
 						font = "malgun_goth_24"
 					}
@@ -1703,21 +1717,56 @@ guiTypes = {
 
 			buttonType = {
 				name = "randomize_name"
-				position = { x = 250 y = 20 }
+				position = { x = 270 y = 20 }
 				spriteType = "GFX_button_randomize"
 				pdx_tooltip = "EDIT_SPECIES_NAME_RANDOMIZE_TOOLTIP"
 				clicksound = randomizer_click
 			}
 
+			containerWindowType = {
+				name = "play_greeting_container"
+				position = { x = 790 y = -6 }
+				size = { width = 200 height = 70 }
+
+				instantTextBoxType = {
+					name = "play_greeting_heading"
+					#font = "cg_16b"
+					font = "malgun_goth_24"
+					position = { x = 2 y = 0 }
+					maxWidth = 200
+					maxHeight = 20
+					text = "PLAY_GREETING_TITLE"
+					alwaysTransparent = yes
+					text_color_code = "H"
+				}
+
+				instantTextBoxType = {
+					name = "play_greeting_label"
+					font = "cg_16b"
+					position = { x = 2 y = 30 }
+					maxWidth = 200
+					text =	 "PLAY_GREETING_PHRASE"
+					alwaysTransparent = yes
+				}
+
+				buttonType = {
+					name = "play_greeting_button"
+					position = { x = 135 y = 2 }
+					spriteType = "GFX_button_sound"
+					buttonFont = "cg_16b"
+					pdx_tooltip = "PLAY_GREETING_TOOLTIP"
+					shortCut = "p"
+				}
+			}
 		}
 
+		@subselect_w = 200
+		@spinner_w = 180
 
-		@subselect_w = 260
-
-		### portrait
+		### phenotype
 		containerWindowType = {
 			name = "sub_portrait"
-			position = { x = 390 y = 30 }
+			position = { x = 350 y = 210 }
 			size = { width = @subselect_w height = 70 }
 
 
@@ -1743,7 +1792,7 @@ guiTypes = {
 				name = "selected"
 				position = { x = -20 y = -35 }
 				font = "malgun_goth_24"
-				maxWidth = 240
+				maxWidth = 200
 				maxHeight = 20
 				text = "12"
 				format = left
@@ -1755,7 +1804,7 @@ guiTypes = {
 				name = "spinner"
 				leftbutton = "spinner_upButton"
 				rightbutton = "spinner_downButton"
-				size = {x = 240 y = 30 }
+				size = {x = @spinner_w y = 30 }
 				position = { x = 10 y = 30}
 				priority = 100
 				borderSize = { x = 16 y = 16 }
@@ -1778,11 +1827,11 @@ guiTypes = {
 			}
 		}
 
-		### clothes
+		### clothing
 		containerWindowType = {
 			name = "clothes"
 			size = { width = @subselect_w height = 70 }
-			position = { x = 680 y = 120 }
+			position = { x = 570 y = 286 }
 
 			background = {
 				name = "dark_area_bg"
@@ -1818,7 +1867,7 @@ guiTypes = {
 				name = "spinner"
 				leftbutton = "spinner_upButton"
 				rightbutton = "spinner_downButton"
-				size = {x = 240 y = 30 }
+				size = {x = @spinner_w y = 30 }
 				position = {x= 10 y = 30}
 				priority = 100
 				borderSize = {x =16 y = 16}
@@ -1844,7 +1893,7 @@ guiTypes = {
 		### attachment style
 		containerWindowType = {
 			name = "attachments"
-			position = { x = 680 y = 30 }
+			position = { x = 570 y = 210 }
 			size = { width = @subselect_w height = 70 }
 
 
@@ -1882,7 +1931,7 @@ guiTypes = {
 				name = "spinner"
 				leftbutton = "spinner_upButton"
 				rightbutton = "spinner_downButton"
-				size = {x = 240 y = 30 }
+				size = {x = @spinner_w y = 30 }
 				position = {x= 10 y = 30}
 				priority = 100
 				borderSize = {x =16 y = 16}
@@ -1906,11 +1955,11 @@ guiTypes = {
 		}
 
 
-		### variation
+		### color variant
 		containerWindowType = {
 			name = "variation"
 			size = { width = @subselect_w height = 70 }
-			position = { x = 390 y = 120 }
+			position = { x = 350 y = 286 }
 
 			background = {
 				name = "dark_area_bg"
@@ -1946,7 +1995,7 @@ guiTypes = {
 				name = "spinner"
 				leftbutton = "spinner_upButton"
 				rightbutton = "spinner_downButton"
-				size = {x = 240 y = 30 }
+				size = {x = @spinner_w y = 30 }
 				position = {x= 10 y = 30}
 				priority = 100
 				borderSize = {x =16 y = 16}
@@ -1969,10 +2018,136 @@ guiTypes = {
 			}
 		}
 
+		### appearance evolution stages
+		containerWindowType = {
+			name = "evolution_stage"
+			size = { width = @subselect_w height = 70 }
+			position = { x = 790 y = 210 }
+
+			background = {
+				name = "dark_area_bg"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "portrait_label"
+				position = { x = -100 y = 3 }
+				font = "malgun_goth_24"
+				maxWidth = 200
+				maxHeight = 20
+				text = "EVOLUTION_STAGE"
+				format = center
+				orientation = "CENTER_UP"
+				text_color_code = "H"
+			}
+
+			instantTextBoxType = {
+				name = "selected"
+				position = { x = -100 y = -35 }
+				font = "malgun_goth_24"
+				maxWidth = 200
+				maxHeight = 20
+				text = "78"
+				format = center
+				orientation = "CENTER_DOWN"
+			}
+
+			spinnerType = {
+				id = "spinner"
+				name = "spinner"
+				leftbutton = "spinner_upButton"
+				rightbutton = "spinner_downButton"
+				size = { x = @spinner_w y = 30 }
+				position = { x = 10 y = 30 }
+				priority = 100
+				borderSize = { x = 16 y = 16 }
+				horizontal = 1
+				maxValue = 100
+				startValue = 0
+
+				guiButtonType = {
+					name = "spinner_upButton"
+					quadTextureSprite = "GFX_button_left"
+					position = { x = 30 y = 0 }
+					clicksound = decrement_click
+				}
+				guiButtonType = {
+					name = "spinner_downButton"
+					quadTextureSprite = "GFX_button_right"
+					position = { x = 30 y = 120 }
+					clicksound = increment_click
+				}
+			}
+		}
+
+		### appearance evolution variants
+		containerWindowType = {
+			name = "evolution_variant"
+			size = { width = @subselect_w height = 70 }
+			position = { x = 790 y = 290 }
+
+			background = {
+				name = "dark_area_bg"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "portrait_label"
+				position = { x = -100 y = 3 }
+				font = "malgun_goth_24"
+				maxWidth = 200
+				maxHeight = 20
+				text = "EVOLUTION_VARIANT"
+				format = center
+				orientation = "CENTER_UP"
+				text_color_code = "H"
+			}
+
+			instantTextBoxType = {
+				name = "selected"
+				position = { x = -100 y = -35 }
+				font = "malgun_goth_24"
+				maxWidth = 200
+				maxHeight = 20
+				text = "78"
+				format = center
+				orientation = "CENTER_DOWN"
+			}
+
+			spinnerType = {
+				id = "spinner"
+				name = "spinner"
+				leftbutton = "spinner_upButton"
+				rightbutton = "spinner_downButton"
+				size = { x = @spinner_w y = 30 }
+				position = { x = 10 y = 30 }
+				priority = 100
+				borderSize = { x = 16 y = 16 }
+				horizontal = 1
+				maxValue = 100
+				startValue = 0
+
+				guiButtonType = {
+					name = "spinner_upButton"
+					quadTextureSprite = "GFX_button_left"
+					position = { x = 30 y = 0 }
+					clicksound = decrement_click
+				}
+				guiButtonType = {
+					name = "spinner_downButton"
+					quadTextureSprite = "GFX_button_right"
+					position = { x = 30 y = 120 }
+					clicksound = increment_click
+				}
+			}
+		}
+
 		containerWindowType = {
 			name = "leader_bio_container"
-			size = { width = 280 height = 140 }
-			position = { x = 30 y = 218 }
+			size = { width = 280 height = 145 }
+			position = { x = 28 y = 210 }
 
 			clipping = no
 
@@ -1985,16 +2160,16 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "leader_bio_title"
 				font = "malgun_goth_24"
-				position = { x = 0 y = -28 }
+				position = { x = 2 y = -30 }
 				maxWidth = 400
-				text =	 "BIOGRAPHY"
+				text = "BIOGRAPHY"
 				alwaysTransparent = yes
 			}
 
 			editBoxType = {
 				name = "leader_bio_edit_box"
 				position = { x = 10 y = 10 }
-				size = { x = 270 y = 130 }
+				size = { x = 270 y = 120 }
 				font = "cg_16b"
 				allow_multi_line = yes
 				max_characters = 1000 #it is important to set this limit by number of chars to diminish amount of calculations for limited height
@@ -2005,31 +2180,22 @@ guiTypes = {
 		}
 
 		buttonType = {
-			name = "cancel"
-			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 8 }
-			Orientation = "UPPER_RIGHT"
-			shortCut = "ESCAPE"
-			pdx_tooltip = "CLOSE_TITLE"
-			clicksound = "back_click"
-		}
-
-		buttonType={
 			name = "back"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "FRONT_BACK"
-			position = { x = 0 y = -40 }
+			position = { x = -2 y = -39 }
 			orientation = LOWER_LEFT
 			shortcut = "BACKSPACE"
 			clicksound = back_click
 		}
-		buttonType={
+
+		buttonType = {
 			name = "apply_and_close"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "NEXT"
-			position = { x = -290 y = -40 }
+			position = { x = -289 y = -39 }
 			orientation = LOWER_RIGHT
 			#shortcut = "RETURN"
 			clicksound = confirm_click
@@ -2041,13 +2207,35 @@ guiTypes = {
 	containerWindowType = {
 		name = "planet_class_editor"
 		moveable = @movable_editors
-		position = { x = -400 y = @sub_window_pos_y }
-		size = { width = 1030 height = @sub_window_height }
+		position = { x = @sub_window_pos_x y = @sub_window_pos_y }
+		size = { width = @sub_window_width height = @sub_window_height }
 		orientation = center
 
 		background = {
 			name = "background"
 			spriteType = "GFX_subwindow_tile_plain_solid"
+		}
+
+		containerWindowType = {
+			name = "homeworld_names_window"
+			position = { x = 10 y = 41 }
+			size = { width = 302 height = 326 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_subwindow_tile_plain_solid"
+			}
+		}
+
+			containerWindowType = {
+			name = "planetclass_selection_window"
+			position = { x = 316 y = 41 }
+			size = { width = 715 height = 326 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_subwindow_tile_plain_solid"
+			}
 		}
 
 		iconType = {
@@ -2059,7 +2247,7 @@ guiTypes = {
 
 		iconType = {
 			name = "header_line"
-			spriteType = "GFX_line"
+			spriteType = "GFX_line_medium"
 			position = { x = 6 y = 26 }
 		}
 
@@ -2068,16 +2256,14 @@ guiTypes = {
 			font = "malgun_goth_24"
 			position = { x = 16 y = 7 }
 			maxWidth = 230
-			text =	 "planet_class_editor"
+			text = "planet_class_editor"
 			format = left
 			alwaysTransparent = yes
 		}
 
-
-
 		buttonType = {
 			name = "randomize_name"
-			position = { x = 245 y = 78 }
+			position = { x = 252 y = 84 }
 			spriteType = "GFX_button_randomize"
 			pdx_tooltip = "EDIT_SPECIES_NAME_RANDOMIZE_TOOLTIP"
 			clicksound = randomizer_click
@@ -2085,7 +2271,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "homeworld_box"
 			size = { width = 100 height = 100 }
-			position = { x = 0 y = 50 }
+			position = { x = 10 y = 49 }
 
 			instantTextBoxType = {
 				name = "lbl1"
@@ -2097,14 +2283,14 @@ guiTypes = {
 			}
 			buttonType = {
 				name = "bg1"
-				position = { x = @bg_x y = 35 }
-				size = { x = 210 y = 28 }
+				position = { x = @bg_x y = 40 }
+				size = { x = 225 y = 28 }
 				spriteType = "GFX_tiles_dark_area_cut_8"
 				alwaysTransparent = yes
 			}
 			editBoxType = {
 				name = "name"
-				position = { x = @eb_x y = 35 }
+				position = { x = @eb_x y = 40 }
 				size = { x = 200 y = 24 }
 				font = "malgun_goth_24"
 				max_characters = 100
@@ -2114,12 +2300,12 @@ guiTypes = {
 		containerWindowType = {
 			name = "system_box"
 			size = { width = 100 height = 100 }
-			position = { x = 0 y = 120 }
+			position = { x = 10 y = 146 }
 
 			instantTextBoxType = {
 				name = "lbl1"
 				font = "malgun_goth_24"
-				position = { x = @label_x y = 5 }
+				position = { x = @label_x y = 0 }
 				maxWidth = 400
 				text =	 "SYSTEM_NAME"
 				alwaysTransparent = yes
@@ -2127,7 +2313,7 @@ guiTypes = {
 			buttonType = {
 				name = "bg1"
 				position = { x = @bg_x y = 35 }
-				size = { x = 210 y = 28 }
+				size = { x = 225 y = 28 }
 				spriteType = "GFX_tiles_dark_area_cut_8"
 				alwaysTransparent = yes
 			}
@@ -2140,10 +2326,21 @@ guiTypes = {
 			}
 		}
 
+		buttonType = {
+			name = "back"
+			font = "cg_16b"
+			spriteType = "GFX_galactic_object_button"
+			buttonText = "BACK"
+			position = { x = -2 y = -39 }
+			orientation = LOWER_LEFT
+			shortcut = "BACKSPACE"
+			clicksound = back_click
+		}
+
 		containerWindowType = {
 			name = "initializer_box"
 			size = { width = 300 height = 70 }
-			position = { x = 0 y = 210 }
+			position = { x = 10 y = 235 }
 
 			instantTextBoxType = {
 				name = "lbl1"
@@ -2153,52 +2350,52 @@ guiTypes = {
 				text =	 "SELECT_SYSTEM_INITIALIZER_LABEL"
 				alwaysTransparent = yes
 			}
-			buttonType = {
-				name = "bg1"
-				position = { x = 71 y = 35 }
-				size = { x = 170 y = 36 }
-				spriteType = "GFX_tiles_dark_area_cut_8"
-				alwaysTransparent = yes
-			}
-			instantTextBoxType = {
-				name = "value"
-				font = "malgun_goth_24"
-				position = { x = 75 y = 40 }
-				maxWidth = 160
-				maxHeight = 20
-				fixedSize = yes
-				text =	 "RANDOM"
-				format = center
-			}
 
-			spinnerType = {
-				id = "spinner"
-				name = "spinner"
-				leftbutton = "spinner_upButton"
-				rightbutton = "spinner_downButton"
-				size = {x = 250 y = 30 }
-				position = {x= 31 y = 34}
-				priority = 100
-				borderSize = {x =16 y = 16}
-				horizontal = 1
-				maxValue = 100
-				startValue = 0
+			dropDownBoxType = {
+				name = "initializer_dropdown"
+				position = { x = 14 y = 40 }
+				size = { width = 250 height = 30 }
+				#clipping = no #just since positions are wrong!
+				orientation = upper_left
 
-				guiButtonType = {
-					name = "spinner_upButton"
-					quadTextureSprite = "GFX_button_left"
-					position = { x=30 y =0}
-					clicksound = interface
-					pdx_tooltip = "CHANGE_SYSTEM_INITIALZIER"
-					clicksound = decrement_click
+				background = {
+					name = "dropdown_button_bg"
+					spriteType = "GFX_dropdown_button_104"
+					position = { x = 0 y = 0 }
+					#size = { x = 65 y = 38 }
+					pdx_tooltip = "SELECT_TARGET_EMPIRE"
+					no_clicksound = yes
 				}
-				guiButtonType = {
-					name = "spinner_downButton"
-					quadTextureSprite = "GFX_button_right"
-					position = { x=30 y =120}
-					clicksound = interface
-					pdx_tooltip = "CHANGE_SYSTEM_INITIALZIER"
-					clicksound = increment_click
+
+				instantTextBoxType = {
+					name = "selected_initializer_name"
+					position = { x = 10 y = 0 }
+					font = "malgun_goth_24"
+					text = "Test"
+					maxWidth = 250
+					maxHeight = 25
+					fixedSize = yes
+					alwaysTransparent = yes
+				}
+
+				expandedWindow = { # The dropdown list
+					name = "initializer_dropdown_content"
+					position = { x = 0 y = 30 }
+					size = { width = 250 height = 100 }
+					#dynamic_extra_height = 0.4
+					#verticalScrollbar = "right_vertical_slider"
+
+					background = {
+						name = "dropdown_list_bg"
+						spriteType = "GFX_subwindow_tile_plain_solid"
+					}
+
+					smoothListBoxType = {
+						name = "initializer_dropdown_list"
+						position = { x = 0 y = 0 }
+						size = { x = 250 y = 100 }
+						scrollbarType = "standardlistbox_slider_small"
+					}
 				}
 			}
 		}
@@ -2206,16 +2403,15 @@ guiTypes = {
 		containerWindowType = {
 			name = "3d_icons"
 			size = { width = 100 height = 100 }
-			position = { x = 40 y = 0 }
+			position = { x = 48 y = 24 }
 
-
-			@planet_row0 = 10
-			@planet_row1 = 47
-			@planet_row2 = 147
-			@planet_row3 = 247
-			@planet_col1 = 300
-			@planet_col2 = 425
-			@planet_col3 = 550
+			@planet_row0 = 18
+			@planet_row1 = 46
+			@planet_row2 = 140
+			@planet_row3 = 236
+			@planet_col1 = 286
+			@planet_col2 = 411
+			@planet_col3 = 537
 
 			instantTextBoxType = {
 				name = "TYPE_HEADER_01"
@@ -2253,41 +2449,50 @@ guiTypes = {
 				format = center
 			}
 
-
+			instantTextBoxType = {
+				name = "TYPE_HEADER_04"
+				font = "malgun_goth_24"
+				text = "climate_volcanic"
+				position = { x = @planet_col3 y = @planet_row0 }
+				maxWidth = 100
+				maxHeight = 20
+				Orientation = "UPPER_LEFT"
+				text_color_code = "E"
+				format = center
+			}
 
 			containerWindowType = {
 				name = "setting_bg_box1"
-				size = { width = 120 height = 318 }
-				position = { x = 290 y = 39 }
+				size = { width = 120 height = 302 }
+				position = { x = 276 y = 40 }
 
-					background = {
-						name = "setting_bg_frame"
-						spriteType = "GFX_clean_frame_area"
-					}
+				background = {
+					name = "setting_bg_frame"
+					spriteType = "GFX_clean_frame_area"
+				}
 			}
 
 			containerWindowType = {
 				name = "setting_bg_box2"
-				size = { width = 120 height = 318 }
-				position = { x = 415 y = 39 }
+				size = { width = 120 height = 302 }
+				position = { x = 403 y = 40 }
 
-					background = {
-						name = "setting_bg_frame"
-						spriteType = "GFX_clean_frame_area"
-					}
+				background = {
+					name = "setting_bg_frame"
+					spriteType = "GFX_clean_frame_area"
+				}
 			}
 
 			containerWindowType = {
 				name = "setting_bg_box3"
-				size = { width = 120 height = 318 }
-				position = { x = 540 y = 39 }
+				size = { width = 120 height = 302 }
+				position = { x = 528 y = 40 }
 
-					background = {
-						name = "setting_bg_frame"
-						spriteType = "GFX_clean_frame_area"
-					}
+				background = {
+					name = "setting_bg_frame"
+					spriteType = "GFX_clean_frame_area"
+				}
 			}
-
 
 			buttonType = {
 				name = "pc_desert"
@@ -2361,7 +2566,13 @@ guiTypes = {
 				clicksound = "select_click"
 			}
 
-
+			buttonType = {
+				name = "pc_volcanic"
+				position = { x = @planet_col3 y = @planet_row2 }
+				spriteType = "GFX_dummy_3d_home_world_new"
+				size = { x = 100 y = 100 }
+				clicksound = "select_click"
+			}
 
 			containerWindowType = {
 				#This window will be moved to whatever button has the currently selected planet class
@@ -2386,11 +2597,159 @@ guiTypes = {
 
 		}
 
+		containerWindowType = {
+			name = "3d_icons_arkships"
+			size = { width = 100 height = 100 }
+			position = { x = 40 y = 2 }
+
+			instantTextBoxType = {
+				name = "TYPE_HEADER_01"
+				font = "malgun_goth_24"
+				text = "arkship_cap"
+				position = { x = 275 y = 10 }
+				maxWidth = 100
+				maxHeight = 20
+				Orientation = "UPPER_LEFT"
+				text_color_code = "E"
+				format = center
+			}
+
+			containerWindowType = {
+				name = "civilian_arkship_tier_1"
+				position = { x = 290 y = 47 }
+				size = { width = 356 height = 96 }
+
+				background = {
+					name = "background"
+					spriteType = "gfx_message_bg"
+				}
+
+				containerWindowType = {
+					name = "selected_overlay"
+					position = { x = 4 y = 4 }
+					size = { width = 348 height = 88 }
+					background = {
+						name = "selected_bg"
+						spriteType = "GFX_glow_tile_orange_no_padding"
+						alwaysTransparent = yes
+					}
+				}
+
+				buttonType = {
+					name = "button"
+					position = { x = 8 y = 8 }
+					size = { x = 340 y = 80 }
+					quadTextureSprite = "GFX_ship_design_entry_bg_arkships"
+					oversound = mouse_over
+					clicksound = select_click
+					alwaysTransparent = no
+				}
+
+				instantTextBoxType = {
+					name = "name"
+					font = "cg_16b"
+					format = center
+					position = { x = 0 y = 70 }
+					maxWidth = 340
+					text = "civilian_arkship_name"
+					alwaysTransparent = yes
+					#text_color_code = "E"
+				}
+			}
+
+			containerWindowType = {
+				name = "science_arkship_tier_1"
+				position = { x = 290 y = 147 }
+				size = { width = 356 height = 96 }
+
+				background = {
+					name = "background"
+					spriteType = "gfx_message_bg"
+				}
+
+				containerWindowType = {
+					name = "selected_overlay"
+					position = { x = 4 y = 4 }
+					size = { width = 348 height = 88 }
+					background = {
+						name = "selected_bg"
+						spriteType = "GFX_glow_tile_orange_no_padding"
+						alwaysTransparent = yes
+					}
+				}
+
+				buttonType = {
+					name = "button"
+					position = { x = 8 y = 8 }
+					size = { x = 340 y = 80 }
+					quadTextureSprite = "GFX_ship_design_entry_bg_arkships"
+					oversound = mouse_over
+					clicksound = select_click
+					alwaysTransparent = no
+				}
+
+				instantTextBoxType = {
+					name = "name"
+					font = "cg_16b"
+					format = center
+					position = { x = 0 y = 70 }
+					maxWidth = 340
+					text = "science_arkship_name"
+					alwaysTransparent = yes
+					#text_color_code = "E"
+				}
+			}
+
+			containerWindowType = {
+				name = "military_arkship_tier_1"
+				position = { x = 290 y = 247 }
+				size = { width = 356 height = 96 }
+
+				background = {
+					name = "background"
+					spriteType = "gfx_message_bg"
+				}
+
+				containerWindowType = {
+					name = "selected_overlay"
+					position = { x = 4 y = 4 }
+					size = { width = 348 height = 88 }
+					background = {
+						name = "selected_bg"
+						spriteType = "GFX_glow_tile_orange_no_padding"
+						alwaysTransparent = yes
+					}
+				}
+
+				buttonType = {
+					name = "button"
+					position = { x = 8 y = 8 }
+					size = { x = 340 y = 80 }
+					quadTextureSprite = "GFX_ship_design_entry_bg_arkships"
+					oversound = mouse_over
+					clicksound = select_click
+					alwaysTransparent = no
+				}
+
+				instantTextBoxType = {
+					name = "name"
+					font = "cg_16b"
+					format = center
+					position = { x = 0 y = 73 }
+					maxWidth = 340
+					text = "military_arkship_name"
+					alwaysTransparent = yes
+					#text_color_code = "E"
+				}
+			}
+		}
+
 		### details
 		containerWindowType = {
 			name = "details"
-			size = { width = 300 height = 260 }
-			position = { x = 720 y = 48 }
+			size = { width = 320 height = 310 }
+			position = { x = 703 y = 49 }
+			margin = { top = 2 bottom = 2 }
 
 			background = {
 				name = "bg"
@@ -2400,23 +2759,24 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "name"
 				font = "malgun_goth_24"
-				position = { x = 10 y = 5 }
+				position = { x = 14 y = 8 }
 				maxWidth = 230
 				text =	 ""
 				format = left
 				alwaysTransparent = yes
-				#text_color_code = "E"
 			}
 
 			instantTextBoxType = {
 				name = "desc"
 				font = "cg_16b"
-				position = { x = 9 y = 40 }
+				position = { x = 14 y = 44 }
 				maxWidth = 290
+				maxHeight = 208
 				text = ""
 				format = left
 				#galwaysTransparent = yes
 				text_color_code = "L"
+				scrollbarType = "standardtext_slider"
 			}
 
 			containerWindowType = {
@@ -2424,7 +2784,7 @@ guiTypes = {
 				orientation = lower_left
 				origo = lower_left
 				size = { width = 290 height = 50 }
-				position = { x = 10 y = -3 }
+				position = { x = 12 y = 12 }
 
 				background = {
 					name = "preference_trait_hitbox"
@@ -2441,7 +2801,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "name"
 					font = "malgun_goth_24"
-					position = { x = 35 y = 1 }
+					position = { x = 38 y = 2 }
 					maxWidth = 230
 					text =	 ""
 					format = left
@@ -2451,32 +2811,12 @@ guiTypes = {
 		}
 
 		buttonType = {
-			name = "cancel"
-			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 8 }
-			Orientation = "UPPER_RIGHT"
-			shortCut = "ESCAPE"
-			pdx_tooltip = "CLOSE_TITLE"
-			clicksound = "back_click"
-		}
-		buttonType={
-			name = "back"
-			font = "cg_16b"
-			spriteType = "GFX_galactic_object_button"
-			buttonText = "BACK"
-			position = { x = 0 y = -40 }
-			orientation = LOWER_LEFT
-			shortcut = "BACKSPACE"
-			clicksound = back_click
-		}
-		buttonType={
 			name = "apply_and_close"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "NEXT"
-			position = { x = -290 y = -40 }
+			position = { x = -289 y = -39 }
 			orientation = LOWER_RIGHT
-			#shortcut = "RETURN"
 			clicksound = confirm_click
 		}
 
@@ -2488,8 +2828,8 @@ guiTypes = {
 	containerWindowType = {
 		name = "planet_city_gfx_culture_editor"
 		moveable = @movable_editors
-		position = { x = -400 y = -50 }
-		size = { width = 1030 height = 400 }
+		position = { x = @sub_window_pos_x y = -50 }
+		size = { width = @sub_window_width height = 405 }
 		orientation = center
 
 		background = {
@@ -2520,13 +2860,31 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 
+		buttonType = {
+			name = "city_tab_button"
+			position = { x = -310 y = -4 }
+			font = "cg_16b"
+			spriteType = "GFX_standard_button_142_34_button"
+			text = "EMPIRE_CREATION_CITY_APPEARANCE"
+			orientation = UPPER_RIGHT
+		}
+
+		buttonType = {
+			name = "room_tab_button"
+			position = { x = -162 y = -4 }
+			font = "cg_16b"
+			spriteType = "GFX_standard_button_142_34_button"
+			text = "EMPIRE_CREATION_ROOM_APPEARANCE"
+			orientation = UPPER_RIGHT
+		}
+
 		containerWindowType = {
-			name = "portraits_window"
+			name = "cities_window"
 			position = { x = 2 y = 40 }
-			size = { width = 1030 height = 320 }
+			size = { width = 99% height = 325 }
 			orientation = upper_left
 			moveable = no
-			margin = { top = 2 bottom = 2 }
+			margin = { top = 6 bottom = 2 }
 			verticalScrollBar = "right_vertical_slider"
 
 			background = {
@@ -2535,7 +2893,31 @@ guiTypes = {
 			}
 
 			gridBoxType = {
-				name = "portraits"
+				name = "cities_grid"
+				position = { x = 9 y = 3 }
+				size = { width = 1010 height = 305 }
+				slotSize = { width = 339 height = 135 }
+				max_slots_horizontal = 3
+				format = UPPER_LEFT
+			}
+		}
+
+		containerWindowType = {
+			name = "rooms_window"
+			position = { x = 2 y = 40 }
+			size = { width = 99% height = 325 }
+			orientation = upper_left
+			moveable = no
+			margin = { top = 6 bottom = 2 }
+			verticalScrollBar = "right_vertical_slider"
+
+			background = {
+				name = "background"
+				spriteType = "GFX_invisible"
+			}
+
+			gridBoxType = {
+				name = "rooms_grid"
 				position = { x = 5 y = 3 }
 				size = { width = 1010 height = 305 }
 				slotSize = { width = 339 height = 135 }
@@ -2544,108 +2926,97 @@ guiTypes = {
 			}
 		}
 
-		### background
-		containerWindowType = {
-			name = "room_container"
-			size = { width = 400 height = 32 }
-			position = { x = 390 y = 7 }
-
-			background = {
-				name = "dark_area_bg"
-				quadTextureSprite = "GFX_tiles_dark_area_cut_8"
-				alwaysTransparent = yes
-			}
-
-			instantTextBoxType = {
-				name = "portrait_label"
-				position = { x = 0 y = 3 }
-				font = "malgun_goth_24"
-				maxWidth = 100
-				maxHeight = 20
-				text = "ROOM_BACKGROUND"
-				format = center
-			}
-
-			instantTextBoxType = {
-				name = "selected"
-				position = { x = 190 y = 4 }
-				font = "malgun_goth_24"
-				maxWidth = 120
-				maxHeight = 20
-				format = center
-			}
-
-			spinnerType = {
-				id = "spinner"
-				name = "spinner"
-				leftbutton = "spinner_upButton"
-				rightbutton = "spinner_downButton"
-				size = {x = 180 y = 30 }
-				position = {x = 160 y = 2}
-				priority = 100
-				borderSize = {x = 16 y = 16}
-				horizontal = 1
-				maxValue = 100
-				startValue = 0
-
-				guiButtonType = {
-					name = "spinner_upButton"
-					quadTextureSprite = "GFX_button_left"
-					scale = 0.75
-					clicksound = decrement_click
-				}
-				guiButtonType = {
-					name = "spinner_downButton"
-					quadTextureSprite = "GFX_button_right"
-					scale = 0.75
-					clicksound = increment_click
-				}
-			}
-		}
-
 		buttonType = {
-			name = "cancel"
-			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 8 }
-			Orientation = "UPPER_RIGHT"
-			shortCut = "ESCAPE"
-			pdx_tooltip = "CLOSE_TITLE"
-			clicksound = "back_click"
-		}
-
-		buttonType={
 			name = "back"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "BACK"
-			position = { x = 0 y = -40 }
+			position = { x = -2 y = -39 }
 			orientation = LOWER_LEFT
 			shortcut = "BACKSPACE"
 			clicksound = back_click
 		}
 
-		buttonType={
+		buttonType = {
 			name = "apply_and_close"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "NEXT"
-			position = { x = -290 y = -40 }
+			position = { x = -289 y = -39 }
 			orientation = LOWER_RIGHT
 			#shortcut = "RETURN"
 			clicksound = confirm_click
 		}
 	}
 
+	### City appearance entry
 	containerWindowType = {
 		name = "city_portrait_entry"
+		position = { x = 0 y = 5 }
+		size = { width = 340 height = 140 }
+		clipping = yes
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_portrait_planet"
+			position = { x = 1 y = -35 }
+			scale = 0.41
+			clicksound = "select_click"
+		}
+
+		containerWindowType = {
+			name = "background"
+			position = { x = 0 y = 0 }
+			size = { width = 330 height = 130 }
+
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_tiles_frame_extra_light"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "selected"
+			position = { x = 0 y = 0 }
+			size = { width = 330 height = 130 }
+
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_orange_frame_tile"
+				alwaysTransparent = yes
+			}
+		}
+
+		instantTextBoxType = {
+			name = "culture"
+			font = "cg_16b"
+			position = { x = 0 y = 108 }
+			maxWidth = 330
+			text =	 "asdf"
+			format = centre
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "missing_dlc_overlay"
+			quadTextureSprite = "GFX_city_culture_locked_overlay"
+			position = { x = 6 y = 1 }
+			size = { x = 340 y = 140 }
+		}
+	}
+
+	### Room appearance entry
+	containerWindowType = {
+		name = "diplomacy_room_entry"
 		position = { x = 0 y = 5 }
 		size = { width = 340 height = 130 }
 		clipping = yes
 
 		containerWindowType = {
 			name = "background"
-			position = { x = 1 y = -6 }
-			size = { width = 338 height = 140 }
+			position = { x = 1 y = -4 }
+			size = { width = 338 height = 138 }
 
 			background = {
 				name = "selected_bg"
@@ -2667,30 +3038,14 @@ guiTypes = {
 		}
 
 		buttonType = {
-			name = "portrait"
-			quadTextureSprite = "GFX_portrait_planet"
-			position = { x = 6 y = -60 }
-			scale = 0.585
+			name = "button"
+			quadTextureSprite = "GFX_portrait_gamesetup_mask"
+			position = { x = 6 y = 6 }
+			scale = 0.346
 			clicksound = "select_click"
 		}
-
-		instantTextBoxType = {
-			name = "culture"
-			font = "cg_16b"
-			position = { x = 0 y = 108 }
-			maxWidth = 330
-			text =	 "asdf"
-			format = centre
-			alwaysTransparent = yes
-		}
-
-		buttonType = {
-			name = "missing_dlc_overlay"
-			quadTextureSprite = "GFX_city_culture_locked_overlay"
-			position = { x = 6 y = 1 }
-			size = { x = 340 y = 140 }
-		}
 	}
+
 
 	#######################
 	# origin
@@ -2698,8 +3053,8 @@ guiTypes = {
 	containerWindowType = {
 		name = "empire_origin_editor"
 		moveable = @movable_editors
-		position = { x = -400 y = @sub_window_pos_y }
-		size = { width = 1030 height = @sub_window_height }
+		position = { x = @sub_window_pos_x y = @sub_window_pos_y }
+		size = { width = @sub_window_width height = @sub_window_height }
 		orientation = center
 
 		background = {
@@ -2735,8 +3090,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "origins_window"
-			position = { x = 10 y = 50 }
-			size = { width = 670 height = 300 }
+			position = { x = 4 y = 40 }
+			size = { width = 676 height = 320 }
 			orientation = upper_left
 			moveable = no
 			margin = { top = 2 bottom = 2 }
@@ -2759,8 +3114,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "desc_window"
-			position = { x = 690 y = 50 }
-			size = { width = 330 height = 300 }
+			position = { x = 682 y = 40 }
+			size = { width = 350 height = 320 }
 			orientation = upper_left
 			moveable = no
 			margin = { top = 2 bottom = 2 }
@@ -2781,7 +3136,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "selected_origin_name"
 				font = "malgun_goth_24"
-				position = { x = 50 y = 12 }
+				position = { x = 48 y = 12 }
 				maxWidth = 300
 				format = left
 				alwaysTransparent = yes
@@ -2800,33 +3155,25 @@ guiTypes = {
 		}
 
 		buttonType = {
-				name = "cancel"
-				quadTextureSprite = "GFX_close"
-				position = { x = -45 y = 8 }
-				Orientation = "UPPER_RIGHT"
-				shortCut = "ESCAPE"
-				pdx_tooltip = "CLOSE_TITLE"
-				clicksound = "back_click"
-			}
-			buttonType = {
-				name = "back"
-				font = "cg_16b"
-				spriteType = "GFX_galactic_object_button"
-				buttonText = "BACK"
-				position = { x = 0 y = -40 }
-				orientation = LOWER_LEFT
-				shortcut = "BACKSPACE"
-				clicksound = back_click
-			}
-			buttonType = {
-				name = "apply_and_close"
-				font = "cg_16b"
-				spriteType = "GFX_galactic_object_button"
-				buttonText = "NEXT"
-				position = { x = -290 y = -40 }
-				orientation = LOWER_RIGHT
-				clicksound = confirm_click
-			}
+			name = "back"
+			font = "cg_16b"
+			spriteType = "GFX_galactic_object_button"
+			buttonText = "BACK"
+			position = { x = -2 y = -39 }
+			orientation = LOWER_LEFT
+			shortcut = "BACKSPACE"
+			clicksound = back_click
+		}
+
+		buttonType = {
+			name = "apply_and_close"
+			font = "cg_16b"
+			spriteType = "GFX_galactic_object_button"
+			buttonText = "NEXT"
+			position = { x = -289 y = -39 }
+			orientation = LOWER_RIGHT
+			clicksound = confirm_click
+		}
 	}
 
 	#######################
@@ -2893,13 +3240,46 @@ guiTypes = {
 	containerWindowType = {
 		name = "empire_ethics_and_government_editor"
 		moveable = @movable_editors
-		position = { x = -400 y = @sub_window_pos_y }
-		size = { width = 1030 height = @sub_window_height }
+		position = { x = @sub_window_pos_x y = @sub_window_pos_y }
+		size = { width = @sub_window_width height = @sub_window_height }
 		orientation = center
 
 		background = {
 			name = "background"
 			spriteType = "GFX_subwindow_tile_plain_solid"
+		}
+
+		containerWindowType = {
+			name = "ethics_window"
+			position = { x = 10 y = 43 }
+			size = { width = 336 height = 320 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_subwindow_tile_plain_solid"
+			}
+		}
+
+		containerWindowType = {
+			name = "authority_window"
+			position = { x = 353 y = 43 }
+			size = { width = 336 height = 320 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_subwindow_tile_plain_solid"
+			}
+		}
+
+		containerWindowType = {
+			name = "civics_window"
+			position = { x = 695 y = 43 }
+			size = { width = 336 height = 320 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_subwindow_tile_plain_solid"
+			}
 		}
 
 		### ETHICS ###
@@ -2933,322 +3313,361 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "ethics"
-			size = { width = 230 height = 230 }
-			position = { x = 20 y = -25 }
-
+			size = {
+				width = 300
+				height = 340
+			}
+			position = {
+				x = 35
+				y = 22
+			}
 			instantTextBoxType = {
 				name = "ethic_points_left"
-				position = { x = -130 y = 95 }
+				position = {
+					x = -15
+					y = 32
+				}
 				font = "malgun_goth_24"
 				maxWidth = 310
 				maxHeight = 20
 				text = "POINTS_LEFT_ETHICS"
-				orientation = center_down
+				orientation = upper_left
 				format = center
 			}
-
-			### NON-FANATIC ETHICS ###
-
-		####mod ethic rebuild####
-		#########################	
-		
-		buttonType = {
-			name = "ethic_egalitarian"
-			spriteType = "GFX_ethics_egalitarian"
-			position = { x = 125 y = 104 }
-			clicksound = interface
-			# orientation = center_up
+			buttonType = {
+				name = "ethic_egalitarian"
+				spriteType = "GFX_ethics_egalitarian"
+				position = {
+					x = 20
+					y = 60
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_egalitarian"
+				spriteType = "GFX_ethics_fanatic_egalitarian"
+				position = {
+					x = 65
+					y = 60
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_authoritarian"
+				spriteType = "GFX_ethics_authoritarian"
+				position = {
+					x = 190
+					y = 60
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_authoritarian"
+				spriteType = "GFX_ethics_fanatic_authoritarian"
+				position = {
+					x = 235
+					y = 60
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_socialism"
+				spriteType = "GFX_ethics_socialism"
+				position = {
+					x = 20
+					y = 95
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_socialism"
+				spriteType = "GFX_ethics_fanatic_socialism"
+				position = {
+					x = 65
+					y = 95
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_capitalism"
+				spriteType = "GFX_ethics_capitalism"
+				position = {
+					x = 190
+					y = 95
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_capitalism"
+				spriteType = "GFX_ethics_fanatic_capitalism"
+				position = {
+					x = 235
+					y = 95
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_militarist"
+				spriteType = "GFX_ethics_militarist"
+				position = {
+					x = 20
+					y = 130
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_militarist"
+				spriteType = "GFX_ethics_fanatic_militarist"
+				position = {
+					x = 65
+					y = 130
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_pacifist"
+				spriteType = "GFX_ethics_pacifist"
+				position = {
+					x = 190
+					y = 130
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_pacifist"
+				spriteType = "GFX_ethics_fanatic_pacifist"
+				position = {
+					x = 235
+					y = 130
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_xenophobe"
+				spriteType = "GFX_ethics_xenophobe"
+				position = {
+					x = 20
+					y = 165
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_xenophobe"
+				spriteType = "GFX_ethics_fanatic_xenophobe"
+				position = {
+					x = 65
+					y = 165
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_xenophile"
+				spriteType = "GFX_ethics_xenophile"
+				position = {
+					x = 190
+					y = 165
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_xenophile"
+				spriteType = "GFX_ethics_fanatic_xenophile"
+				position = {
+					x = 235
+					y = 165
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_interventionism"
+				spriteType = "GFX_ethics_interventionism"
+				position = {
+					x = 20
+					y = 200
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_interventionism"
+				spriteType = "GFX_ethics_fanatic_interventionism"
+				position = {
+					x = 65
+					y = 200
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_neutralism"
+				spriteType = "GFX_ethics_neutralism"
+				position = {
+					x = 190
+					y = 200
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_neutralism"
+				spriteType = "GFX_ethics_fanatic_neutralism"
+				position = {
+					x = 235
+					y = 200
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_developmentalism"
+				spriteType = "GFX_ethics_developmentalism"
+				position = {
+					x = 20
+					y = 235
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_developmentalism"
+				spriteType = "GFX_ethics_fanatic_developmentalism"
+				position = {
+					x = 65
+					y = 235
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_conservationism"
+				spriteType = "GFX_ethics_conservationism"
+				position = {
+					x = 190
+					y = 235
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_conservationism"
+				spriteType = "GFX_ethics_fanatic_conservationism"
+				position = {
+					x = 235
+					y = 235
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_materialist"
+				spriteType = "GFX_ethics_materialist"
+				position = {
+					x = 20
+					y = 270
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_materialist"
+				spriteType = "GFX_ethics_fanatic_materialist"
+				position = {
+					x = 65
+					y = 270
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_spiritualist"
+				spriteType = "GFX_ethics_spiritualist"
+				position = {
+					x = 190
+					y = 270
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_spiritualist"
+				spriteType = "GFX_ethics_fanatic_spiritualist"
+				position = {
+					x = 235
+					y = 270
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_honorism"
+				spriteType = "GFX_ethics_honorism"
+				position = {
+					x = 20
+					y = 305
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_honorism"
+				spriteType = "GFX_ethics_fanatic_honorism"
+				position = {
+					x = 65
+					y = 305
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_utilitarianism"
+				spriteType = "GFX_ethics_utilitarianism"
+				position = {
+					x = 190
+					y = 305
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_fanatic_utilitarianism"
+				spriteType = "GFX_ethics_fanatic_utilitarianism"
+				position = {
+					x = 235
+					y = 305
+				}
+				clicksound = interface
+			}
+			buttonType = {
+				name = "ethic_gestalt_consciousness"
+				spriteType = "GFX_ethics_gestalt_consciousness"
+				position = {
+					x = 125
+					y = 183
+				}
+				clicksound = interface
+			}
+			iconType = {
+				name = "ethic_col_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+			iconType = {
+				name = "ethic_xen_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+			iconType = {
+				name = "ethic_mil_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+			iconType = {
+				name = "ethic_spi_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+			iconType = {
+				name = "ethic_hive_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+			iconType = {
+				name = "ethic_ngm_soc_or_cap_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+			iconType = {
+				name = "ethic_ngm_int_or_neu_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+			iconType = {
+				name = "ethic_ngm_con_or_dev_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+			iconType = {
+				name = "ethic_ngm_hon_or_uti_selected"
+				spriteType = "GFX_ethic_selected"
+			}
 		}
-		
-
-		
-		buttonType = {
-			name = "ethic_socialism"
-			spriteType = "GFX_ethics_socialism"
-			position = { x = 154.2 y = 109.9 }
-			clicksound = interface
-		}						
-		
-		
-		buttonType = {
-			name = "ethic_militarist"
-			spriteType = "GFX_ethics_militarist"
-			position = { x = 178 y = 126 }
-			clicksound = interface
-		}
-		
-
-		
-		buttonType = {
-			name = "ethic_xenophobe"
-			spriteType = "GFX_ethics_xenophobe"
-			position = { x = 194.1 y = 149.8 }
-			clicksound = interface
-		}
-		
-
-
-		buttonType = {
-			name = "ethic_interventionism"
-			spriteType = "GFX_ethics_interventionism"
-			position = { x = 200 y = 179 }
-			clicksound = interface
-		}
-		
-	
-
-		buttonType = {
-			name = "ethic_developmentalism"
-			spriteType = "GFX_ethics_developmentalism"
-			position = { x = 194.1 y = 208.2 }
-			clicksound = interface
-		}
-		
-		
-		buttonType = {
-			name = "ethic_materialist"
-			spriteType = "GFX_ethics_materialist"
-			position = { x = 178 y = 232 }
-			clicksound = interface
-		}
-		
-		buttonType = {
-			name = "ethic_utilitarianism"
-			spriteType = "GFX_ethics_utilitarianism"
-			position = { x = 154.2 y = 248.1 }
-			clicksound = interface
-		}
-		
-		buttonType = {
-			name = "ethic_authoritarian"
-			spriteType = "GFX_ethics_authoritarian"
-			position = { x = 125 y = 254 }
-			clicksound = interface
-		}
-		
-		buttonType = {
-			name = "ethic_capitalism"
-			spriteType = "GFX_ethics_capitalism"
-			position = { x = 95.8 y = 248.1 }
-			clicksound = interface
-		}
-		
-		buttonType = {
-			name = "ethic_pacifist"
-			spriteType = "GFX_ethics_pacifist"
-			position = { x = 72 y = 232 }
-			clicksound = interface
-		}
-		
-		buttonType = {
-			name = "ethic_xenophile"
-			spriteType = "GFX_ethics_xenophile"
-			position = { x = 55.9 y = 208.2 }
-			clicksound = interface
-		}
-		
-		buttonType = {
-			
-			name = "ethic_neutralism"
-			spriteType = "GFX_ethics_neutralism"
-			position = { x = 50 y = 179 }
-			clicksound = interface
-		}
-		
-		buttonType = {
-			name = "ethic_conservationism"
-			spriteType = "GFX_ethics_conservationism"
-			position = { x = 55.9 y = 149.8 }
-			clicksound = interface
-		}
-		
-		
-		buttonType = {
-			name = "ethic_spiritualist"
-			spriteType = "GFX_ethics_spiritualist"
-			position = { x = 72 y = 126 }
-			clicksound = interface
-		}		
-
-		buttonType = {
-			name = "ethic_honorism"
-			spriteType = "GFX_ethics_honorism"
-			position = { x = 95.8 y = 109.9 }
-			clicksound = interface
-		}		
-		
-
-		### FANATIC ETHICS ###
-
-		buttonType = {
-			name = "ethic_fanatic_egalitarian"
-			spriteType = "GFX_ethics_fanatic_egalitarian"
-			position = { x = 125 y = 73.5 }
-			clicksound = interface
-		}
-		
-		buttonType = {
-			name = "ethic_fanatic_socialism"
-			spriteType = "GFX_ethics_fanatic_socialism"
-			position = { x = 166 y = 81.8 }
-			clicksound = interface
-		}
-		
-		buttonType = {
-			name = "ethic_fanatic_militarist"
-			spriteType = "GFX_ethics_fanatic_militarist"
-			position = { x = 199.6 y = 104.4 }
-			clicksound = interface
-		}
-		
-		buttonType = {
-			name = "ethic_fanatic_xenophobe"
-			spriteType = "GFX_ethics_fanatic_xenophobe"
-			position = { x = 222.2 y = 137.9 }
-			clicksound = interface
-		}
-		
-		buttonType = {
-			name = "ethic_fanatic_interventionism"
-			spriteType = "GFX_ethics_fanatic_interventionism"
-			position = { x = 230.5 y = 179 }
-			clicksound = interface
-		}
-		
-		buttonType = {
-			name = "ethic_fanatic_developmentalism"
-			spriteType = "GFX_ethics_fanatic_developmentalism"
-			position = { x = 222.2 y = 220.1 }
-			clicksound = interface
-		}
-		
-		buttonType = {
-			name = "ethic_fanatic_materialist"
-			spriteType = "GFX_ethics_fanatic_materialist"
-					position = { x = 199.6 y = 253.6 }
-			clicksound = interface
-		}
-		
-		buttonType = {
-			name = "ethic_fanatic_utilitarianism"
-			spriteType = "GFX_ethics_fanatic_utilitarianism"
-			position = { x = 166.1 y = 276.2 }
-			clicksound = interface
-		}	
-		
-		buttonType = {
-			name = "ethic_fanatic_authoritarian"
-			spriteType = "GFX_ethics_fanatic_authoritarian"
-			position = { x = 125 y = 284.5 }				
-			clicksound = interface
-		}
-		
-		buttonType = {
-			name = "ethic_fanatic_capitalism"
-			spriteType = "GFX_ethics_fanatic_capitalism"
-			position = { x = 83.9 y = 276.2 }
-			clicksound = interface
-		}
-		
-		
-		buttonType = {
-			name = "ethic_fanatic_pacifist"
-			spriteType = "GFX_ethics_fanatic_pacifist"
-			position = { x = 50.4 y = 253.6 }								
-			clicksound = interface
-		}		
-
-		buttonType = {
-			name = "ethic_fanatic_xenophile"
-			spriteType = "GFX_ethics_fanatic_xenophile"
-			position = { x = 27.8 y = 220.1 }				
-			clicksound = interface
-		}	
-
-		buttonType = {
-			name = "ethic_fanatic_neutralism"
-			spriteType = "GFX_ethics_fanatic_neutralism"
-			position = { x = 19.5 y = 179 }
-			clicksound = interface
-		}	
-		
-		buttonType = {
-			name = "ethic_fanatic_conservationism"
-			spriteType = "GFX_ethics_fanatic_conservationism"
-			position = { x = 27.8 y = 137.9 }
-			clicksound = interface
-		}				
-
-		buttonType = {
-			name = "ethic_fanatic_spiritualist"
-			spriteType = "GFX_ethics_fanatic_spiritualist"
-			position = { x = 50.4 y = 104.4 }
-			clicksound = interface
-		}		
-
-		buttonType = {
-			name = "ethic_fanatic_honorism"
-			spriteType = "GFX_ethics_fanatic_honorism"
-			position = { x = 83.9 y = 81.8 }
-			clicksound = interface
-		}		
-		
-
-		buttonType = {
-			name = "ethic_gestalt_consciousness"
-			spriteType = "GFX_ethics_gestalt_consciousness"
-			position = { x = 125 y = 179 }
-			clicksound = interface
-		}		
-
-		### SELECTED ETHICS ###
-
-		iconType = {
-			name = "ethic_col_selected"
-			spriteType = "GFX_ethic_selected"
-		}
-
-		iconType = {
-			name = "ethic_xen_selected"
-			spriteType = "GFX_ethic_selected"
-		}
-
-		iconType = {
-			name = "ethic_mil_selected"
-			spriteType = "GFX_ethic_selected"
-		}
-
-		iconType = {
-			name = "ethic_spi_selected"
-			spriteType = "GFX_ethic_selected"
-		}
-		
-		iconType = {
-			name = "ethic_ngm_soc_or_cap_selected"
-			spriteType = "GFX_ethic_selected"
-		}
-
-		iconType = {
-			name = "ethic_ngm_int_or_neu_selected"
-			spriteType = "GFX_ethic_selected"
-		}
-		
-
-		iconType = {
-			name = "ethic_ngm_con_or_dev_selected"
-			spriteType = "GFX_ethic_selected"
-		}
-
-		iconType = {
-			name = "ethic_ngm_hon_or_uti_selected"
-			spriteType = "GFX_ethic_selected"
-		}
-
-		iconType = {
-			name = "ethic_hive_selected"
-			spriteType = "GFX_ethic_selected"
-		}
-	}
 
 		### GOVERNMENT AUTHORITY ###
 
@@ -3259,22 +3678,22 @@ guiTypes = {
 			iconType = {
 				name = "hex_bg"
 				spriteType = "GFX_hex_bg"
-				position = { x = -10 y = -8 }
+				position = { x = -16 y = -8 }
 				alwaysTransparent = yes
 			}
 
 			iconType = {
 				name = "header_line"
 				spriteType = "GFX_line"
-				position = { x = 6 y = 26 }
+				position = { x = 0 y = 26 }
 			}
 
 			instantTextBoxType = {
 				name = "label"
 				font = "malgun_goth_24"
-				position = { x = 16 y = 7 }
+				position = { x = 8 y = 7 }
 				maxWidth = 400
-				text =	 "GOVERNMENT_AUTHORITY"
+				text = "GOVERNMENT_AUTHORITY_AND_TYPE"
 				format = left
 				alwaysTransparent = yes
 			}
@@ -3282,18 +3701,47 @@ guiTypes = {
 
 		gridBoxType = {
 			name = "authority_grid"
-			position = { x = 362 y = 50 }
+			position = { x = 316 y = 58 }
 			size = { width = 300 height = 50 }
 			slotSize = { width = 50 height = 50 }
-			max_slots_horizontal = 5
+			max_slots_horizontal = 4
 			format = CENTERED_UP
 			add_horizontal = yes
 		}
 
 		containerWindowType = {
+			name = "nomad_toggle_container"
+			position = { x = 620 y = 121 }
+			size = { width = 45 height = 45 }
+
+			iconType = {
+				name = "selected"
+				spriteType = "GFX_gamesetup_gov_sel"
+				orientation = center
+				centerPosition = yes
+				alwaysTransparent = yes
+			}
+
+			buttonType = {
+				name = "nomad_toggle"
+				spriteType = "GFX_toggle_nomad"
+				orientation = center
+				centerPosition = yes
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "missing_dlc_overlay"
+				quadTextureSprite = "GFX_government_locked_overlay"
+				position = { x = -12 y = -12 }
+				size = { x = 68 y = 68 }
+			}
+		}
+
+		containerWindowType = {
 			name = "authority_description"
-			size = { width = 310 height = 131 }
-			position = { x = 360 y = 160 }
+			size = { width = 320 height = 142 }
+			position = { x = 361 y = 214  }
 
 			background = {
 				name = "background"
@@ -3305,7 +3753,7 @@ guiTypes = {
 				name = "desc"
 				font = "cg_16b"
 				position = { x = 10 y = 10 }
-				maxWidth = 290
+				maxWidth = 294
 				maxHeight = 111
 				text = ""
 				scrollbartype = "standardtext_slider"
@@ -3315,7 +3763,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "government_type"
 			font = "malgun_goth_24"
-			position = { x = 360 y = 300 }
+			position = { x = 360 y = 52 }
 			maxWidth = 310
 			maxHeight = 20
 			text =	""
@@ -3331,20 +3779,20 @@ guiTypes = {
 			iconType = {
 				name = "hex_bg"
 				spriteType = "GFX_hex_bg"
-				position = { x = -10 y = -8 }
+				position = { x = -28 y = -8 }
 				alwaysTransparent = yes
 			}
 
 			iconType = {
 				name = "header_line"
 				spriteType = "GFX_line"
-				position = { x = 6 y = 26 }
+				position = { x = -8 y = 26 }
 			}
 
 			instantTextBoxType = {
 				name = "label"
 				font = "malgun_goth_24"
-				position = { x = 16 y = 7 }
+				position = { x = 0 y = 7 }
 				maxWidth = 400
 				text =	 "GOVERNMENT_CIVICS"
 				format = left
@@ -3354,8 +3802,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "civics"
-			size = { width = 310 height = 330 }
-			position = { x = 710 y = 50 }
+			size = { width = 325 height = 273 }
+			position = { x = 700 y = 84 }
 
 			background = {
 				name = "dark_area_bg"
@@ -3366,7 +3814,7 @@ guiTypes = {
 			smoothListboxType = {
 				name = "selected_entries"
 				position = { x = 8 y = 8 }
-				size = { x = 294 y = 320 }
+				size = { x = 302 y = 207 }
 				scrollbarType = "standardlistbox_slider"
 				borderSize = { x = 0 y = 0 }
 				spacing = 3
@@ -3375,7 +3823,7 @@ guiTypes = {
 			smoothListboxType = {
 				name = "available_entries"
 				position = { x = 8 y = 15 }
-				size = { x = 294 y = 320 }
+				size = { x = 302 y = 256 }
 				scrollbarType = "standardlistbox_slider"
 				borderSize = { x = 0 y = 0 }
 				spacing = 3
@@ -3384,7 +3832,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "civic_points_left"
-			position = { x = 710 y = 380 }
+			position = { x = 710 y =53 }
 			font = "malgun_goth_24"
 			maxWidth = 310
 			maxHeight = 20
@@ -3395,31 +3843,23 @@ guiTypes = {
 		### APPLY / CANCEL BUTTONS ###
 
 		buttonType = {
-			name = "cancel"
-			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 8 }
-			Orientation = "UPPER_RIGHT"
-			shortCut = "ESCAPE"
-			pdx_tooltip = "CLOSE_TITLE"
-			clicksound = "back_click"
-		}
-		buttonType={
 			name = "back"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "BACK"
-			position = { x = 0 y = -40 }
+			position = { x = -2 y = -39 }
 			orientation = LOWER_LEFT
 			shortcut = "BACKSPACE"
 			clicksound = back_click
 		}
-		buttonType={
+
+		buttonType = {
 			name = "apply_and_close"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "NEXT"
-			position = { x = 290 y = -40 }
-			orientation = LOWER_LEFT
+			position = { x = -289 y = -39 }
+			orientation = LOWER_RIGHT
 			#shortcut = "RETURN"
 			clicksound = confirm_click
 		}
@@ -3428,7 +3868,7 @@ guiTypes = {
 	### government authority entry
 	containerWindowType = {
 		name = "government_entry"
-		size = { width = 50 height = 50 }
+		size = { width = 55 height = 120 }
 
 		iconType = {
 			name = "selected"
@@ -3449,7 +3889,7 @@ guiTypes = {
 		buttonType = {
 			name = "missing_dlc_overlay"
 			quadTextureSprite = "GFX_government_locked_overlay"
-			position = { x = -9 y = -10 }
+			position = { x = -7 y = 26 }
 			size = { x = 68 y = 68 }
 		}
 	}
@@ -3457,7 +3897,7 @@ guiTypes = {
 	## government civic entry
 	containerWindowType = {
 		name = "customization_selected_civic_entry"
-		size = { width = 294 height = 32 }
+		size = { width = 302 height = 32 }
 		background = {
 			name = "bg"
 			spriteType = "GFX_planet_bg_tile"
@@ -3473,7 +3913,7 @@ guiTypes = {
 
 		iconType = {
 			name = "selected"
-			quadTextureSprite = "GFX_government_civic_selected"
+			quadTextureSprite = "GFX_government_civic_selected_longer"
 			position = { x = 0 y = 0 }
 			alwaysTransparent = yes
 		}
@@ -3509,8 +3949,8 @@ guiTypes = {
 	containerWindowType = {
 		name = "empire_flag_editor"
 		moveable = @movable_editors
-		position = { x = -400 y = @sub_window_pos_y }
-		size = { width = 1030 height = @sub_window_height }
+		position = { x = @sub_window_pos_x y = @sub_window_pos_y }
+		size = { width = @sub_window_width height = @sub_window_height }
 		orientation = center
 
 		background = {
@@ -3543,18 +3983,18 @@ guiTypes = {
 
 		smoothListboxType = {
 			name = "categories"
-			position = { x = 10 y = 50 }
-			size = { x = 144 y = 320 }
+			position = { x = 10 y = 45 }
+			size = { x = 154 y = 320 }
 			scrollbarType = "standardlistbox_slider"
 			borderSize = { x = 0 y = 0 }
-			spacing = 5
+			spacing = 0
 			backGround = "GFX_tiles_dark_area_cut_8"
 		}
 
 		containerWindowType = {
 			name = "symbols_window"
-			position = { x = 170 y = 50 }
-			size = { width = 364 height = 325 }
+			position = { x = 180 y = 45 }
+			size = { width = 372 height = 321 }
 			orientation = upper_left
 			margin = { top = 2 bottom = 2 }
 
@@ -3567,32 +4007,18 @@ guiTypes = {
 				name = "symbols"
 				size = { width = 364 height = 270 }
 				slotSize = { width = 60 height = 60 }
-				position = { x = 2 y = 8 }
+				position = { x = 6 y = 4 }
 				max_slots_horizontal = 6
 				format = UPPER_LEFT
 			}
 		}
 
-		gridBoxType = {
-			name = "colors"
-			slotSize = { width = 28 height = 28 }
-			max_slots_horizontal = 8
-			format = UPPER_LEFT
-			position = { x = 552 y = 120 }
-			size = { width = 240 height = 265 }
-			padding = { left = 5 top = 5 bottom = 5 }
-			backGround = {
-				name = "bg"
-				spriteType = "GFX_tiles_dark_area_cut_8"
-				position = { x = -10 y = -10 }
-			}
-		}
 		buttonType={
 			name = "primary_color"
 			font = "cg_16b"
 			spriteType = "GFX_standard_button_240_24"
 			buttonText = "PRIMARY_COLOR"
-			position = { x = 530 y = 39}
+			position = { x = 545 y = 34 }
 			clicksound = click_outliner
 		}
 		buttonType={
@@ -3600,14 +4026,126 @@ guiTypes = {
 			font = "cg_16b"
 			spriteType = "GFX_standard_button_240_24"
 			buttonText = "SECONDARY_COLOR"
-			position = { x = 530 y = 69 }
+			position = { x = 545 y = 63 }
 			clicksound = click_outliner
+		}
+		buttonType={
+			name = "border_color"
+			font = "cg_16b"
+			spriteType = "GFX_standard_button_240_24"
+			buttonText = "BORDER_COLOR"
+			pdx_tooltip = "MAP_BORDER_COLOR_TOOLTIP"
+			position = { x = 545 y = 92 }
+			clicksound = click_outliner
+		}
+		buttonType={
+			name = "fill_color"
+			font = "cg_16b"
+			spriteType = "GFX_standard_button_240_24"
+			buttonText = "FILL_COLOR"
+			pdx_tooltip = "MAP_FILL_COLOR_TOOLTIP"
+			position = { x = 545 y = 121 }
+			clicksound = click_outliner
+		}
+		containerWindowType = {
+			name = "primary_color_preview"
+			position = { x = 776 y = 49 }
+			size = { width = 18 height = 18}
+			backGround = {
+				name = "bg"
+				spriteType = "GFX_flag_swatch_border"
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "swatch"
+				quadTextureSprite = "GFX_flag_colorpicker"
+				position = { x = 1 y = 1 }
+				scale = 0.8
+			}
+		}
+		containerWindowType = {
+			name = "secondary_color_preview"
+			position = { x = 776 y = 78 }
+			size = { width = 18 height = 18}
+			backGround = {
+				name = "bg"
+				spriteType = "GFX_flag_swatch_border"
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "swatch"
+				quadTextureSprite = "GFX_flag_colorpicker"
+				position = { x = 1 y = 1 }
+				scale = 0.8
+			}
+		}
+		containerWindowType = {
+			name = "border_color_preview"
+			position = { x = 776 y = 107 }
+			size = { width = 18 height = 18}
+			backGround = {
+				name = "bg"
+				spriteType = "GFX_flag_swatch_border"
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "swatch"
+				quadTextureSprite = "GFX_flag_colorpicker"
+				position = { x = 1 y = 1 }
+				scale = 0.8
+			}
+		}
+		containerWindowType = {
+			name = "fill_color_preview"
+			position = { x = 776 y = 136 }
+			size = { width = 18 height = 18}
+			backGround = {
+				name = "bg"
+				spriteType = "GFX_flag_swatch_border"
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "swatch"
+				quadTextureSprite = "GFX_flag_colorpicker"
+				position = { x = 1 y = 1 }
+				scale = 0.8
+			}
+		}
+		checkboxType = {
+			name = "use_map_color"
+			position = { x = 820 y = 32 }
+			spriteType = "GFX_checkbox_20_20_01"
+			pdx_tooltip = "USE_MAP_COLOR_TOOLTIP"
+		}
+		instantTextBoxType = {
+			name = "use_map_color_label"
+			font = "cg_16b"
+			position = { x = 852 y = 36 }
+			maxWidth = 200
+			maxHeight = 20
+			text = "USE_MAP_COLOR"
+			format = left
+			vertical_alignment = center
+			alwaysTransparent = yes
+		}
+		gridBoxType = {
+			name = "colors"
+			slotSize = { width = 22 height = 22 }
+			max_slots_horizontal = 8
+			format = UPPER_LEFT
+			position = { x = 590 y = 166 }
+			size = { width = 194 height = 204 }
+			backGround = {
+				name = "bg"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				position = { x = -10 y = -4 }
+			}
 		}
 
 		containerWindowType = {
 			name = "patterns_window"
-			position = { x = 790 y = 50 }
-			size = { width = 230 height = 325 }
+			position = { x = 802 y = 68 }
+			size = { width = 230 height = 299 }
 			orientation = upper_left
 			margin = { top = 2 bottom = 2 }
 			verticalScrollBar = "right_vertical_slider"
@@ -3628,21 +4166,12 @@ guiTypes = {
 			}
 		}
 
-		buttonType = {
-			name = "cancel"
-			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 8 }
-			Orientation = "UPPER_RIGHT"
-			shortCut = "ESCAPE"
-			pdx_tooltip = "CLOSE_TITLE"
-			clicksound = "back_click"
-		}
 		buttonType={
 			name = "back"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "BACK"
-			position = { x = 0 y = -40 }
+			position = { x = -2 y = -39 }
 			orientation = LOWER_LEFT
 			shortcut = "BACKSPACE"
 			clicksound = back_click
@@ -3652,7 +4181,7 @@ guiTypes = {
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "NEXT"
-			position = { x = -290 y = -40 }
+			position = { x = -289 y = -39 }
 			orientation = LOWER_RIGHT
 			#shortcut = "RETURN"
 			clicksound = confirm_click
@@ -3714,17 +4243,17 @@ guiTypes = {
 	###
 	containerWindowType = {
 		name = "color_entry"
-		size = { width = 22 height = 22 }
+		size = { width = 20 height = 20 }
 
 		buttonType = {
 			name = "select_color"
-			quadTextureSprite = "GFX_gamesetup_colorpicker"
+			quadTextureSprite = "GFX_flag_colorpicker"
 			clicksound = "select_click"
 		}
 
 		iconType = {
 			name = "highlight"
-			spriteType = "GFX_gamesetup_colorpicker_highlight"
+			spriteType = "GFX_flag_colorpicker_highlight"
 			position = { x = -1 y = -1 }
 			alwaystransparent = yes
 		}
@@ -3768,8 +4297,8 @@ guiTypes = {
 	containerWindowType = {
 		name = "empire_name_list_editor"
 		moveable = @movable_editors
-		position = { x = -400 y = @sub_window_pos_y }
-		size = { width = 1030 height = @sub_window_height }
+		position = { x = @sub_window_pos_x y = @sub_window_pos_y }
+		size = { width = @sub_window_width height = @sub_window_height }
 		orientation = center
 
 		background = {
@@ -3811,13 +4340,13 @@ guiTypes = {
 		buttonType = {
 			name = "bg1"
 			position = { x = @bg_x y = 75 }
-			size = { x = 210 y = 24 }
+			size = { x = 290 y = 30 }
 			spriteType = "GFX_tiles_dark_area_cut_8"
 			alwaysTransparent = yes
 		}
 		editBoxType = {
 			name = "prefix"
-			position = { x = @eb_x y = 75 }
+			position = { x = 25 y = 78 }
 			size = { x = 200 y = 24 }
 			font = "malgun_goth_24"
 			max_characters = 100
@@ -3825,8 +4354,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "available"
-			size = { width = 290 height = 200 }
-			position = { x = 15 y = 110 }
+			size = { width = 290 height = 235 }
+			position = { x = 15 y = 114 }
 
 			background = {
 				name = "dark_area_bg"
@@ -3836,13 +4365,13 @@ guiTypes = {
 
 			smoothListboxType = {
 				name = "entries"
-				position = { x = 10 y = 0 }
-				size = { x = 260 y = 200 }
+				position = { x = 5 y = 10 }
+				size = { x = 268 y = 220 }
 				scrollbarType = "standardlistbox_slider"
-				borderSize = { x = 0 y = 0 }
+				borderSize = { x = -5 y = 0 }
 				orientation = "UPPER_LEFT"
 				#autohide_scrollbar = no
-				spacing = 5
+				spacing = -3
 			}
 		}
 
@@ -3851,7 +4380,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "examples_label"
 			font = "malgun_goth_24"
-			position = { x = 335 y = 25 }
+			position = { x = 335 y = 44 }
 			maxWidth = 300
 			maxHeight = 18
 			text = "NAME_LISTS_EXAMPLES"
@@ -3860,8 +4389,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "leaders"
-			size = { width = 345 height = 120 }
-			position = { x = 325 y = 60 }
+			size = { width = 345 height = 135}
+			position = { x = 325 y = 75 }
 
 				background = {
 					name = "bg"
@@ -3872,7 +4401,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "header"
 				font = "malgun_goth_24"
-				position = { x = 10 y = 5 }
+				position = { x = 10 y = 7 }
 				maxWidth = 230
 				text =	 "LEADER_NAMES"
 				format = left
@@ -3895,8 +4424,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "planets"
-			size = { width = 345 height = 120 }
-			position = { x = 325 y = 190 }
+			size = { width = 345 height = 135 }
+			position = { x = 325 y = 215 }
 
 				background = {
 					name = "bg"
@@ -3907,7 +4436,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "header"
 				font = "malgun_goth_24"
-				position = { x = 10 y = 5 }
+				position = { x = 10 y = 7 }
 				maxWidth = 230
 				text =	 "PLANET_NAMES"
 				format = left
@@ -3932,8 +4461,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "ships"
-			size = { width = 345 height = 120 }
-			position = { x = 675 y = 60 }
+			size = { width = 345 height = 135 }
+			position = { x = 675 y = 75 }
 
 			background = {
 				name = "bg"
@@ -3943,7 +4472,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "header"
 				font = "malgun_goth_24"
-				position = { x = 10 y = 5 }
+				position = { x = 10 y = 7 }
 				maxWidth = 230
 				text =	 "SHIP_NAMES"
 				format = left
@@ -3966,8 +4495,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "fleets"
-			size = { width = 345 height = 120 }
-			position = { x = 675 y = 190 }
+			size = { width = 345 height = 135 }
+			position = { x = 675 y = 215 }
 
 				background = {
 					name = "bg"
@@ -3978,7 +4507,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "header"
 				font = "malgun_goth_24"
-				position = { x = 10 y = 5 }
+				position = { x = 10 y = 7 }
 				maxWidth = 230
 				text =	 "FLEET_NAMES"
 				format = left
@@ -4000,30 +4529,22 @@ guiTypes = {
 		}
 
 		buttonType = {
-			name = "cancel"
-			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 8 }
-			Orientation = "UPPER_RIGHT"
-			shortCut = "ESCAPE"
-			pdx_tooltip = "CLOSE_TITLE"
-			clicksound = "back_click"
-		}
-		buttonType={
 			name = "back"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "BACK"
-			position = { x = 0 y = -40 }
+			position = { x = -2 y = -39 }
 			orientation = LOWER_LEFT
 			shortcut = "BACKSPACE"
 			clicksound = back_click
 		}
-		buttonType={
+
+		buttonType = {
 			name = "apply_and_close"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "NEXT"
-			position = { x = -290 y = -40 }
+			position = { x = -289 y = -39 }
 			orientation = LOWER_RIGHT
 			#shortcut = "RETURN"
 			clicksound = confirm_click
@@ -4033,8 +4554,8 @@ guiTypes = {
 	containerWindowType = {
 		name = "empire_name_list_editor_secondary"
 		moveable = @movable_editors
-		position = { x = -400 y = @sub_window_pos_y }
-		size = { width = 1030 height = @sub_window_height }
+		position = { x = @sub_window_pos_x y = @sub_window_pos_y }
+		size = { width = @sub_window_width height = @sub_window_height }
 		orientation = center
 
 		background = {
@@ -4123,94 +4644,13 @@ guiTypes = {
 		}
 
 		buttonType = {
-			name = "cancel"
-			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 8 }
-			Orientation = "UPPER_RIGHT"
-			shortCut = "ESCAPE"
-			pdx_tooltip = "CLOSE_TITLE"
-			clicksound = "back_click"
-		}
-		buttonType = {
 			name = "back"
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "BACK"
-			position = { x = 0 y = -40 }
+			position = { x = -2 y = -39 }
 			orientation = LOWER_LEFT
 			shortcut = "BACKSPACE"
-		}
-		buttonType = {
-			name = "apply_and_close"
-			font = "cg_16b"
-			spriteType = "GFX_galactic_object_button"
-			buttonText = "NEXT"
-			position = { x = -290 y = -40 }
-			orientation = LOWER_RIGHT
-			#shortcut = "RETURN"
-		}
-	}
-
-	#######################
-	# Ship gfx-culture
-	#######################
-	containerWindowType = {
-		name = "ship_gfx_culture_browser_editor"
-		moveable = @movable_editors
-		position = { x = -405 y = -395 }
-		size = { width = 1041 height = 750 }
-		orientation = center
-
-		background = {
-			name = "background"
-			spriteType = "GFX_subwindow_tile_plain_solid"
-		}
-
-		containerWindowType = {
-			name = "3d_view_window"
-			size = { width = 1039 height = 750 }
-			position = { x = 0 y = 0 }
-			clipping = yes
-
-			buttonType = {
-				name ="3d_view"
-				quadTextureSprite = "GFX_dummy_3d_ship_view"
-				position = { x = 2 y = 48 }
-				size = { x = 200 y = 200 }
-				scale = 1.0
-				oversound = no_sound
-			}
-		}
-
-		instantTextBoxType = {
-			name = "label"
-			font = "malgun_goth_24"
-			position = { x = 16 y = 10 }
-			maxWidth = 230
-			text =	 "SHIP_GRAPHICS"
-			format = left
-			alwaysTransparent = yes
-		}
-
-		buttonType = {
-			name = "cancel"
-			quadTextureSprite = "GFX_close"
-			position = { x = -45 y = 6 }
-			Orientation = "UPPER_RIGHT"
-			shortCut = "ESCAPE"
-			pdx_tooltip = "CLOSE_TITLE"
-			clicksound = "back_click"
-		}
-
-		buttonType = {
-			name = "back"
-			font = "cg_16b"
-			spriteType = "GFX_galactic_object_button"
-			buttonText = "BACK"
-			position = { x = 0 y = -40 }
-			orientation = LOWER_LEFT
-			shortcut = "BACKSPACE"
-			clicksound = back_click
 		}
 
 		buttonType = {
@@ -4218,235 +4658,32 @@ guiTypes = {
 			font = "cg_16b"
 			spriteType = "GFX_galactic_object_button"
 			buttonText = "NEXT"
-			position = { x = -290 y = -40 }
+			position = { x = -289 y = -39 }
 			orientation = LOWER_RIGHT
 			#shortcut = "RETURN"
-			clicksound = confirm_click
-		}
-
-		iconType = {
-			name = "dlc_overlay"
-			position = { x = 2 y = 48 }
-			spriteType = "GFX_ship_browser_dlc_overlay"
-			scale = 1.032
-			alwaysTransparent = yes
-		}
-
-
-		containerWindowType = {
-			name = "shipbrowser_menu"
-			size = { width = 224 height = 581 }
-			position = { x = 8 y = 53 }
-
-			background = {
-				name = "shipbrowser_menu_bg"
-				spriteType = "GFX_subwindow_tile_plain_solid"
-			}
-
-			instantTextBoxType = {
-				name = "ship_appearance_label"
-				font = "cg_16b"
-				position = { x = 4 y = 7 }
-				maxWidth = 216
-				maxHeight = 110
-				text =	 "SHIP_GRAPHICS_BROWSER"
-				format = left
-				alwaysTransparent = yes
-			}
-
-			smoothListboxType = {
-				name = "ship_categories"
-				position = { x = 4 y = 30 }
-				size = { x = 216 y = 261 }
-				offset = {x = -11 y = 0}
-				scrollbarType = "standardlistbox_slider"
-				background = "GFX_tiles_dark_area_cut_8"
-			}
-
-			instantTextBoxType = {
-				name = "ship_preview_label"
-				font = "cg_16b"
-				position = { x = 4 y = 302 }
-				maxWidth = 216
-				maxHeight = 110
-				text =	 "SHIP_GRAPHICS_PREVIEW"
-				format = left
-				alwaysTransparent = yes
-			}
-
-			buttonType = {
-				name = "ship_preview_bg"
-				position = { x = 4 y = 325 }
-				size = { x = 216 y = 30 }
-				spriteType = "GFX_tiles_dark_area_cut_8"
-				alwaystransparent = yes
-			}
-
-			instantTextBoxType = {
-				name = "ship_preview_value"
-				font = "cg_16b"
-				position = { x = 30 y = 332 }
-				maxWidth = 160
-				maxHeight = 20
-				fixedSize = yes
-				text =	 "MISSING_TEXT"
-				format = center
-			}
-
-			spinnerType = {
-				id = "spinner"
-				name = "ship_spinner"
-				leftbutton = "spinner_left_button"
-				rightbutton = "spinner_right_button"
-				size = { x = 214 y = 30 }
-				position = { x = 5 y = 327 }
-				priority = 100
-				borderSize = { x = 16 y = 16 }
-				horizontal = 1
-				maxValue = 0
-				startValue = 0
-
-				guiButtonType = {
-					name = "spinner_left_button"
-					quadTextureSprite = "scrollbar_leftbutton"
-					clicksound = decrement_click
-				}
-				guiButtonType = {
-					name = "spinner_right_button"
-					quadTextureSprite = "scrollbar_rightbutton"
-					clicksound = increment_click
-				}
-			}
-
-			buttonType = {
-				name = "ship_desc_bg"
-				position = { x = 4 y = 360 }
-				size = { x = 216 y = 141 }
-				spriteType = "GFX_tiles_dark_area_cut_8"
-				alwaystransparent = yes
-			}
-
-			instantTextBoxType = {
-				name = "ship_desc_text"
-				font = "cg_16b"
-				position = { x = 14 y = 362 }
-				maxWidth = 196
-				maxHeight = 111
-				text = "MISSING_TEXT"
-				scrollbartype = "standardtext_slider"
-				text_color_code = "E"
-			}
-
-			instantTextBoxType = {
-				name = "ship_required_dlc"
-				font = "cg_16b"
-				position = { x = 4 y = 511 }
-				maxWidth = 216
-				maxHeight = 111
-				text = "SHIP_GRAPHICS_REQUIRED_DLC"
-			}
-
-			buttonType = {
-				name = "ship_required_dlc_bg"
-				position = { x = 4 y = 534 }
-				size = { x = 216 y = 44 }
-				spriteType = "GFX_tiles_dark_area_cut_8"
-				alwaystransparent = yes
-			}
-
-			gridBoxType = {
-				name = "ship_required_dlc_list"
-				position = { x = 20 y = 538 }
-				size = { width = 206 height = 30 }
-				format = UPPER_LEFT
-				slotSize = {
-					width = 40
-					height = 40
-				}
-			}
-		}
-
-		iconType = {
-			name = "ship_zoom_in"
-			position = { x = 1002 y = 550 }
-			spriteType = "GFX_camera_zoom_in"
-			pdx_tooltip = "SHIP_GRAPHICS_ZOOM_IN_TOOLTIP"
-		}
-
-		iconType = {
-			name = "ship_zoom_out"
-			position = { x = 1002 y = 580 }
-			spriteType = "GFX_camera_zoom_out"
-			pdx_tooltip = "SHIP_GRAPHICS_ZOOM_OUT_TOOLTIP"
-		}
-
-		iconType = {
-			name = "ship_rotate"
-			position = { x = 1002 y = 630 }
-			spriteType = "GFX_camera_rotate"
-			pdx_tooltip = "SHIP_GRAPHICS_ROTATE_TOOLTIP"
 		}
 	}
 
 	###
+	# System initializer dropdown entry
+	###
 	containerWindowType = {
-		name = "ship_category_entry"
-		size = { width = 220 height = 26 }
-
-		buttonType = {
-			name = "ship_category_entry_button"
-			spriteType = "GFX_standard_button_200_24"
-			size = { x = 200 y = 24 }
-			position = {x = -5 y = -2}
-			clicksound = "click_outliner"
-		}
-
-		buttonType = {
-			name = "missing_dlc_overlay"
-			spriteType = "GFX_standard_button_200_24_dlc_overlay"
-			size = { x = 200 y = 24 }
-			position = {x = -5 y = -2}
-			clicksound = "click_outliner"
-		}
-
-		instantTextBoxType = {
-			name = "ship_category_entry_name"
-			font = "cg_16b"
-			position = { x = 12 y = 7 }
-			maxWidth = 140
-			text =	 "MISSING_TEXT"
-			format = left
-			alwaysTransparent = yes
-		}
-	}
-
-	containerWindowType = {
-		name = "ship_browser_dlc_list_entry"
+		name = "system_initializer_dropdown_entry"
 		position = { x = 0 y = 0 }
-		size = { width = 50 height = 45 }
+		size = { width = 250 height = 30 }
 
-		buttonType = {
-			name = "dlc_underlay"
-			position = { x = -9 y = 0 }
-			quadTextureSprite = "GFX_invisible" # Set by code
-			alwaysTransparent = no
+		background = {
+			name = "entry_bg"
+			spriteType = "GFX_tiles_dark_area_cut_8"
 		}
 
 		buttonType = {
-			name = "dlc_button"
-			position = { x = -1 y = 1 }
-			quadTextureSprite = "GFX_invisible"
-			format = center
-			pdx_tooltip = "DLC_START"
-			alwaysTransparent = yes
-		}
-
-		iconType = {
-			name = "dlc_frame"
-			position = { x = -1 y = 1 }
-			quadTextureSprite = "GFX_invisible"
-			pdx_tooltip = "DLC_START"
-			alwaysTransparent = yes
+			name = "select"
+			font = "malgun_goth_24"
+			spriteType = "GFX_dropdown_item_104"
+			buttonText = "ENTRY"
+			text_offset = { x = 10 y = 0 }
+			format = left
 		}
 	}
 }

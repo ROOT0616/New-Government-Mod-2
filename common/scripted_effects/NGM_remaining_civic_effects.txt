@@ -1,0 +1,390 @@
+ngm_youth_leader_age_effect = {
+	if = {
+		limit = {
+			root = {
+				has_valid_civic = civic_ngm_youth_politics
+			}
+			OR = {
+				leader_class = official
+				leader_class = commander
+				leader_class = scientist
+			}
+			NOT = {
+				has_leader_flag = ngm_youth_age_initialized
+			}
+		}
+		random_list = {
+			1 = {
+				set_age = 10
+			}
+			1 = {
+				set_age = 11
+			}
+			1 = {
+				set_age = 12
+			}
+			1 = {
+				set_age = 13
+			}
+			1 = {
+				set_age = 14
+			}
+			1 = {
+				set_age = 15
+			}
+			1 = {
+				set_age = 16
+			}
+			1 = {
+				set_age = 17
+			}
+			1 = {
+				set_age = 18
+			}
+			1 = {
+				set_age = 19
+			}
+			1 = {
+				set_age = 20
+			}
+		}
+		set_leader_flag = ngm_youth_age_initialized
+	}
+}
+ngm_elder_leader_age_effect = {
+	if = {
+		limit = {
+			root = {
+				has_valid_civic = civic_ngm_elder_politics
+			}
+			OR = {
+				leader_class = official
+				leader_class = commander
+				leader_class = scientist
+			}
+			NOT = {
+				has_leader_flag = ngm_elder_age_initialized
+			}
+		}
+		random_list = {
+			1 = {
+				set_age = 65
+			}
+			1 = {
+				set_age = 66
+			}
+			1 = {
+				set_age = 67
+			}
+			1 = {
+				set_age = 68
+			}
+			1 = {
+				set_age = 69
+			}
+			1 = {
+				set_age = 70
+			}
+			1 = {
+				set_age = 71
+			}
+			1 = {
+				set_age = 72
+			}
+			1 = {
+				set_age = 73
+			}
+			1 = {
+				set_age = 74
+			}
+			1 = {
+				set_age = 75
+			}
+			1 = {
+				set_age = 76
+			}
+			1 = {
+				set_age = 77
+			}
+			1 = {
+				set_age = 78
+			}
+			1 = {
+				set_age = 79
+			}
+			1 = {
+				set_age = 80
+			}
+			1 = {
+				set_age = 81
+			}
+			1 = {
+				set_age = 82
+			}
+			1 = {
+				set_age = 83
+			}
+			1 = {
+				set_age = 84
+			}
+			1 = {
+				set_age = 85
+			}
+			1 = {
+				set_age = 86
+			}
+			1 = {
+				set_age = 87
+			}
+			1 = {
+				set_age = 88
+			}
+			1 = {
+				set_age = 89
+			}
+			1 = {
+				set_age = 90
+			}
+			1 = {
+				set_age = 91
+			}
+			1 = {
+				set_age = 92
+			}
+			1 = {
+				set_age = 93
+			}
+			1 = {
+				set_age = 94
+			}
+			1 = {
+				set_age = 95
+			}
+			1 = {
+				set_age = 96
+			}
+			1 = {
+				set_age = 97
+			}
+			1 = {
+				set_age = 98
+			}
+			1 = {
+				set_age = 99
+			}
+			1 = {
+				set_age = 100
+			}
+		}
+		set_leader_flag = ngm_elder_age_initialized
+	}
+}
+ngm_apprentice_leader_effect = {
+	if = {
+		limit = {
+			root = {
+				has_valid_civic = civic_ngm_apprenticeship
+			}
+			OR = {
+				leader_class = official
+				leader_class = commander
+				leader_class = scientist
+			}
+			NOT = {
+				has_leader_flag = ngm_apprentice_initialized
+			}
+		}
+		if = {
+			limit = {
+				has_base_skill < 2
+			}
+			set_skill = 2
+		}
+		add_trait = {
+			trait = random_common
+			show_message = no
+		}
+		set_leader_flag = ngm_apprentice_initialized
+	}
+}
+ngm_insanity_leader_effect = {
+	if = {
+		limit = {
+			root = {
+				has_valid_civic = civic_ngm_fundamental_insanity
+			}
+		}
+		if = {
+			limit = {
+				leader_class = scientist
+				NOR = {
+					has_trait = leader_trait_maniacal
+					has_trait = leader_trait_maniacal_2
+					has_trait = leader_trait_maniacal_3
+				}
+			}
+			add_trait = {
+				trait = leader_trait_maniacal
+				show_message = no
+			}
+		}
+		if = {
+			limit = {
+				leader_class = commander
+				NOR = {
+					has_trait = leader_trait_trickster
+				}
+			}
+			add_trait = {
+				trait = leader_trait_trickster
+				show_message = no
+			}
+		}
+	}
+}
+ngm_remaining_leader_effect = {
+	ngm_youth_leader_age_effect = yes
+	ngm_elder_leader_age_effect = yes
+	ngm_apprentice_leader_effect = yes
+	ngm_insanity_leader_effect = yes
+}
+ngm_youth_species_effect = {
+	if = {
+		limit = {
+			has_valid_civic = civic_ngm_youth_politics
+			species = {
+				NOT = {
+					has_trait = trait_ngm_youth_politics
+				}
+			}
+		}
+		species = {
+			save_event_target_as = ngm_old_political_species
+			modify_species = {
+				species = this
+				base = auto
+				add_trait = trait_ngm_youth_politics
+				remove_trait = trait_ngm_elder_politics
+				change_scoped_species = no
+				effect = {
+					save_event_target_as = ngm_new_political_species
+				}
+			}
+		}
+		every_owned_pop_group = {
+			limit = {
+				exists = species
+				is_exact_same_species = event_target:ngm_old_political_species
+			}
+			change_species = event_target:ngm_new_political_species
+		}
+		every_owned_leader = {
+			limit = {
+				exists = species
+				is_exact_same_species = event_target:ngm_old_political_species
+			}
+			change_species = event_target:ngm_new_political_species
+		}
+		every_pool_leader = {
+			limit = {
+				exists = species
+				is_exact_same_species = event_target:ngm_old_political_species
+			}
+			change_species = event_target:ngm_new_political_species
+		}
+		every_envoy = {
+			limit = {
+				exists = species
+				is_exact_same_species = event_target:ngm_old_political_species
+			}
+			change_species = event_target:ngm_new_political_species
+		}
+		every_owned_army = {
+			limit = {
+				exists = species
+				is_exact_same_species = event_target:ngm_old_political_species
+			}
+			change_species = event_target:ngm_new_political_species
+		}
+		every_controlled_ship = {
+			limit = {
+				is_ship_class = shipclass_colonizer
+				is_exact_same_species = event_target:ngm_old_political_species
+			}
+			change_species = event_target:ngm_new_political_species
+		}
+		change_dominant_species = {
+			species = event_target:ngm_new_political_species
+		}
+	}
+}
+ngm_elder_species_effect = {
+	if = {
+		limit = {
+			has_valid_civic = civic_ngm_elder_politics
+			species = {
+				NOT = {
+					has_trait = trait_ngm_elder_politics
+				}
+			}
+		}
+		species = {
+			save_event_target_as = ngm_old_political_species
+			modify_species = {
+				species = this
+				base = auto
+				add_trait = trait_ngm_elder_politics
+				remove_trait = trait_ngm_youth_politics
+				change_scoped_species = no
+				effect = {
+					save_event_target_as = ngm_new_political_species
+				}
+			}
+		}
+		every_owned_pop_group = {
+			limit = {
+				exists = species
+				is_exact_same_species = event_target:ngm_old_political_species
+			}
+			change_species = event_target:ngm_new_political_species
+		}
+		every_owned_leader = {
+			limit = {
+				exists = species
+				is_exact_same_species = event_target:ngm_old_political_species
+			}
+			change_species = event_target:ngm_new_political_species
+		}
+		every_pool_leader = {
+			limit = {
+				exists = species
+				is_exact_same_species = event_target:ngm_old_political_species
+			}
+			change_species = event_target:ngm_new_political_species
+		}
+		every_envoy = {
+			limit = {
+				exists = species
+				is_exact_same_species = event_target:ngm_old_political_species
+			}
+			change_species = event_target:ngm_new_political_species
+		}
+		every_owned_army = {
+			limit = {
+				exists = species
+				is_exact_same_species = event_target:ngm_old_political_species
+			}
+			change_species = event_target:ngm_new_political_species
+		}
+		every_controlled_ship = {
+			limit = {
+				is_ship_class = shipclass_colonizer
+				is_exact_same_species = event_target:ngm_old_political_species
+			}
+			change_species = event_target:ngm_new_political_species
+		}
+		change_dominant_species = {
+			species = event_target:ngm_new_political_species
+		}
+	}
+}

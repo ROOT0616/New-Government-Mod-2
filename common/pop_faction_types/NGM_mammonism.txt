@@ -1,78 +1,58 @@
-##############################
-# Mammonism Faction
-##############################
 NGM_mammonism = {
-	election_header = "GFX_faction_header_yellow"
+	election_header = GFX_faction_header_yellow
 	guiding_ethic = ethic_capitalism
-	visual_ethic = "NGM_mammonism_visual_ethic"
-
+	visual_ethic = NGM_mammonism_visual_ethic
 	unique = yes
 	support_multiplier = 1
-
 	resources = {
 		category = pop_factions
+		inline_script = pop_faction_types/shared_unity_production
 		produces = {
-			unity = 0.5
+			trigger = {
+				owner = {
+					OR = {
+						has_valid_civic = civic_crowdsourcing
+						has_valid_civic = civic_corporate_crowdsourcing
+					}
+				}
+			}
+			unity = @faction_base_output
 		}
 	}
-
 	is_potential = {
 		is_faction_allowed = yes
 	}
-
-	parameters = {
-		empire = {
-			type = country
-			valid_objects = {
-				is_same_value = root
-			}
-		}
-	}
-
 	can_join_pre_triggers = {
 		is_enslaved = no
 		is_being_purged = no
-		is_robot_pop = no
 	}
-
 	can_join_faction = {
-		can_think = yes
-		is_shackled_robot = no
+		inline_script = pop_faction_types/can_join_faction/base
 		has_ethic = ethic_capitalism
 	}
-
 	attraction = {
 		base = 150
-
-		modifier = {
-			factor = 1.25
-			exists = from
-			from = {
-				exists = leader
-				leader = { is_ruler = yes }
-			}
-		}
-
-		modifier = {
-			factor = 0.75
-			exists = from
-			from = {
-				NOT = { exists = leader }
-			}
-		}
+		inline_script = pop_faction_types/attraction/promote_suppress_attraction
+		inline_script = pop_faction_types/attraction/leader_attraction
 	}
-
 	leader = {
 		base = 100
+		modifier = {
+			factor = 0
+			is_ruler = yes
+			owner = {
+				is_imperial_authority = yes
+			}
+		}
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
 		}
 	}
 	demand = {
-		title = "FACTION_OUTRAGED_GC"
-		unfulfilled_title = "FACTION_OUTRAGED_GC"
-		desc = "FACTION_OUTRAGED_GC_DESC"
+		title = FACTION_OUTRAGED_GC
+		unfulfilled_title = FACTION_OUTRAGED_GC
+		desc = FACTION_OUTRAGED_GC_DESC
 		fulfilled_effect = -20
 		unfulfilled_effect = -0.001
 		potential = {
@@ -88,18 +68,14 @@ NGM_mammonism = {
 		}
 	}
 	demand = {
-		# "平和"
-		title = "PROSPERITY_PEACE"
-		unfulfilled_title = "PROSPERITY_NO_PEACE"
-		desc = "PROSPERITY_PEACE_DESC"
-
+		title = PROSPERITY_PEACE
+		unfulfilled_title = PROSPERITY_NO_PEACE
+		desc = PROSPERITY_PEACE_DESC
 		fulfilled_effect = 5
 		unfulfilled_effect = -10
-
 		potential = {
 			exists = owner
 		}
-
 		trigger = {
 			owner = {
 				is_at_war = no
@@ -107,10 +83,9 @@ NGM_mammonism = {
 		}
 	}
 	demand = {
-		# "貿易至上主義 Trade Supremacy"
-		title = "MAMMONISM_TRADE_SUPREMACY"
-		unfulfilled_title = "MAMMONISM_TRADE_SUPREMACY"
-		desc = "MAMMONISM_TRADE_SUPREMACY_DESC"
+		title = MAMMONISM_TRADE_SUPREMACY
+		unfulfilled_title = MAMMONISM_TRADE_SUPREMACY
+		desc = MAMMONISM_TRADE_SUPREMACY_DESC
 		fulfilled_effect = 10
 		unfulfilled_effect = -10
 		potential = {
@@ -123,10 +98,9 @@ NGM_mammonism = {
 		}
 	}
 	demand = {
-		# "貿易利益 Trade profit"
-		title = "MAMMONISM_TRADE_PROFIT"
-		unfulfilled_title = "MAMMONISM_TRADE_PROFIT"
-		desc = "MAMMONISM_TRADE_PROFIT_DESC"
+		title = MAMMONISM_TRADE_PROFIT
+		unfulfilled_title = MAMMONISM_TRADE_PROFIT
+		desc = MAMMONISM_TRADE_PROFIT_DESC
 		fulfilled_effect = 10
 		unfulfilled_effect = -5
 		potential = {
@@ -138,12 +112,10 @@ NGM_mammonism = {
 			}
 		}
 	}
-
 	demand = {
-		# 堅実な流動資産
-		title = "PROSPERITY_LIQUIDITY"
-		unfulfilled_title = "PROSPERITY_NO_LIQUIDITY"
-		desc = "PROSPERITY_LIQUIDITY_DESC"
+		title = PROSPERITY_LIQUIDITY
+		unfulfilled_title = PROSPERITY_NO_LIQUIDITY
+		desc = PROSPERITY_LIQUIDITY_DESC
 		fulfilled_effect = 10
 		unfulfilled_effect = -0.001
 		potential = {
@@ -152,16 +124,19 @@ NGM_mammonism = {
 				num_owned_planets >= 3
 			}
 		}
-
 		trigger = {
-			owner = { resource_stockpile_compare = { resource = energy value >= 5000 } }
+			owner = {
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 5000
+				}
+			}
 		}
 	}
 	demand = {
-		# "通商の拡大 Expanding Trade"
-		title = "MAMMONISM_EXPANDING_TRADE"
-		unfulfilled_title = "MAMMONISM_EXPANDING_TRADE"
-		desc = "MAMMONISM_EXPANDING_TRADE_DESC"
+		title = MAMMONISM_EXPANDING_TRADE
+		unfulfilled_title = MAMMONISM_EXPANDING_TRADE
+		desc = MAMMONISM_EXPANDING_TRADE_DESC
 		potential = {
 			exists = owner
 		}
@@ -172,7 +147,9 @@ NGM_mammonism = {
 					count > 2
 					limit = {
 						exists = this
-						root.owner = { has_commercial_pact = prev }
+						root.owner = {
+							has_commercial_pact = prev
+						}
 					}
 				}
 			}
@@ -180,54 +157,54 @@ NGM_mammonism = {
 	}
 	on_create = {
 		pop_faction_event = {
-			id = factions.1
+			id = factions.0
 		}
 	}
 	on_destroy = {
-		if = {
-			limit = {
-				has_modifier = promoted_capitalism
-			}
-			remove_modifier = promoted_capitalism
+		inline_script = {
+			script = NGM/factions/promote_on_destroy
+			ETHIC = capitalism
+			FACTION = NGM_mammonism
 		}
-		if = {
-			limit = {
-				has_modifier = suppressed_capitalism
-			}
-			remove_modifier = suppressed_capitalism
+		inline_script = {
+			script = NGM/factions/suppress_on_destroy
+			ETHIC = capitalism
+			FACTION = NGM_mammonism
 		}
 	}
 	actions = {
 		embrace_faction = {
-			title = "EMBRACE_FACTION"
-			description = "EMBRACE_FACTION_DESC"
-
+			title = EMBRACE_FACTION
+			description = EMBRACE_FACTION_DESC
 			cost = {
 				unity = 5000
 			}
-
 			potential = {
 				exists = owner
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = { any_agreement = { agreement_preset = preset_dominion } }
+						NOT = {
+							any_agreement = {
+								agreement_preset = preset_dominion
+							}
+						}
 					}
 				}
 			}
 			valid = {
 				custom_tooltip = {
 					fail_text = EMBRACE_FACTION_COOLDOWN
-					parameter:empire = {
+					owner = {
 						NOT = {
 							has_modifier = embraced_faction_timer
 						}
 					}
 				}
-				support > 0.2
-				parameter:empire = {
+				support > 0.20
+				owner = {
 					NOT = {
-						has_ethic = "ethic_fanatic_capitalism"
+						has_ethic = ethic_fanatic_capitalism
 					}
 				}
 			}
@@ -236,7 +213,8 @@ NGM_mammonism = {
 					modifier = embraced_faction
 					days = 3600
 				}
-				parameter:empire = {
+				owner = {
+					set_country_flag = has_embraced_faction
 					shift_ethic = ethic_capitalism
 					hidden_effect = {
 						add_modifier = {
@@ -258,7 +236,7 @@ NGM_mammonism = {
 				}
 				hidden_effect = {
 					save_event_target_as = TargetFaction
-					parameter:empire = {
+					owner = {
 						every_relation = {
 							limit = {
 								is_ai = no
@@ -281,7 +259,7 @@ NGM_mammonism = {
 				base = 1
 				modifier = {
 					factor = 0
-					support < 0.5
+					support < 0.50
 					owner = {
 						has_ethic = ethic_capitalism
 					}
@@ -302,94 +280,16 @@ NGM_mammonism = {
 				}
 			}
 		}
-		promote_faction = {
-			title = "PROMOTE_FACTION"
-			description = "PROMOTE_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					NOR = {
-						has_modifier = suppressed_capitalism
-						has_modifier = promoted_capitalism
-					}
-				}
-			}
-			effect = {
-				parameter:empire = {
-					add_modifier = {
-						modifier = promoted_capitalism
-						days = -1
-					}
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
-		cancel_promote_faction = {
-			title = "CANCEL_PROMOTE_FACTION"
-			description = "CANCEL_PROMOTE_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					has_modifier = promoted_capitalism
-				}
-			}
-			effect = {
-				parameter:empire = {
-					remove_modifier = promoted_capitalism
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
-		suppress_faction = {
-			title = "SUPPRESS_FACTION"
-			description = "SUPPRESS_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					NOR = {
-						has_modifier = suppressed_capitalism
-						has_modifier = promoted_capitalism
-					}
-				}
-			}
-			effect = {
-				add_modifier = {
-					modifier = suppressed_faction
-					days = -1
-				}
-				parameter:empire = {
-					add_modifier = {
-						modifier = suppressed_capitalism
-						days = -1
-					}
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
-		cancel_suppress_faction = {
-			title = "CANCEL_SUPPRESS_FACTION"
-			description = "CANCEL_SUPPRESS_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					has_modifier = suppressed_capitalism
-				}
-			}
-			effect = {
-				remove_modifier = suppressed_faction
-				parameter:empire = {
-					remove_modifier = suppressed_capitalism
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
+	}
+	inline_script = pop_faction_types/attraction/promote_suppress_tags
+	inline_script = {
+		script = NGM/factions/promote_faction
+		ETHIC = capitalism
+		FACTION = NGM_mammonism
+	}
+	inline_script = {
+		script = NGM/factions/suppress_faction
+		ETHIC = capitalism
+		FACTION = NGM_mammonism
 	}
 }

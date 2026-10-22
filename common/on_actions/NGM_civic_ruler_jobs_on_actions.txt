@@ -1,0 +1,4 @@
+on_game_start_country = { events = { ngm_civic_jobs.1 } }
+on_monthly_pulse_country = { events = { ngm_civic_jobs.1 } }
+on_colonized = { events = { ngm_civic_jobs.2 } }
+on_colony_transfer = { events = { ngm_civic_jobs.2 } }

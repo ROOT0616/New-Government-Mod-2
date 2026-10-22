@@ -1,0 +1,6 @@
+namespace = ngm_origin
+country_event = {
+    id = ngm_origin.3001 hide_window = yes is_triggered_only = yes
+    trigger = { has_origin = origin_ngm_revolution NOT = { has_relic = r_ngm_legacy_of_revolution } }
+    immediate = { add_relic = r_ngm_legacy_of_revolution }
+}

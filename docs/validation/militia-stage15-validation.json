@@ -1,0 +1,10 @@
+{
+  "version": "1.39.0-dev.16",
+  "passed": true,
+  "checks": [
+    "Every patched legacy key maps to a current engine-registered modifier and full-file diffs match",
+    "Both civic defense-army rates are preserved in an explicitly declared modifier consumed by the population formula",
+    "Population-based army count passes 44 zero/threshold/stacked-rate cases"
+  ],
+  "runtime_tested": false
+}

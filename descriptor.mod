@@ -1,9 +1,8 @@
-version="1.38.30"
+version="1.39.0-dev.16"
 tags={
-	"Diplomacy"
-	"Economy"
-	"Gameplay"
+    "Diplomacy"
+    "Economy"
+    "Gameplay"
 }
-name="New Government Mod 2"
-supported_version="3.9.*"
-remote_file_id="2493984024"
+name="New Government Mod 2 - Development"
+supported_version="4.5.*"

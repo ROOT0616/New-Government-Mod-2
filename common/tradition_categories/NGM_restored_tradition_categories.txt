@@ -1,0 +1,45 @@
+tradition_ngm_planet = {
+	tree_template = tree_11_12
+	adoption_bonus = tr_ngm_planet_adopt
+	finish_bonus = tr_ngm_planet_finish
+	traditions = {
+		tr_ngm_planetary_scale_mining
+		tr_ngm_agrarianism
+		tr_ngm_support_for_mining
+		tr_ngm_investment_in_agricultural_corporations
+		tr_ngm_local_regeneration
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+tradition_ngm_development = {
+	tree_template = tree_11_12
+	adoption_bonus = tr_ngm_development_adopt
+	finish_bonus = tr_ngm_development_finish
+	traditions = {
+		tr_ngm_station_management_office
+		tr_ngm_zero_gravity_mining
+		tr_ngm_station_power_generation
+		tr_ngm_station_hub
+		tr_ngm_space_department
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
+tradition_ngm_craftsmanship = {
+	tree_template = tree_11_12
+	adoption_bonus = tr_ngm_craftsmanship_adopt
+	finish_bonus = tr_ngm_craftsmanship_finish
+	traditions = {
+		tr_ngm_craft_production
+		tr_ngm_metal_processing_institute
+		tr_ngm_recycling_processing
+		tr_ngm_improvement_of_metal_processing
+		tr_ngm_technicians_retention
+	}
+	ai_weight = {
+		factor = 10
+	}
+}
