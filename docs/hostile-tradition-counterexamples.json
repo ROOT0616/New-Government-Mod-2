@@ -1,0 +1,129 @@
+{
+  "version": "1.39.0-dev.17",
+  "engine_target": "4.5.2",
+  "method": "Limited evaluation of actual AST; no game engine, time advancement, modifier stacking, or unsupported syntax emulation",
+  "runtime_tested": false,
+  "counterexamples": [
+    {
+      "id": "T01",
+      "description": "9番目の報道の自由取得国に割当がない",
+      "observed": 0,
+      "logic_violation_reproduced": true,
+      "runtime_tested": false
+    },
+    {
+      "id": "T02",
+      "description": "伝統所持・割当flagなしの月次更新",
+      "observed": {},
+      "logic_violation_reproduced": true,
+      "runtime_tested": false
+    },
+    {
+      "id": "T03",
+      "description": "免疫取得後も浸透9～15が残存",
+      "observed": [
+        "tr_ngm_penetration_debuff_10",
+        "tr_ngm_penetration_debuff_11",
+        "tr_ngm_penetration_debuff_12",
+        "tr_ngm_penetration_debuff_13",
+        "tr_ngm_penetration_debuff_14",
+        "tr_ngm_penetration_debuff_15",
+        "tr_ngm_penetration_debuff_9"
+      ],
+      "logic_violation_reproduced": true,
+      "runtime_tested": false
+    },
+    {
+      "id": "T04",
+      "description": "接触条件を失った国の浸透効果を解除しない",
+      "observed": {
+        "tr_ngm_penetration_debuff_1": "permanent"
+      },
+      "logic_violation_reproduced": true,
+      "runtime_tested": false
+    },
+    {
+      "id": "T05",
+      "description": "浸透の取得処理再実行で2枠を消費",
+      "observed": [
+        "country_flag_tr_ngm_penetration_debuff_1",
+        "country_flag_tr_ngm_penetration_debuff_2"
+      ],
+      "logic_violation_reproduced": true,
+      "runtime_tested": false
+    },
+    {
+      "id": "T06",
+      "description": "国家宣伝省は宿敵0でも影響力補正を消さない",
+      "observed": {
+        "tr_ngm_ministry_engagement_buff_1": "permanent"
+      },
+      "logic_violation_reproduced": true,
+      "runtime_tested": false
+    },
+    {
+      "id": "T07",
+      "description": "善隣完成だけでは月次更新が発火しない",
+      "observed": false,
+      "logic_violation_reproduced": true,
+      "runtime_tested": false
+    },
+    {
+      "id": "T08",
+      "description": "国家宣伝省だけで善隣完成効果を得る",
+      "observed": {
+        "tr_ngm_neighbor_finish_buff": "permanent"
+      },
+      "logic_violation_reproduced": true,
+      "runtime_tested": false
+    },
+    {
+      "id": "T09",
+      "description": "種族数が5未満になっても善隣効果を解除しない",
+      "observed": {
+        "tr_ngm_neighbor_finish_buff": "permanent"
+      },
+      "logic_violation_reproduced": true,
+      "runtime_tested": false
+    },
+    {
+      "id": "T10",
+      "description": "領域継承だけで文化大臣の補正を付与",
+      "observed": {
+        "tr_ngm_ministory_culture_modifier": "permanent"
+      },
+      "logic_violation_reproduced": true,
+      "runtime_tested": false
+    },
+    {
+      "id": "T11",
+      "description": "独立後の解除対象に領域継承・余裕完成がない",
+      "observed": {
+        "tr_ngm_territory_inheritance_modifier": "permanent",
+        "tr_ngm_margin_finish_modifier": "permanent"
+      },
+      "logic_violation_reproduced": true,
+      "runtime_tested": false
+    },
+    {
+      "id": "T12",
+      "description": "非従属国の宣教効果は解除されるが被宣教flagは別処理",
+      "observed": {},
+      "logic_violation_reproduced": true,
+      "runtime_tested": false
+    },
+    {
+      "id": "T13",
+      "description": "恒常的妨害は旧初期化イベントを呼ばず暗号化へ変更",
+      "observed": [
+        [
+          "intel_encryption_add",
+          "=",
+          "5"
+        ]
+      ],
+      "logic_violation_reproduced": true,
+      "runtime_tested": false
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# New Government Mod 2 1.39.0-dev.16
+# New Government Mod 2 1.39.0-dev.17
 
 対象：ローカルStellaris Cygnus v4.5.2 (9776)。原版1.38.30と友人版1.00からの復旧作業版です。全機能対応版・通常プレイ用の完成版ではありません。
 
@@ -53,3 +53,7 @@ Vanilla変更：tb_others_group、is_faction_allowed、ethic_gestalt_consciousne
 - 植民熱を復旧し、新規植民で100人口を一度だけ付与。首都・領有移管・ロード時は付与せず、破壊後の再入植は対象。
 - GitHubはstellaris-4.5-restorationブランチで更新。masterへのマージ・Workshop更新は行わない。
 - 本体不要の検査：python tools/check_mod.py --root .
+
+## 第17段階
+
+技術取引・艦隊贈与は別MODへ分離済みのため、NGMから法令と専用翻訳を削除しました。原版と友人版の参照資料は保持しています。対外デバフ伝統は発火・対象・更新・解除に不具合が確認されており、動作保証前です。詳細はGitHubのdocs/hostile-traditions-audit.mdを参照。今回の削除では既存save内の他MODの状態を変更する移行処理は行いません。

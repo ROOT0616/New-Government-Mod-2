@@ -1,11 +1,45 @@
 {
   "target": "4.5.2",
-  "development": "1.39.0-dev.16",
+  "development": "1.39.0-dev.17",
   "runtime_tested": false,
+  "intentionally_excluded_separate_trade_definitions": [
+    "gft_ai_tech_trade.1",
+    "gft_ai_tech_trade.2",
+    "gft_ai_tech_trade.5",
+    "gft_ai_tech_trade.6",
+    "gft_ai_tech_trade.7",
+    "gft_fleet_trade.1",
+    "gft_fleet_trade.2",
+    "gft_fleet_trade.3",
+    "gft_fleet_trade.4",
+    "gft_fleet_trade.5",
+    "gft_fleet_trade_options_menu",
+    "gft_tech_trade.1",
+    "gft_tech_trade.10",
+    "gft_tech_trade.1001",
+    "gft_tech_trade.1002",
+    "gft_tech_trade.1003",
+    "gft_tech_trade.11",
+    "gft_tech_trade.12",
+    "gft_tech_trade.13",
+    "gft_tech_trade.14",
+    "gft_tech_trade.15",
+    "gft_tech_trade.16",
+    "gft_tech_trade.17",
+    "gft_tech_trade.18",
+    "gft_tech_trade.19",
+    "gft_tech_trade.2",
+    "gft_tech_trade.20",
+    "gft_tech_trade.21",
+    "gft_tech_trade.22",
+    "gft_tech_trade.23",
+    "gft_tech_trade.24",
+    "gft_technology_trade_options_menu"
+  ],
   "definition_counts": {
     "original": 2126,
     "friend": 1485,
-    "development": 1749
+    "development": 1747
   },
   "missing_original_references": [
     {
@@ -73,18 +107,6 @@
       "path": "agenda_ngm_expanding_paranoia/effect/else_if/every_rival_country/limit/NOT/has_ascension_perk",
       "missing": "ap_ngm_ministry_of_innocence",
       "original_file": "common/ascension_perks/NGM_ascension_perks.txt"
-    },
-    {
-      "file": "common/edicts/GFT_campaigns.txt",
-      "path": "gft_technology_trade_options_menu/effect/hidden_effect/country_event/id",
-      "missing": "gft_tech_trade.1",
-      "original_file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "file": "common/edicts/GFT_campaigns.txt",
-      "path": "gft_fleet_trade_options_menu/effect/hidden_effect/country_event/id",
-      "missing": "gft_fleet_trade.1",
-      "original_file": "events/GFT_fleet_trade_event.txt"
     },
     {
       "file": "common/edicts/NGM_campaigns.txt",
@@ -4427,16 +4449,6 @@
   ],
   "unresolved_event_calls": [
     {
-      "file": "common/edicts/GFT_campaigns.txt",
-      "path": "gft_technology_trade_options_menu/effect/hidden_effect/country_event",
-      "id": "gft_tech_trade.1"
-    },
-    {
-      "file": "common/edicts/GFT_campaigns.txt",
-      "path": "gft_fleet_trade_options_menu/effect/hidden_effect/country_event",
-      "id": "gft_fleet_trade.1"
-    },
-    {
       "file": "common/edicts/NGM_campaigns.txt",
       "path": "ngm_virture_rival_options_menu/effect/hidden_effect/country_event",
       "id": "ngm_diplomatic.1"
@@ -6022,156 +6034,6 @@
       "name": "district_rw_industrial",
       "category": "common/districts",
       "file": "common/districts/04_ringworld_districts.txt"
-    },
-    {
-      "name": "gft_ai_tech_trade.1",
-      "category": "events",
-      "file": "events/GFT_tech_trade_ai_event_0.txt"
-    },
-    {
-      "name": "gft_ai_tech_trade.2",
-      "category": "events",
-      "file": "events/GFT_tech_trade_ai_event_0.txt"
-    },
-    {
-      "name": "gft_ai_tech_trade.5",
-      "category": "events",
-      "file": "events/GFT_tech_trade_ai_event_0.txt"
-    },
-    {
-      "name": "gft_ai_tech_trade.6",
-      "category": "events",
-      "file": "events/GFT_tech_trade_ai_event_0.txt"
-    },
-    {
-      "name": "gft_ai_tech_trade.7",
-      "category": "events",
-      "file": "events/GFT_tech_trade_ai_event_0.txt"
-    },
-    {
-      "name": "gft_fleet_trade.1",
-      "category": "events",
-      "file": "events/GFT_fleet_trade_event.txt"
-    },
-    {
-      "name": "gft_fleet_trade.2",
-      "category": "events",
-      "file": "events/GFT_fleet_trade_event.txt"
-    },
-    {
-      "name": "gft_fleet_trade.3",
-      "category": "events",
-      "file": "events/GFT_fleet_trade_event.txt"
-    },
-    {
-      "name": "gft_fleet_trade.4",
-      "category": "events",
-      "file": "events/GFT_fleet_trade_event.txt"
-    },
-    {
-      "name": "gft_fleet_trade.5",
-      "category": "events",
-      "file": "events/GFT_fleet_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.1",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.10",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.1001",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.1002",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.1003",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.11",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.12",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.13",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.14",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.15",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.16",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.17",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.18",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.19",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.2",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.20",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.21",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.22",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.23",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
-    },
-    {
-      "name": "gft_tech_trade.24",
-      "category": "events",
-      "file": "events/GFT_tech_trade_event.txt"
     },
     {
       "name": "large_ship_pursuer",

@@ -2,6 +2,10 @@
 
 対象は原版 d54857bc、友人Workshop版、開発版 1.39.0-dev.16。実装基準はインストール済み Stellaris Cygnus 4.5.2 (9776)。オンラインでの最新配信版との一致は今回の調査対象外。
 
+## dev.17での追記・訂正
+
+技術取引・艦隊贈与は別MODへ分離済みとのユーザー指示により、NGMから入口法令・専用翻訳を削除した。以下のA01はdev.16時点の記録であり、現在は意図的除外。A03も再調査で、現行Vanillaに国家modifierからpop_resettlement_cost_multを使う実例があることを確認した。「置換誤り確認」は撤回し、効果の同等性未確認へ訂正する。詳細はhostile-traditions-audit.md参照。
+
 ## 結論
 
 追加の問題はある。現在の開発版は「一部を復旧した開発途中」であり、原版の全機能復活・全効果保証が完了した状態ではない。特に、表示・選択の入口が残る一方で本体が欠ける機能、存在するキーを異なるscopeのキーに置換した箇所、種族特性に国家向け補正が残る箇所を優先して直す必要がある。
@@ -14,7 +18,7 @@
 |---|---|---|---|
 | A01 | 最優先・欠落確認 | 技術取引・艦隊贈与の法令は存在するが、呼び出す `gft_tech_trade.1` / `gft_fleet_trade.1` がない。人間プレイヤー向け入口が残っており、取引画面を開く処理が成立しない。 | 原版にイベントあり、友人版・開発版で欠落。`common/edicts/GFT_campaigns.txt` |
 | A02 | 最優先・欠落確認 | 悪徳・前衛・記憶・敵対の4伝統カテゴリが、存在しない採用・完成・個別伝統を参照。合計28定義への参照が欠けている。カテゴリの存在だけをもって復旧済みとは扱えない。 | 友人版から継承。`common/tradition_categories/NGM_tradition_categories.txt`。悪徳・記憶にはpotentialによる一律停止もない。前衛・敵対にも単なる排他条件しかない。 |
-| A03 | 高・置換誤り確認 | `country_resettlement_cost_mult` は4.5.2でも Countries として存在する。置換先 `pop_resettlement_cost_mult` は Pops。国是・伝統の国家modifierへ機械置換したため同等効果とは認められない。再定住費用軽減が効かない可能性がある。 | 今回の復旧で導入。`common/governments/civics/NGM_civics.txt`、`common/traditions/NGM_traditions.txt`。engine modifiers.log 265・266行。旧キー不存在を前提にした置換判断は訂正が必要。 |
+| A03 | 訂正・同等性未確認 | `country_resettlement_cost_mult` は4.5.2でも Countries として存在する。置換先 `pop_resettlement_cost_mult` は Pops。国家modifierから置換先を使う現行Vanillaの実例があるため、分類だけを根拠に無効とは判定できない。旧効果との同等性は未検証。 | 今回の復旧で導入。`common/governments/civics/NGM_civics.txt`、`common/traditions/NGM_traditions.txt`。engine modifiers.log 265・266行。旧キー不存在を前提にした置換判断は訂正が必要。 |
 | A04 | 高・scope不一致候補 | 種族特性の `modifier` に国家向け補正11使用・10特性が残る。研究速度、信頼上限、遺伝子改変費用、帝国規模が対象。ポイントを払っても説明どおりに効かない疑い。 | 原版由来の問題を友人版・開発版が継承。全件を後掲。単なる名前の実在検査では検出できなかった。 |
 | A05 | 高・未登録候補 | 現行engine登録にもMOD内の生成定義にも対応を確認できない補正が17種類84使用残る。奴隷生産、移民、海賊抑制、家畜食料など複数の機能に波及。 | 多くは原版・友人版由来。84件は84バグという意味ではない。動的生成やscopeを追加確認し、効果単位で再設計する必要がある。 |
 | A06 | 高・仕様差確認 | 青年政治の種族特性から研究速度+10%が削除されている。残っている研究生産補正とは計算が違い、代替完了とは扱えない。 | 今回の復旧で削除。原版・友人版の `trait_ngm_youth_politics` に存在。元の種族scope実装自体に問題があり、そのまま戻すのも不可。 |
