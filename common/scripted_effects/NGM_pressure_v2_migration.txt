@@ -1,4 +1,7 @@
 ngm_pressure_v2_migrate_country_effect = {
+ if = {
+  limit = { NOT = { has_country_flag = ngm_pressure_v2_legacy_cleanup_v20 } }
+
 if = { limit = { is_ai = no NOT = { has_country_flag = ngm_pressure_v2_selection_reset_notified } OR = { has_country_flag = country_flag_ngm_virture_rival_country_1 has_country_flag = country_flag_ngm_virture_rival_country_2 has_country_flag = country_flag_ngm_virture_rival_country_3 has_country_flag = country_flag_ngm_virture_rival_country_4 has_country_flag = country_flag_ngm_virture_rival_country_5 has_country_flag = country_flag_ngm_virture_rival_country_6 has_country_flag = country_flag_ngm_virture_rival_country_7 has_country_flag = country_flag_ngm_virture_rival_country_8 has_country_flag = country_flag_ngm_virture_rival_country_9 has_country_flag = country_flag_ngm_virture_rival_country_10 has_country_flag = country_flag_ngm_virture_rival_country_11 has_country_flag = country_flag_ngm_virture_rival_country_12 has_country_flag = country_flag_ngm_virture_rival_country_13 has_country_flag = country_flag_ngm_virture_rival_country_14 has_country_flag = country_flag_ngm_virture_rival_country_15 has_country_flag = country_flag_ngm_virture_rival_country_16 } } country_event = { id = ngm_pressure.30 } set_country_flag = ngm_pressure_v2_selection_reset_notified }
 remove_country_flag = country_flag_ngm_virture_rival_country_1
 remove_country_flag = country_flag_ngm_virture_rival_country_2
@@ -80,6 +83,9 @@ set_variable = { which = ngm_virture_rival_country_num value = 0 }
  remove_modifier = ap_ngm_chio_debuff_6
  remove_modifier = ap_ngm_chio_debuff_7
  remove_modifier = ap_ngm_chio_debuff_8
+
+  set_country_flag = ngm_pressure_v2_legacy_cleanup_v20
+ }
 }
 ngm_pressure_v2_sync_all_effect = {
  if = { limit = { NOT = { has_global_flag = ngm_pressure_v2_migration_complete } }
