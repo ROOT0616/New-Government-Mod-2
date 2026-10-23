@@ -15,11 +15,13 @@
 const axes=[['権威主義','平等主義'],['軍国主義','平和主義'],['排他主義','受容主義'],['精神主義','物質主義'],['社会主義','資本主義'],['介入主義','中立主義'],['保全主義','開発主義'],['名誉主義','功利主義']];
 const civics=[['merit','能力主義','Vanilla','統治','能力を重視する統治。'],['tech','技術官僚の支配','Vanilla','研究','科学者の役割を重視する構成。'],['priest','高貴なる神権','Vanilla','統治','精神主義を軸にした統治。'],['service','市民軍役','Vanilla','軍事','軍務と市民生活を結ぶ構成。'],['guild','商人ギルド','Vanilla','経済','交易を重視する構成。'],['haven','自由の避難所','Vanilla','社会・外交','移民と開放性を重視する構成。'],['youth','青年政治','NGM','統治','若い世代の政治参加。'],['elder','長老政治','NGM','統治','経験を重視する政治参加。'],['env','環境民主主義','NGM','社会・外交','環境と社会を重視する構成。'],['medal','歴史ある勲章','NGM','社会・外交','勲章を重視する構成。']];
 const original={ethics:[-1,0,-1,0,-1,-1,-1,-1],civics:['merit','guild']};
-let draft=structuredClone(original),tab='ethics',filter='すべて',paused=false,consumed=false;
+let draft=structuredClone(original),tab='ethics',filter='すべて',paused=false,consumed=false,reviewSignature=null;
 const main=document.getElementById('main'),dialog=document.getElementById('confirm');
 function nameOf(i,v){return v===0?'なし':(Math.abs(v)===2?'狂信的な':'')+axes[i][v<0?0:1]}
 function civicName(id){return civics.find(c=>c[0]===id)?.[1]||id}
 function pointCount(){return draft.ethics.reduce((s,v)=>s+Math.abs(v),0)}
+function mockIssues(){const problems=[];if(draft.ethics.length!==8||draft.ethics.some(v=>!Number.isInteger(v)||v < -2||v > 2))problems.push('志向の値が不正です。');if(pointCount()!==6)problems.push('志向は合計6ポイントにしてください。');if(Math.abs(draft.ethics[0])===2)problems.push('寡頭制では狂信的な権威主義・平等主義を採用できません。');if(draft.civics.length>7)problems.push('国是が見本の上限を超えています。');return problems}
+function canReview(){return !consumed&&!paused&&mockIssues().length===0&&changes().length>0}
 function changes(){const lines=[];axes.forEach((a,i)=>{if(original.ethics[i]!==draft.ethics[i])lines.push(`${nameOf(i,original.ethics[i])} → ${nameOf(i,draft.ethics[i])}`)});original.civics.filter(id=>!draft.civics.includes(id)).forEach(id=>lines.push('削除：'+civicName(id)));draft.civics.filter(id=>!original.civics.includes(id)).forEach(id=>lines.push('追加：'+civicName(id)));return lines}
 function render(){
  document.getElementById('points').textContent=`志向 ${pointCount()} / 6`;
@@ -29,11 +31,14 @@ function render(){
  document.getElementById('entitlement').textContent='再設計権利 '+(consumed?0:1);
  document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
  document.getElementById('summary').innerHTML='<b>変更後の志向</b><ul>'+draft.ethics.map((v,i)=>v?'<li>'+nameOf(i,v)+'</li>':'').join('')+'</ul><b>変更後の国是</b><ul>'+draft.civics.map(id=>'<li>'+civicName(id)+'</li>').join('')+'</ul>';
- document.getElementById('review').disabled=consumed||pointCount()!==6||draft.civics.length>7||changes().length===0;
+ document.getElementById('review').disabled=!canReview();
+ document.getElementById('discard').disabled=consumed;
+ document.getElementById('pause').disabled=consumed;
+ document.getElementById('apply').disabled=consumed;
  document.getElementById('pause').textContent=paused?'編集を再開':'中断する';
  if(paused){main.innerHTML='<h2>変更案を保持しています</h2><p>現在の国家には、何も適用していません。</p><p class="muted">「編集を再開」で、同じ変更案を開きます。ゲーム内では専用布告からも再開できる設計です。</p>';return}
  if(tab==='ethics'){
-  main.innerHTML='<h2>国家の志向</h2><p class="muted small">各軸は一つだけ選択。通常は1点、狂信は2点です。</p>'+axes.map((a,i)=>'<div class="row"><div class="axisname">'+a[0]+' ↔ '+a[1]+'</div><div class="axis">'+[-2,-1,0,1,2].map(v=>`<button aria-pressed="${draft.ethics[i]===v}" class="${draft.ethics[i]===v?'active':''}" data-axis="${i}" data-value="${v}">${v===0?'なし':Math.abs(v)===2?'狂信':'通常'}${v===0?'':`<br>${a[v<0?0:1]}`}</button>`).join('')+'</div></div>').join('');
+  main.innerHTML='<h2>国家の志向</h2><p class="muted small">各軸は一つだけ選択。通常は1点、狂信は2点です。寡頭制と不適合の案は確定できません。</p>'+(mockIssues().length?'<p class="warning">'+mockIssues().join('<br>')+'</p>':'')+axes.map((a,i)=>'<div class="row"><div class="axisname">'+a[0]+' ↔ '+a[1]+'</div><div class="axis">'+[-2,-1,0,1,2].map(v=>`<button aria-pressed="${draft.ethics[i]===v}" class="${draft.ethics[i]===v?'active':''}" data-axis="${i}" data-value="${v}">${v===0?'なし':Math.abs(v)===2?'狂信':'通常'}${v===0?'':`<br>${a[v<0?0:1]}`}</button>`).join('')+'</div></div>').join('');
   main.querySelectorAll('[data-axis]').forEach(b=>b.onclick=()=>{if(consumed)return;draft.ethics[+b.dataset.axis]=+b.dataset.value;render()});
  }else if(tab==='civics'){
   main.innerHTML='<h2>国是の変更案</h2><p class="muted small">候補名は表示例です。実際の採用条件はゲーム本体から登録・検証します。</p><div class="filters">'+['すべて','統治','経済','研究','軍事','社会・外交','選択済み'].map(f=>`<button class="${filter===f?'active':''}" data-filter="${f}">${f}</button>`).join('')+'</div><div class="cards">'+civics.filter(c=>filter==='すべて'||c[3]===filter||filter==='選択済み'&&draft.civics.includes(c[0])).map(c=>`<article class="card ${draft.civics.includes(c[0])?'selected':''}"><span class="tag">${c[2]} / ${c[3]}</span><h3>${c[1]}</h3><p>${c[4]}</p><button data-civic="${c[0]}">${draft.civics.includes(c[0])?'案から外す':'案に追加'}</button></article>`).join('')+'</div>';
@@ -42,14 +47,14 @@ function render(){
  }else if(tab==='changes'){
   main.innerHTML='<h2>変更点</h2><div class="changes">'+(changes().map(line=>'<p>'+line+'</p>').join('')||'<p class="muted">まだ変更はありません。</p>')+'</div><p class="muted small">Popの志向・起源・種族は、この機能では直接変更しません。</p>';
  }else{
-  main.innerHTML='<h2>確定前の確認</h2><div class="summary">'+(pointCount()===6?'<span class="good">✓ 志向は6ポイントです。</span>':`<span class="error">志向が${pointCount()}点です。6点に調整してください。</span>`)+`<br>${draft.civics.length<=7?'✓ 国是は見本の上限内です。':'国是を7件以下に調整してください。'}<br><span class="warning">国是の条件・政体適合・DLC検査は、この見本では未接続です。</span></div><p>実際の画面では、条件不足の国是や競合する組合せをここから修正します。</p>`;
+  main.innerHTML='<h2>確定前の確認</h2><div class="summary">'+(mockIssues().length?'<span class="error">'+mockIssues().join('<br>')+'</span>':'<span class="good">志向点数・寡頭制の志向制限・見本の国是上限を満たしています。</span>')+'<br><span class="warning">国是の採用条件・特殊政体・DLC等の完全な検査は、この見本では未接続です。</span></div><p>実際の画面では、条件不足の国是や競合する組合せをここから修正します。</p>';
  }
 }
 document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;render()});
-document.getElementById('pause').onclick=()=>{paused=!paused;render()};
-document.getElementById('discard').onclick=()=>{draft=structuredClone(original);paused=false;consumed=false;render()};
-document.getElementById('review').onclick=()=>{document.getElementById('confirmbody').innerHTML='<ul>'+changes().map(s=>'<li>'+s+'</li>').join('')+'</ul>';dialog.showModal()};
+document.getElementById('pause').onclick=()=>{if(consumed)return;paused=!paused;reviewSignature=null;render()};
+document.getElementById('discard').onclick=()=>{if(consumed)return;draft=structuredClone(original);paused=false;reviewSignature=null;render()};
+document.getElementById('review').onclick=()=>{if(!canReview())return;reviewSignature=JSON.stringify(draft);document.getElementById('confirmbody').innerHTML='<ul>'+changes().map(s=>'<li>'+s+'</li>').join('')+'</ul>';dialog.showModal()};
 document.getElementById('back').onclick=()=>dialog.close();
-document.getElementById('apply').onclick=()=>{consumed=true;dialog.close();render()};
+document.getElementById('apply').onclick=()=>{if(!canReview()||reviewSignature!==JSON.stringify(draft)){reviewSignature=null;dialog.close();render();return}consumed=true;reviewSignature=null;dialog.close();render()};
 render();
 </script></body></html>

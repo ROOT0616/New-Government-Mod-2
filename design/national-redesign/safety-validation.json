@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "method": "Executable design contract and base-authority requirement evaluator, not game implementation",
+  "target": "4.5.2 (9776)",
+  "normal_six_point_combinations": 17920,
+  "authority_matrix_comparisons": 89600,
+  "authority_matrix": {
+    "auth_democratic": {
+      "accepted": 12684,
+      "rejected": 5236
+    },
+    "auth_oligarchic": {
+      "accepted": 14952,
+      "rejected": 2968
+    },
+    "auth_dictatorial": {
+      "accepted": 12684,
+      "rejected": 5236
+    },
+    "auth_imperial": {
+      "accepted": 5256,
+      "rejected": 12664
+    },
+    "auth_corporate": {
+      "accepted": 10420,
+      "rejected": 7500
+    }
+  },
+  "contract_check_count": 48,
+  "checks": [
+    "all-six-point-ethics-combinations-match-current-base-authorities",
+    "democracy-rejects-normal-authoritarian",
+    "imperial-rejects-ngm-utilitarianism",
+    "corporate-rejects-ngm-socialism",
+    "ordinary-machine-not-gestalt",
+    "hive-requires-gestalt",
+    "hive-rejects-machine-archetype",
+    "machine-gestalt-requires-machine-archetype",
+    "machine-gestalt-valid-species",
+    "legendary-origin-constraint-not-ignored",
+    "unknown-requirement-fails-closed",
+    "invalid-axis-type-fails-closed",
+    "begin-normal",
+    "draft-does-not-mutate-country",
+    "no-unverified-civic-commit",
+    "review-certified-plan",
+    "wrong-player-cannot-commit",
+    "valid-commit",
+    "double-commit-blocked",
+    "consumed-cannot-discard-or-reopen",
+    "normal-cannot-select-gestalt",
+    "tampered-authority-blocked",
+    "same-axis-normal-and-fanatic-rejected",
+    "gestalt-open-auth_hive_mind",
+    "gestalt-ethics-locked-auth_hive_mind",
+    "gestalt-review-auth_hive_mind",
+    "gestalt-civic-only-commit-auth_hive_mind",
+    "gestalt-open-auth_machine_intelligence",
+    "gestalt-ethics-locked-auth_machine_intelligence",
+    "gestalt-review-auth_machine_intelligence",
+    "gestalt-civic-only-commit-auth_machine_intelligence",
+    "external-change-blocked-authority",
+    "external-change-blocked-advanced",
+    "external-change-blocked-origin",
+    "external-change-blocked-species_identity",
+    "external-change-blocked-archetype",
+    "external-change-blocked-budget",
+    "external-change-blocked-catalog_version",
+    "external-change-blocked-country_type",
+    "edit-invalidates-review",
+    "apply-failed-no-consumption-no-retry",
+    "invalid-or-unsupported-start-{'advanced': 'uncertified_advanced_swap'}",
+    "invalid-or-unsupported-start-{'origin': 'origin_wilderness'}",
+    "invalid-or-unsupported-start-{'country_type': 'ai_empire'}",
+    "invalid-or-unsupported-start-{'authority': 'unregistered_authority'}",
+    "invalid-or-unsupported-start-{'authority': 'auth_hive_mind', 'ethics': {'ethic_gestalt_consciousness', 'ethic_materialist'}}",
+    "invalid-or-unsupported-start-{'ethics': {'ethic_gestalt_consciousness'}}",
+    "snapshot-private-between-countries"
+  ],
+  "advanced_swaps_in_inventory": 72,
+  "advanced_swaps_certified": 0,
+  "civic_rules_certified": false,
+  "game_runtime_tested": false,
+  "game_gui_tested": false
+}

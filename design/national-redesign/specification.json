@@ -1,5 +1,5 @@
 {
-  "design_version": 1,
+  "design_version": 2,
   "stage": "design-not-implemented",
   "target": "4.5.2 (9776)",
   "runtime_version_unchanged": "1.39.0-dev.21",
@@ -176,5 +176,17 @@
     "save/load",
     "two players",
     "resolution and UI scale"
-  ]
+  ],
+  "safety_contract": {
+    "gestalt_commit_executes_no_ethic_effect": true,
+    "base_and_advanced_authority_locked": true,
+    "uncertified_advanced_authority": "block entry",
+    "unknown_requirement": "block",
+    "stale_snapshot": "block commit",
+    "review_bound_to_draft_revision": true,
+    "apply_failed": "no automatic retry or refund/regrant",
+    "requirements_inventory": "authority-rules.json",
+    "contract_validation": "safety-validation.json",
+    "release_requires_in_game_tests": true
+  }
 }
