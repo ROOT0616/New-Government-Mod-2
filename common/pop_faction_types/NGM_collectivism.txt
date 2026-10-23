@@ -1,94 +1,68 @@
-##############################
-# Collectivism Faction
-##############################
 NGM_collectivism = {
-	election_header = "GFX_faction_header_yellow"
+	election_header = GFX_faction_header_yellow
 	guiding_ethic = ethic_socialism
-	visual_ethic = "NGM_collectivism_visual_ethic"
-
+	visual_ethic = NGM_collectivism_visual_ethic
 	unique = yes
 	support_multiplier = 1
-
 	resources = {
 		category = pop_factions
+		inline_script = pop_faction_types/shared_unity_production
 		produces = {
-			unity = @faction_base_unity
+			trigger = {
+				owner = {
+					OR = {
+						has_valid_civic = civic_crowdsourcing
+						has_valid_civic = civic_corporate_crowdsourcing
+					}
+				}
+			}
+			unity = @faction_base_output
 		}
 	}
-
 	is_potential = {
 		is_faction_allowed = yes
 	}
-
-	parameters = {
-		empire = {
-			type = country
-			valid_objects = {
-				is_same_value = root
-			}
-		}
-	}
-
 	can_join_pre_triggers = {
 		is_enslaved = no
 		is_being_purged = no
 	}
-
 	can_join_faction = {
-		can_think = yes
-		is_shackled_robot = no
+		inline_script = pop_faction_types/can_join_faction/base
 		has_ethic = ethic_socialism
 	}
-
 	attraction = {
 		base = 150
-
-		modifier = {
-			factor = 1.25
-			exists = from
-			from = {
-				exists = leader
-				leader = { is_ruler = yes }
-			}
-		}
-
-		modifier = {
-			factor = 0.75
-			exists = from
-			from = {
-				NOT = { exists = leader }
-			}
-		}
+		inline_script = pop_faction_types/attraction/promote_suppress_attraction
+		inline_script = pop_faction_types/attraction/leader_attraction
 	}
-
 	leader = {
 		base = 100
 		modifier = {
 			factor = 0
+			is_ruler = yes
+			owner = {
+				is_imperial_authority = yes
+			}
+		}
+		modifier = {
+			factor = 0.0
 			is_event_leader = yes
 		}
 	}
-
-	# DEMAND: Faction Outraged (by a GalCom Resolution)
 	inline_script = {
 		script = pop_faction_types/demand_faction_outraged
 		FLAG = galcom_resolution_passed_anti_NGM_collectivism
 	}
-
-	# DEMAND: Faction Pleased (by a GalCom Resolution)
 	inline_script = {
 		script = pop_faction_types/demand_faction_pleased
 		FLAG = galcom_resolution_passed_pro_NGM_collectivism
 	}
-
 	demand = {
-		title = "FACTION_OUTRAGED_GC"
-		unfulfilled_title = "FACTION_OUTRAGED_GC"
-		desc = "FACTION_OUTRAGED_GC_DESC"
-
+		title = FACTION_OUTRAGED_GC
+		unfulfilled_title = FACTION_OUTRAGED_GC
+		desc = FACTION_OUTRAGED_GC_DESC
 		fulfilled_effect = -20
 		unfulfilled_effect = -0.001
-
 		potential = {
 			exists = owner
 			owner = {
@@ -102,10 +76,9 @@ NGM_collectivism = {
 		}
 	}
 	demand = {
-		# "社会福祉 social welfare"
-		title = "COLLECTIVISM_SOCIAL_WELFARE"
-		unfulfilled_title = "COLLECTIVISM_SOCIAL_WELFARE"
-		desc = "COLLECTIVISM_SOCIAL_WELFARE_DESC"
+		title = COLLECTIVISM_SOCIAL_WELFARE
+		unfulfilled_title = COLLECTIVISM_SOCIAL_WELFARE
+		desc = COLLECTIVISM_SOCIAL_WELFARE_DESC
 		fulfilled_effect = 20
 		unfulfilled_effect = -10
 		potential = {
@@ -129,10 +102,9 @@ NGM_collectivism = {
 		}
 	}
 	demand = {
-		# "生まれながら平等"
-		title = "PROGRESSIVE_NO_ELITISM"
-		unfulfilled_title = "PROGRESSIVE_ELITISM"
-		desc = "PROGRESSIVE_NO_ELITISM_DESC"
+		title = PROGRESSIVE_NO_ELITISM
+		unfulfilled_title = PROGRESSIVE_ELITISM
+		desc = PROGRESSIVE_NO_ELITISM_DESC
 		fulfilled_effect = 5
 		unfulfilled_effect = -5
 		potential = {
@@ -154,10 +126,9 @@ NGM_collectivism = {
 		}
 	}
 	demand = {
-		# "反階級社会"
-		title = "PROGRESSIVE_NO_STRATIFIED"
-		unfulfilled_title = "PROGRESSIVE_STRATIFIED"
-		desc = "PROGRESSIVE_NO_STRATIFIED_DESC"
+		title = PROGRESSIVE_NO_STRATIFIED
+		unfulfilled_title = PROGRESSIVE_STRATIFIED
+		desc = PROGRESSIVE_NO_STRATIFIED_DESC
 		unfulfilled_effect = -25
 		fulfilled_effect = 0.001
 		potential = {
@@ -176,10 +147,9 @@ NGM_collectivism = {
 		}
 	}
 	demand = {
-		# "平等の兵役 Equal Military Service"
-		title = "COLLECTIVISM_MILITARY_SERVICE"
-		unfulfilled_title = "COLLECTIVISM_MILITARY_SERVICE"
-		desc = "COLLECTIVISM_MILITARY_SERVICE_DESC"
+		title = COLLECTIVISM_MILITARY_SERVICE
+		unfulfilled_title = COLLECTIVISM_MILITARY_SERVICE
+		desc = COLLECTIVISM_MILITARY_SERVICE_DESC
 		fulfilled_effect = 10
 		unfulfilled_effect = 0
 		potential = {
@@ -198,10 +168,9 @@ NGM_collectivism = {
 		}
 	}
 	demand = {
-		# "反君主制 antimonarchy"
-		title = "COLLECTIVISM_ANTIMONARCHY"
-		unfulfilled_title = "COLLECTIVISM_ANTIMONARCHY"
-		desc = "COLLECTIVISM_ANTIMONARCHY_DESC"
+		title = COLLECTIVISM_ANTIMONARCHY
+		unfulfilled_title = COLLECTIVISM_ANTIMONARCHY
+		desc = COLLECTIVISM_ANTIMONARCHY_DESC
 		fulfilled_effect = 0
 		unfulfilled_effect = -10
 		potential = {
@@ -215,83 +184,94 @@ NGM_collectivism = {
 			}
 		}
 	}
-
-	# Faction Demands for Ruler and Council positions.
 	inline_script = {
-		script = "paragon/global_faction_demands"
+		script = paragon/global_faction_demands
 		ETHIC = ethic_socialism
 		ETHIC_FANATIC = ethic_fanatic_socialism
 		ETHIC_OPPOSED = ethic_capitalism
-	} 
-
+	}
 	on_create = {
-		pop_faction_event = { id = factions.1 }
+		pop_faction_event = {
+			id = factions.0
+		}
 	}
-
 	on_destroy = {
-		if = {
-			limit = {
-				has_modifier = promoted_socialism
-			}
-			remove_modifier = promoted_socialism
+		inline_script = {
+			script = NGM/factions/promote_on_destroy
+			ETHIC = socialism
+			FACTION = NGM_collectivism
 		}
-		if = {
-			limit = {
-				has_modifier = suppressed_socialism
-			}
-			remove_modifier = suppressed_socialism
+		inline_script = {
+			script = NGM/factions/suppress_on_destroy
+			ETHIC = socialism
+			FACTION = NGM_collectivism
 		}
 	}
-
 	actions = {
 		embrace_faction = {
-			title = "EMBRACE_FACTION"
-			description = "EMBRACE_FACTION_DESC"
-
+			title = EMBRACE_FACTION
+			description = EMBRACE_FACTION_DESC
 			cost = {
 				unity = 5000
 			}
-
 			potential = {
 				exists = owner
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = { any_agreement = { agreement_preset = preset_dominion } }
+						NOT = {
+							any_agreement = {
+								agreement_preset = preset_dominion
+							}
+						}
 					}
 				}
 			}
-
 			valid = {
 				custom_tooltip = {
 					fail_text = EMBRACE_FACTION_COOLDOWN
-					parameter:empire = {
-						NOT = { has_modifier = embraced_faction_timer }
+					owner = {
+						NOT = {
+							has_modifier = embraced_faction_timer
+						}
 					}
 				}
 				support > 0.20
-				parameter:empire = {
+				owner = {
 					NOT = {
-						has_ethic = "ethic_fanatic_socialism"
+						has_ethic = ethic_fanatic_socialism
 					}
 				}
 			}
-
 			effect = {
-				add_modifier = { modifier = embraced_faction days = 3600 }
-				parameter:empire = {
-					shift_ethic = ethic_spiritualist
+				add_modifier = {
+					modifier = embraced_faction
+					days = 3600
+				}
+				owner = {
+					set_country_flag = has_embraced_faction
+					shift_ethic = ethic_socialism
 					hidden_effect = {
-						add_modifier = { modifier = embraced_faction_timer days = 3600 }
+						add_modifier = {
+							modifier = embraced_faction_timer
+							days = 3600
+						}
 						every_pop_faction = {
-							limit = { NOT = { is_same_value = root } }
-							add_modifier = { modifier = embraced_another_faction days = 3600 }
+							limit = {
+								NOT = {
+									is_same_value = root
+								}
+							}
+							add_modifier = {
+								modifier = embraced_another_faction
+								days = 3600
+							}
 						}
 					}
 				}
 				hidden_effect = {
 					save_event_target_as = TargetFaction
-					parameter:empire = {
+					owner = {
 						every_relation = {
 							limit = {
 								is_ai = no
@@ -303,12 +283,13 @@ NGM_collectivism = {
 									level >= 1
 								}
 							}
-							country_event = { id = factions.2000 }
+							country_event = {
+								id = factions.2000
+							}
 						}
 					}
 				}
 			}
-
 			ai_weight = {
 				base = 1
 				modifier = {
@@ -334,94 +315,16 @@ NGM_collectivism = {
 				}
 			}
 		}
-		promote_faction = {
-			title = "PROMOTE_FACTION"
-			description = "PROMOTE_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					NOR = {
-						has_modifier = suppressed_socialism
-						has_modifier = promoted_socialism
-					}
-				}
-			}
-			effect = {
-				parameter:empire = {
-					add_modifier = {
-						modifier = promoted_socialism
-						days = -1
-					}
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
-		cancel_promote_faction = {
-			title = "CANCEL_PROMOTE_FACTION"
-			description = "CANCEL_PROMOTE_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					has_modifier = promoted_socialism
-				}
-			}
-			effect = {
-				parameter:empire = {
-					remove_modifier = promoted_socialism
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
-		suppress_faction = {
-			title = "SUPPRESS_FACTION"
-			description = "SUPPRESS_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					NOR = {
-						has_modifier = suppressed_socialism
-						has_modifier = promoted_socialism
-					}
-				}
-			}
-			effect = {
-				add_modifier = {
-					modifier = suppressed_faction
-					days = -1
-				}
-				parameter:empire = {
-					add_modifier = {
-						modifier = suppressed_socialism
-						days = -1
-					}
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
-		cancel_suppress_faction = {
-			title = "CANCEL_SUPPRESS_FACTION"
-			description = "CANCEL_SUPPRESS_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					has_modifier = suppressed_socialism
-				}
-			}
-			effect = {
-				remove_modifier = suppressed_faction
-				parameter:empire = {
-					remove_modifier = suppressed_socialism
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
+	}
+	inline_script = pop_faction_types/attraction/promote_suppress_tags
+	inline_script = {
+		script = NGM/factions/promote_faction
+		ETHIC = socialism
+		FACTION = NGM_collectivism
+	}
+	inline_script = {
+		script = NGM/factions/suppress_faction
+		ETHIC = socialism
+		FACTION = NGM_collectivism
 	}
 }

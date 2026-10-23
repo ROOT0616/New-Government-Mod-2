@@ -1,24 +1,26 @@
-##############################
-# Reputation Faction
-##############################
 NGM_reputation = {
-	election_header = "GFX_faction_header_yellow"
+	election_header = GFX_faction_header_yellow
 	guiding_ethic = ethic_honorism
-	visual_ethic = "NGM_reputation_visual_ethic"
-
+	visual_ethic = NGM_reputation_visual_ethic
 	unique = yes
 	support_multiplier = 1
-
 	resources = {
 		category = pop_factions
+		inline_script = pop_faction_types/shared_unity_production
 		produces = {
-			unity = 0.5
+			trigger = {
+				owner = {
+					OR = {
+						has_valid_civic = civic_crowdsourcing
+						has_valid_civic = civic_corporate_crowdsourcing
+					}
+				}
+			}
+			unity = @faction_base_output
 		}
 	}
-
 	is_potential = {
 		is_faction_allowed = yes
-
 		if = {
 			limit = {
 				has_faction = NGM_reputation
@@ -37,62 +39,37 @@ NGM_reputation = {
 			}
 		}
 	}
-
-	parameters = {
-		empire = {
-			type = country
-			valid_objects = {
-				is_same_value = root
-			}
-		}
-	}
-
 	can_join_pre_triggers = {
 		is_enslaved = no
 		is_being_purged = no
-		is_robot_pop = no
 	}
-
 	can_join_faction = {
-		can_think = yes
-		OR = {
-			has_ethic = ethic_honorism
-			has_ethic = ethic_fanatic_honorism
-		}
+		inline_script = pop_faction_types/can_join_faction/base
+		has_ethic = ethic_honorism
 	}
-
 	attraction = {
 		base = 150
-
-		modifier = {
-			factor = 1.25
-			exists = from
-			from = {
-				exists = leader
-				leader = { is_ruler = yes }
-			}
-		}
-
-		modifier = {
-			factor = 0.75
-			exists = from
-			from = {
-				NOT = { exists = leader }
-			}
-		}
+		inline_script = pop_faction_types/attraction/promote_suppress_attraction
+		inline_script = pop_faction_types/attraction/leader_attraction
 	}
-
 	leader = {
 		base = 100
+		modifier = {
+			factor = 0
+			is_ruler = yes
+			owner = {
+				is_imperial_authority = yes
+			}
+		}
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
 		}
 	}
 	demand = {
-		title = "FACTION_OUTRAGED_GC"
-		unfulfilled_title = "FACTION_OUTRAGED_GC"
-		desc = "FACTION_OUTRAGED_GC_DESC"
+		title = FACTION_OUTRAGED_GC
+		unfulfilled_title = FACTION_OUTRAGED_GC
+		desc = FACTION_OUTRAGED_GC_DESC
 		fulfilled_effect = -20
 		unfulfilled_effect = -0.001
 		potential = {
@@ -108,10 +85,9 @@ NGM_reputation = {
 		}
 	}
 	demand = {
-		# 階級社会
-		title = "TOTALITARIAN_STRATIFICATION"
-		unfulfilled_title = "TOTALITARIAN_NO_STRATIFICATION"
-		desc = "TOTALITARIAN_STRATIFICATION_DESC"
+		title = TOTALITARIAN_STRATIFICATION
+		unfulfilled_title = TOTALITARIAN_NO_STRATIFICATION
+		desc = TOTALITARIAN_STRATIFICATION_DESC
 		fulfilled_effect = 10
 		unfulfilled_effect = -20
 		potential = {
@@ -155,10 +131,9 @@ NGM_reputation = {
 		}
 	}
 	demand = {
-		# 帝国外部への影響力
-		title = "TOTALITARIAN_EXTRANATIONAL_AUTHORITY"
-		unfulfilled_title = "TOTALITARIAN_NO_EXTRANATIONAL_AUTHORITY"
-		desc = "TOTALITARIAN_EXTRANATIONAL_AUTHORITY_DESC"
+		title = TOTALITARIAN_EXTRANATIONAL_AUTHORITY
+		unfulfilled_title = TOTALITARIAN_NO_EXTRANATIONAL_AUTHORITY
+		desc = TOTALITARIAN_EXTRANATIONAL_AUTHORITY_DESC
 		fulfilled_effect = 10
 		unfulfilled_effect = -0.001
 		potential = {
@@ -174,10 +149,9 @@ NGM_reputation = {
 		}
 	}
 	demand = {
-		# 君主主義者 monarchist（君主制）+10（未設定時-10）
-		title = "REPUTATION_MONARCHIST"
-		unfulfilled_title = "REPUTATION_MONARCHIST"
-		desc = "REPUTATION_MONARCHIST_DESC"
+		title = REPUTATION_MONARCHIST
+		unfulfilled_title = REPUTATION_MONARCHIST
+		desc = REPUTATION_MONARCHIST_DESC
 		unfulfilled_effect = -10
 		fulfilled_effect = 10
 		potential = {
@@ -190,10 +164,9 @@ NGM_reputation = {
 		}
 	}
 	demand = {
-		# 国家的影響力 National Influence
-		title = "REPUTATION_NATIONAL_INFLUENCE"
-		unfulfilled_title = "REPUTATION_NATIONAL_INFLUENCE"
-		desc = "REPUTATION_NATIONAL_INFLUENCE_DESC"
+		title = REPUTATION_NATIONAL_INFLUENCE
+		unfulfilled_title = REPUTATION_NATIONAL_INFLUENCE
+		desc = REPUTATION_NATIONAL_INFLUENCE_DESC
 		unfulfilled_effect = 0
 		fulfilled_effect = 20
 		potential = {
@@ -212,12 +185,9 @@ NGM_reputation = {
 		}
 	}
 	demand = {
-		# "少数派の苦悩"Reputation
-		title = "REPUTATION_UNHONORIST"
-		unfulfilled_title = "REPUTATION_NOT_UNHONORIST"
-		# unfulfilled_title = "TRADITIONALIST_NOT_UNSPIRITUALIST"
-		desc = "REPUTATION_UNHONORIST_DESC"
-		# desc = "TRADITIONALIST_UNSPIRITUALIST_DESC"
+		title = REPUTATION_UNHONORIST
+		unfulfilled_title = REPUTATION_NOT_UNHONORIST
+		desc = REPUTATION_UNHONORIST_DESC
 		unfulfilled_effect = -10
 		fulfilled_effect = 0.001
 		potential = {
@@ -244,54 +214,54 @@ NGM_reputation = {
 	}
 	on_create = {
 		pop_faction_event = {
-			id = factions.1
+			id = factions.0
 		}
 	}
 	on_destroy = {
-		if = {
-			limit = {
-				has_modifier = promoted_honorism
-			}
-			remove_modifier = promoted_honorism
+		inline_script = {
+			script = NGM/factions/promote_on_destroy
+			ETHIC = honorism
+			FACTION = NGM_reputation
 		}
-		if = {
-			limit = {
-				has_modifier = suppressed_honorism
-			}
-			remove_modifier = suppressed_honorism
+		inline_script = {
+			script = NGM/factions/suppress_on_destroy
+			ETHIC = honorism
+			FACTION = NGM_reputation
 		}
 	}
 	actions = {
 		embrace_faction = {
-			title = "EMBRACE_FACTION"
-			description = "EMBRACE_FACTION_DESC"
-
+			title = EMBRACE_FACTION
+			description = EMBRACE_FACTION_DESC
 			cost = {
 				unity = 5000
 			}
-
 			potential = {
 				exists = owner
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = { any_agreement = { agreement_preset = preset_dominion } }
+						NOT = {
+							any_agreement = {
+								agreement_preset = preset_dominion
+							}
+						}
 					}
 				}
 			}
 			valid = {
 				custom_tooltip = {
 					fail_text = EMBRACE_FACTION_COOLDOWN
-					parameter:empire = {
+					owner = {
 						NOT = {
 							has_modifier = embraced_faction_timer
 						}
 					}
 				}
-				support > 0.2
-				parameter:empire = {
+				support > 0.20
+				owner = {
 					NOT = {
-						has_ethic = "ethic_fanatic_honorism"
+						has_ethic = ethic_fanatic_honorism
 					}
 				}
 			}
@@ -300,7 +270,8 @@ NGM_reputation = {
 					modifier = embraced_faction
 					days = 3600
 				}
-				parameter:empire = {
+				owner = {
+					set_country_flag = has_embraced_faction
 					shift_ethic = ethic_honorism
 					hidden_effect = {
 						add_modifier = {
@@ -322,7 +293,7 @@ NGM_reputation = {
 				}
 				hidden_effect = {
 					save_event_target_as = TargetFaction
-					parameter:empire = {
+					owner = {
 						every_relation = {
 							limit = {
 								is_ai = no
@@ -345,7 +316,7 @@ NGM_reputation = {
 				base = 1
 				modifier = {
 					factor = 0
-					support < 0.5
+					support < 0.50
 					owner = {
 						has_ethic = ethic_honorism
 					}
@@ -366,94 +337,16 @@ NGM_reputation = {
 				}
 			}
 		}
-		promote_faction = {
-			title = "PROMOTE_FACTION"
-			description = "PROMOTE_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					NOR = {
-						has_modifier = suppressed_honorism
-						has_modifier = promoted_honorism
-					}
-				}
-			}
-			effect = {
-				parameter:empire = {
-					add_modifier = {
-						modifier = promoted_honorism
-						days = -1
-					}
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
-		cancel_promote_faction = {
-			title = "CANCEL_PROMOTE_FACTION"
-			description = "CANCEL_PROMOTE_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					has_modifier = promoted_honorism
-				}
-			}
-			effect = {
-				parameter:empire = {
-					remove_modifier = promoted_honorism
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
-		suppress_faction = {
-			title = "SUPPRESS_FACTION"
-			description = "SUPPRESS_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					NOR = {
-						has_modifier = suppressed_honorism
-						has_modifier = promoted_honorism
-					}
-				}
-			}
-			effect = {
-				add_modifier = {
-					modifier = suppressed_faction
-					days = -1
-				}
-				parameter:empire = {
-					add_modifier = {
-						modifier = suppressed_honorism
-						days = -1
-					}
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
-		cancel_suppress_faction = {
-			title = "CANCEL_SUPPRESS_FACTION"
-			description = "CANCEL_SUPPRESS_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					has_modifier = suppressed_honorism
-				}
-			}
-			effect = {
-				remove_modifier = suppressed_faction
-				parameter:empire = {
-					remove_modifier = suppressed_honorism
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
+	}
+	inline_script = pop_faction_types/attraction/promote_suppress_tags
+	inline_script = {
+		script = NGM/factions/promote_faction
+		ETHIC = honorism
+		FACTION = NGM_reputation
+	}
+	inline_script = {
+		script = NGM/factions/suppress_faction
+		ETHIC = honorism
+		FACTION = NGM_reputation
 	}
 }

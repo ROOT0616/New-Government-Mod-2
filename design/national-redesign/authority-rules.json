@@ -1,0 +1,1756 @@
+{
+  "target": "4.5.2 (9776)",
+  "note": "Base-authority requirement inventory only. Advanced swaps are separate and not certified.",
+  "authorities": {
+    "auth_democratic": {
+      "source": "vanilla/00_authorities.txt",
+      "potential": [],
+      "possible": [
+        [
+          "origin",
+          "=",
+          [
+            [
+              "NOR",
+              "=",
+              [
+                [
+                  "text",
+                  "=",
+                  "origin_legendary_leader_no_gov_change"
+                ],
+                [
+                  "value",
+                  "=",
+                  "origin_legendary_leader_dictatorial"
+                ],
+                [
+                  "value",
+                  "=",
+                  "origin_legendary_leader_imperial"
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "ethics",
+          "=",
+          [
+            [
+              "NOR",
+              "=",
+              [
+                [
+                  "value",
+                  "=",
+                  "ethic_gestalt_consciousness"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_authoritarian"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_fanatic_authoritarian"
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      "advanced_swaps": [
+        {
+          "name": "auth_cyber_creed_democratic",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_creed_advanced_government"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_cyber_democratic_individualist",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_individualist"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_cyber_democratic_collectivist",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_collectivist"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_synth_democratic_physical",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "synth_physical"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_synth_democratic_virtual",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "synth_virtual"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_democratic_purity",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_purity"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_democratic_cloning",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_cloning"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_democratic_mutation",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_mutation"
+            ],
+            [
+              "NOT",
+              "=",
+              [
+                [
+                  "has_origin",
+                  "=",
+                  "origin_evolutionary_predators"
+                ]
+              ]
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_democratic_evopred",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_mutation"
+            ],
+            [
+              "has_origin",
+              "=",
+              "origin_evolutionary_predators"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_shroud_democratic_transcendent",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "is_transcendent_authority",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_shroud_democratic_corporeal",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "is_corporeal_authority",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        }
+      ]
+    },
+    "auth_oligarchic": {
+      "source": "vanilla/00_authorities.txt",
+      "potential": [],
+      "possible": [
+        [
+          "origin",
+          "=",
+          [
+            [
+              "NOR",
+              "=",
+              [
+                [
+                  "text",
+                  "=",
+                  "origin_legendary_leader_no_gov_change"
+                ],
+                [
+                  "value",
+                  "=",
+                  "origin_legendary_leader_dictatorial"
+                ],
+                [
+                  "value",
+                  "=",
+                  "origin_legendary_leader_imperial"
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "ethics",
+          "=",
+          [
+            [
+              "NOR",
+              "=",
+              [
+                [
+                  "value",
+                  "=",
+                  "ethic_gestalt_consciousness"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_fanatic_egalitarian"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_fanatic_authoritarian"
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      "advanced_swaps": [
+        {
+          "name": "auth_cyber_creed_oligarchic",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_creed_advanced_government"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_cyber_oligarchic_individualist",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_individualist"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_cyber_oligarchic_collectivist",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_collectivist"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_synth_oligarchic_physical",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "synth_physical"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_synth_oligarchic_virtual",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "synth_virtual"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_oligarchic_purity",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_purity"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_oligarchic_cloning",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_cloning"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_oligarchic_mutation",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_mutation"
+            ],
+            [
+              "NOT",
+              "=",
+              [
+                [
+                  "has_origin",
+                  "=",
+                  "origin_evolutionary_predators"
+                ]
+              ]
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_oligarchic_evopred",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_mutation"
+            ],
+            [
+              "has_origin",
+              "=",
+              "origin_evolutionary_predators"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_shroud_oligarchic_transcendent",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "is_transcendent_authority",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_shroud_oligarchic_corporeal",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "is_corporeal_authority",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        }
+      ]
+    },
+    "auth_dictatorial": {
+      "source": "vanilla/00_authorities.txt",
+      "potential": [],
+      "possible": [
+        [
+          "origin",
+          "=",
+          [
+            [
+              "NOT",
+              "=",
+              [
+                [
+                  "text",
+                  "=",
+                  "origin_legendary_leader_no_gov_change"
+                ],
+                [
+                  "value",
+                  "=",
+                  "origin_legendary_leader_imperial"
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "ethics",
+          "=",
+          [
+            [
+              "NOR",
+              "=",
+              [
+                [
+                  "value",
+                  "=",
+                  "ethic_gestalt_consciousness"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_egalitarian"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_fanatic_egalitarian"
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      "advanced_swaps": [
+        {
+          "name": "auth_cyber_creed_dictatorial",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_creed_advanced_government"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_cyber_dictatorial_individualist",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_individualist"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_cyber_dictatorial_collectivist_official",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_collectivist"
+            ],
+            [
+              "ruler?",
+              "=",
+              [
+                [
+                  "leader_class",
+                  "=",
+                  "official"
+                ]
+              ]
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_cyber_dictatorial_collectivist_commander",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_collectivist"
+            ],
+            [
+              "ruler?",
+              "=",
+              [
+                [
+                  "leader_class",
+                  "=",
+                  "commander"
+                ]
+              ]
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_cyber_dictatorial_collectivist_scientist",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_collectivist"
+            ],
+            [
+              "ruler?",
+              "=",
+              [
+                [
+                  "leader_class",
+                  "=",
+                  "scientist"
+                ]
+              ]
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_cyber_dictatorial_collectivist_vacant",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_collectivist"
+            ],
+            [
+              "NOT",
+              "=",
+              [
+                [
+                  "any_owned_leader",
+                  "=",
+                  [
+                    [
+                      "is_ruler",
+                      "=",
+                      "yes"
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_synth_dictatorial_physical",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "synth_physical"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_synth_dictatorial_virtual",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "synth_virtual"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_dictatorial_purity",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_purity"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_dictatorial_cloning",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_cloning"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_dictatorial_mutation",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_mutation"
+            ],
+            [
+              "NOT",
+              "=",
+              [
+                [
+                  "has_origin",
+                  "=",
+                  "origin_evolutionary_predators"
+                ]
+              ]
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_dictatorial_evopred",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_mutation"
+            ],
+            [
+              "has_origin",
+              "=",
+              "origin_evolutionary_predators"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_shroud_dictatorial_transcendent",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "is_transcendent_authority",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_shroud_dictatorial_corporeal",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "is_corporeal_authority",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        }
+      ]
+    },
+    "auth_imperial": {
+      "source": "ngm/NGM_authority_ethic_rules.txt",
+      "potential": [],
+      "possible": [
+        [
+          "origin",
+          "=",
+          [
+            [
+              "NOT",
+              "=",
+              [
+                [
+                  "text",
+                  "=",
+                  "origin_legendary_leader_no_gov_change"
+                ],
+                [
+                  "value",
+                  "=",
+                  "origin_legendary_leader_dictatorial"
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "ethics",
+          "=",
+          [
+            [
+              "NOR",
+              "=",
+              [
+                [
+                  "value",
+                  "=",
+                  "ethic_gestalt_consciousness"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_egalitarian"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_fanatic_egalitarian"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_utilitarianism"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_fanatic_utilitarianism"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_socialism"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_fanatic_socialism"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_fanatic_capitalism"
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      "advanced_swaps": [
+        {
+          "name": "auth_cyber_creed_imperial",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_creed_advanced_government"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_cyber_imperial_individualist",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_individualist"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_cyber_imperial_collectivist",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_collectivist"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_synth_imperial_physical",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "synth_physical"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_synth_imperial_virtual",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "synth_virtual"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_imperial_purity",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_purity"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_imperial_cloning",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_cloning"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_imperial_mutation",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_mutation"
+            ],
+            [
+              "NOT",
+              "=",
+              [
+                [
+                  "has_origin",
+                  "=",
+                  "origin_evolutionary_predators"
+                ]
+              ]
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_imperial_evopred",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_mutation"
+            ],
+            [
+              "has_origin",
+              "=",
+              "origin_evolutionary_predators"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_shroud_imperial_transcendent",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "is_transcendent_authority",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_shroud_imperial_corporeal",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "is_corporeal_authority",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        }
+      ]
+    },
+    "auth_hive_mind": {
+      "source": "vanilla/00_authorities.txt",
+      "potential": [],
+      "possible": [
+        [
+          "ethics",
+          "=",
+          [
+            [
+              "value",
+              "=",
+              "ethic_gestalt_consciousness"
+            ]
+          ]
+        ],
+        [
+          "species_archetype",
+          "=",
+          [
+            [
+              "NOT",
+              "=",
+              [
+                [
+                  "value",
+                  "=",
+                  "MACHINE"
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      "advanced_swaps": [
+        {
+          "name": "auth_cyber_hive_volitional",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_hive_volitional"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_cyber_hive_integrated",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_hive_integrated"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_hive_purity",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_purity"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_hive_cloning",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_cloning"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_hive_mutation",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_mutation"
+            ],
+            [
+              "NOT",
+              "=",
+              [
+                [
+                  "has_origin",
+                  "=",
+                  "origin_evolutionary_predators"
+                ]
+              ]
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_hive_mind_evopred",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_mutation"
+            ],
+            [
+              "has_origin",
+              "=",
+              "origin_evolutionary_predators"
+            ],
+            [
+              "is_nomadic",
+              "=",
+              "no"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_hive_mind_evopred",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_mutation"
+            ],
+            [
+              "has_origin",
+              "=",
+              "origin_evolutionary_predators"
+            ],
+            [
+              "is_nomadic",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_mutualistic_intelligence",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "is_wilderness_empire",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_shroud_hive_transcendent",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "is_transcendent_authority",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_shroud_hive_corporeal",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "is_corporeal_authority",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        }
+      ]
+    },
+    "auth_machine_intelligence": {
+      "source": "vanilla/00_authorities.txt",
+      "potential": [],
+      "possible": [
+        [
+          "ethics",
+          "=",
+          [
+            [
+              "value",
+              "=",
+              "ethic_gestalt_consciousness"
+            ]
+          ]
+        ],
+        [
+          "species_archetype",
+          "=",
+          [
+            [
+              "value",
+              "=",
+              "MACHINE"
+            ]
+          ]
+        ]
+      ],
+      "advanced_swaps": [
+        {
+          "name": "auth_memory_aggregator",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "driven_memory_aggregator"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_neural_chorus",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "driven_neural_chorus"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_shroud_machine_transcendent",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "is_transcendent_authority",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_shroud_machine_corporeal",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "is_corporeal_authority",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        }
+      ]
+    },
+    "auth_ancient_machine_intelligence": {
+      "source": "vanilla/00_authorities.txt",
+      "potential": [
+        [
+          "country_type",
+          "=",
+          [
+            [
+              "value",
+              "=",
+              "ai_empire"
+            ]
+          ]
+        ]
+      ],
+      "possible": [],
+      "advanced_swaps": []
+    },
+    "auth_corporate": {
+      "source": "ngm/NGM_authority_ethic_rules.txt",
+      "potential": [
+        [
+          "country_type",
+          "=",
+          [
+            [
+              "NOT",
+              "=",
+              [
+                [
+                  "value",
+                  "=",
+                  "primitive"
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      "possible": [
+        [
+          "origin",
+          "=",
+          [
+            [
+              "NOR",
+              "=",
+              [
+                [
+                  "text",
+                  "=",
+                  "origin_legendary_leader_no_gov_change"
+                ],
+                [
+                  "value",
+                  "=",
+                  "origin_legendary_leader_dictatorial"
+                ],
+                [
+                  "value",
+                  "=",
+                  "origin_legendary_leader_imperial"
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "ethics",
+          "=",
+          [
+            [
+              "NOR",
+              "=",
+              [
+                [
+                  "value",
+                  "=",
+                  "ethic_gestalt_consciousness"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_fanatic_egalitarian"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_fanatic_authoritarian"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_socialism"
+                ],
+                [
+                  "value",
+                  "=",
+                  "ethic_fanatic_socialism"
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      "advanced_swaps": [
+        {
+          "name": "auth_cyber_creed_corporate",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_creed_advanced_government"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_cyber_corporate_individualist",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_individualist"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_cyber_corporate_collectivist",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "cyber_collectivist"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_synth_corporate_physical",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "synth_physical"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_synth_corporate_virtual",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "synth_virtual"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_corporate_purity",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_purity"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_corporate_cloning",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_cloning"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_corporate_mutation",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_mutation"
+            ],
+            [
+              "NOT",
+              "=",
+              [
+                [
+                  "has_origin",
+                  "=",
+                  "origin_evolutionary_predators"
+                ]
+              ]
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_bio_corporate_evopred",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "has_country_flag",
+              "=",
+              "bio_mutation"
+            ],
+            [
+              "has_origin",
+              "=",
+              "origin_evolutionary_predators"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_shroud_corporate_transcendent",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "is_transcendent_authority",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        },
+        {
+          "name": "auth_shroud_corporate_corporeal",
+          "trigger": [
+            [
+              "is_scope_valid",
+              "=",
+              "yes"
+            ],
+            [
+              "is_corporeal_authority",
+              "=",
+              "yes"
+            ]
+          ],
+          "weight": []
+        }
+      ]
+    }
+  }
+}

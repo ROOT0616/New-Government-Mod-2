@@ -1,7 +1,6 @@
-# 犯罪抑止力-10%	安定度5%	エネルギー-5
 d_patrolling_society_deposit = {
 	category = deposit_cat_rare
-	icon = d_city
+	icon = d_monument_in_space
 	resources = {
 		category = planet_deposits
 		upkeep = {
@@ -12,11 +11,9 @@ d_patrolling_society_deposit = {
 		weight = 0
 	}
 }
-
-# 政策区域	エネルギー-5
 d_ngm_special_policies_deposit = {
 	category = deposit_cat_rare
-	icon = d_city
+	icon = d_monument_in_space
 	resources = {
 		category = planet_deposits
 		upkeep = {
@@ -27,11 +24,9 @@ d_ngm_special_policies_deposit = {
 		weight = 0
 	}
 }
-
-# 実験的物質の発見
 d_ngm_experimental_substance = {
 	category = deposit_cat_rare
-	icon = d_city
+	icon = d_monument_in_space
 	resources = {
 		category = planet_deposits
 		produces = {
@@ -41,7 +36,7 @@ d_ngm_experimental_substance = {
 		}
 	}
 	potential = {
-		always = yes
+		always = no
 	}
 	drop_weight = {
 		weight = 0

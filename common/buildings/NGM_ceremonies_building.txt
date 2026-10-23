@@ -1,0 +1,57 @@
+building_ngm_bureau_of_ceremonies = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	category = government
+	potential = {
+		exists = owner
+		NOT = {
+			has_modifier = slave_colony
+		}
+		owner = {
+			is_gestalt = no
+		}
+	}
+	empire_limit = 1
+	prerequisites = {
+		tech_ceremony_theory
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			energy = 200
+			minerals = 400
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	planet_modifier = {
+		job_bureau_of_ceremonies_add = 200
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = "job_bureau_of_ceremonies_effect_desc"
+	}
+	on_built = {
+		owner = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = build_ngm_bureau_of_ceremonies
+					}
+				}
+				set_country_flag = build_ngm_bureau_of_ceremonies
+			}
+		}
+	}
+	on_destroy = {
+		owner = {
+			remove_country_flag = build_ngm_bureau_of_ceremonies
+		}
+	}
+	building_sets = {
+		government
+	}
+}

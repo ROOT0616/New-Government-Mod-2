@@ -1,0 +1,164 @@
+origin_ngm_crown = {
+	is_origin = yes
+	icon = gfx/interface/icons/origins/origins_default.dds
+	picture = GFX_evt_metropolis
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		civics = {
+			value = civic_symbolic_monarchy
+		}
+	}
+	modifier = {
+		faction_approval = 0.1
+		pop_happiness = 0.1
+		diplo_weight_mult = 0.2
+		envoys_add = 1
+	}
+	description = origin_tooltip_ngm_crown
+	random_weight = {
+		base = 0
+	}
+}
+origin_ngm_freecity = {
+	is_origin = yes
+	icon = gfx/interface/icons/origins/origins_default.dds
+	picture = GFX_evt_metropolis
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		text = "civic_tooltip_egalitarian"
+		ethics = {
+			OR = {
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_ngm_manifest_destiny
+			}
+		}
+	}
+	modifier = {
+		empire_size_pops_mult = -0.2
+		logistic_growth_mult = 0.15
+		empire_size_systems_mult = 0.5
+		starbase_outpost_cost_mult = 0.3
+	}
+	description = origin_tooltip_ngm_freecity
+	random_weight = {
+		base = 0
+	}
+}
+origin_ngm_noble = {
+	is_origin = yes
+	icon = gfx/interface/icons/origins/origins_default.dds
+	picture = GFX_evt_metropolis
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		text = "civic_tooltip_honorism"
+		ethics = {
+			OR = {
+				value = ethic_honorism
+				value = ethic_fanatic_honorism
+			}
+		}
+	}
+	modifier = {
+		country_base_ngm_order_of_merit_produces_add = 0.1
+		planet_jobs_unity_produces_mult = 0.2
+		tradition_cost_empire_size_mult = -0.2
+	}
+	description = origin_tooltip_ngm_noble
+	random_weight = {
+		base = 0
+	}
+}
+origin_ngm_maintaining = {
+	is_origin = yes
+	icon = gfx/interface/icons/origins/origins_default.dds
+	picture = GFX_evt_metropolis
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	modifier = {
+		planet_stability_add = 10
+		pop_amenities_usage_mult = 0.25
+		pop_government_ethic_attraction = 0.2
+	}
+	description = origin_tooltip_ngm_maintaining
+	random_weight = {
+		base = 0
+	}
+}
+origin_ngm_administration = {
+	is_origin = yes
+	icon = gfx/interface/icons/origins/origins_default.dds
+	picture = GFX_evt_metropolis
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	modifier = {
+		empire_size_mult = -0.2
+	}
+	description = origin_tooltip_ngm_administration
+	random_weight = {
+		base = 0
+	}
+}
+origin_ngm_revolution = {
+	is_origin = yes
+	icon = gfx/interface/icons/origins/origins_default.dds
+	picture = GFX_evt_metropolis
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		text = "civic_tooltip_socialism"
+		ethics = {
+			OR = {
+				value = ethic_socialism
+				value = ethic_fanatic_socialism
+			}
+		}
+	}
+	description = origin_tooltip_ngm_revolution
+	random_weight = {
+		base = 0
+	}
+}

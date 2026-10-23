@@ -1,0 +1,13 @@
+if = {
+	limit = {
+		from = { has_pop_faction_flag = promoted_faction }
+		NOT = { # Only remove the modifier if no other faction with the same ethic is promoted
+			any_pop_faction = {
+				NOT = { is_same_value = from }
+				is_pop_faction_type = $FACTION$
+				has_pop_faction_flag = promoted_faction
+			}
+		}
+	}
+	remove_modifier = promoted_$ETHIC$
+}

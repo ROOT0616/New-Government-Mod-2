@@ -1,0 +1,31 @@
+# Leader scope; ROOT is the country event that invokes this effect.
+ngm_youth_leader_bonus_effect = {
+    if = {
+        limit = {
+            root = { has_valid_civic = civic_ngm_youth_politics }
+            OR = { leader_class = official leader_class = commander leader_class = scientist }
+            NOT = { has_leader_flag = flag_ngm_got_civic_young_bonus }
+        }
+        if = {
+            limit = { NOT = { has_trait = leader_trait_adaptable } }
+            add_trait = { trait = leader_trait_adaptable show_message = no }
+        }
+        set_leader_flag = flag_ngm_got_civic_young_bonus
+    }
+}
+
+ngm_elder_leader_bonus_effect = {
+    if = {
+        limit = {
+            root = { has_valid_civic = civic_ngm_elder_politics }
+            OR = { leader_class = official leader_class = commander leader_class = scientist }
+            NOT = { has_leader_flag = flag_ngm_got_civic_old_bonus }
+        }
+        if = {
+            limit = { has_base_skill < 4 }
+            set_skill = 4
+        }
+        add_experience = 300
+        set_leader_flag = flag_ngm_got_civic_old_bonus
+    }
+}

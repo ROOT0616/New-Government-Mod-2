@@ -1,0 +1,3648 @@
+{
+  "version": "1.39.0-dev.21",
+  "engine_version": "Cygnus v4.5.2",
+  "documentation_timestamp": "2026-10-22 20:29:16",
+  "native_alias_evidence": "common/static_modifiers/24_static_modifiers_jobs.txt",
+  "generated_job_modifier_evidence": "Declared common/pop_jobs IDs and current engine pop_<job>_bonus_workforce_mult family",
+  "unknown_modifier_usages": [],
+  "missing_on_action_events": [],
+  "original_non_vanilla_definitions_still_absent": [
+    {
+      "category": "common/armies",
+      "name": "ngm_imperial_guard",
+      "label": "帝国近衛軍",
+      "status": "不在（復旧対象）",
+      "original_file": "common/armies/NGM_armies.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/armies",
+      "name": "ngm_imperiallocal_army",
+      "label": "帝国地方軍",
+      "status": "不在（復旧対象）",
+      "original_file": "common/armies/NGM_armies.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/ascension_perks",
+      "name": "ap_ngm_relation_old_empire",
+      "label": "寵児",
+      "status": "不在（復旧対象）",
+      "original_file": "common/ascension_perks/NGM_ascension_perks.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/ascension_perks",
+      "name": "ap_ngm_galactic_reconguista",
+      "label": "銀河のレコンギスタ",
+      "status": "不在（復旧対象）",
+      "original_file": "common/ascension_perks/NGM_ascension_perks.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/ascension_perks",
+      "name": "ap_ngm_rebirth_from_the_ashes",
+      "label": "灰の中からの再誕",
+      "status": "不在（復旧対象）",
+      "original_file": "common/ascension_perks/NGM_ascension_perks.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/ascension_perks",
+      "name": "ap_ngm_outward_steps",
+      "label": "外への歩み",
+      "status": "不在（復旧対象）",
+      "original_file": "common/ascension_perks/NGM_ascension_perks.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/ascension_perks",
+      "name": "ap_ngm_imperial_majesty",
+      "label": "帝国の威風",
+      "status": "不在（復旧対象）",
+      "original_file": "common/ascension_perks/NGM_ascension_perks.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/ascension_perks",
+      "name": "ap_ngm_existence_of_a_saint",
+      "label": "聖天の存在",
+      "status": "不在（復旧対象）",
+      "original_file": "common/ascension_perks/NGM_ascension_perks.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_perpetual_palace",
+      "label": "永久の宮殿",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_ginga_department_store",
+      "label": "銀河百貨店",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_business_school",
+      "label": "企業大学校",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_star_workshop",
+      "label": "星間工場群",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_galaxy_salon",
+      "label": "銀河サロン",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_m_a_center",
+      "label": "M&Aセンター",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_galactic_bank",
+      "label": "ギャラクティックバンク",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_IAA",
+      "label": "星間広告代理店",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_corporate_hospital",
+      "label": "コーポレートメディカルセンター",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_planetary_scale_building_center",
+      "label": "惑星規模建築センター",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_corporate_plantation",
+      "label": "企業農園",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_society_cosmic_port",
+      "label": "社有宇宙港",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_planet_trust_bank",
+      "label": "惑星信託銀行",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_corporate_espionage",
+      "label": "企業諜報機関",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_planet_rating_agency",
+      "label": "惑星格付会社",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_sa_ko_ryo",
+      "label": "サービス付き高官向け料亭",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_theatergoer",
+      "label": "劇場通",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_avant_garde_art_square",
+      "label": "前衛芸術広場",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_Iimperial_concert_hall",
+      "label": "帝国音楽堂",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_imperial_art_museum",
+      "label": "帝国芸術博物館",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_premise_workshop",
+      "label": "先端工場",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_advanced_research_institutes",
+      "label": "高度研究機関",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_Phe_Palace",
+      "label": "帝国宮殿",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_Phe_Court",
+      "label": "帝国大審院",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_Phe_Crest",
+      "label": "帝国紋章院",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_Phe_Central_school",
+      "label": "帝国中央学院",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_Phe_Spaceport",
+      "label": "帝立宇宙港",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_Phe_HQ",
+      "label": "帝国軍総司令部",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_Phe_S_Palace",
+      "label": "帝国離宮",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_Phe_Factory",
+      "label": "帝国工場",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_Phe_Purification",
+      "label": "帝国精製所",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_Phe_Park",
+      "label": "帝国庭園",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_Phe_orbit_elv",
+      "label": "帝国軌道エレベータ",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_Phe_University",
+      "label": "帝国大学",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/buildings",
+      "name": "building_ngm_Phe_Fort",
+      "label": "帝国要塞",
+      "status": "不在（復旧対象）",
+      "original_file": "common/buildings/NGM_buildings.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/component_slot_templates",
+      "name": "pursuer_small_turret",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/component_slot_templates/NGM_component_slots_turrets.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/component_slot_templates",
+      "name": "pursuer_medium_turret",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/component_slot_templates/NGM_component_slots_turrets.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/component_slot_templates",
+      "name": "pursuer_large_turret",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/component_slot_templates/NGM_component_slots_turrets.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/council_agendas",
+      "name": "agenda_ngm_positive_intervention",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/council_agendas/NGM_council_agendas.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/council_agendas",
+      "name": "agenda_ngm_pursuit_of_economic_profit",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/council_agendas/NGM_council_agendas.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/districts",
+      "name": "district_industrial",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/districts/00_urban_districts.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/districts",
+      "name": "district_arcology_religious",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/districts/01_arcology_districts.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/districts",
+      "name": "district_generator_uncapped",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/districts/02_rural_districts.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/districts",
+      "name": "district_mining_uncapped",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/districts/02_rural_districts.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/districts",
+      "name": "district_farming_uncapped",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/districts/02_rural_districts.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/districts",
+      "name": "district_hab_industrial",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/districts/03_habitat_districts.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/districts",
+      "name": "district_rw_industrial",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/districts/04_ringworld_districts.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/edicts",
+      "name": "ngm_conducting_decoration_ceremonies_campaign",
+      "label": "功労者や上流階級の市民などに勲章を授与する式典を実施する。",
+      "status": "不在（復旧対象）",
+      "original_file": "common/edicts/NGM_campaigns.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/edicts",
+      "name": "ngm_conducting_decoration_ceremonies_2_campaign",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/edicts/NGM_campaigns.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/edicts",
+      "name": "ngm_conducting_decoration_ceremonies_3_campaign",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/edicts/NGM_campaigns.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/event_chains",
+      "name": "ngm_olympic_chain",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/event_chains/NGM_event_chains_1.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/federation_types",
+      "name": "NGM_CEPA_federation",
+      "label": "包括的経済連携協定",
+      "status": "不在（復旧対象）",
+      "original_file": "common/federation_types/NGM_federation_types.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/federation_types",
+      "name": "NGM_personal_union_federation",
+      "label": "同君連合",
+      "status": "不在（復旧対象）",
+      "original_file": "common/federation_types/NGM_federation_types.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/federation_types",
+      "name": "NGM_permanent_summit_federation",
+      "label": "常設首脳会議",
+      "status": "不在（復旧対象）",
+      "original_file": "common/federation_types/NGM_federation_types.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/federation_types",
+      "name": "NGM_unification_church_federation",
+      "label": "統一教団",
+      "status": "不在（復旧対象）",
+      "original_file": "common/federation_types/NGM_federation_types.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/governments/civics",
+      "name": "civic_ngm_space_security_headquarters",
+      "label": "宙間警備本部",
+      "status": "不在（復旧対象）",
+      "original_file": "common/governments/civics/NGM_civics.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/governments/civics",
+      "name": "civic_ngm_freedom_in_obedience",
+      "label": "服従の中の自由",
+      "status": "不在（復旧対象）",
+      "original_file": "common/governments/civics/NGM_civics.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/governments/civics",
+      "name": "civic_ngm_multiculturalism",
+      "label": "多文化主義",
+      "status": "不在（復旧対象）",
+      "original_file": "common/governments/civics/NGM_civics.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/governments/civics",
+      "name": "civic_ngm_respect_act",
+      "label": "称号と敬称の尊重法",
+      "status": "不在（復旧対象）",
+      "original_file": "common/governments/civics/NGM_civics.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/governments/civics",
+      "name": "origin_ngm_buffer_state",
+      "label": "律儀な古代の緩衝国家",
+      "status": "不在（復旧対象）",
+      "original_file": "common/governments/civics/NGM_origins.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/governments/civics",
+      "name": "origin_ngm_escape_to_the_past",
+      "label": "過去への逃走",
+      "status": "不在（復旧対象）",
+      "original_file": "common/governments/civics/NGM_origins.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/governments/civics",
+      "name": "origin_ngm_phenix",
+      "label": "黄昏の帝国",
+      "status": "不在（復旧対象）",
+      "original_file": "common/governments/civics/NGM_origins.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/governments/civics",
+      "name": "origin_ngm_phenix_npc",
+      "label": "永遠の恩義",
+      "status": "不在（復旧対象）",
+      "original_file": "common/governments/civics/NGM_origins.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/governments/civics",
+      "name": "origin_ngm_military",
+      "label": "軍事的拡張の夢",
+      "status": "不在（復旧対象）",
+      "original_file": "common/governments/civics/NGM_origins.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/governments/civics",
+      "name": "origin_ngm_crime",
+      "label": "犯罪の楽園",
+      "status": "不在（復旧対象）",
+      "original_file": "common/governments/civics/NGM_origins.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/governments/councilors",
+      "name": "councilor_ngm_space_security_headquarters",
+      "label": "大生命保護官",
+      "status": "不在（復旧対象）",
+      "original_file": "common/governments/councilors/NGM_councilors.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/governments/councilors",
+      "name": "councilor_ngm_space_security_headquarters",
+      "label": "大生命保護官",
+      "status": "不在（復旧対象）",
+      "original_file": "common/governments/councilors/NGM_councilors.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/governments/councilors",
+      "name": "councilor_ngm_space_security_headquarters",
+      "label": "大生命保護官",
+      "status": "不在（復旧対象）",
+      "original_file": "common/governments/councilors/NGM_councilors.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/graphical_culture",
+      "name": "pursuer_small",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/graphical_culture/NGM_graphical_culture.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/graphical_culture",
+      "name": "pursuer_midle",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/graphical_culture/NGM_graphical_culture.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/graphical_culture",
+      "name": "pursuer_large",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/graphical_culture/NGM_graphical_culture.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/policies",
+      "name": "ngm_ritual_raw",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/policies/NGM_policies.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/pop_jobs",
+      "name": "priest",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/pop_jobs/02_specialist_jobs.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/pop_jobs",
+      "name": "death_priest",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/pop_jobs/02_specialist_jobs.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/pop_jobs",
+      "name": "bluelotus_technician",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/pop_jobs/02_specialist_jobs.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/resolution_categories",
+      "name": "resolution_category_ngm_galactic_scale",
+      "label": "銀河規模の拡大",
+      "status": "不在（復旧対象）",
+      "original_file": "common/resolution_categories/NGM_resolution_categories.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/resolution_categories",
+      "name": "resolution_category_ngm_olympic_form",
+      "label": "国際大会",
+      "status": "不在（復旧対象）",
+      "original_file": "common/resolution_categories/NGM_resolution_categories.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/resolutions",
+      "name": "resolution_ngm_galactic_scale_1",
+      "label": "銀河規模の拡大",
+      "status": "不在（復旧対象）",
+      "original_file": "common/resolutions/NGM_resolutions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/resolutions",
+      "name": "resolution_ngm_galactic_scale_2",
+      "label": "銀河規模の拡大の廃止",
+      "status": "不在（復旧対象）",
+      "original_file": "common/resolutions/NGM_resolutions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/resolutions",
+      "name": "resolution_ngm_olympic_form",
+      "label": "国際大会の形成",
+      "status": "不在（復旧対象）",
+      "original_file": "common/resolutions/NGM_resolutions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/resolutions",
+      "name": "resolution_ngm_olympic_end",
+      "label": "国際競技大会の中止",
+      "status": "不在（復旧対象）",
+      "original_file": "common/resolutions/NGM_resolutions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/ship_sizes",
+      "name": "small_ship_pursuer",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/ship_sizes/NGM_ship_sizes.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/ship_sizes",
+      "name": "medium_ship_pursuer",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/ship_sizes/NGM_ship_sizes.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/ship_sizes",
+      "name": "large_ship_pursuer",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/ship_sizes/NGM_ship_sizes.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/static_modifiers",
+      "name": "origin_ngm_crime_modifier_1",
+      "label": "犯罪の楽園(被)",
+      "status": "不在（復旧対象）",
+      "original_file": "common/static_modifiers/NGM_modifier.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/static_modifiers",
+      "name": "origin_ngm_crime_modifier_2",
+      "label": "犯罪の楽園(被)",
+      "status": "不在（復旧対象）",
+      "original_file": "common/static_modifiers/NGM_modifier.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/static_modifiers",
+      "name": "origin_ngm_crime_modifier_3",
+      "label": "犯罪の楽園(被)",
+      "status": "不在（復旧対象）",
+      "original_file": "common/static_modifiers/NGM_modifier.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/static_modifiers",
+      "name": "origin_ngm_crime_modifier_4",
+      "label": "犯罪の楽園(被)",
+      "status": "不在（復旧対象）",
+      "original_file": "common/static_modifiers/NGM_modifier.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/static_modifiers",
+      "name": "origin_ngm_crime_modifier_5",
+      "label": "犯罪の楽園(被)",
+      "status": "不在（復旧対象）",
+      "original_file": "common/static_modifiers/NGM_modifier.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/static_modifiers",
+      "name": "origin_ngm_crime_modifier_6",
+      "label": "犯罪の楽園(被)",
+      "status": "不在（復旧対象）",
+      "original_file": "common/static_modifiers/NGM_modifier.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/static_modifiers",
+      "name": "origin_ngm_crime_modifier_7",
+      "label": "犯罪の楽園(被)",
+      "status": "不在（復旧対象）",
+      "original_file": "common/static_modifiers/NGM_modifier.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/static_modifiers",
+      "name": "origin_ngm_crime_modifier_8",
+      "label": "犯罪の楽園(被)",
+      "status": "不在（復旧対象）",
+      "original_file": "common/static_modifiers/NGM_modifier.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/static_modifiers",
+      "name": "ngm_government3e",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/static_modifiers/NGM_modifier.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/tradition_categories",
+      "name": "tradition_ngm_financing",
+      "label": "金融",
+      "status": "不在（復旧対象）",
+      "original_file": "common/tradition_categories/NGM_tradition_categories.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/tradition_categories",
+      "name": "tradition_ngm_vitality",
+      "label": "活力",
+      "status": "不在（復旧対象）",
+      "original_file": "common/tradition_categories/NGM_tradition_categories.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/tradition_categories",
+      "name": "tradition_ngm_brawny",
+      "label": "魁偉",
+      "status": "不在（復旧対象）",
+      "original_file": "common/tradition_categories/NGM_tradition_categories.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/tradition_categories",
+      "name": "tradition_ngm_elegance",
+      "label": "賢雅",
+      "status": "不在（復旧対象）",
+      "original_file": "common/tradition_categories/NGM_tradition_categories.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/tradition_categories",
+      "name": "tradition_ngm_gaishi",
+      "label": "蓋世",
+      "status": "不在（復旧対象）",
+      "original_file": "common/tradition_categories/NGM_tradition_categories.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/tradition_categories",
+      "name": "tradition_ngm_misdirection",
+      "label": "赫焉",
+      "status": "不在（復旧対象）",
+      "original_file": "common/tradition_categories/NGM_tradition_categories.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/tradition_categories",
+      "name": "tradition_ngm_gods_majesty",
+      "label": "神威",
+      "status": "不在（復旧対象）",
+      "original_file": "common/tradition_categories/NGM_tradition_categories.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_avantgarde_first",
+      "label": "前衛の伝統",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_avantgarde_finish",
+      "label": "前衛の伝統の完成",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_avantgarde_2",
+      "label": "アバンギャルド",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_chord",
+      "label": "究極の和音",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_student_art",
+      "label": "学生芸術の推奨",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_freedom_art",
+      "label": "芸術の自由",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_asymmetric",
+      "label": "非対称芸術",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_memory_first",
+      "label": "記憶の伝統",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_memory_finish",
+      "label": "記憶の伝統の完成",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_record",
+      "label": "緻密な記録",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_past",
+      "label": "過去の参照",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_memory2",
+      "label": "記憶の追求",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_crime_record",
+      "label": "我々は忘れない。",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_trade_record",
+      "label": "記録法",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_financing_adopt",
+      "label": "金融の伝統",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_financing_finish",
+      "label": "金融の伝統の完成",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_loan_restriction_relaxation",
+      "label": "融資の制限緩和",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_financial_interest",
+      "label": "金融利息",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_benefit_protection",
+      "label": "利益の保護",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_galactic_bank",
+      "label": "銀河の銀行",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_financial_empire",
+      "label": "金融帝国主義",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_vitality_adopt",
+      "label": "活力の伝統",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_vitality_finish",
+      "label": "活力の伝統の完成",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_manifest_destiny",
+      "label": "マニュフェスト・ディスティニー",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_future_orientation",
+      "label": "未来志向",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_patience_of_today",
+      "label": "今日の辛抱",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_comrades",
+      "label": "仲間たち",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_win_it",
+      "label": "勝ち取る！",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_brawny_adopt",
+      "label": "魁偉の伝統",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_brawny_finish",
+      "label": "魁偉の伝統の完成",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_brawny_utc",
+      "label": "超時空電探",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_brawny_spbt",
+      "label": "一点突破戦術",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_brawny_predictive_aversion",
+      "label": "予知的回避",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_brawny_shinkos_reproduction",
+      "label": "神鋼の再生産",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_brawny_reopening_of_the_imperial_shipyard",
+      "label": "帝国造船所の再稼働",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_elegance_adopt",
+      "label": "賢雅の伝統",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_elegance_finish",
+      "label": "賢雅の伝統の完成",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_elegance_bpt",
+      "label": "超越物理理論",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_elegance_ichi",
+      "label": "予知心理学",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_elegance_magitek_engineering",
+      "label": "マギテック工学",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_elegance_the_way_of_the_new_light",
+      "label": "新光の道",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_elegance_overture_to_tomorrow",
+      "label": "明日への序曲",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_gaishi_adopt",
+      "label": "蓋世の伝統",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_gaishi_finish",
+      "label": "蓋世の伝統の完成",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_gaishi_true_power_projection",
+      "label": "真の戦力投射",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_gaishi_the_true_value_of_economic_power",
+      "label": "経済力の真価",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_gaishi_guidance_for_the_wise",
+      "label": "知恵者の指導",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_gaishi_galactic_power",
+      "label": "銀河の力",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_gaishi_insist_on_ones_own_ideas",
+      "label": "声高なる主張",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_misdirection_adopt",
+      "label": "赫焉の伝統",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_misdirection_finish",
+      "label": "赫焉の伝統の完成",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_misdirection_idea_commonly_accepted",
+      "label": "大衆の了簡",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_misdirection_dignity_and_moderation",
+      "label": "品格と節制",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_misdirection_blessing_of_the_stars",
+      "label": "星々の祝福",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_misdirection_blessing_of_life",
+      "label": "生命の祝福",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_misdirection_blessings_of_creation",
+      "label": "創造の祝福",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_gods_majesty_adopt",
+      "label": "神威の伝統",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_gods_majesty_finish",
+      "label": "神威の伝統の完成",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_gods_majesty_preface",
+      "label": "序章",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_gods_majesty_beginning",
+      "label": "起",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_gods_majesty_second",
+      "label": "承",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_gods_majesty_abruptly",
+      "label": "転",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traditions",
+      "name": "tr_ngm_gods_majesty_a_new_chapter",
+      "label": "新たなる序章",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traditions/NGM_traditions.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_economist",
+      "label": "経済学者",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_intel",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_intel_2",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_intel_3",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_foreign",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_imperial",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_math",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_math_2",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_math_3",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_wise",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_balance",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_park",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_park",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_nature",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_park",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_park",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_park",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_mafia",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_profit",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_strong",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_lord",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_knight",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_king",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_ceo",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_rich",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_milli",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_revo",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_party",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_player",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_commu",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_sport",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_fina",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_desk",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_low",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_religion",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_political_decorations_governor",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_political_decorations_scientist",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_political_decorations_admiral",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_political_decorations_general",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "common/traits",
+      "name": "leader_trait_ngm_political_decorations",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "common/traits/NGM_leader_trait.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "factions.1",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "factions.10",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "factions.11",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "factions.12",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "factions.13",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "factions.15",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "factions.1005",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "factions.2000",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "factions.3000",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "factions.3005",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "factions.3010",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "manifesti.1",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "manifesti.5",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "manifesti.10",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "manifesti.15",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "manifesti.20",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "manifesti.25",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "manifesti.26",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "manifesti.30",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/faction_events.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_fleet_trade.1",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_fleet_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_fleet_trade.2",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_fleet_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_fleet_trade.3",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_fleet_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_fleet_trade.4",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_fleet_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_fleet_trade.5",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_fleet_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_ai_tech_trade.1",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_ai_event_0.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_ai_tech_trade.2",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_ai_event_0.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_ai_tech_trade.5",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_ai_event_0.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_ai_tech_trade.6",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_ai_event_0.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_ai_tech_trade.7",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_ai_event_0.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.1",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.2",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.10",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.11",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.12",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.13",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.14",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.15",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.16",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.17",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.18",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.19",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.20",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.21",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.22",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.23",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.24",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.1001",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.1002",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "gft_tech_trade.1003",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/GFT_tech_trade_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.1",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.2",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.4",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.5",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.7",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.8",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.9",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.10",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.14",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.15",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.16",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.165",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.17",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.18",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.19",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.20",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.21",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.22",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.23",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.24",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.26",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.27",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.28",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_civic.29",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_civic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_diplomatic.1",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_diplomatic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_diplomatic.2",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_diplomatic_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_federation.1",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_campaign.1",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "syndaw.11",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.90",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.91",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.92",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.93",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.100",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.101",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.102",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.103",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.104",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.105",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.106",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.107",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.108",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.109",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.110",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.111",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.112",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.113",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.114",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.115",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.116",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.117",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.118",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.119",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.120",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.121",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.122",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.123",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.124",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.125",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.126",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.127",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.150",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.151",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.152",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.153",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.154",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.155",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.156",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.157",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.158",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.159",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.160",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.161",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.162",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.163",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.164",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.165",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.166",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.167",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.200",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.201",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.202",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.203",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.204",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.205",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.206",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.207",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.208",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.209",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.210",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.211",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.212",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.213",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.220",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.221",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.222",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.223",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.224",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.225",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.226",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.227",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.228",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.229",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.230",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.231",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.232",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.233",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.300",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.301",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.302",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.303",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.304",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.305",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.306",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.310",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_government.311",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_government_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.1",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.2",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.3",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.4",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.5",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.6",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.7",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.8",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.9",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.10",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.11",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.12",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.13",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.14",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.100",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.101",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.102",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.103",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.104",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.2000",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.2001",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.2002",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.2003",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.2004",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.2005",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.3001",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.3002",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    },
+    {
+      "category": "events",
+      "name": "ngm_origin.3003",
+      "label": "",
+      "status": "不在（復旧対象）",
+      "original_file": "events/NGM_origin_event.txt",
+      "friend_file": "",
+      "vanilla_same_name": "False"
+    }
+  ],
+  "runtime_tested": false
+}

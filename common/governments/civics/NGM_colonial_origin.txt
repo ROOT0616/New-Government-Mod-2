@@ -1,0 +1,26 @@
+origin_ngm_colony = {
+	is_origin = yes
+	icon = gfx/interface/icons/origins/origins_default.dds
+	picture = GFX_evt_metropolis
+	preferred_planet_class_neighbor = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	possible = {
+		civics = {
+			value = civic_ngm_manifest_destiny
+		}
+	}
+	modifier = {
+		planet_colony_development_speed_mult = 0.3
+		empire_size_pops_mult = -0.15
+	}
+	description = origin_tooltip_ngm_colony
+	random_weight = {
+		base = 0
+	}
+}

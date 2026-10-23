@@ -1,287 +1,233 @@
-# 航空騎兵師団	(敵陸軍を頭上から制圧し、速度で勝負する部隊)
-# 			コスト：合金:100	建造期間:150日	維持費:エネルギー10
-#				ダメージ : 耐久 , 士気 , 副次的損害  3 , 6 , 200% 
-#				耐久 , 士気  150 , 200
-ngm_air_cavalry_division_army = {
-	# ダメージ 1*3 = 3
-	damage = 1
-	#  耐久 0.75*200 = 150
-	health = 0.75
-	#  士気 1*200 = 200
-	morale = 1
-	#  士気ダメージ 2*3 = 6
-	morale_damage = 2
-	# 副次的損害
-	collateral_damage = 1
-	# 戦争疲弊度
-	war_exhaustion = 1 
-	time = 150
-	icon = GFX_army_type_assault
-	# 前提技術
-	prerequisites = { "tech_assault_armies" }
-	resources = {
-		category = armies
-		# コスト
-		cost = {
-			alloys = 100
-		}
-		# 維持費
-		upkeep = {
-			energy = 10
-		}
-	}
-}
-
-# 砲兵軍団	(ミサイルや砲弾で敵を攻撃し、惑星表面を耕す部隊)
-# 			コスト：合金:100	建造期間:150日	維持費:合金1
-#				ダメージ : 耐久 , 士気 , 副次的損害  6 , 6 , 300% 
-#				耐久 , 士気  200 , 200
-ngm_artillery_division_army = {
-	# ダメージ 2*3 = 3
-	damage = 2
-	#  耐久 1*200 = 200
-	health = 1
-	#  士気 1*200 = 200
-	morale = 1
-	#  士気ダメージ 2*3 = 6
-	morale_damage = 2
-	# 副次的損害
-	collateral_damage = 1.5
-	# 戦争疲弊度
-	war_exhaustion = 1 
-	time = 150
-	icon = GFX_army_type_assault
-	# 前提技術
-	prerequisites = { "tech_assault_armies" }
-	resources = {
-		category = armies
-		# コスト
-		cost = {
-		alloys = 100
-		}
-		# 維持費
-		upkeep = {
-			alloys = 1
-		}
-	}
-}
-
-# 機甲部隊	(高耐久力かつ近接高火力で敵に浸透する部隊)
-# 			コスト：合金:200	建造期間:200日	維持費:合金2
-#				ダメージ : 耐久 , 士気 , 副次的損害  9 , 6 , 50% 
-#				耐久 , 士気  300 , 200
-ngm_armor_division_army = {
-	# ダメージ 3*3 = 9
-	damage = 3
-	#  耐久 1.5*200 = 300
-	health = 1.5
-	#  士気 1*200 = 200
-	morale = 1
-	#  士気ダメージ 2*3 = 6
-	morale_damage = 2
-	# 副次的損害
-	collateral_damage = 0.5
-	# 戦争疲弊度
-	war_exhaustion = 1 
-	time = 150
-	icon = GFX_army_type_assault
-	# 前提技術
-	prerequisites = { "tech_assault_armies" }
-	resources = {
-		category = armies
-		# コスト
-		cost = {
-			alloys = 200
-		}
-		# 維持費
-		upkeep = {
-			alloys = 2
-		}
-	}
-}
-
-# 特殊作戦群	(敵に対して高い浸透力を発揮し、高い練度で敵を圧倒する部隊)
-# 			コスト：合金:400	建造期間:450日	維持費:	合金5
-#				ダメージ : 耐久 , 士気 , 副次的損害  6 , 9 , 20% 
-#				耐久 , 士気  300 , 500
-ngm_special_forces_army = {
-	# ダメージ 2*3 = 3
-	damage = 2
-	#  耐久 1.5*200 = 300
-	health = 1.5
-	#  士気 2.5*200 = 500
-	morale = 2.5
-	#  士気ダメージ 3*3 = 9
-	morale_damage = 3
-	# 副次的損害
-	collateral_damage = 0.2
-	# 戦争疲弊度
-	war_exhaustion = 1 
-	time = 150
-	icon = GFX_army_type_assault
-	# 前提技術
-	prerequisites = { "tech_assault_armies" }
-	resources = {
-		category = armies
-		# コスト
-		cost = {
-			alloys = 400
-		}
-		# 維持費
-		upkeep = {
-			alloys = 5
-		}
-	}
-	potential = {
-		from = {
-			NOR = {
-				has_trait = "trait_mechanical"
-				has_trait = "trait_machine_unit"
-				is_sapient = no
-			}
-		}
-		owner = {
-			OR = {
-				NOT = {
-					has_authority = auth_machine_intelligence
-				}
-				has_valid_civic = civic_machine_assimilator
-			}
-		}
-	}
-}
-
-# 戦闘機械	(ﾀﾀｶｳﾀﾒﾉｷｶｲ ﾀﾀｶｳ?)
-# 			コスト：鉱物:300	建造期間:90日	維持費:	エネルギー5
-#				ダメージ : 耐久 , 士気 , 副次的損害  6 , 6 , 300% 
-#				耐久 , 士気  400 , 
 ngm_combat_machine_army = {
-	# ダメージ 2*3 = 6
 	damage = 2
-	#  耐久 2*200 = 400
 	health = 2
-	#  士気 2.5*200 = 500
 	has_morale = no
-	#  士気ダメージ 2*3 = 6
 	morale_damage = 2
-	# 副次的損害
 	collateral_damage = 3
-	# 戦争疲弊度
-	war_exhaustion = 1 
+	war_exhaustion = 1
 	time = 90
 	has_species = no
 	icon = GFX_army_type_machine_assault
 	resources = {
 		category = armies
-		# コスト
 		cost = {
 			minerals = 300
 		}
-		# 維持費
 		upkeep = {
 			energy = 5
 		}
 	}
-	# ここから下はいじらなくていいよ
 	potential = {
 		owner = {
 			has_tradition = tr_ngm_war_machine
 		}
 	}
 }
-
-# 2.巨人軍	(デカい！)
-# 			コスト：鉱物:300	建造期間:90日	維持費:	エネルギー2
-#				ダメージ : 耐久 , 士気 , 副次的損害  7.5 , 9 , 200% 
-#				耐久 , 士気  800 , 500
 ngm_giants_army = {
-	# ダメージ 2.5*3 = 7.5
 	damage = 2
-	#  耐久 4*200 = 800
 	health = 4
-	#  士気 2.5*200 = 500
 	morale = 2.5
-	#  士気ダメージ 3*3 = 9
 	morale_damage = 3
-	# 副次的損害
 	collateral_damage = 2
-	# 戦争疲弊度
-	war_exhaustion = 1 
+	war_exhaustion = 1
 	time = 150
 	has_species = no
 	icon = GFX_army_type_xenomorph
-	# 前提技術
-	prerequisites = { "tech_assault_armies" }
+	prerequisites = {
+		tech_assault_armies
+	}
 	resources = {
 		category = armies
-		# コスト
 		cost = {
 			minerals = 300
 		}
-		# 維持費
 		upkeep = {
 			energy = 2
 		}
 	}
-	# ここから下はいじらなくていいよ
 	potential = {
 		owner = {
 			has_tradition = tr_ngm_giants
 		}
 	}
 }
-
-#海軍艦隊、耐久度ダメージ6、士気ダメージ5、耐久度350、士気300
-# ngm_naval_fleet = {
-# 	defensive = yes
-# 	is_pop_spawned = yes
-# 	damage = 2.4
-# 	health = 1.75
-# 	morale = 1.5
-# 	morale_damage = 1.7
-# 	collateral_damage = 0.0
-# 	war_exhaustion = 0.0 
-# 	#icon = GFX_army_type_defensive
-# 	potential = {
-# 		planet ={
-# 			has_district = ngm_district_arcology_marine_villa
-# 		}
-# 	}
-# }
-
-# ※1	耐久ダメージ	士気ダメージ	耐久度	士気	説明
-# 帝国近衛軍	imperial_guard 20	75	1500	1200	帝国を守ることを誓ったエリート軍団
-ngm_imperial_guard = {
-	defensive = yes
-	is_pop_spawned = yes
-	damage = 50
-	health = 7.5
-	morale = 1.5
-	morale_damage = 25.5
-	collateral_damage = 0.0
-	war_exhaustion = 0.0 
-	#icon = GFX_army_type_defensive
-	potential = {
-		planet ={
-			has_building = building_ngm_Phe_HQ
+ngm_air_cavalry_division_army = {
+	damage = 1
+	health = 0.75
+	morale = 1
+	morale_damage = 2
+	collateral_damage = 1
+	war_exhaustion = 1
+	time = 150
+	icon = GFX_army_type_assault
+	prerequisites = {
+		tech_assault_armies
+	}
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+		}
+		upkeep = {
+			energy = 10
 		}
 	}
-}
-
-# 帝国地方軍 imperiallocal_army	10	50	1000	800	帝国を守ることを誓った軍人
-ngm_imperiallocal_army = {
-	defensive = yes
-	is_pop_spawned = yes
-	damage = 25
-	health = 5
-	morale = 1.5
-	morale_damage = 17
-	collateral_damage = 0.0
-	war_exhaustion = 0.0 
-	#icon = GFX_army_type_defensive
-	potential = {
-		planet ={
-			has_building = building_ngm_Phe_Fort
+	potential_country = {
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+			has_origin = origin_shroud_forged
 		}
+		is_wilderness_empire = no
+	}
+	potential = {
+		from = {
+			OR = {
+				has_trait = trait_shroud_forged
+				NOR = {
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+					is_sapient = no
+				}
+			}
+		}
+	}
+	ai_weight = {
+		base = 100
+	}
+}
+ngm_artillery_division_army = {
+	damage = 2
+	health = 1
+	morale = 1
+	morale_damage = 2
+	collateral_damage = 1.5
+	war_exhaustion = 1
+	time = 150
+	icon = GFX_army_type_assault
+	prerequisites = {
+		tech_assault_armies
+	}
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+		}
+		upkeep = {
+			alloys = 1
+		}
+	}
+	potential_country = {
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+			has_origin = origin_shroud_forged
+		}
+		is_wilderness_empire = no
+	}
+	potential = {
+		from = {
+			OR = {
+				has_trait = trait_shroud_forged
+				NOR = {
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+					is_sapient = no
+				}
+			}
+		}
+	}
+	ai_weight = {
+		base = 100
+	}
+}
+ngm_armor_division_army = {
+	damage = 3
+	health = 1.5
+	morale = 1
+	morale_damage = 2
+	collateral_damage = 0.5
+	war_exhaustion = 1
+	time = 150
+	icon = GFX_army_type_assault
+	prerequisites = {
+		tech_assault_armies
+	}
+	resources = {
+		category = armies
+		cost = {
+			alloys = 200
+		}
+		upkeep = {
+			alloys = 2
+		}
+	}
+	potential_country = {
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+			has_origin = origin_shroud_forged
+		}
+		is_wilderness_empire = no
+	}
+	potential = {
+		from = {
+			OR = {
+				has_trait = trait_shroud_forged
+				NOR = {
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+					is_sapient = no
+				}
+			}
+		}
+	}
+	ai_weight = {
+		base = 100
+	}
+}
+ngm_special_forces_army = {
+	damage = 2
+	health = 1.5
+	morale = 2.5
+	morale_damage = 3
+	collateral_damage = 0.2
+	war_exhaustion = 1
+	time = 150
+	icon = GFX_army_type_assault
+	prerequisites = {
+		tech_assault_armies
+	}
+	resources = {
+		category = armies
+		cost = {
+			alloys = 400
+		}
+		upkeep = {
+			alloys = 5
+		}
+	}
+	potential_country = {
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_assimilator
+			has_origin = origin_shroud_forged
+		}
+		is_wilderness_empire = no
+	}
+	potential = {
+		from = {
+			OR = {
+				has_trait = trait_shroud_forged
+				NOR = {
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+					is_sapient = no
+				}
+			}
+		}
+	}
+	ai_weight = {
+		base = 100
 	}
 }

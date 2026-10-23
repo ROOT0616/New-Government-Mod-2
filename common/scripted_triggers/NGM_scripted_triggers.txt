@@ -63,6 +63,7 @@ is_utilitarianism = {
 }
 
 # 派閥発生判定
+# 4.5.2 Vanilla baseline; extend the early faction condition for NGM.
 is_faction_allowed = {
 	OR = {
 		AND = {
@@ -71,17 +72,27 @@ is_faction_allowed = {
 		}
 		AND = {
 			days_passed > 30
-			has_valid_civic = civic_parliamentary_system
-		}
-		AND = {
-			days_passed > 30
-			has_valid_civic = civic_substantive_constitutionalism
+			OR = {
+				has_valid_civic = civic_parliamentary_system
+				has_valid_civic = civic_substantive_constitutionalism
+				has_valid_civic = civic_media_conglomerate
+				has_valid_civic = civic_crowdsourcing
+				has_valid_civic = civic_corporate_crowdsourcing
+			}
 		}
 		AND = {
 			days_passed > 350
-			has_origin = origin_broken_shackles
+			OR = {
+				has_origin = origin_broken_shackles
+				AND = {
+					has_origin = origin_unplugged
+					has_country_flag = unplugged_faction_allowed
+				}
+			}
 		}
 	}
-	NOT = { has_ethic = ethic_gestalt_consciousness }
-	NOT = { has_country_flag = suppress_vanilla_factions }
+	NOR = {
+		has_ethic = ethic_gestalt_consciousness
+		has_country_flag = suppress_vanilla_factions
+	}
 }

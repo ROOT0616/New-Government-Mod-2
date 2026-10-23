@@ -1,0 +1,77 @@
+actions = {
+	 # First suppressed faction of this ethic also suppresses the empire-wide ethic attraction
+	suppress_faction = {
+		title = "SUPPRESS_FACTION"
+		description = "SUPPRESS_FACTION_DESC"
+
+		potential = {
+			NOR = {
+				has_modifier = suppressed_faction
+				has_pop_faction_flag = promoted_faction
+			}
+			owner = { NOT = { has_modifier = suppressed_$ETHIC$ } }
+		}
+
+		effect = {
+			add_modifier = { modifier = suppressed_faction days = -1 }
+			owner = {
+				add_modifier = { modifier = suppressed_$ETHIC$ days = -1 }
+			}
+		}
+
+		ai_weight = {
+			base = 0
+		}
+	}
+	 # Another faction of this ethic is already suppressed
+	suppress_faction_shared = {
+		title = "SUPPRESS_FACTION"
+		description = "SUPPRESS_FACTION_SHARED_DESC"
+
+		potential = {
+			NOR = {
+				has_modifier = suppressed_faction
+				has_pop_faction_flag = promoted_faction
+			}
+			owner = { has_modifier = suppressed_$ETHIC$ }
+		}
+
+		effect = {
+			add_modifier = { modifier = suppressed_faction days = -1 }
+		}
+
+		ai_weight = {
+			base = 0
+		}
+	}
+
+	cancel_suppress_faction = {
+		title = "CANCEL_SUPPRESS_FACTION"
+		description = "CANCEL_SUPPRESS_FACTION_DESC"
+
+		potential = {
+			has_modifier = suppressed_faction
+		}
+
+		effect = {
+			remove_modifier = suppressed_faction
+			owner = {
+				if = {
+					limit = { # Only remove the modifier if no other faction with the same ethic is suppressed
+						NOT = {
+							any_pop_faction = {
+								is_pop_faction_type = $FACTION$
+								has_modifier = suppressed_faction
+							}
+						}
+					}
+					remove_modifier = suppressed_$ETHIC$
+				}
+			}
+		}
+
+		ai_weight = {
+			base = 0
+		}
+	}
+}

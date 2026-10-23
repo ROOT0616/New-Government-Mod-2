@@ -1,0 +1,192 @@
+{
+  "design_version": 2,
+  "stage": "design-not-implemented",
+  "target": "4.5.2 (9776)",
+  "runtime_version_unchanged": "1.39.0-dev.21",
+  "ethic_points": 6,
+  "axes": [
+    {
+      "index": 0,
+      "values": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "ethic_ids": [
+        "ethic_fanatic_authoritarian",
+        "ethic_authoritarian",
+        null,
+        "ethic_egalitarian",
+        "ethic_fanatic_egalitarian"
+      ]
+    },
+    {
+      "index": 1,
+      "values": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "ethic_ids": [
+        "ethic_fanatic_militarist",
+        "ethic_militarist",
+        null,
+        "ethic_pacifist",
+        "ethic_fanatic_pacifist"
+      ]
+    },
+    {
+      "index": 2,
+      "values": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "ethic_ids": [
+        "ethic_fanatic_xenophobe",
+        "ethic_xenophobe",
+        null,
+        "ethic_xenophile",
+        "ethic_fanatic_xenophile"
+      ]
+    },
+    {
+      "index": 3,
+      "values": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "ethic_ids": [
+        "ethic_fanatic_spiritualist",
+        "ethic_spiritualist",
+        null,
+        "ethic_materialist",
+        "ethic_fanatic_materialist"
+      ]
+    },
+    {
+      "index": 4,
+      "values": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "ethic_ids": [
+        "ethic_fanatic_socialism",
+        "ethic_socialism",
+        null,
+        "ethic_capitalism",
+        "ethic_fanatic_capitalism"
+      ]
+    },
+    {
+      "index": 5,
+      "values": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "ethic_ids": [
+        "ethic_fanatic_interventionism",
+        "ethic_interventionism",
+        null,
+        "ethic_neutralism",
+        "ethic_fanatic_neutralism"
+      ]
+    },
+    {
+      "index": 6,
+      "values": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "ethic_ids": [
+        "ethic_fanatic_conservationism",
+        "ethic_conservationism",
+        null,
+        "ethic_developmentalism",
+        "ethic_fanatic_developmentalism"
+      ]
+    },
+    {
+      "index": 7,
+      "values": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "ethic_ids": [
+        "ethic_fanatic_honorism",
+        "ethic_honorism",
+        null,
+        "ethic_utilitarianism",
+        "ethic_fanatic_utilitarianism"
+      ]
+    }
+  ],
+  "authority_editable": false,
+  "gestalt_conversion": false,
+  "pop_ethic_conversion": false,
+  "civic_budget": "recompute from the proposed final configuration; unsupported contributions block commit",
+  "rights": {
+    "grant": "avantgarde finisher once",
+    "consume": "successful nonempty commit only"
+  },
+  "states": [
+    "available",
+    "editing",
+    "review",
+    "applying",
+    "consumed",
+    "apply_failed"
+  ],
+  "unknown_civics": "keep locked; block ethic edits until compatibility is registered",
+  "gui": {
+    "host": "custom event GUI",
+    "buttons": "button_effects with explicit owner/scope guards",
+    "candidate_list": "native event options first",
+    "live_refresh": "requires in-game proof",
+    "prototype_is_game_ui": false
+  },
+  "minimum_probe": [
+    "open custom window",
+    "button scope with selected foreign object",
+    "one ethic axis",
+    "two draft civics",
+    "refresh without stacked windows",
+    "pause/resume",
+    "save/load",
+    "two players",
+    "resolution and UI scale"
+  ],
+  "safety_contract": {
+    "gestalt_commit_executes_no_ethic_effect": true,
+    "base_and_advanced_authority_locked": true,
+    "uncertified_advanced_authority": "block entry",
+    "unknown_requirement": "block",
+    "stale_snapshot": "block commit",
+    "review_bound_to_draft_revision": true,
+    "apply_failed": "no automatic retry or refund/regrant",
+    "requirements_inventory": "authority-rules.json",
+    "contract_validation": "safety-validation.json",
+    "release_requires_in_game_tests": true
+  }
+}

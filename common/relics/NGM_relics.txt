@@ -1,15 +1,11 @@
 @activation_cost = 150
 @triumph_duration = 3600
-# 遺物「古代の盟約」Ancient Pact（古代の列強間の協定で、緊急時に強力な自衛力を求められたうえで、平時には他国の脅威にならない経済国家であることを求められる条文。所有国は永久にこれを守らなくてはならない。）
-# パッシブ効果	：請求権作成の影響力コスト+9999%、開拓前哨地建造コスト+9999%、外交発言力+100%。統合力+30%、交易価値+100%、
-# アクティブ効果	：船体値+100%、宇宙軍許容量+500%、造船速度+500%(10年間。起動コスト影響力200)
 r_ngm_ancient_pact = {
 	activation_duration = @triumph_duration
-	portrait = "GFX_relic_omnicodex"
-	sound = "relic_activation_the_omnicodex"
+	portrait = GFX_relic_omnicodex
+	sound = relic_activation_the_omnicodex
 	resources = {
 		category = relics
-		# Activation cost
 		cost = {
 			influence = 200
 		}
@@ -17,7 +13,6 @@ r_ngm_ancient_pact = {
 	ai_weight = {
 		weight = 100
 	}
-	# パッシブ効果	：請求権作成の影響力コスト+9999%、開拓前哨地建造コスト+9999%、外交発言力+100%。統合力+30%、交易価値+100%、
 	triggered_country_modifier = {
 		potential = {
 			always = yes
@@ -25,7 +20,7 @@ r_ngm_ancient_pact = {
 		starbase_outpost_alloys_cost_mult = 9999.99
 		country_claim_influence_cost_mult = 20
 		country_unity_produces_mult = 0.3
-		trade_value_mult = 1
+		planet_jobs_trade_produces_mult = 1
 	}
 	triggered_country_modifier = {
 		potential = {
@@ -40,42 +35,34 @@ r_ngm_ancient_pact = {
 		diplo_weight_mult = 1
 	}
 	score = 10
-	# アクティブ効果	：船体値+100%、宇宙軍許容量+500%、造船速度+500%(10年間。起動コスト影響力200)
 	active_effect = {
 		add_modifier = {
-			modifier = "ngm_ancient_pact"
+			modifier = ngm_ancient_pact
 			days = @triumph_duration
 		}
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
 			add_modifier = {
-				modifier = "relic_activation_cooldown"
+				modifier = relic_activation_cooldown
 				days = @triumph_duration
 			}
 		}
 	}
-	# Possible check for activation
 	possible = {
 		custom_tooltip = {
-			fail_text = "requires_relic_no_cooldown"
+			fail_text = requires_relic_no_cooldown
 			NOT = {
 				has_modifier = relic_activation_cooldown
 			}
 		}
 	}
 }
-
-# 銀河皇帝勅許第7216号「帝立遊園領邦の認可」
-# パッシブ効果	：POPの成長速度+100%、統合力+50%、交易価値+100%、星系基地建設のコスト+999999999%、請求権作成の影響力+1000%
-# アクティブ効果	：建造物建造コスト-30%、区域建造コスト-30%、巨大構造物建造コスト-10%、市場手数料-5%
-# ★（全銀河の統治者にして天界を統べる法秩序の体現者。神聖にして不可侵である銀河帝国第27代皇帝である余、ポチャヌルス8世は銀河帝国全体の福祉のために帝立遊園の設立を許す。帝立遊園の長には王と同格の公爵位を授け、余の宮廷において式部官長の地位を授ける。なお、領邦としての帝立遊園はその自律的権利を制約される。制約内容は......）
 r_ngm_geid = {
 	activation_duration = @triumph_duration
-	portrait = "GFX_relic_omnicodex"
-	sound = "relic_activation_the_omnicodex"
+	portrait = GFX_relic_omnicodex
+	sound = relic_activation_the_omnicodex
 	resources = {
 		category = relics
-		# Activation cost
 		cost = {
 			influence = 200
 		}
@@ -83,7 +70,6 @@ r_ngm_geid = {
 	ai_weight = {
 		weight = 100
 	}
-	# パッシブ効果	POPの成長速度+100%、統合力+50%、交易価値+100%、星系基地建設のコスト+999999999%、請求権作成の影響力+1000%
 	triggered_country_modifier = {
 		potential = {
 			always = yes
@@ -91,47 +77,38 @@ r_ngm_geid = {
 		starbase_outpost_alloys_cost_mult = 9999.99
 		country_claim_influence_cost_mult = 10
 		country_unity_produces_mult = 0.5
-		trade_value_mult = 1
-		pop_growth_speed = 1
+		planet_jobs_trade_produces_mult = 1
+		logistic_growth_mult = 1
 	}
 	score = 10
-	# アクティブ効果	：帝国補正：POPの成長速度+100%、統合力+50% みかん
 	active_effect = {
 		add_modifier = {
-			modifier = "ngm_r_galactic_empire_aquarium"
+			modifier = ngm_r_galactic_empire_aquarium
 			days = @triumph_duration
 		}
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
 			add_modifier = {
-				modifier = "relic_activation_cooldown"
+				modifier = relic_activation_cooldown
 				days = @triumph_duration
 			}
 		}
 	}
-	# Possible check for activation
 	possible = {
 		custom_tooltip = {
-			fail_text = "requires_relic_no_cooldown"
+			fail_text = requires_relic_no_cooldown
 			NOT = {
 				has_modifier = relic_activation_cooldown
 			}
 		}
 	}
 }
-
-# インペリアル・クロニクル この帝国の物語は実話であり、主人公は我々であったのだ
-# パッシブ効果	： 派閥満足度+20% 布告:民間船徴発を可能にする
-# アクティブ効果	：統合力+500K 派閥統合力ボーナス+50%
-# (アクティブコスト:影響力300)
-# (クールダウン期間:7200)
 r_ngm_imperial_chronicle = {
 	activation_duration = @triumph_duration
-	portrait = "GFX_relic_omnicodex"
-	sound = "relic_activation_the_omnicodex"
+	portrait = GFX_relic_omnicodex
+	sound = relic_activation_the_omnicodex
 	resources = {
 		category = relics
-		# Activation cost
 		cost = {
 			influence = 300
 		}
@@ -139,7 +116,6 @@ r_ngm_imperial_chronicle = {
 	ai_weight = {
 		weight = 100
 	}
-	# パッシブ効果	毎月の忠誠心+10 派閥満足度+20%
 	triggered_country_modifier = {
 		potential = {
 			always = yes
@@ -147,46 +123,37 @@ r_ngm_imperial_chronicle = {
 		faction_approval = 0.2
 	}
 	score = 10
-	# アクティブ効果	：帝国補正：統合力+500K 派閥統合力ボーナス+50%
 	active_effect = {
 		add_resource = {
 			unity = 500000
 		}
 		add_modifier = {
-			modifier = "ngm_r_imperial_chronicle_modifier"
+			modifier = ngm_r_imperial_chronicle_modifier
 			days = 3600
 		}
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
 			add_modifier = {
-				modifier = "relic_activation_cooldown"
+				modifier = relic_activation_cooldown
 				days = 7200
 			}
 		}
 	}
-	# Possible check for activation
 	possible = {
 		custom_tooltip = {
-			fail_text = "requires_relic_no_cooldown"
+			fail_text = requires_relic_no_cooldown
 			NOT = {
 				has_modifier = relic_activation_cooldown
 			}
 		}
 	}
 }
-
-# 偉大なる恩顧 偉大なる帝国の臣下であることは大いなる喜びなのだ
-# パッシブ効果	：鉱物、食料、エネルギー生産+25% 粉末、クリスタル、ガス生産+25% 外交発言力-50% 毎月の忠誠心+10
-# アクティブ効果	：勲章+10 統合力+5K
-# (アクティブコスト:影響力300)
-# (クールダウン期間:7200)
 r_ngm_great_patronage = {
 	activation_duration = @triumph_duration
-	portrait = "GFX_relic_omnicodex"
-	sound = "relic_activation_the_omnicodex"
+	portrait = GFX_relic_omnicodex
+	sound = relic_activation_the_omnicodex
 	resources = {
 		category = relics
-		# Activation cost
 		cost = {
 			influence = 300
 		}
@@ -194,7 +161,6 @@ r_ngm_great_patronage = {
 	ai_weight = {
 		weight = 100
 	}
-	# パッシブ効果	：鉱物、食料、エネルギー生産+25% 粉末、クリスタル、ガス生産+25% 外交発言力-50% 毎月の忠誠心+10
 	triggered_country_modifier = {
 		potential = {
 			always = yes
@@ -209,7 +175,6 @@ r_ngm_great_patronage = {
 		monthly_loyalty = 10
 	}
 	score = 10
-	# アクティブ効果	：勲章+10 統合力+5K
 	active_effect = {
 		add_resource = {
 			unity = 5000
@@ -217,34 +182,26 @@ r_ngm_great_patronage = {
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
 			add_modifier = {
-				modifier = "relic_activation_cooldown"
+				modifier = relic_activation_cooldown
 				days = 7200
 			}
 		}
 	}
-	# Possible check for activation
 	possible = {
 		custom_tooltip = {
-			fail_text = "requires_relic_no_cooldown"
+			fail_text = requires_relic_no_cooldown
 			NOT = {
 				has_modifier = relic_activation_cooldown
 			}
 		}
 	}
 }
-
-# 革命の遺産 この革命の遺産は、常に革新主義へと社会を導き続けるのだ
-# パッシブ効果	：社会主義派閥志向魅力+50% 平等主義派閥志向魅力+50% 開発主義派閥志向魅力+50% 保全主義派閥志向魅力+50% 派閥からの収入+25%
-# アクティブ効果	：派閥幸福度+20% 影響力+1
-# (アクティブコスト:影響力300)
-# (クールダウン期間:7200)
 r_ngm_legacy_of_revolution = {
 	activation_duration = @triumph_duration
-	portrait = "GFX_relic_omnicodex"
-	sound = "relic_activation_the_omnicodex"
+	portrait = GFX_relic_omnicodex
+	sound = relic_activation_the_omnicodex
 	resources = {
 		category = relics
-		# Activation cost
 		cost = {
 			influence = 300
 		}
@@ -252,7 +209,6 @@ r_ngm_legacy_of_revolution = {
 	ai_weight = {
 		weight = 100
 	}
-	# パッシブ効果	：社会主義派閥志向魅力+50% 平等主義派閥志向魅力+50% 開発主義派閥志向魅力+50% 保全主義派閥志向魅力+50% 派閥からの収入+25%
 	triggered_country_modifier = {
 		potential = {
 			always = yes
@@ -264,31 +220,28 @@ r_ngm_legacy_of_revolution = {
 		pop_factions_unity_produces_mult = 0.25
 	}
 	score = 10
-	# アクティブ効果	：派閥幸福度+20% 影響力+1
 	active_effect = {
 		add_resource = {
 			influence = 1
 		}
 		add_modifier = {
-			modifier = "r_ngm_legacy_of_revolution_modifier"
+			modifier = r_ngm_legacy_of_revolution_modifier
 			days = 3600
 		}
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
 			add_modifier = {
-				modifier = "relic_activation_cooldown"
+				modifier = relic_activation_cooldown
 				days = 7200
 			}
 		}
 	}
-	# Possible check for activation
 	possible = {
 		custom_tooltip = {
-			fail_text = "requires_relic_no_cooldown"
+			fail_text = requires_relic_no_cooldown
 			NOT = {
 				has_modifier = relic_activation_cooldown
 			}
 		}
 	}
 }
-

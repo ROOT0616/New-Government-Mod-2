@@ -410,8 +410,8 @@
  civic_ngm_ship_protection_protocol:0 "船舶保護プロトコル"
  civic_ngm_ship_protection_protocol_desc:0 "船舶の緊急回避システムの搭載がこの国では義務付けられている。"
 
- civic_ngm_space_security_headquarters:0 "宙間警備本部"
- civic_ngm_space_security_headquarters_desc:0 "海賊対処のための専門警察機関がこの国では設立されている。"
+ civic_ngm_space_security_headquarters2:0 "宙間警備本部"
+ civic_ngm_space_security_headquarters2_desc:0 "海賊対処のための専門警察機関がこの国では設立されている。"
 
  civic_ngm_random_birth_rate:0 "乱脈的出生率"
  civic_ngm_random_birth_rate_desc:0 "この国では出生率がコントロールできていない。"
@@ -603,7 +603,7 @@
  civic_ngm_defender_of_the_faith:0 "信仰の擁護者"
  civic_ngm_defender_of_the_faith_desc:0 "この国の指導者は国家として神を守ることを誓約しており、そのためにはあらゆる犠牲を惜しまない。"
 
- civic_ngm_divination:0 "亀ト（きぼく）"
+ civic_ngm_divination:0 "亀ト"
  civic_ngm_divination_desc:0 "この国では占いにより政治が行われており、奇跡的に現在まで生き残ってきた原始的な体制である。"
 
  civic_ngm_cultural_consumption:0 "文化の大量消費"
@@ -824,6 +824,51 @@
 
  civic_ngm_p_councilor:0 "連邦参事会"
  civic_ngm_p_councilor_desc:0 "この国はすべての政党が内閣に参加し、合議体制の閣議が実質的な国家元首として機能している"
+
+ civic_ngm_c_god_rule:0 "建神論"
+ civic_ngm_c_god_rule_desc:0 "神は自然に存在するものではない。我々で創造するものだ。"
+
+ civic_ngm_n_face_rule:0 "生命の顔をした国家"
+ civic_ngm_n_face_rule_desc:0 "この国は抑圧のためではなく、融和のために存在している。"
+
+ civic_ngm_b_faction:0 "派閥主義"
+ civic_ngm_b_faction_desc:0 "この国では各勢力や派閥がしのぎを削っている。"
+
+ civic_ngm_a_noble_rule:0 "啓蒙貴族制"
+ civic_ngm_a_noble_rule_desc:0 "この国では富は徳を生み、その富を広げることでこそ社会は安定すると考えられる徳治貴族が支配している。"
+
+ civic_ngm_m_marrige_rule:0 "多婚制"
+ civic_ngm_m_marrige_rule_desc:0 "この国では多様な婚姻形態が認められている。"
+
+ civic_ngm_t_election_rule:0 "二元代表制"
+ civic_ngm_t_election_rule_desc:0 "この国は一方法による代表選出ではなく、複数方法により代表選出を行う。"
+
+ civic_ngm_e_geli_rule:0 "腐敗選挙区"
+ civic_ngm_e_geli_rule_desc:0 "この国の選挙区割りは現職や与党に有利になるよう仕組まれている。"
+
+ civic_ngm_g_bureaucrat_rule:0 "官僚統治制"
+ civic_ngm_g_bureaucrat_rule_desc:0 "この国の政治は政治家や貴族が統御しておらず、官僚が操っている。"
+
+ civic_ngm_nk_commun_rule:0 "主体思想"
+ civic_ngm_nk_commun_rule_desc:0 "自国の主体性と指導者指導の正統性を知らしめることは同志主席の本懐である。"
+
+ civic_ngm_blm_affirma_rule:0 "積極的是正"
+ civic_ngm_blm_affirma_rule_desc:0 "この国は差別や不公平に対して社会的補足を行うことで社会を改良しようとしている。"
+
+ civic_ngm_c_taxes_rule:0 "複雑な税制度"
+ civic_ngm_c_taxes_rule_desc:0 "この国の税制度を理解することは極めて困難であるが、官僚は必要な税を徴収し続けている。"
+
+ civic_ngm_u_stamp_rule:0 "押印主義"
+ civic_ngm_u_stamp_rule_desc:0 "書類に印を押す。手紙に印を押す。成果表に......"
+
+ civic_ngm_p_blood_rule:0 "血液信仰"
+ civic_ngm_p_blood_rule_desc:0 "血液とは人々の意思と魂を媒介する神聖なる液体であり、この研究は生命への必要な畏敬をもたらす。"
+
+ civic_ngm_c_noble_rule:0 "形式的貴族制"
+ civic_ngm_c_noble_rule_desc:0 "この国では国家功労者等に貴族称号を贈ることで、その功績や地位に報いている。"
+
+ civic_ngm_m_money_rule:0 "金権屋"
+ civic_ngm_m_money_rule_desc:0 "この国では大金を有する個人が政治を指揮し、その利益を最大化するようにふるまっている。"
 
 #############################
 #####    企業帝国国是    #####
@@ -1964,63 +2009,11 @@
  ngm_with_honor_1_modifier:0 "死は無であるが、敗北と不名誉に生きることは、まさに日常の死なのだ。"
  ngm_with_honor_2_modifier:0 "屈辱を与えられた。"
 
- tr_ngm_sniper_debuff_1:0 "狙い撃ち"
- tr_ngm_sniper_debuff_2:0 "$tr_ngm_sniper_debuff_1$"
- tr_ngm_sniper_debuff_3:0 "$tr_ngm_sniper_debuff_1$"
- tr_ngm_sniper_debuff_4:0 "$tr_ngm_sniper_debuff_1$"
- tr_ngm_sniper_debuff_5:0 "$tr_ngm_sniper_debuff_1$"
- tr_ngm_sniper_debuff_6:0 "$tr_ngm_sniper_debuff_1$"
- tr_ngm_sniper_debuff_7:0 "$tr_ngm_sniper_debuff_1$"
- tr_ngm_sniper_debuff_8:0 "$tr_ngm_sniper_debuff_1$"
 
- tr_ngm_penetration_debuff_1:0 "浸透"
- tr_ngm_penetration_debuff_2:0 "$tr_ngm_penetration_debuff_1$"
- tr_ngm_penetration_debuff_3:0 "$tr_ngm_penetration_debuff_1$"
- tr_ngm_penetration_debuff_4:0 "$tr_ngm_penetration_debuff_1$"
- tr_ngm_penetration_debuff_5:0 "$tr_ngm_penetration_debuff_1$"
- tr_ngm_penetration_debuff_6:0 "$tr_ngm_penetration_debuff_1$"
- tr_ngm_penetration_debuff_7:0 "$tr_ngm_penetration_debuff_1$"
- tr_ngm_penetration_debuff_8:0 "$tr_ngm_penetration_debuff_1$"
- tr_ngm_penetration_debuff_9:0 "$tr_ngm_penetration_debuff_1$"
- tr_ngm_penetration_debuff_10:0 "$tr_ngm_penetration_debuff_1$"
- tr_ngm_penetration_debuff_11:0 "$tr_ngm_penetration_debuff_1$"
- tr_ngm_penetration_debuff_12:0 "$tr_ngm_penetration_debuff_1$"
- tr_ngm_penetration_debuff_13:0 "$tr_ngm_penetration_debuff_1$"
- tr_ngm_penetration_debuff_14:0 "$tr_ngm_penetration_debuff_1$"
- tr_ngm_penetration_debuff_15:0 "$tr_ngm_penetration_debuff_1$"
 
- tr_ngm_freedom_finish_debuff_1:0 "報道の自由"
- tr_ngm_freedom_finish_debuff_2:0 "$tr_ngm_freedom_finish_debuff_1$"
- tr_ngm_freedom_finish_debuff_3:0 "$tr_ngm_freedom_finish_debuff_1$"
- tr_ngm_freedom_finish_debuff_4:0 "$tr_ngm_freedom_finish_debuff_1$"
- tr_ngm_freedom_finish_debuff_5:0 "$tr_ngm_freedom_finish_debuff_1$"
- tr_ngm_freedom_finish_debuff_6:0 "$tr_ngm_freedom_finish_debuff_1$"
- tr_ngm_freedom_finish_debuff_7:0 "$tr_ngm_freedom_finish_debuff_1$"
- tr_ngm_freedom_finish_debuff_8:0 "$tr_ngm_freedom_finish_debuff_1$"
 
- tr_ngm_sabotage_debuff_1:0 "破壊工作"
- tr_ngm_sabotage_debuff_2:0 "$tr_ngm_sabotage_debuff_1$"
- tr_ngm_sabotage_debuff_3:0 "$tr_ngm_sabotage_debuff_1$"
- tr_ngm_sabotage_debuff_4:0 "$tr_ngm_sabotage_debuff_1$"
- tr_ngm_sabotage_debuff_5:0 "$tr_ngm_sabotage_debuff_1$"
- tr_ngm_sabotage_debuff_6:0 "$tr_ngm_sabotage_debuff_1$"
- tr_ngm_sabotage_debuff_7:0 "$tr_ngm_sabotage_debuff_1$"
- tr_ngm_sabotage_debuff_8:0 "$tr_ngm_sabotage_debuff_1$"
 
- tr_ngm_constant_obstruction_debuff_1:0 "恒常的妨害"
- tr_ngm_constant_obstruction_debuff_2:0 "$tr_ngm_constant_obstruction_debuff_1$"
- tr_ngm_constant_obstruction_debuff_3:0 "$tr_ngm_constant_obstruction_debuff_1$"
- tr_ngm_constant_obstruction_debuff_4:0 "$tr_ngm_constant_obstruction_debuff_1$"
- tr_ngm_constant_obstruction_debuff_5:0 "$tr_ngm_constant_obstruction_debuff_1$"
- tr_ngm_constant_obstruction_debuff_6:0 "$tr_ngm_constant_obstruction_debuff_1$"
- tr_ngm_constant_obstruction_debuff_7:0 "$tr_ngm_constant_obstruction_debuff_1$"
- tr_ngm_constant_obstruction_debuff_8:0 "$tr_ngm_constant_obstruction_debuff_1$"
 
- tr_ngm_ministry_engagement_buff_1:0 "国家宣伝省"
- tr_ngm_ministry_engagement_buff_2:0 "$tr_ngm_ministry_engagement_buff_1$"
- tr_ngm_ministry_engagement_buff_3:0 "$tr_ngm_ministry_engagement_buff_1$"
- tr_ngm_ministry_engagement_buff_4:0 "$tr_ngm_ministry_engagement_buff_1$"
- tr_ngm_ministry_engagement_buff_5:0 "$tr_ngm_ministry_engagement_buff_1$"
 
  tr_ngm_neighbor_finish_buff:0 "善隣完遂"
 
@@ -2042,23 +2035,7 @@
 
  tr_ngm_adversity_finish_modifier:0 "逆境完遂"
 
- tr_ngm_battle_speach_modifier_1:0 "敵対的演説"
- tr_ngm_battle_speach_modifier_2:0 "$tr_ngm_battle_speach_modifier_1$"
- tr_ngm_battle_speach_modifier_3:0 "$tr_ngm_battle_speach_modifier_1$"
- tr_ngm_battle_speach_modifier_4:0 "$tr_ngm_battle_speach_modifier_1$"
- tr_ngm_battle_speach_modifier_5:0 "$tr_ngm_battle_speach_modifier_1$"
- tr_ngm_battle_speach_modifier_6:0 "$tr_ngm_battle_speach_modifier_1$"
- tr_ngm_battle_speach_modifier_7:0 "$tr_ngm_battle_speach_modifier_1$"
- tr_ngm_battle_speach_modifier_8:0 "$tr_ngm_battle_speach_modifier_1$"
 
- ap_ngm_chio_debuff_1:0 "恒常的敵対諜報活動"
- ap_ngm_chio_debuff_2:0 "$ap_ngm_chio_debuff_1$"
- ap_ngm_chio_debuff_3:0 "$ap_ngm_chio_debuff_1$"
- ap_ngm_chio_debuff_4:0 "$ap_ngm_chio_debuff_1$"
- ap_ngm_chio_debuff_5:0 "$ap_ngm_chio_debuff_1$"
- ap_ngm_chio_debuff_6:0 "$ap_ngm_chio_debuff_1$"
- ap_ngm_chio_debuff_7:0 "$ap_ngm_chio_debuff_1$"
- ap_ngm_chio_debuff_8:0 "$ap_ngm_chio_debuff_1$"
 
  ap_ngm_dipromatic_think_tank_modifier:0 "外交シンクタンク"
 
@@ -3846,7 +3823,7 @@
 
  ap_ngm_ministry_of_innocence:0 "社会秩序維持局"
  ap_ngm_ministry_of_innocence_desc:0 "我が国は他国と一線を画し、純潔性を維持する必要がある"
- ap_ngm_ministry_of_innocence_effect:0 "他国から諜報以外の方法で§Y内政的悪影響を受けない§!"
+ ap_ngm_ministry_of_innocence_effect:0 "狙い撃ち・浸透・破壊工作・報道の自由・恒常的妨害・敵対的演説・恒常的敵対諜報活動、および宗主由来の追加忠誠効果を無効化する。既存の対象補正も解除。"
 
  ap_ngm_great_constructure_department:0 "大規模建築計画局"
  ap_ngm_great_constructure_department_desc:0 "大規模建築を行う際の資源や職人を運用し、調整する省庁を設立する"
@@ -3930,17 +3907,17 @@
  tr_ngm_virture_first_tooltip:0 "政策「§Y$policy_ngm_policies_contempt_law$§!」をアンロック\n§Y影の敵国§!を2か国、設定できるようになる\n影の敵国は、相手に通知されず、影響力を発生させることはないが、宿敵に準じる形で対象を指定する。\n(伝統等で宿敵に対する効果がある場合は適用される) "
  tr_ngm_virture_finish:0 "悪徳の伝統の完成"
  tr_ngm_sniper:0 "狙い撃ち"
- tr_ngm_sniper_tooltip:0 "宿敵の犯罪: §R+30§!"
+ tr_ngm_sniper_tooltip:0 "発生国1か国につき宿敵の犯罪+30。有効な架空宿敵にも適用。"
  tr_ngm_sniper_delayed:0 "敵対する船であれば、集中攻撃することが確実だ"
  tr_ngm_penetration:0 "浸透"
- tr_ngm_penetration_tooltip:0 "外交関係にあるすべての国家の犯罪: §R+20§!"
+ tr_ngm_penetration_tooltip:0 "発生国1か国につき接触済み他国の犯罪+20。同盟国・従属国も対象。"
  tr_ngm_penetration_delayed:0 "敵対国家に対しては常に浸透する必要がある"
  tr_ngm_chain_harted:0 "憎しみの連鎖"
  tr_ngm_chain_harted_delayed:0 "相手を憎むことで相手は誰かを憎むようになるだろう"
  tr_ngm_exclusive:0 "独占"
  tr_ngm_exclusive_delayed:0 "利益や富は最も強き者のものになる"
  tr_ngm_sabotage:0 "破壊工作"
- tr_ngm_sabotage_tooltip:0 "宿敵の交易保護値: §R-15§!\n宿敵の犯罪: §R+20§!"
+ tr_ngm_sabotage_tooltip:0 "発生国1か国につき宿敵の犯罪+20、職業交易産出-15%。有効な架空宿敵にも適用。"
  tr_ngm_sabotage_delayed:0 "敵を密かに破壊し、妨害することで我が国に利益が生まれる"
 
  tradition_ngm_study:0 "研鑽"
@@ -4051,7 +4028,7 @@
  tr_ngm_freedom_first_tooltip:0 "政策「§Y$policy_ngm_policies_civil_liberties$§!」をアンロック"
  tr_ngm_freedom_finish:0 "自由の伝統の完成"
  tr_ngm_freedom_broad:0 "報道の自由"
- tr_ngm_freedom_broad_tooltip:0 "宿敵の$pop_cat_slave$の幸福度: §R-20%§!"
+ tr_ngm_freedom_broad_tooltip:0 "発生国1か国につき宿敵の奴隷幸福度-20%。"
  tr_ngm_freedom_broad_delayed:0 "知る権利は市民に保障される重要な権利だ"
  tr_ngm_freedom_association:0 "結社の自由"
  tr_ngm_freedom_association_delayed:0 "政治や自己利益のための結社は市民に認められた権利である"
@@ -4072,7 +4049,7 @@
  tr_ngm_appropriate:0 "適切な居場所"
  tr_ngm_appropriate_delayed:0 "国家は市民の居場所を規定する。例外はない"
  tr_ngm_ministry_engagement:0 "国家宣伝省"
- tr_ngm_ministry_engagement_tooltip:0 "宿敵の獲得影響力:§G+1§!"
+ tr_ngm_ministry_engagement_tooltip:0 "宿敵1か国につき自国の月間影響力+1。最大+5。宿敵がいなければ解除。"
  tr_ngm_ministry_engagement_delayed:0 "国家の方針や方向は耳障りのいい言葉で説明される"
  tr_ngm_right_place:0 "適材適所"
  tr_ngm_right_place_delayed:0 "国家は市民の適性を理解している"
@@ -4084,7 +4061,7 @@
  tr_ngm_neighbor_first:0 "善隣の伝統"
  tr_ngm_neighbor_first_tooltip:0 "§Yファーストコンタクト時の姿勢を敵対的にできない§!"
  tr_ngm_neighbor_finish:0 "善隣の伝統の完成"
- tr_ngm_neighbor_finish_tooltip:0 "§Y5種類以上§!の種族がいる惑星で\nPOPの成長速度:§G+10%§!\n交易価値:§G+10%§!\n統合力:§G+10%§!\n流入魅力:§G+10%§!"
+ tr_ngm_neighbor_finish_tooltip:0 "5種族以上いる惑星：成長速度・職業交易産出・職業統合力産出+10%。条件を失うと解除。"
  tr_ngm_ambassador:0 "国際的大使館"
  tr_ngm_ambassador_delayed:0 "各国の大使館では外交以外の交流活動も頻繁に行われる。これは我が国のイメージを大きく向上させることができる"
  tr_ngm_salad:0 "人種のサラダボウル"
@@ -4108,10 +4085,10 @@
  tr_ngm_coarse_food:0 "臥薪嘗胆"
  tr_ngm_coarse_food_delayed:0 "かの国に勝つために、食事を切り詰める"
  tr_ngm_transcendental:0 "超然的敵対存在"
- tr_ngm_transcendental_tooltip:0 "布告「§Y$ngm_supernatural_adversary_campaign$§!」をアンロック"
+ tr_ngm_transcendental_tooltip:0 "布告「超然的敵対存在」を解禁：有効中は宿敵上限+1。"
  tr_ngm_transcendental_delayed:0 "どのようなものかは関わらず、かの国は敵だ"
  tr_ngm_battle_speach:0 "敵対的演説"
- tr_ngm_battle_speach_tooltip:0 "宿敵の外交発言力:§R-10%§!"
+ tr_ngm_battle_speach_tooltip:0 "発生国1か国につき宿敵の外交発言力-10%。"
  tr_ngm_battle_speach_delayed:0 "かの国は敵だ！"
 
  tradition_ngm_nature:0 "自然"
@@ -4359,7 +4336,7 @@
  tr_ngm_cryptanalysis_team:0 "暗号解読班"
  tr_ngm_cryptanalysis_team_delayed:0 "簡易暗号など平文と同等だ"
  tr_ngm_constant_obstruction:0 "恒常的妨害"
- tr_ngm_constant_obstruction_tooltip:0 "宿敵の交易保護値: §R-5§!"
+ tr_ngm_constant_obstruction_tooltip:0 "発生国1か国につき宿敵の職業交易産出-5%。"
  tr_ngm_constant_obstruction_delayed:0 "絶え間ない諜報活動は相手を疲弊させる"
  tr_ngm_intelligence_school:0 "諜報学校"
  tr_ngm_intelligence_school_delayed:0 "諜報員を育てるためには隠れた教育機関が必要だ"
@@ -4655,7 +4632,7 @@
  councilor_neoliberalism_female:0 "$councilor_neoliberalism$"
  councilor_neoliberalism_desc:0 "経済団体連合会長"
 
- councilor_manifest_destiny:0 "拓殖務長官"
+ councilor_manifest_destiny:0 "拓植務長官"
  councilor_manifest_destiny_female:0 "$councilor_manifest_destiny$"
  councilor_manifest_destiny_desc:0 "植民と開拓を推進し、国家の繁栄を下支えする責任者"
 
@@ -4731,9 +4708,9 @@
  councilor_ngm_ship_protection_protocol_female:0 "$councilor_ngm_ship_protection_protocol$"
  councilor_ngm_ship_protection_protocol_desc:0 "宇宙における完成統御を行う事務長"
 
- councilor_ngm_space_security_headquarters:0 "宙間警備本部長官"
- councilor_ngm_space_security_headquarters_female:0 "$councilor_ngm_space_security_headquarters$"
- councilor_ngm_space_security_headquarters_desc:0 "宇宙の警備を行い、宙間交通の安全を守る責任者"
+ councilor_ngm_space_security_headquarters2:0 "宙間警備本部長官"
+ councilor_ngm_space_security_headquarters2_female:0 "$councilor_ngm_space_security_headquarters$"
+ councilor_ngm_space_security_headquarters2_desc:0 "宇宙の警備を行い、宙間交通の安全を守る責任者"
 
  councilor_ngm_random_birth_rate:0 "生命の運び手"
  councilor_ngm_random_birth_rate_female:0 "$councilor_ngm_random_birth_rate$"
@@ -4771,9 +4748,9 @@
  councilor_ngm_peoples_democracy_female:0 "$councilor_ngm_peoples_democracy$"
  councilor_ngm_peoples_democracy_desc:0 "人民の問題を取り扱う主任閣僚"
 
- councilor_ngm_cyberdemocracy:0 "サイバー民主制"
+ councilor_ngm_cyberdemocracy:0 "選挙管理技術主任"
  councilor_ngm_cyberdemocracy_female:0 "$councilor_ngm_cyberdemocracy$"
- councilor_ngm_cyberdemocracy_desc:0 "国内外の情報を管理する役所の長"
+ councilor_ngm_cyberdemocracy_desc:0 "選挙情報を管理する役所の長"
 
  councilor_ngm_aristocratic_republicanism:0 "法の守護者"
  councilor_ngm_aristocratic_republicanism_female:0 "$councilor_ngm_aristocratic_republicanism$"
@@ -4971,9 +4948,9 @@
  councilor_ngm_messenger_of_peace_female:0 "$councilor_ngm_messenger_of_peace$"
  councilor_ngm_messenger_of_peace_desc:0 "平和を愛し、人々に平和を届けることを夢見る高官"
 
- councilor_ngm_space_security_headquarters:0 "最高交渉官"
- councilor_ngm_space_security_headquarters_female:0 "$councilor_ngm_space_security_headquarters$"
- councilor_ngm_space_security_headquarters_desc:0 "国家間の交渉を行う最高位の外交官"
+ councilor_ngm_good_faith_negotiator:0 "最高交渉官"
+ councilor_ngm_good_faith_negotiator_female:0 "$councilor_ngm_space_security_headquarters$"
+ councilor_ngm_good_faith_negotiator_desc:0 "国家間の交渉を行う最高位の外交官"
 
  councilor_ngm_mechanical_faith:0 "機械法王"
  councilor_ngm_mechanical_faith_female:0 "$councilor_ngm_mechanical_faith$"
@@ -5135,9 +5112,9 @@
  councilor_ngm_planetary_garden_female:0 "$councilor_ngm_planetary_garden$"
  councilor_ngm_planetary_garden_desc:0 "国家規模の庭園を管理し、美しい状態を維持する"
 
- councilor_ngm_space_security_headquarters:0 "大生命保護官"
- councilor_ngm_space_security_headquarters_female:0 "$councilor_ngm_space_security_headquarters$"
- councilor_ngm_space_security_headquarters_desc:0 "この世で最も尊い生命を保護し、安全を確保する高等官"
+ councilor_ngm_breakdown_prevention_method:0 "大生命保護官"
+ councilor_ngm_breakdown_prevention_method_female:0 "$councilor_ngm_space_security_headquarters$"
+ councilor_ngm_breakdown_prevention_method_desc:0 "この世で最も尊い生命を保護し、安全を確保する高等官"
 
  councilor_ngm_nature_faith:0 "巫女姫"
  councilor_ngm_nature_faith_female:0 "$councilor_ngm_nature_faith$"
@@ -5223,7 +5200,7 @@
  councilor_ngm_p_medal_female:0 "$councilor_ngm_p_medal$"
  councilor_ngm_p_medal_desc:0 "式典を司る上級官僚"
 
- councilor_ngm_p_agriculture:0 "国家農業協同組合長"
+ councilor_ngm_p_agriculture:0 "全国農業協同組合中央会代表理事会長"
  councilor_ngm_p_agriculture_female:0 "$councilor_ngm_p_agriculture$"
  councilor_ngm_p_agriculture_desc:0 "国家の農業政策に発言力を有する組合長"
 
@@ -5346,6 +5323,66 @@
  councilor_ngm_pc_directer:0 "総務局長"
  councilor_ngm_pc_directer_female:0 "$councilor_ngm_pc_directer$"
  councilor_ngm_pc_directer_desc:0 "企業内の事務を総括し、効率的な運用を目指す部局長"
+
+ councilor_civic_ngm_c_god_rule:0 "教育人民委員"
+ councilor_civic_ngm_c_god_rule_female:0 "$councilor_civic_ngm_c_god_rule$"
+ councilor_civic_ngm_c_god_rule_desc:0 "労働者教育と倫理観の敷衍を担う教育政務官"
+
+ councilor_civic_ngm_n_face_rule:0 "融和長官"
+ councilor_civic_ngm_n_face_rule_female:0 "$councilor_civic_ngm_n_face_rule$"
+ councilor_civic_ngm_n_face_rule_desc:0 "社会の融和と政治への不満を解決するための窓口となる政府高官"
+
+ councilor_civic_ngm_b_faction:0 "渉内担当官"
+ councilor_civic_ngm_b_faction_female:0 "councilor_civic_ngm_b_faction$"
+ councilor_civic_ngm_b_faction_desc:0 "国内の各勢力や派閥の利害を調整する事務官"
+
+ councilor_civic_ngm_a_noble_rule:0 "典礼長官"
+ councilor_civic_ngm_a_noble_rule_female:0 "$councilor_civic_ngm_a_noble_rule$"
+ councilor_civic_ngm_a_noble_rule_desc:0 "貴族と高官に関する諸問題の調整を行う高位行政官"
+
+ councilor_civic_ngm_m_marrige_rule:0 "婚姻調整主任判事"
+ councilor_civic_ngm_m_marrige_rule_female:0 "$councilor_civic_ngm_m_marrige_rule$"
+ councilor_civic_ngm_m_marrige_rule_desc:0 "婚姻に係る諸問題の仲裁を図る最高裁判官"
+
+ councilor_civic_ngm_t_election_rule:0 "首相"
+ councilor_civic_ngm_t_election_rule_female:0 "$councilor_civic_ngm_t_election_rule$"
+ councilor_civic_ngm_t_election_rule_desc:0 "国民の声を政治に反映させ、必要な措置を行うための職"
+
+ councilor_civic_ngm_e_geli_rule:0 "内務大臣"
+ councilor_civic_ngm_e_geli_rule_female:0 "$councilor_civic_ngm_e_geli_rule$"
+ councilor_civic_ngm_e_geli_rule_desc:0 "国内の統制に関わる業務を司る閣僚"
+
+ councilor_civic_ngm_g_bureaucrat_rule:0 "政策統括監"
+ councilor_civic_ngm_g_bureaucrat_rule_female:0 "$councilor_civic_ngm_g_bureaucrat_rule$"
+ councilor_civic_ngm_g_bureaucrat_rule_desc:0 "官僚の立場で政策を操作し、全てを操る高官"
+
+ councilor_civic_ngm_nk_commun_rule:0 "国務委員長"
+ councilor_civic_ngm_nk_commun_rule_female:0 "$councilor_civic_ngm_nk_commun_rule$"
+ councilor_civic_ngm_nk_commun_rule_desc:0 "国家の重要政務を統括する委員会の長"
+
+ councilor_civic_ngm_blm_affirma_rule:0 "是正措置担当官"
+ councilor_civic_ngm_blm_affirma_rule_female:0 "$councilor_civic_ngm_blm_affirma_rule$"
+ councilor_civic_ngm_blm_affirma_rule_desc:0 "差別を許さず、格差を是正する責任者"
+
+ councilor_civic_ngm_c_taxes_rule:0 "国税庁長官"
+ councilor_civic_ngm_c_taxes_rule_female:0 "$councilor_civic_ngm_c_taxes_rule$"
+ councilor_civic_ngm_c_taxes_rule_desc:0 "税制度の統括と徴収の総責任者"
+
+ councilor_civic_ngm_u_stamp_rule:0 "国璽尚書"
+ councilor_civic_ngm_u_stamp_rule_female:0 "$councilor_civic_ngm_u_stamp_rule$"
+ councilor_civic_ngm_u_stamp_rule_desc:0 "国家の重要文書に押印する国璽を管理する役所の長官"
+
+ councilor_civic_ngm_p_blood_rule:0 "輸血研究所長"
+ councilor_civic_ngm_p_blood_rule_female:0 "$councilor_civic_ngm_p_blood_rule$"
+ councilor_civic_ngm_p_blood_rule_desc:0 "血液を他人に移すことにより新たな知見を得ようとする探求者"
+
+ councilor_civic_ngm_c_noble_rule:0 "貴族院議長"
+ councilor_civic_ngm_c_noble_rule_female:0 "$councilor_civic_ngm_c_noble_rule$"
+ councilor_civic_ngm_c_noble_rule_desc:0 "儀礼貴族が政治に意見する議会の議長"
+
+ councilor_civic_ngm_m_money_rule:0 "金権屋"
+ councilor_civic_ngm_m_money_rule_female:0 "$councilor_civic_ngm_m_money_rule$"
+ councilor_civic_ngm_m_money_rule_desc:0 "金で政治を動かす国家の大物"
 
 ##############################
 #####    評議会の方針    ######

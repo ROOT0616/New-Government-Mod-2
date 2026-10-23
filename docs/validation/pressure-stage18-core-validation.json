@@ -1,0 +1,211 @@
+{
+  "version": "1.39.0-dev.19",
+  "status": "design-core-logic-checked-not-engine-verified",
+  "cases": [
+    {
+      "name": "source-count-0",
+      "passed": true,
+      "counts": {}
+    },
+    {
+      "name": "source-count-1",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_sniper": 1.0,
+        "ngm_pressure_v2_penetration": 1.0,
+        "ngm_pressure_v2_sabotage": 1.0,
+        "ngm_pressure_v2_free_press": 1.0,
+        "ngm_pressure_v2_obstruction": 1.0,
+        "ngm_pressure_v2_hostile_speech": 1.0,
+        "ngm_pressure_v2_hostile_intelligence": 1.0
+      }
+    },
+    {
+      "name": "source-count-3",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_sniper": 3.0,
+        "ngm_pressure_v2_penetration": 3.0,
+        "ngm_pressure_v2_sabotage": 3.0,
+        "ngm_pressure_v2_free_press": 3.0,
+        "ngm_pressure_v2_obstruction": 3.0,
+        "ngm_pressure_v2_hostile_speech": 3.0,
+        "ngm_pressure_v2_hostile_intelligence": 3.0
+      }
+    },
+    {
+      "name": "100-refreshes-no-accumulation",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_sniper": 3.0,
+        "ngm_pressure_v2_penetration": 3.0,
+        "ngm_pressure_v2_sabotage": 3.0,
+        "ngm_pressure_v2_free_press": 3.0,
+        "ngm_pressure_v2_obstruction": 3.0,
+        "ngm_pressure_v2_hostile_speech": 3.0,
+        "ngm_pressure_v2_hostile_intelligence": 3.0
+      }
+    },
+    {
+      "name": "immunity-clears-all",
+      "passed": true,
+      "counts": {}
+    },
+    {
+      "name": "immunity-loss-reapplies",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_sniper": 3.0,
+        "ngm_pressure_v2_penetration": 3.0,
+        "ngm_pressure_v2_sabotage": 3.0,
+        "ngm_pressure_v2_free_press": 3.0,
+        "ngm_pressure_v2_obstruction": 3.0,
+        "ngm_pressure_v2_hostile_speech": 3.0,
+        "ngm_pressure_v2_hostile_intelligence": 3.0
+      }
+    },
+    {
+      "name": "source-loses-abilities",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_sniper": 2.0,
+        "ngm_pressure_v2_penetration": 2.0,
+        "ngm_pressure_v2_sabotage": 2.0,
+        "ngm_pressure_v2_free_press": 2.0,
+        "ngm_pressure_v2_obstruction": 2.0,
+        "ngm_pressure_v2_hostile_speech": 2.0,
+        "ngm_pressure_v2_hostile_intelligence": 2.0
+      }
+    },
+    {
+      "name": "rivalry-ended-contact-remains",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_sniper": 1.0,
+        "ngm_pressure_v2_penetration": 2.0,
+        "ngm_pressure_v2_sabotage": 1.0,
+        "ngm_pressure_v2_free_press": 1.0,
+        "ngm_pressure_v2_obstruction": 1.0,
+        "ngm_pressure_v2_hostile_speech": 1.0,
+        "ngm_pressure_v2_hostile_intelligence": 1.0
+      }
+    },
+    {
+      "name": "source-destroyed",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_penetration": 1.0
+      }
+    },
+    {
+      "name": "reverse-rivalry-does-not-emit",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_penetration": 1.0
+      }
+    },
+    {
+      "name": "self-excluded",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_penetration": 1.0
+      }
+    },
+    {
+      "name": "source-count-8",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_sniper": 8.0,
+        "ngm_pressure_v2_penetration": 8.0,
+        "ngm_pressure_v2_sabotage": 8.0,
+        "ngm_pressure_v2_free_press": 8.0,
+        "ngm_pressure_v2_obstruction": 8.0,
+        "ngm_pressure_v2_hostile_speech": 8.0,
+        "ngm_pressure_v2_hostile_intelligence": 8.0
+      }
+    },
+    {
+      "name": "source-count-9",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_sniper": 9.0,
+        "ngm_pressure_v2_penetration": 9.0,
+        "ngm_pressure_v2_sabotage": 9.0,
+        "ngm_pressure_v2_free_press": 9.0,
+        "ngm_pressure_v2_obstruction": 9.0,
+        "ngm_pressure_v2_hostile_speech": 9.0,
+        "ngm_pressure_v2_hostile_intelligence": 9.0
+      }
+    },
+    {
+      "name": "source-count-15",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_sniper": 15.0,
+        "ngm_pressure_v2_penetration": 15.0,
+        "ngm_pressure_v2_sabotage": 15.0,
+        "ngm_pressure_v2_free_press": 15.0,
+        "ngm_pressure_v2_obstruction": 15.0,
+        "ngm_pressure_v2_hostile_speech": 15.0,
+        "ngm_pressure_v2_hostile_intelligence": 15.0
+      }
+    },
+    {
+      "name": "source-count-16",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_sniper": 16.0,
+        "ngm_pressure_v2_penetration": 16.0,
+        "ngm_pressure_v2_sabotage": 16.0,
+        "ngm_pressure_v2_free_press": 16.0,
+        "ngm_pressure_v2_obstruction": 16.0,
+        "ngm_pressure_v2_hostile_speech": 16.0,
+        "ngm_pressure_v2_hostile_intelligence": 16.0
+      }
+    },
+    {
+      "name": "source-count-40",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_sniper": 40.0,
+        "ngm_pressure_v2_penetration": 40.0,
+        "ngm_pressure_v2_sabotage": 40.0,
+        "ngm_pressure_v2_free_press": 40.0,
+        "ngm_pressure_v2_obstruction": 40.0,
+        "ngm_pressure_v2_hostile_speech": 40.0,
+        "ngm_pressure_v2_hostile_intelligence": 40.0
+      }
+    },
+    {
+      "name": "virtual-target-supported",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_sniper": 1.0,
+        "ngm_pressure_v2_sabotage": 1.0
+      }
+    },
+    {
+      "name": "formal-and-virtual-count-once",
+      "passed": true,
+      "counts": {
+        "ngm_pressure_v2_sniper": 1.0,
+        "ngm_pressure_v2_sabotage": 1.0
+      }
+    },
+    {
+      "name": "lost-adoption-disables-virtual-target",
+      "passed": true,
+      "counts": {}
+    },
+    {
+      "name": "cancel-virtual-target-clears",
+      "passed": true,
+      "counts": {}
+    }
+  ],
+  "case_count": 20,
+  "all_passed": true,
+  "engine_modifier_keys_verified": true,
+  "runtime_tested": false,
+  "trade_redesign_not_equivalent_to_old_protection": true
+}

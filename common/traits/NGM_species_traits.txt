@@ -1,10 +1,8 @@
-#1.青年政治 オール	リーダーの寿命-20年、初期リーダーの年齢が10-20歳になる、研究速度+10%
 trait_ngm_youth_politics = {
 	cost = 0
-	custom_tooltip = Youth_Politics
 	potential_crossbreeding_chance = 0
 	opposites = {
-		"trait_ngm_elder_politics"
+		trait_ngm_elder_politics
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -14,14 +12,13 @@ trait_ngm_youth_politics = {
 		LITHOID
 	}
 	modifier = {
-		leader_age = -10
-		all_technology_research_speed = 0.1
+		leader_lifespan_add = -10
 	}
 	initial = no
 	randomized = no
 	species_potential_add = {
-		owner = {
-			has_civic = civic_ngm_youth_politics
+		from = {
+			has_valid_civic = civic_ngm_youth_politics
 		}
 	}
 	species_possible_remove = {
@@ -32,15 +29,14 @@ trait_ngm_youth_politics = {
 	}
 	leader_age_min = 10
 	leader_age_max = 20
+	custom_tooltip = ngm_country_trait_trait_ngm_youth_politics_tt
 }
-
-#2.長老政治 オール	リーダーの寿命+20年	初期リーダーの年齢が65-100歳になる	統合力+10%
 trait_ngm_elder_politics = {
 	cost = 0
 	custom_tooltip = Elder_Politics
 	potential_crossbreeding_chance = 0
 	opposites = {
-		"trait_ngm_youth_politics"
+		trait_ngm_youth_politics
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -50,14 +46,19 @@ trait_ngm_elder_politics = {
 		LITHOID
 	}
 	modifier = {
-		leader_age = 20
-		planet_jobs__unity_produces_mult = 0.1
+		leader_lifespan_add = 20
+		bureaucrat_jobs_bonus_workforce_mult = 0.1
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.1
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.1
+		pop_ngm_influencer_bonus_workforce_mult = 0.1
+		pop_ngm_gardener_bonus_workforce_mult = 0.1
 	}
 	initial = no
 	randomized = no
 	species_potential_add = {
-		owner = {
-			has_civic = civic_ngm_elder_politics
+		from = {
+			has_valid_civic = civic_ngm_elder_politics
 		}
 	}
 	species_possible_remove = {
@@ -69,144 +70,149 @@ trait_ngm_elder_politics = {
 	leader_age_min = 65
 	leader_age_max = 100
 }
-
-# 特性
-# trait_ngm_knight	騎士道精神	：2p	統合力+10%、犯罪度-10%	(この種族は弱きものを助け、社会正義を全うすべきだという強い信念を有した高潔性を有している。)
 trait_ngm_knight = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_gentle"
-		"trait_ngm_rascal"
-		"trait_ngm_totemowarui"
+		trait_ngm_gentle
+		trait_ngm_rascal
+		trait_ngm_totemowarui
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.1
-		planet_crime_mult = -0.1
+		bureaucrat_jobs_bonus_workforce_mult = 0.1
+		pop_happiness = 0.05
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.1
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.1
+		pop_ngm_influencer_bonus_workforce_mult = 0.1
+		pop_ngm_gardener_bonus_workforce_mult = 0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_gentle	紳士      	：1p	統合力+5%、犯罪度-5%	(この種族は常に丁寧で、物腰柔らかな傾向がある。。)
 trait_ngm_gentle = {
 	cost = 1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_knight"
-		"trait_ngm_rascal"
-		"trait_ngm_totemowarui"
+		trait_ngm_knight
+		trait_ngm_rascal
+		trait_ngm_totemowarui
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.05
-		planet_crime_mult = -0.05
+		bureaucrat_jobs_bonus_workforce_mult = 0.05
+		pop_happiness = 0.025
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.05
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.05
+		pop_ngm_influencer_bonus_workforce_mult = 0.05
+		pop_ngm_gardener_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_rascal	悪漢      	：-1p	統合力-5%、犯罪度+5%	(この種族は利己主義的で、自分の利益を最優先する傾向がある。)
 trait_ngm_rascal = {
 	cost = -1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_knight"
-		"trait_ngm_gentle"
-		"trait_ngm_totemowarui"
+		trait_ngm_knight
+		trait_ngm_gentle
+		trait_ngm_totemowarui
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_unity_produces_mult = -0.05
-		planet_crime_mult = 0.05
+		bureaucrat_jobs_bonus_workforce_mult = -0.05
+		pop_happiness = -0.025
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.05
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.05
+		pop_ngm_influencer_bonus_workforce_mult = -0.05
+		pop_ngm_gardener_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_totemowarui	巨悪      	：-2p	統合力-10%、犯罪度10%	(この種族は自己利益を最大化することに余念がなく、その方法を気にしない。)
 trait_ngm_totemowarui = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_knight"
-		"trait_ngm_gentle"
-		"trait_ngm_rascal"
+		trait_ngm_knight
+		trait_ngm_gentle
+		trait_ngm_rascal
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_unity_produces_mult = -0.1
-		planet_crime_mult = 0.1
+		bureaucrat_jobs_bonus_workforce_mult = -0.1
+		pop_happiness = -0.05
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.1
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.1
+		pop_ngm_influencer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_healing	治癒遺伝子	：2p	POPの成長速度+5%、リーダーの寿命+10年、地上軍耐久度+30%	(この種族の遺伝子は特殊で、自己複製能力が高く、多少の怪我や病気はすぐに治癒する。)
 trait_ngm_healing = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_unhealing"
+		trait_ngm_unhealing
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		pop_growth_speed = 0.05
-		leader_age = 10
+		logistic_growth_mult = 0.05
+		leader_lifespan_add = 10
 		army_health = 0.3
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_unhealing	修復不能  	：-2p	POPの成長速度-5%、リーダーの寿命-10年、地上軍耐久度-30%	(この種族の遺伝子は特殊で、自己複製能力が低く、多少の怪我や病気が命取りとなる。)
 trait_ngm_unhealing = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_healing"
+		trait_ngm_healing
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		pop_growth_speed = -0.05
-		leader_age = -10
+		logistic_growth_mult = -0.05
+		leader_lifespan_add = -10
 		army_health = -0.3
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_assimilation	身体的同化	：2p	居住性+10%、Popの移住-10%	(この種族は、身体的な同化機能が高く、どのような環境であれ、ある程度の順応性を有する。ただし、順応には時間がかかるため、新たな環境への移動を躊躇することが多い。)
 trait_ngm_assimilation = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_unadaptation"
+		trait_ngm_unadaptation
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -214,19 +220,17 @@ trait_ngm_assimilation = {
 	}
 	modifier = {
 		pop_environment_tolerance = 0.1
-		pop_growth_from_immigration = -0.1
+		pop_resettlement_cost_mult = 0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_unadaptation	適応不足  	：-2p	居住性-10%、Popの移住+10%	(この種族は、身体的な同化機能が低く、自分の身体に合った環境への移動をより好む傾向がある。)
 trait_ngm_unadaptation = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_assimilation"
+		trait_ngm_assimilation
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -234,136 +238,135 @@ trait_ngm_unadaptation = {
 	}
 	modifier = {
 		pop_environment_tolerance = -0.1
-		pop_growth_from_immigration = 0.1
+		pop_resettlement_cost_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_division	生体分裂  	：2p	POPの成長速度+10%				(この種族は無性生殖が可能で、身体を分裂左折ことが可能である。)
 trait_ngm_division = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_MPMD"
-		"trait_ngm_LMLD"
+		trait_ngm_MPMD
+		trait_ngm_LMLD
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		pop_growth_speed = 0.1
+		logistic_growth_mult = 0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_MPMD		多産多死  	：2p	POPの成長速度+15%、リーダーの寿命-10年
 trait_ngm_MPMD = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_division"
-		"trait_ngm_LMLD"
+		trait_ngm_division
+		trait_ngm_LMLD
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		pop_growth_speed = 0.15
-		leader_age = -10
+		logistic_growth_mult = 0.15
+		leader_lifespan_add = -10
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_LMLD		少子長命  	：2p	POPの成長速度-5%、リーダーの寿命+30年
 trait_ngm_LMLD = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_division"
-		"trait_ngm_MPMD"
+		trait_ngm_division
+		trait_ngm_MPMD
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		pop_growth_speed = -0.05
-		leader_age = 30
+		logistic_growth_mult = -0.05
+		leader_lifespan_add = 30
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_abn_growth	異常発達  	：4p	POPの成長速度+30%、防衛軍強度+40%、統合力-20%、研究力-10%
 trait_ngm_abn_growth = {
 	cost = 4
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_Lost_species"
+		trait_ngm_Lost_species
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		pop_growth_speed = 0.3
+		logistic_growth_mult = 0.3
 		army_defense_health_mult = 0.4
-		planet_jobs_unity_produces_mult = -0.2
-		planet_jobs_physics_research_produces_mult = -0.1
-		planet_jobs_society_research_produces_mult = -0.1
-		planet_jobs_engineering_research_produces_mult = -0.1
+		bureaucrat_jobs_bonus_workforce_mult = -0.2
+		researcher_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.2
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.2
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.15
+		pop_ngm_influencer_bonus_workforce_mult = -0.2
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.15
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_Lost_species	失われし種	：4p 	POPの成長速度-25%、統合力+20%、研究力+20%
 trait_ngm_Lost_species = {
 	cost = 1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_abn_growth"
+		trait_ngm_abn_growth
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		pop_growth_speed = -0.25
-		planet_jobs_unity_produces_mult = 0.2
-		planet_jobs_physics_research_produces_mult = 0.2
-		planet_jobs_society_research_produces_mult = 0.2
-		planet_jobs_engineering_research_produces_mult = 0.2
+		logistic_growth_mult = -0.25
+		bureaucrat_jobs_bonus_workforce_mult = 0.2
+		researcher_jobs_bonus_workforce_mult = 0.2
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.2
+		pop_ngm_secretary_bonus_workforce_mult = 0.2
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.2
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.2
+		pop_ngm_influencer_bonus_workforce_mult = 0.2
+		pop_ngm_tide_engineer_bonus_workforce_mult = 0.2
+		pop_ngm_gardener_bonus_workforce_mult = 0.2
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.2
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_turf		縄張り意識	：-2p	強制移住コスト+25%、Popの流入-10%、防衛軍士気+10%、POPの住居使用量+5%	(この種族は自らの範囲を重要視しており、それを維持することに執念を見せる。)
 trait_ngm_turf = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_Movement"
+		trait_ngm_Movement
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		pop_resettlement_cost_mult = 0.25
-		pop_growth_from_immigration = -0.1
+		pop_resettlement_cost_mult = 0.35
 		army_defense_morale_mult = 0.1
 		pop_housing_usage_mult = 0.05
 	}
@@ -371,21 +374,18 @@ trait_ngm_turf = {
 		energy = 50
 	}
 }
-
-# trait_ngm_Movement	移動性社会	：2p	強制移住コスト-25%、Popの流入+10%、POPの住居使用量-5%、侵攻軍士気+10%	(この種族は転居や移住を好んでおり、そのためにはあらゆる行動をとりうる。)
 trait_ngm_Movement = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_turf"
+		trait_ngm_turf
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		pop_resettlement_cost_mult = -0.25
-		pop_growth_from_immigration = 0.1
+		pop_resettlement_cost_mult = -0.35
 		army_attack_morale_mult = 0.1
 		pop_housing_usage_mult = -0.05
 	}
@@ -393,139 +393,138 @@ trait_ngm_Movement = {
 		energy = 50
 	}
 }
-
-# trait_ngm_empathy	共感      	：1p	職業による統合力+5%、統治志向への魅力+10%、犯罪度-5%	(この種族は、他者に対する思いやりの感情が強い。)
 trait_ngm_empathy = {
 	cost = 1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_resentment"
+		trait_ngm_resentment
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.05
+		bureaucrat_jobs_bonus_workforce_mult = 0.05
 		pop_government_ethic_attraction = 0.1
-		planet_crime_mult = -0.05
+		pop_happiness = 0.025
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.05
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.05
+		pop_ngm_influencer_bonus_workforce_mult = 0.05
+		pop_ngm_gardener_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_resentment	反感      	：-1p	職業による統合力-5%、統治志向への魅力-10%、犯罪度+5%	(この種族は、他者に対して常に反感を覚えている。)
 trait_ngm_resentment = {
 	cost = -1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_empathy"
+		trait_ngm_empathy
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_unity_produces_mult = -0.05
+		bureaucrat_jobs_bonus_workforce_mult = -0.05
 		pop_government_ethic_attraction = -0.1
-		planet_crime_mult = 0.05
+		pop_happiness = -0.025
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.05
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.05
+		pop_ngm_influencer_bonus_workforce_mult = -0.05
+		pop_ngm_gardener_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_magnetism		磁性      	：2p	物理学+20%、合金生産-5%、					(この種族はほのかに磁性を有しており、物理学的技術発展に寄与している。)
 trait_ngm_magnetism = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_radioactive"
-		"trait_ngm_jack_o_lantern"
-		"trait_ngm_optical_adapt"
-		"trait_ngm_hardness"
-		"trait_ngm_neural_block"
-		"trait_ngm_flying"
-		"trait_ngm_swift_horse"
+		trait_ngm_radioactive
+		trait_ngm_jack_o_lantern
+		trait_ngm_optical_adapt
+		trait_ngm_hardness
+		trait_ngm_neural_block
+		trait_ngm_flying
+		trait_ngm_swift_horse
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.2
-		planet_jobs_alloys_produces_mult = -0.05
+		physicist_jobs_bonus_workforce_mult = 0.2
+		foundry_jobs_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_radioactive		放射性血液	：2p	物理学+10%、エネルギー+5%					(この種族の血液には放射性物質が含まれている。)
 trait_ngm_radioactive = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_magnetism"
-		"trait_ngm_jack_o_lantern"
-		"trait_ngm_optical_adapt"
-		"trait_ngm_hardness"
-		"trait_ngm_neural_block"
-		"trait_ngm_flying"
-		"trait_ngm_swift_horse"
+		trait_ngm_magnetism
+		trait_ngm_jack_o_lantern
+		trait_ngm_optical_adapt
+		trait_ngm_hardness
+		trait_ngm_neural_block
+		trait_ngm_flying
+		trait_ngm_swift_horse
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.1
-		planet_jobs_energy_produces_mult = 0.05
+		physicist_jobs_bonus_workforce_mult = 0.1
+		technician_jobs_bonus_workforce_mult = 0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_jack_o_lantern	鬼火      	：2p	地上軍ダメージ+15%、合金生産+5%、		(この種族は自在に火を操ることが可能である。)
 trait_ngm_jack_o_lantern = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_magnetism"
-		"trait_ngm_radioactive"
-		"trait_ngm_optical_adapt"
-		"trait_ngm_hardness"
-		"trait_ngm_neural_block"
-		"trait_ngm_flying"
-		"trait_ngm_swift_horse"
+		trait_ngm_magnetism
+		trait_ngm_radioactive
+		trait_ngm_optical_adapt
+		trait_ngm_hardness
+		trait_ngm_neural_block
+		trait_ngm_flying
+		trait_ngm_swift_horse
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.05
+		foundry_jobs_bonus_workforce_mult = 0.05
 		army_damage_mult = 0.15
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_optical_adapt		光学適応  	：2p	地上軍耐久度+30%、POPの住居使用量-5%、快適度消費-5%、犯罪発生+5%	(この種族は光学的に周囲へ溶け込むことで隠れることができる。)
 trait_ngm_optical_adapt = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_magnetism"
-		"trait_ngm_radioactive"
-		"trait_ngm_jack_o_lantern"
-		"trait_ngm_hardness"
-		"trait_ngm_neural_block"
-		"trait_ngm_flying"
-		"trait_ngm_swift_horse"
+		trait_ngm_magnetism
+		trait_ngm_radioactive
+		trait_ngm_jack_o_lantern
+		trait_ngm_hardness
+		trait_ngm_neural_block
+		trait_ngm_flying
+		trait_ngm_swift_horse
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -535,25 +534,23 @@ trait_ngm_optical_adapt = {
 		army_health = 0.3
 		pop_housing_usage_mult = -0.05
 		pop_amenities_usage_mult = -0.05
-		planet_crime_mult = 0.05
+		pop_happiness = -0.025
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_hardness		硬質器官  	：2p	地上軍ダメージ+20%、地上軍耐久度+20%、鉱物生産+5%		(この種族は体の一部を硬化させることができる。)
 trait_ngm_hardness = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_magnetism"
-		"trait_ngm_radioactive"
-		"trait_ngm_jack_o_lantern"
-		"trait_ngm_optical_adapt"
-		"trait_ngm_neural_block"
-		"trait_ngm_flying"
-		"trait_ngm_swift_horse"
+		trait_ngm_magnetism
+		trait_ngm_radioactive
+		trait_ngm_jack_o_lantern
+		trait_ngm_optical_adapt
+		trait_ngm_neural_block
+		trait_ngm_flying
+		trait_ngm_swift_horse
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -562,25 +559,23 @@ trait_ngm_hardness = {
 	modifier = {
 		army_damage_mult = 0.2
 		army_health = 0.2
-		planet_jobs_minerals_produces_mult = 0.05
+		miner_jobs_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_neural_block		神経遮断  	：2p	地上軍士気+40%、リーダーの寿命+5年				(この種族は痛覚神経を一時的に遮断させ、痛みを避けることができる。)
 trait_ngm_neural_block = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_magnetism"
-		"trait_ngm_radioactive"
-		"trait_ngm_jack_o_lantern"
-		"trait_ngm_optical_adapt"
-		"trait_ngm_hardness"
-		"trait_ngm_flying"
-		"trait_ngm_swift_horse"
+		trait_ngm_magnetism
+		trait_ngm_radioactive
+		trait_ngm_jack_o_lantern
+		trait_ngm_optical_adapt
+		trait_ngm_hardness
+		trait_ngm_flying
+		trait_ngm_swift_horse
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -588,51 +583,46 @@ trait_ngm_neural_block = {
 	}
 	modifier = {
 		army_morale = 0.4
-		leader_age = 5
+		leader_lifespan_add = 5
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_flying		飛行器官  	：2p	回避+5%、軍用機ダメージ+10%					(この種族は飛行することができる。)
 trait_ngm_flying = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_magnetism"
-		"trait_ngm_radioactive"
-		"trait_ngm_jack_o_lantern"
-		"trait_ngm_optical_adapt"
-		"trait_ngm_hardness"
-		"trait_ngm_neural_block"
-		"trait_ngm_swift_horse"
+		trait_ngm_magnetism
+		trait_ngm_radioactive
+		trait_ngm_jack_o_lantern
+		trait_ngm_optical_adapt
+		trait_ngm_hardness
+		trait_ngm_neural_block
+		trait_ngm_swift_horse
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		ship_evasion_mult = 0.05
-		ship_armor_damage_mult = 0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_flying_tt
 }
-
-# trait_ngm_swift_horse		俊足      	：3p	地上軍ダメージ+10%、地上軍耐久度+10%、地上軍士気+10%		(この種族は恐ろしい速度で走ることができる。)
 trait_ngm_swift_horse = {
 	cost = 3
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_magnetism"
-		"trait_ngm_radioactive"
-		"trait_ngm_jack_o_lantern"
-		"trait_ngm_optical_adapt"
-		"trait_ngm_hardness"
-		"trait_ngm_neural_block"
-		"trait_ngm_flying"
+		trait_ngm_magnetism
+		trait_ngm_radioactive
+		trait_ngm_jack_o_lantern
+		trait_ngm_optical_adapt
+		trait_ngm_hardness
+		trait_ngm_neural_block
+		trait_ngm_flying
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -647,38 +637,35 @@ trait_ngm_swift_horse = {
 		energy = 50
 	}
 }
-
-# trait_ngm_clairvoyance	千里眼    	：3p	食料算出量+5%、地上軍士気+10%、軍用機ダメージ+10%			(この種族は通常の視界以上のものを見ることができる。)
 trait_ngm_clairvoyance = {
 	cost = 3
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_sixth_sense"
-		"trait_ngm_sluggish"
-		"trait_ngm_degeneration"
+		trait_ngm_sixth_sense
+		trait_ngm_sluggish
+		trait_ngm_degeneration
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		country_food_produces_mult = 0.05
+		farmer_jobs_bonus_workforce_mult = 0.05
 		army_damage_mult = 0.1
-		ship_armor_damage_mult = 0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_clairvoyance_tt
 }
-
-# trait_ngm_sixth_sense	第六感    	：5p	地上軍士気+10%、回避+10%、研究力+5%					(この種族は予知能力のような形で一時的に未来を知ることができる。)
 trait_ngm_sixth_sense = {
 	cost = 5
 	potential_crossbreeding_chance = 1
 	opposites = {
 		trait_ngm_clairvoyance
-		"trait_ngm_sluggish"
-		"trait_ngm_degeneration"
+		trait_ngm_sluggish
+		trait_ngm_degeneration
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -686,24 +673,25 @@ trait_ngm_sixth_sense = {
 	}
 	modifier = {
 		army_morale = 0.1
-		ship_evasion_mult = 0.1
-		planet_jobs_physics_research_produces_mult = 0.05
-		planet_jobs_society_research_produces_mult = 0.05
-		planet_jobs_engineering_research_produces_mult = 0.05
+		researcher_jobs_bonus_workforce_mult = 0.05
+		pop_ngm_secretary_bonus_workforce_mult = 0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = 0.05
+		pop_ngm_gardener_bonus_workforce_mult = 0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_sixth_sense_tt
 }
-
-# trait_ngm_sluggish	鈍い感覚  	：-3p	回避-10%、研究力-5%							(この種族は5感が鈍く、周囲を知るために時間がかかる。)
 trait_ngm_sluggish = {
 	cost = -3
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_clairvoyance"
-		"trait_ngm_sixth_sense"
-		"trait_ngm_degeneration"
+		trait_ngm_clairvoyance
+		trait_ngm_sixth_sense
+		trait_ngm_degeneration
 	}
 	species_potential_add = {
 		is_species_class = HUM
@@ -713,50 +701,52 @@ trait_ngm_sluggish = {
 		LITHOID
 	}
 	modifier = {
-		ship_evasion_mult = -0.1
-		planet_jobs_physics_research_produces_mult = -0.05
-		planet_jobs_society_research_produces_mult = -0.05
-		planet_jobs_engineering_research_produces_mult = -0.05
+		researcher_jobs_bonus_workforce_mult = -0.05
+		pop_ngm_secretary_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.05
+		pop_ngm_gardener_bonus_workforce_mult = -0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_sluggish_tt
 }
-
-# trait_ngm_degeneration	退化した眼	：-5p	回避-15%、研究力-5%、地上軍士気-10%					(この種族は眼が退化しており、周囲を探る方法が限られている。)
 trait_ngm_degeneration = {
 	cost = -5
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_clairvoyance"
-		"trait_ngm_sixth_sense"
-		"trait_ngm_sluggish"
+		trait_ngm_clairvoyance
+		trait_ngm_sixth_sense
+		trait_ngm_sluggish
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		ship_evasion_mult = -0.15
-		planet_jobs_physics_research_produces_mult = -0.05
-		planet_jobs_society_research_produces_mult = -0.05
-		planet_jobs_engineering_research_produces_mult = -0.05
 		army_morale = -0.1
+		researcher_jobs_bonus_workforce_mult = -0.05
+		pop_ngm_secretary_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.05
+		pop_ngm_gardener_bonus_workforce_mult = -0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_degeneration_tt
 }
-
-# trait_ngm_confusion	混乱      	：-2p	地上軍士気-5%、研究力-5%						(この種族はちょっとしたことで落ち着きを失い、混乱した状態となる。)
 trait_ngm_confusion = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_derangement"
-		"trait_ngm_melancholy"
-		"trait_ngm_enervated"
-		"trait_ngm_death_heart"
+		trait_ngm_derangement
+		trait_ngm_melancholy
+		trait_ngm_enervated
+		trait_ngm_death_heart
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -764,49 +754,51 @@ trait_ngm_confusion = {
 	}
 	modifier = {
 		army_morale = -0.05
-		planet_jobs_physics_research_produces_mult = -0.05
-		planet_jobs_society_research_produces_mult = -0.05
-		planet_jobs_engineering_research_produces_mult = -0.05
+		researcher_jobs_bonus_workforce_mult = -0.05
+		pop_ngm_secretary_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.05
+		pop_ngm_gardener_bonus_workforce_mult = -0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_derangement	錯乱      	：-2p	研究力-10%、Popの快適度使用量+10%					(この種族は混沌に満ちており、冷静さを失っている。)
 trait_ngm_derangement = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_confusion"
-		"trait_ngm_melancholy"
-		"trait_ngm_enervated"
-		"trait_ngm_death_heart"
+		trait_ngm_confusion
+		trait_ngm_melancholy
+		trait_ngm_enervated
+		trait_ngm_death_heart
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = -0.1
-		planet_jobs_society_research_produces_mult = -0.1
-		planet_jobs_engineering_research_produces_mult = -0.1
 		pop_amenities_usage_mult = 0.1
+		researcher_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_melancholy	憂鬱      	：-3p	Popの快適度使用量+10%、幸福度-10%					(この種族は常に憂鬱で、落ち込んだ状態で生活している。)
 trait_ngm_melancholy = {
 	cost = -3
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_confusion"
-		"trait_ngm_derangement"
-		"trait_ngm_enervated"
-		"trait_ngm_death_heart"
+		trait_ngm_confusion
+		trait_ngm_derangement
+		trait_ngm_enervated
+		trait_ngm_death_heart
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -820,65 +812,66 @@ trait_ngm_melancholy = {
 		energy = 50
 	}
 }
-
-# trait_ngm_enervated	惰弱      	：-4p	鉱物生産量-10%、食料生産量-10%、地上軍耐久度-10%			(この種族は身体が弱く、熱心に動くことができない。)
 trait_ngm_enervated = {
 	cost = -4
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_confusion"
-		"trait_ngm_derangement"
-		"trait_ngm_melancholy"
-		"trait_ngm_death_heart"
+		trait_ngm_confusion
+		trait_ngm_derangement
+		trait_ngm_melancholy
+		trait_ngm_death_heart
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_minerals_produces_mult = -0.1
-		planet_jobs_food_produces_mult = -0.1
+		miner_jobs_bonus_workforce_mult = -0.1
+		farmer_jobs_bonus_workforce_mult = -0.1
 		army_health = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_death_heart	心の死    	：-4p	研究力-10%、統合力-10%、Popの快適度使用量-15%				(この種族は心を失っており、熱心さがない。)
 trait_ngm_death_heart = {
 	cost = -4
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_confusion"
-		"trait_ngm_derangement"
-		"trait_ngm_melancholy"
-		"trait_ngm_enervated"
+		trait_ngm_confusion
+		trait_ngm_derangement
+		trait_ngm_melancholy
+		trait_ngm_enervated
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = -0.1
-		planet_jobs_society_research_produces_mult = -0.1
-		planet_jobs_engineering_research_produces_mult = -0.1
-		planet_jobs_unity_produces_mult = -0.1
+		bureaucrat_jobs_bonus_workforce_mult = -0.1
 		pop_amenities_usage_mult = -0.15
+		researcher_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.1
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.1
+		pop_ngm_influencer_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_huge		巨大      	：3p	Popの食料消費量+10%、POPの住居使用量+15%、地上軍ダメージ+20%、地上軍耐久度+20%、家畜からの食料+3、Popの鉱物・エネルギー・食料生産+10%	(この種族の身体は銀河基準からしても巨大である。)
 trait_ngm_huge = {
 	cost = 3
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_big"
-		"trait_ngm_small"
-		"trait_ngm_minimum"
+		trait_ngm_big
+		trait_ngm_small
+		trait_ngm_minimum
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -889,24 +882,24 @@ trait_ngm_huge = {
 		pop_housing_usage_mult = 0.15
 		army_damage_mult = 0.2
 		army_health = 0.2
-		planet_livestock_food_produces_add = 3
-		planet_jobs_energy_produces_mult = 0.1
-		planet_jobs_minerals_produces_mult = 0.1
-		planet_jobs_food_produces_mult = 0.1
+		pop_livestock_bonus_workforce_mult = 0.75
+		technician_jobs_bonus_workforce_mult = 0.1
+		miner_jobs_bonus_workforce_mult = 0.1
+		farmer_jobs_bonus_workforce_mult = 0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = 0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_big		大型      	：2p	Popの食料消費量+5%、POPの住居使用量+10%、地上軍ダメージ+10%、地上軍耐久度+10%、家畜からの食料+1、Popの鉱物・エネルギー・食料生産+5%		(この種族の身体は銀河基準からしても大柄である。)
 trait_ngm_big = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_huge"
-		"trait_ngm_small"
-		"trait_ngm_minimum"
+		trait_ngm_huge
+		trait_ngm_small
+		trait_ngm_minimum
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -917,24 +910,24 @@ trait_ngm_big = {
 		pop_housing_usage_mult = 0.1
 		army_damage_mult = 0.1
 		army_health = 0.1
-		planet_livestock_food_produces_add = 1
-		planet_jobs_energy_produces_mult = 0.05
-		planet_jobs_minerals_produces_mult = 0.05
-		planet_jobs_food_produces_mult = 0.05
+		pop_livestock_bonus_workforce_mult = 0.25
+		technician_jobs_bonus_workforce_mult = 0.05
+		miner_jobs_bonus_workforce_mult = 0.05
+		farmer_jobs_bonus_workforce_mult = 0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = 0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_small		小型      	：-2p	Popの食料消費量-5%、POPの住居使用量-10%、地上軍ダメージ-10%、地上軍耐久度-10%、家畜からの食料-1、Popの鉱物・エネルギー・食料生産-5%		(この種族の身体は銀河基準からしても小型である。)
 trait_ngm_small = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_huge"
-		"trait_ngm_big"
-		"trait_ngm_minimum"
+		trait_ngm_huge
+		trait_ngm_big
+		trait_ngm_minimum
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -945,24 +938,24 @@ trait_ngm_small = {
 		pop_housing_usage_mult = -0.1
 		army_damage_mult = -0.1
 		army_health = -0.1
-		planet_livestock_food_produces_add = -1
-		planet_jobs_energy_produces_mult = -0.05
-		planet_jobs_minerals_produces_mult = -0.05
-		planet_jobs_food_produces_mult = -0.05
+		pop_livestock_bonus_workforce_mult = -0.25
+		technician_jobs_bonus_workforce_mult = -0.05
+		miner_jobs_bonus_workforce_mult = -0.05
+		farmer_jobs_bonus_workforce_mult = -0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_minimum	極小      	：-3p	Popの食料消費量-10%、POPの住居使用量-15%、地上軍ダメージ-20%、地上軍耐久度-20%、家畜からの食料-3、Popの鉱物・エネルギー・食料生産-10%	(この種族の身体は銀河基準からしても極小である。)
 trait_ngm_minimum = {
 	cost = -3
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_huge"
-		"trait_ngm_big"
-		"trait_ngm_small"
+		trait_ngm_huge
+		trait_ngm_big
+		trait_ngm_small
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -973,111 +966,107 @@ trait_ngm_minimum = {
 		pop_housing_usage_mult = -0.15
 		army_damage_mult = -0.2
 		army_health = -0.2
-		planet_livestock_food_produces_add = -3
-		planet_jobs_energy_produces_mult = -0.1
-		planet_jobs_minerals_produces_mult = -0.1
-		planet_jobs_food_produces_mult = -0.1
+		pop_livestock_bonus_workforce_mult = -0.75
+		technician_jobs_bonus_workforce_mult = -0.1
+		miner_jobs_bonus_workforce_mult = -0.1
+		farmer_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_hunting	狩猟文化  	：-3p	食料生産-20%、居住性-5%	(この種族の社会は狩猟により食料を確保している。)
 trait_ngm_hunting = {
 	cost = -3
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_collecting"
-		"trait_ngm_h_g"
-		"trait_ngm_agriculture"
+		trait_ngm_collecting
+		trait_ngm_h_g
+		trait_ngm_agriculture
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_food_produces_mult = -0.2
+		farmer_jobs_bonus_workforce_mult = -0.2
 		pop_environment_tolerance = -0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.2
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_collecting	採取文化        ：-3p	食料生産-20%、居住性-5%	(この種族の社会は採取により食料を確保している。)
 trait_ngm_collecting = {
 	cost = -3
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_hunting"
-		"trait_ngm_h_g"
-		"trait_ngm_agriculture"
+		trait_ngm_hunting
+		trait_ngm_h_g
+		trait_ngm_agriculture
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_food_produces_mult = -0.2
+		farmer_jobs_bonus_workforce_mult = -0.2
 		pop_environment_tolerance = -0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.2
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_h_g		狩猟採取文化    ：-2p	食料生産-10%、居住性-3%	(この種族の社会は狩猟や採取により食料を確保している。)
 trait_ngm_h_g = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_hunting"
-		"trait_ngm_collecting"
-		"trait_ngm_agriculture"
+		trait_ngm_hunting
+		trait_ngm_collecting
+		trait_ngm_agriculture
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_food_produces_mult = -0.1
+		farmer_jobs_bonus_workforce_mult = -0.1
 		pop_environment_tolerance = -0.03
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_agriculture	農耕文化        ：2p	食料生産+10%、居住性+3%	(この種族の社会は農業に基盤が置かれている。)
 trait_ngm_agriculture = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_hunting"
-		"trait_ngm_collecting"
-		"trait_ngm_h_g"
+		trait_ngm_hunting
+		trait_ngm_collecting
+		trait_ngm_h_g
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_food_produces_mult = 0.1
+		farmer_jobs_bonus_workforce_mult = 0.1
 		pop_environment_tolerance = 0.03
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_elder_verbal		複雑な言語      ：-1p	Popの快適度使用量+25%、統合力+5%	(この種族の語彙や文法は極めて難しい。)
 trait_ngm_elder_verbal = {
 	cost = -1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_elder_non_verbal"
-		"trait_ngm_elder_non_character"
+		trait_ngm_elder_non_verbal
+		trait_ngm_elder_non_character
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -1085,193 +1074,195 @@ trait_ngm_elder_verbal = {
 	}
 	modifier = {
 		pop_amenities_usage_mult = 0.25
-		planet_jobs_unity_produces_mult = 0.05
+		bureaucrat_jobs_bonus_workforce_mult = 0.05
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.05
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.05
+		pop_ngm_influencer_bonus_workforce_mult = 0.05
+		pop_ngm_gardener_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_elder_non_verbal	非言語社会      ：-2p	研究力-10%、統合力-5%、POPの成長速度+3%	(この種族には言語という概念が存在しない。)
 trait_ngm_elder_non_verbal = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_elder_verbal"
-		"trait_ngm_elder_non_character"
+		trait_ngm_elder_verbal
+		trait_ngm_elder_non_character
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = -0.1
-		planet_jobs_society_research_produces_mult = -0.1
-		planet_jobs_engineering_research_produces_mult = -0.1
-		planet_jobs_unity_produces_mult = -0.05
-		pop_growth_speed = 0.03
+		bureaucrat_jobs_bonus_workforce_mult = -0.05
+		logistic_growth_mult = 0.03
+		researcher_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.05
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.075
+		pop_ngm_influencer_bonus_workforce_mult = -0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.075
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_elder_non_character	無文字社会      ：-2p	研究力-10%				(この種族には文字という概念が存在しない。)
 trait_ngm_elder_non_character = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_elder_verbal"
-		"trait_ngm_elder_non_verbal"
+		trait_ngm_elder_verbal
+		trait_ngm_elder_non_verbal
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = -0.1
-		planet_jobs_society_research_produces_mult = -0.1
-		planet_jobs_engineering_research_produces_mult = -0.1
+		researcher_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_delicious		美味な肉体      ：0p	家畜からの食料+2					(この種族は美味しい！)
 trait_ngm_delicious = {
 	cost = 0
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_unappetizing"
-		"trait_ngm_speckled_w_white"
-		"trait_ngm_Toxic"
+		trait_ngm_unappetizing
+		trait_ngm_speckled_w_white
+		trait_ngm_Toxic
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_livestock_food_produces_add = 2
+		pop_livestock_bonus_workforce_mult = 0.5
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_unappetizing		不味い肉体      ：+1p	家畜からの食料-2、Popの食料消費量-10%			(この種族は不味い！)
 trait_ngm_unappetizing = {
 	cost = 1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_delicious"
-		"trait_ngm_speckled_w_white"
-		"trait_ngm_Toxic"
+		trait_ngm_delicious
+		trait_ngm_speckled_w_white
+		trait_ngm_Toxic
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_livestock_food_produces_add = -2
+		pop_livestock_bonus_workforce_mult = -0.5
 		planet_pops_organics_food_upkeep_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_speckled_w_white	霜降り          ：-1p	家畜からの食料+1、Popの食料消費量+10%、リーダーの寿命-5年	(この種族は全身が霜降りである。)
 trait_ngm_speckled_w_white = {
 	cost = -1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_delicious"
-		"trait_ngm_unappetizing"
-		"trait_ngm_Toxic"
+		trait_ngm_delicious
+		trait_ngm_unappetizing
+		trait_ngm_Toxic
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_livestock_food_produces_add = 1
+		pop_livestock_bonus_workforce_mult = 0.25
 		planet_pops_organics_food_upkeep_mult = 0.1
-		leader_age = -5
+		leader_lifespan_add = -5
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_Toxic			有毒            ：-1p	家畜からの食料-3、職業による快適度-10%			(この種族の肉は有毒である。)
 trait_ngm_Toxic = {
 	cost = -1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_delicious"
-		"trait_ngm_unappetizing"
-		"trait_ngm_speckled_w_white"
+		trait_ngm_delicious
+		trait_ngm_unappetizing
+		trait_ngm_speckled_w_white
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_livestock_food_produces_add = -3
-		planet_amenities_mult = -0.1
+		pop_livestock_bonus_workforce_mult = -0.75
+		influential_jobs_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_complex_heredity	複雑な遺伝構造  ：1p	社会学+15%、遺伝子改造コスト+20%	(この種族の遺伝子は極めて複雑である。)
 trait_ngm_complex_heredity = {
 	cost = 1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_simple_heredity"
+		trait_ngm_simple_heredity
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_society_research_produces_mult = 0.15
-		modify_species_cost_mult = 0.2
+		biologist_jobs_bonus_workforce_mult = 0.15
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.15
+		pop_ngm_gardener_bonus_workforce_mult = 0.15
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
 		energy = 50
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_complex_heredity_tt
 }
-
-# trait_ngm_simple_heredity	単純な遺伝構造  ：-1p	社会学-15%、遺伝子改造コスト-20%	(この種族の遺伝子は極めて単純である。)
 trait_ngm_simple_heredity = {
 	cost = -1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_complex_heredity"
+		trait_ngm_complex_heredity
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_society_research_produces_mult = -0.15
-		modify_species_cost_mult = -0.2
+		biologist_jobs_bonus_workforce_mult = -0.15
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.15
+		pop_ngm_gardener_bonus_workforce_mult = -0.15
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.15
 	}
 	slave_cost = {
 		energy = 50
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_simple_heredity_tt
 }
-
-# trait_ngm_sensitization		感光性          ：-1p	POPの快適度使用量+10%	(この種族は極めて光に弱く、光を避ける傾向にある。)
 trait_ngm_sensitization = {
 	cost = -1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_like_light"
+		trait_ngm_like_light
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -1284,13 +1275,11 @@ trait_ngm_sensitization = {
 		energy = 50
 	}
 }
-
-# trait_ngm_like_light		好光性          ：-1p	POPの住居使用量+10%		(この種族は光を好み、日光を浴びることを好む。)
 trait_ngm_like_light = {
 	cost = -1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_sensitization"
+		trait_ngm_sensitization
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -1303,13 +1292,11 @@ trait_ngm_like_light = {
 		energy = 50
 	}
 }
-
-# trait_ngm_indoor	インドア派      ：-1p	POPの住居使用量+10%	(この種族は屋内での活動を好む。)
 trait_ngm_indoor = {
 	cost = -1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_outdoor"
+		trait_ngm_outdoor
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -1322,13 +1309,11 @@ trait_ngm_indoor = {
 		energy = 50
 	}
 }
-
-# trait_ngm_outdoor	アウトドア派    ：+1p	POPの住居使用量-10%	(この種族は屋外での活動を好む。)
 trait_ngm_outdoor = {
 	cost = 1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_indoor"
+		trait_ngm_indoor
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -1341,197 +1326,195 @@ trait_ngm_outdoor = {
 		energy = 50
 	}
 }
-
-# trait_ngm_multitasking	マルチタスク    ：+1p	研究力+5%	(この種族は器用で、同時に仕事を行うことができる。)
 trait_ngm_multitasking = {
 	cost = 1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_clumsy"
+		trait_ngm_clumsy
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_energy_produces_mult = 0.05
-		planet_jobs_minerals_produces_mult = 0.05
-		planet_jobs_food_produces_mult = 0.05
+		technician_jobs_bonus_workforce_mult = 0.05
+		miner_jobs_bonus_workforce_mult = 0.05
+		farmer_jobs_bonus_workforce_mult = 0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = 0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_clumsy	不器用          ：-1p	研究力-5%	(この種族は不器用で、同時に仕事を行うことが苦手である。)
 trait_ngm_clumsy = {
 	cost = -1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_multitasking"
+		trait_ngm_multitasking
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = -0.05
-		planet_jobs_society_research_produces_mult = -0.05
-		planet_jobs_engineering_research_produces_mult = -0.05
+		researcher_jobs_bonus_workforce_mult = -0.05
+		pop_ngm_secretary_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.05
+		pop_ngm_gardener_bonus_workforce_mult = -0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_reversing_theory		理論的後進      ：-1p	物理学-10%	(この種族は理論構築が苦手であり、うまく物理学を扱えない。)
 trait_ngm_reversing_theory = {
 	cost = -1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_reversing_culture"
-		"trait_ngm_reversing_technologies"
+		trait_ngm_reversing_culture
+		trait_ngm_reversing_technologies
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = -0.1
+		physicist_jobs_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_reversing_culture		文化的後進      ：-1p	社会学-10%	(この種族の社会学的発展は遅れており、銀河規模の社会を取り扱い切れていない。)
 trait_ngm_reversing_culture = {
 	cost = -1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_reversing_theory"
-		"trait_ngm_reversing_technologies"
+		trait_ngm_reversing_theory
+		trait_ngm_reversing_technologies
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_society_research_produces_mult = -0.1
+		biologist_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_reversing_technologies	技術的後進      ：-1p	工学-10%	(この種族の工学技術は遅れており、機械構築などは苦手である。)
 trait_ngm_reversing_technologies = {
 	cost = -1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_reversing_theory"
-		"trait_ngm_reversing_culture"
+		trait_ngm_reversing_theory
+		trait_ngm_reversing_culture
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = -0.1
+		engineer_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_individuality		優秀な個性      ：3p	リーダー取得経験値+10%、リーダーのスキル上限+2	(この種族は個々の個性を伸ばすことを重要視している。)
 trait_ngm_individuality = {
 	cost = 3
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_non_individuality"
+		trait_ngm_non_individuality
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		species_leader_exp_gain = 0.1
-		leader_skill_levels = 2
+		species_leader_exp_gain = 0.3
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_non_individuality	無個性          ：-3p	リーダー取得経験値-10%、リーダーのスキル上限-2	(この種族は個々の個性を均一化することを重要視している。)
 trait_ngm_non_individuality = {
 	cost = -3
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_individuality"
+		trait_ngm_individuality
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		species_leader_exp_gain = -0.1
-		leader_skill_levels = -2
+		species_leader_exp_gain = -0.3
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_sociability		社交性          ：2p	職業による快適度+10%、職業による統合力+5%	(この種族は社交的だ。)
 trait_ngm_sociability = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_introversion"
+		trait_ngm_introversion
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_amenities_mult = 0.1
-		planet_jobs_unity_produces_mult = 0.05
+		influential_jobs_bonus_workforce_mult = 0.1
+		bureaucrat_jobs_bonus_workforce_mult = 0.05
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.05
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.05
+		pop_ngm_influencer_bonus_workforce_mult = -0.05
+		pop_ngm_gardener_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_introversion		内向性          ：-2p	職業による快適度-10%、職業による統合力-5%	(この種族は内向的だ。)
 trait_ngm_introversion = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_sociability"
+		trait_ngm_sociability
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_amenities_mult = -0.1
-		planet_jobs_unity_produces_mult = -0.05
+		influential_jobs_bonus_workforce_mult = -0.1
+		bureaucrat_jobs_bonus_workforce_mult = -0.05
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.05
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.05
+		pop_ngm_influencer_bonus_workforce_mult = 0.05
+		pop_ngm_gardener_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_spirit_release	精神的開放  	：-2p	統治志向の魅力-30%	(この種族は精神的な束縛を嫌う。)
 trait_ngm_spirit_release = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_spirit_freedom"
-		"trait_ngm_spirit_authority"
-		"trait_ngm_spirit_subordination"
+		trait_ngm_spirit_freedom
+		trait_ngm_spirit_authority
+		trait_ngm_spirit_subordination
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -1544,15 +1527,13 @@ trait_ngm_spirit_release = {
 		energy = 50
 	}
 }
-
-# trait_ngm_spirit_freedom	精神的自由  	：-1p	統治志向の魅力-15%	(この種族は精神的な自由を重視している。)
 trait_ngm_spirit_freedom = {
 	cost = -1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_spirit_release"
-		"trait_ngm_spirit_authority"
-		"trait_ngm_spirit_subordination"
+		trait_ngm_spirit_release
+		trait_ngm_spirit_authority
+		trait_ngm_spirit_subordination
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -1565,15 +1546,13 @@ trait_ngm_spirit_freedom = {
 		energy = 50
 	}
 }
-
-# trait_ngm_spirit_authority	精神的権威  	：1p	統治志向の魅力+15%	(この種族は精神的に誰かに従うことに慣れている。)
 trait_ngm_spirit_authority = {
 	cost = 1
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_spirit_release"
-		"trait_ngm_spirit_freedom"
-		"trait_ngm_spirit_subordination"
+		trait_ngm_spirit_release
+		trait_ngm_spirit_freedom
+		trait_ngm_spirit_subordination
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -1586,15 +1565,13 @@ trait_ngm_spirit_authority = {
 		energy = 50
 	}
 }
-
-# trait_ngm_spirit_subordination	精神的従属	：2p	統治志向の魅力+30%	(この種族は精神的に誰かの管理下に置かれることを好んでいる。)
 trait_ngm_spirit_subordination = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_spirit_release"
-		"trait_ngm_spirit_freedom"
-		"trait_ngm_spirit_authority"
+		trait_ngm_spirit_release
+		trait_ngm_spirit_freedom
+		trait_ngm_spirit_authority
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -1607,160 +1584,149 @@ trait_ngm_spirit_subordination = {
 		energy = 50
 	}
 }
-
-# trait_ngm_liar		嘘吐き      	：-2p	職業による快適度-10%	(この種族は小さい嘘をつくことを好み、しばし周囲を疲弊させる。)
 trait_ngm_liar = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_honest"
+		trait_ngm_honest
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_amenities_mult = -0.1
+		influential_jobs_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_honest	正直者      	：2p	職業による快適度+10%	(この種族は正直者で、周囲に気持ちの良い関係を構築する。)
 trait_ngm_honest = {
 	cost = 2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_liar"
+		trait_ngm_liar
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_amenities_mult = 0.1
+		influential_jobs_bonus_workforce_mult = 0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_heart_less	無心        	：-2p	食料算出量-15%		(この種族は心を込めて食物を作ることができない。)
 trait_ngm_heart_less = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_debauchery"
-		"trait_ngm_tired"
-		"trait_ngm_stupidity"
-		"trait_ngm_spendthrift"
+		trait_ngm_debauchery
+		trait_ngm_tired
+		trait_ngm_stupidity
+		trait_ngm_spendthrift
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_food_produces_mult = -0.15
+		farmer_jobs_bonus_workforce_mult = -0.15
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.15
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_debauchery	放蕩        	：-2p	エネルギー算出量-15%	(この種族はエネルギーを無駄にする傾向がある。)
 trait_ngm_debauchery = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_heart_less"
-		"trait_ngm_tired"
-		"trait_ngm_stupidity"
-		"trait_ngm_spendthrift"
+		trait_ngm_heart_less
+		trait_ngm_tired
+		trait_ngm_stupidity
+		trait_ngm_spendthrift
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_energy_produces_mult = -0.15
+		technician_jobs_bonus_workforce_mult = -0.15
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.15
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_tired		疲労感      	：-2p	鉱物産出量-15%		(この種族は疲労しやすく、鉱物生産が苦手である。)
 trait_ngm_tired = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_heart_less"
-		"trait_ngm_debauchery"
-		"trait_ngm_stupidity"
-		"trait_ngm_spendthrift"
+		trait_ngm_heart_less
+		trait_ngm_debauchery
+		trait_ngm_stupidity
+		trait_ngm_spendthrift
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_minerals_produces_mult = -0.15
+		miner_jobs_bonus_workforce_mult = -0.15
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_stupidity	愚鈍      	：-2p	研究力-10%		(この種族は知力が低く、うまく研究を進めることができない。)
 trait_ngm_stupidity = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_heart_less"
-		"trait_ngm_debauchery"
-		"trait_ngm_tired"
-		"trait_ngm_spendthrift"
+		trait_ngm_heart_less
+		trait_ngm_debauchery
+		trait_ngm_tired
+		trait_ngm_spendthrift
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = -0.1
-		planet_jobs_society_research_produces_mult = -0.1
-		planet_jobs_engineering_research_produces_mult = -0.1
+		researcher_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# trait_ngm_spendthrift	浪費家      	：-2p	交易価値-25%		(この種族は浪費癖があり、交易をうまく行うことができない。)
 trait_ngm_spendthrift = {
 	cost = -2
 	potential_crossbreeding_chance = 1
 	opposites = {
-		"trait_ngm_heart_less"
-		"trait_ngm_debauchery"
-		"trait_ngm_tired"
-		"trait_ngm_stupidity"
+		trait_ngm_heart_less
+		trait_ngm_debauchery
+		trait_ngm_tired
+		trait_ngm_stupidity
 	}
 	allowed_archetypes = {
 		BIOLOGICAL
 		LITHOID
 	}
 	modifier = {
-		trade_value_mult = -0.25
+		trader_jobs_bonus_workforce_mult = -0.25
+		pop_ngm_executive_cast_bonus_workforce_mult = -0.25
+		pop_ngm_cast_bonus_workforce_mult = -0.25
 	}
 	slave_cost = {
 		energy = 50
 	}
 }
-
-# 起源用
-# 種族特性「古代からの商人」（はるか太古から頭脳労働者として活躍してきたため、創造やデスクワークに適性がある種族。人口過少の防止として太古に繁殖力の増強が図られている。）
-# 交易価値+30%、POPの住居使用量-30%、POPの成長速度+20%。鉱山労働者の生産量-50%、POP消費財維持費+10%。途中削除、追加不可。強制取得。
 trait_ngm_merchant_from_ancient = {
 	cost = 0
 	initial = no
@@ -1781,43 +1747,28 @@ trait_ngm_merchant_from_ancient = {
 		LITHOID
 	}
 	modifier = {
-		trade_value_mult = 0.3
+		trader_jobs_bonus_workforce_mult = 0.3
 		pop_housing_usage_mult = -0.3
-		pop_growth_speed = 0.2
-		planet_jobs_minerals_produces_mult = -0.5
+		logistic_growth_mult = 0.2
+		miner_jobs_bonus_workforce_mult = -0.5
 		planet_pops_consumer_goods_upkeep_mult = 0.1
+		pop_ngm_executive_cast_bonus_workforce_mult = 0.3
+		pop_ngm_cast_bonus_workforce_mult = 0.3
 	}
 	slave_cost = {
 		energy = 500
 	}
 }
-
-# 以下、対応するポートレートのみ選択可能。
-# trait_ngm_Advanced_finger	高度な手指（ヒューマノイド）：2p	合金生産+10%							(この種族の手指は器用で、うまく加工を行うことができる。)
-# trait_ngm_homicide		同族殺し（ヒューマノイド）  ：-2p	統合力-10%、安定度-5%、軍国主義志向への魅力+10%、平和主義志向への魅力-10%	(この種族は互いに殺し合いを行う悪習がある。)
-# trait_ngm_beautiful_fur 	美しい毛並み（哺乳類）      ：2p	職業による快適度+10%、居住性+5%					(この種族の毛並みは長く、美しい。)
-# trait_ngm_violence_instinct	暴力的本能（哺乳類）        ：-2p	地上軍士気-10%、統合力-5%、地上軍士気+5%			(この種族は本能的に粗暴である。)
-# trait_ngm_scantily_clad		身軽な身体（鳥）            ：2p	回避+5%、POPの住居使用量-10%						(この種族は体重が少ない割に筋肉量が多く、身軽に動くことができる。)
-# trait_ngm_chicken head		鳥頭（鳥）                  ：-2p	研究力-10%、統合力-5%、幸福度+5%、統治志向の魅力+10%		(この種族の脳は小さく、すぐ忘れてしまう。)
-# trait_ngm_efficient_metabolism	効率的代謝（爬虫類）        ：2p	食料消費量-15%							(この種族の代謝効率は極めて高く、少ない食料で生きていける。)
-# trait_ngm_external_temperature	外温性（爬虫類）            ：-2p	居住性-5%、リーダーの寿命+5年					(この種族は外部の温度に体温を左右されるため、居住について課題が多い。)
-# trait_ngm_elder_rational_body	合理的身体機能（虫）        ：2p	居住性+10%							(この種族の身体は極めて合理的で、あらゆる環境に適応できる。)
-# trait_ngm_metamorphosis		変態（虫）                  ：-2p	POPの成長速度-10%、POPの住居使用量-5%					(この種族は幼体から成体になる間に大きな形態変化を必要とするほか、変態時に突然死することも多い。)
-# trait_ngm_flexible_muscle	柔軟な筋肉（軟体人）        ：2p	鉱物生産量+5%、地上軍ダメージ+10%				(この種族の筋肉は柔軟で、強度も高い。)
-# trait_ngm_corrosiveness_mucus	腐食性粘液（軟体人）        ：-2p	POP消費財維持費+10%、地上軍攻撃力+5%				(この種族が分泌する粘液は腐食性で、様々なものを壊すことが多い。)
-# trait_ngm_disassembly		高分子分解（菌類）          ：2p	POPの成長速度+10%							(この種族は様々なものを分解し、栄養とすることができる。)
-# trait_ngm_spore			変性胞子（菌類）            ：-2p	職業による快適度-10%、居住性-5%、統合力+5%			(この種族の胞子は周囲に予測可能性の低い影響を与える。)
-# trait_ngm_photosynthesis	光合成（植物）              ：2p	食料消費量-20%、居住性+5%					(この種族は光合成により栄養を手に入れることができる。)
-# trait_ngm_slowness		遅速性（植物）              ：-2p	地上軍耐久度-30%、POPの住居使用量+10%、リーダーの寿命+15年		(この種族の足は遅く、動作が緩慢である。)
-
-# 機械特性
-# 1 工芸義肢 trait_ngm_m_crafts 3 "合金生産+5% 消費財生産+5%" この機械の腕は極めて精巧な動作にも耐え、工芸品や工業製品の製造に高い適性を示している。
 trait_ngm_m_crafts = {
 	cost = 3
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.05
-		planet_jobs_consumer_goods_produces_mult = 0.05
+		foundry_jobs_bonus_workforce_mult = 0.05
+		artisan_jobs_bonus_workforce_mult = 0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 750
@@ -1825,26 +1776,31 @@ trait_ngm_m_crafts = {
 	assembly_score = {
 		modifier = {
 			add = 1.5
-			from = { has_factory_designation = yes }
+			from = {
+				has_factory_designation = yes
+			}
 		}
 		modifier = {
 			add = 1.5
-			from = { has_foundry_designation = yes }
+			from = {
+				has_foundry_designation = yes
+			}
 		}
 		modifier = {
 			add = 1.5
-			from = { has_industrial_designation = yes }
+			from = {
+				has_industrial_designation = yes
+			}
 		}
 	}
 }
-
-# 2 高機能レンズ trait_ngm_m_lens 3 "研究速度+10% アノマリー調査速度+5%" この機械のレンズは微細な者から遠くのものまで把握することに高い能力を誇る。
 trait_ngm_m_lens = {
 	cost = 3
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		all_technology_research_speed = 0.1
-		ship_anomaly_research_speed_mult = 0.05
 	}
 	slave_cost = {
 		energy = 750
@@ -1852,21 +1808,28 @@ trait_ngm_m_lens = {
 	assembly_score = {
 		modifier = {
 			add = 1.5
-			from = { has_mining_designation = yes }
+			from = {
+				has_mining_designation = yes
+			}
 		}
 		modifier = {
 			add = 0.5
-			from = { has_rural_designation = yes }
+			from = {
+				has_rural_designation = yes
+			}
 		}
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_lens_tt
 }
-
-# 3 味覚プログラム trait_ngm_m_taste 2 食料生産+30% この機械は味覚を有しており、不味いものは作らない。
 trait_ngm_m_taste = {
 	cost = 2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		planet_jobs_food_produces_mult = 0.3
+		farmer_jobs_bonus_workforce_mult = 0.3
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.3
 	}
 	slave_cost = {
 		energy = 750
@@ -1874,15 +1837,18 @@ trait_ngm_m_taste = {
 	assembly_score = {
 		modifier = {
 			add = 1.5
-			from = { has_farming_designation = yes }
+			from = {
+				has_farming_designation = yes
+			}
 		}
 	}
 }
-
-# 4 放電コンデンサ trait_ngm_m_discharge 2 地上軍ダメージ+30% この機械は放電能力を有しており、有機生命体に攻撃を行う際に強い適性を誇る。
 trait_ngm_m_discharge = {
 	cost = 2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
 		army_damage_mult = 0.3
 	}
@@ -1892,26 +1858,28 @@ trait_ngm_m_discharge = {
 	assembly_score = {
 	}
 }
-
-# 5 飛行ジェット trait_ngm_m_jet 2 "回避+5% 物理学+10%" この機械は空を飛ぶ機構を備えている。
 trait_ngm_m_jet = {
 	cost = 2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		ship_evasion_mult = 0.05
-		planet_jobs_physics_research_produces_mult = 0.1
+		physicist_jobs_bonus_workforce_mult = 0.1
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_jet_tt
 }
-
-# 6 有機体分解 trait_ngm_m_disassembly 1 Pop維持費-5% この機械は不要な有機体を体内で分解することができる。
 trait_ngm_m_disassembly = {
 	cost = 1
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
 		planet_pops_consumer_goods_upkeep_mult = -0.05
 	}
@@ -1921,55 +1889,54 @@ trait_ngm_m_disassembly = {
 	assembly_score = {
 	}
 }
-
-# 7 量子コンピュータ trait_ngm_m_quantum 4 「霊子コンピュータ」 "研究速度+20% 帝国規模-10% Pop製造コスト+30%" この機械の頭脳は初期型の量子コンピュータにより統御されており、極めて複雑な計算を一瞬で行うことが可能である。
 trait_ngm_m_quantum = {
 	cost = 4
-	opposites = { "trait_ngm_m_reishi" }
-	allowed_archetypes = { ROBOT MACHINE }
-	modifier = {
-		all_technology_research_speed = 0.2
-		species_empire_size_mult = -0.10
+	opposites = {
+		trait_ngm_m_reishi
 	}
-	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
-	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = 0.3
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
+	modifier = {
+		species_empire_size_mult = -0.10
+		planet_pop_assembly_mult = -0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_quantum_tt
 }
-
-# 8 霊子コンピュータ trait_ngm_m_reishi 4 「量子コンピュータ」 "回避+10% 信用+30 研究速度+20% Pop製造コスト-30%" この機械の頭脳は特殊な霊子コンピュータでできており、感情や意思を頂上的な力で感じ取りつつ高度な演算を行うことができる。
 trait_ngm_m_reishi = {
 	cost = 4
-	opposites = { "trait_ngm_m_quantum" }
-	allowed_archetypes = { ROBOT MACHINE }
-	modifier = {
-		country_trust_cap_add = 30
-		ship_evasion_mult = 0.1
-		all_technology_research_speed = 0.2
+	opposites = {
+		trait_ngm_m_quantum
 	}
-	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
-	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = -0.3
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
+	modifier = {
+		planet_pop_assembly_mult = 0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_reishi_tt
 }
-
-# 9 原始的構造 trait_ngm_m_primitive -3 "Pop維持費+10% リーダーレベル上限-1" この機械の構造は極めて原始的で、どうして動いているのか不明だ。
 trait_ngm_m_primitive = {
 	cost = -3
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
 		planet_pops_upkeep_mult = 0.1
-		leader_skill_levels = -1
+		species_leader_exp_gain = -0.1
 	}
 	slave_cost = {
 		energy = 750
@@ -1977,13 +1944,15 @@ trait_ngm_m_primitive = {
 	assembly_score = {
 	}
 }
-
-# 10 漏電 trait_ngm_m_leakage -2 エネルギー生産-10% この機械はよく漏電している。
 trait_ngm_m_leakage = {
 	cost = -2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		planet_jobs_energy_produces_mult = -0.1
+		technician_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 750
@@ -1991,26 +1960,28 @@ trait_ngm_m_leakage = {
 	assembly_score = {
 	}
 }
-
-# 11 短絡的判断 trait_ngm_m_nasty -3 "快適度消費+20% 研究速度-5%" この機械の判断は短絡的で、目の前の課題を解決することしかできない。
 trait_ngm_m_nasty = {
 	cost = -3
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
 		pop_amenities_usage_mult = 0.2
-		all_technology_research_speed = -0.05
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_nasty_tt
 }
-
-# 12 非光学的判断 trait_ngm_m_invisible -2 地上軍ダメージ-20% この機械は光学的な把握を行うことができず、それらを確認することはできない。
 trait_ngm_m_invisible = {
 	cost = -2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
 		army_damage_mult = -0.2
 	}
@@ -2020,11 +1991,12 @@ trait_ngm_m_invisible = {
 	assembly_score = {
 	}
 }
-
-# 13 不適切配線 trait_ngm_m_wiring -2 Pop製造速度-10% この機械の内部配線は不適切であるが、諸事情により変更することができない。
 trait_ngm_m_wiring = {
 	cost = -2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
 		planet_pop_assembly_mult = -0.1
 	}
@@ -2034,16 +2006,14 @@ trait_ngm_m_wiring = {
 	assembly_score = {
 	}
 }
-
-# 14 詰め合わせ trait_ngm_m_cram -1 Pop製造コスト+5% この機械をデザインした者はこの機械を本来超える能力をこの機体に詰め込もうとした。
 trait_ngm_m_cram = {
 	cost = -1
-	allowed_archetypes = { ROBOT MACHINE }
-	modifier = {
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
 	}
-	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
-	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = 0.05
+	modifier = {
+		planet_pop_assembly_mult = -0.025
 	}
 	slave_cost = {
 		energy = 750
@@ -2051,35 +2021,37 @@ trait_ngm_m_cram = {
 	assembly_score = {
 	}
 }
-
-# 15 頻発する故障 trait_ngm_m_malfunction -4 「作業不適格」 "Pop製造コスト+10% Pop維持費+10% Pop製造速度+10% リーダー故障確率+20%まだ" この機械の故障率は異常であり、製造途中でも、製造後にも不具合を起こすため維持コストも極めて高い。
 trait_ngm_m_malfunction = {
 	cost = -4
-	opposites = { "trait_ngm_m_inappropriate" }
-	allowed_archetypes = { ROBOT MACHINE }
+	opposites = {
+		trait_ngm_m_inappropriate
+	}
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		planet_pop_assembly_mult = 0.1
+		planet_pop_assembly_mult = 0.05
 		planet_pops_upkeep_mult = 0.1
 	}
 	custom_tooltip = trait_ngm_m_malfunction_custom_tooltip
-	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
-	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = 0.1
-	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
 	}
 }
-
-# 16 作業不適格 trait_ngm_m_inappropriate -4 「頻発する故障」 Pop生産-10% この機械は、あらゆる生産を行うための適正がない。
 trait_ngm_m_inappropriate = {
 	cost = -4
-	opposites = { "trait_ngm_m_malfunction" }
-	allowed_archetypes = { ROBOT MACHINE }
+	opposites = {
+		trait_ngm_m_malfunction
+	}
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		planet_jobs_produces_mult = -0.1
+		pop_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 750
@@ -2087,11 +2059,12 @@ trait_ngm_m_inappropriate = {
 	assembly_score = {
 	}
 }
-
-# 17	シリコン製	trait_ngm_m_shi	2		Pop維持費-10%	この種族の身体にはシリコンが利用されている
 trait_ngm_m_shi = {
 	cost = 2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
 		planet_pops_upkeep_mult = -0.1
 	}
@@ -2101,34 +2074,27 @@ trait_ngm_m_shi = {
 	assembly_score = {
 	}
 }
-
-# 18	人工皮膚	trait_ngm_m_skin	2		"有機生命体からの信用最大値+20 関係改善効率+10%"	この種族には人工皮膚が利用されており、有機的な外観になることが可能だ
 trait_ngm_m_skin = {
 	cost = 2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		country_organic_trust_cap_add = 20
-		envoy_improve_relations_mult = 0.1
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_skin_tt
 }
-
-# 19	複合CPU	trait_ngm_m_mcpu	1		"リーダー取得経験値+35% リーダー故障確率+5%"	複数のCPUを搭載し、熟慮を行うことができる
 trait_ngm_m_mcpu = {
 	cost = 1
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	custom_tooltip = trait_ngm_m_mcpu_custom_tooltip
 	modifier = {
 		species_leader_exp_gain = 0.35
@@ -2137,23 +2103,16 @@ trait_ngm_m_mcpu = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 20	火炎放射	trait_ngm_m_fire	2		"職業からの合金+5% 地上軍ダメージ+15%"	ヒャッハー！ 汚物は消毒だー！
 trait_ngm_m_fire = {
 	cost = 2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.05
+		foundry_jobs_bonus_workforce_mult = 0.05
 		army_damage_mult = 0.15
 	}
 	slave_cost = {
@@ -2162,19 +2121,18 @@ trait_ngm_m_fire = {
 	assembly_score = {
 		modifier = {
 			add = 1.5
-			from = { has_foundry_designation = yes }
+			from = {
+				has_foundry_designation = yes
+			}
 		}
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 21	緊急バックアップ	trait_ngm_m_back	4		リーダー故障確率-20%	万が一に備え、必要なデータを保存することを義務としている
 trait_ngm_m_back = {
 	cost = 2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
 	}
 	custom_tooltip = trait_ngm_m_back_custom_tooltip
@@ -2182,114 +2140,80 @@ trait_ngm_m_back = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 22	戦闘コンピュータ	trait_ngm_m_bcpu	4		"回避+5% 武器射程+15%"	この種族は、戦闘目的でデザインされている
 trait_ngm_m_bcpu = {
 	cost = 4
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		ship_evasion_mult = 0.05
-		ship_weapon_range_mult = 0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_bcpu_tt
 }
-
-# 23	サブシステム	trait_ngm_m_sub	2		職業からの資源産出+1%	システムの補助機能を使うことで全般的な機能向上が可能である
 trait_ngm_m_sub = {
 	cost = 2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		planet_jobs_produces_mult = 0.01
+		pop_bonus_workforce_mult = 0.01
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 24	自己複製	trait_ngm_m_made	3		"POPの成長速度+10% リーダー故障確率-5%"	この種族は、自分たち自身を複製することができる
 trait_ngm_m_made = {
 	cost = 2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	custom_tooltip = trait_ngm_m_made_custom_tooltip
 	modifier = {
-		pop_growth_speed = 0.1
+		logistic_growth_mult = 0.1
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 25	事務プロトコル	trait_ngm_m_office	3		帝国規模-5%	この種族は、事務作業を得意とする
 trait_ngm_m_office = {
 	cost = 3
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		empire_size_pops_mult = -0.05
+		species_empire_size_mult = -0.05
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 26	製造システム	trait_ngm_m_product	4	典礼システム	合金産出+20%	この種族は、合金製造を得意とする
 trait_ngm_m_product = {
 	cost = 4
-	allowed_archetypes = { ROBOT MACHINE }
-	opposites = { "trait_ngm_m_proto" }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
+	opposites = {
+		trait_ngm_m_proto
+	}
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.2
+		foundry_jobs_bonus_workforce_mult = 0.2
 	}
 	slave_cost = {
 		energy = 750
@@ -2297,22 +2221,28 @@ trait_ngm_m_product = {
 	assembly_score = {
 		modifier = {
 			add = 1.5
-			from = { has_foundry_designation = yes }
+			from = {
+				has_foundry_designation = yes
+			}
 		}
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 27	典礼システム	trait_ngm_m_proto	4	製造システム	統合力産出+25%	この種族は、儀礼と伝統を重んじる
 trait_ngm_m_proto = {
 	cost = 4
-	allowed_archetypes = { ROBOT MACHINE }
-	opposites = { "trait_ngm_m_product" }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
+	opposites = {
+		trait_ngm_m_product
+	}
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.25
+		bureaucrat_jobs_bonus_workforce_mult = 0.25
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.25
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.25
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.25
+		pop_ngm_influencer_bonus_workforce_mult = 0.25
+		pop_ngm_gardener_bonus_workforce_mult = 0.25
 	}
 	slave_cost = {
 		energy = 750
@@ -2320,53 +2250,53 @@ trait_ngm_m_proto = {
 	assembly_score = {
 		modifier = {
 			add = 1.5
-			from = { has_unity_designation = yes }
+			from = {
+				has_unity_designation = yes
+			}
 		}
 	}
 }
-
-# 28	異常複製	trait_ngm_m_incr	2	古代の機械	"POP製造速度+25% POP維持費-10% リーダー故障確率+15%"	この種族は通常では考えられない速度で自己増殖する
 trait_ngm_m_incr = {
 	cost = 2
-	allowed_archetypes = { ROBOT MACHINE }
-	opposites = { "trait_ngm_m_antient" }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
+	opposites = {
+		trait_ngm_m_antient
+	}
 	custom_tooltip = trait_ngm_m_incr_custom_tooltip
 	modifier = {
 		planet_pops_upkeep_mult = -0.1
-	}
-	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
-	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = 0.25
+		planet_pop_assembly_mult = -0.125
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 29	古代の機械	trait_ngm_m_antient	4	異常複製	"POP製造速度-25% 研究力+20% 統合力+20%"	この種族は古代の技術を用いた発達をしている
 trait_ngm_m_antient = {
 	cost = 4
-	allowed_archetypes = { ROBOT MACHINE }
-	opposites = { "trait_ngm_m_incr" }
-	modifier = {
-		planet_jobs_unity_produces_mult = 0.2
-		planet_jobs_physics_research_produces_mult = 0.20
-		planet_jobs_society_research_produces_mult = 0.20
-		planet_jobs_engineering_research_produces_mult = 0.20
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
 	}
-	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
-	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = -0.25
+	opposites = {
+		trait_ngm_m_incr
+	}
+	modifier = {
+		bureaucrat_jobs_bonus_workforce_mult = 0.2
+		researcher_jobs_bonus_workforce_mult = 0.2
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.2
+		pop_ngm_secretary_bonus_workforce_mult = 0.2
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.2
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.2
+		pop_ngm_influencer_bonus_workforce_mult = 0.2
+		pop_ngm_tide_engineer_bonus_workforce_mult = 0.2
+		pop_ngm_gardener_bonus_workforce_mult = 0.2
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.2
+		planet_pop_assembly_mult = 0.125
 	}
 	slave_cost = {
 		energy = 750
@@ -2374,29 +2304,34 @@ trait_ngm_m_antient = {
 	assembly_score = {
 		modifier = {
 			add = 1.5
-			from = { has_research_designation = yes }
+			from = {
+				has_research_designation = yes
+			}
 		}
 		modifier = {
 			add = 1.5
-			from = { has_unity_designation = yes }
+			from = {
+				has_unity_designation = yes
+			}
 		}
 	}
 }
-
-# 30	巨大	trait_ngm_m_huge	3	小型、極小、大型	"POPの維持費+15% 地上軍ダメージ+20% 地上軍耐久度+20% 職業からの鉱物産出+10%"	この種族は銀河の標準を考えても巨大だ
 trait_ngm_m_huge = {
 	cost = 3
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	opposites = {
-		"trait_ngm_m_big"
-		"trait_ngm_m_small"
-		"trait_ngm_m_tiny"
+		trait_ngm_m_big
+		trait_ngm_m_small
+		trait_ngm_m_tiny
 	}
 	modifier = {
 		planet_pops_upkeep_mult = 0.15
 		army_damage_mult = 0.2
 		army_health = 0.2
-		planet_jobs_minerals_produces_mult = 0.1
+		miner_jobs_bonus_workforce_mult = 0.1
 	}
 	slave_cost = {
 		energy = 750
@@ -2404,30 +2339,28 @@ trait_ngm_m_huge = {
 	assembly_score = {
 		modifier = {
 			add = 1.5
-			from = { has_mining_designation = yes }
+			from = {
+				has_mining_designation = yes
+			}
 		}
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 31	大型	trait_ngm_m_big	2	小型、極小、巨大	"POPの維持費+5% 地上軍ダメージ+10% 地上軍耐久度+10% 職業からの鉱物産出+5%"	この種族は銀河の標準を考えても大型だ
 trait_ngm_m_big = {
 	cost = 2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	opposites = {
-		"trait_ngm_m_huge"
-		# "trait_ngm_m_big"
-		"trait_ngm_m_small"
-		"trait_ngm_m_tiny"
+		trait_ngm_m_huge
+		trait_ngm_m_small
+		trait_ngm_m_tiny
 	}
 	modifier = {
 		planet_pops_upkeep_mult = 0.5
 		army_damage_mult = 0.1
 		army_health = 0.1
-		planet_jobs_minerals_produces_mult = 0.05
+		miner_jobs_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 750
@@ -2435,19 +2368,18 @@ trait_ngm_m_big = {
 	assembly_score = {
 		modifier = {
 			add = 1.5
-			from = { has_mining_designation = yes }
+			from = {
+				has_mining_designation = yes
+			}
 		}
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 31	コアユニット露出	trait_ngm_m_core	-1		地上軍耐久力-25%	この種族は重要部品が露出している
 trait_ngm_m_core = {
 	cost = -1
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
 		army_health = -0.25
 	}
@@ -2455,111 +2387,76 @@ trait_ngm_m_core = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 32	中枢統御機構	trait_ngm_m_main	-2		"職業からの資源産出-1% リーダー故障確率-5%"	この種族は応用の効かない古典的な統御をしている
 trait_ngm_m_main = {
 	cost = -2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	custom_tooltip = trait_ngm_m_main_custom_tooltip
 	modifier = {
-		planet_jobs_produces_mult = -0.01
+		pop_bonus_workforce_mult = -0.01
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 33	蒸気機関	trait_ngm_m_steam	-3		エネルギー算出-25%	この種族は蒸気機関をいまだに利用している
 trait_ngm_m_steam = {
 	cost = -3
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		planet_jobs_energy_produces_mult = -0.25
+		technician_jobs_bonus_workforce_mult = -0.25
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.25
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 34	非光学探知	trait_ngm_m_light	-4		"回避-10% 連射レート-15%"	この種族は、光学的探査に頼らない
 trait_ngm_m_light = {
 	cost = -4
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		ship_evasion_mult = -0.1
-		ship_fire_rate_mult = -0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_light_tt
 }
-
-# 35	制御困難	trait_ngm_m_uncont	-2		帝国規模+10%	この種族は、制御することが困難だ
 trait_ngm_m_uncont = {
 	cost = -2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		empire_size_pops_mult = 0.1
+		species_empire_size_mult = 0.1
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 36	フラッシュメモリ	trait_ngm_m_flash	-3		"リーダー維持費+15% リーダー故障確率+10%"	この種族のデータは外部に保存され、よくなくなる
 trait_ngm_m_flash = {
 	cost = -3
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	custom_tooltip = trait_ngm_m_flash_custom_tooltip
 	modifier = {
 		leaders_upkeep_mult = 0.15
@@ -2568,105 +2465,75 @@ trait_ngm_m_flash = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 37	小型	trait_ngm_m_small	-2	極小、大型、巨大	"POPの維持費-5% 地上軍ダメージ-10% 地上軍耐久度-10% 職業からの鉱物産出-5%"	この種族は、銀河でみても小型だ
 trait_ngm_m_small = {
 	cost = -2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	opposites = {
-		"trait_ngm_m_huge"
-		"trait_ngm_m_big"
-		# "trait_ngm_m_small"
-		"trait_ngm_m_tiny"
+		trait_ngm_m_huge
+		trait_ngm_m_big
+		trait_ngm_m_tiny
 	}
 	modifier = {
 		planet_pops_upkeep_mult = -0.05
 		army_damage_mult = -0.1
 		army_health = -0.1
-		planet_jobs_minerals_produces_mult = -0.05
+		miner_jobs_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 38	極小	trait_ngm_m_tiny	-3	小型、大型、巨大	"POPの維持費-10% 地上軍ダメージ-20% 地上軍耐久度-20% 職業からの鉱物産出-10%"	この種族は、銀河で見てもかなり小さい
 trait_ngm_m_tiny = {
 	cost = -3
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	opposites = {
-		"trait_ngm_m_huge"
-		"trait_ngm_m_big"
-		"trait_ngm_m_small"
-		# "trait_ngm_m_tiny"
+		trait_ngm_m_huge
+		trait_ngm_m_big
+		trait_ngm_m_small
 	}
 	modifier = {
 		planet_pops_upkeep_mult = -0.1
 		army_damage_mult = -0.22
 		army_health = -0.2
-		planet_jobs_minerals_produces_mult = -0.1
+		miner_jobs_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 39	エラー音	trait_ngm_m_error	-1		逸脱度+5%	深刻なエラーが発生しました
 trait_ngm_m_error = {
 	cost = -1
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		planet_crime_mult = 0.05
+		pop_happiness = -0.025
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 40	ブルースクリーン	trait_ngm_m_blue	-4		リーダー故障確率+10%	この種族は、よく青くなる
 trait_ngm_m_blue = {
 	cost = -4
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	custom_tooltip = trait_ngm_m_blue_custom_tooltip
 	modifier = {
 	}
@@ -2674,46 +2541,30 @@ trait_ngm_m_blue = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 41	自爆装置	trait_ngm_m_bomb	-4		"POPの成長速度-5% リーダー故障確率+5%"	この種族は、危機に陥ると爆発する
 trait_ngm_m_bomb = {
 	cost = -4
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	custom_tooltip = trait_ngm_m_bomb_custom_tooltip
 	modifier = {
-	}
-	assembling_modifier = {
 		planet_pop_assembly_mult = -0.05
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 42	木製	trait_ngm_m_wo	-2		Pop維持費+15%	この種族は、木でできた部品がある
 trait_ngm_m_wo = {
 	cost = -2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
 		planet_pops_upkeep_mult = 0.15
 	}
@@ -2721,84 +2572,61 @@ trait_ngm_m_wo = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 43	機能制限	trait_ngm_m_ban	-2		POPからの帝国規模+10%	この種族の機能は潜在的に制限されており、逐一行為が見張られる
 trait_ngm_m_ban = {
 	cost = -2
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		empire_size_pops_mult = 0.1
+		species_empire_size_mult = 0.1
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 44	抽象的	trait_ngm_m_abs	-4		"研究力-10% 統合力-10%"	この種族の出力されるデータは抽象的であり、うまく説明できない
 trait_ngm_m_abs = {
 	cost = -4
-	allowed_archetypes = { ROBOT MACHINE }
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
+	}
 	modifier = {
-		planet_jobs_unity_produces_mult = -0.1
-		planet_jobs_physics_research_produces_mult = -0.110
-		planet_jobs_society_research_produces_mult = -0.10
-		planet_jobs_engineering_research_produces_mult = -0.10
+		bureaucrat_jobs_bonus_workforce_mult = -0.1
+		physicist_jobs_bonus_workforce_mult = -0.110
+		biologist_jobs_bonus_workforce_mult = -0.10
+		engineer_jobs_bonus_workforce_mult = -0.10
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.1
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.1
+		pop_ngm_influencer_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }
-
-# 45	自己破壊	trait_ngm_m_break	-3		POPの成長速度-10%	この種族は自己保存の原則を有しておらず、よく自己破壊する
 trait_ngm_m_break = {
 	cost = -3
-	allowed_archetypes = { ROBOT MACHINE }
-	modifier = {
+	allowed_archetypes = {
+		ROBOT
+		MACHINE
 	}
-	assembling_modifier = {
+	modifier = {
 		planet_pop_assembly_mult = -0.1
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
-		# modifier = {
-		# 	add = 1.5
-		# 	from = { has_mining_designation = yes }
-		# }
-		# modifier = {
-		# 	add = 0.5
-		# 	from = { has_rural_designation = yes }
-		# }
 	}
 }

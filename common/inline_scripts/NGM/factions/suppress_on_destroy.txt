@@ -1,0 +1,13 @@
+if = {
+	limit = {
+		from = { has_modifier = suppressed_faction }
+		NOT = { # Only remove the modifier if no other faction with the same ethic is suppressed
+			any_pop_faction = {
+				NOT = { is_same_value = from }
+				is_pop_faction_type = $FACTION$
+				has_modifier = suppressed_faction
+			}
+		}
+	}
+	remove_modifier = suppressed_$ETHIC$
+}

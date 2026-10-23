@@ -1,0 +1,140 @@
+tr_ngm_planet_adopt = {
+	modifier = {
+		pop_environment_tolerance = 0.1
+	}
+}
+tr_ngm_planet_finish = {
+	modifier = {
+		terraforming_cost_mult = -0.2
+		terraform_speed_mult = 0.2
+	}
+}
+tr_ngm_planetary_scale_mining = {
+	possible = {
+	}
+	modifier = {
+		country_minerals_produces_mult = 0.2
+		district_mining_max_add = 2
+	}
+}
+tr_ngm_agrarianism = {
+	possible = {
+	}
+	modifier = {
+		country_food_produces_mult = 0.2
+		district_farming_max_add = 2
+	}
+}
+tr_ngm_support_for_mining = {
+	possible = {
+	}
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.25
+	}
+}
+tr_ngm_investment_in_agricultural_corporations = {
+	possible = {
+	}
+	modifier = {
+		planet_jobs_food_produces_mult = 0.25
+	}
+}
+tr_ngm_local_regeneration = {
+	possible = {
+	}
+	modifier = {
+		empire_size_colonies_mult = -0.15
+	}
+}
+tr_ngm_development_adopt = {
+	modifier = {
+		stations_cost_mult = 0.2
+	}
+}
+tr_ngm_development_finish = {
+	modifier = {
+		megastructures_cost_mult = -0.15
+		megastructure_build_speed_mult = 0.15
+	}
+}
+tr_ngm_station_management_office = {
+	possible = {
+	}
+	modifier = {
+		stations_produces_mult = 0.2
+	}
+}
+tr_ngm_zero_gravity_mining = {
+	possible = {
+	}
+	modifier = {
+		country_minerals_produces_mult = 0.15
+	}
+}
+tr_ngm_station_power_generation = {
+	possible = {
+	}
+	modifier = {
+		stations_upkeep_mult = 0.2
+	}
+}
+tr_ngm_station_hub = {
+	possible = {
+	}
+	modifier = {
+		starbase_outpost_cost_mult = -0.15
+	}
+}
+tr_ngm_space_department = {
+	possible = {
+	}
+	modifier = {
+		empire_size_systems_mult = -0.2
+	}
+}
+tr_ngm_craftsmanship_adopt = {
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+	}
+}
+tr_ngm_craftsmanship_finish = {
+	modifier = {
+		planet_jobs_trade_produces_mult = 0.15
+	}
+}
+tr_ngm_craft_production = {
+	possible = {
+	}
+	modifier = {
+		country_consumer_goods_produces_mult = 0.15
+	}
+}
+tr_ngm_metal_processing_institute = {
+	possible = {
+	}
+	modifier = {
+		country_alloys_produces_mult = 0.15
+	}
+}
+tr_ngm_recycling_processing = {
+	possible = {
+	}
+	modifier = {
+		planet_artisans_upkeep_mult = -0.2
+	}
+}
+tr_ngm_improvement_of_metal_processing = {
+	possible = {
+	}
+	modifier = {
+		planet_metallurgists_upkeep_mult = -0.2
+	}
+}
+tr_ngm_technicians_retention = {
+	possible = {
+	}
+	modifier = {
+		job_foundry_add = 100
+		job_artisan_add = 100
+	}
+}

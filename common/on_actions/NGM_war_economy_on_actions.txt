@@ -1,0 +1,6 @@
+on_game_start_country = { events = { ngm_civic.17 } }
+on_war_beginning = { events = { ngm_civic.18 } }
+# Vanilla supplies the loser as ROOT; other participants are repaired monthly.
+on_war_ended = { events = { ngm_civic.19 } }
+on_colonized = { events = { ngm_civic.102 } }
+on_colony_transfer = { events = { ngm_civic.102 } }

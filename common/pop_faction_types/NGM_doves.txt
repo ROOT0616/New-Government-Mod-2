@@ -1,25 +1,26 @@
-##############################
-# Doves Faction
-##############################
-
 NGM_doves = {
-	election_header = "GFX_faction_header_yellow"
+	election_header = GFX_faction_header_yellow
 	guiding_ethic = ethic_neutralism
-	visual_ethic = "NGM_doves_visual_ethic"
-
+	visual_ethic = NGM_doves_visual_ethic
 	unique = yes
 	support_multiplier = 1
-
 	resources = {
 		category = pop_factions
+		inline_script = pop_faction_types/shared_unity_production
 		produces = {
-			unity = 0.5
+			trigger = {
+				owner = {
+					OR = {
+						has_valid_civic = civic_crowdsourcing
+						has_valid_civic = civic_corporate_crowdsourcing
+					}
+				}
+			}
+			unity = @faction_base_output
 		}
 	}
-
 	is_potential = {
 		is_faction_allowed = yes
-
 		if = {
 			limit = {
 				has_faction = NGM_doves
@@ -38,63 +39,37 @@ NGM_doves = {
 			}
 		}
 	}
-
-	parameters = {
-		empire = {
-			type = country
-			valid_objects = {
-				is_same_value = root
-			}
-		}
-	}
-
 	can_join_pre_triggers = {
 		is_enslaved = no
 		is_being_purged = no
-		is_robot_pop = no
 	}
-
 	can_join_faction = {
-		can_think = yes
-		OR = {
-			has_ethic = ethic_neutralism
-			has_ethic = ethic_fanatic_neutralism
-		}
+		inline_script = pop_faction_types/can_join_faction/base
+		has_ethic = ethic_neutralism
 	}
-
 	attraction = {
 		base = 150
-
-		modifier = {
-			factor = 1.25
-			exists = from
-			from = {
-				exists = leader
-				leader = { is_ruler = yes }
-			}
-		}
-
-		modifier = {
-			factor = 0.75
-			exists = from
-			from = {
-				NOT = { exists = leader }
-			}
-		}
+		inline_script = pop_faction_types/attraction/promote_suppress_attraction
+		inline_script = pop_faction_types/attraction/leader_attraction
 	}
-
 	leader = {
 		base = 100
-
+		modifier = {
+			factor = 0
+			is_ruler = yes
+			owner = {
+				is_imperial_authority = yes
+			}
+		}
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
 		}
 	}
 	demand = {
-		title = "FACTION_OUTRAGED_GC"
-		unfulfilled_title = "FACTION_OUTRAGED_GC"
-		desc = "FACTION_OUTRAGED_GC_DESC"
+		title = FACTION_OUTRAGED_GC
+		unfulfilled_title = FACTION_OUTRAGED_GC
+		desc = FACTION_OUTRAGED_GC_DESC
 		fulfilled_effect = -20
 		unfulfilled_effect = -0.001
 		potential = {
@@ -110,21 +85,17 @@ NGM_doves = {
 		}
 	}
 	demand = {
-		# 強力なる孤立
-		title = "SUPREMACIST_ISOLATIONIST_NO_FEDERATION"
-		unfulfilled_title = "SUPREMACIST_ISOLATIONIST_FEDERATION"
-		desc = "SUPREMACIST_ISOLATIONIST_NO_FEDERATION_DESC"
-
+		title = SUPREMACIST_ISOLATIONIST_NO_FEDERATION
+		unfulfilled_title = SUPREMACIST_ISOLATIONIST_FEDERATION
+		desc = SUPREMACIST_ISOLATIONIST_NO_FEDERATION_DESC
 		unfulfilled_effect = -25
 		fulfilled_effect = 0.001
-
 		potential = {
 			exists = owner
 			owner = {
 				num_communications > 0
 			}
 		}
-
 		trigger = {
 			owner = {
 				has_federation = no
@@ -132,14 +103,11 @@ NGM_doves = {
 		}
 	}
 	demand = {
-		# 多数の不可侵条約
-		title = "ISOLATIONIST_NON_AGGRESSION3"
-		unfulfilled_title = "ISOLATIONIST_FEW_NON_AGGRESSION3"
-		desc = "ISOLATIONIST_NON_AGGRESSION_DESC3"
-
+		title = ISOLATIONIST_NON_AGGRESSION3
+		unfulfilled_title = ISOLATIONIST_FEW_NON_AGGRESSION3
+		desc = ISOLATIONIST_NON_AGGRESSION_DESC3
 		fulfilled_effect = 15
 		unfulfilled_effect = -0.001
-
 		potential = {
 			exists = owner
 			owner = {
@@ -155,7 +123,6 @@ NGM_doves = {
 				}
 			}
 		}
-
 		trigger = {
 			owner = {
 				count_playable_country = {
@@ -170,20 +137,15 @@ NGM_doves = {
 			}
 		}
 	}
-	
 	demand = {
-		# "平和"
-		title = "PROSPERITY_PEACE"
-		unfulfilled_title = "PROSPERITY_NO_PEACE"
-		desc = "PROSPERITY_PEACE_DESC"
-
+		title = PROSPERITY_PEACE
+		unfulfilled_title = PROSPERITY_NO_PEACE
+		desc = PROSPERITY_PEACE_DESC
 		fulfilled_effect = 5
 		unfulfilled_effect = -10
-
 		potential = {
 			exists = owner
 		}
-
 		trigger = {
 			owner = {
 				is_at_war = no
@@ -191,39 +153,37 @@ NGM_doves = {
 		}
 	}
 	demand = {
-		# 非暴力
-		title = "PROSPERITY_NOT_AGGRESSOR"
-		unfulfilled_title = "PROSPERITY_AGGRESSOR"
-		desc = "PROSPERITY_NOT_AGGRESSOR_DESC"
-
+		title = PROSPERITY_NOT_AGGRESSOR
+		unfulfilled_title = PROSPERITY_AGGRESSOR
+		desc = PROSPERITY_NOT_AGGRESSOR_DESC
 		unfulfilled_effect = -30
 		fulfilled_effect = 0.001
-
 		potential = {
 			exists = owner
 			owner = {
 				num_communications > 2
 			}
 		}
-
 		trigger = {
 			owner = {
 				NOR = {
 					has_country_flag = entered_war_as_attacker
-					any_war = { is_war_participant = { who = prev side = attackers } }
+					any_war = {
+						is_war_participant = {
+							who = prev
+							side = attackers
+						}
+					}
 				}
 			}
 		}
 	}
 	demand = {
-		# あらゆる難民を歓迎する
-		title = "XENOIST_REFUGEES_WELCOME"
-		unfulfilled_title = "XENOIST_REFUGEES_UNWELCOME"
-		desc = "XENOIST_REFUGEES_WELCOME_DESC"
-
+		title = XENOIST_REFUGEES_WELCOME
+		unfulfilled_title = XENOIST_REFUGEES_UNWELCOME
+		desc = XENOIST_REFUGEES_WELCOME_DESC
 		fulfilled_effect = 10
 		unfulfilled_effect = -10
-
 		potential = {
 			exists = owner
 			owner = {
@@ -233,63 +193,62 @@ NGM_doves = {
 				}
 			}
 		}
-
 		trigger = {
 			owner = {
 				has_policy_flag = refugees_allowed
 			}
 		}
 	}
-
 	on_create = {
 		pop_faction_event = {
-			id = factions.1
+			id = factions.0
 		}
 	}
 	on_destroy = {
-		if = {
-			limit = {
-				has_modifier = promoted_neutralism
-			}
-			remove_modifier = promoted_neutralism
+		inline_script = {
+			script = NGM/factions/promote_on_destroy
+			ETHIC = neutralism
+			FACTION = NGM_doves
 		}
-		if = {
-			limit = {
-				has_modifier = suppressed_neutralism
-			}
-			remove_modifier = suppressed_neutralism
+		inline_script = {
+			script = NGM/factions/suppress_on_destroy
+			ETHIC = neutralism
+			FACTION = NGM_doves
 		}
 	}
 	actions = {
 		embrace_faction = {
-			title = "EMBRACE_FACTION"
-			description = "EMBRACE_FACTION_DESC"
-
+			title = EMBRACE_FACTION
+			description = EMBRACE_FACTION_DESC
 			cost = {
 				unity = 5000
 			}
-
 			potential = {
 				exists = owner
 				owner = {
 					OR = {
 						is_subject = no
-						NOT = { any_agreement = { agreement_preset = preset_dominion } }
+						NOT = {
+							any_agreement = {
+								agreement_preset = preset_dominion
+							}
+						}
 					}
 				}
 			}
-
 			valid = {
 				custom_tooltip = {
 					fail_text = EMBRACE_FACTION_COOLDOWN
-					parameter:empire = {
-						NOT = { has_modifier = embraced_faction_timer }
+					owner = {
+						NOT = {
+							has_modifier = embraced_faction_timer
+						}
 					}
 				}
 				support > 0.20
-				parameter:empire = {
+				owner = {
 					NOT = {
-						has_ethic = "ethic_fanatic_neutralism"
+						has_ethic = ethic_fanatic_neutralism
 					}
 				}
 			}
@@ -298,7 +257,8 @@ NGM_doves = {
 					modifier = embraced_faction
 					days = 3600
 				}
-				parameter:empire = {
+				owner = {
+					set_country_flag = has_embraced_faction
 					shift_ethic = ethic_neutralism
 					hidden_effect = {
 						add_modifier = {
@@ -320,7 +280,7 @@ NGM_doves = {
 				}
 				hidden_effect = {
 					save_event_target_as = TargetFaction
-					parameter:empire = {
+					owner = {
 						every_relation = {
 							limit = {
 								is_ai = no
@@ -343,7 +303,7 @@ NGM_doves = {
 				base = 1
 				modifier = {
 					factor = 0
-					support < 0.5
+					support < 0.50
 					owner = {
 						has_ethic = ethic_neutralism
 					}
@@ -364,94 +324,16 @@ NGM_doves = {
 				}
 			}
 		}
-		promote_faction = {
-			title = "PROMOTE_FACTION"
-			description = "PROMOTE_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					NOR = {
-						has_modifier = suppressed_neutralism
-						has_modifier = promoted_neutralism
-					}
-				}
-			}
-			effect = {
-				parameter:empire = {
-					add_modifier = {
-						modifier = promoted_neutralism
-						days = -1
-					}
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
-		cancel_promote_faction = {
-			title = "CANCEL_PROMOTE_FACTION"
-			description = "CANCEL_PROMOTE_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					has_modifier = promoted_neutralism
-				}
-			}
-			effect = {
-				parameter:empire = {
-					remove_modifier = promoted_neutralism
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
-		suppress_faction = {
-			title = "SUPPRESS_FACTION"
-			description = "SUPPRESS_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					NOR = {
-						has_modifier = suppressed_neutralism
-						has_modifier = promoted_neutralism
-					}
-				}
-			}
-			effect = {
-				add_modifier = {
-					modifier = suppressed_faction
-					days = -1
-				}
-				parameter:empire = {
-					add_modifier = {
-						modifier = suppressed_neutralism
-						days = -1
-					}
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
-		cancel_suppress_faction = {
-			title = "CANCEL_SUPPRESS_FACTION"
-			description = "CANCEL_SUPPRESS_FACTION_DESC"
-			potential = {
-				exists = owner
-				parameter:empire = {
-					has_modifier = suppressed_neutralism
-				}
-			}
-			effect = {
-				remove_modifier = suppressed_faction
-				parameter:empire = {
-					remove_modifier = suppressed_neutralism
-				}
-			}
-			ai_weight = {
-				base = 0
-			}
-		}
+	}
+	inline_script = pop_faction_types/attraction/promote_suppress_tags
+	inline_script = {
+		script = NGM/factions/promote_faction
+		ETHIC = neutralism
+		FACTION = NGM_doves
+	}
+	inline_script = {
+		script = NGM/factions/suppress_faction
+		ETHIC = neutralism
+		FACTION = NGM_doves
 	}
 }

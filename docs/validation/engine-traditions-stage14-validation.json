@@ -1,0 +1,12 @@
+{
+  "version": "1.39.0-dev.16",
+  "passed": true,
+  "checks": [
+    "Building capacity replacement is registered in the current engine and all recorded file diffs match",
+    "Species modification saves the newly modified species without a redundant clone",
+    "All 21 restored traditions retain original values except documented key/unit conversions; every modifier is registered in current engine documentation",
+    "All 33 added tradition sprite names are unique and texture files resolve",
+    "Migrated jobs/effects contain no accidental null scalar fields"
+  ],
+  "runtime_tested": false
+}

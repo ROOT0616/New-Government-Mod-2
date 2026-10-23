@@ -1,90 +1,61 @@
-##############################
-#####    ディシジョン    ######
-##############################
-
-
-# ※セクター首都にのみ布告可能
-# ※それぞれ惑星の算出するエネルギー-10%、幸福度+10%
-
-# 1.絶対君主制 territorial_monarchy(鉱業、農業)
 ngm_territorial_monarchy = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_arcology_project.dds
 	icon_frame = 1
 	planet_jobs_minerals_produces_mult = 0.1
 	planet_jobs_food_produces_mult = 0.1
 }
-
-# 2.象徴君主制(統合力)
 ngm_symbolic_monarchy = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_arcology_project.dds
 	icon_frame = 1
 	planet_jobs_unity_produces_mult = 0.1
 }
-
-# 3.地方独裁制(工業)
 ngm_local_dictatorship = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_arcology_project.dds
 	icon_frame = 1
 	planet_jobs_alloys_produces_mult = 0.1
 	planet_jobs_consumer_goods_produces_mult = 0.1
 }
-
-# 4.金権支配制(交易価値)
 ngm_golden_rule_system = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_arcology_project.dds
 	icon_frame = 1
-	trade_value_mult = 0.1
+	planet_jobs_trade_produces_mult = 0.1
 }
-
-# 5.AI補助統治(研究力)
 ngm_ai_supplementary_governance = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_arcology_project.dds
 	icon_frame = 1
 	planet_researchers_produces_mult = 0.1
 }
-
-# 6.首長優位制(統治者の幸福度)
 ngm_chieftaincy_system = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_arcology_project.dds
 	icon_frame = 1
 	pop_cat_ruler_happiness = 10
 }
-
-# 7.議会優位制(市民POP幸福度)
 ngm_parliamentary_dominance = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_arcology_project.dds
 	icon_frame = 1
 	pop_citizen_happiness = 5
 }
-
-# 8.宗教支配制(職業からの統合力+10%))
 ngm_religious_domination = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_arcology_project.dds
 	icon_frame = 1
 	planet_jobs_unity_produces_mult = 0.1
 }
-
-# 9.ドローン警備隊 犯罪抑止力-10%	安定度5%	エネルギー-5
 patrolling_society = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_colony_settlement.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_colony_settlement.dds
 	icon_frame = 1
 	planet_stability_add = 5
 	planet_crime_mult = -10
 }
-
-# 10.衛星による監視 犯罪抑止力-30%	安定度15%	エネルギー10 合金3
 fanatic_patrolling_society = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_colony_settlement.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_colony_settlement.dds
 	icon_frame = 1
 	planet_stability_add = 15
 	planet_crime_mult = -30
 	planet_jobs_energy_produces_mult = -0.2
 	planet_jobs_alloys_produces_mult = -0.15
 }
-
-# 11.完全なる人民の監視 犯罪抑止力-50%	安定度30%	エネルギー20 合金5
 hyper_fanatic_patrolling_society = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_colony_settlement.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_colony_settlement.dds
 	icon_frame = 1
 	planet_stability_add = 30
 	planet_crime_mult = -50
@@ -92,10 +63,8 @@ hyper_fanatic_patrolling_society = {
 	planet_jobs_consumer_goods_produces_mult = -0.2
 	planet_jobs_alloys_produces_mult = -0.2
 }
-
-# 12.自由言論を推奨する 志向魅力-20%					研究力10%	統合力10%
 free_speech = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_arcology_project.dds
 	icon_frame = 1
 	pop_government_ethic_attraction = -0.2
 	planet_jobs_unity_produces_mult = 0.1
@@ -103,10 +72,8 @@ free_speech = {
 	planet_jobs_society_research_produces_mult = 0.1
 	planet_jobs_engineering_research_produces_mult = 0.1
 }
-
-# 13.大自由討論会を定期時に行う 志向魅力-50%	安定度-10%			研究力15%	統合力15%
 fanatic_free_speech = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_arcology_project.dds
 	icon_frame = 1
 	pop_government_ethic_attraction = -0.5
 	planet_stability_add = -10
@@ -115,10 +82,8 @@ fanatic_free_speech = {
 	planet_jobs_society_research_produces_mult = 0.15
 	planet_jobs_engineering_research_produces_mult = 0.15
 }
-
-# 14.惑星規模の徴用政策 消費財維持費-30% 犯罪度-10% 合金+10%		安定度-20 幸福度-20
 requisition_policy = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_expel_population.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_expel_population.dds
 	icon_frame = 1
 	planet_crime_mult = -10
 	planet_jobs_alloys_produces_mult = 0.1
@@ -126,10 +91,8 @@ requisition_policy = {
 	planet_stability_add = -20
 	pop_happiness = -0.2
 }
-
-# 15.強制労働 食糧、鉱物、エネルギー+10%		幸福度-10% 研究、統合力-30%
 forced_labor = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_archaeology.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_archaeology.dds
 	icon_frame = 1
 	planet_jobs_energy_produces_mult = 0.1
 	planet_jobs_food_produces_mult = 0.1
@@ -140,549 +103,323 @@ forced_labor = {
 	planet_jobs_society_research_produces_mult = -0.3
 	planet_jobs_engineering_research_produces_mult = -0.3
 }
-
-# 養殖種類変更（水産研究アーコロジー）(研究で選択肢追加)
-# # 16.ストーンフィッシュ        (鉱物+10)
-# ngm_stonefish = {
-# 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
-# 	icon_frame = 1
-# 	planets_minerals_produces_add = 10
-# }
-
-# # 17.ラグジュアリー・ジェリー    (交易価値+7)
-# ngm_luxury_jewelry = {
-# 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
-# 	icon_frame = 1
-# 	trade_value_add = 7
-# }
-
-# # 18.エナジー・オイスター        (エネルギー+10)
-# ngm_energy_oyster = {
-# 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
-# 	icon_frame = 1
-# 	planets_energy_produces_add = 10
-# }
-
-# # 19.白金魚            (合金+5)
-# ngm_white_goldfish = {
-# 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
-# 	icon_frame = 1
-# 	planets_alloys_produces_add = 5
-# }
-
-# # 20.海綿藻            (消費財+5)    (デフォルト)
-# ngm_seaweed = {
-# 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
-# 	icon_frame = 1
-# 	planets_consumer_goods_produces_add = 5
-# }
-
-#######################
-#####    布告    ######
-#######################
-
-# ① 文化人への叙勲
-#   文化人の統合力算出+20%(12ヶ月)
-#   研究者の研究力算出+10%(12ヶ月)
 ngm_campaign_1_a_1_modifier = {
-	planet_culture_workers_produces_mult = 0.2
+	pop_culture_worker_bonus_workforce_mult = 0.2
 	planet_researchers_produces_mult = 0.1
 }
-
-# ② 財界人への叙勲
-#   交易価値+20%(24ヶ月)
 ngm_campaign_1_b_1_modifier = {
-	trade_value_mult = 0.2
+	planet_jobs_trade_produces_mult = 0.2
 }
-
-# ③ 外交官への叙勲
-#   外交発言力+20%(24ヶ月)
 ngm_campaign_1_c_1_modifier = {
 	diplo_weight_mult = 0.2
 }
-
-# ④派閥幹部への叙勲
-#   派閥幸福度+15%(24ヶ月)
 ngm_campaign_1_d_1_modifier = {
 	faction_approval = 0.15
 }
-
-# ⑤軍人への叙勲
-#   回避+5% (12ヶ月)
-#   連射レート+10% (12ヶ月)
-#   地上軍士気+20% (24ヶ月)
 ngm_campaign_1_e_1_modifier = {
 	ship_evasion_mult = 0.05
 	ship_fire_rate_mult = 0.1
 }
-
-#   地上軍士気+20% (24ヶ月)
 ngm_campaign_1_e_2_modifier = {
 	army_morale = 0.2
 }
-
-# ⑧貴族への叙勲(貴族エリート、栄望のみ)
-#   統治者幸福度+50%(48ヶ月)
 ngm_campaign_1_i_1_modifier = {
 	pop_cat_ruler_happiness = 0.5
 }
-
-# ⑨勤労者への叙勲(栄望or社会主義)
-#   労働者幸福度+30% (48ヶ月)
-#   専門家幸福度+10% (48ヶ月)
 ngm_campaign_1_j_1_modifier = {
 	pop_cat_worker_happiness = 0.3
 	pop_cat_specialist_happiness = 0.1
 }
-
-#######################
-#####    国是    ######
-#######################
-
-# 21.繁栄主義者		平和の期間が5年続くごとに労働者POPの資源産出+1%、交易価値+2.5%（最大50年分）
 civic_ngm_prosperity_1_advocate_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	planet_jobs_worker_produces_mult = 0.01
-	trade_value_mult = 0.025
+	planet_jobs_trade_produces_mult = 0.025
 }
 civic_ngm_prosperity_2_advocate_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	planet_jobs_worker_produces_mult = 0.02
-	trade_value_mult = 0.05
+	planet_jobs_trade_produces_mult = 0.05
 }
 civic_ngm_prosperity_3_advocate_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	planet_jobs_worker_produces_mult = 0.03
-	trade_value_mult = 0.075
+	planet_jobs_trade_produces_mult = 0.075
 }
 civic_ngm_prosperity_4_advocate_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	planet_jobs_worker_produces_mult = 0.04
-	trade_value_mult = 0.1
+	planet_jobs_trade_produces_mult = 0.1
 }
 civic_ngm_prosperity_5_advocate_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	planet_jobs_worker_produces_mult = 0.05
-	trade_value_mult = 0.125
+	planet_jobs_trade_produces_mult = 0.125
 }
 civic_ngm_prosperity_6_advocate_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	planet_jobs_worker_produces_mult = 0.06
-	trade_value_mult = 0.15
+	planet_jobs_trade_produces_mult = 0.15
 }
 civic_ngm_prosperity_7_advocate_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	planet_jobs_worker_produces_mult = 0.07
-	trade_value_mult = 0.175
+	planet_jobs_trade_produces_mult = 0.175
 }
 civic_ngm_prosperity_8_advocate_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	planet_jobs_worker_produces_mult = 0.08
-	trade_value_mult = 0.2
+	planet_jobs_trade_produces_mult = 0.2
 }
 civic_ngm_prosperity_9_advocate_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	planet_jobs_worker_produces_mult = 0.09
-	trade_value_mult = 0.225
+	planet_jobs_trade_produces_mult = 0.225
 }
 civic_ngm_prosperity_10_advocate_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	planet_jobs_worker_produces_mult = 0.1
-	trade_value_mult = 0.25
+	planet_jobs_trade_produces_mult = 0.25
 }
-
-# 22.刑罰の金銭代替		惑星の犯罪*1の交易価値を惑星に付与、交易価値+10%、犯罪度+10、犯罪度+10%
 civic_ngm_money_penalty_1_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 1
 }
 civic_ngm_money_penalty_2_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 2
 }
 civic_ngm_money_penalty_3_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 3
 }
 civic_ngm_money_penalty_4_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 4
 }
 civic_ngm_money_penalty_5_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 5
 }
 civic_ngm_money_penalty_6_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 6
 }
 civic_ngm_money_penalty_7_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 7
 }
 civic_ngm_money_penalty_8_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 8
 }
 civic_ngm_money_penalty_9_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 9
 }
 civic_ngm_money_penalty_10_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 10
 }
 civic_ngm_money_penalty_11_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 11
 }
 civic_ngm_money_penalty_12_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 12
 }
 civic_ngm_money_penalty_13_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 13
 }
 civic_ngm_money_penalty_14_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 14
 }
 civic_ngm_money_penalty_15_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 15
 }
 civic_ngm_money_penalty_16_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 16
 }
 civic_ngm_money_penalty_17_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 17
 }
 civic_ngm_money_penalty_18_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 18
 }
 civic_ngm_money_penalty_19_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 19
 }
 civic_ngm_money_penalty_20_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 20
 }
 civic_ngm_money_penalty_21_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 21
 }
 civic_ngm_money_penalty_22_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 22
 }
 civic_ngm_money_penalty_23_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 23
 }
 civic_ngm_money_penalty_24_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 24
 }
 civic_ngm_money_penalty_25_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 25
 }
 civic_ngm_money_penalty_26_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 26
 }
 civic_ngm_money_penalty_27_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 27
 }
 civic_ngm_money_penalty_28_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 28
 }
 civic_ngm_money_penalty_29_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 29
 }
 civic_ngm_money_penalty_30_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 30
 }
 civic_ngm_money_penalty_31_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 31
 }
 civic_ngm_money_penalty_32_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 32
 }
 civic_ngm_money_penalty_33_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 33
 }
 civic_ngm_money_penalty_34_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 34
 }
 civic_ngm_money_penalty_35_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 35
 }
 civic_ngm_money_penalty_36_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 36
 }
 civic_ngm_money_penalty_37_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 37
 }
 civic_ngm_money_penalty_38_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 38
 }
 civic_ngm_money_penalty_39_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 39
 }
 civic_ngm_money_penalty_40_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 40
 }
 civic_ngm_money_penalty_41_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 41
 }
 civic_ngm_money_penalty_42_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 42
 }
 civic_ngm_money_penalty_43_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 43
 }
 civic_ngm_money_penalty_44_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 44
 }
 civic_ngm_money_penalty_45_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 45
 }
 civic_ngm_money_penalty_46_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 46
 }
 civic_ngm_money_penalty_47_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 47
 }
 civic_ngm_money_penalty_48_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 48
 }
 civic_ngm_money_penalty_49_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 49
 }
 civic_ngm_money_penalty_50_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
-	trade_value_add = 50
 }
-
-# 23.戦争経済	戦争疲弊-20%、戦時中の鉱物、合金、交易価値、消費財生産量+20%、造船速度+20%。
-# 非戦争時の鉱物、合金、交易価値、消費財生産量-20%、造船速度-20%
 civic_ngm_war_prosperity_not_war_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_crime.dds
 	icon_frame = 1
 	planet_jobs_minerals_produces_mult = -0.2
 	planet_jobs_alloys_produces_mult = -0.2
 	planet_jobs_consumer_goods_produces_mult = -0.2
-	trade_value_mult = -0.2
+	planet_jobs_trade_produces_mult = -0.2
 }
 civic_ngm_war_prosperity_not_war_country_modifier = {
 	starbase_shipyard_build_speed_mult = -0.2
 }
 civic_ngm_war_prosperity_is_war_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	planet_jobs_minerals_produces_mult = 0.2
 	planet_jobs_alloys_produces_mult = 0.2
 	planet_jobs_consumer_goods_produces_mult = 0.2
-	trade_value_mult = 0.2
+	planet_jobs_trade_produces_mult = 0.2
 }
 civic_ngm_war_prosperity_is_war_country_modifier = {
 	starbase_shipyard_build_speed_mult = 0.2
 }
-
-# 伝道者団の来訪
 civic_ngm_missionary_group_modifier = {
 	pop_ethic_spiritualist_attraction_mult = 0.4
 }
-
-#######################
-#####    志向    ######
-#######################
-
-# 〇社会主義
-suppressed_socialism = {
-	pop_ethic_socialism_attraction_mult = -0.75
-	country_base_influence_produces_add = -1
-}
-promoted_socialism = {
-	pop_ethic_socialism_attraction_mult = 1
-	country_base_influence_produces_add = -2
-}
-
-# 〇資本主義
-suppressed_capitalism = {
-	pop_ethic_capitalism_attraction_mult = -0.75
-	country_base_influence_produces_add = -1
-}
-promoted_capitalism = {
-	pop_ethic_capitalism_attraction_mult = 1
-	country_base_influence_produces_add = -2
-}
-
-# 〇介入主義
-suppressed_interventionism = {
-	pop_ethic_interventionism_attraction_mult = -0.75
-	country_base_influence_produces_add = -1
-}
-promoted_interventionism = {
-	pop_ethic_interventionism_attraction_mult = 1
-	country_base_influence_produces_add = -2
-}
-
-# 〇中立主義
-suppressed_neutralism = {
-	pop_ethic_neutralism_attraction_mult = -0.75
-	country_base_influence_produces_add = -1
-}
-promoted_neutralism = {
-	pop_ethic_neutralism_attraction_mult = 1
-	country_base_influence_produces_add = -2
-}
-
-# 〇保全主義
-suppressed_conservationism = {
-	pop_ethic_conservationism_attraction_mult = -0.75
-	country_base_influence_produces_add = -1
-}
-promoted_conservationism = {
-	pop_ethic_conservationism_attraction_mult = 1
-	country_base_influence_produces_add = -2
-}
-
-# 〇開発主義
-suppressed_developmentalism = {
-	pop_ethic_developmentalism_attraction_mult = -0.75
-	country_base_influence_produces_add = -1
-}
-promoted_developmentalism = {
-	pop_ethic_developmentalism_attraction_mult = 1
-	country_base_influence_produces_add = -2
-}
-
-# 〇栄望主義
-suppressed_honorism = {
-	pop_ethic_honorism_attraction_mult = -0.75
-	country_base_influence_produces_add = -1
-}
-promoted_honorism = {
-	pop_ethic_honorism_attraction_mult = 1
-	country_base_influence_produces_add = -2
-}
-
-# 〇実利主義
-suppressed_utilitarianism = {
-	pop_ethic_utilitarianism_attraction_mult = -0.75
-	country_base_influence_produces_add = -1
-}
-promoted_utilitarianism = {
-	pop_ethic_utilitarianism_attraction_mult = 1
-	country_base_influence_produces_add = -2
-}
-
-#######################
-#####    起源    ######
-#######################
-
-# 遺物「古代の盟約」（古代の列強間の協定で、緊急時に強力な自衛力を求められたうえで、平時には他国の脅威にならない経済国家であることを求められる条文。所有国は永久にこれを守らなくてはならない。）
-# パッシブ効果	：請求権作成の影響力コスト+9999%、開拓前哨地建造コスト+9999%、外交発言力+100%。統合力+30%、交易価値+50%、
-# アクティブ効果	：船体値+100%、宇宙軍許容量+500%、造船速度+500%(10年間。起動コスト影響力200)
 ngm_ancient_pact = {
 	ship_hull_mult = 1
 	country_naval_cap_mult = 5
 	starbase_shipyard_build_speed_mult = 5
 }
-
-# 銀河皇帝勅許第7216号「帝立遊園領邦の認可」
-# パッシブ効果	POPの成長速度+100%、統合力+50%、交易価値+100%、星系基地建設のコスト+999999999%、請求権作成の影響力+1000%
-# アクティブ効果	：建造物建造コスト-30%、区域建造コスト-30%、巨大構造物建造コスト-10%、市場手数料-5%
 ngm_r_galactic_empire_aquarium = {
 	planet_buildings_cost_mult = -0.3
 	planet_districts_cost_mult = -0.3
@@ -690,65 +427,43 @@ ngm_r_galactic_empire_aquarium = {
 	megastructures_influence_cost_mult = -0.1
 	country_trade_fee = -0.05
 }
-
-# 偉大なる恩顧 偉大なる帝国の臣下であることは大いなる喜びなのだ
-# アクティブ効果	：帝国補正：統合力+500K 派閥統合力ボーナス+50%
 ngm_r_imperial_chronicle_modifier = {
 	pop_factions_unity_produces_mult = 0.5
 }
-
-# 開始時、20年の間POPの成長速度+200%、Pop製造速度+200%、流入魅力+100%の惑星特性（国家再興の決意 Determination to Rebuild ）を付与
 ngm_determination_to_rebuild = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
-	pop_growth_speed = 2
+	logistic_growth_mult = 2
 	planet_pop_assembly_mult = 2
-	planet_immigration_pull_mult = 1
+	planet_resettlement_unemployed_destination_mult = 1
 }
-
-# 首都惑星に特殊な特性「時空超越機」 space_time_continuum （時間を超えることができる機械で、惑星と一体化している。原理は失われているため再現は不可能であるが、時折亡命者がこの時代に流れ込んでいる。）
-# 物理学研究+20%、POPの成長速度+10%
 ngm_space_time_continuum = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
-	pop_growth_speed = 0.2
+	logistic_growth_mult = 0.2
 	planet_jobs_engineering_research_produces_mult = 0.2
 }
-
-# 過去への逃走のAIようにバフ
 ngm_space_time_continuum_ai = {
 	country_base_alloys_produces_add = 100
 }
-
-# 艦隊伝統の堅持	艦船を建造することができない	艦隊運用には古来よりの方法がある
 origin_ngm_phenix_1_modifier = {
 	starbase_shipyard_build_speed_mult = -9999.99
 }
-
-# 古びたデータバンク	研究速度-9999.99%	研究に使うデータバンクには苔が生えている
 origin_ngm_phenix_2_modifier = {
 	all_technology_research_speed = -9999.99
 }
-
-# 傲慢なる老臣	使節-10	帝国の老臣は傲慢で他者を見下している
 origin_ngm_phenix_3_modifier = {
 	envoys_add = -10
 }
-
-# 怠惰なる民衆	POP成長、POP建造不可	民衆は自己利益を常に追求している
 origin_ngm_phenix_4_modifier = {
-	pop_growth_speed = -999999.99
+	logistic_growth_mult = -999999.99
 	planet_pop_assembly_mult = -999999.99
 }
-
-# 老いた軍事ドクトリン	艦隊射程-50%、連射レート-50%、回避-50%、艦隊取引ができない	この帝国のドクトリンはさび付いている
 origin_ngm_phenix_5_modifier = {
 	ship_weapon_range_mult = -0.5
 	ship_fire_rate_mult = -0.5
 	ship_evasion_mult = -0.5
 }
-
-# 古代の研究律	研究生産-200%研究速度-50%、技術取引ができない、テラフォーミング不可	この帝国の研究方針は極めて古い
 origin_ngm_phenix_6_modifier = {
 	all_technology_research_speed = -0.5
 	country_physics_research_produces_mult = -2
@@ -756,28 +471,19 @@ origin_ngm_phenix_6_modifier = {
 	country_engineering_research_produces_mult = -2
 	terraform_speed_mult = -999999.99
 }
-
-# 無気力な省庁	"開拓前哨地作成不可 請求権作成の影響力コスト+9999999999%"	この帝国の省庁は非効率かつ不安定な動きをしている。
 origin_ngm_phenix_7_modifier = {
 	starbase_outpost_alloys_cost_mult = 9999.99
 	country_claim_influence_cost_mult = 20
 }
-
-# 無作法な廷臣	防衛協定、不可侵条約、通商協定、研究協定、移民協定が締結できない、外交発言力-500%	この帝国の高級官僚は無礼だ
 origin_ngm_phenix_8_modifier = {
 	diplo_weight_mult = -5
 }
-
-# 失われしインフラ技術	巨大構造物建造不可、防衛星系基地許容量-500	この帝国の偉大なる大規模建築は再現不可能だ
 origin_ngm_phenix_9_modifier = {
 	starbase_defense_platform_capacity_add = -500
 	country_megastructure_build_cap_add = -50
 	megastructure_build_speed_mult = -999999.99
 }
-
-# 黄昏の帝国	帝国規模+500%	帝国は衰退しました
 origin_ngm_phenix_10_modifier = {
-	# ship_hull_mult = -0.5
 	ship_armor_mult = -0.5
 	ship_shield_mult = -0.5
 	ship_accuracy_mult = -0.5
@@ -786,8 +492,6 @@ origin_ngm_phenix_10_modifier = {
 	country_government_civic_points_add = -1
 	country_trust_cap_add = -50
 }
-
-# 古代帝国	統合力産出-20%、帝国規模+250%、帝国規模による伝統コスト+200% 市場手数料+10%、使節-2、布告資金-50、評議会の方針の進行速度-25% リーダー雇用上限+4 この帝国は古代から続く伝統を強く守っており、そのコストを支払い続けている
 origin_ngm_phenix_11_modifier = {
 	country_unity_produces_mult = -0.2
 	empire_size_mult = 2.5
@@ -798,760 +502,392 @@ origin_ngm_phenix_11_modifier = {
 	council_agenda_progress_speed = -0.25
 	country_leader_cap_add = 4
 }
-
-# 不死鳥の帝国	リーダー雇用上限+4 開戦事由「不死鳥の帰還」を使用可能	我々は蘇る！
 origin_ngm_phenix_12_modifier = {
 	country_leader_cap_add = 4
 }
-
-# 革命の遺産 アクティブ効果	：派閥幸福度+20% 影響力+1
-ngm_r_imperial_chronicle_modifier = {
-	faction_approval = 0.2
-}
-
-# 犯罪の楽園 宿敵の犯罪度+20
-origin_ngm_crime_modifier_1 = {
-	planet_crime_add = 20
-}
-origin_ngm_crime_modifier_2 = {
-	planet_crime_add = 20
-}
-origin_ngm_crime_modifier_3 = {
-	planet_crime_add = 20
-}
-origin_ngm_crime_modifier_4 = {
-	planet_crime_add = 20
-}
-origin_ngm_crime_modifier_5 = {
-	planet_crime_add = 20
-}
-origin_ngm_crime_modifier_6 = {
-	planet_crime_add = 20
-}
-origin_ngm_crime_modifier_7 = {
-	planet_crime_add = 20
-}
-origin_ngm_crime_modifier_8 = {
-	planet_crime_add = 20
-}
-
-##########################
-#####    イベント    ######
-##########################
-
-# 統合参謀本部に任せる。(消費財1000消費。1年間亜空間移動速度+10%)
 ngm_government1a = {
 	ship_speed_mult = 0.1
 }
-
-# 前線指揮官の見解を聞こう。(エネルギー1000消費。1年間艦隊連射レート+5%)
 ngm_government1b = {
 	ship_fire_rate_mult = 0.05
 }
-
-# 陸軍のやり方に一理あるようだ。(合金500消費。3年間陸軍耐久+20%)
 ngm_government1c = {
 	army_health = 0.2
 }
-
-# ふむ。私の意見ではな......(軍国のみの選択)(エネルギー、合金500消費。2年間艦隊船体値+5%)
 ngm_government1d = {
 	ship_hull_mult = 0.05
 }
-
-# よろしい。直ちに軍事パレードだ。(影響力100消費。安定度)
 ngm_government2a = {
 	pop_happiness = 0.1
 }
-# 軍事パレードではなく、追悼集会をしよう(平和のみ。影響力50消費。厭戦-10)
 ngm_government2c = {
 	planet_stability_add = 10
 }
-# 盛大にやろうじゃないか(軍国or栄望or権威のみ。影響力100、エネルギー500消費。厭戦値-10%、1年間の厭戦増加-10%)
 ngm_government2d = {
 	country_war_exhaustion_mult = -0.1
 }
-# 英雄を讃え、勲章を配ろう。(実利以外。勲章を-10 厭戦値-10%、1年間の厭戦増加-10%)(編集済)
 ngm_government2e = {
 	country_war_exhaustion_mult = -0.1
 }
-
-# すぐに鎮圧しろ！(3年間惑星安定度-10。厭戦+10)
 ngm_government3a = {
 	country_war_exhaustion_mult = -0.1
 	planet_stability_add = -10
 }
-# 群衆に呼びかけ、軍の支持集会を開け。(軍国のみ。影響力-50。厭戦-10)
 ngm_government3d = {
 	country_war_exhaustion_mult = -0.1
 }
-# とある施設なら中で叫んでくれて構わない。(権威かつ社会主義。影響力-80。当該惑星に3年間強制労働者3枠のJobを獲得)
-ngm_government3e = {
-	job_ad_forcrd_larbor_add = 3
-}
-
-# 死は無であるが、敗北と不名誉に生きることは、まさに日常の死なのだ。 月間 影響力+1 幸福度+25% 快適度+25% 交易価値+25% POPの成長速度+25% 月間資源+25% POP消費財維持費+25%
 ngm_with_honor_1_modifier = {
 	country_base_influence_produces_add = 1
 	pop_happiness = 0.25
 	planet_amenities_mult = 0.25
-	trade_value_mult = 0.25
-	pop_growth_speed = 0.25
+	planet_jobs_trade_produces_mult = 0.25
+	logistic_growth_mult = 0.25
 	country_produces_mult = 0.25
 	planet_pops_consumer_goods_upkeep_mult = 0.25
 }
-
-# 屈辱を与えられた 月間 影響力-2 幸福度-25% 快適度-25% 安定度-10 交易価値-25% POPの成長速度-10% 外交発言力-10%
 ngm_with_honor_2_modifier = {
 	country_base_influence_produces_add = -2
 	pop_happiness = -0.25
 	planet_amenities_mult = -0.25
 	planet_stability_add = -10
-	trade_value_mult = -0.25
-	pop_growth_speed = -0.1
+	planet_jobs_trade_produces_mult = -0.25
+	logistic_growth_mult = -0.1
 	diplo_weight_mult = -0.1
 }
-
-# 名前は、銀河規模の拡大という名称で、
-# POPの成長速度+1000%、Pop製造速度+1000%。Pop消費財+50%
 resolution_ngm_galactic_scale_1 = {
-	pop_growth_speed = 10
-	# pop_assembly_speed = 10
+	logistic_growth_mult = 10
 	planet_pop_assembly_mult = 10
 	planet_pops_consumer_goods_upkeep_mult = 0.5
 }
-
 ngm_olympic_nominee_level_1 = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 }
-
 ngm_olympic_nominee_level_2 = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 }
-
 ngm_olympic_nominee_level_3 = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 }
-
 ngm_olympic_nominee_level_4 = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 }
-
 ngm_olympic_nominee_level_5 = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 }
-
-# 開催地の主張
 ngm_olympic_founder_planet_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 }
-
-# 1年間当該惑星交易価値+10%
 ngm_olympic_1_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
-	trade_value_mult = 0.1
+	planet_jobs_trade_produces_mult = 0.1
 }
-
-# 2年間当該惑星安定度+10
 ngm_olympic_2_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	planet_stability_add = 10
 }
-
-# 1年間外交発言力+10%
 ngm_olympic_3_event_modifier = {
 	diplo_weight_mult = 0.1
 }
-
-# 2年間当該惑星幸福度+10%
 ngm_olympic_4_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	pop_happiness = 0.1
 }
-
-# 1年間帝国交易価値+10%
 ngm_olympic_5_event_modifier = {
-	trade_value_mult = 0.1
+	planet_jobs_trade_produces_mult = 0.1
 }
-
-# 2年間帝国安定度+10
 ngm_olympic_6_event_modifier = {
 	planet_stability_add = 10
 }
-
-# 1年間当該惑星交易価値+10%
 ngm_olympic_7_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
-	trade_value_mult = 0.1
+	planet_jobs_trade_produces_mult = 0.1
 }
-
-# 1年間当該惑星POPの成長速度+10%
 ngm_olympic_8_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
-	pop_growth_speed = 0.1
+	logistic_growth_mult = 0.1
 }
-
-# 5年間帝国安定度+10
 ngm_olympic_9_event_modifier = {
 	planet_stability_add = 10
 }
-
-# 5年間当該惑星統合力+10%
 ngm_olympic_10_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	planet_jobs_unity_produces_mult = 0.1
 }
-
-# 1年間参加国交易価値+5%
 ngm_olympic_11_event_modifier = {
-	trade_value_mult = 0.05
+	planet_jobs_trade_produces_mult = 0.05
 }
-
-# 2年間当該惑星交易価値+5%
-# 2年間当該惑星移民流入+20%
 ngm_olympic_12_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
-	trade_value_mult = 0.05
-	planet_immigration_pull_mult = 0.2
+	planet_jobs_trade_produces_mult = 0.05
+	planet_resettlement_unemployed_destination_mult = 0.2
 }
-
-# 5年間帝国管理許容量+10%
 ngm_olympic_13_event_modifier = {
 	country_admin_cap_mult = 0.1
 }
-
-# 2年間当該惑星犯罪度+10
 ngm_olympic_14_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	planet_crime_add = 10
 }
-
-# 1年間惑星幸福度-5%
 ngm_olympic_15_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	pop_happiness = -0.05
 }
-
-# 2年間帝国Pop幸福度-10%
 ngm_olympic_16_event_modifier = {
 	pop_happiness = -0.1
 }
-
-# 1年間当該惑星POPの成長速度-10%
 ngm_olympic_17_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
-	pop_growth_speed = -0.1
+	logistic_growth_mult = -0.1
 }
-
-# 2年間当該惑星交易価値-10%
 ngm_olympic_18_event_modifier = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
-	trade_value_mult = -0.1
+	planet_jobs_trade_produces_mult = -0.1
 }
-
-# 1年間全参加国幸福度+10%
 ngm_olympic_1_game_modifier = {
 	pop_happiness = 0.1
 }
-
-# 1年間参加国のうちランダムで1か国幸福度+20%
 ngm_olympic_2_game_modifier = {
 	pop_happiness = 0.2
 }
-
-# 1年間参加国のうちランダムで2か国幸福度+20%
 ngm_olympic_3_game_modifier = {
 	pop_happiness = 0.2
 }
-
-# 1年間参加国のうちランダムで2か国幸福度+20%
 ngm_olympic_4_game_modifier = {
 	pop_happiness = 0.2
 }
-
-# 1年間全参加国統合力+20%
 ngm_olympic_5_game_modifier = {
 	country_unity_produces_mult = 0.2
 }
-
-# 1年間参加国のうちランダムで1か国統合力+20%
 ngm_olympic_6_game_modifier = {
 	country_unity_produces_mult = 0.2
 }
-
-# 1年間主催国の幸福度+10%
 ngm_olympic_7_game_modifier = {
 	pop_happiness = 0.1
 }
-
-# 1年間参加国のうちランダムで1か国幸福度-10%
 ngm_olympic_8_game_modifier = {
 	pop_happiness = -0.1
 }
-
-# 1年間主催国社会学研究+10%
 ngm_olympic_9_game_modifier = {
 	country_society_tech_research_speed = 0.1
 }
-
-# 1年間参加国のうちランダムで1か国幸福度-10%
 ngm_olympic_10_game_modifier = {
 	pop_happiness = -0.1
 }
-
-# 参加国のうちランダムで1年間統合力-10%
 ngm_olympic_11_game_modifier = {
 	country_unity_produces_mult = -0.1
 }
-
-# オリンピック1位
-# 1位は影響力+300と5年間統合力算出+20%、5年間外交発言力+10%
 ngm_olympic_1win_modifier = {
 	country_unity_produces_mult = 0.2
 	diplo_weight_mult = 0.1
 }
-
-# オリンピック2位
-# 2位は影響力+150と5年間統合力算出+10%
 ngm_olympic_2win_modifier = {
 	country_unity_produces_mult = 0.1
-
 }
-
-# オリンピック3位
-# 3位は影響力+100と5年間統合力算出+10%
 ngm_olympic_3win_modifier = {
 	country_unity_produces_mult = 0.1
 }
-
-# オリンピック 参加賞
-# 統合力算出+5%
 ngm_olympic_buff_modifier = {
 	country_unity_produces_mult = 0.
 }
 
-# 狙い撃ち:宿敵の犯罪+30
-tr_ngm_sniper_debuff_1 = {
-	planet_crime_add = 30
-}
-tr_ngm_sniper_debuff_2 = {
-	planet_crime_add = 30
-}
-tr_ngm_sniper_debuff_3 = {
-	planet_crime_add = 30
-}
-tr_ngm_sniper_debuff_4 = {
-	planet_crime_add = 30
-}
-tr_ngm_sniper_debuff_5 = {
-	planet_crime_add = 30
-}
-tr_ngm_sniper_debuff_6 = {
-	planet_crime_add = 30
-}
-tr_ngm_sniper_debuff_7 = {
-	planet_crime_add = 30
-}
-tr_ngm_sniper_debuff_8 = {
-	planet_crime_add = 30
-}
 
-# 浸透:外交関係にあるすべての国家の犯罪+20		伝統取得時
-tr_ngm_penetration_debuff_1 = {
-	planet_crime_add = 20
-}
-tr_ngm_penetration_debuff_2 = {
-	planet_crime_add = 20
-}
-tr_ngm_penetration_debuff_3 = {
-	planet_crime_add = 20
-}
-tr_ngm_penetration_debuff_4 = {
-	planet_crime_add = 20
-}
-tr_ngm_penetration_debuff_5 = {
-	planet_crime_add = 20
-}
-tr_ngm_penetration_debuff_6 = {
-	planet_crime_add = 20
-}
-tr_ngm_penetration_debuff_7 = {
-	planet_crime_add = 20
-}
-tr_ngm_penetration_debuff_8 = {
-	planet_crime_add = 20
-}
-tr_ngm_penetration_debuff_9 = {
-	planet_crime_add = 20
-}
-tr_ngm_penetration_debuff_10 = {
-	planet_crime_add = 20
-}
-tr_ngm_penetration_debuff_11 = {
-	planet_crime_add = 20
-}
-tr_ngm_penetration_debuff_12 = {
-	planet_crime_add = 20
-}
-tr_ngm_penetration_debuff_13 = {
-	planet_crime_add = 20
-}
-tr_ngm_penetration_debuff_14 = {
-	planet_crime_add = 20
-}
-tr_ngm_penetration_debuff_15 = {
-	planet_crime_add = 20
-}
 
-# 自由:報道の自由:宿敵宣言した国家の奴隷の幸福度-20%
-tr_ngm_freedom_finish_debuff_1 = {
-	pop_cat_slave_happiness = -0.2
-}
-tr_ngm_freedom_finish_debuff_2 = {
-	pop_cat_slave_happiness = -0.2
-}
-tr_ngm_freedom_finish_debuff_3 = {
-	pop_cat_slave_happiness = -0.2
-}
-tr_ngm_freedom_finish_debuff_4 = {
-	pop_cat_slave_happiness = -0.2
-}
-tr_ngm_freedom_finish_debuff_5 = {
-	pop_cat_slave_happiness = -0.2
-}
-tr_ngm_freedom_finish_debuff_6 = {
-	pop_cat_slave_happiness = -0.2
-}
-tr_ngm_freedom_finish_debuff_7 = {
-	pop_cat_slave_happiness = -0.2
-}
-tr_ngm_freedom_finish_debuff_8 = {
-	pop_cat_slave_happiness = -0.2
-}
 
-# 破壊工作:宿敵の交易保護値-15、宿敵の犯罪+20
-tr_ngm_sabotage_debuff_1 = {
-	local_trade_protection_add = -15
-	planet_crime_add = 20
-}
-tr_ngm_sabotage_debuff_2 = {
-	local_trade_protection_add = -15
-	planet_crime_add = 20
-}
-tr_ngm_sabotage_debuff_3 = {
-	local_trade_protection_add = -15
-	planet_crime_add = 20
-}
-tr_ngm_sabotage_debuff_4 = {
-	local_trade_protection_add = -15
-	planet_crime_add = 20
-}
-tr_ngm_sabotage_debuff_5 = {
-	local_trade_protection_add = -15
-	planet_crime_add = 20
-}
-tr_ngm_sabotage_debuff_6 = {
-	local_trade_protection_add = -15
-	planet_crime_add = 20
-}
-tr_ngm_sabotage_debuff_7 = {
-	local_trade_protection_add = -15
-	planet_crime_add = 20
-}
-tr_ngm_sabotage_debuff_8 = {
-	local_trade_protection_add = -15
-	planet_crime_add = 20
-}
 
-# 恒常的妨害:宿敵の交易保護値-5
-tr_ngm_constant_obstruction_debuff_1 = {
-	local_trade_protection_add = -5
-}
-tr_ngm_constant_obstruction_debuff_2 = {
-	local_trade_protection_add = -5
-}
-tr_ngm_constant_obstruction_debuff_3 = {
-	local_trade_protection_add = -5
-}
-tr_ngm_constant_obstruction_debuff_4 = {
-	local_trade_protection_add = -5
-}
-tr_ngm_constant_obstruction_debuff_5 = {
-	local_trade_protection_add = -5
-}
-tr_ngm_constant_obstruction_debuff_6 = {
-	local_trade_protection_add = -5
-}
-tr_ngm_constant_obstruction_debuff_7 = {
-	local_trade_protection_add = -5
-}
-tr_ngm_constant_obstruction_debuff_8 = {
-	local_trade_protection_add = -5
-}
 
-# 国家宣伝省:宿敵1つあたりの影響力収入+1
-tr_ngm_ministry_engagement_buff_1 = {
-	country_base_influence_produces_add = 1
-}
-# tr_ngm_ministry_engagement_buff_2 = {
-# 	country_base_influence_produces_add = 2
-# }
-# tr_ngm_ministry_engagement_buff_3 = {
-# 	country_base_influence_produces_add = 3
-# }
-# tr_ngm_ministry_engagement_buff_4 = {
-# 	country_base_influence_produces_add = 4
-# }
-# tr_ngm_ministry_engagement_buff_5 = {
-# 	country_base_influence_produces_add = 5
-# }
 
-# 善隣完遂時:5種類以上の種族がいる惑星でPOPの成長速度+10%、交易価値+10%、統合力+10%、流入魅力+10%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 tr_ngm_neighbor_finish_buff = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	pop_growth_speed = 0.1
-	trade_value_mult = 0.1
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
+	logistic_growth_mult = 0.1
+	planet_jobs_trade_produces_mult = 0.1
 	planet_jobs_unity_produces_mult = 0.1
-	planet_immigration_pull_mult = 0.1
 }
-
-# 憲兵隊:地上軍のいる惑星の安定度+20
 tr_ngm_military_police_buff = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	planet_stability_add = 20
 }
-
-# 余裕取得時：管理許容量を超過しているとき、外交発言力+30%
 tr_ngm_margin_adopt_buff = {
 	diplo_weight_mult = 0.3
 }
-
-# 余裕完遂時:管理許容量を超過しているとき、影響力+30%
 tr_ngm_margin_finish_buff = {
 	country_influence_produces_mult = 0.3
 }
-
-# 3.軍事国家:宇宙軍許容量を超過しているときに職業による資源+10%
 tr_ngm_weapons_arsenal_country_buff = {
 	planet_jobs_productive_produces_mult = 0.1
 }
-
-# 40.芸術外交:月間忠誠度+1
 tr_ngm_ministory_culture_modifier = {
 	monthly_loyalty = 1
 }
-
-# 237.領地相続:毎月の忠誠心+1
 tr_ngm_territory_inheritance_modifier = {
 	monthly_loyalty = 1
 }
-
-# 宗主取得時：忠誠度月間+1
 tr_ngm_margin_finish_modifier = {
 	monthly_loyalty = 1
 }
-
-# 宗主取得時：忠誠度月間+1
 tr_ngm_suzerain_adopt_modifier = {
 	monthly_loyalty = 1
 }
-
-# 181.宗主国の圧力:忠誠度月間+1
 tr_ngm_suzerainty_pressure_modifier = {
 	monthly_loyalty = 1
 }
 
-# 84.敵対的演説:宿敵の外交発言力-10%
-tr_ngm_battle_speach_modifier_1 = {
-	diplo_weight_mult = -0.1
-}
-tr_ngm_battle_speach_modifier_2 = {
-	diplo_weight_mult = -0.1
-}
-tr_ngm_battle_speach_modifier_3 = {
-	diplo_weight_mult = -0.1
-}
-tr_ngm_battle_speach_modifier_4 = {
-	diplo_weight_mult = -0.1
-}
-tr_ngm_battle_speach_modifier_5 = {
-	diplo_weight_mult = -0.1
-}
-tr_ngm_battle_speach_modifier_6 = {
-	diplo_weight_mult = -0.1
-}
-tr_ngm_battle_speach_modifier_7 = {
-	diplo_weight_mult = -0.1
-}
-tr_ngm_battle_speach_modifier_8 = {
-	diplo_weight_mult = -0.1
-}
 
-# 156.逆境 完遂時:防衛戦争時に亜高速移動速度+20%
+
+
+
+
+
+
 tr_ngm_adversity_finish_modifier = {
 	ship_speed_mult = 0.2
 }
 
-# 恒常的敵対諜報活動		宿敵にした相手国の影響力-1
-ap_ngm_chio_debuff_1 = {
-	country_base_influence_produces_add = -1
-}
-ap_ngm_chio_debuff_2 = {
-	country_base_influence_produces_add = -1
-}
-ap_ngm_chio_debuff_3 = {
-	country_base_influence_produces_add = -1
-}
-ap_ngm_chio_debuff_4 = {
-	country_base_influence_produces_add = -1
-}
-ap_ngm_chio_debuff_5 = {
-	country_base_influence_produces_add = -1
-}
-ap_ngm_chio_debuff_6 = {
-	country_base_influence_produces_add = -1
-}
-ap_ngm_chio_debuff_7 = {
-	country_base_influence_produces_add = -1
-}
-ap_ngm_chio_debuff_8 = {
-	country_base_influence_produces_add = -1
-}
 
-# 2.外交シンクタンク	外交官+2 外交発言力+20% 月間忠誠度+1
+
+
+
+
+
+
 ap_ngm_dipromatic_think_tank_modifier = {
 	monthly_loyalty = 1
 }
-
-# 23.重層的国家	月間忠誠度+2
 ap_ngm_layer_countries_modifier = {
 	monthly_loyalty = 2
 }
-
-# 志向の矯正
 ngm_ethics_force_loyalty_1 = {
 	monthly_loyalty = -3.0
 }
-
-# 志向の矯正
 ngm_ethics_force_loyalty_2 = {
 	country_trust_growth = -0.5
 }
-
-# 積極的介入	positive_intervention	介入	浸透度+5、解読力+5	適用済みの補正	浸透度+10、解読力+10、外交発言力+20%	国外への関与は帝国の地位をより高める
 agenda_ngm_positive_intervention_finish_modifier = {
 	spy_power_cost_add = 10
 	intel_decryption_add = 10
 	diplo_weight_mult = 0.2
 }
-
-# 中立の確認	neutrality_confirmation	中立	幸福度+5%、暗号力+5	適用済みの補正	幸福度+10%、暗号力+10、外交発言力+20%	他国から自立することは帝国にとって必要だ
 agenda_ngm_neutrality_confirmation_finish_modifier = {
 	pop_happiness = 0.1
 	intel_encryption_add = 10
 	diplo_weight_mult = 0.2
 }
-
-# 栄誉の称賛	honorary_accolades	栄望	影響力+1	適用済みの補正	影響力+2	名誉を称えることこそ国家の義務だ
 agenda_ngm_honorary_accolades_finish_modifier = {
 	country_base_influence_produces_add = 2
 }
-
-# 実益の確保	securing_real_benefits	実利	職業からの資源産出+5%	適用済みの補正	職業からの資源産出+10%	利益であれば食べていくことができる
 agenda_ngm_securing_real_benefits_finish_modifier = {
 	planet_jobs_produces_mult = 0.1
 }
-
-# 経済利益の追求	pursuit_of_economic_profit	資本	交易価値+15%、交易保護値+2	適用済みの補正	交易価値+30%、交易保護値+5、エネルギー収入+15%	金、金、金。金は重要なのだ
 agenda_ngm_pursuit_of_economic_profit_finish_modifier = {
-	trade_value_mult = 0.3
-	local_trade_protection_add = 5
+	planet_jobs_trade_produces_mult = 0.3
+	country_trade_produces_mult = 0.05
 	country_energy_produces_mult = 0.15
 }
-
-# 経済的格差の是正	reduction_of_economic_disparities	社会	労働者の幸福度+10%、労働者資源産出+5%	適用済みの補正	労働者の幸福度+20%、労働者資源産出+10%、安定度+5	平等の実現は国の義務だ
 agenda_ngm_reduction_of_economic_disparities_finish_modifier = {
 	pop_cat_worker_happiness = 0.2
 	planet_jobs_worker_produces_mult = 0.1
 	planet_stability_add = 5
 }
-
-# 開発構想の改革	reform_of_development_concept	開発	鉱物産出+10%、合金産出+10%、消費財産出+10%	適用済みの補正	鉱物産出+20%、合金産出+20%、消費財産出+20%	帝国の開発追求は未来へとつながる
 agenda_ngm_reform_of_development_concept_finish_modifier = {
 	country_minerals_produces_mult = 0.2
 	country_alloys_produces_mult = 0.2
 	country_consumer_goods_produces_mult = 0.2
 }
-
-# 環境主義の喧伝	the_clamor_for_environmentalism	保全	居住性+5、POPの成長速度+10%	適用済みの補正	居住性+10、POPの成長速度+20%、POP消費財維持費-10%	自然環境は保護していくべき財産だ
 agenda_ngm_the_clamor_for_environmentalism_finish_modifier = {
-	pop_environment_tolerance = 10
-	pop_growth_speed = 0.2
+	pop_environment_tolerance = 0.1
+	logistic_growth_mult = 0.2
 	planet_pops_consumer_goods_upkeep_mult = -0.1
 }
-
-# 法秩序の徹底	ensuring_law_and_order	法令	犯罪-5、POPからの帝国規模-10%	適用済みの補正	犯罪-10、POPからの帝国規模-20%	法秩序の実現は必要なのだ
 agenda_ngm_ensuring_law_and_order_finish_modifier = {
 	planet_crime_add = -10
 	empire_size_pops_mult = -0.2
 }
-
-# 幹部教育の再実施	re_implementation_of_executive_education	研鑽	リーダーの獲得経験値+15%、リーダー雇用コスト-20%	適用済みの補正	リーダーの獲得経験値+30%、リーダー雇用コスト-40%、リーダー維持コスト-25%	幹部こそ初心を忘れてはいけない
 agenda_ngm_re_implementation_of_executive_education_finish_modifier = {
 	species_leader_exp_gain = 0.3
 	leaders_cost_mult = -0.4
 	leaders_upkeep_mult = -0.25
 }
-
-# 耽美なる祝宴	aesthetic_feast	逸楽	統治者幸福度+15%、快適度+15%	適用済みの補正	統治者幸福度+15%、快適度+15%	贅沢は友だ
 agenda_ngm_aesthetic_feast_finish_modifier = {
 	pop_cat_ruler_happiness = 0.15
 	planet_amenities_mult = 0.15
 }
-
-# 学術研究の推進	promoting_academic_research	学術	研究速度+10%	適用済みの補正	研究速度+20%	技術の推進は発展の両輪だ
 agenda_ngm_promoting_academic_research_finish_modifier = {
 	all_technology_research_speed = 0.2
 }
-
-# 自由への歩み	steps_toward_freedom	自由	派閥統合力ボーナス+15%	適用済みの補正	派閥統合力ボーナス+30%	自由に基づく派閥政治を推進する
 agenda_ngm_steps_toward_freedom_finish_modifier = {
 	pop_factions_unity_produces_mult = 0.3
 }
-
-# 秩序の再編	reorganization_of_order	秩序	帝国規模-10%	適用済みの補正	帝国規模-20%	秩序はすべての上に立つ
 agenda_ngm_reorganization_of_order_finish_modifier = {
 	empire_size_mult = -0.2
 }
-
-# 異種族理解の推進	promotion_of_species_understanding	善隣	外交発言力+10%、流入魅力+20%	適用済みの補正	外交発言力+10%、流入魅力+40%、POPの成長速度+10%	異種族の理解推進は国家規模で行われる
 agenda_ngm_promotion_of_species_understanding_finish_modifier = {
 	diplo_weight_mult = 0.1
-	planet_immigration_pull_mult = 0.4
-	pop_growth_speed = 0.1
+	planet_resettlement_unemployed_destination_mult = 0.4
+	logistic_growth_mult = 0.1
 }
-
-# パラノイアの拡大	expanding_paranoia	敵視	宿敵の外交発言力-10%	適用済みの補正	宿敵の外交発言力-20%、浸透度+10	あいつらは敵なのだ……そうに違いない
 agenda_ngm_expanding_paranoia_finish_modifier = {
 	spy_power_cost_add = 10
 }
-
 agenda_ngm_expanding_paranoia_debuff_0 = {
 }
 agenda_ngm_expanding_paranoia_debuff_1 = {
@@ -1578,50 +914,34 @@ agenda_ngm_expanding_paranoia_debuff_7 = {
 agenda_ngm_expanding_paranoia_debuff_8 = {
 	diplo_weight_mult = -0.2
 }
-
-# 官僚機構の拡大	expansion_of_bureaucracy	官吏	布告資金+50、リーダー雇用コスト-15%	適用済みの補正	リーダー雇用コスト-30%、布告資金+100、帝国規模-10%	官僚機構の強化は国の強化である
 agenda_ngm_expansion_of_bureaucracy_finish_modifier = {
 	leaders_cost_mult = -0.3
 	country_edict_fund_add = 100
 	empire_size_mult = -0.1
 }
-
-# 将校団の拡大	expansion_of_officer_corps	将校	艦船維持費-20%、地上軍の士気+20%	適用済みの補正	艦船維持費-40%、地上軍の士気+40%、最大占領守備隊数+10	将校の強化は軍を強化できる
 agenda_ngm_expansion_of_officer_corps_finish_modifier = {
 	ships_upkeep_mult = -0.4
 	army_morale = 0.4
 }
-
-# 建築計画の実施	implementation_of_building_plans	建築	惑星建造速度+20%、巨大構造物建造速度+15%	適用済みの補正	惑星建造速度+40%、巨大構造物建造速度+30%	手塩にかけた建築計画は常に作成される
 agenda_ngm_implementation_of_building_plans_finish_modifier = {
 	planet_building_build_speed_mult = 0.4
 	megastructure_build_speed_mult = 0.3
 }
-
-# 希望の宙	space_of_hope	切望	関係改善の効果+25%、国境摩擦-20%	適用済みの補正	関係改善の効果+50%、国境摩擦-40%	未来へと常に進み続ける
 agenda_ngm_space_of_hope_finish_modifier = {
 	envoy_improve_relations_mult = 0.5
 	country_border_friction_mult = -0.4
 }
-
-# 国際問題の解決	resolving_international_issues	介入	利用可能な使節の数+1、外交発言力+15%	適用済みの補正	利用可能な使節の数+2、外交発言力+30%	国際的問題は一国では解決しない。そもそも一国では発生しない
 agenda_ngm_resolving_international_issues_finish_modifier = {
 	envoys_add = 2
 	diplo_weight_mult = 0.3
 }
-
-# 大規模行動の実施	implementation_of_large_scale_actions	巨大	開拓前哨地建造コスト-20%、請求権作成の影響力コスト-20%	適用済みの補正	開拓前哨地建造コスト-40%、請求権作成の影響力コスト-40%	国家拡張に向けて進め！
 agenda_ngm_implementation_of_large_scale_actions_finish_modifier = {
 	shipclass_starbase_build_cost_mult = -0.4
 	country_claim_influence_cost_mult = -0.4
 }
-
-# 立法手続きの再編	restructuring_of_legislative_procedures	立法	布告資金+100	適用済みの補正	布告資金+200	法の見直しは常に必要なのだ
 agenda_ngm_restructuring_of_legislative_procedures_finish_modifier = {
 	country_edict_fund_add = 200
 }
-
-# 階級的秩序の徹底			世襲	安定度+5、統治者Popの資源生産+5%	適用済みの補正	安定度+10、統治者Popの資源生産+10%、統合力+10%	世襲階級への優遇は国家の礎なのだ
 agenda_ngm_ensuring_class_order_finish_modifier = {
 	planet_stability_add = 10
 	planet_jobs_ruler_produces_mult = 0.1

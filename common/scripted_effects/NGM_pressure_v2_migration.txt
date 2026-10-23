@@ -1,0 +1,8 @@
+# Live global dispatcher. Legacy save migration was retired in dev.21.
+ngm_pressure_v2_sync_all_effect = {
+ every_playable_country = {
+  ngm_pressure_v2_refresh_effect = yes
+  ngm_pressure_v2_support_effect = yes
+  ngm_pressure_v2_subject_support_effect = yes
+ }
+}

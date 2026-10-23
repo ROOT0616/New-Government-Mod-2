@@ -1,0 +1,12 @@
+{
+  "version": "1.39.0-dev.16",
+  "passed": true,
+  "checks": [
+    "13 migrated jobs use current ruler/specialist eligibility and weights; all resource production/upkeep is preserved, with explicit trade and amenities/army-key conversions. Existing influencer is unchanged. Job economic categories use colony scope.",
+    "All 50 ruler grants match original civic/capital counts in current workforce units. 5120 civic combinations across five capitals preserve nonnegative politician capacity, including civic stacking.",
+    "Ceremonies building supplies 200 capacity and the restored job produces medal resource with original costs/yield.",
+    "Dissection eligibility exactly retains all current Vanilla slavery protections after explicit country-scope substitution.",
+    "Six restored origins have resolved icon assets and normal/fanatic ethic alternatives are selectable OR conditions."
+  ],
+  "runtime_tested": false
+}

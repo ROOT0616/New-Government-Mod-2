@@ -1,0 +1,23 @@
+namespace = ngm_colonial_origin
+# Carrier scope. A fresh colony gains 100 people of an actual colonizing group.
+carrier_event = {
+    id = ngm_colonial_origin.1 hide_window = yes is_triggered_only = yes
+    trigger = {
+        is_capital = no
+        exists = owner owner = { has_origin = origin_ngm_colony }
+        NOT = { has_carrier_flag = ngm_colony_origin_bonus_given }
+        any_owned_pop_group = { pop_group_size > 0 }
+    }
+    immediate = {
+        random_owned_pop_group = {
+            limit = { pop_group_size > 0 }
+            save_event_target_as = ngm_colonizing_group
+        }
+        create_pop_group = { pop_group = event_target:ngm_colonizing_group size = 100 }
+        set_carrier_flag = ngm_colony_origin_bonus_given
+    }
+}
+carrier_event = {
+    id = ngm_colonial_origin.2 hide_window = yes is_triggered_only = yes
+    immediate = { remove_carrier_flag = ngm_colony_origin_bonus_given }
+}

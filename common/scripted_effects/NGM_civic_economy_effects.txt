@@ -1,0 +1,120 @@
+ngm_sync_money_penalty_effect = {
+ set_variable = { which = ngm_money_penalty_desired value = 0 }
+ if = { limit = { exists = owner owner = { has_valid_civic = civic_ngm_money_penalty } }
+  set_variable = { which = ngm_money_penalty_desired value = value:ngm_money_penalty_tier_value }
+ }
+ if = { limit = { OR = { NOT = { is_variable_set = ngm_money_penalty_applied } NOT = { check_variable = { which = ngm_money_penalty_applied value = ngm_money_penalty_desired } } } }
+  if = { limit = { has_deposit = d_ngm_money_penalty_1 } remove_deposit = d_ngm_money_penalty_1 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_2 } remove_deposit = d_ngm_money_penalty_2 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_3 } remove_deposit = d_ngm_money_penalty_3 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_4 } remove_deposit = d_ngm_money_penalty_4 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_5 } remove_deposit = d_ngm_money_penalty_5 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_6 } remove_deposit = d_ngm_money_penalty_6 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_7 } remove_deposit = d_ngm_money_penalty_7 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_8 } remove_deposit = d_ngm_money_penalty_8 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_9 } remove_deposit = d_ngm_money_penalty_9 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_10 } remove_deposit = d_ngm_money_penalty_10 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_11 } remove_deposit = d_ngm_money_penalty_11 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_12 } remove_deposit = d_ngm_money_penalty_12 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_13 } remove_deposit = d_ngm_money_penalty_13 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_14 } remove_deposit = d_ngm_money_penalty_14 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_15 } remove_deposit = d_ngm_money_penalty_15 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_16 } remove_deposit = d_ngm_money_penalty_16 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_17 } remove_deposit = d_ngm_money_penalty_17 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_18 } remove_deposit = d_ngm_money_penalty_18 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_19 } remove_deposit = d_ngm_money_penalty_19 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_20 } remove_deposit = d_ngm_money_penalty_20 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_21 } remove_deposit = d_ngm_money_penalty_21 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_22 } remove_deposit = d_ngm_money_penalty_22 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_23 } remove_deposit = d_ngm_money_penalty_23 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_24 } remove_deposit = d_ngm_money_penalty_24 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_25 } remove_deposit = d_ngm_money_penalty_25 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_26 } remove_deposit = d_ngm_money_penalty_26 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_27 } remove_deposit = d_ngm_money_penalty_27 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_28 } remove_deposit = d_ngm_money_penalty_28 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_29 } remove_deposit = d_ngm_money_penalty_29 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_30 } remove_deposit = d_ngm_money_penalty_30 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_31 } remove_deposit = d_ngm_money_penalty_31 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_32 } remove_deposit = d_ngm_money_penalty_32 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_33 } remove_deposit = d_ngm_money_penalty_33 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_34 } remove_deposit = d_ngm_money_penalty_34 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_35 } remove_deposit = d_ngm_money_penalty_35 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_36 } remove_deposit = d_ngm_money_penalty_36 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_37 } remove_deposit = d_ngm_money_penalty_37 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_38 } remove_deposit = d_ngm_money_penalty_38 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_39 } remove_deposit = d_ngm_money_penalty_39 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_40 } remove_deposit = d_ngm_money_penalty_40 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_41 } remove_deposit = d_ngm_money_penalty_41 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_42 } remove_deposit = d_ngm_money_penalty_42 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_43 } remove_deposit = d_ngm_money_penalty_43 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_44 } remove_deposit = d_ngm_money_penalty_44 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_45 } remove_deposit = d_ngm_money_penalty_45 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_46 } remove_deposit = d_ngm_money_penalty_46 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_47 } remove_deposit = d_ngm_money_penalty_47 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_48 } remove_deposit = d_ngm_money_penalty_48 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_49 } remove_deposit = d_ngm_money_penalty_49 }
+  if = { limit = { has_deposit = d_ngm_money_penalty_50 } remove_deposit = d_ngm_money_penalty_50 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 1 } } add_deposit = d_ngm_money_penalty_1 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 2 } } add_deposit = d_ngm_money_penalty_2 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 3 } } add_deposit = d_ngm_money_penalty_3 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 4 } } add_deposit = d_ngm_money_penalty_4 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 5 } } add_deposit = d_ngm_money_penalty_5 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 6 } } add_deposit = d_ngm_money_penalty_6 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 7 } } add_deposit = d_ngm_money_penalty_7 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 8 } } add_deposit = d_ngm_money_penalty_8 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 9 } } add_deposit = d_ngm_money_penalty_9 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 10 } } add_deposit = d_ngm_money_penalty_10 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 11 } } add_deposit = d_ngm_money_penalty_11 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 12 } } add_deposit = d_ngm_money_penalty_12 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 13 } } add_deposit = d_ngm_money_penalty_13 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 14 } } add_deposit = d_ngm_money_penalty_14 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 15 } } add_deposit = d_ngm_money_penalty_15 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 16 } } add_deposit = d_ngm_money_penalty_16 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 17 } } add_deposit = d_ngm_money_penalty_17 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 18 } } add_deposit = d_ngm_money_penalty_18 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 19 } } add_deposit = d_ngm_money_penalty_19 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 20 } } add_deposit = d_ngm_money_penalty_20 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 21 } } add_deposit = d_ngm_money_penalty_21 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 22 } } add_deposit = d_ngm_money_penalty_22 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 23 } } add_deposit = d_ngm_money_penalty_23 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 24 } } add_deposit = d_ngm_money_penalty_24 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 25 } } add_deposit = d_ngm_money_penalty_25 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 26 } } add_deposit = d_ngm_money_penalty_26 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 27 } } add_deposit = d_ngm_money_penalty_27 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 28 } } add_deposit = d_ngm_money_penalty_28 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 29 } } add_deposit = d_ngm_money_penalty_29 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 30 } } add_deposit = d_ngm_money_penalty_30 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 31 } } add_deposit = d_ngm_money_penalty_31 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 32 } } add_deposit = d_ngm_money_penalty_32 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 33 } } add_deposit = d_ngm_money_penalty_33 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 34 } } add_deposit = d_ngm_money_penalty_34 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 35 } } add_deposit = d_ngm_money_penalty_35 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 36 } } add_deposit = d_ngm_money_penalty_36 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 37 } } add_deposit = d_ngm_money_penalty_37 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 38 } } add_deposit = d_ngm_money_penalty_38 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 39 } } add_deposit = d_ngm_money_penalty_39 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 40 } } add_deposit = d_ngm_money_penalty_40 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 41 } } add_deposit = d_ngm_money_penalty_41 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 42 } } add_deposit = d_ngm_money_penalty_42 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 43 } } add_deposit = d_ngm_money_penalty_43 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 44 } } add_deposit = d_ngm_money_penalty_44 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 45 } } add_deposit = d_ngm_money_penalty_45 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 46 } } add_deposit = d_ngm_money_penalty_46 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 47 } } add_deposit = d_ngm_money_penalty_47 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 48 } } add_deposit = d_ngm_money_penalty_48 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 49 } } add_deposit = d_ngm_money_penalty_49 }
+  if = { limit = { check_variable = { which = ngm_money_penalty_desired value = 50 } } add_deposit = d_ngm_money_penalty_50 }
+  set_variable = { which = ngm_money_penalty_applied value = ngm_money_penalty_desired }
+ }
+}
+
+ngm_sync_experimental_substance_effect = {
+    if = { limit = { exists = owner owner = { has_valid_civic = civic_ngm_experimental_substance } }
+        if = { limit = { NOT = { has_deposit = d_ngm_experimental_substance } }
+            add_deposit = d_ngm_experimental_substance }
+    } else = { remove_deposit = d_ngm_experimental_substance }
+}
+ngm_sync_civic_economy_planet_effect = {
+    ngm_sync_money_penalty_effect = yes
+    ngm_sync_experimental_substance_effect = yes
+}

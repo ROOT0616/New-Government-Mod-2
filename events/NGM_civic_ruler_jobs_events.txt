@@ -1,0 +1,7 @@
+namespace = ngm_civic_jobs
+country_event = { id = ngm_civic_jobs.1 hide_window = yes is_triggered_only = yes
+    immediate = { every_owned_planet = { ngm_sync_civic_ruler_jobs_effect = yes } }
+}
+carrier_event = { id = ngm_civic_jobs.2 hide_window = yes is_triggered_only = yes
+    immediate = { ngm_sync_civic_ruler_jobs_effect = yes }
+}

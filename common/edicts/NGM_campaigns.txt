@@ -1,150 +1,7 @@
 @campaignDuration = 3600
-
-# (1)叙勲式の実施(反栄典法を制定していない)
-# ① 文化人への叙勲
-#   文化人の統合力算出+20%(12ヶ月)
-#   研究者の研究力算出+10%(12ヶ月)
-# ② 財界人への叙勲
-#   交易価値+20%(24ヶ月)
-# ③ 外交官への叙勲
-#   外交発言力+20%(24ヶ月)
-# ④派閥幹部への叙勲
-#   派閥幸福度+15%(24ヶ月)
-# ⑤軍人への叙勲
-#   回避+5% (12ヶ月)
-#   連射レート+10% (12ヶ月)
-#   地上軍士気+20% (24ヶ月)
-# ⑥リーダーへの叙勲(特性:政治的叙勲付与)
-#     総督(スキル上限+1、統合力算出+10%)
-#     科学者(スキル上限+1、研究力算出+5%)
-#     提督(スキル上限+1、リーダー取得経験値+20%)
-#     将軍(スキル上限+1、リーダー取得経験値+20%)
-# ⑥皇族への叙勲(君主制のみ)
-#   君主もしくは後継者に特性付与
-#   (特性:政治的叙勲)スキル上限+1、統合力+10%、安定度+5
-# ⑦ 統治者への叙勲
-#   (特性:政治的叙勲)スキル上限+1、統合力+10%、安定度+5
-# ⑧貴族への叙勲(貴族エリート、栄望のみ)
-#   統治者幸福度+50%(48ヶ月)
-# ⑨勤労者への叙勲(栄望or社会主義)
-#   労働者幸福度+30% (48ヶ月)
-#   専門家幸福度+10% (48ヶ月)
-ngm_conducting_decoration_ceremonies_campaign = {
-	length = 1500
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = campaigns
-		cost = {
-			ngm_order_of_merit = 100
-		}
-		upkeep = {
-			ngm_order_of_merit = 0.5
-		}
-	}
-	effect = {
-		country_event = {
-			id = ngm_campaign.1
-		}
-	}
-	potential = {
-		is_gestalt = no
-	}
-	allow = {
-		NOT = {
-			has_policy_flag = ngm_flag_Ant_rit
-		}
-	}
-	ai_weight = {
-		weight = 1
-	}
-}
-
-# (2)対外的叙勲の決定
-# 1 国外要人への叙勲
-#   国選択→叙勲対象選択→送られる側でイベント。受け入れた場合は授与イベント。受け入れられなければ、拒否イベント
-#   送った側は外交発言力+20%,拒否した場合は影響力+100
-#   対象は指導者、後継者、提督、将軍、総督、科学者から選択(特性:国外の叙勲)
-#   指導者	(リーダー経験値取得+20%、影響力+1)
-#   提督		(リーダー経験値取得+20%、連射レート+5%)
-#   将軍		(リーダー経験値取得+20%、地上軍士気+30%)
-#   総督		(リーダー経験値取得+20%、統合力+15%)
-#   科学者	(リーダー経験値取得+20%、研究力+10%)
-# 2 国外功績の称揚(クールダウン36か月)
-# 国選択→叙勲対象選択→送られる側でイベント。受け入れた場合は授与イベント。受け入れられなければ、拒否イベント
-# 送った側は外交発言力+20%,拒否した場合は影響力+100
-#   対象は、文化、科学、統治、外交、軍事
-#   文化		(統合力+20%)	(24ヶ月)
-#   科学		(研究速度+10%)	(24ヶ月)
-#   統治		(安定度+10)	(24ヶ月)
-#   外交		(外交発言力+20%)(24ヶ月)
-#   軍事		(船体値+10%)	(24ヶ月)
-ngm_conducting_decoration_ceremonies_2_campaign = {
-	length = 0
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = campaigns
-		# cost = {
-		# 	ngm_order_of_merit = 100
-		# }
-		# upkeep = {
-		# 	ngm_order_of_merit = 0.5
-		# }
-	}
-	effect = {
-		country_event = {
-			id = ngm_campaign.2
-		}
-	}
-	potential = {
-		is_gestalt = no
-	}
-	allow = {
-		always = yes
-	}
-	ai_weight = {
-		weight = 1
-	}
-}
-
-# (3)叙勲の依頼
-#   相手国へ恩義を代償に叙勲を打診する。
-#   送られた側は送った側に恩義を1渡す
-# 国選択→叙勲対象選択→対象国でイベント。受け入れた場合は授与イベント。受け入れられなければ、拒否イベント
-#   選ぶ対象は、統治者、文化、軍事の3つ
-ngm_conducting_decoration_ceremonies_3_campaign = {
-	length = 0
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = campaigns
-		# cost = {
-		# 	ngm_order_of_merit = 100
-		# }
-		# upkeep = {
-		# 	ngm_order_of_merit = 0.5
-		# }
-	}
-	effect = {
-		country_event = {
-			id = ngm_campaign.3
-		}
-	}
-	potential = {
-		is_gestalt = no
-	}
-	allow = {
-		always = yes
-	}
-	ai_weight = {
-		weight = 1
-	}
-}
-
-
-# 布告「5か年計画」  布告できるのはいずれか1つ。布告コスト  影響力：20、エネルギー500  影響力布告期間は5年。クールタイムは10年
-# five_year_plan1 .建築5か年計画  ：建造物コスト-5%、建造物建築速度+10%、区域建造速度+5%	  Pop消費財使用量+5%
 ngm_five_year_plan1_campaign = {
 	length = 1825
-	icon = "GFX_edict_type_time"
+	icon = GFX_edict_type_time
 	resources = {
 		category = campaigns
 		cost = {
@@ -155,7 +12,6 @@ ngm_five_year_plan1_campaign = {
 	modifier = {
 		planet_buildings_cost_mult = -0.05
 		planet_building_build_speed_mult = 0.1
-		# planet_district_build_speed_mult = 0.05
 		planet_pops_consumer_goods_upkeep_mult = 0.05
 	}
 	effect = {
@@ -179,11 +35,9 @@ ngm_five_year_plan1_campaign = {
 		weight = 1
 	}
 }
-
-# five_year_plan2 .重工業5か年計画：合金生産量+10%、造船速度5%		居住性-5%、農業生産量-10%
 ngm_five_year_plan2_campaign = {
 	length = 1825
-	icon = "GFX_edict_type_time"
+	icon = GFX_edict_type_time
 	resources = {
 		category = campaigns
 		cost = {
@@ -218,11 +72,9 @@ ngm_five_year_plan2_campaign = {
 		weight = 1
 	}
 }
-
-# five_year_plan3 .農業5か年計画  ：農業生産量+20%、POPの成長速度+5%	職業からの研究力-5%
 ngm_five_year_plan3_campaign = {
 	length = 1825
-	icon = "GFX_edict_type_time"
+	icon = GFX_edict_type_time
 	resources = {
 		category = campaigns
 		cost = {
@@ -232,7 +84,7 @@ ngm_five_year_plan3_campaign = {
 	}
 	modifier = {
 		planet_jobs_food_produces_mult = 0.2
-		pop_growth_speed = 0.05
+		logistic_growth_mult = 0.05
 		planet_jobs_physics_research_produces_mult = -0.05
 		planet_jobs_society_research_produces_mult = -0.05
 		planet_jobs_engineering_research_produces_mult = -0.05
@@ -258,11 +110,9 @@ ngm_five_year_plan3_campaign = {
 		weight = 1
 	}
 }
-
-# five_year_plan4 .研究5か年計画  ：職業からの工学+10%、巨大構造物建造速度+5%	職業からの物理学-5%、職業からの社会学-5%
 ngm_five_year_plan4_campaign = {
 	length = 1825
-	icon = "GFX_edict_type_time"
+	icon = GFX_edict_type_time
 	resources = {
 		category = campaigns
 		cost = {
@@ -297,11 +147,9 @@ ngm_five_year_plan4_campaign = {
 		weight = 1
 	}
 }
-
-# five_year_plan5 .思想5か年計画  ：社会主義志向への魅力+20%、統合力+10%		安定度-5
 ngm_five_year_plan5_campaign = {
 	length = 1825
-	icon = "GFX_edict_type_time"
+	icon = GFX_edict_type_time
 	resources = {
 		category = campaigns
 		cost = {
@@ -335,13 +183,9 @@ ngm_five_year_plan5_campaign = {
 		weight = 1
 	}
 }
-
-# 伝統等でアンロックされる布告
-# 1.記憶の布告
-#   ①覇権の記憶	memories_of_hegemony	(影響力100)(キャンセルするまで有効)(我が国の覇権を記録し、後世へ伝える)(統合力+10%、艦船連射レート+10%、地上軍士気+20%)
 ngm_memories_of_hegemony = {
 	length = -1
-	icon = "GFX_edict_type_policy"
+	icon = GFX_edict_type_policy
 	edict_cap_usage = 1
 	resources = {
 		category = edicts
@@ -364,11 +208,9 @@ ngm_memories_of_hegemony = {
 		weight = @EdictMedPrio
 	}
 }
-
-#   ②栄華の記憶	memories_of_glory	(影響力100)(キャンセルするまで有効)(我が国の栄華を記録し、後世へ伝える)(統合力+10%、交易価値+20%、経済力から発生する外交発言力+20%)
 ngm_memories_of_glory = {
 	length = -1
-	icon = "GFX_edict_type_policy"
+	icon = GFX_edict_type_policy
 	edict_cap_usage = 1
 	resources = {
 		category = edicts
@@ -384,18 +226,16 @@ ngm_memories_of_glory = {
 	}
 	modifier = {
 		country_unity_produces_mult = 0.1
-		trade_value_mult = 0.2
+		planet_jobs_trade_produces_mult = 0.2
 		diplo_weight_economy_mult = 0.2
 	}
 	ai_weight = {
 		weight = @EdictMedPrio
 	}
 }
-
-#   ③堅忍の記憶	memoirs_of_perseverance	(影響力100)(キャンセルするまで有効)(我が国の堅忍を記録し、後世へ伝える)(統合力+10%、POP消費財維持費-20%、合金生産量+10%)
 ngm_memoirs_of_perseverance = {
 	length = -1
-	icon = "GFX_edict_type_policy"
+	icon = GFX_edict_type_policy
 	edict_cap_usage = 1
 	resources = {
 		category = edicts
@@ -418,12 +258,9 @@ ngm_memoirs_of_perseverance = {
 		weight = @EdictMedPrio
 	}
 }
-
-# 2.国防計画
-#   ①甲種国防計画	class_A_national_defense_plan	(影響力100)(キャンセルするまで有効)(統合参謀本部が立案した国防計画を実施する)(造船速度+20%、艦隊許容量+50、艦隊指揮上限+10)
 ngm_class_A_national_defense_plan = {
 	length = -1
-	icon = "GFX_edict_type_policy"
+	icon = GFX_edict_type_policy
 	edict_cap_usage = 1
 	resources = {
 		category = edicts
@@ -446,11 +283,9 @@ ngm_class_A_national_defense_plan = {
 		weight = @EdictMedPrio
 	}
 }
-
-#   ②乙種国防計画	class_B_national_defense_plan	(影響力100)(キャンセルするまで有効)(統合参謀本部が立案した国防計画を実施する)(エネルギー生産量+20%、合金生産量+10%)
 ngm_class_B_national_defense_plan = {
 	length = -1
-	icon = "GFX_edict_type_policy"
+	icon = GFX_edict_type_policy
 	edict_cap_usage = 1
 	resources = {
 		category = edicts
@@ -472,19 +307,15 @@ ngm_class_B_national_defense_plan = {
 		weight = @EdictMedPrio
 	}
 }
-
-# 超然的敵対存在	supernatural_adversary	統合力100	この世には、滅ぼさねばならぬ敵がいる	影響力+1、連射レート+10%、射程+10%
 ngm_supernatural_adversary_campaign = {
 	length = -1
-	icon = "GFX_edict_type_policy"
+	icon = GFX_edict_type_policy
 	resources = {
 		category = edicts
 		upkeep = {
 			unity = 100
 			multiplier = value:edict_size_effect
 		}
-	}
-	modifier = {
 	}
 	potential = {
 		has_active_tradition = tr_ngm_transcendental
@@ -495,12 +326,13 @@ ngm_supernatural_adversary_campaign = {
 	ai_weight = {
 		weight = 500
 	}
+	modifier = {
+		max_rivalries = 1
+	}
 }
-
-# 法務局監査	legal_department_audits	統合力100	法律の専門家による監査により、法務執行の遅滞や、不適切な法律運用を監視し、行政の不正や低効率を改善させることができる	帝国規模-15%、帝国基金-20
 ngm_legal_department_audits_campaign = {
 	length = -1
-	icon = "GFX_edict_type_policy"
+	icon = GFX_edict_type_policy
 	resources = {
 		category = edicts
 		upkeep = {
@@ -522,11 +354,9 @@ ngm_legal_department_audits_campaign = {
 		weight = 500
 	}
 }
-
-# モスボールされた民間船の再整備 気だるいことではあるが、モスボールされている民間船を再整備することは可能である
 ngm_mossball_edict = {
 	length = 0
-	icon = "GFX_edict_type_policy"
+	icon = GFX_edict_type_policy
 	potential = {
 		has_origin = origin_ngm_phenix
 	}
@@ -546,7 +376,7 @@ ngm_mossball_edict = {
 					effect = {
 						set_owner = event_target:ngm_phenix_country
 						create_ship = {
-							name = random
+							name = "random"
 							random_existing_design = science
 						}
 						set_fleet_stance = evasive
@@ -557,7 +387,7 @@ ngm_mossball_edict = {
 					effect = {
 						set_owner = event_target:ngm_phenix_country
 						create_ship = {
-							name = random
+							name = "random"
 							random_existing_design = constructor
 						}
 						set_fleet_stance = evasive
@@ -568,59 +398,47 @@ ngm_mossball_edict = {
 		}
 	}
 }
-
-# 影の敵国を設定
 ngm_virture_rival_options_menu = {
 	length = 0
-	icon = "GFX_edict_type_policy"
+	icon = GFX_edict_type_policy
 	potential = {
 		has_tradition = tr_ngm_virture_first
 		is_ai = no
 	}
-	allow = {
-		custom_tooltip = {
-			fail_text = "requires_actor_not_ngm_virture_rival_country"
-			check_variable = {
-				which = ngm_virture_rival_country_num
-				value < 2
-			}
-		}
-	}
 	effect = {
-		# custom_tooltip = ryika_abdw_options_menu_tt
 		hidden_effect = {
+			set_variable = {
+				which = ngm_pressure_v2_page_offset
+				value = 0
+			}
 			country_event = {
-				id = ngm_diplomatic.1
+				id = ngm_pressure.10
 			}
 		}
 	}
 }
-
 ngm_virture_rival_end_options_menu = {
 	length = 0
-	icon = "GFX_edict_type_policy"
+	icon = GFX_edict_type_policy
 	potential = {
 		has_tradition = tr_ngm_virture_first
-		hidden_trigger = {
-			check_variable = {
-				which = ngm_virture_rival_country_num
-				value > 1
-			}
-		}
+		is_ai = no
 	}
 	effect = {
-		# custom_tooltip = ryika_abdw_options_menu_tt
 		hidden_effect = {
+			set_variable = {
+				which = ngm_pressure_v2_page_offset
+				value = 0
+			}
 			country_event = {
-				id = ngm_diplomatic.2
+				id = ngm_pressure.20
 			}
 		}
 	}
 }
-
 ngm_test_campaign = {
 	length = -1
-	icon = "GFX_edict_type_policy"
+	icon = GFX_edict_type_policy
 	potential = {
 		has_ethic = ethic_egalitarian
 		has_ethic = ethic_materialist

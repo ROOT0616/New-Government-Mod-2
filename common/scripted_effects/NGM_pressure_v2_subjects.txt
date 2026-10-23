@@ -1,0 +1,23 @@
+ngm_pressure_v2_subject_support_effect = {
+ if = { limit = { is_subject = yes exists = overlord NOT = { has_ascension_perk = ap_ngm_ministry_of_innocence } overlord = { has_tradition = tr_ngm_margin_finish } }
+  if = { limit = { NOT = { has_modifier = tr_ngm_margin_finish_modifier } } add_modifier = { modifier = tr_ngm_margin_finish_modifier days = -1 } }
+ } else = { remove_modifier = tr_ngm_margin_finish_modifier }
+ if = { limit = { is_subject = yes exists = overlord NOT = { has_ascension_perk = ap_ngm_ministry_of_innocence } overlord = { has_tradition = tr_ngm_suzerain_finish } }
+  if = { limit = { NOT = { has_modifier = tr_ngm_suzerain_adopt_modifier } } add_modifier = { modifier = tr_ngm_suzerain_adopt_modifier days = -1 } }
+ } else = { remove_modifier = tr_ngm_suzerain_adopt_modifier }
+ if = { limit = { is_subject = yes exists = overlord NOT = { has_ascension_perk = ap_ngm_ministry_of_innocence } overlord = { has_tradition = tr_ngm_suzerainty_pressure } }
+  if = { limit = { NOT = { has_modifier = tr_ngm_suzerainty_pressure_modifier } } add_modifier = { modifier = tr_ngm_suzerainty_pressure_modifier days = -1 } }
+ } else = { remove_modifier = tr_ngm_suzerainty_pressure_modifier }
+ if = { limit = { is_subject = yes exists = overlord NOT = { has_ascension_perk = ap_ngm_ministry_of_innocence } overlord = { has_tradition = tr_ngm_diplomatic_art } }
+  if = { limit = { NOT = { has_modifier = tr_ngm_ministory_culture_modifier } } add_modifier = { modifier = tr_ngm_ministory_culture_modifier days = -1 } }
+ } else = { remove_modifier = tr_ngm_ministory_culture_modifier }
+ if = { limit = { is_subject = yes exists = overlord NOT = { has_ascension_perk = ap_ngm_ministry_of_innocence } overlord = { has_tradition = tr_ngm_territory_inheritance } }
+  if = { limit = { NOT = { has_modifier = tr_ngm_territory_inheritance_modifier } } add_modifier = { modifier = tr_ngm_territory_inheritance_modifier days = -1 } }
+ } else = { remove_modifier = tr_ngm_territory_inheritance_modifier }
+ if = { limit = { is_subject = yes exists = overlord NOT = { has_ascension_perk = ap_ngm_ministry_of_innocence } overlord = { has_ascension_perk = ap_ngm_dipromatic_think_tank } }
+  if = { limit = { NOT = { has_modifier = ap_ngm_dipromatic_think_tank_modifier } } add_modifier = { modifier = ap_ngm_dipromatic_think_tank_modifier days = -1 } }
+ } else = { remove_modifier = ap_ngm_dipromatic_think_tank_modifier }
+ if = { limit = { is_subject = yes exists = overlord NOT = { has_ascension_perk = ap_ngm_ministry_of_innocence } overlord = { has_ascension_perk = ap_ngm_layer_countries } }
+  if = { limit = { NOT = { has_modifier = ap_ngm_layer_countries_modifier } } add_modifier = { modifier = ap_ngm_layer_countries_modifier days = -1 } }
+ } else = { remove_modifier = ap_ngm_layer_countries_modifier }
+}

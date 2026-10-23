@@ -1,0 +1,24 @@
+# Added by NGM events only; never randomly generated.
+d_ngm_ethic_ruler_jobs = {
+    is_for_colonizable = yes
+    category = deposit_cat_rare
+    icon = d_monument_in_space
+    potential = { always = no }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_honorism = yes }
+        }
+        job_ngm_ethic_noble_add = 1
+        mult = value:ngm_ethics_job_capacity|MODIFIER|ngm_noble_job_ratio|
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_utilitarianism = yes }
+        }
+        job_ngm_influencer_add = 1
+        mult = value:ngm_ethics_job_capacity|MODIFIER|ngm_influencer_job_ratio|
+    }
+}

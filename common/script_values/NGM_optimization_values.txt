@@ -1,0 +1,7 @@
+# Planet scope; Vanilla 07_script_values_shroud.txt uses trigger:planet_crime.
+ngm_money_penalty_tier_value = {
+ base = trigger:planet_crime
+ ceiling = yes
+ max = 50
+ min = 0
+}

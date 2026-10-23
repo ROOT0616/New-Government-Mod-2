@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "state_cases": 64,
+  "checks": [
+    "actual parsed effects: repeated application, war transitions, invalid civic, ownerless and stale opposing modifiers",
+    "current Vanilla hooks and unique event IDs",
+    "only the two intended trade keys changed in existing static modifiers"
+  ],
+  "runtime_tested": false
+}

@@ -1,0 +1,7 @@
+namespace = ngm_militia
+country_event = { id = ngm_militia.1 hide_window = yes is_triggered_only = yes
+    immediate = { every_owned_planet = { ngm_sync_militia_effect = yes } }
+}
+carrier_event = { id = ngm_militia.2 hide_window = yes is_triggered_only = yes
+    immediate = { ngm_sync_militia_effect = yes }
+}

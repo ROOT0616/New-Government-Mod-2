@@ -1,0 +1,3848 @@
+{
+  "version": "1.39.0-dev.18",
+  "category_count": 37,
+  "tradition_count": 245,
+  "ledger": [
+    {
+      "category": "tradition_ngm_planet",
+      "tradition": "tr_ngm_planet_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_environment_tolerance",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_planet",
+      "tradition": "tr_ngm_planet_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "terraforming_cost_mult",
+          "=",
+          "-0.2"
+        ],
+        [
+          "terraform_speed_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_planet",
+      "tradition": "tr_ngm_planetary_scale_mining",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_minerals_produces_mult",
+          "=",
+          "0.2"
+        ],
+        [
+          "district_mining_max_add",
+          "=",
+          "2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_planet",
+      "tradition": "tr_ngm_agrarianism",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_food_produces_mult",
+          "=",
+          "0.2"
+        ],
+        [
+          "district_farming_max_add",
+          "=",
+          "2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_planet",
+      "tradition": "tr_ngm_support_for_mining",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_jobs_minerals_produces_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_planet",
+      "tradition": "tr_ngm_investment_in_agricultural_corporations",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_jobs_food_produces_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_planet",
+      "tradition": "tr_ngm_local_regeneration",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "empire_size_colonies_mult",
+          "=",
+          "-0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_development",
+      "tradition": "tr_ngm_development_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "stations_cost_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_development",
+      "tradition": "tr_ngm_development_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "megastructures_cost_mult",
+          "=",
+          "-0.15"
+        ],
+        [
+          "megastructure_build_speed_mult",
+          "=",
+          "0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_development",
+      "tradition": "tr_ngm_station_management_office",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "stations_produces_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_development",
+      "tradition": "tr_ngm_zero_gravity_mining",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_minerals_produces_mult",
+          "=",
+          "0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_development",
+      "tradition": "tr_ngm_station_power_generation",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "stations_upkeep_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_development",
+      "tradition": "tr_ngm_station_hub",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "starbase_outpost_cost_mult",
+          "=",
+          "-0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_development",
+      "tradition": "tr_ngm_space_department",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "empire_size_systems_mult",
+          "=",
+          "-0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_craftsmanship",
+      "tradition": "tr_ngm_craftsmanship_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_jobs_unity_produces_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_craftsmanship",
+      "tradition": "tr_ngm_craftsmanship_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_jobs_trade_produces_mult",
+          "=",
+          "0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_craftsmanship",
+      "tradition": "tr_ngm_craft_production",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_consumer_goods_produces_mult",
+          "=",
+          "0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_craftsmanship",
+      "tradition": "tr_ngm_metal_processing_institute",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_alloys_produces_mult",
+          "=",
+          "0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_craftsmanship",
+      "tradition": "tr_ngm_recycling_processing",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_artisans_upkeep_mult",
+          "=",
+          "-0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_craftsmanship",
+      "tradition": "tr_ngm_improvement_of_metal_processing",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_metallurgists_upkeep_mult",
+          "=",
+          "-0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_craftsmanship",
+      "tradition": "tr_ngm_technicians_retention",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "job_foundry_add",
+          "=",
+          "100"
+        ],
+        [
+          "job_artisan_add",
+          "=",
+          "100"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_law",
+      "tradition": "tr_ngm_law_first",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_law",
+      "tradition": "tr_ngm_law_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_law",
+      "tradition": "tr_ngm_human_rights",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_ethic_xenophile_attraction_mult",
+          "=",
+          "0.2"
+        ],
+        [
+          "pop_slave_happiness",
+          "=",
+          "0.1"
+        ],
+        [
+          "pop_cat_worker_happiness",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_law",
+      "tradition": "tr_ngm_law_trade",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_law",
+      "tradition": "tr_ngm_law_pirates",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "piracy_suppression_mult",
+          "=",
+          "-0.3"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_law",
+      "tradition": "tr_ngm_law_government",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "empire_size_systems_mult",
+          "=",
+          "-0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_law",
+      "tradition": "tr_ngm_constitution",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_virture",
+      "tradition": "tr_ngm_virture_first",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_virture",
+      "tradition": "tr_ngm_virture_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "country_claim_influence_cost_mult",
+          "=",
+          "-0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_virture",
+      "tradition": "tr_ngm_sniper",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_virture",
+      "tradition": "tr_ngm_penetration",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_virture",
+      "tradition": "tr_ngm_chain_harted",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "max_rivalries",
+          "=",
+          "2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_virture",
+      "tradition": "tr_ngm_exclusive",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_cat_ruler_happiness",
+          "=",
+          "0.3"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_virture",
+      "tradition": "tr_ngm_sabotage",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_study",
+      "tradition": "tr_ngm_study_first",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "species_leader_exp_gain",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_study",
+      "tradition": "tr_ngm_study_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "country_leader_cap_add",
+          "=",
+          "2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_study",
+      "tradition": "tr_ngm_restudy",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "army_starting_experience_add",
+          "=",
+          "300"
+        ],
+        [
+          "ship_starting_experience_add",
+          "=",
+          "300"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_study",
+      "tradition": "tr_ngm_leader_study",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_scientist_cap_add",
+          "=",
+          "2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_study",
+      "tradition": "tr_ngm_program_study",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_study",
+      "tradition": "tr_ngm_reprogram",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "all_technology_research_speed",
+          "=",
+          "0.05"
+        ],
+        [
+          "country_unity_produces_mult",
+          "=",
+          "0.05"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_study",
+      "tradition": "tr_ngm_high_study",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "leaders_cost_mult",
+          "=",
+          "-0.33"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_ecstasy",
+      "tradition": "tr_ngm_ecstasy_first",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_happiness",
+          "=",
+          "0.05"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_ecstasy",
+      "tradition": "tr_ngm_ecstasy_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "country_base_influence_produces_add",
+          "=",
+          "1"
+        ],
+        [
+          "planet_pops_consumer_goods_upkeep_mult",
+          "=",
+          "-0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_ecstasy",
+      "tradition": "tr_ngm_art_good",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_unity_produces_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_ecstasy",
+      "tradition": "tr_ngm_art_industry",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_amenities_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_ecstasy",
+      "tradition": "tr_ngm_groly_supporter",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_jobs_slave_produces_mult",
+          "=",
+          "0.1"
+        ],
+        [
+          "pop_slave_happiness",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_ecstasy",
+      "tradition": "tr_ngm_ecstasy_family",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "logistic_growth_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_ecstasy",
+      "tradition": "tr_ngm_long_live",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "leader_lifespan_add",
+          "=",
+          "15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_avantgarde",
+      "tradition": "tr_ngm_avantgarde_first",
+      "definition_present": false,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_avantgarde",
+      "tradition": "tr_ngm_avantgarde_finish",
+      "definition_present": false,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_avantgarde",
+      "tradition": "tr_ngm_avantgarde_2",
+      "definition_present": false,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_avantgarde",
+      "tradition": "tr_ngm_chord",
+      "definition_present": false,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_avantgarde",
+      "tradition": "tr_ngm_student_art",
+      "definition_present": false,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_avantgarde",
+      "tradition": "tr_ngm_freedom_art",
+      "definition_present": false,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_avantgarde",
+      "tradition": "tr_ngm_asymmetric",
+      "definition_present": false,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_classic",
+      "tradition": "tr_ngm_classic_first",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_jobs_unity_produces_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_classic",
+      "tradition": "tr_ngm_classic_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "country_government_civic_points_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_classic",
+      "tradition": "tr_ngm_realism",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "job_culture_worker_per_pop",
+          "=",
+          "0.02"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_classic",
+      "tradition": "tr_ngm_acoustics",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_classic",
+      "tradition": "tr_ngm_ministory_culture",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_base_unity_produces_add",
+          "=",
+          "10"
+        ],
+        [
+          "country_base_influence_produces_add",
+          "=",
+          "0.5"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_classic",
+      "tradition": "tr_ngm_diplomatic_art",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "diplo_weight_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_classic",
+      "tradition": "tr_ngm_authority_art",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_academic",
+      "tradition": "tr_ngm_academic_first",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ship_anomaly_generation_chance_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_academic",
+      "tradition": "tr_ngm_academic_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_academic",
+      "tradition": "tr_ngm_national_academy",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "all_technology_research_speed",
+          "=",
+          "0.05"
+        ],
+        [
+          "planet_jobs_specialist_physics_research_produces_mult",
+          "=",
+          "0.1"
+        ],
+        [
+          "planet_jobs_specialist_society_research_produces_mult",
+          "=",
+          "0.1"
+        ],
+        [
+          "planet_jobs_specialist_engineering_research_produces_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_academic",
+      "tradition": "tr_ngm_culture_study",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "all_technology_research_speed",
+          "=",
+          "0.1"
+        ],
+        [
+          "country_unity_produces_mult",
+          "=",
+          "0.05"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_academic",
+      "tradition": "tr_ngm_specialist_education",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_jobs_specialist_produces_mult",
+          "=",
+          "0.05"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_academic",
+      "tradition": "tr_ngm_leader_education",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "species_leader_exp_gain",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_academic",
+      "tradition": "tr_ngm_high_education",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_memory",
+      "tradition": "tr_ngm_memory_first",
+      "definition_present": false,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_memory",
+      "tradition": "tr_ngm_memory_finish",
+      "definition_present": false,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_memory",
+      "tradition": "tr_ngm_record",
+      "definition_present": false,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_memory",
+      "tradition": "tr_ngm_past",
+      "definition_present": false,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_memory",
+      "tradition": "tr_ngm_memory2",
+      "definition_present": false,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_memory",
+      "tradition": "tr_ngm_crime_record",
+      "definition_present": false,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_memory",
+      "tradition": "tr_ngm_trade_record",
+      "definition_present": false,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_freedom",
+      "tradition": "tr_ngm_freedom_first",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_freedom",
+      "tradition": "tr_ngm_freedom_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "pop_factions_influence_produces_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_freedom",
+      "tradition": "tr_ngm_freedom_broad",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_government_ethic_attraction",
+          "=",
+          "-0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_freedom",
+      "tradition": "tr_ngm_freedom_association",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_factions_produces_mult",
+          "=",
+          "0.3"
+        ],
+        [
+          "planet_stability_add",
+          "=",
+          "10"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_freedom",
+      "tradition": "tr_ngm_freedom_ega",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_leader_cap_add",
+          "=",
+          "1"
+        ],
+        [
+          "leaders_cost_mult",
+          "=",
+          "-0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_freedom",
+      "tradition": "tr_ngm_freedom_immigrant",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_immigration_pull_mult",
+          "=",
+          "0.3"
+        ],
+        [
+          "pop_happiness",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_freedom",
+      "tradition": "tr_ngm_freedom2",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "faction_approval",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_order",
+      "tradition": "tr_ngm_order_first",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_order",
+      "tradition": "tr_ngm_order_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "planet_stability_add",
+          "=",
+          "5"
+        ],
+        [
+          "empire_size_pops_mult",
+          "=",
+          "-0.05"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_order",
+      "tradition": "tr_ngm_no_voice",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_government_ethic_attraction",
+          "=",
+          "0.4"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_order",
+      "tradition": "tr_ngm_appropriate",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_housing_usage_mult",
+          "=",
+          "-0.15"
+        ],
+        [
+          "pop_resettlement_cost_mult",
+          "=",
+          "-0.3"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_order",
+      "tradition": "tr_ngm_ministry_engagement",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_order",
+      "tradition": "tr_ngm_right_place",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_demotion_time_mult",
+          "=",
+          "-0.5"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_order",
+      "tradition": "tr_ngm_orderly",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_housing_mult",
+          "=",
+          "0.2"
+        ],
+        [
+          "planet_building_capacity_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_neighbor",
+      "tradition": "tr_ngm_neighbor_first",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "first_contact_speed_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_neighbor",
+      "tradition": "tr_ngm_neighbor_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_neighbor",
+      "tradition": "tr_ngm_ambassador",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "envoys_add",
+          "=",
+          "1"
+        ],
+        [
+          "diplo_action_acceptance_add",
+          "=",
+          "20"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_neighbor",
+      "tradition": "tr_ngm_salad",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_ethic_xenophile_attraction_mult",
+          "=",
+          "0.25"
+        ],
+        [
+          "planet_stability_add",
+          "=",
+          "10"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_neighbor",
+      "tradition": "tr_ngm_talk",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_border_friction_mult",
+          "=",
+          "-0.5"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_neighbor",
+      "tradition": "tr_ngm_free_move",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_immigration_pull_mult",
+          "=",
+          "0.3"
+        ],
+        [
+          "country_unity_produces_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_neighbor",
+      "tradition": "tr_ngm_acceptance",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_ethic_xenophile_attraction_mult",
+          "=",
+          "0.25"
+        ],
+        [
+          "diplo_weight_mult",
+          "=",
+          "0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_enemy",
+      "tradition": "tr_ngm_enemy_first",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "diplo_weight_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_enemy",
+      "tradition": "tr_ngm_enemy_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_enemy",
+      "tradition": "tr_ngm_paranoia",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_ethic_xenophobe_attraction_mult",
+          "=",
+          "0.25"
+        ],
+        [
+          "max_rivalries",
+          "=",
+          "2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_enemy",
+      "tradition": "tr_ngm_battle_ambass",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "spy_power_cost_mult",
+          "=",
+          "0.2"
+        ],
+        [
+          "espionage_operation_cost_mult",
+          "=",
+          "-0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_enemy",
+      "tradition": "tr_ngm_coarse_food",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_pops_food_upkeep_mult",
+          "=",
+          "-0.25"
+        ],
+        [
+          "planet_pops_consumer_goods_upkeep_mult",
+          "=",
+          "-0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_enemy",
+      "tradition": "tr_ngm_transcendental",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_enemy",
+      "tradition": "tr_ngm_battle_speach",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_ethic_xenophobe_attraction_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_nature",
+      "tradition": "tr_ngm_nature_first",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "deposit_blockers_cost_mult",
+          "=",
+          "-0.33"
+        ],
+        [
+          "planet_clear_blocker_time_mult",
+          "=",
+          "-0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_nature",
+      "tradition": "tr_ngm_nature_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "logistic_growth_mult",
+          "=",
+          "0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_nature",
+      "tradition": "tr_ngm_nature2",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_environment_tolerance",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_nature",
+      "tradition": "tr_ngm_nature_growth",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "logistic_growth_mult",
+          "=",
+          "0.05"
+        ],
+        [
+          "pop_happiness",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_nature",
+      "tradition": "tr_ngm_nature_research",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "category_biology_research_speed_mult",
+          "=",
+          "0.2"
+        ],
+        [
+          "country_society_research_produces_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_nature",
+      "tradition": "tr_ngm_food_nature",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_food_produces_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_nature",
+      "tradition": "tr_ngm_ecology",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_pops_upkeep_mult",
+          "=",
+          "-0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_machine",
+      "tradition": "tr_ngm_machine_first",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_machine",
+      "tradition": "tr_ngm_machine_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "planet_pops_robotics_upkeep_mult",
+          "=",
+          "-0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_machine",
+      "tradition": "tr_ngm_war_machine",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_machine",
+      "tradition": "tr_ngm_desighn",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "shipsize_starbase_outpost_hull_mult",
+          "=",
+          "0.3"
+        ],
+        [
+          "shipsize_starbase_starport_hull_mult",
+          "=",
+          "0.3"
+        ],
+        [
+          "shipsize_starbase_starhold_hull_mult",
+          "=",
+          "0.3"
+        ],
+        [
+          "shipsize_starbase_starfortress_hull_mult",
+          "=",
+          "0.3"
+        ],
+        [
+          "shipsize_starbase_citadel_hull_mult",
+          "=",
+          "0.3"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_machine",
+      "tradition": "tr_ngm_machine_depart",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_pop_assemblers_upkeep_mult",
+          "=",
+          "-0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_machine",
+      "tradition": "tr_ngm_robot_depart",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_pop_assembly_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_machine",
+      "tradition": "tr_ngm_machine_human",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ROBOT_species_trait_points_add",
+          "=",
+          "2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_official",
+      "tradition": "tr_ngm_official_first",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_official",
+      "tradition": "tr_ngm_official_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "country_government_civic_points_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_official",
+      "tradition": "tr_ngm_human_resources",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_leader_cap_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_official",
+      "tradition": "tr_ngm_note",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "empire_size_mult",
+          "=",
+          "-0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_official",
+      "tradition": "tr_ngm_document",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_edict_fund_add",
+          "=",
+          "50"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_official",
+      "tradition": "tr_ngm_general_affairs",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_administrators_unity_produces_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_official",
+      "tradition": "tr_ngm_cabinet",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_base_influence_produces_add",
+          "=",
+          "0.5"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_officer",
+      "tradition": "tr_ngm_officer_first",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_naval_cap_mult",
+          "=",
+          "0.2"
+        ],
+        [
+          "ship_weapon_range_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_officer",
+      "tradition": "tr_ngm_officer_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_officer",
+      "tradition": "tr_ngm_navy_depart",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "starbase_shipyard_build_speed_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_officer",
+      "tradition": "tr_ngm_officer_1",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ship_speed_mult",
+          "=",
+          "0.1"
+        ],
+        [
+          "planet_army_build_speed_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_officer",
+      "tradition": "tr_ngm_logistics_hq",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ships_upkeep_mult",
+          "=",
+          "-0.2"
+        ],
+        [
+          "armies_upkeep_mult",
+          "=",
+          "-0.3"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_officer",
+      "tradition": "tr_ngm_military_bureau",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "army_damage_mult",
+          "=",
+          "0.2"
+        ],
+        [
+          "ship_fire_rate_mult",
+          "=",
+          "0.05"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_officer",
+      "tradition": "tr_ngm_weapons_depart",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_engineering_tech_research_speed",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_navy",
+      "tradition": "tr_ngm_navy_first",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "starbase_shipyard_build_speed_mult",
+          "=",
+          "0.15"
+        ],
+        [
+          "command_limit_add",
+          "=",
+          "10"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_navy",
+      "tradition": "tr_ngm_navy_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "country_naval_cap_add",
+          "=",
+          "10"
+        ],
+        [
+          "country_naval_cap_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_navy",
+      "tradition": "tr_ngm_voyage",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ship_evasion_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_navy",
+      "tradition": "tr_ngm_maintenance",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ship_hull_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_navy",
+      "tradition": "tr_ngm_logistics",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ships_upkeep_mult",
+          "=",
+          "-0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_navy",
+      "tradition": "tr_ngm_excellence_officer",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "command_limit_add",
+          "=",
+          "20"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_navy",
+      "tradition": "tr_ngm_deposition_admiral",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ship_weapon_range_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_planet_army",
+      "tradition": "tr_ngm_planet_army_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "army_starting_experience_add",
+          "=",
+          "200"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_planet_army",
+      "tradition": "tr_ngm_planet_army_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "army_defense_health_mult",
+          "=",
+          "2"
+        ],
+        [
+          "army_defense_morale_mult",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_planet_army",
+      "tradition": "tr_ngm_severe_general",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "army_morale",
+          "=",
+          "0.2"
+        ],
+        [
+          "army_collateral_damage_mult",
+          "=",
+          "-0.5"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_planet_army",
+      "tradition": "tr_ngm_military_police",
+      "definition_present": true,
+      "on_enabled_events": [
+        "ngm_tradition.17"
+      ],
+      "modifiers": [
+        [
+          "army_experience_gain_mult",
+          "=",
+          "0.5"
+        ],
+        [
+          "army_health",
+          "=",
+          "0.5"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_planet_army",
+      "tradition": "tr_ngm_iren_discipline",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "army_morale",
+          "=",
+          "0.25"
+        ],
+        [
+          "army_health",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_planet_army",
+      "tradition": "tr_ngm_planet_supply_point",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_occupation_armies_add",
+          "=",
+          "20"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_planet_army",
+      "tradition": "tr_ngm_brave_and_resolute",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "army_damage_mult",
+          "=",
+          "0.3"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_noble",
+      "tradition": "tr_ngm_noble_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_leader_cap_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_noble",
+      "tradition": "tr_ngm_noble_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "country_base_influence_produces_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_noble",
+      "tradition": "tr_ngm_upper_class",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_jobs_ruler_produces_mult",
+          "=",
+          "0.15"
+        ],
+        [
+          "pop_cat_ruler_political_power",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_noble",
+      "tradition": "tr_ngm_backroom_politics",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_factions_produces_mult",
+          "=",
+          "0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_noble",
+      "tradition": "tr_ngm_patron",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_amenities_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_noble",
+      "tradition": "tr_ngm_honor",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_base_influence_produces_add",
+          "=",
+          "0.5"
+        ],
+        [
+          "country_unity_produces_mult",
+          "=",
+          "0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_noble",
+      "tradition": "tr_ngm_class_politics",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_ethic_authoritarian_attraction_mult",
+          "=",
+          "0.2"
+        ],
+        [
+          "planet_stability_add",
+          "=",
+          "10"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_mass",
+      "tradition": "tr_ngm_mass_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_jobs_worker_produces_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_mass",
+      "tradition": "tr_ngm_mass_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "country_base_influence_produces_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_mass",
+      "tradition": "tr_ngm_mass_society",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_stability_add",
+          "=",
+          "10"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_mass",
+      "tradition": "tr_ngm_mass_culture",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_jobs_unity_produces_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_mass",
+      "tradition": "tr_ngm_mass_economy",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_jobs_trade_produces_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_mass",
+      "tradition": "tr_ngm_peoples_politics",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "faction_approval",
+          "=",
+          "0.1"
+        ],
+        [
+          "pop_cat_worker_political_power",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_mass",
+      "tradition": "tr_ngm_faithful_mass",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_cat_worker_happiness",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_building",
+      "tradition": "tr_ngm_building_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_building",
+      "tradition": "tr_ngm_building_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "megastructure_build_speed_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_building",
+      "tradition": "tr_ngm_building_plan",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_buildings_cost_mult",
+          "=",
+          "-0.1"
+        ],
+        [
+          "building_time_mult",
+          "=",
+          "-0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_building",
+      "tradition": "tr_ngm_discount_negotiation",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_colony_development_speed_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_building",
+      "tradition": "tr_ngm_infrastructure_investment",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_districts_cost_mult",
+          "=",
+          "-0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_building",
+      "tradition": "tr_ngm_materials_bareau",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_buildings_cost_mult",
+          "=",
+          "-0.2"
+        ],
+        [
+          "country_trade_fee",
+          "=",
+          "-0.05"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_building",
+      "tradition": "tr_ngm_megastructure_bareau",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_megastructure_build_cap_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_longing",
+      "tradition": "tr_ngm_longing_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "first_contact_speed_mult",
+          "=",
+          "0.5"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_longing",
+      "tradition": "tr_ngm_longing_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_longing",
+      "tradition": "tr_ngm_expansion_diplomatic_corps",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "envoys_add",
+          "=",
+          "2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_longing",
+      "tradition": "tr_ngm_intervention_for_friendship",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "diplo_weight_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_longing",
+      "tradition": "tr_ngm_friendship_declaration",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "envoy_improve_relations_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_longing",
+      "tradition": "tr_ngm_treaty_bureau",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "diplomacy_influence_upkeep_mult",
+          "=",
+          "-0.5"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_longing",
+      "tradition": "tr_ngm_extended_negotiations",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_border_friction_mult",
+          "=",
+          "-0.25"
+        ],
+        [
+          "country_starbase_influence_cost_mult",
+          "=",
+          "-0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_adversity",
+      "tradition": "tr_ngm_adversity_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "shipsize_starbase_outpost_hull_mult",
+          "=",
+          "0.5"
+        ],
+        [
+          "shipsize_starbase_starport_hull_mult",
+          "=",
+          "0.5"
+        ],
+        [
+          "shipsize_starbase_starhold_hull_mult",
+          "=",
+          "0.5"
+        ],
+        [
+          "shipsize_starbase_starfortress_hull_mult",
+          "=",
+          "0.5"
+        ],
+        [
+          "shipsize_starbase_citadel_hull_mult",
+          "=",
+          "0.5"
+        ],
+        [
+          "ship_home_territory_fire_rate_mult",
+          "=",
+          "0.1"
+        ],
+        [
+          "damage_vs_superior_empires_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_adversity",
+      "tradition": "tr_ngm_adversity_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_adversity",
+      "tradition": "tr_ngm_strong_command_and_control",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "force_disparity_fire_rate_mult",
+          "=",
+          "0.2"
+        ],
+        [
+          "ship_weapon_range_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_adversity",
+      "tradition": "tr_ngm_purify_corruption",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_max_districts_add",
+          "=",
+          "2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_adversity",
+      "tradition": "tr_ngm_cancellation_of_administratively_infarction",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_edict_fund_add",
+          "=",
+          "50"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_adversity",
+      "tradition": "tr_ngm_guerrilla_tactics",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "force_disparity_fire_rate_mult",
+          "=",
+          "0.5"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_adversity",
+      "tradition": "tr_ngm_efficient_management",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_jobs_productive_produces_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_margin",
+      "tradition": "tr_ngm_margin_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "empire_size_mult",
+          "=",
+          "-0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_margin",
+      "tradition": "tr_ngm_margin_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "diplo_weight_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_margin",
+      "tradition": "tr_ngm_giant_fleet",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_naval_cap_add",
+          "=",
+          "20"
+        ],
+        [
+          "country_naval_cap_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_margin",
+      "tradition": "tr_ngm_large_fleet_command",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "command_limit_add",
+          "=",
+          "30"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_margin",
+      "tradition": "tr_ngm_weapons_arsenal_country",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_margin",
+      "tradition": "tr_ngm_rock_solid_bureaucracy",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_administrators_unity_produces_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_margin",
+      "tradition": "tr_ngm_steady_national_guidelines",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_base_influence_produces_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_friendship",
+      "tradition": "tr_ngm_friendship_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "envoys_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_friendship",
+      "tradition": "tr_ngm_friendship_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "federation_join_malus_mult",
+          "=",
+          "-0.5"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_friendship",
+      "tradition": "tr_ngm_in_depth_negotiations",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_border_friction_mult",
+          "=",
+          "-0.25"
+        ],
+        [
+          "starbase_buildings_influence_cost_mult",
+          "=",
+          "-0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_friendship",
+      "tradition": "tr_ngm_diplomat_without_a_gap",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "intel_encryption_add",
+          "=",
+          "10"
+        ],
+        [
+          "diplo_weight_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_friendship",
+      "tradition": "tr_ngm_economic_diplomacy",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "diplo_weight_economy_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_friendship",
+      "tradition": "tr_ngm_federal_army",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "federation_naval_cap_contribution_mult",
+          "=",
+          "0.5"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_friendship",
+      "tradition": "tr_ngm_big_stick_diplomacy",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "diplo_weight_naval_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_suzerain",
+      "tradition": "tr_ngm_suzerain_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_subject_acceptance_add",
+          "=",
+          "20"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_suzerain",
+      "tradition": "tr_ngm_suzerain_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_suzerain",
+      "tradition": "tr_ngm_diplomatic_expansion",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_vassal_naval_capacity_contribution_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_suzerain",
+      "tradition": "tr_ngm_delegation",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "envoys_add",
+          "=",
+          "1"
+        ],
+        [
+          "diplo_weight_mult",
+          "=",
+          "0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_suzerain",
+      "tradition": "tr_ngm_colonial_hegemony",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_colony_development_speed_mult",
+          "=",
+          "0.3"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_suzerain",
+      "tradition": "tr_ngm_suzerainty_pressure",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_subject_trust_cap_add",
+          "=",
+          "50"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_suzerain",
+      "tradition": "tr_ngm_authority_to_belong",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_subject_acceptance_add",
+          "=",
+          "50"
+        ],
+        [
+          "country_subject_power_penalty_mult",
+          "=",
+          "-0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_strong_pressure",
+      "tradition": "tr_ngm_strong_pressure_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "veto_cooldown_mult",
+          "=",
+          "-0.3"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_strong_pressure",
+      "tradition": "tr_ngm_strong_pressure_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "emergency_measures_cooldown_mult",
+          "=",
+          "-0.3"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_strong_pressure",
+      "tradition": "tr_ngm_army_pressure",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "armies_cost_mult",
+          "=",
+          "-0.25"
+        ],
+        [
+          "army_morale",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_strong_pressure",
+      "tradition": "tr_ngm_fleet_pressure",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "starbase_shipyard_build_speed_mult",
+          "=",
+          "0.25"
+        ],
+        [
+          "diplo_weight_naval_mult",
+          "=",
+          "0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_strong_pressure",
+      "tradition": "tr_ngm_diplomatic_pressure",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "envoys_add",
+          "=",
+          "1"
+        ],
+        [
+          "diplo_weight_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_strong_pressure",
+      "tradition": "tr_ngm_administration_to_support_pressure",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "empire_size_mult",
+          "=",
+          "-0.05"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_strong_pressure",
+      "tradition": "tr_ngm_compulsory_friendship",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "envoys_add",
+          "=",
+          "1"
+        ],
+        [
+          "envoy_improve_relations_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_intervention",
+      "tradition": "tr_ngm_intervention_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "diplo_weight_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_intervention",
+      "tradition": "tr_ngm_intervention_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_intervention",
+      "tradition": "tr_ngm_resident_intelligence_officer",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "envoys_add",
+          "=",
+          "1"
+        ],
+        [
+          "spy_power_cost_mult",
+          "=",
+          "0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_intervention",
+      "tradition": "tr_ngm_cryptanalysis_team",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "intel_decryption_add",
+          "=",
+          "5"
+        ],
+        [
+          "ship_cloaking_detection_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_intervention",
+      "tradition": "tr_ngm_constant_obstruction",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_intervention",
+      "tradition": "tr_ngm_intelligence_school",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "intel_decryption_add",
+          "=",
+          "5"
+        ],
+        [
+          "intel_encryption_add",
+          "=",
+          "5"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_intervention",
+      "tradition": "tr_ngm_shadow_fixer",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_gigantic",
+      "tradition": "tr_ngm_gigantic_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "shipclass_starbase_hull_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_gigantic",
+      "tradition": "tr_ngm_gigantic_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ship_hull_mult",
+          "=",
+          "0.1"
+        ],
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_gigantic",
+      "tradition": "tr_ngm_dreadnought",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "shipsize_battleship_build_speed_mult",
+          "=",
+          "0.15"
+        ],
+        [
+          "ship_fire_rate_mult",
+          "=",
+          "0.05"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_gigantic",
+      "tradition": "tr_ngm_giants",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_gigantic",
+      "tradition": "tr_ngm_megastructure",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_megastructure_build_cap_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_gigantic",
+      "tradition": "tr_ngm_gians_voice",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "envoys_add",
+          "=",
+          "1"
+        ],
+        [
+          "diplo_weight_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_gigantic",
+      "tradition": "tr_ngm_mighty_empire",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "starbase_outpost_cost_mult",
+          "=",
+          "-0.2"
+        ],
+        [
+          "country_starbase_influence_cost_mult",
+          "=",
+          "-0.2"
+        ],
+        [
+          "country_border_friction_mult",
+          "=",
+          "0.4"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_information",
+      "tradition": "tr_ngm_information_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_engineering_tech_research_speed",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_information",
+      "tradition": "tr_ngm_information_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "spy_network_decay_mult",
+          "=",
+          "-0.5"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_information",
+      "tradition": "tr_ngm_expansion_of_information_assets",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ship_cloaking_strength_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_information",
+      "tradition": "tr_ngm_protection_of_information_assets",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ship_cloaking_detection_add",
+          "=",
+          "2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_information",
+      "tradition": "tr_ngm_establishment_of_intelligence_bureau",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "intel_decryption_add",
+          "=",
+          "5"
+        ],
+        [
+          "espionage_operation_skill_add",
+          "=",
+          "2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_information",
+      "tradition": "tr_ngm_establishment_of_counterintelligence_bureau",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "intel_encryption_add",
+          "=",
+          "5"
+        ],
+        [
+          "espionage_hostile_operation_difficulty_add",
+          "=",
+          "2"
+        ],
+        [
+          "espionage_hostile_operation_cost_mult",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_information",
+      "tradition": "tr_ngm_control_of_information_crime",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_crime_add",
+          "=",
+          "-10"
+        ],
+        [
+          "planet_stability_add",
+          "=",
+          "10"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_legislation",
+      "tradition": "tr_ngm_legislation_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_edict_fund_add",
+          "=",
+          "50"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_legislation",
+      "tradition": "tr_ngm_legislation_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "country_base_influence_produces_add",
+          "=",
+          "1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_legislation",
+      "tradition": "tr_ngm_constitutional_lawsuit",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "faction_approval",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_legislation",
+      "tradition": "tr_ngm_preliminary_legal_review",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_factions_unity_produces_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_legislation",
+      "tradition": "tr_ngm_expansion_of_the_legal_affairs_bureau",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_legislation",
+      "tradition": "tr_ngm_strengthening_parliamentary_authority",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_government_ethic_attraction",
+          "=",
+          "0.33"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_legislation",
+      "tradition": "tr_ngm_establishment_of_legislative_institution",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "empire_size_mult",
+          "=",
+          "-0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_purification",
+      "tradition": "tr_ngm_purification_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "station_gatherers_produces_mult",
+          "=",
+          "0.2"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_purification",
+      "tradition": "tr_ngm_purification_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "country_base_volatile_motes_produces_add",
+          "=",
+          "0.25"
+        ],
+        [
+          "country_base_exotic_gases_produces_add",
+          "=",
+          "0.25"
+        ],
+        [
+          "country_base_rare_crystals_produces_add",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_purification",
+      "tradition": "tr_ngm_gas_law",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_base_exotic_gases_produces_add",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_purification",
+      "tradition": "tr_ngm_energy_powder_refining",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_base_volatile_motes_produces_add",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_purification",
+      "tradition": "tr_ngm_crystal_production_system",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_base_rare_crystals_produces_add",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_purification",
+      "tradition": "tr_ngm_latast_industrial",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_purification",
+      "tradition": "tr_ngm_advanced_factory",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_production",
+      "tradition": "tr_ngm_production_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_consumer_goods_produces_mult",
+          "=",
+          "0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_production",
+      "tradition": "tr_ngm_production_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "country_alloys_produces_mult",
+          "=",
+          "0.15"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_production",
+      "tradition": "tr_ngm_mining_act",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_minerals_produces_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_production",
+      "tradition": "tr_ngm_planetary_exploration",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "station_gatherers_produces_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_production",
+      "tradition": "tr_ngm_food_industry",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_food_produces_mult",
+          "=",
+          "0.25"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_production",
+      "tradition": "tr_ngm_mass_production_system",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "starbase_shipyard_build_speed_mult",
+          "=",
+          "0.3"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_production",
+      "tradition": "tr_ngm_industrial_research",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "category_industry_research_speed_mult",
+          "=",
+          "0.25"
+        ],
+        [
+          "country_engineering_tech_research_speed",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_hereditary",
+      "tradition": "tr_ngm_hereditary_adopt",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_cat_ruler_happiness",
+          "=",
+          "0.15"
+        ],
+        [
+          "pop_cat_ruler_political_power",
+          "=",
+          "100"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_hereditary",
+      "tradition": "tr_ngm_hereditary_finish",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "ascension_perks_add",
+          "=",
+          "1"
+        ],
+        [
+          "job_noble_per_pop",
+          "=",
+          "0.04"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_hereditary",
+      "tradition": "tr_ngm_inheritance_tax_relief",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "pop_cat_ruler_happiness",
+          "=",
+          "0.1"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_hereditary",
+      "tradition": "tr_ngm_hereditary_title",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "country_base_influence_produces_add",
+          "=",
+          "0.5"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_hereditary",
+      "tradition": "tr_ngm_inheritance_of_technology",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "all_technology_research_speed",
+          "=",
+          "0.1"
+        ],
+        [
+          "country_unity_produces_mult",
+          "=",
+          "0.05"
+        ]
+      ]
+    },
+    {
+      "category": "tradition_ngm_hereditary",
+      "tradition": "tr_ngm_territory_inheritance",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": []
+    },
+    {
+      "category": "tradition_ngm_hereditary",
+      "tradition": "tr_ngm_hereditary_nation",
+      "definition_present": true,
+      "on_enabled_events": [],
+      "modifiers": [
+        [
+          "planet_stability_add",
+          "=",
+          "10"
+        ]
+      ]
+    }
+  ],
+  "missing_custom_reference_usages": [
+    {
+      "file": "common/casus_belli/NGM_casus_belli.txt",
+      "path": "cb_ngm_return_of_the_phoenix/potential/has_origin",
+      "key": "has_origin",
+      "value": "origin_ngm_phenix",
+      "category": "governments/civics"
+    },
+    {
+      "file": "common/edicts/NGM_campaigns.txt",
+      "path": "ngm_memories_of_hegemony/potential/has_active_tradition",
+      "key": "has_active_tradition",
+      "value": "tr_ngm_memory_finish",
+      "category": "traditions"
+    },
+    {
+      "file": "common/edicts/NGM_campaigns.txt",
+      "path": "ngm_memories_of_glory/potential/has_active_tradition",
+      "key": "has_active_tradition",
+      "value": "tr_ngm_memory_finish",
+      "category": "traditions"
+    },
+    {
+      "file": "common/edicts/NGM_campaigns.txt",
+      "path": "ngm_memoirs_of_perseverance/potential/has_active_tradition",
+      "key": "has_active_tradition",
+      "value": "tr_ngm_memory_finish",
+      "category": "traditions"
+    },
+    {
+      "file": "common/edicts/NGM_campaigns.txt",
+      "path": "ngm_mossball_edict/potential/has_origin",
+      "key": "has_origin",
+      "value": "origin_ngm_phenix",
+      "category": "governments/civics"
+    },
+    {
+      "file": "common/opinion_modifiers/NGM_opinion_modifiers.txt",
+      "path": "triggered_opinion_ap_ngm_relation_old_empire/trigger/FROM/has_ascension_perk",
+      "key": "has_ascension_perk",
+      "value": "ap_ngm_relation_old_empire",
+      "category": "ascension_perks"
+    },
+    {
+      "file": "common/opinion_modifiers/NGM_opinion_modifiers.txt",
+      "path": "triggered_opinion_origin_ngm_phenix_10_modifier/trigger/NOT/has_origin",
+      "key": "has_origin",
+      "value": "origin_ngm_phenix_npc",
+      "category": "governments/civics"
+    },
+    {
+      "file": "common/policies/NGM_policies.txt",
+      "path": "ngm_policies_recording_method/potential/has_tradition",
+      "key": "has_tradition",
+      "value": "tr_ngm_trade_record",
+      "category": "traditions"
+    },
+    {
+      "file": "common/random_names/NGM_federation_names.txt",
+      "path": "federation_name_format/random_weight/modifier/has_federation_type",
+      "key": "has_federation_type",
+      "value": "NGM_CEPA_federation",
+      "category": "federation_types"
+    },
+    {
+      "file": "common/random_names/NGM_federation_names.txt",
+      "path": "federation_name_format/random_weight/modifier/has_federation_type",
+      "key": "has_federation_type",
+      "value": "NGM_personal_union_federation",
+      "category": "federation_types"
+    },
+    {
+      "file": "common/random_names/NGM_federation_names.txt",
+      "path": "federation_name_format/random_weight/modifier/has_federation_type",
+      "key": "has_federation_type",
+      "value": "NGM_permanent_summit_federation",
+      "category": "federation_types"
+    },
+    {
+      "file": "common/random_names/NGM_federation_names.txt",
+      "path": "federation_name_format/random_weight/modifier/has_federation_type",
+      "key": "has_federation_type",
+      "value": "NGM_unification_church_federation",
+      "category": "federation_types"
+    },
+    {
+      "file": "common/war_goals/NGM_war_goals.txt",
+      "path": "wg_ngm_return_of_the_phoenix/potential/has_origin",
+      "key": "has_origin",
+      "value": "origin_ngm_phenix",
+      "category": "governments/civics"
+    },
+    {
+      "file": "events/NGM_tradition_event.txt",
+      "path": "country_event/trigger/has_tradition",
+      "key": "has_tradition",
+      "value": "tr_ngm_avantgarde_finish",
+      "category": "traditions"
+    },
+    {
+      "file": "events/NGM_tradition_event.txt",
+      "path": "country_event/immediate/if/limit/has_civic",
+      "key": "has_civic",
+      "value": "civic_ngm_space_security_headquarters",
+      "category": "governments/civics"
+    },
+    {
+      "file": "events/NGM_tradition_event.txt",
+      "path": "country_event/immediate/if/limit/has_civic",
+      "key": "has_civic",
+      "value": "civic_ngm_freedom_in_obedience",
+      "category": "governments/civics"
+    },
+    {
+      "file": "events/NGM_tradition_event.txt",
+      "path": "country_event/immediate/if/limit/has_civic",
+      "key": "has_civic",
+      "value": "civic_ngm_multiculturalism",
+      "category": "governments/civics"
+    },
+    {
+      "file": "events/NGM_tradition_event.txt",
+      "path": "country_event/immediate/if/limit/has_civic",
+      "key": "has_civic",
+      "value": "civic_ngm_respect_act",
+      "category": "governments/civics"
+    },
+    {
+      "file": "events/NGM_tradition_event.txt",
+      "path": "country_event/option/allow/NOT/has_civic",
+      "key": "has_civic",
+      "value": "civic_ngm_advanced_glory_system",
+      "category": "governments/civics"
+    },
+    {
+      "file": "events/NGM_tradition_event.txt",
+      "path": "country_event/option/allow/NOT/has_civic",
+      "key": "has_civic",
+      "value": "civic_ngm_space_security_headquarters",
+      "category": "governments/civics"
+    },
+    {
+      "file": "events/NGM_tradition_event.txt",
+      "path": "country_event/option/allow/NOT/has_civic",
+      "key": "has_civic",
+      "value": "civic_ngm_freedom_in_obedience",
+      "category": "governments/civics"
+    },
+    {
+      "file": "events/NGM_tradition_event.txt",
+      "path": "country_event/option/allow/NOT/has_civic",
+      "key": "has_civic",
+      "value": "civic_ngm_multiculturalism",
+      "category": "governments/civics"
+    },
+    {
+      "file": "events/NGM_tradition_event.txt",
+      "path": "country_event/option/allow/NOT/has_civic",
+      "key": "has_civic",
+      "value": "civic_ngm_gentlemanly_disgust",
+      "category": "governments/civics"
+    },
+    {
+      "file": "events/NGM_tradition_event.txt",
+      "path": "country_event/option/allow/NOT/has_civic",
+      "key": "has_civic",
+      "value": "civic_ngm_information_operation",
+      "category": "governments/civics"
+    },
+    {
+      "file": "events/NGM_tradition_event.txt",
+      "path": "country_event/option/allow/NOT/has_civic",
+      "key": "has_civic",
+      "value": "civic_ngm_respect_act",
+      "category": "governments/civics"
+    }
+  ],
+  "runtime_tested": false
+}

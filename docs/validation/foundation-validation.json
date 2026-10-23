@@ -1,0 +1,17 @@
+{
+  "version": "1.39.0-dev.19",
+  "passed": true,
+  "files_parsed": 119,
+  "checks": [
+    "All 119 active script/UI text files pass structural parsing.",
+    "All 180 councilor declarations, including three friend-added IDs, are at root level; the first civic/modifier are outside eligibility conditions.",
+    "Faction eligibility matches the full 4.5.2 definition after removing only the added NGM civic condition.",
+    "Resource group matches the full 4.5.2 definition after removing only the medal entry.",
+    "Ceremony I/II and the retained third technology have intact IDs and prerequisite; leader trait checks use the country scripted trigger.",
+    "Medal prerequisite, texture, Japanese/English labels and localization BOM are present.",
+    "Descriptor/launcher versions and development path match; no Workshop upload ID or replace_path.",
+    "All 922 Workshop reference files are unchanged."
+  ],
+  "parser_diagnostics": [],
+  "runtime_tested": false
+}

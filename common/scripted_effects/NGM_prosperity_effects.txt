@@ -1,0 +1,103 @@
+# Country scope; one timer, checked monthly. Original interval: 1825 days.
+ngm_reset_prosperity_effect = { remove_country_flag = ngm_prosperity_tier_0
+remove_country_flag = ngm_prosperity_tier_1
+remove_country_flag = ngm_prosperity_tier_2
+remove_country_flag = ngm_prosperity_tier_3
+remove_country_flag = ngm_prosperity_tier_4
+remove_country_flag = ngm_prosperity_tier_5
+remove_country_flag = ngm_prosperity_tier_6
+remove_country_flag = ngm_prosperity_tier_7
+remove_country_flag = ngm_prosperity_tier_8
+remove_country_flag = ngm_prosperity_tier_9
+remove_country_flag = ngm_prosperity_tier_10
+remove_country_flag = ngm_prosperity_interval
+remove_country_flag = civic_ngm_prosperity_advocate_flag1
+remove_country_flag = civic_ngm_prosperity_advocate_flag2
+remove_country_flag = civic_ngm_prosperity_advocate_flag3
+remove_country_flag = civic_ngm_prosperity_advocate_flag4
+remove_country_flag = civic_ngm_prosperity_advocate_flag5
+remove_country_flag = civic_ngm_prosperity_advocate_flag6
+remove_country_flag = civic_ngm_prosperity_advocate_flag7
+remove_country_flag = civic_ngm_prosperity_advocate_flag8
+remove_country_flag = civic_ngm_prosperity_advocate_flag9
+remove_country_flag = civic_ngm_prosperity_advocate_flag10
+remove_country_flag = civic_ngm_prosperity_advocate_flag11
+remove_country_flag = civic_ngm_prosperity_advocate_war_begin_flag
+remove_country_flag = civic_ngm_prosperity_advocate_war_finish_flag
+ }
+ngm_sync_prosperity_planet_effect = { if = { limit = { exists = owner owner = { has_valid_civic = civic_ngm_prosperity_advocate is_at_war = no has_country_flag = ngm_prosperity_tier_1 } }
+        if = { limit = { NOT = { has_modifier = civic_ngm_prosperity_1_advocate_modifier } } add_modifier = { modifier = civic_ngm_prosperity_1_advocate_modifier days = -1 } }
+    } else = { remove_modifier = civic_ngm_prosperity_1_advocate_modifier }
+if = { limit = { exists = owner owner = { has_valid_civic = civic_ngm_prosperity_advocate is_at_war = no has_country_flag = ngm_prosperity_tier_2 } }
+        if = { limit = { NOT = { has_modifier = civic_ngm_prosperity_2_advocate_modifier } } add_modifier = { modifier = civic_ngm_prosperity_2_advocate_modifier days = -1 } }
+    } else = { remove_modifier = civic_ngm_prosperity_2_advocate_modifier }
+if = { limit = { exists = owner owner = { has_valid_civic = civic_ngm_prosperity_advocate is_at_war = no has_country_flag = ngm_prosperity_tier_3 } }
+        if = { limit = { NOT = { has_modifier = civic_ngm_prosperity_3_advocate_modifier } } add_modifier = { modifier = civic_ngm_prosperity_3_advocate_modifier days = -1 } }
+    } else = { remove_modifier = civic_ngm_prosperity_3_advocate_modifier }
+if = { limit = { exists = owner owner = { has_valid_civic = civic_ngm_prosperity_advocate is_at_war = no has_country_flag = ngm_prosperity_tier_4 } }
+        if = { limit = { NOT = { has_modifier = civic_ngm_prosperity_4_advocate_modifier } } add_modifier = { modifier = civic_ngm_prosperity_4_advocate_modifier days = -1 } }
+    } else = { remove_modifier = civic_ngm_prosperity_4_advocate_modifier }
+if = { limit = { exists = owner owner = { has_valid_civic = civic_ngm_prosperity_advocate is_at_war = no has_country_flag = ngm_prosperity_tier_5 } }
+        if = { limit = { NOT = { has_modifier = civic_ngm_prosperity_5_advocate_modifier } } add_modifier = { modifier = civic_ngm_prosperity_5_advocate_modifier days = -1 } }
+    } else = { remove_modifier = civic_ngm_prosperity_5_advocate_modifier }
+if = { limit = { exists = owner owner = { has_valid_civic = civic_ngm_prosperity_advocate is_at_war = no has_country_flag = ngm_prosperity_tier_6 } }
+        if = { limit = { NOT = { has_modifier = civic_ngm_prosperity_6_advocate_modifier } } add_modifier = { modifier = civic_ngm_prosperity_6_advocate_modifier days = -1 } }
+    } else = { remove_modifier = civic_ngm_prosperity_6_advocate_modifier }
+if = { limit = { exists = owner owner = { has_valid_civic = civic_ngm_prosperity_advocate is_at_war = no has_country_flag = ngm_prosperity_tier_7 } }
+        if = { limit = { NOT = { has_modifier = civic_ngm_prosperity_7_advocate_modifier } } add_modifier = { modifier = civic_ngm_prosperity_7_advocate_modifier days = -1 } }
+    } else = { remove_modifier = civic_ngm_prosperity_7_advocate_modifier }
+if = { limit = { exists = owner owner = { has_valid_civic = civic_ngm_prosperity_advocate is_at_war = no has_country_flag = ngm_prosperity_tier_8 } }
+        if = { limit = { NOT = { has_modifier = civic_ngm_prosperity_8_advocate_modifier } } add_modifier = { modifier = civic_ngm_prosperity_8_advocate_modifier days = -1 } }
+    } else = { remove_modifier = civic_ngm_prosperity_8_advocate_modifier }
+if = { limit = { exists = owner owner = { has_valid_civic = civic_ngm_prosperity_advocate is_at_war = no has_country_flag = ngm_prosperity_tier_9 } }
+        if = { limit = { NOT = { has_modifier = civic_ngm_prosperity_9_advocate_modifier } } add_modifier = { modifier = civic_ngm_prosperity_9_advocate_modifier days = -1 } }
+    } else = { remove_modifier = civic_ngm_prosperity_9_advocate_modifier }
+if = { limit = { exists = owner owner = { has_valid_civic = civic_ngm_prosperity_advocate is_at_war = no has_country_flag = ngm_prosperity_tier_10 } }
+        if = { limit = { NOT = { has_modifier = civic_ngm_prosperity_10_advocate_modifier } } add_modifier = { modifier = civic_ngm_prosperity_10_advocate_modifier days = -1 } }
+    } else = { remove_modifier = civic_ngm_prosperity_10_advocate_modifier }
+ }
+ngm_sync_prosperity_country_effect_state = {
+    if = { limit = { has_valid_civic = civic_ngm_prosperity_advocate is_at_war = no }
+        if = { limit = { NOT = {  OR = { has_country_flag = ngm_prosperity_tier_0 has_country_flag = ngm_prosperity_tier_1 has_country_flag = ngm_prosperity_tier_2 has_country_flag = ngm_prosperity_tier_3 has_country_flag = ngm_prosperity_tier_4 has_country_flag = ngm_prosperity_tier_5 has_country_flag = ngm_prosperity_tier_6 has_country_flag = ngm_prosperity_tier_7 has_country_flag = ngm_prosperity_tier_8 has_country_flag = ngm_prosperity_tier_9 has_country_flag = ngm_prosperity_tier_10 }  } }
+            ngm_reset_prosperity_effect = yes
+            set_country_flag = ngm_prosperity_tier_0
+            set_timed_country_flag = { flag = ngm_prosperity_interval days = 1825 }
+        }
+        else_if = { limit = { NOT = { has_country_flag = ngm_prosperity_interval } NOT = { has_country_flag = ngm_prosperity_tier_10 } }
+            if = { limit = { has_country_flag = ngm_prosperity_tier_9 }
+        remove_country_flag = ngm_prosperity_tier_9 set_country_flag = ngm_prosperity_tier_10
+    }
+else_if = { limit = { has_country_flag = ngm_prosperity_tier_8 }
+        remove_country_flag = ngm_prosperity_tier_8 set_country_flag = ngm_prosperity_tier_9
+    }
+else_if = { limit = { has_country_flag = ngm_prosperity_tier_7 }
+        remove_country_flag = ngm_prosperity_tier_7 set_country_flag = ngm_prosperity_tier_8
+    }
+else_if = { limit = { has_country_flag = ngm_prosperity_tier_6 }
+        remove_country_flag = ngm_prosperity_tier_6 set_country_flag = ngm_prosperity_tier_7
+    }
+else_if = { limit = { has_country_flag = ngm_prosperity_tier_5 }
+        remove_country_flag = ngm_prosperity_tier_5 set_country_flag = ngm_prosperity_tier_6
+    }
+else_if = { limit = { has_country_flag = ngm_prosperity_tier_4 }
+        remove_country_flag = ngm_prosperity_tier_4 set_country_flag = ngm_prosperity_tier_5
+    }
+else_if = { limit = { has_country_flag = ngm_prosperity_tier_3 }
+        remove_country_flag = ngm_prosperity_tier_3 set_country_flag = ngm_prosperity_tier_4
+    }
+else_if = { limit = { has_country_flag = ngm_prosperity_tier_2 }
+        remove_country_flag = ngm_prosperity_tier_2 set_country_flag = ngm_prosperity_tier_3
+    }
+else_if = { limit = { has_country_flag = ngm_prosperity_tier_1 }
+        remove_country_flag = ngm_prosperity_tier_1 set_country_flag = ngm_prosperity_tier_2
+    }
+else_if = { limit = { has_country_flag = ngm_prosperity_tier_0 }
+        remove_country_flag = ngm_prosperity_tier_0 set_country_flag = ngm_prosperity_tier_1
+    }
+
+            set_timed_country_flag = { flag = ngm_prosperity_interval days = 1825 }
+        }
+    } else = { ngm_reset_prosperity_effect = yes }
+
+}
+ngm_sync_prosperity_country_effect = { ngm_sync_prosperity_country_effect_state = yes every_owned_planet = { ngm_sync_prosperity_planet_effect = yes } }

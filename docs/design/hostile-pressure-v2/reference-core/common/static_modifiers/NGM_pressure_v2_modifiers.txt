@@ -1,0 +1,7 @@
+ngm_pressure_v2_sniper = { planet_crime_add = 30 }
+ngm_pressure_v2_penetration = { planet_crime_add = 20 }
+ngm_pressure_v2_sabotage = { planet_crime_add = 20 planet_jobs_trade_produces_mult = -0.15 }
+ngm_pressure_v2_free_press = { pop_slave_happiness = -0.2 }
+ngm_pressure_v2_obstruction = { planet_jobs_trade_produces_mult = -0.05 }
+ngm_pressure_v2_hostile_speech = { diplo_weight_mult = -0.1 }
+ngm_pressure_v2_hostile_intelligence = { country_base_influence_produces_add = -1 }
