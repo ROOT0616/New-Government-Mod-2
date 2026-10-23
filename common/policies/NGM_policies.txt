@@ -895,7 +895,7 @@ ngm_military_law = {
 		modifier = {
 			planet_crime_mult = -0.1
 			planet_stability_add = 5
-			planet_job_soldier_crime_produces_add = -5
+			job_soldier_stability_add = 5
 		}
 		AI_weight = {
 			weight = 10
@@ -986,7 +986,7 @@ ngm_military_law = {
 			ngm_flag_Mis_dis
 		}
 		modifier = {
-			planet_job_soldier_crime_produces_add = 1
+			job_soldier_stability_add = -1
 			intel_encryption_add = -5
 			country_energy_produces_mult = 0.2
 		}
@@ -1609,7 +1609,7 @@ ngm_policies_robotics = {
 			ngm_robotics_appropriate_priority
 		}
 		modifier = {
-			planet_jobs_robotic_produces_mult = 0.1
+			robotic_pop_bonus_workforce_mult = 0.1
 		}
 		AI_weight = {
 			weight = 10

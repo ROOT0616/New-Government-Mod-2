@@ -134,7 +134,7 @@ councilor_national_sacrifice = {
 	}
 	civic = civic_national_sacrifice
 	modifier = {
-		planet_priests_unity_produces_add = 1
+		planet_bureaucrats_unity_produces_add = 1
 	}
 }
 councilor_neoliberalism = {
@@ -319,7 +319,7 @@ councilor_ngm_formalist_rootkeeper = {
 	}
 	civic = civic_ngm_formalist_rootkeeper
 	modifier = {
-		planet_administrators_unity_produces_add = 1
+		planet_bureaucrats_unity_produces_add = 1
 	}
 }
 councilor_ngm_artistically_inclined_careless_person = {
@@ -411,7 +411,7 @@ councilor_ngm_ship_protection_protocol = {
 	civic = civic_ngm_ship_protection_protocol
 	modifier = {
 		country_naval_cap_add = 10
-		local_trade_protection_add = 1
+		country_trade_produces_mult = 0.01
 	}
 }
 councilor_ngm_space_security_headquarters2 = {
@@ -423,7 +423,7 @@ councilor_ngm_space_security_headquarters2 = {
 	}
 	civic = civic_ngm_space_security_headquarters2
 	modifier = {
-		local_trade_protection_add = 1
+		country_trade_produces_mult = 0.01
 	}
 }
 councilor_ngm_random_birth_rate = {
@@ -946,7 +946,7 @@ councilor_ngm_globalism = {
 	}
 	civic = civic_ngm_globalism
 	modifier = {
-		planet_immigration_pull_mult = 0.02
+		planet_resettlement_unemployed_destination_mult = 0.02
 		pop_ethic_xenophile_attraction_mult = 0.05
 	}
 }
@@ -960,7 +960,7 @@ councilor_ngm_multiculturalism = {
 	civic = civic_ngm_multiculturalism
 	modifier = {
 		logistic_growth_mult = 0.01
-		planet_immigration_pull_mult = 0.02
+		planet_resettlement_unemployed_destination_mult = 0.02
 	}
 }
 councilor_ngm_paternalism = {
@@ -1002,7 +1002,7 @@ councilor_ngm_people_flying_away = {
 	modifier = {
 		planet_stability_add = 2
 		planet_crime_add = -2
-		planet_immigration_pull_mult = 0.02
+		planet_resettlement_unemployed_destination_mult = 0.02
 	}
 }
 councilor_ngm_exclusive_community = {
@@ -2030,7 +2030,7 @@ councilor_ngm_hypothecation_of_human_rights = {
 	}
 	civic = civic_ngm_hypothecation_of_human_rights
 	modifier = {
-		planet_jobs_slave_produces_mult = 0.01
+		pop_slave_bonus_workforce_mult = 0.01
 		pop_happiness = -0.01
 	}
 }
@@ -2308,7 +2308,7 @@ councilor_ngm_p_block = {
 	}
 	civic = civic_ngm_p_block
 	modifier = {
-		local_trade_protection_add = 1
+		country_trade_produces_mult = 0.01
 	}
 }
 councilor_ngm_p_councilor = {

@@ -1,0 +1,50 @@
+ngm_sync_species_country_effect = {
+ if = { limit = { exists = species species = { has_trait = trait_ngm_flying }  }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_flying } } add_modifier = { modifier = ngm_country_trait_trait_ngm_flying days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_flying }
+ if = { limit = { exists = species species = { has_trait = trait_ngm_clairvoyance }  }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_clairvoyance } } add_modifier = { modifier = ngm_country_trait_trait_ngm_clairvoyance days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_clairvoyance }
+ if = { limit = { exists = species species = { has_trait = trait_ngm_sixth_sense }  }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_sixth_sense } } add_modifier = { modifier = ngm_country_trait_trait_ngm_sixth_sense days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_sixth_sense }
+ if = { limit = { exists = species species = { has_trait = trait_ngm_sluggish }  }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_sluggish } } add_modifier = { modifier = ngm_country_trait_trait_ngm_sluggish days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_sluggish }
+ if = { limit = { exists = species species = { has_trait = trait_ngm_degeneration }  }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_degeneration } } add_modifier = { modifier = ngm_country_trait_trait_ngm_degeneration days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_degeneration }
+ if = { limit = { exists = species species = { has_trait = trait_ngm_complex_heredity }  }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_complex_heredity } } add_modifier = { modifier = ngm_country_trait_trait_ngm_complex_heredity days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_complex_heredity }
+ if = { limit = { exists = species species = { has_trait = trait_ngm_simple_heredity }  }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_simple_heredity } } add_modifier = { modifier = ngm_country_trait_trait_ngm_simple_heredity days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_simple_heredity }
+ if = { limit = { exists = species species = { has_trait = trait_ngm_m_lens }  }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_m_lens } } add_modifier = { modifier = ngm_country_trait_trait_ngm_m_lens days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_m_lens }
+ if = { limit = { exists = species species = { has_trait = trait_ngm_m_jet }  }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_m_jet } } add_modifier = { modifier = ngm_country_trait_trait_ngm_m_jet days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_m_jet }
+ if = { limit = { exists = species species = { has_trait = trait_ngm_m_quantum }  }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_m_quantum } } add_modifier = { modifier = ngm_country_trait_trait_ngm_m_quantum days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_m_quantum }
+ if = { limit = { exists = species species = { has_trait = trait_ngm_m_reishi }  }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_m_reishi } } add_modifier = { modifier = ngm_country_trait_trait_ngm_m_reishi days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_m_reishi }
+ if = { limit = { exists = species species = { has_trait = trait_ngm_m_nasty }  }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_m_nasty } } add_modifier = { modifier = ngm_country_trait_trait_ngm_m_nasty days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_m_nasty }
+ if = { limit = { exists = species species = { has_trait = trait_ngm_m_skin }  }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_m_skin } } add_modifier = { modifier = ngm_country_trait_trait_ngm_m_skin days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_m_skin }
+ if = { limit = { exists = species species = { has_trait = trait_ngm_m_bcpu }  }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_m_bcpu } } add_modifier = { modifier = ngm_country_trait_trait_ngm_m_bcpu days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_m_bcpu }
+ if = { limit = { exists = species species = { has_trait = trait_ngm_m_light }  }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_m_light } } add_modifier = { modifier = ngm_country_trait_trait_ngm_m_light days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_m_light }
+ if = { limit = { exists = species species = { has_trait = trait_ngm_youth_politics } has_valid_civic = civic_ngm_youth_politics }
+  if = { limit = { NOT = { has_modifier = ngm_country_trait_trait_ngm_youth_politics } } add_modifier = { modifier = ngm_country_trait_trait_ngm_youth_politics days = -1 } }
+ } else = { remove_modifier = ngm_country_trait_trait_ngm_youth_politics }
+}

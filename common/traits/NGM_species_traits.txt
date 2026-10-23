@@ -1,6 +1,5 @@
 trait_ngm_youth_politics = {
 	cost = 0
-	custom_tooltip = Youth_Politics
 	potential_crossbreeding_chance = 0
 	opposites = {
 		trait_ngm_elder_politics
@@ -30,6 +29,7 @@ trait_ngm_youth_politics = {
 	}
 	leader_age_min = 10
 	leader_age_max = 20
+	custom_tooltip = ngm_country_trait_trait_ngm_youth_politics_tt
 }
 trait_ngm_elder_politics = {
 	cost = 0
@@ -47,7 +47,12 @@ trait_ngm_elder_politics = {
 	}
 	modifier = {
 		leader_lifespan_add = 20
-		planet_jobs_unity_produces_mult = 0.1
+		bureaucrat_jobs_bonus_workforce_mult = 0.1
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.1
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.1
+		pop_ngm_influencer_bonus_workforce_mult = 0.1
+		pop_ngm_gardener_bonus_workforce_mult = 0.1
 	}
 	initial = no
 	randomized = no
@@ -78,8 +83,13 @@ trait_ngm_knight = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.1
-		planet_crime_mult = -0.1
+		bureaucrat_jobs_bonus_workforce_mult = 0.1
+		pop_happiness = 0.05
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.1
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.1
+		pop_ngm_influencer_bonus_workforce_mult = 0.1
+		pop_ngm_gardener_bonus_workforce_mult = 0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -98,8 +108,13 @@ trait_ngm_gentle = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.05
-		planet_crime_mult = -0.05
+		bureaucrat_jobs_bonus_workforce_mult = 0.05
+		pop_happiness = 0.025
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.05
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.05
+		pop_ngm_influencer_bonus_workforce_mult = 0.05
+		pop_ngm_gardener_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -118,8 +133,13 @@ trait_ngm_rascal = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_unity_produces_mult = -0.05
-		planet_crime_mult = 0.05
+		bureaucrat_jobs_bonus_workforce_mult = -0.05
+		pop_happiness = -0.025
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.05
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.05
+		pop_ngm_influencer_bonus_workforce_mult = -0.05
+		pop_ngm_gardener_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -138,8 +158,13 @@ trait_ngm_totemowarui = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_unity_produces_mult = -0.1
-		planet_crime_mult = 0.1
+		bureaucrat_jobs_bonus_workforce_mult = -0.1
+		pop_happiness = -0.05
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.1
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.1
+		pop_ngm_influencer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -195,7 +220,7 @@ trait_ngm_assimilation = {
 	}
 	modifier = {
 		pop_environment_tolerance = 0.1
-		pop_growth_from_immigration = -0.1
+		pop_resettlement_cost_mult = 0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -213,7 +238,7 @@ trait_ngm_unadaptation = {
 	}
 	modifier = {
 		pop_environment_tolerance = -0.1
-		pop_growth_from_immigration = 0.1
+		pop_resettlement_cost_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -288,10 +313,16 @@ trait_ngm_abn_growth = {
 	modifier = {
 		logistic_growth_mult = 0.3
 		army_defense_health_mult = 0.4
-		planet_jobs_unity_produces_mult = -0.2
-		planet_jobs_physics_research_produces_mult = -0.1
-		planet_jobs_society_research_produces_mult = -0.1
-		planet_jobs_engineering_research_produces_mult = -0.1
+		bureaucrat_jobs_bonus_workforce_mult = -0.2
+		researcher_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.2
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.2
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.15
+		pop_ngm_influencer_bonus_workforce_mult = -0.2
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.15
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -309,10 +340,16 @@ trait_ngm_Lost_species = {
 	}
 	modifier = {
 		logistic_growth_mult = -0.25
-		planet_jobs_unity_produces_mult = 0.2
-		planet_jobs_physics_research_produces_mult = 0.2
-		planet_jobs_society_research_produces_mult = 0.2
-		planet_jobs_engineering_research_produces_mult = 0.2
+		bureaucrat_jobs_bonus_workforce_mult = 0.2
+		researcher_jobs_bonus_workforce_mult = 0.2
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.2
+		pop_ngm_secretary_bonus_workforce_mult = 0.2
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.2
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.2
+		pop_ngm_influencer_bonus_workforce_mult = 0.2
+		pop_ngm_tide_engineer_bonus_workforce_mult = 0.2
+		pop_ngm_gardener_bonus_workforce_mult = 0.2
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.2
 	}
 	slave_cost = {
 		energy = 50
@@ -329,8 +366,7 @@ trait_ngm_turf = {
 		LITHOID
 	}
 	modifier = {
-		pop_resettlement_cost_mult = 0.25
-		pop_growth_from_immigration = -0.1
+		pop_resettlement_cost_mult = 0.35
 		army_defense_morale_mult = 0.1
 		pop_housing_usage_mult = 0.05
 	}
@@ -349,8 +385,7 @@ trait_ngm_Movement = {
 		LITHOID
 	}
 	modifier = {
-		pop_resettlement_cost_mult = -0.25
-		pop_growth_from_immigration = 0.1
+		pop_resettlement_cost_mult = -0.35
 		army_attack_morale_mult = 0.1
 		pop_housing_usage_mult = -0.05
 	}
@@ -369,9 +404,14 @@ trait_ngm_empathy = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.05
+		bureaucrat_jobs_bonus_workforce_mult = 0.05
 		pop_government_ethic_attraction = 0.1
-		planet_crime_mult = -0.05
+		pop_happiness = 0.025
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.05
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.05
+		pop_ngm_influencer_bonus_workforce_mult = 0.05
+		pop_ngm_gardener_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -388,9 +428,14 @@ trait_ngm_resentment = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_unity_produces_mult = -0.05
+		bureaucrat_jobs_bonus_workforce_mult = -0.05
 		pop_government_ethic_attraction = -0.1
-		planet_crime_mult = 0.05
+		pop_happiness = -0.025
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.05
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.05
+		pop_ngm_influencer_bonus_workforce_mult = -0.05
+		pop_ngm_gardener_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -413,8 +458,8 @@ trait_ngm_magnetism = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.2
-		planet_jobs_alloys_produces_mult = -0.05
+		physicist_jobs_bonus_workforce_mult = 0.2
+		foundry_jobs_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -437,8 +482,9 @@ trait_ngm_radioactive = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.1
-		planet_jobs_energy_produces_mult = 0.05
+		physicist_jobs_bonus_workforce_mult = 0.1
+		technician_jobs_bonus_workforce_mult = 0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -461,7 +507,7 @@ trait_ngm_jack_o_lantern = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.05
+		foundry_jobs_bonus_workforce_mult = 0.05
 		army_damage_mult = 0.15
 	}
 	slave_cost = {
@@ -488,7 +534,7 @@ trait_ngm_optical_adapt = {
 		army_health = 0.3
 		pop_housing_usage_mult = -0.05
 		pop_amenities_usage_mult = -0.05
-		planet_crime_mult = 0.05
+		pop_happiness = -0.025
 	}
 	slave_cost = {
 		energy = 50
@@ -513,7 +559,7 @@ trait_ngm_hardness = {
 	modifier = {
 		army_damage_mult = 0.2
 		army_health = 0.2
-		planet_jobs_minerals_produces_mult = 0.05
+		miner_jobs_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -560,12 +606,11 @@ trait_ngm_flying = {
 		LITHOID
 	}
 	modifier = {
-		ship_evasion_mult = 0.05
-		ship_armor_damage_mult = 0.1
 	}
 	slave_cost = {
 		energy = 50
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_flying_tt
 }
 trait_ngm_swift_horse = {
 	cost = 3
@@ -605,13 +650,14 @@ trait_ngm_clairvoyance = {
 		LITHOID
 	}
 	modifier = {
-		country_food_produces_mult = 0.05
+		farmer_jobs_bonus_workforce_mult = 0.05
 		army_damage_mult = 0.1
-		ship_armor_damage_mult = 0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_clairvoyance_tt
 }
 trait_ngm_sixth_sense = {
 	cost = 5
@@ -627,14 +673,17 @@ trait_ngm_sixth_sense = {
 	}
 	modifier = {
 		army_morale = 0.1
-		ship_evasion_mult = 0.1
-		planet_jobs_physics_research_produces_mult = 0.05
-		planet_jobs_society_research_produces_mult = 0.05
-		planet_jobs_engineering_research_produces_mult = 0.05
+		researcher_jobs_bonus_workforce_mult = 0.05
+		pop_ngm_secretary_bonus_workforce_mult = 0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = 0.05
+		pop_ngm_gardener_bonus_workforce_mult = 0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_sixth_sense_tt
 }
 trait_ngm_sluggish = {
 	cost = -3
@@ -652,14 +701,17 @@ trait_ngm_sluggish = {
 		LITHOID
 	}
 	modifier = {
-		ship_evasion_mult = -0.1
-		planet_jobs_physics_research_produces_mult = -0.05
-		planet_jobs_society_research_produces_mult = -0.05
-		planet_jobs_engineering_research_produces_mult = -0.05
+		researcher_jobs_bonus_workforce_mult = -0.05
+		pop_ngm_secretary_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.05
+		pop_ngm_gardener_bonus_workforce_mult = -0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_sluggish_tt
 }
 trait_ngm_degeneration = {
 	cost = -5
@@ -674,15 +726,18 @@ trait_ngm_degeneration = {
 		LITHOID
 	}
 	modifier = {
-		ship_evasion_mult = -0.15
-		planet_jobs_physics_research_produces_mult = -0.05
-		planet_jobs_society_research_produces_mult = -0.05
-		planet_jobs_engineering_research_produces_mult = -0.05
 		army_morale = -0.1
+		researcher_jobs_bonus_workforce_mult = -0.05
+		pop_ngm_secretary_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.05
+		pop_ngm_gardener_bonus_workforce_mult = -0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_degeneration_tt
 }
 trait_ngm_confusion = {
 	cost = -2
@@ -699,9 +754,12 @@ trait_ngm_confusion = {
 	}
 	modifier = {
 		army_morale = -0.05
-		planet_jobs_physics_research_produces_mult = -0.05
-		planet_jobs_society_research_produces_mult = -0.05
-		planet_jobs_engineering_research_produces_mult = -0.05
+		researcher_jobs_bonus_workforce_mult = -0.05
+		pop_ngm_secretary_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.05
+		pop_ngm_gardener_bonus_workforce_mult = -0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -721,10 +779,13 @@ trait_ngm_derangement = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = -0.1
-		planet_jobs_society_research_produces_mult = -0.1
-		planet_jobs_engineering_research_produces_mult = -0.1
 		pop_amenities_usage_mult = 0.1
+		researcher_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -765,9 +826,10 @@ trait_ngm_enervated = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_minerals_produces_mult = -0.1
-		planet_jobs_food_produces_mult = -0.1
+		miner_jobs_bonus_workforce_mult = -0.1
+		farmer_jobs_bonus_workforce_mult = -0.1
 		army_health = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -787,11 +849,17 @@ trait_ngm_death_heart = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = -0.1
-		planet_jobs_society_research_produces_mult = -0.1
-		planet_jobs_engineering_research_produces_mult = -0.1
-		planet_jobs_unity_produces_mult = -0.1
+		bureaucrat_jobs_bonus_workforce_mult = -0.1
 		pop_amenities_usage_mult = -0.15
+		researcher_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.1
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.1
+		pop_ngm_influencer_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -814,10 +882,12 @@ trait_ngm_huge = {
 		pop_housing_usage_mult = 0.15
 		army_damage_mult = 0.2
 		army_health = 0.2
-		planet_livestock_food_produces_add = 3
-		planet_jobs_energy_produces_mult = 0.1
-		planet_jobs_minerals_produces_mult = 0.1
-		planet_jobs_food_produces_mult = 0.1
+		pop_livestock_bonus_workforce_mult = 0.75
+		technician_jobs_bonus_workforce_mult = 0.1
+		miner_jobs_bonus_workforce_mult = 0.1
+		farmer_jobs_bonus_workforce_mult = 0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = 0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -840,10 +910,12 @@ trait_ngm_big = {
 		pop_housing_usage_mult = 0.1
 		army_damage_mult = 0.1
 		army_health = 0.1
-		planet_livestock_food_produces_add = 1
-		planet_jobs_energy_produces_mult = 0.05
-		planet_jobs_minerals_produces_mult = 0.05
-		planet_jobs_food_produces_mult = 0.05
+		pop_livestock_bonus_workforce_mult = 0.25
+		technician_jobs_bonus_workforce_mult = 0.05
+		miner_jobs_bonus_workforce_mult = 0.05
+		farmer_jobs_bonus_workforce_mult = 0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = 0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -866,10 +938,12 @@ trait_ngm_small = {
 		pop_housing_usage_mult = -0.1
 		army_damage_mult = -0.1
 		army_health = -0.1
-		planet_livestock_food_produces_add = -1
-		planet_jobs_energy_produces_mult = -0.05
-		planet_jobs_minerals_produces_mult = -0.05
-		planet_jobs_food_produces_mult = -0.05
+		pop_livestock_bonus_workforce_mult = -0.25
+		technician_jobs_bonus_workforce_mult = -0.05
+		miner_jobs_bonus_workforce_mult = -0.05
+		farmer_jobs_bonus_workforce_mult = -0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -892,10 +966,12 @@ trait_ngm_minimum = {
 		pop_housing_usage_mult = -0.15
 		army_damage_mult = -0.2
 		army_health = -0.2
-		planet_livestock_food_produces_add = -3
-		planet_jobs_energy_produces_mult = -0.1
-		planet_jobs_minerals_produces_mult = -0.1
-		planet_jobs_food_produces_mult = -0.1
+		pop_livestock_bonus_workforce_mult = -0.75
+		technician_jobs_bonus_workforce_mult = -0.1
+		miner_jobs_bonus_workforce_mult = -0.1
+		farmer_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -914,8 +990,9 @@ trait_ngm_hunting = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_food_produces_mult = -0.2
+		farmer_jobs_bonus_workforce_mult = -0.2
 		pop_environment_tolerance = -0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.2
 	}
 	slave_cost = {
 		energy = 50
@@ -934,8 +1011,9 @@ trait_ngm_collecting = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_food_produces_mult = -0.2
+		farmer_jobs_bonus_workforce_mult = -0.2
 		pop_environment_tolerance = -0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.2
 	}
 	slave_cost = {
 		energy = 50
@@ -954,8 +1032,9 @@ trait_ngm_h_g = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_food_produces_mult = -0.1
+		farmer_jobs_bonus_workforce_mult = -0.1
 		pop_environment_tolerance = -0.03
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -974,8 +1053,9 @@ trait_ngm_agriculture = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_food_produces_mult = 0.1
+		farmer_jobs_bonus_workforce_mult = 0.1
 		pop_environment_tolerance = 0.03
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -994,7 +1074,12 @@ trait_ngm_elder_verbal = {
 	}
 	modifier = {
 		pop_amenities_usage_mult = 0.25
-		planet_jobs_unity_produces_mult = 0.05
+		bureaucrat_jobs_bonus_workforce_mult = 0.05
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.05
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.05
+		pop_ngm_influencer_bonus_workforce_mult = 0.05
+		pop_ngm_gardener_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -1012,11 +1097,17 @@ trait_ngm_elder_non_verbal = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = -0.1
-		planet_jobs_society_research_produces_mult = -0.1
-		planet_jobs_engineering_research_produces_mult = -0.1
-		planet_jobs_unity_produces_mult = -0.05
+		bureaucrat_jobs_bonus_workforce_mult = -0.05
 		logistic_growth_mult = 0.03
+		researcher_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.05
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.075
+		pop_ngm_influencer_bonus_workforce_mult = -0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.075
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -1034,9 +1125,12 @@ trait_ngm_elder_non_character = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = -0.1
-		planet_jobs_society_research_produces_mult = -0.1
-		planet_jobs_engineering_research_produces_mult = -0.1
+		researcher_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -1055,7 +1149,7 @@ trait_ngm_delicious = {
 		LITHOID
 	}
 	modifier = {
-		planet_livestock_food_produces_add = 2
+		pop_livestock_bonus_workforce_mult = 0.5
 	}
 	slave_cost = {
 		energy = 50
@@ -1074,7 +1168,7 @@ trait_ngm_unappetizing = {
 		LITHOID
 	}
 	modifier = {
-		planet_livestock_food_produces_add = -2
+		pop_livestock_bonus_workforce_mult = -0.5
 		planet_pops_organics_food_upkeep_mult = -0.1
 	}
 	slave_cost = {
@@ -1094,7 +1188,7 @@ trait_ngm_speckled_w_white = {
 		LITHOID
 	}
 	modifier = {
-		planet_livestock_food_produces_add = 1
+		pop_livestock_bonus_workforce_mult = 0.25
 		planet_pops_organics_food_upkeep_mult = 0.1
 		leader_lifespan_add = -5
 	}
@@ -1115,8 +1209,8 @@ trait_ngm_Toxic = {
 		LITHOID
 	}
 	modifier = {
-		planet_livestock_food_produces_add = -3
-		planet_amenities_mult = -0.1
+		pop_livestock_bonus_workforce_mult = -0.75
+		influential_jobs_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -1133,12 +1227,15 @@ trait_ngm_complex_heredity = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_society_research_produces_mult = 0.15
-		modify_species_cost_mult = 0.2
+		biologist_jobs_bonus_workforce_mult = 0.15
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.15
+		pop_ngm_gardener_bonus_workforce_mult = 0.15
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
 		energy = 50
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_complex_heredity_tt
 }
 trait_ngm_simple_heredity = {
 	cost = -1
@@ -1151,12 +1248,15 @@ trait_ngm_simple_heredity = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_society_research_produces_mult = -0.15
-		modify_species_cost_mult = -0.2
+		biologist_jobs_bonus_workforce_mult = -0.15
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.15
+		pop_ngm_gardener_bonus_workforce_mult = -0.15
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.15
 	}
 	slave_cost = {
 		energy = 50
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_simple_heredity_tt
 }
 trait_ngm_sensitization = {
 	cost = -1
@@ -1237,9 +1337,11 @@ trait_ngm_multitasking = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_energy_produces_mult = 0.05
-		planet_jobs_minerals_produces_mult = 0.05
-		planet_jobs_food_produces_mult = 0.05
+		technician_jobs_bonus_workforce_mult = 0.05
+		miner_jobs_bonus_workforce_mult = 0.05
+		farmer_jobs_bonus_workforce_mult = 0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = 0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -1256,9 +1358,12 @@ trait_ngm_clumsy = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = -0.05
-		planet_jobs_society_research_produces_mult = -0.05
-		planet_jobs_engineering_research_produces_mult = -0.05
+		researcher_jobs_bonus_workforce_mult = -0.05
+		pop_ngm_secretary_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.05
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.05
+		pop_ngm_gardener_bonus_workforce_mult = -0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -1276,7 +1381,7 @@ trait_ngm_reversing_theory = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = -0.1
+		physicist_jobs_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -1294,7 +1399,10 @@ trait_ngm_reversing_culture = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_society_research_produces_mult = -0.1
+		biologist_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -1312,7 +1420,9 @@ trait_ngm_reversing_technologies = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = -0.1
+		engineer_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -1329,8 +1439,7 @@ trait_ngm_individuality = {
 		LITHOID
 	}
 	modifier = {
-		species_leader_exp_gain = 0.1
-		leader_skill_levels = 2
+		species_leader_exp_gain = 0.3
 	}
 	slave_cost = {
 		energy = 50
@@ -1347,8 +1456,7 @@ trait_ngm_non_individuality = {
 		LITHOID
 	}
 	modifier = {
-		species_leader_exp_gain = -0.1
-		leader_skill_levels = -2
+		species_leader_exp_gain = -0.3
 	}
 	slave_cost = {
 		energy = 50
@@ -1365,8 +1473,13 @@ trait_ngm_sociability = {
 		LITHOID
 	}
 	modifier = {
-		planet_amenities_mult = 0.1
-		planet_jobs_unity_produces_mult = 0.05
+		influential_jobs_bonus_workforce_mult = 0.1
+		bureaucrat_jobs_bonus_workforce_mult = 0.05
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.05
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.05
+		pop_ngm_influencer_bonus_workforce_mult = -0.05
+		pop_ngm_gardener_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -1383,8 +1496,13 @@ trait_ngm_introversion = {
 		LITHOID
 	}
 	modifier = {
-		planet_amenities_mult = -0.1
-		planet_jobs_unity_produces_mult = -0.05
+		influential_jobs_bonus_workforce_mult = -0.1
+		bureaucrat_jobs_bonus_workforce_mult = -0.05
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.05
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.05
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.05
+		pop_ngm_influencer_bonus_workforce_mult = 0.05
+		pop_ngm_gardener_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 50
@@ -1477,7 +1595,7 @@ trait_ngm_liar = {
 		LITHOID
 	}
 	modifier = {
-		planet_amenities_mult = -0.1
+		influential_jobs_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -1494,7 +1612,7 @@ trait_ngm_honest = {
 		LITHOID
 	}
 	modifier = {
-		planet_amenities_mult = 0.1
+		influential_jobs_bonus_workforce_mult = 0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -1514,7 +1632,8 @@ trait_ngm_heart_less = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_food_produces_mult = -0.15
+		farmer_jobs_bonus_workforce_mult = -0.15
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.15
 	}
 	slave_cost = {
 		energy = 50
@@ -1534,7 +1653,8 @@ trait_ngm_debauchery = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_energy_produces_mult = -0.15
+		technician_jobs_bonus_workforce_mult = -0.15
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.15
 	}
 	slave_cost = {
 		energy = 50
@@ -1554,7 +1674,7 @@ trait_ngm_tired = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_minerals_produces_mult = -0.15
+		miner_jobs_bonus_workforce_mult = -0.15
 	}
 	slave_cost = {
 		energy = 50
@@ -1574,9 +1694,12 @@ trait_ngm_stupidity = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = -0.1
-		planet_jobs_society_research_produces_mult = -0.1
-		planet_jobs_engineering_research_produces_mult = -0.1
+		researcher_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 50
@@ -1596,7 +1719,9 @@ trait_ngm_spendthrift = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_trade_produces_mult = -0.25
+		trader_jobs_bonus_workforce_mult = -0.25
+		pop_ngm_executive_cast_bonus_workforce_mult = -0.25
+		pop_ngm_cast_bonus_workforce_mult = -0.25
 	}
 	slave_cost = {
 		energy = 50
@@ -1622,11 +1747,13 @@ trait_ngm_merchant_from_ancient = {
 		LITHOID
 	}
 	modifier = {
-		planet_jobs_trade_produces_mult = 0.3
+		trader_jobs_bonus_workforce_mult = 0.3
 		pop_housing_usage_mult = -0.3
 		logistic_growth_mult = 0.2
-		planet_jobs_minerals_produces_mult = -0.5
+		miner_jobs_bonus_workforce_mult = -0.5
 		planet_pops_consumer_goods_upkeep_mult = 0.1
+		pop_ngm_executive_cast_bonus_workforce_mult = 0.3
+		pop_ngm_cast_bonus_workforce_mult = 0.3
 	}
 	slave_cost = {
 		energy = 500
@@ -1639,8 +1766,9 @@ trait_ngm_m_crafts = {
 		MACHINE
 	}
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.05
-		planet_jobs_consumer_goods_produces_mult = 0.05
+		foundry_jobs_bonus_workforce_mult = 0.05
+		artisan_jobs_bonus_workforce_mult = 0.05
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 750
@@ -1673,8 +1801,6 @@ trait_ngm_m_lens = {
 		MACHINE
 	}
 	modifier = {
-		all_technology_research_speed = 0.1
-		ship_anomaly_research_speed_mult = 0.05
 	}
 	slave_cost = {
 		energy = 750
@@ -1693,6 +1819,7 @@ trait_ngm_m_lens = {
 			}
 		}
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_lens_tt
 }
 trait_ngm_m_taste = {
 	cost = 2
@@ -1701,7 +1828,8 @@ trait_ngm_m_taste = {
 		MACHINE
 	}
 	modifier = {
-		planet_jobs_food_produces_mult = 0.3
+		farmer_jobs_bonus_workforce_mult = 0.3
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.3
 	}
 	slave_cost = {
 		energy = 750
@@ -1737,14 +1865,14 @@ trait_ngm_m_jet = {
 		MACHINE
 	}
 	modifier = {
-		ship_evasion_mult = 0.05
-		planet_jobs_physics_research_produces_mult = 0.1
+		physicist_jobs_bonus_workforce_mult = 0.1
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_jet_tt
 }
 trait_ngm_m_disassembly = {
 	cost = 1
@@ -1771,17 +1899,15 @@ trait_ngm_m_quantum = {
 		MACHINE
 	}
 	modifier = {
-		all_technology_research_speed = 0.2
 		species_empire_size_mult = -0.10
-	}
-	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = 0.3
+		planet_pop_assembly_mult = -0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_quantum_tt
 }
 trait_ngm_m_reishi = {
 	cost = 4
@@ -1793,18 +1919,14 @@ trait_ngm_m_reishi = {
 		MACHINE
 	}
 	modifier = {
-		country_trust_cap_add = 30
-		ship_evasion_mult = 0.1
-		all_technology_research_speed = 0.2
-	}
-	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = -0.3
+		planet_pop_assembly_mult = 0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_reishi_tt
 }
 trait_ngm_m_primitive = {
 	cost = -3
@@ -1814,7 +1936,7 @@ trait_ngm_m_primitive = {
 	}
 	modifier = {
 		planet_pops_upkeep_mult = 0.1
-		leader_skill_levels = -1
+		species_leader_exp_gain = -0.1
 	}
 	slave_cost = {
 		energy = 750
@@ -1829,7 +1951,8 @@ trait_ngm_m_leakage = {
 		MACHINE
 	}
 	modifier = {
-		planet_jobs_energy_produces_mult = -0.1
+		technician_jobs_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 750
@@ -1845,13 +1968,13 @@ trait_ngm_m_nasty = {
 	}
 	modifier = {
 		pop_amenities_usage_mult = 0.2
-		all_technology_research_speed = -0.05
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_nasty_tt
 }
 trait_ngm_m_invisible = {
 	cost = -2
@@ -1890,9 +2013,7 @@ trait_ngm_m_cram = {
 		MACHINE
 	}
 	modifier = {
-	}
-	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = 0.05
+		planet_pop_assembly_mult = -0.025
 	}
 	slave_cost = {
 		energy = 750
@@ -1910,13 +2031,10 @@ trait_ngm_m_malfunction = {
 		MACHINE
 	}
 	modifier = {
-		planet_pop_assembly_mult = 0.1
+		planet_pop_assembly_mult = 0.05
 		planet_pops_upkeep_mult = 0.1
 	}
 	custom_tooltip = trait_ngm_m_malfunction_custom_tooltip
-	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = 0.1
-	}
 	slave_cost = {
 		energy = 750
 	}
@@ -1933,7 +2051,7 @@ trait_ngm_m_inappropriate = {
 		MACHINE
 	}
 	modifier = {
-		planet_jobs_produces_mult = -0.1
+		pop_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 750
@@ -1963,14 +2081,13 @@ trait_ngm_m_skin = {
 		MACHINE
 	}
 	modifier = {
-		country_organic_trust_cap_add = 20
-		envoy_improve_relations_mult = 0.1
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_skin_tt
 }
 trait_ngm_m_mcpu = {
 	cost = 1
@@ -1995,7 +2112,7 @@ trait_ngm_m_fire = {
 		MACHINE
 	}
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.05
+		foundry_jobs_bonus_workforce_mult = 0.05
 		army_damage_mult = 0.15
 	}
 	slave_cost = {
@@ -2032,14 +2149,13 @@ trait_ngm_m_bcpu = {
 		MACHINE
 	}
 	modifier = {
-		ship_evasion_mult = 0.05
-		ship_weapon_range_mult = 0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_bcpu_tt
 }
 trait_ngm_m_sub = {
 	cost = 2
@@ -2048,7 +2164,7 @@ trait_ngm_m_sub = {
 		MACHINE
 	}
 	modifier = {
-		planet_jobs_produces_mult = 0.01
+		pop_bonus_workforce_mult = 0.01
 	}
 	slave_cost = {
 		energy = 750
@@ -2079,7 +2195,7 @@ trait_ngm_m_office = {
 		MACHINE
 	}
 	modifier = {
-		empire_size_pops_mult = -0.05
+		species_empire_size_mult = -0.05
 	}
 	slave_cost = {
 		energy = 750
@@ -2097,7 +2213,7 @@ trait_ngm_m_product = {
 		trait_ngm_m_proto
 	}
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.2
+		foundry_jobs_bonus_workforce_mult = 0.2
 	}
 	slave_cost = {
 		energy = 750
@@ -2121,7 +2237,12 @@ trait_ngm_m_proto = {
 		trait_ngm_m_product
 	}
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.25
+		bureaucrat_jobs_bonus_workforce_mult = 0.25
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.25
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.25
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.25
+		pop_ngm_influencer_bonus_workforce_mult = 0.25
+		pop_ngm_gardener_bonus_workforce_mult = 0.25
 	}
 	slave_cost = {
 		energy = 750
@@ -2147,9 +2268,7 @@ trait_ngm_m_incr = {
 	custom_tooltip = trait_ngm_m_incr_custom_tooltip
 	modifier = {
 		planet_pops_upkeep_mult = -0.1
-	}
-	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = 0.25
+		planet_pop_assembly_mult = -0.125
 	}
 	slave_cost = {
 		energy = 750
@@ -2167,13 +2286,17 @@ trait_ngm_m_antient = {
 		trait_ngm_m_incr
 	}
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.2
-		planet_jobs_physics_research_produces_mult = 0.20
-		planet_jobs_society_research_produces_mult = 0.20
-		planet_jobs_engineering_research_produces_mult = 0.20
-	}
-	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = -0.25
+		bureaucrat_jobs_bonus_workforce_mult = 0.2
+		researcher_jobs_bonus_workforce_mult = 0.2
+		pop_ngm_ethic_noble_bonus_workforce_mult = 0.2
+		pop_ngm_secretary_bonus_workforce_mult = 0.2
+		pop_ngm_crest_bearer_bonus_workforce_mult = 0.2
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = 0.2
+		pop_ngm_influencer_bonus_workforce_mult = 0.2
+		pop_ngm_tide_engineer_bonus_workforce_mult = 0.2
+		pop_ngm_gardener_bonus_workforce_mult = 0.2
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = 0.2
+		planet_pop_assembly_mult = 0.125
 	}
 	slave_cost = {
 		energy = 750
@@ -2208,7 +2331,7 @@ trait_ngm_m_huge = {
 		planet_pops_upkeep_mult = 0.15
 		army_damage_mult = 0.2
 		army_health = 0.2
-		planet_jobs_minerals_produces_mult = 0.1
+		miner_jobs_bonus_workforce_mult = 0.1
 	}
 	slave_cost = {
 		energy = 750
@@ -2237,7 +2360,7 @@ trait_ngm_m_big = {
 		planet_pops_upkeep_mult = 0.5
 		army_damage_mult = 0.1
 		army_health = 0.1
-		planet_jobs_minerals_produces_mult = 0.05
+		miner_jobs_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 750
@@ -2274,7 +2397,7 @@ trait_ngm_m_main = {
 	}
 	custom_tooltip = trait_ngm_m_main_custom_tooltip
 	modifier = {
-		planet_jobs_produces_mult = -0.01
+		pop_bonus_workforce_mult = -0.01
 	}
 	slave_cost = {
 		energy = 750
@@ -2289,7 +2412,8 @@ trait_ngm_m_steam = {
 		MACHINE
 	}
 	modifier = {
-		planet_jobs_energy_produces_mult = -0.25
+		technician_jobs_bonus_workforce_mult = -0.25
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.25
 	}
 	slave_cost = {
 		energy = 750
@@ -2304,14 +2428,13 @@ trait_ngm_m_light = {
 		MACHINE
 	}
 	modifier = {
-		ship_evasion_mult = -0.1
-		ship_fire_rate_mult = -0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
 	assembly_score = {
 	}
+	custom_tooltip = ngm_country_trait_trait_ngm_m_light_tt
 }
 trait_ngm_m_uncont = {
 	cost = -2
@@ -2320,7 +2443,7 @@ trait_ngm_m_uncont = {
 		MACHINE
 	}
 	modifier = {
-		empire_size_pops_mult = 0.1
+		species_empire_size_mult = 0.1
 	}
 	slave_cost = {
 		energy = 750
@@ -2359,7 +2482,7 @@ trait_ngm_m_small = {
 		planet_pops_upkeep_mult = -0.05
 		army_damage_mult = -0.1
 		army_health = -0.1
-		planet_jobs_minerals_produces_mult = -0.05
+		miner_jobs_bonus_workforce_mult = -0.05
 	}
 	slave_cost = {
 		energy = 750
@@ -2382,7 +2505,7 @@ trait_ngm_m_tiny = {
 		planet_pops_upkeep_mult = -0.1
 		army_damage_mult = -0.22
 		army_health = -0.2
-		planet_jobs_minerals_produces_mult = -0.1
+		miner_jobs_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 750
@@ -2397,7 +2520,7 @@ trait_ngm_m_error = {
 		MACHINE
 	}
 	modifier = {
-		planet_crime_mult = 0.05
+		pop_happiness = -0.025
 	}
 	slave_cost = {
 		energy = 750
@@ -2428,8 +2551,6 @@ trait_ngm_m_bomb = {
 	}
 	custom_tooltip = trait_ngm_m_bomb_custom_tooltip
 	modifier = {
-	}
-	assembling_modifier = {
 		planet_pop_assembly_mult = -0.05
 	}
 	slave_cost = {
@@ -2460,7 +2581,7 @@ trait_ngm_m_ban = {
 		MACHINE
 	}
 	modifier = {
-		empire_size_pops_mult = 0.1
+		species_empire_size_mult = 0.1
 	}
 	slave_cost = {
 		energy = 750
@@ -2475,10 +2596,18 @@ trait_ngm_m_abs = {
 		MACHINE
 	}
 	modifier = {
-		planet_jobs_unity_produces_mult = -0.1
-		planet_jobs_physics_research_produces_mult = -0.110
-		planet_jobs_society_research_produces_mult = -0.10
-		planet_jobs_engineering_research_produces_mult = -0.10
+		bureaucrat_jobs_bonus_workforce_mult = -0.1
+		physicist_jobs_bonus_workforce_mult = -0.110
+		biologist_jobs_bonus_workforce_mult = -0.10
+		engineer_jobs_bonus_workforce_mult = -0.10
+		pop_ngm_ethic_noble_bonus_workforce_mult = -0.1
+		pop_ngm_secretary_bonus_workforce_mult = -0.1
+		pop_ngm_crest_bearer_bonus_workforce_mult = -0.1
+		pop_ngm_superintendent_of_wilderness_bonus_workforce_mult = -0.1
+		pop_ngm_influencer_bonus_workforce_mult = -0.1
+		pop_ngm_tide_engineer_bonus_workforce_mult = -0.1
+		pop_ngm_gardener_bonus_workforce_mult = -0.1
+		pop_ngm_aquaculture_technician_bonus_workforce_mult = -0.1
 	}
 	slave_cost = {
 		energy = 750
@@ -2493,8 +2622,6 @@ trait_ngm_m_break = {
 		MACHINE
 	}
 	modifier = {
-	}
-	assembling_modifier = {
 		planet_pop_assembly_mult = -0.1
 	}
 	slave_cost = {

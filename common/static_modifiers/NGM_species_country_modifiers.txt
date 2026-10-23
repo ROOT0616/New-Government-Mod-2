@@ -1,0 +1,55 @@
+ngm_country_trait_trait_ngm_flying = {
+	ship_evasion_mult = 0.05
+	ship_armor_damage_mult = 0.1
+}
+ngm_country_trait_trait_ngm_clairvoyance = {
+	ship_armor_damage_mult = 0.1
+}
+ngm_country_trait_trait_ngm_sixth_sense = {
+	ship_evasion_mult = 0.1
+}
+ngm_country_trait_trait_ngm_sluggish = {
+	ship_evasion_mult = -0.1
+}
+ngm_country_trait_trait_ngm_degeneration = {
+	ship_evasion_mult = -0.15
+}
+ngm_country_trait_trait_ngm_complex_heredity = {
+	modify_species_cost_mult = 0.2
+}
+ngm_country_trait_trait_ngm_simple_heredity = {
+	modify_species_cost_mult = -0.2
+}
+ngm_country_trait_trait_ngm_m_lens = {
+	all_technology_research_speed = 0.1
+	ship_anomaly_research_speed_mult = 0.05
+}
+ngm_country_trait_trait_ngm_m_jet = {
+	ship_evasion_mult = 0.05
+}
+ngm_country_trait_trait_ngm_m_quantum = {
+	all_technology_research_speed = 0.2
+}
+ngm_country_trait_trait_ngm_m_reishi = {
+	country_trust_cap_add = 30
+	ship_evasion_mult = 0.1
+	all_technology_research_speed = 0.2
+}
+ngm_country_trait_trait_ngm_m_nasty = {
+	all_technology_research_speed = -0.05
+}
+ngm_country_trait_trait_ngm_m_skin = {
+	country_organic_trust_cap_add = 20
+	envoy_improve_relations_mult = 0.1
+}
+ngm_country_trait_trait_ngm_m_bcpu = {
+	ship_evasion_mult = 0.05
+	ship_weapon_range_mult = 0.15
+}
+ngm_country_trait_trait_ngm_m_light = {
+	ship_evasion_mult = -0.1
+	ship_fire_rate_mult = -0.15
+}
+ngm_country_trait_trait_ngm_youth_politics = {
+	all_technology_research_speed = 0.1
+}

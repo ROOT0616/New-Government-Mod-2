@@ -104,7 +104,7 @@ forced_labor = {
 	planet_jobs_engineering_research_produces_mult = -0.3
 }
 ngm_campaign_1_a_1_modifier = {
-	planet_culture_workers_produces_mult = 0.2
+	pop_culture_worker_bonus_workforce_mult = 0.2
 	planet_researchers_produces_mult = 0.1
 }
 ngm_campaign_1_b_1_modifier = {
@@ -435,7 +435,7 @@ ngm_determination_to_rebuild = {
 	icon_frame = 1
 	logistic_growth_mult = 2
 	planet_pop_assembly_mult = 2
-	planet_immigration_pull_mult = 1
+	planet_resettlement_unemployed_destination_mult = 1
 }
 ngm_space_time_continuum = {
 	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
@@ -631,7 +631,7 @@ ngm_olympic_12_event_modifier = {
 	icon = gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds
 	icon_frame = 1
 	planet_jobs_trade_produces_mult = 0.05
-	planet_immigration_pull_mult = 0.2
+	planet_resettlement_unemployed_destination_mult = 0.2
 }
 ngm_olympic_13_event_modifier = {
 	country_admin_cap_mult = 0.1
@@ -913,7 +913,7 @@ agenda_ngm_securing_real_benefits_finish_modifier = {
 }
 agenda_ngm_pursuit_of_economic_profit_finish_modifier = {
 	planet_jobs_trade_produces_mult = 0.3
-	local_trade_protection_add = 5
+	country_trade_produces_mult = 0.05
 	country_energy_produces_mult = 0.15
 }
 agenda_ngm_reduction_of_economic_disparities_finish_modifier = {
@@ -955,7 +955,7 @@ agenda_ngm_reorganization_of_order_finish_modifier = {
 }
 agenda_ngm_promotion_of_species_understanding_finish_modifier = {
 	diplo_weight_mult = 0.1
-	planet_immigration_pull_mult = 0.4
+	planet_resettlement_unemployed_destination_mult = 0.4
 	logistic_growth_mult = 0.1
 }
 agenda_ngm_expanding_paranoia_finish_modifier = {

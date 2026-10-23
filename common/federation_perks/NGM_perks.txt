@@ -31,13 +31,13 @@ NGM_CEPA_IPT = {
 NGM_CEPA_ERTRSB = {
 	members_modifier = {
 		description = federation_NGM_CEPA_ERTRSB_effect
-		local_trade_protection_add = 5
+		country_trade_produces_mult = 0.05
 	}
 }
 NGM_CEPA_ERESB = {
 	members_modifier = {
 		description = federation_NGM_CEPA_ERESB_effect
-		planet_immigration_pull_mult = 0.1
+		planet_resettlement_unemployed_destination_mult = 0.1
 		logistic_growth_mult = 0.05
 	}
 }
@@ -145,7 +145,7 @@ NGM_PS_ET = {
 	members_modifier = {
 		description = federation_NGM_PS_ET_effect
 		planet_crime_mult = -0.1
-		local_trade_protection_add = 3
+		country_trade_produces_mult = 0.03
 	}
 }
 NGM_PS_EGFRC = {
@@ -217,7 +217,7 @@ NGM_UC_EGUR = {
 NGM_UC_CP = {
 	members_modifier = {
 		description = federation_NGM_UC_CP_effect
-		planet_immigration_pull_mult = 0.3
+		planet_resettlement_unemployed_destination_mult = 0.3
 	}
 }
 NGM_holy_wars = {
@@ -243,6 +243,6 @@ NGM_UC_GC = {
 	members_modifier = {
 		description = federation_NGM_UC_GC_effect
 		job_high_priest_add = 1
-		job_priest_add = 3
+		job_bureaucrat_add = 300
 	}
 }

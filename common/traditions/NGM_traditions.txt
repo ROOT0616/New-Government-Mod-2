@@ -24,7 +24,7 @@ tr_ngm_law_trade = {
 }
 tr_ngm_law_pirates = {
 	modifier = {
-		piracy_suppression_mult = -0.3
+		ships_upkeep_mult = -0.1
 	}
 }
 tr_ngm_law_government = {
@@ -103,7 +103,7 @@ tr_ngm_art_industry = {
 }
 tr_ngm_groly_supporter = {
 	modifier = {
-		planet_jobs_slave_produces_mult = 0.1
+		pop_slave_bonus_workforce_mult = 0.1
 		pop_slave_happiness = 0.1
 	}
 }
@@ -148,7 +148,6 @@ tr_ngm_diplomatic_art = {
 	custom_tooltip_with_modifiers = tr_ngm_diplomatic_art_tooltip
 	on_enabled = {
 		hidden_effect = {
-			
 		}
 	}
 	modifier = {
@@ -233,7 +232,7 @@ tr_ngm_freedom_ega = {
 }
 tr_ngm_freedom_immigrant = {
 	modifier = {
-		planet_immigration_pull_mult = 0.3
+		planet_resettlement_unemployed_destination_mult = 0.3
 		pop_happiness = 0.1
 	}
 }
@@ -273,7 +272,7 @@ tr_ngm_ministry_engagement = {
 }
 tr_ngm_right_place = {
 	modifier = {
-		pop_demotion_time_mult = -0.5
+		planet_resettlement_unemployed_mult = 0.5
 	}
 }
 tr_ngm_orderly = {
@@ -314,7 +313,7 @@ tr_ngm_talk = {
 }
 tr_ngm_free_move = {
 	modifier = {
-		planet_immigration_pull_mult = 0.3
+		planet_resettlement_unemployed_destination_mult = 0.3
 		country_unity_produces_mult = 0.1
 	}
 }
@@ -435,7 +434,7 @@ tr_ngm_document = {
 }
 tr_ngm_general_affairs = {
 	modifier = {
-		planet_administrators_unity_produces_add = 1
+		planet_bureaucrats_unity_produces_add = 1
 	}
 }
 tr_ngm_cabinet = {
@@ -843,7 +842,7 @@ tr_ngm_weapons_arsenal_country = {
 }
 tr_ngm_rock_solid_bureaucracy = {
 	modifier = {
-		planet_administrators_unity_produces_add = 1
+		planet_bureaucrats_unity_produces_add = 1
 	}
 }
 tr_ngm_steady_national_guidelines = {
@@ -916,7 +915,6 @@ tr_ngm_suzerain_finish = {
 	}
 	on_enabled = {
 		hidden_effect = {
-			
 		}
 	}
 }
@@ -1314,7 +1312,6 @@ tr_ngm_territory_inheritance = {
 	custom_tooltip_with_modifiers = tr_ngm_suzerain_finish_tooltip
 	on_enabled = {
 		hidden_effect = {
-			
 		}
 	}
 	modifier = {
@@ -1329,86 +1326,72 @@ tr_ngm_hereditary_nation = {
 		planet_stability_add = 10
 	}
 }
-
 tr_ngm_virture_first = {
 	custom_tooltip_with_modifiers = tr_ngm_virture_first_tooltip
 	modifier = {
 	}
 }
-
 tr_ngm_virture_finish = {
 	modifier = {
 		ascension_perks_add = 1
 		country_claim_influence_cost_mult = -0.2
 	}
 }
-
 tr_ngm_sniper = {
 	custom_tooltip_with_modifiers = tr_ngm_sniper_tooltip
 }
-
 tr_ngm_penetration = {
 	custom_tooltip_with_modifiers = tr_ngm_penetration_tooltip
 }
-
 tr_ngm_chain_harted = {
 	modifier = {
 		max_rivalries = 2
 	}
 }
-
 tr_ngm_exclusive = {
 	modifier = {
 		pop_cat_ruler_happiness = 0.3
 	}
 }
-
 tr_ngm_sabotage = {
 	custom_tooltip_with_modifiers = tr_ngm_sabotage_tooltip
 	modifier = {
 	}
 }
-
 tr_ngm_enemy_first = {
 	unlocks_agenda = agenda_ngm_expanding_paranoia
 	modifier = {
 		diplo_weight_mult = 0.25
 	}
 }
-
 tr_ngm_enemy_finish = {
 	modifier = {
 		ascension_perks_add = 1
 	}
 }
-
 tr_ngm_paranoia = {
 	modifier = {
 		pop_ethic_xenophobe_attraction_mult = 0.25
 		max_rivalries = 2
 	}
 }
-
 tr_ngm_battle_ambass = {
 	modifier = {
 		spy_power_cost_mult = 0.2
 		espionage_operation_cost_mult = -0.25
 	}
 }
-
 tr_ngm_coarse_food = {
 	modifier = {
 		planet_pops_food_upkeep_mult = -0.25
 		planet_pops_consumer_goods_upkeep_mult = -0.25
 	}
 }
-
 tr_ngm_transcendental = {
 	custom_tooltip_with_modifiers = tr_ngm_transcendental_tooltip
 	modifier = {
 	}
 }
-
 tr_ngm_battle_speach = {
 	custom_tooltip_with_modifiers = tr_ngm_battle_speach_tooltip
 	modifier = {
