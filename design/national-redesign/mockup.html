@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>国家再設計 — GUI操作見本</title>
+<style>
+:root{color-scheme:dark;font-family:Meiryo,'Yu Gothic',sans-serif;color:#dce9e9;background:#071317}*{box-sizing:border-box}body{margin:0;padding:24px;background:radial-gradient(ellipse at top,#193638,#071317 75%)}button{font:inherit;color:inherit;cursor:pointer;background:#17353b;border:1px solid #41636b;border-radius:5px;padding:9px 12px}button:hover{background:#244c52}button:focus-visible{outline:3px solid #e2bb71;outline-offset:2px}button.active{background:#275b5b;border-color:#7ddac9}button:disabled{opacity:.45;cursor:default}h1{font-size:25px;font-weight:500;margin:0}h2{font-size:17px;margin:0 0 16px}p{line-height:1.7}.shell{max-width:1230px;margin:auto;border:1px solid #617c7d;background:#0c1e23ee;box-shadow:0 20px 80px #0008;border-radius:9px;overflow:hidden}.head{padding:22px 26px;border-bottom:1px solid #345057;display:flex;gap:18px;align-items:center;justify-content:space-between}.sub{font-size:12px;color:#9bb5b6;margin-top:8px}.pill{border:1px solid #8b7544;color:#edce91;padding:6px 10px;border-radius:20px;font-size:12px}.bar{display:flex;gap:26px;padding:14px 26px;background:#152d32;font-size:13px}.layout{display:grid;grid-template-columns:140px minmax(0,1fr) 270px;min-height:540px}.nav{padding:20px 12px;border-right:1px solid #345057;display:flex;flex-direction:column;gap:9px}.nav button{text-align:left}.main{padding:24px}.aside{padding:24px 18px;background:#10272d;border-left:1px solid #345057;font-size:13px}.aside ul{padding-left:18px;line-height:1.9}.muted{color:#9ab3b7}.notice{margin:0 auto 16px;max-width:1230px;color:#b9c9cb;font-size:12px;line-height:1.7}.row{border-bottom:1px solid #27444b;padding:10px 0}.axisname{font-size:12px;color:#b8d2d0;margin-bottom:8px}.axis{display:grid;grid-template-columns:1fr 1fr 46px 1fr 1fr;gap:5px}.axis button{padding:7px 4px;font-size:12px}.cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}.card{padding:14px;border:1px solid #35555f;border-radius:6px;background:#132c33}.card.selected{border-color:#76c9b6}.card h3{font-size:14px;margin:0 0 6px}.card p{font-size:12px;color:#a3bcbd;min-height:38px;margin:8px 0}.card button{width:100%;font-size:12px}.tag{font-size:10px;color:#94b3bd}.filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}.filters button{font-size:12px;padding:6px 9px}.footer{border-top:1px solid #345057;padding:16px 24px;display:flex;gap:10px;justify-content:space-between}.primary{background:#337466;border-color:#8cc8ad}.warning{color:#eccb87}.error{color:#f39a91}.good{color:#9bd9b6}.small{font-size:12px}.summary{padding:14px;background:#142f36;border-radius:5px;line-height:1.9;font-size:13px}.changes p{padding:8px;border-bottom:1px solid #345057}.status{margin-top:20px;padding-top:15px;border-top:1px solid #345057}dialog{max-width:650px;width:90%;background:#10272d;color:#deeceb;border:1px solid #789da2;border-radius:8px;padding:25px}dialog::backdrop{background:#000b}.actions{display:flex;gap:12px;justify-content:flex-end;margin-top:20px}@media(max-width:1000px){body{padding:10px}.layout{grid-template-columns:115px minmax(0,1fr)}.aside{grid-column:1/-1;border-left:0;border-top:1px solid #345057}.main{padding:16px}}@media(max-width:600px){.layout{display:block}.nav{flex-direction:row;border-right:0;flex-wrap:wrap}.head{display:block}.pill{display:inline-block;margin-top:10px}.bar{gap:10px;flex-wrap:wrap}.cards{grid-template-columns:1fr}.axis button{font-size:10px}.footer{flex-wrap:wrap}}
+</style>
+<body>
+<p class="notice">操作できる画面見本です。志向点数と仮選択だけを再現しており、国是のゲーム内条件・効果・専用GUIへの接続は未実装です。Stellarisやセーブには影響しません。</p>
+<div class="shell"><header class="head"><div><h1>国家再設計</h1><div class="sub">前衛の伝統を完遂した国家に、一度だけ新しい構成を。</div></div><span class="pill" id="entitlement">再設計権利 1</span></header>
+<div class="bar"><span id="points"></span><span id="civicpoints"></span><span>政体：寡頭制〈固定〉</span><span id="saved" class="muted">未確定の変更案</span></div>
+<div class="layout"><nav class="nav" aria-label="編集項目"><button data-tab="ethics">志向</button><button data-tab="civics">国是</button><button data-tab="changes">変更点</button><button data-tab="issues">問題を確認</button></nav><main class="main" id="main"></main><aside class="aside"><h2>現在 → 変更後</h2><div id="summary"></div><div class="status"><b>実際の国家</b><p class="muted">確定するまでは、現在の志向と国是を維持します。</p><p class="warning small">集合意識への転換、政体・起源・種族の変更は対象外です。</p></div></aside></div>
+<footer class="footer"><div><button id="discard">案を破棄</button> <button id="pause">中断する</button></div><button id="review" class="primary">確認へ進む</button></footer></div>
+<dialog id="confirm"><h2>変更案の最終確認〈操作見本〉</h2><div id="confirmbody"></div><p class="warning small">ゲーム内では、この段階でもう一度条件を検査します。このHTMLでは本体の検査・実際の適用を行いません。</p><div class="actions"><button id="back">編集に戻る</button><button id="apply" class="primary">操作見本として確定</button></div></dialog>
+<script>
+const axes=[['権威主義','平等主義'],['軍国主義','平和主義'],['排他主義','受容主義'],['精神主義','物質主義'],['社会主義','資本主義'],['介入主義','中立主義'],['保全主義','開発主義'],['名誉主義','功利主義']];
+const civics=[['merit','能力主義','Vanilla','統治','能力を重視する統治。'],['tech','技術官僚の支配','Vanilla','研究','科学者の役割を重視する構成。'],['priest','高貴なる神権','Vanilla','統治','精神主義を軸にした統治。'],['service','市民軍役','Vanilla','軍事','軍務と市民生活を結ぶ構成。'],['guild','商人ギルド','Vanilla','経済','交易を重視する構成。'],['haven','自由の避難所','Vanilla','社会・外交','移民と開放性を重視する構成。'],['youth','青年政治','NGM','統治','若い世代の政治参加。'],['elder','長老政治','NGM','統治','経験を重視する政治参加。'],['env','環境民主主義','NGM','社会・外交','環境と社会を重視する構成。'],['medal','歴史ある勲章','NGM','社会・外交','勲章を重視する構成。']];
+const original={ethics:[-1,0,-1,0,-1,-1,-1,-1],civics:['merit','guild']};
+let draft=structuredClone(original),tab='ethics',filter='すべて',paused=false,consumed=false;
+const main=document.getElementById('main'),dialog=document.getElementById('confirm');
+function nameOf(i,v){return v===0?'なし':(Math.abs(v)===2?'狂信的な':'')+axes[i][v<0?0:1]}
+function civicName(id){return civics.find(c=>c[0]===id)?.[1]||id}
+function pointCount(){return draft.ethics.reduce((s,v)=>s+Math.abs(v),0)}
+function changes(){const lines=[];axes.forEach((a,i)=>{if(original.ethics[i]!==draft.ethics[i])lines.push(`${nameOf(i,original.ethics[i])} → ${nameOf(i,draft.ethics[i])}`)});original.civics.filter(id=>!draft.civics.includes(id)).forEach(id=>lines.push('削除：'+civicName(id)));draft.civics.filter(id=>!original.civics.includes(id)).forEach(id=>lines.push('追加：'+civicName(id)));return lines}
+function render(){
+ document.getElementById('points').textContent=`志向 ${pointCount()} / 6`;
+ document.getElementById('points').className=pointCount()===6?'good':'warning';
+ document.getElementById('civicpoints').textContent=`国是 ${draft.civics.length} / 7〈見本〉`;
+ document.getElementById('saved').textContent=consumed?'見本上の確定が完了':paused?'案を中断・保持しています':'未確定の変更案';
+ document.getElementById('entitlement').textContent='再設計権利 '+(consumed?0:1);
+ document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
+ document.getElementById('summary').innerHTML='<b>変更後の志向</b><ul>'+draft.ethics.map((v,i)=>v?'<li>'+nameOf(i,v)+'</li>':'').join('')+'</ul><b>変更後の国是</b><ul>'+draft.civics.map(id=>'<li>'+civicName(id)+'</li>').join('')+'</ul>';
+ document.getElementById('review').disabled=consumed||pointCount()!==6||draft.civics.length>7||changes().length===0;
+ document.getElementById('pause').textContent=paused?'編集を再開':'中断する';
+ if(paused){main.innerHTML='<h2>変更案を保持しています</h2><p>現在の国家には、何も適用していません。</p><p class="muted">「編集を再開」で、同じ変更案を開きます。ゲーム内では専用布告からも再開できる設計です。</p>';return}
+ if(tab==='ethics'){
+  main.innerHTML='<h2>国家の志向</h2><p class="muted small">各軸は一つだけ選択。通常は1点、狂信は2点です。</p>'+axes.map((a,i)=>'<div class="row"><div class="axisname">'+a[0]+' ↔ '+a[1]+'</div><div class="axis">'+[-2,-1,0,1,2].map(v=>`<button aria-pressed="${draft.ethics[i]===v}" class="${draft.ethics[i]===v?'active':''}" data-axis="${i}" data-value="${v}">${v===0?'なし':Math.abs(v)===2?'狂信':'通常'}${v===0?'':`<br>${a[v<0?0:1]}`}</button>`).join('')+'</div></div>').join('');
+  main.querySelectorAll('[data-axis]').forEach(b=>b.onclick=()=>{if(consumed)return;draft.ethics[+b.dataset.axis]=+b.dataset.value;render()});
+ }else if(tab==='civics'){
+  main.innerHTML='<h2>国是の変更案</h2><p class="muted small">候補名は表示例です。実際の採用条件はゲーム本体から登録・検証します。</p><div class="filters">'+['すべて','統治','経済','研究','軍事','社会・外交','選択済み'].map(f=>`<button class="${filter===f?'active':''}" data-filter="${f}">${f}</button>`).join('')+'</div><div class="cards">'+civics.filter(c=>filter==='すべて'||c[3]===filter||filter==='選択済み'&&draft.civics.includes(c[0])).map(c=>`<article class="card ${draft.civics.includes(c[0])?'selected':''}"><span class="tag">${c[2]} / ${c[3]}</span><h3>${c[1]}</h3><p>${c[4]}</p><button data-civic="${c[0]}">${draft.civics.includes(c[0])?'案から外す':'案に追加'}</button></article>`).join('')+'</div>';
+  main.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;render()});
+  main.querySelectorAll('[data-civic]').forEach(b=>b.onclick=()=>{if(consumed)return;const id=b.dataset.civic;draft.civics=draft.civics.includes(id)?draft.civics.filter(x=>x!==id):[...draft.civics,id];render()});
+ }else if(tab==='changes'){
+  main.innerHTML='<h2>変更点</h2><div class="changes">'+(changes().map(line=>'<p>'+line+'</p>').join('')||'<p class="muted">まだ変更はありません。</p>')+'</div><p class="muted small">Popの志向・起源・種族は、この機能では直接変更しません。</p>';
+ }else{
+  main.innerHTML='<h2>確定前の確認</h2><div class="summary">'+(pointCount()===6?'<span class="good">✓ 志向は6ポイントです。</span>':`<span class="error">志向が${pointCount()}点です。6点に調整してください。</span>`)+`<br>${draft.civics.length<=7?'✓ 国是は見本の上限内です。':'国是を7件以下に調整してください。'}<br><span class="warning">国是の条件・政体適合・DLC検査は、この見本では未接続です。</span></div><p>実際の画面では、条件不足の国是や競合する組合せをここから修正します。</p>`;
+ }
+}
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;render()});
+document.getElementById('pause').onclick=()=>{paused=!paused;render()};
+document.getElementById('discard').onclick=()=>{draft=structuredClone(original);paused=false;consumed=false;render()};
+document.getElementById('review').onclick=()=>{document.getElementById('confirmbody').innerHTML='<ul>'+changes().map(s=>'<li>'+s+'</li>').join('')+'</ul>';dialog.showModal()};
+document.getElementById('back').onclick=()=>dialog.close();
+document.getElementById('apply').onclick=()=>{consumed=true;dialog.close();render()};
+render();
+</script></body></html>
