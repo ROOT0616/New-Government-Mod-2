@@ -1,0 +1,2 @@
+namespace = ngm_sync
+country_event = { id = ngm_sync.1 hide_window = yes is_triggered_only = yes immediate = { ngm_monthly_country_sync_effect = yes } }

@@ -1,4 +1,4 @@
-version="1.39.0-dev.20"
+version="1.39.0-dev.21"
 tags={
     "Diplomacy"
     "Economy"

@@ -1,4 +1,4 @@
-# REFERENCE ONLY: integrate after removing the legacy dispatchers and restoring dependencies.
+# Live v2 hooks; country-only pick scope requires full refresh.
 on_game_start = { events = { ngm_pressure.1 } }
 on_monthly_pulse = { events = { ngm_pressure.1 } }
 on_tradition_picked = { events = { ngm_pressure.2 } }

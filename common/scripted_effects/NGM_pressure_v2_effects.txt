@@ -38,32 +38,53 @@ ngm_pressure_v2_refresh_effect = {
    }
   }
  }
- remove_modifier = ngm_pressure_v2_sniper
  if = { limit = { check_variable = { which = ngm_pressure_v2_sniper_count value > 0 } }
-  add_modifier = { modifier = ngm_pressure_v2_sniper days = -1 multiplier = ngm_pressure_v2_sniper_count }
- }
- remove_modifier = ngm_pressure_v2_penetration
+  if = { limit = { OR = { NOT = { has_modifier = ngm_pressure_v2_sniper } NOT = { check_variable = { which = ngm_pressure_v2_sniper_applied value = ngm_pressure_v2_sniper_count } } } }
+   remove_modifier = ngm_pressure_v2_sniper
+   add_modifier = { modifier = ngm_pressure_v2_sniper days = -1 multiplier = ngm_pressure_v2_sniper_count }
+  }
+ } else = { if = { limit = { has_modifier = ngm_pressure_v2_sniper } remove_modifier = ngm_pressure_v2_sniper } }
+ set_variable = { which = ngm_pressure_v2_sniper_applied value = ngm_pressure_v2_sniper_count }
  if = { limit = { check_variable = { which = ngm_pressure_v2_penetration_count value > 0 } }
-  add_modifier = { modifier = ngm_pressure_v2_penetration days = -1 multiplier = ngm_pressure_v2_penetration_count }
- }
- remove_modifier = ngm_pressure_v2_sabotage
+  if = { limit = { OR = { NOT = { has_modifier = ngm_pressure_v2_penetration } NOT = { check_variable = { which = ngm_pressure_v2_penetration_applied value = ngm_pressure_v2_penetration_count } } } }
+   remove_modifier = ngm_pressure_v2_penetration
+   add_modifier = { modifier = ngm_pressure_v2_penetration days = -1 multiplier = ngm_pressure_v2_penetration_count }
+  }
+ } else = { if = { limit = { has_modifier = ngm_pressure_v2_penetration } remove_modifier = ngm_pressure_v2_penetration } }
+ set_variable = { which = ngm_pressure_v2_penetration_applied value = ngm_pressure_v2_penetration_count }
  if = { limit = { check_variable = { which = ngm_pressure_v2_sabotage_count value > 0 } }
-  add_modifier = { modifier = ngm_pressure_v2_sabotage days = -1 multiplier = ngm_pressure_v2_sabotage_count }
- }
- remove_modifier = ngm_pressure_v2_free_press
+  if = { limit = { OR = { NOT = { has_modifier = ngm_pressure_v2_sabotage } NOT = { check_variable = { which = ngm_pressure_v2_sabotage_applied value = ngm_pressure_v2_sabotage_count } } } }
+   remove_modifier = ngm_pressure_v2_sabotage
+   add_modifier = { modifier = ngm_pressure_v2_sabotage days = -1 multiplier = ngm_pressure_v2_sabotage_count }
+  }
+ } else = { if = { limit = { has_modifier = ngm_pressure_v2_sabotage } remove_modifier = ngm_pressure_v2_sabotage } }
+ set_variable = { which = ngm_pressure_v2_sabotage_applied value = ngm_pressure_v2_sabotage_count }
  if = { limit = { check_variable = { which = ngm_pressure_v2_free_press_count value > 0 } }
-  add_modifier = { modifier = ngm_pressure_v2_free_press days = -1 multiplier = ngm_pressure_v2_free_press_count }
- }
- remove_modifier = ngm_pressure_v2_obstruction
+  if = { limit = { OR = { NOT = { has_modifier = ngm_pressure_v2_free_press } NOT = { check_variable = { which = ngm_pressure_v2_free_press_applied value = ngm_pressure_v2_free_press_count } } } }
+   remove_modifier = ngm_pressure_v2_free_press
+   add_modifier = { modifier = ngm_pressure_v2_free_press days = -1 multiplier = ngm_pressure_v2_free_press_count }
+  }
+ } else = { if = { limit = { has_modifier = ngm_pressure_v2_free_press } remove_modifier = ngm_pressure_v2_free_press } }
+ set_variable = { which = ngm_pressure_v2_free_press_applied value = ngm_pressure_v2_free_press_count }
  if = { limit = { check_variable = { which = ngm_pressure_v2_obstruction_count value > 0 } }
-  add_modifier = { modifier = ngm_pressure_v2_obstruction days = -1 multiplier = ngm_pressure_v2_obstruction_count }
- }
- remove_modifier = ngm_pressure_v2_hostile_speech
+  if = { limit = { OR = { NOT = { has_modifier = ngm_pressure_v2_obstruction } NOT = { check_variable = { which = ngm_pressure_v2_obstruction_applied value = ngm_pressure_v2_obstruction_count } } } }
+   remove_modifier = ngm_pressure_v2_obstruction
+   add_modifier = { modifier = ngm_pressure_v2_obstruction days = -1 multiplier = ngm_pressure_v2_obstruction_count }
+  }
+ } else = { if = { limit = { has_modifier = ngm_pressure_v2_obstruction } remove_modifier = ngm_pressure_v2_obstruction } }
+ set_variable = { which = ngm_pressure_v2_obstruction_applied value = ngm_pressure_v2_obstruction_count }
  if = { limit = { check_variable = { which = ngm_pressure_v2_hostile_speech_count value > 0 } }
-  add_modifier = { modifier = ngm_pressure_v2_hostile_speech days = -1 multiplier = ngm_pressure_v2_hostile_speech_count }
- }
- remove_modifier = ngm_pressure_v2_hostile_intelligence
+  if = { limit = { OR = { NOT = { has_modifier = ngm_pressure_v2_hostile_speech } NOT = { check_variable = { which = ngm_pressure_v2_hostile_speech_applied value = ngm_pressure_v2_hostile_speech_count } } } }
+   remove_modifier = ngm_pressure_v2_hostile_speech
+   add_modifier = { modifier = ngm_pressure_v2_hostile_speech days = -1 multiplier = ngm_pressure_v2_hostile_speech_count }
+  }
+ } else = { if = { limit = { has_modifier = ngm_pressure_v2_hostile_speech } remove_modifier = ngm_pressure_v2_hostile_speech } }
+ set_variable = { which = ngm_pressure_v2_hostile_speech_applied value = ngm_pressure_v2_hostile_speech_count }
  if = { limit = { check_variable = { which = ngm_pressure_v2_hostile_intelligence_count value > 0 } }
-  add_modifier = { modifier = ngm_pressure_v2_hostile_intelligence days = -1 multiplier = ngm_pressure_v2_hostile_intelligence_count }
- }
+  if = { limit = { OR = { NOT = { has_modifier = ngm_pressure_v2_hostile_intelligence } NOT = { check_variable = { which = ngm_pressure_v2_hostile_intelligence_applied value = ngm_pressure_v2_hostile_intelligence_count } } } }
+   remove_modifier = ngm_pressure_v2_hostile_intelligence
+   add_modifier = { modifier = ngm_pressure_v2_hostile_intelligence days = -1 multiplier = ngm_pressure_v2_hostile_intelligence_count }
+  }
+ } else = { if = { limit = { has_modifier = ngm_pressure_v2_hostile_intelligence } remove_modifier = ngm_pressure_v2_hostile_intelligence } }
+ set_variable = { which = ngm_pressure_v2_hostile_intelligence_applied value = ngm_pressure_v2_hostile_intelligence_count }
 }

@@ -207,41 +207,25 @@ ngm_apprentice_leader_effect = {
 		set_leader_flag = ngm_apprentice_initialized
 	}
 }
+# Original behavior: first trait if absent; upgrade an existing tier 1 once.
 ngm_insanity_leader_effect = {
-	if = {
-		limit = {
-			root = {
-				has_valid_civic = civic_ngm_fundamental_insanity
-			}
-		}
-		if = {
-			limit = {
-				leader_class = scientist
-				NOR = {
-					has_trait = leader_trait_maniacal
-					has_trait = leader_trait_maniacal_2
-					has_trait = leader_trait_maniacal_3
-				}
-			}
-			add_trait = {
-				trait = leader_trait_maniacal
-				show_message = no
-			}
-		}
-		if = {
-			limit = {
-				leader_class = commander
-				NOR = {
-					has_trait = leader_trait_trickster
-				}
-			}
-			add_trait = {
-				trait = leader_trait_trickster
-				show_message = no
-			}
-		}
-	}
+ if = { limit = { root = { has_valid_civic = civic_ngm_fundamental_insanity }
+  NOT = { has_leader_flag = ngm_insanity_initialized }
+ }
+  if = { limit = { leader_class = scientist }
+   if = { limit = { has_trait = leader_trait_maniacal }
+    add_trait = { trait = leader_trait_maniacal_2 show_message = no }
+   } else_if = { limit = { NOR = { has_trait = leader_trait_maniacal_2 has_trait = leader_trait_maniacal_3 } }
+    add_trait = { trait = leader_trait_maniacal show_message = no }
+   }
+  }
+  if = { limit = { leader_class = commander NOT = { has_trait = leader_trait_trickster } }
+   add_trait = { trait = leader_trait_trickster show_message = no }
+  }
+  set_leader_flag = ngm_insanity_initialized
+ }
 }
+
 ngm_remaining_leader_effect = {
 	ngm_youth_leader_age_effect = yes
 	ngm_elder_leader_age_effect = yes

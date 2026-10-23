@@ -7,7 +7,7 @@ ngm_sync_war_economy_planet_effect = { if = {
         if = { limit = { NOT = { has_modifier = civic_ngm_war_prosperity_not_war_modifier } } add_modifier = { modifier = civic_ngm_war_prosperity_not_war_modifier days = -1 } } }
 }
 else = { remove_modifier = civic_ngm_war_prosperity_not_war_modifier remove_modifier = civic_ngm_war_prosperity_is_war_modifier } }
-ngm_sync_war_economy_country_effect = {
+ngm_sync_war_economy_country_effect_state = {
     if = {
     limit = { has_valid_civic = civic_ngm_war_prosperity }
     if = { limit = { is_at_war = yes } remove_modifier = civic_ngm_war_prosperity_not_war_country_modifier
@@ -16,5 +16,6 @@ ngm_sync_war_economy_country_effect = {
         if = { limit = { NOT = { has_modifier = civic_ngm_war_prosperity_not_war_country_modifier } } add_modifier = { modifier = civic_ngm_war_prosperity_not_war_country_modifier days = -1 } } }
 }
 else = { remove_modifier = civic_ngm_war_prosperity_not_war_country_modifier remove_modifier = civic_ngm_war_prosperity_is_war_country_modifier }
-    every_owned_planet = { ngm_sync_war_economy_planet_effect = yes }
+
 }
+ngm_sync_war_economy_country_effect = { ngm_sync_war_economy_country_effect_state = yes every_owned_planet = { ngm_sync_war_economy_planet_effect = yes } }

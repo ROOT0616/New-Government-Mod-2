@@ -94,23 +94,3 @@ planet_ngm_influencer = {
 	}
 	modifier_category = colony
 }
-country_ruler = {
-	parent = country_container
-	generate_add_modifiers = {
-		produces
-		upkeep
-	}
-	modifier_category = country
-}
-megastructures = {
-	use_for_ai_budget = yes
-	ai_use_parent_for_resources_upkeep = {
-		energy
-		consumer_goods
-	}
-	generate_mult_modifiers = {
-		cost
-	}
-	parent = country
-	modifier_category = megastructure
-}

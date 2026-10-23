@@ -56,7 +56,7 @@ if = { limit = { exists = owner owner = { has_valid_civic = civic_ngm_prosperity
         if = { limit = { NOT = { has_modifier = civic_ngm_prosperity_10_advocate_modifier } } add_modifier = { modifier = civic_ngm_prosperity_10_advocate_modifier days = -1 } }
     } else = { remove_modifier = civic_ngm_prosperity_10_advocate_modifier }
  }
-ngm_sync_prosperity_country_effect = {
+ngm_sync_prosperity_country_effect_state = {
     if = { limit = { has_valid_civic = civic_ngm_prosperity_advocate is_at_war = no }
         if = { limit = { NOT = {  OR = { has_country_flag = ngm_prosperity_tier_0 has_country_flag = ngm_prosperity_tier_1 has_country_flag = ngm_prosperity_tier_2 has_country_flag = ngm_prosperity_tier_3 has_country_flag = ngm_prosperity_tier_4 has_country_flag = ngm_prosperity_tier_5 has_country_flag = ngm_prosperity_tier_6 has_country_flag = ngm_prosperity_tier_7 has_country_flag = ngm_prosperity_tier_8 has_country_flag = ngm_prosperity_tier_9 has_country_flag = ngm_prosperity_tier_10 }  } }
             ngm_reset_prosperity_effect = yes
@@ -98,5 +98,6 @@ else_if = { limit = { has_country_flag = ngm_prosperity_tier_0 }
             set_timed_country_flag = { flag = ngm_prosperity_interval days = 1825 }
         }
     } else = { ngm_reset_prosperity_effect = yes }
-    every_owned_planet = { ngm_sync_prosperity_planet_effect = yes }
+
 }
+ngm_sync_prosperity_country_effect = { ngm_sync_prosperity_country_effect_state = yes every_owned_planet = { ngm_sync_prosperity_planet_effect = yes } }

@@ -110,12 +110,12 @@ country_event = { id = ngm_civic.2 hide_window = yes is_triggered_only = yes
 country_event = { id = ngm_civic.5 hide_window = yes is_triggered_only = yes
         immediate = { ngm_elder_species_effect = yes } }
 country_event = { id = ngm_civic.23 hide_window = yes is_triggered_only = yes
-        immediate = { every_owned_leader = { ngm_remaining_leader_effect = yes } every_pool_leader = { ngm_remaining_leader_effect = yes } } }
+        immediate = { every_owned_leader = { ngm_sync_political_leader_effect = yes } every_pool_leader = { ngm_sync_political_leader_effect = yes } } }
 country_event = { id = ngm_civic.26 hide_window = yes is_triggered_only = yes
-        immediate = { every_owned_leader = { ngm_remaining_leader_effect = yes } every_pool_leader = { ngm_remaining_leader_effect = yes } } }
+        immediate = { every_owned_leader = { ngm_sync_political_leader_effect = yes } every_pool_leader = { ngm_sync_political_leader_effect = yes } } }
 country_event = { id = ngm_civic.24 hide_window = yes is_triggered_only = yes
     trigger = { exists = from }
-    immediate = { from = { ngm_remaining_leader_effect = yes } }
+    immediate = { from = { ngm_sync_political_leader_effect = yes } }
 }
 
 country_event = { id = ngm_civic.14 hide_window = yes is_triggered_only = yes

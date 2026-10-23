@@ -1,0 +1,12 @@
+ngm_monthly_country_sync_effect = {
+ ngm_sync_war_economy_country_effect_state = yes
+ ngm_sync_prosperity_country_effect_state = yes
+ every_owned_planet = {
+  ngm_sync_civic_economy_planet_effect = yes
+  ngm_sync_ethic_job_deposit_effect = yes
+  ngm_sync_civic_ruler_jobs_effect = yes
+  ngm_sync_militia_effect = yes
+  ngm_sync_war_economy_planet_effect = yes
+  ngm_sync_prosperity_planet_effect = yes
+ }
+}
